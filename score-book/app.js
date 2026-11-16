@@ -105,11 +105,14 @@ const shortDate = date => new Date(date).toLocaleDateString(undefined,{year:'num
 const player = (game,index) => game.names[index].trim() || 'Player '+(index+1);
 const emptyRow = n => Array(n).fill('');
 const filled = value => value !== '' && value !== '-';
+const retiredRound = (game, index) => game.retiredRounds?.[index];
+const isActive = (game, index) => retiredRound(game, index) == null;
+const joinedRound = (game, index) => game.joinedRounds?.[index] ?? 0;
 function totals(game) {
   return game.rounds.reduce((sum,row)=>sum.map((n,i)=>n+(Number(row[i]) || 0)), game.names.map(()=>0));
 }
 function results(game) {
-  const scores = totals(game), candidates = scores.map((score,i)=>({score,i})).filter(({i})=>game.rounds.some(row=>filled(row[i])));
+  const scores = totals(game), candidates = scores.map((score,i)=>({score,i})).filter(({i})=>isActive(game,i) && game.rounds.some(row=>filled(row[i])));
   if (!candidates.length) return '';
   const high = Math.max(...candidates.map(p=>p.score));
   const leaders = candidates.filter(p=>p.score===high).map(p=>player(game,p.i));
@@ -155,10 +158,10 @@ function finishCard() {
   openDialog('Finish this game?', '<p id="final-summary"></p><p id="missing" class="hint"></p><label>Location (optional)<input id="finish-location" maxlength="120" placeholder="Viva lounge"></label>', 'Finish & save', async () => {
     const place=$('#finish-location').value.trim();
     await amend(id,game=>{
-      if (!game.rounds.some(row=>row.some(filled))) throw Error('Enter at least one score before finishing.');
+      if (!game.rounds.some(row=>row.some(filled)) && game.names.some((_, i) => isActive(game, i))) throw Error('Enter at least one score before finishing.');
       if (game.rounds.some(row=>row.includes('-'))) throw Error('Finish entering the negative score or clear its minus sign.');
       game.location=place;game.finished=new Date().toISOString();
-      game.rounds=game.rounds.filter(row=>row.some(filled));
+      if (!game.joinedRounds && !game.retiredRounds) game.rounds=game.rounds.filter(row=>row.some(filled));
     });
     await route();
   });
@@ -175,9 +178,57 @@ function deleteCard() {
   });
   $('#delete-description').textContent = current.names.map((_,i)=>player(current,i)).join(' · ')+' — '+shortDate(current.finished||current.created);
 }
+function addPlayer() {
+  const id = current.id;
+  openDialog('Add a player', '<label>Player name<input id="new-name" maxlength="40" required></label>', 'Add to game', async () => {
+    const name = $('#new-name').value.trim();
+    if (!name) throw Error('Enter a player name.');
+    await amend(id, game => {
+      if (game.names.filter((_, i) => isActive(game, i)).length >= 32) throw Error('Up to 32 players can play at a time.');
+      const index = game.names.length;
+      game.names.push(name);
+      (game.joinedRounds ??= {})[index] = game.rounds.length - 1;
+      for (const row of game.rounds) row.push('');
+    });
+    await route();
+  });
+}
+function retirePlayer(index) {
+  const id = current.id, name = player(current, index);
+  openDialog('Retire ' + name + '?', '<p>Their scores and final total will stay on this card. Everyone else can keep playing.</p>', 'Retire player', async () => {
+    await amend(id, game => {
+      if (!isActive(game, index)) return;
+      if (game.rounds.some(row => row[index] === '-')) throw Error('Finish entering the negative score or clear its minus sign first.');
+      (game.retiredRounds ??= {})[index] = game.rounds.length - 1;
+    });
+    await route();
+  });
+}
+function showRetired(host, game) {
+  const retired = game.names.map((_, i) => i).filter(i => !isActive(game, i));
+  if (!retired.length) return;
+  const section = node('section', undefined, 'retired');
+  section.append(node('h2', 'Retired players'));
+  const scores = totals(game);
+  for (const i of retired) {
+    const details = node('details'), summary = node('summary');
+    summary.append(node('strong', player(game, i)), node('span', scores[i] + ' pts', 'retired-total'),
+      node('small', 'Finished in round ' + (retiredRound(game, i) + 1)));
+    details.append(summary);
+    const history = node('ul');
+    for (let r = joinedRound(game, i); r <= retiredRound(game, i); r++) {
+      const value = game.rounds[r][i];
+      history.append(node('li', 'Round ' + (r + 1) + ' · ' + (filled(value) ? value : 'No score')));
+    }
+    details.append(history);
+    section.append(details);
+  }
+  host.append(section);
+}
 async function nextRound() {
   try {
     const game=await amend(current.id,g=>{
+      if (!g.names.some((_, i) => isActive(g, i))) throw Error('Add a player to continue the game.');
       if (!g.rounds[g.rounds.length-1].some(filled)) throw Error('Enter a score in the current round first.');
       g.rounds.push(emptyRow(g.names.length));
     });
@@ -193,15 +244,21 @@ function updateTotals() {
     });
     row.forEach((raw,i)=>{
       const total=document.getElementById('total-'+round+'-'+i);
+      if (!total) return;
       total.textContent=filled(raw)?String(sum[i]):'';
       total.setAttribute('aria-label','Running total for '+player(current,i)+': '+sum[i]);
     });
   }
-  const target=sum.flatMap((v,i)=>v>=current.target?[player(current,i)]:[]);
+  const target=sum.flatMap((v,i)=>isActive(current,i) && v>=current.target?[player(current,i)]:[]);
   $('#result').textContent = current.finished?results(current):target.length?'Reached '+current.target+' points: '+target.join(', ')+'.':'';
 }
 function scoreCell(rowIndex,i) {
   const td=node('td'),box=node('div',undefined,'cell'),raw=current.rounds[rowIndex][i];
+  if (rowIndex < joinedRound(current, i)) {
+    td.textContent = '—';
+    td.setAttribute('aria-label', player(current, i) + ' had not joined');
+    return td;
+  }
   if(current.finished)box.append(node('span',filled(raw)?raw:'—','final-score'));
   else{
     const field=node('input',undefined,'number');
@@ -219,7 +276,11 @@ function scoreCell(rowIndex,i) {
       if (!/^-?\d{0,7}$/.test(value)){field.value=current.rounds[rowIndex][i];return;}
       field.value=value;fitScore(value);
       sign.setAttribute('aria-pressed',String(value.startsWith('-')));
-      saveEdit(g=>{g.rounds[rowIndex][i]=value;});updateTotals();
+      saveEdit(g=>{
+        if (!isActive(g, i)) throw Error('This player has retired.');
+        g.rounds[rowIndex][i]=value;
+      });
+      updateTotals();
     }
     field.oninput=applyScore;
     field.onfocus=()=>{if(field.value!=='-')field.select();};
@@ -250,29 +311,52 @@ function drawCard() {
     place.oninput=()=>{const value=place.value;saveEdit(g=>{g.location=value;});};
     label.append(place);meta.append(label);
   }
-  host.append(meta,node('p','Round scores are followed by running totals in blue.','hint'));
+  if (!current.finished) meta.append(button('Add player', addPlayer));
+  host.append(meta);
+  const active = current.names.map((_, i) => i).filter(i => isActive(current, i));
+  if (active.length) host.append(node('p','Running totals appear in dark green.','hint'));
   const scroll=node('div',undefined,'scroll'),table=node('table',undefined,'sheet');
   table.setAttribute('aria-label','Round scores and running totals');scroll.tabIndex=0;scroll.setAttribute('aria-label','Score sheet, scroll sideways for more players');
   const head=table.createTHead().insertRow(),round=node('th','Round','round');round.scope='col';head.append(round);
-  current.names.forEach((value,i)=>{
+  active.forEach(i=>{
+    const value = current.names[i];
     const th=node('th');th.scope='col';
     if(current.finished)th.textContent=player(current,i);
     else{
       const name=node('input',undefined,'name');name.maxLength=40;name.placeholder='Player '+(i+1);name.value=value;name.setAttribute('aria-label','Player '+(i+1)+' name');
-      name.oninput=()=>{const text=name.value;saveEdit(g=>{g.names[i]=text;});labelScores();updateTotals();};
-      th.append(name);
+      const retire = button('× Retire', () => retirePlayer(i), 'retire-player');
+      const labelRetire = () => retire.setAttribute('aria-label', 'Retire ' + player(current, i));
+      name.oninput=()=>{
+        const text=name.value;
+        saveEdit(g=>{
+          if (!isActive(g, i)) throw Error('This player has retired.');
+          g.names[i]=text;
+        });
+        labelRetire();labelScores();updateTotals();
+      };
+      labelRetire();
+      th.append(name, retire);
     }
     head.append(th);
   });
   const body=table.createTBody();
   current.rounds.forEach((row,r)=>{
     const tr=body.insertRow(),th=node('th',String(r+1),'round');th.scope='row';tr.append(th);
-    row.forEach((v,i)=>tr.append(scoreCell(r,i)));
+    active.forEach(i=>tr.append(scoreCell(r,i)));
   });
-  scroll.append(table);host.append(scroll,node('p','','result'));host.querySelector('.result').id='result';
+  scroll.append(table);
+  if (active.length) host.append(scroll);
+  else if (!current.finished) host.append(node('p','All players have retired. Add a player or finish the game.','hint'));
+  showRetired(host, current);
+  host.append(node('p','','result'));host.querySelector('.result').id='result';
   const footer=node('div',undefined,'foot');
   if(!current.finished){
-    const next=button('Add round',nextRound,'primary');next.id='next-round';footer.append(next,button('Finish game',finishCard));
+    if (active.length) {
+      const next = button('Add round', nextRound, 'primary');
+      next.id = 'next-round';
+      footer.append(next);
+    }
+    footer.append(button('Finish game', finishCard));
   }
   host.append(footer,button('Delete scorecard',deleteCard,'danger'));labelScores();updateTotals();
 }
