@@ -1,7 +1,7 @@
 const scope = self.registration.scope;
 const shelf = new URL('index.html', scope).href;
 const cacheName = 'books-shelf-v1:' + scope;
-const assets = [shelf, ...['books.webmanifest', 'last-port-casebook/icon.png', 'last-port-casebook/icon-large.png'].map(path => new URL(path, scope).href)];
+const assets = [shelf, ...['books.webmanifest', 'last-port-casebook/icon.png', 'last-port-casebook/icon-large.png', 'field-and-home/icon-192.png'].map(path => new URL(path, scope).href)];
 
 self.addEventListener('install', event => event.waitUntil((async () => {
   const cache = await caches.open(cacheName);
@@ -16,6 +16,11 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   url.search = '';
   const target = url.href === scope ? shelf : url.href;
+  // Downloads started on the shelf are handled by the shelf's worker.
+  if (target === new URL('field-and-home/Field-and-Home.epub', scope).href) {
+    event.respondWith((async () => await caches.match(target) || fetch(event.request))());
+    return;
+  }
   if (!assets.includes(target)) return;
   event.respondWith((async () => {
     const cache = await caches.open(cacheName);

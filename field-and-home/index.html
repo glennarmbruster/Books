@@ -1,0 +1,1716 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Field &amp; Home</title>
+<meta name="description" content="Offline-first survival, homesteading, cooking, home repair, and workshop guide.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#f5f4ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1311" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Field &amp; Home">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<script>try { var t = localStorage.getItem('goobs-survival-theme'); if (t === 'light' || t === 'blue' || t === 'halloween') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<style>
+:root{
+  --bg:#f5f4ef; --card:#ffffff; --ink:#1b2420; --muted:#66736d; --line:#e2e0d6; --soft:#efede5;
+  --accent:#0f766e; --accent-ink:#ffffff; --accent-soft:#d9f0ec;
+  --bad:#b42318; --bad-soft:#fde8e6; --warn:#9a5b00; --warn-soft:#fdf0d5; --ok:#166534; --ok-soft:#dcf5e3;
+  --radius:14px; --shadow:0 1px 2px rgba(16,24,20,.06),0 6px 18px rgba(16,24,20,.06);
+  color-scheme:light dark;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme]){
+    --bg:#0e1311; --card:#171f1c; --ink:#e7eeeb; --muted:#97a69f; --line:#27332e; --soft:#1e2824;
+    --accent:#2dd4bf; --accent-ink:#06211d; --accent-soft:#12332e;
+    --bad:#ff8a80; --bad-soft:#3a1a18; --warn:#f6c26b; --warn-soft:#3a2c12; --ok:#7ee2a0; --ok-soft:#14301f;
+    --shadow:none;
+  }
+}
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="blue"]{
+  --bg:#141b28;--card:#1b2435;--soft:#232e43;--line:#2d3a52;--ink:#e2e8f1;--muted:#97a4ba;
+  --accent:#8eaedf;--accent-ink:#0e1626;--accent-soft:#24344f;
+  --bad:#f28b82;--bad-soft:#3a1f22;--warn:#e9c27a;--warn-soft:#3a3020;--ok:#8fd4a6;--ok-soft:#1b3326;
+  --shadow:none;color-scheme:dark;
+}
+:root[data-theme="halloween"]{
+  --bg:#140b1c;--card:#22142e;--soft:#2f1d3d;--line:#3a2549;--ink:#f6ecff;--muted:#b9a3c9;
+  --accent:#ff7a1a;--accent-ink:#1c1026;--accent-soft:#3d2236;
+  --bad:#ff5a5f;--bad-soft:#3d1a24;--warn:#ffb02e;--warn-soft:#3d2a16;--ok:#7ee35a;--ok-soft:#1d3320;
+  --shadow:none;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.48 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  padding-bottom:calc(88px + env(safe-area-inset-bottom));
+}
+a{color:var(--accent)}
+h1,h2,h3{margin:0;line-height:1.25}
+p{margin:0 0 10px}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+.muted{color:var(--muted)} .bad{color:var(--bad)} .warn{color:var(--warn)} .ok{color:var(--ok)}
+.hide{display:none!important}
+.pad{padding:16px}
+.hint{font-size:13px;color:var(--muted);margin-top:4px}
+
+/* Header */
+header.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+header.top .wrap{display:flex;align-items:center;gap:10px;min-height:58px}
+header.top .grow{flex:1;min-width:0}
+header.top h1{font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header.top .sub{font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hbtn{min-width:42px;padding:0 10px;font-size:18px}
+.desk-nav{display:none;gap:6px;align-items:center}
+
+/* Cards, Lists & Badges */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.sec-h{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:20px 4px 8px;font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700}
+.list{list-style:none;margin:0;padding:0}
+.row{display:flex;align-items:flex-start;gap:12px;padding:13px 15px;border-top:1px solid var(--line);cursor:pointer;text-align:left;width:100%;background:none;border-left:0;border-right:0;border-bottom:0;color:inherit;font:inherit}
+.row:first-child{border-top:0}
+.row:hover{background:var(--soft)}
+.row.active{background:var(--accent-soft)}
+.row-main{flex:1;min-width:0}
+.row-title{font-weight:650;font-size:16px;line-height:1.3;overflow-wrap:anywhere}
+.row-sub{font-size:13px;color:var(--muted);margin-top:3px;line-height:1.35}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--muted);vertical-align:middle;margin-right:4px}
+.badge.ok{background:var(--ok-soft);color:var(--ok)}
+.badge.warn{background:var(--warn-soft);color:var(--warn)}
+.badge.bad{background:var(--bad-soft);color:var(--bad)}
+.badge.acc{background:var(--accent-soft);color:var(--accent)}
+
+/* Buttons & Chips */
+.btn{white-space:nowrap;appearance:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:600;min-height:42px;padding:0 15px;border-radius:12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.danger{color:var(--bad)}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--accent)}
+.btn.small{min-height:36px;padding:0 12px;font-size:14px;border-radius:10px}
+.btn.block{width:100%}
+.btn:active{transform:translateY(1px)}
+.chips{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;padding:4px 0;-webkit-overflow-scrolling:touch}
+.chips::-webkit-scrollbar{display:none}
+.chips.wrap-chips{flex-wrap:wrap;overflow-x:visible}
+.chip{flex:none;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 13px;min-height:36px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--ink);white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* Search & Filter Bar */
+.search-bar{position:sticky;top:calc(58px + env(safe-area-inset-top));z-index:8;background:var(--bg);padding:10px 0 6px;display:flex;flex-direction:column;gap:6px}
+.search-row{display:flex;gap:8px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:44px}
+textarea{min-height:110px;resize:vertical}
+input[type=checkbox]{width:22px;height:22px;min-height:0;padding:0;accent-color:var(--accent);flex:none}
+
+/* Guide Detail Reader */
+.guide-box{padding:18px;margin-top:10px}
+.guide-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.guide-head h2{font-size:22px;line-height:1.25}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:12px 0}
+.meta-tile{background:var(--soft);padding:10px 12px;border-radius:10px}
+.meta-tile .lbl{font-size:11.5px;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:.04em}
+.meta-tile .val{font-size:14.5px;font-weight:650;margin-top:2px}
+.callout{padding:12px 14px;border-radius:12px;margin:12px 0;font-size:14.5px;line-height:1.45}
+.callout.warn{background:var(--warn-soft);color:var(--warn);border-left:4px solid var(--warn)}
+.callout.note{background:var(--accent-soft);color:var(--ink);border-left:4px solid var(--accent)}
+.steps{margin:10px 0 14px;padding-left:22px}
+.steps li{margin-bottom:10px;line-height:1.5}
+.pill-list{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 14px}
+.pill{background:var(--soft);padding:6px 11px;border-radius:9px;font-size:13.5px;border:1px solid transparent;display:inline-flex;align-items:center;gap:5px}
+.pill.owned{background:var(--ok-soft);color:var(--ok);font-weight:600}
+.pill.def-btn{cursor:pointer;border-color:var(--line);font-weight:600;color:var(--ink);font-family:inherit}
+.pill.def-btn:hover{border-color:var(--accent);background:var(--accent-soft)}
+.pill.def-btn .qmark{display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:11px;font-weight:800}
+
+/* Tool Definition Card inside Guide & Glossary */
+.def-card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0 14px;display:flex;gap:14px;align-items:center}
+.def-pic{flex:none;width:72px;height:72px;border-radius:10px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;padding:6px;color:var(--accent)}
+.def-pic svg{width:100%;height:100%;display:block}
+.def-body{flex:1;min-width:0}
+.def-title{font-weight:700;font-size:15px;display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:3px}
+.def-desc{font-size:13.5px;line-height:1.4;color:var(--ink)}
+.def-sub{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* Bottom Nav + FAB (Narrow < 1000px) */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:12;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav.tabs .wrap{display:flex;padding:0}
+nav.tabs button{flex:1;min-height:58px;border:0;background:none;color:var(--muted);font:inherit;font-size:11.5px;font-weight:650;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer}
+nav.tabs .ico{font-size:20px;line-height:1}
+nav.tabs [aria-current="page"]{color:var(--accent)}
+.fab{position:fixed;right:16px;bottom:calc(74px + env(safe-area-inset-bottom));z-index:13;width:54px;height:54px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);font-size:28px;line-height:1;box-shadow:0 6px 18px rgba(0,0,0,.28);cursor:pointer}
+
+/* Dialogs & Toasts */
+dialog{border:0;border-radius:18px;padding:0;width:calc(100vw - 24px);max-width:560px;background:var(--card);color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(10,15,12,.55)}
+.dlg-form{padding:20px;display:flex;flex-direction:column;gap:12px;max-height:85dvh;overflow:auto}
+.dlg-form h2{font-size:19px}
+.field label{display:block;font-size:13px;font-weight:650;color:var(--muted);margin-bottom:4px}
+.field.check{display:flex;align-items:center;gap:10px}
+.field.check label{margin:0;color:var(--ink);font-size:15.5px;font-weight:500}
+.dlg-actions{display:flex;gap:8px;align-items:center;margin-top:6px;flex-wrap:wrap}
+.dlg-actions .spacer{flex:1}
+.dlg-err{color:var(--bad);font-size:14px}
+.dlg-err:empty{display:none}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(82px + env(safe-area-inset-bottom));background:#1b2420;color:#fff;padding:12px 16px;border-radius:12px;display:flex;gap:14px;align-items:center;z-index:60;max-width:calc(100vw - 24px);box-shadow:0 8px 24px rgba(0,0,0,.35);font-size:14.5px}
+.toast button{background:none;border:0;color:#7dd3c8;font:inherit;font-weight:700;cursor:pointer;min-height:34px}
+.syncbadge{flex:none;white-space:nowrap;border:1px solid var(--line);background:var(--card);color:inherit;border-radius:999px;padding:4px 10px;font:inherit;font-size:.82rem;cursor:pointer}
+.syncbadge.ok{color:#15803d}.syncbadge.bad{color:#b91c1c}
+.themes{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0}
+.themes [role=button]{border-radius:12px;border:2px solid transparent;background:var(--soft);color:var(--ink);padding:8px 0;font:inherit;font-weight:700;font-size:12px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer}
+.themes [role=button][aria-pressed="true"]{border-color:var(--accent)}
+.themes .sw{width:38px;height:24px;border-radius:7px;border:1px solid rgba(127,127,127,.35);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.themes .sw i{display:block}
+.empty{text-align:center;padding:38px 20px;color:var(--muted)}
+.empty h2{color:var(--ink);font-size:18px;margin-bottom:6px}
+.foot{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0}
+
+/* Desktop Wide Layout (>= 1000px) */
+@media (min-width:1000px){
+  body{padding-bottom:32px}
+  .wrap{max-width:1620px;padding:0 24px}
+  nav.tabs,.fab{display:none!important}
+  .desk-nav{display:flex}
+  .split{display:grid;grid-template-columns:460px minmax(0,1fr);gap:22px;align-items:start;margin-top:12px}
+  .split-left{position:sticky;top:72px;max-height:calc(100dvh - 90px);overflow:auto;padding-right:4px}
+  .split-right{position:sticky;top:72px;max-height:calc(100dvh - 90px);overflow:auto}
+  .guide-box{margin-top:0}
+  .toast{bottom:24px}
+}
+header.top h1,.reader-controls h2,.guide-head h2,.field-section h3{font-family:Georgia,"Times New Roman",serif}
+header.top h1{font-weight:600;letter-spacing:-.035em;font-size:24px}
+.reader-layout{max-width:1240px;margin:22px auto;display:grid;gap:18px;align-items:start}
+.reader-controls,.reading-page{min-width:0}
+.reader-controls{overflow-x:clip;display:grid;grid-template-columns:minmax(0,1fr);background:var(--card);padding:20px;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:8px}
+.reader-controls h2{font-size:25px;font-weight:500;margin-bottom:5px}
+.reader-controls label{margin:14px 0 5px;font-size:13px;font-weight:650}
+.reader-controls small{float:right;color:var(--muted);font-weight:400;font-size:12px}
+.reader-controls select,.reader-controls input{min-width:0;max-width:100%;width:100%;border-radius:5px}
+.guide-box{margin:0;border-radius:8px;padding:clamp(18px,3vw,44px);border-top:4px solid var(--accent)}
+.guide-head{flex-wrap:wrap}
+.guide-head>div{flex:1 1 300px;min-width:0}
+.guide-head h2{font-weight:500;letter-spacing:-.034em;font-size:clamp(29px,3.3vw,45px);line-height:1.12;overflow-wrap:anywhere}
+.field-section{margin:18px 0;line-height:1.6}
+.field-section h3{font-size:20px;font-weight:600;margin:0 0 6px}
+.field-section p{margin:0;white-space:pre-line}
+.scene{padding:14px 18px;background:var(--accent-soft);border-left:3px solid var(--accent)}
+.overview{border-top:1px solid var(--line);padding-top:18px}
+.steps{padding-left:2em}
+.steps li{padding:4px 0 10px .45em;border-bottom:1px solid var(--line);line-height:1.65}
+.steps li::marker{color:var(--accent);font-weight:700}
+.step-figure{margin:12px 0 4px;max-width:580px;break-inside:avoid}
+.step-figure img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);box-sizing:border-box}
+.step-figure figcaption{margin:.36em 0;font-size:.92em;font-weight:600}
+.figure-open{display:block;position:relative;width:100%;padding:0;border:0;background:transparent;border-radius:8px;cursor:zoom-in}
+.figure-open::after{content:"⤢";position:absolute;right:0;top:calc(100% + 5px);z-index:1;display:grid;place-items:center;width:24px;height:24px;border:1px solid #bec7bb;border-radius:5px;color:#223f3e;background:#faf6eb;font:18px/1 system-ui}
+.figure-open:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.step-figure figcaption strong,.figure-note{display:block}
+.step-figure figcaption strong{padding-right:32px;min-height:24px}
+.figure-note{font-weight:400;margin-top:.2em;line-height:1.45}
+#figure-reader{max-width:920px;max-height:90vh;max-height:90dvh;padding:16px;overflow:auto}
+#figure-reader h2{font:600 1.25rem/1.25 Georgia,serif}
+.figure-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px}
+.figure-toolbar button{min-height:44px}
+.figure-scroll{width:100%;max-height:60vh;max-height:60dvh;overflow:auto;background:#faf6eb;border-radius:6px}
+.figure-scroll img{display:block;width:100%;height:auto}
+.figure-scroll.zoomed img{width:200%;max-width:none}
+#figure-reader p{margin:.6em 0 0}
+@media(max-width:500px){
+  .steps{padding-left:1.45em}
+  .steps li{padding-left:.1em}
+  .step-figure{margin-left:-1.5em}
+}
+@media print{.guide-box button.figure-open:not(.pill){display:block!important}.figure-open::after{display:none}}
+.source-list{margin:10px 0 0;padding-left:1.25em;font-size:.88em;overflow-wrap:anywhere}
+@media(min-width:900px){.reader-layout{grid-template-columns:minmax(230px,295px) minmax(0,1fr);gap:24px}.reader-controls{position:sticky;top:80px}}
+@media print{header.top,nav.tabs,.fab,.reader-controls,.guide-box button:not(.pill),.wrap-chips,.toast,.desk-nav{display:none!important}.reader-layout,.reading-page,#view{display:block;max-width:none;margin:0;padding:0}.guide-box{box-shadow:none;border:0;padding:0}.steps li,.field-section{break-inside:avoid}body{background:white;color:black;padding:0}}
+
+.reader-options{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}.reader-options summary{font-size:14px;cursor:pointer;color:var(--accent);font-weight:650}.reader-options label{display:block}
+@media(max-width:899px){.reader-controls{padding:12px 16px}.reader-controls h2{font-size:21px}.reader-controls label{margin:6px 0 3px}.reader-options{margin-top:9px;padding-top:8px}.reader-layout{margin:12px auto}.guide-head{gap:6px}.guide-box{padding:18px}.guide-head h2{font-size:29px}}
+@media(max-width:500px){header.top .wrap{gap:6px}header.top h1{font-size:21px}.syncbadge span{display:none}.syncbadge{padding:5px}.reader-layout{gap:10px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <img src="icon-192.png" alt="" width="39" height="39" style="border-radius:9px">
+  <div class="grow">
+    <h1 id="title">Field &amp; Home</h1>
+    <div class="sub" id="sub">Offline skills &amp; workshop guide</div>
+  </div>
+  <nav class="desk-nav" aria-label="Primary">
+    <button type="button" class="chip" data-nav="guides" aria-pressed="true">📖 Guides</button>
+    <button type="button" class="chip" data-nav="logs" aria-pressed="false">🧪 Try &amp; Log</button>
+    <button type="button" class="chip" data-nav="gear" aria-pressed="false">🧰 Gear &amp; Seeds</button>
+    <button type="button" class="chip" data-nav="tools" aria-pressed="false">⚙️ Tools &amp; Sync</button>
+    <button type="button" class="btn small primary" id="deskAddBtn">+ Add</button>
+  </nav>
+  <span id="syncSlot"></span>
+  <button type="button" class="btn small ghost hbtn" id="topSearchBtn" aria-label="Search guides" title="Search guides">🔍</button>
+  <button type="button" class="btn small ghost hbtn" id="viewBtn" aria-label="Theme" title="Theme">🎨</button>
+</div></header>
+
+<main class="wrap" id="view"></main>
+
+<button type="button" class="fab" id="fabBtn" aria-label="Add">+</button>
+<nav class="tabs" id="tabbar" aria-label="Tabs">
+  <div class="wrap">
+    <button type="button" data-nav="guides" aria-current="page"><span class="ico">📖</span>Guides</button>
+    <button type="button" data-nav="logs"><span class="ico">🧪</span>Try &amp; Log</button>
+    <button type="button" data-nav="gear"><span class="ico">🧰</span>Gear &amp; Seeds</button>
+    <button type="button" data-nav="tools"><span class="ico">⚙️</span>Tools</button>
+  </div>
+</nav>
+
+<dialog id="dlg"></dialog>
+<dialog id="ask"></dialog>
+<dialog id="figure-reader" aria-labelledby="figure-heading">
+  <div class="figure-toolbar">
+    <button class="btn" id="figure-zoom" type="button" aria-pressed="false">Zoom in</button>
+    <button class="btn" id="figure-close" type="button" autofocus>Close</button>
+  </div>
+  <div class="figure-scroll"><img alt=""></div>
+  <h2 id="figure-heading"></h2>
+  <p id="figure-description"></p>
+</dialog>
+
+<script src="field-figures.js"></script>
+<script>
+function figuresForStep(catalog, guide, step) {
+  const entries = catalog && Object.hasOwn(catalog, guide.id) && catalog[guide.id];
+  return !guide.isCustom && Array.isArray(entries) ? entries.filter(f => f.step === step) : [];
+}
+</script>
+<script>
+'use strict';
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const str = v => (typeof v === 'string' ? v : v == null ? '' : String(v));
+const clampStr = (v, n) => str(v).trim().slice(0, n);
+const todayISO = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+
+/* ===================== Storage Isolation ===================== */
+const APP_ID = 'goobs-survival';
+const DB_NAME = 'goobs-survival-db';
+const LIB_DB_NAME = 'goobs-survival-lib';
+const THEME_KEY = 'goobs-survival-theme';
+const SCHEMA = 1;
+
+function openDB(name) {
+  return new Promise((res, rej) => {
+    const r = indexedDB.open(name, 1);
+    r.onupgradeneeded = () => { r.result.createObjectStore('kv'); };
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+  });
+}
+const idbGet = (db, k) => new Promise((res, rej) => {
+  const q = db.transaction('kv').objectStore('kv').get(k);
+  q.onsuccess = () => res(q.result);
+  q.onerror = () => rej(q.error);
+});
+const idbPut = (db, k, v) => new Promise((res, rej) => {
+  const tx = db.transaction('kv', 'readwrite');
+  tx.objectStore('kv').put(v, k);
+  tx.oncomplete = () => res();
+  tx.onerror = () => rej(tx.error);
+});
+
+/* ===================== Toast & Dialogs ===================== */
+function toast(msg, action) {
+  const old = $('.toast'); if (old) old.remove();
+  const t = document.createElement('div');
+  t.className = 'toast'; t.setAttribute('role', 'status');
+  t.innerHTML = `<span>${esc(msg)}</span>` + (action ? `<button type="button">${esc(action.label)}</button>` : '');
+  if (action) t.querySelector('button').onclick = () => { t.remove(); action.fn(); };
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), action ? 7000 : 3200);
+}
+
+function fieldHTML(f) {
+  const id = 'f_' + f.name, v = f.value ?? '';
+  if (f.type === 'checkbox')
+    return `<div class="field check"><input type="checkbox" id="${id}" name="${f.name}"${f.value ? ' checked' : ''}><label for="${id}">${esc(f.label)}</label></div>`;
+  let ctl;
+  if (f.type === 'select') {
+    ctl = `<select id="${id}" name="${f.name}">${f.options.map(o => {
+      const [val, label] = Array.isArray(o) ? o : [o, o];
+      return `<option value="${esc(val)}"${String(val) === String(v) ? ' selected' : ''}>${esc(label)}</option>`;
+    }).join('')}</select>`;
+  } else if (f.type === 'textarea') {
+    ctl = `<textarea id="${id}" name="${f.name}" placeholder="${esc(f.placeholder || '')}">${esc(v)}</textarea>`;
+  } else {
+    ctl = `<input id="${id}" name="${f.name}" type="${f.type || 'text'}" value="${esc(v)}" placeholder="${esc(f.placeholder || '')}">`;
+  }
+  return `<div class="field"><label for="${id}">${esc(f.label)}${f.required ? ' *' : ''}</label>${ctl}${f.hint ? `<div class="hint">${esc(f.hint)}</div>` : ''}</div>`;
+}
+
+function formDialog({ title, intro = '', fields, submitLabel = 'Save', onSubmit, onDelete, deleteLabel = 'Delete', extra = [], grid = '' }) {
+  const dlg = $('#dlg');
+  const body = grid ? `<div class="${grid}">${fields.map(fieldHTML).join('')}</div>` : fields.map(fieldHTML).join('');
+  dlg.innerHTML = `<form class="dlg-form" novalidate>
+    <h2>${esc(title)}</h2>${intro ? `<p class="muted">${esc(intro)}</p>` : ''}${body}
+    <div class="dlg-err" role="alert"></div>
+    <div class="dlg-actions">
+      ${onDelete ? `<button type="button" class="btn danger" data-k="del">${esc(deleteLabel)}</button>` : ''}
+      ${extra.map((x, i) => `<button type="button" class="btn ${x.kind || ''}" data-x="${i}">${esc(x.label)}</button>`).join('')}
+      <span class="spacer"></span>
+      <button type="button" class="btn ghost" data-k="cancel">Cancel</button>
+      <button type="submit" class="btn primary">${esc(submitLabel)}</button>
+    </div></form>`;
+  const form = $('form', dlg), err = $('.dlg-err', dlg);
+  const collect = () => {
+    const vals = {};
+    for (const f of fields) { const el = form.elements[f.name]; vals[f.name] = f.type === 'checkbox' ? el.checked : el.value; }
+    return vals;
+  };
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const vals = collect();
+    for (const f of fields) if (f.required && !String(vals[f.name]).trim()) { err.textContent = `${f.label} is required.`; return; }
+    err.textContent = '';
+    const msg = await onSubmit(vals);
+    if (msg) err.textContent = msg; else dlg.close();
+  });
+  $('[data-k="cancel"]', dlg).onclick = () => dlg.close();
+  if (onDelete) $('[data-k="del"]', dlg).onclick = async () => { if (await onDelete()) dlg.close(); };
+  $$('[data-x]', dlg).forEach(b => { b.onclick = () => extra[+b.dataset.x].onClick(collect()); });
+  dlg.showModal();
+}
+
+function askDialog({ title, body = '', buttons }) {
+  return new Promise(resolve => {
+    const d = $('#ask'); let done = false;
+    d.innerHTML = `<div class="dlg-form"><h2>${esc(title)}</h2>${body ? `<div>${body}</div>` : ''}
+      <div class="dlg-actions" style="justify-content:flex-end">${buttons.map((b, i) => `<button type="button" class="btn ${b.kind || ''}" data-i="${i}">${esc(b.label)}</button>`).join('')}</div></div>`;
+    const finish = v => { if (done) return; done = true; d.close(); resolve(v); };
+    $$('button', d).forEach(btn => { btn.onclick = () => finish(buttons[+btn.dataset.i].value); });
+    d.oncancel = () => { done = true; resolve(undefined); };
+    d.showModal();
+  });
+}
+const confirmBox = async (title, msg, okLabel = 'Delete', danger = true) =>
+  (await askDialog({ title, body: msg ? `<p>${esc(msg)}</p>` : '', buttons: [{ label: 'Cancel', value: false }, { label: okLabel, value: true, kind: danger ? 'danger' : 'primary' }] })) === true;
+const msgBox = (title, msg) =>
+  askDialog({ title, body: `<p>${esc(msg)}</p>`, buttons: [{ label: 'OK', value: true, kind: 'primary' }] });
+
+/* ===================== File Share & Pick Helpers ===================== */
+async function deliverFile(filename, text, mime = 'application/json') {
+  const file = new File([text], filename, { type: mime });
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    try { await navigator.share({ files: [file], title: filename }); return 'shared'; }
+    catch (e) { if (e && e.name === 'AbortError') return 'cancelled'; }
+  }
+  const url = URL.createObjectURL(file);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.style.display = 'none';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 15000);
+  return 'downloaded';
+}
+function pickFile(accept = '.json,application/json') {
+  return new Promise(resolve => {
+    const i = document.createElement('input');
+    i.type = 'file'; i.accept = accept; i.style.display = 'none';
+    document.body.appendChild(i);
+    let done = false;
+    const fin = f => { if (done) return; done = true; i.remove(); resolve(f); };
+    i.addEventListener('change', () => fin((i.files && i.files[0]) || null));
+    i.addEventListener('cancel', () => fin(null));
+    i.click();
+  });
+}
+const readFileText = f => f.text();
+
+/* ===================== Firebase Sync (goobs-apps-aa819) ===================== */
+const SYNC_CONFIG = {
+  apiKey: 'AIzaSyCztAn5kfhZ1yLjvia17D0dEsnDBvFzuKA',
+  authDomain: 'goobs-apps-aa819.firebaseapp.com',
+  projectId: 'goobs-apps-aa819',
+  storageBucket: 'goobs-apps-aa819.firebasestorage.app',
+  messagingSenderId: '1080769702714',
+  appId: '1:1080769702714:web:70a664d22a62ee9492fe03'
+};
+const SYNC_SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+
+async function firebaseBackend() {
+  const [appM, authM, fsM] = await Promise.all([
+    import(SYNC_SDK + 'firebase-app.js'), import(SYNC_SDK + 'firebase-auth.js'), import(SYNC_SDK + 'firebase-firestore.js')
+  ]);
+  const app = appM.initializeApp(SYNC_CONFIG), auth = authM.getAuth(app), fs = fsM.getFirestore(app);
+  return {
+    onAuth: cb => authM.onAuthStateChanged(auth, u => cb(u ? { uid: u.uid, email: u.email || '' } : null)),
+    signIn: (email, pw) => authM.signInWithEmailAndPassword(auth, email, pw),
+    signOut: () => authM.signOut(auth),
+    watch: (coll, onDocs, onErr) => fsM.onSnapshot(fsM.collection(fs, coll),
+      snap => { if (!snap.metadata.fromCache) onDocs(snap.docs.map(d => ({ id: d.id, data: d.data() }))); },
+      onErr),
+    write: op => {
+      const ref = fsM.doc(fs, op.coll, op.id);
+      return fsM.runTransaction(fs, async tx => {
+        const cur = await tx.get(ref);
+        if (cur.exists() && (op.ts === 0 || (cur.data()._u || 0) > op.ts)) return;
+        if (op.op === 'del') tx.delete(ref);
+        else tx.set(ref, { ...op.data, _u: op.ts, _n: op.n });
+      });
+    }
+  };
+}
+
+const Sync = (() => {
+  const ACK_MS = 120000;
+  let model = null, db = null, dbKey = 'sync', backend = null, user = null, state0 = 'off';
+  let st = { v: 1, enabled: false, joined: false, seen: {}, outbox: {}, order: {} };
+  let unsubs = [], remote = {}, ready = {}, flushing = false, retryTimer = null, retries = 0, lastTs = 0, lastN = 0, denied = false, errored = false;
+  const acked = new Map(), listeners = [];
+  const canon = v => JSON.stringify(v, (k, x) => (x && typeof x === 'object' && !Array.isArray(x)) ? Object.fromEntries(Object.keys(x).sort().map(y => [y, x[y]])) : x);
+  const nextTs = () => (lastTs = Math.max(Date.now(), lastTs + 1));
+  const nextN = () => (lastN = Math.max(Date.now() * 1000, lastN + 1));
+  const keyOf = (c, id) => c + '/' + id;
+  const pending = () => Object.keys(st.outbox).length;
+  const emit = () => { for (const f of listeners) try { f(); } catch (e) { console.error(e); } };
+  let saveChain = Promise.resolve();
+  function save() { if (!db) return; const s = JSON.stringify(st); saveChain = saveChain.then(() => idbPut(db, dbKey, s)).catch(e => console.error(e)); }
+  function status() {
+    if (!model) return 'off';
+    if (state0 === 'unavailable') return 'unavailable';
+    if (!user) return backend ? 'signed-out' : 'connecting';
+    if (denied) return 'denied';
+    if (errored) return 'error';
+    if (!model.colls.every(c => ready[c])) return 'connecting';
+    return pending() ? 'syncing' : 'live';
+  }
+  function localDiff() {
+    if (!st.enabled || !model) return;
+    const present = new Set(); let dirty = false;
+    for (const e of model.toEntities()) {
+      const k = keyOf(e.coll, e.id); present.add(k);
+      const j = canon(e.data);
+      if (st.seen[k] === j) continue;
+      st.seen[k] = j;
+      if (!(k in st.order)) st.order[k] = nextN();
+      st.outbox[k] = { op: 'set', coll: e.coll, id: e.id, data: JSON.parse(j), ts: st.joined ? nextTs() : 0, n: st.order[k] };
+      dirty = true;
+    }
+    for (const k of Object.keys(st.seen)) {
+      if (present.has(k)) continue;
+      delete st.seen[k];
+      const i = k.indexOf('/');
+      st.outbox[k] = { op: 'del', coll: k.slice(0, i), id: k.slice(i + 1), ts: st.joined ? nextTs() : 0 };
+      dirty = true;
+    }
+    if (dirty) save();
+  }
+  function reconcile() {
+    if (!model || !user || !model.colls.every(c => ready[c])) return;
+    localDiff();
+    const now = Date.now(), out = {}, remoteKeys = new Set();
+    model.colls.forEach(c => { out[c] = []; });
+    for (const c of model.colls) for (const d of remote[c] || []) {
+      const k = keyOf(c, d.id), op = st.outbox[k], u = d.data._u || 0, a = acked.get(k);
+      remoteKeys.add(k);
+      if (op && op.ts > u) { if (op.op === 'set') out[c].push({ id: d.id, data: op.data, n: op.n }); continue; }
+      if (op) delete st.outbox[k];
+      if (a && a.op === 'del' && now - a.at < ACK_MS && u <= a.ts) continue;
+      const { _u, _n, ...data } = d.data;
+      if (_n) st.order[k] = _n;
+      out[c].push({ id: d.id, data, n: _n || st.order[k] || 0 });
+    }
+    for (const e of model.toEntities()) {
+      const k = keyOf(e.coll, e.id);
+      if (remoteKeys.has(k)) continue;
+      const op = st.outbox[k], a = acked.get(k);
+      if ((op && op.op === 'set') || (a && a.op === 'set' && now - a.at < ACK_MS)) out[e.coll].push({ id: e.id, data: e.data, n: st.order[k] || 0 });
+    }
+    for (const [k, a] of acked) if (now - a.at >= ACK_MS || (a.op === 'set') === remoteKeys.has(k)) acked.delete(k);
+    for (const c of model.colls) out[c].sort((x, y) => (x.n || 0) - (y.n || 0));
+    model.apply(out);
+    const inOut = new Set();
+    for (const c of model.colls) for (const o of out[c]) inOut.add(keyOf(c, o.id));
+    const seen = {};
+    for (const e of model.toEntities()) { const k = keyOf(e.coll, e.id); if (inOut.has(k)) seen[k] = canon(e.data); }
+    st.seen = seen; st.joined = true;
+    localDiff(); save(); emit(); flush();
+  }
+  async function flush() {
+    if (flushing || !backend || !user || !st.enabled) return;
+    if (!st.joined && !model.colls.every(c => ready[c])) return;
+    flushing = true; let failed = false;
+    try {
+      for (const k of Object.keys(st.outbox)) {
+        const op = st.outbox[k];
+        await backend.write(op);
+        if (st.outbox[k] === op) delete st.outbox[k];
+        acked.set(k, { op: op.op, ts: op.ts, at: Date.now() });
+        retries = 0; errored = false;
+      }
+    } catch (e) {
+      failed = true; errored = !(typeof navigator !== 'undefined' && navigator.onLine === false);
+      if (e && e.code === 'permission-denied') { denied = true; errored = false; }
+      else { clearTimeout(retryTimer); retryTimer = setTimeout(flush, Math.min(60000, 3000 * 2 ** Math.min(retries++, 5))); }
+    }
+    flushing = false; save(); emit();
+    if (!failed && pending()) flush();
+  }
+  function watch() {
+    unwatch();
+    for (const c of model.colls) {
+      unsubs.push(backend.watch(c, docs => { remote[c] = docs; ready[c] = true; denied = false; reconcile(); },
+        e => { if (e && e.code === 'permission-denied') denied = true; else errored = true; emit(); }));
+    }
+  }
+  function unwatch() { unsubs.forEach(u => { try { u(); } catch {} }); unsubs = []; remote = {}; ready = {}; }
+  async function connect() {
+    try { backend = await firebaseBackend(); state0 = 'ok'; }
+    catch { backend = null; state0 = 'unavailable'; emit(); return; }
+    backend.onAuth(u => {
+      user = u; denied = false; errored = false;
+      if (u) { if (!st.enabled) { st.enabled = true; save(); } localDiff(); watch(); flush(); }
+      else unwatch();
+      emit();
+    });
+  }
+  return {
+    async start({ db: d, key, model: m }) {
+      db = d; dbKey = key || 'sync'; model = m;
+      if (db) { try { const raw = await idbGet(db, dbKey); if (raw) { const p = JSON.parse(raw); if (p && p.v === 1) st = { ...st, ...p }; } } catch {} }
+      window.addEventListener('online', () => { if (!backend) connect(); else { errored = false; flush(); } });
+      await connect(); emit();
+    },
+    touch() { if (!st.enabled) return; localDiff(); flush(); emit(); },
+    onChange(f) { listeners.push(f); },
+    status, pending, enabled: () => st.enabled, user: () => user,
+    async signIn(email, pw) { if (!backend) throw Object.assign(new Error('offline'), { code: 'auth/network-request-failed' }); await backend.signIn(email, pw); },
+    async signOut() { if (backend) await backend.signOut(); }
+  };
+})();
+
+function syncText() {
+  const s = Sync.status(), n = Sync.pending();
+  switch (s) {
+    case 'live': return { icon: '☁️', text: 'Shared and up to date', cls: 'ok' };
+    case 'syncing': return { icon: '🔄', text: `Syncing ${n} change${n === 1 ? '' : 's'}…`, cls: '' };
+    case 'connecting': return { icon: '🔄', text: 'Connecting…', cls: '' };
+    case 'signed-out': return { icon: '👤', text: 'Not signed in — saved on this device', cls: '' };
+    case 'denied': return { icon: '⛔', text: 'Account not permitted', cls: 'bad' };
+    case 'error': return { icon: '⚠️', text: 'Sync issue — saved locally, will retry', cls: 'bad' };
+    default: return { icon: '📴', text: 'Offline — saved locally, syncs when online', cls: '' };
+  }
+}
+function syncBadgeHTML() {
+  const s = Sync.status(); if (s === 'off') return '';
+  const t = syncText();
+  return `<button type="button" class="syncbadge ${t.cls}" data-action="sync-info" aria-label="${esc(t.text)}">${t.icon} <span>${esc({ live: 'Shared', 'signed-out': 'Sign in', unavailable: 'Offline', connecting: 'Connecting', syncing: 'Syncing', denied: 'Denied', error: 'Sync issue' }[s] || 'Sync')}</span></button>`;
+}
+function syncSignInDialog() {
+  formDialog({
+    title: 'Sign in to sync', intro: 'Use your Goobs Apps email and password so Cindy’s notes, edits, gear, and logs sync across her iPhone, iPad, and PC.',
+    fields: [
+      { name: 'email', label: 'Email', type: 'email', required: true },
+      { name: 'password', label: 'Password', type: 'password', required: true }
+    ], submitLabel: 'Sign in',
+    onSubmit: async v => {
+      try { await Sync.signIn(v.email.trim(), v.password); }
+      catch (e) { return 'Couldn’t sign in. Check email/password or connection.'; }
+    }
+  });
+}
+
+/* ===================== Themes ===================== */
+const THEMES = [
+  { id: 'auto', label: 'Phone', sw: ['#f5f4ef', '#0e1311'] },
+  { id: 'light', label: 'Light', sw: ['#f5f4ef', '#0f766e'], bar: '#f5f4ef' },
+  { id: 'blue', label: 'Blue', sw: ['#141b28', '#8eaedf'], bar: '#141b28' },
+  { id: 'halloween', label: 'Halloween', sw: ['#1c1026', '#ff7a1a'], bar: '#1c1026' }
+];
+function applyTheme(id = state.theme) {
+  const t = THEMES.find(x => x.id === id) || THEMES[0], root = document.documentElement;
+  if (t.id === 'auto') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', t.id);
+  try { if (t.id === 'auto') localStorage.removeItem(THEME_KEY); else localStorage.setItem(THEME_KEY, t.id); } catch {}
+}
+const themesHTML = () => `<div class="themes">${THEMES.map(t => `<div role="button" tabindex="0" data-theme-pick="${t.id}" aria-pressed="${state.theme === t.id}"><span class="sw"><i style="background:${t.sw[0]}"></i><i style="background:${t.sw[1]}"></i></span>${t.label}</div>`).join('')}</div>`;
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-theme-pick]'); if (!b) return;
+  state.theme = b.dataset.themePick; save(); applyTheme();
+  $$('[data-theme-pick]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+});
+
+/* ===================== Tool & Specialty Gear Glossary (Definitions + Crisp SVG Diagrams) ===================== */
+const TOOL_SVGS = {
+  cloth: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="12" y="14" width="40" height="36" rx="4"/><path d="M12 22h40M12 30h40M12 38h40M20 14v36M28 14v36M36 14v36M44 14v36" stroke-opacity=".45"/><path d="M10 12c6 4 14-4 22 0s16-4 22 0" stroke-width="2.5"/></svg>',
+  basket: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M10 24h44l-5 24a6 6 0 0 1-6 5H21a6 6 0 0 1-6-5l-5-24Z"/><path d="M12 31h40M13 38h38M15 45h34" stroke-dasharray="4 3"/><ellipse cx="32" cy="24" rx="22" ry="4"/></svg>',
+  lame: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 52 36 28" stroke-width="4" stroke-linecap="round"/><rect x="33" y="12" width="18" height="12" rx="2" transform="rotate(-45 42 18)"/><circle cx="42" cy="18" r="2"/></svg>',
+  meter: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="16" y="8" width="32" height="48" rx="5"/><rect x="21" y="13" width="22" height="11" rx="2"/><circle cx="32" cy="36" r="7"/><path d="M32 36l4-4M23 49v5M41 49v5"/></svg>',
+  fuse: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 32h12M46 32h12"/><rect x="18" y="23" width="28" height="18" rx="4"/><path d="M24 32c3-5 5 5 8 0s5 5 8 0"/></svg>',
+  pot: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M14 26h36v22a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6V26Z"/><path d="M8 30h6M50 30h6M12 22h40M28 17h8"/></svg>',
+  ferment: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="18" y="22" width="28" height="34" rx="4"/><path d="M22 17h20v5H22z"/><path d="M32 17V9c0-3 6-3 6 0v4c0 3 6 3 6 0V8"/></svg>',
+  spade: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M32 8v26M26 8h12" stroke-linecap="round"/><path d="M23 34h18v12c0 6-9 11-9 11s-9-5-9-11V34Z"/></svg>',
+  wrench: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M42 12a11 11 0 0 0-10 15L14 45a4 4 0 0 0 5 5l18-18a11 11 0 0 0 15-10l-6 6-5-1-1-5 6-6Z"/></svg>'
+};
+
+const BUILTIN_GLOSSARY = {
+  'butter muslin': {
+    term: 'Butter Muslin',
+    aka: 'Grade 90+ extra-fine cheesecloth',
+    svg: 'cloth',
+    def: 'A tightly woven, unbleached cotton fabric with a much finer mesh (90+ threads per inch) than standard grocery-store cheesecloth. It catches fine ricotta, yogurt, and paneer curds without letting them slip through, and can be rinsed and reused.'
+  },
+  'banneton': {
+    term: 'Banneton (Brotform)',
+    aka: 'Coiled rattan or cane proofing basket',
+    svg: 'basket',
+    def: 'A breathable coiled-rattan basket used to support shaped bread dough during its final rise. It wicks slight surface moisture so the dough forms a dry skin—making clean razor scoring easier—and leaves classic spiral flour rings on the crust.'
+  },
+  'bread lame': {
+    term: 'Bread Lame',
+    aka: 'Curved or straight dough-scoring razor',
+    svg: 'lame',
+    def: 'A thin, ultra-sharp double-edged razor blade mounted on a handle (often slightly curved). Used right before baking to slash bread dough at a shallow 30° angle so steam escapes controllably and the loaf blooms with a crisp "ear."'
+  },
+  'multimeter': {
+    term: 'Digital Multimeter',
+    aka: 'Volt-Ohm-Milliammeter (VOM)',
+    svg: 'meter',
+    def: 'An electronic diagnostic meter that measures voltage (AC/DC), resistance (Ohms Ω), and continuity. Set to continuity/Ohms (with the appliance unplugged), touching its two probes to both terminals of a fuse or heating element confirms whether electricity can flow through it.'
+  },
+  'thermal fuse': {
+    term: 'Thermal Fuse',
+    aka: 'One-time high-temperature safety cutoff',
+    svg: 'fuse',
+    def: 'A small, inexpensive safety switch mounted on a dryer’s blower housing or heating duct. If lint buildup causes overheating, an internal pellet melts and permanently opens the circuit to prevent a fire. Once blown, it cannot be reset and must be replaced.'
+  },
+  'dutch oven': {
+    term: 'Cast-Iron Dutch Oven',
+    aka: 'Heavy lidded baking pot',
+    svg: 'pot',
+    def: 'A thick-walled cast-iron pot (bare or enameled) with a tight-fitting lid. When preheated to 450°F–500°F, it traps the bread dough’s own evaporating moisture to create bakery-level steam for maximum oven spring and blistered crust.'
+  },
+  'airlock lid': {
+    term: 'Fermentation Airlock Lid',
+    aka: 'One-way CO₂ burping lid',
+    svg: 'ferment',
+    def: 'A mason-jar lid fitted with a water-filled S-trap or silicone one-way valve. It lets carbon dioxide gas escape during vegetable fermentation (like sauerkraut) while blocking oxygen and airborne mold spores from entering.'
+  },
+  'fermentation weights': {
+    term: 'Fermentation Weights',
+    aka: 'Glass or ceramic submerging pucks',
+    svg: 'ferment',
+    def: 'Heavy, non-porous glass or glazed ceramic discs placed inside wide-mouth jars to hold shredded vegetables completely beneath the salty brine. Keeping vegetables submerged prevents mold and kahm yeast.'
+  },
+  'drain spade': {
+    term: 'Drain Spade (Trenching Shovel)',
+    aka: 'Sharpshooter shovel',
+    svg: 'spade',
+    def: 'A narrow, long-bladed shovel (typically 14–16 inches long and 4–6 inches wide) built for digging narrow irrigation trenches, deep post holes, and transplanting deep-rooted shrubs without disturbing neighboring plants.'
+  },
+  'basin wrench': {
+    term: 'Basin Wrench',
+    aka: 'Sink-faucet nut wrench',
+    svg: 'wrench',
+    def: 'A T-handled plumbing tool with a spring-loaded pivoting jaw at the end of a long shaft, designed specifically to reach behind a sink bowl and loosen or tighten faucet mounting nuts in tight spaces.'
+  }
+};
+
+let customGlossary = {};
+
+function lookupTerm(rawLabel) {
+  const low = rawLabel.toLowerCase();
+  const all = { ...BUILTIN_GLOSSARY, ...customGlossary };
+  for (const [key, entry] of Object.entries(all)) {
+    if (low.includes(key)) return { key, ...entry };
+  }
+  return null;
+}
+
+/* ===================== App State & Data Model ===================== */
+const CATEGORIES = [
+  'All',
+  'Household Preparedness & Recovery',
+  'Kitchen & From-Scratch',
+  'Homestead & Garden',
+  'Home & Appliance Repair',
+  'Wilderness & Emergency',
+  'First Aid & Remedies',
+  'Crafts & Textiles',
+  'Travel & Fieldcraft',
+  'Smart Shopping & Negotiation'
+];
+
+const BUILTIN_STARTER = [
+  {
+    "id": "hh-002",
+    "cat": "Household Preparedness & Recovery",
+    "sub": "Before the storm",
+    "title": "Make a wallet card for meeting up",
+    "scenario": "The phones are at 3% and a blocked street keeps you from meeting at home.",
+    "diff": "Easy",
+    "time": "15 minutes",
+    "gear": [
+      "Pen"
+    ],
+    "supplies": [
+      "Two wallet-sized cards"
+    ],
+    "steps": [
+      "Choose one meeting point outside the home and a second outside the neighborhood. Use a specific entrance or landmark everyone can describe.",
+      "Ask a willing out-of-area contact to relay messages. Write their number and both meeting places on each card.",
+      "Agree what to text when separated. Try “Safe at the library, staying here, next check-in at 4.” Include the date if the incident spans several days.",
+      "Swap cards and describe both meeting places from memory. Correct ambiguous wording and return each card to its wallet."
+    ],
+    "overview": "The card answers three questions without a charged phone. Where should I go, who can relay a message, and when should I expect another update?",
+    "tags": [
+      "before the storm"
+    ],
+    "sources": [
+      [
+        "Ready.gov · Family emergency planning",
+        "https://www.ready.gov/sites/default/files/2021-11/are-you-ready-guide.pdf"
+      ]
+    ],
+    "illustrations": [
+      {
+        "step": "Ask a willing out-of-area contact to relay messages. Write their number and both meeting places on each card.",
+        "plate": "meet-card",
+        "title": "Name the entrance on both copies",
+        "alt": "A wallet card contains spaces for nearby and farther meeting places, the relay contact, and the next check-in.",
+        "caption": "Make both copies from the same wording. A named entrance gives each person something they can actually find."
+      }
+    ]
+  },
+  {
+    "id": "kit-001",
+    "cat": "Kitchen & From-Scratch",
+    "sub": "Fresh Cheese & Dairy",
+    "title": "Make whole-milk ricotta",
+    "diff": "Easy",
+    "time": "45 mins",
+    "gear": [
+      "Heavy stockpot",
+      "Instant-read thermometer",
+      "Colander",
+      "Butter muslin"
+    ],
+    "supplies": [
+      "1 gal whole pasteurized milk (not UHT)",
+      "1/3 cup fresh lemon juice or white vinegar",
+      "1 tsp cheese salt"
+    ],
+    "steps": [
+      "Heat milk slowly over medium heat to 190°F, stirring gently so the bottom does not scorch.",
+      "Remove from heat, gently stir in lemon juice, and let sit undisturbed for 10 minutes until thick curds separate from pale yellow whey.",
+      "Set a colander lined with damp butter muslin over a deep bowl. Ladle in the curds gently. Check after 15 minutes. For toast, try spreading a spoonful. For lasagna, drain a little longer, up to about 30 minutes, until a spoonful holds its mound.",
+      "Fold in salt, transfer to an airtight container, and chill immediately."
+    ],
+    "safety": "Do not use ultra-pasteurized (UHT) milk—its proteins are denatured and will not form firm curds. Refrigerate and consume within 5 days.",
+    "tags": [
+      "cheese",
+      "ricotta",
+      "dairy",
+      "beginner"
+    ],
+    "scenario": "Dinner needs a soft cheese and there’s a gallon of milk in the fridge. Decide whether it’s going on toast or into lasagna before you drain it.",
+    "overview": "A spoonful that slumps will spread well. For a filling, leave the curds in the cloth a little longer so they hold their shape and keep the pasta layers intact.",
+    "illustrations": [
+      {
+        "step": "Set a colander lined with damp butter muslin over a deep bowl. Ladle in the curds gently. Check after 15 minutes. For toast, try spreading a spoonful. For lasagna, drain a little longer, up to about 30 minutes, until a spoonful holds its mound.",
+        "plate": "draining-curds",
+        "title": "Leave space for the whey",
+        "alt": "Cloth cradles curds in a strainer above a bowl. Drops fall into the gap below.",
+        "caption": "The strainer should sit above the collected whey. If the liquid reaches the cloth, empty the bowl or use a deeper one."
+      },
+      {
+        "step": "Remove from heat, gently stir in lemon juice, and let sit undisturbed for 10 minutes until thick curds separate from pale yellow whey.",
+        "plate": "atlas-kit-001",
+        "title": "See the curds and whey",
+        "alt": "See the curds and whey. White curds gather in islands. The thinner liquid visible between them is whey. Lift the curds gently.",
+        "caption": "White curds gather in islands. The thinner liquid visible between them is whey. Lift the curds gently."
+      }
+    ]
+  },
+  {
+    "id": "hom-101",
+    "cat": "Homestead & Garden",
+    "sub": "Soil & Compost",
+    "title": "Work Gulf Coast clay when it crumbles",
+    "diff": "Medium",
+    "time": "2–3 hours",
+    "gear": [
+      "Broadfork",
+      "Wheelbarrow",
+      "Garden rake",
+      "Soil pH/moisture meter"
+    ],
+    "supplies": [
+      "3–4 inches aged compost",
+      "Expanded shale (1/4-inch)",
+      "Elemental sulfur or organic matter",
+      "Hardwood mulch"
+    ],
+    "steps": [
+      "Take a handful from a few inches below the surface. Squeeze it, then press the lump with your thumb. If it smears into a shiny ribbon, leave the bed to dry. When it breaks into dull crumbs under light pressure, you can work it without making hard clods.",
+      "Spread 3 inches of finished compost and 2 inches of expanded shale across the bed surface.",
+      "Drive a broadfork straight down 10–12 inches and rock back slightly to fracture subsoil compaction without inverting soil biology.",
+      "Rake amendments into the top 4–6 inches and top-dress immediately with 3 inches of shredded hardwood mulch to prevent sun-baking."
+    ],
+    "safety": "Avoid adding beach or builder's sand to heavy clay; sand plus clay creates a concrete-like hardpan.",
+    "tags": [
+      "soil",
+      "clay",
+      "friendswood",
+      "texas",
+      "broadfork",
+      "amendment"
+    ],
+    "scenario": "A shovel comes up coated in sticky Friendswood clay after rain.",
+    "overview": "The first decision is when the soil is workable. Leave one small strip untreated so you can compare drainage and root growth next season.",
+    "illustrations": [
+      {
+        "step": "Take a handful from a few inches below the surface. Squeeze it, then press the lump with your thumb. If it smears into a shiny ribbon, leave the bed to dry. When it breaks into dull crumbs under light pressure, you can work it without making hard clods.",
+        "plate": "clay-clods",
+        "title": "Squeeze a sample, then press it with your thumb",
+        "alt": "Wet clay holds together as a shiny lump. Workable soil breaks into dull crumbs.",
+        "caption": "Test soil from the depth you plan to work. A dry crust can hide a sticky layer underneath."
+      },
+      {
+        "step": "Drive a broadfork straight down 10–12 inches and rock back slightly to fracture subsoil compaction without inverting soil biology.",
+        "plate": "atlas-hom-101",
+        "title": "Rock the broadfork back",
+        "alt": "Rock the broadfork back. The tines enter upright. Lean the handle toward you to lift and crack the soil.",
+        "caption": "The tines enter upright. Lean the handle toward you to lift and crack the soil."
+      }
+    ]
+  },
+  {
+    "id": "rep-101",
+    "cat": "Home & Appliance Repair",
+    "sub": "Electrical & Safety",
+    "title": "Tripped Circuit Breaker vs. Blown Fuse Diagnosis",
+    "diff": "Easy",
+    "time": "15 mins",
+    "gear": [
+      "Non-contact voltage tester",
+      "Flashlight"
+    ],
+    "supplies": [
+      "Label maker or permanent marker"
+    ],
+    "steps": [
+      "Open the main electrical panel and look for a breaker handle sitting in the middle (tripped) position rather than fully ON or OFF.",
+      "Unplug high-wattage appliances on that circuit (space heaters, hair dryers, air fryers) before resetting.",
+      "Push the tripped breaker handle firmly all the way to the OFF position until it clicks, then flip it back to ON.",
+      "If the breaker trips again immediately with nothing plugged in, leave it OFF and call an electrician—this indicates a hard short circuit or ground fault."
+    ],
+    "safety": "Stand to the side of the panel (never directly in front) when flipping a breaker back on, and never touch the panel with wet hands.",
+    "tags": [
+      "electrical",
+      "breaker",
+      "panel",
+      "power",
+      "troubleshooting"
+    ],
+    "scenario": "One room loses power when two heating appliances are running.",
+    "overview": "Identify what was drawing power and whether the protective device trips again. Repeated trips, wet equipment, heat or odors call for an electrician.",
+    "illustrations": [
+      {
+        "step": "Open the main electrical panel and look for a breaker handle sitting in the middle (tripped) position rather than fully ON or OFF.",
+        "plate": "atlas-rep-101",
+        "title": "Read a breaker handle from the front",
+        "alt": "Compare handles. A tripped handle on this style rests between ON and OFF.",
+        "caption": "Use the markings on your own breaker. The handle position can be subtle. Keep the protective panel cover in place."
+      }
+    ]
+  },
+  {
+    "id": "sur-123",
+    "cat": "Wilderness & Emergency",
+    "sub": "Wild Food & Trapping",
+    "title": "Unknown berries or leaves: leave them uneaten",
+    "diff": "Medium",
+    "time": "Immediate",
+    "gear": [
+      "Phone"
+    ],
+    "supplies": [],
+    "steps": [
+      "Stop anyone from tasting the plant. Photograph it in place from a safe distance if identification will be needed.",
+      "Use the food you carried and reassess your route or need for rescue. Arrange expert identification later, away from the pressure of hunger.",
+      "If anyone has already tasted it, call US Poison Control at 1-800-222-1222 promptly. Report the time, amount and symptoms. For collapse, seizure or breathing difficulty, call 911."
+    ],
+    "safety": "Do not induce vomiting or rely on a skin or taste test.",
+    "tags": [
+      "berries",
+      "edibility test",
+      "poison",
+      "foraging"
+    ],
+    "scenario": "There are berries beside the trail and your food bag is nearly empty.",
+    "overview": "Taste, skin contact and animal feeding cannot identify an edible plant. The decision to leave it behind also prevents an uncertain exposure from becoming a rescue emergency.",
+    "sources": [
+      [
+        "National Park Service · Plant identification",
+        "https://www.nps.gov/anch/faqs.htm"
+      ]
+    ]
+  }
+];
+
+const defaultState = () => ({
+  v: 1,
+  theme: 'auto',
+  libVer: '',
+  edits: {},
+  customGuides: [],
+  gear: [],
+  logs: []
+});
+
+let state = defaultState();
+let db = null, libDb = null;
+let masterGuides = [...BUILTIN_STARTER];
+const ui = {
+  tab: 'guides',
+  q: '',
+  cat: 'All',
+  filter: 'all',
+  selectedId: 'hh-002',
+  showSearch: matchMedia('(min-width:900px)').matches,
+  openDefKey: ''
+};
+
+function normState(s) {
+  s = s && typeof s === 'object' ? s : {};
+  return {
+    v: 1,
+    theme: THEMES.some(t => t.id === s.theme) ? s.theme : 'auto',
+    libVer: str(s.libVer),
+    edits: s.edits && typeof s.edits === 'object' && !Array.isArray(s.edits) ? s.edits : {},
+    customGuides: Array.isArray(s.customGuides) ? s.customGuides : [],
+    gear: Array.isArray(s.gear) ? s.gear : [],
+    logs: Array.isArray(s.logs) ? s.logs : []
+  };
+}
+
+function save() {
+  if (db) idbPut(db, 'state', JSON.stringify(state)).catch(() => {});
+}
+let committing = false;
+function commit() {
+  save();
+  committing = true;
+  try { Sync.touch(); } finally { committing = false; }
+  render();
+}
+
+/* ===================== Firestore Sync Model ===================== */
+const C_EDITS = 'survEdits', C_GEAR = 'survGear', C_LOGS = 'survLogs';
+const syncModel = {
+  colls: [C_EDITS, C_GEAR, C_LOGS],
+  toEntities() {
+    const out = [];
+    for (const [id, ed] of Object.entries(state.edits)) out.push({ coll: C_EDITS, id, data: ed });
+    for (const cg of state.customGuides) out.push({ coll: C_EDITS, id: 'custom_' + cg.id, data: { ...cg, _isCustomGuide: true } });
+    for (const g of state.gear) out.push({ coll: C_GEAR, id: g.id, data: g });
+    for (const l of state.logs) out.push({ coll: C_LOGS, id: l.id, data: l });
+    return out;
+  },
+  apply(out) {
+    const edits = {}, customGuides = [];
+    for (const r of out[C_EDITS] || []) {
+      if (r.data && r.data._isCustomGuide) {
+        const { _isCustomGuide, ...g } = r.data;
+        customGuides.push(g);
+      } else if (r.data) {
+        edits[r.id] = { ...r.data, id: r.id };
+      }
+    }
+    state.edits = edits;
+    state.customGuides = customGuides;
+    state.gear = (out[C_GEAR] || []).map(r => ({ ...r.data, id: r.id }));
+    state.logs = (out[C_LOGS] || []).map(r => ({ ...r.data, id: r.id }));
+    save();
+    if (!committing && !$('dialog[open]')) render();
+  }
+};
+
+/* ===================== Modular Pack Loader (2,000+ Guides + Glossary) ===================== */
+async function loadLibraryPacks(force = false) {
+  try {
+    if (location.protocol === 'file:') {
+      if (!window.fieldHomeEdition) {
+        await new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = './local-edition.js';
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+      masterGuides = window.fieldHomeEdition.guides;
+      customGlossary = window.fieldHomeEdition.glossary;
+    } else {
+      if (!libDb) libDb = await openDB(LIB_DB_NAME).catch(() => null);
+      let cached;
+      if (libDb) {
+        cached = await idbGet(libDb, 'edition');
+        if (cached?.guides?.length && !force) {
+          masterGuides = cached.guides;
+          customGlossary = cached.glossary;
+          render();
+        } else if (!force) {
+          const old = await idbGet(libDb, 'packs_bundle');
+          if (old) masterGuides = JSON.parse(old);
+          const gloss = await idbGet(libDb, 'packs_glossary');
+          if (gloss) customGlossary = JSON.parse(gloss);
+          render();
+        }
+      }
+      const res = await fetch('./packs/manifest.json', {cache:'no-cache'});
+      if (!res.ok) throw Error('Manifest unavailable');
+      const manifest = await res.json();
+      if (cached?.version === manifest.version && !force) return;
+      const packs = await Promise.all(manifest.files.map(async file => {
+        const result = await fetch('./packs/' + file, {cache:'no-cache'});
+        if (!result.ok) throw Error(file);
+        const pack = await result.json();
+        if (manifest.versionedPacks && pack.version !== manifest.version) throw Error('Edition mismatch: ' + file);
+        const entries = Array.isArray(pack) ? pack : pack.guides;
+        if (!entries?.length || entries.some(g => !g.id || !g.title) || (pack.count != null && entries.length !== pack.count)) throw Error(file);
+        return pack;
+      }));
+      const guides = packs.flatMap(pack => Array.isArray(pack) ? pack : pack.guides);
+      if (new Set(guides.map(g => g.id)).size !== guides.length) throw Error('Duplicate guide');
+      const glossary = Object.assign({}, ...packs.map(pack => pack.glossary || {}));
+      if (libDb) await idbPut(libDb, 'edition', {version:manifest.version, guides, glossary}).catch(() => {});
+      masterGuides = guides;
+      customGlossary = glossary;
+      state.libVer = manifest.version;
+      save();
+    }
+    render();
+    if (force) toast(`Loaded ${masterGuides.length.toLocaleString()} guides`);
+  } catch {
+    render();
+    if (force || masterGuides === BUILTIN_STARTER || masterGuides.length <= BUILTIN_STARTER.length) toast('Library unavailable. Showing the guides on this device.');
+  }
+}
+
+
+/* ===================== Combined Guide Helpers ===================== */
+function allGuides() {
+  return [...state.customGuides, ...masterGuides];
+}
+function getGuide(id) {
+  const base = state.customGuides.find(g => g.id === id) || masterGuides.find(g => g.id === id);
+  return withEdits(base);
+}
+function withEdits(base) {
+  if (!base) return null;
+  const ed = state.edits[base.id] || {};
+  return {
+    ...base,
+    title: ed.customTitle || base.title,
+    scenario: ed.customScenario ?? base.scenario,
+    overview: ed.customOverview ?? base.overview,
+    steps: Array.isArray(ed.customSteps) && ed.customSteps.length ? ed.customSteps : base.steps,
+    notes: ed.notes || '',
+    status: ed.status || '',
+    isEdited: !!(ed.customScenario !== undefined || ed.customOverview !== undefined || ed.customTitle || (ed.customSteps && ed.customSteps.length) || ed.notes || base.isCustom)
+  };
+}
+const ownedSet = () => new Set(state.gear.filter(g => g.have !== false).map(g => g.name.toLowerCase()));
+
+/* ===================== Render Views ===================== */
+const view = $('#view');
+
+function render() {
+  applyTheme();
+  $('#syncSlot').innerHTML = syncBadgeHTML();
+  $$('[data-nav]').forEach(b => {
+    const active = b.dataset.nav === ui.tab;
+    b.setAttribute('aria-pressed', String(active));
+    if (b.parentElement && b.parentElement.parentElement === $('#tabbar')) b.setAttribute('aria-current', active ? 'page' : 'false');
+  });
+
+  const total = allGuides().length;
+  $('#sub').textContent = `${total.toLocaleString()} guide${total === 1 ? '' : 's'} · Cindy & Glenn’s field guide`;
+
+  if (ui.tab === 'guides') renderGuides();
+  else if (ui.tab === 'logs') renderLogs();
+  else if (ui.tab === 'gear') renderGear();
+  else renderTools();
+}
+
+function filteredGuides() {
+  const words = ui.q.toLowerCase().split(/\s+/).filter(Boolean);
+  return allGuides().map(withEdits).filter(g => {
+    if (ui.cat !== 'All' && g.cat !== ui.cat) return false;
+    if (ui.filter === 'try-next' && g.status !== 'try-next') return false;
+    if (ui.filter === 'done' && g.status !== 'done') return false;
+    if (ui.filter === 'edited' && !g.isEdited) return false;
+    if (!words.length) return true;
+    const hay = [g.title, g.cat, g.sub, g.scenario, g.overview, ...(g.tags || []), ...(g.gear || []), ...(g.supplies || []), ...(g.steps || []), g.notes].join(' ').toLowerCase();
+    return words.every(w => hay.includes(w));
+  });
+}
+
+function renderPill(item, isOwned) {
+  const def = lookupTerm(item);
+  if (def) {
+    return `<button type="button" class="pill def-btn${isOwned ? ' owned' : ''}" data-def="${esc(def.key)}" aria-expanded="${ui.openDefKey === def.key}">
+      ${isOwned ? '✓ ' : ''}${esc(item)} <span class="qmark" title="What is this?">?</span>
+    </button>`;
+  }
+  return `<span class="pill${isOwned ? ' owned' : ''}">${isOwned ? '✓ ' : ''}${esc(item)}</span>`;
+}
+
+function defCardHTML(key) {
+  if (!key) return '';
+  const all = { ...BUILTIN_GLOSSARY, ...customGlossary };
+  const entry = all[key];
+  if (!entry) return '';
+  const svgMarkup = entry.svg && TOOL_SVGS[entry.svg] ? TOOL_SVGS[entry.svg] : TOOL_SVGS.wrench;
+  return `<div class="def-card" role="region" aria-label="Tool definition">
+    <div class="def-pic">${svgMarkup}</div>
+    <div class="def-body">
+      <div class="def-title"><span>${esc(entry.term)}</span><button type="button" class="btn small ghost" data-def-close style="min-height:28px;padding:0 8px">✕</button></div>
+      <div class="def-desc">${esc(entry.def)}</div>
+      ${entry.aka ? `<div class="def-sub">Also known as: ${esc(entry.aka)}</div>` : ''}
+    </div>
+  </div>`;
+}
+
+function stepFigureHTML(figure) {
+  const src = figure.png ? 'data:image/png;base64,' + figure.png : './figures/' + figure.plate + '.svg';
+  return `<figure class="step-figure">
+    <button class="figure-open" type="button" aria-haspopup="dialog" aria-label="Enlarge: ${esc(figure.title)}">
+      <img loading="lazy" src="${esc(src)}" alt="${esc(figure.alt)}">
+    </button>
+    <figcaption><strong>${esc(figure.title)}</strong>${figure.caption ? `<span class="figure-note">${esc(figure.caption)}</span>` : ''}</figcaption>
+  </figure>`;
+}
+
+function openFigure(button) {
+  const figure = button.closest('figure');
+  const reader = $('#figure-reader');
+  const frame = $('.figure-scroll', reader);
+  const source = $('img', button);
+  const image = $('img', frame);
+  image.src = source.currentSrc || source.src;
+  image.alt = source.alt;
+  $('#figure-heading').textContent = $('figcaption strong', figure).textContent;
+  $('#figure-description').textContent = $('.figure-note', figure)?.textContent || source.alt;
+  frame.classList.remove('zoomed');
+  const zoom = $('#figure-zoom');
+  zoom.setAttribute('aria-pressed', 'false');
+  zoom.textContent = 'Zoom in';
+  zoom.onclick = () => {
+    const enlarged = frame.classList.toggle('zoomed');
+    zoom.setAttribute('aria-pressed', String(enlarged));
+    zoom.textContent = enlarged ? 'Fit illustration' : 'Zoom in';
+  };
+  $('#figure-close').onclick = () => reader.close();
+  reader.showModal();
+  frame.scrollTo(0, 0);
+}
+
+function guideDetailHTML(id) {
+  const g = getGuide(id);
+  if (!g) return '<div class="card guide-box empty"><h2>Select a guide</h2><p>Pick any guide from the list to view instructions, edit steps, or add margin notes.</p></div>';
+  const owned = ownedSet();
+  const isOwned = item => [...owned].some(o => item.toLowerCase().includes(o) || o.includes(item.toLowerCase()));
+
+  const activeDef = ui.openDefKey && [...(g.gear || []), ...(g.supplies || [])].some(x => {
+    const d = lookupTerm(x);
+    return d && d.key === ui.openDefKey;
+  }) ? ui.openDefKey : '';
+
+  return `<article class="card guide-box">
+    <div class="guide-head">
+      <div>
+        <div style="margin-bottom:6px">
+          <span class="badge acc">${esc(g.cat)}</span>
+          ${g.sub ? `<span class="badge">${esc(g.sub)}</span>` : ''}
+          ${g.isCustom ? '<span class="badge ok">Custom Guide</span>' : g.isEdited ? '<span class="badge warn">Edited</span>' : ''}
+        </div>
+        <h2>${esc(g.title)}</h2>
+      </div>
+      <button type="button" class="btn small" data-act="edit-guide" data-id="${esc(g.id)}">✎ Edit / Note</button>
+    </div>
+
+    ${g.scenario ? `<section class="field-section scene"><h3>About this guide</h3><p>${esc(g.scenario)}</p></section>` : ''}
+
+    <div class="chips wrap-chips" style="margin-bottom:10px">
+      <button type="button" class="chip" data-act="status" data-id="${esc(g.id)}" data-st="try-next" aria-pressed="${g.status === 'try-next'}">📌 Try Next</button>
+      <button type="button" class="chip" data-act="status" data-id="${esc(g.id)}" data-st="done" aria-pressed="${g.status === 'done'}">✅ Done</button>
+      <button type="button" class="chip" data-act="log-guide" data-id="${esc(g.id)}">🧪 Log Attempt</button>
+    </div>
+
+    <div class="meta-grid">
+      <div class="meta-tile"><div class="lbl">Difficulty</div><div class="val">${esc(g.diff || 'Easy')}</div></div>
+      <div class="meta-tile"><div class="lbl">Time</div><div class="val">${esc(g.time || 'Varies')}</div></div>
+    </div>
+
+    ${g.notes ? `<div class="callout note"><b>Cindy’s Note:</b><br>${esc(g.notes).replace(/\n/g, '<br>')}</div>` : ''}
+
+    ${(g.gear && g.gear.length) ? `<div class="sec-h"><span>Tools &amp; Gear <span style="font-weight:400;text-transform:none">(tap ? for definition &amp; diagram)</span></span></div><div class="pill-list">${g.gear.map(x => renderPill(x, isOwned(x))).join('')}</div>` : ''}
+
+    ${activeDef ? defCardHTML(activeDef) : ''}
+
+    ${(g.supplies && g.supplies.length) ? `<div class="sec-h"><span>Supplies &amp; Ingredients</span></div><div class="pill-list">${g.supplies.map(x => renderPill(x, isOwned(x))).join('')}</div>` : ''}
+
+    <div class="sec-h"><span>Step-by-Step Instructions</span></div>
+    <ol class="steps">${(g.steps || []).map(s => {
+      const added = g.isCustom ? [] : (g.illustrations || []).filter(f => f.step === s && /^[a-z0-9-]+$/.test(f.plate));
+      const figures = [...figuresForStep(fieldFigures, g, s), ...added].map(stepFigureHTML).join('');
+      return `<li>${esc(s)}${figures}</li>`;
+    }).join('')}</ol>
+
+    ${g.safety ? `<div class="callout warn"><b>⚠️ Safety &amp; Key Tip:</b> ${esc(g.safety)}</div>` : ''}
+    ${(g.sources || []).some(s => Array.isArray(s) && /^https?:\/\//i.test(s[1])) ? `<h3 class="sec-h">References</h3><ul class="source-list">${g.sources.filter(s => Array.isArray(s) && /^https?:\/\//i.test(s[1])).map(([label,url]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a></li>`).join('')}</ul>` : ''}
+    ${g.overview ? `<section class="field-section overview"><h3>Overview</h3><p>${esc(g.overview)}</p></section>` : ''}
+  </article>`;
+}
+
+function renderGuides() {
+  const list = filteredGuides();
+  const selected = list.find(g => g.id === ui.selectedId) || list[0];
+  if (selected) ui.selectedId = selected.id;
+  const groups = new Map();
+  for (const guide of list) {
+    const group = ui.cat === 'All' ? guide.cat : guide.sub || guide.cat;
+    if (!groups.has(group)) groups.set(group, []);
+    groups.get(group).push(guide);
+  }
+  const guideOptions = [...groups].map(([label, entries]) =>
+    `<optgroup label="${esc(label)}">${entries.sort((a, b) => a.title.localeCompare(b.title)).map(g =>
+      `<option value="${esc(g.id)}" ${selected?.id === g.id ? 'selected' : ''}>${esc(g.title)}</option>`
+    ).join('')}</optgroup>`
+  ).join('');
+  view.innerHTML = `<div class="reader-layout">
+    <nav class="reader-controls" aria-label="Find a field guide">
+      <h2>Find a guide</h2>
+      <label for="chapter">Chapter</label>
+      <select id="chapter">${CATEGORIES.map(c => `<option value="${esc(c)}" ${ui.cat === c ? 'selected' : ''}>${esc(c === 'All' ? 'All chapters' : c)}</option>`).join('')}</select>
+      <label for="guide-picker">Guide <small>${list.length.toLocaleString()} available</small></label>
+      <select id="guide-picker" ${list.length ? '' : 'disabled'}>${guideOptions || '<option>No matching guides</option>'}</select>
+      <details class="reader-options" ${ui.showSearch ? 'open' : ''}><summary>Search and reading lists</summary>
+      <label for="q">Search this selection</label>
+      <input id="q" type="search" placeholder="A skill, situation or ingredient…" value="${esc(ui.q)}" autocomplete="off">
+      <label for="reading-filter">Reading list</label>
+      <select id="reading-filter">${[['all','All guides'],['try-next','Try next'],['done','Done'],['edited','Edited or annotated']].map(([v,label]) =>
+        `<option value="${v}" ${v === ui.filter ? 'selected' : ''}>${label}</option>`).join('')}</select>
+      </details>
+    </nav>
+    <div class="reading-page">${selected ? guideDetailHTML(selected.id) : `<section class="empty card"><h2>No matching guides</h2><p>Try a different chapter, reading list or search.</p><button class="btn" type="button" data-act="clear-guide-filters">Show all guides</button></section>`}</div>
+  </div>`;
+}
+
+function openGuide(id) {
+  ui.tab = 'guides';
+  ui.selectedId = id;
+  ui.cat = getGuide(id)?.cat || 'All';
+  ui.q = '';
+  ui.filter = 'all';
+  ui.openDefKey = '';
+}
+
+
+
+function renderLogs() {
+  const tryNext = allGuides().map(g => getGuide(g.id)).filter(g => g.status === 'try-next');
+  let html = `<div class="sec-h"><span>📌 Try-Next Queue (${tryNext.length})</span></div>`;
+  html += tryNext.length
+    ? `<div class="card"><div class="list">${tryNext.map(g => `<button type="button" class="row" data-jump-guide="${esc(g.id)}"><div class="row-main"><div class="row-title">${esc(g.title)}</div><div class="row-sub">${esc(g.cat)} · ${esc(g.time || '')}</div></div></button>`).join('')}</div></div>`
+    : `<div class="card pad muted">No projects queued yet. Open any guide and tap <b>📌 Try Next</b>.</div>`;
+
+  html += `<div class="sec-h"><span>🧪 Experiment &amp; Garden Log (${state.logs.length})</span><button type="button" class="btn small primary" data-act="new-log">+ Log Batch</button></div>`;
+  html += state.logs.length
+    ? `<div class="card"><div class="list">${state.logs.slice().sort((a, b) => (b.date || '').localeCompare(a.date || '')).map(l => {
+        const badge = l.rating === 'again' ? '<span class="badge ok">Make Again</span>' : l.rating === 'tweak' ? '<span class="badge warn">Tweak Next Time</span>' : '<span class="badge">Logged</span>';
+        return `<button type="button" class="row" data-edit-log="${esc(l.id)}"><div class="row-main"><div class="row-title">${esc(l.title)} ${badge}</div><div class="row-sub">${esc(l.date || '')}${l.notes ? ' — ' + esc(l.notes) : ''}</div></div></button>`;
+      }).join('')}</div></div>`
+    : `<div class="card pad muted">Record cheese batches, sourdough bakes, seed germination tests, or repairs here.</div>`;
+
+  view.innerHTML = html;
+}
+
+function renderGear() {
+  const tools = state.gear.filter(g => g.kind !== 'seed');
+  const seeds = state.gear.filter(g => g.kind === 'seed');
+
+  let html = `<div class="sec-h"><span>🧰 What We Already Own (${tools.length})</span><button type="button" class="btn small primary" data-act="new-gear" data-kind="gear">+ Add Gear</button></div>
+    <p class="hint" style="margin:0 4px 8px">Items listed here automatically highlight with a green ✓ inside matching guides.</p>`;
+  html += tools.length
+    ? `<div class="card"><div class="list">${tools.map(g => `<button type="button" class="row" data-edit-gear="${esc(g.id)}"><div class="row-main"><div class="row-title">${g.have !== false ? '✓ ' : ''}${esc(g.name)}</div><div class="row-sub">${esc(g.category || 'Kitchen / Home')}${g.note ? ' · ' + esc(g.note) : ''}</div></div></button>`).join('')}</div></div>`
+    : `<div class="card pad muted">Add gear Cindy already owns (e.g., Freeze dryer, Butter muslin, Instant-read thermometer, Dutch oven, Multimeter).</div>`;
+
+  html += `<div class="sec-h"><span>🌱 Friendswood Seed Vault (${seeds.length})</span><button type="button" class="btn small primary" data-act="new-gear" data-kind="seed">+ Add Seed</button></div>`;
+  html += seeds.length
+    ? `<div class="card"><div class="list">${seeds.map(s => `<button type="button" class="row" data-edit-gear="${esc(s.id)}"><div class="row-main"><div class="row-title">🌱 ${esc(s.name)}</div><div class="row-sub">${esc(s.category || 'Spring/Fall')}${s.date ? ' · Packed ' + esc(s.date) : ''}${s.note ? ' · ' + esc(s.note) : ''}</div></div></button>`).join('')}</div></div>`
+    : `<div class="card pad muted">Track heirloom seed packets, packing years, and Gulf Coast planting windows here.</div>`;
+
+  const allGloss = Object.values({ ...BUILTIN_GLOSSARY, ...customGlossary });
+  html += `<div class="sec-h"><span>📖 Specialty Tool &amp; Supply Glossary (${allGloss.length})</span></div>
+    <p class="hint" style="margin:0 4px 8px">Visual reference for specialty homesteading, kitchen, and repair tools.</p>`;
+  html += allGloss.map(entry => {
+    const svgMarkup = entry.svg && TOOL_SVGS[entry.svg] ? TOOL_SVGS[entry.svg] : TOOL_SVGS.wrench;
+    return `<div class="def-card" style="margin:8px 0">
+      <div class="def-pic">${svgMarkup}</div>
+      <div class="def-body">
+        <div class="def-title"><span>${esc(entry.term)}</span></div>
+        <div class="def-desc">${esc(entry.def)}</div>
+        ${entry.aka ? `<div class="def-sub">Also known as: ${esc(entry.aka)}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  view.innerHTML = html;
+}
+
+function renderTools() {
+  const editedCount = Object.keys(state.edits).length + state.customGuides.length;
+  const u = Sync.user();
+  view.innerHTML = `
+    <div class="sec-h"><span>📤 Send Edits to Glenn</span></div>
+    <div class="card pad">
+      <p>Whenever Cindy edits a guide, adds a margin note, or writes a new custom guide (${editedCount} total right now), tap below to email or share a clean file with Glenn so he can merge it into the master library.</p>
+      <div class="foot" style="justify-content:flex-start;margin-bottom:0">
+        <button type="button" class="btn primary" data-act="export-edits">✉️ Backup &amp; Email Edits to Glenn</button>
+      </div>
+    </div>
+
+    <div class="sec-h"><span>☁️ Automated Multi-Device Sync</span></div>
+    <div class="card pad">
+      <p>${syncText().icon} <b>${esc(syncText().text)}</b></p>
+      <p class="muted">Sign in once on Cindy’s iPhone, iPad, and PC to keep her notes, edits, Try-Next list, gear, and logs automatically synced across all devices.</p>
+      ${u
+        ? `<button type="button" class="btn" data-act="signout">Sign out (${esc(u.email)})</button>`
+        : `<button type="button" class="btn primary" data-act="signin">Sign in to sync</button>`}
+    </div>
+
+    <div class="sec-h"><span>💾 Full App Backup &amp; Library Refresh</span></div>
+    <div class="card pad">
+      <div class="foot" style="justify-content:flex-start;margin:0">
+        <button type="button" class="btn" data-act="full-backup">Back up all user data</button>
+        <button type="button" class="btn" data-act="full-restore">Restore backup</button>
+        <button type="button" class="btn" data-act="refresh-packs">Check for new guide packs</button>
+      </div>
+    </div>
+
+    <div class="sec-h"><span>🎨 Theme (This Device)</span></div>
+    <div class="card pad">${themesHTML()}</div>
+  `;
+}
+
+/* ===================== Dialogs for Editing, Logging, Gear ===================== */
+function editGuideDialog(id) {
+  const g = getGuide(id);
+  if (!g) return;
+  const ed = state.edits[id] || {};
+  formDialog({
+    title: 'Edit Guide / Add Note',
+    intro: 'Your edits and notes stay safely layered on top of the master guide and sync automatically.',
+    fields: [
+      { name: 'notes', label: 'Cindy’s Margin Note', type: 'textarea', value: ed.notes || '', placeholder: 'Tweaks, temperatures, family feedback, or reminders…' },
+      { name: 'customTitle', label: 'Title', value: g.title },
+      { name: 'customScenario', label: 'About / scenario', type: 'textarea', value: g.scenario || '' },
+      { name: 'customOverview', label: 'Closing overview', type: 'textarea', value: g.overview || '' },
+      { name: 'customSteps', label: 'Steps (one step per line)', type: 'textarea', value: (g.steps || []).join('\n') }
+    ],
+    extra: ed.customScenario !== undefined || ed.customOverview !== undefined || ed.customTitle || ed.customSteps || ed.notes ? [{
+      label: 'Reset to Original',
+      kind: 'danger',
+      onClick: () => { delete state.edits[id]; $('#dlg').close(); commit(); toast('Reset guide to original'); }
+    }] : [],
+    onSubmit: v => {
+      const steps = v.customSteps.split(/\r?\n/).map(x => x.trim()).filter(Boolean);
+      const base = allGuides().find(x => x.id === id);
+      state.edits[id] = {
+        ...ed,
+        id,
+        notes: clampStr(v.notes, 2000),
+        customTitle: base && v.customTitle.trim() === base.title ? '' : clampStr(v.customTitle, 120),
+        customSteps: base && JSON.stringify(steps) === JSON.stringify(base.steps) ? null : steps,
+        updatedAt: Date.now()
+      };
+      for (const [key, baseKey] of [['customScenario','scenario'],['customOverview','overview']]) {
+        const value = clampStr(v[key],3000);
+        if (value === (base[baseKey] || '')) delete state.edits[id][key];
+        else state.edits[id][key] = value;
+      }
+      commit();
+      toast('Saved guide edits');
+    }
+  });
+}
+
+function newCustomGuideDialog() {
+  formDialog({
+    title: 'Add New Guide',
+    fields: [
+      { name: 'title', label: 'Guide Title', required: true, placeholder: 'e.g. Homemade Cultured Butter' },
+      { name: 'cat', label: 'Category', type: 'select', options: CATEGORIES.filter(c => c !== 'All') },
+      { name: 'sub', label: 'Subcategory', placeholder: 'e.g. Dairy, Electrical, Canning' },
+      { name: 'time', label: 'Estimated Time', placeholder: 'e.g. 30 mins' },
+      { name: 'gear', label: 'Gear Needed (comma-separated)', placeholder: 'Stand mixer, Strainer' },
+      { name: 'supplies', label: 'Supplies / Ingredients (comma-separated)', placeholder: '1 qt heavy cream, Salt' },
+      { name: 'scenario', label: 'About / scenario', type: 'textarea' },
+      { name: 'overview', label: 'Closing overview', type: 'textarea' },
+      { name: 'steps', label: 'Steps (one per line)', type: 'textarea', required: true },
+      { name: 'safety', label: 'Safety / Key Tip', placeholder: 'Optional warning or tip' }
+    ],
+    onSubmit: v => {
+      const id = 'cust-' + uid();
+      state.customGuides.unshift({
+        id,
+        scenario: clampStr(v.scenario, 3000),
+        overview: clampStr(v.overview, 3000),
+        isCustom: true,
+        cat: v.cat,
+        sub: clampStr(v.sub, 50),
+        title: clampStr(v.title, 120),
+        diff: 'Easy',
+        time: clampStr(v.time, 40) || 'Varies',
+        gear: v.gear.split(',').map(x => x.trim()).filter(Boolean),
+        supplies: v.supplies.split(',').map(x => x.trim()).filter(Boolean),
+        steps: v.steps.split(/\r?\n/).map(x => x.trim()).filter(Boolean),
+        safety: clampStr(v.safety, 400),
+        tags: ['custom'],
+        updatedAt: Date.now()
+      });
+      openGuide(id);
+      commit();
+      toast('Added custom guide');
+    }
+  });
+}
+
+function logDialog(existing, prefillGuide) {
+  formDialog({
+    title: existing ? 'Edit Experiment / Garden Log' : 'Log Batch or Attempt',
+    fields: [
+      { name: 'title', label: 'Project / Batch', required: true, value: existing ? existing.title : prefillGuide ? prefillGuide.title : '', placeholder: 'e.g. First Ricotta Batch' },
+      { name: 'date', label: 'Date', type: 'date', required: true, value: existing ? existing.date : todayISO() },
+      { name: 'rating', label: 'Verdict', type: 'select', value: existing ? existing.rating : 'again', options: [['again', '✅ Would make / do again'], ['tweak', '🔧 Good, tweak next time'], ['skip', '⏭️ Skip next time']] },
+      { name: 'notes', label: 'Notes & Results', type: 'textarea', value: existing ? existing.notes : '', placeholder: 'What worked, what to change, germination rate, yield…' }
+    ],
+    onDelete: existing ? async () => {
+      state.logs = state.logs.filter(x => x.id !== existing.id);
+      commit(); return true;
+    } : null,
+    onSubmit: v => {
+      if (existing) {
+        Object.assign(existing, { title: clampStr(v.title, 120), date: v.date, rating: v.rating, notes: clampStr(v.notes, 1500) });
+      } else {
+        state.logs.unshift({ id: uid(), guideId: prefillGuide ? prefillGuide.id : '', title: clampStr(v.title, 120), date: v.date, rating: v.rating, notes: clampStr(v.notes, 1500) });
+      }
+      commit();
+      toast('Saved log entry');
+    }
+  });
+}
+
+function gearDialog(existing, defaultKind = 'gear') {
+  const kind = existing ? existing.kind : defaultKind;
+  formDialog({
+    title: existing ? 'Edit Item' : kind === 'seed' ? 'Add Heirloom Seed' : 'Add Gear We Own',
+    fields: [
+      { name: 'name', label: kind === 'seed' ? 'Seed Variety' : 'Tool / Supply Name', required: true, value: existing ? existing.name : '', placeholder: kind === 'seed' ? 'e.g. Cherokee Purple Tomato' : 'e.g. Butter muslin / Thermometer' },
+      { name: 'category', label: kind === 'seed' ? 'Planting Season' : 'Category', value: existing ? existing.category : '', placeholder: kind === 'seed' ? 'Spring (Feb–Apr) / Fall' : 'Kitchen, Electrical, Camping' },
+      { name: 'date', label: kind === 'seed' ? 'Packet Year / Date' : 'Note', value: existing ? (existing.date || existing.note) : '', placeholder: kind === 'seed' ? '2026' : 'Location or size' },
+      { name: 'have', label: 'Currently on hand', type: 'checkbox', value: existing ? existing.have !== false : true }
+    ],
+    onDelete: existing ? async () => {
+      state.gear = state.gear.filter(x => x.id !== existing.id);
+      commit(); return true;
+    } : null,
+    onSubmit: v => {
+      const rec = {
+        id: existing ? existing.id : uid(),
+        kind,
+        name: clampStr(v.name, 100),
+        category: clampStr(v.category, 60),
+        date: kind === 'seed' ? clampStr(v.date, 30) : '',
+        note: kind === 'seed' ? '' : clampStr(v.date, 200),
+        have: !!v.have
+      };
+      if (existing) Object.assign(existing, rec); else state.gear.unshift(rec);
+      commit();
+      toast('Saved item');
+    }
+  });
+}
+
+/* ===================== Export Edits to Glenn ===================== */
+async function exportEditsToGlenn() {
+  const editedGuides = Object.values(state.edits).map(ed => {
+    const base = allGuides().find(g => g.id === ed.id);
+    return { ...ed, originalTitle: base ? base.title : ed.id };
+  });
+  const payload = {
+    app: APP_ID,
+    type: 'cindy-edits-diff',
+    exportedAt: new Date().toISOString(),
+    editedGuides,
+    customGuides: state.customGuides
+  };
+  if (!editedGuides.length && !state.customGuides.length) {
+    await msgBox('Nothing to send yet', 'Cindy hasn’t edited any guides or added margin notes yet.');
+    return;
+  }
+  const text = JSON.stringify(payload, null, 2);
+  const res = await deliverFile(`cindy-field-guide-edits-${todayISO()}.json`, text);
+  if (res === 'downloaded') toast('Edits file downloaded — attach to email to Glenn');
+}
+
+
+
+/* ===================== Event Listeners ===================== */
+document.addEventListener('click', async e => {
+  const nav = e.target.closest('[data-nav]');
+  if (nav) {
+    ui.tab = nav.dataset.nav;
+    render();
+    window.scrollTo(0, 0);
+    return;
+  }
+  if (e.target.closest('[data-action="sync-info"]')) {
+    if (Sync.status() === 'signed-out') syncSignInDialog();
+    else await msgBox('Sync Status', syncText().text);
+  }
+});
+
+$('#topSearchBtn').onclick = () => {
+  ui.tab = 'guides';
+  ui.showSearch = true;
+  render();
+  const det = $('.reader-options');
+  if (det) det.open = true;
+  const q = $('#q');
+  if (q) {
+    q.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    q.focus();
+    q.select();
+  }
+};
+$('#viewBtn').onclick = () => askDialog({ title: 'Theme', body: themesHTML(), buttons: [{ label: 'Done', value: true, kind: 'primary' }] });
+$('#fabBtn').onclick = $('#deskAddBtn').onclick = () => {
+  if (ui.tab === 'logs') logDialog(null, null);
+  else if (ui.tab === 'gear') gearDialog(null, 'gear');
+  else newCustomGuideDialog();
+};
+
+view.addEventListener('toggle', e => {
+  if (e.target.matches('.reader-options') && e.target.isConnected) ui.showSearch = e.target.open;
+}, true);
+
+view.addEventListener('change', e => {
+  const controls = {chapter:'cat', 'guide-picker':'selectedId', 'reading-filter':'filter'};
+  const key = controls[e.target.id];
+  if (!key) return;
+  const id = e.target.id;
+  ui[key] = e.target.value;
+  ui.openDefKey = '';
+  render();
+  document.getElementById(id)?.focus({preventScroll:true});
+  if (id === 'guide-picker') window.scrollTo(0, 0);
+});
+
+view.addEventListener('input', e => {
+  if (e.target.id === 'q') {
+    ui.q = e.target.value;
+    const pos = e.target.selectionStart;
+    render();
+    const q = $('#q');
+    if (q) { q.focus(); try { q.setSelectionRange(pos, pos); } catch {} }
+  }
+});
+
+view.addEventListener('click', async e => {
+  const illustration = e.target.closest('.figure-open');
+  if (illustration) { openFigure(illustration); return; }
+
+  const defBtn = e.target.closest('[data-def]');
+  if (defBtn) {
+    const k = defBtn.dataset.def;
+    ui.openDefKey = ui.openDefKey === k ? '' : k;
+    render();
+    return;
+  }
+  if (e.target.closest('[data-def-close]')) {
+    ui.openDefKey = '';
+    render();
+    return;
+  }
+
+
+  const jg = e.target.closest('[data-jump-guide]');
+  if (jg) { openGuide(jg.dataset.jumpGuide); render(); window.scrollTo(0, 0); return; }
+  const elLog = e.target.closest('[data-edit-log]');
+  if (elLog) { const item = state.logs.find(x => x.id === elLog.dataset.editLog); if (item) logDialog(item); return; }
+  const elGear = e.target.closest('[data-edit-gear]');
+  if (elGear) { const item = state.gear.find(x => x.id === elGear.dataset.editGear); if (item) gearDialog(item); return; }
+
+  const act = e.target.closest('[data-act]');
+  if (!act) return;
+  const id = act.dataset.id;
+  switch (act.dataset.act) {
+    case 'clear-guide-filters': ui.q = ''; ui.cat = 'All'; ui.filter = 'all'; render(); break;
+    case 'edit-guide': editGuideDialog(id); break;
+    case 'status': {
+      const cur = (state.edits[id] && state.edits[id].status) || '';
+      const next = cur === act.dataset.st ? '' : act.dataset.st;
+      state.edits[id] = { ...(state.edits[id] || { id }), status: next, updatedAt: Date.now() };
+      commit();
+      break;
+    }
+    case 'log-guide': logDialog(null, getGuide(id)); break;
+    case 'new-log': logDialog(null, null); break;
+    case 'new-gear': gearDialog(null, act.dataset.kind || 'gear'); break;
+    case 'export-edits': await exportEditsToGlenn(); break;
+    case 'signin': syncSignInDialog(); break;
+    case 'signout': if (await confirmBox('Sign out?', 'Stop syncing on this device?', 'Sign out', false)) await Sync.signOut(); break;
+    case 'full-backup': {
+      const txt = JSON.stringify({ app: APP_ID, schemaVersion: SCHEMA, exportedAt: new Date().toISOString(), data: state }, null, 2);
+      await deliverFile(`field-home-backup-${todayISO()}.json`, txt);
+      break;
+    }
+    case 'full-restore': {
+      const f = await pickFile(); if (!f) return;
+      try {
+        const parsed = JSON.parse(await readFileText(f));
+        if (parsed.app !== APP_ID || !parsed.data) throw new Error('Not a Field & Home backup file.');
+        state = normState(parsed.data);
+        commit(); toast('Backup restored');
+      } catch (err) { await msgBox('Restore failed', err.message); }
+      break;
+    }
+    case 'refresh-packs': await loadLibraryPacks(true); break;
+  }
+});
+
+if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+  window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
+}
+
+(async function init() {
+  try {
+    db = await openDB(DB_NAME);
+    const raw = await idbGet(db, 'state');
+    if (raw) state = normState(JSON.parse(raw));
+  } catch {}
+  applyTheme();
+  render();
+  loadLibraryPacks(false);
+  Sync.onChange(() => render());
+  Sync.start({ db, key: 'sync', model: syncModel }).catch(() => {});
+})();
+</script>
+</body>
+</html>

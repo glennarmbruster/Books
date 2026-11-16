@@ -12,7 +12,10 @@
     body {margin:0; background:#f6f2e7; color:#26362f; font:17px/1.55 system-ui,sans-serif}
     main {max-width:68rem; margin:auto; padding:clamp(2rem,6vw,5rem)}
     h1 {font:normal clamp(3rem,8vw,5.5rem)/1 Georgia,serif; margin:0 0 2rem; padding-bottom:1.1rem; border-bottom:2px solid #88724a}
-    article {display:inline-grid; gap:.9rem; width:min(100%,21rem)}
+    .shelf {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),21rem)); gap:2rem; align-items:start}
+    article {display:grid; gap:.9rem}
+    .cover.field-cover {background:#394f44; border-left-color:#24392e}
+    .edition-link {color:#214a41; justify-self:start}
     .cover {min-height:22rem; padding:1.8rem; border-left:10px solid #122f2b; border-radius:4px 10px 10px 4px; background:#214a41; color:#f8eed4; text-decoration:none; display:grid; align-content:space-between; gap:2rem; box-shadow:2px 3px #c1b394,3px 5px #756e55}
     .cover img {width:58px; height:58px; border-radius:50%}
     h2 {font:normal 2.85rem/1 Georgia,serif; letter-spacing:-.045em; margin:0}
@@ -25,15 +28,27 @@
 <body>
   <main>
     <h1>Books</h1>
-    <article data-book="last-port-casebook" data-edition="volume-1-100">
-      <a class="cover" href="./last-port-casebook/index.html">
-        <img src="./last-port-casebook/icon.png" alt="">
-        <h2>The Last Port Casebook</h2>
-        <small>100 mystery puzzles &amp; companion answer book →</small>
-      </a>
-      <button type="button" hidden>Download for offline use</button>
-      <p role="status"></p>
-    </article>
+    <section class="shelf" aria-label="Bookshelf">
+      <article data-book="last-port-casebook" data-edition="volume-1-100">
+        <a class="cover" href="./last-port-casebook/index.html">
+          <img src="./last-port-casebook/icon.png" alt="">
+          <h2>The Last Port Casebook</h2>
+          <small>100 mystery puzzles &amp; companion answer book →</small>
+        </a>
+        <button type="button" hidden>Download for offline use</button>
+        <p role="status"></p>
+      </article>
+      <article data-book="field-and-home" data-edition="2026.11.16-field-atlas-r2">
+        <a class="cover field-cover" href="./field-and-home/index.html">
+          <img src="./field-and-home/icon-192.png" alt="">
+          <h2>Field &amp; Home</h2>
+          <small>769 illustrated and text guides to survival, home repair, cooking and more →</small>
+        </a>
+        <button type="button" hidden>Download for offline use</button>
+        <a class="edition-link" href="./field-and-home/Field-and-Home.epub" download>Download for Apple Books (.epub)</a>
+        <p role="status"></p>
+      </article>
+    </section>
   </main>
   <script>
     async function activeWorker(registration) {
@@ -73,7 +88,7 @@
       }
       button.onclick = async () => {
         button.disabled = true;
-        status.textContent = 'Downloading the book and answers…';
+        status.textContent = 'Downloading for offline use…';
         try {
           await shelfReady;
           const reg = await navigator.serviceWorker.register(new URL('sw.js', folder), {updateViaCache: 'none'});
