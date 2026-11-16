@@ -1,7 +1,7 @@
 # Books
 
-- [The Last Port Casebook](./last-port-casebook/) — 400 mystery puzzles and a companion answer book.
-- [The Prism Cabinet](./prism-cabinet/) — 400 illustrated and text challenges with hints and a companion answer book.
+- [The Last Port Casebook](./last-port-casebook/) — 500 mystery puzzles and a companion answer book.
+- [The Prism Cabinet](./prism-cabinet/) — 500 illustrated and text challenges with hints and a companion answer book.
 - [Field & Home](./field-and-home/) — the searchable Survival Book, with 769 guides. [Download the Apple Books edition](./field-and-home/Field-and-Home.epub?raw=true).
 - [The Desk Dictionary & Thesaurus](./desk-dictionary/) — offline English definitions, sense-grouped synonyms and antonyms, fuzzy spelling search, and regional variants. [Data credits](./desk-dictionary/credits.html).
 - [Score Book](./score-book/) — offline round scores, running totals and dated scorecards.
