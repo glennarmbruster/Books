@@ -19043,5 +19043,6360 @@ const puzzles = [
     "why": "Subtract six minutes: the moon was still there after the 8:04 handoff and gone by 8:11. Only slot 3, at 8:08, fits. To identify its collector, notice that Inez precedes the Otis–Bea pair and Jules cannot be first. This alone allows Inez, Jules, Otis, Bea as well as other arrangements; the extra stub showing Bea collected before Jules fixes the order as Inez, Otis, Bea, Jules. The third word on Bea’s row is LEND. The directory supplies the destination and the return after one night.",
     "kind": "Detective skills",
     "id": 300
+  },
+  {
+    "title": "How the blue comma traveled",
+    "level": "Medium",
+    "intro": "The harbor printer wants to mount three successive editions of a menu in the order they were typeset. Someone has arranged them by the fading of their blue ink. The printer remembers two corrections to the actual type, and says no correction was ever undone.",
+    "clues": [
+      "All three came from the same standing type. Each print was taken at a different stage: before either correction, between them, or after both.",
+      "One correction removed a comma after BREAD; the other changed PARE to PEAR. The printer cannot remember which she made first."
+    ],
+    "questions": [
+      "Put the menus in printing order and name the first correction.",
+      "Which evidence dates the type even if one sheet spent a summer in the sun?"
+    ],
+    "answer": "Rose, Kite, then Fern. The fruit spelling was corrected first.",
+    "why": "Rose preserves both old readings. Fern has neither. Kite already reads PEAR but still has the comma, placing it between them. The shared state of the type fixes the order independently of how dark the ink looks.",
+    "tables": [
+      [
+        "The surviving sheets",
+        [
+          "Mount",
+          "Bread line",
+          "Fruit line"
+        ],
+        [
+          [
+            "Fern",
+            "BREAD",
+            "PEAR"
+          ],
+          [
+            "Rose",
+            "BREAD,",
+            "PARE"
+          ],
+          [
+            "Kite",
+            "BREAD,",
+            "PEAR"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 301
+  },
+  {
+    "title": "The pearl button in the chorus",
+    "level": "Medium",
+    "intro": "The Pearl Button was a tiny prize traditionally passed to the singer who began the last verse. At this year’s supper the four choristers sang a round. An old sailor wrote “the third tune won it” on a napkin. All four singers sang the same tune, so the choirmaster asks Sal to reconstruct the order of entry.",
+    "clues": [
+      "One singer began in each of four successive measures. They started at different times, stayed in that order throughout, and the third singer to begin was the one who started the last verse.",
+      "Ada started exactly two measures before Len. Odo began later than Len. Fia was the remaining singer."
+    ],
+    "questions": [
+      "Who won the pearl button? Which singer did the old sailor mean by “the third tune”?"
+    ],
+    "answer": "Len won. The sailor meant the third entry of the same tune.",
+    "why": "Ada and Len could occupy 1 and 3 or 2 and 4. Odo needs a position later than Len, so Len cannot be fourth. The entries must be Ada, Fia, Len, Odo. Third entry means Len, not a different melody.",
+    "kind": "Whodunit",
+    "id": 302
+  },
+  {
+    "title": "Where the red glass goes",
+    "level": "Medium",
+    "intro": "The glassmaker is restoring a two-row shop window. Each row has three panes, called left, middle and right as seen from the street. A rubbing lost all the colors but preserved the maker’s count lines.",
+    "clues": [
+      "Each pane was either red or clear. The top row had two red panes and the bottom row one. Each vertical pair contained one red and one clear.",
+      "A surviving note says the top-left and top-middle panes matched one another."
+    ],
+    "questions": [
+      "Restore the six pane colors."
+    ],
+    "answer": "Top: red, red, clear. Bottom: clear, clear, red.",
+    "why": "The matching top pair cannot both be clear because the top row needs two reds. Make them red and leave the last top pane clear. Inverting each color underneath supplies exactly one red in every column.",
+    "tableform": {
+      "rows": [
+        "Top left",
+        "Top middle",
+        "Top right",
+        "Bottom left",
+        "Bottom middle",
+        "Bottom right"
+      ],
+      "cols": [
+        [
+          "Glass",
+          "Red",
+          "Clear"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 303
+  },
+  {
+    "title": "One key struck twice",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "An unsigned note came with the typing champion’s trophy. Her crossword describes the machine she used. The ribbon envelope carries one more clue.",
+    "entries": [
+      {
+        "x": 1,
+        "y": 1,
+        "dir": "Across",
+        "word": "SPACE",
+        "clue": "What the long bar inserts"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "dir": "Down",
+        "word": "TAB",
+        "clue": "Skip straight to a preset position"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "dir": "Down",
+        "word": "BELL",
+        "clue": "Sound warning that the line is nearly full"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "dir": "Across",
+        "word": "ELITE",
+        "clue": "Traditional typewriter pitch of twelve characters per inch"
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "dir": "Down",
+        "word": "RETURN",
+        "clue": "Carriage action at the end of a line"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "dir": "Down",
+        "word": "SPOOL",
+        "clue": "Wheel that holds a wound ink strip"
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "dir": "Across",
+        "word": "PLATEN",
+        "clue": "Rubber roller behind the page"
+      },
+      {
+        "x": 3,
+        "y": 7,
+        "dir": "Across",
+        "word": "MARGIN",
+        "clue": "Blank area at either side of a typed page"
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "dir": "Down",
+        "word": "PAPER",
+        "clue": "Sheet gripped by the feed rollers"
+      },
+      {
+        "x": 0,
+        "y": 9,
+        "dir": "Across",
+        "word": "RIBBON",
+        "clue": "Ink-soaked strip between type and paper"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "7 Across",
+            "1"
+          ],
+          [
+            "2",
+            "1 Down",
+            "2"
+          ],
+          [
+            "3",
+            "3 Down",
+            "2"
+          ],
+          [
+            "4",
+            "5 Across",
+            "2"
+          ],
+          [
+            "5",
+            "6 Across",
+            "5"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Maple.",
+    "why": "7 Across is MARGIN, so letter 1 is M. 1 Down is TAB, so letter 2 is A. 3 Down is SPOOL, so letter 2 is P. 5 Across is ELITE, so letter 2 is L. 6 Across is PLATEN, so letter 5 is E.",
+    "id": 304
+  },
+  {
+    "title": "A cave full of folding chairs",
+    "kind": "Word search",
+    "level": "Medium",
+    "intro": "The cliff cave hosted one concert before the tide came in. The cavers’ words on the seating chart double as route marks. Look in any of eight directions.",
+    "grid": [
+      "GHFPSXSXGEGW",
+      "RZUFOGMZTWKZ",
+      "IEXCEOSIUBCE",
+      "UYBNIATRUCAE",
+      "LAPMFCSACRLN",
+      "TCAYAROAHDCO",
+      "FLILEHVLNLIT",
+      "ARAGJECWUHTS",
+      "HTDMRDBCFMEW",
+      "SECNGGYPQJNO",
+      "LGTUPASSAGEL",
+      "CUFLNSXSWISF"
+    ],
+    "locations": {
+      "STALACTITE": [
+        [
+          0,
+          9
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "FLOWSTONE": [
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          3
+        ]
+      ],
+      "CURTAIN": [
+        [
+          9,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "CHAMBER": [
+        [
+          6,
+          7
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "PASSAGE": [
+        [
+          4,
+          10
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "CALCITE": [
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          8
+        ]
+      ],
+      "CAVERN": [
+        [
+          8,
+          4
+        ],
+        [
+          3,
+          9
+        ]
+      ],
+      "COLUMN": [
+        [
+          5,
+          4
+        ],
+        [
+          10,
+          9
+        ]
+      ],
+      "LEDGE": [
+        [
+          0,
+          10
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "SHAFT": [
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    "questions": [
+      "At which square do STALACTITE and COLUMN cross? Give the row, column and shared letter. Count from the top left, starting at 1."
+    ],
+    "answer": "Row 5, column 6, letter C.",
+    "why": "STALACTITE runs northeast from row 10, column 1. COLUMN runs southeast from row 5, column 6. Their lines share one square, containing C.",
+    "id": 305
+  },
+  {
+    "title": "The rose that started as a tile",
+    "level": "Easy",
+    "intro": "A florist entered a four-digit order number by walking a word from TILE to ROSE. Each time she changed one letter she wrote down its position, counting from the left.",
+    "clues": [
+      "The word stays four letters long. Follow the definitions in their printed order; every move changes exactly one letter.",
+      "After TILE, the four definitions are: movement of the sea; a trip on a pony; go up; a flower with thorns on its stem."
+    ],
+    "questions": [
+      "Which order number did the florist write? Show the four intermediate or final words."
+    ],
+    "answer": "3132.",
+    "why": "TILE becomes TIDE by changing position 3. RIDE changes position 1, RISE changes position 3, and ROSE changes position 2.",
+    "kind": "Codebreaking",
+    "id": 306
+  },
+  {
+    "title": "A cage that went nowhere",
+    "level": "Medium",
+    "intro": "A photograph caption says a pet canary moved from the east window to the west window during a ferry crossing. Sal finds the original notes for the two photographs. She suspects the changing labels describe the ferry, not the canary.",
+    "clues": [
+      "The one-room cabin has just two side windows, one on each side. Both photographs show the bird at the window on the vessel’s right when you face its bow.",
+      "In frame one the bow points north. In frame two the bow points south. The ship turned around between frames. Treat north as the top of a map."
+    ],
+    "questions": [
+      "Which compass-side window appears in each frame? Does the evidence require anyone to have carried the cage?"
+    ],
+    "answer": "East in the first and west in the second. The same physical window fits both.",
+    "why": "Facing north, the vessel’s right points east; facing south, its right points west. The labels track changing compass directions. The pictures cannot establish what happened between exposures, but the cage need never have moved.",
+    "kind": "Detective skills",
+    "id": 307
+  },
+  {
+    "title": "The byline on the collation slip",
+    "level": "Hard",
+    "intro": "After finding her play printed without a byline, a playwright registered a private sentence that pointed to her copy. Three marginal slips survive with corrections in different hands. The registrar did not ask whose ink was in the margin. She asked who delivered the first copy that already incorporated both alterations in its typed body.",
+    "clues": [
+      "All delivery times are on one clock. The authors delivered their listed copies in person. A correction counts as incorporated only if its new word is in the clean typed text, not handwritten nearby.",
+      "The corrected words are WINDOW in line 8 and LANTERN in line 11. The play was credited to the earliest qualifying delivery."
+    ],
+    "questions": [
+      "Who received the credit under this rule? Why does the 10:10 copy fail?"
+    ],
+    "answer": "Mina at 10:25. The 10:10 body still says CANDLE.",
+    "why": "Toby’s delivery has only one of the two correct words in the typescript. Etta’s copy has neither pair complete. Mina’s 10:25 copy has both; Rae’s later 10:30 copy does too. The marginal LANTERN on Toby’s copy does not satisfy the printed-body rule.",
+    "tables": [
+      [
+        "Registrar’s page",
+        [
+          "Author and time",
+          "Typed line 8",
+          "Typed line 11",
+          "Margin"
+        ],
+        [
+          [
+            "Etta · 10:05",
+            "DOOR",
+            "LANTERN",
+            "—"
+          ],
+          [
+            "Toby · 10:10",
+            "WINDOW",
+            "CANDLE",
+            "LANTERN"
+          ],
+          [
+            "Mina · 10:25",
+            "WINDOW",
+            "LANTERN",
+            "—"
+          ],
+          [
+            "Rae · 10:30",
+            "WINDOW",
+            "LANTERN",
+            "—"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 308
+  },
+  {
+    "title": "Equal freight for the two paper steamers",
+    "level": "Medium",
+    "intro": "Two enormous paper steamers hold weights for the model club. Each steamer must carry three pieces of freight and the finished loads must balance. None of the six marked pieces may be opened or split.",
+    "clues": [
+      "The six pieces weigh 3, 4, 5, 6, 7 and 9 units. The 9-unit piece has already been fixed inside the red steamer.",
+      "Every piece goes aboard, one time only. Ignore the equal weights of the steamers themselves."
+    ],
+    "questions": [
+      "Assign the six pieces to the red or blue steamer."
+    ],
+    "answer": "Red carries 3, 5 and 9. Blue carries 4, 6 and 7.",
+    "why": "There are 34 units, so each side gets 17. After its 9, red needs exactly two pieces totaling 8. Only 3 plus 5 works; blue then has the remaining 17.",
+    "tableform": {
+      "rows": [
+        "3 units",
+        "4 units",
+        "5 units",
+        "6 units",
+        "7 units",
+        "9 units"
+      ],
+      "cols": [
+        [
+          "Steamer",
+          "Red",
+          "Blue"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 309
+  },
+  {
+    "title": "What the balloonist left in the basket",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "A balloonist’s log landed ahead of its owner. Piece together what the crew saw at the balloon meet. Someone who handled the completed grid can identify which slip belongs in the log.",
+    "entries": [
+      {
+        "x": 0,
+        "y": 5,
+        "dir": "Across",
+        "word": "DAWN",
+        "clue": "Early time favored for a calm ascent"
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "dir": "Down",
+        "word": "BURNER",
+        "clue": "Heat source above the pilot in a hot-air balloon"
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "dir": "Across",
+        "word": "BASKET",
+        "clue": "Wicker compartment beneath a balloon"
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "dir": "Down",
+        "word": "LAND",
+        "clue": "Come back to the ground"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "dir": "Down",
+        "word": "CREW",
+        "clue": "People helping the pilot launch"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Across",
+        "word": "ENVELOPE",
+        "clue": "Fabric body holding the lifting gas or hot air"
+      },
+      {
+        "x": 10,
+        "y": 2,
+        "dir": "Down",
+        "word": "CHASE",
+        "clue": "What the ground vehicle does after launch"
+      },
+      {
+        "x": 6,
+        "y": 5,
+        "dir": "Down",
+        "word": "TETHER",
+        "clue": "Line securing a balloon to the ground"
+      },
+      {
+        "x": 5,
+        "y": 10,
+        "dir": "Across",
+        "word": "DRIFT",
+        "clue": "Move along with the wind"
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "dir": "Down",
+        "word": "CROWN",
+        "clue": "Highest part of a balloon envelope"
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "dir": "Down",
+        "word": "ALOFT",
+        "clue": "Up in the air"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Nell",
+            "9 Across meets 8 Down at T",
+            "9 Across meets 5 Down at O"
+          ],
+          [
+            "Rae",
+            "8 Down meets 10 Across at R",
+            "3 Down meets 3 Across at T"
+          ],
+          [
+            "Quin",
+            "6 Across meets 3 Down at N",
+            "3 Down meets 9 Across at E"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Quin wrote the accurate slip.",
+    "why": "The two actual crossing letters on Quin’s slip are N and E. Nell wrote T for the crossing of ENVELOPE and TETHER, which share E. Rae wrote T for the crossing of BURNER and BASKET, which share B.",
+    "id": 310
+  },
+  {
+    "title": "The shadow of the missing camel",
+    "kind": "Word search",
+    "level": "Medium",
+    "intro": "A sand sculptor put ten desert words on a chart of her display. The marshal’s route is marked by the way the words run. Look in any of eight directions.",
+    "grid": [
+      "HNOIPROCSTKV",
+      "YSLEIQAUIRWC",
+      "DASAYGTFJSOE",
+      "WNQMRCLEGPLQ",
+      "DDKLAOASISSY",
+      "ASWCDMVSBMEY",
+      "STAUETIYEDEX",
+      "EODAMLTRUCXU",
+      "MNIYOHENAQZT",
+      "PEAERIEMWGSE",
+      "RBVYDHCPAGEU",
+      "ZQGYGYACACRV"
+    ],
+    "locations": {
+      "SANDSTONE": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "DROMEDARY": [
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "SCORPION": [
+        [
+          8,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "MIRAGE": [
+        [
+          5,
+          5
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "CACTUS": [
+        [
+          3,
+          5
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "OASIS": [
+        [
+          5,
+          4
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "CAMEL": [
+        [
+          9,
+          11
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "DUNE": [
+        [
+          9,
+          6
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "WADI": [
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "MESA": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    "questions": [
+      "Stand on the last letter of DROMEDARY. Which OTHER listed word starts closest, and how many one-square steps away is its start? You may walk up, down, left or right through any cells."
+    ],
+    "answer": "Oasis, 3 steps.",
+    "why": "DROMEDARY ends at row 3, column 5. OASIS begins at row 5, column 6. Their row and column distances add to 3. The next closest start is 4 steps away.",
+    "id": 311
+  },
+  {
+    "title": "The weights in the coffee cupboard",
+    "level": "Hard",
+    "intro": "Three tins of coffee arrived with different amounts of coffee inside. The shipping clerk billed the café for the heaviest gross tin as though it contained the most beans. The café supplies three pairs of scale readings for the buyer to audit.",
+    "clues": [
+      "The supplier weighs each closed tin before delivery. After all coffee has been poured out, the café weighs that same empty tin with its lid. No coffee is left clinging inside."
+    ],
+    "questions": [
+      "Which tin contained the most coffee? How much more did it hold than the tin the shipping clerk selected?"
+    ],
+    "answer": "The blue tin held 530 grams, 35 grams more than the green tin.",
+    "why": "Subtract each empty reading from its own full reading. Green gives 735 − 240 = 495 g; blue gives 705 − 175 = 530 g; rust gives 720 − 205 = 515 g. Green weighs the most before unloading because its tin is the heaviest.",
+    "tables": [
+      [
+        "Scale slips",
+        [
+          "Tin",
+          "Full, grams",
+          "Empty with lid, grams"
+        ],
+        [
+          [
+            "Green",
+            735,
+            240
+          ],
+          [
+            "Blue",
+            705,
+            175
+          ],
+          [
+            "Rust",
+            720,
+            205
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 312
+  },
+  {
+    "title": "A minute missing from the matinee",
+    "level": "Hard",
+    "intro": "At an inquest into the death of film producer Ern Vale, the court agrees on one narrow fact: the murderer was the last guest to speak with the producer in his private theater box. The box attendant heard their live conversation begin at the instant a painted boat appeared on the screen. The usher’s schedule and the audience’s actual screening did not coincide.",
+    "clues": [
+      "The film began at 14:06, six minutes after its advertised start. The painted boat first appears 18 minutes after the film starts, with no interval before it.",
+      "Four guests visited the box in nonoverlapping intervals shown below, recorded on the theater’s standard clock. Nobody other than the named visitor and the producer was in the box during a listed interval."
+    ],
+    "questions": [
+      "Which guest does the inquest identify? Which wrong name would the printed start suggest?"
+    ],
+    "answer": "Ivy was the guest at 14:24. Using the advertised time would wrongly point to Moss at 14:18.",
+    "why": "Actual screening time puts the boat at 14:06 + 18 minutes = 14:24, well within Ivy’s visit. At 14:18 Moss occupied the box; that answer assumes the film started on schedule. The supplied inquest finding connects the identified visitor with the death.",
+    "tables": [
+      [
+        "Box attendant’s book",
+        [
+          "Guest",
+          "Standard time"
+        ],
+        [
+          [
+            "Eve",
+            "14:10–14:14"
+          ],
+          [
+            "Moss",
+            "14:15–14:19"
+          ],
+          [
+            "Ivy",
+            "14:21–14:26"
+          ],
+          [
+            "Tom",
+            "14:28–14:32"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 313
+  },
+  {
+    "title": "The counter between two shops",
+    "level": "Medium",
+    "intro": "A toy shop and a café shared a sign with a single movable word between their two names. A set of four practice signs explains the owner’s system.",
+    "clues": [
+      "Supply one word that makes a familiar word or phrase with the word on its left AND with the word on its right. Compounds may be written together or separately. The middle hints settle the intended choices.",
+      "Read the initials of the four middle words in order."
+    ],
+    "questions": [
+      "Which item did the café order for its counter?"
+    ],
+    "answer": "A bowl.",
+    "why": "SNOW + BALL and BALL + ROOM give B. LAMP OIL and OIL PAINTING give O. RAINWATER and WATER WHEEL give W. MOONLIGHT and LIGHTHOUSE give L.",
+    "tables": [
+      [
+        "Practice signs",
+        [
+          "Left",
+          "Middle hint",
+          "Right"
+        ],
+        [
+          [
+            "Snow",
+            "Something round to throw",
+            "Room"
+          ],
+          [
+            "Lamp",
+            "Liquid fuel",
+            "Painting"
+          ],
+          [
+            "Rain",
+            "What a pump moves",
+            "Wheel"
+          ],
+          [
+            "Moon",
+            "What a bulb provides",
+            "House"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Codebreaking",
+    "id": 314
+  },
+  {
+    "title": "The passenger who existed twice",
+    "level": "Hard",
+    "intro": "The harbor choir sold two colors of ticket for a Sunday outing. A paper claimed 35 different people boarded because the two gate clerks had collected 35 tickets. A surviving rule from the outing explains why their sum is wrong.",
+    "clues": [
+      "Every person boarding handed over exactly one launch ticket, one lunch ticket, or one of each. Nobody presented two of the same color.",
+      "The launch clerk collected 20 tickets and the lunch clerk 15. The photographer took exactly one portrait per person boarding and made 27 portraits."
+    ],
+    "questions": [
+      "How many people handed in both colors, and how many handed in only a lunch ticket?"
+    ],
+    "answer": "Eight handed in both. Seven handed in only a lunch ticket.",
+    "why": "Counting tickets counts the people who had both twice. The excess 35 − 27 is eight extra counts; subtract those eight from the 15 lunch ticket holders to get seven lunch-only guests.",
+    "kind": "Detective skills",
+    "id": 315
+  },
+  {
+    "title": "The punch maker’s three ladles",
+    "level": "Hard",
+    "intro": "The punch maker’s brass, copper and tin ladles have different whole-number capacities from one to six measures. A loose handle has hidden each engraved capacity, but the recipe still works.",
+    "clues": [
+      "Two brass ladles and one copper ladle fill the 13-measure punch bowl exactly.",
+      "One copper plus one tin fills a 7-measure bowl. Brass holds exactly one measure more than tin."
+    ],
+    "questions": [
+      "Find each ladle’s capacity in measures."
+    ],
+    "answer": "Brass 5, copper 3, tin 4.",
+    "why": "Replace tin by brass minus one in the little bowl: copper plus brass is 8. The big bowl is copper plus two brass, totaling 13. The extra brass is 5. Then copper is 3 and tin is 4.",
+    "tableform": {
+      "rows": [
+        "Brass",
+        "Copper",
+        "Tin"
+      ],
+      "cols": [
+        [
+          "Measures",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 316
+  },
+  {
+    "title": "The paragraph with five feet",
+    "kind": "Crossword",
+    "level": "Hard",
+    "intro": "The pier poet entered a verse under a pen name. The forms and sounds of poetry supply the crossword clues.",
+    "entries": [
+      {
+        "x": 1,
+        "y": 4,
+        "dir": "Across",
+        "word": "VERSE",
+        "clue": "Writing arranged in poetic lines"
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "dir": "Down",
+        "word": "LINE",
+        "clue": "One row of a printed poem"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "dir": "Down",
+        "word": "METER",
+        "clue": "Pattern of stressed and unstressed syllables"
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "dir": "Across",
+        "word": "BEAT",
+        "clue": "Pulse that a reader can tap along with"
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "dir": "Across",
+        "word": "IAMB",
+        "clue": "Foot with an unstressed syllable followed by a stressed one"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "dir": "Down",
+        "word": "SONNET",
+        "clue": "Poem traditionally containing fourteen lines"
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "dir": "Down",
+        "word": "EPIC",
+        "clue": "Long narrative poem about great deeds"
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "dir": "Down",
+        "word": "BARD",
+        "clue": "Poet, in an old-fashioned phrase"
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "dir": "Across",
+        "word": "RHYME",
+        "clue": "Sound match such as quay and sea"
+      },
+      {
+        "x": 3,
+        "y": 9,
+        "dir": "Across",
+        "word": "STANZA",
+        "clue": "Group of lines separated from the next group"
+      },
+      {
+        "x": 7,
+        "y": 5,
+        "dir": "Across",
+        "word": "ODE",
+        "clue": "Poem of praise"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "3 Down",
+            "2"
+          ],
+          [
+            "2",
+            "7 Across",
+            "3"
+          ],
+          [
+            "3",
+            "5 Across",
+            "1"
+          ],
+          [
+            "4",
+            "11 Across",
+            "1"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Iris.",
+    "why": "3 Down is LINE, so letter 2 is I. 7 Across is VERSE, so letter 3 is R. 5 Across is IAMB, so letter 1 is I. 11 Across is STANZA, so letter 1 is S.",
+    "id": 317
+  },
+  {
+    "title": "The roundabout beneath the atlas",
+    "kind": "Word search",
+    "level": "Hard",
+    "intro": "The town planner left a street map beneath the lid of the atlas case. Ten road words stand in for streets on it. Look in any of eight directions.",
+    "grid": [
+      "HTNECSERCGNSF",
+      "OONYXINUHNZXX",
+      "JKVIADUCTIGLV",
+      "QYKOOIVDBSDGA",
+      "ABDDQZFJBSCIZ",
+      "VLEAVINOQOSYA",
+      "EWPREFUIAREUR",
+      "NIVNALBLSCXXX",
+      "UZPDEULYANWVG",
+      "EUUVREQRPNSIJ",
+      "DFAZYRRSAAOFV",
+      "PRTRJETLZRSCL",
+      "DDEFTPENALBSV"
+    ],
+    "locations": {
+      "BOULEVARD": [
+        [
+          8,
+          4
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "CRESCENT": [
+        [
+          8,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "CROSSING": [
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "TERRACE": [
+        [
+          4,
+          12
+        ],
+        [
+          10,
+          6
+        ]
+      ],
+      "VIADUCT": [
+        [
+          2,
+          2
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "AVENUE": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "SQUARE": [
+        [
+          7,
+          10
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "BYPASS": [
+        [
+          6,
+          7
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "ALLEY": [
+        [
+          8,
+          6
+        ],
+        [
+          4,
+          10
+        ]
+      ],
+      "LANE": [
+        [
+          9,
+          12
+        ],
+        [
+          6,
+          12
+        ]
+      ]
+    },
+    "questions": [
+      "Start at row 7, column 7. Take ONE step in each word’s reading direction in this order: BOULEVARD, VIADUCT, CRESCENT, BYPASS. Where do you land, and which letter is printed there? A diagonal counts as one step."
+    ],
+    "answer": "Row 9, column 7, letter L.",
+    "why": "The four bearings are southwest, east, west, southeast. Your stops are row 8, column 6; row 8, column 7; row 8, column 6; row 9, column 7.",
+    "id": 318
+  },
+  {
+    "title": "Who heard the missing verse?",
+    "level": "Hard",
+    "intro": "A folk-song archive received two copies of a harbor concert. Both came from the same uninterrupted performance, but each archivist had permission to remove at most one whole verse. A third person combined their notes and claimed that the order could never be recovered.",
+    "clues": [
+      "Verse titles were unique within the performance. The archivists preserved the original order and made no insertions.",
+      "The fiddle player remembers that “Low Cloud” began immediately after “Copper Rain.” This is a statement about the original performance."
+    ],
+    "questions": [
+      "Recover the order. Which pair could not have been ordered from the two copies alone?"
+    ],
+    "answer": "Slipway, Copper Rain, Low Cloud, Moon Cup, Home Bell. Copper Rain and Low Cloud needed the third witness.",
+    "why": "The common verses give the spine Slipway – Moon Cup – Home Bell. Each copy has one extra between the first two. Neither copy shows both extras, so the copies alone allow either order. The fiddle player places Low Cloud directly after Copper Rain.",
+    "tables": [
+      [
+        "Archival copies",
+        [
+          "Copy",
+          "Verses in surviving order"
+        ],
+        [
+          [
+            "Wax",
+            "Slipway / Copper Rain / Moon Cup / Home Bell"
+          ],
+          [
+            "Paper",
+            "Slipway / Low Cloud / Moon Cup / Home Bell"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 319
+  },
+  {
+    "title": "The one unpaid cup",
+    "level": "Easy",
+    "intro": "A blue cup from the pottery fair was put in the wrong box. One of four customers paid for one fewer cup than they packed; everyone else packed exactly what they paid for. The till charged for each third cup in an order at half price.",
+    "clues": [
+      "The normal price is 4 pennies per cup. A customer paying for three cups owes 4 + 4 + 2 = 10 pennies; four cups cost 14 pennies. No customer paid for more than four cups.",
+      "The box with an extra cup contains the blue one. No cups were returned or exchanged."
+    ],
+    "questions": [
+      "Who packed the blue cup, and how many cups were on that receipt?"
+    ],
+    "answer": "Nico packed the blue cup. His 8-penny receipt covered two cups.",
+    "why": "A one-cup purchase costs 4, two cost 8, three cost 10 and four cost 14. The four boxes should contain 3, 2, 1 and 4 cups respectively. Only Nico’s contains one extra.",
+    "tables": [
+      [
+        "Fair-stall check",
+        [
+          "Buyer",
+          "Paid",
+          "Cups actually packed"
+        ],
+        [
+          [
+            "Alma",
+            "10 pennies",
+            3
+          ],
+          [
+            "Nico",
+            "8 pennies",
+            3
+          ],
+          [
+            "Ro",
+            "4 pennies",
+            1
+          ],
+          [
+            "Zed",
+            "14 pennies",
+            4
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 320
+  },
+  {
+    "title": "Three notes on a music-box barrel",
+    "level": "Medium",
+    "intro": "A toy maker punched exactly one of C, D and E on each beat of a three-beat tune. The three tunes on one barrel were arranged like a little square. Every tune uses each note once, and each beat, read down the tunes, also uses each note once.",
+    "clues": [
+      "The top tune begins C, E. The middle tune begins D. Those are the only surviving punches."
+    ],
+    "questions": [
+      "Reconstruct the three tunes. Which note opens the bottom tune?"
+    ],
+    "answer": "Top C–E–D; middle D–C–E; bottom E–D–C. E opens the bottom tune.",
+    "why": "The top ends D. The first beat lacks E at the bottom. The middle tune’s second beat can be neither D nor the E already above, so it is C; its last beat is E. Each column now supplies the bottom note.",
+    "tableform": {
+      "rows": [
+        "Top tune",
+        "Middle tune",
+        "Bottom tune"
+      ],
+      "cols": [
+        [
+          "Beat 1",
+          "C",
+          "D",
+          "E"
+        ],
+        [
+          "Beat 2",
+          "C",
+          "D",
+          "E"
+        ],
+        [
+          "Beat 3",
+          "C",
+          "D",
+          "E"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 321
+  },
+  {
+    "title": "A fish without a hook",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "A painted lure won a carving prize before it ever touched water. Rebuild the carver’s shop from the clues and find the entry slip that agrees with the grid.",
+    "entries": [
+      {
+        "x": 2,
+        "y": 5,
+        "dir": "Across",
+        "word": "BENCH",
+        "clue": "Workbench, for short"
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "dir": "Down",
+        "word": "CHIP",
+        "clue": "Small fragment removed by a carving cut"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "dir": "Down",
+        "word": "GOUGE",
+        "clue": "Carving tool with a curved cutting edge"
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "dir": "Across",
+        "word": "VISE",
+        "clue": "Bench fitting that grips the work"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "dir": "Across",
+        "word": "GRAIN",
+        "clue": "Direction of the fibers in the wood"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "dir": "Down",
+        "word": "KNOT",
+        "clue": "Hard spot where a branch once grew"
+      },
+      {
+        "x": 7,
+        "y": 3,
+        "dir": "Across",
+        "word": "TIP",
+        "clue": "Point at the end of a carving blade"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "dir": "Down",
+        "word": "WAX",
+        "clue": "Finish that can be buffed with a cloth"
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "dir": "Down",
+        "word": "BLOCK",
+        "clue": "Solid piece of wood before shaping"
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "dir": "Across",
+        "word": "OIL",
+        "clue": "Finish that soaks into porous timber"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Gus",
+            "3 Down meets 3 Across at I",
+            "5 Across meets 3 Down at E"
+          ],
+          [
+            "Pia",
+            "6 Down meets 8 Across at I",
+            "5 Down meets 7 Across at O"
+          ],
+          [
+            "Kit",
+            "3 Across meets 1 Down at A",
+            "5 Across meets 5 Down at B"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Kit wrote the accurate slip.",
+    "why": "The two actual crossing letters on Kit’s slip are A and B. Gus wrote I for the crossing of GOUGE and GRAIN, which share G. Pia wrote O for the crossing of BLOCK and OIL, which share L.",
+    "id": 322
+  },
+  {
+    "title": "Pencils for the geographer",
+    "kind": "Word search",
+    "level": "Easy",
+    "intro": "Ten kinds of map feature are hiding on the geographer’s pencil tin. Read them as lines on a chart to answer the surveyor’s extra question. Look across to the right, down, or diagonally down.",
+    "grid": [
+      "CONTOURLXM",
+      "ZPHBJIEQEW",
+      "PLSIOGNRGP",
+      "ASNNERISAW",
+      "RSNNGDDREW",
+      "AYDPIZRERT",
+      "LMTAQOZVRI",
+      "LBNEWHOWLT",
+      "EOSCALEYHL",
+      "LLNEOIZTKE"
+    ],
+    "locations": {
+      "MERIDIAN": [
+        [
+          9,
+          0
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "PARALLEL": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "CONTOUR": [
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "BORDER": [
+        [
+          3,
+          1
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "LEGEND": [
+        [
+          7,
+          0
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "SYMBOL": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "SCALE": [
+        [
+          2,
+          8
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "INSET": [
+        [
+          5,
+          1
+        ],
+        [
+          9,
+          5
+        ]
+      ],
+      "ARROW": [
+        [
+          8,
+          3
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "TITLE": [
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          9
+        ]
+      ]
+    },
+    "questions": [
+      "The finish flags belong to CONTOUR, TITLE, BORDER. From the LAST letter of SCALE, which flag’s LAST letter is farthest away by horizontal and vertical steps? Diagonal shortcuts are off limits."
+    ],
+    "answer": "Contour, 8 steps.",
+    "why": "From row 9, column 7, the three distances are CONTOUR 8, TITLE 4, BORDER 4. Count the difference in rows plus the difference in columns for each pair of endpoints.",
+    "id": 323
+  },
+  {
+    "title": "The little boat in a round bottle",
+    "level": "Medium",
+    "intro": "The museum owns a round souvenir bottle with a boat inside. Two guests standing on opposite sides give opposite accounts of which end of the boat carries its little white flag. Sal reads their words carefully.",
+    "clues": [
+      "The bottle and model stayed still. Both guests looked straight at the boat broadside. Each used “left” and “right” for their own view.",
+      "Paz, facing north, saw the flag on her left. Neri, facing south, saw it on his right. Both agree the blue bow is at the east end of the model."
+    ],
+    "questions": [
+      "Do the two witnesses disagree? Is the flag at the model’s bow or stern?"
+    ],
+    "answer": "They agree; the flag is at the west end, the stern.",
+    "why": "The left of a person facing north and the right of one facing south both point west. With the bow at the east end, opposite it is the stern. Turning the witness around changes their left and right, not the boat.",
+    "kind": "Detective skills",
+    "id": 324
+  },
+  {
+    "title": "A melody in somebody else’s key",
+    "level": "Medium",
+    "intro": "Someone played the five notes of an old sea call at the unveiling of the harbor organ. The witness remembered only the successive jumps between notes. Each of four keyboard players had been assigned one short phrase, and no player varied its jumps.",
+    "clues": [
+      "Use the printed pitch numbers. Subtract one number from the next to get a jump; positive is upward. Moving a phrase into another key adds the same number to every note and leaves the jumps unchanged.",
+      "The witness tapped out the jumps: up two, down one, up three, down two. One of the assigned phrases has exactly those jumps."
+    ],
+    "questions": [
+      "Who played the call? Could it have started on pitch 7 instead of its printed starting pitch?"
+    ],
+    "answer": "Rina. Yes: 7, 9, 8, 11, 9 has the same jumps.",
+    "why": "Rina’s phrase 3,5,4,7,5 gives +2, −1, +3, −2. Ivo changes the third jump, Bea the direction of the second, and Hal the last jump. Adding four to every one of Rina’s notes gives the proposed pitch-7 start.",
+    "tables": [
+      [
+        "Players’ phrase cards",
+        [
+          "Player",
+          "Pitches"
+        ],
+        [
+          [
+            "Ivo",
+            "2 · 4 · 3 · 5 · 3"
+          ],
+          [
+            "Rina",
+            "3 · 5 · 4 · 7 · 5"
+          ],
+          [
+            "Bea",
+            "1 · 3 · 4 · 7 · 5"
+          ],
+          [
+            "Hal",
+            "4 · 6 · 5 · 8 · 7"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 325
+  },
+  {
+    "title": "A label one tile too heavy",
+    "level": "Easy",
+    "intro": "Four bins at the tea counter each received the right letter tiles for a label plus one stowaway. The clerk says the four stowaways will spell the name on the order.",
+    "clues": [
+      "Use the definition to recover what belongs on each bin. The letters are mixed. Keep the single unused tile from each group in order."
+    ],
+    "questions": [
+      "What name is on the order?"
+    ],
+    "answer": "Nora.",
+    "why": "MILK leaves N in KINLM. SUGAR leaves O in GOURAS. MINT leaves R in TNIRM. LEMON leaves A in MOANEL. The four extra tiles spell NORA.",
+    "tables": [
+      [
+        "Tea counter bins",
+        [
+          "Mixed tiles",
+          "What belongs"
+        ],
+        [
+          [
+            "KINLM",
+            "White addition poured from a jug"
+          ],
+          [
+            "GOURAS",
+            "Sweetener measured in spoonfuls"
+          ],
+          [
+            "TNIRM",
+            "Cooling herb in a tea blend"
+          ],
+          [
+            "MOANEL",
+            "Yellow citrus sliced for tea"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Codebreaking",
+    "id": 326
+  },
+  {
+    "title": "The contract in the lining paper",
+    "level": "Hard",
+    "intro": "A blue harbor token turned up in a display lined with a scrap of an old contract. A dealer took the token’s year from the contract. The curator pulled apart the dealer’s argument without touching the token.",
+    "clues": [
+      "The maker’s records prove the token design was produced from 1882 through 1889 inclusive. The contract was signed in 1893. The exact display in its current arrangement appears in a dated 1897 photograph.",
+      "The token was already made and the signed contract already existed when the display was assembled. No narrower dates are known."
+    ],
+    "questions": [
+      "Give the narrowest supported ranges for the token’s manufacture and for assembling the display. Could the objects have been made in different decades?"
+    ],
+    "answer": "Token: 1882–1889. Display: 1893–1897. Yes.",
+    "why": "The signed paper puts a lower bound on assembly, and the photograph puts an upper bound on it. Neither dates the manufacture of the token beyond the maker’s own range. A token from the 1880s fits a display assembled in the 1890s.",
+    "kind": "Detective skills",
+    "id": 327
+  },
+  {
+    "title": "The bunting with a missing middle",
+    "level": "Medium",
+    "intro": "Four flag cards have fallen from the pattern board for the opening procession. The assistant remembers relationships rather than positions; she always describes left and right from the crowd’s side of the board.",
+    "clues": [
+      "Use amber, green, red and yellow once each. Green was two places to the right of amber, with one card between them.",
+      "Yellow stood somewhere to the left of red. Yellow was not first."
+    ],
+    "questions": [
+      "Hang the four colors from left to right."
+    ],
+    "answer": "Amber, yellow, green, red.",
+    "why": "Amber and green could occupy 1 and 3 or 2 and 4. In the latter case yellow and red would need 1 and 3 in that order, placing yellow first. Therefore amber and green are 1 and 3, and yellow precedes red in the other two positions.",
+    "tableform": {
+      "rows": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "cols": [
+        [
+          "Card",
+          "Amber",
+          "Green",
+          "Red",
+          "Yellow"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 328
+  },
+  {
+    "title": "The canal boat’s extra nameplate",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "Two boats arrived at one lock carrying three nameplates. The lockkeeper drew up a crossword about the crossing and tucked a short message into it.",
+    "entries": [
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Across",
+        "word": "LEVEL",
+        "clue": "Height of the water in the chamber"
+      },
+      {
+        "x": 7,
+        "y": 3,
+        "dir": "Down",
+        "word": "WALL",
+        "clue": "Vertical side of the chamber"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Down",
+        "word": "LOCK",
+        "clue": "Chamber that raises or lowers boats"
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "dir": "Down",
+        "word": "PADDLE",
+        "clue": "Lock fitting raised to let water through a sluice"
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "dir": "Across",
+        "word": "BEAM",
+        "clue": "Long arm used to push a traditional lock gate"
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "dir": "Across",
+        "word": "POUND",
+        "clue": "Stretch of canal between locks"
+      },
+      {
+        "x": 7,
+        "y": 3,
+        "dir": "Across",
+        "word": "WEIR",
+        "clue": "Low barrier over which water spills"
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "dir": "Across",
+        "word": "CILL",
+        "clue": "Lock-gate sill, in British canal spelling with a C"
+      },
+      {
+        "x": 1,
+        "y": 3,
+        "dir": "Down",
+        "word": "TOWPATH",
+        "clue": "Bank-side route once used by horses pulling boats"
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "dir": "Down",
+        "word": "GATE",
+        "clue": "Barrier that shuts across the lock entrance"
+      },
+      {
+        "x": 10,
+        "y": 3,
+        "dir": "Down",
+        "word": "ROPE",
+        "clue": "Line used to hold a boat steady"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "dir": "Across",
+        "word": "BARGE",
+        "clue": "Flat-bottomed cargo boat"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "8 Across",
+            "1"
+          ],
+          [
+            "2",
+            "3 Down",
+            "6"
+          ],
+          [
+            "3",
+            "4 Across",
+            "3"
+          ],
+          [
+            "4",
+            "1 Across",
+            "3"
+          ],
+          [
+            "5",
+            "6 Down",
+            "3"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Pearl.",
+    "why": "8 Across is POUND, so letter 1 is P. 3 Down is PADDLE, so letter 6 is E. 4 Across is BEAM, so letter 3 is A. 1 Across is BARGE, so letter 3 is R. 6 Down is WALL, so letter 3 is L.",
+    "id": 329
+  },
+  {
+    "title": "The giant shoe at the fair",
+    "kind": "Word search",
+    "level": "Easy",
+    "intro": "A float shaped like a giant shoe carried a display for the town shops. The ten footwear words on its sign mark where the floats crossed. Look across to the right, down, or diagonally down.",
+    "grid": [
+      "CMLVWJINGP",
+      "ELOWADERNZ",
+      "SKOCSANDAL",
+      "NAXGAZIVGS",
+      "ELFCWSBKLG",
+      "AQOOXRSIBM",
+      "KMRAOBPIBJ",
+      "EQDGFPLONZ",
+      "RCUEEEOPHF",
+      "CEERWTRMFR"
+    ],
+    "locations": {
+      "MOCASSIN": [
+        [
+          1,
+          0
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "SLIPPER": [
+        [
+          9,
+          3
+        ],
+        [
+          3,
+          9
+        ]
+      ],
+      "SNEAKER": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "SANDAL": [
+        [
+          4,
+          2
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "LOAFER": [
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "BROGUE": [
+        [
+          6,
+          4
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "OXFORD": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "WADER": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "CLOG": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "BOOT": [
+        [
+          8,
+          6
+        ],
+        [
+          5,
+          9
+        ]
+      ]
+    },
+    "questions": [
+      "At which square do OXFORD and CLOG cross? Give the row, column and shared letter. Count from the top left, starting at 1."
+    ],
+    "answer": "Row 3, column 3, letter O.",
+    "why": "OXFORD runs south from row 3, column 3. CLOG runs southeast from row 1, column 1. Their lines share one square, containing O.",
+    "id": 330
+  },
+  {
+    "title": "One seat at the island council",
+    "level": "Medium",
+    "intro": "At an island council election the first count named Lyle. The charter, however, says to count again after the candidate with the fewest first choices drops out. The printers need the actual name before they strike the council medal.",
+    "clues": [
+      "Each ballot has a first choice and a second. Only ballots for the eliminated candidate move, and every one moves to its second choice.",
+      "Lyle had 14 first choices, Mari 12 and Fen 6. Of Fen’s six ballots four listed Mari second and two listed Lyle second. The charter awards a tie after transfers to the finalist with more original first choices."
+    ],
+    "questions": [
+      "Who gets the medal? How many of Fen’s six would have had to go to Mari for Mari to win outright?"
+    ],
+    "answer": "Lyle on the tie rule. Five of Fen’s six would have given Mari an outright win.",
+    "why": "The transfers make 16 each, so Lyle’s larger first count settles it. A 5–1 split would instead give Mari 17 and Lyle 15. Four transfers to Mari only tie; fewer leave her behind.",
+    "kind": "Whodunit",
+    "id": 331
+  },
+  {
+    "title": "A witness in the wrong lane",
+    "level": "Medium",
+    "intro": "Two runners carried banners around one lap of a small racecourse. A photograph at the finish shows Bea in the outer lane. Her team claims this proves she traveled farther. The course card preserves enough detail to settle the distances.",
+    "clues": [
+      "Both runners stayed in one lane for the first half lap and changed lanes at the halfway line. The change was a short connector exactly 2 m long for each.",
+      "At the finish Bea was outside, Sol inside. The two halves of the inside lane are each 48 m; the two outside halves are each 54 m."
+    ],
+    "questions": [
+      "Who ran farther, and how far did each travel?"
+    ],
+    "answer": "Neither. Each traveled 104 m.",
+    "why": "Bea ran the first half inside, the connector, then the second half outside: 48 + 2 + 54. Sol ran 54 + 2 + 48. A photograph at the finish reveals only the second half of their routes.",
+    "kind": "Detective skills",
+    "id": 332
+  },
+  {
+    "title": "An alphabet measured in pennies",
+    "level": "Hard",
+    "intro": "A letter caster priced the six letters A through F at 1 through 6 pennies, one price per letter. A customer settled three bills in front of the detective. The prices determine a short sign the caster was making.",
+    "clues": [
+      "A pair costs the sum of its letters, even when the two letters are the same. Every letter has a different price.",
+      "Bills: AA costs 4, BE costs 7, BD costs 4. C costs more than E. F is the most expensive.",
+      "The sign’s price strip reads 5 · 2 · 6 · 4. Substitute the letter costing each amount."
+    ],
+    "questions": [
+      "What does the strip spell?"
+    ],
+    "answer": "CAFE.",
+    "why": "A is 2 and F is 6. B and D must be 1 and 3. If B were 1, E would have to cost 6, already taken by F. Thus B is 3, D is 1 and E is 4. C takes the remaining price, 5. The strip spells CAFE.",
+    "kind": "Codebreaking",
+    "id": 333
+  },
+  {
+    "title": "Four rooms for the returning crews",
+    "level": "Medium",
+    "intro": "The museum loaned one room to each of four workshops. Rooms cannot be shared during the day, even if two workshops begin at different times. Each workshop lasts exactly one hour.",
+    "clues": [
+      "A room must fit everyone and be open for the entire workshop. An interval 09–12 accepts a workshop starting at 09, 10 or 11.",
+      "Assign one different room per workshop."
+    ],
+    "questions": [
+      "Which room should each crew use?"
+    ],
+    "answer": "Map folding in the Loft; Shell drawing in the Parlor; Sail stitching in the Garden; Harbor chorus in the Gallery.",
+    "why": "The 20-person chorus needs the Gallery. Shell drawing cannot use the small Loft, and the Garden is not open at 10, leaving the Parlor. Sail stitching needs the Garden at noon. Map folding fits the remaining Loft.",
+    "tableform": {
+      "rows": [
+        "Map folding",
+        "Shell drawing",
+        "Sail stitching",
+        "Harbor chorus"
+      ],
+      "cols": [
+        [
+          "Room",
+          "Loft",
+          "Parlor",
+          "Garden",
+          "Gallery"
+        ]
+      ]
+    },
+    "tables": [
+      [
+        "Room keys",
+        [
+          "Room",
+          "Seats",
+          "Open"
+        ],
+        [
+          [
+            "Loft",
+            8,
+            "09–12"
+          ],
+          [
+            "Parlor",
+            12,
+            "10–13"
+          ],
+          [
+            "Garden",
+            18,
+            "11–14"
+          ],
+          [
+            "Gallery",
+            22,
+            "09–11"
+          ]
+        ]
+      ],
+      [
+        "Workshop slips",
+        [
+          "Crew",
+          "People",
+          "Start"
+        ],
+        [
+          [
+            "Map folding",
+            7,
+            "09:00"
+          ],
+          [
+            "Shell drawing",
+            11,
+            "10:00"
+          ],
+          [
+            "Sail stitching",
+            16,
+            "12:00"
+          ],
+          [
+            "Harbor chorus",
+            20,
+            "09:00"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Logic",
+    "id": 334
+  },
+  {
+    "title": "One square of Roman floor",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "A museum volunteer copied the mosaic pavement before its border was restored. Her crossword was rolled up with three accounts of the visit.",
+    "entries": [
+      {
+        "x": 6,
+        "y": 6,
+        "dir": "Across",
+        "word": "CUBE",
+        "clue": "Three-dimensional shape of many mosaic pieces"
+      },
+      {
+        "x": 7,
+        "y": 3,
+        "dir": "Down",
+        "word": "GROUT",
+        "clue": "Filler between the pieces"
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "dir": "Across",
+        "word": "BORDER",
+        "clue": "Band running around the outside of a design"
+      },
+      {
+        "x": 7,
+        "y": 3,
+        "dir": "Across",
+        "word": "GAP",
+        "clue": "Unfilled space between pieces"
+      },
+      {
+        "x": 9,
+        "y": 0,
+        "dir": "Down",
+        "word": "CHIP",
+        "clue": "Small fragment broken from a larger piece"
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "dir": "Down",
+        "word": "STONE",
+        "clue": "Material split into chips for an ancient mosaic"
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "dir": "Across",
+        "word": "TILE",
+        "clue": "Small hard piece in a floor pattern"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "dir": "Across",
+        "word": "ARC",
+        "clue": "Short curved section of a circular border"
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "dir": "Down",
+        "word": "FIELD",
+        "clue": "Central area enclosed by a border"
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "dir": "Across",
+        "word": "GLASS",
+        "clue": "Colored material used for bright mosaic pieces"
+      },
+      {
+        "x": 9,
+        "y": 5,
+        "dir": "Down",
+        "word": "BED",
+        "clue": "Layer of mortar supporting the tiles"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Cleo",
+            "5 Down meets 5 Across at O",
+            "4 Down meets 9 Across at E"
+          ],
+          [
+            "Rae",
+            "10 Across meets 8 Down at E",
+            "4 Down meets 3 Across at S"
+          ],
+          [
+            "Mae",
+            "10 Across meets 5 Down at E",
+            "2 Down meets 1 Across at C"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Rae wrote the accurate slip.",
+    "why": "The two actual crossing letters on Rae’s slip are E and S. Cleo wrote O for the crossing of GROUT and GAP, which share G. Mae wrote E for the crossing of CUBE and GROUT, which share U.",
+    "id": 335
+  },
+  {
+    "title": "The mask of the midnight moth",
+    "kind": "Word search",
+    "level": "Medium",
+    "intro": "Ten night creatures are printed in a club’s field notebook. The order and direction of the lettering tell the group where to gather. Look in any of eight directions.",
+    "grid": [
+      "REGDABGTFOSI",
+      "WOMBATEBPTDU",
+      "IWYFGVHOFNFF",
+      "TKYYIOSIYVNI",
+      "OFECASHBPRHR",
+      "LZDRUXAEAXKE",
+      "EGWMAIFJGKRF",
+      "CYPLLCTHMDTL",
+      "ONNOSHCHKLEY",
+      "JOOJGDFOTNFH",
+      "XEZIFMUTOOJY",
+      "DJNLAJGMPNMO"
+    ],
+    "locations": {
+      "NIGHTJAR": [
+        [
+          2,
+          11
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "HEDGEHOG": [
+        [
+          11,
+          9
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "RACCOON": [
+        [
+          3,
+          5
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      "FIREFLY": [
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          8
+        ]
+      ],
+      "OPOSSUM": [
+        [
+          9,
+          0
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "BADGER": [
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "WOMBAT": [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "OCELOT": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "CIVET": [
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "MOTH": [
+        [
+          10,
+          11
+        ],
+        [
+          7,
+          8
+        ]
+      ]
+    },
+    "questions": [
+      "Stand on the last letter of RACCOON. Which OTHER listed word starts closest, and how many one-square steps away is its start? You may walk up, down, left or right through any cells."
+    ],
+    "answer": "Moth, 1 steps.",
+    "why": "RACCOON ends at row 12, column 10. MOTH begins at row 12, column 11. Their row and column distances add to 1. The next closest start is 4 steps away.",
+    "id": 336
+  },
+  {
+    "title": "A fish story in two baskets",
+    "level": "Hard",
+    "intro": "The fish market compares the fraction of torn labels on two packing days. The foreman insists that because both the red and the blue baskets improved on Tuesday, the fraction of torn labels overall must have improved too. The baskets changed greatly in size.",
+    "clues": [
+      "Each label belonged to exactly one of the two baskets on its day. A torn label counts once. Compare fractions of all labels, not just the raw torn counts."
+    ],
+    "questions": [
+      "Did the overall fraction of torn labels go down? Explain how both basket fractions could improve."
+    ],
+    "answer": "It rose from 26% to 57%. Tuesday put many more labels in the basket with the higher damage rate.",
+    "why": "On Monday the red basket had 8/10 torn and blue 18/90; on Tuesday red improved to 56/80 and blue to 1/20. The totals are 26/100 and 57/100. Red was the higher-rate basket both days and represented four fifths of Tuesday’s labels.",
+    "tables": [
+      [
+        "Market tally",
+        [
+          "Day",
+          "Red torn / all",
+          "Blue torn / all"
+        ],
+        [
+          [
+            "Monday",
+            "8 / 10",
+            "18 / 90"
+          ],
+          [
+            "Tuesday",
+            "56 / 80",
+            "1 / 20"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 337
+  },
+  {
+    "title": "The guest who kept the left glove",
+    "level": "Hard",
+    "intro": "A glove-shaped charm was sent to the person who sat directly opposite the guest wearing a white rose. At a round table set for six, Sal finds three place cards, three remembered positions and no useful view of the room entrance.",
+    "clues": [
+      "Starting at the seat with the white rose and reading clockwise, the second seat encountered is Pru’s: there is exactly one intervening seat.",
+      "Nils sat immediately clockwise from Pru. Jo sat opposite Pru. June wore the white rose. The remaining guests were Tess and Sal."
+    ],
+    "questions": [
+      "Who received the charm? Can the remaining two unnamed seats be assigned from these clues?"
+    ],
+    "answer": "Nils received the charm. Tess and Sal can swap their two seats.",
+    "why": "Number June’s seat 1. Pru is 3; Nils is 4, opposite 1. Jo at 6 is opposite Pru. The free seats 2 and 5 can be filled by Tess and Sal in either order. The charm does not depend on that last choice.",
+    "kind": "Whodunit",
+    "id": 338
+  },
+  {
+    "title": "The silent partner on the voucher",
+    "level": "Medium",
+    "intro": "Three neighbors split the cost of a lantern for the harbor walk. The clerk entered all payments as though they had come out of one purse. A refund for the chipped chimney makes the grand total on the surviving voucher misleading.",
+    "clues": [
+      "Ada and Bren first paid exactly the same whole number of pounds. Cy paid half as much as Ada. The shop later returned four pounds, all to Cy.",
+      "After the refund, the three neighbors together had actually spent 31 pounds. No one paid or received anything else."
+    ],
+    "questions": [
+      "How much did each neighbor actually contribute after the refund? Could Cy’s final contribution have been half Ada’s?"
+    ],
+    "answer": "Ada paid £14, Bren £14 and Cy £3 net.",
+    "why": "Before the refund the shop had received £35. Split it into five equal shares: two each for Ada and Bren, one for Cy. The share is £7. Cy paid £7 then received £4, so the “half” description works only for the first payment.",
+    "kind": "Detective skills",
+    "id": 339
+  },
+  {
+    "title": "The ferries that never met at noon",
+    "level": "Medium",
+    "intro": "Three model ferries leave their berths forever on Tuesday’s exhibition turntable. Each has a private bell that strikes on departure. The engineer insists that two bells can ring together, yet all three never can.",
+    "clues": [
+      "Red rings at minute 0 and every 6 minutes thereafter. Blue rings at minute 3 and every 9 minutes thereafter. Gold rings at minute 1 and every 4 minutes thereafter.",
+      "Times are whole minutes counted from the start. A bell strike has no duration."
+    ],
+    "questions": [
+      "When do red and blue first ring together? Which pair can never coincide, and what does that tell you about the three?"
+    ],
+    "answer": "Red and blue first meet at minute 12. Red and gold never meet, so no three-bell chord occurs.",
+    "why": "Red’s early times are 0, 6 and 12; blue’s are 3 and 12. Every red time is even and every gold time is odd. Blue and gold do meet, for example at minute 21.",
+    "kind": "Logic",
+    "id": 340
+  },
+  {
+    "title": "The mitten sold by itself",
+    "kind": "Crossword",
+    "level": "Easy",
+    "intro": "The second mitten went to the wrong customer. The first mitten came with the knitter’s crossword and a coded parcel mark.",
+    "entries": [
+      {
+        "x": 5,
+        "y": 6,
+        "dir": "Across",
+        "word": "PURL",
+        "clue": "Stitch often paired with knit"
+      },
+      {
+        "x": 6,
+        "y": 4,
+        "dir": "Down",
+        "word": "THUMB",
+        "clue": "Only digit with its own pocket in a mitten"
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "dir": "Across",
+        "word": "RIB",
+        "clue": "Stretchy alternating knit and purl pattern"
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "dir": "Across",
+        "word": "KNIT",
+        "clue": "Stitch giving the face of stockinette its little V shapes"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "dir": "Down",
+        "word": "SKEIN",
+        "clue": "Loosely wound bundle of yarn"
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "dir": "Down",
+        "word": "LOOP",
+        "clue": "Shape of a live stitch"
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "dir": "Across",
+        "word": "GAUGE",
+        "clue": "Number of stitches per inch"
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "dir": "Down",
+        "word": "ROW",
+        "clue": "One pass across a flat piece"
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "dir": "Down",
+        "word": "CAST",
+        "clue": "First word in the instruction to put stitches on a needle"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "6 Across",
+            "3"
+          ],
+          [
+            "2",
+            "8 Down",
+            "2"
+          ],
+          [
+            "3",
+            "2 Down",
+            "3"
+          ],
+          [
+            "4",
+            "3 Across",
+            "5"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Rose.",
+    "why": "6 Across is PURL, so letter 3 is R. 8 Down is ROW, so letter 2 is O. 2 Down is CAST, so letter 3 is S. 3 Across is GAUGE, so letter 5 is E.",
+    "id": 341
+  },
+  {
+    "title": "The seal on the gem setter’s tray",
+    "kind": "Word search",
+    "level": "Hard",
+    "intro": "The jeweler entered ten cut and setting terms on a squared tray liner. Follow the chart to identify the mark on the tray. Look in any of eight directions.",
+    "grid": [
+      "TTGPECUSHIONV",
+      "AVIJGERZRAMIW",
+      "RORBJTJHJTZGI",
+      "ANDGEXZHDHTBT",
+      "CZLHMZOJZIHEV",
+      "GNEDPPEPBVCCN",
+      "VNOLDOALYAAPO",
+      "QGOMBVIYFEMYH",
+      "FSDRIUEGVLUGC",
+      "OIMLPPKSLAVOO",
+      "FUIBETTEUGABB",
+      "SOGNIOTWJZGUA",
+      "NLOPCNPUEOBTC"
+    ],
+    "locations": {
+      "CABOCHON": [
+        [
+          12,
+          12
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "BAGUETTE": [
+        [
+          11,
+          10
+        ],
+        [
+          4,
+          10
+        ]
+      ],
+      "PAVILION": [
+        [
+          7,
+          5
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "CUSHION": [
+        [
+          5,
+          0
+        ],
+        [
+          11,
+          0
+        ]
+      ],
+      "GIRDLE": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "FACET": [
+        [
+          8,
+          7
+        ],
+        [
+          12,
+          3
+        ]
+      ],
+      "BEZEL": [
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "PRONG": [
+        [
+          4,
+          9
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "CARAT": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "OVAL": [
+        [
+          11,
+          9
+        ],
+        [
+          8,
+          9
+        ]
+      ]
+    },
+    "questions": [
+      "Start at row 7, column 7. Take ONE step in each word’s reading direction in this order: CUSHION, PAVILION, PRONG, BEZEL. Where do you land, and which letter is printed there? A diagonal counts as one step."
+    ],
+    "answer": "Row 8, column 7, letter I.",
+    "why": "The four bearings are east, southwest, northwest, southeast. Your stops are row 7, column 8; row 8, column 7; row 7, column 6; row 8, column 7.",
+    "id": 342
+  },
+  {
+    "title": "Who painted the second chimney?",
+    "level": "Medium",
+    "intro": "Three artists successively worked on the same harbor panorama. After the exhibition a collector paid a bonus to whoever added its second chimney. The pictures on the artists’ postcards were all taken after they finished, but the cards were posted in a different order.",
+    "clues": [
+      "Details were added and never painted out. The initial bare canvas had no chimney. One postcard shows the painting exactly as each named artist left it.",
+      "Each later artist left all earlier additions intact. Paint sessions occurred one after another."
+    ],
+    "questions": [
+      "Which artist earned the chimney bonus? Why is the card showing three chimneys not enough by itself?"
+    ],
+    "answer": "Pavel added the second chimney.",
+    "why": "Read the irreversible additions as a time sequence: Irma left one chimney; Pavel left two; Jo left three. The artist who left three added the third after the second already existed. Posting dates concern the mail, not the painting.",
+    "tables": [
+      [
+        "Postcard fronts",
+        [
+          "Artist",
+          "Visible details",
+          "Day posted"
+        ],
+        [
+          [
+            "Jo",
+            "Three chimneys, sail, moon",
+            "Monday"
+          ],
+          [
+            "Irma",
+            "One chimney, sail",
+            "Friday"
+          ],
+          [
+            "Pavel",
+            "Two chimneys, sail, moon",
+            "Sunday"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 343
+  },
+  {
+    "title": "The twins on the rowing card",
+    "level": "Easy",
+    "intro": "Two people appear under the initial J. Moss on a club card. A guest suggests the entries record the same person twice. The club used the form below and checked every age at the start of the meet.",
+    "clues": [
+      "The meet lasted one afternoon. A competitor could appear in different events, but each person had just one checked age for the entire meet.",
+      "Moss was a common surname at the club. J. could be more than one first name."
+    ],
+    "questions": [
+      "What is the smallest possible number of people in these four entries? Does the card establish that they were twins?"
+    ],
+    "answer": "At least two people, and two suffice. The card does not establish twins.",
+    "why": "A 17-year-old cannot also be the 19-year-old checked on that afternoon. One person of each age could row both listed events for that age. Sharing an initial and surname does not show any family relationship.",
+    "tables": [
+      [
+        "Heat cards",
+        [
+          "Entry",
+          "Age",
+          "Event"
+        ],
+        [
+          [
+            "J. Moss",
+            17,
+            "Singles"
+          ],
+          [
+            "J. Moss",
+            19,
+            "Pairs"
+          ],
+          [
+            "J. Moss",
+            17,
+            "Fours"
+          ],
+          [
+            "J. Moss",
+            19,
+            "Singles"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 344
+  },
+  {
+    "title": "Two foils for the destination board",
+    "level": "Medium",
+    "intro": "A model railway used two transparent foils to light a three-digit train number. Neither foil is legible by itself. Copies of their five rows survive.",
+    "clues": [
+      "Place the foils in exact register, with the top rows together. A dot filled on EITHER foil stays filled in the combined image. A light dot means empty.",
+      "There are eleven positions per row. Positions 4 and 8 are blank spacers between three-column digits. Sketch the five combined rows on the scratch pad."
+    ],
+    "questions": [
+      "Which train was shown on the destination board?"
+    ],
+    "answer": "Train 258.",
+    "why": "The joined patterns form 2, 5 and 8. Only the upper right and lower left sides light on the first digit. The second digit uses the opposite sides, and the last lights all four sides.",
+    "tables": [
+      [
+        "Foil strips",
+        [
+          "Row",
+          "Foil A",
+          "Foil B"
+        ],
+        [
+          [
+            1,
+            "·●··●●·····",
+            "●●●··●●·●●●"
+          ],
+          [
+            2,
+            "··●········",
+            "··●·●···●·●"
+          ],
+          [
+            3,
+            "●●··●●●·●●●",
+            "·●●··●···●·"
+          ],
+          [
+            4,
+            "········●·●",
+            "●·····●·●··"
+          ],
+          [
+            5,
+            "·●●·●●··●●●",
+            "●·····●··●●"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Codebreaking",
+    "id": 345
+  },
+  {
+    "title": "The badge that beats the badge",
+    "level": "Hard",
+    "intro": "The promenade society held three separate votes between pairs of designs for its badge. The secretary assumed that one design beat both others. The only surviving ballots rank all three designs from favorite to least favorite.",
+    "clues": [
+      "The designs are Bell, Shell and Crab. For each match, every ballot votes for whichever of that pair it ranks higher. All nine ballots count in every match.",
+      "Four ballots read Bell, Shell, Crab. Three read Shell, Crab, Bell. Two read Crab, Bell, Shell."
+    ],
+    "questions": [
+      "Choose the winning design in each pairing. Did any design win both its matches?"
+    ],
+    "answer": "Bell beats Shell 6–3; Shell beats Crab 7–2; Crab beats Bell 5–4. Each wins once.",
+    "why": "Against Shell, Bell gets the first four ballots and the last two. Against Crab, Shell gets the first four and the middle three. Against Bell, Crab gets the middle three and the last two. The three pairwise choices form a cycle.",
+    "tableform": {
+      "rows": [
+        "Bell vs Shell",
+        "Shell vs Crab",
+        "Bell vs Crab"
+      ],
+      "cols": [
+        [
+          "Winner",
+          "Bell",
+          "Shell",
+          "Crab"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 346
+  },
+  {
+    "title": "The scent on the greenhouse key",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "Three gardeners handed in labels after a citrus tasting. One had also seen the grower’s completed crossword.",
+    "entries": [
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Across",
+        "word": "GRAFT",
+        "clue": "Join a fruiting shoot to another rootstock"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Down",
+        "word": "GROVE",
+        "clue": "Planting of fruit trees"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "dir": "Down",
+        "word": "SOUR",
+        "clue": "Taste that makes many people pucker"
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "dir": "Across",
+        "word": "BLOOM",
+        "clue": "Flower that can precede the fruit"
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "dir": "Down",
+        "word": "PULP",
+        "clue": "Juicy flesh of the fruit"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "dir": "Across",
+        "word": "SEGMENT",
+        "clue": "Natural wedge of an orange"
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "dir": "Down",
+        "word": "PEEL",
+        "clue": "Remove a fruit’s outer covering"
+      },
+      {
+        "x": 10,
+        "y": 1,
+        "dir": "Down",
+        "word": "PITH",
+        "clue": "Spongy white layer beneath citrus peel"
+      },
+      {
+        "x": 2,
+        "y": 10,
+        "dir": "Across",
+        "word": "ZEST",
+        "clue": "Thin colored outer layer grated for flavor"
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "dir": "Down",
+        "word": "LIME",
+        "clue": "Green citrus in a traditional key pie"
+      },
+      {
+        "x": 3,
+        "y": 1,
+        "dir": "Across",
+        "word": "JUICE",
+        "clue": "Liquid squeezed from a lemon"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Owen",
+            "5 Down meets 5 Across at T",
+            "8 Across meets 6 Down at L"
+          ],
+          [
+            "Mae",
+            "5 Across meets 4 Down at E",
+            "5 Across meets 1 Down at N"
+          ],
+          [
+            "Ida",
+            "7 Down meets 9 Across at E",
+            "7 Across meets 5 Down at R"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Ida wrote the accurate slip.",
+    "why": "The two actual crossing letters on Ida’s slip are E and R. Owen wrote T for the crossing of SOUR and SEGMENT, which share S. Mae wrote N for the crossing of SEGMENT and LIME, which share E.",
+    "id": 347
+  },
+  {
+    "title": "The ten boats in a teacup",
+    "kind": "Word search",
+    "level": "Easy",
+    "intro": "The miniatures club put ten watercraft on its regatta poster. The tiny vessels sail in the reading directions of their names. Look across to the right, down, or diagonally down.",
+    "grid": [
+      "PQSLOOPXMC",
+      "WPKEZSXSEB",
+      "VUIBKYZDKY",
+      "BGFVAEPQSA",
+      "POFBCRTJMW",
+      "QLSAHXGCCL",
+      "MPNVDUCEHL",
+      "DOUOCUTTER",
+      "EERNITRAFT",
+      "LYTATIOTCO"
+    ],
+    "locations": {
+      "CUTTER": [
+        [
+          4,
+          7
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "KETCH": [
+        [
+          4,
+          2
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "CANOE": [
+        [
+          4,
+          4
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "SKIFF": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "SLOOP": [
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "BARGE": [
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "DORY": [
+        [
+          4,
+          6
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "YAWL": [
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          5
+        ]
+      ],
+      "RAFT": [
+        [
+          6,
+          8
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "PUNT": [
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          9
+        ]
+      ]
+    },
+    "questions": [
+      "The finish flags belong to CANOE, PUNT, CUTTER. From the LAST letter of SLOOP, which flag’s LAST letter is farthest away by horizontal and vertical steps? Diagonal shortcuts are off limits."
+    ],
+    "answer": "Canoe, 14 steps.",
+    "why": "From row 1, column 7, the three distances are CANOE 14, PUNT 11, CUTTER 10. Count the difference in rows plus the difference in columns for each pair of endpoints.",
+    "id": 348
+  },
+  {
+    "title": "The guest behind the bracket",
+    "level": "Hard",
+    "intro": "In a travelers’ memoir four friends share the initials they used on a tour. The printer set a bracket in the wrong place on a caption. The club’s key survives: a bracket contains the writer’s old cabin number, not the pictured guest’s. The album describes both people by initials alone.",
+    "clues": [
+      "The disputed caption reads “R photographed T [12].” Read R and T as first-name initials only. Each guest kept one cabin for the trip.",
+      "After the portrait, the photographed guest hung the print in the lounge. This cannot be a self-portrait because the two initials differ.",
+      "A postcard from the photographed guest says “my cabin number is the one immediately above yours in number,” addressing the photographer."
+    ],
+    "questions": [
+      "Who photographed whom? Whose photograph was hung in the lounge?"
+    ],
+    "answer": "Robin photographed Tavi, and Tavi’s portrait was hung.",
+    "why": "The bracket assigns cabin 12 to the photographer R, who must be Robin. The photographed T occupied 13, the next number, making that guest Tavi. Rory and Toni fit the initials but their cabins cannot fit the caption and postcard together.",
+    "tables": [
+      [
+        "Cabin ledger",
+        [
+          "Guest",
+          "Cabin"
+        ],
+        [
+          [
+            "Rory",
+            11
+          ],
+          [
+            "Robin",
+            12
+          ],
+          [
+            "Tavi",
+            13
+          ],
+          [
+            "Toni",
+            14
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 349
+  },
+  {
+    "title": "The ticket that turned seventeen",
+    "level": "Medium",
+    "intro": "There is a strip of individually numbered folding chairs. The caretaker made a note while looking at the strip from the stage, then read that note from the audience entrance. Her note said “seventeenth from my left.” The ushers need the actual chair.",
+    "clues": [
+      "All 26 chairs form a single straight row facing the stage. The audience sees chair 1 at the far left and chair 26 at the far right.",
+      "The caretaker stood on the stage facing the audience when she wrote the note. Later she stood at the back facing the stage."
+    ],
+    "questions": [
+      "Which numbered chair was meant? How many chairs lie between it and chair 17?"
+    ],
+    "answer": "Chair 10. Six chairs lie between 10 and 17.",
+    "why": "The caretaker’s original left was the audience’s right. The seventeenth from that end is 26 − 17 + 1 = 10. Chairs 11 through 16 are the six between the two candidates.",
+    "kind": "Detective skills",
+    "id": 350
+  },
+  {
+    "title": "The four margins of a flag",
+    "level": "Medium",
+    "intro": "A cloth flag had a narrow hand-painted border along all four edges. A souvenir shop says a smaller scrap with paint on two adjoining edges was cut from the flag’s very center. The cutter has kept her cutting diagram.",
+    "clues": [
+      "The original cloth was painted only on its outside edges. It was sliced into nine equal rectangles with two straight full-width cuts each way. No paint was added afterward.",
+      "The scrap is one of those nine rectangles. It has paint on exactly two adjoining edges. The border is identical all around, and the scrap carries no other orientation mark."
+    ],
+    "questions": [
+      "Where in the flag can the scrap have come from? Does the paint alone identify a specific one of the nine positions?"
+    ],
+    "answer": "Any of the four corners, and only a corner. It does not distinguish which corner.",
+    "why": "The center piece touches no original edges, and each edge-middle piece touches only one. Exactly the four corner rectangles retain two adjacent outer edges. With no orientation or distinctive border mark, all four can fit.",
+    "kind": "Detective skills",
+    "id": 351
+  },
+  {
+    "title": "Three hands on the parish banner",
+    "level": "Medium",
+    "intro": "An embroidered harbor banner was credited to one maker, though a second volunteer had sewn its border and a third had chosen the cloth. Three statements were written down separately; the treasurer can independently certify that exactly one is false. The minute book establishes who chose the cloth.",
+    "clues": [
+      "No one held two roles. Greer chose the cloth. The others are Nella and Ash.",
+      "Greer said “Ash sewed the border.” Nella said “I embroidered the center.” Ash said “Nella sewed the border.”"
+    ],
+    "questions": [
+      "Whose name belongs on the credit for the embroidered center? Who made the false statement?"
+    ],
+    "answer": "Nella embroidered the center. Ash’s statement was false.",
+    "why": "With Greer assigned, there are two ways to fill the rest. If Ash sewed the border then Nella did the center: true, true, false. If Nella sewed the border the claims read false, false, true. Only the first leaves exactly one false.",
+    "kind": "Whodunit",
+    "id": 352
+  },
+  {
+    "title": "Three drums in a toy tram",
+    "level": "Hard",
+    "intro": "A toy tram has front, middle and rear number drums. Each displays one of 0, 1, 2 or 3. Together the three show different numbers. A fourth display adds front and rear but shows only the remainder after dividing by four.",
+    "clues": [
+      "The three drum numbers total 5. The fourth display reads 3. The middle drum is larger than the front one.",
+      "A remainder of 3 could arise from a sum of 3 or 7, but each individual drum is at most 3."
+    ],
+    "questions": [
+      "Restore the three drum numbers."
+    ],
+    "answer": "Front 0, middle 2, rear 3.",
+    "why": "Front and rear cannot total 7, so they total 3 and the middle is 2. For the ends choose either 0 and 3 or 1 and 2. The second pair repeats the middle. The front must be less than 2, forcing it to 0.",
+    "tableform": {
+      "rows": [
+        "Front",
+        "Middle",
+        "Rear"
+      ],
+      "cols": [
+        [
+          "Number",
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 353
+  },
+  {
+    "title": "A postcard from the bowls lawn",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "Three bowls rolled onto the same green after closing. The groundskeeper left his crossword to identify which team had reserved it.",
+    "entries": [
+      {
+        "x": 0,
+        "y": 3,
+        "dir": "Across",
+        "word": "BANK",
+        "clue": "Raised ground beyond the ditch"
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "dir": "Down",
+        "word": "TAPE",
+        "clue": "Flexible measure for deciding the nearer bowl"
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "dir": "Across",
+        "word": "END",
+        "clue": "One passage of play toward a jack"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "dir": "Down",
+        "word": "JACK",
+        "clue": "Small target ball in lawn bowls"
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "dir": "Down",
+        "word": "DRAW",
+        "clue": "A gently judged shot intended to finish close to the jack"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Across",
+        "word": "RINK",
+        "clue": "Lane-like division of a bowling green"
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "dir": "Down",
+        "word": "GREEN",
+        "clue": "Prepared surface on which bowls is played"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "dir": "Across",
+        "word": "TEAM",
+        "clue": "Side playing together"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "dir": "Across",
+        "word": "MAT",
+        "clue": "Small rectangle on which a player takes a stance"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "9 Across",
+            "1"
+          ],
+          [
+            "2",
+            "3 Down",
+            "4"
+          ],
+          [
+            "3",
+            "8 Down",
+            "1"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Red.",
+    "why": "9 Across is RINK, so letter 1 is R. 3 Down is TAPE, so letter 4 is E. 8 Down is DRAW, so letter 1 is D.",
+    "id": 354
+  },
+  {
+    "title": "The flower that grew under glass",
+    "kind": "Word search",
+    "level": "Medium",
+    "intro": "The greenhouse manager planned a display with ten plant-care words as the aisles. The last page of the plan records where two aisles meet. Look in any of eight directions.",
+    "grid": [
+      "VQLGJONCXHTH",
+      "QCKZNRIXSCOU",
+      "CVCLNIMYSLWM",
+      "IWOUORLBBUDI",
+      "FATKCPWDWMTD",
+      "MJSIVZRAESAI",
+      "KUTSZDTUOEFT",
+      "KDOSSEWPNBSY",
+      "CPOVRFMIBIPR",
+      "YWRIDODYHMNK",
+      "TDNYCUTTINGG",
+      "PGSILLERTYYZ"
+    ],
+    "locations": {
+      "ROOTSTOCK": [
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "WATERING": [
+        [
+          8,
+          4
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "SEEDLING": [
+        [
+          10,
+          7
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "HUMIDITY": [
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          7
+        ]
+      ],
+      "PRUNING": [
+        [
+          5,
+          4
+        ],
+        [
+          11,
+          10
+        ]
+      ],
+      "TRELLIS": [
+        [
+          8,
+          11
+        ],
+        [
+          2,
+          11
+        ]
+      ],
+      "CUTTING": [
+        [
+          4,
+          10
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "COMPOST": [
+        [
+          4,
+          10
+        ],
+        [
+          10,
+          4
+        ]
+      ],
+      "MULCH": [
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          0
+        ]
+      ],
+      "LOAM": [
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    "questions": [
+      "At which square do CUTTING and COMPOST cross? Give the row, column and shared letter. Count from the top left, starting at 1."
+    ],
+    "answer": "Row 11, column 5, letter C.",
+    "why": "CUTTING runs east from row 11, column 5. COMPOST runs northeast from row 11, column 5. Their lines share one square, containing C.",
+    "id": 355
+  },
+  {
+    "title": "The trim that reads from the clasp",
+    "level": "Medium",
+    "intro": "Four enamel links fell out of a bracelet. The maker used a different paint at each joint so she could put the links back in order. Each link carries a permanent letter in its middle.",
+    "clues": [
+      "Either end of a loose link may face the clasp. Lay the links in one chain, touching like colors. Begin at the ivory clasp, finish at the mint clasp and use every link.",
+      "The middle letters are stamped on both faces, so turning a link around does not change its letter."
+    ],
+    "questions": [
+      "Which creature was on the bracelet’s matching brooch?"
+    ],
+    "answer": "A seal.",
+    "why": "Only the S link has an ivory end. Its blue end requires E, which presents umber. Umber leads to A and pink leads to L. The far end is mint, as required.",
+    "tables": [
+      [
+        "Links on the cloth",
+        [
+          "One end",
+          "Letter",
+          "Other end"
+        ],
+        [
+          [
+            "Pink",
+            "L",
+            "Mint"
+          ],
+          [
+            "Umber",
+            "E",
+            "Blue"
+          ],
+          [
+            "Ivory",
+            "S",
+            "Blue"
+          ],
+          [
+            "Pink",
+            "A",
+            "Umber"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Codebreaking",
+    "id": 356
+  },
+  {
+    "title": "The catch hidden in the moving average",
+    "level": "Hard",
+    "intro": "The central pier posted its sales as the average of the most recent three days. On Tuesday and Wednesday the figure changed, though the two middle days in those calculations were the same. The Sunday tally is still legible.",
+    "clues": [
+      "Tuesday’s average used Sunday, Monday and Tuesday. Wednesday’s used Monday, Tuesday and Wednesday. Averages shown are exact.",
+      "Sunday sold 18 tickets. Tuesday’s posted average was 24 tickets; Wednesday’s was 29."
+    ],
+    "questions": [
+      "How many tickets were sold on Wednesday? Do these data determine Monday’s sales by themselves?"
+    ],
+    "answer": "Wednesday sold 33. Monday’s sales cannot be isolated.",
+    "why": "The three-day totals rose from 72 to 87. Replacing Sunday with Wednesday increased them by 15, so Wednesday was 18 + 15 = 33. Monday and Tuesday together total 54. For example, 26 and 28 or 27 and 27 both fit.",
+    "kind": "Detective skills",
+    "id": 357
+  },
+  {
+    "title": "A beneficiary in the book of sums",
+    "level": "Hard",
+    "intro": "A donor left the cost of restoring a carved dolphin to one of four boat clubs. Her signed note says to pick the club whose entry is “closest to the middle pledged sum.” The treasurer’s charter carefully defines this expression.",
+    "clues": [
+      "There are four pledges. Sort them. The middle sum is the arithmetic mean of the two middle pledges. Compare each club’s distance from that value.",
+      "When two clubs are equally close, select the club whose pledge arrived earlier in the day. The four arrival times are distinct."
+    ],
+    "questions": [
+      "Which club receives the restoration credit, and why does simply picking the second-smallest pledge fail?"
+    ],
+    "answer": "Gannet. The middle sum is 21 pounds; both 18 and 24 are three pounds away, and Gannet arrived earlier.",
+    "why": "The sorted sums are 9, 18, 24 and 45; the midpoint of 18 and 24 is 21. Gannet brought 24 at 09:12 and Auk brought 18 at 10:05. The outer sums lie 12 and 24 pounds away.",
+    "tables": [
+      [
+        "Club pledges",
+        [
+          "Club",
+          "Pledge",
+          "Arrival"
+        ],
+        [
+          [
+            "Auk",
+            "£18",
+            "10:05"
+          ],
+          [
+            "Gannet",
+            "£24",
+            "09:12"
+          ],
+          [
+            "Kite",
+            "£45",
+            "08:30"
+          ],
+          [
+            "Tern",
+            "£9",
+            "09:45"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 358
+  },
+  {
+    "title": "Two boats for six floating kitchens",
+    "level": "Medium",
+    "intro": "Six floating kitchens, lettered A through F, need recipe cards. The charity can put packets on just two scheduled delivery boats. A boat can serve any of its listed kitchens, and every kitchen must receive a card.",
+    "clues": [
+      "Choose two different boats. They must cover the six kitchens between them."
+    ],
+    "questions": [
+      "Which two boats should carry the recipe packets? Why won’t the other boat serving D work in a two-boat plan?"
+    ],
+    "answer": "Heron and Reed.",
+    "why": "Only Reed and Tern serve D. Tern serves B, C and D, leaving A, E and F for one boat, and none serves all three. Reed covers D and F; only Heron supplies all four remaining letters A, B, C and E.",
+    "tables": [
+      [
+        "Boat calls",
+        [
+          "Boat",
+          "Kitchens served"
+        ],
+        [
+          [
+            "Heron",
+            "A, B, C, E"
+          ],
+          [
+            "Iris",
+            "B, C, F"
+          ],
+          [
+            "Moss",
+            "A, C, E"
+          ],
+          [
+            "Reed",
+            "D, F"
+          ],
+          [
+            "Tern",
+            "B, C, D"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Logic",
+    "id": 359
+  },
+  {
+    "title": "The proof on handmade paper",
+    "kind": "Crossword",
+    "level": "Hard",
+    "intro": "The papermaker’s apprentice put a puzzle on a drying sheet. One visitor described the finished crossword before the ink dried.",
+    "entries": [
+      {
+        "x": 5,
+        "y": 4,
+        "dir": "Across",
+        "word": "DRY",
+        "clue": "What the new sheets must eventually do"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "dir": "Down",
+        "word": "FIBER",
+        "clue": "One filament making up the paper"
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "dir": "Down",
+        "word": "DECKLE",
+        "clue": "Frame that fixes a sheet’s edges on a papermaker’s mould"
+      },
+      {
+        "x": 3,
+        "y": 9,
+        "dir": "Across",
+        "word": "SHEET",
+        "clue": "One finished leaf of paper"
+      },
+      {
+        "x": 7,
+        "y": 7,
+        "dir": "Down",
+        "word": "VAT",
+        "clue": "Large tub of watery pulp"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "dir": "Across",
+        "word": "FELT",
+        "clue": "Absorbent sheet placed between wet sheets of paper"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Down",
+        "word": "PRESS",
+        "clue": "Machine that squeezes water from the stack"
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "dir": "Down",
+        "word": "LAID",
+        "clue": "Paper with fine parallel lines from its mould"
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "dir": "Across",
+        "word": "SIZE",
+        "clue": "Treatment that helps paper resist soaking up ink"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Sol",
+            "1 Across meets 2 Down at D",
+            "7 Across meets 4 Down at S"
+          ],
+          [
+            "Ida",
+            "3 Across meets 1 Down at R",
+            "7 Across meets 5 Down at V"
+          ],
+          [
+            "Mae",
+            "3 Down meets 7 Across at E",
+            "3 Across meets 3 Down at D"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Mae wrote the accurate slip.",
+    "why": "The two actual crossing letters on Mae’s slip are E and D. Sol wrote D for the crossing of FELT and LAID, which share L. Ida wrote V for the crossing of SHEET and VAT, which share T.",
+    "id": 360
+  },
+  {
+    "title": "Parcel from the concertina player",
+    "kind": "Word search",
+    "level": "Medium",
+    "intro": "A busker sent ten words from a squeezebox and string band on a card. Follow the musical lines on her card. Look in any of eight directions.",
+    "grid": [
+      "FIDDLEMUEALB",
+      "QEPAEUSEXJDT",
+      "DBNSYSWOLLEB",
+      "WUJIKVKYWOQL",
+      "XTCVLTNNFRDY",
+      "ETOUFODEERVY",
+      "UOJPMDDFMLJI",
+      "WNNRYHRNQBUY",
+      "GRAUFAGOAQUH",
+      "CHBZINRRHMNH",
+      "INSNPZVGTCCL",
+      "NIRFMJOBWURI"
+    ],
+    "locations": {
+      "MANDOLIN": [
+        [
+          9,
+          9
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "BELLOWS": [
+        [
+          11,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "HARMONY": [
+        [
+          1,
+          9
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "REFRAIN": [
+        [
+          9,
+          4
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "BUTTON": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "FIDDLE": [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "MELODY": [
+        [
+          6,
+          0
+        ],
+        [
+          11,
+          5
+        ]
+      ],
+      "BANJO": [
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "CHORD": [
+        [
+          9,
+          10
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "REED": [
+        [
+          9,
+          5
+        ],
+        [
+          6,
+          5
+        ]
+      ]
+    },
+    "questions": [
+      "Stand on the last letter of HARMONY. Which OTHER listed word starts closest, and how many one-square steps away is its start? You may walk up, down, left or right through any cells."
+    ],
+    "answer": "Refrain, 3 steps.",
+    "why": "HARMONY ends at row 4, column 8. REFRAIN begins at row 5, column 10. Their row and column distances add to 3. The next closest start is 4 steps away.",
+    "id": 361
+  },
+  {
+    "title": "A very economical string of bunting",
+    "level": "Hard",
+    "intro": "The tailor supplied ten triangular flags on a single line across the ballroom. The caterer’s drawing omitted the gaps and made the flag order look unimportant. A recovered measurement reveals which of two arrangements actually hung on the line.",
+    "clues": [
+      "Flag widths along the line were 10 cm for each rust flag and 20 cm for each blue flag. Every gap between neighboring flags was exactly 5 cm; there was no gap before the first.",
+      "Both sketches below start at the left wall. A pencil mark made exactly 65 cm from that wall was directly over fabric, strictly inside a flag rather than on a hem or in a gap."
+    ],
+    "questions": [
+      "Which sketch could be right? What color lay below the mark?"
+    ],
+    "answer": "Sketch A; the mark was on blue fabric.",
+    "why": "In A the first three flags occupy 0–10, 15–35 and 40–50 cm. The fourth, blue, runs from 55 to 75 cm. In B the first three run 0–20, 25–35 and 40–60 cm; its fourth starts at 65, on a hem. Only A puts 65 strictly inside fabric.",
+    "tables": [
+      [
+        "Left-to-right sketches",
+        [
+          "Sketch",
+          "Flag colors"
+        ],
+        [
+          [
+            "A",
+            "Rust, blue, rust, blue, blue, rust, rust, blue, rust, blue"
+          ],
+          [
+            "B",
+            "Blue, rust, blue, rust, rust, blue, blue, rust, blue, rust"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 362
+  },
+  {
+    "title": "The actress in the pantry photograph",
+    "level": "Medium",
+    "intro": "In a playful photograph of a shipboard melodrama, exactly one performer is in character as the lost countess. For this rehearsal the countess was always identified by two particular props. The newspaper cut off one side of the photograph but the wardrobe inventory survives.",
+    "clues": [
+      "The countess alone held a fan in her left hand and wore a ring on her right. At least one other character had each individual prop.",
+      "The photograph shows the four performers facing the camera. Each fan’s side is given from the viewer’s perspective. The original positive was printed without reflection. The wardrobe log gives each wearer’s own hand for the ring."
+    ],
+    "questions": [
+      "Who is the countess? Which apparent match arises if you forget whose left is meant?"
+    ],
+    "answer": "Elsa. If you treated the viewer’s left as the wearer’s left, you would pick Toni.",
+    "why": "A person facing you has their left hand on your right. Elsa and Quinn have the fan on that side; only Elsa also has a ring on her own right. Toni’s ring is right but her fan is in her own right hand.",
+    "tables": [
+      [
+        "Press crop and wardrobe log",
+        [
+          "Name",
+          "Fan in image",
+          "Ring in wardrobe log"
+        ],
+        [
+          [
+            "Toni",
+            "Viewer’s left",
+            "Wearer’s right"
+          ],
+          [
+            "Elsa",
+            "Viewer’s right",
+            "Wearer’s right"
+          ],
+          [
+            "Quinn",
+            "Viewer’s right",
+            "Wearer’s left"
+          ],
+          [
+            "Darcy",
+            "Viewer’s left",
+            "Wearer’s left"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 363
+  },
+  {
+    "title": "Supper for the odd one out",
+    "level": "Medium",
+    "intro": "A menu printer dialed up a five-letter password using rows of identical food labels. The compositor printed each ordinary dish twice and the special once on every row. The orders of the dishes were then mixed.",
+    "clues": [
+      "Within each row, pair off identical words. Take the final letter of the single dish left unpaired. Read the rows from top to bottom.",
+      "The password names an item at the captain’s place setting."
+    ],
+    "questions": [
+      "Which item is the password?"
+    ],
+    "answer": "Plate.",
+    "why": "The unmatched dishes in order are SOUP, VEAL, OKRA, TOAST and RICE. Their last letters make PLATE.",
+    "tables": [
+      [
+        "Mixed menu orders",
+        [
+          "Row",
+          "Labels"
+        ],
+        [
+          [
+            "1",
+            "Fig, soup, pea, fig, pea"
+          ],
+          [
+            "2",
+            "Veal, ham, yam, yam, ham"
+          ],
+          [
+            "3",
+            "Okra, rice, rye, rice, rye"
+          ],
+          [
+            "4",
+            "Jam, toast, leek, jam, leek"
+          ],
+          [
+            "5",
+            "Stew, bean, rice, bean, stew"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Codebreaking",
+    "id": 364
+  },
+  {
+    "title": "The piano heard at two speeds",
+    "level": "Hard",
+    "intro": "A donated disc preserves a pianist’s single sustained passage. One transfer calls it a fast performance lasting 48 seconds; another calls it slower and says it lasted exactly a minute. Both transfers began and ended at precisely the same grooves.",
+    "clues": [
+      "For this puzzle every revolution maps one full turn of groove; there was no editing or skipping. The fast transfer used 75 revolutions per minute.",
+      "The disc label is gone. We know which transfer ran faster, but we have no independent evidence of the speed the pianist intended."
+    ],
+    "questions": [
+      "What speed produced the minute-long transfer? Which transfer proves the pianist’s intended tempo?"
+    ],
+    "answer": "60 revolutions per minute. Neither transfer alone proves the intended tempo.",
+    "why": "In 48 seconds, or four fifths of a minute, the fast machine made 75 × 4/5 = 60 revolutions. The slow machine covered exactly those 60 revolutions in one minute. Playback settings fix the measured ratio only.",
+    "kind": "Detective skills",
+    "id": 365
+  },
+  {
+    "title": "All three stamps before the pier",
+    "level": "Hard",
+    "intro": "The quay walking club gives a prize for the shortest five-stop walk from the Gate to the Pier that collects the Forge, Inn and Shop stamps. Each stamp stop is visited exactly once; the Gate and Pier must occur only as the start and finish.",
+    "clues": [
+      "Every street listed can be walked either way. There are no others. Each number is a walking time in minutes.",
+      "To qualify, use a single listed street between each successive pair of stops; a return to an earlier place is not allowed."
+    ],
+    "questions": [
+      "Choose the three stamp stops in order and give the shortest time."
+    ],
+    "answer": "Inn, Forge, Shop: 11 minutes.",
+    "why": "From the Gate only Inn or Forge can be first. The four possible complete routes have their middle stops Inn–Forge–Shop (2+4+2+3=11), Inn–Shop–Forge (2+6+2+7=17), Forge–Inn–Shop (3+4+6+3=16) and Forge–Shop–Inn (3+2+6+4=15). The first is uniquely quickest.",
+    "tableform": {
+      "rows": [
+        "First stamp",
+        "Second stamp",
+        "Third stamp"
+      ],
+      "cols": [
+        [
+          "Stop",
+          "Forge",
+          "Inn",
+          "Shop"
+        ]
+      ]
+    },
+    "tables": [
+      [
+        "Street lengths",
+        [
+          "Street",
+          "Minutes"
+        ],
+        [
+          [
+            "Gate–Forge",
+            3
+          ],
+          [
+            "Gate–Inn",
+            2
+          ],
+          [
+            "Forge–Inn",
+            4
+          ],
+          [
+            "Forge–Shop",
+            2
+          ],
+          [
+            "Inn–Shop",
+            6
+          ],
+          [
+            "Shop–Pier",
+            3
+          ],
+          [
+            "Forge–Pier",
+            7
+          ],
+          [
+            "Inn–Pier",
+            4
+          ]
+        ]
+      ]
+    ],
+    "kind": "Logic",
+    "id": 366
+  },
+  {
+    "title": "The trail beneath a sundial",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "A brass sundial arrived with its maker’s signature polished away. The crossword on its mounting board keeps a smaller mark intact.",
+    "entries": [
+      {
+        "x": 2,
+        "y": 6,
+        "dir": "Across",
+        "word": "TILT",
+        "clue": "Inclination away from level"
+      },
+      {
+        "x": 5,
+        "y": 3,
+        "dir": "Down",
+        "word": "NORTH",
+        "clue": "Direction of the pole star along the horizon’s compass scale"
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "dir": "Down",
+        "word": "EAST",
+        "clue": "Compass direction associated with sunrise"
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "dir": "Across",
+        "word": "DIAL",
+        "clue": "Face carrying the hour marks"
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "dir": "Down",
+        "word": "SHADE",
+        "clue": "What an object casts onto the face"
+      },
+      {
+        "x": 5,
+        "y": 7,
+        "dir": "Across",
+        "word": "HOUR",
+        "clue": "Unit marked off by a dial line"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "dir": "Across",
+        "word": "GNOMON",
+        "clue": "Part of a sundial that casts the reading shadow"
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "dir": "Down",
+        "word": "BRASS",
+        "clue": "Golden alloy often used for a garden dial"
+      },
+      {
+        "x": 6,
+        "y": 9,
+        "dir": "Across",
+        "word": "WEST",
+        "clue": "Compass direction associated with sunset"
+      },
+      {
+        "x": 9,
+        "y": 0,
+        "dir": "Down",
+        "word": "NOON",
+        "clue": "Time when the local sun crosses the meridian"
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "dir": "Across",
+        "word": "RAY",
+        "clue": "Straight line representing sunlight"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "1 Down",
+            "1"
+          ],
+          [
+            "2",
+            "2 Down",
+            "5"
+          ],
+          [
+            "3",
+            "6 Across",
+            "1"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Ned.",
+    "why": "1 Down is NOON, so letter 1 is N. 2 Down is SHADE, so letter 5 is E. 6 Across is DIAL, so letter 1 is D.",
+    "id": 367
+  },
+  {
+    "title": "A wall of tiny mirrors",
+    "kind": "Word search",
+    "level": "Hard",
+    "intro": "A restorer mapped the glazier’s shop with ten workshop words instead of aisle numbers. Follow the reading directions to retrace a delivery. Look in any of eight directions.",
+    "grid": [
+      "PHABMXIZCCLFK",
+      "GEPNAONJRWYRH",
+      "YTTUPJSSJTBAA",
+      "SAHGZRLNFKYMI",
+      "ODGLCQBAACLEW",
+      "JEIVIMGRTRSYT",
+      "HPLPJVEMQCTYK",
+      "SWDCZIYNZSHYM",
+      "ABAUZTDTANYIH",
+      "SFEARTYMKPRPD",
+      "XHLGBEVELRZNC",
+      "HGKHKBCOOFUJO",
+      "MCTRUFHRANNSN"
+    ],
+    "locations": {
+      "LEADLIGHT": [
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "TRANSOM": [
+        [
+          10,
+          6
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "GLAZIER": [
+        [
+          1,
+          11
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "MIRROR": [
+        [
+          12,
+          7
+        ],
+        [
+          7,
+          12
+        ]
+      ],
+      "PUTTY": [
+        [
+          4,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "FRAME": [
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          4
+        ]
+      ],
+      "BEVEL": [
+        [
+          4,
+          10
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "LATCH": [
+        [
+          6,
+          3
+        ],
+        [
+          10,
+          7
+        ]
+      ],
+      "SASH": [
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "PANE": [
+        [
+          9,
+          9
+        ],
+        [
+          6,
+          6
+        ]
+      ]
+    },
+    "questions": [
+      "Start at row 7, column 7. Take ONE step in each word’s reading direction in this order: PANE, SASH, BEVEL, MIRROR. Where do you land, and which letter is printed there? A diagonal counts as one step."
+    ],
+    "answer": "Row 6, column 6, letter M.",
+    "why": "The four bearings are northwest, north, east, southwest. Your stops are row 6, column 6; row 5, column 6; row 5, column 7; row 6, column 6.",
+    "id": 368
+  },
+  {
+    "title": "Two editions of the same lantern walk",
+    "level": "Medium",
+    "intro": "A typesetter printed the lantern walk program twice. On the second run she inserted two pages immediately before the first song and did nothing else. The song and a spoken toast both appear in both copies. A librarian has two loose pages to assign.",
+    "clues": [
+      "In the first run the toast is on page 6 and comes before the inserted pages. The first song is on page 8; the closing speech is on page 14.",
+      "Loose leaf K carries the closing speech with page number 16. Leaf L carries the toast on page 6. The lines and type on the toast page are otherwise identical in the two runs."
+    ],
+    "questions": [
+      "Which leaf can be assigned to a particular run? Where is the first song in the second run?"
+    ],
+    "answer": "K is from the second run. L could come from either. The first song moved to page 10.",
+    "why": "Material after the insertion advances two pages: 14 becomes 16 and 8 becomes 10. Material before it does not shift, so the identical toast on page 6 supplies no way to distinguish L’s printing.",
+    "kind": "Detective skills",
+    "id": 369
+  },
+  {
+    "title": "A pony prize without a winner’s name",
+    "level": "Medium",
+    "intro": "The souvenir pony at the fair carried two saddle tags. One held a race number, the other a prize category. The announcement promised the pony to the fastest finisher in the junior class. Someone stapled the overall fastest rider’s portrait to the announcement.",
+    "clues": [
+      "“Junior” means younger than 16 on race day. The four times are measured from each rider’s own start to that rider’s own finish, using the same clock. Each elapsed time is under ten minutes."
+    ],
+    "questions": [
+      "Who should receive the pony, and which senior rider made the fastest run overall?"
+    ],
+    "answer": "Jude earns the pony with a junior time of five minutes. Mara was fastest overall at four minutes.",
+    "why": "Convert start and finish to elapsed times: Kit 6, Jude 5, Mara 4 and Tao 7 minutes. The overall fastest, Mara, was already 16. Of the two juniors, Jude beats Kit.",
+    "tables": [
+      [
+        "The race notebook",
+        [
+          "Rider",
+          "Age",
+          "Start",
+          "Finish"
+        ],
+        [
+          [
+            "Kit",
+            14,
+            "12:02",
+            "12:08"
+          ],
+          [
+            "Jude",
+            15,
+            "12:06",
+            "12:11"
+          ],
+          [
+            "Mara",
+            16,
+            "12:09",
+            "12:13"
+          ],
+          [
+            "Tao",
+            17,
+            "12:01",
+            "12:08"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 370
+  },
+  {
+    "title": "The innkeepers’ spare folding screens",
+    "level": "Medium",
+    "intro": "Four inns lent folding screens to dress a ferry theater. They reported different totals, one through four screens. The receipt only says what people remembered as they stacked them at the quay.",
+    "clues": [
+      "The Alder and Cedar inns lent five screens between them. Bay sent exactly one more screen than Alder.",
+      "Dune sent more screens than Alder. Each count from one through four was used once."
+    ],
+    "questions": [
+      "Restore each inn’s contribution."
+    ],
+    "answer": "Alder 1, Bay 2, Cedar 4, Dune 3.",
+    "why": "The possible Alder–Cedar pairs adding to 5 are 1–4, 2–3, 3–2 or 4–1. Alder 2 would force Bay 3 as well as Cedar 3; Alder 4 would force Bay 5. Alder 3 gives Bay 4 and leaves Dune 1, too few. Only Alder 1 survives.",
+    "tableform": {
+      "rows": [
+        "Alder",
+        "Bay",
+        "Cedar",
+        "Dune"
+      ],
+      "cols": [
+        [
+          "Screens",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 371
+  },
+  {
+    "title": "The bobbing head in the automaton case",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "A mechanical owl nodded once during the exhibition. Its maker left the crossword complete; three apprentices tried to claim they had seen it.",
+    "entries": [
+      {
+        "x": 3,
+        "y": 0,
+        "dir": "Across",
+        "word": "CAM",
+        "clue": "Off-center or shaped wheel that drives a follower"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "dir": "Down",
+        "word": "CASE",
+        "clue": "Enclosure keeping fingers away from the works"
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "dir": "Across",
+        "word": "AXLE",
+        "clue": "Shaft about which a wheel rotates"
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "dir": "Across",
+        "word": "SPRING",
+        "clue": "Coiled store of energy in a wind-up toy"
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "dir": "Down",
+        "word": "GEAR",
+        "clue": "Toothed wheel meshing with another"
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "dir": "Down",
+        "word": "BASE",
+        "clue": "Lower support for the model"
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "dir": "Across",
+        "word": "ROD",
+        "clue": "Stiff link transmitting a push or pull"
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "dir": "Down",
+        "word": "PIVOT",
+        "clue": "Point about which the owl’s head tilts"
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "dir": "Down",
+        "word": "LEVER",
+        "clue": "Rigid bar turning about a pivot"
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "dir": "Across",
+        "word": "MESH",
+        "clue": "Fit together as gear teeth do"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Jules",
+            "1 Down meets 4 Across at S",
+            "4 Across meets 2 Down at I"
+          ],
+          [
+            "Quin",
+            "7 Down meets 9 Across at E",
+            "6 Across meets 3 Down at S"
+          ],
+          [
+            "Nell",
+            "5 Down meets 8 Across at A",
+            "6 Across meets 7 Down at L"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Jules wrote the accurate slip.",
+    "why": "The two actual crossing letters on Jules’s slip are S and I. Quin wrote S for the crossing of AXLE and BASE, which share A. Nell wrote A for the crossing of GEAR and ROD, which share R.",
+    "id": 372
+  },
+  {
+    "title": "The mermaid’s board of fare",
+    "kind": "Word search",
+    "level": "Easy",
+    "intro": "A seaside stall decorated its menu with ten sea creatures. The names point in the directions the cook drew on her folding sign. Look across to the right, down, or diagonally down.",
+    "grid": [
+      "MDOYSTERLQ",
+      "UUSQUIDOQR",
+      "SKWYMCBVJD",
+      "SZSFCSXCCW",
+      "ECACTLSQPH",
+      "LIOEAHARFE",
+      "JHRCRLAMML",
+      "NNOIKWLIEK",
+      "TOMRNLNOUT",
+      "FPLCHHEJPL"
+    ],
+    "locations": {
+      "LOBSTER": [
+        [
+          8,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "SCALLOP": [
+        [
+          2,
+          3
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "MUSSEL": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "OYSTER": [
+        [
+          2,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "SHRIMP": [
+        [
+          6,
+          4
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "COCKLE": [
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "WHELK": [
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "SQUID": [
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "PRAWN": [
+        [
+          8,
+          4
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "CLAM": [
+        [
+          4,
+          3
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    },
+    "questions": [
+      "The finish flags belong to LOBSTER, SQUID, PRAWN. From the LAST letter of CLAM, which flag’s LAST letter is farthest away by horizontal and vertical steps? Diagonal shortcuts are off limits."
+    ],
+    "answer": "Squid, 6 steps.",
+    "why": "From row 7, column 8, the three distances are LOBSTER 5, SQUID 6, PRAWN 5. Count the difference in rows plus the difference in columns for each pair of endpoints.",
+    "id": 373
+  },
+  {
+    "title": "A bowl just shy of the line",
+    "level": "Medium",
+    "intro": "A green mixing bowl has fixed depth marks at 1, 2 and 3 cm above its level base. A kitchen photograph shows the water at 2 cm. An exhibit label claims this proves the bowl contained exactly twice as much water as it would at 1 cm. A calibration slip is tucked underneath.",
+    "clues": [
+      "The calibration was measured on this same bowl on a level table. Each entry gives water added since the previous depth."
+    ],
+    "questions": [
+      "How much water is pictured? Give the actual ratio of the 2 cm volume to the 1 cm volume."
+    ],
+    "answer": "160 mL is pictured, which is eight thirds of the 1 cm volume.",
+    "why": "The first centimeter holds 60 mL; reaching the second needs another 100 mL. The ratio is 160/60 = 8/3. Equal depths can hold unequal volumes in a widening vessel.",
+    "tables": [
+      [
+        "Calibration",
+        [
+          "Depth span",
+          "Extra water"
+        ],
+        [
+          [
+            "Empty to 1 cm",
+            "60 mL"
+          ],
+          [
+            "1 to 2 cm",
+            "100 mL"
+          ],
+          [
+            "2 to 3 cm",
+            "150 mL"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 374
+  },
+  {
+    "title": "The pennant in the judge’s lap",
+    "level": "Medium",
+    "intro": "Four boats carried hand-painted pennants. A pennant came loose during the model-boat race and landed beside the judge. She measured its cloth area as 12 square units. Two boats had carried exactly that area; its outline settles the owner.",
+    "clues": [
+      "The recovered pennant is a triangle with a right-angle corner. In the owners’ registry, the third measurement for a triangle is perpendicular height. Triangle area is base × height ÷ 2; rectangle area is length × width."
+    ],
+    "questions": [
+      "Whose pennant is it? Which other boat fits the area but has the wrong outline?"
+    ],
+    "answer": "Ember’s pennant. Birch’s rectangle also has area 12.",
+    "why": "Ember’s right triangle is 6 × 4 ÷ 2 = 12. Birch’s rectangle is 3 × 4 = 12 but has four sides. The other triangles have areas 15 and 9.",
+    "tables": [
+      [
+        "Registry",
+        [
+          "Boat",
+          "Outline",
+          "Measurements"
+        ],
+        [
+          [
+            "Birch",
+            "Rectangle",
+            "3 by 4"
+          ],
+          [
+            "Ember",
+            "Right triangle",
+            "Base 6, height 4"
+          ],
+          [
+            "Wren",
+            "Right triangle",
+            "Base 6, height 5"
+          ],
+          [
+            "Oriel",
+            "Right triangle",
+            "Base 6, height 3"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 375
+  },
+  {
+    "title": "The register that reads in stereo",
+    "level": "Medium",
+    "intro": "On a strip for a seaside fortune machine, each letter cell carries two possible characters, one toward the promenade and one toward the water. The operator starts facing the promenade.",
+    "clues": [
+      "Immediately before reading a cell, change sides if it bears a star. Stay on the current side at all other cells.",
+      "Read one letter per cell. The word names the prize in the machine."
+    ],
+    "questions": [
+      "What prize does the register promise, and which side supplies its last letter?"
+    ],
+    "answer": "A puppet. The last letter comes from the promenade side.",
+    "why": "Read P on the promenade. Switch at cell 2, read U and P on the water side, and switch at cell 4 for P. Two more switches supply E and then T.",
+    "tables": [
+      [
+        "Strip left to right",
+        [
+          "Cell",
+          "Promenade",
+          "Water",
+          "Mark"
+        ],
+        [
+          [
+            "1",
+            "P",
+            "F",
+            "Plain"
+          ],
+          [
+            "2",
+            "O",
+            "U",
+            "Star"
+          ],
+          [
+            "3",
+            "N",
+            "P",
+            "Plain"
+          ],
+          [
+            "4",
+            "P",
+            "G",
+            "Star"
+          ],
+          [
+            "5",
+            "A",
+            "E",
+            "Star"
+          ],
+          [
+            "6",
+            "T",
+            "R",
+            "Star"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Codebreaking",
+    "id": 376
+  },
+  {
+    "title": "The parcel office retires one digit",
+    "level": "Hard",
+    "intro": "A clerk used to stamp parcel numbers with two wheels, 00 through 99, in order. One day she was told to skip every number containing a 4. She stamped all permitted labels from 00 through 59 inclusive, then counted the clean blanks.",
+    "clues": [
+      "Count a skipped number just once even when both its digits are 4. Leading zeros are printed. There were exactly 60 blanks before the run."
+    ],
+    "questions": [
+      "How many blanks were left? Which is the fifth skipped number in numerical order?"
+    ],
+    "answer": "Fifteen blanks remained; the fifth skipped number was 40.",
+    "why": "The ten numbers 40 through 49 are skipped, plus 04, 14, 24, 34 and 54 outside that block. The first four skips end in 4; the next is 40. Counting 44 twice would produce one extra blank.",
+    "kind": "Detective skills",
+    "id": 377
+  },
+  {
+    "title": "Photographs of the four enamel fish",
+    "level": "Hard",
+    "intro": "A ring holds four different enamel fish: amber, blue, cream and green. There is no mark for the top. A front-facing camera can photograph the ring at any rotation. The backs of the fish are blank, so a flipped ring is never photographed.",
+    "clues": [
+      "Treat two arrangements as the same if rotating one makes its photo exactly match the other. Clockwise order matters.",
+      "The maker now requires blue to be next to amber."
+    ],
+    "questions": [
+      "How many distinct clockwise arrangements satisfy the maker? How many more would be allowed without the neighbor rule?"
+    ],
+    "answer": "Four meet the rule. Removing it adds two more arrangements.",
+    "why": "Rotate until amber is at the top. Blue has two adjacent places, and the two remaining colors can trade places: 2 × 2 = 4. Without the rule, blue has three positions, each with two completions, for six overall.",
+    "kind": "Logic",
+    "id": 378
+  },
+  {
+    "title": "The last frame of the lantern show",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "Two audiences remembered two endings to the same lantern slide show. The projectionist’s crossword names the prop used for the encore.",
+    "entries": [
+      {
+        "x": 4,
+        "y": 6,
+        "dir": "Across",
+        "word": "LENS",
+        "clue": "Optical piece that focuses the image"
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "dir": "Down",
+        "word": "SLIDE",
+        "clue": "Transparent picture projected on the screen"
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "dir": "Down",
+        "word": "SCREEN",
+        "clue": "Surface on which the audience sees the picture"
+      },
+      {
+        "x": 0,
+        "y": 9,
+        "dir": "Across",
+        "word": "FRAME",
+        "clue": "Surround that supports the transparent picture"
+      },
+      {
+        "x": 2,
+        "y": 1,
+        "dir": "Across",
+        "word": "FOCUS",
+        "clue": "Adjust for a sharp image"
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "dir": "Across",
+        "word": "DUST",
+        "clue": "Specks on a slide that can spoil the picture"
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "dir": "Down",
+        "word": "ZOOM",
+        "clue": "Change apparent image size using a variable lens"
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "dir": "Down",
+        "word": "GLARE",
+        "clue": "Harsh, troublesome brightness"
+      },
+      {
+        "x": 5,
+        "y": 3,
+        "dir": "Across",
+        "word": "IRIS",
+        "clue": "Adjustable circular opening"
+      },
+      {
+        "x": 8,
+        "y": 1,
+        "dir": "Down",
+        "word": "MASK",
+        "clue": "Opaque shape that blocks part of a slide"
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "dir": "Across",
+        "word": "BEAM",
+        "clue": "Shaft of light crossing the hall"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "11 Across",
+            "1"
+          ],
+          [
+            "2",
+            "4 Down",
+            "2"
+          ],
+          [
+            "3",
+            "3 Down",
+            "6"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Fan.",
+    "why": "11 Across is FRAME, so letter 1 is F. 4 Down is MASK, so letter 2 is A. 3 Down is SCREEN, so letter 6 is N.",
+    "id": 379
+  },
+  {
+    "title": "The picnic on a giant checkerboard",
+    "kind": "Word search",
+    "level": "Easy",
+    "intro": "Ten picnic items mark the squares occupied by the guests. Find the words, then work out where two picnic parties met. Look across to the right, down, or diagonally down.",
+    "grid": [
+      "FSSMELONDP",
+      "LACNZRAMLU",
+      "ANBXAPXEAP",
+      "SDWLPPMBIB",
+      "KWXLAOKCGA",
+      "KIECNNKICS",
+      "HCCARLKHNK",
+      "UHDMEYREFE",
+      "AEROSUMWTT",
+      "BISCUITQKX"
+    ],
+    "locations": {
+      "SANDWICH": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "LEMONADE": [
+        [
+          8,
+          1
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "BLANKET": [
+        [
+          2,
+          2
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "BISCUIT": [
+        [
+          0,
+          9
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "BASKET": [
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "PICKLE": [
+        [
+          9,
+          2
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "NAPKIN": [
+        [
+          3,
+          1
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "MELON": [
+        [
+          3,
+          0
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "FLASK": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "APPLE": [
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          5
+        ]
+      ]
+    },
+    "questions": [
+      "Stand on the last letter of BLANKET. Which OTHER listed word starts closest, and how many one-square steps away is its start? You may walk up, down, left or right through any cells."
+    ],
+    "answer": "Basket, 6 steps.",
+    "why": "BLANKET ends at row 9, column 9. BASKET begins at row 4, column 10. Their row and column distances add to 6. The next closest start is 7 steps away.",
+    "id": 380
+  },
+  {
+    "title": "The last penny for the framed print",
+    "level": "Hard",
+    "intro": "Four shipmates jointly ordered a framed print. The framer described its donor as the person who put in the final penny of the full price. The price was 30 pennies. Counting coins gives a very different impression of who made the gift complete.",
+    "clues": [
+      "The price was reached exactly, with no change. Each person made one payment in the order recorded; no one took money back.",
+      "The first donor paid eight pennies. The second paid half of what then remained. The third paid all but four pennies of the new balance. The fourth paid the rest.",
+      "Cy paid 11 pennies. Uma paid fewer pennies than anyone else. Fay paid more than Ned but less than Cy."
+    ],
+    "questions": [
+      "Who completed the price? Also match all four donors to their payments."
+    ],
+    "answer": "Uma completed the price with 4 pennies. Fay paid 8, Cy 11 and Ned 7.",
+    "why": "The running balances are 22, 11, 4 and 0, giving contributions of 8, 11, 7 and 4. Cy is the second and Uma must be the smallest payer. Of the remaining sums Fay exceeds Ned, so they gave 8 and 7.",
+    "kind": "Whodunit",
+    "id": 381
+  },
+  {
+    "title": "A pair of photographs for one hat",
+    "level": "Hard",
+    "intro": "Two camera clubs claim their pictures show the same minute of a pier ceremony. The curator lays the prints under glass. Both show the same clock face with a ribbon across it, but the dial cannot be read. There is a stretch in which both observations could be true. Is a simultaneous exposure proved?",
+    "clues": [
+      "The blue banner went up at 10:04 and came down at 10:11. A person in a white hat stood on the stand from 10:08 until 10:14. Treat each interval as including its start and excluding its finish.",
+      "Photo A shows the blue banner up. Its field of view completely excludes the stand. Photo B shows the white hat on the stand. Its field of view excludes the flagpole. There is no other time evidence."
+    ],
+    "questions": [
+      "Give the full interval in which both exposures could have happened together. Then give two different exposure times consistent with the prints."
+    ],
+    "answer": "Anywhere from 10:08 inclusive to 10:11 exclusive. The prints could instead be A at 10:05 and B at 10:13.",
+    "why": "The overlap of the banner interval and the hat interval lasts three minutes. Each photograph records only its own condition. Nothing ties the two exposures to a single instant.",
+    "kind": "Detective skills",
+    "id": 382
+  },
+  {
+    "title": "The librarian’s disappearing vowels",
+    "level": "Hard",
+    "intro": "A typesetter lost all five vowels from the embossed titles of four little books. The bookbinder saved the vowels on four separate strips. The order of the vowels on a strip is intact.",
+    "clues": [
+      "Restore each title using its consonants in order and the vowels from exactly one strip, also in order. Insert the vowels anywhere needed. Each strip fits one definition.",
+      "Read the FIRST vowel of each restored title in shelf order. Use the clerk’s small key to identify the collection."
+    ],
+    "questions": [
+      "Which collection is on the shelf? Give the four titles that verify it."
+    ],
+    "answer": "The Weather Shelf. The titles are Pilot, Ocean, Amber and Echo.",
+    "why": "PLT with IO makes PILOT. CN with OEA makes OCEAN. MBR with AE makes AMBER. CH with EO makes ECHO. Their first vowels give I–O–A–E.",
+    "tables": [
+      [
+        "Shelf in order",
+        [
+          "Consonants",
+          "Title clue"
+        ],
+        [
+          [
+            "PLT",
+            "Person guiding a vessel"
+          ],
+          [
+            "CN",
+            "A body of water larger than a sea"
+          ],
+          [
+            "MBR",
+            "Fossil resin"
+          ],
+          [
+            "CH",
+            "A sound returned from a wall"
+          ]
+        ]
+      ],
+      [
+        "Loose strips",
+        [
+          "Surviving vowel sequences"
+        ],
+        [
+          [
+            "AE"
+          ],
+          [
+            "EO"
+          ],
+          [
+            "IO"
+          ],
+          [
+            "OEA"
+          ]
+        ]
+      ],
+      [
+        "Clerk’s key",
+        [
+          "Sequence",
+          "Collection"
+        ],
+        [
+          [
+            "I–A–O–E",
+            "Navigation Shelf"
+          ],
+          [
+            "I–O–A–E",
+            "Weather Shelf"
+          ],
+          [
+            "I–O–E–A",
+            "Signal Shelf"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Codebreaking",
+    "id": 383
+  },
+  {
+    "title": "A streamer in the wrong tube",
+    "level": "Easy",
+    "intro": "Four tightly rolled streamers lie in one display tube. A broad paper band conceals all except the second roll from the left, which is white. The fittings prevent the rolls from sliding past one another.",
+    "clues": [
+      "The four rolls are red, blue, gold and white. The maker tied gold immediately to the left of blue.",
+      "No other rolls are hidden. Read the tube from the numbered left cap."
+    ],
+    "questions": [
+      "Enter the four rolls as they sit in the tube."
+    ],
+    "answer": "Red, white, gold, blue.",
+    "why": "White blocks positions 1–2 and 2–3 from being the gold–blue pair. The pair must occupy 3–4, leaving red in position 1.",
+    "tableform": {
+      "rows": [
+        "1 · left cap",
+        "2",
+        "3",
+        "4 · right cap"
+      ],
+      "cols": [
+        [
+          "Color",
+          "Red",
+          "Blue",
+          "Gold",
+          "White"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 384
+  },
+  {
+    "title": "The handbell that went to sea",
+    "kind": "Crossword",
+    "level": "Medium",
+    "intro": "The handbell choir put a crossword in the program for its first ferry concert. Only one listener copied the grid accurately.",
+    "entries": [
+      {
+        "x": 6,
+        "y": 6,
+        "dir": "Across",
+        "word": "RING",
+        "clue": "Set a bell sounding"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "dir": "Down",
+        "word": "CLAPPER",
+        "clue": "Part that strikes the inside of a bell"
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "dir": "Across",
+        "word": "TONE",
+        "clue": "A bell’s characteristic sound"
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "dir": "Down",
+        "word": "BRONZE",
+        "clue": "Copper alloy traditionally used for bells"
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "dir": "Down",
+        "word": "NOTE",
+        "clue": "One written pitch in the score"
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "dir": "Across",
+        "word": "HANDLE",
+        "clue": "Part of a handbell the ringer holds"
+      },
+      {
+        "x": 7,
+        "y": 9,
+        "dir": "Across",
+        "word": "REST",
+        "clue": "Written silence in the music"
+      },
+      {
+        "x": 10,
+        "y": 0,
+        "dir": "Down",
+        "word": "DUET",
+        "clue": "Piece for two performers"
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "dir": "Across",
+        "word": "CHIME",
+        "clue": "Set of tuned bells or their sound"
+      },
+      {
+        "x": 10,
+        "y": 7,
+        "dir": "Down",
+        "word": "MUTE",
+        "clue": "Silence or damp a vibration"
+      },
+      {
+        "x": 2,
+        "y": 7,
+        "dir": "Down",
+        "word": "RIM",
+        "clue": "Lower edge of a bell’s mouth"
+      },
+      {
+        "x": 6,
+        "y": 4,
+        "dir": "Across",
+        "word": "PEAL",
+        "clue": "Prolonged ringing of bells"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Kit",
+            "8 Down meets 12 Across at E",
+            "4 Down meets 11 Across at E"
+          ],
+          [
+            "Lorna",
+            "12 Across meets 10 Down at T",
+            "6 Across meets 4 Down at T"
+          ],
+          [
+            "Sol",
+            "11 Across meets 9 Down at R",
+            "3 Across meets 2 Down at E"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Kit wrote the accurate slip.",
+    "why": "The two actual crossing letters on Kit’s slip are E and E. Lorna wrote T for the crossing of TONE and BRONZE, which share O. Sol wrote R for the crossing of CHIME and RIM, which share I.",
+    "id": 385
+  },
+  {
+    "title": "The old inn’s window box",
+    "kind": "Word search",
+    "level": "Medium",
+    "intro": "An inn once took bookings under flower names. The gardener’s card still lists ten of them, with directions hidden in the planting plan. Look in any of eight directions.",
+    "grid": [
+      "AKBEGONIAIOF",
+      "NYSNAPPTIEXV",
+      "NEHNROEIVDRK",
+      "AUMMGQTWLEDA",
+      "MNNEFNUXAZLQ",
+      "USENSDNASYEH",
+      "IBEBKIILSVSX",
+      "NEXTRLASXMKM",
+      "AXIJEEUMKVWM",
+      "RPABJMVXSTDT",
+      "EQOAISHCUFKJ",
+      "GLZSTPIQYQHR"
+    ],
+    "locations": {
+      "GERANIUM": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "FUCHSIA": [
+        [
+          9,
+          10
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "PETUNIA": [
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "BEGONIA": [
+        [
+          2,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "LOBELIA": [
+        [
+          1,
+          11
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "VERBENA": [
+        [
+          6,
+          9
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "ALYSSUM": [
+        [
+          11,
+          3
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "NEMESIA": [
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "SALVIA": [
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "PANSY": [
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "questions": [
+      "Stand on the last letter of VERBENA. Which OTHER listed word starts closest, and how many one-square steps away is its start? You may walk up, down, left or right through any cells."
+    ],
+    "answer": "Nemesia, 2 steps.",
+    "why": "VERBENA ends at row 4, column 1. NEMESIA begins at row 2, column 1. Their row and column distances add to 2. The next closest start is 5 steps away.",
+    "id": 386
+  },
+  {
+    "title": "A fountain split into thirds",
+    "level": "Easy",
+    "intro": "A little fountain in the winter garden fills its dry display trough. Three separate spouts empty the same-sized measuring mug in 2, 3 and 6 minutes respectively. A witness insists that with all three open they could never fill a mug in less than 2 minutes.",
+    "clues": [
+      "All three flows are constant, act together without affecting one another and feed the same mug with no leaks."
+    ],
+    "questions": [
+      "How long to fill one mug? Which spout supplies as much as the other two combined?"
+    ],
+    "answer": "One minute. The two-minute spout supplies half a mug, as much as the other two together.",
+    "why": "In one minute the three flows contribute 1/2, 1/3 and 1/6 of a mug, summing to one. The slower two also sum to 1/2.",
+    "kind": "Detective skills",
+    "id": 387
+  },
+  {
+    "title": "A cup in an unfinished game",
+    "level": "Hard",
+    "intro": "The pier café tied its novelty cup to the first guest who made three of their marks in a line in a grid game. The final board is still on the slate. The manager knows Ada drew circles and Beck drew crosses, but no one wrote down whose turn came last.",
+    "clues": [
+      "Players alternated, Beck first. Play stopped immediately on the first completed row, column or diagonal of three of one player’s marks. A dot is an empty square.",
+      "Nobody erased or moved a mark. The top row of the diagram is the far side of the real table."
+    ],
+    "questions": [
+      "Who won the cup, along what line? Does the evidence identify which of those three squares was marked last?"
+    ],
+    "answer": "Ada won along the middle row. Any of its three circles could have been her final move.",
+    "why": "There are three crosses and three circles, so Ada played last. The circles fill the middle row; no line of crosses is complete. Remove any one of the circles and the earlier board has no winner. Since Beck’s three final positions never form a line, a legal order exists for each possible last circle.",
+    "tables": [
+      [
+        "Café slate",
+        [
+          "Row",
+          "Left",
+          "Center",
+          "Right"
+        ],
+        [
+          [
+            "Far",
+            "×",
+            "×",
+            "·"
+          ],
+          [
+            "Middle",
+            "○",
+            "○",
+            "○"
+          ],
+          [
+            "Near",
+            "·",
+            "×",
+            "·"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 388
+  },
+  {
+    "title": "The cottage beneath three windows",
+    "level": "Hard",
+    "intro": "A witness describes a cottage along a ruler-straight shoreline seen through three pier windows. The camera could have been at any one of three marked points on a quay plan. Rather than trusting a sketch, Sal compares which cottage was exactly behind a post.",
+    "clues": [
+      "Use a square grid. All three camera positions have y = 0; the post is at (4,2) and the cottage door at (7,5). “Exactly behind” means camera, post and door lie on one straight sightline.",
+      "Candidate camera positions are (1,0), (2,0) and (3,0)."
+    ],
+    "questions": [
+      "Which camera position fits, and why does a line through the other two objects decide the question?"
+    ],
+    "answer": "(2,0).",
+    "why": "From the post to the door the line goes three units right and three up. Continuing backwards from (4,2) to y = 0 therefore goes two left, reaching (2,0). None of the other candidate points lies on that line.",
+    "kind": "Detective skills",
+    "id": 389
+  },
+  {
+    "title": "Two cloves in the spice game",
+    "level": "Hard",
+    "intro": "At a blind smelling game two of five covered pots contained cloves. The other three contained tea. Instead of letting the judge uncover a pot, the host revealed how many clove pots belonged to certain groups.",
+    "clues": [
+      "Exactly two of A through E contained cloves. The group counts below are exact. A pot is counted afresh each time its letter occurs."
+    ],
+    "questions": [
+      "Mark each pot as cloves or tea."
+    ],
+    "answer": "Cloves in B and D; tea in A, C and E.",
+    "why": "The C–E group has no cloves, leaving A, B and D. Exactly one of A and B contains cloves, so D must contain the other one. Since only one of A, D and E contains cloves and D is already that one, A is tea and B holds cloves.",
+    "tableform": {
+      "rows": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "cols": [
+        [
+          "Contents",
+          "Cloves",
+          "Tea"
+        ]
+      ]
+    },
+    "tables": [
+      [
+        "Host’s tallies",
+        [
+          "Group",
+          "Clove pots"
+        ],
+        [
+          [
+            "A, B, C",
+            1
+          ],
+          [
+            "A, D, E",
+            1
+          ],
+          [
+            "A, B",
+            1
+          ],
+          [
+            "C, E",
+            0
+          ],
+          [
+            "A, C, D",
+            1
+          ]
+        ]
+      ]
+    ],
+    "kind": "Logic",
+    "id": 390
+  },
+  {
+    "title": "The café that served a paper pie",
+    "kind": "Crossword",
+    "level": "Easy",
+    "intro": "The seaside café’s display pie was made of paper. The cook wrote the real filling on a separate order and hid its name in the pastry crossword.",
+    "entries": [
+      {
+        "x": 3,
+        "y": 4,
+        "dir": "Across",
+        "word": "TART",
+        "clue": "Open pastry case with a filling"
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "dir": "Down",
+        "word": "ROLL",
+        "clue": "Flatten dough with a pin"
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "dir": "Across",
+        "word": "SLICE",
+        "clue": "Wedge served from a round pie"
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "dir": "Down",
+        "word": "TIN",
+        "clue": "Metal pan that shapes a pie"
+      },
+      {
+        "x": 8,
+        "y": 3,
+        "dir": "Down",
+        "word": "APPLE",
+        "clue": "Fruit in a classic brown-betty dessert"
+      },
+      {
+        "x": 7,
+        "y": 7,
+        "dir": "Down",
+        "word": "COOL",
+        "clue": "Let the baked filling lose heat before cutting"
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "dir": "Across",
+        "word": "OVEN",
+        "clue": "Heated chamber used for baking"
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "dir": "Down",
+        "word": "CRUST",
+        "clue": "Baked outer layer of a pie"
+      },
+      {
+        "x": 5,
+        "y": 9,
+        "dir": "Across",
+        "word": "FLOUR",
+        "clue": "Powder dusted on the board"
+      },
+      {
+        "x": 1,
+        "y": 6,
+        "dir": "Down",
+        "word": "VENT",
+        "clue": "Opening that lets steam escape"
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "dir": "Across",
+        "word": "LID",
+        "clue": "Top layer of pastry covering the filling"
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "dir": "Across",
+        "word": "CRIMP",
+        "clue": "Pinch an edge into a repeated pattern"
+      }
+    ],
+    "tables": [
+      [
+        "The postscript slip",
+        [
+          "Read in order",
+          "Grid entry",
+          "Letter to keep"
+        ],
+        [
+          [
+            "1",
+            "2 Across",
+            "5"
+          ],
+          [
+            "2",
+            "7 Down",
+            "2"
+          ],
+          [
+            "3",
+            "4 Across",
+            "2"
+          ],
+          [
+            "4",
+            "1 Down",
+            "2"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "What word does the postscript spell? Count from the beginning of each completed entry."
+    ],
+    "answer": "Pear.",
+    "why": "2 Across is CRIMP, so letter 5 is P. 7 Down is VENT, so letter 2 is E. 4 Across is TART, so letter 2 is A. 1 Down is CRUST, so letter 2 is R.",
+    "id": 391
+  },
+  {
+    "title": "Museum of the curious suffix",
+    "kind": "Word search",
+    "level": "Hard",
+    "intro": "A lexicographer fitted ten writing and editing words onto an old proof sheet. The direction of each entry doubles as a proofreader’s arrow. Look in any of eight directions.",
+    "grid": [
+      "GRCKFSMHLXGWF",
+      "WPKOZDYOWGMSB",
+      "TXAAMPJXMYBVA",
+      "WDBRHMVENYRPH",
+      "YAEEAGAOMUEPP",
+      "JQNIWGMRGQVEB",
+      "CWUJWORTNYCLO",
+      "LLLZHXSAZKRBD",
+      "APPREFIXPBWAY",
+      "UMPIGORFSHBLU",
+      "SXTLWVQPFZTLX",
+      "EJNRZKPUMUMYQ",
+      "FTLEWOVHXMSSW"
+    ],
+    "locations": {
+      "PARAGRAPH": [
+        [
+          1,
+          1
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "SYLLABLE": [
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          5
+        ]
+      ],
+      "HOMONYM": [
+        [
+          4,
+          7
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "PREFIX": [
+        [
+          2,
+          8
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "SUFFIX": [
+        [
+          10,
+          12
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "CLAUSE": [
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "HYPHEN": [
+        [
+          7,
+          0
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "VOWEL": [
+        [
+          6,
+          12
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "COMMA": [
+        [
+          2,
+          0
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "VERB": [
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          2
+        ]
+      ]
+    },
+    "questions": [
+      "Start at row 7, column 7. Take ONE step in each word’s reading direction in this order: SUFFIX, SYLLABLE, PARAGRAPH, COMMA. Where do you land, and which letter is printed there? A diagonal counts as one step."
+    ],
+    "answer": "Row 7, column 8, letter T.",
+    "why": "The four bearings are northwest, north, southeast, southeast. Your stops are row 6, column 6; row 5, column 6; row 6, column 7; row 7, column 8.",
+    "id": 392
+  },
+  {
+    "title": "The cousin who leased the skylight",
+    "level": "Hard",
+    "intro": "A retired painter left the rent from her skylight studio to “the daughter of my father’s only sister.” A newspaper named the painter’s own sister. The family record in the case file is complete for everyone mentioned.",
+    "clues": [
+      "The painter is Ada. Her parents are Max and June. Max has precisely two siblings: his brother Noel and his sister Fern. Fern has one son, Jules, and one daughter, Iona.",
+      "Ada’s own sister is Tess. Nobody in the record is related to anyone else in another way."
+    ],
+    "questions": [
+      "Who inherited the rent? How is that person related to Ada, and where did the newspaper go wrong?"
+    ],
+    "answer": "Iona, Ada’s first cousin.",
+    "why": "Ada’s father is Max; his only sister is Fern. Fern’s daughter is Iona. A child of a parent’s sibling is a first cousin. The newspaper answered “my sister” and lost the intermediate step through Max’s sister.",
+    "kind": "Whodunit",
+    "id": 393
+  },
+  {
+    "title": "The four scraps of a continuous take",
+    "level": "Medium",
+    "intro": "A film club holds four preview strips made from one continuous take. Each strip shows three consecutive unique painted signs as the camera passed them. Successive strips overlap by exactly two signs. Their labels are badly shuffled.",
+    "clues": [
+      "Each sign occurred once in the actual passage. The camera moved in one direction, and every strip is printed in that direction."
+    ],
+    "questions": [
+      "Reconstruct the six-sign sequence and name the first strip."
+    ],
+    "answer": "Bell, Hand, Eel, Cup, Fan, Rose. Strip Gold goes first.",
+    "why": "Gold ends in Hand–Eel, precisely how Fern begins. Fern ends in Eel–Cup, which starts Rust. Rust leads by Cup–Fan into Lilac. No strip ends in Bell–Hand, so Gold has no predecessor.",
+    "tables": [
+      [
+        "Preview strips",
+        [
+          "Label",
+          "Three signs"
+        ],
+        [
+          [
+            "Rust",
+            "Eel · Cup · Fan"
+          ],
+          [
+            "Gold",
+            "Bell · Hand · Eel"
+          ],
+          [
+            "Lilac",
+            "Cup · Fan · Rose"
+          ],
+          [
+            "Fern",
+            "Hand · Eel · Cup"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 394
+  },
+  {
+    "title": "Two sizes of brass space",
+    "level": "Hard",
+    "intro": "A wharf photographer filed pictures under four-word instructions. The spaces in one brass caption have fallen out. Two different four-word divisions can be made from the type, but only one fits the harbor photograph.",
+    "clues": [
+      "Use all the letters in order and choose exactly four words from the caption vocabulary.",
+      "For this picture the third word names a single color and the fourth names a part of a boat."
+    ],
+    "questions": [
+      "What are the two possible divisions? Which one belongs under the photograph?"
+    ],
+    "answer": "NOTE THE BLUE SAIL belongs to the photograph. The other division is NOTE THE BLUES AIL.",
+    "why": "NOT leaves a stray E, so both readings must begin NOTE THE. The remaining letters BLUESAIL split as BLUE / SAIL or BLUES / AIL. Only the first pair supplies a color and a boat part.",
+    "tables": [
+      [
+        "Caption vocabulary",
+        [
+          "Word",
+          "Word",
+          "Word"
+        ],
+        [
+          [
+            "NOTE",
+            "NOT",
+            "THE"
+          ],
+          [
+            "BLUE",
+            "BLUES",
+            "SAIL"
+          ],
+          [
+            "AIL",
+            "SEA",
+            "IS"
+          ]
+        ]
+      ]
+    ],
+    "exhibit": "NOTETHEBLUESAIL",
+    "kind": "Codebreaking",
+    "id": 395
+  },
+  {
+    "title": "Lost voices from the tide broadcast",
+    "level": "Hard",
+    "intro": "Four different reporters spoke once each from four different places on a single harbor broadcast. The archivist hopes to put their names and listening posts back on the four reels.",
+    "clues": [
+      "Ben spoke last. The Pier report came immediately after Mim’s report. The first voice came from the Arch.",
+      "Jo reported from the Steps. The Shed report came after the Pier report. Sol spoke earlier than Jo."
+    ],
+    "questions": [
+      "Match each reel to its reporter and listening post."
+    ],
+    "answer": "First: Mim at the Arch; Second: Sol at the Pier; Third: Jo at the Steps; Fourth: Ben at the Shed.",
+    "why": "The Arch is first. The Pier follows Mim and must also precede the Shed, so it can only be second or third. If third, Mim is second and the Shed last, leaving the Steps second; that would assign the Steps to both Mim and Jo. Thus the Pier is second, with Mim first. The remaining posts are Steps and Shed. Ben is last and cannot be Jo at the Steps, so Jo is third at the Steps and Ben last at the Shed. Sol occupies the second reel at the Pier.",
+    "tableform": {
+      "rows": [
+        "First",
+        "Second",
+        "Third",
+        "Fourth"
+      ],
+      "cols": [
+        [
+          "Reporter",
+          "Jo",
+          "Mim",
+          "Ben",
+          "Sol"
+        ],
+        [
+          "Post",
+          "Arch",
+          "Pier",
+          "Shed",
+          "Steps"
+        ]
+      ]
+    },
+    "kind": "Logic",
+    "id": 396
+  },
+  {
+    "title": "Footsteps on an empty platform",
+    "kind": "Crossword",
+    "level": "Hard",
+    "intro": "The sound-effects crew built a harbor onstage with ordinary props. Their completed crossword supports one of the three sound logs.",
+    "entries": [
+      {
+        "x": 5,
+        "y": 7,
+        "dir": "Across",
+        "word": "ECHO",
+        "clue": "Delayed return of a sound"
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "dir": "Down",
+        "word": "RATTLE",
+        "clue": "Repeated short knocks from loose objects"
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "dir": "Down",
+        "word": "BOOM",
+        "clue": "Deep, resonant explosive-sounding noise"
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "dir": "Down",
+        "word": "CUE",
+        "clue": "Signal to make an effect"
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "dir": "Across",
+        "word": "MIX",
+        "clue": "Combine sounds at chosen levels"
+      },
+      {
+        "x": 0,
+        "y": 9,
+        "dir": "Across",
+        "word": "SILENCE",
+        "clue": "What a rest in the effects script calls for"
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "dir": "Across",
+        "word": "PROP",
+        "clue": "Object used to make an effect"
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "dir": "Down",
+        "word": "TAP",
+        "clue": "Light strike with a fingertip"
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "dir": "Across",
+        "word": "RUSTLE",
+        "clue": "Sound of crumpling paper or dry leaves"
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "dir": "Down",
+        "word": "HISS",
+        "clue": "Sound of escaping steam"
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "dir": "Down",
+        "word": "FOLEY",
+        "clue": "Sound effects made in time with actions on screen"
+      }
+    ],
+    "tables": [
+      [
+        "Three accounts of the grid",
+        [
+          "Signed",
+          "First crossing",
+          "Second crossing"
+        ],
+        [
+          [
+            "Kit",
+            "8 Across meets 9 Down at O",
+            "4 Down meets 3 Across at R"
+          ],
+          [
+            "Hettie",
+            "8 Across meets 5 Down at O",
+            "8 Across meets 4 Down at E"
+          ],
+          [
+            "Cleo",
+            "11 Across meets 6 Down at I",
+            "2 Down meets 1 Across at T"
+          ]
+        ]
+      ]
+    ],
+    "questions": [
+      "Which person got both crossing letters right? Correct one mistake on each of the other slips."
+    ],
+    "answer": "Hettie wrote the accurate slip.",
+    "why": "The two actual crossing letters on Hettie’s slip are O and E. Kit wrote O for the crossing of ECHO and CUE, which share C. Cleo wrote I for the crossing of SILENCE and HISS, which share S.",
+    "id": 397
+  },
+  {
+    "title": "The hatbox of costume jewels",
+    "kind": "Word search",
+    "level": "Medium",
+    "intro": "The costume mistress hid ten accessory names in the lid of a hatbox. Their directions will identify the matching label. Look in any of eight directions.",
+    "grid": [
+      "WAUKHWIEFTIY",
+      "YOEMACERWRGY",
+      "MYDSNRMQWTZC",
+      "PZTKNILFFUCB",
+      "ETXBGZCBRJAT",
+      "NZECRKGERNTI",
+      "DWVKSOKUGJEA",
+      "AGXJCOOLNCLR",
+      "NNDMHOECEGKA",
+      "TRICJQLXHQNW",
+      "TORQUETYTMAM",
+      "EFCCMOUYKJRV"
+    ],
+    "locations": {
+      "CUFFLINK": [
+        [
+          10,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "PENDANT": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "BROOCH": [
+        [
+          3,
+          4
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "LOCKET": [
+        [
+          6,
+          9
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "BANGLE": [
+        [
+          11,
+          3
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "TORQUE": [
+        [
+          0,
+          10
+        ],
+        [
+          5,
+          10
+        ]
+      ],
+      "ANKLET": [
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "CHOKER": [
+        [
+          3,
+          9
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      "CAMEO": [
+        [
+          5,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "TIARA": [
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          8
+        ]
+      ]
+    },
+    "questions": [
+      "The finish flags belong to CHOKER, BANGLE, CUFFLINK. From the LAST letter of LOCKET, which flag’s LAST letter is farthest away by horizontal and vertical steps? Diagonal shortcuts are off limits."
+    ],
+    "answer": "Bangle, 9 steps.",
+    "why": "From row 5, column 2, the three distances are CHOKER 7, BANGLE 9, CUFFLINK 3. Count the difference in rows plus the difference in columns for each pair of endpoints.",
+    "id": 398
+  },
+  {
+    "title": "The bonbon that was weighed twice",
+    "level": "Hard",
+    "intro": "A confectioner weighed three trays by placing overlapping selections on the scale. The apprentice added the readings and entered that sum as the total weight of all three trays. Sal salvages the inventory without another weighing.",
+    "clues": [
+      "The first reading weighs almond and mint together. The second weighs mint and rose together. The third weighs the mint tray by itself. The scale was zeroed before each reading."
+    ],
+    "questions": [
+      "What is the actual total and the weight of the lightest tray?"
+    ],
+    "answer": "875 g altogether. The mint tray is lightest at 185 g.",
+    "why": "Add the paired readings, 505 + 555 = 1060 g. That counts mint twice, so subtract one 185 g to obtain 875. Individually almond is 320, mint 185 and rose 370 g.",
+    "tables": [
+      [
+        "Scale card",
+        [
+          "Trays",
+          "Reading"
+        ],
+        [
+          [
+            "Almond + mint",
+            "505 g"
+          ],
+          [
+            "Mint + rose",
+            "555 g"
+          ],
+          [
+            "Mint only",
+            "185 g"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Detective skills",
+    "id": 399
+  },
+  {
+    "title": "The four-hundredth lantern",
+    "level": "Hard",
+    "intro": "Lantern Quay promised to etch a name beneath its four-hundredth lantern. Opening night produced three rival claims. One volunteer delivered four lanterns, one carried a lantern marked 400, and one made the lantern that actually became the four-hundredth accepted for display. The old agreement awards the inscription to the maker in that last sense. Sal opens the opening-night ledger, a steward’s queue slip and the maker’s pattern book.",
+    "clues": [
+      "Exactly 394 lanterns had been accepted before the three parties arrived. The opening-night parties came in the order on the ledger. Within a party, accepted lanterns kept the order in which they were presented. Returned or loaned items did not count.",
+      "The ledger’s “loan” means a lantern supplied only to light the queue; it never entered the display. Painted numbers are makers’ marks, with no connection to acceptance order.",
+      "The loose steward’s slip belongs to the party that brought five lanterns. It records their presentation from first to last. Pattern marks are read from the top of each lantern to its base. Each listed pattern identifies exactly one maker."
+    ],
+    "questions": [
+      "Which party brought the four-hundredth accepted lantern, and which position was it in within that party’s presentation?",
+      "Which pattern and maker get the inscription? Explain why the lantern painted “400” misses the honor."
+    ],
+    "answer": "The Bell party brought it, in third presentation position. The Moon-over-Reed lantern was made by June Hare.",
+    "why": "Reed party adds three accepted lanterns, bringing the total to 397; its fourth stays outside on loan. The Bell party’s first three lanterns were accepted and become 398, 399 and 400. Its yellow number-400 lantern came second, so it is actually number 399. The third carries a moon above a reed. The pattern book credits that arrangement to June Hare, not the maker whose reed is above a moon.",
+    "tables": [
+      [
+        "Opening-night intake",
+        [
+          "Party",
+          "Presented",
+          "Result"
+        ],
+        [
+          [
+            "Reed",
+            "4 lanterns",
+            "3 accepted; 1 loan"
+          ],
+          [
+            "Bell",
+            "5 lanterns",
+            "4 accepted; 1 returned"
+          ],
+          [
+            "Finch",
+            "2 lanterns",
+            "Both accepted"
+          ]
+        ]
+      ],
+      [
+        "Steward’s Bell-party slip",
+        [
+          "Position",
+          "Visible mark",
+          "Decision"
+        ],
+        [
+          [
+            "1",
+            "Star over bar",
+            "Accepted"
+          ],
+          [
+            "2",
+            "Yellow number 400",
+            "Accepted"
+          ],
+          [
+            "3",
+            "Moon over reed",
+            "Accepted"
+          ],
+          [
+            "4",
+            "Plain blue",
+            "Returned"
+          ],
+          [
+            "5",
+            "Reed over moon",
+            "Accepted"
+          ]
+        ]
+      ],
+      [
+        "Maker’s pattern book",
+        [
+          "Pattern",
+          "Maker"
+        ],
+        [
+          [
+            "Reed over moon",
+            "Len Kite"
+          ],
+          [
+            "Yellow number 400",
+            "Paz Fen"
+          ],
+          [
+            "Moon over reed",
+            "June Hare"
+          ],
+          [
+            "Star over bar",
+            "Orla Bell"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Whodunit",
+    "id": 400
   }
 ];
