@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#233d58">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>Score Book · Books</title>
+</head>
+<body>
+  <header><div><a href="../">‹ Bookshelf</a><span id="offline" role="status"></span></div></header>
+  <main>
+    <div id="error" role="alert" hidden></div>
+    <section id="library" hidden>
+      <div class="heading"><h1>Score Book</h1><button id="new" class="primary">New scorecard</button></div>
+      <div id="games"></div>
+    </section>
+    <section id="card" hidden></section>
+  </main>
+  <dialog id="dialog" aria-labelledby="dialog-title"><form id="form"><h2 id="dialog-title"></h2><div id="fields"></div><p id="message" role="alert"></p><div class="actions"><button type="button" id="cancel">Cancel</button><button id="accept" class="primary" type="submit"></button></div></form></dialog>
+  <noscript>Enable JavaScript to keep score on this device.</noscript>
+  <script src="app.js"></script>
+</body>
+</html>

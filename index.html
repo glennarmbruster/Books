@@ -14,6 +14,8 @@
     h1 {font:normal clamp(3rem,8vw,5.5rem)/1 Georgia,serif; margin:0 0 2rem; padding-bottom:1.1rem; border-bottom:2px solid #88724a}
     .shelf {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),21rem)); gap:2rem; align-items:start}
     article {display:grid; gap:.9rem}
+    .cover.score-cover {background:#233d58;border-left-color:#14293c}
+    .cover.score-cover img {border-radius:6px}
     .cover.field-cover {background:#394f44; border-left-color:#24392e}
     .cover.dictionary-cover {background:#542c37; border-left-color:#341b22}
     .cover.dictionary-cover img {border-radius:4px}
@@ -67,6 +69,15 @@
           <small>Definitions, synonyms, antonyms and spelling suggestions →</small>
         </a>
         <button type="button" hidden>Download for offline use (47 MB)</button>
+        <p role="status"></p>
+      </article>
+      <article data-book="score-book" data-edition="score-book-1">
+        <a class="cover score-cover" href="./score-book/index.html">
+          <img src="./score-book/icon.png" alt="">
+          <h2>Score Book</h2>
+          <small>Round scores, running totals and saved games →</small>
+        </a>
+        <button type="button" hidden>Download for offline use</button>
         <p role="status"></p>
       </article>
     </section>
