@@ -1,13 +1,15 @@
 'use strict';
 const CACHE_PREFIX = 'books-field-home:' + self.registration.scope + ':';
 const EDITION = '2026.11.16-guide-order-r1';
-const READER_EDITION = EDITION + '-jump';
+const READER_EDITION = EDITION + '-appendix-search';
 const CACHE = CACHE_PREFIX + READER_EDITION;
 const CORE = [
   '../book-number.js',
   './',
   './index.html',
   './field-figures.js',
+  './appendix-search.js',
+  './appendix-search.css',
   './Field-and-Home.epub',
   './manifest.json',
   './icon-192.png',

@@ -37,6 +37,7 @@ def reference_html(guide):
     for i, section in enumerate(guide['referenceSections']):
         links.append('<li>' + link('#section-' + str(i), section['title']) + '</li>')
     body += '<nav aria-label="Sections in this sheet"><ul>' + ''.join(links) + '</ul></nav>'
+    body += '<div class="appendix-tables">'
     for i, section in enumerate(guide['referenceSections']):
         body += '<section class="reference-section" id="section-' + str(i) + '">'
         body += '<h2>' + e(section['title']) + '</h2>'
@@ -51,10 +52,12 @@ def reference_html(guide):
                 body += '<td><span class="reference-label">' + e(label) + '</span>' + e(cell) + '</td>'
             body += '</tr>'
         body += '</tbody></table></section>'
-    return '<div class="food-reference">' + body + '</div>'
+    return '<div class="food-reference">' + body + '</div></div>'
 
 put('book.css','''body{font-family:Georgia,serif;line-height:1.5;margin:4%}h1,h2,h3{font-family:Georgia,serif;font-weight:normal;line-height:1.15;break-after:avoid}h1{font-size:1.9em}h2{font-size:1.32em;margin:1.25em 0 .35em}p{margin:.5em 0 .8em}a{color:#286660}nav li{margin:.25em 0}.kicker,.meta,figcaption,.chapter-links{font-family:-apple-system,Helvetica,Arial,sans-serif}.kicker{font-size:.88em}.meta{font-size:.95em}.scene{border-left:.2em solid #649487;padding-left:.75em}ol.steps{padding-left:1.55em}.steps>li{margin:.7em 0 1em;padding-left:.12em}.steps>li>p{margin:0}figure{margin:.7em 0 .8em;break-inside:avoid;page-break-inside:avoid}figure img{display:block;margin:auto;width:100%;max-width:36em;height:auto}figcaption{font-size:.9em;line-height:1.35;margin:.45em 0 0}figcaption strong{display:block}.warning{border-left:.2em solid #ae6f45;padding-left:.75em}.bookplate{text-align:center;margin-top:10%}.bookplate img{width:45%;max-width:15em}.chapter-links{line-height:1.35}.chapter-links li{margin:.45em 0}.refs{overflow-wrap:anywhere}''','text/css')
 parts['book.css'] += '\n.reference-section{break-before:page;margin-top:2em}\n.reference-table{border-collapse:collapse;table-layout:fixed;width:100%;font-size:1em;line-height:1.45}\n.reference-table caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}\n.reference-table th,.reference-table td{border-bottom:1px solid #a8b6aa;padding:.65em .45em;text-align:left;vertical-align:top;overflow-wrap:anywhere}\n.reference-table th:first-child{width:23%}\n.reference-table tr{break-inside:avoid}\n.reference-table thead{display:table-header-group;background:#edf1e9;color:#172d21}\n.reference-table tbody th{font-weight:bold}\n.reference-label{display:none}\n@media(max-width:680px){\n.reference-table,.reference-table tbody{display:block;width:100%}\n.reference-table thead{display:none}\n.reference-table tr{display:block;border-bottom:2px solid #a8b6aa;margin-bottom:1.4em}\n.reference-table th,.reference-table td,.reference-table th:first-child{display:block;width:auto;padding:.5em .4em}\n.reference-label{display:block;font-size:.85em;font-weight:bold;margin-bottom:.12em}\n}\n'
+put('appendix-search.js',(root/'appendix-search.js').read_bytes(),'application/javascript')
+parts['book.css'] += (root/'appendix-search.css').read_text()
 put('cover.png',(root/'icon-1024.png').read_bytes(),'image/png',attr='properties="cover-image"')
 put('title.xhtml',doc('Field & Home','<main class="bookplate"><img src="cover.png" alt="A compass rose above a spade and wrench"/><h1>Field &amp; Home</h1><p>Cindy’s Skills Guide</p><p>Illustrated edition</p></main>'),'application/xhtml+xml',True)
 guide_numbers={guide['id']:i for i,guide in enumerate(bundle['guides'],1)}
@@ -73,6 +76,7 @@ for no,file in enumerate(man['files'],1):
  put(chapter,doc(ct,cbody),'application/xhtml+xml',True)
  for g in gs:
   b='<p class="kicker">'+link(chapter,ct)+' · '+e(g['sub'])+'</p><h1>'+e(g['title'])+'</h1>'
+  if g.get('referenceSections'): b+='<div class="appendix-search-slot"></div>'
   if g.get('scenario'):b+='<div class="scene">'+para(g['scenario'])+'</div>'
   b+='<p class="meta">'+e(g.get('diff',''))+' · '+e(g.get('time',''))+'</p>'+headinglist('Tools & gear',g.get('gear'))+headinglist('Supplies & ingredients',g.get('supplies'))
   if g.get('referenceSections'): b+=reference_html(g)
@@ -98,7 +102,10 @@ for no,file in enumerate(man['files'],1):
   if g.get('safety'):b+='<div class="warning"><h2>Safety &amp; key tip</h2>'+para(g['safety'])+'</div>'
   if g.get('overview'):b+=para(g['overview'])
   if g.get('sources'):b+='<h2>References</h2><ul class="refs">'+''.join('<li>'+link(u,t)+'</li>' for t,u in g['sources'])+'</ul>'
-  put(gfile(g),doc(g['title'],b),'application/xhtml+xml',True)
+  content=doc(g['title'],b)
+  if g.get('referenceSections'):
+   content=content.replace('</head>', '<script type="text/javascript" src="appendix-search.js"></script></head>')
+  put(gfile(g),content,'application/xhtml+xml',True,attr='properties="scripted"' if g.get('referenceSections') else '')
  if file.startswith('11-'):
   appendix_spine.extend(spine[start_spine:])
   del spine[start_spine:]

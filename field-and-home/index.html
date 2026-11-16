@@ -277,6 +277,7 @@ body:has(#guide-finder[open]){overflow:hidden}
 }
 
 </style>
+<link rel="stylesheet" href="./appendix-search.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -337,6 +338,7 @@ body:has(#guide-finder[open]){overflow:hidden}
 </dialog>
 
 <script src="../book-number.js"></script>
+<script src="./appendix-search.js"></script>
 <script src="field-figures.js"></script>
 <script>
 function figuresForStep(catalog, guide, step) {
@@ -1448,7 +1450,7 @@ function referenceHTML(guide) {
       <thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></section>`;
   }).join('');
   return `<div class="food-reference"><p class="reference-note">Checked ${esc(guide.reviewed)}</p>
-    ${intro}<nav aria-label="Sections in this sheet"><ul class="reference-contents">${contents}</ul></nav>${sections}</div>`;
+    ${intro}<nav aria-label="Sections in this sheet"><ul class="reference-contents">${contents}</ul></nav><div class="appendix-tables">${sections}</div></div>`;
 }
 
 function guideDetailHTML(id) {
@@ -1475,6 +1477,7 @@ function guideDetailHTML(id) {
       </div>
     </div>
 
+    ${g.referenceSections ? '<div class="appendix-search-slot" data-sheet="' + esc(g.id) + '"></div>' : ''}
     ${g.scenario ? `<section class="field-section scene"><h3>About this guide</h3><p>${esc(g.scenario)}</p></section>` : ''}
 
 
@@ -1514,6 +1517,10 @@ function guideDetailHTML(id) {
 
 function renderGuides() {
   const selected = getGuide(ui.selectedId) || withEdits(allGuides()[0]);
+  const previous = view.querySelector('.appendix-search-slot');
+  const sameSheet = previous && previous.dataset.sheet === selected?.id;
+  const query = sameSheet ? previous.querySelector('input')?.value || '' : '';
+  const resumeTyping = sameSheet && previous.contains(document.activeElement);
   if (selected) ui.selectedId = selected.id;
   view.innerHTML = `<div class="reader-layout">
     <nav class="reader-controls" aria-label="Book navigation">
@@ -1525,6 +1532,10 @@ function renderGuides() {
     </nav>
     <div class="reading-page">${guideDetailHTML(selected?.id)}</div>
   </div>`;
+  mountAppendixSearch(view);
+  const input = view.querySelector('#appendix-query');
+  if (query && input) { input.value = query; input.dispatchEvent(new Event('input')); }
+  if (resumeTyping && input) input.focus({preventScroll:true});
 }
 
 const finder = $('#guide-finder');

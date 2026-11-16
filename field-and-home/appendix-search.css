@@ -1,0 +1,7 @@
+.appendix-search-slot:not(:empty){margin:.8rem 0;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.3rem .5rem}
+.appendix-search-slot label,.appendix-search-slot p{grid-column:1/-1;margin:0}
+.appendix-search-slot label{font-weight:600}
+.appendix-search-slot input,.appendix-search-slot button{box-sizing:border-box;font:inherit;font-size:max(16px,1em);min-height:44px;padding:.4em .65em;border:1px solid currentColor;border-radius:.4em;color:inherit;background:transparent}
+.appendix-search-slot input{width:100%}
+.appendix-search-slot p:empty,.appendix-search-slot [hidden],.appendix-tables [hidden],.food-reference nav[hidden]{display:none!important}
+.appendix-search-slot + .appendix-tables .reference-section{break-before:auto;margin-top:1em}
