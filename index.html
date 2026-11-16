@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183d36">
+  <link rel="manifest" href="./books.webmanifest">
+  <link rel="apple-touch-icon" href="./last-port-casebook/icon.png">
+  <title>Books</title>
+  <style>
+    * {box-sizing:border-box}
+    body {margin:0; background:#f6f2e7; color:#26362f; font:17px/1.55 system-ui,sans-serif}
+    main {max-width:68rem; margin:auto; padding:clamp(2rem,6vw,5rem)}
+    h1 {font:normal clamp(3rem,8vw,5.5rem)/1 Georgia,serif; margin:0 0 2rem; padding-bottom:1.1rem; border-bottom:2px solid #88724a}
+    article {display:inline-grid; gap:.9rem; width:min(100%,21rem)}
+    .cover {min-height:22rem; padding:1.8rem; border-left:10px solid #122f2b; border-radius:4px 10px 10px 4px; background:#214a41; color:#f8eed4; text-decoration:none; display:grid; align-content:space-between; gap:2rem; box-shadow:2px 3px #c1b394,3px 5px #756e55}
+    .cover img {width:58px; height:58px; border-radius:50%}
+    h2 {font:normal 2.85rem/1 Georgia,serif; letter-spacing:-.045em; margin:0}
+    .cover small {border-top:1px solid #a99b74; padding-top:.8rem; font-size:.9rem}
+    button {justify-self:start; background:#faf8f1; color:#214a41; border:1px solid #8c998a; border-radius:5px; min-height:44px; padding:.55rem .9rem; font:inherit; cursor:pointer}
+    a:focus-visible,button:focus-visible {outline:3px solid #a46622; outline-offset:3px}
+    p {margin:0; color:#526354}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Books</h1>
+    <article data-book="last-port-casebook">
+      <a class="cover" href="./last-port-casebook/index.html">
+        <img src="./last-port-casebook/icon.png" alt="">
+        <h2>The Last Port Casebook</h2>
+        <small>10 mystery puzzles &amp; companion answer book →</small>
+      </a>
+      <button type="button" hidden>Download for offline use</button>
+      <p role="status"></p>
+    </article>
+  </main>
+  <script>
+    async function activeWorker(registration) {
+      if (registration.active?.state === 'activated') return registration.active;
+      const worker = registration.installing || registration.waiting || registration.active;
+      if (!worker) throw Error('Installation unavailable');
+      return new Promise((resolve, reject) => {
+        function changed() {
+          if (worker.state === 'activated') resolve(worker);
+          if (worker.state === 'redundant') reject(Error('Installation failed'));
+        }
+        worker.addEventListener('statechange', changed);
+        changed();
+      });
+    }
+
+    function verify(worker) {
+      const channel = new MessageChannel();
+      return new Promise(resolve => {
+        function finish(ready) {
+          clearTimeout(timer);
+          channel.port1.close();
+          resolve(ready);
+        }
+        const timer = setTimeout(() => finish(false), 3000);
+        channel.port1.onmessage = event => finish(event.data === true);
+        worker.postMessage('verify', [channel.port2]);
+      });
+    }
+
+    async function prepareCard(card, shelfReady) {
+      const button = card.querySelector('button');
+      const status = card.querySelector('[role=status]');
+      const folder = new URL('./' + card.dataset.book + '/', location.href);
+      function ready() {
+        button.hidden = true;
+        status.textContent = 'Ready offline';
+      }
+      button.onclick = async () => {
+        button.disabled = true;
+        status.textContent = 'Downloading the book and answers…';
+        try {
+          await shelfReady;
+          const reg = await navigator.serviceWorker.register(new URL('sw.js', folder));
+          if (!await verify(await activeWorker(reg))) throw Error('Incomplete download');
+          ready();
+        } catch {
+          status.textContent = 'Download incomplete. Reopen the shelf online and try again.';
+        } finally { button.disabled = false; }
+      };
+      try {
+        await shelfReady;
+        const reg = await navigator.serviceWorker.getRegistration(folder);
+        if (reg?.scope === folder.href && reg.active && await verify(reg.active)) {
+          ready();
+        } else { button.hidden = false; }
+      } catch { status.textContent = 'Open the hosted bookshelf online to set up offline use.'; }
+    }
+
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      const shelfReady = navigator.serviceWorker.register('./shelf-worker.js').then(activeWorker);
+      document.querySelectorAll('[data-book]').forEach(card => prepareCard(card, shelfReady));
+    }
+  </script>
+</body>
+</html>

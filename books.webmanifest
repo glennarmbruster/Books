@@ -1,0 +1,14 @@
+{
+  "id": "./",
+  "name": "Books",
+  "short_name": "Books",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#183d36",
+  "background_color": "#f6f2e7",
+  "icons": [
+    {"src":"./last-port-casebook/icon.png","sizes":"192x192","type":"image/png"},
+    {"src":"./last-port-casebook/icon-large.png","sizes":"512x512","type":"image/png"}
+  ]
+}
