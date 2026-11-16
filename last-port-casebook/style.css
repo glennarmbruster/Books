@@ -4,3 +4,17 @@
 
 .back-to-books { color: #fbf6e6; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; padding-inline: 6px; }
 @media (max-width: 520px) { header { flex-wrap: wrap; } }
+
+.index-section { border-bottom: 1px solid var(--line); }
+.index-section > summary {
+ display: list-item; cursor: pointer; padding: 15px 6px; color: var(--spruce);
+ font: 500 23px/1.4 Georgia, serif;
+}
+.index-section > summary::marker { color: var(--brass); font-size: .7em; }
+.index-section > summary small { float: right; color: var(--muted); font: 14px/2.3 system-ui, sans-serif; }
+.index-section[open] > summary { border-bottom: 1px solid var(--line); }
+.index-section > summary:focus-visible { outline: 3px solid var(--brass); outline-offset: -3px; }
+.index-section .indexrow:last-child { border-bottom: 0; }
+.indexrow strong s { color: var(--muted); text-decoration-thickness: .09em; }
+.complete-control { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 6px 12px; cursor: pointer; color: var(--spruce); font-weight: 650; }
+.complete-control input { width: 22px; height: 22px; accent-color: var(--spruce); margin: 0; }

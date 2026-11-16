@@ -15,16 +15,51 @@ const pNow=()=>puzzles[book.id-1];
 function page(){return book.pages[book.id] ||= {};}
 function toast(message){$('#notice').textContent=message;clearTimeout(timer);timer=setTimeout(()=>$('#notice').textContent='',4500);}
 function save(){try{localStorage.setItem(key,JSON.stringify(book));return true;}catch{toast('Storage is full or unavailable. Back up your work before closing.');return false;}}
-function nav(view,id=book.id){book.view=view;book.id=id;if(view==='puzzle')book.last=id;save();render();window.scrollTo(0,0);}
+function nav(view,id=book.id){
+ for(const section of main.querySelectorAll('.index-section')){
+  if(section.open)openSections.add(section.dataset.section);
+  else openSections.delete(section.dataset.section);
+ }
+ if((view==='index'||view==='answers')&&(book.view==='puzzle'||book.view==='answer')){
+  openSections.add(pNow().kind);
+ }
+ book.view=view;book.id=id;if(view==='puzzle')book.last=id;save();render();window.scrollTo(0,0);}
 function btn(label,act,cls=''){return '<button type="button" class="'+cls+'" data-act="'+act+'">'+label+'</button>';}
 function go(label,view,id,cls=''){return '<button class="'+cls+'" data-go="'+view+'" data-id="'+id+'">'+label+'</button>';}
 function progress(id){const s=book.pages[id];if(s?.done)return 'Complete';if(s&&(s.notes||s.ink?.length||s.found?.length||Object.values(s.fields||{}).some(Boolean)||Object.values(s.letters||{}).some(Boolean)))return 'In progress';return 'Unopened';}
-function list(answer=false){return puzzles.map(p=>go('<span class="num">'+num(p.id)+'</span><span><strong>'+p.title+'</strong><small>'+p.kind+' · '+p.level+'</small></span><span class="status">'+(answer?'Solution':progress(p.id)==='Unopened'?'Open':progress(p.id))+' ›</span>',answer?'answer':'puzzle',p.id,'indexrow')).join('');}
+const sectionLabels = {
+ 'Crossword': 'Crosswords',
+ 'Word search': 'Word searches',
+ 'Detective skills': 'Detective skills',
+ 'Whodunit': 'Whodunits',
+ 'Logic': 'Logic puzzles',
+ 'Codebreaking': 'Codebreaking'
+};
+const openSections = new Set();
+
+function list(answer = false) {
+ return Object.entries(sectionLabels).map(([kind, label]) => {
+  const cases = puzzles.filter(p => p.kind === kind);
+  const complete = cases.filter(p => book.pages[p.id]?.done).length;
+  const rows = cases.map(p => {
+   const done = Boolean(book.pages[p.id]?.done);
+   const status = progress(p.id);
+   const action = answer ? (done ? 'Complete · Solution' : 'Solution') : (status === 'Unopened' ? 'Open' : status);
+   const title = done ? '<s>' + esc(p.title) + '</s>' : esc(p.title);
+   const row = '<span class="num">' + num(p.id) + '</span><span><strong>' + title +
+    '</strong><small>' + p.level + '</small></span><span class="status">' + action + ' ›</span>';
+   return go(row, answer ? 'answer' : 'puzzle', p.id, 'indexrow');
+  }).join('');
+  return '<details class="index-section" data-section="' + kind + '"' + (openSections.has(kind) ? ' open' : '') +
+   '><summary><span>' + label + '</span><small>' + complete + ' of ' + cases.length +
+   ' complete</small></summary>' + rows + '</details>';
+ }).join('');
+}
 function library(){
  const answers=book.view==='answers', index=book.view==='index';
  if(answers||index)return '<div class="page"><div class="pager">'+go('‹ Bookshelf','shelf',book.id)+'</div><div class="filehead"><p class="eyebrow">Volume I · '+(answers?'Companion book':'Puzzle book')+'</p><h1>'+(answers?'The Answer Book':'Puzzle index')+'</h1><p>'+(answers?'Choose a case to open its solution.':'Choose a case to work on.')+'</p></div>'+list(answers)+'</div>';
  const opened=Object.values(book.pages).some(s=>Object.keys(s).length);
- return '<p class="eyebrow">Volume I · Travel sampler</p><h1>Your bookshelf</h1><div class="shelf">'+go('<span class="bookinner"><span class="eyebrow">Puzzle book · 10 cases</span><strong>The Last Port<br>Casebook</strong><small>'+(opened?'Resume case '+num(book.last):'Open the first case')+' &nbsp; →</small></span>','puzzle',book.last,'book')+go('<span class="bookinner"><span class="eyebrow">Companion volume</span><strong>The Answer<br>Book</strong><small>Browse solutions &nbsp; →</small></span>','answers',book.id,'book answer')+'</div><div class="sectionhead"><h2>Puzzle index</h2><span>'+puzzles.filter(p=>book.pages[p.id]?.done).length+' of '+puzzles.length+' complete</span></div>'+list();
+ return '<p class="eyebrow">Volume I · Travel edition</p><h1>Your bookshelf</h1><div class="shelf">'+go('<span class="bookinner"><span class="eyebrow">Puzzle book · '+puzzles.length+' cases</span><strong>The Last Port<br>Casebook</strong><small>'+(opened?'Resume case '+num(book.last):'Open the first case')+' &nbsp; →</small></span>','puzzle',book.last,'book')+go('<span class="bookinner"><span class="eyebrow">Companion volume</span><strong>The Answer<br>Book</strong><small>Browse solutions &nbsp; →</small></span>','answers',book.id,'book answer')+'</div><div class="sectionhead"><h2>Puzzle index</h2><span>'+puzzles.filter(p=>book.pages[p.id]?.done).length+' of '+puzzles.length+' complete</span></div>'+list();
 }
 const shape={Anchor:'⚓︎',Bell:'♧',Shell:'◒',Key:'⚿',Coin:'◉',Ring:'◎'};
 function evidence(p){
@@ -109,7 +144,7 @@ function pageBody(){
  const p=pNow(),s=book.pages[p.id]||{},answer=book.view==='answer',view=book.view;
  let content;
  if(answer){content='<section class="solution"><h2 class="cap">Solution · '+num(p.id)+'</h2>'+(p.answer?'<strong>'+p.answer+'</strong><p>'+p.why+'</p>':p.entries?'<p>The filled grid and its clues are below.</p>':'<p>Coordinates count from the top left.</p>')+'</section>'+(p.entries?cross(p,s,true):p.grid?searchGrid(p,s,true):'')+go('‹ Return to puzzle '+num(p.id),'puzzle',p.id,'primary');}
- else{content='<p class="intro">'+p.intro+'</p>'+evidence(p)+(p.tableform?gridform(p,s):'')+(p.entries?cross(p,s):'')+(p.grid?searchGrid(p,s):'')+(p.questions?'<section class="field"><h2 class="cap">Your deduction</h2>'+p.questions.map((q,i)=>'<label class="question" for="q'+i+'">'+q+'</label><textarea id="q'+i+'" data-field="q'+i+'">'+esc(s.fields?.['q'+i])+'</textarea>').join('')+'</section>':'')+notebook(s)+'<div class="answerbar">'+btn(s.done?'✓ Marked complete':'Mark complete','done',s.done?'solved':'primary')+go('Open answer '+num(p.id)+' ↗','answer',p.id)+btn('Clear this page','clearpage','danger')+'</div>';}
+ else{content='<p class="intro">'+p.intro+'</p>'+evidence(p)+(p.tableform?gridform(p,s):'')+(p.entries?cross(p,s):'')+(p.grid?searchGrid(p,s):'')+(p.questions?'<section class="field"><h2 class="cap">Your deduction</h2>'+p.questions.map((q,i)=>'<label class="question" for="q'+i+'">'+q+'</label><textarea id="q'+i+'" data-field="q'+i+'">'+esc(s.fields?.['q'+i])+'</textarea>').join('')+'</section>':'')+notebook(s)+'<div class="answerbar">'+'<label class="complete-control"><input type="checkbox" id="puzzle-complete"'+(s.done?' checked':'')+'> Complete</label>'+go('Puzzle index','index',p.id)+go('Open answer '+num(p.id)+' ↗','answer',p.id)+btn('Clear this page','clearpage','danger')+'</div>';}
  return '<article class="page"><div class="pager">'+go('‹ '+(answer?'Answer index':'Puzzle index'),answer?'answers':'index',p.id)+'<div class="navright">'+(p.id>1?go('← Previous',view,p.id-1):'')+(p.id<puzzles.length?go('Next →',view,p.id+1):'')+'</div></div><div class="filehead"><p class="eyebrow">'+(answer?'Answer':'Case')+' '+num(p.id)+' / '+num(puzzles.length)+' &nbsp; · &nbsp; '+p.kind+' &nbsp; · &nbsp; '+p.level+'</p><h1>'+p.title+'</h1></div>'+content+'</article>';
 }
 function render(){
@@ -117,6 +152,16 @@ function render(){
  const inside=['puzzle','answer'].includes(book.view);main.innerHTML=inside?pageBody():library();
  if(book.view==='puzzle'){
   if(pNow().entries)setupCross();if(pNow().grid)setupSearch(pNow());setupInk();
+  $('#puzzle-complete').onchange = event => {
+   const checkbox = event.currentTarget;
+   const state = page();
+   const previous = Boolean(state.done);
+   state.done = checkbox.checked;
+   if (!save()) {
+    state.done = previous;
+    checkbox.checked = previous;
+   }
+  };
   $('#notes').oninput=e=>{page().notes=e.target.value;save();};
   main.querySelectorAll('[data-field]').forEach(el=>el.addEventListener(el.tagName==='SELECT'?'change':'input',()=>{(page().fields||={})[el.dataset.field]=el.value;save();}));
  }
@@ -124,7 +169,7 @@ function render(){
 function openDialog(title,body){dialogbody.innerHTML='<h2 id="dialogtitle">'+title+'</h2>'+body;if(!dlg.open)dlg.showModal();}
 function closeDialog(){if(!pendingPin)dlg.close();}
 dlg.addEventListener('cancel',e=>{if(pendingPin)e.preventDefault();});
-function toolsMenu(){openDialog('Book tools','<p>Progress is saved on this device as you work.</p><div class="actions">'+btn('Back up my book','backup','primary')+btn('Restore a backup','restore')+btn('Set up for offline use','install')+btn('Clear all 10 puzzles','clearall','danger')+btn('Close','close')+'</div>');}
+function toolsMenu(){openDialog('Book tools','<p>Progress is saved on this device as you work.</p><div class="actions">'+btn('Back up my book','backup','primary')+btn('Restore a backup','restore')+btn('Set up for offline use','install')+btn('Clear all '+puzzles.length+' puzzles','clearall','danger')+btn('Close','close')+'</div>');}
 function backupMenu(){
  openDialog('Back up your book','<p>The file includes your answers, highlights, handwriting and place in the book.</p><p>Choose <b>Mail</b> in the share sheet to email the attachment. Offline, save the message as a draft or tap Send and check Mail’s Outbox. You can also save the file on your iPad.</p><div class="actions">'+btn('Share backup for email','share','primary')+btn('Save backup file','download')+btn('Close','close')+'</div><p class="error" id="sharestatus" role="status"></p>');
 }
@@ -175,7 +220,6 @@ function handleAction(a){
  case 'download':download();break;
  case 'restore':openDialog('Restore your book','<p>Select a Last Port backup from Files. You’ll review the replacement before it takes effect.</p><input type="file" id="restorefile" accept=".txt,.json,text/plain,application/json"><p id="restorestatus" role="alert" class="error"></p>'+btn('Cancel','close'));$('#restorefile').onchange=e=>restoreFile(e.target.files[0]);break;
  case 'clearall':case 'clearpage':{const all=a==='clearall',id=book.id;pinForm(all?'Clear the whole book?':'Clear case '+num(id)+'?',all?'All answers, notes, highlights and handwriting in this volume will be erased.':'Only the answers, notes, highlights and handwriting for “'+pNow().title+'” will be erased.',()=>{const previous=book;book=JSON.parse(JSON.stringify(previous));if(all){book.pages={};book.last=1;book.view='shelf';book.id=1;}else delete book.pages[id];if(!save()){book=previous;throw Error('Unable to save the cleared book.');}render();toast(all?'Book cleared.':'Page cleared.');},all?'Clear whole book':'Clear page');break;}
- case 'done':page().done=!page().done;save();render();break;
  case 'pen':case 'eraser':inkTool=a;for(const m of ['pen','eraser']){const b=$('[data-act="'+m+'"]');b.classList.toggle('primary',m===a);b.setAttribute('aria-pressed',String(m===a));}break;
  case 'undo':{const h=inkHistory.pop(),ink=page().ink||[];if(h?.deleted)ink.splice(h.i,0,h.deleted);else ink.pop();save();drawInk();break;}
  }
