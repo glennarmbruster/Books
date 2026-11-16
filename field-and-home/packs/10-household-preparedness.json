@@ -17,7 +17,7 @@
       "supplies": [],
       "steps": [
         "Before a storm, get both phones, your street address and the email each person checks. The instructions here work offline. Sending the registration takes internet access. If you need help getting signed up, call Friendswood Emergency Management at 281-996-3335 during office hours.",
-        "On the first phone, open the city’s Emergency Notifications page in References. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
+        "On the first phone, open the City of Friendswood emergency notifications page. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
         "Choose your language and enter your name, email and user ID. Your email can be your user ID. Choose a password with at least eight characters, including uppercase, lowercase, a number and a symbol. Enter it again to confirm.",
         "Enter the number of the phone in your hand and select Mobile. To receive texts, check Opt-In to Public Service SMS Alerts. Leave Group Code blank unless you were given one. Review the terms, check the agreement box and tap Create Account.",
         "Complete the phone verification when prompted. For a text, enter the code from the message. For an automated call, follow its instructions. If nothing arrives, recheck the number before requesting another verification.",
@@ -62,13 +62,17 @@
       ],
       "illustrations": [
         {
-          "step": "On the first phone, open the city’s Emergency Notifications page in References. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
+          "step": "On the first phone, open the City of Friendswood emergency notifications page. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
           "plate": "paired-alerts",
           "title": "Register each person’s usual contact",
           "alt": "A home address branches to two different phones. Each person has their own registration.",
           "caption": "Check both registrations. A message on one person’s phone tells you only that their contact is reachable."
         }
-      ]
+      ],
+      "stepLink": {
+        "text": "City of Friendswood emergency notifications page",
+        "url": "https://www.ci.friendswood.tx.us/618/Emergency-Notifications"
+      }
     },
     {
       "id": "hh-002",
@@ -1274,5 +1278,5 @@
       "supplies": []
     }
   ],
-  "version": "2026.11.16-food-reference-r1"
+  "version": "2026.11.16-guide-order-r1"
 }

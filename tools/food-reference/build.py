@@ -4,7 +4,7 @@ import json
 
 ROOT = Path(__file__).resolve().parents[2]
 BOOK = ROOT / 'field-and-home'
-VERSION = '2026.11.16-food-reference-r1'
+VERSION = '2026.11.16-guide-order-r1'
 CHECKED = 'November 16, 2026'
 CATEGORY = 'Appendix · Food Safety Quick Reference'
 SOURCES = [

@@ -803,6 +803,77 @@ const CATEGORIES = [
 
 const BUILTIN_STARTER = [
   {
+    "id": "hh-001",
+    "cat": "Household Preparedness & Recovery",
+    "sub": "Before the storm",
+    "title": "Set up Friendswood alerts on both phones",
+    "scenario": "One of you is in the garden while the other is out of town. A water notice sent to only one phone leaves half the household guessing.",
+    "diff": "Easy",
+    "time": "Allow 15–20 minutes for both phones",
+    "gear": [
+      "Both phones"
+    ],
+    "supplies": [],
+    "steps": [
+      "Before a storm, get both phones, your street address and the email each person checks. The instructions here work offline. Sending the registration takes internet access. If you need help getting signed up, call Friendswood Emergency Management at 281-996-3335 during office hours.",
+      "On the first phone, open the City of Friendswood emergency notifications page. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
+      "Choose your language and enter your name, email and user ID. Your email can be your user ID. Choose a password with at least eight characters, including uppercase, lowercase, a number and a symbol. Enter it again to confirm.",
+      "Enter the number of the phone in your hand and select Mobile. To receive texts, check Opt-In to Public Service SMS Alerts. Leave Group Code blank unless you were given one. Review the terms, check the agreement box and tap Create Account.",
+      "Complete the phone verification when prompted. For a text, enter the code from the message. For an automated call, follow its instructions. If nothing arrives, recheck the number before requesting another verification.",
+      "In your profile, add or confirm the home street address, including any unit number. Some city warnings go only to addresses inside the affected area. Check your saved address and delivery choices before signing out.",
+      "Repeat on the second phone with that person’s details. Each of you should be able to sign back in and see the correct number and home address. When the city next issues a test or notice, check both phones.",
+      "Check the phone’s separate wireless emergency alerts too. On a U.S. iPhone open Settings, then Notifications, and scroll to Government Alerts. Review Emergency Alerts and Public Safety Alerts. On Android, search Settings for “wireless emergency alerts.” These settings control broadcast warnings. Friendswood still needs your city registration for local calls and texts.",
+      "After a move or new phone number, use Modify or Unsubscribe on the same city page. If cell service fails, listen to local weather bulletins on a battery-powered NOAA radio (Houston, 162.400 MHz)."
+    ],
+    "overview": "Enrollment details checked November 16, 2026. Use the city link for later changes. A city subscription lets Friendswood send local warnings by phone, text or email.",
+    "tags": [
+      "before the storm"
+    ],
+    "sources": [
+      [
+        "City of Friendswood · Emergency notifications",
+        "https://www.ci.friendswood.tx.us/618/Emergency-Notifications"
+      ],
+      [
+        "Smart911 · Friendswood registration form",
+        "https://www.smart911.com/smart911/ref/reg.action?pa=friendswood"
+      ],
+      [
+        "Smart911 · Account and phone verification",
+        "https://www.smart911.com/faqContent.html"
+      ],
+      [
+        "City of Friendswood · Emergency Management",
+        "https://www.ci.friendswood.tx.us/217/Emergency-Management"
+      ],
+      [
+        "National Weather Service · Texas transmitters and county codes",
+        "https://www.weather.gov/nwr/county_coverage?State=TX"
+      ],
+      [
+        "Apple · Government alert settings",
+        "https://support.apple.com/guide/iphone/change-notification-settings-iph7c3d96bab/ios"
+      ],
+      [
+        "Google · Android emergency alerts",
+        "https://support.google.com/android/answer/9319337?hl=en"
+      ]
+    ],
+    "illustrations": [
+      {
+        "step": "On the first phone, open the City of Friendswood emergency notifications page. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
+        "plate": "paired-alerts",
+        "title": "Register each person’s usual contact",
+        "alt": "A home address branches to two different phones. Each person has their own registration.",
+        "caption": "Check both registrations. A message on one person’s phone tells you only that their contact is reachable."
+      }
+    ],
+    "stepLink": {
+      "text": "City of Friendswood emergency notifications page",
+      "url": "https://www.ci.friendswood.tx.us/618/Emergency-Notifications"
+    }
+  },
+  {
     "id": "hh-002",
     "cat": "Household Preparedness & Recovery",
     "sub": "Before the storm",
@@ -1037,7 +1108,7 @@ const ui = {
   q: '',
   cat: 'All',
   filter: 'all',
-  selectedId: 'hh-002',
+  selectedId: 'hh-001',
   openDefKey: ''
 };
 
@@ -1346,6 +1417,17 @@ function openFigure(button) {
   frame.scrollTo(0, 0);
 }
 
+function renderStepText(guide, step) {
+  const link = guide.stepLink;
+  if (!link?.text || !/^https?:\/\//i.test(link.url)) return esc(step);
+  const start = step.indexOf(link.text);
+  if (start < 0) return esc(step);
+  const end = start + link.text.length;
+  return esc(step.slice(0, start)) +
+    `<a href="${esc(link.url)}" target="_blank" rel="noopener noreferrer">${esc(link.text)}</a>` +
+    esc(step.slice(end));
+}
+
 function referenceHTML(guide) {
   if (!guide.referenceSections) return '';
   const intro = (guide.referenceIntro || []).map(text => `<p>${esc(text)}</p>`).join('');
@@ -1415,7 +1497,7 @@ function guideDetailHTML(id) {
     <ol class="steps">${(g.steps || []).map(s => {
       const added = g.isCustom ? [] : (g.illustrations || []).filter(f => f.step === s && /^[a-z0-9-]+$/.test(f.plate));
       const figures = [...figuresForStep(fieldFigures, g, s), ...added].map(stepFigureHTML).join('');
-      return `<li>${esc(s)}${figures}</li>`;
+      return `<li>${renderStepText(g, s)}${figures}</li>`;
     }).join('')}</ol>
 
     ${g.safety ? `<div class="callout warn"><b>⚠️ Safety &amp; Key Tip:</b> ${esc(g.safety)}</div>` : ''}
@@ -1458,14 +1540,19 @@ function renderFinderList() {
     ).join('') + '<button type="button" class="finder-row" data-chapter="All">Search all guides <span aria-hidden="true">⌕</span></button>';
     return;
   }
-  const groups = new Map();
-  for (const guide of filteredGuides()) {
+  const ordered = filteredGuides().sort((a, b) => {
+    const aNumber = guideNumbers.get(a.id) ?? Infinity;
+    const bNumber = guideNumbers.get(b.id) ?? Infinity;
+    return aNumber === bNumber ? a.title.localeCompare(b.title) : aNumber - bNumber;
+  });
+  const groups = [];
+  for (const guide of ordered) {
     const name = ui.cat === 'All' ? guide.cat : guide.sub || guide.cat;
-    if (!groups.has(name)) groups.set(name, []);
-    groups.get(name).push(guide);
+    if (!groups.length || groups[groups.length - 1].name !== name) groups.push({name, entries: []});
+    groups[groups.length - 1].entries.push(guide);
   }
-  finderList.innerHTML = [...groups].map(([name, entries]) =>
-    `<section><h3>${esc(name)}</h3>${entries.sort((a,b) => a.title.localeCompare(b.title)).map(g =>
+  finderList.innerHTML = groups.map(({name, entries}) =>
+    `<section><h3>${esc(name)}</h3>${entries.map(g =>
       `<button type="button" class="finder-row" data-guide="${esc(g.id)}" ${g.id === ui.selectedId ? 'aria-current="page"' : ''}>${guideNumbers.has(g.id) ? '#' + guideNumbers.get(g.id) + ' · ' : ''}${esc(g.title)}</button>`
     ).join('')}</section>`
   ).join('') || '<p class="finder-empty" role="status">No matching guides. Try another search or reading list.</p>';

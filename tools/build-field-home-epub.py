@@ -1,5 +1,5 @@
 from pathlib import Path
-from collections import defaultdict
+from itertools import groupby
 from html import escape as e
 import json,re,base64,zipfile
 from xml.etree import ElementTree as ET
@@ -57,19 +57,19 @@ put('book.css','''body{font-family:Georgia,serif;line-height:1.5;margin:4%}h1,h2
 parts['book.css'] += '\n.reference-section{break-before:page;margin-top:2em}\n.reference-table{border-collapse:collapse;table-layout:fixed;width:100%;font-size:1em;line-height:1.45}\n.reference-table caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}\n.reference-table th,.reference-table td{border-bottom:1px solid #a8b6aa;padding:.65em .45em;text-align:left;vertical-align:top;overflow-wrap:anywhere}\n.reference-table th:first-child{width:23%}\n.reference-table tr{break-inside:avoid}\n.reference-table thead{display:table-header-group;background:#edf1e9;color:#172d21}\n.reference-table tbody th{font-weight:bold}\n.reference-label{display:none}\n@media(max-width:680px){\n.reference-table,.reference-table tbody{display:block;width:100%}\n.reference-table thead{display:none}\n.reference-table tr{display:block;border-bottom:2px solid #a8b6aa;margin-bottom:1.4em}\n.reference-table th,.reference-table td,.reference-table th:first-child{display:block;width:auto;padding:.5em .4em}\n.reference-label{display:block;font-size:.85em;font-weight:bold;margin-bottom:.12em}\n}\n'
 put('cover.png',(root/'icon-1024.png').read_bytes(),'image/png',attr='properties="cover-image"')
 put('title.xhtml',doc('Field & Home','<main class="bookplate"><img src="cover.png" alt="A compass rose above a spade and wrench"/><h1>Field &amp; Home</h1><p>Cindy’s Skills Guide</p><p>Illustrated edition</p></main>'),'application/xhtml+xml',True)
+guide_numbers={guide['id']:i for i,guide in enumerate(bundle['guides'],1)}
 chapter_nav=[]
 appendix_spine=[]
 appendix_nav=[]
 for no,file in enumerate(man['files'],1):
  start_spine=len(spine)
  pack=json.loads((root/'packs'/file).read_text());gs=pack['guides'];ct=gs[0]['cat'] if not file.startswith('08') else 'Friendswood Greenhouse & Garden'
- chapter=f'chapter-{no}.xhtml'; grouped=defaultdict(list)
- for g in gs:grouped[g['sub']].append(g)
+ chapter=f'chapter-{no}.xhtml'
  chapter_nav.append('<li>'+link(chapter,ct)+'</li>')
  def gfile(g):return g['id']+'.xhtml'
  cbody='<h1>'+e(ct)+'</h1>'
- for sub,sg in grouped.items():
-  cbody+='<h2>'+e(sub)+'</h2><ul class="chapter-links">'+''.join('<li>'+link(gfile(g),g['title'])+'</li>' for g in sg)+'</ul>'
+ for sub,sg in groupby(gs, key=lambda guide: guide['sub']):
+  cbody+='<h2>'+e(sub)+'</h2><ul class="chapter-links">'+''.join('<li>'+link(gfile(g),f"#{guide_numbers[g['id']]} · {g['title']}")+'</li>' for g in sg)+'</ul>'
  put(chapter,doc(ct,cbody),'application/xhtml+xml',True)
  for g in gs:
   b='<p class="kicker">'+link(chapter,ct)+' · '+e(g['sub'])+'</p><h1>'+e(g['title'])+'</h1>'
@@ -78,7 +78,12 @@ for no,file in enumerate(man['files'],1):
   if g.get('referenceSections'): b+=reference_html(g)
   b+=('<h2>Step by step</h2>' if g['steps'] else '')+'<ol class="steps">'
   for step in g['steps']:
-   b+='<li>'+para(step)
+   step_html=para(step)
+   step_link=g.get('stepLink')
+   if step_link and step_link['text'] in step:
+    assert step_link['url'].startswith(('https://','http://'))
+    step_html=step_html.replace(e(step_link['text']),link(step_link['url'],step_link['text']),1)
+   b+='<li>'+step_html
    for j,fig in enumerate(old.get(g['id'],[])+g.get('illustrations',[])):
     if fig['step']!=step:continue
     if 'png' in fig:
@@ -97,7 +102,7 @@ for no,file in enumerate(man['files'],1):
  if file.startswith('11-'):
   appendix_spine.extend(spine[start_spine:])
   del spine[start_spine:]
-  appendix_nav.append(chapter_nav.pop()[:-5]+'<ol>'+''.join('<li>'+link(gfile(g),g['title'])+'</li>' for g in gs)+'</ol></li>')
+  appendix_nav.append(chapter_nav.pop()[:-5]+'<ol>'+''.join('<li>'+link(gfile(g),f"#{guide_numbers[g['id']]} · {g['title']}")+'</li>' for g in gs)+'</ol></li>')
 glossary={}
 for file in man['files']:
  glossary.update(json.loads((root/'packs'/file).read_text()).get('glossary',{}))
