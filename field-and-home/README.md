@@ -1,4 +1,4 @@
-# Field & Home
+# Goobie's Survival Guide
 
 [Download the illustrated book for Apple Books](./Field-and-Home.epub?raw=true). On iPad or iPhone, share the downloaded file to Books. The chapter contents link to individual guides, and the illustrations are included for offline reading.
 

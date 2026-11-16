@@ -15,17 +15,7 @@
     .shelf {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:clamp(.75rem,2vh,1.4rem) clamp(.65rem,2vw,1.65rem); align-items:start;
       max-width:min(55rem,calc(127svh - 17rem)); margin-inline:auto}
     article {display:grid; grid-template-columns:minmax(0,1fr); container-type:inline-size; min-width:0; align-content:start; gap:.25rem}
-    .cover.score-cover {background:#233d58;border-left-color:#14293c}
-    .cover.score-cover img {border-radius:6px}
-    .cover.field-cover {background:#394f44; border-left-color:#24392e}
-    .cover.dictionary-cover {background:#542c37; border-left-color:#341b22}
-    .cover.dictionary-cover img {border-radius:4px}
-    .cover.prism-cover {background:#42435b; border-left-color:#2b2c40}
     .edition-link {color:#214a41; display:inline-flex; align-items:center; justify-self:start; min-height:44px; font-size:.86rem}
-    .cover {width:100%; min-width:0; aspect-ratio:2 / 3; padding:clamp(.4rem,6cqw,1rem); border-left:clamp(4px,.6vw,8px) solid #122f2b; border-radius:2px 6px 6px 2px; background:#214a41; color:#f8eed4; text-decoration:none; display:flex; flex-direction:column; gap:.4rem; box-shadow:1px 2px #c1b394,2px 4px #756e55}
-    .cover img {width:clamp(1.3rem,21cqw,2.8rem); aspect-ratio:1; border-radius:50%}
-    h2 {font:normal clamp(1rem,14cqw,1.9rem)/1.04 Georgia,serif; letter-spacing:-.035em; margin:auto 0 0; overflow-wrap:break-word}
-    .cover small {border-top:1px solid #a99b74; padding-top:.4rem; font-size:clamp(.7rem,7.3cqw,.84rem); line-height:1.27}
     button {justify-self:start; background:#faf8f1; color:#214a41; border:1px solid #8c998a; border-radius:5px; min-height:44px; padding:.25rem .5rem; font:inherit; font-size:.85rem; line-height:1.2; cursor:pointer}
     article p {font-size:.85rem}
     article p:empty {display:none}
@@ -37,18 +27,11 @@
       #downloads[aria-pressed=true] {color:#fff;background:#214a41}
       .shelf.compact-actions article > :not(.cover) {display:none}
       .shelf {max-width:min(100%,calc(66svh - 3.2rem)); grid-template-columns:repeat(3,minmax(0,1fr)); gap:.5rem}
-      .cover {padding:.45rem; gap:.3rem}
-      .cover img {width:1.35rem}
-      h2 {font-size:clamp(.92rem,3.9vw,1.15rem)}
-      .cover small {display:none}
       button,.edition-link,article p {font-size:.76rem}
     }
     @media (min-width:601px) and (max-height:820px) {
       main {padding:.65rem 1rem}
       h1 {font-size:2.1rem}
-      .cover img {width:1.65rem}
-      h2 {font-size:clamp(1rem,13cqw,1.45rem)}
-      .cover small {font-size:.72rem}
       .edition-link {font-size:.78rem;line-height:1.2}
       .shelf-heading {margin-bottom:.5rem}
     }
@@ -57,7 +40,6 @@
       .shelf:has(> article:nth-child(6):last-child) {max-width:none;grid-template-columns:repeat(6,minmax(0,1fr))}
     }
     @media (min-width:601px) and (max-height:640px) {
-      .cover small {display:none}
       .shelf {row-gap:.4rem}
       main {padding-block:.4rem}
     }
@@ -68,10 +50,14 @@
       .shelf,.shelf:has(> article:nth-child(5):last-child),.shelf:has(> article:nth-child(6):last-child) {
         grid-template-columns:repeat(4,minmax(0,1fr)); max-width:min(100%,calc(128svh - 5rem)); gap:.5rem
       }
-      .cover {padding:.4rem;gap:.25rem}
-      .cover img {width:1.1rem}
-      h2 {font-size:clamp(.85rem,14cqw,1.1rem)}
     }
+    .shelf .cover {width:100%;min-width:0;aspect-ratio:2/3;text-decoration:none;display:flex;flex-direction:column;gap:.35rem;position:relative; isolation:isolate; overflow:hidden; border:0; border-radius:2px 5px 5px 2px; padding:clamp(.35rem,6cqw,.9rem); background:#142823; color:#fff8df; box-shadow:1px 2px #d0bfa0,2px 4px #85765c}
+    .shelf .jacket-art,.cover::after {position:absolute;inset:0;width:100%;height:100%;border-radius:0}
+    .shelf .jacket-art {object-fit:cover;z-index:-2}
+    .cover::after {content:"";z-index:-1;background:linear-gradient(90deg,#080c0c55,transparent 5%),linear-gradient(0deg,#0c100fe8,transparent 54%)}
+    .cover-kind {align-self:flex-start;border:1px solid #ddc997aa;background:#151b1aea;color:#fff1c9;font:700 clamp(.58rem,7.1cqw,.78rem)/1.1 system-ui,sans-serif;letter-spacing:.055em;text-transform:uppercase;padding:.3em .42em}
+    .shelf h2 {overflow-wrap:break-word;margin:auto 0 0;font:600 clamp(.9rem,14.2cqw,2rem)/1.02 Georgia,serif;letter-spacing:-.045em;text-shadow:0 1px 3px #17160f}
+    .shelf .cover small {display:block;position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%)}
     a:focus-visible,button:focus-visible {outline:3px solid #a46622; outline-offset:3px}
     p {margin:0; color:#526354}
   </style>
@@ -80,46 +66,51 @@
   <main>
     <div class="shelf-heading"><h1>Books</h1><button id="downloads" type="button" aria-controls="shelf" aria-pressed="false" hidden>Downloads</button></div>
     <section id="shelf" class="shelf" aria-label="Bookshelf">
-      <article data-book="last-port-casebook" data-edition="volume-1-500">
+      <article data-book="last-port-casebook" data-edition="volume-1-500-shelf">
         <a class="cover" href="./last-port-casebook/index.html">
-          <img src="./last-port-casebook/icon.png" alt="">
+          <img class="jacket-art" src="./shelf-art/casebook.jpg" alt="">
+          <span class="cover-kind">Mystery game</span>
           <h2>The Last Port Casebook</h2>
           <small>500 mystery puzzles &amp; companion answer book →</small>
         </a>
         <button type="button" hidden>Download offline</button>
         <p role="status"></p>
       </article>
-      <article data-book="prism-cabinet" data-edition="prism-volume-1-500">
+      <article data-book="prism-cabinet" data-edition="prism-volume-1-500-shelf">
         <a class="cover prism-cover" href="./prism-cabinet/index.html">
-          <img src="./prism-cabinet/icon.png" alt="">
+          <img class="jacket-art" src="./shelf-art/prism.jpg" alt="">
+          <span class="cover-kind">Puzzle game</span>
           <h2>The Prism Cabinet</h2>
           <small>500 visual, optical, lateral-thinking and logic challenges →</small>
         </a>
         <button type="button" hidden>Download offline</button>
         <p role="status"></p>
       </article>
-      <article data-book="field-and-home" data-edition="2026.11.16-guide-order-r1-appendix-search">
+      <article data-book="field-and-home" data-edition="2026.11.16-guide-order-r1-goobie">
         <a class="cover field-cover" href="./field-and-home/index.html">
-          <img src="./field-and-home/icon-192.png" alt="">
-          <h2>Field &amp; Home</h2>
+          <img class="jacket-art" src="./shelf-art/survival.jpg" alt="">
+          <span class="cover-kind">Survival reference</span>
+          <h2>Goobie's Survival Guide</h2>
           <small>769 guides plus a food-safety reference appendix →</small>
         </a>
         <button type="button" hidden>Download offline</button>
-        <a class="edition-link" href="./field-and-home/Field-and-Home.epub" download>Apple Books (.epub)</a>
+        <a class="edition-link" href="./field-and-home/Field-and-Home.epub" download="Goobie's Survival Guide.epub">Apple Books (.epub)</a>
         <p role="status"></p>
       </article>
-      <article data-book="desk-dictionary" data-edition="desk-2026-11-16-2">
+      <article data-book="desk-dictionary" data-edition="desk-2026-11-16-3">
         <a class="cover dictionary-cover" href="./desk-dictionary/index.html">
-          <img src="./desk-dictionary/icon.png" alt="">
+          <img class="jacket-art" src="./shelf-art/dictionary.jpg" alt="">
+          <span class="cover-kind">Word reference</span>
           <h2>The Desk Dictionary &amp; Thesaurus</h2>
           <small>Definitions, synonyms, antonyms and spelling suggestions →</small>
         </a>
         <button type="button" hidden>Download offline (47 MB)</button>
         <p role="status"></p>
       </article>
-      <article data-book="score-book" data-edition="score-book-3">
+      <article data-book="score-book" data-edition="score-book-4">
         <a class="cover score-cover" href="./score-book/index.html">
-          <img src="./score-book/icon.png" alt="">
+          <img class="jacket-art" src="./shelf-art/score.jpg" alt="">
+          <span class="cover-kind">Scorekeeper</span>
           <h2>Score Book</h2>
           <small>Round scores, running totals and saved games →</small>
         </a>

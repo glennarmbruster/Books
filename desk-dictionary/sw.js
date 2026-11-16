@@ -1,5 +1,5 @@
 'use strict';
-const edition='desk-2026-11-16-2';
+const edition='desk-2026-11-16-3';
 const prefix='desk-dictionary:'+self.registration.scope+':', cacheName=prefix+edition;
 const url=file=>new URL(file,self.registration.scope).href;
 self.addEventListener('install',event=>event.waitUntil((async()=>{

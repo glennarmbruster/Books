@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Field &amp; Home</title>
+<title>Goobie's Survival Guide</title>
 <meta name="description" content="Offline-first survival, homesteading, cooking, home repair, and workshop guide.">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#0e1311" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Field &amp; Home">
+<meta name="apple-mobile-web-app-title" content="Goobie's Survival Guide">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <script>try { var t = localStorage.getItem('goobs-survival-theme'); if (t === 'light' || t === 'blue' || t === 'halloween') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
 <style>
@@ -64,6 +64,8 @@ p{margin:0 0 10px}
 /* Header */
 header.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
 header.top .wrap{display:flex;align-items:center;gap:10px;min-height:58px}
+header.top .back-to-shelf{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-size:.88rem}
+header.top h1#title{white-space:normal;line-height:1.06}
 header.top .grow{flex:1;min-width:0}
 header.top h1{font-size:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 header.top .sub{font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -281,9 +283,10 @@ body:has(#guide-finder[open]){overflow:hidden}
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <img src="icon-192.png" alt="" width="39" height="39" style="border-radius:9px">
+
   <div class="grow">
-    <h1 id="title">Field &amp; Home</h1>
+    <a class="back-to-shelf" href="../index.html">Bookshelf</a>
+    <h1 id="title">Goobie's Survival Guide</h1>
     <div class="sub" id="sub">Offline skills &amp; workshop guide</div>
   </div>
   <nav class="desk-nav" aria-label="Primary">
@@ -1952,7 +1955,7 @@ view.addEventListener('click', async e => {
       const f = await pickFile(); if (!f) return;
       try {
         const parsed = JSON.parse(await readFileText(f));
-        if (parsed.app !== APP_ID || !parsed.data) throw new Error('Not a Field & Home backup file.');
+        if (parsed.app !== APP_ID || !parsed.data) throw new Error("Choose a Goobie's Survival Guide backup file.");
         state = normState(parsed.data);
         commit(); toast('Backup restored');
       } catch (err) { await msgBox('Restore failed', err.message); }

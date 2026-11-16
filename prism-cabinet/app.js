@@ -82,7 +82,7 @@ function setupInk(){
 function library() {
  const answers = book.view === 'answers';
  if (answers || book.view === 'index') {
-  return `<div class="page"><div class="pager">${go('‹ Bookshelf','shelf',book.id)}</div>
+  return `<div class="page"><div class="pager">${go('‹ Game menu','shelf',book.id)}</div>
     <div class="filehead"><p class="eyebrow">Volume I · ${answers ? 'Companion book' : 'Challenge book'}</p>
     <h1>${answers ? 'The Answer Book' : 'Challenge index'}</h1></div>${list(answers)}</div>`;
  }
@@ -92,7 +92,7 @@ function library() {
    <img src="./icon.png" alt=""><strong>The Prism<br>Cabinet</strong>
    <small>${started ? 'Resume challenge ' + num(book.last) : 'Open the first challenge'} &nbsp; →</small></span>`;
  const companion = '<span class="bookinner"><span class="eyebrow">Companion volume</span><strong>The Answer<br>Book</strong><small>Browse solutions &nbsp; →</small></span>';
- return `<p class="eyebrow">Volume I · Travel edition</p><h1>Your bookshelf</h1>
+ return `<p class="eyebrow">Volume I · Travel edition</p><h1>Game menu</h1>
    <div class="shelf">${go(cover,'puzzle',book.last,'book')}${go(companion,'answers',book.id,'book answer')}</div>
    <div class="sectionhead"><h2>Challenge index</h2><span>${completed} of ${puzzles.length} complete</span></div>${list()}`;
 }

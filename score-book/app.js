@@ -139,7 +139,10 @@ function listGames(games) {
     for (const game of selected) {
       const li=node('li'),link=node('a',undefined,'game-link');
       link.href='#card='+game.id;
-      link.append(node('strong',game.names.map((_,i)=>player(game,i)).join(' · ')),
+      const roster = game.names.map((_,i)=>player(game,i)).join(' · ');
+      if (game.gameName?.trim()) link.append(node('strong', game.gameName.trim()), node('small', roster));
+      else link.append(node('strong', roster));
+      link.append(
         node('small',[shortDate(game.finished||game.created),game.location.trim(),'Play to '+game.target].filter(Boolean).join(' · ')));
       if (finished) link.append(node('small',results(game)));
       li.append(link);list.append(li);
@@ -303,6 +306,21 @@ function drawCard() {
   back.href='#';top.append(back,node('span',shortDate(current.finished||current.created),'stamp'));host.append(top);
   host.append(node('h1',current.finished?'Finished scorecard':'Scorecard'));
   const meta=node('div',undefined,'metadata');
+  if (current.finished) {
+    if (current.gameName?.trim()) meta.append(node('strong', current.gameName.trim()));
+  } else {
+    const gameLabel = node('label', 'Game name (optional)');
+    const gameInput = node('input');
+    gameInput.maxLength = 80;
+    gameInput.value = current.gameName || '';
+    gameInput.placeholder = 'e.g. Farkle';
+    gameInput.oninput = () => {
+      const name = gameInput.value;
+      saveEdit(game => { game.gameName = name; });
+    };
+    gameLabel.append(gameInput);
+    meta.append(gameLabel);
+  }
   meta.append(node('strong','Play to '+current.target+' points'));
   if(current.finished){if(current.location)meta.append(node('span',current.location));}
   else{
