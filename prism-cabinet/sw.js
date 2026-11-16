@@ -1,5 +1,5 @@
 importScripts('./challenges.js');
-const edition = 'prism-volume-1-100';
+const edition = 'prism-volume-1-200';
 const prefix = self.registration.scope + 'prism-cabinet:';
 const cacheName = prefix + edition;
 const localURL = path => new URL(path, self.registration.scope).href;
@@ -13,7 +13,10 @@ const assets = [
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(cacheName);
-    await cache.addAll(assets.map(url => new Request(url, {cache:'reload'})));
+    for (let start = 0; start < assets.length; start += 16) {
+      const batch = assets.slice(start, start + 16);
+      await cache.addAll(batch.map(url => new Request(url, {cache:'reload'})));
+    }
     await self.skipWaiting();
   })());
 });
