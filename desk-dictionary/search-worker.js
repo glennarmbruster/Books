@@ -1,7 +1,8 @@
 // Keep the complete spelling index off the reading screen’s main thread.
 'use strict';
 let words, keys, order, meta, editorial, frequency, lengthOrder, lengthStarts;
-const chunks = new Map();
+const chunks = new Map(), thesaurusChunks = new Map();
+let thesaurusIndex, thesaurusOrder;
 const british = new Map(), american = new Map();
 let ready;
 
@@ -53,11 +54,11 @@ async function initialize() {
   return {count:meta.count,bytes:meta.downloadBytes};
 }
 
-function bound(needle) {
-  let lo=0, hi=order.length;
+function bound(needle, index=order) {
+  let lo=0, hi=index.length;
   while (lo<hi) {
     const mid=(lo+hi)>>>1;
-    if (keys[order[mid]]<needle) lo=mid+1; else hi=mid;
+    if (keys[index[mid]]<needle) lo=mid+1; else hi=mid;
   }
   return lo;
 }
@@ -76,12 +77,12 @@ function item(id) { return {id,word:words[id]}; }
 
 function commonRank(key) { return frequency.get(key) ?? 10000000; }
 
-function prefixes(key, exact) {
-  const start=bound(key), end=bound(key+'\uffff');
+function prefixes(key, exact, index) {
+  const start=bound(key,index), end=bound(key+'\uffff',index);
   // Common completions and the earliest alphabetic matches are both useful.
   const best=[];
   for(let i=start;i<end;i++) {
-    const id=order[i], w=keys[id];
+    const id=index[i], w=keys[id];
     if(id===exact || !w.startsWith(key)) continue;
     const rank = Math.log2(2+commonRank(w)) + Math.min(12,w.length-key.length)*0.28 + (words[id]===w?0:0.4);
     if(best.length===8 && rank>=best[7].rank) continue;
@@ -112,7 +113,7 @@ function distance(a,b,limit,rows) {
   return prev[a.length];
 }
 
-function spellings(key, exact) {
+function spellings(key, exact, inThesaurus) {
   const limit = key.length<=4 ? 1 : key.length<=8 ? 2 : 3;
   if(key.length<2 || key.length+limit>64)return [];
   const rows=Array.from({length:3},()=>new Uint16Array(key.length+2)), best=[];
@@ -121,7 +122,7 @@ function spellings(key, exact) {
   const start=lengthStarts[Math.max(0,key.length-limit)],end=lengthStarts[key.length+limit+1];
   for(let i=start;i<end;i++){
     const id=lengthOrder[i], candidate=keys[id];
-    if(id===exact || candidate===key)continue;
+    if(id===exact || candidate===key || (inThesaurus && !hasThesaurus(id)))continue;
     if(!parts.some(piece=>candidate.includes(piece)))continue;
     const d=distance(key,candidate,limit,rows);if(d>limit)continue;
     const freq=commonRank(candidate);
@@ -137,14 +138,53 @@ function spellings(key, exact) {
   return best.map(x=>item(x.id));
 }
 
-function search(query,submitted) {
+function search(query,submitted,inThesaurus) {
   const key=fold(query);
   if(!key)return {exact:null,prefix:[],similar:[]};
-  const id=exactId(query), prefix=prefixes(key,id);
-  let similar = id<0 && (submitted || (!prefix.length && key.length>=3))?spellings(key,id):[];
+  const id=exactId(query), prefix=prefixes(key,id,inThesaurus ? thesaurusOrder : order);
+  let similar = id<0 && (submitted || (!prefix.length && key.length>=3))?spellings(key,id,inThesaurus):[];
   const corrected=Object.hasOwn(editorial.misspellings,key)?editorial.misspellings[key]:null, cid=corrected?exactId(corrected):-1;
   if(cid>=0 && cid!==id)similar=[item(cid),...similar.filter(x=>x.id!==cid)].slice(0,7);
   return {exact:id>=0?item(id):null,prefix,similar,correction:cid>=0&&cid!==id?item(cid):null};
+}
+
+function hasThesaurus(id) {
+  return id>=0 && (thesaurusIndex.bits.charCodeAt(id>>3) & (1<<(id%8)))!==0;
+}
+
+let openingThesaurus;
+async function openThesaurus() {
+  if(!openingThesaurus){
+    openingThesaurus=readFile('thesaurus/index.json.gz').then(text=>{
+      const data=JSON.parse(text);
+      if(data.size!==words.length)throw Error('Word list and thesaurus editions differ.');
+      thesaurusIndex={...data,bits:atob(data.bits)};
+      thesaurusOrder=order.filter(hasThesaurus);
+      if(thesaurusOrder.length!==data.count)throw Error('The thesaurus index is incomplete.');
+    }).catch(err=>{openingThesaurus=null;throw err;});
+  }
+  return openingThesaurus;
+}
+
+async function thesaurusEntry(id) {
+  const word=words[id];
+  if(!hasThesaurus(id)){
+    const definition=await entry(id);
+    const alternatives=[...definition.british.map(p=>p.us),...definition.american.map(p=>p.uk),
+      ...definition.senses.map(sense=>sense[3]).filter(Boolean)];
+    const references=[...new Set(alternatives)].filter(other=>other!==word && hasThesaurus(exactId(other)));
+    return {word,groups:[],references};
+  }
+  const part=id%thesaurusIndex.shards, file=part.toString(16).padStart(2,'0');
+  if(!thesaurusChunks.has(part)){
+    const reading=readFile('thesaurus/'+file+'.json.gz').then(JSON.parse);
+    thesaurusChunks.set(part,reading);
+    if(thesaurusChunks.size>3)thesaurusChunks.delete(thesaurusChunks.keys().next().value);
+    reading.catch(()=>{if(thesaurusChunks.get(part)===reading)thesaurusChunks.delete(part);});
+  }
+  const groups=(await thesaurusChunks.get(part))[id];
+  if(!groups)throw Error('This thesaurus file is incomplete.');
+  return {word,groups,references:[]};
 }
 
 async function entry(id) {
@@ -167,13 +207,15 @@ self.onmessage=async ({data})=>{
   try {
     if(!ready) ready=initialize().catch(err=>{ready=null;throw err;});
     const info=await ready;let result;
-    if(action==='init')result=info;
-    if(action==='search')result=search(data.query,data.submitted);
-    if(action==='entry'){const id=exactId(data.word);result=id<0?null:await entry(id);}
+    if(data.thesaurus)await openThesaurus();
+    if(action==='init')result=data.thesaurus?{count:thesaurusIndex.count}:info;
+    if(action==='search')result=search(data.query,data.submitted,data.thesaurus);
+    if(action==='entry'){const id=exactId(data.word);result=id<0?null:data.thesaurus?await thesaurusEntry(id):await entry(id);}
     if(action==='browse'){
-      const letter=fold(data.letter),start=bound(letter),end=bound(letter+'\uffff');
+      const index=data.thesaurus?thesaurusOrder:order;
+      const letter=fold(data.letter),start=bound(letter,index),end=bound(letter+'\uffff',index);
       const offset=Math.max(0,Math.min(data.offset||0,Math.max(0,end-start-1)));
-      result={total:end-start,offset,items:Array.from(order.slice(start+offset,Math.min(start+offset+32,end)),item)};
+      result={total:end-start,offset,items:Array.from(index.slice(start+offset,Math.min(start+offset+32,end)),item)};
     }
     self.postMessage({seq,result});
   } catch(err) {self.postMessage({seq,error:err.message});}

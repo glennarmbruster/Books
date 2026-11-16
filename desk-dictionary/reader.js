@@ -2,12 +2,12 @@
 const find = id => document.getElementById(id);
 const worker = new Worker('search-worker.js');
 const pending = new Map();
-let nextId = 0, generation = 0, timer;
+let nextId = 0, generation = 0, timer, thesaurus = false;
 function ask(action, fields = {}) {
   return new Promise((resolve,reject) => {
     const seq = ++nextId;
     pending.set(seq,{resolve,reject});
-    worker.postMessage({seq,action,...fields});
+    worker.postMessage({seq,action,thesaurus,...fields});
   });
 }
 worker.onmessage = ({data}) => {
@@ -29,7 +29,7 @@ function el(tag, text, cls) {
   if (cls) node.className = cls;
   return node;
 }
-function hash(fields) { return '#' + new URLSearchParams(fields); }
+function hash(fields) { return '#' + new URLSearchParams({...thesaurus?{mode:'thesaurus'}:{},...fields}); }
 function link(text,fields) {
   const a=el('a',text);a.href=hash(fields);return a;
 }
@@ -58,7 +58,7 @@ function home() {
   find('list-title').textContent='Explore words';
   matches.replaceChildren(lists(['serendipity','colour','flummox','wanderlust'].map(word=>({word}))));
   alphabetPanel();
-  document.title='The Desk Dictionary · Books';
+  document.title=(thesaurus?'The Desk Thesaurus':'The Desk Dictionary')+' · Books';
 }
 function showMatches(result, term) {
   const nodes=[];
@@ -99,6 +99,55 @@ function groupSenses(senses) {
   }
   return fragment;
 }
+function showThesaurus(data) {
+  const title=el('h2',data.word,'word-title');title.id='word-title';
+  reader.replaceChildren(title);
+  if(!data.groups.length){
+    reader.append(el('p','This edition has no thesaurus group for “'+data.word+'”.'));
+    if(data.references.length){
+      const note=el('p','Explore the related base word or spelling.','context');
+      reader.append(note,lists(data.references.map(word=>({word}))));
+    }
+    reader.append(link('Read the definition',{word:data.word,mode:'dictionary'}));
+  }
+  const meanings=new Map();
+  for(const [pos,gloss,...relations] of data.groups){
+    const [meaning,usage]=gloss.split(' · Alternatives marked ');
+    const key=pos+'\n'+meaning;
+    if(!meanings.has(key))meanings.set(key,{pos,meaning,groups:[]});
+    meanings.get(key).groups.push({usage,relations});
+  }
+  const extra=el('details');
+  extra.append(el('summary','More meanings ('+Math.max(0,meanings.size-6)+')'));
+  [...meanings.values()].forEach(({pos,meaning,groups},index)=>{
+    const section=el('section',undefined,'thesaurus-sense');
+    section.append(el('p',pos,'pos'),el('h3',meaning,'sense-meaning'));
+    const variants=el('details');
+    variants.append(el('summary','Regional and usage variants'));
+    for(const {usage,relations} of groups){
+      const container=usage?el('section',undefined,'usage-variants'):section;
+      if(usage){container.append(el('p',usage,'usage'));variants.append(container);}
+      for(const [relation,items] of relations.entries()){
+        if(!items.length)continue;
+        container.append(el('h4',['Synonyms','Antonyms','Related words'][relation],'word-group-label'));
+        const list=el('ul',undefined,'word-links');
+        for(const word of items){const li=el('li');li.append(link(word,{word}));list.append(li);}
+        container.append(list);
+      }
+    }
+    if(variants.children.length>1)section.append(variants);
+    (index<6?reader:extra).append(section);
+  });
+  if(meanings.size>6)reader.append(extra);
+  const source=el('p',undefined,'attribution'),credit=el('a','Thesaurus sources and usage');
+  credit.href='credits.html#thesaurus';source.append(credit);
+  const original=el('a','Wiktionary entry and history');
+  original.href='https://en.wiktionary.org/wiki/'+encodeURIComponent(data.word.replaceAll(' ','_'))+'#English';
+  source.append(document.createTextNode(' · '),original);reader.append(source);
+  document.querySelector('.columns').classList.add('has-entry');
+  document.title=data.word+' · The Desk Thesaurus';
+  notice('Thesaurus for '+data.word);
+}
 function showEntry(data) {
   const title=el('h2',data.word,'word-title');title.id='word-title';
   reader.replaceChildren(title);
@@ -135,8 +184,18 @@ async function route() {
   const version=++generation, params=new URLSearchParams(location.hash.slice(1));
   const term=(params.get('word')||params.get('q')||'').trim().slice(0,256);
   const letter=(params.get('letter')||'').toUpperCase();
+  thesaurus=params.get('mode')==='thesaurus';
+  const dictionaryTab=find('dictionary-mode'),thesaurusTab=find('thesaurus-mode');
+  const target=term?{word:term}:letter?{letter}:{};
+  dictionaryTab.href=hash({...target,mode:'dictionary'});
+  thesaurusTab.href=hash({...target,mode:'thesaurus'});
+  dictionaryTab.setAttribute('aria-current',String(!thesaurus));
+  thesaurusTab.setAttribute('aria-current',String(thesaurus));
   query.value=term;
   try {
+    const info=await ask('init');
+    if(version!==generation)return;
+    find('index-status').textContent=info.count.toLocaleString()+(thesaurus?' thesaurus entries':' headwords and phrases');
     if(/^[A-Z]$/.test(letter) && !term){
       alphabetPanel();
       const requested=Number(params.get('offset'))||0;
@@ -157,7 +216,7 @@ async function route() {
     if(result.exact){
       const data=await ask('entry',{word:result.exact.word});
       if(version!==generation)return;
-      showEntry(data);
+      if(thesaurus)showThesaurus(data);else showEntry(data);
     } else {
       const title=el('h2','No exact entry','word-title');title.id='word-title';
       const p=el('p','No entry found for “'+term+'”. ');
@@ -182,18 +241,21 @@ query.addEventListener('input',()=>{
 find('lookup').addEventListener('submit',event=>{
   event.preventDefault();const q=query.value.trim();
   const target=hash(q?{q}:{});
-  if(location.hash===target || (!location.hash&&target==='#'))route();else location.hash=target;
+  navigate(target);
 });
+function navigate(target) {
+  if(location.hash!==target)history.pushState(null,'',target);
+  route();
+}
 document.addEventListener('click',event=>{
   const anchor=event.target.closest('a[href^="#"]');
-  if(anchor && anchor.hash===location.hash && !event.metaKey && !event.ctrlKey){
-    event.preventDefault();route();
+  if(anchor && event.button===0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey){
+    event.preventDefault();navigate(anchor.getAttribute('href'));
   }
 });
+window.addEventListener('popstate',route);
 window.addEventListener('hashchange',route);
-ask('init').then(data=>{
-  find('index-status').textContent=data.count.toLocaleString()+' headwords and phrases';
-}).catch(()=>{find('index-status').textContent='Word index unavailable. Reload to retry.';});
+
 route();
 
 async function waitActive(reg) {
