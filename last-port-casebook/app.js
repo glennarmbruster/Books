@@ -82,13 +82,14 @@ function gridform(p,s){const f=p.tableform;return '<section class="field"><h2 cl
 function entries(p){let result=p.entries.map(e=>({...e,cells:Array.from(e.word,(_,i)=>(e.x+(e.dir==='Across'?i:0))+','+(e.y+(e.dir==='Down'?i:0)))}));let pos=[...new Set(result.map(e=>e.cells[0]))].sort((a,b)=>{const [x,y]=a.split(',').map(Number),[u,v]=b.split(',').map(Number);return y-v||x-u;});for(const e of result)e.n=pos.indexOf(e.cells[0])+1;return result.sort((a,b)=>a.n-b.n);}
 let crossDir='Across',selectedCell='',activeEntry;
 function cross(p,s,solution=false){
+ const rings=new Set((p.rings||[]).map(point=>point.join(',')));
  const es=entries(p), board=new Map(), heads=new Map();
  for(const e of es){heads.set(e.cells[0],e.n);e.cells.forEach((k,i)=>board.set(k,e.word[i]));}
  const coords=[...board.keys()].map(k=>k.split(',').map(Number)),w=1+Math.max(...coords.map(a=>a[0])),h=1+Math.max(...coords.map(a=>a[1]));
  let cells='';
  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
-  const k=x+','+y;
-  cells+=!board.has(k)?'<span class="cell void"></span>':'<label class="cell" data-gridcell="'+k+'">'+(heads.has(k)?'<i>'+heads.get(k)+'</i>':'')+(solution?board.get(k):'<input class="square" aria-label="Row '+(y+1)+', column '+(x+1)+'" data-cross="'+k+'" value="'+esc(s.letters?.[k])+'" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false">')+'</label>';
+  const k=x+','+y, ring=rings.has(k);
+  cells+=!board.has(k)?'<span class="cell void"></span>':'<label class="cell'+(ring?' circled':'')+'" data-gridcell="'+k+'">'+(heads.has(k)?'<i>'+heads.get(k)+'</i>':'')+(solution?board.get(k):'<input class="square" aria-label="Row '+(y+1)+', column '+(x+1)+(ring?', circled':'')+'" data-cross="'+k+'" value="'+esc(s.letters?.[k])+'" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false">')+'</label>';
  }
  const clues=['Across','Down'].map(d=>'<h3 class="cap">'+d+'</h3>'+es.filter(e=>e.dir===d).map(e=>solution?'<p><b>'+e.n+'. '+e.word+'</b> · '+e.clue+'</p>':'<button data-entry="'+e.n+'" data-direction="'+d+'">'+e.n+'. '+e.clue+' ('+e.word.length+')</button>').join('')).join('');
  return '<section class="field"><h2 class="cap">'+(solution?'Completed grid':'Crossword')+'</h2>'+(!solution?'<p class="subtle">Tap a clue, then type in its squares. Tap a crossing twice to change direction.</p><p id="currentclue" aria-live="polite"></p>':'')+'<div class="crosslayout"><div><div class="puzzlegrid" style="--cols:'+w+';--max:560px">'+cells+'</div></div><div class="cluelist">'+clues+'</div></div></section>';
@@ -116,8 +117,9 @@ function setupCross(){
 }
 function line(a,b){const dx=b[0]-a[0],dy=b[1]-a[1];if(dx&&dy&&Math.abs(dx)!==Math.abs(dy))return [];return Array.from({length:1+Math.max(Math.abs(dx),Math.abs(dy))},(_,i)=>[a[0]+i*Math.sign(dx),a[1]+i*Math.sign(dy)].join(','));}
 function searchGrid(p,s,solution=false){
+ const rings=new Set((p.rings||[]).map(point=>point.join(',')));
  const words=Object.keys(p.locations),marked=new Set((solution?words:s.found||[]).flatMap(w=>line(...p.locations[w])));
- return '<section class="field"><h2 class="cap">'+(solution?'Word locations':'Inventory grid')+'</h2>'+(!solution?'<p class="subtle">Drag from the first letter to the last, or tap the two ends. Either direction works. Tap a crossed-off word below to remove its highlight.</p>':'')+'<div class="puzzlegrid ws" style="--cols:'+p.grid.length+';--max:545px">'+p.grid.map((r,y)=>Array.from(r,(c,x)=>'<'+(solution?'span':'button type="button"')+' class="cell '+(marked.has(x+','+y)?'found':'')+'" data-ws="'+x+','+y+'" aria-label="Row '+(y+1)+', column '+(x+1)+', '+c+'">'+c+'</'+(solution?'span':'button')+'>').join('')).join('')+'</div>'+(solution?'<ol>'+words.map(w=>{const [a,b]=p.locations[w];return '<li><b>'+w+'</b> · row '+(a[1]+1)+', col '+(a[0]+1)+' → row '+(b[1]+1)+', col '+(b[0]+1)+'</li>';}).join('')+'</ol>':'<div class="wordlist">'+words.sort().map(w=>'<button type="button" aria-pressed="'+Boolean(s.found?.includes(w))+'" class="'+(s.found?.includes(w)?'done':'')+'" data-word="'+w+'">'+w+'</button>').join('')+'</div><p class="wordfound" aria-live="polite">'+(s.found?.length||0)+' of '+words.length+' found</p>')+'</section>';
+ return '<section class="field"><h2 class="cap">'+(solution?'Word locations':'Inventory grid')+'</h2>'+(!solution?'<p class="subtle">Drag from the first letter to the last, or tap the two ends. Either direction works. Tap a crossed-off word below to remove its highlight.</p>':'')+'<div class="puzzlegrid ws" style="--cols:'+p.grid.length+';--max:545px">'+p.grid.map((r,y)=>Array.from(r,(c,x)=>'<'+(solution?'span':'button type="button"')+' class="cell '+(marked.has(x+','+y)?'found':'')+(rings.has(x+','+y)?' circled':'')+'" data-ws="'+x+','+y+'" aria-label="Row '+(y+1)+', column '+(x+1)+', '+c+(rings.has(x+','+y)?', circled':'')+'">'+c+'</'+(solution?'span':'button')+'>').join('')).join('')+'</div>'+(solution?'<ol>'+words.map(w=>{const [a,b]=p.locations[w];return '<li><b>'+w+'</b> · row '+(a[1]+1)+', col '+(a[0]+1)+' → row '+(b[1]+1)+', col '+(b[0]+1)+'</li>';}).join('')+'</ol>':'<div class="wordlist">'+words.sort().map(w=>'<button type="button" aria-pressed="'+Boolean(s.found?.includes(w))+'" class="'+(s.found?.includes(w)?'done':'')+'" data-word="'+w+'">'+w+'</button>').join('')+'</div><p class="wordfound" aria-live="polite">'+(s.found?.length||0)+' of '+words.length+' found</p>')+'</section>';
 }
 function setupSearch(p){
  const grid=$('.ws');let start=null,press=null,previous=null,pointer=null;

@@ -3860,5 +3860,1832 @@ const puzzles = [
     ],
     "answer": "Turn over A and 7.",
     "why": "A could have an odd number hidden behind it, and 7 could hide a vowel. Either would disprove the claim. T cannot violate a rule applying only to vowels; 4 already has an even number regardless of its hidden letter."
+  },
+  {
+    "title": "The right-handed clockwork crab",
+    "kind": "Visual reasoning",
+    "level": "Hard",
+    "intro": "The crab starts on S facing east. Each time it moves one square, it can go straight or turn right and step. It can revisit squares, but may never enter a dark tile or turn in place.",
+    "questions": [
+      "Find a shortest route to F. How many steps does it take?"
+    ],
+    "hints": [
+      "Track which way the crab faces when it reaches a square.",
+      "An apparent dead end for a left turn can be escaped by making three rights around a block."
+    ],
+    "answer": "12 steps. E E S S S S W N E E E S.",
+    "why": "Follow the compass letters, one square per step. A shortest-route check expands every allowed straight or right step from S, keeping a separate record for each facing direction. F first appears at step 12.",
+    "figure": "p3v-crab.svg",
+    "alt": "Five rows, top to bottom: S.... / ..... / ...## / ..... / #..#F. A hash is blocked. Start facing east.",
+    "id": 201
+  },
+  {
+    "title": "An argument at the crossing",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "Two sign painters disagree about the dark symbol at the crossing of two sequences. Each painter followed a different street.",
+    "questions": [
+      "What did the painter coming from the left call it? What did the painter coming from above call it?"
+    ],
+    "hints": [
+      "Read one street at a time.",
+      "Cover the vertical numbers and read across; then cover the flanking letters."
+    ],
+    "answer": "Across it is B. Down it is 13.",
+    "why": "The detached upright stroke can join the double curve as the stem of B, or stand alone as the digit 1 beside a 3. The surrounding sequence steers the grouping.",
+    "figure": "p3o-cross.svg",
+    "alt": "A vertical line stands just left of a double-lobed stroke. A and C flank it; 12 and 14 sit above and below.",
+    "reveal": "p3o-cross-proof.svg",
+    "revealAlt": "The two component strokes are isolated, with readings B and 13 printed underneath.",
+    "id": 202
+  },
+  {
+    "title": "Three readings at table nine",
+    "level": "Easy",
+    "intro": "A compositor carries a line of seven uppercase letters from the dining room to a rehearsal to the arts desk. At dinner it answers “Can you seat us?” At rehearsal it answers “Can the understudy dance?” At the arts desk it describes a performance worth mentioning. The letters never move. Only spaces are inserted or removed. The arts editor pronounces the first syllable like the word NOTE.",
+    "questions": [
+      "What is the line, and how does each reader divide it?"
+    ],
+    "hints": [
+      "Start with an adjective that an editor might use for something worth mentioning.",
+      "The dinner reading ends with a piece of furniture. The rehearsal reading ends with a word meaning capable."
+    ],
+    "answer": "NOTABLE: NO TABLE, NOT ABLE, NOTABLE.",
+    "why": "Read all seven letters straight through for the editor’s adjective. Separating after the second letter gives the host’s answer. Separating after the third gives the stage manager’s answer.",
+    "kind": "Lateral thinking",
+    "id": 203
+  },
+  {
+    "title": "The token with two faces",
+    "level": "Easy",
+    "intro": "A two-digit token number is larger than the number made by exchanging its digits. Adding the two readings gives 99. Subtracting the smaller reading from the larger gives 27. Neither begins with zero.",
+    "questions": [
+      "What number was stamped on the token?"
+    ],
+    "hints": [
+      "Add the two equations “large plus small” and “large minus small.”",
+      "Alternatively, the digits add to 9 and differ by 3."
+    ],
+    "answer": "63.",
+    "why": "The two readings together make 99, and the larger receives 27 extra. Twice the larger is 126, so it is 63. Reversing gives 36, and the difference is exactly 27.",
+    "kind": "Logic",
+    "id": 204
+  },
+  {
+    "title": "The missing gingerbread cutter",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "A baker traced her lost cutter at the top. A replacement can turn on the counter, but its sharp side must stay down.",
+    "questions": [
+      "Which replacement has exactly the traced outline?"
+    ],
+    "hints": [
+      "Start at the single square on the short end.",
+      "Follow the bend to the run at the far end. A reflection swaps the hand of the bend."
+    ],
+    "answer": "Cutter B.",
+    "why": "Half a turn takes B back to the tracing. A is a mirror image. C moves the short end by one square.",
+    "figure": "p3v-ginger.svg",
+    "alt": "The trace has cells (0,0), (1,0), (1,1), (1,2), (2,2), (3,2). A reflects it left to right, B turns it through 180 degrees, and C moves (0,0) to (0,1).",
+    "id": 205
+  },
+  {
+    "title": "The naturalist’s disputed specimen",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "A field sketch has one eye and two long points. The keeper of the pond and the keeper of the hutch both want it for their signs.",
+    "questions": [
+      "What two animals can share this outline? Which end serves two completely different purposes?"
+    ],
+    "hints": [
+      "Look at the left-hand points as a pair.",
+      "Imagine one animal facing left, then another facing right."
+    ],
+    "answer": "A duck facing left and a rabbit facing right.",
+    "why": "For the duck, the two points are the upper and lower bill. For the rabbit they are two ears laid back; the rounded right edge becomes a muzzle. The eye stays put in both readings.",
+    "figure": "p3o-shorebird.svg",
+    "alt": "A profile with a rounded head on the right, an eye near the left, and two long flattened projections pointing left.",
+    "reveal": "p3o-shorebird-proof.svg",
+    "revealAlt": "Leaders identify the same two projections as bill or ears and the rounded edge as head or muzzle.",
+    "id": 206
+  },
+  {
+    "title": "The boatman’s shrinking hill",
+    "level": "Easy",
+    "intro": "A map in a boat cabin has a row of numbers along the channel: 12, 9, 6, 3. The boatman says the floor beneath him climbs as those numbers get smaller. His deck stays exactly the same height above a painted line on the shore. The lake is perfectly still. A surveyor’s note says a weight on a cord touched bottom at each mark.",
+    "questions": [
+      "What do the numbers measure, and what “floor” climbs?"
+    ],
+    "hints": [
+      "The printed numbers measure distances, all from the same starting level.",
+      "Imagine paying out the cord from the surface until its weight touches the bottom."
+    ],
+    "answer": "They are water depths. The lakebed rises toward the surface.",
+    "why": "The surface is level. A fall in depth from 12 to 3 means the bed rises by nine units. The floating deck follows the unchanged surface.",
+    "kind": "Lateral thinking",
+    "id": 207
+  },
+  {
+    "title": "The tea-tray siding",
+    "level": "Medium",
+    "intro": "Four numbered trays arrive in order 1, 2, 3, 4. The steward can place the next arriving tray on top of a single stack or take the top tray from the stack to serve it. A tray can go directly from arrival to service by being placed on top and immediately removed. Once served, a tray stays served.",
+    "questions": [
+      "Which proposed order is impossible: 2–1–4–3 or 3–1–4–2? Point to the first blocked request."
+    ],
+    "hints": [
+      "To serve 3 first, where must you put trays 1 and 2?",
+      "After you remove 3, what is sitting immediately above 1?"
+    ],
+    "answer": "3–1–4–2 is impossible. Its second request is blocked.",
+    "why": "Serving 3 first leaves 2 above 1. Bringing in 4 only adds another obstruction. The other order works: stack 1 and 2, serve 2 and 1, then stack 3 and 4 and serve 4 and 3.",
+    "choices": [
+      "2–1–4–3",
+      "3–1–4–2"
+    ],
+    "kind": "Logic",
+    "id": 208
+  },
+  {
+    "title": "The six-pin kite badge",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "A cord outlines the boundary of a kite badge on a square pegboard. Neighboring pegs are one unit apart.",
+    "questions": [
+      "What area does the badge enclose?"
+    ],
+    "hints": [
+      "Enclose the badge in a four-by-four square.",
+      "The outside pieces are three right triangles. Use half of base times height."
+    ],
+    "answer": "12 square units.",
+    "why": "The bounding square has area 16. At the top left a 2-by-2 triangle takes away 2. At the two right corners 2-by-1 triangles take away 1 each. The remaining area is 12.",
+    "figure": "p3v-charm.svg",
+    "alt": "Vertices in order: A (0,0), B (2,0), C (4,1), D (4,3), E (2,4), F (0,2).",
+    "id": 209
+  },
+  {
+    "title": "The delivery firm’s unpainted sign",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "A retired sign painter used only two black areas. Her delivery company wanted a direction mark without paying for any colored lettering.",
+    "questions": [
+      "Which direction does the unpainted sign point? Name the two shapes that make its shaft and head."
+    ],
+    "hints": [
+      "Look at the narrow empty band through the middle.",
+      "The highest and lowest points of the empty shape form the back corners of a triangular head."
+    ],
+    "answer": "Right. A rectangular shaft feeds a triangular arrowhead.",
+    "why": "The large dark pieces can read as independent panels. Taking the gap between them as figure reveals a right-pointing arrow. The overlay colors its central shape.",
+    "figure": "p3o-sign.svg",
+    "alt": "Two opposing dark panels enclose a pale horizontal band that expands into a chevron near the middle.",
+    "reveal": "p3o-sign-proof.svg",
+    "revealAlt": "The rectangular shaft and right-facing arrowhead in the gap are now colored gold.",
+    "id": 210
+  },
+  {
+    "title": "The cone at Mulberry Fair",
+    "level": "Hard",
+    "intro": "A wooden toy shaped like two cones joined base to base sits across a pair of rails, with its axis across the track. At the starting end the rails run close together and touch thick parts of the toy. They spread farther apart as they rise gently. Released from rest, the toy rolls toward the high end. It has no motor or hidden weight.",
+    "questions": [
+      "How can gravity make it roll toward the higher rail ends? What point would you track to test your explanation?"
+    ],
+    "hints": [
+      "Watching the rail tops tells you only where contact takes place.",
+      "Near the toy’s pointed ends the radius is smaller. Compare the height of its central axle above the rail contacts."
+    ],
+    "answer": "Its center can descend while its contact points move onto higher rails. Track the midpoint of the axle.",
+    "why": "Farther apart, the rails support the toy nearer its narrow tips. That brings the axle closer to rail height. If this drop exceeds the rise of the rails, the center of mass moves downhill and the toy rolls that way.",
+    "kind": "Lateral thinking",
+    "id": 211
+  },
+  {
+    "title": "The lamp that becomes a tile",
+    "level": "Hard",
+    "intro": "The word rack contains exactly LAMP, LIMP, LIME, TIME, TAME, TAMP, RAMP, RIME, DIME, LAME, TIRE and TILE. A move changes exactly one letter in place to form another rack word.",
+    "questions": [
+      "What is the fewest moves from LAMP to TILE? Find every route of that length."
+    ],
+    "hints": [
+      "After one move the reachable words are LIMP, TAMP, RAMP and LAME.",
+      "To reach TILE at the fourth move you must first reach TIME at the third. Which second-step words can reach TIME?"
+    ],
+    "answer": "Four moves, with four shortest routes.",
+    "why": "LAMP–LIMP–LIME–TIME–TILE; LAMP–LAME–LIME–TIME–TILE; LAMP–LAME–TAME–TIME–TILE; LAMP–TAMP–TAME–TIME–TILE. Only LIME and TAME appear as new words on the second move. Neither reaches TILE directly. Of the third-move possibilities, only TIME can then reach TILE.",
+    "kind": "Logic",
+    "id": 212
+  },
+  {
+    "title": "Five tiles in a biscuit tin",
+    "kind": "Visual reasoning",
+    "level": "Hard",
+    "intro": "Five numbered tiles slide in a two-row frame. Only a tile sharing an edge with the empty space may slide into it.",
+    "questions": [
+      "Turn the left layout into the right in the fewest slides. Which tiles move?"
+    ],
+    "hints": [
+      "Work backward from the target as well as forward from the start.",
+      "On one shortest solution, the first tile moved is 4."
+    ],
+    "answer": "8 slides: 4, 1, 5, 2, 3, 5, 2, 3.",
+    "why": "Move the listed tile into the gap each time. Exploring all one-slide neighbors at each distance, discarding layouts already seen, first reaches the target at distance 8.",
+    "figure": "p3v-slider.svg",
+    "alt": "Start rows 415 / .32. Target 123 / 45 dot. A dot is the gap.",
+    "id": 213
+  },
+  {
+    "title": "Coins in the shuttered booth",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "The booth’s shutter looks striped from end to end. A different grain hides a collection of round counters inside it.",
+    "questions": [
+      "How many counters are in the shutter? What outlines their edges before the reveal?"
+    ],
+    "hints": [
+      "Look where the strokes change direction.",
+      "Try following one patch of vertical strokes around its entire edge."
+    ],
+    "answer": "Eight counters, in two rows of four.",
+    "why": "There are no ink rings around the counters in the original. The line direction changes at eight circular boundaries. The proof adds the missing contours.",
+    "figure": "p3o-coffer.svg",
+    "alt": "A field of horizontal lines contains two rows of patches with vertical lines and curved edges.",
+    "reveal": "p3o-coffer-proof.svg",
+    "revealAlt": "Eight copper rings mark the boundaries of the circular patches.",
+    "id": 214
+  },
+  {
+    "title": "The lantern without a porter",
+    "level": "Medium",
+    "intro": "Sumi photographs the same empty courtyard twice from a tripod. In the second picture a glowing line curves from the gate to the steps. Her porter insists he carried one small lantern along that route during the photograph. The background bricks have crisp edges. He wore dark clothes and never paused. A moth tapped the open shutter twice, several seconds apart.",
+    "questions": [
+      "Why is a line clear in the picture while the person carrying its source is almost invisible?"
+    ],
+    "hints": [
+      "The two shutter taps show how long the camera collected light.",
+      "Compare a bright point moving across a dark background with a dark coat briefly passing in front of each brick."
+    ],
+    "answer": "One long exposure recorded the lantern at successive positions as a light trail.",
+    "why": "The stationary bricks contributed light for almost the entire exposure. The coat occupied any one patch for only a brief part of it. The much brighter lantern left a distinct mark even in each brief instant.",
+    "kind": "Lateral thinking",
+    "id": 215
+  },
+  {
+    "title": "The photographer’s six weighings",
+    "level": "Hard",
+    "intro": "Four different camera accessories have positive whole-number weights. The photographer weighed every possible pair, once each. Sorted from lightest to heaviest, the six pair weights are 6, 9, 13, 14, 18 and 21 units.",
+    "questions": [
+      "What are the four weights?"
+    ],
+    "hints": [
+      "Adding all six results counts each accessory three times.",
+      "Call the smallest weight a. The next two weights are 6 − a and 9 − a, so the largest is 12 + a."
+    ],
+    "answer": "1, 5, 8 and 13 units.",
+    "why": "All four sum to 81 ÷ 3 = 27. The smallest-plus-largest pair weighs 12 + 2a. It must be one of the two middle pair totals, 13 or 14. Only 14 gives a whole-number a, namely 1. The other three weights follow, and their six pairings reproduce the list.",
+    "kind": "Logic",
+    "id": 216
+  },
+  {
+    "title": "The skyline vendor’s missing postcard",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Each number is the height of a tower of unit blocks. A camera looks horizontally straight down each column from the bottom edge. Towers hide anything behind them up to their own height.",
+    "questions": [
+      "What three heights form the camera’s skyline, left to right? How many unit-square windows fill that silhouette?"
+    ],
+    "hints": [
+      "A photograph flattens each column into one stack.",
+      "Pick the tallest tower along each of the three lines of sight."
+    ],
+    "answer": "3, 2, 4; 9 windows.",
+    "why": "The left line contains heights 2, 3, 1 and gives 3. The middle line contains 1, 2, 2 and gives 2. The right line contains 4, 1, 3 and gives 4. The silhouette covers 3 + 2 + 4 = 9 squares.",
+    "figure": "p3v-skyline.svg",
+    "alt": "Rows from back to front: 1 2 3; 3 2 1; 2 1 4. Camera at front.",
+    "id": 217
+  },
+  {
+    "title": "The harbor stamp in the thatch",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "A thatcher hid a harbor emblem in a field of little strokes. All marks use the same ink and length.",
+    "questions": [
+      "What emblem do the strokes that lean against the prevailing grain form?"
+    ],
+    "hints": [
+      "Most strokes fall as you read from left to right.",
+      "Follow the rising strokes. Look for a small crosspiece above two upturned flukes."
+    ],
+    "answer": "An anchor.",
+    "why": "The rising strokes make a central shank, a short crossbar and two curved flukes. The proof fades all the falling strokes.",
+    "figure": "p3o-slanted.svg",
+    "alt": "A field of diagonal strokes; the minority rise to the right and sketch a vertical shank with two hooked arms.",
+    "reveal": "p3o-slanted-proof.svg",
+    "revealAlt": "The rising strokes are colored copper, revealing an anchor silhouette.",
+    "id": 218
+  },
+  {
+    "title": "The bookshop’s backwards index",
+    "level": "Medium",
+    "intro": "A bookbinder is sorting slips reading BEND, LEND, SEND, BOWL, FOUL, SOUL. A customer asks why BOWL does not sit with BEND and why SOUL is well away from SEND. The indexer compares the last letter first. On a tie she compares the letters immediately to its left, and so on, using ordinary alphabetical order at each comparison.",
+    "questions": [
+      "Put the six slips in her order. What tempting grouping by sound would give a different result?"
+    ],
+    "hints": [
+      "All the cards ending in D come before all the cards ending in L.",
+      "For the last three, compare the letter before L. For two of those you will need to look even farther left."
+    ],
+    "answer": "BEND, LEND, SEND, FOUL, SOUL, BOWL. Matching the spelling from the end governs the order.",
+    "why": "The reversed spellings are DNEB, DNEL, DNES, LUOF, LUOS and LWOB. FOUL and SOUL sit together in the index even though FOUL rhymes with HOWL while SOUL rhymes with BOWL in these words’ usual pronunciations.",
+    "kind": "Lateral thinking",
+    "id": 219
+  },
+  {
+    "title": "One wrong pair in the type case",
+    "level": "Hard",
+    "intro": "Five type blocks start A B C D E. One legal move chooses any three blocks and rotates them round their three positions in either direction. The printer wants to exchange just A and B, leaving C, D and E where they began.",
+    "questions": [
+      "Can any sequence of legal moves do it? Explain a way to detect the obstruction."
+    ],
+    "hints": [
+      "One three-way rotation can be performed as two ordinary exchanges of pairs.",
+      "Count inversions: pairs whose left-to-right order disagrees with alphabetical order. A single exchange changes whether that count is odd or even."
+    ],
+    "answer": "No. The requested arrangement has odd parity, while every legal move preserves even parity.",
+    "why": "An exchange of two positions reverses their mutual order and changes an even number of other pair relationships in total, so it flips the parity of the inversion count. A three-way rotation uses two exchanges. Starting at zero inversions, the printer can never reach B A C D E, which has one.",
+    "kind": "Logic",
+    "id": 220
+  },
+  {
+    "title": "The festival streamer comb",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Five streamers enter a braiding comb. Each strand goes straight through any crossing. The loose tips are numbered at the bottom.",
+    "questions": [
+      "A prize ticket asks for BEAD. In which order must its four numbered tips be pulled?"
+    ],
+    "hints": [
+      "Trace B first and write its bottom number beneath the B on the ticket.",
+      "A colored line continues on its own diagonal through a crossing."
+    ],
+    "answer": "3, 2, 4, 1.",
+    "why": "From 1 to 5, the tips are D, E, B, A, C. Read their numbers in B, E, A, D order.",
+    "figure": "p3v-cables.svg",
+    "alt": "Top labels A through E. Adjacent lanes swap in this order from top down: 1–2, 3–4, 2–3, 4–5, 3–4, 1–2, 2–3.",
+    "id": 221
+  },
+  {
+    "title": "A postcard nobody printed",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "Four black seals look as if a pale postcard covers part of each one. Follow the apparent postcard edge with your finger.",
+    "questions": [
+      "How many of the postcard’s four long connecting sides were actually drawn in ink? What marks suggest its corners?"
+    ],
+    "hints": [
+      "Examine the middle of the top edge.",
+      "Each dark disc is missing an inward-facing quarter."
+    ],
+    "answer": "None. The four inward-facing quarter-notches define the corners.",
+    "why": "The empty quarters line up like the corners of an opaque rectangle. The brain can supply the continuous edges across the blank areas. The proof draws the inferred rectangle in copper.",
+    "figure": "p3o-postcard.svg",
+    "alt": "Four black discs occupy the corners of a rectangle, each missing the quarter that faces inward.",
+    "reveal": "p3o-postcard-proof.svg",
+    "revealAlt": "A thin rectangle connects the four disc notches and marks the inferred edges.",
+    "id": 222
+  },
+  {
+    "title": "An entire hem in her hand",
+    "level": "Medium",
+    "intro": "A seam sample has an uninterrupted row of loops on its reverse. Each loop of a single thread passes through the preceding loop before the fabric moves ahead. Vera removes the final securing knot, pulls the free end, and takes a whole unbroken thread from the sample. The cloth stays flat and never tears.",
+    "questions": [
+      "Why does the seam vanish from one end? Why would tugging a random loop in the middle look different?"
+    ],
+    "hints": [
+      "Trace what holds the final loop in place after the knot comes out.",
+      "Removing the last loop leaves its predecessor in exactly the same position the last one occupied."
+    ],
+    "answer": "It is a single-thread chain stitch. Pulling the free last loop releases its predecessor, and the process repeats.",
+    "why": "The final thread end can retrace each loop in reverse order. A loop in the middle still has its successor passing through it. Tugging there initially draws neighboring stitches tight or pulls up a loop instead of providing the free finishing end.",
+    "kind": "Lateral thinking",
+    "id": 223
+  },
+  {
+    "title": "The stamp machine’s last refusal",
+    "level": "Medium",
+    "intro": "A machine sells stamps in strips of four and strips of seven. You may buy as many whole strips of either size as you like. It can satisfy every order above a certain size.",
+    "questions": [
+      "What is the largest positive number of stamps it cannot sell exactly?"
+    ],
+    "hints": [
+      "Check 17, then try to build 18, 19, 20 and 21.",
+      "Once there are four consecutive possible sizes, adding a strip of four covers every larger size."
+    ],
+    "answer": "17 stamps.",
+    "why": "With zero, one or two sevens inside 17, the remainders are 17, 10 and 3; none is divisible by four. Meanwhile 18 = 7 + 7 + 4, 19 = 7 + 4 + 4 + 4, 20 = five fours, and 21 = three sevens. Adding fours extends these four sequences indefinitely.",
+    "kind": "Logic",
+    "id": 224
+  },
+  {
+    "title": "The stubborn station digit",
+    "kind": "Visual reasoning",
+    "level": "Easy",
+    "intro": "The sign painter has six glowing bars arranged as 6. Move one lit bar to one unlit position. Keep the others fixed and form an ordinary digit in the same seven positions.",
+    "questions": [
+      "Which digits can you make? Find them all."
+    ],
+    "hints": [
+      "The new digit must still use exactly six bars.",
+      "Among standard digits, only 0, 6 and 9 use six bars."
+    ],
+    "answer": "0 and 9.",
+    "why": "Move the middle bar to the vacant upper-right position for 0. Instead move the lower-left bar to that position for 9.",
+    "figure": "p3v-display.svg",
+    "alt": "The 6 is lit everywhere except its upper-right bar. The digit positions form the standard seven-segment display.",
+    "id": 225
+  },
+  {
+    "title": "The juggler’s traveling shadow",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "Two stills of a green ball were drawn from a fixed camera. In the second, the ball may seem to leap sideways or forward.",
+    "questions": [
+      "Which object actually changed position between the stills? Use the ball’s center and a panel border as references."
+    ],
+    "hints": [
+      "Compare the green center to its own picture frame.",
+      "The soft oval on the ground supplies a clue about depth."
+    ],
+    "answer": "Only the shadow moved. The green ball stays at the same coordinates within each panel.",
+    "why": "The ball keeps its retinal size and picture position while the displaced oval suggests a different relation to the ground. A centerline through each ball makes the fixed placement visible.",
+    "figure": "p3o-floating.svg",
+    "alt": "Two panels show equally placed green balls above a ground line. The oval shadow shifts right in the second.",
+    "reveal": "p3o-floating-proof.svg",
+    "revealAlt": "Vertical copper guides show the green balls centered in the same place in each panel.",
+    "id": 226
+  },
+  {
+    "title": "The tower with an upside-down flag",
+    "level": "Medium",
+    "intro": "Inside a dark booth, a flag on a sunlit tower appears upside down on a white screen. The screen is blank when a tiny hole in the opposite wall is covered. There is no lens, mirror or moving picture. Outside, the red finial is higher than the flag and stands to its left.",
+    "questions": [
+      "On which side of the flag’s image will the red finial appear, and why?"
+    ],
+    "hints": [
+      "Imagine running a straight thread from the finial through the hole and on to the screen.",
+      "Do the same for a point farther down and to the right on the tower."
+    ],
+    "answer": "Below and to the right. The hole makes a pinhole image.",
+    "why": "Rays from the high, left-hand finial cross the opening and continue downward and rightward. Rays from lower, more rightward points end up above and to their left on the screen. The crossing reverses both directions.",
+    "kind": "Lateral thinking",
+    "id": 227
+  },
+  {
+    "title": "The host who chooses the encore",
+    "level": "Medium",
+    "intro": "Three council members rank three songs. Jo ranks Ash above Blue above Crow. Kavi ranks Blue above Crow above Ash. Nell ranks Crow above Ash above Blue. Two songs first face a head-to-head vote; its winner then faces the remaining song. Everyone always votes for the higher song in their own list.",
+    "questions": [
+      "If the host wants Crow to win the final, which two songs should meet first? Could the host arrange a win for either other song too?"
+    ],
+    "hints": [
+      "Compare Ash against Blue separately from Blue against Crow.",
+      "Find the song Crow can beat in a head-to-head final. Can that opponent win the preliminary?"
+    ],
+    "answer": "Start Ash against Blue. Yes, any of the three can win with the right preliminary.",
+    "why": "Ash beats Blue by two votes to one, Blue beats Crow by the same margin, and Crow beats Ash. For a Crow win, let Ash remove Blue. For an Ash win, let Blue remove Crow. For a Blue win, let Crow remove Ash.",
+    "kind": "Logic",
+    "id": 228
+  },
+  {
+    "title": "The fractured ice window",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "A single green crack crosses each pane corner to corner. Cracks meeting at a shared point belong to the same fracture, even if several meet there.",
+    "questions": [
+      "How many separate green fractures must the glazier repair?"
+    ],
+    "hints": [
+      "Treat the pale pane edges as background.",
+      "Start with one green segment. Trace every green branch connected to it before starting a new color."
+    ],
+    "answer": "2 separate fractures.",
+    "why": "Tracing outward from one unused crack at a time partitions the nine green segments into 2 connected groups. A shared corner joins cracks; neighboring panes alone do not.",
+    "figure": "p3v-branches.svg",
+    "alt": "Three rows of diagonals: rising falling rising, falling rising rising, rising rising falling.",
+    "id": 229
+  },
+  {
+    "title": "One bead escaped the string",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "Seven black beads seem to lie on a rising strand. Pale slanted stitches keep pulling the eye away from the real alignment.",
+    "questions": [
+      "Stretch a straight thread from the center of A to the center of G. Which bead center misses it, and on which side?"
+    ],
+    "hints": [
+      "Check alternating beads first.",
+      "Compare D to the midpoint between C and E."
+    ],
+    "answer": "D lies below the thread.",
+    "why": "The centers advance 44 units right and 25 units up at every step except D, which is 13 units below its expected position. The proof stitches an actual line through the six aligned centers.",
+    "figure": "p3o-beads.svg",
+    "alt": "Seven labeled bead centers arranged on an ascending diagonal. A at (91,203), G at (355,53); D is at (223,141).",
+    "reveal": "p3o-beads-proof.svg",
+    "revealAlt": "The straight thread passes above D and through the other six bead centers.",
+    "id": 230
+  },
+  {
+    "title": "The footprints that came back white",
+    "level": "Easy",
+    "intro": "A velvet offcut lies flat on a bench. Luca draws a star across it with a clean fingertip. At one end of the bench the star looks dark against pale cloth. At the opposite end it looks pale against dark cloth. A soft brush stroked uniformly across the whole offcut erases the star. No pigment comes off on a white tissue.",
+    "questions": [
+      "What did Luca change so the star could reverse its contrast?"
+    ],
+    "hints": [
+      "A tissue tests for pigment. The brush tests for something else.",
+      "Look at which way the tiny upright fibers lean where the finger passed."
+    ],
+    "answer": "The finger changed the direction of the velvet’s pile.",
+    "why": "Bent fibers reflect different amounts of light toward each observer. Looking from the opposite direction exchanges which set of fibers appears brightest. Brushing all the fibers the same way removes the difference.",
+    "kind": "Lateral thinking",
+    "id": 231
+  },
+  {
+    "title": "The engraver’s second throw",
+    "level": "Medium",
+    "intro": "The engraver throws a fair six-sided die once. If it shows 1 or 2 she must throw again and accept the second result. Otherwise she keeps the first result. A 5 or 6 on the accepted result wins a tiny silver leaf.",
+    "questions": [
+      "What fraction of plays win a leaf?"
+    ],
+    "hints": [
+      "A win on the first throw and a win after a forced rethrow are separate cases.",
+      "Picture 36 equally likely pairs of potential throws, even when the second throw goes unused."
+    ],
+    "answer": "4/9.",
+    "why": "Twelve of the 36 pairs start with 5 or 6 and win outright. Four start with 1 or 2 and then show 5 or 6. The total is 16 out of 36.",
+    "kind": "Logic",
+    "id": 232
+  },
+  {
+    "title": "The pastry chef’s two straight cuts",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "The pastry is a rectangle. Cut once along each colored line, all the way across. The two lines intersect inside it. Any one resulting piece gets a sugar rose only if it touches two ORIGINAL corners.",
+    "questions": [
+      "How many pieces receive a rose, and which original corners do they touch?"
+    ],
+    "hints": [
+      "Track the original corners, one at a time.",
+      "The first line removes a triangle around A; the second removes a triangle around B, but the cuts cross."
+    ],
+    "answer": "One piece receives a rose. It touches C and D.",
+    "why": "Both lower corners lie below both cuts and share one piece. A is beyond the line that runs from the left edge to the top. B is beyond the line running from the top to the right edge. The two cuts cross, so the small top-center piece has no original corner.",
+    "figure": "p3v-cut.svg",
+    "alt": "Rectangle A top left, B top right, C bottom left, D bottom right. One cut joins the left edge to the top near B; the other joins the top near A to the right edge. They cross inside.",
+    "id": 233
+  },
+  {
+    "title": "Three planks that cannot lie flat",
+    "kind": "Optical illusions",
+    "level": "Hard",
+    "intro": "Three straight planks make a triangle. All three are supposed to sit level, each at a single height. At each corner the uninterrupted pair of outlines belongs to the upper plank.",
+    "questions": [
+      "Can a carpenter assemble the drawing at three fixed heights? Explain using all three corners."
+    ],
+    "hints": [
+      "Trace the top corner first.",
+      "Read the three statements as a loop of above-relations."
+    ],
+    "answer": "No. Teal lies above rust, rust above gold, and gold above teal.",
+    "why": "The junctions are locally plausible. Taken together they require teal to be higher than itself. A cut or bend could realize parts of the effect, but three level planks cannot.",
+    "figure": "p3o-stack.svg",
+    "alt": "A teal left plank crosses over rust at the apex. Rust crosses over gold at the lower right, and gold crosses over teal at lower left.",
+    "reveal": "p3o-stack-proof.svg",
+    "revealAlt": "The upper member is named separately at each crossing, exposing the circular stacking order.",
+    "id": 234
+  },
+  {
+    "title": "The raffle that returns its winner",
+    "level": "Hard",
+    "intro": "At an art fair the draw steward takes a numbered disk from a drum, awards one print, and drops the disk straight back in before the next draw. She is equally adamant that the same visitor cannot win twice. The forty disk numbers never change. A helper holds a separate forty-slot rack and a box of blank cards. Just after a win you see the helper taking a handwritten name from a slot, although the winner keeps her admission ticket. Every draw of an occupied slot awards its print. Each visitor has one name card in the rack.",
+    "questions": [
+      "What does a disk actually select? Predict what the steward must do if she later pulls a winning number again and its slot has stayed empty."
+    ],
+    "hints": [
+      "The moving part can retain the same number while the thing it refers to changes.",
+      "Where are the names stored between draws?"
+    ],
+    "answer": "Each disk selects a numbered slot holding a visitor’s name. The helper empties a winning slot. A repeat draw of that empty number must be passed over.",
+    "why": "There is one entry card per visitor, filed in a numbered slot. Replacing a numbered disk restores only the pointer. Removing the visitor’s card eliminates the possibility of awarding another prize to that same entry. The next occupied number can still select a winner.",
+    "kind": "Lateral thinking",
+    "id": 235
+  },
+  {
+    "title": "The two stamps on the packing slip",
+    "level": "Medium",
+    "intro": "Four display objects have the features shown below. The clerk must choose exactly two of the four feature questions and print their yes/no answers on every packing slip. The same two questions are used for every object.",
+    "questions": [
+      "Which pair identifies all four objects uniquely?"
+    ],
+    "hints": [
+      "Two yes/no questions can distinguish four objects only when all four answer pairs occur.",
+      "Look for a feature that splits the objects one versus three. Pairing it with one more question will still leave two of the three together."
+    ],
+    "answer": "Ask “Round?” and “Striped?”",
+    "why": "Their answers give No/No, No/Yes, Yes/No and Yes/Yes. The chipped and glazed questions each split one object from three. With either of those chosen, one further yes/no answer cannot separate all three.",
+    "tables": [
+      [
+        "Object catalog",
+        [
+          "Object",
+          "Round",
+          "Striped",
+          "Chipped",
+          "Glazed"
+        ],
+        [
+          [
+            "A",
+            "No",
+            "No",
+            "Yes",
+            "No"
+          ],
+          [
+            "B",
+            "No",
+            "Yes",
+            "No",
+            "Yes"
+          ],
+          [
+            "C",
+            "Yes",
+            "No",
+            "No",
+            "Yes"
+          ],
+          [
+            "D",
+            "Yes",
+            "Yes",
+            "No",
+            "Yes"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Logic",
+    "id": 236
+  },
+  {
+    "title": "The fountain with a dry well",
+    "kind": "Visual reasoning",
+    "level": "Easy",
+    "intro": "A model fountain rests on a table. Eight of its nine square columns are three cubes high. The central column is one cube high. Water is poured into the central well up to the rim.",
+    "questions": [
+      "How many cube-volumes of water fit? How many cube faces touch the water, excluding its top?"
+    ],
+    "hints": [
+      "The center well has one square of floor.",
+      "Each layer of water touches four side walls."
+    ],
+    "answer": "2 cube-volumes, touching 9 cube faces.",
+    "why": "The center floor is two cube-heights below the rim. Two layers give eight side faces, plus one square on the center cube.",
+    "figure": "p3v-shell.svg",
+    "alt": "Three rows of column heights: 3 3 3; 3 1 3; 3 3 3.",
+    "id": 237
+  },
+  {
+    "title": "The fence with a slow heartbeat",
+    "kind": "Optical illusions",
+    "level": "Hard",
+    "intro": "Two fine picket screens are laid over one another. The broad recurring bands look like another screen printed in very thick stripes. The first pickets are aligned at the left.",
+    "questions": [
+      "One set has a ten-unit pitch and the other an eleven-unit pitch. How many units apart are exact alignments? Is there a third set of stripes?"
+    ],
+    "hints": [
+      "Find the first distance that contains a whole number of both pitches.",
+      "Eleven dark gaps occupy as much width as ten green gaps."
+    ],
+    "answer": "Exact alignments repeat every 110 units. There is no third set.",
+    "why": "The least common multiple of 10 and 11 is 110. Between coincidences the narrow stripes drift in and out of alignment; their changing density creates the broad beat pattern.",
+    "figure": "p3o-beats.svg",
+    "alt": "Two overlaid sets of narrow vertical lines: dark lines every 10 drawing units and green lines every 11, both starting at x=65.",
+    "reveal": "p3o-beats-proof.svg",
+    "revealAlt": "Five markers show exact coincidences at offsets 0, 110, 220, 330 and 440.",
+    "id": 238
+  },
+  {
+    "title": "The blue dot on the red label",
+    "level": "Medium",
+    "intro": "Under white light one paper label is white with a blue dot and the other is red with a black dot. Under a lamp emitting only red light they look strikingly alike. The white and red papers both reflect the lamp’s red light. The blue and black pigments absorb nearly all of it.",
+    "questions": [
+      "Predict the appearance of each label under the red lamp. Why does swapping the lamp settle a dispute about whether they were printed alike?"
+    ],
+    "hints": [
+      "A pigment cannot send blue light to your eye if no blue light reaches it.",
+      "Assess the unprinted paper and the dot separately."
+    ],
+    "answer": "Each looks like a red field with a very dark dot. Under white light their different reflections become visible again.",
+    "why": "The field of each label returns red light. Neither dot returns much red light. When white light supplies blue and other wavelengths again, the white paper and blue pigment recover appearances the other label cannot match.",
+    "kind": "Lateral thinking",
+    "id": 239
+  },
+  {
+    "title": "Six moves in the sandwich shop",
+    "level": "Hard",
+    "intro": "Two identical sandwich orders each need a bun opened (O), a filling added (F), then a wrapper closed (W). One person does one action at a time. Orders and buns carry no identifying marks. Count sequences of six action letters. An F may use any opened, unfilled bun and a W may use any filled, unwrapped bun.",
+    "questions": [
+      "How many different legal letter sequences are there?"
+    ],
+    "hints": [
+      "At every point the number of openings must be at least the number of fillings, which must be at least the number of wrappings.",
+      "Every sequence begins with O. Separate the ones beginning OO from the ones beginning OF."
+    ],
+    "answer": "Five sequences.",
+    "why": "They are OOFFWW, OOFWFW, OFOFWW, OFOWFW and OFWOFW. After OO, the first F is forced, then either F or W can follow. After OF, the next action is O or W. Following those branches gives precisely the listed endings.",
+    "kind": "Logic",
+    "id": 240
+  },
+  {
+    "title": "The bishops’ cloakroom",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "A token starts at A. It moves any number of open squares diagonally in one move and may not cross the black square. Only the three labeled exits count.",
+    "questions": [
+      "How many moves are needed to reach F? Find a route that avoids the center."
+    ],
+    "hints": [
+      "The only first stopping square is row 2, column 2.",
+      "Work backward from F and find its only possible previous square."
+    ],
+    "answer": "4 moves.",
+    "why": "A shortest route is A → row 2 column 2 → row 1 column 3 → row 2 column 4 → F. In two moves the only possible meeting place is the blocked center. A three-move route would have to go from the only first stop (row 2, column 2) to the only last stop (row 2, column 4), which are not diagonal neighbors.",
+    "figure": "p3v-diagonal.svg",
+    "alt": "A and F are the top corners; B and E are bottom corners of a five-by-five board. Only the central cell is blocked.",
+    "id": 241
+  },
+  {
+    "title": "The kite caught in the scaffold",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "At first the drawing looks like crossing scaffolding poles. Three rust-colored pins hold a shape whose entire border runs on existing poles.",
+    "questions": [
+      "What shape do the pins outline? How many of its corners sit on a pole that extends beyond that corner?"
+    ],
+    "hints": [
+      "Connect the pins two at a time with your eye.",
+      "Look past each pin; the long pole does not stop there."
+    ],
+    "answer": "A triangle. All three corners sit on poles extending past them.",
+    "why": "The triangle shares its sides with much longer lines. Good continuation makes the long poles more conspicuous than the closed figure. The proof traces only the three sides between pins.",
+    "figure": "p3o-lace.svg",
+    "alt": "Three rust pins at (130,209), (242,58) and (379,209) lie on straight scaffold lines with extensions.",
+    "reveal": "p3o-lace-proof.svg",
+    "revealAlt": "A thick rust border follows the three existing lines between the pins.",
+    "id": 242
+  },
+  {
+    "title": "The quiet bell in the second booth",
+    "level": "Medium",
+    "intro": "Two matching suspended tuning forks sit on opposite sides of a narrow gap. A musician strikes the first and immediately damps it with a felt pad. A faint matching tone continues at the second fork. Damping the second stops it. An otherwise similar fork tuned to a different note stays quiet in the same test. The stands never touch.",
+    "questions": [
+      "How did the second fork acquire its motion, and which test distinguishes its tone from a lingering echo?"
+    ],
+    "hints": [
+      "The matching pitches are evidence. Look for a repeated push delivered at just the right time.",
+      "Consider what touching a fork would do to a reflected sound already traveling around the room."
+    ],
+    "answer": "Sound from the first drove the matching fork into vibration. Touching the second then silenced the remaining source.",
+    "why": "Air pressure varies at the first fork’s frequency. Matching pushes add to the second fork’s vibration over many cycles. The mistuned fork responds much less. An ordinary room echo would not stop specifically when the second fork was damped.",
+    "kind": "Lateral thinking",
+    "id": 243
+  },
+  {
+    "title": "The blue counter at the coatroom",
+    "level": "Medium",
+    "intro": "Exactly one third of the counters in a drawer are blue. A helper removes four blue counters and changes nothing else. Now exactly one quarter of the counters left are blue.",
+    "questions": [
+      "How many counters were originally in the drawer?"
+    ],
+    "hints": [
+      "The number of nonblue counters stays fixed.",
+      "Originally there were two nonblue counters for every blue. Afterwards there are three for every blue."
+    ],
+    "answer": "36 counters.",
+    "why": "If there were b blue counters initially, there were 2b nonblue. Afterwards the same 2b equals 3(b − 4). This gives b = 12 and 36 total. Removing four leaves eight blue among 32.",
+    "kind": "Logic",
+    "id": 244
+  },
+  {
+    "title": "The souvenir block’s hidden face",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "The left and right pictures show the same block after a turn. Its six faces have six different letters, A through F.",
+    "questions": [
+      "Which letter is opposite A?"
+    ],
+    "hints": [
+      "A has only four edge neighbors.",
+      "The two pictures expose four different faces alongside A."
+    ],
+    "answer": "F.",
+    "why": "A touches B and C in the first picture and D and E in the second. F is the only remaining face and must sit across the block.",
+    "figure": "p3v-dice.svg",
+    "alt": "Two views of one cube. First shows A atop, B at left, C at right. Second shows A atop, D at left, E at right.",
+    "id": 245
+  },
+  {
+    "title": "The pickets that change partners",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "A designer shaded eight identical upright strokes and asked the eye to pair them without drawing any connecting rails.",
+    "questions": [
+      "Which partner will stroke 3 most naturally acquire by proximity alone? Could rails force stroke 3 to pair with stroke 2 instead? Number from the left."
+    ],
+    "hints": [
+      "Inspect the gap on each side of stroke 3.",
+      "The proof shows what happens when endpoints are connected across the wider gaps."
+    ],
+    "answer": "By proximity, stroke 3 pairs with 4. Yes, connecting 2 and 3 can reverse the grouping.",
+    "why": "The 3–4 gap is 32 units while the 2–3 gap is 71. The proof draws rails across the large gaps, showing how a physical connection competes with proximity.",
+    "figure": "p3o-pillars.svg",
+    "alt": "Strokes numbered 1 to 8 have x values 145,177,248,280,351,383,454,486.",
+    "reveal": "p3o-pillars-proof.svg",
+    "revealAlt": "The copper rails link the formerly separated strokes across the three wider gaps.",
+    "id": 246
+  },
+  {
+    "title": "Two prices for a smaller bouquet",
+    "level": "Medium",
+    "intro": "A florist advertises “yesterday 60; today 70” next to a ribbon reading “less to pay for exactly the same twelve tulips.” Yesterday’s tag went on full bundles of eight; today’s tag goes on full bundles of ten. The florist always charges for loose stems at the corresponding exact per-stem rate. Currency is in cents.",
+    "questions": [
+      "What do twelve stems cost on each day? Why could the ribbon and the two labels all be honest?"
+    ],
+    "hints": [
+      "The unit that attracted the higher printed price also grew larger.",
+      "First reduce both offers to the price of one stem."
+    ],
+    "answer": "Yesterday 90 cents; today 84 cents.",
+    "why": "The old 60-cent bundle works out at 7½ cents per stem. The new 70-cent bundle works out at 7 cents per stem. Multiplying each by twelve makes the cheaper bouquet come from the higher-priced bundle.",
+    "kind": "Lateral thinking",
+    "id": 247
+  },
+  {
+    "title": "The three visits to the print room",
+    "level": "Hard",
+    "intro": "Six artists each leave a proof in the print room for a span of whole hours: Alder 2–4, Bo 3–6, Cleo 5–7, Dov 7–8, Elin 9–12 and Fay 11–14. Both endpoints count. The curator can see all proofs present at a single hour and need not stay between visits.",
+    "questions": [
+      "What is the fewest visits that let her see all six proofs? Give an itinerary and prove it is shortest."
+    ],
+    "hints": [
+      "A visit at an endpoint can count for a proof whose window begins or ends there.",
+      "Find three artists whose windows share no hour with one another."
+    ],
+    "answer": "Three visits, for example at 4, 7 and 12.",
+    "why": "Hour 4 covers Alder and Bo, hour 7 covers Cleo and Dov, and hour 12 covers Elin and Fay. Alder, Cleo and Elin occupy disjoint windows, so no pair of visits could reach all three.",
+    "kind": "Logic",
+    "id": 248
+  },
+  {
+    "title": "Tokens on the star ferry",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Five passengers sit clockwise around a star. On the bell, every passenger passes their token TWO seats clockwise. Nobody moves.",
+    "questions": [
+      "After seven bells, which starting token is at the north seat?"
+    ],
+    "hints": [
+      "After five bells every token returns to its starting seat.",
+      "Seven bells advance a token fourteen seats, equivalent to four clockwise."
+    ],
+    "answer": "The east-upper token B.",
+    "why": "Four clockwise steps from B land on A’s north seat. Equivalently, track one seat counterclockwise for the inverse of four clockwise steps and start at B.",
+    "figure": "p3v-tokens.svg",
+    "alt": "Five seats in clockwise order A (north), B, C, D, E. All tokens move two seats clockwise per bell.",
+    "id": 249
+  },
+  {
+    "title": "The harbor view through the blinds",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "Narrow slits break a colored picture into separate slices. The white interruptions are parts of a blind in front of the picture.",
+    "questions": [
+      "What single object do the surviving slices fit? Identify the three large colored parts."
+    ],
+    "hints": [
+      "Follow the green baseline through the slits.",
+      "The yellow and copper slices taper upward toward a central mast."
+    ],
+    "answer": "A sailboat with a green hull, a yellow sail and a copper sail.",
+    "why": "The straight waterline and sloping sail edges continue from one slit to the next, so the fragments group into one familiar object. Raising the blind shows all three colored shapes.",
+    "figure": "p3o-shutters.svg",
+    "alt": "Narrow vertical openings show a long green tapered base and yellow and copper triangular fragments above it.",
+    "reveal": "p3o-shutters-proof.svg",
+    "revealAlt": "The blind is raised to reveal a complete two-sailed boat.",
+    "id": 250
+  },
+  {
+    "title": "The chalk stripe on the folding fan",
+    "level": "Medium",
+    "intro": "A restorer makes one pencil dot halfway out on each of a folding fan’s twelve evenly spaced sticks. With the fan open, the dots appear to form a smooth curved stripe across the paper. When she closes it and looks squarely at the front, she sees a single dot. She has neither erased nor transferred a mark. Each stick rotates about the same pivot.",
+    "questions": [
+      "Where have the eleven other marks gone, and why did all the dots need the same distance from the pivot?"
+    ],
+    "hints": [
+      "Describe the open dots as points on one circle.",
+      "Closing the fan changes each stick’s angle while preserving the length from the hinge."
+    ],
+    "answer": "The marks stack behind the front mark when the sticks align.",
+    "why": "Their equal distances from the hinge put them on the same arc when open. Once the sticks share a direction, the marks coincide in front view. Unequal distances would leave some marks at different heights along the closed fan.",
+    "kind": "Lateral thinking",
+    "id": 251
+  },
+  {
+    "title": "The three teeth at noon",
+    "level": "Medium",
+    "intro": "Three gears with 12, 18 and 15 teeth engage in a straight chain. Each has one tooth marked red. Through a clear cover you mark the starting position of each red tooth. A tooth-step means turning the first gear by exactly one tooth, which advances each meshing gear by one tooth around its own rim past a fixed point.",
+    "questions": [
+      "After how many positive tooth-steps will all three marks first be back at their starting positions? Which gears then have made a whole even number of turns?"
+    ],
+    "hints": [
+      "Each gear needs a number of steps divisible by its tooth count.",
+      "Use enough factors of 2, 3 and 5 to make all three counts divide the same number."
+    ],
+    "answer": "180 tooth-steps. The 18- and 15-tooth gears have made even numbers of turns.",
+    "why": "The smallest common multiple of 12, 18 and 15 is 180. The turn counts are respectively 15, 10 and 12. The middle gear turns in the opposite direction, which does not affect returning to its mark.",
+    "kind": "Logic",
+    "id": 252
+  },
+  {
+    "title": "One ribbon for two pennants",
+    "kind": "Visual reasoning",
+    "level": "Easy",
+    "intro": "A rectangular pennant measures 10 by 6. One cut runs from the upper-left corner to the midpoint of the bottom edge. A second cut joins that midpoint to the upper-right corner.",
+    "questions": [
+      "What fraction of the rectangle belongs to the middle triangle, and what fraction to each corner scrap?"
+    ],
+    "hints": [
+      "The middle triangle has the entire top edge for its base.",
+      "All three triangles have the same height."
+    ],
+    "answer": "One half for the middle and one quarter for each side.",
+    "why": "The middle triangle has area 10 × 6 ÷ 2 = 30. Each side triangle has a five-unit base and area 15, out of 60 in the full rectangle.",
+    "figure": "p3v-pennant.svg",
+    "alt": "A 10-by-6 rectangle with two cuts from its top corners to the midpoint of the bottom edge.",
+    "id": 253
+  },
+  {
+    "title": "The potter’s turning wreath",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "A circle of triangular leaves can give the impression of a little wheel turning. Study their positions rather than their tips.",
+    "questions": [
+      "Do the leaf centers spiral toward the middle or lie on one circle? How many diametrically opposite pairs of centers are there?"
+    ],
+    "hints": [
+      "Look at the radius to the center of a leaf, not to a corner.",
+      "A partner half a turn away is eight leaves farther around."
+    ],
+    "answer": "One circle, with eight opposite pairs.",
+    "why": "There are sixteen centers at equal angular steps of one sixteenth of a turn. Their radius stays fixed. Turning the triangular marks produces a directional bias without making a spiral.",
+    "figure": "p3o-wreath.svg",
+    "alt": "Sixteen green triangular leaves surround a common center, rotating their orientation successively.",
+    "reveal": "p3o-wreath-proof.svg",
+    "revealAlt": "One copper circle goes through all sixteen centers. A diameter connects an example pair.",
+    "id": 254
+  },
+  {
+    "title": "The clerk’s missing twenty-fourth second",
+    "level": "Hard",
+    "intro": "A film restorer logs an event at 00:10:18 and another at 00:12:06. Watching the last pair of digits carefully, she sees 00:10:23 followed immediately by 00:11:00. Every middle-unit change takes one real second. The last pair advances in uniform steps.",
+    "questions": [
+      "What does the last pair count, and how many steps lie between those two events?"
+    ],
+    "hints": [
+      "Read the clock behavior before deciding how many units make the next place.",
+      "Convert both readings to a total count of the smallest unit."
+    ],
+    "answer": "It counts frames, with 24 frames to a second. The events are 36 frame intervals apart.",
+    "why": "A count from 00 through 23 has 24 positions. The readings are 10 × 24 + 18 = 258 and 12 × 24 + 6 = 294. Their difference of 36 frames spans one and a half seconds.",
+    "kind": "Lateral thinking",
+    "id": 255
+  },
+  {
+    "title": "A gap in the numbered bunting",
+    "level": "Medium",
+    "intro": "At a festival, each number from 1 to 39 was printed on one pennant, without leading zeroes. One whole pennant blew away. The remaining display has one fewer printed 3 and one fewer printed 8 than the complete set.",
+    "questions": [
+      "Which pennant blew away? How many printed 3s are left?"
+    ],
+    "hints": [
+      "Both missing digits must have been on the same pennant.",
+      "Count the 3s in the tens and units positions separately."
+    ],
+    "answer": "Pennant 38. Thirteen printed 3s remain.",
+    "why": "Only 38 contains both digits in the range 1–39. The full set has ten 3s in the tens position and four in the units position (3, 13, 23, 33). Losing the one in 38 leaves thirteen.",
+    "kind": "Logic",
+    "id": 256
+  },
+  {
+    "title": "The picket painter’s shortcut",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Eight lettered posts sit on a rectangular lattice. The fence crew needs one straight rail that passes through as many lettered posts as possible. Diagonal rails are permitted.",
+    "questions": [
+      "What is the maximum number of posts, and how many different lines achieve it?"
+    ],
+    "hints": [
+      "Count the occupied rows.",
+      "An oblique or vertical line meets each occupied row at most once."
+    ],
+    "answer": "Four posts. Exactly two lines do it.",
+    "why": "The upper row and lower row each contain four collinear posts. Any line that is not horizontal crosses each of those rows only once, giving it at most two posts.",
+    "figure": "p3v-fences.svg",
+    "alt": "Row 1 reads A dot B dot C dot D; row 2 is empty; row 3 reads E dot F dot G dot H.",
+    "id": 257
+  },
+  {
+    "title": "The compositor’s mixed sorts",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "At arm’s length the grid can look like one block of ink. The compositor used two different pieces of type throughout.",
+    "questions": [
+      "Read only the ROUND marks as ink. Which capital letter appears, and which feature distinguishes it from P?"
+    ],
+    "hints": [
+      "Ignore the squares, even though their weight is similar.",
+      "Trace the round marks at lower right; they make a diagonal leg."
+    ],
+    "answer": "R. The diagonal leg below the bowl distinguishes it from P.",
+    "why": "Circles build the stem and bowl, then move one column right per row to build the leg. The proof fades the square distractors.",
+    "figure": "p3o-ink.svg",
+    "alt": "Five columns and seven rows of circles and squares. Circles by row: 1234; 15; 15; 1234; 13; 14; 15.",
+    "reveal": "p3o-ink-proof.svg",
+    "revealAlt": "Copper circles read as the capital R against pale square distractors.",
+    "id": 258
+  },
+  {
+    "title": "The duet in different ink",
+    "level": "Medium",
+    "intro": "A proofreader receives two parts for a duet. In one passage a written D in the blue part must sound as a C. In the green part a written C already sounds as C. During rehearsal the two players sound in unison throughout the passage. The green player reads C, D, E, in that order. On the blue instrument every written note sounds one whole tone lower. For this puzzle C to D, D to E and E to F-sharp are each whole tones.",
+    "questions": [
+      "What must be written in the blue part? Why would making the sheets look identical introduce an error?"
+    ],
+    "hints": [
+      "Work from the sound that the audience should hear.",
+      "For each sounding note, choose a written note a whole tone above it for the blue player."
+    ],
+    "answer": "D, E, F-sharp. The blue part is transposed for its instrument.",
+    "why": "The blue instrument lowers each written note by a whole tone, producing C, D and E. Giving it the green part would lower all three intended notes instead of matching them.",
+    "kind": "Lateral thinking",
+    "id": 259
+  },
+  {
+    "title": "The silver medalist’s reel",
+    "level": "Hard",
+    "intro": "Eight short films enter a fixed knockout bracket of three complete rounds. In each head-to-head screening the better film always wins, and no two are of equal quality. Seven screenings identify the best film. The organizer kept every result and now wants to identify the second-best overall with as few extra head-to-head screenings as possible.",
+    "questions": [
+      "How many extra screenings suffice in the worst case, and which films should enter them?"
+    ],
+    "hints": [
+      "Anyone who lost to a film other than the champion has at least two films above them.",
+      "How many different opponents did the champion personally eliminate?"
+    ],
+    "answer": "Two extra screenings. Compare the three opponents beaten directly by the champion.",
+    "why": "The true runner-up could lose only to the champion. Those three eliminated opponents never met each other in the bracket. Each is still a possible runner-up, so one comparison cannot settle all three possibilities. Two comparisons find the best of the three.",
+    "kind": "Logic",
+    "id": 260
+  },
+  {
+    "title": "A square inside the tablecloth",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Joining the midpoints of a square tablecloth makes a diamond. Joining the diamond’s own side midpoints makes the smaller green square. The cloth measures 8 by 8.",
+    "questions": [
+      "How much cloth lies outside the green square but INSIDE the diamond?"
+    ],
+    "hints": [
+      "A midpoint diamond occupies half the area of its parent square.",
+      "Apply that halving a second time before subtracting."
+    ],
+    "answer": "16 square units.",
+    "why": "The original cloth has area 64. Its midpoint diamond has area 32 and the smaller square has area 16. The four slivers between them total 16.",
+    "figure": "p3v-fourth.svg",
+    "alt": "An 8-by-8 square contains its midpoint diamond. A second square joins the diamond’s four side midpoints.",
+    "id": 261
+  },
+  {
+    "title": "One coast, two countries",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "Two countries meet at one stepped frontier. A customs clerk counts only rectangular peninsulas that extend beyond the baseline into the other country.",
+    "questions": [
+      "How many peninsulas does the gold country have, and how many does the teal country have?"
+    ],
+    "hints": [
+      "The straight portions near the left and right edges mark the baseline.",
+      "A gold peninsula points upward, and a teal one points downward."
+    ],
+    "answer": "Gold has two; teal has one.",
+    "why": "The left and right upward steps belong to gold. The single downward middle step belongs to teal. The same outline creates protrusions for one figure and bays for the other.",
+    "figure": "p3o-coast.svg",
+    "alt": "A horizontal frontier has an upward rectangular step, then a downward one, then another upward one. Teal is above and gold below.",
+    "reveal": "p3o-coast-proof.svg",
+    "revealAlt": "A copper baseline separates the two gold protrusions above it and the one teal protrusion below it.",
+    "id": 262
+  },
+  {
+    "title": "The advertisement with three skins",
+    "level": "Easy",
+    "intro": "An old sign alternates among an elephant, a violin and a sailing ship. From behind, a repairer turns one handle through a third of a turn and the entire picture changes. Through a gap you can see dozens of upright pieces. A spare piece on the bench has three long flat painted faces. Each face shows only a narrow sliver of a picture.",
+    "questions": [
+      "How does one handle choose an entire picture, and why must all the pieces turn together?"
+    ],
+    "hints": [
+      "Think about the face of each spare piece that a person standing in front could see.",
+      "Arrange many copies side by side with their elephant slivers pointing forward."
+    ],
+    "answer": "Each upright piece is a three-sided prism. One picture is assembled from the forward face of every prism.",
+    "why": "Turning all the prisms together through a third-turn presents all the violin strips or all the ship strips. Turning one piece alone would replace just a narrow strip, leaving a visibly mixed picture.",
+    "kind": "Lateral thinking",
+    "id": 263
+  },
+  {
+    "title": "Three jars and the restless beads",
+    "level": "Hard",
+    "intro": "Three jars begin with 2, 3 and 4 beads. On a move, take one bead from each of two different nonempty jars and put both beads into the third. An artist wants 3, 3 and 3. Another wants 1, 2 and 6, in that order.",
+    "questions": [
+      "Which arrangement can be reached? Find a property that rules out the other even after many moves."
+    ],
+    "hints": [
+      "Subtract the second jar’s count from the first before and after a possible move.",
+      "If the jars are both donors their difference stays fixed. If one receives, their difference changes by three."
+    ],
+    "answer": "1, 2, 6 is reached in one move. Three equal jars are impossible.",
+    "why": "Donate from the first two into the third to reach the second target. At every move the first-minus-second difference changes by 0, 3 or −3. It starts at −1 and can never become zero, which equality would require.",
+    "kind": "Logic",
+    "id": 264
+  },
+  {
+    "title": "The four arguing gulls",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Four gulls refuse to share a row, column or diagonal. One has already perched in the top row. Three more must perch on the board.",
+    "questions": [
+      "Which columns do the three remaining gulls occupy, from row 2 downward?"
+    ],
+    "hints": [
+      "The first gull rules out columns 1, 2 and 3 in row 2.",
+      "After row 2, try the two unused columns in row 3."
+    ],
+    "answer": "D, A, C.",
+    "why": "Row 2 must use D. The unused columns are A and C, but C in row 3 is diagonal to the gull on D. That places row 3 at A and row 4 at C.",
+    "figure": "p3v-queens.svg",
+    "alt": "Four rows and four columns A–D. A gull occupies B in the first row.",
+    "id": 265
+  },
+  {
+    "title": "The projectionist’s third slide",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "The projectionist says two rectangular color slides overlap. The artist who painted this imitation used flat fields and deliberately gave the overlap its own tint.",
+    "questions": [
+      "How many differently colored rectangular intersection regions do the two slides share? Can their overlap tint alone prove which slide was placed first?"
+    ],
+    "hints": [
+      "Trace the four straight edges that bound their common area.",
+      "The artist chose a single fixed overlap color; it carries no information about the painting order."
+    ],
+    "answer": "One overlap region. Its tint cannot establish an order.",
+    "why": "The slides share the region from x=267 to 337 and y=83 to 216. The muted patch supports an impression of transparency, but either putative slide order fits the same painted result.",
+    "figure": "p3o-film.svg",
+    "alt": "A teal rectangle lies upper left and a gold rectangle lower right. Their common area is filled with a third uniform olive tint.",
+    "reveal": "p3o-film-proof.svg",
+    "revealAlt": "A copper outline marks exactly one rectangular patch shared by both shapes.",
+    "id": 266
+  },
+  {
+    "title": "White marks from a polishing tool",
+    "level": "Hard",
+    "intro": "An artist starts with a metal plate covered in tiny pits. She smooths a white swan shape into it, rolls black ink over the whole plate, and wipes the flat surfaces clean. Damp paper pressed against the plate comes away showing a white swan on a dark field. No white ink was used.",
+    "questions": [
+      "What prints the dark field, and why did smoothing make the swan white?"
+    ],
+    "hints": [
+      "Look for places ink can remain after a flat surface has been wiped.",
+      "Which parts of the pressed paper receive very little ink?"
+    ],
+    "answer": "The pits retain black ink for the dark field. The polished swan holds little ink, leaving that part of the paper light.",
+    "why": "Pressure makes the damp paper take up ink from the rough recesses. The smooth polished area wipes clean, so the swan takes its brightness from the paper itself.",
+    "kind": "Lateral thinking",
+    "id": 267
+  },
+  {
+    "title": "Market day with no small change",
+    "level": "Medium",
+    "intro": "A fair exchanges exactly three mats for five hats, or exactly two hats for seven bells. Both exchanges may be run in either direction. No goods can be split. A performer begins with only mats and wants to finish with only bells.",
+    "questions": [
+      "What is the smallest positive number of starting mats that can be converted completely? How many bells result?"
+    ],
+    "hints": [
+      "As values, one mat equals five thirds of a hat and one hat equals seven halves of a bell.",
+      "Whatever trades are made must conserve the total value, including trades in reverse."
+    ],
+    "answer": "Six mats yield 35 bells.",
+    "why": "A mat is worth 35/6 bells. Because 35 and 6 have no common divisor above one, a whole number of bells requires a multiple of six mats. Six convert to ten hats and then to 35 bells in five full hat exchanges.",
+    "kind": "Logic",
+    "id": 268
+  },
+  {
+    "title": "The minute hand’s little shadow",
+    "kind": "Visual reasoning",
+    "level": "Easy",
+    "intro": "At exactly 3:00, the minute hand stands upright and the hour hand points right. Imagine both hands jumping forward by a quarter turn, without any change in their separation.",
+    "questions": [
+      "Give both new directions. If it were an ordinary clock, why could it not show exactly that pair of directions?"
+    ],
+    "hints": [
+      "Each hand rotates 90 degrees clockwise.",
+      "A real hour hand creeps forward as the minute hand completes a quarter hour."
+    ],
+    "answer": "The minute hand points at 3 and the hour hand at 6.",
+    "why": "At 6:15 an ordinary hour hand has already moved one quarter of the gap from 6 to 7. This clock face would keep the hour hand exactly at 6.",
+    "figure": "p3v-clock.svg",
+    "alt": "Clock at 3:00. Long green hand up; short red hand right.",
+    "id": 269
+  },
+  {
+    "title": "The prop master’s reversible window",
+    "kind": "Optical illusions",
+    "level": "Hard",
+    "intro": "The theater needs a picture that can look like a rectangular window seen at an angle or a flat trapezoidal prop viewed head-on. There are no shadows or depth marks.",
+    "questions": [
+      "Which upright is taller ON THE PAGE? Can that measurement alone prove that the real window has unequal uprights?"
+    ],
+    "hints": [
+      "Use the two top and two bottom endpoints.",
+      "A drawing’s vertical extent is measurable even when the sizes of the scene objects are unknown."
+    ],
+    "answer": "The right upright is taller on the page. No conclusion about the physical uprights follows without knowing the projection or prop.",
+    "why": "The drawing heights are 207 and 118 units. Perspective can make equally tall jambs project to different heights, while a flat prop can have those unequal heights physically. The picture alone fits both accounts.",
+    "figure": "p3o-window.svg",
+    "alt": "A window-shaped trapezoid has vertical edges: left from y=70 to 188 and right from y=29 to 236.",
+    "reveal": "p3o-window-proof.svg",
+    "revealAlt": "Two rulers mark the projected vertical heights of 118 and 207 drawing units.",
+    "id": 270
+  },
+  {
+    "title": "The lifting of the brass pear",
+    "level": "Medium",
+    "intro": "A brass pear rests in a little floating boat in a straight-sided tank. A hand transfers it gently into the water and lets it settle on the bottom. Nothing spills. When submerged, the pear takes up the space of 30 grams of water, although it weighs ninety grams. The waterline moves.",
+    "questions": [
+      "Which way does the waterline go, and by how much does the total displaced water volume change, in grams-of-water equivalent?"
+    ],
+    "hints": [
+      "While it floats, the boat and its load displace their combined weight of water.",
+      "Compare the pear’s contribution while it rides in the boat with its contribution resting on the tank floor."
+    ],
+    "answer": "The line falls. The occupied volume falls by the volume of 60 grams of water.",
+    "why": "The loaded boat had to displace an extra 90 grams of water to support the pear. On the bottom the pear occupies only the volume of 30 grams of water. Unloading the boat removes more displacement than sinking the pear adds.",
+    "kind": "Lateral thinking",
+    "id": 271
+  },
+  {
+    "title": "The loose sheet from a winter songbook",
+    "level": "Hard",
+    "intro": "A forty-page booklet is printed on ten sheets, folded once and nested inside one another. Pages are numbered 1 through 40 in normal reading order, including covers. The outer sheet has pages 40 and 1 on one face, and 2 and 39 on the other. An entire inner sheet falls loose. Page 17 is on it.",
+    "questions": [
+      "Which three other page numbers fall out with 17? Which one of them shares its face of the sheet?"
+    ],
+    "hints": [
+      "Removing one outer sheet strips the two smallest remaining numbers and the two largest.",
+      "Just before you reach 17, eight lower-numbered pairs have been removed."
+    ],
+    "answer": "18, 23 and 24. Pages 17 and 24 are on the upward face, 18 and 23 on the reverse.",
+    "why": "The sheet containing 17 also carries its next page 18 on the reverse. The opposed numbers across the fold on a face sum to 41, so 17 faces across to 24 and 18 to 23. The four pages form one physical sheet.",
+    "kind": "Logic",
+    "id": 272
+  },
+  {
+    "title": "The customs officer’s longest fence",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Three districts share a tiled map. A frontier consists of unit edges where tiles with different letters touch. Ignore the boundary around the map.",
+    "questions": [
+      "Which district pair or pairs share the longest frontier? Give its length."
+    ],
+    "hints": [
+      "Trace the edges of C first.",
+      "Check only the right and lower neighbor of each tile to avoid double-counting."
+    ],
+    "answer": "B–C with 6 edges.",
+    "why": "The frontier totals are A–B: 1, A–C: 5, B–C: 6.",
+    "figure": "p3v-border.svg",
+    "alt": "Four rows: AABBB, ACCCB, AACCB, AACBB.",
+    "id": 273
+  },
+  {
+    "title": "The paint clerk’s contrary labels",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "The paint clerk says that some labels are printed in the very ink they name. Read in ordinary order, top left first. Use teal, rust, gold and dark ink as the four color names.",
+    "questions": [
+      "Which numbered labels match their own ink? Count them without saying the other labels aloud."
+    ],
+    "hints": [
+      "Inspect ink color before reading the word.",
+      "The labels are numbered 1–3 in the upper row and 4–6 in the lower row."
+    ],
+    "answer": "Three labels: 2, 5 and 6.",
+    "why": "The rust word RUST, dark word INK and gold word GOLD match. Reading a familiar word can interfere with identifying its printing color, which is why the other three invite a quick error.",
+    "figure": "p3o-engraver.svg",
+    "alt": "The six word/ink pairs are GOLD in teal, RUST in rust, TEAL in gold, RUST in dark ink, INK in dark ink, GOLD in gold.",
+    "reveal": "p3o-engraver-proof.svg",
+    "revealAlt": "Boxes mark the three correct matches.",
+    "id": 274
+  },
+  {
+    "title": "The echo with two birthdays",
+    "level": "Hard",
+    "intro": "A handclap is recorded beside a straight wall on an empty field. The microphone stays beside the clapper. The original clap is followed by two softer copies 0.20 and 0.32 seconds later. There are exactly two broad reflecting walls, one in each direction along a straight lane, and these are the first direct echoes from the two walls. Sound travels 340 meters per second.",
+    "questions": [
+      "How far apart are the walls? Why would assigning 68 and 108.8 meters to the two wall distances give the wrong answer?"
+    ],
+    "hints": [
+      "Each delay includes the outward and returning journeys.",
+      "Find each one-way distance, then place the walls on opposite sides of the microphone."
+    ],
+    "answer": "88.4 meters apart.",
+    "why": "The first echo traveled 68 meters in total and the second 108.8 meters. Halving gives distances of 34 and 54.4 meters to the walls. The clapper stands between them, so those distances add.",
+    "kind": "Lateral thinking",
+    "id": 275
+  },
+  {
+    "title": "A border that balances its picture",
+    "level": "Hard",
+    "intro": "A rectangular mosaic is made of whole square tiles. Its border is precisely one tile wide all the way around, corners counted once. There are as many border tiles as interior tiles. Both side lengths exceed four. The curator recalls that neither side was longer than ten tiles.",
+    "questions": [
+      "What are the two side lengths? Give a way to exclude every other rectangle."
+    ],
+    "hints": [
+      "If the outer dimensions are m and n, the interior contains (m − 2)(n − 2) tiles.",
+      "Twice the interior equals the whole rectangle. Rearrange that equation into (m − 4)(n − 4) = 8."
+    ],
+    "answer": "6 by 8 tiles.",
+    "why": "The positive factor pairs of 8 are 1 and 8, or 2 and 4. Restoring four to each side yields rectangles 5 by 12 and 6 by 8. Only 6 by 8 fits the limit. Its interior has 4 × 6 = 24 tiles, half its total.",
+    "kind": "Logic",
+    "id": 276
+  },
+  {
+    "title": "Six shutters on the puppet booth",
+    "kind": "Visual reasoning",
+    "level": "Hard",
+    "intro": "A stagehand can flip any adjacent pair of shutters in one move, changing each marked side to blank and each blank side to marked. Shutters are numbered 1 through 6 from left to right.",
+    "questions": [
+      "Change the top pattern into the bottom with the fewest moves. Which pairs flip?"
+    ],
+    "hints": [
+      "The first shutter can only be changed by flipping 1–2.",
+      "Once the first shutter matches, settle the next shutter from left to right."
+    ],
+    "answer": "Flip 1–2, 3–4 and 4–5, in any order.",
+    "why": "Shutter 1 demands the first pair. After that, shutter 2 agrees. Shutter 3 demands 3–4, and shutter 4 then demands 4–5. The last two agree. Each forced pair must be used an odd number of times, so three is minimal.",
+    "figure": "p3v-shutters.svg",
+    "alt": "Marked sides listed as 1: start 100101, target 011111.",
+    "id": 277
+  },
+  {
+    "title": "The harp with a curved string",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "At the string-art stall, a fan of threads seems to enclose one smoothly curving edge. The maker tied each thread taut between two fixed pegs.",
+    "questions": [
+      "How many threads actually bend to follow the curve? Explain why a curved boundary can appear."
+    ],
+    "hints": [
+      "Choose any pair of endpoints that belong to one thread.",
+      "Follow just that strand all the way from peg to peg."
+    ],
+    "answer": "None of them bend.",
+    "why": "Each taut strand is straight. Each touches a different part of an apparent envelope. Looking across short pieces of successive strands creates the contour of a curve. One whole straight strand is highlighted in the proof.",
+    "figure": "p3o-threadcurve.svg",
+    "alt": "Straight strings join successive pegs on a horizontal row to successive pegs on a vertical row. Their slopes vary from steep to shallow.",
+    "reveal": "p3o-threadcurve-proof.svg",
+    "revealAlt": "One complete strand between its two pegs is highlighted in copper.",
+    "id": 278
+  },
+  {
+    "title": "The drummer’s three-finger glove",
+    "level": "Medium",
+    "intro": "Behind a screen someone taps a rhythm on a tabletop. The investigator sees three separate fingertip marks in soft chalk. The performer says she used only one finger and never moved it sideways. On a second run the marks appear in the same order but farther apart when an assistant pulls a strip faster. The three finger marks are identical down to a little nick.",
+    "questions": [
+      "What moved between taps? How can the assistant affect the spacing without affecting the tempo?"
+    ],
+    "hints": [
+      "A mark records relative position between the fingertip and the surface.",
+      "The fingertip can return to the same place in the room each time while meeting new material."
+    ],
+    "answer": "The assistant drew a chalk-coated strip under the tapping finger.",
+    "why": "Successive parts of the strip passed the stationary tapping position. Pulling faster carries the previous impression farther away between taps, increasing distance on the strip while preserving the musical interval.",
+    "kind": "Lateral thinking",
+    "id": 279
+  },
+  {
+    "title": "The encore with too many voices",
+    "level": "Easy",
+    "intro": "Seven short numbers make up an encore. Each is a solo, a duet or a trio. Counting one appearance for each singer in each number, the stage manager records twelve appearances in all. There are three times as many duets as trios.",
+    "questions": [
+      "How many numbers of each kind were performed?"
+    ],
+    "hints": [
+      "Giving each number one singer accounts for seven of the twelve appearances.",
+      "A duet then needs one extra singer and a trio two extra singers. One trio plus its three matching duets uses five extras."
+    ],
+    "answer": "Three solos, three duets and one trio.",
+    "why": "There are five extra appearances to distribute above the one-singer baseline. If t is the number of trios, the duets contribute 3t extras and the trios 2t extras. Thus t = 1. The remaining three numbers are solos.",
+    "kind": "Logic",
+    "id": 280
+  },
+  {
+    "title": "A corner visits the lily pond",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "A square sheet has side 12. Fold its upper-right corner onto the center. The crease meets the top and right edges.",
+    "questions": [
+      "How much area is in the triangular flap above the crease before folding?"
+    ],
+    "hints": [
+      "Every crease point is equally far from the corner and the center.",
+      "The top-edge midpoint is six units from both points. Try the right-edge midpoint too."
+    ],
+    "answer": "18 square units.",
+    "why": "The crease follows the perpendicular bisector between the corner and the center. It joins the two side midpoints adjoining the corner. The flap is a right triangle with legs 6 and 6.",
+    "figure": "p3v-lilypad.svg",
+    "alt": "Square side 12, with an arrow from the upper-right corner to the square’s center.",
+    "id": 281
+  },
+  {
+    "title": "The watercolor that never reached the middle",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "A double-colored outline surrounds a pale shape. A warm wash may seem to reach into the enclosed space. The paper is flat and untextured.",
+    "questions": [
+      "Compare the broad center with the background far outside the outline. Where did the printer actually lay orange ink?"
+    ],
+    "hints": [
+      "Look for the narrow orange stroke beside the purple.",
+      "The proof places a paper-colored bridge across the outline. Check where the bridge disappears."
+    ],
+    "answer": "Only on the narrow orange contour. The broad center and outer background use the same paper color.",
+    "why": "The proof erases a little of the double outline with a strip of background color. Its ends merge both inside and outside. Color at a boundary can suggest a faint tint spreading into the enclosed region.",
+    "figure": "p3o-wash.svg",
+    "alt": "An irregular closed double contour has a purple band and a narrower orange stroke; its center contains no texture.",
+    "reveal": "p3o-wash-proof.svg",
+    "revealAlt": "A paper-colored bridge cuts through the double outline and blends into both broad areas.",
+    "id": 282
+  },
+  {
+    "title": "The archivist’s youthful face",
+    "level": "Medium",
+    "intro": "A child standing beside a sapling made a mark on the trunk level with her chin. Years later she stands on the same paving stone. The old mark is now below her shoulder. A newer branch is far above the site of the original treetop. The ground has stayed level. In this species height gain occurs at growing shoot tips; older trunk chiefly thickens.",
+    "questions": [
+      "How could the tree gain several meters while the old mark stayed near its original height?"
+    ],
+    "hints": [
+      "Which part supplied the tree’s extra height?",
+      "Imagine adding lengths of tubing to the top of a fixed post. Would a mark near its base travel upward?"
+    ],
+    "answer": "The shoots above the mark elongated while the child grew taller from the ground.",
+    "why": "Most new height was added beyond the older trunk section. That section could widen without carrying its mark upward by anything like the growth at the tips. The child’s shoulder eventually rose past the old chin level.",
+    "kind": "Lateral thinking",
+    "id": 283
+  },
+  {
+    "title": "The product on the peppermint wrapper",
+    "level": "Medium",
+    "intro": "A stall rolls two ordinary fair dice and prints their product on the wrapper. A special product lies strictly between 9 and 15, is divisible by 4, and can be made using either of two different unordered pairs of faces.",
+    "questions": [
+      "Which product is special? What is its chance on one roll of both dice?"
+    ],
+    "hints": [
+      "Find the multiple of four first, then list factor pairs that fit on dice.",
+      "Swapping unequal die faces supplies another ordered outcome."
+    ],
+    "answer": "12, with probability 1/9.",
+    "why": "Only 12 is a multiple of four between 9 and 15. The valid pairs are 2 × 6 and 3 × 4. Their reverses give four ordered outcomes out of the 36 equally likely results.",
+    "kind": "Logic",
+    "id": 284
+  },
+  {
+    "title": "The fairground’s indispensable kiosk",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "Paths connect the seven kiosks. The council will close one kiosk and every path meeting it, leaving all other paths in place.",
+    "questions": [
+      "Which single closure would split the remaining fairground into two disconnected groups?"
+    ],
+    "hints": [
+      "A kiosk with several entrances may still have a route around it.",
+      "Look for a crossing between the left and right halves that cannot be bypassed."
+    ],
+    "answer": "Kiosk D.",
+    "why": "Every path from A, B or C to E, F or G goes through D. Closing D leaves two connected trios. Closing any other single kiosk leaves its neighbors connected by an alternate route.",
+    "figure": "p3v-junction.svg",
+    "alt": "Paths AB, BC, CA, BD, CD, DE, DF, EF, EG, FG. No other connections.",
+    "id": 285
+  },
+  {
+    "title": "The jeweler counts the empty centers",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "The apprentice calls every round patch in the tray a bead. The jeweler counts green pieces, while the apprentice counts enclosed spots of bare paper.",
+    "questions": [
+      "How many green pieces are there, how many enclosed bare-paper spots, and why do their counts differ?"
+    ],
+    "hints": [
+      "Treat each green ring as one piece.",
+      "The central piece is the only one with no hole."
+    ],
+    "answer": "Eight green pieces and seven enclosed bare-paper spots.",
+    "why": "Seven annular pieces each enclose one bare center. The eighth piece is a solid disc. Bare paper spreading around the entire group is outside, not an enclosed hole.",
+    "figure": "p3o-holes.svg",
+    "alt": "Seven separate hollow green rings surround one solid green disc.",
+    "reveal": "p3o-holes-proof.svg",
+    "revealAlt": "The seven empty centers are numbered; a white dot identifies the separate solid piece in the middle.",
+    "id": 286
+  },
+  {
+    "title": "The subtraction that fills a room",
+    "level": "Medium",
+    "intro": "At a print auction the catalog describes an image as “twelve rooms around one courtyard.” A guest sees only a square board with twelve separate large wooden blocks on its surface. No marks are painted between them. On a raised rubbing in black, a network of white corridors appears. A second rubbing made after removing one block joins two white regions. Assume only raised surfaces receive the black rubbing.",
+    "questions": [
+      "How can removing something add a visible connection? Which features in the rubbing stand for floor one can walk on?"
+    ],
+    "hints": [
+      "Choose what the black impression represents: the open gaps or the wooden tops.",
+      "Follow the region where the paper received no black at all."
+    ],
+    "answer": "The white gaps represent walkable space. Removing a block creates a new white opening between old gaps.",
+    "why": "Black marks correspond to the solid tops that contact the rubbing paper. Space between those tops stays white. Removing a block keeps its former area white as well, so that area can act as a corridor linking two regions.",
+    "kind": "Lateral thinking",
+    "id": 287
+  },
+  {
+    "title": "Which coupon reached the till first?",
+    "level": "Medium",
+    "intro": "The museum shop applies a twenty-percent discount and a five-dollar voucher to one ticket. The price is high enough for both discounts in either order. After both, one possible checkout total is $31 and the other is $32. The clerk always uses the same original price and never rounds.",
+    "questions": [
+      "What was the original price? Which discount was applied first for the $31 total?"
+    ],
+    "hints": [
+      "A percentage discount shrinks every dollar still on the ticket when it is applied.",
+      "If the percentage comes first, the full five dollars can then be removed."
+    ],
+    "answer": "The ticket cost $45. The twenty-percent discount came first for the $31 total.",
+    "why": "Twenty percent off $45 gives $36, then the voucher makes $31. If the voucher goes first, 80 percent of the remaining $40 is $32. Applying the percentage last reduces the voucher’s eventual saving to $4.",
+    "kind": "Logic",
+    "id": 288
+  },
+  {
+    "title": "Two skaters on opposite edges",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "The rink is 8 units long and 6 wide. One skater starts at the lower-left corner, the other at the upper-right. Both follow the rink edge clockwise at one unit per second, starting together.",
+    "questions": [
+      "After five seconds, how far apart are they in a straight line?"
+    ],
+    "hints": [
+      "From the lower-left corner, clockwise travel goes up the left side.",
+      "At five seconds the skaters are horizontally eight units apart. Find their vertical separation."
+    ],
+    "answer": "√80 units, about 8.94.",
+    "why": "The left skater is five units above the bottom. The right skater is one above the bottom. Their separation has horizontal leg 8 and vertical leg 4, giving √(64 + 16).",
+    "figure": "p3v-lanes.svg",
+    "alt": "Rectangle width 8, height 6. Green starts bottom left and goes up. Red starts top right and goes down.",
+    "id": 289
+  },
+  {
+    "title": "The kingfisher sentries",
+    "kind": "Optical illusions",
+    "level": "Easy",
+    "intro": "A pair of paper birds stands guard. One is said to be a simple copy shifted across the page. Another observer claims it was reflected. Their long backs can draw attention away from their tiny beaks.",
+    "questions": [
+      "Which transformation matches them: horizontal shift, half turn or reflection in a vertical line? How can you distinguish all three?"
+    ],
+    "hints": [
+      "The birds face each other. A plain slide cannot reverse that.",
+      "Check the eye height and the fact that the backs remain above the bellies."
+    ],
+    "answer": "A reflection in a vertical line.",
+    "why": "A shift preserves the facing direction; a half turn would invert the head and body. The birds face each other while keeping the same upright orientation. The guide in the proof locates the mirror axis.",
+    "figure": "p3o-sentries.svg",
+    "alt": "Two dark upright bird silhouettes face one another. Their eye heights and backs match.",
+    "reveal": "p3o-sentries-proof.svg",
+    "revealAlt": "A vertical mirror axis bisects the distance between matching eye positions.",
+    "id": 290
+  },
+  {
+    "title": "The hoop that slipped the rail",
+    "level": "Medium",
+    "intro": "A straight rail is sealed into a solid wall at both ends. A metal “hoop” about the size of a coin hangs on it. Keeping the rail fixed, the demonstrator winds the hoop off into her hand without tools or damage. Viewed face-on the hoop looks like a closed circle. Seen edge-on, its wire runs around the rail a little more than twice, and two distinct wire ends can be felt.",
+    "questions": [
+      "Describe the hoop and the motion. What observation rules out an ordinary welded ring?"
+    ],
+    "hints": [
+      "Follow one wire end rather than tracing the circular silhouette.",
+      "Think about putting a new key onto a key ring."
+    ],
+    "answer": "It is a split ring: a spiral of overlapping wire. Feed the rail between the overlapping ends and wind the ring around until it comes free.",
+    "why": "The rail stays put while the spiral runs past it, turn by turn. A welded single loop has no free wire end to begin the transfer. The side view and two ends distinguish the mechanisms.",
+    "kind": "Lateral thinking",
+    "id": 291
+  },
+  {
+    "title": "The warm seat between the poets",
+    "level": "Medium",
+    "intro": "Five performers hold a straight row of seats, facing the audience. From the audience’s left to its right, Jo sits exactly two places before Fay. Ada sits immediately before Luz. Kit has neither end seat. Ada is somewhere before Jo.",
+    "questions": [
+      "List the five from left to right. Which performer sits directly between Jo and Fay?"
+    ],
+    "hints": [
+      "Ada and Luz must both be before Jo. They cannot overlap the seat reserved for Jo.",
+      "Jo cannot be later than third if Fay must be two seats after Jo."
+    ],
+    "answer": "Ada, Luz, Jo, Kit, Fay. Kit is between Jo and Fay.",
+    "why": "Ada’s adjacent pair requires two seats before Jo, and Fay requires two positions after Jo. Jo is therefore third. The pair occupies seats one and two, Fay occupies five and Kit gets four.",
+    "kind": "Logic",
+    "id": 292
+  },
+  {
+    "title": "Four peeps through the theater curtain",
+    "kind": "Visual reasoning",
+    "level": "Easy",
+    "intro": "A painted sign behind a slit moves one letter left between sightings. Each view shows three consecutive letters. The views are in time order.",
+    "questions": [
+      "What six-letter word slid past the curtain?"
+    ],
+    "hints": [
+      "Most letters in one view appear again in the next.",
+      "Keep the first view and append only the new letter at the right of each later view."
+    ],
+    "answer": "PARADE.",
+    "why": "PAR overlaps ARA on AR; the next windows start with RA and AD. The successive new letters are A, D and E, extending PAR into PARADE.",
+    "figure": "p3v-peep.svg",
+    "alt": "Four successive three-letter windows: PAR, ARA, RAD, ADE.",
+    "id": 293
+  },
+  {
+    "title": "The snowman made of one shadow",
+    "kind": "Optical illusions",
+    "level": "Medium",
+    "intro": "Two equal opaque discs of the same dark teal sit partly in front of one another. Their seam disappears where the colors meet. The twin-lobed silhouette is all that remains.",
+    "questions": [
+      "Can the silhouette tell you which disc is in front? What happens to the outer contour if their stacking order is reversed without moving their centers?"
+    ],
+    "hints": [
+      "Try imagining the right circle printed first.",
+      "Look for a visible T-junction or a differently colored rim inside the united shape."
+    ],
+    "answer": "Either disc can be in front. The outer contour stays exactly the same.",
+    "why": "Both discs use identical opaque ink. The visible shape is their combined footprint, which is independent of painting order. The added rims trace the hidden boundaries.",
+    "figure": "p3o-snowman.svg",
+    "alt": "Two overlapping identical dark teal discs have no visible seam in their overlap.",
+    "reveal": "p3o-snowman-proof.svg",
+    "revealAlt": "Two differently colored circular outline guides pick out the hidden separate disc boundaries.",
+    "id": 294
+  },
+  {
+    "title": "The bubble in the ferry window",
+    "level": "Medium",
+    "intro": "A child levels a clear horizontal tube containing liquid and one air bubble. A small central hump in the tube keeps the bubble at the highest point. She raises the left end enough that it becomes higher than the right, then waits. The bubble goes left while a loose dense bead in an identical tube rolls right. Neither tube has a moving divider.",
+    "questions": [
+      "Why can both movements be responses to gravity? Predict the effect of raising the right end instead."
+    ],
+    "hints": [
+      "The bubble is a pocket of less dense material surrounded by heavier liquid.",
+      "Think about where the liquid can go as the bubble changes places with it."
+    ],
+    "answer": "Dense liquid moves toward the low end and the bubble occupies the high end. The bead settles low.",
+    "why": "The exchange lowers the heavier material overall. Raising the opposite end reverses the tilt and switches the ends sought by the bubble and bead, provided the tilt is enough to overcome the small central hump.",
+    "kind": "Lateral thinking",
+    "id": 295
+  },
+  {
+    "title": "The lamp code with one bad bulb",
+    "level": "Medium",
+    "intro": "Each delivery cart carries a strip of six bulbs (1 lit, 0 dark). Each cart has its own assigned pattern. At inspection exactly one bulb on the arriving cart shows the opposite of its assigned state. The strip reads 100100 from left to right.",
+    "questions": [
+      "Which cart has arrived? Which bulb failed, and was it supposed to be lit?"
+    ],
+    "hints": [
+      "Count differing positions between the observed strip and each catalog row.",
+      "A candidate must differ in exactly one position, even if some other row looks similar."
+    ],
+    "answer": "Eel cart. Bulb five should be lit.",
+    "why": "Eel’s assigned 100110 differs only in position five. Owl differs in two positions, Bee in three and Fox in more than one. The single-fault rule singles out Eel.",
+    "tables": [
+      [
+        "Cart patterns",
+        [
+          "Cart",
+          "Pattern"
+        ],
+        [
+          [
+            "Owl",
+            "000000"
+          ],
+          [
+            "Bee",
+            "111000"
+          ],
+          [
+            "Eel",
+            "100110"
+          ],
+          [
+            "Fox",
+            "011101"
+          ]
+        ]
+      ]
+    ],
+    "kind": "Logic",
+    "id": 296
+  },
+  {
+    "title": "The baker’s L-shaped counter",
+    "kind": "Visual reasoning",
+    "level": "Medium",
+    "intro": "A baker trims a counter made of unit squares with paper ribbon. An assistant says cutting a rectangular notch out of the upper-right corner must reduce the ribbon she needs.",
+    "questions": [
+      "Is the assistant right for this counter? Give the perimeter of the counter and of the original rectangle."
+    ],
+    "hints": [
+      "The original rectangle is three units wide and four high.",
+      "Compare the outer edges removed by the notch with the new edges inside it."
+    ],
+    "answer": "Both perimeters are 14 units.",
+    "why": "The 2-by-2 corner notch removes 2 units of top and 2 of right-hand edge. Its two new inside edges add those same four units. The intact 3-by-4 rectangle has perimeter 2 × (3 + 4) = 14.",
+    "figure": "p3v-bakery.svg",
+    "alt": "A three-column, four-row rectangle. Only the left cell is green in each of the top two rows; all three are green in each bottom row.",
+    "id": 297
+  },
+  {
+    "title": "The conjurer’s three black cords",
+    "kind": "Optical illusions",
+    "level": "Hard",
+    "intro": "The conjurer drew three smooth black cords. They cross but never join. At an intersection keep following the smooth direction you arrived on.",
+    "questions": [
+      "Which numbered tip belongs to cord A? Which tip belongs to B?"
+    ],
+    "hints": [
+      "Start at the leftmost A. Its first bend heads down and right.",
+      "A reaches the lowest lane briefly, then climbs back up."
+    ],
+    "answer": "A reaches 1. B reaches 3.",
+    "why": "A travels through upper, middle, middle, lower, lower, middle and upper lanes. B ends in the lower lane, leaving C at tip 2. A is picked out in copper in the reveal.",
+    "figure": "p3o-serpents.svg",
+    "alt": "Three black curves connect A, B and C on the left to tips 1, 2 and 3. Smooth continuations are preserved at crossings.",
+    "reveal": "p3o-serpents-proof.svg",
+    "revealAlt": "Cord A is highlighted in copper from its upper-left start to tip 1 at upper right.",
+    "id": 298
+  },
+  {
+    "title": "The book that grew in the bath",
+    "level": "Hard",
+    "intro": "A binder cuts two identical strips from one sheet of paper, one along its length and one across. Each dry strip is 100 units long. After both absorb the same damp air, the first measures 101 and the second 104. They dry back to 100. The sheet was made with most long fibers aligned in one direction. Each individual fiber swells much more across its width than along its length.",
+    "questions": [
+      "Which strip ran mainly along the fibers? Which way should a replacement strip be cut to match its modest expansion?"
+    ],
+    "hints": [
+      "Both strips are made of the same material. Their directions differ.",
+      "A measurement along the fiber axes builds up changes in length, while a crosswise measurement builds up changes in width."
+    ],
+    "answer": "The 101-unit strip ran along the fibers. Cut its replacement parallel to the same grain.",
+    "why": "Greater swelling across each fiber produces the sheet’s larger cross-grain expansion. The smaller reversible change identifies the lengthwise direction, so matching grain helps the new strip move with the old one.",
+    "kind": "Lateral thinking",
+    "id": 299
+  },
+  {
+    "title": "The shutters on the last cabinet",
+    "level": "Hard",
+    "intro": "Five shutters stand in a straight row labeled A through E. Exactly two are open. A tally for shutters A, C and E reports one open. A tally for B, D and E also reports one open. A third tally for just A and B reports one open. At least one closed shutter lies between the two open ones.",
+    "questions": [
+      "Which shutters are open? Explain why E can be ruled out before using the third tally."
+    ],
+    "hints": [
+      "Add the first two tallies. Every shutter is counted once except E, which is counted twice.",
+      "With E closed, select one from A/C and one from B/D. The third tally eliminates two combinations."
+    ],
+    "answer": "A and D are open.",
+    "why": "The first tallies sum to two, already the exact open count, so the doubly counted E is closed. The first two rules now allow AB, AD, CB or CD. Exactly one open among A and B leaves AD or CB. C and B are adjacent, while A and D have closed shutters between them.",
+    "kind": "Logic",
+    "id": 300,
+    "figure": "p3l-finalcabinet.svg",
+    "alt": "Five cabinet positions A through E appear with question marks. Three plaques record one open shutter in each group: A/C/E, B/D/E and A/B.",
+    "reveal": "p3l-finalcabinet-proof.svg",
+    "revealAlt": "Shutters A and D reveal brass stars. Each of the three groups contains exactly one open shutter, and B and C separate the two open positions."
   }
 ];

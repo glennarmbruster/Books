@@ -1,4 +1,4 @@
-const CACHE='last-port-sampler-3.0.0';
+const CACHE='last-port-sampler-4.0.0';
 const assets=['../book-number.js','./index.html','./puzzles.js','./app.js','./style.css','./icon.png','./icon-large.png','./manifest.webmanifest'];
 const urlOf=path=>new URL(path,self.registration.scope).href;
 self.addEventListener('install',event=>event.waitUntil((async()=>{
@@ -22,7 +22,7 @@ self.addEventListener('message', event => {
  event.waitUntil((async () => {
   const cache = await caches.open(CACHE);
   const hits = await Promise.all(assets.map(asset => cache.match(urlOf(asset))));
-  const editionMatches = request === 'verify' || request.edition === 'volume-1-200';
+  const editionMatches = request === 'verify' || request.edition === 'volume-1-300';
   event.ports[0]?.postMessage(editionMatches && hits.every(Boolean));
  })());
 });
