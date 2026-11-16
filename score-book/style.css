@@ -8,6 +8,6 @@ h1,h2,h3,p{margin:0}h1,h2{font-family:Georgia,serif;font-weight:normal}h1{font-s
 @media(min-width:700px) and (max-width:1050px){
   .sheet th,.sheet td{padding:.32rem .17rem}.sheet td{min-width:6.6rem}
   .sheet input.name{min-width:0;width:6.3rem}.sheet .round{min-width:2.6rem}
-  .cell{gap:.12rem}.sign{min-width:1.65rem}.number{width:2.65rem;padding-inline:.12rem;font-size:.97rem}
+  .cell{gap:.12rem}.sign{min-width:1.65rem}.sheet input.number{width:2.65rem;padding-inline:.12rem;font-size:.97rem}
   .running{font-size:1.04rem}
 }

@@ -1,4 +1,4 @@
-const edition = 'score-book-1';
+const edition = 'score-book-2';
 const prefix = self.registration.scope + 'score-book:';
 const cacheName = prefix + edition;
 const localURL = path => new URL(path, self.registration.scope).href;

@@ -206,6 +206,8 @@ function scoreCell(rowIndex,i) {
   else{
     const field=node('input',undefined,'number');
     field.type='text';field.inputMode='numeric';field.autocomplete='off';field.maxLength=8;field.value=raw;
+    function fitScore(value){field.style.minWidth=value.length>3?'calc('+value.length+'ch + 1rem)':'';}
+    fitScore(raw);
     field.dataset.player=i;field.dataset.round=rowIndex;
     const sign=button('±',()=>{
       field.value=field.value.startsWith('-')?field.value.slice(1):'-'+field.value;
@@ -215,7 +217,7 @@ function scoreCell(rowIndex,i) {
     function applyScore(){
       const value=field.value.replace('−','-');
       if (!/^-?\d{0,7}$/.test(value)){field.value=current.rounds[rowIndex][i];return;}
-      field.value=value;
+      field.value=value;fitScore(value);
       sign.setAttribute('aria-pressed',String(value.startsWith('-')));
       saveEdit(g=>{g.rounds[rowIndex][i]=value;});updateTotals();
     }
