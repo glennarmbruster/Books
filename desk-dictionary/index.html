@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#542c37">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="book.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>The Desk Dictionary · Books</title>
+</head>
+<body data-edition="desk-2026-11-16-1">
+  <header>
+    <a class="back" href="../">‹ Bookshelf</a>
+    <a class="about" href="credits.html">About this dictionary</a>
+  </header>
+  <main>
+    <section class="mast" aria-labelledby="book-title">
+      <h1 id="book-title">The Desk Dictionary</h1>
+      <form id="lookup" role="search">
+        <label for="query">Look up a word</label>
+        <div class="input-row"><input id="query" name="word" type="search" placeholder="Enter a word or phrase" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="search" maxlength="256"><button class="submit" type="submit">Search</button></div>
+      </form>
+      <div class="availability"><span id="index-status" role="status">Opening the word index…</span><button id="download" type="button" hidden>Download for offline use (35 MB)</button><span id="offline-status" role="status"></span></div>
+    </section>
+    <div class="columns">
+      <section id="results" aria-labelledby="list-title">
+        <h2 class="rubric" id="list-title">Explore words</h2><div id="matches"></div>
+      </section>
+      <article id="reader" aria-labelledby="word-title"><h2 id="word-title" class="word-title">A–Z</h2><p>Choose a letter to browse the dictionary.</p><nav id="alphabet" class="alphabet" aria-label="Browse the alphabet"></nav></article>
+    </div>
+    <noscript>Turn on JavaScript to search this offline dictionary.</noscript>
+    <div id="announce" class="sr" role="status"></div>
+  </main>
+  <script src="reader.js"></script>
+</body>
+</html>

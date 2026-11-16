@@ -15,6 +15,8 @@
     .shelf {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),21rem)); gap:2rem; align-items:start}
     article {display:grid; gap:.9rem}
     .cover.field-cover {background:#394f44; border-left-color:#24392e}
+    .cover.dictionary-cover {background:#542c37; border-left-color:#341b22}
+    .cover.dictionary-cover img {border-radius:4px}
     .cover.prism-cover {background:#42435b; border-left-color:#2b2c40}
     .edition-link {color:#214a41; justify-self:start}
     .cover {min-height:22rem; padding:1.8rem; border-left:10px solid #122f2b; border-radius:4px 10px 10px 4px; background:#214a41; color:#f8eed4; text-decoration:none; display:grid; align-content:space-between; gap:2rem; box-shadow:2px 3px #c1b394,3px 5px #756e55}
@@ -56,6 +58,15 @@
         </a>
         <button type="button" hidden>Download for offline use</button>
         <a class="edition-link" href="./field-and-home/Field-and-Home.epub" download>Download for Apple Books (.epub)</a>
+        <p role="status"></p>
+      </article>
+      <article data-book="desk-dictionary" data-edition="desk-2026-11-16-1">
+        <a class="cover dictionary-cover" href="./desk-dictionary/index.html">
+          <img src="./desk-dictionary/icon.png" alt="">
+          <h2>The Desk Dictionary</h2>
+          <small>English definitions, spelling suggestions and British variants →</small>
+        </a>
+        <button type="button" hidden>Download for offline use (35 MB)</button>
         <p role="status"></p>
       </article>
     </section>
