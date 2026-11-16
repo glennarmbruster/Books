@@ -1,0 +1,14 @@
+{
+  "id": "./",
+  "name": "The Prism Cabinet",
+  "short_name": "Prism Cabinet",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4e9",
+  "theme_color": "#35384d",
+  "icons": [
+    {"src": "./icon.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "./icon-large.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

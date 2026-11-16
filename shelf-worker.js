@@ -1,7 +1,7 @@
 const scope = self.registration.scope;
 const shelf = new URL('index.html', scope).href;
 const cacheName = 'books-shelf-v1:' + scope;
-const assets = [shelf, ...['books.webmanifest', 'last-port-casebook/icon.png', 'last-port-casebook/icon-large.png', 'field-and-home/icon-192.png'].map(path => new URL(path, scope).href)];
+const assets = [shelf, ...['books.webmanifest', 'last-port-casebook/icon.png', 'last-port-casebook/icon-large.png', 'field-and-home/icon-192.png', 'prism-cabinet/icon.png'].map(path => new URL(path, scope).href)];
 
 self.addEventListener('install', event => event.waitUntil((async () => {
   const cache = await caches.open(cacheName);

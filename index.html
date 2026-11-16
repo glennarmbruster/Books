@@ -15,6 +15,7 @@
     .shelf {display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),21rem)); gap:2rem; align-items:start}
     article {display:grid; gap:.9rem}
     .cover.field-cover {background:#394f44; border-left-color:#24392e}
+    .cover.prism-cover {background:#42435b; border-left-color:#2b2c40}
     .edition-link {color:#214a41; justify-self:start}
     .cover {min-height:22rem; padding:1.8rem; border-left:10px solid #122f2b; border-radius:4px 10px 10px 4px; background:#214a41; color:#f8eed4; text-decoration:none; display:grid; align-content:space-between; gap:2rem; box-shadow:2px 3px #c1b394,3px 5px #756e55}
     .cover img {width:58px; height:58px; border-radius:50%}
@@ -34,6 +35,15 @@
           <img src="./last-port-casebook/icon.png" alt="">
           <h2>The Last Port Casebook</h2>
           <small>100 mystery puzzles &amp; companion answer book →</small>
+        </a>
+        <button type="button" hidden>Download for offline use</button>
+        <p role="status"></p>
+      </article>
+      <article data-book="prism-cabinet" data-edition="prism-volume-1-20">
+        <a class="cover prism-cover" href="./prism-cabinet/index.html">
+          <img src="./prism-cabinet/icon.png" alt="">
+          <h2>The Prism Cabinet</h2>
+          <small>20 visual, optical, lateral-thinking and logic challenges →</small>
         </a>
         <button type="button" hidden>Download for offline use</button>
         <p role="status"></p>

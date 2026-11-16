@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320" viewBox="0 0 640 320"><rect x="0" y="0" width="640" height="320" fill="#f8f4e9" />
+<rect x="264" y="35" width="110" height="240" fill="#d9c4a2" class="screen"/>
+<line x1="112" y1="254" x2="264" y2="178" stroke="#243f50" stroke-width="4" class="left-track"/>
+<line x1="374" y1="93" x2="486" y2="37" stroke="#243f50" stroke-width="4" class="track-A"/>
+<text x="504" y="43.0" text-anchor="start" fill="#243f50" font-family="system-ui, sans-serif" font-weight="600" font-size="18">A</text>
+<line x1="374" y1="123" x2="486" y2="67" stroke="#243f50" stroke-width="4" class="track-B"/>
+<text x="504" y="73.0" text-anchor="start" fill="#243f50" font-family="system-ui, sans-serif" font-weight="600" font-size="18">B</text>
+<line x1="374" y1="147" x2="486" y2="91" stroke="#243f50" stroke-width="4" class="track-C"/>
+<text x="504" y="97.0" text-anchor="start" fill="#243f50" font-family="system-ui, sans-serif" font-weight="600" font-size="18">C</text>
+<text x="320" y="298" text-anchor="middle" fill="#243f50" font-family="system-ui, sans-serif" font-weight="600" font-size="17">Which stroke continues behind the screen?</text></svg>
