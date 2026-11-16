@@ -1,6 +1,6 @@
 'use strict';
 const CACHE_PREFIX = 'books-field-home:' + self.registration.scope + ':';
-const EDITION = '2026.11.16-offline-guides-r1';
+const EDITION = '2026.11.16-food-reference-r1';
 const READER_EDITION = EDITION + '-jump';
 const CACHE = CACHE_PREFIX + READER_EDITION;
 const CORE = [

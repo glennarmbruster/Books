@@ -250,6 +250,32 @@ body:has(#guide-finder[open]){overflow:hidden}
 
 @media(max-width:899px){.guide-head{gap:6px}.guide-box{padding:18px}.guide-head h2{font-size:29px}}
 @media(max-width:500px){header.top .wrap{gap:6px}header.top h1{font-size:21px}.syncbadge span{display:none}.syncbadge{padding:5px}.reader-layout{gap:10px}}
+
+.food-reference {font-size:1rem;line-height:1.55}
+.reference-contents {columns:2;column-gap:2rem;padding-left:1.3rem}
+.reference-contents li {break-inside:avoid;margin:.4rem 0}
+.reference-contents a {color:var(--accent)}
+.reference-section {margin-top:2.2rem;scroll-margin-top:1rem}
+.reference-section h3 {font-family:Georgia,serif;font-size:1.4rem;font-weight:normal}
+.reference-note {font-size:.9rem;color:var(--muted)}
+.reference-table {border-collapse:collapse;width:100%;table-layout:fixed;line-height:1.45;font-size:.92rem}
+.reference-table caption {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.reference-table th,.reference-table td {padding:.75rem .6rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.reference-table thead {background:var(--bg)}
+.reference-table th:first-child {width:24%}
+.reference-table tbody th {font-weight:600}
+.reference-label {display:none}
+@media(max-width:680px) {
+ .reference-contents {columns:1}
+ .reference-table,.reference-table tbody {display:block;width:100%}
+ .reference-table thead {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+ .reference-table tr {display:block;margin:0 0 1.4rem;border:1px solid var(--line);border-radius:6px}
+ .reference-table th,.reference-table td,.reference-table th:first-child {display:block;width:auto;padding:.55rem .75rem}
+ .reference-table tbody th {background:var(--bg)}
+ .reference-table td:last-child {border-bottom:0}
+ .reference-label {display:block;font-size:.8em;font-weight:700;color:var(--muted);margin-bottom:.15em}
+}
+
 </style>
 </head>
 <body>
@@ -1199,7 +1225,7 @@ shp-103 shp-104 shp-105 shp-106 shp-107 shp-108 shp-109 shp-110 shp-111 shp-112 
 shp-115 shp-116 shp-117 shp-118 shp-119 shp-120 shp-121 shp-122 shp-123 shp-124 shp-125 shp-126
 shp-127 shp-128 shp-129 shp-130 shp-131 shp-132 shp-133 shp-134 shp-135 shp-136 shp-137 shp-138
 shp-139 shp-140 shp-141 shp-142 shp-143 shp-144 shp-145 shp-146 shp-147 shp-148 shp-149 shp-150
-shp-151`.trim().split(/\s+/);
+shp-151 food-001 food-002 food-003 food-004`.trim().split(/\s+/);
 const guideNumbers = new Map(numberedGuideIds.map((id, index) => [id, index + 1]));
 function allGuides() {
   return [...state.customGuides, ...masterGuides];
@@ -1255,7 +1281,7 @@ function filteredGuides() {
     if (ui.filter === 'done' && g.status !== 'done') return false;
     if (ui.filter === 'edited' && !g.isEdited) return false;
     if (!words.length) return true;
-    const hay = [g.title, g.cat, g.sub, g.scenario, g.overview, ...(g.tags || []), ...(g.gear || []), ...(g.supplies || []), ...(g.steps || []), g.notes].join(' ').toLowerCase();
+    const hay = [g.title, g.cat, g.sub, g.scenario, g.overview, ...(g.referenceIntro || []), ...(g.referenceSections || []).flatMap(section => [section.title, ...section.rows.flat()]), ...(g.tags || []), ...(g.gear || []), ...(g.supplies || []), ...(g.steps || []), g.notes].join(' ').toLowerCase();
     return words.every(w => hay.includes(w));
   });
 }
@@ -1320,6 +1346,29 @@ function openFigure(button) {
   frame.scrollTo(0, 0);
 }
 
+function referenceHTML(guide) {
+  if (!guide.referenceSections) return '';
+  const intro = (guide.referenceIntro || []).map(text => `<p>${esc(text)}</p>`).join('');
+  const contents = guide.referenceSections.map((section, index) =>
+    `<li><a href="#reference-${guide.id}-${index}">${esc(section.title)}</a></li>`
+  ).join('');
+  const sections = guide.referenceSections.map((section, index) => {
+    const headers = section.columns.map(label => `<th scope="col">${esc(label)}</th>`).join('');
+    const rows = section.rows.map(row => `<tr>${row.map((cell, column) =>
+      column === 0
+        ? `<th scope="row">${esc(cell)}</th>`
+        : `<td><span class="reference-label" aria-hidden="true">${esc(section.columns[column])}</span>${esc(cell)}</td>`
+    ).join('')}</tr>`).join('');
+    return `<section class="reference-section" id="reference-${guide.id}-${index}">
+      <h3>${esc(section.title)}</h3>
+      ${section.note ? `<p class="reference-note">${esc(section.note)}</p>` : ''}
+      <table class="reference-table"><caption>${esc(section.title)}</caption>
+      <thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></section>`;
+  }).join('');
+  return `<div class="food-reference"><p class="reference-note">Checked ${esc(guide.reviewed)}</p>
+    ${intro}<nav aria-label="Sections in this sheet"><ul class="reference-contents">${contents}</ul></nav>${sections}</div>`;
+}
+
 function guideDetailHTML(id) {
   const g = getGuide(id);
   if (!g) return '<div class="card guide-box empty"><h2>Select a guide</h2><p>Pick any guide from the list to view instructions, edit steps, or add margin notes.</p></div>';
@@ -1361,7 +1410,8 @@ function guideDetailHTML(id) {
 
     ${(g.supplies && g.supplies.length) ? `<div class="sec-h"><span>Supplies &amp; Ingredients</span></div><div class="pill-list">${g.supplies.map(x => renderPill(x, isOwned(x))).join('')}</div>` : ''}
 
-    <div class="sec-h"><span>Step-by-Step Instructions</span></div>
+    ${referenceHTML(g)}
+    ${g.steps?.length ? '<div class="sec-h"><span>Step-by-Step Instructions</span></div>' : ''}
     <ol class="steps">${(g.steps || []).map(s => {
       const added = g.isCustom ? [] : (g.illustrations || []).filter(f => f.step === s && /^[a-z0-9-]+$/.test(f.plate));
       const figures = [...figuresForStep(fieldFigures, g, s), ...added].map(stepFigureHTML).join('');
