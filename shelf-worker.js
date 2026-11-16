@@ -18,7 +18,15 @@ self.addEventListener('fetch', event => {
   const target = url.href === scope ? shelf : url.href;
   // Downloads started on the shelf are handled by the shelf's worker.
   if (target === new URL('field-and-home/Field-and-Home.epub', scope).href) {
-    event.respondWith((async () => await caches.match(target) || fetch(event.request))());
+    event.respondWith((async () => {
+      try {
+        const response = await fetch(event.request);
+        if (response.ok) return response;
+        return await caches.match(target) || response;
+      } catch {
+        return await caches.match(target) || Response.error();
+      }
+    })());
     return;
   }
   if (!assets.includes(target)) return;

@@ -10,18 +10,23 @@
       "title": "Set up Friendswood alerts on both phones",
       "scenario": "One of you is in the garden while the other is out of town. A water notice sent to only one phone leaves half the household guessing.",
       "diff": "Easy",
-      "time": "10 minutes",
+      "time": "Allow 15–20 minutes for both phones",
       "gear": [
         "Both phones"
       ],
       "supplies": [],
       "steps": [
-        "Open the city’s emergency notifications page below and choose Sign Up. Each of you should register the phone or email you actually check.",
-        "Enter the address you want covered. Some alerts target a specific geographic area, so confirm the street and contact information.",
-        "Save the city page as a bookmark. Show each other where a notice will appear and choose a second way to receive local news if cellular service fails.",
-        "After a move or phone change, return to the city page to update the subscription."
+        "Before a storm, get both phones, your street address and the email each person checks. The instructions here work offline. Sending the registration takes internet access. If you need help getting signed up, call Friendswood Emergency Management at 281-996-3335 during office hours.",
+        "On the first phone, open the city’s Emergency Notifications page in References. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
+        "Choose your language and enter your name, email and user ID. Your email can be your user ID. Choose a password with at least eight characters, including uppercase, lowercase, a number and a symbol. Enter it again to confirm.",
+        "Enter the number of the phone in your hand and select Mobile. To receive texts, check Opt-In to Public Service SMS Alerts. Leave Group Code blank unless you were given one. Review the terms, check the agreement box and tap Create Account.",
+        "Complete the phone verification when prompted. For a text, enter the code from the message. For an automated call, follow its instructions. If nothing arrives, recheck the number before requesting another verification.",
+        "In your profile, add or confirm the home street address, including any unit number. Some city warnings go only to addresses inside the affected area. Check your saved address and delivery choices before signing out.",
+        "Repeat on the second phone with that person’s details. Each of you should be able to sign back in and see the correct number and home address. When the city next issues a test or notice, check both phones.",
+        "Check the phone’s separate wireless emergency alerts too. On a U.S. iPhone open Settings, then Notifications, and scroll to Government Alerts. Review Emergency Alerts and Public Safety Alerts. On Android, search Settings for “wireless emergency alerts.” These settings control broadcast warnings. Friendswood still needs your city registration for local calls and texts.",
+        "After a move or new phone number, use Modify or Unsubscribe on the same city page. If cell service fails, listen to local weather bulletins on a battery-powered NOAA radio (Houston, 162.400 MHz)."
       ],
-      "overview": "A city subscription connects the warning to your address. Two reachable contacts give the household a second chance to act on it.",
+      "overview": "Enrollment details checked November 16, 2026. Use the city link for later changes. A city subscription lets Friendswood send local warnings by phone, text or email.",
       "tags": [
         "before the storm"
       ],
@@ -29,11 +34,35 @@
         [
           "City of Friendswood · Emergency notifications",
           "https://www.ci.friendswood.tx.us/618/Emergency-Notifications"
+        ],
+        [
+          "Smart911 · Friendswood registration form",
+          "https://www.smart911.com/smart911/ref/reg.action?pa=friendswood"
+        ],
+        [
+          "Smart911 · Account and phone verification",
+          "https://www.smart911.com/faqContent.html"
+        ],
+        [
+          "City of Friendswood · Emergency Management",
+          "https://www.ci.friendswood.tx.us/217/Emergency-Management"
+        ],
+        [
+          "National Weather Service · Texas transmitters and county codes",
+          "https://www.weather.gov/nwr/county_coverage?State=TX"
+        ],
+        [
+          "Apple · Government alert settings",
+          "https://support.apple.com/guide/iphone/change-notification-settings-iph7c3d96bab/ios"
+        ],
+        [
+          "Google · Android emergency alerts",
+          "https://support.google.com/android/answer/9319337?hl=en"
         ]
       ],
       "illustrations": [
         {
-          "step": "Open the city’s emergency notifications page below and choose Sign Up. Each of you should register the phone or email you actually check.",
+          "step": "On the first phone, open the city’s Emergency Notifications page in References. Under Friendswood Alerts, tap Sign up for Alerts. The next page says City of Friendswood – TX Alerts and is hosted by Smart911. The City Newsletter is a separate subscription.",
           "plate": "paired-alerts",
           "title": "Register each person’s usual contact",
           "alt": "A home address branches to two different phones. Each person has their own registration.",
@@ -140,7 +169,7 @@
       "steps": [
         "Choose a primary and a backup destination outside the likely affected area. Call ahead about availability, accessibility and pets.",
         "Write the addresses, contact numbers and access needs on paper. Identify alternate routes without assuming a mapped road will be open.",
-        "Agree who checks official evacuation instructions and closures, and who contacts the destination. Follow current routing from authorities.",
+        "Give one person the host phone numbers and the other the paper map. Mark both destinations and a dry alternative before storm season. During an evacuation, get current orders from Friendswood Alerts or broadcast radio and follow local traffic control. A printed route cannot tell you which roads are open.",
         "Practice locating both destinations without internet. If a route is covered in water or barricaded, turn around and seek an official alternative."
       ],
       "overview": "A destination becomes usable when a person can receive you and a safe route remains available. Keep the two contacts beside the household’s departure list.",
@@ -155,6 +184,10 @@
         [
           "National Weather Service · During a flood",
           "https://www.weather.gov/safety/flood-during"
+        ],
+        [
+          "City of Friendswood · Emergency Management",
+          "https://www.ci.friendswood.tx.us/217/Emergency-Management"
         ]
       ],
       "illustrations": [
@@ -184,6 +217,7 @@
       "steps": [
         "Ask the person what help they want with transfers, directions and communication. Write their preferences in their words.",
         "With permission, ask a primary helper and a backup how they can help. Confirm the vehicle can accommodate the person and equipment.",
+        "In Texas, call 2-1-1 before an emergency and ask for STEAR registration. Have the home address, callback number and specific transport or equipment needs ready. The registry helps local planners. Keep your own ride and backup arrangements because registration does not guarantee pickup.",
         "Call the destination to verify step-free access, charging outlets, service-animal arrangements and any other specific need.",
         "Walk the route to the vehicle together in daylight. Note any barrier and arrange qualified help with transfers that cannot be made safely."
       ],
@@ -195,6 +229,10 @@
         [
           "Ready.gov · Family emergency planning",
           "https://www.ready.gov/sites/default/files/2021-11/are-you-ready-guide.pdf"
+        ],
+        [
+          "Texas Division of Emergency Management · STEAR registration",
+          "https://tdem.texas.gov/stear/"
         ]
       ],
       "illustrations": [
@@ -262,7 +300,8 @@
         "Allow at least one gallon per person per day for at least three days. For two people the starting amount is six gallons. Plan extra for heat, illness and pets.",
         "Add the labeled volumes of the containers. Six one-gallon jugs or forty-eight 16-fluid-ounce bottles each supply six gallons.",
         "Choose a cool location away from sunlight, chemicals and areas likely to flood. Store manageable containers where both people can lift them.",
-        "Date the inventory. Follow commercial bottle dates and replace water you filled into properly sanitized food-grade containers every six months."
+        "For water you fill yourself, wash a food-grade container with soap and rinse. To sanitize the empty container, mix one teaspoon of unscented household bleach (5–9% sodium hypochlorite) into one quart of water. Cap and shake to wet all inside surfaces. After at least 30 seconds, pour out the solution and let the container air-dry. This mixture is for cleaning the container.",
+        "Fill the dry container with safe drinking water, cap tightly and write the fill date on it. Replace home-filled water every six months. Follow the date on commercially bottled water."
       ],
       "overview": "Write the reserve in days as well as gallons. If guests arrive or conditions get hotter, that number immediately tells you what needs reconsidering.",
       "tags": [
@@ -504,7 +543,7 @@
       ],
       "steps": [
         "Read the complete notice, its affected area and its issue time. Preserve a copy while your phone has service.",
-        "For a boil notice, use bottled water or follow the official boiling directions for drinking, brushing teeth, food and ice. Disable the refrigerator’s water and ice dispenser.",
+        "For a Texas boil water notice, use bottled water or bring tap water to a vigorous rolling boil. Start timing once the whole surface keeps bubbling. Boil for two minutes, then cool in a clean, covered container. Follow any different instructions in the notice. Use safe water for drinking, brushing teeth, preparing food and making ice. Turn off the fridge dispenser and ice maker.",
         "For a do-not-drink notice, use bottled water for ingestion and food preparation. Boiling will not remove hazardous chemicals. For a do-not-use notice, avoid all tap-water contact covered by the order.",
         "Place a reminder at every used tap and tell both people. Keep the measures in place until the utility lifts the notice and gives its flushing or ice-disposal instructions."
       ],
@@ -516,6 +555,10 @@
         [
           "CDC · Drinking water advisories",
           "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+        ],
+        [
+          "Texas Commission on Environmental Quality · Understanding boil water notices",
+          "https://www.tceq.texas.gov/drinkingwater/notices/bwn/understanding-bwns"
         ]
       ],
       "illustrations": [
@@ -581,7 +624,9 @@
         "Record the last known time power was on and the first time you noticed the outage. Use the earlier time for planning if the start is uncertain.",
         "Leave doors closed. An unopened refrigerator typically holds safe cold for about four hours. A closed full freezer lasts about 48 hours and a half-full one about 24.",
         "If suitable ice and a cooler are already available, transfer perishables before their safe window ends and hold them at 40°F or below.",
-        "When power returns, use the official food chart to assess each item. Without reliable evidence it stayed cold, discard refrigerated perishables after four hours without power. Never taste-test."
+        "Without evidence the food stayed at 40°F or colder, discard refrigerated perishables after four hours without power. Examples include milk, eggs, meat, fish, leftovers, cooked rice, cut fruit and shredded cheese. If you know they were above 40°F for more than two hours, discard them sooner.",
+        "Intact blocks of hard cheddar or Parmesan, butter, whole uncut fruit and plain bread can generally be kept after a power outage if uncontaminated. Discard doubtful foods without tasting.",
+        "Frozen food with ice crystals still present or a measured temperature of 40°F or below can generally be refrozen or cooked. Discard thawed ice cream and frozen yogurt."
       ],
       "overview": "The door note preserves timing that is easy to forget during a long outage. Ice crystals or a measured temperature of 40°F or below help assess frozen items.",
       "tags": [
@@ -927,7 +972,7 @@
         "Paper or simple spreadsheet"
       ],
       "steps": [
-        "Put the incident date, insurer’s verified number and claim reference on the first page.",
+        "Use the claims number on the insurance declarations page. Give the policy number if available, property address, date of damage and a reachable phone number. Ask for the claim number and adjuster’s contact. Write both at the top of the ledger. In Texas, if you cannot identify your insurer’s number, the state insurance help line is 800-252-3439 on weekdays.",
         "Give each expense a line with date, vendor, amount, purpose and receipt location. Photograph paper receipts while still legible.",
         "For a call, record the representative, time, promised action and date to follow up. Ask for material instructions in writing.",
         "Keep paid amounts, estimates and reimbursements in separate columns. Check discrepancies against the actual policy with the insurer."
@@ -940,6 +985,10 @@
         [
           "FEMA · Documenting storm damage",
           "https://www.fema.gov/print/pdf/node/694490"
+        ],
+        [
+          "Texas Department of Insurance · Help after a storm",
+          "https://www.tdi.texas.gov/consumer/storms/recoverytips.html"
         ]
       ],
       "illustrations": [
@@ -969,7 +1018,7 @@
         "Clean labels"
       ],
       "steps": [
-        "Confirm the end notice covers your address and read the utility’s specific flushing and appliance instructions.",
+        "Wait for the utility to lift the advisory for your address. Write down which taps to run, for how long, and what to do about filters and ice. If you missed the notice, call the supplier on your bill. Friendswood city water customers can call 281-996-3382. Keep using stored safe water until you have those directions.",
         "Identify every affected outlet, dispenser, ice maker and filter. Keep stored safe water available while you work through the list.",
         "Discard affected ice and follow the utility and appliance manufacturer’s directions for flushing, cleaning and any filter replacement. Avoid guessing a universal flushing time.",
         "Mark each outlet complete. Remove reminder labels only once that outlet and its connected equipment are back in service."
@@ -982,6 +1031,10 @@
         [
           "CDC · Drinking water advisories",
           "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+        ],
+        [
+          "City of Friendswood · Water and Wastewater Utilities",
+          "https://www.ci.friendswood.tx.us/211/Water-Wastewater-Utilities"
         ]
       ],
       "illustrations": [
@@ -1155,7 +1208,7 @@
       ],
       "time": "Before smoke arrives or when advised",
       "steps": [
-        "Check local fire and evacuation alerts first. If officials advise leaving, follow that direction. For a smoke event with sheltering advised, check AirNow and choose a room that stays cool and fits everyone overnight.",
+        "Follow local evacuation instructions first. If sheltering during smoke, choose a room that stays cool, has few outside openings and fits everyone. When available, enter your location on the AirNow Fire and Smoke Map and check fine-particle conditions nearby. During an internet outage, use local radio advisories and start reducing exposure if smoke is present.",
         "Close exterior doors and windows. Where the cooling system has a fresh-air intake setting, select recirculation according to its instructions. Keep exits clear.",
         "Place a room-sized air cleaner that does not produce ozone where its vents are clear. Run it continuously at the highest tolerable speed. Avoid frying, burning candles and smoking indoors.",
         "Check on heat, smoke and anyone feeling unwell. If power fails, the room gets too hot or smoke keeps entering, move to a cleaner, cooler building. When outdoor air improves, ventilate the room."
@@ -1172,6 +1225,10 @@
         [
           "EPA · Create a clean room during a wildfire",
           "https://www.epa.gov/emergencies-iaq/create-clean-room-protect-indoor-air-quality-during-wildfire"
+        ],
+        [
+          "AirNow · Using the Fire and Smoke Map",
+          "https://smoke.airnow.gov/how-to-use-this-site/"
         ]
       ],
       "cat": "Household Preparedness & Recovery",
@@ -1217,5 +1274,5 @@
       "supplies": []
     }
   ],
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

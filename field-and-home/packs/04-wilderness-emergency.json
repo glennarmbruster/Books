@@ -282,7 +282,7 @@
       "steps": [
         "Read the utility’s notice for your address and find the sealed water reserve. Set aside enough for drinking, food and brushing teeth.",
         "Mark a clean pouring area and keep the caps with their containers. Pour into individual cups or bottles without dipping hands into the reserve.",
-        "Track the remaining gallons at the end of each day. Contact the utility or an official distribution site before you run short."
+        "Count the remaining gallons each evening and divide by the household’s daily use. Before you run short, call the supplier printed on your water bill and ask where safe water is available. Friendswood city water customers can call Water and Wastewater at 281-996-3382. Record the pickup address, hours and container requirements."
       ],
       "safety": "Boiling cannot remove fuel or other harmful chemicals. Follow do-not-drink and do-not-use instructions.",
       "tags": [],
@@ -296,6 +296,10 @@
         [
           "CDC · Drinking water advisories",
           "https://www.cdc.gov/water-emergency/about/drinking-water-advisories-an-overview.html"
+        ],
+        [
+          "City of Friendswood · Water and Wastewater Utilities",
+          "https://www.ci.friendswood.tx.us/211/Water-Wastewater-Utilities"
         ]
       ]
     },
@@ -845,7 +849,7 @@
       "steps": [
         "Photograph the entire plant, leaves in their original arrangement, and any visible flower or fruit without tasting or collecting it.",
         "Record location, habitat and season. Compare multiple identifying traits in a regional guide and ask a qualified local botanist about lookalikes.",
-        "If any trait is uncertain, leave it uneaten. If someone already ate an unknown plant, call Poison Control promptly."
+        "If any trait is uncertain, leave it uneaten. If someone already ate an unknown plant, call Poison Control promptly. In the U.S., Poison Control is 1-800-222-1222. If the person collapses, has a seizure, struggles to breathe or cannot be awakened, call 911 immediately."
       ],
       "safety": "A phone identification result or a single photograph cannot establish edibility.",
       "tags": [
@@ -859,6 +863,10 @@
         [
           "National Park Service · Plant identification",
           "https://www.nps.gov/anch/faqs.htm"
+        ],
+        [
+          "Poison Control · Immediate assistance",
+          "https://www.poison.org/need-immediate-assistance"
         ]
       ],
       "illustrations": [
@@ -982,7 +990,7 @@
       ],
       "supplies": [],
       "steps": [
-        "Before leaving, look up current declination for the route and date. Write the angle and E or W on the paper map. Identify the map’s true-north reference using its legend. Grid north and magnetic north can each point somewhere else.",
+        "Before departure, enter the route coordinates and trip date in NOAA’s magnetic declination calculator. Copy the result in degrees and its E or W direction onto the paper map beside the date and location. Use the map legend to identify true north. An old map’s magnetic arrow may be out of date. Keep the annotated map with the compass.",
         "Lay the baseplate edge from your known starting point toward the destination. The direction-of-travel arrow must point toward the destination. Rotate the dial until its orienting lines run parallel to the map’s true north–south direction, with the north end toward the top of that reference. Read the true bearing at the index.",
         "On a compass without adjustable declination, convert the true bearing to a magnetic bearing: subtract east declination or add west declination. For practice, 80° true with 5° east gives 75° magnetic. Set that result at the index. With an adjustable compass already configured for local declination per its manual, use the true bearing directly.",
         "Step away from vehicles and electronics. Hold the compass level and turn your body until the north tip of the needle aligns with the orienting arrow. Sight a reachable landmark in the direction of travel. Check terrain and hazards before moving toward it.",
@@ -1175,7 +1183,8 @@
         "Laminated family comms card"
       ],
       "steps": [
-        "Find the county for your address. Friendswood spans Galveston and Harris counties. For a receiver with SAME county filtering, use the National Weather Service county and station listing and the receiver manual to select the correct code and a transmitter serving the address.",
+        "On the receiver, tune the weather band to Houston KGG68 at 162.400 MHz or Galveston KHB40 at 162.550 MHz. Both cover Harris and Galveston counties. Listen at your usual spot and choose the clearer broadcast.",
+        "If the radio has SAME (county filtering), open its location or county setting. Select Texas and your county by name, or enter all six digits: 048167 for Galveston County, 048201 for Harris County. Use the county on your property or voter record. To cover both, choose multiple counties and save both codes. If unsure, leave all counties enabled until you can check.",
         "Put the weather receiver where you will use it during an outage. Listen for a clear forecast, enable alerts and confirm backup power. Check that it receives a scheduled local test before depending on it overnight.",
         "For two-way radios you are authorized to operate, agree on the same channel and settings. Write down who calls whom, the next check-in time and what each person does if the call fails. Test from the actual rooms or nearby locations you expect to use.",
         "On a phone, use low-power mode when appropriate. Airplane mode turns off cellular calls, texts and cellular emergency alerts. Keep a reachable device or a designated listening period when you are expecting instructions."
@@ -1199,6 +1208,10 @@
         [
           "National Weather Service · Using SAME county codes",
           "https://www.weather.gov/dsb/usingsame"
+        ],
+        [
+          "National Weather Service · Texas transmitters and county codes",
+          "https://www.weather.gov/nwr/county_coverage?State=TX"
         ]
       ]
     },
@@ -1218,7 +1231,8 @@
         "Departure essentials"
       ],
       "steps": [
-        "Check your address against current official evacuation instructions, storm-surge and flood warnings. Leave when ordered. Ask the local emergency management office about transport early if needed.",
+        "Monitor Friendswood Alerts and local broadcasts for the area named in the order. On a battery weather radio, try Houston 162.400 MHz or Galveston 162.550 MHz. Compare the named area with your home on the paper map. Leave promptly when ordered.",
+        "For transport planning before a storm, call Friendswood Emergency Management at 281-996-3335. In Texas you can also call 2-1-1 to register assistance needs with STEAR. Arrange a primary and backup ride yourself. For an immediate life-threatening emergency, call 911.",
         "If leaving, confirm a receiving destination and use official open routes. Avoid water-covered roads and allow extra time for pets, medical needs and traffic.",
         "If officials advise sheltering, choose a sturdy safe location appropriate to the hazard. An interior room away from windows helps in high wind; rising water requires higher ground. Monitor alerts throughout."
       ],
@@ -1238,11 +1252,23 @@
         [
           "National Weather Service · During a flood",
           "https://www.weather.gov/safety/flood-during"
+        ],
+        [
+          "City of Friendswood · Emergency Management",
+          "https://www.ci.friendswood.tx.us/217/Emergency-Management"
+        ],
+        [
+          "Texas Division of Emergency Management · STEAR registration",
+          "https://tdem.texas.gov/stear/"
+        ],
+        [
+          "National Weather Service · Texas transmitters and county codes",
+          "https://www.weather.gov/nwr/county_coverage?State=TX"
         ]
       ],
       "illustrations": [
         {
-          "step": "Check your address against current official evacuation instructions, storm-surge and flood warnings. Leave when ordered. Ask the local emergency management office about transport early if needed.",
+          "step": "Monitor Friendswood Alerts and local broadcasts for the area named in the order. On a battery weather radio, try Houston 162.400 MHz or Galveston 162.550 MHz. Compare the named area with your home on the paper map. Leave promptly when ordered.",
           "plate": "atlas-sur-134",
           "title": "Read the evacuation zone",
           "alt": "Read the evacuation zone. Example notice. Match your address to the issuing authority’s zone map, then read the action and time for that zone.",
@@ -1744,6 +1770,7 @@
       ],
       "steps": [
         "Keep physical photocopies and encrypted digital scans of driver's licenses, passports, marriage certificate, property deed/title, auto/home insurance policies, and pet vaccine records in one grab-and-go waterproof pouch.",
+        "Before packing the encrypted copy, disconnect the reading device from Wi-Fi and cellular. Open one scan, zoom in on the policy number and check that your partner knows how to unlock it. If the file only opens online, save a local copy and repeat the test.",
         "Record video walkthroughs of every room, closet, garage, and serial numbers of major electronics/appliances once a year for effortless insurance claims.",
         "Include a laminated card with local/out-of-state family phone numbers, doctor/vet numbers, bank/insurance claim lines, and utility account numbers."
       ],
@@ -1919,7 +1946,7 @@
       "time": "Before departure",
       "steps": [
         "Charge the device, confirm that its satellite service is active for your route and sync the intended contacts. Save the model’s instructions offline. Let both partners locate the buttons and read how to start a real SOS. Reserve the SOS control for an actual emergency.",
-        "Go outside with an open view of the sky. Follow the model’s satellite test procedure, including any instruction to disable a paired phone’s cellular connection. Wait for the return confirmation. A queued message alone does not complete the test.",
+        "Take the messenger outdoors with a clear view of the sky. On an inReach Mini 2, press OK from the home screen, select Service Plan, then Test Service. Press OK and choose Begin Test. Leave it under open sky until confirmation returns. For another model, save its test sequence beside the device before leaving.",
         "Send your home contact an ordinary check-in and have them reply. Both partners should read the reply and locate the device after it is packed. Write down when the home contact should act on a missed return and whom they should call.",
         "If a test fails, check the subscription and device sync, allow time under open sky and repeat. Resolve the failure or revise the trip’s communication plan before setting off.",
         "In a real emergency beyond cell service, initiate SOS using the model’s instructions. For example, on the inReach Mini 2 lift the protective cap, hold SOS and allow the countdown to finish. When the response center messages, describe what happened, how many people need help and any immediate hazard. Keep the device available for replies."
@@ -1940,6 +1967,10 @@
         [
           "Garmin · inReach Mini 2 SOS instructions",
           "https://www8.garmin.com/manuals/webhelp/GUID-802DEF62-EBB2-463C-8C51-C58FB29F89E3/EN-US/GUID-1A05801A-FC6D-401A-9E38-AA13923E9E96.html"
+        ],
+        [
+          "Garmin · inReach Mini 2 test sequence",
+          "https://www8.garmin.com/manuals/webhelp/GUID-802DEF62-EBB2-463C-8C51-C58FB29F89E3/EN-US/GUID-A3578187-6312-44A5-A6A3-AE743F590A73.html"
         ]
       ],
       "cat": "Wilderness & Emergency",
@@ -1989,5 +2020,5 @@
     }
   },
   "count": 53,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

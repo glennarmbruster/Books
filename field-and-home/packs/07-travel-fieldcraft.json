@@ -20,7 +20,7 @@
       ],
       "steps": [
         "Checked luggage often arrives at your cabin door between 4:00 PM and 8:00 PM—pack everything needed for Day 1 (medications, swimsuits, dinner clothes, phone chargers, and travel documents) in your carry-on.",
-        "Complete the e-Muster safety video on the cruise line's app while waiting in the terminal, then walk straight to your physical muster station the moment you board to check in within 5 minutes.",
+        "Read the muster station assigned on your boarding pass, cruise card or cabin safety notice. If your line offers an electronic safety briefing, complete it and check in at the station as instructed. Without the app, show your card to a crew member and ask where and when to attend the briefing. Walk the route from the cabin together.",
         "Set phones to Airplane Mode + Ship Wi-Fi immediately upon boarding (before sailing out of Galveston/port) to avoid brutal maritime cellular roaming charges."
       ],
       "safety": "Keep passports, cash, jewelry, and all prescription medications in your personal carry-on—never in checked bags handed to porters.",
@@ -35,7 +35,7 @@
       "overview": "Pack for the first afternoon and learn the ship’s muster procedure while essentials are still in your hand.",
       "illustrations": [
         {
-          "step": "Complete the e-Muster safety video on the cruise line's app while waiting in the terminal, then walk straight to your physical muster station the moment you board to check in within 5 minutes.",
+          "step": "Read the muster station assigned on your boarding pass, cruise card or cabin safety notice. If your line offers an electronic safety briefing, complete it and check in at the station as instructed. Without the app, show your card to a crew member and ask where and when to attend the briefing. Walk the route from the cabin together.",
           "plate": "atlas-trv-101",
           "title": "Find the assigned muster station",
           "alt": "Find the assigned muster station. On the example deck plan, the marker shows station B. Confirm your own letter or number on the ship’s assigned-station information.",
@@ -254,7 +254,9 @@
       ],
       "steps": [
         "Check passport expiration at least 6 months ahead—many countries deny boarding if your passport expires within 6 months of your return date.",
-        "Download offline Google Maps regions, Google Translate offline language packs, and airline/hotel confirmations onto your phone before leaving home.",
+        "On Wi-Fi, open Google Maps on the phone you will carry. Tap your profile picture, Offline maps, then Select your own map. Frame the airport, lodging and routes between them. Tap Download and wait for completion.",
+        "In Google Translate, tap the language name to open the list. Tap the download arrow beside each language you need. If a language has no download option, save a few essential phrases in a note.",
+        "Save hotel and airline confirmations as screenshots or local files. Turn on Airplane Mode and turn Wi-Fi off. Open the map, translate a short phrase and read each confirmation number. Restore your connections after the test.",
         "Always pay in LOCAL CURRENCY when credit card terminals ask 'USD or Local Currency?'—declining Dynamic Currency Conversion avoids 5%–10% hidden exchange markups, and use bank-affiliated ATMs inside bank lobbies rather than standalone street ATMs."
       ],
       "safety": "Split cash and backup credit cards across two separate locations (wallet + hidden money belt/bag pocket) so one pickpocket never strands you.",
@@ -269,12 +271,22 @@
       "overview": "Separate recovery details from the device they recover. Keep essential contact numbers accessible on paper.",
       "illustrations": [
         {
-          "step": "Download offline Google Maps regions, Google Translate offline language packs, and airline/hotel confirmations onto your phone before leaving home.",
+          "step": "On Wi-Fi, open Google Maps on the phone you will carry. Tap your profile picture, Offline maps, then Select your own map. Frame the airport, lodging and routes between them. Tap Download and wait for completion.",
           "plate": "atlas-trv-140",
           "title": "Check the downloaded area",
           "alt": "Check the downloaded area. The dotted boundary is the saved region. Open the map offline and follow the entire planned out-and-back route inside it.",
           "caption": "The dotted boundary is the saved region. Open the map offline and follow the entire planned out-and-back route inside it."
         }
+      ],
+      "sources": [
+        [
+          "Google Maps · Save an area on iPhone or iPad",
+          "https://support.google.com/maps/answer/6291838?co=GENIE.Platform%3DiOS&hl=en"
+        ],
+        [
+          "Google Translate · Download languages",
+          "https://support.google.com/translate/answer/6142473?co=GENIE.Platform%3DiOS&hl=en"
+        ]
       ]
     },
     {
@@ -968,9 +980,9 @@
         "Basic OTC cruise pharmacy kit (sea bands, meclizine, ibuprofen, cold tabs, band-aids, hydrocortisone — ship gift shops charge $20+ for basic meds)"
       ],
       "steps": [
-        "Standard US health insurance and Medicare do NOT cover medical evacuation from a ship or foreign port (air ambulance evacuations from the Caribbean cost $30,000–$80,000+)—always buy a travel medical + MedEvac policy before sailing.",
+        "Before sailing, phone the number on your medical insurance card and ask what it covers on the ship and in each port. Check medical evacuation separately. Write down the policy number, 24-hour assistance number that works from abroad, and whether prior authorization is required. Keep a paper copy with your passport.",
         "Pack a compact OTC symptom kit (cold/sinus meds, antidiarrheal, motion sickness pills, thermometer, antibiotic ointment) so a minor cough or blister doesn't require an expensive shipboard infirmary visit.",
-        "If visiting the ship's medical center, request itemized diagnostic and billing codes immediately so you can submit for insurance reimbursement at home."
+        "For an emergency onboard, call the ship’s emergency number posted by the cabin phone or alert a crew member immediately. When safe, notify the insurer and ask where to send the claim. Request an itemized bill, medical report and payment receipt before leaving the ship."
       ],
       "safety": "Visit the ship medical center immediately for persistent vomiting/diarrhea (norovirus isolation/IV hydration) or chest pain.",
       "tags": [
@@ -981,7 +993,13 @@
         "packing"
       ],
       "scenario": "An illness develops at sea and your regular clinic is unreachable.",
-      "overview": "Keep the ship medical number and insurance assistance number handy. Retain medical and payment records for follow-up ashore."
+      "overview": "Keep the ship medical number and insurance assistance number handy. Retain medical and payment records for follow-up ashore.",
+      "sources": [
+        [
+          "CDC · Travel and medical evacuation insurance",
+          "https://wwwnc.cdc.gov/travel/page/insurance"
+        ]
+      ]
     },
     {
       "id": "trv-127",
@@ -1035,9 +1053,10 @@
         "1 full change of clothes + toothbrush in personal item backpack"
       ],
       "steps": [
-        "When a flight delays or cancels, stand in the gate agent line WHILE simultaneously calling the airline's customer service line AND rebooking yourself inside the airline's mobile app (app rebooking often locks in the last remaining seats before gate lines move).",
+        "At the airline desk, give your booking reference, final destination and any onward connection. Ask what replacement flights are confirmed and how your bags will be routed. Without data, use the staffed desk or the official number on your itinerary. Check the new boarding pass before leaving.",
         "Under US DOT rules, if an airline cancels your flight or causes a significant schedule change and you choose not to travel, you are entitled to a full cash refund (not just a voucher) regardless of ticket type.",
-        "Always pack 24 hours of fresh underwear, socks, shirt, and medications inside your under-seat personal backpack in case overhead bin space forces gate-checking your roller bag."
+        "Always pack 24 hours of fresh underwear, socks, shirt, and medications inside your under-seat personal backpack in case overhead bin space forces gate-checking your roller bag.",
+        "If the bag is missing at arrival, take the baggage tag and boarding pass to the airline’s baggage office before leaving the airport. Give a description, local delivery address and phone. Get a written report with its tracking number and the airline’s claim deadline. Keep receipts for essential replacements."
       ],
       "safety": "Photograph your checked suitcase exterior and interior contents before zipping so lost-baggage claims are effortless.",
       "tags": [
@@ -1057,6 +1076,12 @@
           "alt": "Side view of a seat and the bag under it. A highlighted pocket faces the person reaching in.",
           "caption": "Pack medication and a change of clothes in the personal item that stays with you."
         }
+      ],
+      "sources": [
+        [
+          "U.S. Department of Transportation · Baggage problems",
+          "https://www.transportation.gov/airconsumer/plane-talk-tips-avoiding-baggage-issues"
+        ]
       ]
     },
     {
@@ -1465,9 +1490,10 @@
       ],
       "supplies": [],
       "steps": [
-        "Download full offline map tiles for your entire destination county/park over Wi-Fi before leaving cell service—your phone's GPS chip receives satellite signals directly with zero cell towers or data required.",
-        "Drop a 'Parked Car / Trailhead' waypoint pin before stepping onto any trail.",
-        "Install the free What3Words app: it divides the entire planet into 3x3-meter squares labeled with three simple words (e.g., ///filled.count.soap) accepted by 911 dispatchers nationwide to pinpoint exact trail or roadside locations."
+        "On Wi-Fi, open Google Maps, tap your profile picture, then Offline maps and Select your own map. Frame the approach roads, parking area and return route. Tap Download. For hiking, also carry a paper trail map or a downloaded topographic map that actually shows your trail.",
+        "With cellular and Wi-Fi off, zoom along the entire route. Check that trail junctions and the way back are visible. Google Maps offline driving directions work within the saved area. Do not count on it for offline walking directions or live closures.",
+        "At the trailhead, hold a finger on the parking spot to drop a pin. Copy its displayed latitude and longitude, including minus signs, onto the paper map. Label this as the car’s position. Mark the trail name and nearest junction too.",
+        "To report your location, give your current coordinates, their format (for example, decimal degrees), the trail name and the last junction passed. Read the numbers back with the dispatcher. If you already use what3words, give the three words as an extra detail if requested. A saved map can show your position without a data connection. Calling for help still needs a working communication channel."
       ],
       "safety": "Cold temperatures drain smartphone lithium batteries rapidly—keep your phone in an inside warm pocket when hiking in winter.",
       "tags": [
@@ -1481,12 +1507,18 @@
       "overview": "Test the downloaded map in airplane mode. Write down coordinates and their format so a dispatcher can interpret them.",
       "illustrations": [
         {
-          "step": "Download full offline map tiles for your entire destination county/park over Wi-Fi before leaving cell service—your phone's GPS chip receives satellite signals directly with zero cell towers or data required.",
+          "step": "On Wi-Fi, open Google Maps, tap your profile picture, then Offline maps and Select your own map. Frame the approach roads, parking area and return route. Tap Download. For hiking, also carry a paper trail map or a downloaded topographic map that actually shows your trail.",
           "plate": "atlas-trv-140",
           "title": "Check the downloaded area",
           "alt": "Check the downloaded area. The dotted boundary is the saved region. Open the map offline and follow the entire planned out-and-back route inside it.",
           "caption": "The dotted boundary is the saved region. Open the map offline and follow the entire planned out-and-back route inside it."
         }
+      ],
+      "sources": [
+        [
+          "Google Maps · Save an area on iPhone or iPad",
+          "https://support.google.com/maps/answer/6291838?co=GENIE.Platform%3DiOS&hl=en"
+        ]
       ]
     },
     {
@@ -1906,5 +1938,5 @@
     }
   },
   "count": 51,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

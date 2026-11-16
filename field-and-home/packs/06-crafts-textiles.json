@@ -2426,10 +2426,11 @@
         "Food-grade epoxy/silicone sealer (for multi-use)"
       ],
       "steps": [
-        "Import any black-and-white silhouette SVG into CookieCAD (free web tool) to auto-generate a tapered 0.6mm–0.8mm sharp cutting blade, sturdy 3mm comfort handle rim, and matching interior embosser stamp.",
-        "Print in PLA at 0.2mm layer height with 3 walls and 15% infill; hand-wash ONLY in cool/lukewarm water (dishwashers warp PLA immediately), or press through plastic wrap over dough for effortless cleanup."
+        "Print or trace the silhouette at the size you want. Check small corners and narrow gaps by cutting the outline from paper. For a stencil or a non-food stamp you can use the paper pattern immediately.",
+        "To model a cutter with installed CAD software, import the SVG at the measured size. Close any gaps in the outline. Offset it to make a narrow wall, extrude the wall upright and add a wider rim to the hand side. For CookieCAD, upload the silhouette while online and export the finished STL. Save the SVG, STL and sliced print file locally before heading to the workshop.",
+        "Print a prototype and test the outline in modeling clay. Check that the grip is comfortable and small details release cleanly. For edible dough, transfer the paper pattern to food-safe parchment and cut around it with a clean kitchen tool, or use a cutter made for food contact."
       ],
-      "safety": "Raw 3D-printed layer lines can trap flour and bacteria—use with plastic wrap over dough or coat with FDA-compliant food-safe resin for repeated baking.",
+      "safety": "Keep workshop prototypes and modeling clay out of the food-preparation area. A printed prototype is useful for checking shape and fit.",
       "tags": [
         "cookie-cutters",
         "3d-printing",
@@ -2441,7 +2442,7 @@
       "overview": "Test a paper outline at serving size. Use only materials and finishes suitable for repeated food contact when choosing the actual tool.",
       "illustrations": [
         {
-          "step": "Import any black-and-white silhouette SVG into CookieCAD (free web tool) to auto-generate a tapered 0.6mm–0.8mm sharp cutting blade, sturdy 3mm comfort handle rim, and matching interior embosser stamp.",
+          "step": "To model a cutter with installed CAD software, import the SVG at the measured size. Close any gaps in the outline. Offset it to make a narrow wall, extrude the wall upright and add a wider rim to the hand side. For CookieCAD, upload the silhouette while online and export the finished STL. Save the SVG, STL and sliced print file locally before heading to the workshop.",
           "plate": "atlas-crf-161",
           "title": "Read the cutter wall in section",
           "alt": "Read the cutter wall in section. The tapered cutting edge is narrow. The reinforced body widens toward the grip so the hand presses a broader surface.",
@@ -2466,8 +2467,8 @@
         "90% isopropyl alcohol"
       ],
       "steps": [
-        "Power down as the manual directs and identify smooth rods, lead screws and belts before cleaning. Follow the maintenance instructions for that exact printer. Some rods or lead-screw nuts must stay free of lubricant.",
-        "Brush plastic dust out of extruder drive gear teeth and check X/Y belt tension (belts should pluck like a low bass guitar string without slack)."
+        "Power off and unplug the printer. On a Prusa i3, identify the long polished rods, the threaded Z lead screws and the toothed belts. Wipe dust from smooth rods with a clean lint-free cloth. Keep lubricant off belts, Z lead screws and their trapezoid nuts. For another printer, put its model-specific lubrication page with the tools.",
+        "With power off, remove loose plastic dust from accessible extruder gear teeth with a small brush. Inspect belts for damage and check the pulley is secure. Compare a familiar test print before and after any adjustment. Belt tension depends on the model."
       ],
       "safety": "Power off and unplug the printer before cleaning stepper belts or extruder gears.",
       "tags": [
@@ -2481,7 +2482,7 @@
       "overview": "Inspect belts, screws and feed gears against the manufacturer’s service instructions. Compare a familiar print after each adjustment.",
       "illustrations": [
         {
-          "step": "Power down as the manual directs and identify smooth rods, lead screws and belts before cleaning. Follow the maintenance instructions for that exact printer. Some rods or lead-screw nuts must stay free of lubricant.",
+          "step": "Power off and unplug the printer. On a Prusa i3, identify the long polished rods, the threaded Z lead screws and the toothed belts. Wipe dust from smooth rods with a clean lint-free cloth. Keep lubricant off belts, Z lead screws and their trapezoid nuts. For another printer, put its model-specific lubrication page with the tools.",
           "plate": "atlas-crf-162",
           "title": "Identify the three moving parts",
           "alt": "Identify the three moving parts. Original Prusa i3 MK3 family. Smooth rods guide the carriage, a toothed belt moves it horizontally, and threaded lead screws raise the X assembly.",
@@ -3068,5 +3069,5 @@
     }
   },
   "count": 76,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

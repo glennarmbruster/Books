@@ -56,7 +56,7 @@
       "steps": [
         "Orient your greenhouse ridge East-to-West in Friendswood so the long south-facing wall captures maximum low-angle winter sun from November through February.",
         "Choose twin-wall polycarbonate panels (6mm–8mm) over single-layer glass or thin film—twin-wall channels trap insulating air for winter freezes AND diffuse harsh Texas sunlight to reduce leaf scorch.",
-        "Follow the manufacturer’s foundation and anchoring detail for the model, site and design wind load. On the Canopia example, check the frame-to-base connections and secure the base to a level foundation. Consult local officials or a qualified installer about coastal wind requirements."
+        "Follow the manufacturer’s foundation and anchoring detail for the model, site and design wind load. On the Canopia example, check the frame-to-base connections and secure the base to a level foundation. Consult local officials or a qualified installer about coastal wind requirements. Before assembly, put the model number, foundation diagram and anchor parts list together on paper. Match each frame-to-base fastening point to the drawing and mark it as installed. If the rated foundation or anchor is unknown, have the installer resolve it before erecting the frame."
       ],
       "safety": "Before a named hurricane makes landfall, latch all roof vents shut (or remove lightweight vents) so wind cannot pressurize and lift the roof.",
       "tags": [
@@ -70,7 +70,7 @@
       "overview": "Consider drainage, prevailing wind and room to reach the anchors. Use the manufacturer’s rated anchoring system for the actual site.",
       "illustrations": [
         {
-          "step": "Follow the manufacturer’s foundation and anchoring detail for the model, site and design wind load. On the Canopia example, check the frame-to-base connections and secure the base to a level foundation. Consult local officials or a qualified installer about coastal wind requirements.",
+          "step": "Follow the manufacturer’s foundation and anchoring detail for the model, site and design wind load. On the Canopia example, check the frame-to-base connections and secure the base to a level foundation. Consult local officials or a qualified installer about coastal wind requirements. Before assembly, put the model number, foundation diagram and anchor parts list together on paper. Match each frame-to-base fastening point to the drawing and mark it as installed. If the rated foundation or anchor is unknown, have the installer resolve it before erecting the frame.",
           "plate": "atlas-fwg-102",
           "title": "Trace the frame to the foundation",
           "alt": "Trace the frame to the foundation. Canopia Harmony 6 × 8 example. Follow the frame to the perimeter base, then the base anchor into the level foundation. Confirm the foundation detail for your site.",
@@ -299,9 +299,10 @@
         "Kelp meal"
       ],
       "steps": [
-        "Yellow leaves with dark green veins on citrus, blueberries, gardenias, and tomatoes in Friendswood indicate iron chlorosis caused by alkaline soil (pH >7.2) locking up iron.",
-        "Apply EDDHA-chelated iron (the ONLY iron chelate that stays soluble above pH 7.2) as a root drench for fast green-up within 10 days, and work elemental sulfur + pine bark fines into soil for gradual long-term pH lowering.",
-        "For tomato/pepper Blossom-End Rot (dark leathery bottom spots): add gypsum (provides calcium without raising pH like lime does) and keep soil moisture steady with mulch and drip lines."
+        "Look closely at the newest leaves. Yellow tissue between green veins can indicate iron chlorosis. Record which plants and leaves are affected, check drainage and test the bed’s pH before choosing an amendment.",
+        "Clear leaves and mulch from the surface. Take a 6-inch-deep slice from 8–10 spots in one bed with a clean trowel. Mix in a clean plastic bucket, remove stones and roots, and air-dry damp soil. Bag about one pint and label it with the bed name. Sample a problem patch separately.",
+        "Identify the crop and affected bed on the Texas A&M AgriLife homeowner soil form. Keep the results with your watering notes. If testing supports iron deficiency in alkaline soil, select a chelated iron labeled for the plant and that pH and use the labeled rate.",
+        "For a dark, sunken spot at the blossom end of a tomato or pepper, first check for alternating dry and saturated soil. Mulch and water evenly at the roots. Use the soil test to decide whether calcium is needed before adding gypsum."
       ],
       "safety": "Avoid agricultural lime in Friendswood soils unless a soil test proves pH is below 6.0—our native clay is already alkaline.",
       "tags": [
@@ -315,12 +316,26 @@
       "overview": "These symptoms have different causes. Record watering and obtain a soil test before making broad nutrient or pH changes.",
       "illustrations": [
         {
-          "step": "Yellow leaves with dark green veins on citrus, blueberries, gardenias, and tomatoes in Friendswood indicate iron chlorosis caused by alkaline soil (pH >7.2) locking up iron.",
+          "step": "Look closely at the newest leaves. Yellow tissue between green veins can indicate iron chlorosis. Record which plants and leaves are affected, check drainage and test the bed’s pH before choosing an amendment.",
           "plate": "atlas-fwg-108",
           "title": "Separate two visible symptoms",
           "alt": "Separate two visible symptoms. One leaf yellows between greener veins. A dark sunken patch at a fruit’s blossom end is a different observation. Confirm the cause before treating.",
           "caption": "One leaf yellows between greener veins. A dark sunken patch at a fruit’s blossom end is a different observation. Confirm the cause before treating."
         }
+      ],
+      "sources": [
+        [
+          "Texas A&M AgriLife · Collecting a garden sample",
+          "https://agrilifeextension.tamu.edu/library/gardening/fertilizing/"
+        ],
+        [
+          "Texas A&M AgriLife · Homeowner soil sample form",
+          "https://soiltesting.tamu.edu/wp-content/uploads/sites/13/2023/05/urbansoil.pdf"
+        ],
+        [
+          "Texas A&M AgriLife · Texas home gardening guide",
+          "https://agrilifeextension.tamu.edu/wp-content/uploads/2025/06/Texas-Home-Gardening-Guide.pdf"
+        ]
       ]
     },
     {
@@ -792,5 +807,5 @@
   ],
   "glossary": {},
   "count": 21,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

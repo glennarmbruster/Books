@@ -274,8 +274,9 @@
       "steps": [
         "Percolation test: Dig a 12-inch-deep hole, fill with water, let drain completely, then refill and time how fast it drops (1–2 inches/hour is ideal; under 1/2 inch/hour needs raised beds).",
         "Jar texture test: Fill a mason jar 1/3 with soil and 2/3 with water, shake hard, and measure settled layers at 1 minute (sand), 2 hours (silt), and 24 hours (clay).",
-        "Use the jar for texture. Its layers cannot tell you the soil pH. For a pH reading, take a sample and follow a soil test kit’s directions, or send a sample to a soil-testing service.",
-        "Sample a few places in the bed. Record which readings belong to which area before choosing amendments."
+        "The jar shows soil texture. For a laboratory pH and nutrient reading, collect a separate sample before adding fertilizer or lime.",
+        "Clear leaves and mulch from the surface. Take a 6-inch-deep slice from 8–10 spots in one bed with a clean trowel. Mix in a clean plastic bucket, remove stones and roots, and air-dry damp soil. Bag about one pint and label it with the bed name. Sample a problem patch separately.",
+        "On Texas A&M AgriLife’s Urban and Homeowner Soil Sample Information Form, write the same bed name, crop and requested test. Enclose the form and payment as directed. Your county Extension office can supply the paper form. Keep a copy with the bed sketch and ask for recommendations for that crop."
       ],
       "safety": "Use distilled water rather than hard tap water for pH testing so mineral alkalinity does not skew results.",
       "tags": [
@@ -302,6 +303,16 @@
           "alt": "Read one fixed scale. After the first fill drains, refill. Measure the fall from the same reference point at each time.",
           "caption": "After the first fill drains, refill. Measure the fall from the same reference point at each time."
         }
+      ],
+      "sources": [
+        [
+          "Texas A&M AgriLife · Collecting a garden sample",
+          "https://agrilifeextension.tamu.edu/library/gardening/fertilizing/"
+        ],
+        [
+          "Texas A&M AgriLife · Homeowner soil sample form",
+          "https://soiltesting.tamu.edu/wp-content/uploads/sites/13/2023/05/urbansoil.pdf"
+        ]
       ]
     },
     {
@@ -2121,5 +2132,5 @@
     }
   },
   "count": 51,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

@@ -191,7 +191,6 @@
       "diff": "Easy",
       "time": "10 mins",
       "gear": [
-        "Water meter curb key",
         "Flashlight"
       ],
       "supplies": [
@@ -200,7 +199,7 @@
       "steps": [
         "Locate your home's primary ball/gate shutoff valve (usually in the garage wall, utility closet, or exterior wall facing the street) and tie a bright tag on it so anyone in the house can find it in seconds.",
         "Turn a quarter-turn ball valve 90 degrees perpendicular to the pipe (or turn a wheel gate valve clockwise until snug).",
-        "If the house valve is stuck, open the street meter box cover with a water meter curb key and turn the brass valve 90 degrees until the two holes align (lock position).",
+        "If the house valve sticks or water still flows, leave the utility’s meter valve alone. Call the supplier on the water bill for shutoff assistance. For Friendswood city water, call 281-996-3382. Give the street address and describe where the water is escaping.",
         "Open the lowest outdoor hose bib and an upstairs faucet to drain residual line pressure before cutting pipe or before a hard freeze."
       ],
       "safety": "Turn off electric or gas water heaters before draining the house plumbing so heating elements do not dry-fire.",
@@ -221,6 +220,12 @@
           "alt": "Trace the service. Follow the line from the meter toward the house to identify the house-side valve.",
           "caption": "Photograph the customer shutoff from standing height. Ask the utility to identify the ownership boundary if the controls are unfamiliar."
         }
+      ],
+      "sources": [
+        [
+          "City of Friendswood · Water and Wastewater Utilities",
+          "https://www.ci.friendswood.tx.us/211/Water-Wastewater-Utilities"
+        ]
       ]
     },
     {
@@ -285,7 +290,7 @@
         "Switch the disposal off and disconnect its power before checking a jam. Unplug a corded unit. For a hardwired unit, turn off its circuit breaker.",
         "Shine a flashlight into the chamber and remove any dropped spoon, bone, or glass using long tongs—never put your hand inside.",
         "On a Badger 5, insert the disposal wrench into the center socket underneath and work it back and forth until it turns freely. Remove the wrench. Check the manual for other models.",
-        "Let the motor cool as directed in the manual. With power still disconnected, gently press the overload reset button. Remove all tools, restore power and test with cold water running. If it trips again, stop and arrange service."
+        "On an InSinkErator Badger, look underneath for the small red overload button. With the power still disconnected and the jam cleared, gently press it in. If it pops back out, let the motor cool ten minutes and try once more. Remove tools, start cold water, restore power and test briefly. Stop and get service if the button will not stay in or trips again."
       ],
       "safety": "Never pour chemical drain cleaners into a garbage disposal—they corrode seals and splash back when plunging.",
       "tags": [
@@ -310,6 +315,10 @@
         [
           "InSinkErator · Badger 5 installation, care and use",
           "https://www.insinkerator.com/documents/badger-5-installation-care-use-manual-en-us-68982.pdf"
+        ],
+        [
+          "InSinkErator · Resetting a garbage disposal",
+          "https://www.insinkerator.com/en-us/support/resetting-a-garbage-disposal"
         ]
       ]
     },
@@ -2171,5 +2180,5 @@
     }
   },
   "count": 51,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

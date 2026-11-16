@@ -1195,7 +1195,7 @@
       ],
       "steps": [
         "Leave the water and alert a lifeguard. Call 911 for breathing difficulty, faintness, a severe reaction, a sting to the face or neck, or an unknown or potentially lethal species.",
-        "Follow the local lifeguard or Poison Control’s species-specific instructions. Carefully lift off visible tentacles with a protected hand or appropriate tool, avoiding rubbing.",
+        "Follow the local lifeguard or Poison Control’s species-specific instructions. Carefully lift off visible tentacles with a protected hand or appropriate tool, avoiding rubbing. In the U.S., Poison Control is 1-800-222-1222. If the person collapses, has a seizure, struggles to breathe or cannot be awakened, call 911 immediately.",
         "When appropriate for the sting, immerse the area in tolerably hot water for at least 20 minutes or until pain improves. Test the temperature on unaffected skin to avoid burns. Monitor for systemic symptoms."
       ],
       "safety": "Do not prescribe one rinse for all species or apply urine, sand or pressure.",
@@ -1213,6 +1213,10 @@
         [
           "American Red Cross · Jellyfish stings",
           "https://www.redcross.org/take-a-class/resources/learn-first-aid/jellyfish-stings"
+        ],
+        [
+          "Poison Control · Immediate assistance",
+          "https://www.poison.org/need-immediate-assistance"
         ]
       ]
     },
@@ -1304,7 +1308,7 @@
       "steps": [
         "Move away from the snake. Call 911 immediately and report the time and location. Do not wait for pain or swelling.",
         "Keep the person calm and still. Remove constricting jewelry if easily accessible and monitor breathing.",
-        "Let responders identify the exposure from a description or existing photo. Never try to catch or approach the snake. Follow EMS or Poison Control guidance about the limb."
+        "Let responders identify the exposure from a description or existing photo. Never try to catch or approach the snake. Follow EMS or Poison Control guidance about the limb. In the U.S., Poison Control is 1-800-222-1222. If the person collapses, has a seizure, struggles to breathe or cannot be awakened, call 911 immediately."
       ],
       "safety": "Do not use a tourniquet, cut or suck the wound, or apply ice. Color rhymes are unreliable.",
       "tags": [
@@ -1318,6 +1322,10 @@
         [
           "Poison Control · Snakebites",
           "https://www.poison.org/articles/snakebites-in-march"
+        ],
+        [
+          "Poison Control · Immediate assistance",
+          "https://www.poison.org/need-immediate-assistance"
         ]
       ]
     },
@@ -1961,7 +1969,8 @@
         "Safe Restraint: Wrap an injured cat snugly in a thick bath towel ('purrito') leaving only the injured paw/head exposed; even gentle pets bite when terrified or in pain.",
         "Bleeding & Paw Cuts: Apply direct pressure with sterile gauze and wrap with self-adhering vet wrap (leave two middle toes visible to check for swelling/coldness).",
         "Pet Heatstroke (panting excessively, bright red gums, drooling, staggering): Move to AC immediately, wet fur with cool (not ice-cold) water, point a fan on them, and transport to an emergency vet.",
-        "DEADLY HOUSEHOLD PET TOXINS (especially toxic to cats!): Lilies (even pollen or vase water causes fatal kidney failure in cats), Acetaminophen/Tylenol (fatal to cats!), Ibuprofen, Onions/Garlic, Grapes/Raisins, Xylitol sweetener, Chocolate, and Permethrin flea products."
+        "DEADLY HOUSEHOLD PET TOXINS (especially toxic to cats!): Lilies (even pollen or vase water causes fatal kidney failure in cats), Acetaminophen/Tylenol (fatal to cats!), Ibuprofen, Onions/Garlic, Grapes/Raisins, Xylitol sweetener, Chocolate, and Permethrin flea products.",
+        "For suspected pet poisoning, call your veterinarian or ASPCA Poison Control at 888-426-4435 (24 hours, consultation fee may apply). Give the species, weight, substance, amount and time if known. Keep the container. For a collapsed animal or one struggling to breathe, go to an emergency veterinary hospital immediately."
       ],
       "safety": "NEVER give human painkillers (Tylenol, Advil, Aleve, Aspirin) to cats—a single regular Tylenol tablet is fatal to a cat.",
       "tags": [
@@ -1987,6 +1996,10 @@
         [
           "VCA Animal Hospitals · First aid for bleeding in dogs",
           "https://vcahospitals.com/know-your-pet/first-aid-for-bleeding-in-dogs"
+        ],
+        [
+          "ASPCA · Poison Control",
+          "https://www.aspca.org/pet-care/aspca-poison-control"
         ]
       ]
     },
@@ -2147,7 +2160,7 @@
       ],
       "steps": [
         "Bleach Mixed with Ammonia or Toilet Bowl Acid: Produces toxic chloramine or chlorine gas—evacuate the bathroom/room immediately, close the door, turn on exhaust/open exterior windows from outside, and breathe fresh air.",
-        "Swallowed Corrosive Cleaners (drain cleaner, oven cleaner, bleach, laundry pods): Do NOT induce vomiting and do NOT give charcoal; if alert with no trouble swallowing, give small sips of water/milk ONLY if directed by Poison Control, and go to the ER for airway/esophageal evaluation."
+        "Swallowed Corrosive Cleaners (drain cleaner, oven cleaner, bleach, laundry pods): Do NOT induce vomiting and do NOT give charcoal; if alert with no trouble swallowing, give small sips of water/milk ONLY if directed by Poison Control, and go to the ER for airway/esophageal evaluation. In the U.S., Poison Control is 1-800-222-1222. If the person collapses, has a seizure, struggles to breathe or cannot be awakened, call 911 immediately."
       ],
       "safety": "Never mix chlorine bleach with vinegar, toilet bowl cleaners, or ammonia.",
       "tags": [
@@ -2158,7 +2171,13 @@
         "household"
       ],
       "scenario": "A strong odor develops after two cleaners are used in one bathroom.",
-      "overview": "Get everyone into fresh air first. From safety, report the exact products and who has eye or breathing symptoms."
+      "overview": "Get everyone into fresh air first. From safety, report the exact products and who has eye or breathing symptoms.",
+      "sources": [
+        [
+          "Poison Control · Immediate assistance",
+          "https://www.poison.org/need-immediate-assistance"
+        ]
+      ]
     },
     {
       "id": "med-155",
@@ -2977,5 +2996,5 @@
     }
   },
   "count": 76,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }

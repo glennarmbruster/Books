@@ -335,7 +335,7 @@
       "supplies": [],
       "steps": [
         "Copy the full model number, size or quantity from the listing. Use those details when checking another seller. A nearly identical name can describe a smaller package or a different model.",
-        "Look at the item’s price history where available. Compare today’s price with the amount it sold for repeatedly before the promotion. One short-lived high price can make an ordinary price look like a sale.",
+        "For an online price history, enter the item’s exact model or listing in the tracker and look across several months for its usual selling price. Offline, write down the same model’s prices from dated receipts, printed circulars or saved screenshots. If you have no comparable price, treat the claimed saving as unverified.",
         "Add shipping and any required accessories to each price. If the model number changes, check the feature you care about before treating the offers as equivalent."
       ],
       "safety": "Screenshot the product page and price on purchase day so you can claim price-match refunds if the store drops the price further on Cyber Monday.",
@@ -350,7 +350,7 @@
       "overview": "Compare the same model and quantity against its price history and at least one independent seller.",
       "illustrations": [
         {
-          "step": "Look at the item’s price history where available. Compare today’s price with the amount it sold for repeatedly before the promotion. One short-lived high price can make an ordinary price look like a sale.",
+          "step": "For an online price history, enter the item’s exact model or listing in the tracker and look across several months for its usual selling price. Offline, write down the same model’s prices from dated receipts, printed circulars or saved screenshots. If you have no comparable price, treat the claimed saving as unverified.",
           "plate": "price-chart",
           "title": "Read the price before the sale",
           "alt": "An example price line stays at 40 dollars for three periods, rises to 60, and returns to 40 at the sale.",
@@ -702,11 +702,11 @@
         "Digital copy of itemized receipt & credit card statement"
       ],
       "steps": [
-        "Extended Warranty Benefit (included free on many Visa Signature, Mastercard World/World Elite, and Amex cards): Automatically doubles the manufacturer's US warranty up to 1 additional year on electronics, appliances, and tools bought with that card—saving you from buying store extended warranties.",
-        "Purchase Protection (90–120 days): Reimburses theft or accidental damage (like dropping a new phone or tablet) up to $500–$1,000 per claim when paid on an eligible card.",
-        "Cell Phone Protection: Paying your monthly wireless bill with qualifying cards (such as Chase Freedom Flex or Wells Fargo Autograph) provides free cracked-screen/theft coverage up to $600–$800 with a $25–$50 deductible."
+        "Get the benefits administrator’s number from the issuer using the phone number on your card. Name the card and purchase, ask whether extended warranty or purchase protection applies, and request the claim deadline and document list. Write the answers and case number on the receipt.",
+        "For a damaged or stolen item, note the purchase date, incident date and circumstances. Keep the itemized receipt, statement showing which card paid and any requested repair estimate or report. Coverage and reporting deadlines vary by card.",
+        "For a damaged phone, also keep the wireless bill and proof that the eligible card paid it. Ask the administrator about the deductible and whether to wait for authorization before a repair. Keep a dated copy of the submitted claim."
       ],
-      "safety": "Save PDF receipts in a dedicated cloud folder for big-ticket electronics/appliances—warranty claims require the original itemized receipt.",
+      "safety": "Keep paper copies or downloaded files that open offline. Include the issuer’s benefits guide for the card used for the purchase.",
       "tags": [
         "credit-card-perks",
         "extended-warranty",
@@ -728,10 +728,11 @@
         "Written email proof of cancellation/return attempt"
       ],
       "steps": [
-        "Always pay online merchants, contractors, travel bookings, and unfamiliar vendors with a CREDIT card rather than a debit card—debit cards pull real cash directly from your checking account with weaker dispute protections.",
-        "Under the Fair Credit Billing Act, if a merchant fails to deliver goods, delivers defective/misrepresented items and refuses a refund, or keeps billing after documented cancellation, file a Chargeback dispute with your card issuer within 60 days of the statement date attaching screenshots of your refund request."
+        "For a credit-card billing error such as a duplicate charge or an item never delivered, circle the charge on the statement and call the issuer using the number on the card. For an unauthorized debit-card transaction, call the bank immediately. Debit-card deadlines are different.",
+        "For a credit-card billing error, send a written notice to the issuer’s billing-inquiries address on the statement. Arrange for it to arrive within 60 calendar days after the issuer sent the first statement showing the error. Include your name, account number, date, amount and a short explanation. Keep copies and proof of delivery.",
+        "For example, write “The same $42 purchase on May 3 appears twice. Please correct the second charge.” Attach copies of receipts or correspondence. Keep paying the undisputed part of the bill. For a dispute over the quality of goods you accepted, ask the issuer which process applies."
       ],
-      "safety": "Attempt to resolve the issue with the merchant in writing first—card issuers require proof you gave the merchant a chance to refund.",
+      "safety": "Report suspected fraud promptly using the number on the card. Keep a copy of every letter and the date of every call.",
       "tags": [
         "chargeback",
         "consumer-rights",
@@ -739,7 +740,13 @@
         "fraud-protection"
       ],
       "scenario": "A statement contains a disputed purchase and the merchant correspondence is in several places.",
-      "overview": "Collect dates, amounts and records and contact the issuer promptly. The procedure and deadlines depend on the account and the dispute."
+      "overview": "Collect dates, amounts and records and contact the issuer promptly. The procedure and deadlines depend on the account and the dispute.",
+      "sources": [
+        [
+          "CFPB · Dispute a credit card charge",
+          "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-a-charge-on-my-credit-card-bill-en-61/"
+        ]
+      ]
     },
     {
       "id": "shp-124",
@@ -876,9 +883,10 @@
       "steps": [
         "Get instant baseline offers from CarMax, Carvana, and Driveway first—if Texas sales-tax trade-in credit (6.25% on trade-in value) plus dealer offer comes within $800 of private value, trading in is easier; if private value beats it by $2,000+, sell privately.",
         "Detail the interior/exterior thoroughly, photograph in soft golden-hour shade from all angles (including clean engine bay and tires), and list on Facebook Marketplace and AutoTrader with maintenance records.",
-        "Meet buyers at THEIR bank lobby so the teller issues a verified cashier's check or hands you cash directly, and file the Texas DMV Vehicle Transfer Notification online the exact same day."
+        "Meet at the buyer’s bank to verify payment. Record the buyer’s full name and address, sale date, VIN, plate and odometer reading. Sign the assigned title and provide the buyer the required title application. Keep copies for your own file.",
+        "Notify TxDMV within 30 days. You can mail a completed Texas Motor Vehicle Transfer Notification (Form VTR-346) to the address printed on it, or submit it online. Keep the dated confirmation. This notice records the sale on your vehicle record. The buyer still needs to apply for title."
       ],
-      "safety": "Remove your Texas license plates and toll tag (EZ TAG / TxTag) upon sale—in Texas, plates stay with the seller, not the car.",
+      "safety": "For a Texas private sale, you may remove your plates and registration sticker. Remove the toll tag and take the vehicle off the toll account. If you keep the plates, the buyer should arrange a legal permit or transport before driving away.",
       "tags": [
         "selling-car",
         "private-sale",
@@ -887,7 +895,17 @@
         "finance"
       ],
       "scenario": "You’re considering a private car sale and several buyers want to take it home immediately.",
-      "overview": "Plan payment verification and title transfer before showing the car. Check the current requirements with the relevant motor vehicle office."
+      "overview": "Plan payment verification and title transfer before showing the car. Check the current requirements with the relevant motor vehicle office.",
+      "sources": [
+        [
+          "TxDMV · Buying or selling a vehicle",
+          "https://www.txdmv.gov/motorists/buying-or-selling-a-vehicle"
+        ],
+        [
+          "TxDMV · Vehicle transfer notification",
+          "https://www.txdmv.gov/sites/default/files/form_files/VTR-346.pdf"
+        ]
+      ]
     },
     {
       "id": "shp-129",
@@ -1077,8 +1095,10 @@
         "Comparable neighborhood sales (comps)"
       ],
       "steps": [
-        "File your Texas Residence Homestead Exemption free through your county appraisal district (Galveston CAD or Harris CAD for Friendswood) as soon as your driver's license matches your home address—this caps annual assessed-value increases at 10% and unlocks school-tax exemptions (plus Over-65 freeze when eligible).",
-        "Protest your appraised value EVERY year before the May 15 deadline (or 30 days after notice): upload photos of foundation cracks, aging roof/HVAC/fence, and 3–5 lower-valued comparable homes in your subdivision during informal online settlement."
+        "Find the appraisal district and property account number on your appraisal notice. Friendswood addresses can be in Harris or Galveston County. Ask that district for Form 50-114 to claim a residence homestead exemption. Enter the property and ownership details, select the exemptions that apply and sign. Attach the required proof listed on the form, usually ID showing the homestead address.",
+        "File with the appraisal district serving the property. You can take the paper application to its office. The usual filing period ends April 30, with exceptions for late applications. Keep a dated copy and check that the exemption appears on your appraisal record.",
+        "To challenge the appraisal, request Form 50-132, Property Owner’s Notice of Protest. Identify the property, select the reasons for protest, sign and deliver it to the appraisal review board at the office on your notice. The usual deadline is May 15 or 30 days after the notice was mailed, whichever is later. Check the deadline on your own notice.",
+        "Keep proof of filing. Bring dated photos of damage, estimates or comparable sales that support your requested value. Filing the homestead application and filing a protest are separate actions."
       ],
       "safety": "Never pay third-party mailers charging $150 to file a Homestead Exemption—filing with your county appraisal district is 100% free.",
       "tags": [
@@ -1089,7 +1109,17 @@
         "savings"
       ],
       "scenario": "A Texas appraisal notice arrives and the deadline printed on it matters.",
-      "overview": "Use the official appraisal district for the property address. Save the current forms, supporting evidence and filing confirmation."
+      "overview": "Use the official appraisal district for the property address. Save the current forms, supporting evidence and filing confirmation.",
+      "sources": [
+        [
+          "Texas Comptroller · Homestead application",
+          "https://comptroller.texas.gov/forms/50-114.pdf"
+        ],
+        [
+          "Texas Comptroller · Appraisal protests",
+          "https://comptroller.texas.gov/taxes/property-tax/protests/"
+        ]
+      ]
     },
     {
       "id": "shp-136",
@@ -1186,8 +1216,9 @@
       ],
       "supplies": [],
       "steps": [
-        "Place a free Security Freeze at all three major credit bureaus (Equifax, Experian, TransUnion) plus ChexSystems—it blocks identity thieves from opening credit cards, auto loans, or bank accounts in your name even if your SSN is leaked.",
-        "Keep freezes active 365 days a year and use each bureau's app to temporarily 'thaw' for 24–48 hours only on the exact day you apply for a new credit card or auto loan."
+        "Call each nationwide credit bureau and request a free security freeze. Equifax: 800-685-1111. Experian: 888-397-3742. TransUnion: 888-909-8872. Have your identity and address details ready for verification. Each bureau handles its own request.",
+        "Keep each confirmation, recovery instructions and date in a secure place. If you also want to restrict access to your checking-account consumer report, contact ChexSystems separately at 800-513-7125 and ask for a security freeze.",
+        "Before applying for credit, ask the lender which report it will check and when. Contact that bureau, verify your identity and request a temporary lift with start and end dates. Keep the confirmation and check that the freeze is active again after the window closes."
       ],
       "safety": "Security freezes are 100% free by federal law and have zero impact on your credit score or existing cards.",
       "tags": [
@@ -1197,7 +1228,17 @@
         "finance"
       ],
       "scenario": "A household member wants to reduce the chance of new accounts being opened in their name.",
-      "overview": "Manage each credit bureau separately and keep its recovery details secure. A future credit application may require a temporary lift."
+      "overview": "Manage each credit bureau separately and keep its recovery details secure. A future credit application may require a temporary lift.",
+      "sources": [
+        [
+          "Federal Trade Commission · Credit freeze contacts",
+          "https://consumer.ftc.gov/articles/understanding-your-credit"
+        ],
+        [
+          "CFPB · Consumer reporting companies, including ChexSystems",
+          "https://files.consumerfinance.gov/f/documents/cfpb_consumer-reporting-companies-list.pdf"
+        ]
+      ]
     },
     {
       "id": "shp-140",
@@ -1309,8 +1350,9 @@
         "Electricity Facts Label (EFL)"
       ],
       "steps": [
-        "In Friendswood/Houston (CenterPoint territory), never renew an expiring electric plan automatically—default renewal rates often jump to 18¢–22¢/kWh.",
-        "Download your exact 12-month kWh usage from SmartMeterTexas.com, open the official PowerToChoose.org site, filter for 'Fixed Rate' plans ONLY (avoid variable or 'free nights/weekends' gimmicks unless your usage matches), and read the PDF Electricity Facts Label (EFL) at 1,000 kWh and 2,000 kWh to avoid plans with punitive bill-credit cliffs."
+        "Take the last twelve electricity bills and write each month’s kWh on paper. If you lack bills, ask your provider for usage history. On the current bill, find the plan end date, delivery utility and service address. Confirm that you can choose your retail provider at that address.",
+        "When connected, search your ZIP code at PowerToChoose.org and save the Electricity Facts Label for each plan. You can also call a provider and ask for a paper copy. Underline the monthly fee, per-kWh energy and delivery charges, and any minimum-use fee or bill-credit threshold.",
+        "On paper, multiply your month’s kWh by each applicable per-kWh rate in dollars, add the fixed charges, then apply only credits you earned. For example, 800 kWh at an all-in variable charge of $0.14 per kWh plus a $10 fixed fee is $122 before taxes. A credit starting at 1,000 kWh earns nothing that month. Repeat for low- and high-use months."
       ],
       "safety": "Set a calendar reminder 14 days before your contract end date—Texas lets you lock in a new plan up to 14 days early with zero early-termination fee.",
       "tags": [
@@ -1324,12 +1366,18 @@
       "overview": "Apply each plan’s current fact sheet to several actual bills, including high summer usage. Compare fees and contract terms along with energy charges.",
       "illustrations": [
         {
-          "step": "Download your exact 12-month kWh usage from SmartMeterTexas.com, open the official PowerToChoose.org site, filter for 'Fixed Rate' plans ONLY (avoid variable or 'free nights/weekends' gimmicks unless your usage matches), and read the PDF Electricity Facts Label (EFL) at 1,000 kWh and 2,000 kWh to avoid plans with punitive bill-credit cliffs.",
+          "step": "When connected, search your ZIP code at PowerToChoose.org and save the Electricity Facts Label for each plan. You can also call a provider and ask for a paper copy. Underline the monthly fee, per-kWh energy and delivery charges, and any minimum-use fee or bill-credit threshold.",
           "plate": "atlas-shp-143",
           "title": "Compare at your usage",
           "alt": "Compare at your usage. Example usage bars span three months. Compare the plan’s stated prices and thresholds at the amounts you actually consume.",
           "caption": "Example usage bars span three months. Compare the plan’s stated prices and thresholds at the amounts you actually consume."
         }
+      ],
+      "sources": [
+        [
+          "Public Utility Commission of Texas · Power to Choose",
+          "https://www.powertochoose.org/"
+        ]
       ]
     },
     {
@@ -1487,8 +1535,8 @@
         "Policy declarations page (note Windstorm/Hurricane % deductible vs. All-Peril deductible)"
       ],
       "steps": [
-        "In Galveston/Harris County, check whether your windstorm coverage is separate through TWIA (Texas Windstorm Insurance Association) and note your named-storm percentage deductible (typically 1%–2% of dwelling coverage).",
-        "Never file small claims barely above your deductible—insurers surcharge rates or non-renew policies after multiple minor claims; save homeowner claims for major structural, roof, or water losses."
+        "On your declarations pages find the insured address, insurer, policy number, deductible and claims phone number for home, wind and flood coverage as applicable. Call the relevant insurer, describe the damage and ask what evidence it needs. Record the claim number and adjuster’s contact.",
+        "If you cannot find the claims number, Texas Department of Insurance can help on weekdays at 800-252-3439. Ask the insurer about reporting deadlines and how the deductible applies. Keep photos and emergency repair receipts with a dated call log."
       ],
       "safety": "Take dated photos/videos of storm damage BEFORE making temporary tarp repairs, and save every receipt for emergency tarps/lumber for reimbursement.",
       "tags": [
@@ -1502,12 +1550,18 @@
       "overview": "Photographs, receipts and a dated contact log connect each expense to the claim. Verify the deductible against the actual policy.",
       "illustrations": [
         {
-          "step": "In Galveston/Harris County, check whether your windstorm coverage is separate through TWIA (Texas Windstorm Insurance Association) and note your named-storm percentage deductible (typically 1%–2% of dwelling coverage).",
+          "step": "On your declarations pages find the insured address, insurer, policy number, deductible and claims phone number for home, wind and flood coverage as applicable. Call the relevant insurer, describe the damage and ask what evidence it needs. Record the claim number and adjuster’s contact.",
           "plate": "atlas-shp-148",
           "title": "Find the named peril",
           "alt": "Find the named peril. On the declarations page locate which peril has its own deductible and which value the percentage applies to.",
           "caption": "On the declarations page locate which peril has its own deductible and which value the percentage applies to."
         }
+      ],
+      "sources": [
+        [
+          "Texas Department of Insurance · Help after a storm",
+          "https://www.tdi.texas.gov/consumer/storms/recoverytips.html"
+        ]
       ]
     },
     {
@@ -1623,5 +1677,5 @@
     }
   },
   "count": 51,
-  "version": "2026.11.16-field-atlas-r2"
+  "version": "2026.11.16-offline-guides-r1"
 }
