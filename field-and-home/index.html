@@ -184,13 +184,32 @@ dialog::backdrop{background:rgba(10,15,12,.55)}
 }
 header.top h1,.reader-controls h2,.guide-head h2,.field-section h3{font-family:Georgia,"Times New Roman",serif}
 header.top h1{font-weight:600;letter-spacing:-.035em;font-size:24px}
-.reader-layout{max-width:1240px;margin:22px auto;display:grid;gap:18px;align-items:start}
-.reader-controls,.reading-page{min-width:0}
-.reader-controls{overflow-x:clip;display:grid;grid-template-columns:minmax(0,1fr);background:var(--card);padding:20px;border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:8px}
-.reader-controls h2{font-size:25px;font-weight:500;margin-bottom:5px}
-.reader-controls label{margin:14px 0 5px;font-size:13px;font-weight:650}
-.reader-controls small{float:right;color:var(--muted);font-weight:400;font-size:12px}
-.reader-controls select,.reader-controls input{min-width:0;max-width:100%;width:100%;border-radius:5px}
+body[data-tab="guides"] header.top{position:static}
+.reader-layout{max-width:54rem;margin:0 auto 24px}
+.reader-controls{margin:0;min-width:0}
+.contents-trigger{width:100%;min-height:46px;display:flex;align-items:center;gap:.65rem;border:0;background:transparent;color:var(--accent);font:inherit;cursor:pointer;padding:4px 2px;text-align:left}
+.contents-trigger strong{font-size:.95rem;white-space:nowrap}
+.contents-trigger .chapter-name{min-width:0;margin-left:auto;color:var(--muted);font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#finder-title:focus,.guide-head h2[tabindex="-1"]:focus{outline:none}
+.contents-trigger:focus-visible,.finder-row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+#guide-finder{max-width:35rem;max-height:calc(100dvh - 2rem);overflow:hidden}
+#guide-finder[open]{display:flex;flex-direction:column}
+body:has(#guide-finder[open]){overflow:hidden}
+.finder-heading,.finder-filters,.finder-list{padding-inline:clamp(16px,4vw,26px)}
+.finder-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.finder-heading h2{font:500 1.55rem/1.15 Georgia,serif;overflow-wrap:anywhere}
+.finder-back{padding:0;min-height:32px;background:none;border:0;color:var(--accent);font:inherit;cursor:pointer}
+.finder-filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(6rem,.55fr);gap:8px;padding-block:10px;border-bottom:1px solid var(--line)}
+.finder-filters[hidden],.finder-back[hidden]{display:none}
+.finder-filters input,.finder-filters select{margin:0;width:100%;min-width:0;min-height:44px;font-size:16px}
+.finder-list{overflow-y:auto;overscroll-behavior:contain;min-height:0;max-height:60dvh;padding-bottom:12px}
+.finder-list h3{font:650 .84rem/1.4 system-ui;color:var(--muted);margin:16px 0 3px}
+.finder-row{display:flex;width:100%;min-height:46px;align-items:center;justify-content:space-between;gap:10px;text-align:left;padding:9px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;color:var(--ink);background:transparent;font:inherit;cursor:pointer}
+.finder-row:hover,.finder-row[aria-current="page"]{color:var(--accent);background:var(--accent-soft)}
+.finder-row small{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.finder-empty{padding-block:16px}
+@media(max-width:600px){#guide-finder{width:100%;max-width:none;max-height:87dvh;margin:auto 0 0;border-radius:16px 16px 0 0;padding-bottom:env(safe-area-inset-bottom)}}
+.guide-box > [aria-label="Guide actions"]{margin:22px 0 0;padding-top:14px;border-top:1px solid var(--line)}
 .guide-box{margin:0;border-radius:8px;padding:clamp(18px,3vw,44px);border-top:4px solid var(--accent)}
 .guide-head{flex-wrap:wrap}
 .guide-head>div{flex:1 1 300px;min-width:0}
@@ -227,11 +246,9 @@ header.top h1{font-weight:600;letter-spacing:-.035em;font-size:24px}
 }
 @media print{.guide-box button.figure-open:not(.pill){display:block!important}.figure-open::after{display:none}}
 .source-list{margin:10px 0 0;padding-left:1.25em;font-size:.88em;overflow-wrap:anywhere}
-@media(min-width:900px){.reader-layout{grid-template-columns:minmax(230px,295px) minmax(0,1fr);gap:24px}.reader-controls{position:sticky;top:80px}}
 @media print{header.top,nav.tabs,.fab,.reader-controls,.guide-box button:not(.pill),.wrap-chips,.toast,.desk-nav{display:none!important}.reader-layout,.reading-page,#view{display:block;max-width:none;margin:0;padding:0}.guide-box{box-shadow:none;border:0;padding:0}.steps li,.field-section{break-inside:avoid}body{background:white;color:black;padding:0}}
 
-.reader-options{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}.reader-options summary{font-size:14px;cursor:pointer;color:var(--accent);font-weight:650}.reader-options label{display:block}
-@media(max-width:899px){.reader-controls{padding:12px 16px}.reader-controls h2{font-size:21px}.reader-controls label{margin:6px 0 3px}.reader-options{margin-top:9px;padding-top:8px}.reader-layout{margin:12px auto}.guide-head{gap:6px}.guide-box{padding:18px}.guide-head h2{font-size:29px}}
+@media(max-width:899px){.guide-head{gap:6px}.guide-box{padding:18px}.guide-head h2{font-size:29px}}
 @media(max-width:500px){header.top .wrap{gap:6px}header.top h1{font-size:21px}.syncbadge span{display:none}.syncbadge{padding:5px}.reader-layout{gap:10px}}
 </style>
 </head>
@@ -268,6 +285,20 @@ header.top h1{font-weight:600;letter-spacing:-.035em;font-size:24px}
 
 <dialog id="dlg"></dialog>
 <dialog id="ask"></dialog>
+<dialog id="guide-finder" aria-labelledby="finder-title">
+  <div class="finder-heading">
+    <div><button type="button" class="finder-back" hidden>‹ Chapters</button><h2 id="finder-title" tabindex="-1">Choose a chapter</h2></div>
+    <button class="btn" id="finder-close" type="button">Close</button>
+  </div>
+  <div class="finder-filters" hidden>
+    <input id="q" type="search" aria-label="Search guides" placeholder="Search guides" autocomplete="off">
+    <select id="reading-filter" aria-label="Reading list">
+      <option value="all">All guides</option><option value="try-next">Try next</option>
+      <option value="done">Done</option><option value="edited">Edited or annotated</option>
+    </select>
+  </div>
+  <div class="finder-list"></div>
+</dialog>
 <dialog id="figure-reader" aria-labelledby="figure-heading">
   <div class="figure-toolbar">
     <button class="btn" id="figure-zoom" type="button" aria-pressed="false">Zoom in</button>
@@ -979,7 +1010,6 @@ const ui = {
   cat: 'All',
   filter: 'all',
   selectedId: 'hh-002',
-  showSearch: matchMedia('(min-width:900px)').matches,
   openDefKey: ''
 };
 
@@ -1129,6 +1159,7 @@ const ownedSet = () => new Set(state.gear.filter(g => g.have !== false).map(g =>
 const view = $('#view');
 
 function render() {
+  document.body.dataset.tab = ui.tab;
   applyTheme();
   $('#syncSlot').innerHTML = syncBadgeHTML();
   $$('[data-nav]').forEach(b => {
@@ -1144,6 +1175,7 @@ function render() {
   else if (ui.tab === 'logs') renderLogs();
   else if (ui.tab === 'gear') renderGear();
   else renderTools();
+  if (finder.open) renderFinderList();
 }
 
 function filteredGuides() {
@@ -1238,18 +1270,13 @@ function guideDetailHTML(id) {
           ${g.sub ? `<span class="badge">${esc(g.sub)}</span>` : ''}
           ${g.isCustom ? '<span class="badge ok">Custom Guide</span>' : g.isEdited ? '<span class="badge warn">Edited</span>' : ''}
         </div>
-        <h2>${esc(g.title)}</h2>
+        <h2 tabindex="-1">${esc(g.title)}</h2>
       </div>
-      <button type="button" class="btn small" data-act="edit-guide" data-id="${esc(g.id)}">✎ Edit / Note</button>
     </div>
 
     ${g.scenario ? `<section class="field-section scene"><h3>About this guide</h3><p>${esc(g.scenario)}</p></section>` : ''}
 
-    <div class="chips wrap-chips" style="margin-bottom:10px">
-      <button type="button" class="chip" data-act="status" data-id="${esc(g.id)}" data-st="try-next" aria-pressed="${g.status === 'try-next'}">📌 Try Next</button>
-      <button type="button" class="chip" data-act="status" data-id="${esc(g.id)}" data-st="done" aria-pressed="${g.status === 'done'}">✅ Done</button>
-      <button type="button" class="chip" data-act="log-guide" data-id="${esc(g.id)}">🧪 Log Attempt</button>
-    </div>
+
 
     <div class="meta-grid">
       <div class="meta-tile"><div class="lbl">Difficulty</div><div class="val">${esc(g.diff || 'Easy')}</div></div>
@@ -1274,42 +1301,85 @@ function guideDetailHTML(id) {
     ${g.safety ? `<div class="callout warn"><b>⚠️ Safety &amp; Key Tip:</b> ${esc(g.safety)}</div>` : ''}
     ${(g.sources || []).some(s => Array.isArray(s) && /^https?:\/\//i.test(s[1])) ? `<h3 class="sec-h">References</h3><ul class="source-list">${g.sources.filter(s => Array.isArray(s) && /^https?:\/\//i.test(s[1])).map(([label,url]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a></li>`).join('')}</ul>` : ''}
     ${g.overview ? `<section class="field-section overview"><h3>Overview</h3><p>${esc(g.overview)}</p></section>` : ''}
+    <div class="chips wrap-chips" aria-label="Guide actions" role="group">
+      <button type="button" class="chip" data-act="edit-guide" data-id="${esc(g.id)}">✎ Edit / Note</button>
+      <button type="button" class="chip" data-act="status" data-id="${esc(g.id)}" data-st="try-next" aria-pressed="${g.status === 'try-next'}">📌 Try Next</button>
+      <button type="button" class="chip" data-act="status" data-id="${esc(g.id)}" data-st="done" aria-pressed="${g.status === 'done'}">✅ Done</button>
+      <button type="button" class="chip" data-act="log-guide" data-id="${esc(g.id)}">🧪 Log Attempt</button>
+    </div>
   </article>`;
 }
 
 function renderGuides() {
-  const list = filteredGuides();
-  const selected = list.find(g => g.id === ui.selectedId) || list[0];
+  const selected = getGuide(ui.selectedId) || withEdits(allGuides()[0]);
   if (selected) ui.selectedId = selected.id;
-  const groups = new Map();
-  for (const guide of list) {
-    const group = ui.cat === 'All' ? guide.cat : guide.sub || guide.cat;
-    if (!groups.has(group)) groups.set(group, []);
-    groups.get(group).push(guide);
-  }
-  const guideOptions = [...groups].map(([label, entries]) =>
-    `<optgroup label="${esc(label)}">${entries.sort((a, b) => a.title.localeCompare(b.title)).map(g =>
-      `<option value="${esc(g.id)}" ${selected?.id === g.id ? 'selected' : ''}>${esc(g.title)}</option>`
-    ).join('')}</optgroup>`
-  ).join('');
   view.innerHTML = `<div class="reader-layout">
-    <nav class="reader-controls" aria-label="Find a field guide">
-      <h2>Find a guide</h2>
-      <label for="chapter">Chapter</label>
-      <select id="chapter">${CATEGORIES.map(c => `<option value="${esc(c)}" ${ui.cat === c ? 'selected' : ''}>${esc(c === 'All' ? 'All chapters' : c)}</option>`).join('')}</select>
-      <label for="guide-picker">Guide <small>${list.length.toLocaleString()} available</small></label>
-      <select id="guide-picker" ${list.length ? '' : 'disabled'}>${guideOptions || '<option>No matching guides</option>'}</select>
-      <details class="reader-options" ${ui.showSearch ? 'open' : ''}><summary>Search and reading lists</summary>
-      <label for="q">Search this selection</label>
-      <input id="q" type="search" placeholder="A skill, situation or ingredient…" value="${esc(ui.q)}" autocomplete="off">
-      <label for="reading-filter">Reading list</label>
-      <select id="reading-filter">${[['all','All guides'],['try-next','Try next'],['done','Done'],['edited','Edited or annotated']].map(([v,label]) =>
-        `<option value="${v}" ${v === ui.filter ? 'selected' : ''}>${label}</option>`).join('')}</select>
-      </details>
+    <nav class="reader-controls" aria-label="Book navigation">
+      <button type="button" class="contents-trigger" aria-haspopup="dialog" aria-controls="guide-finder">
+        <span aria-hidden="true">☰</span><strong>Find a guide</strong>
+        <span class="chapter-name">${esc(selected?.cat || '')}</span><span aria-hidden="true">⌄</span>
+      </button>
     </nav>
-    <div class="reading-page">${selected ? guideDetailHTML(selected.id) : `<section class="empty card"><h2>No matching guides</h2><p>Try a different chapter, reading list or search.</p><button class="btn" type="button" data-act="clear-guide-filters">Show all guides</button></section>`}</div>
+    <div class="reading-page">${guideDetailHTML(selected?.id)}</div>
   </div>`;
 }
+
+const finder = $('#guide-finder');
+const finderList = $('.finder-list', finder);
+function renderFinderList() {
+  if ($('.finder-filters', finder).hidden) {
+    const counts = new Map();
+    for (const g of allGuides()) counts.set(g.cat, (counts.get(g.cat) || 0) + 1);
+    const ordered = new Set([...CATEGORIES.filter(c => c !== 'All'), ...counts.keys()]);
+    finderList.innerHTML = [...ordered].filter(cat => counts.has(cat)).map(cat =>
+      `<button type="button" class="finder-row" data-chapter="${esc(cat)}">${esc(cat)} <small>${counts.get(cat)} ›</small></button>`
+    ).join('') + '<button type="button" class="finder-row" data-chapter="All">Search all guides <span aria-hidden="true">⌕</span></button>';
+    return;
+  }
+  const groups = new Map();
+  for (const guide of filteredGuides()) {
+    const name = ui.cat === 'All' ? guide.cat : guide.sub || guide.cat;
+    if (!groups.has(name)) groups.set(name, []);
+    groups.get(name).push(guide);
+  }
+  finderList.innerHTML = [...groups].map(([name, entries]) =>
+    `<section><h3>${esc(name)}</h3>${entries.sort((a,b) => a.title.localeCompare(b.title)).map(g =>
+      `<button type="button" class="finder-row" data-guide="${esc(g.id)}" ${g.id === ui.selectedId ? 'aria-current="page"' : ''}>${esc(g.title)}</button>`
+    ).join('')}</section>`
+  ).join('') || '<p class="finder-empty" role="status">No matching guides. Try another search or reading list.</p>';
+}
+
+function showFinder(chapter = null, search = false) {
+  ui.cat = chapter ?? 'All';
+  ui.q = '';
+  ui.filter = 'all';
+  $('#q').value = '';
+  $('#reading-filter').value = 'all';
+  $('.finder-filters', finder).hidden = chapter === null;
+  $('.finder-back', finder).hidden = chapter === null;
+  $('#finder-title').textContent = chapter === null ? 'Choose a chapter' : chapter === 'All' ? 'All chapters' : chapter;
+  $('#q').placeholder = chapter === 'All' ? 'Search all guides' : 'Search this chapter';
+  renderFinderList();
+  finderList.scrollTop = 0;
+  if (!finder.open) finder.showModal();
+  (search ? $('#q') : $('#finder-title')).focus({preventScroll:true});
+}
+
+finder.onclick = e => {
+  const chapter = e.target.closest('[data-chapter]');
+  const guide = e.target.closest('[data-guide]');
+  if (chapter) showFinder(chapter.dataset.chapter, chapter.dataset.chapter === 'All');
+  else if (guide) {
+    finder.close();
+    openGuide(guide.dataset.guide);
+    render();
+    $('.guide-head h2').focus({preventScroll:true});
+    window.scrollTo(0, 0);
+  } else if (e.target.closest('.finder-back')) showFinder();
+  else if (e.target.closest('#finder-close')) finder.close();
+};
+$('#q').oninput = e => { ui.q = e.target.value; renderFinderList(); finderList.scrollTop = 0; };
+$('#reading-filter').onchange = e => { ui.filter = e.target.value; renderFinderList(); finderList.scrollTop = 0; };
 
 function openGuide(id) {
   ui.tab = 'guides';
@@ -1587,17 +1657,7 @@ document.addEventListener('click', async e => {
 });
 
 $('#topSearchBtn').onclick = () => {
-  ui.tab = 'guides';
-  ui.showSearch = true;
-  render();
-  const det = $('.reader-options');
-  if (det) det.open = true;
-  const q = $('#q');
-  if (q) {
-    q.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    q.focus();
-    q.select();
-  }
+  showFinder('All', true);
 };
 $('#viewBtn').onclick = () => askDialog({ title: 'Theme', body: themesHTML(), buttons: [{ label: 'Done', value: true, kind: 'primary' }] });
 $('#fabBtn').onclick = $('#deskAddBtn').onclick = () => {
@@ -1606,33 +1666,8 @@ $('#fabBtn').onclick = $('#deskAddBtn').onclick = () => {
   else newCustomGuideDialog();
 };
 
-view.addEventListener('toggle', e => {
-  if (e.target.matches('.reader-options') && e.target.isConnected) ui.showSearch = e.target.open;
-}, true);
-
-view.addEventListener('change', e => {
-  const controls = {chapter:'cat', 'guide-picker':'selectedId', 'reading-filter':'filter'};
-  const key = controls[e.target.id];
-  if (!key) return;
-  const id = e.target.id;
-  ui[key] = e.target.value;
-  ui.openDefKey = '';
-  render();
-  document.getElementById(id)?.focus({preventScroll:true});
-  if (id === 'guide-picker') window.scrollTo(0, 0);
-});
-
-view.addEventListener('input', e => {
-  if (e.target.id === 'q') {
-    ui.q = e.target.value;
-    const pos = e.target.selectionStart;
-    render();
-    const q = $('#q');
-    if (q) { q.focus(); try { q.setSelectionRange(pos, pos); } catch {} }
-  }
-});
-
 view.addEventListener('click', async e => {
+  if (e.target.closest('.contents-trigger')) { showFinder(); return; }
   const illustration = e.target.closest('.figure-open');
   if (illustration) { openFigure(illustration); return; }
 
@@ -1661,7 +1696,6 @@ view.addEventListener('click', async e => {
   if (!act) return;
   const id = act.dataset.id;
   switch (act.dataset.act) {
-    case 'clear-guide-filters': ui.q = ''; ui.cat = 'All'; ui.filter = 'all'; render(); break;
     case 'edit-guide': editGuideDialog(id); break;
     case 'status': {
       const cur = (state.edits[id] && state.edits[id].status) || '';

@@ -1,7 +1,7 @@
 'use strict';
 const CACHE_PREFIX = 'books-field-home:' + self.registration.scope + ':';
 const EDITION = '2026.11.16-field-atlas-r2';
-const CACHE = CACHE_PREFIX + EDITION;
+const CACHE = CACHE_PREFIX + EDITION + ':reader-2';
 const CORE = [
   './',
   './index.html',
