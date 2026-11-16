@@ -37,8 +37,19 @@ const sectionLabels = {
 };
 const openSections = new Set();
 
+function numberJump(answer) {
+ return '<book-number-jump noun="' + (answer ? 'answer' : 'puzzle') + '" max="' + puzzles.length + '"></book-number-jump>';
+}
+main.addEventListener('open-book-number', event => {
+ const answers = book.view === 'answer' || book.view === 'answers';
+ nav(answers ? 'answer' : 'puzzle', event.detail);
+ const title = main.querySelector('h1');
+ title.tabIndex = -1;
+ title.focus({preventScroll:true});
+});
+
 function list(answer = false) {
- return Object.entries(sectionLabels).map(([kind, label]) => {
+ return numberJump(answer) + Object.entries(sectionLabels).map(([kind, label]) => {
   const cases = puzzles.filter(p => p.kind === kind);
   const complete = cases.filter(p => book.pages[p.id]?.done).length;
   const rows = cases.map(p => {
@@ -145,7 +156,7 @@ function pageBody(){
  let content;
  if(answer){content='<section class="solution"><h2 class="cap">Solution · '+num(p.id)+'</h2>'+(p.answer?'<strong>'+p.answer+'</strong><p>'+p.why+'</p>':p.entries?'<p>The filled grid and its clues are below.</p>':'<p>Coordinates count from the top left.</p>')+'</section>'+(p.entries?cross(p,s,true):p.grid?searchGrid(p,s,true):'')+go('‹ Return to puzzle '+num(p.id),'puzzle',p.id,'primary');}
  else{content='<p class="intro">'+p.intro+'</p>'+evidence(p)+(p.tableform?gridform(p,s):'')+(p.entries?cross(p,s):'')+(p.grid?searchGrid(p,s):'')+(p.questions?'<section class="field"><h2 class="cap">Your deduction</h2>'+p.questions.map((q,i)=>'<label class="question" for="q'+i+'">'+q+'</label><textarea id="q'+i+'" data-field="q'+i+'">'+esc(s.fields?.['q'+i])+'</textarea>').join('')+'</section>':'')+notebook(s)+'<div class="answerbar">'+'<label class="complete-control"><input type="checkbox" id="puzzle-complete"'+(s.done?' checked':'')+'> Complete</label>'+go('Puzzle index','index',p.id)+go('Open answer '+num(p.id)+' ↗','answer',p.id)+btn('Clear this page','clearpage','danger')+'</div>';}
- return '<article class="page"><div class="pager">'+go('‹ '+(answer?'Answer index':'Puzzle index'),answer?'answers':'index',p.id)+'<div class="navright">'+(p.id>1?go('← Previous',view,p.id-1):'')+(p.id<puzzles.length?go('Next →',view,p.id+1):'')+'</div></div><div class="filehead"><p class="eyebrow">'+(answer?'Answer':'Case')+' '+num(p.id)+' / '+num(puzzles.length)+' &nbsp; · &nbsp; '+p.kind+' &nbsp; · &nbsp; '+p.level+'</p><h1>'+p.title+'</h1></div>'+content+'</article>';
+ return '<article class="page"><div class="pager">'+go('‹ '+(answer?'Answer index':'Puzzle index'),answer?'answers':'index',p.id)+'<div class="navright">'+(p.id>1?go('← Previous',view,p.id-1):'')+(p.id<puzzles.length?go('Next →',view,p.id+1):'')+'</div></div>'+numberJump(answer)+'<div class="filehead"><p class="eyebrow">'+(answer?'Answer':'Case')+' '+num(p.id)+' / '+num(puzzles.length)+' &nbsp; · &nbsp; '+p.kind+' &nbsp; · &nbsp; '+p.level+'</p><h1>'+p.title+'</h1></div>'+content+'</article>';
 }
 function render(){
  if(startupError){main.innerHTML='<h1>Saved book needs attention</h1><p>Your stored progress could not be read. Keep this copy of the app open and retain your latest backup.</p>';return;}

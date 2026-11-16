@@ -1,8 +1,10 @@
 'use strict';
 const CACHE_PREFIX = 'books-field-home:' + self.registration.scope + ':';
 const EDITION = '2026.11.16-field-atlas-r2';
-const CACHE = CACHE_PREFIX + EDITION + ':reader-2';
+const READER_EDITION = EDITION + '-jump';
+const CACHE = CACHE_PREFIX + READER_EDITION;
 const CORE = [
+  '../book-number.js',
   './',
   './index.html',
   './field-figures.js',
@@ -38,7 +40,7 @@ self.addEventListener('message', event => {
   event.waitUntil((async () => {
     let ready = false;
     try {
-      if (request === 'verify' || request.edition === EDITION) {
+      if (request === 'verify' || request.edition === READER_EDITION) {
         const cache = await caches.open(CACHE);
         const packs = await listPacks(cache);
         const plates = await listPlates(cache, packs);
@@ -94,7 +96,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (!url.href.startsWith(self.registration.scope)) return;
+  if (!url.href.startsWith(self.registration.scope) && url.href !== new URL('../book-number.js', self.registration.scope).href) return;
 
   e.respondWith(
     networkWithTimeout(req, 4000)

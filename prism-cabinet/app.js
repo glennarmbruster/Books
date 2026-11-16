@@ -35,8 +35,19 @@ const sectionLabels = {
 };
 const openSections = new Set();
 
+function numberJump(answer) {
+ return '<book-number-jump noun="' + (answer ? 'answer' : 'challenge') + '" max="' + puzzles.length + '"></book-number-jump>';
+}
+main.addEventListener('open-book-number', event => {
+ const answers = book.view === 'answer' || book.view === 'answers';
+ nav(answers ? 'answer' : 'puzzle', event.detail);
+ const title = main.querySelector('h1');
+ title.tabIndex = -1;
+ title.focus({preventScroll:true});
+});
+
 function list(answer = false) {
- return Object.entries(sectionLabels).map(([kind, label]) => {
+ return numberJump(answer) + Object.entries(sectionLabels).map(([kind, label]) => {
   const cases = puzzles.filter(p => p.kind === kind);
   const complete = cases.filter(p => book.pages[p.id]?.done).length;
   const rows = cases.map(p => {
@@ -133,7 +144,7 @@ function pageBody() {
     ${go('Challenge index','index',p.id)}${go('Open answer ' + num(p.id) + ' ↗','answer',p.id)}${btn('Clear this page','clearpage','danger')}</div>`;
  }
  return `<article class="page"><div class="pager">${go(answer ? '‹ Answer index' : '‹ Challenge index',index,p.id)}
-   <div class="navright">${prev}${next}</div></div><div class="filehead">
+   <div class="navright">${prev}${next}</div></div>${numberJump(answer)}<div class="filehead">
    <p class="eyebrow">${answer ? 'Answer' : 'Challenge'} ${num(p.id)} / ${num(puzzles.length)} &nbsp; · &nbsp; ${esc(p.kind)} &nbsp; · &nbsp; ${esc(p.level)}</p>
    <h1>${esc(p.title)}</h1></div>${content}</article>`;
 }

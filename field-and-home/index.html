@@ -186,7 +186,7 @@ header.top h1,.reader-controls h2,.guide-head h2,.field-section h3{font-family:G
 header.top h1{font-weight:600;letter-spacing:-.035em;font-size:24px}
 body[data-tab="guides"] header.top{position:static}
 .reader-layout{max-width:54rem;margin:0 auto 24px}
-.reader-controls{margin:0;min-width:0}
+.reader-controls{margin:0;min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px}.reader-controls book-number-jump{margin:0}.finder-jump{padding-inline:clamp(16px,4vw,26px)}
 .contents-trigger{width:100%;min-height:46px;display:flex;align-items:center;gap:.65rem;border:0;background:transparent;color:var(--accent);font:inherit;cursor:pointer;padding:4px 2px;text-align:left}
 .contents-trigger strong{font-size:.95rem;white-space:nowrap}
 .contents-trigger .chapter-name{min-width:0;margin-left:auto;color:var(--muted);font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -290,6 +290,7 @@ body:has(#guide-finder[open]){overflow:hidden}
     <div><button type="button" class="finder-back" hidden>‹ Chapters</button><h2 id="finder-title" tabindex="-1">Choose a chapter</h2></div>
     <button class="btn" id="finder-close" type="button">Close</button>
   </div>
+  <div class="finder-jump"></div>
   <div class="finder-filters" hidden>
     <input id="q" type="search" aria-label="Search guides" placeholder="Search guides" autocomplete="off">
     <select id="reading-filter" aria-label="Reading list">
@@ -309,6 +310,7 @@ body:has(#guide-finder[open]){overflow:hidden}
   <p id="figure-description"></p>
 </dialog>
 
+<script src="../book-number.js"></script>
 <script src="field-figures.js"></script>
 <script>
 function figuresForStep(catalog, guide, step) {
@@ -1132,6 +1134,73 @@ async function loadLibraryPacks(force = false) {
 
 
 /* ===================== Combined Guide Helpers ===================== */
+// Append future published guide IDs to preserve shared reading numbers.
+const numberedGuideIds = `hh-001 hh-002 hh-003 hh-004 hh-005 hh-006 hh-007 hh-008 hh-009 hh-010 hh-011 hh-012
+hh-013 hh-014 hh-015 hh-016 hh-017 hh-018 hh-019 hh-020 hh-021 hh-022 hh-023 hh-024
+hh-025 hh-026 hh-027 hh-028 hh-029 hh-030 hh-031 hh-032 kit-001 kit-002 kit-003 kit-004
+kit-005 kit-006 kit-007 kit-008 kit-009 kit-010 kit-011 kit-012 kit-013 kit-014 kit-015 kit-016
+kit-017 kit-018 kit-019 kit-020 kit-021 kit-022 kit-023 kit-024 kit-025 kit-026 kit-027 kit-028
+kit-029 kit-030 kit-031 kit-032 kit-033 kit-034 kit-035 kit-036 kit-037 kit-038 kit-039 kit-040
+kit-041 kit-042 kit-043 kit-044 kit-045 kit-046 kit-047 kit-048 kit-049 kit-050 kit-051 kit-052
+kit-053 kit-054 kit-055 kit-056 kit-057 kit-058 kit-059 kit-060 kit-061 kit-062 kit-063 kit-064
+kit-065 kit-066 kit-067 kit-068 kit-069 kit-070 kit-071 kit-072 kit-073 kit-074 kit-075 kit-076
+kit-077 kit-078 kit-079 kit-080 kit-081 kit-082 kit-083 kit-084 kit-085 kit-086 kit-087 kit-088
+kit-089 kit-090 kit-091 kit-092 kit-093 kit-094 kit-095 kit-096 kit-097 kit-098 kit-099 kit-100
+kit-101 kit-102 kit-103 kit-104 kit-105 kit-106 kit-107 kit-108 kit-109 kit-110 kit-111 kit-112
+kit-113 kit-114 kit-115 kit-116 kit-117 kit-118 kit-119 kit-120 kit-121 kit-122 kit-123 kit-124
+kit-125 kit-126 kit-127 kit-128 kit-129 kit-130 kit-131 kit-132 kit-133 kit-134 kit-135 kit-136
+kit-137 kit-138 kit-139 kit-140 kit-141 kit-142 kit-143 kit-144 kit-145 kit-146 kit-147 kit-148
+kit-149 kit-150 kit-151 kit-152 kit-153 kit-154 kit-155 kit-156 kit-157 kit-158 kit-159 kit-160
+kit-161 kit-162 kit-163 kit-164 kit-165 kit-166 kit-167 kit-168 kit-169 kit-170 kit-171 kit-172
+kit-173 kit-174 kit-175 kit-176 kit-177 kit-178 kit-179 kit-180 kit-181 kit-182 kit-183 kit-184
+kit-185 kit-186 kit-187 kit-188 kit-189 kit-190 kit-191 kit-192 kit-193 kit-194 kit-195 kit-196
+kit-197 kit-198 kit-199 kit-200 kit-201 kit-202 kit-203 kit-204 kit-205 kit-206 kit-207 kit-208
+kit-209 kit-210 kit-211 kit-212 kit-213 kit-214 kit-215 kit-216 kit-217 kit-218 kit-219 kit-220
+kit-221 kit-222 kit-223 kit-224 kit-225 kit-226 kit-227 kit-228 kit-229 kit-230 kit-231 kit-232
+kit-233 kit-234 kit-235 kit-236 kit-237 kit-238 kit-239 kit-240 kit-241 kit-242 kit-243 kit-244
+kit-245 kit-246 kit-247 kit-248 kit-249 kit-250 kit-251 kit-252 kit-253 kit-254 kit-255 kit-256
+kit-257 kit-258 kit-259 kit-260 kit-261 kit-262 kit-263 kit-264 kit-265 kit-266 kit-267 kit-268
+kit-269 kit-270 kit-271 kit-272 kit-273 kit-274 kit-275 kit-276 kit-277 kit-278 kit-279 kit-280
+kit-281 kit-282 kit-283 kit-284 kit-285 kit-286 kit-287 kit-288 kit-289 kit-290 kit-291 kit-292
+kit-293 kit-294 kit-295 kit-296 kit-297 kit-298 kit-299 kit-300 kit-301 kit-302 kit-303 kit-304
+kit-305 kit-306 kit-307 hom-101 hom-102 hom-103 hom-104 hom-105 hom-106 hom-107 hom-108 hom-109
+hom-110 hom-111 hom-112 hom-113 hom-114 hom-115 hom-116 hom-117 hom-118 hom-119 hom-120 hom-121
+hom-122 hom-123 hom-124 hom-125 hom-126 hom-127 hom-128 hom-129 hom-130 hom-131 hom-132 hom-133
+hom-134 hom-135 hom-136 hom-137 hom-138 hom-139 hom-140 hom-141 hom-142 hom-143 hom-144 hom-145
+hom-146 hom-147 hom-148 hom-149 hom-150 hom-151 rep-101 rep-102 rep-103 rep-104 rep-105 rep-106
+rep-107 rep-108 rep-109 rep-110 rep-111 rep-112 rep-113 rep-114 rep-115 rep-116 rep-117 rep-118
+rep-119 rep-120 rep-121 rep-122 rep-123 rep-124 rep-125 rep-126 rep-127 rep-128 rep-129 rep-130
+rep-131 rep-132 rep-133 rep-134 rep-135 rep-136 rep-137 rep-138 rep-139 rep-140 rep-141 rep-142
+rep-143 rep-144 rep-145 rep-146 rep-147 rep-148 rep-149 rep-150 rep-151 sur-101 sur-102 sur-103
+sur-104 sur-105 sur-106 sur-107 sur-108 sur-109 sur-110 sur-111 sur-112 sur-113 sur-114 sur-115
+sur-116 sur-117 sur-118 sur-119 sur-120 sur-121 sur-122 sur-123 sur-124 sur-125 sur-126 sur-127
+sur-128 sur-129 sur-130 sur-131 sur-132 sur-133 sur-134 sur-135 sur-136 sur-137 sur-138 sur-139
+sur-140 sur-141 sur-142 sur-143 sur-144 sur-145 sur-146 sur-147 sur-148 sur-149 sur-150 sur-151
+sur-152 sur-153 med-101 med-102 med-103 med-104 med-105 med-106 med-107 med-108 med-109 med-110
+med-111 med-112 med-113 med-114 med-115 med-116 med-117 med-118 med-119 med-120 med-121 med-122
+med-123 med-124 med-125 med-126 med-127 med-128 med-129 med-130 med-131 med-132 med-133 med-134
+med-135 med-136 med-137 med-138 med-139 med-140 med-141 med-142 med-143 med-144 med-145 med-146
+med-147 med-148 med-149 med-150 med-151 med-152 med-153 med-154 med-155 med-156 med-157 med-158
+med-159 med-160 med-161 med-162 med-163 med-164 med-165 med-166 med-167 med-168 med-169 med-170
+med-171 med-172 med-173 med-174 med-175 med-176 crf-101 crf-102 crf-103 crf-104 crf-105 crf-106
+crf-107 crf-108 crf-109 crf-110 crf-111 crf-112 crf-113 crf-114 crf-115 crf-116 crf-117 crf-118
+crf-119 crf-120 crf-121 crf-122 crf-123 crf-124 crf-125 crf-126 crf-127 crf-128 crf-129 crf-130
+crf-131 crf-132 crf-133 crf-134 crf-135 crf-136 crf-137 crf-138 crf-139 crf-140 crf-141 crf-142
+crf-143 crf-144 crf-145 crf-146 crf-147 crf-148 crf-149 crf-150 crf-151 crf-152 crf-153 crf-154
+crf-155 crf-156 crf-157 crf-158 crf-159 crf-160 crf-161 crf-162 crf-163 crf-164 crf-165 crf-166
+crf-167 crf-168 crf-169 crf-170 crf-171 crf-172 crf-173 crf-174 crf-175 crf-176 trv-101 trv-102
+trv-103 trv-104 trv-105 trv-106 trv-107 trv-108 trv-109 trv-110 trv-111 trv-112 trv-113 trv-114
+trv-115 trv-116 trv-117 trv-118 trv-119 trv-120 trv-121 trv-122 trv-123 trv-124 trv-125 trv-126
+trv-127 trv-128 trv-129 trv-130 trv-131 trv-132 trv-133 trv-134 trv-135 trv-136 trv-137 trv-138
+trv-139 trv-140 trv-141 trv-142 trv-143 trv-144 trv-145 trv-146 trv-147 trv-148 trv-149 trv-150
+trv-151 fwg-101 fwg-102 fwg-103 fwg-104 fwg-105 fwg-106 fwg-107 fwg-108 fwg-109 fwg-110 fwg-111
+fwg-112 fwg-113 fwg-114 fwg-115 fwg-116 fwg-117 fwg-118 fwg-119 fwg-120 fwg-121 shp-101 shp-102
+shp-103 shp-104 shp-105 shp-106 shp-107 shp-108 shp-109 shp-110 shp-111 shp-112 shp-113 shp-114
+shp-115 shp-116 shp-117 shp-118 shp-119 shp-120 shp-121 shp-122 shp-123 shp-124 shp-125 shp-126
+shp-127 shp-128 shp-129 shp-130 shp-131 shp-132 shp-133 shp-134 shp-135 shp-136 shp-137 shp-138
+shp-139 shp-140 shp-141 shp-142 shp-143 shp-144 shp-145 shp-146 shp-147 shp-148 shp-149 shp-150
+shp-151`.trim().split(/\s+/);
+const guideNumbers = new Map(numberedGuideIds.map((id, index) => [id, index + 1]));
 function allGuides() {
   return [...state.customGuides, ...masterGuides];
 }
@@ -1266,6 +1335,7 @@ function guideDetailHTML(id) {
     <div class="guide-head">
       <div>
         <div style="margin-bottom:6px">
+          ${guideNumbers.has(g.id) ? `<span class="badge">Guide #${guideNumbers.get(g.id)}</span>` : ''}
           <span class="badge acc">${esc(g.cat)}</span>
           ${g.sub ? `<span class="badge">${esc(g.sub)}</span>` : ''}
           ${g.isCustom ? '<span class="badge ok">Custom Guide</span>' : g.isEdited ? '<span class="badge warn">Edited</span>' : ''}
@@ -1319,12 +1389,14 @@ function renderGuides() {
         <span aria-hidden="true">☰</span><strong>Find a guide</strong>
         <span class="chapter-name">${esc(selected?.cat || '')}</span><span aria-hidden="true">⌄</span>
       </button>
+      <book-number-jump noun="guide" max="${numberedGuideIds.length}"></book-number-jump>
     </nav>
     <div class="reading-page">${guideDetailHTML(selected?.id)}</div>
   </div>`;
 }
 
 const finder = $('#guide-finder');
+$('.finder-jump', finder).innerHTML = `<book-number-jump noun="guide" max="${numberedGuideIds.length}"></book-number-jump>`;
 const finderList = $('.finder-list', finder);
 function renderFinderList() {
   if ($('.finder-filters', finder).hidden) {
@@ -1344,7 +1416,7 @@ function renderFinderList() {
   }
   finderList.innerHTML = [...groups].map(([name, entries]) =>
     `<section><h3>${esc(name)}</h3>${entries.sort((a,b) => a.title.localeCompare(b.title)).map(g =>
-      `<button type="button" class="finder-row" data-guide="${esc(g.id)}" ${g.id === ui.selectedId ? 'aria-current="page"' : ''}>${esc(g.title)}</button>`
+      `<button type="button" class="finder-row" data-guide="${esc(g.id)}" ${g.id === ui.selectedId ? 'aria-current="page"' : ''}>${guideNumbers.has(g.id) ? '#' + guideNumbers.get(g.id) + ' · ' : ''}${esc(g.title)}</button>`
     ).join('')}</section>`
   ).join('') || '<p class="finder-empty" role="status">No matching guides. Try another search or reading list.</p>';
 }
@@ -1364,6 +1436,19 @@ function showFinder(chapter = null, search = false) {
   if (!finder.open) finder.showModal();
   (search ? $('#q') : $('#finder-title')).focus({preventScroll:true});
 }
+
+document.addEventListener('open-book-number', event => {
+  const id = numberedGuideIds[event.detail - 1];
+  if (!getGuide(id)) {
+    event.target.showError('That guide is not loaded yet. Open the bookshelf online to finish the download.');
+    return;
+  }
+  if (finder.open) finder.close();
+  openGuide(id);
+  render();
+  $('.guide-head h2').focus({preventScroll:true});
+  window.scrollTo(0, 0);
+});
 
 finder.onclick = e => {
   const chapter = e.target.closest('[data-chapter]');
