@@ -6,4 +6,7 @@
 - [The Desk Dictionary & Thesaurus](./desk-dictionary/) — offline English definitions, sense-grouped synonyms and antonyms, fuzzy spelling search, and regional variants. [Data credits](./desk-dictionary/credits.html).
 - [Score Book](./score-book/) — offline round scores, running totals and dated scorecards.
 
+- [Wordplay Café](./wordplay-cafe/) — 20 playable word puzzles with saved progress.
+- [The Card Table](./card-table/) — 100 offline card-game rules, a guided bridge deal and a random game picker.
+
 The back-of-book Food Safety Quick Reference appendix includes refrigeration decisions, storage times, freeze-dried product examples, and cat food and treats.

@@ -114,20 +114,30 @@ function totals(game) {
 function results(game) {
   const scores = totals(game), candidates = scores.map((score,i)=>({score,i})).filter(({i})=>isActive(game,i) && game.rounds.some(row=>filled(row[i])));
   if (!candidates.length) return '';
-  const high = Math.max(...candidates.map(p=>p.score));
+  const high = (game.order === 'low' ? Math.min : Math.max)(...candidates.map(p=>p.score));
   const leaders = candidates.filter(p=>p.score===high).map(p=>player(game,p.i));
   return leaders.join(' & ') + (leaders.length>1?' tied at ':' finished with ') + high + (high===1?' point.':' points.');
 }
-function newCard() {
-  openDialog('New scorecard','<label>Number of players<input id="count" type="number" inputmode="numeric" min="2" max="32" value="2" required></label><label>Play to how many points?<input id="target" type="number" inputmode="numeric" min="1" max="9999999" value="500" required></label>', 'Start scorecard', async () => {
+function scoreGoal(game) {
+  if (game.order === 'low') return game.target ? 'Lowest score wins · stop at '+game.target : 'Lowest score wins';
+  return game.target ? 'Play to '+game.target+' points' : 'Highest score wins';
+}
+function newCard(preset) {
+  const fields = '<label>Number of '+(preset?.teams ? 'teams' : 'players')+'<input id="count" type="number" inputmode="numeric" min="2" max="32" value="2" required></label>' +
+    '<label>Point target (optional)<input id="target" type="number" inputmode="numeric" min="1" max="9999999" placeholder="Finish manually"></label>';
+  openDialog(preset?.name || 'New scorecard', fields, 'Start scorecard', async () => {
     const n = Number($('#count').value);
-    const game = {id:crypto.randomUUID(),created:new Date().toISOString(),finished:null,target:Number($('#target').value),names:emptyRow(n),location:'',rounds:[emptyRow(n)]};
+    const names = preset?.teams ? Array.from({length:n},(_,i)=>'Team '+(i+1)) : emptyRow(n);
+    const game = {id:crypto.randomUUID(),created:new Date().toISOString(),finished:null,target:Number($('#target').value),
+      order:preset?.order || 'high',gameName:preset?.name || '',names,location:'',rounds:[emptyRow(n)]};
     await transaction('games','readwrite',store=>store.add(game));
     channel?.postMessage(game.id);
     location.hash = 'card='+game.id;
   });
+  $('#count').value = preset?.count || 2;
+  $('#target').value = preset ? preset.target || '' : 500;
 }
-$('#new').onclick = newCard;
+$('#new').onclick = () => newCard();
 function listGames(games) {
   const host = $('#games');host.replaceChildren();
   for (const [title,finished] of [['In progress',false],['Finished scorecards',true]]) {
@@ -143,7 +153,7 @@ function listGames(games) {
       if (game.gameName?.trim()) link.append(node('strong', game.gameName.trim()), node('small', roster));
       else link.append(node('strong', roster));
       link.append(
-        node('small',[shortDate(game.finished||game.created),game.location.trim(),'Play to '+game.target].filter(Boolean).join(' · ')));
+        node('small',[shortDate(game.finished||game.created),game.location.trim(),scoreGoal(game)].filter(Boolean).join(' · ')));
       if (finished) link.append(node('small',results(game)));
       li.append(link);list.append(li);
     }
@@ -252,7 +262,7 @@ function updateTotals() {
       total.setAttribute('aria-label','Running total for '+player(current,i)+': '+sum[i]);
     });
   }
-  const target=sum.flatMap((v,i)=>isActive(current,i) && v>=current.target?[player(current,i)]:[]);
+  const target=sum.flatMap((v,i)=>current.target && isActive(current,i) && v>=current.target?[player(current,i)]:[]);
   $('#result').textContent = current.finished?results(current):target.length?'Reached '+current.target+' points: '+target.join(', ')+'.':'';
 }
 function scoreCell(rowIndex,i) {
@@ -321,7 +331,7 @@ function drawCard() {
     gameLabel.append(gameInput);
     meta.append(gameLabel);
   }
-  meta.append(node('strong','Play to '+current.target+' points'));
+  meta.append(node('strong',scoreGoal(current)));
   if(current.finished){if(current.location)meta.append(node('span',current.location));}
   else{
     const label=node('label','Location (optional)'),place=node('input');
@@ -389,7 +399,17 @@ async function route() {
   $('#library').hidden=!!game;$('#card').hidden=!game;
   if(game){drawCard();return;}
   const list=await read('games');
-  if(version===viewNumber)listGames(list);
+  if(version!==viewNumber)return;
+  listGames(list);
+  const intent = new URLSearchParams(location.hash.slice(1));
+  const name = intent.get('newGame')?.trim().slice(0,80);
+  if (!name) return;
+  const preset = {name, teams:intent.get('teams')==='yes', order:intent.get('order')==='low'?'low':'high',
+    count:Math.max(2,Math.min(32,parseInt(intent.get('players'),10)||2)),
+    target:Math.max(0,Math.min(9999999,parseInt(intent.get('target'),10)||0))};
+  history.replaceState(null,'',location.pathname+location.search);
+  if (dialog.open) dialog.addEventListener('close',()=>newCard(preset),{once:true});
+  else newCard(preset);
 }
 window.addEventListener('hashchange',()=>route().catch(fail));
 if(channel)channel.onmessage=event=>{
