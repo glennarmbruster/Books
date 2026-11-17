@@ -1,5 +1,5 @@
 'use strict';
-const activityTypes = ['Picture pairs', 'In order', 'The missing object', 'Map memory', 'Story recall'];
+const activityTypes = ['Picture pairs', 'In order', 'The missing object', 'Map memory', 'Story recall', 'Word pairs', 'Category recall'];
 // Each numbered outing has a fixed collection. Keep the order stable for shared play.
 const outings = [
   ['At the harbor','⚓ Anchor','🛟 Life ring','🪢 Rope','🐚 Shell','🧭 Compass','🐟 Fish','🛶 Canoe','🔔 Bell','🪣 Bucket'],
@@ -26,7 +26,25 @@ function shuffle(items, seed) {
   }
   return result;
 }
+// Published numbers are shared between devices. Progress uses the permanent content ID.
+const activityOrder = shuffle(Array.from({length:250}, (_, i) => i + 1), 831712);
 function activity(number) {
+  const contentId = activityOrder[number - 1];
+  const seed = 7919 * contentId;
+  if (contentId > 225) {
+    const set = categoryRecallSets[contentId - 226];
+    return {number, contentId, kind:6, title:set.title, seed,
+      words:shuffle(set.groups.flatMap(group => group.seen), seed),
+      groups:shuffle(set.groups, seed + 31)};
+  }
+  if (contentId > 200) {
+    const set = wordPairSets[contentId - 201];
+    return {number, contentId, kind:5, title:set.title, seed, pairs:set.pairs,
+      prompts:shuffle(set.pairs, seed + 31)};
+  }
+  return {...outingActivity(contentId), number, contentId};
+}
+function outingActivity(number) {
   const kind = (number - 1) % 5;
   const round = Math.floor((number - 1) / 5);
   const seed = 7919 * number;

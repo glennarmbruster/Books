@@ -21,3 +21,8 @@ body{background:#f7f3e7}
 dialog{background:var(--paper);color:var(--ink);border:1px solid #aa9d83;border-radius:.5rem;max-width:min(28rem,92vw)}
 dialog label{margin:.45rem 0}dialog::backdrop{background:#14252490}
 @media(max-width:480px){.board{gap:.36rem}.tile{font-size:.74rem}.token{font-size:.82rem}.choices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.study-words{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));gap:.6rem;padding:0;margin:1rem 0}
+.study-words li{padding:.8rem;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:.4rem}
+.choices button[aria-pressed="true"]{background:var(--ink);color:white}
+.choices button[aria-pressed="true"]::before{content:"✓ ";font-weight:bold}

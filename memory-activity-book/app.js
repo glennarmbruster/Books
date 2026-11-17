@@ -1,7 +1,7 @@
 'use strict';
 const $ = id => document.getElementById(id);
 const prefix = 'books.memory.v1.';
-const total = outings.length * activityTypes.length;
+const total = activityOrder.length;
 const stage = $('stage');
 let current, state, pinAction;
 
@@ -10,7 +10,7 @@ function read(id) {
 }
 function fresh() { return {phase:'study', picked:[], matched:[], turned:[], question:0}; }
 function persist() {
-  try { localStorage.setItem(prefix + current.number, JSON.stringify(state)); }
+  try { localStorage.setItem(prefix + current.contentId, JSON.stringify(state)); }
   catch { $('save-error').textContent = 'This device could not save your place.'; }
 }
 function element(tag, text, className) {
@@ -29,7 +29,7 @@ function contents() {
   const entries = document.createDocumentFragment();
   let count = 0;
   for (let i = 1; i <= total; i++) {
-    const a = activity(i), saved = read(i);
+    const a = activity(i), saved = read(a.contentId);
     const done = saved?.phase === 'done';
     if (done) count++;
     if ($('filter').value !== '' && +$('filter').value !== a.kind) continue;
@@ -50,7 +50,7 @@ function draw(message = '', focusId) {
   if (state.phase === 'done') {
     stage.append(element('h2','✓ Activity complete'), element('p','Your place is marked in the activity index.'));
   } else {
-    [pairs, sequence, missing, mapMemory, storyRecall][current.kind]();
+    [pairs, sequence, missing, mapMemory, storyRecall, wordPairs, categoryRecall][current.kind]();
   }
   if (hadFocus) {
     const target = (focusId && document.getElementById(focusId)) || stage.querySelector('button:not(:disabled)') || $('next');
@@ -203,6 +203,72 @@ function storyRecall() {
   })));
 }
 
+function wordList(words) {
+  const list = element('ul', undefined, 'study-words');
+  for (const word of words) list.append(element('li', word));
+  stage.append(list);
+}
+
+function checkWordRecall(correct, questionCount) {
+  state.picked = [];
+  if (!correct) {
+    state.phase = 'study';
+    state.question = 0;
+    update('Take another look, then try again.');
+    return;
+  }
+  if (++state.question === questionCount) return done();
+  update('Correct.');
+}
+
+function wordPairs() {
+  if (state.phase === 'study') {
+    block('Study the word pairs', 'Picture the two words in each pair together. When you’re ready, hide them and recall the partners.');
+    wordList(current.pairs.map(([cue, partner]) => cue + ' — ' + partner));
+    hideStudy('Hide the pairs');
+    return;
+  }
+  const [cue, partner] = current.prompts[state.question];
+  block('What went with “' + cue + '”?', 'Pair ' + (state.question + 1) + ' of ' + current.pairs.length);
+  const choices = group('choices');
+  const partners = current.pairs.map(pair => pair[1]);
+  for (const word of shuffle(partners, current.seed + 7919 * state.question)) {
+    choices.append(button(word, () => checkWordRecall(word === partner, current.pairs.length)));
+  }
+}
+
+function categoryRecall() {
+  if (state.phase === 'study') {
+    block('Study the word list', 'Read the mixed list. After you hide it, you’ll be asked which words you saw from each category.');
+    wordList(current.words);
+    hideStudy('Hide the list');
+    return;
+  }
+  const category = current.groups[state.question];
+  const count = category.seen.length;
+  block(category.name[0].toUpperCase() + category.name.slice(1),
+    'Category ' + (state.question + 1) + ' of ' + current.groups.length + ' · Which ' + count + ' words appeared on the list? Tap again to undo a choice.');
+  const choices = group('choices');
+  const options = shuffle([...category.seen, ...category.decoys], current.seed + 7919 * state.question);
+  options.forEach((word, i) => {
+    const picked = state.picked.includes(word);
+    const pick = button(word, () => {
+      if (picked) state.picked = state.picked.filter(value => value !== word);
+      else state.picked.push(word);
+      update('', 'pick-word-' + i);
+    });
+    pick.id = 'pick-word-' + i;
+    pick.setAttribute('aria-pressed', String(picked));
+    pick.disabled = !picked && state.picked.length >= count;
+    choices.append(pick);
+  });
+  const check = button('Check words', () => {
+    checkWordRecall(category.seen.every(word => state.picked.includes(word)), current.groups.length);
+  }, 'action');
+  check.disabled = state.picked.length !== count;
+  stage.append(check);
+}
+
 function route() {
   const id = Number(/^#activity-(\d+)$/.exec(location.hash)?.[1]);
   const reading = id>=1 && id<=total;
@@ -211,7 +277,7 @@ function route() {
   $('feedback').textContent='';
   if (reading) {
     current=activity(id);
-    state=read(id)||fresh();
+    state=read(current.contentId)||fresh();
     $('kind').textContent='Activity #'+id+' · '+activityTypes[current.kind];
     $('title').textContent=current.title;
     $('next').textContent=id===total?'Activity index →':'Next activity →';
@@ -264,7 +330,7 @@ $('pin-form').onsubmit=async e=>{
   finally { $('accept').disabled=false; }
 };
 $('restart').onclick=()=>askPin('Restart activity','Enter your PIN to clear this activity.',()=>{
-  localStorage.removeItem(prefix+current.number);state=fresh();draw('Ready to play again.');
+  localStorage.removeItem(prefix+current.contentId);state=fresh();draw('Ready to play again.');
 });
 $('clear-all').onclick=()=>askPin('Clear book progress','Enter your PIN to clear all '+total+' activities on this device.',()=>{
   for (let i=1;i<=total;i++) localStorage.removeItem(prefix+i);
