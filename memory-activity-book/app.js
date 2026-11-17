@@ -53,7 +53,7 @@ function draw(message = '', focusId) {
     [pairs, sequence, missing, mapMemory, storyRecall, wordPairs, categoryRecall][current.kind]();
   }
   if (hadFocus) {
-    const target = (focusId && document.getElementById(focusId)) || stage.querySelector('button:not(:disabled)') || $('next');
+    const target = (focusId && document.getElementById(focusId)) || stage.querySelector('button:not(:disabled)') || $('restart');
     target.focus({preventScroll:true});
   }
 }
@@ -280,8 +280,7 @@ function route() {
     state=read(current.contentId)||fresh();
     $('kind').textContent='Activity #'+id+' · '+activityTypes[current.kind];
     $('title').textContent=current.title;
-    $('next').textContent=id===total?'Activity index →':'Next activity →';
-    $('next').href=id===total?'#contents':'#activity-'+(id+1);
+    document.querySelector('book-pager').setPage(id,total,'activity',n=>location.hash='activity-'+n,()=>location.hash='contents');
     draw();
     $('title').focus({preventScroll:true});
   } else { current=null; contents(); }

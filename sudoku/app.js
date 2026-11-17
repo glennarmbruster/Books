@@ -115,6 +115,7 @@ function route() {
     $('title').textContent='Puzzle '+label(number);$('level').textContent=puzzles[number-1].level;
     $('prev').href='#'+(number-1);$('prev').hidden=number===1;
     $('next').href='#'+(number+1);$('next').hidden=number===puzzles.length;
+  document.querySelector('book-pager').setPage(number,puzzles.length,'puzzle',n=>location.hash=String(n),()=>location.hash='');
     try {localStorage.setItem(storage+'.last',number);}catch{}
     render();
   } else index();

@@ -210,7 +210,17 @@ self.onmessage=async ({data})=>{
     if(data.thesaurus)await openThesaurus();
     if(action==='init')result=data.thesaurus?{count:thesaurusIndex.count}:info;
     if(action==='search')result=search(data.query,data.submitted,data.thesaurus);
-    if(action==='entry'){const id=exactId(data.word);result=id<0?null:data.thesaurus?await thesaurusEntry(id):await entry(id);}
+    const ordered=data.thesaurus?thesaurusOrder:order;
+    if(action==='wordAt')result=words[ordered[data.number-1]];
+    if(action==='entry'){
+      const id=exactId(data.word);
+      result=id<0?null:data.thesaurus?await thesaurusEntry(id):await entry(id);
+      if(result){
+        let pos=bound(keys[id],ordered);
+        while(pos<ordered.length && keys[ordered[pos]]===keys[id] && ordered[pos]!==id)pos++;
+        if(ordered[pos]===id)result.page=pos+1;
+      }
+    }
     if(action==='browse'){
       const index=data.thesaurus?thesaurusOrder:order;
       const letter=fold(data.letter),start=bound(letter,index),end=bound(letter+'\uffff',index);

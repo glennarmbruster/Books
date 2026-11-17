@@ -133,6 +133,7 @@ function hunt() {
 function route(){
   puzzle=menu.find(p=>'#'+p.id===location.hash);$('play').hidden=!puzzle;$('catalog').hidden=!!puzzle;
   if(!puzzle){renderMenu();return;}
+  document.querySelector('book-pager').setPage(menu.indexOf(puzzle)+1,menu.length,'puzzle',n=>location.hash=menu[n-1].id,()=>location.hash='');
   localStorage.setItem(key('last'),String(puzzle.id));state=load(puzzle.id);
   $('number').textContent=types[puzzle.type]+' · '+puzzle.id+' / '+menu.length;$('title').textContent=puzzle.title;
   $('board').replaceChildren();$('after').replaceChildren();$('feedback').textContent='';

@@ -1,8 +1,8 @@
-const edition = 'score-book-6';
+const edition = 'score-book-7';
 const prefix = self.registration.scope + 'score-book:';
 const cacheName = prefix + edition;
 const localURL = path => new URL(path, self.registration.scope).href;
-const assets = ['index.html','app.js','style.css','manifest.webmanifest','icon.png'].map(localURL);
+const assets = ['../book-pager.js','index.html','app.js','style.css','manifest.webmanifest','icon.png'].map(localURL);
 
 self.addEventListener('install', event => {
   event.waitUntil((async () => {

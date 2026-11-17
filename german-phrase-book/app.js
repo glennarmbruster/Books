@@ -32,7 +32,11 @@ function setSaveLabel(b,p,set) {
 }
 function show(p) {
   active=p;stop();$('audio-error').textContent='';$('large-en').textContent=p.en;$('large-de').textContent=p.de;$('large-say').textContent=p.say;
-  setSaveLabel($('save-large'),p,saved());$('show').showModal();$('close').focus();
+  setSaveLabel($('save-large'),p,saved());if(!$('show').open)$('show').showModal();
+  $('phrase-pages').setPage(phrases.indexOf(p)+1,phrases.length,'phrase',n=>show(phrases[n-1]),()=>{
+    $('show').close();$('query').value='';location.hash='chapters';render();
+  });
+  $('close').focus();
 }
 $('listen').onclick=()=>play(active);$('slow').onclick=()=>play(active,.76);$('save-large').onclick=()=>bookmark(active,false);
 $('close').onclick=()=>$('show').close();$('show').onclose=()=>{stop();active=null;};
@@ -52,6 +56,8 @@ function render(){
   for(const a of document.querySelectorAll('.tabs a'))a.removeAttribute('aria-current');
   if(!q&&(directory||favorites))document.querySelector('.tabs a[href="#'+(favorites?'saved':'chapters')+'"]').setAttribute('aria-current','page');
   $('saved-link').textContent='My phrases'+(set.size?' ('+set.size+')':'');
+  const pager=$('chapter-pages');pager.hidden=directory||favorites||!!q||!chapter;
+  if(!pager.hidden)pager.setPage(chapters.indexOf(chapter)+1,chapters.length,'chapter',n=>location.hash=chapters[n-1].id,()=>location.hash='chapters');
   const host=$('entries');host.replaceChildren();if(directory)return;
   const rows=q?phrases.filter(p=>terms.every(t=>p.terms.includes(t))):phrases.filter(p=>favorites?set.has(p.id):p.chapter===chapter?.id);
   $('heading').tabIndex=-1;$('heading').textContent=q?'Search results':favorites?'My phrases':chapter.title;

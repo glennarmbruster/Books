@@ -340,7 +340,7 @@ body:has(#guide-finder[open]){overflow:hidden}
   <p id="figure-description"></p>
 </dialog>
 
-<script src="../book-number.js"></script>
+<script src="../book-pager.js"></script><script src="../book-number.js"></script>
 <script src="./appendix-search.js"></script>
 <script src="field-figures.js"></script>
 <script>
@@ -1533,8 +1533,13 @@ function renderGuides() {
       </button>
       <book-number-jump noun="guide" max="${numberedGuideIds.length}"></book-number-jump>
     </nav>
-    <div class="reading-page">${guideDetailHTML(selected?.id)}</div>
+    <div class="reading-page">${guideDetailHTML(selected?.id)}<book-pager></book-pager></div>
   </div>`;
+  const available=new Set(allGuides().map(g=>g.id));
+  const ids=[...numberedGuideIds.filter(id=>available.has(id)), ...[...available].filter(id=>!guideNumbers.has(id))];
+  if(selected)view.querySelector('book-pager').setPage(ids.indexOf(selected.id)+1,ids.length,'guide',n=>{
+    openGuide(ids[n-1]);render();window.scrollTo(0,0);
+  },()=>showFinder());
   mountAppendixSearch(view);
   const input = view.querySelector('#appendix-query');
   if (query && input) { input.value = query; input.dispatchEvent(new Event('input')); }

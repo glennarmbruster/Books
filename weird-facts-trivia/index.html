@@ -7,29 +7,34 @@
   <div class="jacket"><div><h1>WEIRD Facts<br><em>&amp; Trivia</em></h1><p id="book-count"></p><a href="#browse">Browse the question index ↓</a></div><img src="../shelf-art/trivia.jpg" alt=""></div>
   <div class="setups"><section><h2>Play a round</h2><form id="start-form"><label for="topic">Category</label><select id="topic"></select>
     <div class="round-options"><label>Answer starts with<select id="letter"></select></label><label>Questions in round<input id="length" type="number" inputmode="numeric" min="1" step="1" value="10" required aria-describedby="available"></label></div>
+    <fieldset id="difficulty-mix"><legend>Difficulty mix</legend><p>Set a percentage and the other levels share the rest equally. Leave all four blank for any mix.</p><div class="mix-inputs">
+      <label>Easy %<input id="mix-easy" type="number" min="0" max="100" step="0.01" placeholder="Auto" inputmode="decimal"></label>
+      <label>Medium %<input id="mix-medium" type="number" min="0" max="100" step="0.01" placeholder="Auto" inputmode="decimal"></label>
+      <label>Hard %<input id="mix-hard" type="number" min="0" max="100" step="0.01" placeholder="Auto" inputmode="decimal"></label>
+      <label>Obscure %<input id="mix-obscure" type="number" min="0" max="100" step="0.01" placeholder="Auto" inputmode="decimal"></label></div><p id="mix-preview" role="status"></p></fieldset>
     <p id="available" role="status"></p><button class="action">Start round</button></form></section>
-    <section><h2>Play the same round</h2><p>Have a friend read you their round code. Each device keeps its own score.</p><form id="join-form"><label for="code">Round code</label><input id="code" placeholder="10000-0-4821-1-G20" autocomplete="off" autocapitalize="none" spellcheck="false" required><button>Join round</button></form><p id="join-error" role="alert"></p></section></div>
+    <section><h2>Play the same round</h2><p>Have a friend read you their round code. Each device keeps its own score.</p><form id="join-form"><label for="code">Round code</label><input id="code" placeholder="20000-0-4821-1-G20" autocomplete="off" autocapitalize="none" spellcheck="false" required><button>Join round</button></form><p id="join-error" role="alert"></p></section></div>
   <aside class="curiosity"><div><h2>From the curiosity cabinet</h2><a id="cabinet-question"></a></div><button id="cabinet-another" type="button">Another curiosity</button></aside>
   <section id="recent" hidden><h2>Your rounds</h2><div id="recent-list"></div></section>
   <section id="browse"><h2>Question index</h2><div class="index-tools"><label for="search">Find a question or category<input type="search" id="search" placeholder="Try bubbles, lost luggage, or Disney"></label><div id="number-tool"></div></div>
   <div id="directory"></div>
-  <details class="sources-note"><summary>About the curiosity archives</summary><p>Archive questions adapt facts from Wikipedia’s <i>Did you know?</i> collection into trivia clues. Explanations include shortened article introductions. Each archive card links to the article revision and the original fact. These adaptations credit Wikipedia contributors and use the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 license</a>.</p></details></section>
+  <details class="sources-note"><summary>About the curiosity archives</summary><p>Archive questions adapt facts from Wikipedia’s <i>Did you know?</i> collection into trivia clues. Explanations include shortened article introductions. Each archive card links to the article revision and the original fact. These adaptations credit Wikipedia contributors and use the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 license</a>.</p></details><p><a href="credits.html">Question sources and licenses</a></p></section>
 </section>
 <section id="reader" hidden><nav class="reader-nav"><a href="#">‹ Trivia home</a><div id="share-round"><button id="copy-code" type="button"></button><span id="copy-status" role="status"></span></div></nav>
 <div class="round-line"><span id="mode"></span><span id="score"></span></div><progress id="round-progress" aria-label="Questions scored"></progress>
 <article class="fact-card"><div class="card-meta"><span id="card-category"></span><span id="folio"></span></div><h1 id="question" tabindex="-1"></h1>
-  <button class="action" id="reveal" type="button">Reveal answer</button>
+  <p id="question-hint" hidden></p><ul id="choices" aria-label="Answer choices" hidden></ul><button class="action" id="reveal" type="button">Reveal answer</button>
   <div id="answer-panel" hidden><h2 id="answer"></h2><p id="detail"></p><div id="sources"></div></div>
 </article>
 <div id="marking" hidden><p>How did you do?</p><div class="buttons"><button id="hit" class="action">Got it</button><button id="miss">Missed it</button></div></div>
-<nav id="single-nav" class="reader-nav" hidden><a id="previous">← Previous question</a><a id="next">Next question →</a></nav></section>
+<p id="browse-round-note" hidden>Browse by question number. Your round is saved.</p><a id="resume-browsed-round" hidden>Return to your round</a><book-pager id="single-nav"></book-pager></section>
 <section id="finish" hidden><a href="#" class="back">‹ Trivia home</a><h1>Round complete</h1><p id="final-score"></p><p id="final-code"></p><button id="another" class="action">Play another round</button><h2>Round recap</h2><div id="recap"></div></section>
 <p role="status" id="notice"></p></main>
-<script>window.TRIVIA_CATEGORIES=[];</script>
+<script src="../book-pager.js"></script><script>window.TRIVIA_CATEGORIES=[];</script>
 <script src="data/cruises.js"></script><script src="data/favorites.js"></script><script src="data/discovery.js"></script><script src="data/travel-and-play.js"></script>
 <script src="data/cruises-2.js"></script><script src="data/favorites-2.js"></script><script src="data/discovery-2.js"></script><script src="data/travel-and-play-2.js"></script>
 <script src="data/peculiar-customs.js"></script><script src="data/peculiar-planet.js"></script><script src="data/peculiar-design.js"></script><script src="data/peculiar-everyday.js"></script>
 <script src="data/legacy-letter-answers.js"></script><script src="data/letter-x-cabinet.js"></script><script src="data/letter-q-cabinet.js"></script><script src="data/letter-z-cabinet.js"></script>
 <script src="data/letter-y-cabinet.js"></script><script src="data/letter-u-cabinet.js"></script><script src="data/letter-v-cabinet.js"></script><script src="data/archive-cabinets.js"></script>
 <script src="data/second-x.js"></script><script src="data/second-q.js"></script><script src="data/second-z.js"></script><script src="data/curiosity-almanac.js"></script>
-<script src="../book-number.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>
+<script src="../book-number.js"></script><script src="data/levels.js"></script><script src="data/new-edition.js"></script><script src="mix.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>

@@ -15,8 +15,8 @@
 <div class="buttons"><button id="notes" aria-pressed="false">Pencil notes</button><button id="erase">Erase</button><button id="undo">Undo</button></div>
 <button id="check" class="action">Check entries</button><p id="feedback" role="status"></p>
 <details><summary>How to play</summary><p>Fill each row, column, and outlined 3 × 3 box with the numbers 1–9, using each number once. The dark printed numbers are fixed.</p><p>Tap a square and a number. Turn on Pencil notes to mark possible numbers. On a keyboard, use the arrows to move and Backspace to erase.</p></details>
-<button id="reset" class="quiet">Clear this puzzle</button></div></div></section>
+<button id="reset" class="quiet">Clear this puzzle</button></div></div><book-pager></book-pager></section>
 <details id="tools"><summary>Book tools</summary><div class="buttons"><button id="export">Back up progress</button><label class="file">Restore backup<input id="import" type="file" accept=".json,application/json"></label><button id="clear-all">Clear all puzzles</button></div></details>
 <p id="message" role="status"></p></main>
 <dialog id="dialog" aria-labelledby="dialog-title"><form id="pin-form"><h2 id="dialog-title"></h2><p id="reason"></p><label id="pin-label">PIN<input id="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" required autocomplete="off"></label><label id="confirm-label">Confirm PIN<input id="confirm" type="password" inputmode="numeric" autocomplete="off"></label><p role="alert" id="pin-error"></p><div class="buttons"><button type="button" id="cancel">Cancel</button><button type="submit" class="action" id="accept">Continue</button></div></form></dialog>
-<script src="../book-number.js"></script><script src="puzzles.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>
+<script src="../book-pager.js"></script><script src="../book-number.js"></script><script src="puzzles.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>

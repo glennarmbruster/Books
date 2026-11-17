@@ -40,6 +40,7 @@ function route(){
   const id=location.hash.slice(1);
   current=games.find(g=>g.id===id);$('catalog').hidden=!!current;$('reader').hidden=!current;
   if(!current){filters();return;}
+  document.querySelector('book-pager').setPage(games.indexOf(current)+1,games.length,'game',n=>location.hash=games[n-1].id,()=>location.hash='');
   const g=current;$('title').textContent=g.name;$('details').textContent=[g.style,g.players+(g.players==='1'?' player':' players'),g.decks+(g.decks===1?' deck':' decks'),g.time].join(' · ');$('intro').textContent=g.summary;
   scoreLink(g);$('again').disabled=!matches().some(other=>other.id!==g.id);const host=$('sections');host.replaceChildren();
   for(const section of g.sections){

@@ -151,11 +151,16 @@ function newCard(preset) {
   $('#target').value = preset ? preset.target || '' : 500;
 }
 $('#new').onclick = () => newCard();
+let cardOrder=[];
+function scorecardOrder(a,b){
+  return Number(!!a.finished)-Number(!!b.finished) ||
+    (b.finished||b.created).localeCompare(a.finished||a.created) || a.id.localeCompare(b.id);
+}
 function listGames(games) {
   const host = $('#games');host.replaceChildren();
   for (const [title,finished] of [['In progress',false],['Finished scorecards',true]]) {
     const selected = games.filter(g=>Boolean(g.finished)===finished)
-      .sort((a,b)=>(b.finished||b.created).localeCompare(a.finished||a.created));
+      .sort(scorecardOrder);
     host.append(node('h2',title));
     const list = node('ul',undefined,'games');
     if (!selected.length) list.append(node('li',finished?'Finished games will appear here.':'No games in progress.','hint'));
@@ -425,19 +430,23 @@ function drawCard() {
     footer.append(button('Finish game', finishCard),button('Restart game', restartCard));
   }
   host.append(footer,button('Delete scorecard',deleteCard,'danger'));labelScores();updateTotals();
+  const pager=document.createElement('book-pager');host.append(pager);
+  pager.setPage(cardOrder.indexOf(current.id)+1,cardOrder.length,'scorecard',n=>location.hash='card='+cardOrder[n-1],()=>location.hash='');
 }
 async function route() {
   if(!db || !pin)return;
   const version=++viewNumber;
   const id=new URLSearchParams(location.hash.slice(1)).get('card');
-  const game=id?await read('games',id):null;
+  const list=await read('games');
+  const game=id?list.find(item=>item.id===id):null;
   if(version!==viewNumber)return;
   $('#error').hidden=true;
   current=game;
   $('#library').hidden=!!game;$('#card').hidden=!game;
-  if(game){drawCard();return;}
-  const list=await read('games');
-  if(version!==viewNumber)return;
+  if(game){
+    cardOrder=list.sort(scorecardOrder).map(g=>g.id);
+    drawCard();return;
+  }
   listGames(list);
   const intent = new URLSearchParams(location.hash.slice(1));
   const name = intent.get('newGame')?.trim().slice(0,80);

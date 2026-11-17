@@ -146,11 +146,13 @@ function pageBody() {
  return `<article class="page"><div class="pager">${go(answer ? '‹ Answer index' : '‹ Challenge index',index,p.id)}
    <div class="navright">${prev}${next}</div></div>${numberJump(answer)}<div class="filehead">
    <p class="eyebrow">${answer ? 'Answer' : 'Challenge'} ${num(p.id)} / ${num(puzzles.length)} &nbsp; · &nbsp; ${esc(p.kind)} &nbsp; · &nbsp; ${esc(p.level)}</p>
-   <h1>${esc(p.title)}</h1></div>${content}</article>`;
+   <h1>${esc(p.title)}</h1></div>${content}<book-pager></book-pager></article>`;
 }
 function render(){
  if(startupError){main.innerHTML='<h1>Saved book needs attention</h1><p>Your stored progress could not be read. Keep this copy of the app open and retain your latest backup.</p>';return;}
  const inside=['puzzle','answer'].includes(book.view);main.innerHTML=inside?pageBody():library();
+ if(inside) main.querySelector('book-pager').setPage(book.id,puzzles.length,book.view==='answer'?'answer':'puzzle',
+   n=>nav(book.view,n),()=>nav(book.view==='answer'?'answers':'index',book.id));
  const compare = $('#compare-plate');
  if (compare) {
   const puzzle = pNow();

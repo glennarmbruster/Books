@@ -217,6 +217,13 @@ async function route() {
       const data=await ask('entry',{word:result.exact.word});
       if(version!==generation)return;
       if(thesaurus)showThesaurus(data);else showEntry(data);
+      if(data.page){
+        const pager=el('book-pager');reader.append(pager);
+        pager.setPage(data.page,info.count,'entry',async n=>{
+          const word=await ask('wordAt',{number:n});
+          if(version===generation&&word){location.hash=hash({word});window.scrollTo(0,0);}
+        },()=>location.hash=hash({}));
+      }
     } else {
       const title=el('h2','No exact entry','word-title');title.id='word-title';
       const p=el('p','No entry found for “'+term+'”. ');

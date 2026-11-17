@@ -1,5 +1,5 @@
 'use strict';
-const edition='desk-2026-11-16-3';
+const edition='desk-2026-11-17-4';
 const prefix='desk-dictionary:'+self.registration.scope+':', cacheName=prefix+edition;
 const url=file=>new URL(file,self.registration.scope).href;
 self.addEventListener('install',event=>event.waitUntil((async()=>{
@@ -39,7 +39,8 @@ self.addEventListener('message',event=>{
   })());
 });
 self.addEventListener('fetch',event=>{
-  if(event.request.method!=='GET'||!event.request.url.startsWith(self.registration.scope))return;
+  if(event.request.method!=='GET')return;
+  if(!event.request.url.startsWith(self.registration.scope)&&event.request.url!==url('../book-pager.js'))return;
   const target=new URL(event.request.url);
   target.search='';target.hash='';
   if(target.href===self.registration.scope)target.pathname+='index.html';

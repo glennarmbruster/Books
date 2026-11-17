@@ -14,3 +14,9 @@ main{max-width:53rem}header{background:var(--ink)}h1,h2{letter-spacing:-.035em;f
 .curiosity{display:flex;gap:1.2rem;align-items:center;justify-content:space-between;padding:1.05rem 0;border-bottom:1px solid var(--line)}
 .curiosity h2{font:600 .83rem system-ui;color:var(--muted);margin:0 0 .32rem}.curiosity a{font:1.3rem/1.3 Georgia,serif;color:var(--ink);text-decoration-thickness:1px;text-underline-offset:.15em}.curiosity button{flex:none}
 @media(max-width:580px){.curiosity{align-items:flex-start;flex-direction:column;gap:.6rem}}
+
+#difficulty-mix{margin:.45rem 0;padding:.6rem .7rem;border:1px solid var(--line);border-radius:4px;min-width:0}
+#difficulty-mix legend{font-weight:600}.mix-inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.4rem;margin:.45rem 0}
+.mix-inputs input{display:block;width:100%;min-width:0;box-sizing:border-box;margin-top:.2rem}
+#choices{padding-left:1.5rem;list-style:upper-alpha}#choices li{padding:.2rem .3rem}
+@media(max-width:340px){.mix-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}

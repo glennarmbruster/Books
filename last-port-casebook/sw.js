@@ -1,5 +1,5 @@
-const CACHE='last-port-sampler-6.0.1';
-const assets=['../book-number.js','./index.html','./puzzles.js','./app.js','./style.css','./icon.png','./icon-large.png','./manifest.webmanifest','./four-leaves.svg'];
+const CACHE='last-port-sampler-6.0.2';
+const assets=['../book-pager.js','../book-number.js','./index.html','./puzzles.js','./app.js','./style.css','./icon.png','./icon-large.png','./manifest.webmanifest','./four-leaves.svg'];
 const urlOf=path=>new URL(path,self.registration.scope).href;
 self.addEventListener('install',event=>event.waitUntil((async()=>{
  const cache=await caches.open(CACHE);
@@ -22,7 +22,7 @@ self.addEventListener('message', event => {
  event.waitUntil((async () => {
   const cache = await caches.open(CACHE);
   const hits = await Promise.all(assets.map(asset => cache.match(urlOf(asset))));
-  const editionMatches = request === 'verify' || request.edition === 'volume-1-500-shelf';
+  const editionMatches = request === 'verify' || request.edition === 'volume-1-500-browse';
   event.ports[0]?.postMessage(editionMatches && hits.every(Boolean));
  })());
 });

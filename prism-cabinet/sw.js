@@ -1,10 +1,10 @@
 importScripts('./challenges.js');
-const edition = 'prism-volume-1-500-shelf';
+const edition = 'prism-volume-1-500-browse';
 const prefix = self.registration.scope + 'prism-cabinet:';
 const cacheName = prefix + edition;
 const localURL = path => new URL(path, self.registration.scope).href;
 const figures = puzzles.flatMap(p => [p.figure, p.reveal]).filter(Boolean);
-const assets = [
+const assets = ['../book-pager.js',
   '../book-number.js', 'index.html', 'app.js', 'challenges.js', 'style.css', '../last-port-casebook/style.css',
   'manifest.webmanifest', 'icon.png', 'icon-large.png',
   ...new Set(figures.map(file => 'figures/' + file))

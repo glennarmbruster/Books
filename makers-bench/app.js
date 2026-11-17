@@ -566,7 +566,9 @@ function route() {
     if(a.dataset.tab===(page==='project'?'guide':page)) a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
   if(page==='guide') {if(id) guidePicker.category(id);$('choose-guide').value='';}
-  if(page==='project') { detailPicker.show(p.id); projectPage(p); }
+  if(page==='project') { detailPicker.show(p.id); projectPage(p);
+    document.querySelector('book-pager').setPage(projects.indexOf(p)+1,projects.length,'project',n=>location.hash='project/'+projects[n-1].id,()=>location.hash='guide');
+  }
   if(page==='studio') {
     if(p) {
       if(p.base) {design={...exampleDesign(p),machine:design.machine,units:design.units};currentName=0;}
@@ -601,7 +603,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-7'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-8'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

@@ -1,9 +1,9 @@
 'use strict';
 const CACHE_PREFIX = 'books-field-home:' + self.registration.scope + ':';
 const EDITION = '2026.11.16-guide-order-r1';
-const READER_EDITION = EDITION + '-goobie-tools';
+const READER_EDITION = EDITION + '-goobie-tools-browse';
 const CACHE = CACHE_PREFIX + READER_EDITION;
-const CORE = [
+const CORE = ['../book-pager.js',
   '../book-number.js',
   './',
   './index.html',
@@ -98,7 +98,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (!url.href.startsWith(self.registration.scope) && url.href !== new URL('../book-number.js', self.registration.scope).href) return;
+  if (!url.href.startsWith(self.registration.scope) && !['../book-number.js','../book-pager.js'].some(file=>url.href===new URL(file,self.registration.scope).href)) return;
 
   e.respondWith(
     networkWithTimeout(req, 4000)

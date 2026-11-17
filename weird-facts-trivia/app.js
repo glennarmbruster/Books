@@ -7,13 +7,14 @@ for(const batch of [...window.TRIVIA_CATEGORIES].sort((a,b)=>a.start-b.start)) {
   // Future batches can append cards to a category without changing its original ID.
   const topic=topics.get(batch.name)||{id:batch.start,name:batch.name,cards:[]};
   topics.set(topic.name,topic);
-  batch.cards.forEach(([question,answer,detail,source,url,archive,featured],i)=>{
+  batch.cards.forEach(([question,answer,detail,source,url,archive,featured,level,choices,hint],i)=>{
     const id=batch.start+i;
     if(cards.has(id))throw Error('Duplicate trivia number '+id);
     const letterAnswer=id<=1000?(window.TRIVIA_LETTER_ANSWERS[id]||''):answer;
     const answerKey=normalize(letterAnswer).replace(/[^a-z0-9]+/g,' ').trim();
     const initial=/^[a-z]/.test(answerKey)?answerKey[0].toUpperCase():'';
-    const card={id,question,answer,detail,source,url,archive,featured,topic,letterAnswer,answerKey,initial,terms:normalize(topic.name+' '+question+' '+id)};
+    level=level||difficulties[Number(window.TRIVIA_LEVELS[id-1])];
+    const card={id,level,choices,hint,question,answer,detail,source,url,archive,featured,topic,letterAnswer,answerKey,initial,terms:normalize(topic.name+' '+question+' '+id)};
     topic.cards.push(card);cards.set(id,card);
   });
 }
@@ -65,7 +66,8 @@ function displayIndex(expandId=0) {
   const tokens=normalize($('search').value.trim()).split(/\s+/).filter(Boolean);
   const list=$('directory');list.replaceChildren();
   for(const t of allTopics) {
-    const rows=t.cards.filter(c=>tokens.every(term=>c.terms.includes(term)));if(!rows.length)continue;
+    const requestedNumber=/^#?\d+$/.test(tokens[0])&&tokens.length===1?Number(tokens[0].replace('#','')):null;
+    const rows=t.cards.filter(c=>requestedNumber!==null?c.id===requestedNumber:tokens.every(term=>c.terms.includes(term)));if(!rows.length)continue;
     const section=el('details',undefined,'category'),heading=el('summary',t.name),body=el('div');
     heading.append(el('small',rows.length+(rows.length===1?' question':' questions')));
     section.id='group-'+t.id;section.append(heading,body);
@@ -89,17 +91,19 @@ $('search').oninput=()=>displayIndex();
 // Four-part codes retain the original ten-card dealing rules. The optional suffix
 // pins the letter and requested length alongside the edition, so both devices agree.
 function decode(code) {
-  const match=/^(\d{1,7})-(\d{1,7})-(\d{4})-([1-9]\d{0,6})(?:-(ANY|[A-Z])([1-9]\d{0,6}))?$/.exec(code.trim().toUpperCase());
+  const match=/^(\d{1,7})-(\d{1,7})-(\d{4})-([1-9]\d{0,6})(?:-(ANY|[A-Z])([1-9]\d{0,6})(?:-D([AP0-9.]+))?)?$/.exec(code.trim().toUpperCase());
   if(!match)throw Error('Enter the round code shown on the other device.');
   const [limit,topic,seed,hand]=match.slice(1,5).map(Number);
   if(limit>latest)throw Error('This round uses a newer book. Update this device’s copy online first.');
   if(!cards.has(limit)||(topic&&!byTopic.has(topic)))throw Error('Check the edition and category numbers in that code.');
   if(!match[5])return {limit,topic,seed,hand};
-  return {limit,topic,seed,hand,letter:match[5]==='ANY'?'':match[5],size:Number(match[6])};
+  const mix=match[7]?.toLowerCase().split('.').map(v=>v.replace('p','.'));
+  if(mix){readMix(mix);if(limit<20000)throw Error('This edition does not contain difficulty rounds.');}
+  return {limit,topic,seed,hand,mix,letter:match[5]==='ANY'?'':match[5],size:Number(match[6])};
 }
 function encode(p) {
   const code=[p.limit,p.topic,String(p.seed).padStart(4,'0'),p.hand].join('-');
-  return p.size?code+'-'+(p.letter||'ANY')+p.size:code;
+  return p.size?code+'-'+(p.letter||'ANY')+p.size+(p.mix?'-D'+p.mix.map(v=>v.replace('.','P')).join('.').toUpperCase():''):code;
 }
 function roundName(p) {return p.letter?topicName(p.topic)+' · Answers beginning with '+p.letter:topicName(p.topic);}
 function shuffled(input,random) {
@@ -122,7 +126,18 @@ function deckFor(p) {
   for(let row=0;queues.some(group=>group.length>row);row++)for(const group of queues)if(group[row])deck.push(group[row]);
   return deck;
 }
+function mixPool(p){
+  return (p.topic?byTopic.get(p.topic).cards:[...cards.values()]).filter(c=>c.id<=p.limit&&(!p.letter||c.initial===p.letter));
+}
 function deal(p) {
+  if(p.mix){
+    const pool=mixPool(p);
+    const capacity=p.letter?new Set(pool.map(c=>c.answerKey)).size:pool.length;
+    if(p.size>capacity)throw Error('This round asks for more questions than are available.');
+    if((p.hand-1)*p.size>=capacity)throw Error('That round number is outside this deck.');
+    let state=(p.seed+1)>>>0;
+    return mixedHand(p,pool,()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;});
+  }
   const size=p.size||roundSize,deck=deckFor(p),start=(p.hand-1)*size;
   if(start>=deck.length)throw Error('That round number is outside this deck. Check the code.');
   if(p.size>deck.length)throw Error('This round asks for more questions than are available.');
@@ -131,13 +146,13 @@ function deal(p) {
   // of a deck. No question repeats inside the same round.
   return p.size&&hand.length<size?hand.concat(deck.slice(0,size-hand.length)):hand;
 }
-function startRound(topic,letter,size) {
-  const key=['deck',latest,topic,letter||'any',size].join('.'),previous=load(key,null);
+function startRound(topic,letter,size,mix) {
+  const key=['deck',latest,topic,letter||'any',size].concat(mix||[]).join('.'),previous=load(key,null);
   let p=previous?{...previous,hand:previous.hand+1}:null;
   if(!p||(p.hand-1)*size>=deckFor(p).length) {
     let seed=crypto.getRandomValues(new Uint32Array(1))[0]%10000;
     for(let i=0;i<10000;i++){
-      p={limit:latest,topic,seed,hand:1,letter,size};
+      p={limit:latest,topic,seed,hand:1,letter,size,mix};
       if(!load('round.'+encode(p),null))break;
       seed=(seed+1)%10000;
     }
@@ -164,10 +179,31 @@ function updateSetup() {
   if(!count)$('available').textContent='No '+letter+' answers in this category. Choose another category or letter.';
   else $('available').textContent=letter?count.toLocaleString('en-US')+' different answers begin with '+letter+'.':count.toLocaleString('en-US')+' questions available.';
 }
-$('topic').onchange=$('letter').onchange=updateSetup;updateSetup();
+const mixInputs=difficulties.map(name=>$('mix-'+name));
+function requestedMix(){
+  const values=mixInputs.map(input=>input.value===''?'a':String(input.valueAsNumber));
+  return values.every(v=>v==='a')?undefined:values;
+}
+function previewMix(){
+  const button=$('start-form').querySelector('button'),preview=$('mix-preview'),mix=requestedMix();
+  for(const input of mixInputs)input.placeholder='Auto';
+  button.disabled=$('length').disabled;
+  if(!mix){preview.textContent='Any mix';return;}
+  try{
+    const percent=readMix(mix),size=$('length').valueAsNumber;
+    percent.forEach((value,i)=>{if(mix[i]==='a')mixInputs[i].placeholder=Number(value.toFixed(2))+'%';});
+    if(!Number.isInteger(size)||size<1||size>Number($('length').max)){preview.textContent='';return;}
+    const counts=portionCounts(percent,size);
+    deal({limit:latest,topic:Number($('topic').value),letter:$('letter').value,seed:0,hand:1,size,mix});
+    preview.textContent=counts.map((n,i)=>n+' '+difficulties[i]).join(' · ');
+  }catch(err){preview.textContent=err.message;button.disabled=true;}
+}
+$('topic').onchange=$('letter').onchange=()=>{updateSetup();previewMix();};
+for(const input of [...mixInputs,$('length')])input.oninput=previewMix;
+updateSetup();previewMix();
 $('start-form').onsubmit=e=>{
   e.preventDefault();
-  if(e.target.reportValidity())startRound(Number($('topic').value),$('letter').value,$('length').valueAsNumber);
+  if(e.target.reportValidity())startRound(Number($('topic').value),$('letter').value,$('length').valueAsNumber,requestedMix());
 };
 $('join-form').onsubmit=e=>{
   e.preventDefault();$('join-error').textContent='';
@@ -193,27 +229,34 @@ function recentRounds() {
   }
   $('recent').hidden=!host.children.length;
 }
-let currentLetter='';
+let currentLetter='',browseRound='';
 let currentCode='',hand=[],round=null,card=null,revealed=false;
 function screen(id) {for(const key of ['home','reader','finish'])$(key).hidden=key!==id;}
 function updateQuestion() {
   screen('reader');
   const inRound=!!round;
-  $('share-round').hidden=$('round-progress').hidden=!inRound;$('single-nav').hidden=inRound;
+  $('share-round').hidden=$('round-progress').hidden=!inRound;
   $('mode').textContent=inRound?'Question '+(round.marks.length+1)+' of '+hand.length+(currentLetter?' · Letter '+currentLetter:''):'Question index';
   $('score').textContent=inRound?'Score '+round.marks.filter(Boolean).length+' / '+round.marks.length:'';
   if(inRound) {
     $('copy-code').textContent='Round code '+currentCode;
     $('round-progress').max=hand.length;$('round-progress').value=round.marks.length;
-  }else{
-    const index=numbers.indexOf(card.id);
-    for(const [element,n] of [['previous',numbers[index-1]],['next',numbers[index+1]]]) {
-      $(element).hidden=!n;if(n)$(element).href='#question/'+n;
-    }
   }
-  $('question').textContent=card.question;$('card-category').textContent=card.topic.name;$('folio').textContent=label(card.id);
+  // Stepping away from a scored question opens its numbered browse page.
+  // Saved round progress stays at the last scored card.
+  $('browse-round-note').hidden=!inRound;
+  const resume=$('resume-browsed-round');resume.hidden=inRound||!browseRound;
+  if(browseRound)resume.href='#round/'+browseRound;
+  $('single-nav').setPage(card.id,latest,'question',n=>{
+    if(inRound)browseRound=currentCode;
+    location.hash='question/'+n;
+  },()=>location.hash='browse');
+  $('question-hint').hidden=!card.hint;$('question-hint').textContent=card.hint||'';
+  $('choices').hidden=!card.choices?.length;
+  $('choices').replaceChildren(...(card.choices||[]).map(choice=>el('li',choice)));
+  $('question').textContent=card.question;$('card-category').textContent=card.topic.name+' · '+card.level;$('folio').textContent=label(card.id);
   $('answer-panel').hidden=!revealed;$('reveal').hidden=revealed;$('marking').hidden=!inRound||!revealed;
-  $('answer').textContent=revealed?(currentLetter?card.letterAnswer:card.answer):'';$('detail').textContent=revealed?card.detail:'';
+  $('answer').textContent=revealed?(currentLetter?card.letterAnswer:card.answer):'';$('detail').hidden=!card.detail;$('detail').textContent=revealed?card.detail:'';
   $('sources').replaceChildren(...(revealed?sourcesFor(card):[]));
 }
 function finishRound() {
@@ -255,7 +298,7 @@ $('copy-code').onclick=async()=>{
 };
 $('another').onclick=()=>{
   const p=decode(currentCode),eligible=deckFor({...p,limit:latest}).length;
-  startRound(p.topic,p.letter||'',Math.min(p.size||roundSize,eligible));
+  startRound(p.topic,p.letter||'',Math.min(p.size||roundSize,eligible),p.mix);
 };
 function route() {
   const [view,arg]=location.hash.slice(1).split('/');round=null;currentCode='';currentLetter='';revealed=false;$('join-error').textContent='';
@@ -263,9 +306,9 @@ function route() {
     if(view==='round'){openRound(arg||'');window.scrollTo(0,0);return;}
     if(view==='question'&&cards.has(Number(arg))){card=cards.get(Number(arg));updateQuestion();window.scrollTo(0,0);return;}
   }catch(error){$('join-error').textContent=error.message;}
-  screen('home');recentRounds();
+  screen('home');browseRound='';recentRounds();
   const topic=view==='category'?Number(arg):0;
-  if(byTopic.has(topic)){$('topic').value=topic;$('search').value='';updateSetup();}
+  if(byTopic.has(topic)){$('topic').value=topic;$('search').value='';updateSetup();previewMix();}
   displayIndex(topic);
   if(view==='browse'||byTopic.has(topic))($(byTopic.has(topic)?'group-'+topic:'browse')).scrollIntoView();
   else window.scrollTo(0,0);
