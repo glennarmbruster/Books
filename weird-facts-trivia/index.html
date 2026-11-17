@@ -5,7 +5,7 @@
 </head><body><header><a href="../">‹ Bookshelf</a><span id="offline" role="status"></span></header><main>
 <section id="home">
   <div class="jacket"><div><h1>WEIRD Facts<br><em>&amp; Trivia</em></h1><p id="book-count"></p><a href="#browse">Browse the question index ↓</a></div><img src="../shelf-art/trivia.jpg" alt=""></div>
-  <div class="setups"><section><h2>Play a round</h2><form id="start-form"><label for="topic">Category</label><select id="topic"></select>
+  <div class="setups"><section><h2>Play a round</h2><form id="start-form"><label for="topic">Category</label><select id="topic" aria-describedby="category-help"></select><p id="category-help">Choose a category and an answer letter to combine them. Letter rounds use open answers.</p>
     <div class="round-options"><label>Answer starts with<select id="letter"></select></label><label>Questions in round<input id="length" type="number" inputmode="numeric" min="1" step="1" value="10" required aria-describedby="available"></label></div>
     <fieldset id="difficulty-mix"><legend>Difficulty mix</legend><p>Set a percentage and the other levels share the rest equally. Leave all four blank for any mix.</p><div class="mix-inputs">
       <label>Easy %<input id="mix-easy" type="number" min="0" max="100" step="0.01" placeholder="Auto" inputmode="decimal"></label>
@@ -37,4 +37,4 @@
 <script src="data/legacy-letter-answers.js"></script><script src="data/letter-x-cabinet.js"></script><script src="data/letter-q-cabinet.js"></script><script src="data/letter-z-cabinet.js"></script>
 <script src="data/letter-y-cabinet.js"></script><script src="data/letter-u-cabinet.js"></script><script src="data/letter-v-cabinet.js"></script><script src="data/archive-cabinets.js"></script>
 <script src="data/second-x.js"></script><script src="data/second-q.js"></script><script src="data/second-z.js"></script><script src="data/curiosity-almanac.js"></script>
-<script src="../book-number.js"></script><script src="data/levels.js"></script><script src="data/new-edition.js"></script><script src="mix.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>
+<script src="../book-number.js"></script><script src="data/letter-prompts.js"></script><script src="data/levels.js"></script><script src="data/new-edition.js"></script><script src="mix.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>

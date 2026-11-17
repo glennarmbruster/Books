@@ -177,7 +177,7 @@ function updateSetup() {
   length.disabled=!count;$('start-form').querySelector('button').disabled=!count;
   if(count&&length.valueAsNumber>count)length.value=count;
   if(!count)$('available').textContent='No '+letter+' answers in this category. Choose another category or letter.';
-  else $('available').textContent=letter?count.toLocaleString('en-US')+' different answers begin with '+letter+'.':count.toLocaleString('en-US')+' questions available.';
+  else $('available').textContent=letter?count.toLocaleString('en-US')+' different answers begin with '+letter+(topic?' in '+topic.name:' across all categories')+'.':count.toLocaleString('en-US')+' questions available.';
 }
 const mixInputs=difficulties.map(name=>$('mix-'+name));
 function requestedMix(){
@@ -252,9 +252,10 @@ function updateQuestion() {
     location.hash='question/'+n;
   },()=>location.hash='browse');
   $('question-hint').hidden=!card.hint;$('question-hint').textContent=card.hint||'';
-  $('choices').hidden=!card.choices?.length;
-  $('choices').replaceChildren(...(card.choices||[]).map(choice=>el('li',choice)));
-  $('question').textContent=card.question;$('card-category').textContent=card.topic.name+' · '+card.level;$('folio').textContent=label(card.id);
+  const visibleChoices=currentLetter?[]:(card.choices||[]);
+  $('choices').hidden=!visibleChoices.length;
+  $('choices').replaceChildren(...visibleChoices.map(choice=>el('li',choice)));
+  $('question').textContent=currentLetter?(window.TRIVIA_LETTER_PROMPTS[card.id]||card.question):card.question;$('card-category').textContent=card.topic.name+' · '+card.level;$('folio').textContent=label(card.id);
   $('answer-panel').hidden=!revealed;$('reveal').hidden=revealed;$('marking').hidden=!inRound||!revealed;
   $('answer').textContent=revealed?(currentLetter?card.letterAnswer:card.answer):'';$('detail').hidden=!card.detail;$('detail').textContent=revealed?card.detail:'';
   $('sources').replaceChildren(...(revealed?sourcesFor(card):[]));
