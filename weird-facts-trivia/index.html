@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#381f34">
+<title>Weird Facts &amp; Trivia · Books</title><link rel="stylesheet" href="../table-books.css"><link rel="stylesheet" href="style.css"><link rel="icon" href="../shelf-art/trivia.jpg"><link rel="apple-touch-icon" href="../shelf-art/trivia.jpg">
+</head><body><header><a href="../">‹ Bookshelf</a><span id="offline" role="status"></span></header><main>
+<section id="home">
+  <div class="jacket"><div><h1>Weird Facts<br><em>&amp; Trivia</em></h1><p id="book-count"></p><a href="#browse">Browse the question index ↓</a></div><img src="../shelf-art/trivia.jpg" alt=""></div>
+  <div class="setups"><section><h2>Play a round</h2><form id="start-form"><label for="topic">Category</label><select id="topic"></select><button class="action">Start round</button></form></section>
+    <section><h2>Play the same round</h2><p>Have a friend read you their round code. Each device keeps its own score.</p><form id="join-form"><label for="code">Round code</label><input id="code" placeholder="250-0-4821-1" autocomplete="off" autocapitalize="none" spellcheck="false" required><button>Join round</button></form><p id="join-error" role="alert"></p></section></div>
+  <section id="recent" hidden><h2>Your rounds</h2><div id="recent-list"></div></section>
+  <section id="browse"><h2>Question index</h2><div class="index-tools"><label for="search">Find a question or category<input type="search" id="search" placeholder="Try Disney, Houston, or baseball"></label><div id="number-tool"></div></div>
+  <div id="directory"></div></section>
+</section>
+<section id="reader" hidden><nav class="reader-nav"><a href="#">‹ Trivia home</a><div id="share-round"><button id="copy-code" type="button"></button><span id="copy-status" role="status"></span></div></nav>
+<div class="round-line"><span id="mode"></span><span id="score"></span></div><progress id="round-progress" aria-label="Questions scored"></progress>
+<article class="fact-card"><div class="card-meta"><span id="card-category"></span><span id="folio"></span></div><h1 id="question" tabindex="-1"></h1>
+  <button class="action" id="reveal" type="button">Reveal answer</button>
+  <div id="answer-panel" hidden><h2 id="answer"></h2><p id="detail"></p><a id="source" target="_blank" rel="noopener"></a></div>
+</article>
+<div id="marking" hidden><p>How did you do?</p><div class="buttons"><button id="hit" class="action">Got it</button><button id="miss">Missed it</button></div></div>
+<nav id="single-nav" class="reader-nav" hidden><a id="previous">← Previous question</a><a id="next">Next question →</a></nav></section>
+<section id="finish" hidden><a href="#" class="back">‹ Trivia home</a><h1>Round complete</h1><p id="final-score"></p><p id="final-code"></p><button id="another" class="action">Play another round</button><h2>Round recap</h2><div id="recap"></div></section>
+<p role="status" id="notice"></p></main>
+<script>window.TRIVIA_CATEGORIES=[];</script>
+<script src="data/cruises.js"></script><script src="data/favorites.js"></script><script src="data/discovery.js"></script><script src="data/travel-and-play.js"></script>
+<script src="../book-number.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>

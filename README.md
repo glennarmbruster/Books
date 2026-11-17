@@ -14,4 +14,6 @@
 - [Sudoku](./sudoku/) — 100 graded puzzles with pencil notes and saved progress.
 - [German Phrase Book](./german-phrase-book/) — 160 searchable travel phrases, pronunciation audio and saved favorites.
 
+- [Weird Facts & Trivia](./weird-facts-trivia/) — 250 sourced questions across 25 categories. Play a category or mixed round and share its offline round code.
+
 The back-of-book Food Safety Quick Reference appendix includes refrigeration decisions, storage times, freeze-dried product examples, and cat food and treats.
