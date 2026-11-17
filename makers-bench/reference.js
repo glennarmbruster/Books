@@ -1100,7 +1100,7 @@ window.BenchGuide = {
       "category": "Ornaments",
       "summary": "Fit a tiny mortarboard to a dachshund’s head on a graduation shield. The name sits below the dog so both read from across the tree.",
       "steps": [
-        "Print the shape on paper and mark both ears. Drag the cap over the head and check the placement with the ornament upright.",
+        "Select the cap to adjust its tilt. Uncheck Move both images together to fit the cap over the ears, then check it again to place the dressed dog above the name.",
         "For a single-color raised print, overlap the bottom of the cap and the top of the head slightly. Inspect that junction and the tassel in a sliced layer.",
         "Thread a narrow ribbon through the hole and knot it above the shield. Put the school year on the back before tying the final bow."
       ],
@@ -1121,6 +1121,8 @@ window.BenchGuide = {
         "extraMotif": "fa-graduation-cap",
         "motifWidth": 39,
         "extraMotifWidth": 12,
+        "secondColor": "#b21e38",
+        "linked": true,
         "motifLines": "off",
         "extraMotifLines": "off",
         "nameHeight": 8,
@@ -1136,6 +1138,7 @@ window.BenchGuide = {
           "extraMotif": {
             "x": 0.592,
             "y": 0.364,
+            "angle": -12,
             "size": 0.14457831325301204
           },
           "name": {

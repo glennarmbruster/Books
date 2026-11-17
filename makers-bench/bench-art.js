@@ -46,15 +46,18 @@
     }
     return text;
   }
-  const objectKeys=['motif','extraMotif','name','subtitle'];
-  function positions(value={}) {
+  const imageKeys=images=>['motif','extraMotif',...images.map(img=>img.key)];
+  const defaultOrder=(images=[])=>[...imageKeys(images),'name','subtitle'];
+  function positions(value={},objectKeys) {
     if(!value||typeof value!=='object'||Array.isArray(value)) throw Error('Invalid object positions.');
     const result={};
     for(const [key,point] of Object.entries(value)) {
       if(!objectKeys.includes(key)||!point||![point.x,point.y,point.size].every(Number.isFinite)||
         point.x<0||point.x>1||point.y<0||point.y>1||point.size<=0||point.size>1.001)
         throw Error('Invalid object position or size.');
-      result[key]={x:point.x,y:point.y,size:point.size};
+      const angle=point.angle??0;
+      if(!Number.isFinite(angle)||Math.abs(angle)>180) throw Error('Choose a rotation between -180 and 180 degrees.');
+      result[key]={x:point.x,y:point.y,size:point.size,angle};
     }
     return result;
   }
@@ -69,8 +72,26 @@
     if(!byFont.has(nameFont)||!byFont.has(subtitleFont)) throw Error('Choose a font from the lettering list.');
     const motifLines=input.motifLines??'auto',extraMotifLines=input.extraMotifLines??'auto';
     if(![motifLines,extraMotifLines].every(v=>['auto','on','off'].includes(v))) throw Error('Choose a side-line setting.');
+    const images=input.images??[], fields={}, artColors={motif:input.accent,extraMotif:input.secondColor||input.accent};
+    if(!Array.isArray(images)) throw Error('Invalid artwork list.');
+    const used=new Set();
+    for(const image of images) {
+      if(!image||typeof image.key!=='string'||!/^image[1-9][0-9]*$/.test(image.key)||used.has(image.key)||!validArt(image.art)||image.art==='none')
+        throw Error('Invalid artwork entry.');
+      used.add(image.key);
+      fields[image.key]=image.art;
+      fields[image.key+'Width']=number(image.width,'Artwork width',0,500);
+      if(!['auto','on','off'].includes(image.lines)) throw Error('Choose a side-line setting.');
+      fields[image.key+'Lines']=image.lines;
+      artColors[image.key]=color(image.color||input.accent);
+    }
+    const objectKeys=defaultOrder(images),order=input.order??objectKeys;
+    const ordered=new Set(Array.isArray(order)?order:[]);
+    if(!Array.isArray(order)||order.length!==objectKeys.length||!objectKeys.every(key=>ordered.has(key)))
+      throw Error('Invalid layer order.');
     return {
-      positions:positions(input.positions),motifLines,extraMotifLines,
+      ...fields,images,artColors,order, secondColor:input.secondColor?color(input.secondColor):'',
+      positions:positions(input.positions,objectKeys),motifLines,extraMotifLines,
       nameFont,subtitleFont,
       motifWidth:number(input.motifWidth??0,'Artwork width',0,500),
       extraMotifWidth:number(input.extraMotifWidth??0,'Second artwork width',0,500),
@@ -293,7 +314,7 @@
     if(shape==='sign') areaTop=h*.23;
     const cy=(areaEnd+areaTop)/2;
     const innerH=(areaEnd-areaTop)*(round?.67:.73);
-    const artwork=['motif','extraMotif'].filter(key=>d[key]!=='none');
+    const artwork=imageKeys(d.images).filter(key=>d[key]!=='none');
     const hasMark=artwork.length>0, hasType=Boolean(d.name||d.subtitle);
     const beside=hasMark&&hasType&&d.placement!=='above';
     let typeWidth=usable,typeX=cx,markX=cx;
@@ -304,16 +325,16 @@
       markX-=dir*usable*.325;
     }
     const markSize=beside?innerH*.88:hasType?innerH*.29:innerH*.66;
-    let markWidth=beside?usable*.32:Math.min(usable*(artwork.length===2?.90:.66),markSize*(artwork.length===2?4:2));
+    let markWidth=beside?usable*.32:Math.min(usable*(artwork.length>1?.90:.66),markSize*(artwork.length>1?4:2));
     let markY=hasType&&!beside?cy-innerH*.32:cy, textTop=cy-innerH*.085;
-    const parts=[], artSizes={};
+    const parts=[], artSizes={}, boxes={};
     if(!free&&artwork.some(key=>d[key+'Width']>0)) {
       const maxWidth=usable*(beside?.80:.97), maxHeight=innerH*(hasType&&!beside?.70:1);
-      const gap=artwork.length===2?Math.min(usable*.035,small*.055):0;
+      const gap=artwork.length>1?Math.min(usable*.035,small*.055):0;
       const slot=markWidth/artwork.length;
       const icons=artwork.map(key=>{
         const path=motifPath(d[key]),bounds=inkBounds(path),fixed=d[key+'Width'];
-        const automatic=Math.min(slot*(artwork.length===2?.89:1),markSize*bounds.w/bounds.h);
+        const automatic=Math.min(slot*(artwork.length>1?.89:1),markSize*bounds.w/bounds.h);
         const width=fixed||automatic;
         if(fixed && width*bounds.h/bounds.w>maxHeight+.00001) {
           const limit=maxHeight*bounds.w/bounds.h;
@@ -323,11 +344,11 @@
       });
       const fixedWidth=icons.reduce((sum,icon)=>sum+icon.fixed,0);
       const autoWidth=icons.reduce((sum,icon)=>sum+(icon.fixed?0:icon.width),0);
-      const available=maxWidth-gap-fixedWidth;
+      const available=maxWidth-gap*(artwork.length-1)-fixedWidth;
       if(available<-.00001 || (autoWidth && available<.05))
         throw Error('Artwork exceeds the available width of '+measureLimit(maxWidth,input.units)+'. Reduce an image width or enlarge the blank.');
       for(const icon of icons) if(!icon.fixed) icon.width*=Math.min(1,available/autoWidth);
-      markWidth=icons.reduce((sum,icon)=>sum+icon.width,gap);
+      markWidth=icons.reduce((sum,icon)=>sum+icon.width,gap*(artwork.length-1));
       const rowHeight=Math.max(...icons.map(icon=>icon.width*icon.bounds.h/icon.bounds.w));
       if(beside) {
         const dir=d.placement==='left'?1:-1;
@@ -349,7 +370,7 @@
       // Preserve first-edition layouts until an image width is set.
       artwork.forEach((key,index)=>{
         const slot=markWidth/artwork.length,x=markX-markWidth/2+slot*(index+.5);
-        const path=fit(motifPath(d[key]),x,markY,slot*(artwork.length===2?.89:1),markSize);
+        const path=fit(motifPath(d[key]),x,markY,slot*(artwork.length>1?.89:1),markSize);
         parts.push(path);artSizes[key]=inkBounds(path).w;
       });
     }
@@ -380,50 +401,74 @@
       const px=Math.max(rx,Math.min(w-rx,point?point.x*w:bx));
       const py=Math.max(ry,Math.min(h-ry,point?point.y*h:by));
       if(art) artSizes[key]=rx*2;
-      return transform(path,scale,scale,px-scale*bx,py-scale*by);
+      const angle=point?.angle||0;
+      boxes[key]=[px,py,rx*2,ry*2,angle];
+      const placed=transform(path,scale,scale,px-scale*bx,py-scale*by);
+      if(!angle) return placed;
+      const radians=angle*Math.PI/180, cos=Math.cos(radians),sin=Math.sin(radians);
+      return placed.map(([op,...coords])=>{
+        const command=[op];
+        for(let i=0;i<coords.length;i+=2) {
+          const x=coords[i]-px,y=coords[i+1]-py;
+          command.push(px+x*cos-y*sin,py+x*sin+y*cos);
+        }
+        return command;
+      });
     }
     artwork.forEach((key,i)=>{parts[i]=positioned(parts[i],key,true);});
     lettering=positioned(lettering,mainKey,false);smallType=positioned(smallType,'subtitle',false);
     let rules=[];
-    function addRules(left,right,y) {
-      const gap=small*.035,length=small*.13;
-      const start=Math.max(0,left-gap-length),end=Math.min(w,right+gap+length);
-      if(left-gap-start>small*.02) rules.push([start,y,left-gap,y]);
-      if(end-right-gap>small*.02) rules.push([right+gap,y,end,y]);
+    function addRules(path,key) {
+      const box=inkBounds(path), pose=boxes[key];
+      const [x,y,width,,angle]=pose||[(box.left+box.right)/2,(box.top+box.bottom)/2,box.w,box.h,0];
+      const gap=small*.035,length=small*.13,c=Math.cos(angle*Math.PI/180),s=Math.sin(angle*Math.PI/180);
+      for(const sign of [-1,1]) {
+        const near=sign*(width/2+gap),far=near+sign*length;
+        if(!free) {
+          const l=Math.max(0,x+Math.min(near,far)),r=Math.min(w,x+Math.max(near,far));
+          if(r-l>small*.02) rules.push([l,y,r,y,key]);
+        } else rules.push([x+c*near,y+s*near,x+c*far,y+s*far,key]);
+      }
     }
     if(!free&&artwork.every(key=>d[key+'Lines']==='auto')) {
       // Preserve the original group ornament on automatic layouts.
       if(hasMark&&hasType&&!beside) {
         const from=markWidth/2+small*.035,to=Math.min(usable*.47,from+small*.13);
-        if(to>from+small*.02) rules.push([cx-to,markY,cx-from,markY],[cx+from,markY,cx+to,markY]);
+        if(to>from+small*.02) rules.push([cx-to,markY,cx-from,markY,artwork[0]],[cx+from,markY,cx+to,markY,artwork[0]]);
       }
     } else artwork.forEach((key,i)=>{
       const mode=d[key+'Lines'];
       if(mode==='on'||(mode==='auto'&&!free&&hasType&&!beside)) {
-        const box=inkBounds(parts[i]);addRules(box.left,box.right,(box.top+box.bottom)/2);
+        addRules(parts[i],key);
       }
     });
     if(free&&rules.length) {
-      // Score only the intervals of a horizontal side line that lie on the face.
+      // Intersect each score line with the blank and its hole in the line's own coordinate system.
       const face=contours([...base,...hole],h,.006);
-      rules=rules.flatMap(([l,y,r])=>{
-        const scan=h-y,intersections=[];
+      rules=rules.flatMap(([x,y,u,v,key])=>{
+        const dx=u-x,dy=v-y,lengthSquared=dx*dx+dy*dy,crossings=[];
         for(const ring of face) for(let i=0;i<ring.length;i++) {
-          const [ax,ay]=ring[i],[bx,by]=ring[(i+1)%ring.length];
-          if((ay>scan)!==(by>scan)) intersections.push(ax+(scan-ay)*(bx-ax)/(by-ay));
+          const a=ring[i],b=ring[(i+1)%ring.length];
+          const ax=a[0]-x,ay=h-a[1]-y,bx=b[0]-x,by=h-b[1]-y;
+          const sideA=dx*ay-dy*ax,sideB=dx*by-dy*bx;
+          if((sideA>0)===(sideB>0)) continue;
+          const t=sideA/(sideA-sideB);
+          crossings.push(((ax+t*(bx-ax))*dx+(ay+t*(by-ay))*dy)/lengthSquared);
         }
-        intersections.sort((a,b)=>a-b);
+        crossings.sort((a,b)=>a-b);
         const spans=[];
-        for(let i=1;i<intersections.length;i+=2) {
-          const x1=Math.max(l,intersections[i-1]),x2=Math.min(r,intersections[i]);
-          if(x2>x1) spans.push([x1,y,x2,y]);
+        for(let i=1;i<crossings.length;i+=2) {
+          const l=Math.max(0,crossings[i-1]),r=Math.min(1,crossings[i]);
+          if(l<r) spans.push([x+l*dx,y+l*dy,x+r*dx,y+r*dy,key]);
         }
         return spans;
       });
     }
-    const ruleWidth=small*.009;
-    const ruleFills=rules.map(([x,y,r])=>rect(x,y-ruleWidth/2,r-x,ruleWidth));
-    return {d,base,hole,parts,artwork,free,mainKey,artSizes,lettering,smallType,weldName:first?.run.overlap,weldSmall:second?.run.overlap,rules,ruleFills};
+    const ruleFills=rules.map(([x,y,u,v])=>{
+      const half=small*.0045/Math.hypot(u-x,v-y),nx=(y-v)*half,ny=(u-x)*half;
+      return polygon([[x-nx,y-ny],[u-nx,v-ny],[u+nx,v+ny],[x+nx,y+ny]]);
+    });
+    return {d,base,hole,parts,artwork,boxes,free,mainKey,artSizes,lettering,smallType,weldName:first?.run.overlap,weldSmall:second?.run.overlap,rules,ruleFills};
   }
   function pathData(path) {
     return path.map(([op,...points])=>op+points.map(rounded).join(' ')).join(' ');
@@ -433,14 +478,30 @@
     const path=fit(motifPath(id),50,32,90,54);
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 64" aria-hidden="true" fill="'+color(ink)+'">'+filled(path)+'</svg>';
   }
+  function separateLayers(g) {
+    const automatic=defaultOrder(g.d.images);
+    return g.d.images.length>0||!!g.d.secondColor||g.d.order.some((key,i)=>key!==automatic[i]);
+  }
   function layers(g) {
+    if(g.cutLayers) return g.cutLayers;
+    if(separateLayers(g)) {
+      const rows=[];
+      for(const key of g.d.order) {
+        const index=g.artwork.indexOf(key),image=index!==-1;
+        const path=image?g.parts[index]:key===g.mainKey?g.lettering:key==='subtitle'?g.smallType:null;
+        const sideLines=image?g.ruleFills.filter((_,i)=>g.rules[i][4]===key):[];
+        if(path?.length) rows.push({name:key,rule:image?'evenodd':'nonzero',keys:[key],paths:[path,...sideLines],
+          color:image?g.d.artColors[key]:g.d.ink});
+      }
+      return rows;
+    }
     return [
       {name:'Motif',rule:'evenodd',color:g.d.accent,paths:[...g.parts,...g.ruleFills],keys:g.artwork},
       {name:'Lettering',rule:'nonzero',color:g.d.ink,keys:[g.mainKey,'subtitle'],paths:[g.lettering,g.smallType].filter(p=>p.length)}
     ].filter(layer=>layer.paths.length);
   }
   function credit(design) {
-    const ids=[design.motif,design.extraMotif].filter(id=>catalogIds.has(id)), notices=[];
+    const ids=[design.motif,design.extraMotif,...(design.images||[]).map(image=>image.art)].filter(id=>catalogIds.has(id)), notices=[];
     const fa=ids.filter(id=>id.startsWith('fa-'));
     if(fa.length) notices.push('Artwork '+fa.join(', ')+': Font Awesome Free 6.7.2 by Fonticons, Inc. (https://fontawesome.com). Adapted outlines, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).');
     for(const artist of ['Lorc','Delapouite']) {
@@ -476,7 +537,8 @@
     }
     const art=layers(g).map(l=>'<g id="'+l.name+'" fill="'+l.color+'">'+l.paths.map((p,i)=>{
       const path=filled(p,l.rule),key=l.keys[i];
-      return mode==='preview'&&key?path.replace('<path ','<path data-object="'+key+'" '):path;
+      const box=g.boxes[key];
+      return mode==='preview'&&key?path.replace('<path ','<path data-object="'+key+'" '+(box?'data-box="'+box.join(' ')+'" ':'')):path;
     }).join('')+'</g>').join('');
     if(mode==='cricut') {
       if (!art) throw Error('Add lettering or a motif for the Cricut to cut.');
@@ -643,7 +705,7 @@
     switch(format) {
       case 'profile': case 'glowforge': case 'cricut': {
         // Cutters trace internal edges. Unite touching script outlines before exporting.
-        if(g.free) {
+        if(g.free||separateLayers(g)) {
           // Union overlapping contours per operation, then trim to the real blank and holes.
           const {CrossSection}=await manifoldModule(),owned=[];
           const keep=section=>{owned.push(section);return section;};
@@ -655,14 +717,25 @@
               const whole=keep(CrossSection.union(regions)),trim=keep(whole.intersect(face));
               return trim.toPolygons().flatMap(poly=>polygon(poly.map(([x,y])=>[x,g.d.height-y])));
             }
-            const inks=g.parts.map(path=>area(path,'EvenOdd'));
-            const type=[g.lettering,g.smallType].filter(p=>p.length).map(p=>area(p,'NonZero'));
-            if(format==='glowforge') inks.push(...type);
-            else inks.push(...g.ruleFills.map(p=>area(p,'EvenOdd')));
-            const path=trimmed(inks);
-            g.parts=path.length?[path]:[];g.ruleFills=[];
-            g.lettering=format==='glowforge'?[]:trimmed(type);
-            g.smallType=[];g.weldName=false;g.weldSmall=false;
+            if(separateLayers(g)&&format!=='glowforge') {
+              // Weld adjacent layers of the same color without changing their stacking order.
+              const runs=[];
+              for(const layer of layers(g)) {
+                if(runs.at(-1)?.color!==layer.color) runs.push({...layer,regions:[]});
+                runs.at(-1).regions.push(...layer.paths.map(path=>area(path,layer.rule==='nonzero'?'NonZero':'EvenOdd')));
+              }
+              g.cutLayers=runs.map(run=>({...run,paths:[trimmed(run.regions)],rule:'evenodd'}));
+            } else {
+              const inks=g.parts.map(path=>area(path,'EvenOdd'));
+              const type=[g.lettering,g.smallType].filter(p=>p.length).map(p=>area(p,'NonZero'));
+              if(format==='glowforge') inks.push(...type);
+              else inks.push(...g.ruleFills.map(p=>area(p,'EvenOdd')));
+              const path=trimmed(inks);
+              g.parts=path.length?[path]:[];g.ruleFills=[];
+              g.lettering=format==='glowforge'?[]:trimmed(type);
+              g.smallType=[];
+            }
+            g.weldName=false;g.weldSmall=false;
           } finally {for(const section of owned.reverse()) section.delete();}
         }
         if(g.weldName||g.weldSmall) {
@@ -693,5 +766,5 @@
     setTimeout(()=>URL.revokeObjectURL(address),30000);
     return filename;
   }
-  window.BenchArt=Object.freeze({presets,typefaces,hasHole,credit,swatch,validate,svg,blob,download});
+  window.BenchArt=Object.freeze({presets,typefaces,hasHole,defaultOrder,credit,swatch,validate,svg,blob,download});
 })();

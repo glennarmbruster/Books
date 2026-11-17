@@ -18,7 +18,7 @@ const projectSearch=projects.map(project=>({
 function projectPicker(id,placeholder) {
   const select=$(id),bar=el('div',null,'project-filter');
   const search=el('input'),category=el('select'),count=el('small',null,'art-count');
-  search.type='search';search.placeholder='Try ornaments, parking, UH, or cruise';
+  search.type='search';search.placeholder='Try baseball, Jeep, parking, or ornaments';
   search.id=id+'-search';category.id=id+'-category';
   category.dataset.filter=search.dataset.filter='project';
   category.append(new Option('All categories',''),...[...new Set(projects.map(p=>p.category))].sort().map(c=>new Option(c,c)));
@@ -142,7 +142,7 @@ for(const [button,field] of [['use-name-font','nameFont'],['use-subtitle-font','
   $(button).onclick=()=>{design[field]=$('brand-style').value;$(field).value=design[field];refresh();};
 }
 const dimensionIds=['width','height','hole','thickness','relief'];
-const layoutDefaults={positions:{},motifLines:'auto',extraMotifLines:'auto'};
+const layoutDefaults={images:[],groupKeys:['motif','extraMotif'],order:['motif','extraMotif','name','subtitle'],linked:false,secondColor:'',positions:{},motifLines:'auto',extraMotifLines:'auto'};
 const defaults={...layoutDefaults,...letterDefaults,motifWidth:0,extraMotifWidth:0,shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
 const draftKey='makers-bench-studio-v1';
 let design={...defaults}, currentName=0, exporting=false, valid=false;
@@ -160,6 +160,9 @@ function checked(input) {
     result[k]=input[k];
   }
   if(!Object.hasOwn(machines,result.machine)||!['in','mm'].includes(result.units)||!['png','pdf'].includes(result.printFormat)||!['3mf','profile','stl'].includes(result.modelFormat)||result.names.length>1600) throw Error('This project has unrecognized settings.');
+  if(!Array.isArray(result.images)||!Array.isArray(result.groupKeys)) throw Error('Invalid image group.');
+  const keys=new Set(['motif','extraMotif',...result.images.map(image=>image?.key)]);
+  if(result.groupKeys.some(key=>!keys.has(key))) throw Error('Invalid image group.');
   names(result).forEach(name=>BenchArt.validate({...result,name}));return result;
 }
 try {const stored=JSON.parse(localStorage.getItem(draftKey));if(stored) design=checked(stored);} catch {}
@@ -176,9 +179,14 @@ const priorityCategories=['Parking & transportation','University of Houston'];
 const categories=[...new Set(artItems.map(item=>item.category))].sort((a,b)=>
   (priorityCategories.includes(a)?priorityCategories.indexOf(a):2)-(priorityCategories.includes(b)?priorityCategories.indexOf(b):2)||a.localeCompare(b));
 const featuredIds=['dachshund','fa-graduation-cap','ne-graduation-cap','diploma','uh-interlocking','parking-no-parking','parking-cone','parking-citation'];
+let editingImage='';
+const additionalImage=()=>design.images.find(image=>image.key===editingImage);
+function artworkValue(key) {
+  return key==='moreArt'?(additionalImage()?.art||'none'):design[key];
+}
 function artworkPicker(host,key,title) {
   const heading=el('label',title);heading.htmlFor=key;
-  const find=el('input');find.type='search';find.placeholder='Try UH, parking ticket, or dachshund';
+  const find=el('input');find.type='search';find.placeholder='Try baseball hits, Jeep, UH, or dachshund';
   find.id=key+'-search';find.dataset.filter='true';find.setAttribute('aria-label','Search '+title.toLowerCase());
   const category=el('select');category.id=key+'-category';category.dataset.filter='true';
   category.setAttribute('aria-label',title+' category');
@@ -188,7 +196,7 @@ function artworkPicker(host,key,title) {
   const proof=el('div',null,'art-sample'), thumb=el('span'), caption=el('span');
   thumb.setAttribute('aria-hidden','true');proof.append(thumb,caption);
   const count=el('small',null,'art-count');count.setAttribute('role','status');
-  const widthLabel=el('label',key==='motif'?'Image width ':'Second image width ');
+  const widthLabel=el('label',key==='extraMotif'?'Second image width ':'Image width ');
   const widthUnit=el('span','(mm)','measure-unit'),widthInput=el('input');
   widthInput.id=key+'Width';widthInput.type='number';widthInput.step='any';widthInput.min='0';widthInput.placeholder='Auto';
   widthInput.setAttribute('inputmode','decimal');widthInput.setAttribute('aria-describedby','art-size-help');
@@ -200,19 +208,19 @@ function artworkPicker(host,key,title) {
   host.append(heading,controls,select,count,proof,uhSource,widthLabel,lineLabel);
   let lastSample;
   function preview() {
-    const id=design[key], sig=id+design.accent;
+    const id=artworkValue(key), ink=(key==='moreArt'?additionalImage()?.color:key==='extraMotif'&&design.secondColor)||design.accent, sig=id+ink;
     if(lastSample===sig) return;
     lastSample=sig;
     const item=artById.get(id);
     uhSource.hidden=item?.category!=='University of Houston';
     lineLabel.hidden=widthLabel.hidden=proof.hidden=!item;
-    if(item) {thumb.innerHTML=BenchArt.swatch(id,design.accent);caption.textContent=item.label;}
+    if(item) {thumb.innerHTML=BenchArt.swatch(id,ink);caption.textContent=item.label;}
   }
   function options() {
     const query=normalizeSearch(find.value),tokens=query.split(' ').filter(Boolean);
     const matches=artItems.filter(item=>(!category.value||category.value===item.category)&&tokens.every(term=>artSearch.get(item.id).includes(term)));
-    const current=artById.get(design[key]), fragment=document.createDocumentFragment();
-    fragment.append(new Option(key==='motif'?'No image':'No second image','none'));
+    const current=artById.get(artworkValue(key)), fragment=document.createDocumentFragment();
+    fragment.append(new Option(key==='motif'?'No image':key==='extraMotif'?'No second image':'Choose an image…','none'));
     if(current&&!matches.some(item=>item.id===current.id)) fragment.append(new Option(current.label+' (current)',current.id));
     const groups=new Map();
     const featured=!query&&!category.value;
@@ -226,30 +234,103 @@ function artworkPicker(host,key,title) {
     }
     if(groups.has('Featured')) {fragment.append(groups.get('Featured'));groups.delete('Featured');}
     for(const name of [...groups.keys()].sort()) fragment.append(groups.get(name));
-    select.replaceChildren(fragment);select.value=design[key];
+    select.replaceChildren(fragment);select.value=artworkValue(key);
     count.textContent=matches.length===0?'No matches. Try another search or category.':matches.length.toLocaleString()+' images';
   }
   find.oninput=options;category.onchange=options;
-  return {options,preview};
+  function clearSearch() {find.value=category.value='';}
+  return {options,preview,clearSearch};
 }
 const artPickers=[artworkPicker($('art-picker'),'motif','Artwork'),artworkPicker($('extra-picker'),'extraMotif','Second artwork')];
 
+const morePicker=artworkPicker($('more-picker'),'moreArt','Artwork for this image');
+let addingImage=false, shownEditor;
+function updateImageEditor(rebuild=false) {
+  const image=additionalImage(),visible=addingImage||design.images.length>0;
+  $('more-images').hidden=!visible;
+  if(!visible) {shownEditor=undefined;return;}
+  if(!image&&!addingImage&&design.images.length) editingImage=design.images[0].key;
+  const active=additionalImage(), list=$('edit-image');
+  const items=design.images.map(img=>[img.key,objectLabel(img.key)]);
+  if(addingImage) items.push(['','New image']);
+  const signature=JSON.stringify(items);
+  if(list.dataset.items!==signature){
+    list.replaceChildren(...items.map(([key,label])=>new Option(label,key)));list.dataset.items=signature;
+  }
+  list.value=editingImage;
+  if(shownEditor!==editingImage||rebuild) morePicker.options();
+  shownEditor=editingImage;
+  $('moreArt').value=artworkValue('moreArt');
+  if(document.activeElement!==$('moreArtWidth')) $('moreArtWidth').value=active?.width?Number((active.width/unitFactor()).toFixed(5)):'';
+  $('moreArtLines').value=active?.lines||'auto';
+  $('more-match-row').hidden=!active;
+  $('more-match-color').checked=!active?.color;
+  $('more-color-row').hidden=!active?.color;
+  $('more-color').value=active?.color||design.accent;
+  $('remove-image').hidden=!active;
+  morePicker.preview();
+}
+$('edit-image').onchange=e=>{
+  editingImage=e.target.value;addingImage=!editingImage;updateImageEditor();
+  if(editingImage) arranger.select(editingImage);
+};
+$('add-image').onclick=()=>{
+  const empty=['motif','extraMotif'].find(key=>design[key]==='none');
+  if(empty) {
+    if(empty==='extraMotif') $('second-image').open=true;
+    $(empty+'-search').focus();return;
+  }
+  editingImage='';addingImage=true;morePicker.clearSearch();updateImageEditor(true);
+  $('moreArt-search').focus();
+};
+function removeImage() {
+  const key=editingImage;
+  design.images=design.images.filter(img=>img.key!==key);
+  design.order=design.order.filter(k=>k!==key);design.groupKeys=design.groupKeys.filter(k=>k!==key);
+  design.positions={...design.positions};delete design.positions[key];
+  editingImage=design.images.at(-1)?.key||'';addingImage=false;
+  updateImageEditor();refresh();
+}
+$('remove-image').onclick=removeImage;
+function chooseMoreArt(art) {
+  const existing=additionalImage();
+  if(art==='none') {if(existing) removeImage();return;}
+  if(existing) existing.art=art;
+  else {
+    const number=design.images.reduce((n,img)=>Math.max(n,Number(img.key.slice(5))),2)+1;
+    const key='image'+number;
+    design.positions=arranger.currentPositions();
+    design.positions[key]={x:.5+(number%3-1)*.08,y:.45+(number%4)*.06,size:.20};
+    design.images=[...design.images,{key,art,width:0,lines:'auto',color:''}];
+    design.order=[...design.order,key];
+    editingImage=key;addingImage=false;
+  }
+  updateImageEditor();refresh();arranger.select(editingImage);
+}
 function objectLabel(key) {
   if(key==='name') return 'Name';
   if(key==='subtitle') return 'Second line';
+  const index=design.images.findIndex(image=>image.key===key);
+  if(index>=0) return 'Image '+(index+3)+' · '+(artById.get(design.images[index].art)?.label||'');
   return (key==='motif'?'First image · ':'Second image · ')+(artById.get(design[key])?.label||'');
 }
-const arranger=arrangePreview(()=>design,(positions,size)=>{
-  const resized=size?{[size.field]:size.value}:{};
+const arranger=arrangePreview(()=>design,(positions,size,settings={})=>{
+  const image=size&&design.images.find(img=>img.key+'Width'===size.field);
+  const resized=size&&!image?{[size.field]:size.value}:{};
   if(!Object.keys(positions).length) {
     try {BenchArt.svg({...design,...resized,positions,name:names(design)[currentName]});} catch(error) {
       $('studio-message').textContent='Automatic layout: '+error.message;return;
     }
   }
-  Object.assign(design,resized,{positions});
-  if(size) $(size.field).value=size.value===0?'':displayed(size.field);
+  Object.assign(design,resized,settings,{positions});
+  if(image) image.width=size.value;
+  else if(size) $(size.field).value=size.value===0?'':displayed(size.field);
   refresh();
-},objectLabel);
+},objectLabel,key=>{
+  if(key!==editingImage&&design.images.some(img=>img.key===key)) {
+    editingImage=key;addingImage=false;updateImageEditor();
+  }
+});
 function form() {
   studioPicker.show(design.shape);
   for(const k of ['units','names','subtitle','motifLines','extraMotifLines','nameFont','subtitleFont','placement','ink','accent','paper','machine']) $(k).value=design[k];
@@ -257,10 +338,11 @@ function form() {
   for(const id of optionalSizes) $(id).value=design[id]===0?'':displayed(id);
   document.querySelectorAll('.measure-unit').forEach(node=>node.textContent='('+design.units+')');
   for(const picker of artPickers) picker.options();
+  addingImage=false;if(!additionalImage()) editingImage=design.images[0]?.key||'';updateImageEditor(true);
   if(design.extraMotif!=='none') $('second-image').open=true;
   $('mirror').checked=design.mirror;$('print-format').value=design.printFormat;$('model-format').value=design.modelFormat;
 }
-function setShape(id) {design.positions={};design.shape=id;[design.width,design.height,design.hole]=sizes[id];}
+function setShape(id) {Object.assign(design,{positions:{},linked:false,order:BenchArt.defaultOrder(design.images)});design.shape=id;[design.width,design.height,design.hole]=sizes[id];}
 const fileExt={cricut:'svg',glowforge:'svg',profile:'svg',stl:'stl','3mf':'3mf',pdf:'pdf',png:'png'};
 function format(d=design) {return d.machine==='printer3d'?d.modelFormat:d.machine==='sublimation'?d.printFormat:d.machine;}
 const outputNotes={
@@ -276,10 +358,14 @@ function refresh() {
   const fmt=format();
   $('type-error').hidden=true;
   $('art-size-error').hidden=true;
+  $('match-color').checked=!design.secondColor;
+  $('second-color-row').hidden=!design.secondColor;
+  $('second-color').value=design.secondColor||design.accent;
   for(const id of optionalSizes) $(id).placeholder='Auto';
   $('model-type').hidden=$('depths').hidden=design.machine!=='printer3d';
   $('print-type').hidden=$('mirror-row').hidden=$('transfer-proof').hidden=design.machine!=='sublimation';
   $('hole-row').hidden=!BenchArt.hasHole(design.shape);
+  updateImageEditor();
   for(const picker of artPickers) picker.preview();
   $('output-title').textContent=machines[design.machine]+' file';$('output-note').textContent=outputNotes[fmt];
   $('export').textContent='Download '+fileExt[fmt].toUpperCase();
@@ -294,16 +380,14 @@ function refresh() {
     if(design.machine==='sublimation') $('transfer').innerHTML=BenchArt.svg(d,'print');
     checked(design);
     const preview=$('drawing').querySelector('svg');
-    for(const key of ['motif','extraMotif']) {
+    for(const key of ['motif','extraMotif',...(additionalImage()?[editingImage]:[])]) {
       const mm=preview.getAttribute('data-'+key.toLowerCase()+'-width');
-      if(mm!==null) $(key+'Width').placeholder='Auto · '+Number((Number(mm)/unitFactor()).toFixed(design.units==='in'?3:2));
+      if(mm!==null) $((key===editingImage?'moreArt':key)+'Width').placeholder='Auto · '+Number((Number(mm)/unitFactor()).toFixed(design.units==='in'?3:2));
     }
-    const visibleLines=$('drawing').querySelectorAll('#Lettering path');
-    const fields=[d.name?'nameHeight':'subtitleHeight','subtitleHeight'];
-    visibleLines.forEach((node,i)=>{
-      const height=node.getBBox().height/unitFactor();
-      $(fields[i]).placeholder='Auto · '+Number(height.toFixed(design.units==='in'?3:2));
-    });
+    for(const node of $('drawing').querySelectorAll('[data-object="name"],[data-object="subtitle"]')) {
+      const height=(node.dataset.box?Number(node.dataset.box.split(' ')[3]):node.getBBox().height)/unitFactor();
+      $(node.dataset.object+'Height').placeholder='Auto · '+Number(height.toFixed(design.units==='in'?3:2));
+    }
     if(fmt==='cricut') BenchArt.svg(d,'cricut');
     valid=true;$('studio-message').textContent='';
     try {localStorage.setItem(draftKey,JSON.stringify(design));} catch {}
@@ -323,11 +407,21 @@ $('settings').onsubmit=e=>e.preventDefault();
 $('settings').oninput=e=>{
   const id=e.target.id;
   if(e.target.dataset.filter) return;
-  if(id==='shape') {setShape(e.target.value);form();}
+  if(id==='moreArt') {chooseMoreArt(e.target.value);return;}
+  if(['moreArtWidth','moreArtLines','more-color','more-match-color'].includes(id)) {
+    const img=additionalImage();if(!img) return;
+    if(id==='moreArtWidth') img.width=e.target.validity.badInput?NaN:Number(e.target.value)*unitFactor();
+    if(id==='moreArtLines') img.lines=e.target.value;
+    if(id==='more-color') img.color=e.target.value;
+    if(id==='more-match-color') img.color=e.target.checked?'':design.accent;
+  }
+  else if(id==='shape') {setShape(e.target.value);form();}
   else if(id==='units') {design.units=e.target.value;form();}
   else if(optionalSizes.includes(id)) design[id]=e.target.validity.badInput?NaN:e.target.value===''?0:Number(e.target.value)*unitFactor();
   else if(dimensionIds.includes(id)) design[id]=e.target.value===''?NaN:Number(e.target.value)*unitFactor();
-  else if(id==='placement') {design.placement=e.target.value;design.positions={};}
+  else if(id==='placement') {design.placement=e.target.value;design.positions={};design.linked=false;}
+  else if(id==='match-color') design.secondColor=e.target.checked?'':design.accent;
+  else if(id==='second-color') design.secondColor=e.target.value;
   else if(id==='mirror') design.mirror=e.target.checked;
   else if(Object.hasOwn(defaults,id)) design[id]=e.target.value;
   refresh();
@@ -461,7 +555,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-5'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-6'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

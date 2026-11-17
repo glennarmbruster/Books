@@ -53,7 +53,15 @@
     </fieldset>
     <fieldset><legend>Artwork</legend>
       <div id="art-picker"></div>
-      <details id="second-image"><summary>Second image</summary><div id="extra-picker"></div></details>
+      <details id="second-image"><summary>Second image</summary><div id="extra-picker"></div><label class="check"><input id="match-color" type="checkbox" checked>Match first image color</label><label id="second-color-row" hidden>Second image color<input id="second-color" type="color"></label></details>
+      <div id="more-images" hidden>
+        <label for="edit-image">Additional artwork</label><select id="edit-image" data-filter="art"></select>
+        <div id="more-picker"></div>
+        <label class="check" id="more-match-row"><input id="more-match-color" type="checkbox" checked>Match first image color</label>
+        <label id="more-color-row" hidden>Image color<input id="more-color" type="color"></label>
+        <button id="remove-image" type="button" class="secondary">Remove this image</button>
+      </div>
+      <button id="add-image" class="secondary" type="button">Add another image</button>
       <p id="art-size-help">Enter a width to resize an image proportionally. Clear it for automatic sizing.</p>
       <p id="art-size-error" role="status" hidden></p>
       <label>Starting arrangement<select id="placement"><option value="above">Above the lettering</option><option value="left">Left of the lettering</option><option value="right">Right of the lettering</option></select></label>
@@ -69,9 +77,13 @@
   <div class="proof"><div class="proof-head"><h2>Design preview</h2><label id="which-name" hidden>Name <select id="name-index"></select></label></div>
     <div class="mat"><div id="drawing" tabindex="0" role="group" aria-label="Design canvas. Arrow keys move the selected object one millimeter. Hold Shift for tenths." aria-describedby="drag-tip"></div></div>
     <div class="arrange">
-      <p id="drag-tip">Select an image or text. Drag it to move, or drag a corner to resize. Use the list to select overlapping pieces. The blank trims artwork at its edges and holes.</p>
+      <p id="drag-tip">Drag an object to move it, a corner to resize, or the round handle to rotate. Use the Object list to select a covered piece. The blank trims artwork at its edges and holes.</p>
       <label>Object<select id="move-object"><option value="">Choose an object…</option></select></label>
       <fieldset><legend>Center position (<span id="position-unit">mm</span>)</legend><label>From left<input id="move-x" type="number" step="any" disabled></label><label>From top<input id="move-y" type="number" step="any" disabled></label></fieldset>
+      <label>Rotation (degrees)<input id="object-angle" type="number" step="any" disabled></label>
+      <div class="layer-buttons"><button id="layer-front" type="button" class="secondary" disabled>Bring to front</button><button id="layer-back" type="button" class="secondary" disabled>Send to back</button></div>
+      <label class="check together"><input id="link-images" type="checkbox" disabled><span id="link-caption">Move both images together</span></label>
+      <fieldset id="group-members" hidden><legend>Images to move together</legend><div id="group-list"></div></fieldset>
       <button id="reset-layout" type="button" class="secondary" disabled>Restore automatic layout</button>
     </div>
     <div class="proof-caption"><span id="size-caption"></span><a id="studio-guide" href="#project/tag">Read project guide ↗</a></div>
@@ -86,8 +98,8 @@
 </main>
 <footer><a href="../">‹ Bookshelf</a><span id="offline" role="status">Preparing offline copy…</span><button id="install">Install app</button></footer>
 <dialog id="dialog" aria-labelledby="dialog-title"><form id="dialog-form"><h2 id="dialog-title"></h2><div id="dialog-body"></div><p id="dialog-message" role="alert"></p><div class="actions"><button type="button" id="close-dialog" class="secondary">Cancel</button><button type="submit" id="accept" class="action">Save</button></div></form></dialog>
-<script src="reference.js"></script>
+<script src="reference.js"></script><script src="projects-v6.js"></script>
 <!-- Local export engine -->
-<script src="artwork.js"></script><script src="vendor/bench-font.js"></script><script src="vendor/typefaces.js"></script><script src="vendor/waltograph.js"></script><script src="bench-art.js"></script>
+<script src="artwork.js"></script><script src="artwork-v6.js"></script><script src="vendor/bench-font.js"></script><script src="vendor/typefaces.js"></script><script src="vendor/waltograph.js"></script><script src="bench-art.js"></script>
 <script src="files.js"></script><script src="arrange.js"></script><script src="app.js"></script>
 </body></html>

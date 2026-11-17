@@ -30,3 +30,13 @@
 .lettering-matches summary{font-size:.88rem;color:var(--green);font-weight:650}
 .lettering-matches p{font-size:.84rem;color:var(--muted);margin:.45rem 0 0}.match-actions{display:flex;flex-wrap:wrap;gap:.35rem;margin:.55rem 0 .25rem}
 .match-actions button{font-size:.8rem;padding:.3rem .55rem;min-height:36px}
+
+#drawing [data-rotate]{pointer-events:all;cursor:grab}
+.layer-buttons{display:flex;gap:.4rem;flex-wrap:wrap}
+.arrange .together{grid-column:1/-1;min-height:38px}
+
+#add-image{margin-block:.65rem}
+#more-images{margin-block:.75rem;padding:.75rem;border:1px solid var(--line);border-radius:4px}
+#group-members{grid-column:1/-1;display:block}
+#group-list{display:flex;flex-wrap:wrap;gap:.25rem .9rem}
+#group-list label{min-height:32px;font-size:.8rem}
