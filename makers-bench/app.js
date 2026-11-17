@@ -10,17 +10,57 @@ function el(tag,text,cls) {
 function link(text,href,cls) {const a=el('a',text,cls);a.href=href;return a;}
 function picture(id) {const img=el('img');img.src='images/'+id+'.jpg';img.alt='';return img;}
 function list(items,tag) {const group=el(tag);group.append(...items.map(item=>el('li',item)));return group;}
-function projectOptions() {
-  const groups=new Map();
-  for(const p of projects) {
-    if(!groups.has(p.category)) {const group=el('optgroup');group.label=p.category;groups.set(p.category,group);}
-    groups.get(p.category).append(new Option(p.title,p.id));
+const normalizeSearch=value=>String(value??'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const projectSearch=projects.map(project=>({
+  project,terms:normalizeSearch([project.title,project.category,project.id,project.summary,project.exampleName,project.exampleMotif,
+    ...project.steps,...project.checks].join(' '))
+}));
+function projectPicker(id,placeholder) {
+  const select=$(id),bar=el('div',null,'project-filter');
+  const search=el('input'),category=el('select'),count=el('small',null,'art-count');
+  search.type='search';search.placeholder='Try ornaments, parking, UH, or cruise';
+  search.id=id+'-search';category.id=id+'-category';
+  category.dataset.filter=search.dataset.filter='project';
+  category.append(new Option('All categories',''),...[...new Set(projects.map(p=>p.category))].sort().map(c=>new Option(c,c)));
+  for(const [text,control] of [['Category',category],['Search projects',search]]) {
+    const label=el('label',text);label.htmlFor=control.id;bar.append(label,control);
   }
-  return [...groups.values()];
+  count.setAttribute('role','status');bar.append(count);
+  // Place filters outside the project's own label so the controls have distinct names.
+  const anchor=select.closest('label')||select.previousElementSibling;
+  anchor.before(bar);
+  function list() {
+    const selected=select.value,tokens=normalizeSearch(search.value).split(' ').filter(Boolean);
+    const rows=projectSearch.filter(({project,terms})=>(!category.value||project.category===category.value)&&tokens.every(t=>terms.includes(t)));
+    const groups=new Map();
+    const fragment=document.createDocumentFragment();
+    if(placeholder) fragment.append(new Option(placeholder,''));
+    if(!placeholder&&selected&&!rows.some(({project})=>project.id===selected)) {
+      const active=projects.find(p=>p.id===selected);if(active) fragment.append(new Option(active.title+' (current)',active.id));
+    }
+    for(const {project:p} of rows) {
+      if(!groups.has(p.category)) {const group=el('optgroup');group.label=p.category;groups.set(p.category,group);}
+      groups.get(p.category).append(new Option(p.title,p.id));
+    }
+    for(const name of [...groups.keys()].sort()) fragment.append(groups.get(name));
+    select.replaceChildren(fragment);
+    if(placeholder) select.value='';
+    else if(selected) select.value=selected;
+    count.textContent=rows.length===1?'1 project':rows.length?rows.length+' projects':'No matching projects. Try another search or category.';
+  }
+  search.oninput=list;category.onchange=list;
+  list();
+  return {category(slug) {
+    const option=[...category.options].find(o=>normalizeSearch(o.value).replaceAll(' ','-')===slug);
+    if(option) {category.value=option.value;search.value='';list();}
+  },show(value) {
+    if(![...select.options].some(o=>o.value===value)) {search.value='';category.value='';list();}
+    select.value=value;
+  }};
 }
-$('choose-guide').append(new Option('Select a project…',''),...projectOptions());
-$('another-guide').append(...projectOptions());
-$('shape').append(...projectOptions());
+const guidePicker=projectPicker('choose-guide','Select a project…');
+const detailPicker=projectPicker('another-guide','');
+const studioPicker=projectPicker('shape','');
 for(const id of ['choose-guide','another-guide']) $(id).onchange=e=>{
   if(e.target.value) location.hash='project/'+e.target.value;
 };
@@ -75,6 +115,32 @@ for(const id of ['nameFont','subtitleFont']) {
   }
   $(id).append(...groups.values());
 }
+const fontMatches=[
+  ["UH · Headlines", "league-gothic", "League Gothic is the university’s headline face.", "https://www.uh.edu/brand/brand-identity/style-guide/index"],
+  ["UH · Signs and subheads", "source-sans-3", "The UH brand guide includes Source Sans 3 for signs, headings and supporting text.", "https://www.uh.edu/brand/brand-identity/style-guide/index"],
+  ["UH · Academic serif", "crimson-pro", "UH’s web style guide specifies Crimson Pro for serif text.", "https://uh.edu/marcom/guidelines-policies/web-style/"],
+  ["UH · Formal invitations", "alex-brush", "UH reserves Alex Brush for occasional formal-event lettering.", "https://www.uh.edu/brand/brand-identity/style-guide/index"],
+  ["UH athletics-inspired · Varsity lettering", "graduate", "Graduate has squared athletic serifs. UH Athletics uses its own Houston Bold lettering.", "https://uhcougars.com/sports/2018/6/12/licensing-logos-html"],
+  ["Disney-inspired · Signature lettering","waltograph","Waltograph is Justin Callaghan’s personal-use, noncommercial interpretation of Disney signature lettering.","https://mickeyavenue.com/fonts/waltograph/"],
+  ["Disney-inspired · Vintage cartoon", "mouse-memoirs", "Mouse Memoirs gives short names the tall, springy shapes of vintage cartoon titles.", "https://fonts.google.com/specimen/Mouse+Memoirs/about"],
+  ["Disney-inspired · Storybook script", "berkshire-swash", "Berkshire Swash pairs curled capitals with thick strokes for a storybook title.", "https://thewaltdisneycompany.com/"],
+  ["Royal Caribbean-inspired · Modern capitals", "league-spartan", "League Spartan Semibold gives a ship or port name broad, geometric capitals.", "https://www.royalcaribbean.com/"],
+  ["Norwegian Cruise Line-inspired · Ship initials", "barlow-condensed", "Barlow Condensed Bold Italic gives short initials a strong slanted silhouette.", "https://www.ncl.com/"],
+  ["MSC-inspired · Serif capitals", "bodoni-moda", "Bodoni Moda has sharp serifs and contrasting strokes for short names in capitals.", "https://info.msccruises.com/rs/271-DJN-199/images/MSC_WORLD_EUROPA_techsheet_eng.pdf"],
+  ["Carnival-inspired · Display serif", "dm-serif-display", "DM Serif Display gives mixed-case names strong curves and heavy downstrokes.", "https://www.carnival-news.com/assets/latest-images/carnival-cruise-line-logos-83297"]
+];
+const facesById=new Map(BenchArt.typefaces.map(face=>[face.id,face]));
+for(const [label,id] of fontMatches) {
+  $('brand-style').append(new Option(label+' — '+facesById.get(id).label,id));
+}
+function showFontMatch() {
+  const match=fontMatches.find(([,id])=>id===$('brand-style').value);
+  $('brand-detail').textContent=match[2];$('brand-source').href=match[3];
+}
+$('brand-style').onchange=showFontMatch;showFontMatch();
+for(const [button,field] of [['use-name-font','nameFont'],['use-subtitle-font','subtitleFont']]) {
+  $(button).onclick=()=>{design[field]=$('brand-style').value;$(field).value=design[field];refresh();};
+}
 const dimensionIds=['width','height','hole','thickness','relief'];
 const layoutDefaults={positions:{},motifLines:'auto',extraMotifLines:'auto'};
 const defaults={...layoutDefaults,...letterDefaults,motifWidth:0,extraMotifWidth:0,shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
@@ -104,12 +170,15 @@ const artItems=[
   {id:'leaf',label:'Leaf',category:'Original motifs'}, {id:'mountain',label:'Mountain',category:'Original motifs'},
   ...BenchCatalog.items
 ];
+const artSearch=new Map(artItems.map(item=>[item.id,normalizeSearch([item.id,item.label,item.category,item.keywords].join(' '))]));
 const artById=new Map(artItems.map(item=>[item.id,item]));
-const categories=[...new Set(artItems.map(item=>item.category))].sort();
-const featuredIds=['dachshund','fa-graduation-cap','ne-graduation-cap','diploma'];
+const priorityCategories=['Parking & transportation','University of Houston'];
+const categories=[...new Set(artItems.map(item=>item.category))].sort((a,b)=>
+  (priorityCategories.includes(a)?priorityCategories.indexOf(a):2)-(priorityCategories.includes(b)?priorityCategories.indexOf(b):2)||a.localeCompare(b));
+const featuredIds=['dachshund','fa-graduation-cap','ne-graduation-cap','diploma','uh-interlocking','parking-no-parking','parking-cone','parking-citation'];
 function artworkPicker(host,key,title) {
   const heading=el('label',title);heading.htmlFor=key;
-  const find=el('input');find.type='search';find.placeholder='Try dachshund, graduation, or flower';
+  const find=el('input');find.type='search';find.placeholder='Try UH, parking ticket, or dachshund';
   find.id=key+'-search';find.dataset.filter='true';find.setAttribute('aria-label','Search '+title.toLowerCase());
   const category=el('select');category.id=key+'-category';category.dataset.filter='true';
   category.setAttribute('aria-label',title+' category');
@@ -126,20 +195,22 @@ function artworkPicker(host,key,title) {
   widthLabel.append(widthUnit,widthInput);
   const lineLabel=el('label','Side lines'),lines=el('select');lines.id=key+'Lines';
   lines.append(new Option('Automatic','auto'),new Option('Show side lines','on'),new Option('Hide side lines','off'));lineLabel.append(lines);
-  host.append(heading,controls,select,count,proof,widthLabel,lineLabel);
+  const uhSource=link('UH marks & brand guide ↗','https://www.uh.edu/brand/brand-identity/master-brand-logos-and-marks/interlocking-uh/','credits');
+  uhSource.target='_blank';uhSource.rel='noopener';uhSource.hidden=true;
+  host.append(heading,controls,select,count,proof,uhSource,widthLabel,lineLabel);
   let lastSample;
   function preview() {
     const id=design[key], sig=id+design.accent;
     if(lastSample===sig) return;
     lastSample=sig;
     const item=artById.get(id);
+    uhSource.hidden=item?.category!=='University of Houston';
     lineLabel.hidden=widthLabel.hidden=proof.hidden=!item;
     if(item) {thumb.innerHTML=BenchArt.swatch(id,design.accent);caption.textContent=item.label;}
   }
   function options() {
-    const query=find.value.trim().toLowerCase().replace(/[-_]+/g,' ');
-    const matches=artItems.filter(item=>(!category.value||category.value===item.category)&&
-      [item.label,item.category,item.keywords || ''].join(' ').toLowerCase().replace(/[-_]+/g,' ').includes(query));
+    const query=normalizeSearch(find.value),tokens=query.split(' ').filter(Boolean);
+    const matches=artItems.filter(item=>(!category.value||category.value===item.category)&&tokens.every(term=>artSearch.get(item.id).includes(term)));
     const current=artById.get(design[key]), fragment=document.createDocumentFragment();
     fragment.append(new Option(key==='motif'?'No image':'No second image','none'));
     if(current&&!matches.some(item=>item.id===current.id)) fragment.append(new Option(current.label+' (current)',current.id));
@@ -168,16 +239,20 @@ function objectLabel(key) {
   if(key==='subtitle') return 'Second line';
   return (key==='motif'?'First image · ':'Second image · ')+(artById.get(design[key])?.label||'');
 }
-const arranger=arrangePreview(()=>design,positions=>{
+const arranger=arrangePreview(()=>design,(positions,size)=>{
+  const resized=size?{[size.field]:size.value}:{};
   if(!Object.keys(positions).length) {
-    try {BenchArt.svg({...design,positions,name:names(design)[currentName]});} catch(error) {
+    try {BenchArt.svg({...design,...resized,positions,name:names(design)[currentName]});} catch(error) {
       $('studio-message').textContent='Automatic layout: '+error.message;return;
     }
   }
-  design.positions=positions;refresh();
+  Object.assign(design,resized,{positions});
+  if(size) $(size.field).value=size.value===0?'':displayed(size.field);
+  refresh();
 },objectLabel);
 function form() {
-  for(const k of ['shape','units','names','subtitle','motifLines','extraMotifLines','nameFont','subtitleFont','placement','ink','accent','paper','machine']) $(k).value=design[k];
+  studioPicker.show(design.shape);
+  for(const k of ['units','names','subtitle','motifLines','extraMotifLines','nameFont','subtitleFont','placement','ink','accent','paper','machine']) $(k).value=design[k];
   for(const id of dimensionIds) $(id).value=displayed(id);
   for(const id of optionalSizes) $(id).value=design[id]===0?'':displayed(id);
   document.querySelectorAll('.measure-unit').forEach(node=>node.textContent='('+design.units+')');
@@ -350,8 +425,8 @@ function route() {
   document.querySelectorAll('[data-tab]').forEach(a=>{
     if(a.dataset.tab===(page==='project'?'guide':page)) a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
-  if(page==='guide') $('choose-guide').value='';
-  if(page==='project') { $('another-guide').value=p.id; projectPage(p); }
+  if(page==='guide') {if(id) guidePicker.category(id);$('choose-guide').value='';}
+  if(page==='project') { detailPicker.show(p.id); projectPage(p); }
   if(page==='studio') {
     if(p) {
       if(p.base) {design={...exampleDesign(p),machine:design.machine,units:design.units};currentName=0;}
@@ -386,7 +461,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-4'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-5'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

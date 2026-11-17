@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const defaultFont = 'atkinson';
-  const typefaces = [{id:defaultFont,label:'Atkinson Hyperlegible Bold',category:'Sans serif',font:window.BenchFont}, ...BenchTypefaces];
+  const typefaces = [{id:defaultFont,label:'Atkinson Hyperlegible Bold',category:'Sans serif',font:window.BenchFont}, ...BenchTypefaces,window.BenchStoryFont];
   const byFont = new Map(typefaces.map(face=>[face.id,face]));
   const runCache = new Map();
   const scriptURL = document.currentScript.src;
@@ -21,7 +21,7 @@
     baseShapes.set(project.id,project.base);presets[project.id]=project.size;
   }
   const baseShape=shape=>baseShapes.get(shape)||shape;
-  const topHole = shape => ['bookmark','ornament'].includes(baseShape(shape));
+  const topHole = shape => ['bookmark','ornament'].includes(baseShape(shape))||baseShape(shape).startsWith('ornament-');
   const hasHole = shape => topHole(shape) || ['keyfob','tag'].includes(baseShape(shape));
   function validArt(id) { return motifs.includes(id) || catalogIds.has(id); }
 
@@ -132,10 +132,11 @@
     const key=faceId+'|'+text;
     if(runCache.has(key)) return runCache.get(key);
     const font=byFont.get(faceId).font,path=[];
+    const ligatureLengths=[...new Set(Object.keys(font.ligatures||{}).map(text=>text.length))].sort((a,b)=>b-a);
     let shift=0,prev=null,overlap=false,maxRight=-Infinity;
     for(let i=0;i<text.length;) {
       let char=String.fromCodePoint(text.codePointAt(i)),index=font.map[char];
-      for(const n of [3,2]) {
+      for(const n of ligatureLengths) {
         const group=text.slice(i,i+n);
         if(group.length===n && Object.hasOwn(font.ligatures||{},group)) {
           char=group;index=font.ligatures[group];break;
@@ -232,6 +233,31 @@
     const small=Math.min(w,h);
     switch(shape) {
       case 'coaster': case 'ornament': return circle(w/2,h/2,w/2,h/2);
+      case 'ornament-arch': return [['M',0,h],['L',0,h*.42],['C',0,h*.17,w*.22,0,w*.5,0],
+        ['C',w*.78,0,w,h*.17,w,h*.42],['L',w,h],['Z']];
+      case 'ornament-hex': return polygon([[w*.25,0],[w*.75,0],[w,h*.5],[w*.75,h],[w*.25,h],[0,h*.5]]);
+      case 'ornament-shield': return [['M',0,0],['L',w,0],['L',w,h*.45],['C',w,h*.70,w*.72,h*.91,w*.5,h],
+        ['C',w*.28,h*.91,0,h*.70,0,h*.45],['Z']];
+      case 'ornament-ticket': {
+        const c=small*.09,r=small*.12,cy=h*.5;
+        return [['M',c,0],['L',w-c,0],['L',w,c],['L',w,cy-r],['C',w-r*1.33,cy-r,w-r*1.33,cy+r,w,cy+r],
+          ['L',w,h-c],['L',w-c,h],['L',c,h],['L',0,h-c],['L',0,cy+r],
+          ['C',r*1.33,cy+r,r*1.33,cy-r,0,cy-r],['L',0,c],['Z']];
+      }
+      case 'ornament-drop': return [['M',w*.47,0],['L',w*.53,0],['C',w*.6,h*.20,w,h*.37,w,h*.64],
+        ['C',w,h*.85,w*.77,h,w*.5,h],['C',w*.23,h,0,h*.85,0,h*.64],['C',0,h*.37,w*.40,h*.20,w*.47,0],['Z']];
+      case 'ornament-heart': return [['M',w*.5,h*.18],['C',w*.43,h*.06,w*.34,0,w*.25,0],
+        ['C',w*.10,0,0,h*.11,0,h*.28],['C',0,h*.58,w*.32,h*.85,w*.5,h],
+        ['C',w*.68,h*.85,w,h*.58,w,h*.28],['C',w,h*.11,w*.90,0,w*.75,0],
+        ['C',w*.66,0,w*.57,h*.06,w*.5,h*.18],['Z']];
+      case 'ornament-star': {
+        const points=Array.from({length:10},(_,i)=>{
+          const radius=i%2?.50:1,angle=(i/5-.5)*Math.PI;
+          return [Math.cos(angle)*radius,Math.sin(angle)*radius];
+        });
+        const sx=Math.cos(Math.PI/10),sy=1+Math.sin(3*Math.PI/10);
+        return polygon(points.map(([x,y])=>[(x/sx+1)*w/2,(y+1)*h/sy]));
+      }
       case 'keyfob': return rect(0,0,w,h,small*.49);
       case 'bookmark': return rect(0,0,w,h,small*.15);
       case 'marker': return polygon([[0,0],[w,0],[w,h*.53],[w*.57,h*.53],
@@ -250,14 +276,19 @@
     const shape=baseShape(d.shape),base=blank(shape,w,h),upper=topHole(shape);
     const free=Object.keys(d.positions).length>0;
     const holeX=upper?w/2:d.hole/2+Math.min(w*.075,h*.13);
-    const holeY=upper?d.hole/2+small*.09:h/2;
+    const recessed=['ornament-heart','ornament-star','ornament-drop'].includes(shape);
+    const holeY=upper?d.hole/2+(recessed?h*.20+small*.025:small*.09):h/2;
     const hole=d.hole?circle(holeX,holeY,d.hole/2):[];
     const round=shape==='coaster'||shape==='ornament';
-    const insetX=round?w*.16:small*(shape==='magnet'?.23:.085);
+    const ornament=shape.startsWith('ornament-');
+    const insetX=ornament?w*(shape==='ornament-star'?.29:.18):round?w*.16:small*(shape==='magnet'?.23:.085);
     const left=d.hole&&!upper?Math.max(insetX,holeX+d.hole/2+small*.065):insetX;
     const usable=w-left-insetX,cx=left+usable/2;
     let areaTop=0,areaEnd=h;
     if(upper && d.hole) areaTop=holeY+d.hole/2+small*.045;
+    if(shape==='ornament-star') {areaTop=Math.max(areaTop,h*.34);areaEnd=h*.67;}
+    if(shape==='ornament-heart'||shape==='ornament-shield') areaEnd=h*.74;
+    if(shape==='ornament-drop') {areaTop=Math.max(areaTop,h*.36);areaEnd=h*.86;}
     if(shape==='marker') areaEnd=h*.53;
     if(shape==='sign') areaTop=h*.23;
     const cy=(areaEnd+areaTop)/2;
@@ -418,6 +449,17 @@
     }
     if(ids.some(id=>id.startsWith('ne-'))) notices.push('Adapted Noto Emoji outlines by Google LLC (https://github.com/googlefonts/noto-emoji), SIL OFL 1.1.');
     if(ids.some(id=>id.startsWith('mdi-'))) notices.push('Adapted Material Design Icons by Pictogrammers (https://pictogrammers.com/library/mdi/), Apache License 2.0.');
+    const sources=[
+      ['ph-','Phosphor Icons (https://phosphoricons.com), MIT'],['fe-','Microsoft Fluent Emoji (https://github.com/microsoft/fluentui-emoji), MIT'],
+      ['ms-','Google Material Symbols (https://fonts.google.com/icons), Apache 2.0'],['hi-','Healthicons by Resolve to Save Lives (https://healthicons.org), CC0'],
+      ['maki-','Mapbox Maki (https://github.com/mapbox/maki), CC0'],['tb-','Tabler Icons by Pawel Kuna (https://tabler.io/icons), MIT'],
+      ['bi-','Bootstrap Authors (https://icons.getbootstrap.com), MIT']
+    ];
+    for(const [prefix,source] of sources) if(ids.some(id=>id.startsWith(prefix))) notices.push('Adapted artwork: '+source+'.');
+    if(ids.includes('uh-interlocking')) notices.push('Interlocking UH mark, University of Houston. https://www.uh.edu/brand/brand-identity/master-brand-logos-and-marks/interlocking-uh/');
+    if(ids.some(id=>id.startsWith('parking-'))) notices.push('Parking artwork from The Makers Bench. Individual source notices: https://glennarmbruster.github.io/Books/makers-bench/artwork-credits.txt');
+    if(design.nameFont==='waltograph'||design.subtitleFont==='waltograph')
+      notices.push('Waltograph by Justin Callaghan. Adapted outlines under CC NC-SA 1.0. https://mickeyavenue.com/fonts/waltograph/');
     return notices.join(' ');
 
   }
@@ -561,6 +603,8 @@
     const sources=credit(design), labels=[];
     if(sources.includes('Fonticons')) labels.push('Fonticons CC BY 4.0');
     for(const artist of ['Lorc','Delapouite']) if(sources.includes('by '+artist)) labels.push(artist+' CC BY 3.0');
+    if(sources.includes('Waltograph')) labels.push('Waltograph J. Callaghan CC NC-SA 1.0');
+    if(sources&&labels.length===0) labels.push('Art credits: glennarmbruster.github.io/Books/makers-bench/artwork-credits.txt');
     new Uint8Array(bytes).set(new TextEncoder().encode([...labels,"Maker's Bench | mm"].join(' | ')).subarray(0,80));
     out.setUint32(80,count,true);
     let offset=84;

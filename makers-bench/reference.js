@@ -69,7 +69,7 @@ window.BenchGuide = {
       ]
     },
     {
-      "id": "ornament", "category": "Celebrations & gatherings",
+      "id": "ornament", "category": "Ornaments",
       "title": "Holiday ornament",
       "summary": "Balance a round ornament below its hanging hole and check that the ribbon leaves the image and year visible.",
       "steps": [
@@ -1093,6 +1093,1328 @@ window.BenchGuide = {
       ],
       "exampleName": "BOOK CLUB",
       "exampleMotif": "fa-book-open-reader"
+    },
+    {
+      "id": "orn-doc-dachshund",
+      "title": "Doctorate dachshund ornament",
+      "category": "Ornaments",
+      "summary": "Fit a tiny mortarboard to a dachshund’s head on a graduation shield. The name sits below the dog so both read from across the tree.",
+      "steps": [
+        "Print the shape on paper and mark both ears. Drag the cap over the head and check the placement with the ornament upright.",
+        "For a single-color raised print, overlap the bottom of the cap and the top of the head slightly. Inspect that junction and the tassel in a sliced layer.",
+        "Thread a narrow ribbon through the hole and knot it above the shield. Put the school year on the back before tying the final bow."
+      ],
+      "checks": [
+        "The cap touches the dog without covering its muzzle.",
+        "The bow clears the tassel and the graduate’s name."
+      ],
+      "base": "ornament-shield",
+      "size": [
+        83,
+        92,
+        4
+      ],
+      "exampleName": "DocCin",
+      "exampleMotif": "dachshund",
+      "exampleLayout": {
+        "placement": "above",
+        "extraMotif": "fa-graduation-cap",
+        "motifWidth": 39,
+        "extraMotifWidth": 12,
+        "motifLines": "off",
+        "extraMotifLines": "off",
+        "nameHeight": 8,
+        "ink": "#702337",
+        "accent": "#48312c",
+        "paper": "#fff0d5",
+        "positions": {
+          "motif": {
+            "x": 0.44,
+            "y": 0.46,
+            "size": 0.46987951807228917
+          },
+          "extraMotif": {
+            "x": 0.592,
+            "y": 0.364,
+            "size": 0.14457831325301204
+          },
+          "name": {
+            "x": 0.5,
+            "y": 0.68,
+            "size": 0.08695652173913043
+          }
+        }
+      }
+    },
+    {
+      "id": "orn-cruise-ticket",
+      "title": "Cruise boarding-stub ornament",
+      "category": "Ornaments",
+      "summary": "Turn a sailing date into a ticket-shaped keepsake with a short ship name, an anchor and a ribbon loop.",
+      "steps": [
+        "Set the ship name and departure date on two lines. Fold a paper copy around the ribbon to see how much space the knot will hide.",
+        "Cut a pale blank and engrave the lettering, or print the face on a compatible coated blank. The ticket shape supplies the border.",
+        "Put a second port or trip number on the back by hand and hang the stub beside a cabin photo."
+      ],
+      "checks": [
+        "The date reads correctly on the finished face.",
+        "The ribbon passes without creasing either ticket edge."
+      ],
+      "base": "ornament-ticket",
+      "size": [
+        108,
+        56,
+        4
+      ],
+      "exampleName": "ALL ABOARD",
+      "exampleMotif": "fa-anchor",
+      "exampleLayout": {
+        "subtitle": "FIRST SAILING",
+        "ink": "#123d58",
+        "accent": "#176e80",
+        "paper": "#f0e8cc"
+      }
+    },
+    {
+      "id": "orn-port-postmark",
+      "title": "Port postmark ornament",
+      "category": "Ornaments",
+      "summary": "Build a set of circular “postmarks,” one for each port, with a common diameter and lettering hierarchy.",
+      "steps": [
+        "Choose the longest port name in the itinerary and fit that first. Reserve the second line for the port date.",
+        "Save the first disc as a project, then make the other names using the same dimensions and hole. Give each port a different accent.",
+        "Line up the finished discs before threading. Tie equal lengths of narrow cord so a set hangs on one level."
+      ],
+      "checks": [
+        "The longest name stays inside the circle.",
+        "All discs hang at the same height."
+      ],
+      "base": "ornament",
+      "size": [
+        75,
+        75,
+        4
+      ],
+      "exampleName": "NASSAU",
+      "exampleMotif": "fa-map-pin"
+    },
+    {
+      "id": "orn-uh-pennant",
+      "title": "UH campus pennant ornament",
+      "category": "Ornaments",
+      "summary": "Frame a campus-inspired pennant in red and off-white with a year or graduating class on the reverse.",
+      "steps": [
+        "Trace the shield and hole on red stock or a red paper proof. Keep fine pennant strokes well inside the pointed lower end.",
+        "For vinyl, cut the pennant and lettering together in white, then lift them with a single piece of transfer tape.",
+        "Lay the transfer from the center outward. Add a white hanging loop and test it against a dark branch."
+      ],
+      "checks": [
+        "The red-and-white design reads against the branch.",
+        "The small inside corners of the pennant survive weeding."
+      ],
+      "base": "ornament-shield",
+      "size": [
+        72,
+        88,
+        4
+      ],
+      "exampleName": "HOUSTON",
+      "exampleMotif": "uh-campus-pennant",
+      "exampleLayout": {
+        "ink": "#fff9ec",
+        "accent": "#fff9ec",
+        "paper": "#b92036"
+      }
+    },
+    {
+      "id": "orn-favorite-paw",
+      "title": "Pet memory heart ornament",
+      "category": "Ornaments",
+      "summary": "Reserve a clean area on the back of a heart for a handwritten memory and keep a simple paw on the front.",
+      "steps": [
+        "Choose the pet’s name and try it on a paper heart beside a paw print. Leave both upper lobes clear for the ribbon.",
+        "Make the front in a thin, smooth material. On a scrap of the same finish, test a pen and let the ink dry.",
+        "Write the memory on the reverse, then thread the heart and turn it to check that neither face rubs on the knot."
+      ],
+      "checks": [
+        "Both faces can be read when the heart turns.",
+        "The inscription stays dry to a light touch."
+      ],
+      "base": "ornament-heart",
+      "size": [
+        85,
+        84,
+        4
+      ],
+      "exampleName": "BEST FRIEND",
+      "exampleMotif": "fa-paw",
+      "exampleLayout": {
+        "ink": "#422d32",
+        "accent": "#773c46",
+        "paper": "#f6d4cf"
+      }
+    },
+    {
+      "id": "orn-house-key",
+      "title": "First home key ornament",
+      "category": "Ornaments",
+      "summary": "Use the arch as a little front door and the key as its central detail. A house number can take the place of a long address.",
+      "steps": [
+        "Lay out a key and house number on the face. Print the design full size and check the key teeth against the smallest tool you plan to use.",
+        "Cut the key from a contrasting vinyl color, engrave it into wood, or raise it slightly in a 3D print.",
+        "Loop a narrow ribbon through the arch and write the move-in date on the reverse."
+      ],
+      "checks": [
+        "The key teeth remain separate.",
+        "The hole has a solid rim after cleanup."
+      ],
+      "base": "ornament-arch",
+      "size": [
+        75,
+        88,
+        4
+      ],
+      "exampleName": "HOME",
+      "exampleMotif": "fa-key"
+    },
+    {
+      "id": "orn-winter-window",
+      "title": "Frosted window ornament",
+      "category": "Ornaments",
+      "summary": "Apply a snowflake to a clear arch so window light shines around the frosted artwork.",
+      "steps": [
+        "Hold the clear blank against a window and trace its usable face. Choose a snowflake large enough to weed on its own.",
+        "Make a paper proof of the face, then cut frosted adhesive vinyl for the artwork. Leave the arch and hanging hole clear.",
+        "Apply from the middle outward with a soft scraper and hang it in the light before deciding whether to add lettering."
+      ],
+      "checks": [
+        "Light passes through the openings in the flake.",
+        "There are no trapped creases in the clear viewing area."
+      ],
+      "base": "ornament-arch",
+      "size": [
+        68,
+        87,
+        4
+      ],
+      "exampleName": "",
+      "exampleMotif": "fa-snowflake",
+      "exampleLayout": {
+        "ink": "#335968",
+        "accent": "#8bb8c3",
+        "paper": "#e8f4f2"
+      }
+    },
+    {
+      "id": "orn-quilt-block",
+      "title": "Scrap-fabric quilt ornament",
+      "category": "Ornaments",
+      "summary": "Use the hexagon as a backing for small fabric scraps and center a contrasting cut star over the finished patchwork.",
+      "steps": [
+        "Trace the hexagon onto paper. Arrange three fabric scraps on the tracing, keeping bulky overlaps away from the hanging hole.",
+        "Adhere the fabric to the rigid face with an adhesive suited to the fabric and backing. Trim the perimeter after it sets.",
+        "Cut a star from contrasting fabric or vinyl compatible with that surface. Place it to cover the center seam."
+      ],
+      "checks": [
+        "The backing stays flat as the adhesive cures.",
+        "The star covers the center seam without reaching the hole."
+      ],
+      "base": "ornament-hex",
+      "size": [
+        83,
+        76,
+        4
+      ],
+      "exampleName": "",
+      "exampleMotif": "fa-star"
+    },
+    {
+      "id": "orn-birth-month",
+      "title": "Birth-month bloom ornament",
+      "category": "Ornaments",
+      "summary": "Make a teardrop garden of birth-month keepsakes using a leaf, a small bloom and an initial.",
+      "steps": [
+        "Put the month in the wider part of the drop and try leaf or flower silhouettes at the narrow end.",
+        "Print one color proof beside the ribbon you plan to use. Adjust the contrast before applying the face or pressing a coated blank.",
+        "Write the year on the back and use equal hanging loops when making several months for one family."
+      ],
+      "checks": [
+        "The month fits the widest part of the drop.",
+        "The leaf veins remain visible at arm’s length."
+      ],
+      "base": "ornament-drop",
+      "size": [
+        64,
+        92,
+        4
+      ],
+      "exampleName": "JUNE",
+      "exampleMotif": "fa-leaf",
+      "exampleLayout": {
+        "extraMotif": "fa-seedling",
+        "ink": "#314d41",
+        "accent": "#527c56",
+        "paper": "#f1ddbc"
+      }
+    },
+    {
+      "id": "orn-stage-star",
+      "title": "Recital star ornament",
+      "category": "Ornaments",
+      "summary": "Build a stage memento with a music note in the center and a performance date on the back.",
+      "steps": [
+        "Draw a circle around the largest text area of a paper star. Keep the title inside that circle so the points stay clear.",
+        "Choose a note with a sturdy stem and test-cut it at final size. Use the same test to set the depth of an engraved or raised version.",
+        "Attach a slim cord and hang the star by the top point. Add a short performance note on the back."
+      ],
+      "checks": [
+        "The music note lifts or prints in one piece.",
+        "The top point has a solid bridge around the hole."
+      ],
+      "base": "ornament-star",
+      "size": [
+        92,
+        92,
+        4
+      ],
+      "exampleName": "ENCORE",
+      "exampleMotif": "fa-music"
+    },
+    {
+      "id": "orn-camp-night",
+      "title": "Campsite night-sky ornament",
+      "category": "Ornaments",
+      "summary": "Layer a pale moon and a mountain on a dark hexagon to mark one memorable night outside.",
+      "steps": [
+        "Place the mountain below the moon. If the two share an outline, slide the moon until there is a clear strip of sky between them.",
+        "Use a dark blank and a light opaque surface material, or engrave a coated face that reveals a contrasting layer.",
+        "Record the campsite and date on the back and attach a loop of soft cord."
+      ],
+      "checks": [
+        "The moon has a clean edge against the dark face.",
+        "The name stays clear of the lower sloping sides."
+      ],
+      "base": "ornament-hex",
+      "size": [
+        85,
+        76,
+        4
+      ],
+      "exampleName": "BIG BEND",
+      "exampleMotif": "fa-mountain",
+      "exampleLayout": {
+        "extraMotif": "fa-moon",
+        "ink": "#fff1cf",
+        "accent": "#e2b96b",
+        "paper": "#1a3544"
+      }
+    },
+    {
+      "id": "orn-anniversary-pair",
+      "title": "Paired anniversary heart ornaments",
+      "category": "Ornaments",
+      "summary": "Make a matched pair that can hang together or go to two households. Each heart carries a different initial.",
+      "steps": [
+        "Set two initials as a name set and keep the motif and blank size identical. Make a plain-paper pair and lay the hearts side by side.",
+        "Cut or print both blanks from the same stock. Differentiate them with two ribbon colors drawn from the same palette.",
+        "Write the shared anniversary date in the same spot on both backs, then hang the pair on neighboring branches."
+      ],
+      "checks": [
+        "Both initials are centered when hung.",
+        "The two hearts can turn without their ribbons tangling."
+      ],
+      "base": "ornament-heart",
+      "size": [
+        76,
+        76,
+        4
+      ],
+      "exampleName": "C",
+      "exampleMotif": "fa-heart"
+    },
+    {
+      "id": "orn-memory-photo",
+      "title": "Photo portrait medallion ornament",
+      "category": "Ornaments",
+      "summary": "Combine a separately printed circular photo with a sturdy disc and a short caption.",
+      "steps": [
+        "Cut a paper circle the size of the portrait and move it on the blank. Reserve the lower edge for a caption and the top for the hole.",
+        "Print and trim the photo separately. Place the caption in the studio, make the disc and check their fit before applying adhesive.",
+        "Attach the photo to the face and seal its edge with a finish tested on a spare print. Fit the cord after it dries."
+      ],
+      "checks": [
+        "The portrait leaves the hanging hole accessible.",
+        "The tested finish keeps the printed colors intact."
+      ],
+      "base": "ornament",
+      "size": [
+        86,
+        86,
+        4
+      ],
+      "exampleName": "OUR CREW",
+      "exampleMotif": "none",
+      "exampleLayout": {
+        "positions": {
+          "name": {
+            "x": 0.5,
+            "y": 0.76,
+            "size": 0.065
+          }
+        }
+      }
+    },
+    {
+      "id": "orn-bell-tail",
+      "title": "Jingle-bell tassel ornament",
+      "category": "Ornaments",
+      "summary": "Hang a small purchased bell below a drop using a separate ribbon tail tied through its top hole.",
+      "steps": [
+        "Make a paper drop and run a long ribbon tail down the back from its top hole. Mark a length that places the bell just below the point.",
+        "Make the front with a short word and bell motif. Tie the purchased bell to the free end of the ribbon tail.",
+        "Thread a separate hanging loop through the same top hole and hang the ornament to test the swing."
+      ],
+      "checks": [
+        "The hole takes both ribbons without forcing them.",
+        "The bell swings below the point without striking the face."
+      ],
+      "base": "ornament-drop",
+      "size": [
+        65,
+        90,
+        5
+      ],
+      "exampleName": "JOY",
+      "exampleMotif": "fa-bell"
+    },
+    {
+      "id": "orn-countdown",
+      "title": "Countdown chalkboard ornament",
+      "category": "Ornaments",
+      "summary": "Give a little ticket a reusable writing area for the number of days until a cruise, graduation or reunion.",
+      "steps": [
+        "Reserve the left half for a chalkboard-vinyl patch and put the permanent word on the right. Test your marker on a spare patch.",
+        "Cut the patch to size with rounded corners and apply it to the finished blank. Let the adhesive settle before writing.",
+        "Hang the ticket at a comfortable writing height and test changing a two-digit number while holding the blank still."
+      ],
+      "checks": [
+        "The marker erases cleanly on the tested patch.",
+        "Two digits fit beside the permanent word."
+      ],
+      "base": "ornament-ticket",
+      "size": [
+        103,
+        61,
+        4
+      ],
+      "exampleName": "DAYS",
+      "exampleMotif": "fa-clock",
+      "exampleLayout": {
+        "positions": {
+          "name": {
+            "x": 0.71,
+            "y": 0.61,
+            "size": 0.11
+          },
+          "motif": {
+            "x": 0.71,
+            "y": 0.32,
+            "size": 0.12
+          }
+        }
+      }
+    },
+    {
+      "id": "parking-citation-tray",
+      "title": "Citation intake tray tab",
+      "category": "Parking & transportation",
+      "summary": "Identify the shallow tray where staff place newly received citation forms. Size the tab to the tray’s front lip.",
+      "steps": [
+        "Measure the lip and the space below the top sheet. Try a folded paper tab while removing a full stack from the tray.",
+        "Set a citation illustration beside a short queue name. Use adhesive vinyl on a molded tray or make a separate thin face for a clip.",
+        "Fit the tab to the outside front surface and check it from the staff member’s usual seat."
+      ],
+      "checks": [
+        "The entire word is visible with the tray full.",
+        "Paper clears the mounting clip or adhesive edge."
+      ],
+      "base": "label",
+      "size": [
+        100,
+        38,
+        0
+      ],
+      "exampleName": "CITATIONS",
+      "exampleMotif": "parking-citation"
+    },
+    {
+      "id": "parking-envelope-slot",
+      "title": "Appeals envelope slot legend",
+      "category": "Parking & transportation",
+      "summary": "Make a narrow legend for an office sorting slot that accepts appeals envelopes.",
+      "steps": [
+        "Measure the uninterrupted area above the slot. Trace the opening on paper so the label stays clear of the envelope path.",
+        "Choose a bold envelope symbol and one queue name. Make two proofs and check the better one with a typical envelope in hand.",
+        "Mount the finished strip above the opening. Feed a thick test envelope through the slot and retrieve it from the other side."
+      ],
+      "checks": [
+        "The legend clears the slot door at full travel.",
+        "The symbol can be distinguished from the neighboring slot."
+      ],
+      "base": "plate",
+      "size": [
+        122,
+        27,
+        0
+      ],
+      "exampleName": "APPEALS",
+      "exampleMotif": "parking-ticket-envelope"
+    },
+    {
+      "id": "parking-counter-sign",
+      "title": "No parking counter miniature",
+      "category": "Parking & transportation",
+      "summary": "Build a small tabletop version of a no-parking sign for Cindy’s desk or the office display case.",
+      "steps": [
+        "Trace the visible face and the depth of the slot in a tabletop holder. Mark the area that disappears behind the lip.",
+        "Center a no-parking mark with short lettering below it. Choose one treatment for the thin diagonal slash and check it in a paper proof.",
+        "Cut, engrave or print the sign face and slide its flat edge into the holder. Try it under the lighting where it will be displayed."
+      ],
+      "checks": [
+        "The holder leaves the diagonal slash visible.",
+        "The sign balances on its base when the desk is bumped."
+      ],
+      "base": "sign",
+      "size": [
+        100,
+        70,
+        0
+      ],
+      "exampleName": "NO PARKING",
+      "exampleMotif": "parking-no-parking",
+      "exampleLayout": {
+        "ink": "#9d182a",
+        "accent": "#ad192b",
+        "paper": "#fff7eb"
+      }
+    },
+    {
+      "id": "parking-cone-collar",
+      "title": "Event cone collar badge",
+      "category": "Parking & transportation",
+      "summary": "Attach a removable badge to a soft band on an event check-in cone used at an indoor welcome table.",
+      "steps": [
+        "Wrap a strip of paper around the cone at the intended height and make a reusable soft band to that circumference.",
+        "Punch a paper badge and attach it loosely to the band. Mark where the tie and the cone’s curved face touch the artwork.",
+        "Make the final badge with smooth corners, fit it to the band and slip the whole collar off to store it flat."
+      ],
+      "checks": [
+        "The collar stays at the chosen height.",
+        "The badge faces forward without a sharp projecting corner."
+      ],
+      "base": "tag",
+      "size": [
+        82,
+        40,
+        5
+      ],
+      "exampleName": "CHECK IN",
+      "exampleMotif": "parking-cone"
+    },
+    {
+      "id": "parking-shuttle-marker",
+      "title": "Shuttle dispatch board token",
+      "category": "Parking & transportation",
+      "summary": "Make movable fleet tokens for an internal dispatch board. Each token represents one vehicle on the route grid.",
+      "steps": [
+        "Measure the smallest cell on the board and trace a token inside it. Leave room to grasp the edge with one hand.",
+        "Use one short vehicle identifier and a shuttle silhouette. Apply a flat magnetic backing sized inside the perimeter.",
+        "Move the finished token through consecutive cells and make a second one to test two vehicles in the same column."
+      ],
+      "checks": [
+        "Neighboring vehicle IDs stay readable.",
+        "The token slides without marking the board."
+      ],
+      "base": "magnet",
+      "size": [
+        65,
+        36,
+        0
+      ],
+      "exampleName": "SHUTTLE 2",
+      "exampleMotif": "parking-shuttle"
+    },
+    {
+      "id": "parking-visitor-permit",
+      "title": "Visitor permit sample card",
+      "category": "Parking & transportation",
+      "summary": "Make a training sample to explain the fields on a visitor permit at the counter.",
+      "steps": [
+        "Arrange a permit symbol and a prominent SAMPLE label. Mark two or three example fields on a paper mockup for the trainer to point to.",
+        "Use invented entries and leave the reverse clear for a short checklist. Cut the finished card to fit the training binder pocket.",
+        "Run a practice conversation with the sample and move any field hidden by the holder’s thumb."
+      ],
+      "checks": [
+        "SAMPLE reads at a glance on the front.",
+        "The card fits the pocket without bending its corners."
+      ],
+      "base": "label",
+      "size": [
+        86,
+        54,
+        0
+      ],
+      "exampleName": "SAMPLE",
+      "exampleMotif": "parking-permit"
+    },
+    {
+      "id": "parking-meter-token",
+      "title": "Meter training sequence tokens",
+      "category": "Parking & transportation",
+      "summary": "Make a touchable set of numbered discs for explaining a meter interaction during a training session.",
+      "steps": [
+        "Write the steps of one specific training exercise on paper. Give each step one verb and arrange the paper discs in order.",
+        "Use the name set to make STEP 1, STEP 2 and STEP 3 discs with matching meter symbols. Write each teaching prompt on the back.",
+        "Mix the discs and ask a colleague to put the exercise back in order, then flip them to rehearse the prompts."
+      ],
+      "checks": [
+        "Numbers stay readable in a row on the table.",
+        "The reverse prompt matches the number on the face."
+      ],
+      "base": "coaster",
+      "size": [
+        44,
+        44,
+        0
+      ],
+      "exampleName": "STEP 1",
+      "exampleMotif": "parking-meter"
+    },
+    {
+      "id": "parking-accessible-desk",
+      "title": "Accessible parking inquiry stand",
+      "category": "Parking & transportation",
+      "summary": "Create a removable information card for the counter where visitors ask about accessible parking services.",
+      "steps": [
+        "Measure the acrylic stand’s opening and the width of its frame. Put the icon and the main words inside the visible area.",
+        "Print a high-contrast proof and read it from a seated visitor’s approach. Add the office name to the second line if it remains clear.",
+        "Cut or print the insert and slide it into the stand. Place it where a visitor can point to the topic while speaking with staff."
+      ],
+      "checks": [
+        "The stand lip leaves the words exposed.",
+        "The icon and wording are distinct from adjoining counter cards."
+      ],
+      "base": "plate",
+      "size": [
+        145,
+        47,
+        0
+      ],
+      "exampleName": "ASK HERE",
+      "exampleMotif": "parking-accessible"
+    },
+    {
+      "id": "parking-vehicle-keys",
+      "title": "Fleet key checkout markers",
+      "category": "Parking & transportation",
+      "summary": "Pair a fleet key ring with a numbered marker that remains on the checkout board when the keys leave.",
+      "steps": [
+        "Measure the ring wire and the peg on the board. Test the same hole diameter on paper for both the ring tag and its matching marker.",
+        "Make a pair for one vehicle, using a contrasting reverse color on the board marker. Put only the internal vehicle ID on the face.",
+        "Practice taking the keys and moving the matching marker to the checked-out column before producing the remaining pairs."
+      ],
+      "checks": [
+        "The tag clears the keys’ normal swing.",
+        "The board marker is legible from the checkout desk."
+      ],
+      "base": "keyfob",
+      "size": [
+        70,
+        29,
+        4
+      ],
+      "exampleName": "VAN 03",
+      "exampleMotif": "parking-shuttle"
+    },
+    {
+      "id": "parking-lot-model",
+      "title": "Parking lot planning tile",
+      "category": "Parking & transportation",
+      "summary": "Build a set of movable tiles for planning event arrival flows during office meetings.",
+      "steps": [
+        "Sketch one real meeting-board grid and make a paper tile for each lot. Leave room between tiles for separate arrows or sticky notes.",
+        "Cut or print the lot faces using a common width and different short identifiers. Add removable backing suited to the meeting surface.",
+        "Arrange the tiles in the order a driver encounters the lots. Photograph the arrangement before packing the pieces."
+      ],
+      "checks": [
+        "All lot identifiers face the same reading direction.",
+        "Tiles can be rearranged without leaving adhesive behind."
+      ],
+      "base": "plate",
+      "size": [
+        92,
+        71,
+        0
+      ],
+      "exampleName": "LOT A",
+      "exampleMotif": "fa-square-parking"
+    },
+    {
+      "id": "parking-shift-handoff",
+      "title": "Shift handoff clipboard plaque",
+      "category": "Parking & transportation",
+      "summary": "Mark a reusable clipboard for the notes that move between parking and transportation shifts.",
+      "steps": [
+        "Open and close the clipboard. Trace a front or back mounting area clear of the hinge, pen loop and the writing surface.",
+        "Set a short handoff label with a cone at one end. Print the proof and place it beside the standard shift sheet.",
+        "Apply the thin finished label and stack several clipboards to confirm the plaque does not catch on the clamps."
+      ],
+      "checks": [
+        "The clamp opens fully.",
+        "The label remains visible when the standard sheet is clipped in."
+      ],
+      "base": "label",
+      "size": [
+        94,
+        35,
+        0
+      ],
+      "exampleName": "HANDOFF",
+      "exampleMotif": "parking-cone"
+    },
+    {
+      "id": "parking-fine-example",
+      "title": "Parking fine teaching dial insert",
+      "category": "Parking & transportation",
+      "summary": "Make a round teaching insert for a rotating tabletop card holder used in a parking-office workshop.",
+      "steps": [
+        "Measure the holder and its lip. Sketch a circle showing which portion stays exposed while it rotates.",
+        "Set FINE on one insert, then make companion faces for NOTICE and APPEAL. Put a distinct teaching prompt on each reverse.",
+        "Rotate the holder during a mock discussion and pull out one card at a time to read the prompt aloud."
+      ],
+      "checks": [
+        "Each face remains upright when displayed.",
+        "Prompts can be read without removing the other inserts."
+      ],
+      "base": "coaster",
+      "size": [
+        64,
+        64,
+        0
+      ],
+      "exampleName": "FINE",
+      "exampleMotif": "parking-citation"
+    },
+    {
+      "id": "uh-desk-crest",
+      "title": "University of Houston desk crest",
+      "category": "Campus & celebrations",
+      "summary": "Make a red-and-white Houston desk crest with the interlocking UH and League Gothic lettering and room for a department or class year.",
+      "steps": [
+        "Trace the contour above a small display stand and mark its lip. Fit the monogram above it and leave a clear band for the name.",
+        "Proof the letters in two contrasting colors. For a relief print, inspect small counters before choosing the final letter height.",
+        "Make the face, slip it into the stand and read it from both sides of the desk before adding a second line."
+      ],
+      "checks": [
+        "The inner spaces of the initials remain open.",
+        "The stand stays level with the finished face."
+      ],
+      "base": "sign",
+      "size": [
+        122,
+        73,
+        0
+      ],
+      "exampleName": "HOUSTON",
+      "exampleMotif": "uh-interlocking",
+      "exampleLayout": {
+        "ink": "#ffffff",
+        "accent": "#ffffff",
+        "paper": "#C8102E",
+        "subtitle": "COUGAR COUNTRY",
+        "nameFont": "league-gothic"
+      }
+    },
+    {
+      "id": "uh-pennant-pin",
+      "title": "Cougar pennant display pin",
+      "category": "Campus & celebrations",
+      "summary": "Turn a small collegiate pennant face into a removable pin for a fabric display board.",
+      "steps": [
+        "Hold a paper face against the board and mark the balance point a little above center on the back.",
+        "Make the face from a light blank. Attach a purchased pin back at the balance mark using its recommended mounting method.",
+        "Pin it to an offcut of the display fabric and lift the board upright to check for rotation before hanging it."
+      ],
+      "checks": [
+        "The closure can be opened with one hand.",
+        "The pennant hangs level on the intended fabric."
+      ],
+      "base": "magnet",
+      "size": [
+        53,
+        42,
+        0
+      ],
+      "exampleName": "UH",
+      "exampleMotif": "uh-campus-pennant",
+      "exampleLayout": {
+        "ink": "#9b1d31",
+        "accent": "#a51e32",
+        "paper": "#fff5e8"
+      }
+    },
+    {
+      "id": "uh-campus-key",
+      "title": "Campus building key index",
+      "category": "Campus & celebrations",
+      "summary": "Make a Houston-themed index tab for a staff desk’s internal key organizer.",
+      "steps": [
+        "Measure a hook and the available space between its neighbors. Test the full outline on the organizer before placing lettering.",
+        "Use a short internal label on the face and the skyline as a small secondary element. Match paired tags with different reverse colors.",
+        "Hang a sample between two occupied hooks and remove the middle tag to test finger clearance."
+      ],
+      "checks": [
+        "The index tab does not block adjacent hooks.",
+        "Staff can distinguish the paired reverse colors."
+      ],
+      "base": "tag",
+      "size": [
+        74,
+        36,
+        4
+      ],
+      "exampleName": "OFFICE",
+      "exampleMotif": "uh-houston-skyline",
+      "exampleLayout": {
+        "ink": "#722638",
+        "accent": "#9d2938",
+        "paper": "#fff0d6"
+      }
+    },
+    {
+      "id": "uh-grad-folder",
+      "title": "Doctoral portfolio cover badge",
+      "category": "Campus & celebrations",
+      "summary": "Mark a keepsake portfolio for doctoral ceremony programs, notes and photographs.",
+      "steps": [
+        "Close the actual portfolio and mark the hinge, opening flap and elastic on a paper tracing.",
+        "Choose a short name and a paw. Use flexible vinyl for a soft cover, or a thin rigid badge for a stiff cover with a clear mounting area.",
+        "Apply the badge while the cover is closed and insert the thickest item you plan to keep before checking flap movement."
+      ],
+      "checks": [
+        "The badge lies flat with the portfolio filled.",
+        "The closure clears the lettering."
+      ],
+      "base": "label",
+      "size": [
+        100,
+        47,
+        0
+      ],
+      "exampleName": "DOC CIN",
+      "exampleMotif": "uh-cougar-paw",
+      "exampleLayout": {
+        "ink": "#fff7f0",
+        "accent": "#fff7f0",
+        "paper": "#a41e31",
+        "subtitle": "UNIVERSITY OF HOUSTON"
+      }
+    },
+    {
+      "id": "uh-alumni-frame",
+      "title": "Cougar alumni photo frame plate",
+      "category": "Campus & celebrations",
+      "summary": "Make a slim inscription plate for the lower rail of an alumni photograph frame.",
+      "steps": [
+        "Measure only the flat width of the rail. Cut a paper strip, close the frame and check that the strip clears the glazing.",
+        "Fit the class year before adding the pennant. Keep the shortest dimension large enough for the fine details to survive.",
+        "Apply the finished plate with the frame lying flat, then stand it up and inspect the caption under the room light."
+      ],
+      "checks": [
+        "The plate fits entirely on the flat rail.",
+        "The lettering remains clear beneath reflections from the glass."
+      ],
+      "base": "plate",
+      "size": [
+        106,
+        24,
+        0
+      ],
+      "exampleName": "CLASS OF 2026",
+      "exampleMotif": "uh-campus-pennant",
+      "exampleLayout": {
+        "ink": "#84273b",
+        "accent": "#922b38",
+        "paper": "#f8e9d2"
+      }
+    },
+    {
+      "id": "campus-welcome-stack",
+      "title": "Orientation table topic cards",
+      "category": "Campus & celebrations",
+      "summary": "Create table cards that let incoming students choose a topic before they reach a staff member.",
+      "steps": [
+        "Measure the card holder and its viewing angle. Print paper samples labeled PARKING, SHUTTLE and BIKE.",
+        "Keep the cards the same width and pair each word with a distinct silhouette. Cut samples and check how quickly they slide into the holder.",
+        "Arrange the cards beside a welcome display and try selecting one while carrying a folder in the other hand."
+      ],
+      "checks": [
+        "Each topic can be identified by its word and its image.",
+        "Cards can be replaced without lifting the holder."
+      ],
+      "base": "plate",
+      "size": [
+        115,
+        64,
+        0
+      ],
+      "exampleName": "PARKING",
+      "exampleMotif": "parking-permit"
+    },
+    {
+      "id": "cruise-cabin-board",
+      "title": "Cabin day-plan slider card",
+      "category": "Cruise collections",
+      "summary": "Make interchangeable day-plan cards for a freestanding holder inside the cabin.",
+      "steps": [
+        "Measure the sides of a small card holder and mark the portion hidden by its lip. Trace two inserts on paper.",
+        "Set SEA DAY and PORT DAY on separate faces. Add the day’s first activity in a second line or write it on a removable paper slip.",
+        "Try the inserts on the cabin-style shelf you will use. Keep the stand and cards together in one travel pouch."
+      ],
+      "checks": [
+        "The cards can be exchanged without emptying the holder.",
+        "The first activity is visible above the lip."
+      ],
+      "base": "plate",
+      "size": [
+        116,
+        65,
+        0
+      ],
+      "exampleName": "SEA DAY",
+      "exampleMotif": "fa-anchor"
+    },
+    {
+      "id": "cruise-meetup-card",
+      "title": "Cruise meetup pocket card",
+      "category": "Cruise collections",
+      "summary": "Make a reusable pocket reminder of the group’s meeting place, with space on the reverse for time and deck.",
+      "steps": [
+        "Trace the sleeve or travel wallet and make a paper insert. Round or smooth edges that rub during insertion.",
+        "Put the meeting-point word and compass on the front. Leave a clean strip on the back for a removable written time.",
+        "Tuck it into the actual sleeve and read both sides under warm, low indoor light."
+      ],
+      "checks": [
+        "The card pulls out without bending.",
+        "The current time and deck are easy to update."
+      ],
+      "base": "label",
+      "size": [
+        84,
+        52,
+        0
+      ],
+      "exampleName": "MEET HERE",
+      "exampleMotif": "fa-compass"
+    },
+    {
+      "id": "cruise-deck-divider",
+      "title": "Excursion envelope dividers",
+      "category": "Cruise collections",
+      "summary": "Separate tickets, postcards and daily notes by port in a travel document pouch.",
+      "steps": [
+        "Measure the pouch with its zipper closed. Lay a paper divider behind the tallest folded document to find the visible top band.",
+        "Move the port name and pin into the top band. Cut a thin face for each port and keep thick raised details away from paper documents.",
+        "Load two ports’ worth of paper and open the pouch with one hand to test the labels."
+      ],
+      "checks": [
+        "The port names remain visible above the papers.",
+        "The pouch closes without rubbing the external zipper."
+      ],
+      "base": "plate",
+      "size": [
+        111,
+        82,
+        0
+      ],
+      "exampleName": "PORT 01",
+      "exampleMotif": "fa-map-pin",
+      "exampleLayout": {
+        "positions": {
+          "name": {
+            "x": 0.64,
+            "y": 0.18,
+            "size": 0.065
+          },
+          "motif": {
+            "x": 0.29,
+            "y": 0.18,
+            "size": 0.085
+          }
+        }
+      }
+    },
+    {
+      "id": "cruise-carry-on-ribbon",
+      "title": "Carry-on ribbon end tab",
+      "category": "Cruise collections",
+      "summary": "Finish a removable luggage-handle ribbon with a lightweight personalized end tab.",
+      "steps": [
+        "Wrap the ribbon around the closed handle and fold it into the intended knot. Measure where the free end hangs.",
+        "Cut a paper tab and thread the ribbon before making the final face. Keep the lettering toward the end that stays visible.",
+        "Tie the ribbon to the handle and lift the case from its normal grip, trimming excess ribbon if it folds over the tab."
+      ],
+      "checks": [
+        "The tab clears the grip and telescoping handle.",
+        "The ribbon knot covers neither the word nor the suitcase symbol."
+      ],
+      "base": "tag",
+      "size": [
+        73,
+        30,
+        4
+      ],
+      "exampleName": "CABIN BAG",
+      "exampleMotif": "ne-luggage"
+    },
+    {
+      "id": "cruise-cocktail-guide",
+      "title": "Tasting-note glass coaster",
+      "category": "Cruise collections",
+      "summary": "Number the glasses in a tasting flight with flat coasters that match a separate score sheet.",
+      "steps": [
+        "Trace the largest glass base and use its outline to find a readable rim area on the coaster.",
+        "Apply a flat printed number and motif toward the rim. Make the next coasters in the same series and number the score sheet to match.",
+        "Set all glasses on the coasters and read the numbers from the seated side before making a spare set."
+      ],
+      "checks": [
+        "The glass base rests flat.",
+        "Every number is visible with a glass in place."
+      ],
+      "base": "coaster",
+      "size": [
+        92,
+        92,
+        0
+      ],
+      "exampleName": "01",
+      "exampleMotif": "fa-leaf",
+      "exampleLayout": {
+        "positions": {
+          "name": {
+            "x": 0.5,
+            "y": 0.82,
+            "size": 0.08
+          },
+          "motif": {
+            "x": 0.5,
+            "y": 0.17,
+            "size": 0.1
+          }
+        }
+      }
+    },
+    {
+      "id": "cruise-souvenir-bag",
+      "title": "Souvenir pouch press transfer",
+      "category": "Cruise collections",
+      "summary": "Put a themed transfer on a fabric pouch for small purchases and paper souvenirs.",
+      "steps": [
+        "Flatten the empty pouch and measure between the seams, zipper and gusset. Mark the opening direction on a paper proof.",
+        "Choose transfer media suitable for the pouch fabric. Compare a printed sample to the fabric color and use the media maker’s application settings.",
+        "After the finished transfer has cooled and been peeled as directed, fill the pouch and check the design around the gusset."
+      ],
+      "checks": [
+        "The transfer stays on the flat front panel.",
+        "The zipper opens its full length."
+      ],
+      "base": "label",
+      "size": [
+        95,
+        59,
+        0
+      ],
+      "exampleName": "PORT FINDS",
+      "exampleMotif": "fa-anchor"
+    },
+    {
+      "id": "pet-leash-hook",
+      "title": "Dachshund leash-station plaque",
+      "category": "Pets & keepsakes",
+      "summary": "Place a dachshund plaque above an existing leash hook so the leash hardware carries the load.",
+      "steps": [
+        "Hang the longest leash on its hook and trace a mounting space clear of the loop and swinging clasp.",
+        "Place the dog along the wider part of the plaque. Check its feet and tail on a paper proof at the intended wall height.",
+        "Mount the decorative plaque separately above the existing hook and hang the leash again."
+      ],
+      "checks": [
+        "The clasp clears the plaque when lifted.",
+        "The dog’s tail and feet remain distinct from the name."
+      ],
+      "base": "sign",
+      "size": [
+        143,
+        70,
+        0
+      ],
+      "exampleName": "WALK TIME",
+      "exampleMotif": "dachshund"
+    },
+    {
+      "id": "pet-portrait-caption",
+      "title": "Pet portrait shadow-box caption",
+      "category": "Pets & keepsakes",
+      "summary": "Fit a short remembrance caption beneath a portrait or keepsake collar inside a shadow box.",
+      "steps": [
+        "Measure the inside ledge and the depth between backing and glazing. Make a paper caption the size of the available strip.",
+        "Set a short name and paw. Use a flat engraved or printed face if the box has little depth.",
+        "Attach the caption to the removable backing and close the empty frame once before returning the keepsakes."
+      ],
+      "checks": [
+        "The caption clears the glazing.",
+        "Reassembling the frame does not shift the portrait or collar."
+      ],
+      "base": "plate",
+      "size": [
+        87,
+        24,
+        0
+      ],
+      "exampleName": "FOREVER",
+      "exampleMotif": "fa-paw"
+    },
+    {
+      "id": "pet-gift-wrap",
+      "title": "Dachshund gift-wrap stamp",
+      "category": "Pets & keepsakes",
+      "summary": "Make a repeated dog border on kraft gift wrap using a single raised stamp face.",
+      "steps": [
+        "Place the dachshund in the center of the face and allow clear space around its feet. Mark a tail-side orientation dot on a paper handle mockup.",
+        "Export the relief model and mirror the stamp in the slicer if the dog should face a particular direction on paper. Fit a handle to the flat back.",
+        "Ink lightly and stamp three impressions on a scrap, aligning the tail-side dot to create even spacing along a folded paper edge."
+      ],
+      "checks": [
+        "All four feet print without a heavy ink puddle.",
+        "The repeating impressions leave room for a fold or ribbon."
+      ],
+      "base": "coaster",
+      "size": [
+        52,
+        52,
+        0
+      ],
+      "exampleName": "",
+      "exampleMotif": "dachshund"
+    },
+    {
+      "id": "pet-treat-bin",
+      "title": "Pet supply scoop marker",
+      "category": "Pets & keepsakes",
+      "summary": "Identify dedicated pet supply scoops with wipeable tags attached near the handle end.",
+      "steps": [
+        "Check the scoop handle for an existing hole and measure the space between the handle and the container lid.",
+        "Choose a short identifier and print or engrave it on a smooth tag. Test the attachment with the tag resting on the handle.",
+        "Attach it at the outer end so the tag stays outside the measured contents, then close the bin and lift the scoop once."
+      ],
+      "checks": [
+        "The marking is readable with the scoop stored.",
+        "The tag clears the lid and the scoop’s measuring bowl."
+      ],
+      "base": "keyfob",
+      "size": [
+        62,
+        27,
+        4
+      ],
+      "exampleName": "SMALL",
+      "exampleMotif": "fa-paw"
+    },
+    {
+      "id": "rummy-round-track",
+      "title": "Rummy round-order strip",
+      "category": "Games & puzzles",
+      "summary": "Use interchangeable round strips in a table holder to show which stage of your house rummy game is in progress.",
+      "steps": [
+        "Write the round labels used by your group on separate slips. Test them in the same holder from the farthest seat.",
+        "Enter the labels as a name set and make a consistent strip for each round. Use a second line for one short house-rule cue.",
+        "Stack the strips in play order beside the holder and advance the top strip after scoring a practice hand."
+      ],
+      "checks": [
+        "The cue can be read without leaning across the table.",
+        "Changing the strip leaves cards and score sheet undisturbed."
+      ],
+      "base": "plate",
+      "size": [
+        146,
+        36,
+        0
+      ],
+      "exampleName": "ROUND 1",
+      "exampleMotif": "fa-dice"
+    },
+    {
+      "id": "rummy-partner-markers",
+      "title": "Rummy partnership markers",
+      "category": "Games & puzzles",
+      "summary": "Make paired flat markers so a changing group of players can spot teammates at a glance.",
+      "steps": [
+        "Make paper pairs for two teams and set one marker by each seat. Check that they leave room for a full hand and discard pile.",
+        "Use both a symbol and a word for each partnership. Make two matching markers per team with flat backs for tabletop use.",
+        "Shuffle the markers facedown to draw partners, then turn them faceup beside the players’ score cards."
+      ],
+      "checks": [
+        "The backs look alike during the draw.",
+        "Teams can be told apart without relying on color."
+      ],
+      "base": "magnet",
+      "size": [
+        46,
+        33,
+        0
+      ],
+      "exampleName": "TEAM A",
+      "exampleMotif": "fa-heart"
+    },
+    {
+      "id": "rummy-box-rule",
+      "title": "Rummy box rules insert",
+      "category": "Games & puzzles",
+      "summary": "Fit a removable rules key into the inside lid of a travel card box.",
+      "steps": [
+        "Measure the closed gap above the deck and make a thin paper insert. Check that the tallest card still slips out cleanly.",
+        "Choose one short reminder for the front, such as the end score. Put a few handwritten house conventions on the back.",
+        "Fit the finished insert in a slim sleeve under the lid and close the box on the actual travel deck."
+      ],
+      "checks": [
+        "The closed lid sits flush.",
+        "Players can remove and replace the insert without creasing a card."
+      ],
+      "base": "label",
+      "size": [
+        88,
+        59,
+        0
+      ],
+      "exampleName": "HOUSE RULES",
+      "exampleMotif": "fa-book-open",
+      "exampleLayout": {
+        "subtitle": "PLAY TO 500"
+      }
+    },
+    {
+      "id": "vinyl-color-ring",
+      "title": "Adhesive vinyl color swatch ring",
+      "category": "Workshop & materials",
+      "summary": "Keep a real offcut from each vinyl roll beside its written color code on a ring of sample tabs.",
+      "steps": [
+        "Mark out a small sample area on a paper tab and position the code beyond it. Leave clear space between the patch and the ring hole.",
+        "Cut matching blank tabs and apply a real vinyl offcut to each. Put the maker and finish on the reverse.",
+        "Fan the ring across a project surface under shop lighting to compare similar colors before cutting the full roll."
+      ],
+      "checks": [
+        "The actual sample remains visible when fanned.",
+        "The supplier and finish can be read without removing a tab."
+      ],
+      "base": "tag",
+      "size": [
+        59,
+        32,
+        4
+      ],
+      "exampleName": "TEAL 04",
+      "exampleMotif": "none",
+      "exampleLayout": {
+        "positions": {
+          "name": {
+            "x": 0.68,
+            "y": 0.55,
+            "size": 0.12
+          }
+        }
+      }
+    },
+    {
+      "id": "press-orientation-card",
+      "title": "Heat press orientation sample",
+      "category": "Workshop & materials",
+      "summary": "Keep a physical alignment sample that records which way a tested transfer faces on one press setup.",
+      "steps": [
+        "Place a large asymmetric arrow and readable word on the face. Mark the top of a small compatible sacrificial blank.",
+        "Produce one proof using the same printer, transfer method and press arrangement as the planned run. Record the settings and orientation on the reverse.",
+        "Keep the sample beside that setup and compare the next paper proof to the finished arrow before pressing more blanks."
+      ],
+      "checks": [
+        "The finished word reads in the intended direction.",
+        "The notes identify the tested blank and transfer method."
+      ],
+      "base": "plate",
+      "size": [
+        84,
+        55,
+        0
+      ],
+      "exampleName": "FRONT",
+      "exampleMotif": "fa-diamond-turn-right"
+    },
+    {
+      "id": "spool-bin-divider",
+      "title": "Filament spool bin divider",
+      "category": "Workshop & materials",
+      "summary": "Make quick-change divider fronts to separate filament families in a shelf or dry-bin organizer.",
+      "steps": [
+        "Measure the divider pocket and trace the area visible above the spool rim. Test with the largest spool in the bin.",
+        "Put the material family near the exposed edge and write the actual color lot on a removable strip beneath it.",
+        "Slide the finished front into the divider and remove one spool while the rest of the shelf stays loaded."
+      ],
+      "checks": [
+        "The shelf front does not snag a spool rim.",
+        "The material label is visible from the normal viewing angle."
+      ],
+      "base": "plate",
+      "size": [
+        99,
+        65,
+        0
+      ],
+      "exampleName": "PETG",
+      "exampleMotif": "fa-cube",
+      "exampleLayout": {
+        "positions": {
+          "name": {
+            "x": 0.6,
+            "y": 0.21,
+            "size": 0.11
+          },
+          "motif": {
+            "x": 0.25,
+            "y": 0.21,
+            "size": 0.095
+          }
+        }
+      }
+    },
+    {
+      "id": "laser-focus-reference",
+      "title": "Engraving finish comparison tile",
+      "category": "Workshop & materials",
+      "summary": "Keep matched finish tiles to compare how a light or dark engraving looks on two pieces of stock.",
+      "steps": [
+        "Cut two test pieces from known laser-compatible stock and label their unworked backs with the material details.",
+        "Engrave the same bold shape and small lettering on both using the settings chosen for each material. Record the settings with each tile.",
+        "Compare the pair under the lighting planned for the finished object and photograph them beside the material labels."
+      ],
+      "checks": [
+        "The same features appear on both tiles.",
+        "The notes distinguish stock, finish and test orientation."
+      ],
+      "base": "label",
+      "size": [
+        79,
+        42,
+        0
+      ],
+      "exampleName": "TEST B",
+      "exampleMotif": "fa-paintbrush"
     }
   ],
   problems: [

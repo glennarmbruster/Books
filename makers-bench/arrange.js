@@ -39,10 +39,40 @@ function arrangePreview(getDesign, setPositions, labelFor) {
     const b=boxOf(node);
     xField.value=Number((b.x/factor).toFixed(d.units==='in'?4:2));
     yField.value=Number((b.y/factor).toFixed(d.units==='in'?4:2));
-    const outline=document.createElementNS('http://www.w3.org/2000/svg','rect');
-    for(const [attr,value] of Object.entries({x:b.x-b.width/2,y:b.y-b.height/2,width:b.width,height:b.height,'data-selection':'','aria-hidden':'true'}))
-      outline.setAttribute(attr,value);
-    svg.append(outline);
+    function svgNode(tag,attributes) {
+      const node=document.createElementNS('http://www.w3.org/2000/svg',tag);
+      for(const [attr,value] of Object.entries(attributes)) node.setAttribute(attr,value);
+      return node;
+    }
+    const selection=svgNode('g',{'data-selection':'','aria-hidden':'true'});
+    selection.append(svgNode('rect',{x:b.x-b.width/2,y:b.y-b.height/2,width:b.width,height:b.height,class:'selected-outline'}));
+    const matrix=svg.getScreenCTM();
+    if(matrix) {
+      // Size handles in screen pixels, even for a very small printed object.
+      const px=1/Math.hypot(matrix.a,matrix.b);
+      const left=Math.max(0,b.x-Math.max(b.width/2,13*px)),right=Math.min(d.width,b.x+Math.max(b.width/2,13*px));
+      const top=Math.max(0,b.y-Math.max(b.height/2,13*px)),bottom=Math.min(d.height,b.y+Math.max(b.height/2,13*px));
+      for(const [corner,x,y] of [['nw',left,top],['ne',right,top],['se',right,bottom],['sw',left,bottom]]) {
+        const handle=svgNode('g',{'data-corner':corner});
+        handle.append(svgNode('rect',{x:x-10*px,y:y-10*px,width:20*px,height:20*px,class:'corner-hit'}),
+          svgNode('rect',{x:x-4*px,y:y-4*px,width:8*px,height:8*px,rx:px,class:'corner-grip'}));
+        selection.append(handle);
+      }
+    }
+    svg.append(selection);
+  }
+  function resize(g) {
+    const d=getDesign(),b=g.box;
+    const sx=g.corner.endsWith('e')?1:-1,sy=g.corner.startsWith('s')?1:-1;
+    const anchorX=b.x-sx*b.width/2,anchorY=b.y-sy*b.height/2;
+    const max=Math.min((sx>0?d.width-anchorX:anchorX)/b.width,(sy>0?d.height-anchorY:anchorY)/b.height);
+    // Project the drag onto the original diagonal to preserve aspect ratio.
+    const requested=1+(sx*b.width*g.dx+sy*b.height*g.dy)/(b.width*b.width+b.height*b.height);
+    const scale=Math.min(max,Math.max(Math.min(1,.3/Math.max(b.width,b.height)),requested));
+    const w=b.width*scale,h=b.height*scale, image=g.sizeField.endsWith('Width');
+    const updated={x:Math.max(0,Math.min(1,(anchorX+sx*w/2)/d.width)),
+      y:Math.max(0,Math.min(1,(anchorY+sy*h/2)/d.height)),size:image?w/d.width:h/d.height};
+    setPositions({...g.base,[g.key]:updated},{field:g.sizeField,value:image?w:h});
   }
   function move(original,key,x,y,box) {
     const d=getDesign(),clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
@@ -52,7 +82,9 @@ function arrangePreview(getDesign, setPositions, labelFor) {
   function flush() {
     if(frame) cancelAnimationFrame(frame);frame=0;
     if(!gesture?.moved) return;
-    const g=gesture;move(g.base,g.key,g.box.x+g.dx,g.box.y+g.dy,g.box);
+    const g=gesture;
+    if(g.corner) resize(g);
+    else move(g.base,g.key,g.box.x+g.dx,g.box.y+g.dy,g.box);
   }
   select.onchange=()=>{selected=select.value;sync();};
   reset.onclick=()=>{selected='';setPositions({});};
@@ -67,11 +99,13 @@ function arrangePreview(getDesign, setPositions, labelFor) {
   drawing.onpointerdown=e=>{
     if(gesture||e.button!==0||!e.isPrimary) return;
     const start=point(e);if(!start) return;
-    let node=e.target.closest('[data-object]');
+    const corner=e.target.closest('[data-corner]')?.dataset.corner;
+    let node=corner?paths().find(n=>keyOf(n)===selected):e.target.closest('[data-object]');
     if(!node) node=paths().reverse().find(n=>{const b=n.getBBox();return start.x>=b.x&&start.x<=b.x+b.width&&start.y>=b.y&&start.y<=b.y+b.height;});
     if(!node) return;
     selected=keyOf(node);
-    gesture={pointer:e.pointerId,key:selected,start,clientX:e.clientX,clientY:e.clientY,dx:0,dy:0,moved:false,
+    const sizeField=selected+(['motif','extraMotif'].includes(selected)?'Width':'Height');
+    gesture={corner,sizeField,originalSize:getDesign()[sizeField],pointer:e.pointerId,key:selected,start,clientX:e.clientX,clientY:e.clientY,dx:0,dy:0,moved:false,
       box:boxOf(node),original:getDesign().positions,base:currentPositions()};
     drawing.focus({preventScroll:true});drawing.setPointerCapture(e.pointerId);sync();e.preventDefault();
   };
@@ -91,7 +125,7 @@ function arrangePreview(getDesign, setPositions, labelFor) {
   drawing.onpointercancel=drawing.onlostpointercapture=e=>{
     if(gesture?.pointer!==e.pointerId) return;
     const g=gesture;gesture=null;cancelAnimationFrame(frame);frame=0;
-    if(g.moved) setPositions(g.original);
+    if(g.moved) setPositions(g.original,g.corner?{field:g.sizeField,value:g.originalSize}:null);
   };
   drawing.onkeydown=e=>{
     const dir={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];

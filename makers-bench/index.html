@@ -31,6 +31,12 @@
       <label id="hole-row">Hole diameter<input id="hole" type="number" step="any" required></label>
     </fieldset>
     <fieldset><legend>Lettering</legend>
+      <details class="lettering-matches"><summary>UH, cruise &amp; Disney lettering</summary>
+        <label for="brand-style">Lettering collection</label><select id="brand-style" data-filter="font"></select>
+        <p id="brand-detail"></p><a id="brand-source" class="credits" target="_blank" rel="noopener">Reference ↗</a>
+        <div class="match-actions"><button type="button" id="use-name-font" class="secondary">Use for name</button>
+        <button type="button" id="use-subtitle-font" class="secondary">Use for second line</button></div>
+      </details>
       <label for="names">Names <small>one per line for a set</small></label><textarea id="names" rows="2" maxlength="1600" placeholder="Cindy"></textarea>
       <div class="font-controls">
         <label for="nameFont">Name font<select id="nameFont"></select></label>
@@ -63,7 +69,7 @@
   <div class="proof"><div class="proof-head"><h2>Design preview</h2><label id="which-name" hidden>Name <select id="name-index"></select></label></div>
     <div class="mat"><div id="drawing" tabindex="0" role="group" aria-label="Design canvas. Arrow keys move the selected object one millimeter. Hold Shift for tenths." aria-describedby="drag-tip"></div></div>
     <div class="arrange">
-      <p id="drag-tip">Drag either image or a line of text to place it. Use the list to select overlapping pieces. The blank trims artwork at its edges and holes.</p>
+      <p id="drag-tip">Select an image or text. Drag it to move, or drag a corner to resize. Use the list to select overlapping pieces. The blank trims artwork at its edges and holes.</p>
       <label>Object<select id="move-object"><option value="">Choose an object…</option></select></label>
       <fieldset><legend>Center position (<span id="position-unit">mm</span>)</legend><label>From left<input id="move-x" type="number" step="any" disabled></label><label>From top<input id="move-y" type="number" step="any" disabled></label></fieldset>
       <button id="reset-layout" type="button" class="secondary" disabled>Restore automatic layout</button>
@@ -82,6 +88,6 @@
 <dialog id="dialog" aria-labelledby="dialog-title"><form id="dialog-form"><h2 id="dialog-title"></h2><div id="dialog-body"></div><p id="dialog-message" role="alert"></p><div class="actions"><button type="button" id="close-dialog" class="secondary">Cancel</button><button type="submit" id="accept" class="action">Save</button></div></form></dialog>
 <script src="reference.js"></script>
 <!-- Local export engine -->
-<script src="artwork.js"></script><script src="vendor/bench-font.js"></script><script src="vendor/typefaces.js"></script><script src="bench-art.js"></script>
+<script src="artwork.js"></script><script src="vendor/bench-font.js"></script><script src="vendor/typefaces.js"></script><script src="vendor/waltograph.js"></script><script src="bench-art.js"></script>
 <script src="files.js"></script><script src="arrange.js"></script><script src="app.js"></script>
 </body></html>

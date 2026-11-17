@@ -1,4 +1,4 @@
-const edition = 'makers-bench-4';
+const edition = 'makers-bench-5';
 const files = [
   "app.js",
   "arrange.js",
@@ -23,6 +23,8 @@ const files = [
   "vendor/atkinson-license.txt",
   "vendor/bench-font.js",
   "vendor/typefaces.js",
+  "vendor/waltograph.js",
+  "vendor/waltograph-source.zip",
   "vendor/typeface-licenses.txt",
   "vendor/manifold-license.txt",
   "vendor/manifold.js",
