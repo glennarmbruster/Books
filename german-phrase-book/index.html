@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#343d49">
+<title>German Phrase Book · Books</title><link rel="stylesheet" href="../table-books.css"><link rel="stylesheet" href="style.css"><link rel="icon" href="../shelf-art/german.jpg"><link rel="apple-touch-icon" href="../shelf-art/german.jpg">
+</head><body><header><a href="../">‹ Bookshelf</a><span id="offline" role="status"></span></header><main>
+<div class="mast"><img src="../shelf-art/german.jpg" alt=""><div><h1>German Phrase Book</h1><p>Everyday German for the train platform, the dinner table, and the conversations in between.</p></div></div>
+<div class="lookup"><label for="query">Find a phrase</label><input type="search" id="query" placeholder="Search English or German" autocomplete="off"><div class="tabs"><a href="#chapters">Chapters</a><a href="#saved" id="saved-link">My phrases</a></div></div>
+<section id="directory"><h2>Travel chapters</h2><div id="chapters"></div></section>
+<section id="reader" hidden><div class="section-heading"><h2 id="heading"></h2><span id="count"></span></div><div id="entries"></div></section>
+<details class="sounds"><summary>Pronunciation guide</summary><p>Capitals mark stressed syllables. Read <b>ow</b> as in “cow.” For <b>ue</b>, say “ee” with rounded lips. For <b>oe</b>, say “eh” with rounded lips. The <b>kh</b> sound is soft in <i lang="de">ich</i> and farther back in <i lang="de">Bach</i>. Tap Listen to hear each phrase.</p><p>German audio uses the Thorsten voice and is included in the offline download. <a href="https://huggingface.co/rhasspy/piper-voices/blob/main/de/de_DE/thorsten/medium/MODEL_CARD">Voice credits</a></p></details>
+<p id="notice" role="status"></p></main>
+<dialog id="show" aria-labelledby="large-de"><button id="close" type="button">Close</button><div class="phrase-display"><p id="large-en"></p><h2 id="large-de" lang="de"></h2><p class="spelling" id="large-say"></p><div class="actions"><button type="button" id="listen" class="action">Listen</button><button type="button" id="slow">Listen slowly</button><button type="button" id="save-large">Save phrase</button></div><p id="audio-error" role="status"></p></div></dialog>
+<script src="phrases.js"></script><script src="audio.js"></script><script src="app.js"></script><script src="../table-books-offline.js"></script></body></html>

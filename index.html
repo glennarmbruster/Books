@@ -34,7 +34,7 @@
       .shelf-heading {margin-bottom:.5rem}
     }
     @media (min-width:900px) and (orientation:landscape) {
-      .shelf:has(> article:nth-child(5):last-child) {max-width:none;grid-template-columns:repeat(5,minmax(0,1fr))}
+      .shelf:has(> article:nth-child(5):last-child),.shelf:has(> article:nth-child(10):last-child) {max-width:none;grid-template-columns:repeat(5,minmax(0,1fr))}
       .shelf:has(> article:nth-child(6):last-child) {max-width:none;grid-template-columns:repeat(6,minmax(0,1fr))}
     }
     @media (min-width:601px) and (max-height:640px) {
@@ -45,7 +45,7 @@
       #downloads:not([hidden]) {display:inline-block}
       #downloads[aria-pressed=true] {color:#fff;background:#214a41}
       .shelf.compact-actions article > :not(.cover) {display:none}
-      .shelf,.shelf:has(> article:nth-child(5):last-child),.shelf:has(> article:nth-child(6):last-child) {
+      .shelf,.shelf:has(> article:nth-child(5):last-child),.shelf:has(> article:nth-child(6):last-child),.shelf:has(> article:nth-child(10):last-child) {
         grid-template-columns:repeat(4,minmax(0,1fr)); max-width:min(100%,calc(128svh - 5rem)); gap:.5rem
       }
     }
@@ -137,6 +137,20 @@
         <a class="cover" href="./makers-bench/index.html">
           <img class="jacket-art" src="./shelf-art/bench.jpg" alt="">
           <span class="cover-kind">Craft studio</span><h2>The Maker’s Bench</h2><small>Design files and guides for cutting, pressing, and 3D printing</small>
+        </a>
+        <button type="button" hidden>Download offline</button><p role="status"></p>
+      </article>
+      <article data-book="sudoku" data-edition="sudoku-1">
+        <a class="cover" href="./sudoku/index.html">
+          <img class="jacket-art" src="./shelf-art/sudoku.jpg" alt="">
+          <span class="cover-kind">Number puzzles</span><h2>Sudoku</h2><small>100 Sudoku puzzles from easy to very hard</small>
+        </a>
+        <button type="button" hidden>Download offline</button><p role="status"></p>
+      </article>
+      <article data-book="german-phrase-book" data-edition="german-phrase-book-1">
+        <a class="cover" href="./german-phrase-book/index.html">
+          <img class="jacket-art" src="./shelf-art/german.jpg" alt="">
+          <span class="cover-kind">Travel reference</span><h2>German Phrase Book</h2><small>160 German phrases with offline audio</small>
         </a>
         <button type="button" hidden>Download offline</button><p role="status"></p>
       </article>
