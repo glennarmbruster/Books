@@ -10,7 +10,14 @@ function el(tag,text,cls) {
 function link(text,href,cls) {const a=el('a',text,cls);a.href=href;return a;}
 function picture(id) {const img=el('img');img.src='images/'+id+'.jpg';img.alt='';return img;}
 function list(items,tag) {const group=el(tag);group.append(...items.map(item=>el('li',item)));return group;}
-const projectOptions=()=>projects.map(p=>new Option(p.title,p.id));
+function projectOptions() {
+  const groups=new Map();
+  for(const p of projects) {
+    if(!groups.has(p.category)) {const group=el('optgroup');group.label=p.category;groups.set(p.category,group);}
+    groups.get(p.category).append(new Option(p.title,p.id));
+  }
+  return [...groups.values()];
+}
 $('choose-guide').append(new Option('Select a project…',''),...projectOptions());
 $('another-guide').append(...projectOptions());
 $('shape').append(...projectOptions());
@@ -32,9 +39,22 @@ function references() {
   if(!host.childElementCount) host.append(el('p','No entries match. Try a machine, material, or symptom.'));
 }
 $('find-guide').oninput=references;references();
+function exampleDesign(p) {
+  const [width,height,hole]=p.size;
+  return {...defaults,shape:p.id,width,height,hole,names:p.exampleName,motif:p.exampleMotif,
+    placement:width>1.7*height?'left':'above',...p.exampleLayout};
+}
 function projectPage(p) {
   const layout=el('div',null,'guide-layout'), intro=el('div'), steps=el('div');
-  intro.append(picture(p.id),el('h1',p.title),el('p',p.summary),link('Customize in studio ↗','#studio/'+p.id,'action'));
+  let visual;
+  if(p.base) {
+    const d=exampleDesign(p);
+    visual=el('figure',null,'guide-proof');const image=el('div');
+    image.innerHTML=BenchArt.svg({...d,name:d.names},'print');
+    image.setAttribute('role','img');image.setAttribute('aria-label','Design example for '+p.title);
+    visual.append(image,el('figcaption',d.width+' × '+d.height+' mm'));
+  } else visual=picture(p.id);
+  intro.append(visual,el('h1',p.title),el('p',p.summary),link(p.base?'Start this example in studio ↗':'Customize in studio ↗','#studio/'+p.id,'action'));
   steps.append(el('h2','Make a sample'),list(p.steps,'ol'),el('h2','Before making a set'),list(p.checks,'ul'));
   layout.append(intro,steps);$('project-page').replaceChildren(layout);
 }
@@ -56,7 +76,8 @@ for(const id of ['nameFont','subtitleFont']) {
   $(id).append(...groups.values());
 }
 const dimensionIds=['width','height','hole','thickness','relief'];
-const defaults={...letterDefaults,motifWidth:0,extraMotifWidth:0,shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
+const layoutDefaults={positions:{},motifLines:'auto',extraMotifLines:'auto'};
+const defaults={...layoutDefaults,...letterDefaults,motifWidth:0,extraMotifWidth:0,shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
 const draftKey='makers-bench-studio-v1';
 let design={...defaults}, currentName=0, exporting=false, valid=false;
 function names(d) {
@@ -66,7 +87,7 @@ function names(d) {
 }
 function checked(input) {
   // Projects from the first edition have a single image above the name.
-  input={...letterDefaults,motifWidth:0,extraMotifWidth:0,extraMotif:'none',placement:'above',...input};
+  input={...layoutDefaults,...letterDefaults,motifWidth:0,extraMotifWidth:0,extraMotif:'none',placement:'above',...input};
   const result={};
   for(const k of Object.keys(defaults)) {
     if(typeof input?.[k]!==typeof defaults[k]) throw Error('This project has incomplete design settings.');
@@ -85,7 +106,7 @@ const artItems=[
 ];
 const artById=new Map(artItems.map(item=>[item.id,item]));
 const categories=[...new Set(artItems.map(item=>item.category))].sort();
-const featuredIds=['dachshund','fa-graduation-cap','diploma'];
+const featuredIds=['dachshund','fa-graduation-cap','ne-graduation-cap','diploma'];
 function artworkPicker(host,key,title) {
   const heading=el('label',title);heading.htmlFor=key;
   const find=el('input');find.type='search';find.placeholder='Try dachshund, graduation, or flower';
@@ -103,14 +124,16 @@ function artworkPicker(host,key,title) {
   widthInput.id=key+'Width';widthInput.type='number';widthInput.step='any';widthInput.min='0';widthInput.placeholder='Auto';
   widthInput.setAttribute('inputmode','decimal');widthInput.setAttribute('aria-describedby','art-size-help');
   widthLabel.append(widthUnit,widthInput);
-  host.append(heading,controls,select,count,proof,widthLabel);
+  const lineLabel=el('label','Side lines'),lines=el('select');lines.id=key+'Lines';
+  lines.append(new Option('Automatic','auto'),new Option('Show side lines','on'),new Option('Hide side lines','off'));lineLabel.append(lines);
+  host.append(heading,controls,select,count,proof,widthLabel,lineLabel);
   let lastSample;
   function preview() {
     const id=design[key], sig=id+design.accent;
     if(lastSample===sig) return;
     lastSample=sig;
     const item=artById.get(id);
-    widthLabel.hidden=proof.hidden=!item;
+    lineLabel.hidden=widthLabel.hidden=proof.hidden=!item;
     if(item) {thumb.innerHTML=BenchArt.swatch(id,design.accent);caption.textContent=item.label;}
   }
   function options() {
@@ -140,8 +163,21 @@ function artworkPicker(host,key,title) {
 }
 const artPickers=[artworkPicker($('art-picker'),'motif','Artwork'),artworkPicker($('extra-picker'),'extraMotif','Second artwork')];
 
+function objectLabel(key) {
+  if(key==='name') return 'Name';
+  if(key==='subtitle') return 'Second line';
+  return (key==='motif'?'First image · ':'Second image · ')+(artById.get(design[key])?.label||'');
+}
+const arranger=arrangePreview(()=>design,positions=>{
+  if(!Object.keys(positions).length) {
+    try {BenchArt.svg({...design,positions,name:names(design)[currentName]});} catch(error) {
+      $('studio-message').textContent='Automatic layout: '+error.message;return;
+    }
+  }
+  design.positions=positions;refresh();
+},objectLabel);
 function form() {
-  for(const k of ['shape','units','names','subtitle','nameFont','subtitleFont','placement','ink','accent','paper','machine']) $(k).value=design[k];
+  for(const k of ['shape','units','names','subtitle','motifLines','extraMotifLines','nameFont','subtitleFont','placement','ink','accent','paper','machine']) $(k).value=design[k];
   for(const id of dimensionIds) $(id).value=displayed(id);
   for(const id of optionalSizes) $(id).value=design[id]===0?'':displayed(id);
   document.querySelectorAll('.measure-unit').forEach(node=>node.textContent='('+design.units+')');
@@ -149,7 +185,7 @@ function form() {
   if(design.extraMotif!=='none') $('second-image').open=true;
   $('mirror').checked=design.mirror;$('print-format').value=design.printFormat;$('model-format').value=design.modelFormat;
 }
-function setShape(id) {design.shape=id;[design.width,design.height,design.hole]=sizes[id];}
+function setShape(id) {design.positions={};design.shape=id;[design.width,design.height,design.hole]=sizes[id];}
 const fileExt={cricut:'svg',glowforge:'svg',profile:'svg',stl:'stl','3mf':'3mf',pdf:'pdf',png:'png'};
 function format(d=design) {return d.machine==='printer3d'?d.modelFormat:d.machine==='sublimation'?d.printFormat:d.machine;}
 const outputNotes={
@@ -205,6 +241,7 @@ function refresh() {
     }
     valid=false;$('studio-message').textContent=e.message;$('drawing').replaceChildren();$('transfer').replaceChildren();
   }
+  arranger.sync();
   for(const id of ['save-open','export','export-set']) $(id).disabled=!valid||exporting;
 }
 $('settings').onsubmit=e=>e.preventDefault();
@@ -215,6 +252,7 @@ $('settings').oninput=e=>{
   else if(id==='units') {design.units=e.target.value;form();}
   else if(optionalSizes.includes(id)) design[id]=e.target.validity.badInput?NaN:e.target.value===''?0:Number(e.target.value)*unitFactor();
   else if(dimensionIds.includes(id)) design[id]=e.target.value===''?NaN:Number(e.target.value)*unitFactor();
+  else if(id==='placement') {design.placement=e.target.value;design.positions={};}
   else if(id==='mirror') design.mirror=e.target.checked;
   else if(Object.hasOwn(defaults,id)) design[id]=e.target.value;
   refresh();
@@ -315,7 +353,11 @@ function route() {
   if(page==='guide') $('choose-guide').value='';
   if(page==='project') { $('another-guide').value=p.id; projectPage(p); }
   if(page==='studio') {
-    if(p) {setShape(p.id);history.replaceState(null,'','#studio');}
+    if(p) {
+      if(p.base) {design={...exampleDesign(p),machine:design.machine,units:design.units};currentName=0;}
+      else setShape(p.id);
+      history.replaceState(null,'','#studio');
+    }
     form();refresh();
   }
   if(page==='workshop') workshop();
@@ -344,7 +386,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-3'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-4'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

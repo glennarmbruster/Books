@@ -16,8 +16,13 @@
     keyfob:[72,30,5], bookmark:[40,145,4], ornament:[80,80,4],
     marker:[95,85,0], label:[85,45,0], magnet:[65,45,0], sign:[180,85,0]
   };
-  const topHole = shape => shape==='bookmark' || shape==='ornament';
-  const hasHole = shape => topHole(shape) || shape==='keyfob' || shape==='tag';
+  const baseShapes=new Map();
+  for(const project of BenchGuide.projects) if(project.base) {
+    baseShapes.set(project.id,project.base);presets[project.id]=project.size;
+  }
+  const baseShape=shape=>baseShapes.get(shape)||shape;
+  const topHole = shape => ['bookmark','ornament'].includes(baseShape(shape));
+  const hasHole = shape => topHole(shape) || ['keyfob','tag'].includes(baseShape(shape));
   function validArt(id) { return motifs.includes(id) || catalogIds.has(id); }
 
   function number(value, label, min, max) {
@@ -41,6 +46,18 @@
     }
     return text;
   }
+  const objectKeys=['motif','extraMotif','name','subtitle'];
+  function positions(value={}) {
+    if(!value||typeof value!=='object'||Array.isArray(value)) throw Error('Invalid object positions.');
+    const result={};
+    for(const [key,point] of Object.entries(value)) {
+      if(!objectKeys.includes(key)||!point||![point.x,point.y,point.size].every(Number.isFinite)||
+        point.x<0||point.x>1||point.y<0||point.y>1||point.size<=0||point.size>1.001)
+        throw Error('Invalid object position or size.');
+      result[key]={x:point.x,y:point.y,size:point.size};
+    }
+    return result;
+  }
   function validate(input) {
     if (!Object.hasOwn(presets,input.shape)) throw Error('Choose a project shape.');
     const width = number(input.width,'Width',15,500);
@@ -50,7 +67,10 @@
     if (!['above','left','right'].includes(placement)) throw Error('Choose a position for the artwork.');
     const nameFont=input.nameFont??defaultFont, subtitleFont=input.subtitleFont??defaultFont;
     if(!byFont.has(nameFont)||!byFont.has(subtitleFont)) throw Error('Choose a font from the lettering list.');
+    const motifLines=input.motifLines??'auto',extraMotifLines=input.extraMotifLines??'auto';
+    if(![motifLines,extraMotifLines].every(v=>['auto','on','off'].includes(v))) throw Error('Choose a side-line setting.');
     return {
+      positions:positions(input.positions),motifLines,extraMotifLines,
       nameFont,subtitleFont,
       motifWidth:number(input.motifWidth??0,'Artwork width',0,500),
       extraMotifWidth:number(input.extraMotifWidth??0,'Second artwork width',0,500),
@@ -227,18 +247,19 @@
   }
   function geometry(input) {
     const d=validate(input),w=d.width,h=d.height,small=Math.min(w,h);
-    const base=blank(d.shape,w,h), upper=topHole(d.shape);
+    const shape=baseShape(d.shape),base=blank(shape,w,h),upper=topHole(shape);
+    const free=Object.keys(d.positions).length>0;
     const holeX=upper?w/2:d.hole/2+Math.min(w*.075,h*.13);
     const holeY=upper?d.hole/2+small*.09:h/2;
     const hole=d.hole?circle(holeX,holeY,d.hole/2):[];
-    const round=d.shape==='coaster'||d.shape==='ornament';
-    const insetX=round?w*.16:small*(d.shape==='magnet'?.23:.085);
+    const round=shape==='coaster'||shape==='ornament';
+    const insetX=round?w*.16:small*(shape==='magnet'?.23:.085);
     const left=d.hole&&!upper?Math.max(insetX,holeX+d.hole/2+small*.065):insetX;
     const usable=w-left-insetX,cx=left+usable/2;
     let areaTop=0,areaEnd=h;
     if(upper && d.hole) areaTop=holeY+d.hole/2+small*.045;
-    if(d.shape==='marker') areaEnd=h*.53;
-    if(d.shape==='sign') areaTop=h*.23;
+    if(shape==='marker') areaEnd=h*.53;
+    if(shape==='sign') areaTop=h*.23;
     const cy=(areaEnd+areaTop)/2;
     const innerH=(areaEnd-areaTop)*(round?.67:.73);
     const artwork=['motif','extraMotif'].filter(key=>d[key]!=='none');
@@ -255,7 +276,7 @@
     let markWidth=beside?usable*.32:Math.min(usable*(artwork.length===2?.90:.66),markSize*(artwork.length===2?4:2));
     let markY=hasType&&!beside?cy-innerH*.32:cy, textTop=cy-innerH*.085;
     const parts=[], artSizes={};
-    if(artwork.some(key=>d[key+'Width']>0)) {
+    if(!free&&artwork.some(key=>d[key+'Width']>0)) {
       const maxWidth=usable*(beside?.80:.97), maxHeight=innerH*(hasType&&!beside?.70:1);
       const gap=artwork.length===2?Math.min(usable*.035,small*.055):0;
       const slot=markWidth/artwork.length;
@@ -301,12 +322,12 @@
         parts.push(path);artSizes[key]=inkBounds(path).w;
       });
     }
-    const mark=parts.flat();
+
     function line(text,face,size) {
       if(!text) return null;
       const run=glyphRun(text,face);
       if(!run.path.length) throw Error('The lettering contains only invisible characters.');
-      return {text,run,size};
+      return {text,run,size:free?0:size};
     }
     const name=line(d.name,d.nameFont,d.nameHeight), subtitle=line(d.subtitle,d.subtitleFont,d.subtitleHeight);
     const first=name||subtitle,second=name&&subtitle;
@@ -314,15 +335,64 @@
     const top=overhead?textTop:cy-innerH*.43;
     const bottom=cy+innerH*(overhead?.49:.43);
     const band=bottom-top;
-    const [lettering=[],smallType=[]]=sizeText(first,second,typeWidth,typeX,top,band,input.units);
-    const rules=[];
-    if (hasMark&&hasType&&!beside) {
-      const from=markWidth/2+small*.035,to=Math.min(usable*.47,from+small*.13);
-      if(to>from+small*.02)rules.push([cx-to,markY,cx-from,markY],[cx+from,markY,cx+to,markY]);
+    let [lettering=[],smallType=[]]=sizeText(first,second,typeWidth,typeX,top,band,input.units);
+    const mainKey=name?'name':'subtitle';
+    function positioned(path,key,art) {
+      if(!path.length||!free) return path;
+      const box=inkBounds(path), point=d.positions[key];
+      const fixed=d[key+(art?'Width':'Height')],extent=art?w:h, autoSize=art?box.w:box.h;
+      let scale=(fixed||(point?point.size*extent:autoSize))/autoSize;
+      const maxScale=Math.min(w/box.w,h/box.h);
+      if(fixed&&scale>maxScale+0.00001) throw Error('The '+(art?'image width':'letter height')+' exceeds the blank. Reduce the size to '+measureLimit(autoSize*maxScale,input.units)+' or less.');
+      scale=Math.min(scale,maxScale);
+      const bx=(box.left+box.right)/2,by=(box.top+box.bottom)/2,rx=box.w*scale/2,ry=box.h*scale/2;
+      const px=Math.max(rx,Math.min(w-rx,point?point.x*w:bx));
+      const py=Math.max(ry,Math.min(h-ry,point?point.y*h:by));
+      if(art) artSizes[key]=rx*2;
+      return transform(path,scale,scale,px-scale*bx,py-scale*by);
+    }
+    artwork.forEach((key,i)=>{parts[i]=positioned(parts[i],key,true);});
+    lettering=positioned(lettering,mainKey,false);smallType=positioned(smallType,'subtitle',false);
+    let rules=[];
+    function addRules(left,right,y) {
+      const gap=small*.035,length=small*.13;
+      const start=Math.max(0,left-gap-length),end=Math.min(w,right+gap+length);
+      if(left-gap-start>small*.02) rules.push([start,y,left-gap,y]);
+      if(end-right-gap>small*.02) rules.push([right+gap,y,end,y]);
+    }
+    if(!free&&artwork.every(key=>d[key+'Lines']==='auto')) {
+      // Preserve the original group ornament on automatic layouts.
+      if(hasMark&&hasType&&!beside) {
+        const from=markWidth/2+small*.035,to=Math.min(usable*.47,from+small*.13);
+        if(to>from+small*.02) rules.push([cx-to,markY,cx-from,markY],[cx+from,markY,cx+to,markY]);
+      }
+    } else artwork.forEach((key,i)=>{
+      const mode=d[key+'Lines'];
+      if(mode==='on'||(mode==='auto'&&!free&&hasType&&!beside)) {
+        const box=inkBounds(parts[i]);addRules(box.left,box.right,(box.top+box.bottom)/2);
+      }
+    });
+    if(free&&rules.length) {
+      // Score only the intervals of a horizontal side line that lie on the face.
+      const face=contours([...base,...hole],h,.006);
+      rules=rules.flatMap(([l,y,r])=>{
+        const scan=h-y,intersections=[];
+        for(const ring of face) for(let i=0;i<ring.length;i++) {
+          const [ax,ay]=ring[i],[bx,by]=ring[(i+1)%ring.length];
+          if((ay>scan)!==(by>scan)) intersections.push(ax+(scan-ay)*(bx-ax)/(by-ay));
+        }
+        intersections.sort((a,b)=>a-b);
+        const spans=[];
+        for(let i=1;i<intersections.length;i+=2) {
+          const x1=Math.max(l,intersections[i-1]),x2=Math.min(r,intersections[i]);
+          if(x2>x1) spans.push([x1,y,x2,y]);
+        }
+        return spans;
+      });
     }
     const ruleWidth=small*.009;
     const ruleFills=rules.map(([x,y,r])=>rect(x,y-ruleWidth/2,r-x,ruleWidth));
-    return {d,base,hole,mark,artSizes,lettering,smallType,weldName:first?.run.overlap,weldSmall:second?.run.overlap,rules,ruleFills};
+    return {d,base,hole,parts,artwork,free,mainKey,artSizes,lettering,smallType,weldName:first?.run.overlap,weldSmall:second?.run.overlap,rules,ruleFills};
   }
   function pathData(path) {
     return path.map(([op,...points])=>op+points.map(rounded).join(' ')).join(' ');
@@ -334,8 +404,8 @@
   }
   function layers(g) {
     return [
-      {name:'Motif',rule:'evenodd',color:g.d.accent,paths:[g.mark,...g.ruleFills].filter(p=>p.length)},
-      {name:'Lettering',rule:'nonzero',color:g.d.ink,paths:[g.lettering,g.smallType].filter(p=>p.length)}
+      {name:'Motif',rule:'evenodd',color:g.d.accent,paths:[...g.parts,...g.ruleFills],keys:g.artwork},
+      {name:'Lettering',rule:'nonzero',color:g.d.ink,keys:[g.mainKey,'subtitle'],paths:[g.lettering,g.smallType].filter(p=>p.length)}
     ].filter(layer=>layer.paths.length);
   }
   function credit(design) {
@@ -346,25 +416,35 @@
       const art=ids.filter(id=>id.startsWith('gi-'+artist.toLowerCase()+'-'));
       if(art.length) notices.push('Artwork '+art.join(', ')+' by '+artist+' (https://game-icons.net). Adapted outlines, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).');
     }
+    if(ids.some(id=>id.startsWith('ne-'))) notices.push('Adapted Noto Emoji outlines by Google LLC (https://github.com/googlefonts/noto-emoji), SIL OFL 1.1.');
+    if(ids.some(id=>id.startsWith('mdi-'))) notices.push('Adapted Material Design Icons by Pictogrammers (https://pictogrammers.com/library/mdi/), Apache License 2.0.');
     return notices.join(' ');
 
   }
+  let clipSerial=0;
   function xml(g,mode) {
     const {d}=g;
     const dimensions=mode==='preview'?Object.entries(g.artSizes).map(([key,width])=>' data-'+key.toLowerCase()+'-width="'+rounded(width)+'"').join(''):'';
     const opening='<svg xmlns="http://www.w3.org/2000/svg" width="'+d.width+'mm" height="'+d.height+'mm" viewBox="0 0 '+d.width+' '+d.height+'"'+dimensions+'>'+(credit(d)?'<desc>'+credit(d)+'</desc>':'');
     if(mode==='glowforge') {
       const score=g.rules.map(([x,y,u,v])=>'<path d="M'+rounded(x)+' '+rounded(y)+'L'+rounded(u)+' '+rounded(v)+'"/>').join('');
-      return opening+'<g id="Engrave" fill="#000000">'+filled(g.mark)+filled(g.lettering,'nonzero')+filled(g.smallType,'nonzero')+'</g>'+
+      return opening+'<g id="Engrave" fill="#000000">'+g.parts.map(path=>filled(path)).join('')+filled(g.lettering,'nonzero')+filled(g.smallType,'nonzero')+'</g>'+
         (score?'<g id="Score" fill="none" stroke="#0000ff" stroke-width="0.1">'+score+'</g>':'')+
         '<g id="Cut" fill="none" stroke="#ff0000" stroke-width="0.1">'+[g.hole,g.base].filter(p=>p.length).map(p=>'<path d="'+pathData(p)+'"/>').join('')+'</g></svg>';
     }
-    const art=layers(g).map(l=>'<g id="'+l.name+'" fill="'+l.color+'">'+l.paths.map(p=>filled(p,l.rule)).join('')+'</g>').join('');
+    const art=layers(g).map(l=>'<g id="'+l.name+'" fill="'+l.color+'">'+l.paths.map((p,i)=>{
+      const path=filled(p,l.rule),key=l.keys[i];
+      return mode==='preview'&&key?path.replace('<path ','<path data-object="'+key+'" '):path;
+    }).join('')+'</g>').join('');
     if(mode==='cricut') {
       if (!art) throw Error('Add lettering or a motif for the Cricut to cut.');
       return opening+art+'</svg>';
     }
-    const front='<g id="Blank" fill="'+d.paper+'">'+filled([...g.base,...g.hole])+'</g>'+art;
+    const outline=[...g.base,...g.hole],clip='bench-face-'+(++clipSerial);
+    const painted=(g.free&&['print','preview'].includes(mode))
+      ? '<defs><clipPath id="'+clip+'"><path clip-rule="evenodd" d="'+pathData(outline)+'"/></clipPath></defs><g clip-path="url(#'+clip+')">'+art+'</g>'
+      : art;
+    const front='<g id="Blank" fill="'+d.paper+'">'+filled(outline)+'</g>'+painted;
     return opening+(mode==='print'&&d.mirror?'<g transform="translate('+d.width+' 0) scale(-1 1)">'+front+'</g>':front)+'</svg>';
   }
   function svg(input,mode='preview') { return xml(geometry(input),mode); }
@@ -409,15 +489,19 @@
   function pdf(g) {
     const {d}=g, scale=72/mmPerInch, width=rounded(d.width*scale),height=rounded(d.height*scale);
     let content='q\n'+[d.mirror?-scale:scale,0,0,-scale,d.mirror?width:0,height].map(rounded).join(' ')+' cm\n';
+    function trace(path) {
+      for(const [op,...coords] of path)content+=(coords.length?coords.map(rounded).join(' ')+' ':'')+({M:'m',L:'l',C:'c',Z:'h'})[op]+'\n';
+    }
     function paint(hex,paths,rule='evenodd') {
       const rgb=hex.slice(1).match(/../g).map(h=>rounded(parseInt(h,16)/255));
       content+=rgb.join(' ')+' rg\n';
       for(const path of paths){
-        for(const [op,...coords] of path)content+=(coords.length?coords.map(rounded).join(' ')+' ':'')+({M:'m',L:'l',C:'c',Z:'h'})[op]+'\n';
+        trace(path);
         content+=rule==='evenodd'?'f*\n':'f\n';
       }
     }
     paint(d.paper,[[...g.base,...g.hole]]);
+    if(g.free) {trace([...g.base,...g.hole]);content+='W* n\n';}
     for(const layer of layers(g))paint(layer.color,layer.paths,layer.rule);
     content+='Q\n';
     const objects=['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
@@ -497,11 +581,11 @@
     const own=obj=>(owned.push(obj),obj);
     const section=(path,rule='EvenOdd')=>own(new CrossSection(contours(path,d.height),rule));
     try {
-      const base=own(section([...g.base,...g.hole]).extrude(d.thickness));
+      const face=section([...g.base,...g.hole]),base=own(face.extrude(d.thickness));
       const artwork=layers(g).flatMap(layer=>layer.paths.map(path=>section(path,layer.rule==='nonzero'?'NonZero':'EvenOdd')));
       let solid=base;
       if(artwork.length) {
-        const relief=own(CrossSection.union(artwork));
+        const union=own(CrossSection.union(artwork)),relief=g.free?own(union.intersect(face)):union;
         const prism=own(relief.extrude(d.relief+.01));
         const raised=own(prism.translate([0,0,d.thickness-.01]));
         solid=own(base.add(raised));
@@ -515,10 +599,32 @@
     switch(format) {
       case 'profile': case 'glowforge': case 'cricut': {
         // Cutters trace internal edges. Unite touching script outlines before exporting.
+        if(g.free) {
+          // Union overlapping contours per operation, then trim to the real blank and holes.
+          const {CrossSection}=await manifoldModule(),owned=[];
+          const keep=section=>{owned.push(section);return section;};
+          const area=(path,rule)=>keep(new CrossSection(contours(path,g.d.height,.006),rule));
+          try {
+            const face=area([...g.base,...g.hole],'EvenOdd');
+            function trimmed(regions) {
+              if(!regions.length) return [];
+              const whole=keep(CrossSection.union(regions)),trim=keep(whole.intersect(face));
+              return trim.toPolygons().flatMap(poly=>polygon(poly.map(([x,y])=>[x,g.d.height-y])));
+            }
+            const inks=g.parts.map(path=>area(path,'EvenOdd'));
+            const type=[g.lettering,g.smallType].filter(p=>p.length).map(p=>area(p,'NonZero'));
+            if(format==='glowforge') inks.push(...type);
+            else inks.push(...g.ruleFills.map(p=>area(p,'EvenOdd')));
+            const path=trimmed(inks);
+            g.parts=path.length?[path]:[];g.ruleFills=[];
+            g.lettering=format==='glowforge'?[]:trimmed(type);
+            g.smallType=[];g.weldName=false;g.weldSmall=false;
+          } finally {for(const section of owned.reverse()) section.delete();}
+        }
         if(g.weldName||g.weldSmall) {
           const {CrossSection}=await manifoldModule();
           for(const [key,weld] of [['lettering',g.weldName],['smallType',g.weldSmall]]) {
-            if(!weld) continue;
+            if(!weld||!g[key].length) continue;
             const area=new CrossSection(contours(g[key],g.d.height,.006),'NonZero');
             try {g[key]=area.toPolygons().flatMap(poly=>polygon(poly.map(([x,y])=>[x,g.d.height-y])));}
             finally {area.delete();}

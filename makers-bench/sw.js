@@ -1,6 +1,7 @@
-const edition = 'makers-bench-3';
+const edition = 'makers-bench-4';
 const files = [
   "app.js",
+  "arrange.js",
   "bench-art.js",
   "artwork.js",
   "artwork-credits.txt",
