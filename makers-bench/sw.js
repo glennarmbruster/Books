@@ -1,4 +1,4 @@
-const edition = 'makers-bench-6';
+const edition = 'makers-bench-6.1';
 const files = [
   "app.js",
   "arrange.js",

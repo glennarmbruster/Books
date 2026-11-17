@@ -96,11 +96,13 @@ function arrangePreview(getDesign, setPositions, labelFor, editImage) {
       const px=1/Math.hypot(matrix.a,matrix.b);
       const left=Math.max(0,b.x-Math.max(b.width/2,13*px)),right=Math.min(d.width,b.x+Math.max(b.width/2,13*px));
       const top=Math.max(0,b.y-Math.max(b.height/2,13*px)),bottom=Math.min(d.height,b.y+Math.max(b.height/2,13*px));
-      for(const [corner,x,y] of [['nw',left,top],['ne',right,top],['se',right,bottom],['sw',left,bottom]]) {
+      for(const [corner,cx,cy] of [['nw',left,top],['ne',right,top],['se',right,bottom],['sw',left,bottom]]) {
+        const offset=turn(cx-b.x,cy-b.y,b.angle);
+        const x=clamp(b.x+offset.x,5*px,d.width-5*px),y=clamp(b.y+offset.y,5*px,d.height-5*px);
         const handle=svgNode('g',{'data-corner':corner});
         handle.append(svgNode('rect',{x:x-10*px,y:y-10*px,width:20*px,height:20*px,class:'corner-hit'}),
           svgNode('rect',{x:x-4*px,y:y-4*px,width:8*px,height:8*px,rx:px,class:'corner-grip'}));
-        outline.append(handle);
+        selection.append(handle);
       }
       // Keep the rotation grip on the canvas even when an object touches an edge.
       let stem=turn(0,-b.height/2,b.angle), tip=turn(0,-b.height/2-24*px,b.angle);
