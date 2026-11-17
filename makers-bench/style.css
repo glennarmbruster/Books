@@ -40,3 +40,7 @@
 #group-members{grid-column:1/-1;display:block}
 #group-list{display:flex;flex-wrap:wrap;gap:.25rem .9rem}
 #group-list label{min-height:32px;font-size:.8rem}
+
+.project-filter .sport-filter,.art-filters .sport-filter{grid-column:1/-1;grid-row:auto}
+.sport-filter select{display:block;width:100%}
+.sport-filter[hidden]{display:none}

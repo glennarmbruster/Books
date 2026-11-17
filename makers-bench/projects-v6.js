@@ -2,34 +2,9 @@
 (() => {
   'use strict';
 
-  const finishing = {
-    tag: ['Loop the actual strap through a paper proof and pencil in the area it covers. Keep lettering outside that mark.', 'The strap turns freely and leaves the text visible.'],
-    keyfob: ['Thread the intended split ring through a scrap cut to the final thickness. Adjust the hole before making the face.', 'The ring clears the artwork when it swings across the face.'],
-    ornament: ['Hang a full-size paper proof with the intended ribbon and adjust the design with the knot in place.', 'The hanging piece faces forward and the ribbon clears its artwork.'],
-    bookmark: ['Slip a paper sample into the closed book to check its length and how far the ribbon will project.', 'The finished face and edges slide smoothly against paper.'],
-    magnet: ['Place the paper shape on the board, then test the chosen backing on a finished sample.', 'The mounted sample stays in position and can be lifted by an edge.'],
-    coaster: ['Trace the foot of the cup on a paper proof. Use flat decoration anywhere the cup bears on the face.', 'The cup sits level and the finished piece rests flat.'],
-    sign: ['Set a paper proof in the actual stand or frame. Mark the lip and move text into the exposed area.', 'A reader can see the complete message from the intended location.'],
-    plate: ['Lay a print at actual size over the mounting spot. Check both edges and the visible height before cutting.', 'The plate fits its holder with clearance at the corners.'],
-    label: ['Tape a paper sample to the intended surface and try it through one normal use before choosing the final stock.', 'Edges clear neighboring parts and the type reads at actual size.']
-  };
+  const {addProjects} = window.BenchCollections;
 
-  function addCollection(category, palette, rows) {
-    for (const [id, title, base, width, height, hole, name, subtitle, motif, summary, start, make, check] of rows) {
-      const [finish, fit] = finishing[base.startsWith('ornament-') ? 'ornament' : base];
-      window.BenchGuide.projects.push({
-        id, title, category, base, size: [width, height, hole],
-        exampleName: name, exampleMotif: motif,
-        exampleLayout: {
-          subtitle, nameFont: palette.font, ink: palette.ink, accent: palette.accent,
-          paper: palette.paper, motifLines: 'off'
-        },
-        summary, steps: [start, make, finish], checks: [check, fit]
-      });
-    }
-  }
-
-  addCollection('Baseball & softball', {
+  addProjects('Sports', {
     font: 'graduate', ink: '#172c46', accent: '#a32835', paper: '#fff0cf'
   }, [
     ['baseball-first-hit', 'First-hit display plaque', 'plate', 142, 58, 0, 'FIRST HIT', 'APRIL 12', 'baseball-contact-hit',
@@ -202,9 +177,9 @@
       'Choose a ring that opens to accept future park tags. Test it with several paper pieces stacked together.',
       'Number the first park and put the city on the second line. Keep the hole position for every tag in the series.',
       'Tags fan apart far enough to reveal each city.']
-  ]);
+  ], 'Baseball & Softball');
 
-  addCollection('Cars & garage', {
+  addProjects('Cars & garage', {
     font: 'barlow-condensed', ink: '#222e36', accent: '#ad472d', paper: '#f3e6cb'
   }, [
     ['garage-fastback', 'Fastback show placard', 'sign', 183, 93, 0, 'FASTBACK', '1968', 'garage-fastback',
@@ -374,7 +349,7 @@
       'The magnet displays every digit in the same order as the photo.']
   ]);
 
-  addCollection('Jeep & trail', {
+  addProjects('Jeep & trail', {
     font: 'league-spartan', ink: '#25382f', accent: '#88622e', paper: '#f2e7c9'
   }, [
     ['jeep-first-trail', 'First Jeep trail desk plaque', 'plate', 145, 57, 0, 'FIRST TRAIL', 'CEDAR LOOP', 'trail-open-jeep',

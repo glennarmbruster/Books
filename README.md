@@ -9,7 +9,7 @@
 - [Wordplay Café](./wordplay-cafe/) — 300 playable word puzzles (200 word ladders, 50 cryptograms and 50 word hunts) with saved progress.
 - [The Card Table](./card-table/) — 100 offline card-game rules, a guided bridge deal and a random game picker.
 
-- [The Maker’s Bench](./makers-bench/) — 200 searchable projects including baseball, cars, Jeep trails, and ornaments. The offline studio has 7,250 artwork choices, 90 fonts, and a workshop for saving layered designs.
+- [The Maker’s Bench](./makers-bench/) — 295 searchable projects including sports, holidays, seasons, Jeep trails, and ornaments. The offline studio has 7,320 artwork choices, 90 fonts, and a workshop for saving layered designs.
 
 - [Sudoku](./sudoku/) — 100 graded puzzles with pencil notes and saved progress.
 - [German Phrase Book](./german-phrase-book/) — 640 searchable travel phrases, pronunciation audio and saved favorites.

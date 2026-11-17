@@ -10,28 +10,48 @@ function el(tag,text,cls) {
 function link(text,href,cls) {const a=el('a',text,cls);a.href=href;return a;}
 function picture(id) {const img=el('img');img.src='images/'+id+'.jpg';img.alt='';return img;}
 function list(items,tag) {const group=el(tag);group.append(...items.map(item=>el('li',item)));return group;}
-const normalizeSearch=value=>String(value??'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const normalizeSearch=value=>String(value??'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/['’]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+const categoryKeywords = new Map([
+  ['4th of July','fourth of july independence day july fourth'],
+  ['New Year’s','new year new years eve'],
+  ['Fall','autumn'], ['Soccer','futbol fútbol socker'], ['UH Team Sports','University of Houston Cougars']
+]);
+const sports = [...new Set(projects.map(p=>p.sport).filter(Boolean))].sort();
+function sportPicker(id, refresh) {
+  const label=el('label','Sport','sport-filter'), select=el('select');
+  select.id=id+'-sport';select.dataset.filter='true';
+  select.append(new Option('All sports',''),...sports.map(name=>new Option(name,name)));
+  select.onchange=refresh;label.append(select);label.hidden=true;
+  return {label,select,update(category) {
+    label.hidden=category!=='Sports';
+    if(label.hidden) select.value='';
+  }};
+}
 const projectSearch=projects.map(project=>({
-  project,terms:normalizeSearch([project.title,project.category,project.id,project.summary,project.exampleName,project.exampleMotif,
+  project,terms:normalizeSearch([project.title,project.category,project.sport,categoryKeywords.get(project.category),
+    categoryKeywords.get(project.sport),project.id,project.summary,project.exampleName,project.exampleMotif,
     ...project.steps,...project.checks].join(' '))
 }));
 function projectPicker(id,placeholder) {
   const select=$(id),bar=el('div',null,'project-filter');
   const search=el('input'),category=el('select'),count=el('small',null,'art-count');
-  search.type='search';search.placeholder='Try baseball, Jeep, parking, or ornaments';
+  search.type='search';search.placeholder='Try soccer, Christmas, or ornaments';
   search.id=id+'-search';category.id=id+'-category';
   category.dataset.filter=search.dataset.filter='project';
   category.append(new Option('All categories',''),...[...new Set(projects.map(p=>p.category))].sort().map(c=>new Option(c,c)));
   for(const [text,control] of [['Category',category],['Search projects',search]]) {
     const label=el('label',text);label.htmlFor=control.id;bar.append(label,control);
   }
-  count.setAttribute('role','status');bar.append(count);
+  const sport=sportPicker(id,list);
+  count.setAttribute('role','status');bar.append(sport.label,count);
   // Place filters outside the project's own label so the controls have distinct names.
   const anchor=select.closest('label')||select.previousElementSibling;
   anchor.before(bar);
   function list() {
     const selected=select.value,tokens=normalizeSearch(search.value).split(' ').filter(Boolean);
-    const rows=projectSearch.filter(({project,terms})=>(!category.value||project.category===category.value)&&tokens.every(t=>terms.includes(t)));
+    sport.update(category.value);
+    const rows=projectSearch.filter(({project,terms})=>(!category.value||project.category===category.value)
+      &&(!sport.select.value||project.sport===sport.select.value)&&tokens.every(t=>terms.includes(t)));
     const groups=new Map();
     const fragment=document.createDocumentFragment();
     if(placeholder) fragment.append(new Option(placeholder,''));
@@ -39,8 +59,9 @@ function projectPicker(id,placeholder) {
       const active=projects.find(p=>p.id===selected);if(active) fragment.append(new Option(active.title+' (current)',active.id));
     }
     for(const {project:p} of rows) {
-      if(!groups.has(p.category)) {const group=el('optgroup');group.label=p.category;groups.set(p.category,group);}
-      groups.get(p.category).append(new Option(p.title,p.id));
+      const section=category.value==='Sports'?p.sport:p.category;
+      if(!groups.has(section)) {const group=el('optgroup');group.label=section;groups.set(section,group);}
+      groups.get(section).append(new Option(p.title,p.id));
     }
     for(const name of [...groups.keys()].sort()) fragment.append(groups.get(name));
     select.replaceChildren(fragment);
@@ -51,6 +72,9 @@ function projectPicker(id,placeholder) {
   search.oninput=list;category.onchange=list;
   list();
   return {category(slug) {
+    const requestedSport=slug==='baseball-softball'?'Baseball & Softball':'';
+    if(requestedSport) slug='sports';
+    sport.select.value=requestedSport;
     const option=[...category.options].find(o=>normalizeSearch(o.value).replaceAll(' ','-')===slug);
     if(option) {category.value=option.value;search.value='';list();}
   },show(value) {
@@ -173,11 +197,26 @@ const artItems=[
   {id:'leaf',label:'Leaf',category:'Original motifs'}, {id:'mountain',label:'Mountain',category:'Original motifs'},
   ...BenchCatalog.items
 ];
-const artSearch=new Map(artItems.map(item=>[item.id,normalizeSearch([item.id,item.label,item.category,item.keywords].join(' '))]));
+// Build one searchable entry per artwork ID, even if it belongs to several collections.
+const artSearch=new Map(),categoryNames=new Set();
+for(const item of artItems) {
+  const terms=[item.id,item.label,item.category,item.sport,item.keywords];
+  categoryNames.add(item.category);
+  for(const c of item.collections||[]) {
+    categoryNames.add(c.category);
+    terms.push(c.category,c.sport,c.label,c.keywords,categoryKeywords.get(c.category),categoryKeywords.get(c.sport));
+  }
+  artSearch.set(item.id,normalizeSearch(terms.join(' ')));
+}
 const artById=new Map(artItems.map(item=>[item.id,item]));
 const priorityCategories=['Parking & transportation','University of Houston'];
-const categories=[...new Set(artItems.map(item=>item.category))].sort((a,b)=>
+const categories=[...categoryNames].sort((a,b)=>
   (priorityCategories.includes(a)?priorityCategories.indexOf(a):2)-(priorityCategories.includes(b)?priorityCategories.indexOf(b):2)||a.localeCompare(b));
+function inArtCollection(item, category, sport) {
+  if(!category) return item;
+  const curated=item.collections?.find(c=>c.category===category&&(!sport||c.sport===sport));
+  return curated || (item.category===category&&(!sport||item.sport===sport)?item:null);
+}
 const featuredIds=['dachshund','fa-graduation-cap','ne-graduation-cap','diploma','uh-interlocking','parking-no-parking','parking-cone','parking-citation'];
 let editingImage='';
 const additionalImage=()=>design.images.find(image=>image.key===editingImage);
@@ -186,13 +225,14 @@ function artworkValue(key) {
 }
 function artworkPicker(host,key,title) {
   const heading=el('label',title);heading.htmlFor=key;
-  const find=el('input');find.type='search';find.placeholder='Try baseball hits, Jeep, UH, or dachshund';
+  const find=el('input');find.type='search';find.placeholder='Try hockey, autumn, UH, or dachshund';
   find.id=key+'-search';find.dataset.filter='true';find.setAttribute('aria-label','Search '+title.toLowerCase());
   const category=el('select');category.id=key+'-category';category.dataset.filter='true';
   category.setAttribute('aria-label',title+' category');
   category.append(new Option('All categories',''),...categories.map(c=>new Option(c,c)));
   const select=el('select');select.id=key;
-  const controls=el('div',null,'art-filters');controls.append(category,find);
+  const sport=sportPicker(key,options);
+  const controls=el('div',null,'art-filters');controls.append(category,find,sport.label);
   const proof=el('div',null,'art-sample'), thumb=el('span'), caption=el('span');
   thumb.setAttribute('aria-hidden','true');proof.append(thumb,caption);
   const count=el('small',null,'art-count');count.setAttribute('role','status');
@@ -208,37 +248,43 @@ function artworkPicker(host,key,title) {
   host.append(heading,controls,select,count,proof,uhSource,widthLabel,lineLabel);
   let lastSample;
   function preview() {
-    const id=artworkValue(key), ink=(key==='moreArt'?additionalImage()?.color:key==='extraMotif'&&design.secondColor)||design.accent, sig=id+ink;
+    const id=artworkValue(key), ink=(key==='moreArt'?additionalImage()?.color:key==='extraMotif'&&design.secondColor)||design.accent, sig=[id,ink,category.value,sport.select.value].join('|');
     if(lastSample===sig) return;
     lastSample=sig;
     const item=artById.get(id);
     uhSource.hidden=item?.category!=='University of Houston';
     lineLabel.hidden=widthLabel.hidden=proof.hidden=!item;
-    if(item) {thumb.innerHTML=BenchArt.swatch(id,ink);caption.textContent=item.label;}
+    if(item) {thumb.innerHTML=BenchArt.swatch(id,ink);caption.textContent=inArtCollection(item,category.value,sport.select.value)?.label||item.label;}
   }
   function options() {
     const query=normalizeSearch(find.value),tokens=query.split(' ').filter(Boolean);
-    const matches=artItems.filter(item=>(!category.value||category.value===item.category)&&tokens.every(term=>artSearch.get(item.id).includes(term)));
+    sport.update(category.value);
+    const matches=[];
+    for(const item of artItems) {
+      const entry=inArtCollection(item,category.value,sport.select.value);
+      if(entry&&tokens.every(term=>artSearch.get(item.id).includes(term))) matches.push({item,entry});
+    }
     const current=artById.get(artworkValue(key)), fragment=document.createDocumentFragment();
     fragment.append(new Option(key==='motif'?'No image':key==='extraMotif'?'No second image':'Choose an image…','none'));
-    if(current&&!matches.some(item=>item.id===current.id)) fragment.append(new Option(current.label+' (current)',current.id));
+    if(current&&!matches.some(({item})=>item.id===current.id)) fragment.append(new Option(current.label+' (current)',current.id));
     const groups=new Map();
     const featured=!query&&!category.value;
     function group(name) {
       if(!groups.has(name)) {const node=el('optgroup');node.label=name;groups.set(name,node);}
       return groups.get(name);
     }
-    for(const item of matches) {
-      const name=featured&&featuredIds.includes(item.id)?'Featured':item.category;
-      group(name).append(new Option(item.label,item.id));
+    for(const {item,entry} of matches) {
+      const name=featured&&featuredIds.includes(item.id)?'Featured':category.value==='Sports'?(entry.sport||'Other sports'):entry.category;
+      group(name).append(new Option(entry.label,item.id));
     }
     if(groups.has('Featured')) {fragment.append(groups.get('Featured'));groups.delete('Featured');}
     for(const name of [...groups.keys()].sort()) fragment.append(groups.get(name));
     select.replaceChildren(fragment);select.value=artworkValue(key);
+    preview();
     count.textContent=matches.length===0?'No matches. Try another search or category.':matches.length.toLocaleString()+' images';
   }
   find.oninput=options;category.onchange=options;
-  function clearSearch() {find.value=category.value='';}
+  function clearSearch() {find.value=category.value=sport.select.value='';}
   return {options,preview,clearSearch};
 }
 const artPickers=[artworkPicker($('art-picker'),'motif','Artwork'),artworkPicker($('extra-picker'),'extraMotif','Second artwork')];
@@ -555,7 +601,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-6.1'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-7'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';
