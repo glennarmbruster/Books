@@ -14,7 +14,7 @@
 - [Sudoku](./sudoku/) — 100 graded puzzles with pencil notes and saved progress.
 - [German Phrase Book](./german-phrase-book/) — 640 searchable travel phrases, pronunciation audio and saved favorites.
 
-- [Weird Facts & Trivia](./weird-facts-trivia/) — 500 sourced questions across 25 categories. Play a category or mixed round and share its offline round code.
+- [WEIRD Facts & Trivia](./weird-facts-trivia/) — 1,000 sourced questions across 60 categories. Play a category or mixed round and share its offline round code.
 
 - [Memory Activity Book](./memory-activity-book/) — 250 numbered activities including picture matching, sequence and spatial memory, story recall, word pairs and category recall.
 

@@ -38,7 +38,7 @@ function sourceLink(card) {
   const a=link(card.source+' ↗',card.url);a.target='_blank';a.rel='noopener';return a;
 }
 function topicName(id) {return id?byTopic.get(id).name:'Mixed categories';}
-$('book-count').textContent=cards.size+' questions · '+topics.size+' categories';
+$('book-count').textContent=cards.size.toLocaleString('en-US')+' questions · '+topics.size+' categories';
 $('topic').append(new Option('Random mix · all categories','0'));
 for(const t of [...allTopics].sort((a,b)=>a.name.localeCompare(b.name)))$('topic').append(new Option(t.name,t.id));
 const jump=el('book-number-jump');jump.setAttribute('noun','question');jump.setAttribute('max',latest);$('number-tool').append(jump);
