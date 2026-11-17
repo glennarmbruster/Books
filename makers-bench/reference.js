@@ -35,6 +35,118 @@ window.BenchGuide = {
         "Try the paper outline in the holder before making the full design. Check the final stock thickness against the stand or mounting hardware."
       ],
       checks: ["The holder leaves both lines visible.", "Openings in small letters survive the chosen process.", "The finished plate fits its mounting space."]
+    },
+    {
+      "id": "keyfob",
+      "title": "Key fob",
+      "summary": "Make a pocket-sized fob with a left-hand ring hole and a name you can read while the keys hang from it.",
+      "steps": [
+        "Trace the keys and split ring on paper. Cut out a paper fob at your chosen width and height, then punch the left hole.",
+        "Thread the paper sample onto the ring. Swing it around the keys and mark how much of the face the ring covers.",
+        "Place short lettering and a bold silhouette beyond that mark. Check the hole diameter and the material left between the hole and the outside edge.",
+        "Make one fob in the intended thickness. Fit it to the real ring and turn the keys through a full rotation before making a batch."
+      ],
+      "checks": [
+        "The ring threads through the hole without forcing the edge.",
+        "The keys swing freely.",
+        "The ring clears the lettering and the outside edge feels smooth in a pocket."
+      ]
+    },
+    {
+      "id": "bookmark",
+      "title": "Ribbon bookmark",
+      "summary": "Fit a tall, narrow bookmark to a favorite book and use the top hole for a ribbon that peeks above the pages.",
+      "steps": [
+        "Measure the book from the top of a page to the bottom. Cut a paper strip at the proposed bookmark size and close the book around it.",
+        "Fold a short length of your ribbon and pass the fold through a sample hole. Leave enough space between the hole and the top edge for the ribbon to pull gently.",
+        "Choose a compact image and short initials for the narrow face. Print a size proof to see whether the smallest features stay distinct.",
+        "Make the bookmark in thin, smooth stock. Keep raised details above the page edge or use flat artwork where the bookmark rests between pages."
+      ],
+      "checks": [
+        "The ribbon feeds through the finished hole.",
+        "The edges slide past a sheet of paper without catching.",
+        "The book closes comfortably over the finished piece."
+      ]
+    },
+    {
+      "id": "ornament",
+      "title": "Holiday ornament",
+      "summary": "Balance a round ornament below its hanging hole and check that the ribbon leaves the image and year visible.",
+      "steps": [
+        "Cut a paper circle to the chosen diameter. Mark its top hole, thread the intended ribbon through it and hang the sample.",
+        "Place the main image beneath the ribbon and add a name or year. Check the design from the distance at which it will hang.",
+        "Make one ornament at the intended material thickness. For a laser-cut blank, engrave the artwork and cut the hanging hole before releasing the outer circle.",
+        "Tie the final loop and let the ornament settle. Adjust the knot or hanging hardware if it tips forward."
+      ],
+      "checks": [
+        "The loop fits the intended hook or branch.",
+        "The knot clears the design.",
+        "The hanging hole has an intact rim after finishing."
+      ]
+    },
+    {
+      "id": "marker",
+      "title": "Garden marker",
+      "summary": "Give a plant name its own horizontal sign above a stake, with enough clearance to read it after watering or mulching.",
+      "steps": [
+        "Measure the open space around the plant and the depth available for the stake. Use the full marker height when sizing the blank.",
+        "Write the variety name on the face and put a shorter detail, such as the planting year, on the second line. Hold a paper proof beside the plant.",
+        "Make a sample in material suited to its growing spot. For a cut sheet, keep the grain or strongest direction along the stake where practical.",
+        "Open a pilot slot in the soil. Insert the stake by pressing near the stake itself and leave the bottom of the lettering above the mulch."
+      ],
+      "checks": [
+        "The stake fits the bed or pot without hitting the bottom.",
+        "The full name is visible above soil and foliage.",
+        "The chosen finish and lettering suit the expected moisture and sunlight."
+      ]
+    },
+    {
+      "id": "label",
+      "title": "Pantry label",
+      "summary": "Use a clipped-corner label to name a jar or bin. Match the label width to the surface that actually touches its back.",
+      "steps": [
+        "Cut a paper outline and tape it lightly to the empty container. On a curved jar, look from the side for corners lifting away from the surface.",
+        "Try the longest ingredient name in the set first. Adjust the face width or use the second line before sizing the shorter names.",
+        "Choose flexible vinyl for a curved surface or place a rigid label on a flat face. Clean and dry the exterior as directed for your adhesive.",
+        "Align the first label with a removable tape guide. Press from the center outward and follow the adhesive maker’s instructions before washing."
+      ],
+      "checks": [
+        "The title reads at shelf height.",
+        "The clipped corners sit down against the container.",
+        "The label placement leaves the lid and any date markings visible."
+      ]
+    },
+    {
+      "id": "magnet",
+      "title": "Fridge magnet",
+      "summary": "Turn a small graphic into a flat-backed keepsake and fit a separate magnet to its reverse.",
+      "steps": [
+        "Check the intended display surface with an existing magnet. Trace the purchased magnet or magnetic sheet onto a paper outline of the keepsake.",
+        "Size the face so the magnet fits fully behind it. Keep the back flat and put all lettering and raised artwork on the front.",
+        "Make one face, then attach the magnet using the supplier’s directions for both materials. Keep the assembly flat while the bond sets.",
+        "Test the finished piece on the actual surface. If it is meant to hold a note, test it with the same number of sheets you plan to use."
+      ],
+      "checks": [
+        "The magnet sits flush against the display surface.",
+        "The backing stays attached when the piece is removed.",
+        "The finished piece holds its intended load without sliding."
+      ]
+    },
+    {
+      "id": "sign",
+      "title": "Door sign",
+      "summary": "Plan an adhesive-mounted door sign around the available flat panel and the distance from which people will read it.",
+      "steps": [
+        "Measure a flat section of the door, clear of molding, hardware and the door swing. Tape a full-size paper outline in place.",
+        "Choose the name and artwork, then view the proof from the normal approach to the doorway. Shorten the second line if it disappears at that distance.",
+        "Make the sign with a smooth, flat back. Choose mounting strips rated for the finished weight and compatible with both surfaces.",
+        "Mark the top edge with low-tack tape as a level guide. Apply the strips, leaving removal tabs accessible where required, and follow their timing instructions."
+      ],
+      "checks": [
+        "The door opens fully and the sign clears nearby trim.",
+        "The name reads comfortably from the approach.",
+        "The mounting system suits the door finish and finished weight."
+      ]
     }
   ],
   problems: [

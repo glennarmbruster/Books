@@ -10,11 +10,13 @@ function el(tag,text,cls) {
 function link(text,href,cls) {const a=el('a',text,cls);a.href=href;return a;}
 function picture(id) {const img=el('img');img.src='images/'+id+'.jpg';img.alt='';return img;}
 function list(items,tag) {const group=el(tag);group.append(...items.map(item=>el('li',item)));return group;}
-for(const project of projects) {
-  const a=link('','#project/'+project.id,'project-card');
-  const label=el('span',null,'card-label');label.append(el('span',project.title,'card-title'),el('span','↗'));
-  a.append(picture(project.id),label);$('project-cards').append(a);
-}
+const projectOptions=()=>projects.map(p=>new Option(p.title,p.id));
+$('choose-guide').append(new Option('Select a project…',''),...projectOptions());
+$('another-guide').append(...projectOptions());
+$('shape').append(...projectOptions());
+for(const id of ['choose-guide','another-guide']) $(id).onchange=e=>{
+  if(e.target.value) location.hash='project/'+e.target.value;
+};
 function references() {
   const query=$('find-guide').value.trim().toLowerCase(), host=$('lookups');host.replaceChildren();
   for(const [heading,rows] of [['Machine workflows',methods],['Troubleshooting',problems]]) {
@@ -36,10 +38,10 @@ function projectPage(p) {
   steps.append(el('h2','Make a sample'),list(p.steps,'ol'),el('h2','Before making a set'),list(p.checks,'ul'));
   layout.append(intro,steps);$('project-page').replaceChildren(layout);
 }
-const sizes={tag:[90,50,5],coaster:[95,95,0],plate:[140,45,0]};
+const sizes=BenchArt.presets;
 const machines={glowforge:'Glowforge',cricut:'Cricut',sublimation:'Sublimation printer',printer3d:'3D printer'};
 const dimensionIds=['width','height','hole','thickness','relief'];
-const defaults={shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
+const defaults={shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
 const draftKey='makers-bench-studio-v1';
 let design={...defaults}, currentName=0, exporting=false, valid=false;
 function names(d) {
@@ -48,6 +50,8 @@ function names(d) {
   return lines.length?lines:[''];
 }
 function checked(input) {
+  // Projects from the first edition have a single image above the name.
+  input={extraMotif:'none',placement:'above',...input};
   const result={};
   for(const k of Object.keys(defaults)) {
     if(typeof input?.[k]!==typeof defaults[k]) throw Error('This project has incomplete design settings.');
@@ -59,9 +63,68 @@ function checked(input) {
 try {const stored=JSON.parse(localStorage.getItem(draftKey));if(stored) design=checked(stored);} catch {}
 const unitFactor=()=>design.units==='in'?25.4:1;
 function displayed(id) {return Number.isFinite(design[id])?Number((design[id]/unitFactor()).toFixed(design.units==='in'?5:3)):'';}
+const artItems=[
+  {id:'wave',label:'Wave',category:'Original motifs'}, {id:'sun',label:'Sun',category:'Original motifs'},
+  {id:'leaf',label:'Leaf',category:'Original motifs'}, {id:'mountain',label:'Mountain',category:'Original motifs'},
+  ...BenchCatalog.items
+];
+const artById=new Map(artItems.map(item=>[item.id,item]));
+const categories=[...new Set(artItems.map(item=>item.category))].sort();
+const featuredIds=['dachshund','fa-graduation-cap','diploma'];
+function artworkPicker(host,key,title) {
+  const heading=el('label',title);heading.htmlFor=key;
+  const find=el('input');find.type='search';find.placeholder='Try dachshund, graduation, or flower';
+  find.id=key+'-search';find.dataset.filter='true';find.setAttribute('aria-label','Search '+title.toLowerCase());
+  const category=el('select');category.id=key+'-category';category.dataset.filter='true';
+  category.setAttribute('aria-label',title+' category');
+  category.append(new Option('All categories',''),...categories.map(c=>new Option(c,c)));
+  const select=el('select');select.id=key;
+  const controls=el('div',null,'art-filters');controls.append(category,find);
+  const proof=el('div',null,'art-sample'), thumb=el('span'), caption=el('span');
+  thumb.setAttribute('aria-hidden','true');proof.append(thumb,caption);
+  const count=el('small',null,'art-count');count.setAttribute('role','status');
+  host.append(heading,controls,select,count,proof);
+  let lastSample;
+  function preview() {
+    const id=design[key], sig=id+design.accent;
+    if(lastSample===sig) return;
+    lastSample=sig;
+    const item=artById.get(id);
+    proof.hidden=!item;
+    if(item) {thumb.innerHTML=BenchArt.swatch(id,design.accent);caption.textContent=item.label;}
+  }
+  function options() {
+    const query=find.value.trim().toLowerCase().replace(/[-_]+/g,' ');
+    const matches=artItems.filter(item=>(!category.value||category.value===item.category)&&
+      [item.label,item.category,item.keywords || ''].join(' ').toLowerCase().replace(/[-_]+/g,' ').includes(query));
+    const current=artById.get(design[key]), fragment=document.createDocumentFragment();
+    fragment.append(new Option(key==='motif'?'No image':'No second image','none'));
+    if(current&&!matches.some(item=>item.id===current.id)) fragment.append(new Option(current.label+' (current)',current.id));
+    const groups=new Map();
+    const featured=!query&&!category.value;
+    function group(name) {
+      if(!groups.has(name)) {const node=el('optgroup');node.label=name;groups.set(name,node);}
+      return groups.get(name);
+    }
+    for(const item of matches) {
+      const name=featured&&featuredIds.includes(item.id)?'Featured':item.category;
+      group(name).append(new Option(item.label,item.id));
+    }
+    if(groups.has('Featured')) {fragment.append(groups.get('Featured'));groups.delete('Featured');}
+    for(const name of [...groups.keys()].sort()) fragment.append(groups.get(name));
+    select.replaceChildren(fragment);select.value=design[key];
+    count.textContent=matches.length===0?'No matches. Try another search or category.':matches.length.toLocaleString()+' images';
+  }
+  find.oninput=options;category.onchange=options;
+  return {options,preview};
+}
+const artPickers=[artworkPicker($('art-picker'),'motif','Artwork'),artworkPicker($('extra-picker'),'extraMotif','Second artwork')];
+
 function form() {
-  for(const k of ['shape','units','names','subtitle','motif','ink','accent','paper','machine']) $(k).value=design[k];
+  for(const k of ['shape','units','names','subtitle','placement','ink','accent','paper','machine']) $(k).value=design[k];
   for(const id of dimensionIds) $(id).value=displayed(id);
+  for(const picker of artPickers) picker.options();
+  if(design.extraMotif!=='none') $('second-image').open=true;
   $('mirror').checked=design.mirror;$('print-format').value=design.printFormat;$('model-format').value=design.modelFormat;
 }
 function setShape(id) {design.shape=id;[design.width,design.height,design.hole]=sizes[id];}
@@ -80,7 +143,8 @@ function refresh() {
   const fmt=format();
   $('model-type').hidden=$('depths').hidden=design.machine!=='printer3d';
   $('print-type').hidden=$('mirror-row').hidden=$('transfer-proof').hidden=design.machine!=='sublimation';
-  $('hole-row').hidden=design.shape!=='tag';
+  $('hole-row').hidden=!BenchArt.hasHole(design.shape);
+  for(const picker of artPickers) picker.preview();
   $('output-title').textContent=machines[design.machine]+' file';$('output-note').textContent=outputNotes[fmt];
   $('export').textContent='Download '+fileExt[fmt].toUpperCase();
   $('studio-guide').href='#project/'+design.shape;$('size-caption').textContent=displayed('width')+' × '+displayed('height')+' '+design.units;
@@ -104,6 +168,7 @@ function refresh() {
 $('settings').onsubmit=e=>e.preventDefault();
 $('settings').oninput=e=>{
   const id=e.target.id;
+  if(e.target.dataset.filter) return;
   if(id==='shape') {setShape(e.target.value);form();}
   else if(id==='units') {design.units=e.target.value;form();}
   else if(dimensionIds.includes(id)) design[id]=e.target.value===''?NaN:Number(e.target.value)*unitFactor();
@@ -204,7 +269,8 @@ function route() {
   document.querySelectorAll('[data-tab]').forEach(a=>{
     if(a.dataset.tab===(page==='project'?'guide':page)) a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   });
-  if(page==='project') projectPage(p);
+  if(page==='guide') $('choose-guide').value='';
+  if(page==='project') { $('another-guide').value=p.id; projectPage(p); }
   if(page==='studio') {
     if(p) {setShape(p.id);history.replaceState(null,'','#studio');}
     form();refresh();
@@ -235,7 +301,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-1'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-2'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

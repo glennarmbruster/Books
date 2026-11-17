@@ -37,7 +37,7 @@ window.BenchFiles = (() => {
   function slug(s) { return s.normalize('NFC').replace(/[^\p{L}\p{N}-]+/gu,'-').replace(/^-+|-+$/g,'') || 'design'; }
 
   // 3MF indexes shared vertices and explicitly records millimeters.
-  async function model3mf(stl) {
+  async function model3mf(stl,notice) {
     const data = new DataView(await stl.arrayBuffer()), ids = new Map(), vertices = [], triangles = [];
     for (let i=0; i<data.getUint32(80,true); i++) {
       const triangle = [];
@@ -57,12 +57,12 @@ window.BenchFiles = (() => {
     return zip([
       ['[Content_Types].xml',xml('<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="model" ContentType="application/vnd.ms-package.3dmanufacturing-3dmodel+xml"/></Types>')],
       ['_rels/.rels',xml('<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Target="/3D/3dmodel.model" Id="model" Type="http://schemas.microsoft.com/3dmanufacturing/2013/01/3dmodel"/></Relationships>')],
-      ['3D/3dmodel.model',xml('<model unit="millimeter" xml:lang="en-US" xmlns="http://schemas.microsoft.com/3dmanufacturing/core/2015/02"><resources><object id="1" type="model"><mesh><vertices>'+vertices.join('')+'</vertices><triangles>'+triangles.join('')+'</triangles></mesh></object></resources><build><item objectid="1"/></build></model>')]
+      ['3D/3dmodel.model',xml('<model unit="millimeter" xml:lang="en-US" xmlns="http://schemas.microsoft.com/3dmanufacturing/core/2015/02">'+(notice?'<metadata name="Description">'+notice+'</metadata>':'')+'<resources><object id="1" type="model"><mesh><vertices>'+vertices.join('')+'</vertices><triangles>'+triangles.join('')+'</triangles></mesh></object></resources><build><item objectid="1"/></build></model>')]
     ],'model/3mf');
   }
   async function output(design, format) {
     if (format === 'profile') return new Blob([BenchArt.svg(design,'preview')],{type:'image/svg+xml'});
-    if (format === '3mf') return model3mf(await BenchArt.blob(design,'stl'));
+    if (format === '3mf') return model3mf(await BenchArt.blob(design,'stl'),BenchArt.credit(design));
     return BenchArt.blob(design,format);
   }
   let db;

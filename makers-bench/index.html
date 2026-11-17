@@ -17,24 +17,27 @@
   <div class="hero"><div class="hero-copy"><h1>The Maker’s<br><em>Bench</em></h1>
     <p>A field guide and design studio for the things you cut, press, print, and make again.</p><a href="#studio" class="action">Open design studio <span>↗</span></a></div>
     <img src="../shelf-art/bench.jpg" alt="A luggage tag, coaster, and nameplate on a craft bench" fetchpriority="high" class="hero-image"></div>
-  <div class="section-title"><h2>Project guides</h2></div><div id="project-cards" class="cards"></div>
+  <div class="guide-picker"><h2>Project guides</h2><label for="choose-guide">Choose a project</label><select id="choose-guide"></select></div>
   <div class="reference"><div><h2>At the workbench</h2><p>Find a material check, machine workflow, or fix for a test piece.</p><label for="find-guide">Search the reference</label><input id="find-guide" type="search" placeholder="Try ghosting, vinyl, or sizing"></div><div id="lookups"></div></div>
 </section>
-<section id="project" class="view" hidden><a class="back" href="#guide">‹ Field guide</a><div id="project-page"></div></section>
+<section id="project" class="view" hidden><a class="back" href="#guide">‹ Field guide</a><label class="guide-switch">Browse project guides<select id="another-guide"></select></label><div id="project-page"></div></section>
 <section id="studio" class="view" hidden>
   <div class="section-title"><div><h1>Design studio</h1><p>Choose a starting shape, then make it yours.</p></div><button type="button" id="save-open" class="secondary">Save to my workshop</button></div>
   <div class="studio-grid"><form id="settings" class="settings" novalidate>
     <fieldset><legend>Project</legend>
-      <label for="shape">Starting shape</label><select id="shape"><option value="tag">Luggage tag</option><option value="coaster">Coaster</option><option value="plate">Nameplate</option></select>
+      <label for="shape">Starting shape</label><select id="shape"></select>
       <div class="pair unit-row"><span>Blank size</span><label class="unit-select">Units <select id="units"><option value="mm">mm</option><option value="in">inches</option></select></label></div>
       <div class="pair"><label>Width<input id="width" type="number" step="any" required></label><label>Height<input id="height" type="number" step="any" required></label></div>
-      <label id="hole-row">Strap hole diameter<input id="hole" type="number" step="any" required></label>
+      <label id="hole-row">Hole diameter<input id="hole" type="number" step="any" required></label>
     </fieldset>
     <fieldset><legend>Lettering & artwork</legend>
       <label for="names">Names <small>one per line for a set</small></label><textarea id="names" rows="2" maxlength="1600" placeholder="Cindy"></textarea>
       <label>Second line<input id="subtitle" maxlength="80" placeholder="Optional"></label>
-      <label>Motif<select id="motif"><option value="none">Lettering only</option><option value="wave">Wave</option><option value="sun">Sun</option><option value="leaf">Leaf</option><option value="mountain">Mountain</option></select></label>
-      <div class="swatches"><label>Lettering<input id="ink" type="color"></label><label>Motif<input id="accent" type="color"></label><label>Blank<input id="paper" type="color"></label></div>
+      <div id="art-picker"></div>
+      <details id="second-image"><summary>Second image</summary><div id="extra-picker"></div></details>
+      <label>Artwork position<select id="placement"><option value="above">Above the lettering</option><option value="left">Left of the lettering</option><option value="right">Right of the lettering</option></select></label>
+      <a class="credits" href="artwork-credits.txt" target="_blank" rel="noopener">Artwork credits</a>
+      <div class="swatches"><label>Lettering<input id="ink" type="color"></label><label>Artwork<input id="accent" type="color"></label><label>Blank<input id="paper" type="color"></label></div>
     </fieldset>
     <fieldset><legend>Output</legend>
       <label>Machine<select id="machine"><option value="glowforge">Glowforge</option><option value="cricut">Cricut</option><option value="sublimation">Sublimation printer</option><option value="printer3d">3D printer</option></select></label>
@@ -58,6 +61,6 @@
 <dialog id="dialog" aria-labelledby="dialog-title"><form id="dialog-form"><h2 id="dialog-title"></h2><div id="dialog-body"></div><p id="dialog-message" role="alert"></p><div class="actions"><button type="button" id="close-dialog" class="secondary">Cancel</button><button type="submit" id="accept" class="action">Save</button></div></form></dialog>
 <script src="reference.js"></script>
 <!-- Local export engine -->
-<script src="vendor/bench-font.js"></script><script src="bench-art.js"></script>
+<script src="artwork.js"></script><script src="vendor/bench-font.js"></script><script src="bench-art.js"></script>
 <script src="files.js"></script><script src="app.js"></script>
 </body></html>

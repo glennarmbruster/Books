@@ -1,10 +1,19 @@
-const edition = 'makers-bench-1';
+const edition = 'makers-bench-2';
 const files = [
   "app.js",
   "bench-art.js",
+  "artwork.js",
+  "artwork-credits.txt",
   "files.js",
   "images/coaster.jpg",
   "images/plate.jpg",
+  "images/keyfob.jpg",
+  "images/bookmark.jpg",
+  "images/ornament.jpg",
+  "images/marker.jpg",
+  "images/label.jpg",
+  "images/magnet.jpg",
+  "images/sign.jpg",
   "images/tag.jpg",
   "index.html",
   "manifest.webmanifest",
