@@ -19,18 +19,26 @@ function save() {
   try { localStorage.setItem(key(puzzle.id),JSON.stringify(state)); }
   catch { $('feedback').textContent='This device could not save your progress.'; }
 }
+function selectedMenu() {
+  const type = $('kind').value;
+  return type ? menu.filter(p => p.type === type) : menu;
+}
 function renderMenu() {
-  const last=Number(localStorage.getItem(key('last')));
-  const recent=menu.find(p=>p.id===last);
-  if(recent) {
-    const next=load(last).done ? menu.find(p=>!load(p.id).done) : recent;
-    $('resume').href='#'+(next||recent).id;
-    $('resume').textContent=next ? 'Continue · '+next.title : 'Revisit · '+recent.title;
-  }
-  const complete=menu.filter(p=>load(p.id).done).length;
-  $('progress').textContent=complete+' of '+menu.length+' solved';
+  const visible = selectedMenu();
+  const last = Number(localStorage.getItem(key('last')));
+  const recent = visible.find(p => p.id === last);
+  const next = recent && !load(last).done ? recent : visible.find(p => !load(p.id).done);
+  const choice = next || recent || visible[0];
+  $('resume').href = '#' + choice.id;
+  $('resume').textContent = !next ? 'Revisit · ' + choice.title :
+    recent ? 'Continue · ' + choice.title : 'Start puzzle ' + choice.id;
+  const savedStates = visible.map(p => load(p.id));
+  const solved = savedStates.filter(s => s.done).length;
+  const started = savedStates.filter(s => !s.done && Object.keys(s).length).length;
+  $('progress').textContent = solved + ' of ' + visible.length + ' solved' +
+    (started ? ' · ' + started + ' in progress' : '');
   $('list').replaceChildren();
-  for(const p of menu.filter(p=>!$('kind').value || $('kind').value===p.type)) {
+  for(const p of visible) {
     const saved=load(p.id), a=link('', '#'+p.id,'entry');
     a.append(el('small',String(p.id).padStart(2,'0')+' · '+types[p.type]),el('strong',p.title),
       el('span',saved.done?'✓ Solved':Object.keys(saved).length?'In progress':'Play →'));
@@ -44,7 +52,8 @@ function complete(words) {
   const links=el('div',null,'wordlinks');links.append(el('strong','Look up a word'));
   for(const w of new Set(words)) links.append(link(w.toLowerCase(),'../desk-dictionary/index.html#q='+encodeURIComponent(w.toLowerCase())));
   nav.append(links);
-  const next=menu.find(p=>p.id>puzzle.id&&!load(p.id).done)||menu.find(p=>!load(p.id).done);
+  const visible=selectedMenu();
+  const next=visible.find(p=>p.id>puzzle.id&&!load(p.id).done)||visible.find(p=>!load(p.id).done);
   nav.append(link(next?'Next puzzle · '+next.title:'Return to menu',next?'#'+next.id:'#','action'),
     button('Play again',()=>{localStorage.removeItem(key(puzzle.id));route();}));
 }
