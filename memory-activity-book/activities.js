@@ -13,7 +13,8 @@ const outings = [
   ['A baker’s morning','🥣 Bowl','🥄 Spoon','🥐 Croissant','🥚 Egg','🧈 Butter','🥛 Milk','🧇 Waffle','🍞 Loaf','🍪 Cookie'],
   ['Mountain camp','⛺ Tent','🎒 Backpack','🧦 Socks','🥾 Boot','🪵 Log','🔥 Campfire','🌲 Pine','🔭 Telescope','🛷 Sled'],
   ['The art table','🎨 Palette','🖌️ Brush','✂️ Scissors','✏️ Pencil','🧵 Thread','📏 Ruler','🖍️ Crayon','🖼️ Frame','📌 Pushpin'],
-  ['A night at the theater','🎭 Masks','🌹 Rose','🕯️ Candle','🎬 Clapperboard','👑 Crown','🎀 Ribbon','💎 Jewel','🪭 Fan','🔮 Crystal ball']
+  ['A night at the theater','🎭 Masks','🌹 Rose','🕯️ Candle','🎬 Clapperboard','👑 Crown','🎀 Ribbon','💎 Jewel','🪭 Fan','🔮 Crystal ball'],
+  ...extraOutings
 ];
 function shuffle(items, seed) {
   const result = [...items];
@@ -31,7 +32,8 @@ function activity(number) {
   const seed = 7919 * number;
   const [setting, ...objects] = outings[round];
   const pool = shuffle(objects, seed);
-  const level = Math.floor(round / 4);
+  // Keep the first edition intact; later outings cycle through four difficulty levels.
+  const level = round < 12 ? Math.floor(round / 4) : (round - 12) % 4;
   const base = {number, kind, title:setting, seed};
   if (kind === 4) {
     const story = window.MEMORY_STORIES[round];

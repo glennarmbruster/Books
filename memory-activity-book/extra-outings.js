@@ -1,0 +1,32 @@
+'use strict';
+
+const extraOutings = [
+  ['Midnight at the observatory','🔭 Telescope','🌙 Crescent moon','☄️ Comet','🪐 Ringed planet','⭐ Star','🌌 Milky Way','📓 Notebook','🔦 Flashlight','🕰️ Clock','🧤 Gloves'],
+  ['Along a Venetian canal','🌉 Bridge','🚤 Speedboat','🛟 Life ring','🎭 Masks','🍧 Shaved ice','🪟 Window','🐈 Cat','🪢 Knot','🧳 Suitcase','📸 Camera'],
+  ['Aboard the night train','🛏️ Berth','🎫 Ticket','🎧 Headphones','🧦 Socks','🧼 Soap','🪥 Toothbrush','⏰ Alarm clock','🧸 Teddy bear','📖 Book','🥿 Slipper'],
+  ['The Christmas market','🎄 Christmas tree','🥨 Pretzel','🕯️ Candle','🎁 Present','🌰 Chestnut','🧣 Scarf','🍪 Cookie','🛷 Sled','🧇 Waffle','🔔 Bell'],
+  ['Behind the aquarium glass','🐙 Octopus','🪼 Jellyfish','🦈 Shark','🐠 Tropical fish','🐢 Turtle','🦐 Shrimp','🐡 Pufferfish','🪸 Coral','🦭 Seal','🦞 Lobster'],
+  ['Through the castle courtyard','🏰 Castle','🗝️ Key','🛡️ Shield','🐎 Horse','⛲ Fountain','🚪 Door','👑 Crown','🪶 Feather','📜 Scroll','🪣 Bucket'],
+  ['High in the cable car','🚠 Cable car','🎿 Skis','🏔️ Peak','🦅 Eagle','🧢 Cap','🥾 Boot','🎒 Backpack','🕶️ Sunglasses','🌲 Fir tree','🧃 Juice box'],
+  ['Waiting for the canal lock','🚦 Signal','⚙️ Gear','🛥️ Motorboat','⚓ Anchor','🧱 Brick','🪜 Ladder','🦆 Duck','🪝 Hook','📻 Radio','🔒 Padlock'],
+  ['Inside the glasshouse','🌵 Cactus','🌺 Hibiscus','🍍 Pineapple','🌴 Palm','🦋 Butterfly','🐌 Snail','🎋 Bamboo','🍌 Banana','🌱 Seedling','💧 Water drop'],
+  ['A lap of the promenade','🛳️ Ship','🕶️ Sunglasses','📷 Camera','🧢 Cap','☀️ Sun','🐬 Dolphin','🧴 Sunscreen','👟 Sneaker','⌚ Watch','🪑 Chair'],
+  ['The seaside post office','📮 Postbox','✉️ Envelope','📦 Parcel','🏷️ Label','🖊️ Pen','🧵 Thread','✂️ Scissors','⚖️ Scales','🐚 Shell','🪙 Coin'],
+  ['Harvest in the vineyard','🍇 Grapes','🧺 Basket','✂️ Snips','🍷 Wine glass','🍾 Bottle','🪜 Ladder','🚜 Tractor','🧤 Gloves','🌿 Sprig','🐦 Bird'],
+  ['The lakeside boathouse','🛶 Canoe','🎣 Fishing rod','🏮 Lantern','🪣 Pail','🐸 Frog','🪢 Rope','🥽 Goggles','🛟 Life ring','🔑 Key','🧭 Compass'],
+  ['Downstairs for breakfast','🥐 Croissant','🥓 Bacon','🍳 Fried egg','☕ Coffee','🫖 Teapot','🥣 Cereal bowl','🍊 Orange','🧈 Butter','🍯 Honey','🥛 Milk'],
+  ['In the baseball dugout','⚾ Baseball','🧢 Cap','📋 Clipboard','🥜 Peanuts','🧊 Ice cube','🧃 Juice box','🪣 Ball bucket','⌚ Watch','👟 Shoe','🍌 Banana'],
+  ['The quilt show','🪡 Needle','🧵 Thread','✂️ Fabric scissors','📏 Ruler','🧷 Safety pin','🧺 Sewing basket','🎀 Ribbon','🌻 Sunflower patch','🦊 Fox patch','🧸 Quilted bear'],
+  ['Listening at the record shop','🎧 Headphones','💿 CD','📻 Radio','🎙️ Microphone','🔊 Speaker','🎸 Guitar','🛍️ Shopping bags','🎫 Concert ticket','🪩 Disco ball','🧾 Receipt'],
+  ['At the pottery wheel','🏺 Vase','🥣 Bowl','🫖 Teapot','☕ Coffee cup','🧽 Sponge','🪣 Water bucket','🖌️ Glaze brush','🧱 Kiln brick','🧼 Soap','🪴 Plant pot'],
+  ['The puzzle swap','🧩 Puzzle piece','🎲 Die','🃏 Joker','♟️ Pawn','⏳ Sand timer','🔍 Magnifier','📦 Puzzle box','🏷️ Label','✏️ Pencil','📝 Sign-up sheet'],
+  ['Riding the parade float','🎈 Balloon','🎺 Trumpet','🥁 Drum','🎉 Party popper','🚩 Flag','👑 Crown','🌼 Flower','🎀 Bow','🎤 Microphone','🦚 Peacock'],
+  ['Inside the candy kitchen','🍭 Lollipop','🍫 Chocolate bar','🍬 Wrapped sweet','🥥 Coconut','🍋 Lemon','🌡️ Thermometer','🥄 Spoon','🍒 Cherries','🥜 Peanuts','🍯 Honey'],
+  ['The costume fitting','👗 Dress','🎩 Top hat','🧥 Coat','👠 High heel','🪞 Mirror','👔 Necktie','🪭 Hand fan','👓 Glasses','🧦 Socks','🪡 Needle'],
+  ['At the library sale','📚 Books','🔖 Bookmark','📰 Newspaper','💿 Audiobook disc','🖼️ Framed print','📦 Box','🛍️ Tote bags','🏷️ Price tag','💵 Cash','🧾 Receipt'],
+  ['The antique fair','🕰️ Mantel clock','🪞 Mirror','📻 Radio','🧳 Suitcase','🖼️ Painting','🏺 Urn','🕯️ Candle','🗝️ Skeleton key','💍 Ring','☎️ Telephone'],
+  ['The garage restoration','🛞 Tire','🔧 Wrench','🪛 Screwdriver','🔋 Battery','🧽 Sponge','🛢️ Oil drum','🚗 Car','🧲 Magnet','🪣 Wash bucket','🔦 Inspection light'],
+  ['Picking day at the orchard','🍎 Apple','🪜 Ladder','🧺 Picking basket','🚜 Tractor','🐝 Bee','🍂 Fallen leaf','🥧 Pie','🪵 Log','🧤 Gloves','🌤️ Sun and cloud'],
+  ['Supper on the rooftop','🥗 Salad','🍕 Pizza','🫒 Olive','🍴 Fork and knife','🍹 Fruit drink','🌇 Sunset','🕯️ Candle','🧂 Salt shaker','🧀 Cheese','🌹 Rose'],
+  ['Game night on the balcony','🃏 Joker','🎲 Dice','📝 Score sheet','✏️ Pencil','🧊 Ice cube','🥨 Pretzel','🌙 Moon','🌊 Wave','🪑 Deck chair','🍿 Popcorn']
+];

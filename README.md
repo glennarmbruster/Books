@@ -16,6 +16,6 @@
 
 - [Weird Facts & Trivia](./weird-facts-trivia/) — 500 sourced questions across 25 categories. Play a category or mixed round and share its offline round code.
 
-- [Memory Activity Book](./memory-activity-book/) — 60 numbered activities in matching, sequence, object, spatial and story recall.
+- [Memory Activity Book](./memory-activity-book/) — 200 numbered activities in matching, sequence, object, spatial and story recall.
 
 The back-of-book Food Safety Quick Reference appendix includes refrigeration decisions, storage times, freeze-dried product examples, and cat food and treats.

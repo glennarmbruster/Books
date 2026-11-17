@@ -266,7 +266,7 @@ $('pin-form').onsubmit=async e=>{
 $('restart').onclick=()=>askPin('Restart activity','Enter your PIN to clear this activity.',()=>{
   localStorage.removeItem(prefix+current.number);state=fresh();draw('Ready to play again.');
 });
-$('clear-all').onclick=()=>askPin('Clear book progress','Enter your PIN to clear all 60 activities on this device.',()=>{
+$('clear-all').onclick=()=>askPin('Clear book progress','Enter your PIN to clear all '+total+' activities on this device.',()=>{
   for (let i=1;i<=total;i++) localStorage.removeItem(prefix+i);
   contents();
 });
