@@ -7,10 +7,13 @@ for(const batch of [...window.TRIVIA_CATEGORIES].sort((a,b)=>a.start-b.start)) {
   // Future batches can append cards to a category without changing its original ID.
   const topic=topics.get(batch.name)||{id:batch.start,name:batch.name,cards:[]};
   topics.set(topic.name,topic);
-  batch.cards.forEach(([question,answer,detail,source,url],i)=>{
+  batch.cards.forEach(([question,answer,detail,source,url,archive,featured],i)=>{
     const id=batch.start+i;
     if(cards.has(id))throw Error('Duplicate trivia number '+id);
-    const card={id,question,answer,detail,source,url,topic,terms:normalize(topic.name+' '+question+' '+id)};
+    const letterAnswer=id<=1000?(window.TRIVIA_LETTER_ANSWERS[id]||''):answer;
+    const answerKey=normalize(letterAnswer).replace(/[^a-z0-9]+/g,' ').trim();
+    const initial=/^[a-z]/.test(answerKey)?answerKey[0].toUpperCase():'';
+    const card={id,question,answer,detail,source,url,archive,featured,topic,letterAnswer,answerKey,initial,terms:normalize(topic.name+' '+question+' '+id)};
     topic.cards.push(card);cards.set(id,card);
   });
 }
@@ -34,8 +37,10 @@ function el(tag,text,cls) {
   return node;
 }
 function link(text,href,cls) {const a=el('a',text,cls);a.href=href;return a;}
-function sourceLink(card) {
-  const a=link(card.source+' ↗',card.url);a.target='_blank';a.rel='noopener';return a;
+function sourcesFor(card) {
+  const sources=[[card.source,card.url]];
+  if(card.archive) sources.push(['Original fact','https://en.wikipedia.org/w/index.php?oldid='+card.archive],['CC BY-SA 4.0','https://creativecommons.org/licenses/by-sa/4.0/']);
+  return sources.map(([label,url])=>{const a=link(label+' ↗',url);a.target='_blank';a.rel='noopener';return a;});
 }
 function topicName(id) {return id?byTopic.get(id).name:'Mixed categories';}
 $('book-count').textContent=cards.size.toLocaleString('en-US')+' questions · '+topics.size+' categories';
@@ -43,6 +48,18 @@ $('topic').append(new Option('Random mix · all categories','0'));
 for(const t of [...allTopics].sort((a,b)=>a.name.localeCompare(b.name)))$('topic').append(new Option(t.name,t.id));
 const jump=el('book-number-jump');jump.setAttribute('noun','question');jump.setAttribute('max',latest);$('number-tool').append(jump);
 document.addEventListener('open-book-number',e=>{location.hash='question/'+e.detail;});
+
+const cabinet=deckFor({limit:latest,topic:0,seed:1927}).filter(c=>c.featured);
+const now=new Date();
+let cabinetIndex=Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/86400000);
+function displayCuriosity() {
+  const anchor=$('cabinet-question');
+  if(!cabinet.length){anchor.closest('aside').hidden=true;return;}
+  const pick=cabinet[cabinetIndex%cabinet.length];
+  anchor.href='#question/'+pick.id;anchor.textContent=pick.question;
+}
+$('cabinet-another').onclick=()=>{cabinetIndex++;displayCuriosity();};
+displayCuriosity();
 
 function displayIndex(expandId=0) {
   const tokens=normalize($('search').value.trim()).split(/\s+/).filter(Boolean);
@@ -69,17 +86,22 @@ function displayIndex(expandId=0) {
 }
 $('search').oninput=()=>displayIndex();
 
-// A code records the edition's last question, the topic's permanent ID, a shuffle seed,
-// and the hand from that deck. Adding a later batch leaves older codes reproducible.
+// Four-part codes retain the original ten-card dealing rules. The optional suffix
+// pins the letter and requested length alongside the edition, so both devices agree.
 function decode(code) {
-  const match=/^(\d{1,7})-(\d{1,7})-(\d{4})-([1-9]\d{0,6})$/.exec(code.trim());
-  if(!match)throw Error('Enter the four groups of numbers shown on the other device.');
-  const [limit,topic,seed,hand]=match.slice(1).map(Number);
+  const match=/^(\d{1,7})-(\d{1,7})-(\d{4})-([1-9]\d{0,6})(?:-(ANY|[A-Z])([1-9]\d{0,6}))?$/.exec(code.trim().toUpperCase());
+  if(!match)throw Error('Enter the round code shown on the other device.');
+  const [limit,topic,seed,hand]=match.slice(1,5).map(Number);
   if(limit>latest)throw Error('This round uses a newer book. Update this device’s copy online first.');
   if(!cards.has(limit)||(topic&&!byTopic.has(topic)))throw Error('Check the edition and category numbers in that code.');
-  return {limit,topic,seed,hand};
+  if(!match[5])return {limit,topic,seed,hand};
+  return {limit,topic,seed,hand,letter:match[5]==='ANY'?'':match[5],size:Number(match[6])};
 }
-function encode(p) {return [p.limit,p.topic,String(p.seed).padStart(4,'0'),p.hand].join('-');}
+function encode(p) {
+  const code=[p.limit,p.topic,String(p.seed).padStart(4,'0'),p.hand].join('-');
+  return p.size?code+'-'+(p.letter||'ANY')+p.size:code;
+}
+function roundName(p) {return p.letter?topicName(p.topic)+' · Answers beginning with '+p.letter:topicName(p.topic);}
 function shuffled(input,random) {
   const shuffled=[...input];
   for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
@@ -88,6 +110,12 @@ function shuffled(input,random) {
 function deckFor(p) {
   let state=(p.seed+1)>>>0;
   const random=()=>{state=(Math.imul(state,1664525)+1013904223)>>>0;return state/4294967296;};
+  if(p.letter) {
+    const pool=p.topic?byTopic.get(p.topic).cards:numbers.map(id=>cards.get(id));
+    const matches=shuffled(pool.filter(c=>c.id<=p.limit&&c.initial===p.letter),random);
+    const seen=new Set();
+    return matches.filter(c=>{if(seen.has(c.answerKey))return false;seen.add(c.answerKey);return true;});
+  }
   if(p.topic)return shuffled(byTopic.get(p.topic).cards.filter(c=>c.id<=p.limit),random);
   const groups=allTopics.filter(t=>t.id<=p.limit).map(t=>shuffled(t.cards.filter(c=>c.id<=p.limit),random));
   const queues=shuffled(groups,random),deck=[];
@@ -95,26 +123,52 @@ function deckFor(p) {
   return deck;
 }
 function deal(p) {
-  const start=(p.hand-1)*roundSize;
-  const hand=deckFor(p).slice(start,start+roundSize);
-  if(!hand.length)throw Error('That round number is outside this deck. Check the code.');
-  return hand;
+  const size=p.size||roundSize,deck=deckFor(p),start=(p.hand-1)*size;
+  if(start>=deck.length)throw Error('That round number is outside this deck. Check the code.');
+  if(p.size>deck.length)throw Error('This round asks for more questions than are available.');
+  const hand=deck.slice(start,start+size);
+  // A new-format round always has the requested length, including at the end
+  // of a deck. No question repeats inside the same round.
+  return p.size&&hand.length<size?hand.concat(deck.slice(0,size-hand.length)):hand;
 }
-function startRound(topic) {
-  const key='deck.'+latest+'.'+topic,previous=load(key,null);
+function startRound(topic,letter,size) {
+  const key=['deck',latest,topic,letter||'any',size].join('.'),previous=load(key,null);
   let p=previous?{...previous,hand:previous.hand+1}:null;
-  if(!p||(p.hand-1)*roundSize>=deckFor(p).length) {
+  if(!p||(p.hand-1)*size>=deckFor(p).length) {
     let seed=crypto.getRandomValues(new Uint32Array(1))[0]%10000;
-    // Skip already played codes even after cycling through a full category.
     for(let i=0;i<10000;i++){
-      p={limit:latest,topic,seed,hand:1};
+      p={limit:latest,topic,seed,hand:1,letter,size};
       if(!load('round.'+encode(p),null))break;
       seed=(seed+1)%10000;
     }
   }
   save(key,p);location.hash='round/'+encode(p);
 }
-$('start-form').onsubmit=e=>{e.preventDefault();startRound(Number($('topic').value));};
+function updateSetup() {
+  const topic=byTopic.get(Number($('topic').value));
+  const pool=topic?topic.cards:[...cards.values()];
+  const available=new Map(Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ',l=>[l,new Set()]));
+  for(const c of pool)if(c.initial)available.get(c.initial).add(c.answerKey);
+  const old=$('letter').value;
+  $('letter').replaceChildren(new Option('Any letter',''));
+  for(const [l,answers] of available){
+    const option=new Option(l+' · '+answers.size.toLocaleString('en-US'),l);
+    option.disabled=!answers.size;$('letter').append(option);
+  }
+  if(available.has(old))$('letter').value=old;
+  const letter=$('letter').value;
+  const count=letter?available.get(letter).size:pool.length;
+  const length=$('length');length.max=count;
+  length.disabled=!count;$('start-form').querySelector('button').disabled=!count;
+  if(count&&length.valueAsNumber>count)length.value=count;
+  if(!count)$('available').textContent='No '+letter+' answers in this category. Choose another category or letter.';
+  else $('available').textContent=letter?count.toLocaleString('en-US')+' different answers begin with '+letter+'.':count.toLocaleString('en-US')+' questions available.';
+}
+$('topic').onchange=$('letter').onchange=updateSetup;updateSetup();
+$('start-form').onsubmit=e=>{
+  e.preventDefault();
+  if(e.target.reportValidity())startRound(Number($('topic').value),$('letter').value,$('length').valueAsNumber);
+};
 $('join-form').onsubmit=e=>{
   e.preventDefault();$('join-error').textContent='';
   try {const p=decode($('code').value.trim().replace(/\s+/g,'').replace(/[–—]/g,'-'));deal(p);location.hash='round/'+encode(p);}
@@ -133,19 +187,20 @@ function recentRounds() {
       const p=decode(code),hand=deal(p),state=load('round.'+code,null);if(!state)continue;
       const n=state.marks.length,score=state.marks.filter(Boolean).length;
       const a=link('','#round/'+code,'recent-link');
-      a.append(el('strong',topicName(p.topic)),el('small',code+' · '+(n===hand.length?score+' / '+n:'Resume at '+(n+1)+' of '+hand.length)));
+      a.append(el('strong',roundName(p)),el('small',code+' · '+(n===hand.length?score+' / '+n:'Resume at '+(n+1)+' of '+hand.length)));
       host.append(a);
     }catch{continue;}
   }
   $('recent').hidden=!host.children.length;
 }
+let currentLetter='';
 let currentCode='',hand=[],round=null,card=null,revealed=false;
 function screen(id) {for(const key of ['home','reader','finish'])$(key).hidden=key!==id;}
 function updateQuestion() {
   screen('reader');
   const inRound=!!round;
   $('share-round').hidden=$('round-progress').hidden=!inRound;$('single-nav').hidden=inRound;
-  $('mode').textContent=inRound?'Question '+(round.marks.length+1)+' of '+hand.length:'Question index';
+  $('mode').textContent=inRound?'Question '+(round.marks.length+1)+' of '+hand.length+(currentLetter?' · Letter '+currentLetter:''):'Question index';
   $('score').textContent=inRound?'Score '+round.marks.filter(Boolean).length+' / '+round.marks.length:'';
   if(inRound) {
     $('copy-code').textContent='Round code '+currentCode;
@@ -158,22 +213,23 @@ function updateQuestion() {
   }
   $('question').textContent=card.question;$('card-category').textContent=card.topic.name;$('folio').textContent=label(card.id);
   $('answer-panel').hidden=!revealed;$('reveal').hidden=revealed;$('marking').hidden=!inRound||!revealed;
-  $('answer').textContent=revealed?card.answer:'';$('detail').textContent=revealed?card.detail:'';
-  $('source').textContent=revealed?card.source+' ↗':'';if(revealed)$('source').href=card.url;else $('source').removeAttribute('href');
+  $('answer').textContent=revealed?(currentLetter?card.letterAnswer:card.answer):'';$('detail').textContent=revealed?card.detail:'';
+  $('sources').replaceChildren(...(revealed?sourcesFor(card):[]));
 }
 function finishRound() {
   screen('finish');
   $('final-score').textContent=round.marks.filter(Boolean).length+' of '+hand.length+' correct';
-  $('final-code').textContent=topicName(decode(currentCode).topic)+' · '+currentCode;
+  $('final-code').textContent=roundName(decode(currentCode))+' · '+currentCode;
   const recap=$('recap');recap.replaceChildren();
   hand.forEach((c,i)=>{
     const item=el('details'),summary=el('summary',(round.marks[i]?'✓ Got it':'× Missed')+' · '+label(c.id)+' · '+c.question);
-    const detail=el('p');detail.append(el('strong',c.answer),document.createTextNode(' '+c.detail+' '),sourceLink(c));
+    const detail=el('p');detail.append(el('strong',currentLetter?c.letterAnswer:c.answer),document.createTextNode(' '+c.detail+' '));
+    const sources=el('span',undefined,'recap-sources');sources.append(...sourcesFor(c));detail.append(sources);
     item.append(summary,detail);recap.append(item);
   });
 }
 function openRound(raw) {
-  const p=decode(raw);currentCode=encode(p);hand=deal(p);
+  const p=decode(raw);currentLetter=p.letter||'';currentCode=encode(p);hand=deal(p);
   round=load('round.'+currentCode,null);
   if(!round){round={marks:[],revealed:false};save('round.'+currentCode,round);}
   remember(currentCode);$('copy-status').textContent='';
@@ -197,16 +253,19 @@ $('copy-code').onclick=async()=>{
   try {await navigator.clipboard.writeText(currentCode);$('copy-status').textContent='Copied';}
   catch {$('copy-status').textContent='Read this code to your friend.';}
 };
-$('another').onclick=()=>startRound(decode(currentCode).topic);
+$('another').onclick=()=>{
+  const p=decode(currentCode),eligible=deckFor({...p,limit:latest}).length;
+  startRound(p.topic,p.letter||'',Math.min(p.size||roundSize,eligible));
+};
 function route() {
-  const [view,arg]=location.hash.slice(1).split('/');round=null;currentCode='';revealed=false;$('join-error').textContent='';
+  const [view,arg]=location.hash.slice(1).split('/');round=null;currentCode='';currentLetter='';revealed=false;$('join-error').textContent='';
   try{
     if(view==='round'){openRound(arg||'');window.scrollTo(0,0);return;}
     if(view==='question'&&cards.has(Number(arg))){card=cards.get(Number(arg));updateQuestion();window.scrollTo(0,0);return;}
   }catch(error){$('join-error').textContent=error.message;}
   screen('home');recentRounds();
   const topic=view==='category'?Number(arg):0;
-  if(byTopic.has(topic)){$('topic').value=topic;$('search').value='';}
+  if(byTopic.has(topic)){$('topic').value=topic;$('search').value='';updateSetup();}
   displayIndex(topic);
   if(view==='browse'||byTopic.has(topic))($(byTopic.has(topic)?'group-'+topic:'browse')).scrollIntoView();
   else window.scrollTo(0,0);
