@@ -21,3 +21,5 @@ h1,h2,h3,p{margin:0}h1,h2{font-family:Georgia,serif;font-weight:normal}h1{font-s
 .retired-total{color:#185333;font-weight:650;white-space:nowrap}
 .retired summary small{display:inline-block;color:#475563}
 .retired ul{margin:0;padding:0 0 .65rem 1.55rem}
+
+.goal{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}

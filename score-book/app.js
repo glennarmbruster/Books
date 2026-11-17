@@ -50,12 +50,14 @@ function read(store, key) {
   });
 }
 async function amend(id, change) {
+  const restartNumber = current?.restartNumber ?? 0;
   const result = await transaction('games','readwrite',(store,done,abort) => {
     const req = store.get(id);
     req.onsuccess = () => {
       try {
         const game = req.result;
         if (!game || game.finished) throw Error('This game has already been finished or deleted. Reopen your scorecards.');
+        if ((game.restartNumber ?? 0) !== restartNumber) throw Error('This game was restarted in another window. Reopen the scorecard to continue.');
         change(game);
         store.put(game);done(game);
       } catch(error) { abort(error); }
@@ -90,7 +92,7 @@ async function hashPin(value, salt) {
   return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)), n=>n.toString(16).padStart(2,'0')).join('');
 }
 function setupPin() {
-  openDialog('Choose your Score Book PIN','<p>Use this PIN to delete a scorecard saved on this device.</p><label>Choose a 4–8 digit PIN'+pinInput+'</label><label>Confirm PIN'+pinInput.replace('id="pin"','id="repeat"')+'</label>', 'Set PIN', async () => {
+  openDialog('Choose your Score Book PIN','<p>Use this PIN to restart a game or delete a scorecard on this device.</p><label>Choose a 4–8 digit PIN'+pinInput+'</label><label>Confirm PIN'+pinInput.replace('id="pin"','id="repeat"')+'</label>', 'Set PIN', async () => {
     if ($('#pin').value !== $('#repeat').value) throw Error('Enter the same PIN in both fields.');
     const salt = crypto.randomUUID();
     const record = {salt,hash:await hashPin($('#pin').value,salt)};
@@ -122,9 +124,20 @@ function scoreGoal(game) {
   if (game.order === 'low') return game.target ? 'Lowest score wins · stop at '+game.target : 'Lowest score wins';
   return game.target ? 'Play to '+game.target+' points' : 'Highest score wins';
 }
+const targetField = '<label>Point target (optional)<input id="target" type="number" inputmode="numeric" min="1" max="9999999" placeholder="Finish manually"></label>';
+function changeTarget() {
+  const id = current.id;
+  openDialog('Change target', targetField + '<p class="hint">Leave blank to finish the game manually.</p>', 'Save target', async () => {
+    const target = Number($('#target').value);
+    await amend(id, game => { game.target = target; });
+    await route();
+  });
+  $('#target').value = current.target || '';
+  $('#target').select();
+}
 function newCard(preset) {
   const fields = '<label>Number of '+(preset?.teams ? 'teams' : 'players')+'<input id="count" type="number" inputmode="numeric" min="2" max="32" value="2" required></label>' +
-    '<label>Point target (optional)<input id="target" type="number" inputmode="numeric" min="1" max="9999999" placeholder="Finish manually"></label>';
+    targetField;
   openDialog(preset?.name || 'New scorecard', fields, 'Start scorecard', async () => {
     const n = Number($('#count').value);
     const names = preset?.teams ? Array.from({length:n},(_,i)=>'Team '+(i+1)) : emptyRow(n);
@@ -182,10 +195,32 @@ function finishCard() {
   if (current.rounds.some(row=>row.some(filled) && row.some(v=>!filled(v)))) $('#missing').textContent='Blank scores will be saved as blank.';
   $('#finish-location').value=current.location;
 }
+async function verifyPin() {
+  const input = $('#pin');
+  if (await hashPin(input.value,pin.salt) !== pin.hash) {
+    input.focus();input.select();
+    throw Error('That PIN did not match. Try again.');
+  }
+}
+function restartCard() {
+  const id = current.id;
+  openDialog('Restart this game?', '<p>Clear every round and start at Round 1 with the same players and target. Retired players stay retired.</p><label>Enter your PIN'+pinInput+'</label>', 'Restart game', async () => {
+    await verifyPin();
+    await amend(id, game => {
+      game.rounds = [emptyRow(game.names.length)];
+      delete game.joinedRounds;
+      for (const index of Object.keys(game.retiredRounds || {})) {
+        if (!isActive(game,index)) game.retiredRounds[index] = -1;
+      }
+      game.restartNumber = (game.restartNumber ?? 0) + 1;
+    });
+    await route();
+  });
+}
 function deleteCard() {
   const id=current.id;
   openDialog('Delete this scorecard?', '<p id="delete-description"></p><label>Enter your PIN'+pinInput+'</label>', 'Delete scorecard', async ()=>{
-    if (await hashPin($('#pin').value,pin.salt)!==pin.hash) throw Error('That PIN did not match. Try again.');
+    await verifyPin();
     await transaction('games','readwrite',store=>store.delete(id));
     channel?.postMessage(id);location.hash='';
   });
@@ -226,7 +261,7 @@ function showRetired(host, game) {
   for (const i of retired) {
     const details = node('details'), summary = node('summary');
     summary.append(node('strong', player(game, i)), node('span', scores[i] + ' pts', 'retired-total'),
-      node('small', 'Finished in round ' + (retiredRound(game, i) + 1)));
+      node('small', retiredRound(game,i) < 0 ? 'Retired before restart' : 'Finished in round ' + (retiredRound(game, i) + 1)));
     details.append(summary);
     const history = node('ul');
     for (let r = joinedRound(game, i); r <= retiredRound(game, i); r++) {
@@ -331,7 +366,10 @@ function drawCard() {
     gameLabel.append(gameInput);
     meta.append(gameLabel);
   }
-  meta.append(node('strong',scoreGoal(current)));
+  const goal = node('div',undefined,'goal');
+  goal.append(node('strong',scoreGoal(current)));
+  if (!current.finished) goal.append(button('Change target',changeTarget));
+  meta.append(goal);
   if(current.finished){if(current.location)meta.append(node('span',current.location));}
   else{
     const label=node('label','Location (optional)'),place=node('input');
@@ -384,7 +422,7 @@ function drawCard() {
       next.id = 'next-round';
       footer.append(next);
     }
-    footer.append(button('Finish game', finishCard));
+    footer.append(button('Finish game', finishCard),button('Restart game', restartCard));
   }
   host.append(footer,button('Delete scorecard',deleteCard,'danger'));labelScores();updateTotals();
 }
@@ -413,8 +451,11 @@ async function route() {
 }
 window.addEventListener('hashchange',()=>route().catch(fail));
 if(channel)channel.onmessage=event=>{
-  if(!dialog.open && (!current || current.id===event.data))route().catch(fail);
+  if(current && current.id!==event.data) return;
+  if(dialog.open) dialog.addEventListener('close', refreshAfterDialog, {once:true});
+  else route().catch(fail);
 };
+function refreshAfterDialog() { route().catch(fail); }
 (async()=>{
   try{
     db=await database();pin=await read('settings','pin');
