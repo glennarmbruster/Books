@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#193e37">
+  <title>The Maker’s Bench · Books</title>
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="top">
+  <a href="../" class="books">‹ Bookshelf</a><a href="#guide" class="wordmark">The Maker’s Bench</a>
+  <nav aria-label="Main"><a href="#guide" data-tab="guide">Field guide</a><a href="#studio" data-tab="studio">Design studio</a><a href="#workshop" data-tab="workshop">My workshop</a></nav>
+</div></header>
+<main>
+<section id="guide" class="view">
+  <div class="hero"><div class="hero-copy"><h1>The Maker’s<br><em>Bench</em></h1>
+    <p>A field guide and design studio for the things you cut, press, print, and make again.</p><a href="#studio" class="action">Open design studio <span>↗</span></a></div>
+    <img src="../shelf-art/bench.jpg" alt="A luggage tag, coaster, and nameplate on a craft bench" fetchpriority="high" class="hero-image"></div>
+  <div class="section-title"><h2>Project guides</h2></div><div id="project-cards" class="cards"></div>
+  <div class="reference"><div><h2>At the workbench</h2><p>Find a material check, machine workflow, or fix for a test piece.</p><label for="find-guide">Search the reference</label><input id="find-guide" type="search" placeholder="Try ghosting, vinyl, or sizing"></div><div id="lookups"></div></div>
+</section>
+<section id="project" class="view" hidden><a class="back" href="#guide">‹ Field guide</a><div id="project-page"></div></section>
+<section id="studio" class="view" hidden>
+  <div class="section-title"><div><h1>Design studio</h1><p>Choose a starting shape, then make it yours.</p></div><button type="button" id="save-open" class="secondary">Save to my workshop</button></div>
+  <div class="studio-grid"><form id="settings" class="settings" novalidate>
+    <fieldset><legend>Project</legend>
+      <label for="shape">Starting shape</label><select id="shape"><option value="tag">Luggage tag</option><option value="coaster">Coaster</option><option value="plate">Nameplate</option></select>
+      <div class="pair unit-row"><span>Blank size</span><label class="unit-select">Units <select id="units"><option value="mm">mm</option><option value="in">inches</option></select></label></div>
+      <div class="pair"><label>Width<input id="width" type="number" step="any" required></label><label>Height<input id="height" type="number" step="any" required></label></div>
+      <label id="hole-row">Strap hole diameter<input id="hole" type="number" step="any" required></label>
+    </fieldset>
+    <fieldset><legend>Lettering & artwork</legend>
+      <label for="names">Names <small>one per line for a set</small></label><textarea id="names" rows="2" maxlength="1600" placeholder="Cindy"></textarea>
+      <label>Second line<input id="subtitle" maxlength="80" placeholder="Optional"></label>
+      <label>Motif<select id="motif"><option value="none">Lettering only</option><option value="wave">Wave</option><option value="sun">Sun</option><option value="leaf">Leaf</option><option value="mountain">Mountain</option></select></label>
+      <div class="swatches"><label>Lettering<input id="ink" type="color"></label><label>Motif<input id="accent" type="color"></label><label>Blank<input id="paper" type="color"></label></div>
+    </fieldset>
+    <fieldset><legend>Output</legend>
+      <label>Machine<select id="machine"><option value="glowforge">Glowforge</option><option value="cricut">Cricut</option><option value="sublimation">Sublimation printer</option><option value="printer3d">3D printer</option></select></label>
+      <div class="pair" id="depths" hidden><label>Base thickness<input id="thickness" type="number" step="any"></label><label>Raised detail<input id="relief" type="number" step="any"></label></div>
+      <label id="mirror-row" class="check" hidden><input id="mirror" type="checkbox">Mirror the transfer file</label>
+    </fieldset>
+  </form>
+  <div class="proof"><div class="proof-head"><h2>Design preview</h2><label id="which-name" hidden>Name <select id="name-index"></select></label></div>
+    <div class="mat"><div id="drawing"></div></div>
+    <div class="proof-caption"><span id="size-caption"></span><a id="studio-guide" href="#project/tag">Read project guide ↗</a></div>
+    <div id="transfer-proof" hidden><h3>Transfer view</h3><div id="transfer"></div></div>
+    <div class="output"><h3 id="output-title">Glowforge file</h3><p id="output-note"></p><label id="print-type" hidden>Print file <select id="print-format"><option value="png">Full-color PNG · 300 ppi</option><option value="pdf">Print-at-size PDF</option></select></label>
+    <label id="model-type" hidden>Design file <select id="model-format"><option value="stl">STL · solid model</option><option value="3mf">3MF · solid model in millimeters</option><option value="profile">SVG · flat CAD profiles</option></select></label>
+    <div class="actions"><button id="export" class="action">Download SVG</button><button id="export-set" class="secondary" hidden>Download name set (.zip)</button></div></div>
+    <p id="studio-message" role="status"></p>
+  </div></div>
+</section>
+<section id="workshop" class="view" hidden><div class="section-title"><div><h1>My workshop</h1><p>Your saved designs, machine settings, and test pieces on this device.</p></div><div class="actions"><label class="secondary file-button">Open project file<input id="import" type="file" accept=".json,application/json"></label><a href="#studio" class="action">Open studio ↗</a></div></div><p id="workshop-message" role="status"></p><div id="records"></div></section>
+</main>
+<footer><a href="../">‹ Bookshelf</a><span id="offline" role="status">Preparing offline copy…</span><button id="install">Install app</button></footer>
+<dialog id="dialog" aria-labelledby="dialog-title"><form id="dialog-form"><h2 id="dialog-title"></h2><div id="dialog-body"></div><p id="dialog-message" role="alert"></p><div class="actions"><button type="button" id="close-dialog" class="secondary">Cancel</button><button type="submit" id="accept" class="action">Save</button></div></form></dialog>
+<script src="reference.js"></script>
+<!-- Local export engine -->
+<script src="vendor/bench-font.js"></script><script src="bench-art.js"></script>
+<script src="files.js"></script><script src="app.js"></script>
+</body></html>
