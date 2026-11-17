@@ -1,7 +1,10 @@
 /* Maker's Bench design geometry uses millimeters throughout. */
 (() => {
   'use strict';
-  const font = window.BenchFont;
+  const defaultFont = 'atkinson';
+  const typefaces = [{id:defaultFont,label:'Atkinson Hyperlegible Bold',category:'Sans serif',font:window.BenchFont}, ...BenchTypefaces];
+  const byFont = new Map(typefaces.map(face=>[face.id,face]));
+  const runCache = new Map();
   const scriptURL = document.currentScript.src;
   const mmPerInch = 25.4;
   const kappa = 4 * (Math.sqrt(2) - 1) / 3;
@@ -29,11 +32,12 @@
     if (!/^#[\da-f]{6}$/i.test(value)) throw Error('Choose a solid color for each layer.');
     return value.toLowerCase();
   }
-  function cleanLine(raw) {
+  function cleanLine(raw,face) {
     const text = String(raw ?? '').normalize('NFC').trim();
     if ([...text].length > 64) throw Error('Use up to 64 characters per line.');
+    const map=face.font.map;
     for (const char of text) {
-      if (!Object.hasOwn(font.map, char)) throw Error('The outline font does not include “' + char + '”. Try a different character.');
+      if (!Object.hasOwn(map, char)) throw Error(face.label+' does not include “'+char+'”. Choose another font or character.');
     }
     return text;
   }
@@ -44,14 +48,21 @@
     const extra = input.extraMotif ?? 'none', placement = input.placement ?? 'above';
     if (!validArt(input.motif) || !validArt(extra)) throw Error('Choose artwork from the catalog.');
     if (!['above','left','right'].includes(placement)) throw Error('Choose a position for the artwork.');
+    const nameFont=input.nameFont??defaultFont, subtitleFont=input.subtitleFont??defaultFont;
+    if(!byFont.has(nameFont)||!byFont.has(subtitleFont)) throw Error('Choose a font from the lettering list.');
     return {
+      nameFont,subtitleFont,
+      motifWidth:number(input.motifWidth??0,'Artwork width',0,500),
+      extraMotifWidth:number(input.extraMotifWidth??0,'Second artwork width',0,500),
+      nameHeight:number(input.nameHeight??0,'Name letter height',0,500),
+      subtitleHeight:number(input.subtitleHeight??0,'Second-line letter height',0,500),
       shape: input.shape, width, height,
       hole: hasHole(input.shape) ? number(input.hole ?? 0,'Hole diameter',0,Math.min(width*.2,height*.4)) : 0,
       thickness: number(input.thickness ?? 3,'Base thickness',.4,30),
       relief: number(input.relief ?? 1,'Raised height',.2,15),
       motif: input.motif, extraMotif: extra, placement, ink: color(input.ink), accent: color(input.accent),
       paper: color(input.paper), mirror: input.mirror === true,
-      name: cleanLine(input.name), subtitle: cleanLine(input.subtitle)
+      name: cleanLine(input.name,byFont.get(nameFont)), subtitle: cleanLine(input.subtitle,byFont.get(subtitleFont))
     };
   }
 
@@ -76,24 +87,95 @@
   function transform(path, sx, sy, x, y) {
     return path.map(([op,...coords])=>[op,...coords.map((n,i)=>i%2?y+n*sy:x+n*sx)]);
   }
-  function glyphPath(text) {
-    const paths=[];
-    let shift=0;
-    for(const char of text) {
-      const [advance,commands]=font.glyphs[font.map[char]];
+  // Measure the ink itself, including cubic extrema between on-curve points.
+  function inkBounds(path) {
+    let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity,px=0,py=0;
+    function include(x,y) {left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}
+    function roots(p,a,b,q) {
+      const A=q-3*b+3*a-p, B=2*(b-2*a+p), C=a-p;
+      if(Math.abs(A)<1e-10) return B?[-C/B]:[];
+      const det=B*B-4*A*C;
+      return det<0?[]:[(-B+Math.sqrt(det))/(2*A),(-B-Math.sqrt(det))/(2*A)];
+    }
+    function cubic(p,a,b,q,t) { const u=1-t;return u*u*u*p+3*u*u*t*a+3*u*t*t*b+t*t*t*q; }
+    for(const [op,...v] of path) {
+      if(op==='Z') continue;
+      const x=v.at(-2),y=v.at(-1);
+      if(op==='C') for(const t of [...roots(px,v[0],v[2],x),...roots(py,v[1],v[3],y)]) {
+        if(t>0&&t<1) include(cubic(px,v[0],v[2],x,t),cubic(py,v[1],v[3],y,t));
+      }
+      include(x,y);px=x;py=y;
+    }
+    return {left,right,top,bottom,w:right-left,h:bottom-top};
+  }
+  function glyphRun(text,faceId) {
+    const key=faceId+'|'+text;
+    if(runCache.has(key)) return runCache.get(key);
+    const font=byFont.get(faceId).font,path=[];
+    let shift=0,prev=null,overlap=false,maxRight=-Infinity;
+    for(let i=0;i<text.length;) {
+      let char=String.fromCodePoint(text.codePointAt(i)),index=font.map[char];
+      for(const n of [3,2]) {
+        const group=text.slice(i,i+n);
+        if(group.length===n && Object.hasOwn(font.ligatures||{},group)) {
+          char=group;index=font.ligatures[group];break;
+        }
+      }
+      i+=char.length;
+      if(prev!==null && font.kerning) shift+=font.kerning(prev,index);
+      const [advance,commands]=font.glyphs[index],glyph=[];
       let px=0,py=0;
       for(const [op,...p] of commands) {
-        if(op==='Z') { paths.push(['Z']); continue; }
+        if(op==='Z') {glyph.push(['Z']);continue;}
         const points=p.map((n,i)=>i%2?-n:shift+n);
         if(op==='Q') {
           const [cx,cy,x,y]=points;
-          paths.push(['C',px+2*(cx-px)/3,py+2*(cy-py)/3,x+2*(cx-x)/3,y+2*(cy-y)/3,x,y]);
-        } else paths.push([op,...points]);
+          glyph.push(['C',px+2*(cx-px)/3,py+2*(cy-py)/3,x+2*(cx-x)/3,y+2*(cy-y)/3,x,y]);
+        } else glyph.push([op,...points]);
         px=points.at(-2);py=points.at(-1);
       }
-      shift+=advance;
+      if(glyph.length) {
+        const bounds=inkBounds(glyph);
+        if(bounds.left<maxRight) overlap=true;
+        maxRight=Math.max(bounds.right,maxRight);
+        path.push(...glyph);
+      }
+      shift+=advance;prev=index;
     }
-    return paths;
+    const run={path,bounds:inkBounds(path),overlap};
+    if(runCache.size>=64) runCache.delete(runCache.keys().next().value);
+    runCache.set(key,run);return run;
+  }
+  function measureLimit(mm,units) {
+    const inches=units==='in',factor=inches?1000:100;
+    const value=Math.floor(mm/(inches?mmPerInch:1)*factor)/factor;
+    return value+(inches?' in':' mm');
+  }
+  // A typed height is the physical height of the visible letters in millimeters.
+  function sizeText(first,second,w,x,top,band,units) {
+    const rows=[first,second].filter(Boolean);
+    if(rows.every(row=>row.size===0)) {
+      return rows.map((row,i)=>fit(row.run.path,x,top+band*(i===1?.84:second?.3:.5),
+        w*(i===1?.92:1),band*(i===1?.225:second?.51:.79)));
+    }
+    const gap=second?band*.075:0,room=band-gap;
+    let fixed=0;
+    const heights=rows.map((row,i)=>{
+      const bounds=row.run.bounds,maxWidth=w*(i===1?.92:1),limit=Math.min(room,bounds.h*maxWidth/bounds.w);
+      if(row.size>limit+.00001) {
+        throw Error('For “'+row.text+'”, use a letter height of '+measureLimit(limit,units)+' or less, or enlarge the blank.');
+      }
+      if(row.size) {fixed+=row.size;return row.size;}
+      return Math.min(limit,band*(i===1?.225:second?.51:.79));
+    });
+    if(fixed>room+.00001 || (rows.some(r=>!r.size)&&fixed>=room-.001)) throw Error('The two lines are too tall together. Reduce a letter height or enlarge the blank.');
+    for(let i=0;i<rows.length;i++) if(!rows[i].size) heights[i]=Math.min(heights[i],room-fixed);
+    let y=top+(band-heights.reduce((sum,v)=>sum+v,0)-gap)/2;
+    return rows.map((row,i)=>{
+      const box=row.run.bounds,k=heights[i]/box.h;
+      const path=transform(row.run.path,k,k,x-k*(box.left+box.right)/2,y-k*box.top);
+      y+=heights[i]+gap;return path;
+    });
   }
   function fit(path,x,y,w,h) {
     if (!path.length) return [];
@@ -159,7 +241,7 @@
     if(d.shape==='sign') areaTop=h*.23;
     const cy=(areaEnd+areaTop)/2;
     const innerH=(areaEnd-areaTop)*(round?.67:.73);
-    const artwork=[d.motif,d.extraMotif].filter(id=>id!=='none');
+    const artwork=['motif','extraMotif'].filter(key=>d[key]!=='none');
     const hasMark=artwork.length>0, hasType=Boolean(d.name||d.subtitle);
     const beside=hasMark&&hasType&&d.placement!=='above';
     let typeWidth=usable,typeX=cx,markX=cx;
@@ -170,21 +252,69 @@
       markX-=dir*usable*.325;
     }
     const markSize=beside?innerH*.88:hasType?innerH*.29:innerH*.66;
-    const markWidth=beside?usable*.32:Math.min(usable*(artwork.length===2?.90:.66),markSize*(artwork.length===2?4:2));
-    const markY=hasType&&!beside?cy-innerH*.32:cy;
-    const mark=[];
-    artwork.forEach((id,index)=>{
+    let markWidth=beside?usable*.32:Math.min(usable*(artwork.length===2?.90:.66),markSize*(artwork.length===2?4:2));
+    let markY=hasType&&!beside?cy-innerH*.32:cy, textTop=cy-innerH*.085;
+    const parts=[], artSizes={};
+    if(artwork.some(key=>d[key+'Width']>0)) {
+      const maxWidth=usable*(beside?.80:.97), maxHeight=innerH*(hasType&&!beside?.70:1);
+      const gap=artwork.length===2?Math.min(usable*.035,small*.055):0;
       const slot=markWidth/artwork.length;
-      const x=markX-markWidth/2+slot*(index+.5);
-      mark.push(...fit(motifPath(id),x,markY,slot*(artwork.length===2?.89:1),markSize));
-    });
-    const first=d.name||d.subtitle,second=d.name?d.subtitle:'';
+      const icons=artwork.map(key=>{
+        const path=motifPath(d[key]),bounds=inkBounds(path),fixed=d[key+'Width'];
+        const automatic=Math.min(slot*(artwork.length===2?.89:1),markSize*bounds.w/bounds.h);
+        const width=fixed||automatic;
+        if(fixed && width*bounds.h/bounds.w>maxHeight+.00001) {
+          const limit=maxHeight*bounds.w/bounds.h;
+          throw Error('For this artwork, use a width of '+measureLimit(limit,input.units)+' or less to fit the height.');
+        }
+        return {key,path,bounds,fixed,width};
+      });
+      const fixedWidth=icons.reduce((sum,icon)=>sum+icon.fixed,0);
+      const autoWidth=icons.reduce((sum,icon)=>sum+(icon.fixed?0:icon.width),0);
+      const available=maxWidth-gap-fixedWidth;
+      if(available<-.00001 || (autoWidth && available<.05))
+        throw Error('Artwork exceeds the available width of '+measureLimit(maxWidth,input.units)+'. Reduce an image width or enlarge the blank.');
+      for(const icon of icons) if(!icon.fixed) icon.width*=Math.min(1,available/autoWidth);
+      markWidth=icons.reduce((sum,icon)=>sum+icon.width,gap);
+      const rowHeight=Math.max(...icons.map(icon=>icon.width*icon.bounds.h/icon.bounds.w));
+      if(beside) {
+        const dir=d.placement==='left'?1:-1;
+        const separation=Math.min(usable*.045,small*.12);
+        typeWidth=usable-markWidth-separation;
+        markX=cx-dir*(usable-markWidth)/2;
+        typeX=cx+dir*(usable-typeWidth)/2;
+      } else if(hasType) {
+        markY=cy-innerH*.49+rowHeight/2;
+        textTop=Math.max(textTop,markY+rowHeight/2+innerH*.045);
+      }
+      let x=markX-markWidth/2;
+      for(const {key,path,bounds,width} of icons) {
+        const k=width/bounds.w;
+        parts.push(transform(path,k,k,x-k*bounds.left,markY-k*(bounds.top+bounds.bottom)/2));
+        artSizes[key]=width;x+=width+gap;
+      }
+    } else {
+      // Preserve first-edition layouts until an image width is set.
+      artwork.forEach((key,index)=>{
+        const slot=markWidth/artwork.length,x=markX-markWidth/2+slot*(index+.5);
+        const path=fit(motifPath(d[key]),x,markY,slot*(artwork.length===2?.89:1),markSize);
+        parts.push(path);artSizes[key]=inkBounds(path).w;
+      });
+    }
+    const mark=parts.flat();
+    function line(text,face,size) {
+      if(!text) return null;
+      const run=glyphRun(text,face);
+      if(!run.path.length) throw Error('The lettering contains only invisible characters.');
+      return {text,run,size};
+    }
+    const name=line(d.name,d.nameFont,d.nameHeight), subtitle=line(d.subtitle,d.subtitleFont,d.subtitleHeight);
+    const first=name||subtitle,second=name&&subtitle;
     const overhead=hasMark&&!beside;
-    const top=overhead?cy-innerH*.085:cy-innerH*.43;
+    const top=overhead?textTop:cy-innerH*.43;
     const bottom=cy+innerH*(overhead?.49:.43);
     const band=bottom-top;
-    const lettering=first?fit(glyphPath(first),typeX,top+band*(second?.30:.5),typeWidth,band*(second?.51:.79)): [];
-    const smallType=second?fit(glyphPath(second),typeX,top+band*.84,typeWidth*.92,band*.225):[];
+    const [lettering=[],smallType=[]]=sizeText(first,second,typeWidth,typeX,top,band,input.units);
     const rules=[];
     if (hasMark&&hasType&&!beside) {
       const from=markWidth/2+small*.035,to=Math.min(usable*.47,from+small*.13);
@@ -192,37 +322,44 @@
     }
     const ruleWidth=small*.009;
     const ruleFills=rules.map(([x,y,r])=>rect(x,y-ruleWidth/2,r-x,ruleWidth));
-    return {d,base,hole,mark,lettering,smallType,rules,ruleFills};
+    return {d,base,hole,mark,artSizes,lettering,smallType,weldName:first?.run.overlap,weldSmall:second?.run.overlap,rules,ruleFills};
   }
   function pathData(path) {
     return path.map(([op,...points])=>op+points.map(rounded).join(' ')).join(' ');
   }
-  function filled(path) { return path.length?'<path fill-rule="evenodd" d="'+pathData(path)+'"/>':''; }
+  function filled(path,rule='evenodd') { return path.length?'<path fill-rule="'+rule+'" d="'+pathData(path)+'"/>':''; }
   function swatch(id,ink) {
     const path=fit(motifPath(id),50,32,90,54);
     return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 64" aria-hidden="true" fill="'+color(ink)+'">'+filled(path)+'</svg>';
   }
   function layers(g) {
     return [
-      {name:'Motif',color:g.d.accent,paths:[g.mark,...g.ruleFills].filter(p=>p.length)},
-      {name:'Lettering',color:g.d.ink,paths:[g.lettering,g.smallType].filter(p=>p.length)}
+      {name:'Motif',rule:'evenodd',color:g.d.accent,paths:[g.mark,...g.ruleFills].filter(p=>p.length)},
+      {name:'Lettering',rule:'nonzero',color:g.d.ink,paths:[g.lettering,g.smallType].filter(p=>p.length)}
     ].filter(layer=>layer.paths.length);
   }
   function credit(design) {
-    const ids=[design.motif,design.extraMotif].filter(id=>typeof id==='string'&&id.startsWith('fa-'));
-    if(!ids.length) return '';
-    return 'Artwork '+ids.join(', ')+': Font Awesome Free 6.7.2 by Fonticons, Inc. (https://fontawesome.com). Adapted outlines, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).';
+    const ids=[design.motif,design.extraMotif].filter(id=>catalogIds.has(id)), notices=[];
+    const fa=ids.filter(id=>id.startsWith('fa-'));
+    if(fa.length) notices.push('Artwork '+fa.join(', ')+': Font Awesome Free 6.7.2 by Fonticons, Inc. (https://fontawesome.com). Adapted outlines, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).');
+    for(const artist of ['Lorc','Delapouite']) {
+      const art=ids.filter(id=>id.startsWith('gi-'+artist.toLowerCase()+'-'));
+      if(art.length) notices.push('Artwork '+art.join(', ')+' by '+artist+' (https://game-icons.net). Adapted outlines, CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).');
+    }
+    return notices.join(' ');
+
   }
   function xml(g,mode) {
     const {d}=g;
-    const opening='<svg xmlns="http://www.w3.org/2000/svg" width="'+d.width+'mm" height="'+d.height+'mm" viewBox="0 0 '+d.width+' '+d.height+'">'+(credit(d)?'<desc>'+credit(d)+'</desc>':'');
+    const dimensions=mode==='preview'?Object.entries(g.artSizes).map(([key,width])=>' data-'+key.toLowerCase()+'-width="'+rounded(width)+'"').join(''):'';
+    const opening='<svg xmlns="http://www.w3.org/2000/svg" width="'+d.width+'mm" height="'+d.height+'mm" viewBox="0 0 '+d.width+' '+d.height+'"'+dimensions+'>'+(credit(d)?'<desc>'+credit(d)+'</desc>':'');
     if(mode==='glowforge') {
       const score=g.rules.map(([x,y,u,v])=>'<path d="M'+rounded(x)+' '+rounded(y)+'L'+rounded(u)+' '+rounded(v)+'"/>').join('');
-      return opening+'<g id="Engrave" fill="#000000">'+[g.mark,g.lettering,g.smallType].map(filled).join('')+'</g>'+
+      return opening+'<g id="Engrave" fill="#000000">'+filled(g.mark)+filled(g.lettering,'nonzero')+filled(g.smallType,'nonzero')+'</g>'+
         (score?'<g id="Score" fill="none" stroke="#0000ff" stroke-width="0.1">'+score+'</g>':'')+
         '<g id="Cut" fill="none" stroke="#ff0000" stroke-width="0.1">'+[g.hole,g.base].filter(p=>p.length).map(p=>'<path d="'+pathData(p)+'"/>').join('')+'</g></svg>';
     }
-    const art=layers(g).map(l=>'<g id="'+l.name+'" fill="'+l.color+'">'+l.paths.map(filled).join('')+'</g>').join('');
+    const art=layers(g).map(l=>'<g id="'+l.name+'" fill="'+l.color+'">'+l.paths.map(p=>filled(p,l.rule)).join('')+'</g>').join('');
     if(mode==='cricut') {
       if (!art) throw Error('Add lettering or a motif for the Cricut to cut.');
       return opening+art+'</svg>';
@@ -272,16 +409,16 @@
   function pdf(g) {
     const {d}=g, scale=72/mmPerInch, width=rounded(d.width*scale),height=rounded(d.height*scale);
     let content='q\n'+[d.mirror?-scale:scale,0,0,-scale,d.mirror?width:0,height].map(rounded).join(' ')+' cm\n';
-    function paint(hex,paths) {
+    function paint(hex,paths,rule='evenodd') {
       const rgb=hex.slice(1).match(/../g).map(h=>rounded(parseInt(h,16)/255));
       content+=rgb.join(' ')+' rg\n';
       for(const path of paths){
         for(const [op,...coords] of path)content+=(coords.length?coords.map(rounded).join(' ')+' ':'')+({M:'m',L:'l',C:'c',Z:'h'})[op]+'\n';
-        content+='f*\n';
+        content+=rule==='evenodd'?'f*\n':'f\n';
       }
     }
     paint(d.paper,[[...g.base,...g.hole]]);
-    for(const layer of layers(g))paint(layer.color,layer.paths);
+    for(const layer of layers(g))paint(layer.color,layer.paths,layer.rule);
     content+='Q\n';
     const objects=['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
       '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+width+' '+height+'] /Resources << >> /Contents 4 0 R >>',
@@ -293,7 +430,7 @@
       'trailer\n<< /Size 5 /Root 1 0 R >>\nstartxref\n'+xref+'\n%%EOF\n';
     return new Blob([out],{type:'application/pdf'});
   }
-  function contours(path,height) {
+  function contours(path,height,tolerance=.025) {
     const result=[];
     let row=[],last;
     function append(point) {
@@ -306,7 +443,7 @@
     function curve(a,b,c,d,depth=0) {
       const dx=d[0]-a[0],dy=d[1]-a[1],len=Math.hypot(dx,dy);
       const dist=p=>len?Math.abs(dx*(a[1]-p[1])-dy*(a[0]-p[0]))/len:Math.hypot(p[0]-a[0],p[1]-a[1]);
-      if(depth>=12||Math.max(dist(b),dist(c))<=.025){append(d);return;}
+      if(depth>=12||Math.max(dist(b),dist(c))<=tolerance){append(d);return;}
       const ab=mid(a,b),bc=mid(b,c),cd=mid(c,d),abc=mid(ab,bc),bcd=mid(bc,cd),center=mid(abc,bcd);
       curve(a,ab,abc,center,depth+1);curve(center,bcd,cd,d,depth+1);
     }
@@ -333,11 +470,14 @@
     }
     return manifoldPromise;
   }
-  function binarySTL(mesh,notice) {
+  function binarySTL(mesh,design) {
     const indices=mesh.triVerts,vertices=mesh.vertProperties,step=mesh.numProp;
     const count=indices.length/3;
     const bytes=new ArrayBuffer(84+50*count),out=new DataView(bytes);
-    new Uint8Array(bytes).set(new TextEncoder().encode(notice?"Font Awesome Free by Fonticons | fontawesome.com | CC BY 4.0 | adapted | mm":"Maker's Bench | millimeters"));
+    const sources=credit(design), labels=[];
+    if(sources.includes('Fonticons')) labels.push('Fonticons CC BY 4.0');
+    for(const artist of ['Lorc','Delapouite']) if(sources.includes('by '+artist)) labels.push(artist+' CC BY 3.0');
+    new Uint8Array(bytes).set(new TextEncoder().encode([...labels,"Maker's Bench | mm"].join(' | ')).subarray(0,80));
     out.setUint32(80,count,true);
     let offset=84;
     const float=value=>{out.setFloat32(offset,value,true);offset+=4;};
@@ -355,10 +495,10 @@
   async function stl(g) {
     const {CrossSection}=await manifoldModule(),{d}=g,owned=[];
     const own=obj=>(owned.push(obj),obj);
-    const section=path=>own(new CrossSection(contours(path,d.height),'EvenOdd'));
+    const section=(path,rule='EvenOdd')=>own(new CrossSection(contours(path,d.height),rule));
     try {
       const base=own(section([...g.base,...g.hole]).extrude(d.thickness));
-      const artwork=layers(g).flatMap(layer=>layer.paths.map(section));
+      const artwork=layers(g).flatMap(layer=>layer.paths.map(path=>section(path,layer.rule==='nonzero'?'NonZero':'EvenOdd')));
       let solid=base;
       if(artwork.length) {
         const relief=own(CrossSection.union(artwork));
@@ -367,13 +507,25 @@
         solid=own(base.add(raised));
       }
       if(solid.status()!=='NoError')throw Error('The solid could not be built. Try a different size.');
-      return binarySTL(solid.getMesh(),credit(d));
+      return binarySTL(solid.getMesh(),d);
     } finally { for(const obj of owned.reverse())obj.delete(); }
   }
   async function blob(input,format) {
     const g=geometry(input);
     switch(format) {
-      case 'glowforge': case 'cricut': return new Blob([xml(g,format)],{type:'image/svg+xml'});
+      case 'profile': case 'glowforge': case 'cricut': {
+        // Cutters trace internal edges. Unite touching script outlines before exporting.
+        if(g.weldName||g.weldSmall) {
+          const {CrossSection}=await manifoldModule();
+          for(const [key,weld] of [['lettering',g.weldName],['smallType',g.weldSmall]]) {
+            if(!weld) continue;
+            const area=new CrossSection(contours(g[key],g.d.height,.006),'NonZero');
+            try {g[key]=area.toPolygons().flatMap(poly=>polygon(poly.map(([x,y])=>[x,g.d.height-y])));}
+            finally {area.delete();}
+          }
+        }
+        return new Blob([xml(g,format)],{type:'image/svg+xml'});
+      }
       case 'png':return png(g);
       case 'pdf':return pdf(g);
       case 'stl':return stl(g);
@@ -391,5 +543,5 @@
     setTimeout(()=>URL.revokeObjectURL(address),30000);
     return filename;
   }
-  window.BenchArt=Object.freeze({presets,hasHole,credit,swatch,validate,svg,blob,download});
+  window.BenchArt=Object.freeze({presets,typefaces,hasHole,credit,swatch,validate,svg,blob,download});
 })();

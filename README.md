@@ -9,6 +9,6 @@
 - [Wordplay Café](./wordplay-cafe/) — 300 playable word puzzles (200 word ladders, 50 cryptograms and 50 word hunts) with saved progress.
 - [The Card Table](./card-table/) — 100 offline card-game rules, a guided bridge deal and a random game picker.
 
-- [The Maker’s Bench](./makers-bench/) — 10 project guides, an offline design studio with 902 artwork choices, and a personal workshop log.
+- [The Maker’s Bench](./makers-bench/) — 10 project guides, an offline design studio with 1,804 artwork choices and 64 bundled fonts, and a personal workshop log.
 
 The back-of-book Food Safety Quick Reference appendix includes refrigeration decisions, storage times, freeze-dried product examples, and cat food and treats.

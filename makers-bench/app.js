@@ -40,8 +40,23 @@ function projectPage(p) {
 }
 const sizes=BenchArt.presets;
 const machines={glowforge:'Glowforge',cricut:'Cricut',sublimation:'Sublimation printer',printer3d:'3D printer'};
+const letterDefaults={nameFont:'atkinson',subtitleFont:'atkinson',nameHeight:0,subtitleHeight:0};
+const heightIds=['nameHeight','subtitleHeight'];
+const optionalSizes=[...heightIds,'motifWidth','extraMotifWidth'];
+const familiarNames={arimo:'Arial-compatible',tinos:'Times New Roman-compatible',cousine:'Courier New-compatible',carlito:'Calibri-compatible'};
+for(const id of ['nameFont','subtitleFont']) {
+  const groups=new Map();
+  for(const face of BenchArt.typefaces) {
+    if(!groups.has(face.category)) {
+      const group=el('optgroup');group.label=face.category;groups.set(face.category,group);
+    }
+    const alias=familiarNames[face.id];
+    groups.get(face.category).append(new Option(face.label+(alias?' ('+alias+')':''),face.id));
+  }
+  $(id).append(...groups.values());
+}
 const dimensionIds=['width','height','hole','thickness','relief'];
-const defaults={shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
+const defaults={...letterDefaults,motifWidth:0,extraMotifWidth:0,shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
 const draftKey='makers-bench-studio-v1';
 let design={...defaults}, currentName=0, exporting=false, valid=false;
 function names(d) {
@@ -51,7 +66,7 @@ function names(d) {
 }
 function checked(input) {
   // Projects from the first edition have a single image above the name.
-  input={extraMotif:'none',placement:'above',...input};
+  input={...letterDefaults,motifWidth:0,extraMotifWidth:0,extraMotif:'none',placement:'above',...input};
   const result={};
   for(const k of Object.keys(defaults)) {
     if(typeof input?.[k]!==typeof defaults[k]) throw Error('This project has incomplete design settings.');
@@ -83,14 +98,19 @@ function artworkPicker(host,key,title) {
   const proof=el('div',null,'art-sample'), thumb=el('span'), caption=el('span');
   thumb.setAttribute('aria-hidden','true');proof.append(thumb,caption);
   const count=el('small',null,'art-count');count.setAttribute('role','status');
-  host.append(heading,controls,select,count,proof);
+  const widthLabel=el('label',key==='motif'?'Image width ':'Second image width ');
+  const widthUnit=el('span','(mm)','measure-unit'),widthInput=el('input');
+  widthInput.id=key+'Width';widthInput.type='number';widthInput.step='any';widthInput.min='0';widthInput.placeholder='Auto';
+  widthInput.setAttribute('inputmode','decimal');widthInput.setAttribute('aria-describedby','art-size-help');
+  widthLabel.append(widthUnit,widthInput);
+  host.append(heading,controls,select,count,proof,widthLabel);
   let lastSample;
   function preview() {
     const id=design[key], sig=id+design.accent;
     if(lastSample===sig) return;
     lastSample=sig;
     const item=artById.get(id);
-    proof.hidden=!item;
+    widthLabel.hidden=proof.hidden=!item;
     if(item) {thumb.innerHTML=BenchArt.swatch(id,design.accent);caption.textContent=item.label;}
   }
   function options() {
@@ -121,8 +141,10 @@ function artworkPicker(host,key,title) {
 const artPickers=[artworkPicker($('art-picker'),'motif','Artwork'),artworkPicker($('extra-picker'),'extraMotif','Second artwork')];
 
 function form() {
-  for(const k of ['shape','units','names','subtitle','placement','ink','accent','paper','machine']) $(k).value=design[k];
+  for(const k of ['shape','units','names','subtitle','nameFont','subtitleFont','placement','ink','accent','paper','machine']) $(k).value=design[k];
   for(const id of dimensionIds) $(id).value=displayed(id);
+  for(const id of optionalSizes) $(id).value=design[id]===0?'':displayed(id);
+  document.querySelectorAll('.measure-unit').forEach(node=>node.textContent='('+design.units+')');
   for(const picker of artPickers) picker.options();
   if(design.extraMotif!=='none') $('second-image').open=true;
   $('mirror').checked=design.mirror;$('print-format').value=design.printFormat;$('model-format').value=design.modelFormat;
@@ -141,6 +163,9 @@ const outputNotes={
 };
 function refresh() {
   const fmt=format();
+  $('type-error').hidden=true;
+  $('art-size-error').hidden=true;
+  for(const id of optionalSizes) $(id).placeholder='Auto';
   $('model-type').hidden=$('depths').hidden=design.machine!=='printer3d';
   $('print-type').hidden=$('mirror-row').hidden=$('transfer-proof').hidden=design.machine!=='sublimation';
   $('hole-row').hidden=!BenchArt.hasHole(design.shape);
@@ -157,10 +182,27 @@ function refresh() {
     $('drawing').innerHTML=BenchArt.svg(d);
     if(design.machine==='sublimation') $('transfer').innerHTML=BenchArt.svg(d,'print');
     checked(design);
+    const preview=$('drawing').querySelector('svg');
+    for(const key of ['motif','extraMotif']) {
+      const mm=preview.getAttribute('data-'+key.toLowerCase()+'-width');
+      if(mm!==null) $(key+'Width').placeholder='Auto · '+Number((Number(mm)/unitFactor()).toFixed(design.units==='in'?3:2));
+    }
+    const visibleLines=$('drawing').querySelectorAll('#Lettering path');
+    const fields=[d.name?'nameHeight':'subtitleHeight','subtitleHeight'];
+    visibleLines.forEach((node,i)=>{
+      const height=node.getBBox().height/unitFactor();
+      $(fields[i]).placeholder='Auto · '+Number(height.toFixed(design.units==='in'?3:2));
+    });
     if(fmt==='cricut') BenchArt.svg(d,'cricut');
     valid=true;$('studio-message').textContent='';
     try {localStorage.setItem(draftKey,JSON.stringify(design));} catch {}
   } catch(e) {
+    if(/artwork|image width/i.test(e.message)) {
+      $('art-size-error').hidden=false;$('art-size-error').textContent=e.message;
+    }
+    if(/font|letter|two lines/i.test(e.message)) {
+      $('type-error').hidden=false;$('type-error').textContent=e.message;
+    }
     valid=false;$('studio-message').textContent=e.message;$('drawing').replaceChildren();$('transfer').replaceChildren();
   }
   for(const id of ['save-open','export','export-set']) $(id).disabled=!valid||exporting;
@@ -171,6 +213,7 @@ $('settings').oninput=e=>{
   if(e.target.dataset.filter) return;
   if(id==='shape') {setShape(e.target.value);form();}
   else if(id==='units') {design.units=e.target.value;form();}
+  else if(optionalSizes.includes(id)) design[id]=e.target.validity.badInput?NaN:e.target.value===''?0:Number(e.target.value)*unitFactor();
   else if(dimensionIds.includes(id)) design[id]=e.target.value===''?NaN:Number(e.target.value)*unitFactor();
   else if(id==='mirror') design.mirror=e.target.checked;
   else if(Object.hasOwn(defaults,id)) design[id]=e.target.value;
@@ -301,7 +344,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-2'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-3'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

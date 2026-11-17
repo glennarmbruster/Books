@@ -61,7 +61,6 @@ window.BenchFiles = (() => {
     ],'model/3mf');
   }
   async function output(design, format) {
-    if (format === 'profile') return new Blob([BenchArt.svg(design,'preview')],{type:'image/svg+xml'});
     if (format === '3mf') return model3mf(await BenchArt.blob(design,'stl'),BenchArt.credit(design));
     return BenchArt.blob(design,format);
   }

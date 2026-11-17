@@ -30,11 +30,26 @@
       <div class="pair"><label>Width<input id="width" type="number" step="any" required></label><label>Height<input id="height" type="number" step="any" required></label></div>
       <label id="hole-row">Hole diameter<input id="hole" type="number" step="any" required></label>
     </fieldset>
-    <fieldset><legend>Lettering & artwork</legend>
+    <fieldset><legend>Lettering</legend>
       <label for="names">Names <small>one per line for a set</small></label><textarea id="names" rows="2" maxlength="1600" placeholder="Cindy"></textarea>
+      <div class="font-controls">
+        <label for="nameFont">Name font<select id="nameFont"></select></label>
+        <label for="nameHeight">Letter height <span class="measure-unit">(mm)</span><input id="nameHeight" type="number" min="0" step="any" inputmode="decimal" placeholder="Auto" aria-describedby="size-help"></label>
+      </div>
       <label>Second line<input id="subtitle" maxlength="80" placeholder="Optional"></label>
+      <div class="font-controls">
+        <label for="subtitleFont">Second-line font<select id="subtitleFont"></select></label>
+        <label for="subtitleHeight">Letter height <span class="measure-unit">(mm)</span><input id="subtitleHeight" type="number" min="0" step="any" inputmode="decimal" placeholder="Auto" aria-describedby="size-help"></label>
+      </div>
+      <p id="size-help">Leave a height blank to fit the lettering automatically.</p>
+      <p id="type-error" role="status" hidden></p>
+      <a class="credits" href="vendor/typeface-licenses.txt" target="_blank" rel="noopener">Font credits</a>
+    </fieldset>
+    <fieldset><legend>Artwork</legend>
       <div id="art-picker"></div>
       <details id="second-image"><summary>Second image</summary><div id="extra-picker"></div></details>
+      <p id="art-size-help">Enter a width to resize an image proportionally. Clear it for automatic sizing.</p>
+      <p id="art-size-error" role="status" hidden></p>
       <label>Artwork position<select id="placement"><option value="above">Above the lettering</option><option value="left">Left of the lettering</option><option value="right">Right of the lettering</option></select></label>
       <a class="credits" href="artwork-credits.txt" target="_blank" rel="noopener">Artwork credits</a>
       <div class="swatches"><label>Lettering<input id="ink" type="color"></label><label>Artwork<input id="accent" type="color"></label><label>Blank<input id="paper" type="color"></label></div>
@@ -61,6 +76,6 @@
 <dialog id="dialog" aria-labelledby="dialog-title"><form id="dialog-form"><h2 id="dialog-title"></h2><div id="dialog-body"></div><p id="dialog-message" role="alert"></p><div class="actions"><button type="button" id="close-dialog" class="secondary">Cancel</button><button type="submit" id="accept" class="action">Save</button></div></form></dialog>
 <script src="reference.js"></script>
 <!-- Local export engine -->
-<script src="artwork.js"></script><script src="vendor/bench-font.js"></script><script src="bench-art.js"></script>
+<script src="artwork.js"></script><script src="vendor/bench-font.js"></script><script src="vendor/typefaces.js"></script><script src="bench-art.js"></script>
 <script src="files.js"></script><script src="app.js"></script>
 </body></html>

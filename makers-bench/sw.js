@@ -1,4 +1,4 @@
-const edition = 'makers-bench-2';
+const edition = 'makers-bench-3';
 const files = [
   "app.js",
   "bench-art.js",
@@ -21,6 +21,8 @@ const files = [
   "style.css",
   "vendor/atkinson-license.txt",
   "vendor/bench-font.js",
+  "vendor/typefaces.js",
+  "vendor/typeface-licenses.txt",
   "vendor/manifold-license.txt",
   "vendor/manifold.js",
   "vendor/manifold.wasm",
