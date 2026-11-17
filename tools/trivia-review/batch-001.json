@@ -1,0 +1,45 @@
+{
+  "reviewDate": "2026-11-17",
+  "firstQuestion": 20001,
+  "lastQuestion": 20100,
+  "count": 100,
+  "releaseStrategy": "First reviewed batch toward the 100000 ceiling; no bulk candidate imports.",
+  "difficultyCounts": {
+    "medium": 44,
+    "easy": 50,
+    "hard": 6
+  },
+  "categoryCounts": {
+    "Science in Plain Sight": 3,
+    "Disney Cruise Line": 2,
+    "Cooking": 21,
+    "The Games People Play": 4,
+    "Earth and Sky": 3,
+    "Animal Encounters": 20,
+    "University of Houston": 4,
+    "Objects with a Past": 4,
+    "MSC Cruises": 2,
+    "Chicago (band)": 4,
+    "Carnival Cruise Line": 3,
+    "Deep Time and Distant Skies": 8,
+    "Houston": 4,
+    "Disney": 7,
+    "The Beatles": 5,
+    "Royal Caribbean": 2,
+    "Curious Gardens": 1,
+    "Norwegian Cruise Line": 2,
+    "Buildings with Extraordinary Lives": 1
+  },
+  "sourceCount": 89,
+  "checks": [
+    "Fact and explanation checked against the per-card source",
+    "Question and explanation overlap reviewed against the prior 20000 questions",
+    "Four plausible distinct options, one correct answer",
+    "Difficulty estimates independent of the default game mix"
+  ],
+  "notes": [
+    "The quartz-watch candidate was replaced because it duplicated question 1184.",
+    "Candidates repeating Ocean Cay coral relocation and Lee Loughnane instrument facts were replaced.",
+    "Source links and explanations are included in the offline cards; opening the external reference requires a connection."
+  ]
+}

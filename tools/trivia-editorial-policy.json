@@ -1,0 +1,23 @@
+{
+  "maximumQuestions": 100000,
+  "releaseStrategy": "Reviewed batches; never bulk-publish unreviewed candidates to meet the ceiling.",
+  "defaultGameMix": {
+    "easy": 70,
+    "medium": 10,
+    "hard": 10,
+    "obscure": 10
+  },
+  "difficultyPolicy": "Estimate difficulty for general adult players. Easy means approachable with plausible choices; do not relabel specialist facts to meet a quota. Open-answer letter games may feel harder.",
+  "categoryLetterTarget": 25,
+  "coveragePolicy": "Prioritize distinct answers in underfilled category/letter pairs where natural, worthwhile questions exist. The 100000 ceiling cannot meet every pair in the current categories.",
+  "checks": [
+    "Verify each new fact against a supporting source.",
+    "Prefer primary institutional references and stable historical facts.",
+    "Use original wording, a concise explanation and a direct source link.",
+    "Check earlier questions and explanations for semantic duplicates.",
+    "Use four plausible, distinct choices with one unambiguous correct answer.",
+    "Preserve all published question IDs, category IDs and shared-round behavior.",
+    "Validate offline caching, counts, letter games, mix capacity, browsing and saved progress."
+  ],
+  "bulkCandidatesPublishedInThisUpdate": false
+}

@@ -14,7 +14,7 @@
 - [Sudoku](./sudoku/) — 100 graded puzzles with pencil notes and saved progress.
 - [German Phrase Book](./german-phrase-book/) — 640 searchable travel phrases, pronunciation audio and saved favorites.
 
-- [WEIRD Facts & Trivia](./weird-facts-trivia/) — 20,000 sourced questions with numbered browsing and A–Z rounds. The newest 10,000 include 7,000 easy questions and at least 70 easy and 25 medium distinct answers per initial. Choose a category, starting letter, round length, and difficulty percentages, then share its offline round code.
+- [WEIRD Facts & Trivia](./weird-facts-trivia/) — 20,100 sourced questions, growing in reviewed batches toward a 100,000-question ceiling. New games default to 70% easy and 10% each medium, hard, and obscure; the bank keeps independent difficulty estimates. Choose category, initial, length and percentages, or use Any mix when a narrow selection cannot supply a requested mix. Browse numbered questions in batches of 100 and share an offline round code.
 
 - [Memory Activity Book](./memory-activity-book/) — 250 numbered activities including picture matching, sequence and spatial memory, story recall, word pairs and category recall.
 

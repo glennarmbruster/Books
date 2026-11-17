@@ -20,3 +20,5 @@ main{max-width:53rem}header{background:var(--ink)}h1,h2{letter-spacing:-.035em;f
 .mix-inputs input{display:block;width:100%;min-width:0;box-sizing:border-box;margin-top:.2rem}
 #choices{padding-left:1.5rem;list-style:upper-alpha}#choices li{padding:.2rem .3rem}
 @media(max-width:340px){.mix-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.mix-presets{display:flex;flex-wrap:wrap;gap:.4rem}.mix-presets button{font-size:.82rem;padding:.4rem .65rem}

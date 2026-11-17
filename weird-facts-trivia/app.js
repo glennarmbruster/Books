@@ -19,6 +19,8 @@ for(const batch of [...window.TRIVIA_CATEGORIES].sort((a,b)=>a.start-b.start)) {
   });
 }
 const allTopics=[...topics.values()], byTopic=new Map(allTopics.map(t=>[t.id,t]));
+// The cards now own the data; release the duplicate source arrays.
+window.TRIVIA_CATEGORIES=undefined;
 const numbers=[...cards.keys()].sort((a,b)=>a-b), latest=numbers.at(-1), roundSize=10;
 const label=id=>'#'+String(id).padStart(3,'0');
 const prefix='books.weird-trivia.v1.', memory=new Map();
@@ -50,7 +52,7 @@ for(const t of [...allTopics].sort((a,b)=>a.name.localeCompare(b.name)))$('topic
 const jump=el('book-number-jump');jump.setAttribute('noun','question');jump.setAttribute('max',latest);$('number-tool').append(jump);
 document.addEventListener('open-book-number',e=>{location.hash='question/'+e.detail;});
 
-const cabinet=deckFor({limit:latest,topic:0,seed:1927}).filter(c=>c.featured);
+const cabinet=[...cards.values()].filter(c=>c.featured);
 const now=new Date();
 let cabinetIndex=Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/86400000);
 function displayCuriosity() {
@@ -72,21 +74,25 @@ function displayIndex(expandId=0) {
     heading.append(el('small',rows.length+(rows.length===1?' question':' questions')));
     section.id='group-'+t.id;section.append(heading,body);
     // Keep the index light as later editions add thousands of questions.
+    let shown=0;
+    const more=el('button','Show more questions');more.type='button';
     const fill=()=>{
-      if(body.childElementCount)return;
-      const fragment=document.createDocumentFragment();
-      for(const c of rows) {
-        const a=link('','#question/'+c.id,'index-link');a.append(el('span',label(c.id)),document.createTextNode(c.question));fragment.append(a);
+      const fragment=document.createDocumentFragment(), end=Math.min(shown+100,rows.length);
+      for(;shown<end;shown++) {
+        const c=rows[shown],a=link('','#question/'+c.id,'index-link');a.append(el('span',label(c.id)),document.createTextNode(c.question));fragment.append(a);
       }
-      body.append(fragment);
+      more.remove();body.append(fragment);
+      if(shown<rows.length){more.textContent='Show more · '+shown.toLocaleString('en-US')+' of '+rows.length.toLocaleString('en-US');body.append(more);}
     };
-    section.ontoggle=()=>{if(section.open)fill();};
+    more.onclick=fill;
+    section.ontoggle=()=>{if(section.open&&!shown)fill();};
     if(tokens.length||t.id===expandId){fill();section.open=true;}
     list.append(section);
   }
   if(!list.children.length)list.append(el('p','No matching questions. Try another word or category.'));
 }
-$('search').oninput=()=>displayIndex();
+let searchTimer;
+$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>displayIndex(),160);};
 
 // Four-part codes retain the original ten-card dealing rules. The optional suffix
 // pins the letter and requested length alongside the edition, so both devices agree.
@@ -122,8 +128,11 @@ function deckFor(p) {
   }
   if(p.topic)return shuffled(byTopic.get(p.topic).cards.filter(c=>c.id<=p.limit),random);
   const groups=allTopics.filter(t=>t.id<=p.limit).map(t=>shuffled(t.cards.filter(c=>c.id<=p.limit),random));
-  const queues=shuffled(groups,random),deck=[];
-  for(let row=0;queues.some(group=>group.length>row);row++)for(const group of queues)if(group[row])deck.push(group[row]);
+  let queues=shuffled(groups,random);const deck=[];
+  for(let row=0;queues.length;row++){
+    queues=queues.filter(group=>group.length>row);
+    for(const group of queues)deck.push(group[row]);
+  }
   return deck;
 }
 function mixPool(p){
@@ -159,22 +168,28 @@ function startRound(topic,letter,size,mix) {
   }
   save(key,p);location.hash='round/'+encode(p);
 }
+const letterAvailability=new Map();
 function updateSetup() {
   const topic=byTopic.get(Number($('topic').value));
   const pool=topic?topic.cards:[...cards.values()];
-  const available=new Map(Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ',l=>[l,new Set()]));
-  for(const c of pool)if(c.initial)available.get(c.initial).add(c.answerKey);
+  const topicId=topic?.id||0;
+  let available=letterAvailability.get(topicId);
+  if(!available){
+    const answers=new Map(Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ',l=>[l,new Set()]));
+    for(const c of pool)if(c.initial)answers.get(c.initial).add(c.answerKey);
+    available=new Map([...answers].map(([l,items])=>[l,items.size]));letterAvailability.set(topicId,available);
+  }
   const old=$('letter').value;
   $('letter').replaceChildren(new Option('Any letter',''));
-  for(const [l,answers] of available){
-    const option=new Option(l+' · '+answers.size.toLocaleString('en-US'),l);
-    option.disabled=!answers.size;$('letter').append(option);
+  for(const [l,count] of available){
+    const option=new Option(l+' · '+count.toLocaleString('en-US'),l);
+    option.disabled=!count;$('letter').append(option);
   }
   if(available.has(old))$('letter').value=old;
   const letter=$('letter').value;
-  const count=letter?available.get(letter).size:pool.length;
+  const count=letter?available.get(letter):pool.length;
   const length=$('length');length.max=count;
-  length.disabled=!count;$('start-form').querySelector('button').disabled=!count;
+  length.disabled=!count;$('start-round').disabled=!count;
   if(count&&length.valueAsNumber>count)length.value=count;
   if(!count)$('available').textContent='No '+letter+' answers in this category. Choose another category or letter.';
   else $('available').textContent=letter?count.toLocaleString('en-US')+' different answers begin with '+letter+(topic?' in '+topic.name:' across all categories')+'.':count.toLocaleString('en-US')+' questions available.';
@@ -184,8 +199,27 @@ function requestedMix(){
   const values=mixInputs.map(input=>input.value===''?'a':String(input.valueAsNumber));
   return values.every(v=>v==='a')?undefined:values;
 }
+// Cache counts for setup changes; drawing/shuffling a full deck is only needed
+// when a player actually starts a game.
+const mixCapacities=new Map();
+function checkMixCapacity(p,counts){
+  const key=[p.limit,p.topic,p.letter].join(':');
+  let capacity=mixCapacities.get(key);
+  if(!capacity){
+    const pool=mixPool(p),levels=[0,0,0,0],masks=new Map();
+    for(const c of pool){
+      const level=difficulties.indexOf(c.level);levels[level]++;
+      if(p.letter)masks.set(c.answerKey,(masks.get(c.answerKey)||0)|(1<<level));
+    }
+    const groups=Array.from({length:16},()=>({length:0}));
+    for(const mask of masks.values())groups[mask].length++;
+    capacity={levels,groups};mixCapacities.set(key,capacity);
+  }
+  if(p.letter)assignAnswerGroups(capacity.groups,counts);
+  else for(let i=0;i<4;i++)if(counts[i]>capacity.levels[i])throw Error('This round needs '+counts[i]+' '+difficulties[i]+' questions. Only '+capacity.levels[i]+' are available. Shorten the round or change its mix.');
+}
 function previewMix(){
-  const button=$('start-form').querySelector('button'),preview=$('mix-preview'),mix=requestedMix();
+  const button=$('start-round'),preview=$('mix-preview'),mix=requestedMix();
   for(const input of mixInputs)input.placeholder='Auto';
   button.disabled=$('length').disabled;
   if(!mix){preview.textContent='Any mix';return;}
@@ -194,12 +228,14 @@ function previewMix(){
     percent.forEach((value,i)=>{if(mix[i]==='a')mixInputs[i].placeholder=Number(value.toFixed(2))+'%';});
     if(!Number.isInteger(size)||size<1||size>Number($('length').max)){preview.textContent='';return;}
     const counts=portionCounts(percent,size);
-    deal({limit:latest,topic:Number($('topic').value),letter:$('letter').value,seed:0,hand:1,size,mix});
+    checkMixCapacity({limit:latest,topic:Number($('topic').value),letter:$('letter').value},counts);
     preview.textContent=counts.map((n,i)=>n+' '+difficulties[i]).join(' · ');
-  }catch(err){preview.textContent=err.message;button.disabled=true;}
+  }catch(err){preview.textContent=err.message+' Use Any mix to play without difficulty percentages.';button.disabled=true;}
 }
 $('topic').onchange=$('letter').onchange=()=>{updateSetup();previewMix();};
 for(const input of [...mixInputs,$('length')])input.oninput=previewMix;
+$('mix-default').onclick=()=>{mixInputs.forEach((input,i)=>input.value=i===0?'70':'');previewMix();};
+$('mix-any').onclick=()=>{mixInputs.forEach(input=>input.value='');previewMix();};
 updateSetup();previewMix();
 $('start-form').onsubmit=e=>{
   e.preventDefault();
