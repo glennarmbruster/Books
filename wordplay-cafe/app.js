@@ -40,6 +40,7 @@ function renderMenu() {
   $('list').replaceChildren();
   for(const p of visible) {
     const saved=load(p.id), a=link('', '#'+p.id,'entry');
+    if (saved.done) a.classList.add('solved');
     a.append(el('small',String(p.id).padStart(2,'0')+' · '+types[p.type]),el('strong',p.title),
       el('span',saved.done?'✓ Solved':Object.keys(saved).length?'In progress':'Play →'));
     $('list').append(a);
