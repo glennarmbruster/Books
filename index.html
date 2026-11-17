@@ -20,6 +20,21 @@
     article p:empty {display:none}
     .shelf-heading {display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid #88724a; margin-bottom:clamp(.65rem,2vh,1.5rem)}
     #downloads {display:none}
+    .shelf-tools {display:flex;align-items:center;gap:.45rem}
+    .shelf-tools details {position:relative}
+    .shelf-tools summary {cursor:pointer;min-height:44px;display:flex;align-items:center;padding:.3rem .65rem;color:#214a41}
+    .shelf-tools summary::after {content:"▾";margin-left:.4rem}
+    .shelf-tools details[open] button {position:absolute;right:0;z-index:5;width:10rem;box-shadow:0 3px 12px #18282033}
+    #order-panel {max-width:55rem;margin:0 auto 1rem;padding:.65rem 0;border-bottom:1px solid #bcb49d}
+    #order-panel p {margin:0 0 .45rem}
+    #order-panel button {margin-right:.25rem}
+    #save-order {background:#214a41;color:white}
+    #shelf.arranging article {position:relative}
+    #shelf.arranging article > :not(.cover,.pick-position) {display:none}
+    .pick-position {display:none}
+    #shelf.arranging .pick-position {display:block;position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;z-index:1}
+    #shelf.arranging .pick-position[aria-pressed=true] {outline:4px solid #ad590f;outline-offset:1px}
+    #shelf.arranging .pick-position[aria-pressed=true]::after {content:"Selected";position:absolute;top:25%;left:0;background:#844009;color:white;padding:.3em .6em}
     @media (max-width:600px) {
       main {padding:.65rem}
       #downloads:not([hidden]) {display:inline-block; margin-bottom:.3rem}
@@ -67,7 +82,8 @@
 </head>
 <body>
   <main>
-    <div class="shelf-heading"><h1>Books</h1><button id="downloads" type="button" aria-controls="shelf" aria-pressed="false" hidden>Downloads</button></div>
+    <div class="shelf-heading"><h1>Books</h1><div class="shelf-tools"><button id="downloads" type="button" aria-controls="shelf" aria-pressed="false" hidden>Downloads</button><details id="shelf-menu"><summary>Menu</summary><button type="button" id="arrange">Arrange books</button></details></div></div>
+    <section id="order-panel" aria-label="Arrange books" hidden><p id="order-help" role="status"></p><button type="button" id="save-order">Save order</button><button type="button" id="cancel-order">Cancel</button></section>
     <section id="shelf" class="shelf" aria-label="Bookshelf">
       <article data-book="last-port-casebook" data-edition="volume-1-500-shelf">
         <a class="cover" href="./last-port-casebook/index.html">
@@ -147,10 +163,10 @@
         </a>
         <button type="button" hidden>Download offline</button><p role="status"></p>
       </article>
-      <article data-book="german-phrase-book" data-edition="german-phrase-book-1">
+      <article data-book="german-phrase-book" data-edition="german-phrase-book-2">
         <a class="cover" href="./german-phrase-book/index.html">
           <img class="jacket-art" src="./shelf-art/german.jpg" alt="">
-          <span class="cover-kind">Travel reference</span><h2>German Phrase Book</h2><small>160 German phrases with offline audio</small>
+          <span class="cover-kind">Travel reference</span><h2>German Phrase Book</h2><small>320 German phrases with offline audio</small>
         </a>
         <button type="button" hidden>Download offline</button><p role="status"></p>
       </article>
@@ -158,6 +174,13 @@
         <a class="cover" href="./weird-facts-trivia/index.html">
           <img class="jacket-art" src="./shelf-art/trivia.jpg" alt="">
           <span class="cover-kind">Trivia game</span><h2>Weird Facts &amp; Trivia</h2><small>250 questions in 25 categories with shared offline rounds</small>
+        </a>
+        <button type="button" hidden>Download offline</button><p role="status"></p>
+      </article>
+      <article data-book="memory-activity-book" data-edition="memory-1">
+        <a class="cover" href="./memory-activity-book/index.html">
+          <img class="jacket-art" src="./shelf-art/memory.jpg" alt="">
+          <span class="cover-kind">Memory game</span><h2>Memory Activity Book</h2><small>60 numbered activities in five kinds of recall</small>
         </a>
         <button type="button" hidden>Download offline</button><p role="status"></p>
       </article>
@@ -240,5 +263,6 @@
       document.querySelectorAll('[data-book]').forEach(card => prepareCard(card, shelfReady));
     }
   </script>
+  <script src="./shelf-order.js"></script>
 </body>
 </html>
