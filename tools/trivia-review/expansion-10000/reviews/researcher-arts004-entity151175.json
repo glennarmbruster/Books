@@ -1,0 +1,122 @@
+{
+  "mummy.{0,30}(brown|pigment)|pigment.{0,35}mumm": [
+    {
+      "id": null,
+      "q": "Which archaeological remains were once ground up to make a brown artists’ pigment?",
+      "a": "Egyptian mummies",
+      "d": "The material supplied a bituminous brown for painting. Other pigments were also sold under the same “mummy” name."
+    }
+  ],
+  "paw.?print|inky.{0,20}(cat|foot)|cat.{0,30}(ink|manuscript)": [
+    {
+      "id": 1272,
+      "q": "Which Mexican state capital grew from a sixteenth-century silver discovery and has a historic center set in a steep-sided valley?",
+      "a": "Zacatecas",
+      "d": "Mining wealth helped pay for lavish buildings, including a cathedral with an intricately carved pink-stone façade."
+    },
+    {
+      "id": 2895,
+      "q": "Germany's lowest recorded temperature of −45.9°C (−50.6°F) was recorded at which lake?",
+      "a": "Funtensee",
+      "d": "Funtensee is a karst lake on the Steinernes Meer plateau in Berchtesgaden National Park, Bavaria, Germany. It is located in the larger of two sinkholes."
+    },
+    {
+      "id": 4910,
+      "q": "Which Hindu widow goddess is offered liquor, meat, cigarettes and bhang, an intoxicating hashish drink?",
+      "a": "Dhumavati",
+      "d": "Dhumavati is one of the Mahavidyas, a group of ten Hindu Tantric goddesses. Dhumavati represents the fearsome aspect of Mahadevi, the supreme goddess in Hindu traditions such as Shaktism."
+    },
+    {
+      "id": 10876,
+      "q": "Which location houses the artwork “The Thinker”?",
+      "a": "Musée Rodin",
+      "d": "The artist is Auguste Rodin."
+    },
+    {
+      "id": 17819,
+      "q": "According to Breton folklore, not completing the 600 km long Tro Breizh in one's lifetime would condemn their soul to repeating a tour of equivalent length every seven years from within their ____. Which detail is missing?",
+      "a": "Coffin",
+      "d": "According to Breton folklore, not completing the 600 km long Tro Breizh in one's lifetime would condemn their soul to repeating a tour of equivalent length every seven years from within their coffin. Tro Breizh is a Catholic pilgrimage that links the towns of the seven founding saints of Brittany."
+    },
+    {
+      "id": 18874,
+      "q": "What hyphenated catalyst name links two Nobel-winning chemists to a method used in making plastics?",
+      "a": "Ziegler–Natta catalyst",
+      "d": "Karl Ziegler and Giulio Natta shared the 1963 chemistry prize for work on polymers."
+    },
+    {
+      "id": null,
+      "q": "A desert tortoise may return to a shallow depression it dug earlier. What is it waiting to collect there?",
+      "a": "Rainwater",
+      "d": "The tortoise can remember the locations of these small drinking basins."
+    },
+    {
+      "id": null,
+      "q": "What household animal left inky footprints on a 1489 volume catalogued by the British Library’s Endangered Archives Programme?",
+      "a": "Cat",
+      "d": "The catalog records paw-made ink smears among the book’s handwritten notes and colored initials."
+    }
+  ],
+  "knight.{0,30}snail|snail.{0,30}(knight|manuscript)": [
+    {
+      "id": null,
+      "q": "Medieval manuscript margins repeatedly show armed knights fighting which unlikely small creature?",
+      "a": "Snail",
+      "d": "Sometimes the knight seems to be losing. Scholars have proposed several meanings for the strange recurring battles, without one settled explanation."
+    }
+  ],
+  "letterlock|crossed letter|cross.?writing|right angles.{0,50}(letter|writ)": [
+    {
+      "id": null,
+      "q": "In historical letterlocking, what became the letter’s protective outer envelope?",
+      "a": "The letter’s own folded sheet",
+      "d": "Folds, slits and tucks secured the message into a packet, leaving physical evidence of how it had been closed."
+    },
+    {
+      "id": null,
+      "q": "How did Jane Austen fit more writing onto some letters to save paper and postal charges?",
+      "a": "Writing across earlier lines at right angles",
+      "d": "Her crossed letters place a second layer of handwriting over the first, turning one sheet into two reading surfaces."
+    }
+  ],
+  "canvas.{0,40}(drum|wind)|rain.{0,30}(beans|peas)|saliva.{0,50}(paint|clean)|spit.{0,50}(paint|clean)": [
+    {
+      "id": 61,
+      "q": "What can you drain from a can of chickpeas and whip into a meringue?",
+      "a": "Aquafaba, the chickpea liquid.",
+      "d": "Beating the liquid makes a foam that can take the place of egg whites in meringue kisses."
+    },
+    {
+      "id": 18746,
+      "q": "Some Arnhem Land artists show both an animal and the skeleton inside it. What name for this style borrows the name of a see-through hospital image?",
+      "a": "X-ray painting",
+      "d": "The artist can show internal organs through the outlined body. This convention appears in both rock and bark painting."
+    },
+    {
+      "id": null,
+      "q": "Research into an old art-conservation technique identified an enzyme in which bodily fluid as an effective cleaning agent?",
+      "a": "Saliva",
+      "d": "The researchers identified alpha-amylase as the main contributor to saliva’s cleaning power in their tests. They also investigated substitute enzyme preparations."
+    },
+    {
+      "id": null,
+      "q": "What rattled inside the Opera Museum in Parma’s wooden machine to imitate rain?",
+      "a": "Dried beans and peas",
+      "d": "The operator could change a drizzle into a storm by turning the metal-lined container faster."
+    }
+  ],
+  "Le Bateau|Codex Seraphinianus|Lucier|Pendulum Music|Without a Cover|pyrophone|octobass|vegetable orchestra|typewriter orchestra": [
+    {
+      "id": null,
+      "q": "After a Vegetable Orchestra concert, what can audience members enjoy that uses leftovers from making the instruments?",
+      "a": "Soup",
+      "d": "Vegetables left over from preparing the instruments go into the post-concert meal. The group carries its vegetable theme from the stage to the table."
+    },
+    {
+      "id": null,
+      "q": "On the original giant octobass design, how does a player stop strings that are beyond normal reach?",
+      "a": "Levers and pedals",
+      "d": "Mechanical controls press the strings while the player bows. The enormous instrument makes a bassist’s hands and feet work together."
+    }
+  ]
+}

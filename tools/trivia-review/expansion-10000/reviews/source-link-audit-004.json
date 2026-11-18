@@ -1,0 +1,1634 @@
+{
+  "checkedOn": "2026-11-17T22:14:31.441808+00:00",
+  "method": "Read-only HTTP GET with4workers; response headers only.403/429/timeouts are unresolved, not factual errors. Checks newly added accepted URLs absent from all prior audits; excludes unaccepted research drafts.",
+  "totalDistinctUrls": 166,
+  "completed": 166,
+  "summary": {
+    "reachable": 126,
+    "unresolved": 40
+  },
+  "urls": [
+    {
+      "url": "https://archive.reading.ac.uk/news-events/2015/April/pr631000.html?trk=article-ssr-frontend-pulse_little-text-block",
+      "candidateIds": [
+        "human-0032"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://archive.reading.ac.uk/news-events/2015/April/pr631000.html?trk=article-ssr-frontend-pulse_little-text-block",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/0/2045/files/2018/11/2011-Bedny.pdf",
+      "candidateIds": [
+        "human-0022"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bpb-us-e1.wpmucdn.com/sites.mit.edu/dist/0/2045/files/2018/11/2011-Bedny.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://bpb-us-w2.wpmucdn.com/web.sas.upenn.edu/dist/7/206/files/2016/09/amnesiadow167PS98-qo6b86.pdf",
+      "candidateIds": [
+        "human-0094"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bpb-us-w2.wpmucdn.com/web.sas.upenn.edu/dist/7/206/files/2016/09/amnesiadow167PS98-qo6b86.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://collections.si.edu/search/detail/ead_component:sova-eepa-1973-001-ref17805?fq=culture:%22Wodaabe+(African+people)%22&hlterm=%26quot%3BCompetition%26quot%3B&q=%22Competition%22&record=2",
+      "candidateIds": [
+        "customs-0085"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://cpb-us-w2.wpmucdn.com/sites.uwm.edu/dist/5/235/files/2016/07/mita_reversed-1a0ku8p.pdf",
+      "candidateIds": [
+        "human-0060"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://cpb-us-w2.wpmucdn.com/sites.uwm.edu/dist/5/235/files/2016/07/mita_reversed-1a0ku8p.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://doi.org/10.1038/s41598-019-41895-7",
+      "candidateIds": [
+        "human-0077"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/s41598-019-41895-7?error=cookies_not_supported&code=0ba8941d-a439-470f-b832-a3dcce1f608c",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.3758/BF03208840",
+      "candidateIds": [
+        "human-0027"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://link.springer.com/article/10.3758/BF03208840?error=cookies_not_supported&code=6b8027bc-7ccb-4c42-a55b-0807873dc2fd",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://dur.ac.uk/news-events/latest-news/2024/06/echolocation-psychology-research/",
+      "candidateIds": [
+        "human-0011"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://dur.ac.uk/news-events/latest-news/2024/06/echolocation-psychology-research/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://healthcare.utah.edu/press-releases/2018/01/surprise-virus-protein-important-cognition-and-memory",
+      "candidateIds": [
+        "human-0092"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://healthcare.utah.edu/press-releases/2018/01/surprise-virus-protein-important-cognition-and-memory",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://hwni.berkeley.edu/node/810",
+      "candidateIds": [
+        "human-0064"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://hwni.berkeley.edu/node/810",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://idw-online.de/de/news?id=676657&print=1",
+      "candidateIds": [
+        "archaeology-0010"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://idw-online.de/de/news?id=676657&print=1",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://institut-curie.org/publications/unveiling-skin-macrophage-dynamics-explains-both-tattoo-persistence-and-strenuous-removal",
+      "candidateIds": [
+        "human-0071"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://institut-curie.org/publications/unveiling-skin-macrophage-dynamics-explains-both-tattoo-persistence-and-strenuous-removal",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://jacobsschool.ucsd.edu/news/release?id=3304",
+      "candidateIds": [
+        "human-0076"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://jacobsschool.ucsd.edu/news/release?id=3304",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0006256",
+      "candidateIds": [
+        "human-0013"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0006256",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://journals.sagepub.com/doi/10.1177/0956797613504438",
+      "candidateIds": [
+        "human-0112"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://journals.sagepub.com/doi/full/10.1177/0956797610386621",
+      "candidateIds": [
+        "human-0082"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://magazine.northwestern.edu/news/lucid-dream-communication-interactive-dreaming",
+      "candidateIds": [
+        "human-0020"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://magazine.northwestern.edu/news/lucid-dream-communication-interactive-dreaming",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://maryrose.org/artefacts/ballock-dagger/",
+      "candidateIds": [
+        "archaeology-0004"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://maryrose.org/artefacts/ballock-dagger/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://maryrose.org/artefacts/fiddle/",
+      "candidateIds": [
+        "archaeology-0005"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://maryrose.org/artefacts/fiddle/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://med.stanford.edu/news/all-news/2021/05/software-turns-handwriting-thoughts-into-on-screen-text.html",
+      "candidateIds": [
+        "human-0091"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://med.stanford.edu/news/all-news/2021/05/software-turns-handwriting-thoughts-into-on-screen-text.html",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://medlineplus.gov/genetics/understanding/traits/fingerprints/",
+      "candidateIds": [
+        "human-0038"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://medlineplus.gov/genetics/understanding/traits/fingerprints/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://muttermuseum.org/on-view/soap-lady/",
+      "candidateIds": [
+        "human-0115"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://muttermuseum.org/on-view/soap-lady/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://news.harvard.edu/gazette/story/2013/06/mouthful-of-clues/",
+      "candidateIds": [
+        "human-0045"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.harvard.edu/gazette/story/2013/06/mouthful-of-clues/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://news.mit.edu/2010/mayaball-0524",
+      "candidateIds": [
+        "archaeology-0017"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.mit.edu/2010/mayaball-0524",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.mit.edu/2023/roman-concrete-durability-lime-casts-0106",
+      "candidateIds": [
+        "archaeology-0012"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.mit.edu/2023/roman-concrete-durability-lime-casts-0106",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.ncsu.edu/2012/11/wms-belly-button-biodiversity/",
+      "candidateIds": [
+        "human-0039"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.ncsu.edu/2012/11/wms-belly-button-biodiversity/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://news.uchicago.edu/story/visual-mandela-effect-false-memories-psychology-neuroscience-pikachu-mr-monopoly-waldo",
+      "candidateIds": [
+        "human-0059"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.uchicago.edu/story/visual-mandela-effect-false-memories-psychology-neuroscience-pikachu-mr-monopoly-waldo",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://newsarchive.berkeley.edu/news/media/releases/2006/12/18_scents.shtml",
+      "candidateIds": [
+        "human-0016"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://newsarchive.berkeley.edu/news/media/releases/2006/12/18_scents.shtml",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://now.tufts.edu/2023/11/30/scientists-build-tiny-biological-robots-human-cells",
+      "candidateIds": [
+        "human-0075"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://now.tufts.edu/2023/11/30/scientists-build-tiny-biological-robots-human-cells",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/maps.12664",
+      "candidateIds": [
+        "archaeology-0011"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11825814/",
+      "candidateIds": [
+        "human-0012"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11825814/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2817301/",
+      "candidateIds": [
+        "human-0108"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2817301/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2900654/",
+      "candidateIds": [
+        "human-0052"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2900654/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3563049",
+      "candidateIds": [
+        "human-0026"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3563049/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3760924/",
+      "candidateIds": [
+        "human-0073"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3760924/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4033126/",
+      "candidateIds": [
+        "human-0053"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4033126/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4387520",
+      "candidateIds": [
+        "human-0104"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4387520/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5486926/",
+      "candidateIds": [
+        "human-0007"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5486926/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7351597/",
+      "candidateIds": [
+        "human-0002"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7351597/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8007668/",
+      "candidateIds": [
+        "human-0050"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8007668/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8294484/",
+      "candidateIds": [
+        "human-0014"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8294484/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9014675/",
+      "candidateIds": [
+        "human-0005"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9014675/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9747182/",
+      "candidateIds": [
+        "human-0055"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9747182/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://profiles.wustl.edu/en/publications/human-infrared-vision-is-triggered-by-two-photon-chromophore-isom/",
+      "candidateIds": [
+        "human-0048"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://profiles.wustl.edu/en/publications/human-infrared-vision-is-triggered-by-two-photon-chromophore-isom/",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://psychandneuro.duke.edu/news/eardrums-move-when-eyes-move",
+      "candidateIds": [
+        "human-0110"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://psychandneuro.duke.edu/news/eardrums-move-when-eyes-move",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://psychnet.wustl.edu/memory/wp-content/uploads/2018/04/Roediger-McDermott-1995_JEPLMC.pdf",
+      "candidateIds": [
+        "human-0035"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10693809/",
+      "candidateIds": [
+        "human-0079"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/10693809/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10706285/",
+      "candidateIds": [
+        "human-0078"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/10706285/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10707330/",
+      "candidateIds": [
+        "human-0061"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/10707330/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11030656/",
+      "candidateIds": [
+        "human-0047"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/11030656/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12022024/",
+      "candidateIds": [
+        "human-0090"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/12022024/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12802549/",
+      "candidateIds": [
+        "human-0069"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/12802549/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12963263/",
+      "candidateIds": [
+        "human-0033"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/12963263/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15878673/",
+      "candidateIds": [
+        "human-0070"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/15878673/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16262769/",
+      "candidateIds": [
+        "human-0021"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/16262769/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17470790/",
+      "candidateIds": [
+        "human-0083"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/17470790/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1754366/",
+      "candidateIds": [
+        "human-0025"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/1754366/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18004955/",
+      "candidateIds": [
+        "human-0113"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/18004955/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18074019/",
+      "candidateIds": [
+        "human-0098"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/18074019/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19179493/",
+      "candidateIds": [
+        "human-0111"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/19179493/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19896378/",
+      "candidateIds": [
+        "human-0081"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/19896378/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20169159/",
+      "candidateIds": [
+        "human-0036"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/20169159/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20876394/",
+      "candidateIds": [
+        "human-0044"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/20876394/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21478887/",
+      "candidateIds": [
+        "human-0065"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/21478887/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21861201/",
+      "candidateIds": [
+        "human-0099"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/21861201/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21882726/",
+      "candidateIds": [
+        "human-0074"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/21882726/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22922782/",
+      "candidateIds": [
+        "human-0084"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/22922782/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23438449/",
+      "candidateIds": [
+        "human-0003"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/23438449/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24386113/",
+      "candidateIds": [
+        "human-0056"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/24386113/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24621793/",
+      "candidateIds": [
+        "human-0051"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/24621793/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25301017/",
+      "candidateIds": [
+        "human-0024"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/25301017/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25447995/",
+      "candidateIds": [
+        "human-0086"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/25447995/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25656162/",
+      "candidateIds": [
+        "human-0001"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/25656162/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25721103/",
+      "candidateIds": [
+        "human-0058"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/25721103/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26301795/",
+      "candidateIds": [
+        "human-0121"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/26301795/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27112296/",
+      "candidateIds": [
+        "human-0042"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/27112296/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27113677/",
+      "candidateIds": [
+        "human-0109"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/27113677/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27711189/",
+      "candidateIds": [
+        "human-0023"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/27711189/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27927961/",
+      "candidateIds": [
+        "human-0100"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/27927961/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29197546/",
+      "candidateIds": [
+        "human-0037"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/29197546/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29880852/",
+      "candidateIds": [
+        "human-0106"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/29880852/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31160580/",
+      "candidateIds": [
+        "human-0049"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/31160580/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31996332/",
+      "candidateIds": [
+        "human-0101"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/31996332/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32079491/",
+      "candidateIds": [
+        "human-0057"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/32079491/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32425851/",
+      "candidateIds": [
+        "human-0054"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/32425851/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32478591/",
+      "candidateIds": [
+        "human-0124"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/32478591/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33347414/",
+      "candidateIds": [
+        "human-0118"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/33347414/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34525363/",
+      "candidateIds": [
+        "human-0107"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/34525363/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34541958/",
+      "candidateIds": [
+        "human-0009"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/34541958/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37079173/",
+      "candidateIds": [
+        "human-0096"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/37079173/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38127837/",
+      "candidateIds": [
+        "human-0088"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/38127837/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39965356/",
+      "candidateIds": [
+        "human-0097"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/39965356/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42777739/",
+      "candidateIds": [
+        "human-0114"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/42777739/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/5076909/",
+      "candidateIds": [
+        "human-0006"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/5076909/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/5409744/",
+      "candidateIds": [
+        "human-0028"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/5409744/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8136066/",
+      "candidateIds": [
+        "human-0105"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/8136066/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/905085/",
+      "candidateIds": [
+        "human-0034"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/905085/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/class-info/Consciousness_2014/Johansson_ChoiceBlindness_Science2005.pdf",
+      "candidateIds": [
+        "human-0031"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/class-info/Consciousness_2014/Johansson_ChoiceBlindness_Science2005.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://seas.harvard.edu/news/biohybrid-fish-made-human-cardiac-cells-swims-heart-beats",
+      "candidateIds": [
+        "human-0103"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://seas.harvard.edu/news/biohybrid-fish-made-human-cardiac-cells-swims-heart-beats",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://uni-tuebingen.de/de/99373",
+      "candidateIds": [
+        "human-0080"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://uni-tuebingen.de/de/99373",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://unicycling.org/rulebook/team-hockey/",
+      "candidateIds": [
+        "customs-0108"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://unicycling.org/rulebook/team-hockey/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://web.stanford.edu/class/me327/lectures/lecture06-prerecorded.pdf",
+      "candidateIds": [
+        "human-0004"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://web.stanford.edu/class/me327/lectures/lecture06-prerecorded.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.aao.org/eye-health/tips-prevention/moving-spots-in-blue-sky",
+      "candidateIds": [
+        "human-0066"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.aao.org/eye-health/tips-prevention/moving-spots-in-blue-sky",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.birmingham.ac.uk/news-archive/2021/which-shape-is-the-bouba-and-which-is-the-kiki",
+      "candidateIds": [
+        "human-0030"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.birmingham.ac.uk/news-archive/2021/which-shape-is-the-bouba-and-which-is-the-kiki",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.bmj.com/content/363/bmj.k5094",
+      "candidateIds": [
+        "human-0122"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.bristol.ac.uk/news/2013/9060.html",
+      "candidateIds": [
+        "human-0043"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bristol.ac.uk/news/2013/9060.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.britishmuseum.org/sites/default/files/2023-04/British_Museum_unwraps_secrets_of_ancient_Egyptian_lizard_mummies_0.pdf",
+      "candidateIds": [
+        "archaeology-0008"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.britishmuseum.org/sites/default/files/2024-11/Animal_mummies_from_beliefs_to_practice_abstracts.pdf",
+      "candidateIds": [
+        "archaeology-0009"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.bu.edu/psych/charris/papers/BilingualTaboo.pdf",
+      "candidateIds": [
+        "human-0095"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bu.edu/psych/charris/papers/BilingualTaboo.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.cam.ac.uk/stories/third-thumb",
+      "candidateIds": [
+        "human-0010"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cam.ac.uk/stories/third-thumb",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/chimerism",
+      "candidateIds": [
+        "human-0040"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/chimerism",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.discoverbucksmuseum.org/1700-year-old-roman-egg-press-release/",
+      "candidateIds": [
+        "archaeology-0016"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.discoverbucksmuseum.org/1700-year-old-roman-egg-press-release/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.esrf.fr/home/news/general/content-news/general/scientists-find-that-nanoparticles-from-tattoos-travel-inside-the-body.html",
+      "candidateIds": [
+        "human-0072"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.iceman.it/en/oetzi/equipment",
+      "candidateIds": [
+        "archaeology-0006",
+        "archaeology-0007"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.iceman.it/en/oetzi/equipment",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.inrap.fr/sites/inrap.fr/files/atoms/files/pr_restauration_and_study_of_the_exceptional_cage_cup_from_autun_.pdf",
+      "candidateIds": [
+        "archaeology-0014"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.jstor.org/stable/1506167",
+      "candidateIds": [
+        "human-0119"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jstor.org/stable/1506167",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.kubbvm.com/rules/english.pdf",
+      "candidateIds": [
+        "customs-0022"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.kubbvm.com/rules/english.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/aardvark",
+      "candidateIds": [
+        "words-0054"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/alligator",
+      "candidateIds": [
+        "words-0053"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/bazooka",
+      "candidateIds": [
+        "words-0061"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/budget",
+      "candidateIds": [
+        "words-0060"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/chameleon",
+      "candidateIds": [
+        "words-0056"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/dunce",
+      "candidateIds": [
+        "words-0070"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/etiquette",
+      "candidateIds": [
+        "words-0058"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/galaxy",
+      "candidateIds": [
+        "words-0071"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/glamour",
+      "candidateIds": [
+        "words-0066"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/grenade",
+      "candidateIds": [
+        "words-0062"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/heckle",
+      "candidateIds": [
+        "words-0068"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/jovial",
+      "candidateIds": [
+        "words-0063"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/lemur",
+      "candidateIds": [
+        "words-0055"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/magazine",
+      "candidateIds": [
+        "words-0067"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/melancholy",
+      "candidateIds": [
+        "words-0064"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/muslin",
+      "candidateIds": [
+        "words-0069"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/orangutan",
+      "candidateIds": [
+        "words-0057"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/pumpernickel",
+      "candidateIds": [
+        "words-0065"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/scruple",
+      "candidateIds": [
+        "words-0072"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/silly",
+      "candidateIds": [
+        "words-0049"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/tulip",
+      "candidateIds": [
+        "words-0051"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/vermicelli",
+      "candidateIds": [
+        "words-0052"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/wordplay/the-villain-in-the-history-of-the-word-villain-isnt-the-villain",
+      "candidateIds": [
+        "words-0050"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.mpg.de/596269/pressRelease200908171",
+      "candidateIds": [
+        "human-0017"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mpg.de/596269/pressRelease200908171",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.mrc-cbu.cam.ac.uk/personal/matt.davis/sine-wave-speech/",
+      "candidateIds": [
+        "human-0029"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mrc-cbu.cam.ac.uk/personal/matt.davis/sine-wave-speech/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.nationaltrust.org.uk/visit/suffolk/sutton-hoo/royal-burial-ground-at-sutton-hoo",
+      "candidateIds": [
+        "archaeology-0013"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nationaltrust.org.uk/visit/suffolk/sutton-hoo/royal-burial-ground-at-sutton-hoo",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/24300",
+      "candidateIds": [
+        "human-0116"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/24300?error=cookies_not_supported&code=f606bb0d-9680-452f-8625-f1cebdf4dab3",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK594225/",
+      "candidateIds": [
+        "human-0085"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ncbi.nlm.nih.gov/books/NBK594225/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.news.uct.ac.za/images/archive/releases/2018/2018-10-24_BioBricks.pdf",
+      "candidateIds": [
+        "human-0102"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.news.uct.ac.za/images/archive/releases/2018/2018-10-24_BioBricks.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.nidcd.nih.gov/glossary/otoacoustic-emissions",
+      "candidateIds": [
+        "human-0015"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nidcd.nih.gov/glossary/otoacoustic-emissions",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nps.gov/places/glacial-lake-missoula-national-natural-landmark-camas-prairie-ripples.htm",
+      "candidateIds": [
+        "earth-0146"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nps.gov/places/glacial-lake-missoula-national-natural-landmark-camas-prairie-ripples.htm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.paralympic.org/blind-football",
+      "candidateIds": [
+        "customs-0043"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.paralympic.org/blind-football",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.research.ed.ac.uk/en/publications/the-developmental-basis-of-fingerprint-pattern-formation-and-vari/",
+      "candidateIds": [
+        "human-0087"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.research.ed.ac.uk/en/publications/the-developmental-basis-of-fingerprint-pattern-formation-and-vari/",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.rockefeller.edu/news/11808-study-suggests-humans-can-detect-even-the-smallest-units-of-light/",
+      "candidateIds": [
+        "human-0063"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0304422X99000030",
+      "candidateIds": [
+        "human-0117"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0960982208007343",
+      "candidateIds": [
+        "human-0123"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0960982209011099",
+      "candidateIds": [
+        "human-0089"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352409X24002645",
+      "candidateIds": [
+        "archaeology-0015"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.scientificamerican.com/article/why-cant-a-person-tickle/",
+      "candidateIds": [
+        "human-0018"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.scientificamerican.com/article/why-cant-a-person-tickle/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/full/10.1080/15248372.2011.594826",
+      "candidateIds": [
+        "human-0068"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.u-tokyo.ac.jp/focus/en/press/z0508_00329.html",
+      "candidateIds": [
+        "human-0093"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.u-tokyo.ac.jp/focus/en/press/z0508_00329.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.u-tokyo.ac.jp/focus/en/press/z0508_00360.html",
+      "candidateIds": [
+        "human-0062"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.u-tokyo.ac.jp/focus/en/press/z0508_00360.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.ualberta.ca/en/rehabilitation/news-and-events/news/2015/april/pull-my-finger-say-scientists-who-solve-knuckle-cracking-riddle.html",
+      "candidateIds": [
+        "human-0041"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ualberta.ca/en/rehabilitation/news-and-events/news/2015/april/pull-my-finger-say-scientists-who-solve-knuckle-cracking-riddle.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.unsw.edu.au/newsroom/news/2014/12/when-we-lose-weight--where-does-the-fat-go--",
+      "candidateIds": [
+        "human-0067"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.unsw.edu.au/newsroom/news/2014/12/when-we-lose-weight--where-does-the-fat-go--",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.unsw.edu.au/newsroom/news/2022/04/windows-to-the-soul-pupils-reveal-aphantasia-the-absence-of-visual-imagination.",
+      "candidateIds": [
+        "human-0019"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.unsw.edu.au/newsroom/news/2022/04/windows-to-the-soul-pupils-reveal-aphantasia-the-absence-of-visual-imagination.",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.vindolanda.com/blog/vindolandas-top-10-finds-of-the-decade?title=vindolandas-top-10-finds-of-the-decade",
+      "candidateIds": [
+        "archaeology-0002",
+        "archaeology-0003"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.vindolanda.com/blog/vindolandas-top-10-finds-of-the-decade?title=vindolandas-top-10-finds-of-the-decade",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.vindolanda.com/news/roman-leather-mouse-discovered",
+      "candidateIds": [
+        "archaeology-0001"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.vindolanda.com/news/roman-leather-mouse-discovered",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.weizmann-usa.org/news-media/news-releases/the-scent-of-a-handshake",
+      "candidateIds": [
+        "human-0046"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.wpi.edu/news/wpi-team-grows-heart-tissue-spinach-leaves",
+      "candidateIds": [
+        "human-0120"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.wpi.edu/news/wpi-team-grows-heart-tissue-spinach-leaves",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+[
+  {
+    "q": "What creates the enormous rings of thin ice sometimes seen on Lake Baikal?",
+    "a": "Warm underwater eddies",
+    "d": "Circulating water thins the ice most strongly around an eddy’s edge.",
+    "choices": [
+      "Sediment absorbing sunlight beneath the ice",
+      "Gas bubbles trapped in circular cracks",
+      "Pressure waves from shifting lake ice",
+      "Warm underwater eddies"
+    ],
+    "u": "https://science.nasa.gov/earth/earth-observatory/baikals-giant-ice-rings-146220/",
+    "s": "NASA Earth Observatory · Baikal’s giant ice rings",
+    "evidence": "Measurements linked ice rings to warm lens-shaped eddies beneath the lake surface.",
+    "level": "medium",
+    "cat": "Earth and Sky"
+  },
+  {
+    "q": "Why can Ecuador’s Chimborazo summit be farther from Earth’s center than Everest’s?",
+    "a": "Earth bulges at the equator",
+    "d": "Everest wins above sea level; Chimborazo benefits from its position near the equatorial bulge.",
+    "choices": [
+      "Earth bulges at the equator",
+      "Earth’s crust is thickest beneath Ecuador",
+      "Earth’s tilt raises equatorial mountains",
+      "Earth’s center shifts toward Asia"
+    ],
+    "u": "https://cdn.oceanservice.noaa.gov/oceanserviceprod/facts/highestpoint-infographic.pdf",
+    "s": "NOAA · Earth’s highest point",
+    "evidence": "NOAA compares Everest sea-level height with Chimborazo center-distance and identifies equatorial bulge.",
+    "level": "medium",
+    "cat": "Earth and Sky"
+  },
+  {
+    "q": "Which shark can reach freshwater Lake Nicaragua by swimming through its river connection to the sea?",
+    "a": "Bull shark",
+    "d": "The lake’s sharks are not trapped ocean relics; bull sharks can travel between fresh and salt water.",
+    "choices": [
+      "Great white shark",
+      "Shortfin mako shark",
+      "Blue shark",
+      "Bull shark"
+    ],
+    "u": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bull-shark/",
+    "s": "Florida Museum · Bull shark",
+    "evidence": "Species account identifies river access to Lake Nicaragua and freshwater tolerance.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "The historic “lighthouse” of Catatumbo in Venezuela is produced by what natural display?",
+    "a": "Lightning",
+    "d": "Frequent nocturnal storms near Lake Maracaibo provided a conspicuous navigation landmark.",
+    "choices": [
+      "Lightning",
+      "Volcanic glow",
+      "Auroras",
+      "Luminous ocean plankton"
+    ],
+    "u": "https://www.earthdata.nasa.gov/s3fs-public/2025-02/TotalFreqDistLightBasedon10YrsofObsfrmSpacebyLIS.pdf?VersionId=pwe71ku4YlYwY4bxVyiJbOHlHqwzM3Oa",
+    "s": "NASA-hosted lightning research · Space-based lightning distribution",
+    "evidence": "Paper describes Catatumbo nocturnal lightning as a historical navigation guide.",
+    "level": "medium",
+    "cat": "Weather"
+  },
+  {
+    "q": "Northern Australia’s Morning Glory cloud can appear to roll across the sky. What happens at its leading and trailing edges?",
+    "a": "Droplets form at the front and evaporate behind",
+    "d": "Air rises and cools along the advancing atmospheric wave, then descends and warms behind it.",
+    "choices": [
+      "Droplets form at the front and evaporate behind",
+      "Dust collects at the front and settles behind",
+      "Rain falls at the front and freezes behind",
+      "Ice forms at the front and falls behind"
+    ],
+    "u": "https://www.bom.gov.au/aviation/data/education/flying-tropics.pdf",
+    "s": "Australian Bureau of Meteorology · Flying the tropics",
+    "evidence": "Morning Glory description explains leading-edge condensation and rear evaporation.",
+    "level": "hard",
+    "cat": "Weather"
+  },
+  {
+    "q": "On freezing mornings, Yosemite Creek can flow like a giant slush drink. What feeds this frazil-ice display?",
+    "a": "Frozen waterfall mist",
+    "d": "Fine ice produced around the falls collects in the moving creek.",
+    "choices": [
+      "Frozen waterfall mist",
+      "Shattered sheets of river-surface ice",
+      "Refrozen snowmelt emerging from springs",
+      "Hail washed down from mountain slopes"
+    ],
+    "u": "https://www.nps.gov/yose/planyourvisit/frazilice.htm?vm=r",
+    "s": "National Park Service · Frazil ice",
+    "evidence": "NPS describes mist freezing at waterfalls and floating down Yosemite creeks.",
+    "level": "medium",
+    "cat": "Weather"
+  },
+  {
+    "q": "The enormous circular Eye of the Sahara was once suspected to be an impact crater. What explanation is now favored?",
+    "a": "Erosion of an uplifted rock dome",
+    "d": "Different rock layers erode at different rates, leaving the Richat Structure’s concentric pattern.",
+    "choices": [
+      "Salt crystallizing around a drying lake",
+      "Collapse of a limestone cavern",
+      "Erosion of an uplifted rock dome",
+      "Sediment deposited in a whirlpool"
+    ],
+    "u": "https://science.nasa.gov/earth/earth-observatory/eyeing-the-richat-structure/",
+    "s": "NASA Earth Observatory · Eyeing the Richat Structure",
+    "evidence": "NASA describes an uplifted dome over an intrusion, subsequently exposed by differential erosion.",
+    "level": "medium",
+    "cat": "Earth and Sky"
+  },
+  {
+    "q": "What keeps Chad’s Ounianga desert lakes supplied despite extreme evaporation and very little modern rainfall?",
+    "a": "Ancient groundwater",
+    "d": "An aquifer replenished during a wetter past feeds these Saharan lakes.",
+    "choices": [
+      "Ancient groundwater",
+      "Seasonal meltwater from distant glaciers",
+      "Daily tides from an underground sea",
+      "Condensation collected by salt crusts"
+    ],
+    "u": "https://science.nasa.gov/earth/earth-observatory/ounianga-lakes-sahara-desert-chad-41425/",
+    "s": "NASA Earth Observatory · Ounianga Lakes",
+    "evidence": "Account identifies an underground aquifer charged during a wetter climate as the supply.",
+    "level": "medium",
+    "cat": "Earth and Sky"
+  },
+  {
+    "q": "What is the silent-looking summer phenomenon commonly called “heat lightning”?",
+    "a": "Lightning from a distant storm",
+    "d": "The storm is far enough away that its thunder does not reach the observer.",
+    "choices": [
+      "Sunlight reflecting from high ice clouds",
+      "Lightning from a distant storm",
+      "Lightning that produces no sound",
+      "Lightning generated by hot pavement"
+    ],
+    "u": "https://www.weather.gov/safety/lightning-heat",
+    "s": "National Weather Service · Heat lightning",
+    "evidence": "NWS explains the term as distant ordinary lightning with inaudible thunder.",
+    "level": "easy",
+    "cat": "Weather"
+  },
+  {
+    "q": "A large falling raindrop looks more like which familiar food than a pointed teardrop?",
+    "a": "Hamburger bun",
+    "d": "Airflow flattens the underside; smaller drops remain more nearly spherical.",
+    "choices": [
+      "Ice-cream cone",
+      "Spaghetti strand",
+      "Croissant",
+      "Hamburger bun"
+    ],
+    "u": "https://gpm.nasa.gov/science/anatomy-of-a-raindrop",
+    "s": "NASA GPM · Anatomy of a raindrop",
+    "evidence": "NASA describes larger drops as hamburger-bun shaped due to airflow.",
+    "level": "easy",
+    "cat": "Weather"
+  },
+  {
+    "q": "During a ring-tailed lemur “stink fight,” what does a male coat with scent and wave toward a rival?",
+    "a": "Tail",
+    "d": "He rubs it against scent glands before wafting the odor.",
+    "choices": [
+      "Ears",
+      "Belly fur",
+      "Tail",
+      "Hind feet"
+    ],
+    "u": "https://lemur.duke.edu/oh-yeah-smell-this-or-conflict-resolution-lemur-style/",
+    "s": "Duke Lemur Center · Conflict resolution, lemur style",
+    "evidence": "Duke describes wrist/shoulder secretions rubbed onto tails and waved at opponents.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "Wild red-fronted lemurs have been seen chewing which animals and rubbing them around their tails and bottoms?",
+    "a": "Millipedes",
+    "d": "Researchers proposed that the secretions might help control parasites; that benefit remains a hypothesis.",
+    "choices": [
+      "Beetles",
+      "Ants",
+      "Caterpillars",
+      "Millipedes"
+    ],
+    "u": "https://pubmed.ncbi.nlm.nih.gov/30058024/",
+    "s": "Peckre and colleagues · Millipede use by lemurs",
+    "evidence": "Study observed six lemurs chewing millipedes, anointing anogenital regions and sometimes swallowing pieces.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "How does an aye-aye locate hidden insect tunnels before gnawing into wood?",
+    "a": "Tapping and listening",
+    "d": "Its acoustic inspection helps locate cavities; a slender finger then retrieves the food.",
+    "choices": [
+      "Tapping and listening",
+      "Smelling through its fingertips",
+      "Sensing electrical pulses",
+      "Watching for bark color changes"
+    ],
+    "u": "https://lemur.duke.edu/discover/meet-the-lemurs/aye-aye/",
+    "s": "Duke Lemur Center · Aye-aye",
+    "evidence": "Duke describes tapping to locate hollow passages, followed by gnawing and extraction.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "How does a male echidna use the four tips of its unusual penis?",
+    "a": "Two tips operate at a time",
+    "d": "The active pair can alternate between erections, controlled by the organ’s divided blood supply.",
+    "choices": [
+      "Only one ever becomes functional",
+      "Two tips operate at a time",
+      "All four operate together",
+      "Three operate while one remains closed"
+    ],
+    "u": "https://pursuit.unimelb.edu.au/articles/solving-the-mystery-of-the-four-headed-echidna-penis",
+    "s": "University of Melbourne · Echidna anatomy",
+    "evidence": "Researchers describe four glans with two functional at erection, alternation and divided erectile tissues.",
+    "level": "hard",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "When a breeding clownfish group loses its dominant female, what can its breeding male do?",
+    "a": "Become female",
+    "d": "The largest male can change sex and take over the female’s role.",
+    "choices": [
+      "Remain male until a new female arrives",
+      "Join another group as a breeding male",
+      "Become female",
+      "Permanently cease breeding"
+    ],
+    "u": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/clownfish",
+    "s": "Monterey Bay Aquarium · Clownfish",
+    "evidence": "Aquarium explains male-to-female sex change after loss of the dominant female.",
+    "level": "easy",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "Which fish creates intricate circular patterns in seabed sand as a courtship nest?",
+    "a": "Pufferfish",
+    "d": "Male Torquigener albomaculosus sculpt the circles using their fins.",
+    "choices": [
+      "Ray",
+      "Pufferfish",
+      "Lionfish",
+      "Triggerfish"
+    ],
+    "u": "https://www.nhm.ac.uk/discover/pufferfish-underwater-balloon-of-death.html?pubDate=20250427",
+    "s": "Natural History Museum · Pufferfish",
+    "evidence": "Museum describes male white-spotted pufferfish making circular nests.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "What urban food-raiding skill spread through Sydney’s sulphur-crested cockatoos by social learning?",
+    "a": "Opening household garbage bins",
+    "d": "The birds copied a technique for lifting lids, and local variations developed.",
+    "choices": [
+      "Opening household garbage bins",
+      "Unscrewing drink-bottle caps",
+      "Turning vending-machine handles",
+      "Removing restaurant drain covers"
+    ],
+    "u": "https://pubmed.ncbi.nlm.nih.gov/34437121/",
+    "s": "Klump and colleagues · Urban parrot foraging culture",
+    "evidence": "Primary abstract reports spatial spread of waste-bin opening through social learning.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "As a young flatfish develops, what moves across its head to the opposite side?",
+    "a": "One eye",
+    "d": "The symmetrical larva transforms into an adult with both eyes on its upward-facing side.",
+    "choices": [
+      "One gill opening",
+      "One eye",
+      "One nostril",
+      "Its mouth"
+    ],
+    "u": "https://www.nature.com/articles/s42003-024-05951-x",
+    "s": "Communications Biology · Flatfish eye migration",
+    "evidence": "Primary study describes ontogenetic movement of one eye across the head during metamorphosis.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "Researchers fitted desert ants with tiny stilts. Which navigational calculation did altered leg length disrupt?",
+    "a": "Distance traveled",
+    "d": "Longer strides made ants overshoot the expected nest position.",
+    "choices": [
+      "Angle of the setting Sun",
+      "Distance traveled",
+      "Direction of north",
+      "Identity of the home colony"
+    ],
+    "u": "https://pubmed.ncbi.nlm.nih.gov/17210957/",
+    "s": "Wittlinger and colleagues · Desert ant odometer",
+    "evidence": "Primary abstract reports larger strides and misgauged homing distance after leg elongation.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "How can a desert ant dragging food backward refresh its visual bearings?",
+    "a": "Put down the load and look forward",
+    "d": "Experiments showed brief forward peeks that helped orient the subsequent backward journey.",
+    "choices": [
+      "Read the load’s shadow as a compass",
+      "Put down the load and look forward",
+      "Wait for a nestmate to pull it",
+      "Follow scratches left by the load"
+    ],
+    "u": "https://pubmed.ncbi.nlm.nih.gov/28111152/",
+    "s": "Schwarz and colleagues · Ant navigation while moving backward",
+    "evidence": "Study describes forward peeking and transfer of learned direction to backward travel.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "As meerkat pups become more experienced, how do helpers change the hunting lessons supplied with their meals?",
+    "a": "Provide less-disabled live prey",
+    "d": "Helpers adjust prey preparation as pups mature, giving them increasingly demanding handling practice.",
+    "choices": [
+      "Replace animal prey with plant foods",
+      "Offer only already-dead prey",
+      "Move all feeding into the burrow",
+      "Provide less-disabled live prey"
+    ],
+    "u": "https://pubmed.ncbi.nlm.nih.gov/16840701/",
+    "s": "Thornton and McAuliffe · Teaching in wild meerkats",
+    "evidence": "Primary paper reports age-dependent provisioning of dead, disabled and intact prey, accelerating pup learning.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "The parasitic crustacean Cymothoa exigua can take the place of which part of its fish host?",
+    "a": "Tongue",
+    "d": "After the original tissue deteriorates, the attached parasite occupies its position in the mouth.",
+    "choices": [
+      "Tongue",
+      "Lower jaw",
+      "Gill cover",
+      "Pectoral fin"
+    ],
+    "u": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/tongue-snatcher/",
+    "s": "University of Texas Marine Science Institute · Tongue Snatcher",
+    "evidence": "Institutional account describes tongue atrophy followed by parasite occupancy and continued fish feeding.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "In a goby–shrimp partnership, which job does the fish perform while the shrimp maintains their shared burrow?",
+    "a": "Watch for danger",
+    "d": "The shrimp’s antenna keeps contact with its better-sighted lookout.",
+    "choices": [
+      "Incubate the shrimp’s eggs",
+      "Clean parasites from the shrimp",
+      "Filter sand into food pellets",
+      "Watch for danger"
+    ],
+    "u": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/cooperation/",
+    "s": "University of Texas Marine Science Institute · Cooperation",
+    "evidence": "Institutional account describes shrimp excavation and antenna contact with a watchful goby.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "Experiments found that some mantis shrimp use which unusual light signal to avoid an occupied burrow?",
+    "a": "Circular polarization",
+    "d": "Their body patterns can reflect this light property, which human eyes cannot normally distinguish.",
+    "choices": [
+      "Infrared heat flashes",
+      "Ultraviolet fluorescence",
+      "Circular polarization",
+      "Changes in red light brightness"
+    ],
+    "u": "https://research-information.bris.ac.uk/en/publications/circularly-polarized-light-as-a-communication-signal-in-mantis-sh/",
+    "s": "Gagnon and colleagues · Circular polarization in mantis shrimp",
+    "evidence": "Primary abstract reports polarized body patterns, discrimination and avoidance of occupied refuges.",
+    "level": "hard",
+    "cat": "Animal Encounters"
+  },
+  {
+    "q": "How does a Coquerel’s sifaka commonly cross open ground between trees?",
+    "a": "Sideways hops on two legs",
+    "d": "Its specialized tree-leaping body produces a distinctive ground-level dance.",
+    "choices": [
+      "Sideways hops on two legs",
+      "Alternating forelimb and hindlimb gallops",
+      "Bounding on all four limbs",
+      "Heel-first walking on two legs"
+    ],
+    "u": "https://lemur.duke.edu/discover/meet-the-lemurs/coquerels-sifaka/",
+    "s": "Duke Lemur Center · Coquerel’s sifaka",
+    "evidence": "Duke describes terrestrial bipedal sideways hopping.",
+    "level": "medium",
+    "cat": "Animal Encounters"
+  }
+]

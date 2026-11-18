@@ -1,0 +1,24 @@
+{
+  "reviewedOn": "2026-11-17",
+  "baselineQuestions": 20100,
+  "acceptedQuestions": 2500,
+  "review": "Full question+answer+explanation corpus rerun at2500. Read final66new candidates’ relevant neighbors at0.16 and above, then reread both new release-wide pairs at0.25 and above. Earlier2084 and2434 checkpoint decisions retained; entity-based reading supplements lexical triage.",
+  "finalPairs": [
+    {
+      "ids": [
+        "objects-0373",
+        "objects-0374"
+      ],
+      "decision": "Patent sharing versus inventor’s prior ejection-seat career: different facts."
+    },
+    {
+      "ids": [
+        "objects-0376",
+        "published-18083"
+      ],
+      "decision": "Folding-chair mechanism versus naming the shopping-cart invention: new fact."
+    }
+  ],
+  "outstandingKnownNewDuplicates": 0,
+  "limitation": "Editorial review and similarity tools reduce repeats but cannot guarantee absence of every semantic overlap."
+}

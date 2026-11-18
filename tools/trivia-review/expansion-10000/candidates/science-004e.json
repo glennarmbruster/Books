@@ -1,0 +1,727 @@
+[
+  {
+    "candidateId": "science-0151",
+    "q": "UMass Amherst’s 2020 Air-gen device generated electricity from which normally overlooked feature of the surrounding air?",
+    "a": "Humidity",
+    "d": "A thin film of microbial protein nanowires developed a moisture gradient. The researchers reported a sustained small electrical output from this arrangement.",
+    "s": "UMass Amherst · Air-Gen",
+    "u": "https://www.umass.edu/news/article/new-green-technology-umass-amherst",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Static dust particles",
+      "Humidity",
+      "Air pressure fluctuations",
+      "Carbon dioxide concentration"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.umass.edu/news/article/new-green-technology-umass-amherst",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report and primary PMID 32066937 identify atmospheric water vapor and a self-maintained moisture gradient in protein-nanowire films.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "844865bacd44b9f1777c12e5d57ab0e11845a4ca1be45b8d45a217bb0ca21e57"
+    }
+  },
+  {
+    "candidateId": "science-0152",
+    "q": "What controlled the movements of CUHK’s experimental “slimebot,” which could squeeze through gaps and wrap around objects?",
+    "a": "Magnetic fields",
+    "d": "Magnetic particles embedded in a soft polymer mixture allowed external fields to guide and reshape it. Demonstrations included surrounding a battery in a model stomach.",
+    "s": "CUHK · Slime Robot",
+    "u": "https://www3.erg.cuhk.edu.hk/erg/node/2403",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Changes in air pressure",
+      "Magnetic fields",
+      "Ultraviolet flashes",
+      "Ultrasound pulses"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www3.erg.cuhk.edu.hk/erg/node/2403",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party 2022 report describes externally magnetically controlled slime, gap navigation, and battery-encircling demonstration in a stomach model.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "4d5b0f2d7577de14e45b62c17b19097cc3568e5f1c0b301479d66118011ee8b6"
+    }
+  },
+  {
+    "candidateId": "science-0153",
+    "q": "MIT’s see-through solar-cell research aimed to harvest which parts of sunlight while letting most visible light pass?",
+    "a": "Ultraviolet and near-infrared",
+    "d": "Selective absorption could turn a window into a power-generating surface while keeping it see-through. The design sacrifices visible-light harvesting to preserve transparency.",
+    "s": "MIT Energy Initiative · Transparent Solar Cells",
+    "u": "https://energy.mit.edu/news-events/news/transparent-solar-cells",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Green and yellow visible light",
+      "Red and blue visible light",
+      "All visible colors equally",
+      "Ultraviolet and near-infrared"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://energy.mit.edu/news-events/news/transparent-solar-cells",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional research explanation explicitly describes ultraviolet and near-infrared absorption with low visible absorption.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "2e77f1a056b6241508995a9fbdce0fcff5d64bc2f36405e195a2a3e16f92341e"
+    }
+  },
+  {
+    "candidateId": "science-0154",
+    "q": "What supplied the force that moved the fingers of MIT’s transparent hydrogel fish-gripper in 2017?",
+    "a": "Pumped water",
+    "d": "Water pumped into hollow gel structures inflated them in controlled directions. The soft hand could close around a live fish and then release it.",
+    "s": "MIT · Transparent Gel Robots",
+    "u": "https://news.mit.edu/2017/transparent-gel-robots-catch-release-fish-0201",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Pumped water",
+      "Compressed air",
+      "Electric motors",
+      "Magnetic fields"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2017/transparent-gel-robots-catch-release-fish-0201",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report identifies mostly-water hydrogel, water-pumped actuation, underwater camouflage, and fish-gripping demonstration.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "969865711f994585aebf08da18b65851e66c3bf2e6ae37cedf1881d58fc46cdf"
+    }
+  },
+  {
+    "candidateId": "science-0155",
+    "q": "Early HASEL artificial muscles at CU Boulder contained which supermarket liquid inside their flexible pouches?",
+    "a": "Canola oil",
+    "d": "Electrical forces displaced the insulating liquid and changed the pouch’s shape. The liquid also helped the actuators recover after electrical breakdown.",
+    "s": "CU Boulder · Soft Robotic Muscles",
+    "u": "https://www.colorado.edu/engineering/2018/01/04/cu-engineering-researchers-create-soft-robotic-muscles",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Lemon juice",
+      "White vinegar",
+      "Maple syrup",
+      "Canola oil"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.colorado.edu/engineering/2018/01/04/cu-engineering-researchers-create-soft-robotic-muscles",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional report explicitly identifies supermarket canola oil, electrostatic displacement, and recovery from dielectric breakdown.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "94b8662bee0a34734fac079f452bb3da901409d0d370a5190c879797d3559dc7"
+    }
+  },
+  {
+    "candidateId": "science-0156",
+    "q": "A Harvard–MIT robot began as a flat sheet, folded itself, then walked away in 2014. What triggered its folds?",
+    "a": "Heating the fold lines",
+    "d": "Embedded electrical heaters activated shrinking material at selected hinges. A programmed sequence turned the flat structure into a standing robot before it began crawling.",
+    "s": "MIT · Self-Folding Robot",
+    "u": "https://news.mit.edu/index.php/2014/mobile-folding-robots-0807",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Rotating tiny gears at each crease",
+      "Inflating sealed air pockets",
+      "Heating the fold lines",
+      "Moistening the paper layers"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/index.php/2014/mobile-folding-robots-0807",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report distinguishes electrical leads heating joints from earlier oven-heated prototypes and describes autonomous folding followed by walking.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "8f5fa9a38c27d124c4bee440f98268cc7f66f8e728788df3958650cc585c2e65"
+    }
+  },
+  {
+    "candidateId": "science-0157",
+    "q": "In a famous 1999 experiment, which kind of pulse was slowed to roughly 38 miles per hour inside an ultracold gas?",
+    "a": "Light pulses",
+    "d": "A carefully prepared sodium gas dramatically reduced the pulses’ propagation speed. The experiment concerned light traveling through a special medium, not its speed in a vacuum.",
+    "s": "Nature · Slow Light in Ultracold Gas",
+    "u": "https://www.nature.com/articles/17561",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Light pulses",
+      "Heat pulses",
+      "Electrical current pulses",
+      "Sound pulses"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nature.com/articles/17561",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper reports optical pulse propagation at 17 metres per second through an ultracold sodium gas; 38 mph is a rounded conversion.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "c05dd2750ff20dce66b6f82265591931862fb8128836b6b8a782cad4d9d3fb3a"
+    }
+  },
+  {
+    "candidateId": "science-0158",
+    "q": "Yale’s 2011 device could make suitably matched incoming laser beams almost entirely disappear into an absorber. What was its popular nickname?",
+    "a": "Anti-laser",
+    "d": "The coherent perfect absorber used interference and an absorbing silicon wafer. Instead of amplifying outgoing light, the arrangement trapped incoming light and converted its energy to heat.",
+    "s": "Yale · Anti-Laser",
+    "u": "https://news.yale.edu/2011/02/17/scientists-build-world-s-first-anti-laser",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Laser diode",
+      "Optical maser",
+      "Anti-laser",
+      "Photonic lantern"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.yale.edu/2011/02/17/scientists-build-world-s-first-anti-laser",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report identifies the anti-laser nickname, coherent perfect absorber, silicon wafer, matched incoming beams, and heat generation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "fa5c45cbdbcc86e70d542db97fd6b8a67477d672553efecdcf1726ec538018a2"
+    }
+  },
+  {
+    "candidateId": "science-0159",
+    "q": "University of Chicago physicists used shaped underwater wings in 2013 to tie knots in what?",
+    "a": "Vortex loops",
+    "d": "The moving water formed linked or knotted swirling loops. Tracking them showed that the knots could stretch, reconnect, and come apart.",
+    "s": "University of Chicago · Vortex Knots",
+    "u": "https://news.uchicago.edu/story/vortex-loops-could-untie-knotty-physics-problems",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Surface ripples",
+      "Streams of sand",
+      "Oil filaments",
+      "Vortex loops"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.uchicago.edu/story/vortex-loops-could-untie-knotty-physics-problems",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report describes 3-D-printed hydrofoils making water vortex knots and their reconnection dynamics.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "9200b7524d0a22cb3559906d795c5d649a39a75a7d79d989c952ced8571a2191"
+    }
+  },
+  {
+    "candidateId": "science-0160",
+    "q": "In 2011, researchers used a single living cell containing fluorescent protein as the light-amplifying part of what device?",
+    "a": "Laser",
+    "d": "The cell sat between mirrors and received external light pulses. It emitted laser pulses and remained alive after repeated operation.",
+    "s": "Nature Photonics · Single-Cell Biological Lasers",
+    "u": "https://www.nature.com/articles/nphoton.2011.99",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Solar cell",
+      "Laser",
+      "Light-emitting diode",
+      "Optical fiber"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nature.com/articles/nphoton.2011.99",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper reports GFP-expressing live cells in an optical cavity, externally pumped laser emission, and survival after prolonged lasing.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "af2094f538d5f679a9a1a5273195fede398542fe3bf3f8a226993053d0a7d4eb"
+    }
+  },
+  {
+    "candidateId": "science-0161",
+    "q": "A study of the Alhambra traced unexpected purple patches in its gilded decoration to tiny particles of which metal?",
+    "a": "Gold",
+    "d": "Corrosion processes produced gold nanoparticles. At that scale, the metal interacts with light differently from a continuous golden surface, helping explain the purple discoloration.",
+    "s": "Science Advances · Purple Alhambra Gilding",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9462697/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Iron",
+      "Cobalt",
+      "Gold",
+      "Copper"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9462697/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary 2022 conservation study identifies gold nanoparticles as the cause of purple discoloration in gilded Alhambra decoration.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a6a8b42f33d0418b2e82711f7f2eb97b3fd04af6bb2afef1f754094a816af7a1"
+    }
+  },
+  {
+    "candidateId": "science-0162",
+    "q": "Some heated crystals suddenly leap off a hotplate. What supplies the mechanical kick in the thermosalient effect?",
+    "a": "Release of internal strain",
+    "d": "A rapid structural transformation builds and releases stress inside the crystal. The resulting motion can throw a tiny crystal into the air.",
+    "s": "Max Planck Institute · Jumping Crystals",
+    "u": "https://www.fkf.mpg.de/8844666/news_publication_8824541_transferred",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Rising convection currents underneath",
+      "Escaping trapped water vapor",
+      "Electrostatic repulsion from the hotplate",
+      "Release of internal strain"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.fkf.mpg.de/8844666/news_publication_8824541_transferred",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional study explanation attributes jumping to rapid release of mechanical tension during a structural phase change.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "28fecdd97dfdfdc747cd8a3366e7fef26ccf7ead498dddfc354f33dce7403746"
+    }
+  },
+  {
+    "candidateId": "science-0163",
+    "q": "The “metallic” smell left on your hand after touching iron largely comes from reactions involving what?",
+    "a": "Skin oils",
+    "d": "Iron helps generate volatile molecules from substances on the skin. The familiar odor is therefore produced at the metal–skin encounter, rather than by airborne iron atoms.",
+    "s": "Virginia Tech · The Smell of Metal",
+    "u": "https://news.vt.edu/articles/2006/11/2006-611.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Dissolved nitrogen",
+      "Water vapor alone",
+      "Skin oils",
+      "Rust dust"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.vt.edu/articles/2006/11/2006-611.html",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report identifies metal-induced oxidation of skin lipids and odor-producing aldehydes and ketones.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "35ac0bcb871ee57f3515924525012cf0062958a4dee169c071cde9653c67317f"
+    }
+  },
+  {
+    "candidateId": "science-0164",
+    "q": "Harvard’s 2013 soft jumping robot got its sudden upward kick from what?",
+    "a": "Tiny internal combustion events",
+    "d": "Brief combustion inflated channels in the flexible robot rapidly enough to launch it. The system demonstrated jumping as a new movement for soft machines.",
+    "s": "Harvard · Robots with Lift",
+    "u": "https://news.harvard.edu/gazette/story/2013/02/robots-with-lift/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Electromagnets pulling on the floor",
+      "Rapidly spinning flywheels",
+      "Compressed coil springs",
+      "Tiny internal combustion events"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.harvard.edu/gazette/story/2013/02/robots-with-lift/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report describes combustion-driven pressure inside silicone channels producing repeated jumps; no construction instructions included.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "bdea849664c01f87e6fb2ead673f32803eedaea8b173eca37227a975eac4cb0a"
+    }
+  },
+  {
+    "candidateId": "science-0165",
+    "q": "In MIT’s “fluid trampoline” experiment, a water droplet bounced repeatedly on what thin vibrating surface?",
+    "a": "Soap film",
+    "d": "An oscillating liquid film could support bouncing droplets instead of immediately swallowing them. The experiment offered a compact system for studying chaotic motion.",
+    "s": "MIT · Fluid Trampoline",
+    "u": "https://news.mit.edu/2008/math-professor-discovers-chaos-fluid-trampoline",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Oil-coated rubber",
+      "Soap film",
+      "Liquid mercury",
+      "Molten wax"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2008/math-professor-discovers-chaos-fluid-trampoline",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report describes water drops bouncing on a vertically vibrating soap film; primary follow-up paper details the fluid system.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "c455bdb3b3db0fcd4fd07703a301215b55fd94f0218eb0907154205512e5f1ad"
+    }
+  },
+  {
+    "candidateId": "science-0166",
+    "q": "For IBM’s 2013 stop-motion film, the animators physically repositioned which microscopic objects between frames?",
+    "a": "Carbon monoxide molecules",
+    "d": "A scanning tunneling microscope moved the molecules on a surface. The tiny arrangements became successive frames of A Boy and His Atom.",
+    "s": "Nico Casavecchia · A Boy and His Atom",
+    "u": "https://www.nicocasavecchia.com/a-boy-and-his-atom",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Silica beads",
+      "DNA strands",
+      "Gold nanoparticles",
+      "Carbon monoxide molecules"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nicocasavecchia.com/a-boy-and-his-atom",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Film director’s first-party project description identifies carbon monoxide molecules, scanning tunneling microscopy, and frame-by-frame repositioning.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "57540cae92370d4624aff61adc8658ec2f832246b031c7999d7cb6b3da66be83"
+    }
+  },
+  {
+    "candidateId": "science-0167",
+    "q": "Caltech researchers made nanoscale smiley faces by folding long strands of what material with shorter molecular “staples”?",
+    "a": "DNA",
+    "d": "Short DNA strands bound to chosen parts of a longer strand, pulling it into a designed shape. The result was molecular construction rather than a printed picture.",
+    "s": "Caltech Rothemund Lab · DNA Origami",
+    "u": "https://rothemundlab.caltech.edu/dna_origami",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Silk protein",
+      "Carbon nanotubes",
+      "Cellulose",
+      "DNA"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://rothemundlab.caltech.edu/dna_origami",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Researcher’s own description specifies a long DNA strand, short folding strands, and nanoscale smiley-face structures.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "aad4e515669b8983909896e954dc0f3397c8bda23f45ae59eaf2bf5aa6d0e048"
+    }
+  },
+  {
+    "candidateId": "science-0168",
+    "q": "A special drill based on a rounded triangular shape can cut a hole that is approximately what shape?",
+    "a": "Square",
+    "d": "A Reuleaux-triangle-based cutter can follow an almost square boundary when properly constrained. The resulting corners are slightly rounded rather than mathematically perfect.",
+    "s": "Procedia Materials Science · Square-Hole Tool",
+    "u": "https://www.sciencedirect.com/science/article/pii/S2211812814005781",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Perfect circle",
+      "Regular pentagon",
+      "Figure eight",
+      "Square"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S2211812814005781",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary fabrication paper reports Reuleaux-triangle geometry, constrained moving center, and removal of 98.7 percent of the desired square area.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "d4a6a4498342782fb5648f0fa4e67bbd3dc0fa782f8c5c3a008b11f0992c000a"
+    }
+  },
+  {
+    "candidateId": "science-0169",
+    "q": "How many stable resting positions does an ideal uniform-density Gömböc have on a level surface?",
+    "a": "One",
+    "d": "Its carefully designed shape makes it return to a single stable orientation without a hidden bottom weight. It also has one unstable balance point.",
+    "s": "Cambridge Whipple Museum · Gömböc",
+    "u": "https://collections.whipplemuseum.cam.ac.uk/objects/14982/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Two",
+      "Three",
+      "Four",
+      "One"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://collections.whipplemuseum.cam.ac.uk/objects/14982/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum object description identifies homogeneous material, exactly one stable and one unstable equilibrium, and shape-based self-righting.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "ad7e46f9702c040840e23d8b4b72b795520f5d3ed85ab9f12d3ef5391fbe80d3"
+    }
+  },
+  {
+    "candidateId": "science-0170",
+    "q": "Davy and Faraday’s experiment in Florence showed that which precious stone could keep burning in pure oxygen once ignited?",
+    "a": "Diamond",
+    "d": "Faraday described the gem continuing to burn after the initial heat source was removed. A diamond is combustible despite its reputation for hardness and durability.",
+    "s": "Michael Faraday · Combustion of Diamond",
+    "u": "https://en.wikisource.org/wiki/Experimental_Researches_in_Chemistry_and_Physics/Apparatus_for_the_combustion_of_the_diamond",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Ruby",
+      "Emerald",
+      "Diamond",
+      "Sapphire"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://en.wikisource.org/wiki/Experimental_Researches_in_Chemistry_and_Physics/Apparatus_for_the_combustion_of_the_diamond",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary Faraday text recounts Davy’s Florence experiment and continued combustion of diamond in oxygen after removal of the original heat source.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "681272851c731db6bc2a76462cc94ebffdd475e01a245733d7a785fa3e8a90f4"
+    }
+  },
+  {
+    "candidateId": "science-0171",
+    "q": "What hidden component lets a heated Rijke tube keep roaring briefly after the flame is removed?",
+    "a": "Wire gauze",
+    "d": "The hot mesh transfers heat to air moving through the tube. Under the right conditions, that energy reinforces a loud acoustic oscillation.",
+    "s": "UCLA Physics · Rijke Tubes",
+    "u": "https://demoweb.physics.ucla.edu/content/110-rijke-tubes",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Steel coil spring",
+      "Rubber reed",
+      "Piezoelectric disc",
+      "Wire gauze"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://demoweb.physics.ucla.edu/content/110-rijke-tubes",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University demonstration description identifies internal wire gauze and sustained roaring from retained heat after removal from a flame.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "b0c85d221d80226f96707af4f8432d6a1e13ebd64ef40748d10dfa0625719dbc"
+    }
+  },
+  {
+    "candidateId": "science-0172",
+    "q": "A 2021 study made flexible microfibers from which normally brittle material, allowing them to bend and spring back while very cold?",
+    "a": "Ice",
+    "d": "Nearly defect-free single-crystal fibers of frozen water could deform elastically. Their tiny dimensions allowed behavior very different from an ordinary ice cube cracking.",
+    "s": "Science · Elastic Ice Microfibers",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/34244408/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Table salt",
+      "Quartz",
+      "Ice",
+      "Chalk"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/34244408/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper reports reversible bending of single-crystal ice microfibers under cryogenic conditions, approaching the theoretical elastic limit.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "32eed1720fdcc988a50ced2eedaba9ff5add4b879ecd691f5f0dd6979ee4ce81"
+    }
+  },
+  {
+    "candidateId": "science-0173",
+    "q": "Washington State researchers made experimental memory components in 2022 using a solidified layer of which sweet substance?",
+    "a": "Honey",
+    "d": "The honey layer sat between metal electrodes in a memristor. Tests showed switching and memory-like electrical behavior relevant to experimental brain-inspired computing.",
+    "s": "Washington State University · Honey Memristors",
+    "u": "https://news.wsu.edu/press-release/2022/04/05/honey-holds-potential-for-making-brain-like-computer-chips/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Corn syrup",
+      "Maple syrup",
+      "Molasses",
+      "Honey"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.wsu.edu/press-release/2022/04/05/honey-holds-potential-for-making-brain-like-computer-chips/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report identifies solidified honey between electrodes and measured memristor switching and synapse-like responses, not a complete artificial brain.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "4549e4fdcf2059cc7ce07d626bf690a4c18793e18a65cad2c8bb42bb379d94ed"
+    }
+  },
+  {
+    "candidateId": "science-0174",
+    "q": "Form Energy’s iron-air battery takes advantage of a reversible version of which familiar process?",
+    "a": "Rusting",
+    "d": "Discharging converts iron to rust using oxygen from the air. Charging reverses the transformation, restoring iron and releasing oxygen.",
+    "s": "Form Energy · Iron-Air Battery Cycle",
+    "u": "https://formenergy.com/technology/battery-technology/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Dissolving in acid",
+      "Melting",
+      "Electroplating with copper",
+      "Rusting"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://formenergy.com/technology/battery-technology/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Manufacturer’s technical description explicitly identifies reversible rusting and the charge/discharge transformations; no price or performance forecast used.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "77556fccfadb5f0c1a50b4d371e71f7924e9403b8e05b5d16349e9f3791aeb93"
+    }
+  },
+  {
+    "candidateId": "science-0175",
+    "q": "In the MycelioTronics study, researchers grew a biodegradable support for electronic circuits from what?",
+    "a": "Fungal mycelium",
+    "d": "Thin fungal skins served as flexible substrates for conducting traces. The study demonstrated electronic components on the material, including battery-powered sensing devices.",
+    "s": "Science Advances · MycelioTronics",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/36367944/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Algal shells",
+      "Bacterial spores",
+      "Moss leaves",
+      "Fungal mycelium"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/36367944/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary 2022 paper reports fungal mycelium skins as substrates, deposited conducting traces, flexible circuits, and autonomous sensing demonstrations.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "917dc6c529885dfe0337636a06aea1fac9fef6d27a532d467eebe5fb971d1bde"
+    }
+  }
+]

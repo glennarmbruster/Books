@@ -1,0 +1,162 @@
+[
+  {
+    "index": 56,
+    "card": {
+      "q": "In MIT experiments, how did raindrops striking porous soil launch tiny particles into the air?",
+      "a": "Trapped bubbles burst at the surface",
+      "d": "Air caught beneath a drop rises through it and bursts, producing aerosols.",
+      "choices": [
+        "Trapped bubbles burst at the surface",
+        "The whole drop rebounds and breaks apart",
+        "Surface salt crystals fracture on impact",
+        "Charged grains repel one another"
+      ],
+      "u": "https://news.mit.edu/2015/rainfall-can-release-aerosols-0114",
+      "s": "MIT · Rainfall can release aerosols",
+      "evidence": "High-speed imaging showed bubbles trapped on impact releasing aerosols when they burst.",
+      "level": "medium",
+      "cat": "Earth and Sky"
+    },
+    "reason": "Previously taught underlying fact; replaced before acceptance."
+  },
+  {
+    "index": 68,
+    "card": {
+      "q": "Where do many poisonous pufferfish obtain their tetrodotoxin?",
+      "a": "Their food",
+      "d": "Diet transfers toxin associated with bacteria into the fish.",
+      "choices": [
+        "Their food",
+        "Their own liver enzymes",
+        "Fungi growing on their scales",
+        "Direct absorption from seawater"
+      ],
+      "u": "https://www.nhm.ac.uk/discover/pufferfish-underwater-balloon-of-death.html?pubDate=20250427",
+      "s": "Natural History Museum · Pufferfish",
+      "evidence": "Museum attributes toxin to bacteria acquired through food.",
+      "level": "medium",
+      "cat": "Animal Encounters"
+    },
+    "reason": "Previously taught underlying fact; replaced before acceptance."
+  },
+  {
+    "index": 72,
+    "card": {
+      "q": "Where does a male dusky jawfish shelter his developing eggs?",
+      "a": "Inside his mouth",
+      "d": "He carries the clutch in his mouth instead of leaving it exposed.",
+      "choices": [
+        "Inside his mouth",
+        "Under a folded dorsal fin",
+        "Inside a belly pouch",
+        "Attached to his tail"
+      ],
+      "u": "https://ocean.si.edu/ocean-life/fish/dusky-jawfish-protecting-its-brood",
+      "s": "Smithsonian Ocean · Dusky jawfish brood",
+      "evidence": "Institutional photograph and account identify male oral egg brooding.",
+      "level": "medium",
+      "cat": "Animal Encounters"
+    },
+    "reason": "Previously taught underlying fact; replaced before acceptance."
+  },
+  {
+    "index": 64,
+    "card": {
+      "q": "What surprising strategy helps a fat-tailed dwarf lemur survive Madagascar’s long dry season?",
+      "a": "Hibernation",
+      "d": "This tropical primate can spend months in a low-energy state, living on stored fat.",
+      "choices": [
+        "Hibernation",
+        "Seasonal migration to wetter forest",
+        "Collecting food in underground stores",
+        "Growing a thicker insulating coat"
+      ],
+      "u": "https://lemur.duke.edu/discover/meet-the-lemurs/fat-tailed-dwarf-lemur/",
+      "s": "Duke Lemur Center · Fat-tailed dwarf lemur",
+      "evidence": "Duke reports prolonged hibernation with periodic arousals and use of tail fat.",
+      "level": "medium",
+      "cat": "Animal Encounters"
+    },
+    "reason": "Parent identified same mechanism taught by another species."
+  },
+  {
+    "index": 67,
+    "card": {
+      "q": "When a pufferfish inflates underwater, what chiefly fills its expanding stomach?",
+      "a": "Water",
+      "d": "The stomach stretches as the fish pumps water into it.",
+      "choices": [
+        "Water",
+        "Air",
+        "Carbon dioxide",
+        "Blood"
+      ],
+      "u": "https://www.nhm.ac.uk/discover/pufferfish-underwater-balloon-of-death.html?pubDate=20250427",
+      "s": "Natural History Museum · Pufferfish",
+      "evidence": "Museum explains underwater inflation by stomach water intake.",
+      "level": "easy",
+      "cat": "Animal Encounters"
+    },
+    "reason": "Parent identified same mechanism taught by another species."
+  },
+  {
+    "index": 97,
+    "card": {
+      "q": "Where do a female Suriname toad’s young develop before emerging as tiny frogs?",
+      "a": "Pockets in her back skin",
+      "d": "The eggs become embedded in her skin, where development continues until the young emerge.",
+      "choices": [
+        "Pockets in her back skin",
+        "Inside her throat",
+        "Between folds of her belly",
+        "In chambers beneath her feet"
+      ],
+      "u": "https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=2728",
+      "s": "US Geological Survey · Suriname toad",
+      "evidence": "Indexed official species account describes development on female back and emergence after three to four months.",
+      "level": "medium",
+      "cat": "Animal Encounters"
+    },
+    "reason": "Exact published Suriname-toad brood fact10325."
+  },
+  {
+    "index": 119,
+    "card": {
+      "q": "What can a sea otter use as a tool to open a hard-shelled meal while floating?",
+      "a": "Rock",
+      "d": "It may pound shellfish against a stone or strike the shell with one.",
+      "choices": [
+        "Rock",
+        "Driftwood fork",
+        "Kelp rope",
+        "Sea-urchin spine"
+      ],
+      "u": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/sea-otter",
+      "s": "Monterey Bay Aquarium · Sea otter",
+      "evidence": "Aquarium notes rock use for opening crab or clam prey.",
+      "level": "easy",
+      "cat": "Animal Encounters"
+    },
+    "reason": "Duplicates published156: otter pounding shellfish against rock on chest."
+  },
+  {
+    "index": 123,
+    "card": {
+      "q": "How does a velvet worm immobilize prey at a distance?",
+      "a": "Squirting sticky slime",
+      "d": "Paired oral nozzles eject adhesive that entangles the victim.",
+      "choices": [
+        "Squirting sticky slime",
+        "Throwing detachable bristles",
+        "Spitting venomous droplets",
+        "Firing grains of sand"
+      ],
+      "u": "https://www.hmnh.harvard.edu/velvet-worms-fierce-hunter-secret-weapon",
+      "s": "Harvard Museum of Natural History · Velvet worms",
+      "evidence": "Museum describes glue-like slime shot from nozzles to entrap prey.",
+      "level": "medium",
+      "cat": "Animal Encounters"
+    },
+    "reason": "Duplicates published1462: velvet worm paired adhesive nozzles restraining prey."
+  }
+]

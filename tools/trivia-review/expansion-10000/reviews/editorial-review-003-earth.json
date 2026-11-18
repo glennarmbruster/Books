@@ -1,0 +1,16 @@
+{
+  "reviewedOn": "2026-11-17",
+  "accepted": 149,
+  "rejected": 1,
+  "method": "Read all150 prompts, explanations and choices in successive drafts plus final replacements; improved answer choices and removed self-answering clues. Parent source spot checks covered lunar snow, Old Faithful trees, Greenland sea-level gravity, Lake Vanda solar heating, and long-lived fjord oscillations. Retained study/model qualifiers. Parent rewrote124 to remove multiple plausible hydrogen-source answers.",
+  "duplicateReview": "Combined author full question/answer/explanation review with parent independent whole-bank lexical neighbors and entity searches. Replaced Mars sunset, carbonatite whitening, frost deposition, volcanic lightning, Enceladus ring supply, asphalt volcanoes and ice-dam variations. Related mechanism questions judged separately; no exact duplicates found.",
+  "exclusions": [
+    {
+      "candidateId": "earth-0049",
+      "reason": "Wind and current transport is a routine mechanism; this card does not supply enough distinctive surprise beyond naming an ice shove."
+    }
+  ],
+  "parentChanges": [
+    "earth0124 asks supplied element rather than an ambiguously worded source choice"
+  ]
+}

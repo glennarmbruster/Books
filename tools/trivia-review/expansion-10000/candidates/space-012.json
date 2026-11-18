@@ -1,0 +1,60 @@
+[
+  {
+    "candidateId": "space-0032",
+    "q": "What formed the flexible tire-like outer structure of the Apollo lunar rovers' wheels?",
+    "a": "Woven metal wire",
+    "d": "The mesh wheels used zinc-coated piano wire, with titanium tread strips. They carried astronauts across lunar soil without conventional inflated rubber tires.",
+    "s": "Boeing and NASA technical archive - Lunar rover wheel configuration",
+    "u": "https://ntrs.nasa.gov/api/citations/19910005287/downloads/19910005287.pdf",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Woven metal wire",
+      "Inflated fabric tubes",
+      "Solid molded rubber",
+      "Flexible fiberglass rings"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://ntrs.nasa.gov/api/citations/19910005287/downloads/19910005287.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary Boeing engineering sheet archived by NASA identifies woven zinc-coated piano wire, titanium tread and aluminum hub. NASA technical overview independently describes mesh construction and titanium chevrons.",
+      "sourceReviewer": "Codex primary researcher; exact institutional source read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "5841638cecbbd7be32de79655e1f073c979be1944aa184adef38d6e4b22d39cb"
+    }
+  },
+  {
+    "candidateId": "space-0033",
+    "q": "What accident ended Apollo 12's live television pictures from the lunar surface?",
+    "a": "Pointing the camera at the Sun",
+    "d": "While setting it up, Alan Bean inadvertently exposed the camera's sensitive imaging tube to direct sunlight. The astronauts continued their work without the live surface television coverage.",
+    "s": "NASA history - Apollo 12 on the Moon",
+    "u": "https://www.nasa.gov/history/50-years-ago-apollo-12-on-the-moon-whoopee/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Severing its cable with a shovel",
+      "Dropping its battery into a crater",
+      "Pointing the camera at the Sun",
+      "Snapping its antenna while unfolding it"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/history/50-years-ago-apollo-12-on-the-moon-whoopee/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NASA mission-history account explicitly describes accidental Sun pointing damaging the vidicon tube and ending live surface TV transmission.",
+      "sourceReviewer": "Codex primary researcher; exact institutional source read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "588ddf0a1b0f09d3500cc037448828547c2eea0ec9c4b4f5612b6f0b382b13b4"
+    }
+  }
+]

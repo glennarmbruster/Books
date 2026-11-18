@@ -1,0 +1,34 @@
+[
+  {
+    "q": "What formed the flexible tire-like outer structure of the Apollo lunar rovers' wheels?",
+    "a": "Woven metal wire",
+    "d": "The mesh wheels used zinc-coated piano wire, with titanium tread strips. They carried astronauts across lunar soil without conventional inflated rubber tires.",
+    "s": "Boeing and NASA technical archive - Lunar rover wheel configuration",
+    "u": "https://ntrs.nasa.gov/api/citations/19910005287/downloads/19910005287.pdf",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Woven metal wire",
+      "Inflated fabric tubes",
+      "Solid molded rubber",
+      "Flexible fiberglass rings"
+    ],
+    "evidence": "Primary Boeing engineering sheet archived by NASA identifies woven zinc-coated piano wire, titanium tread and aluminum hub. NASA technical overview independently describes mesh construction and titanium chevrons."
+  },
+  {
+    "q": "What accident ended Apollo 12's live television pictures from the lunar surface?",
+    "a": "Pointing the camera at the Sun",
+    "d": "While setting it up, Alan Bean inadvertently exposed the camera's sensitive imaging tube to direct sunlight. The astronauts continued their work without the live surface television coverage.",
+    "s": "NASA history - Apollo 12 on the Moon",
+    "u": "https://www.nasa.gov/history/50-years-ago-apollo-12-on-the-moon-whoopee/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Severing its cable with a shovel",
+      "Dropping its battery into a crater",
+      "Pointing the camera at the Sun",
+      "Snapping its antenna while unfolding it"
+    ],
+    "evidence": "NASA mission-history account explicitly describes accidental Sun pointing damaging the vidicon tube and ending live surface TV transmission."
+  }
+]

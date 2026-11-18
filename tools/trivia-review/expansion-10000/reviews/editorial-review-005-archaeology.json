@@ -1,0 +1,37 @@
+{
+  "reviewedOn": "2026-11-17",
+  "file": "candidates/archaeology-005.json",
+  "accepted": 17,
+  "rejectedBeforeStaging": [
+    "Ancient chewed birch-pitch genome: already food0104.",
+    "Hoxne hammer: not retained while better primary route remained unverified.",
+    "Ancient toy rattles: too ordinary for this set."
+  ],
+  "sourceReview": "Parent read exact institutional pages or primary papers. Archived press PDFs from British Museum and Inrap and Carmona primary paper were read via indexed full text where direct open failed. University of Basel toe release hosted on IDW is explicitly university-authored.",
+  "sourceBudgets": {
+    "https://www.vindolanda.com/news/roman-leather-mouse-discovered": 64,
+    "https://www.vindolanda.com/blog/vindolandas-top-10-finds-of-the-decade?title=vindolandas-top-10-finds-of-the-decade": 97,
+    "https://maryrose.org/artefacts/ballock-dagger/": 54,
+    "https://maryrose.org/artefacts/fiddle/": 58,
+    "https://www.iceman.it/en/oetzi/equipment": 122,
+    "https://www.britishmuseum.org/sites/default/files/2023-04/British_Museum_unwraps_secrets_of_ancient_Egyptian_lizard_mummies_0.pdf": 62,
+    "https://www.britishmuseum.org/sites/default/files/2024-11/Animal_mummies_from_beliefs_to_practice_abstracts.pdf": 68,
+    "https://idw-online.de/de/news?id=676657&print=1": 62,
+    "https://onlinelibrary.wiley.com/doi/10.1111/maps.12664": 60,
+    "https://news.mit.edu/2023/roman-concrete-durability-lime-casts-0106": 75,
+    "https://www.nationaltrust.org.uk/visit/suffolk/sutton-hoo/royal-burial-ground-at-sutton-hoo": 63,
+    "https://www.inrap.fr/sites/inrap.fr/files/atoms/files/pr_restauration_and_study_of_the_exceptional_cage_cup_from_autun_.pdf": 54,
+    "https://www.sciencedirect.com/science/article/pii/S2352409X24002645": 65,
+    "https://www.discoverbucksmuseum.org/1700-year-old-roman-egg-press-release/": 62,
+    "https://news.mit.edu/2010/mayaball-0524": 63
+  },
+  "editorialNotes": [
+    "No claims of preserved Roman egg being edible or fresh; exact contents unknown.",
+    "No implication all animal mummy bundles without full animals were fraudulent.",
+    "No current oldest-record claim, simplistic wine-color claim or definite motive for mouse/carrying embers.",
+    "Ignored outdated confident tattoo-technique statements on one museum page; no tattoo question created."
+  ],
+  "duplicateNotes": "Full stem+answer+explanation neighbors and entity searches inspected. Methods, rather than repeated wordings of earlier facts, distinguish ancient lime concrete from bacterial repair.",
+  "independentSecondReviewer": false,
+  "fullReleaseReady": false
+}

@@ -1,0 +1,161 @@
+{
+  "status": "bounded_authoring_complete_parent_adjudication_pending_final25",
+  "count": 225,
+  "frozen_imported_indices": "1–200; do not reimport or overwrite earlier parent repairs",
+  "new_final_indices": "201–225",
+  "level_counts": {
+    "hard": 58,
+    "medium": 139,
+    "easy": 28
+  },
+  "release": "held; no app/cache/repository edits",
+  "novelty_checks": [
+    "Full q+a+d TF-IDF nearest neighbors saved separately; all final25 nearest pairs read.",
+    "Entity sweeps against published20100, all editorial candidate files, sibling temporary files.",
+    "214 differs from lotus effect: water sheets on hydrophilic coating, rather than rolling droplets on hydrophobic leaf.",
+    "215 tests tunable musical rubber-block demonstration;221 tests observed electrical discharges, both distinct facts from one study.",
+    "225 tests dust origin in vacuum-cleaner bags; earlier peanut-butter SRM tests a different specimen.",
+    "206 engineered spinach chemical detection differs from earlier spinach tissue scaffold."
+  ],
+  "source_checks": [
+    "No201–225 URLs returned404. Some direct scripted requests were blocked403/406; actual supporting institutional/publisher text was read through web retrieval.",
+    "Harvard215/221 primary publication verified: DOI10.1038/s41586-026-10132-3; publication25February2026; PubMed41741742 and Crossmark both confirm. Crossmark document current.",
+    "Raw106 still contains earlier frozen source; parent was sent verified ISMA2018 replacement and owns candidate repair.",
+    "Final set uses no more than3 cards per source and maximum129 derived words per source including evidence across raw225."
+  ],
+  "editorial_revisions": [
+    "205 removed answer-giving magnetocaloric stem.",
+    "210 asks unexpected material welded, rather than obvious friction heat.",
+    "213 removed pencil clue; parallel material distractors.",
+    "214 removed implausible freezing distractor.",
+    "219 removed chemical-generator wording from question to avoid giving method away.",
+    "220 replaced weak implausible distractors with parallel measurement aims."
+  ],
+  "per_card": [
+    {
+      "index": 201,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 202,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 203,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 204,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 205,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 206,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 207,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 208,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 209,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 210,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 211,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 212,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 213,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 214,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 215,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 216,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 217,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 218,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 219,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 220,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 221,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 222,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 223,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 224,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    },
+    {
+      "index": 225,
+      "decision": "accept",
+      "note": "Source-supported, scoped, independently distinct; parent final review requested."
+    }
+  ]
+}

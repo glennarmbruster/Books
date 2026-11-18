@@ -1,0 +1,41 @@
+{
+  "reviewedOn": "2026-11-17",
+  "scope": "Primary researcher’s books, space and word-history additions. Other contributors are still drafting separately and are not included.",
+  "candidatesRead": 46,
+  "accepted": 42,
+  "rejected": 4,
+  "published": false,
+  "reviewNotes": [
+    "Read linked source text and supporting dictionary etymology sections; uncertainties are retained rather than converted into facts.",
+    "Compared questions, answers and explanations against all20,100 published questions and staged candidates, reading lexical neighbors and targeted subject searches.",
+    "Improved distractors and rephrased answer-giving prompts. Correct choices use a deterministic hash ordering.",
+    "Rejected repeated ConanDoyle miniaturelibrary, chainedlibrary pageedges and musclemouse origin, plus an ambiguous musical-wire comparison."
+  ],
+  "rejections": [
+    {
+      "candidateId": "books-0003",
+      "reason": "Published #911 already covers the same miniature Holmes story and dolls’ house library, including its title in the explanation."
+    },
+    {
+      "candidateId": "books-0011",
+      "reason": "Published #924 already explains the spine-inward arrangement of chained books; another library is not a new underlying fact."
+    },
+    {
+      "candidateId": "space-0021",
+      "reason": "Wire is used in several instruments; this tests an arbitrary comparison in the source rather than a robust unique fact. Retain the stronger cliff-gripping and ice-drilling robot cards."
+    },
+    {
+      "candidateId": "words-0001",
+      "reason": "Same muscle/little-mouse etymology already accepted in culture-0033."
+    }
+  ],
+  "followup": {
+    "acceptedAfterIndependentReview": 41,
+    "rejectedAfterIndependentReview": 5,
+    "changes": [
+      "Rejected space0027 automatic urine choices.",
+      "Changed cappuccino to medium and eavesdropper to easy."
+    ],
+    "report": "independent-review-002-parent.json"
+  }
+}

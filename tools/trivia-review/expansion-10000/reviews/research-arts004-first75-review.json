@@ -1,0 +1,27 @@
+{
+  "frozenThrough": 75,
+  "eligible": 74,
+  "rejected": [
+    {
+      "rawIndex": 68,
+      "reason": "Underlying fact already accepted in objects-0133: Victorian mourning jewelry made from loved ones human hair. Preserve raw position; do not count."
+    }
+  ],
+  "revised": [
+    15,
+    18,
+    20,
+    22,
+    23,
+    29,
+    46,
+    47,
+    54,
+    62,
+    70
+  ],
+  "naturalAnswers": "Removed leading A/An/The where present; repaired matching choices.",
+  "urlCaveats": "No 404s in HTTP audit. Several museums return automated-request 403/429. Swedish manuscript catalog has host certificate mismatch in urllib, but web tool read indexed institutional catalog. Walker URL has TLS protocol error in urllib but institutional page read by web. Clean V&A hair route returns403; card68 rejected and original read URL retained.",
+  "first75sha256": "4f3ce92ae197c017ee35a2fb23301177f44732bc6202c25d7c54cacfbc8eac36",
+  "semanticCheck": "Full q+a+d IDF neighbors and specific entity scan. Confirmed mourning hair duplicate only. Named-topic checks: TARDIS, Great Omar, Codex Gigas, N\u00fcshu, tintype iron, camellibrary, Pepper ghost had no distinct existing matching fact."
+}

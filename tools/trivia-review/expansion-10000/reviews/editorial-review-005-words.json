@@ -1,0 +1,22 @@
+{
+  "reviewedOn": "2026-11-17",
+  "file": "candidates/words-005.json",
+  "staged": 24,
+  "accepted": 23,
+  "rejected": [
+    {
+      "candidateId": "words-0059",
+      "reason": "Less surprising than the other word histories; repeats the bread/panis connection already taught by companion in words0003."
+    }
+  ],
+  "sourceMethod": "Parent read every exact dictionary etymology, plus relevant historical notes. Villain uses the directly opened Merriam-Webster historical essay. This is a source and editorial review by the same author, not an independent second-person review.",
+  "duplicateReview": "Inspected complete q/a/d topic search and top neighbors for every card. Silly versus nice involve different words and semantic changes; galaxy milk is distinct from merely identifying the Milky Way; muslin word origin differs from geographical city identification.",
+  "omittedBeforeStaging": [
+    "Sarcasm stripping-flesh derivation is conjectural according to the entry; omitted.",
+    "Saturnine/lunatic repeat astronomical naming pattern and are too readily inferred.",
+    "Calico/tuxedo add little beside existing fabric/place word histories.",
+    "Dexterity is too similar to existing sinister left/right etymology."
+  ],
+  "wordBudget": "One card per exact source page; each q/a/d/repeated correct answer/supporting fact total remains below180 words.",
+  "fullReleaseReady": false
+}

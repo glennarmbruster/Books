@@ -1,0 +1,2402 @@
+[
+  {
+    "index": 1,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/mercury/facts/",
+    "evidence": "NASA describes a brief sunrise, sunset and second sunrise at some surface locations.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.441,
+      "file": "existing.json",
+      "id": 16373,
+      "q": "Which of the following planets is closest to the Sun?",
+      "a": "Mercury",
+      "d": ""
+    }
+  },
+  {
+    "index": 2,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/mercury/facts/",
+    "evidence": "NASA attributes large cliffs to cooling and contraction of Mercury’s interior.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.273,
+      "file": "existing.json",
+      "id": 13223,
+      "q": "What is the closest planet to our solar system's sun?",
+      "a": "Mercury",
+      "d": ""
+    }
+  },
+  {
+    "index": 3,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/mars/facts/",
+    "evidence": "NASA says inward-moving Phobos may crash or break up, creating a dusty ring.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.271,
+      "file": "existing.json",
+      "id": 2596,
+      "q": "Termite-inspired robots may someday build a base for humans on which celestial object?",
+      "a": "Mars",
+      "d": "Mars is the fourth planet from the Sun. It is also known as the \"Red Planet\", for its orange-red appearance."
+    }
+  },
+  {
+    "index": 4,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/earth/10-things-to-know-about-the-ionosphere/",
+    "evidence": "NASA explains airglow from excited particles relaxing and ionized particles recombining.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.175,
+      "file": "existing.json",
+      "id": 1313,
+      "q": "What triangular glow sometimes looks like dawn even though it is sunlight scattering off dust between the planets?",
+      "a": "Zodiacal light",
+      "d": "On a dark night it rises along the broad path traced by the planets. That alignment reflects the shape of the inner solar system's dust cloud."
+    }
+  },
+  {
+    "index": 5,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/planets/mars/nasa-scientists-re-create-mars-spiders-in-a-lab-for-first-time/",
+    "evidence": "NASA describes the Kieffer model and laboratory replication; formation is a supported explanation, not fully settled.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Supported leading model and lab replication, not fully settled.",
+    "highestTextMatch": {
+      "score": 0.225,
+      "file": "existing.json",
+      "id": 16209,
+      "q": "Dry ice is the solid form of what substance?",
+      "a": "Carbon dioxide",
+      "d": ""
+    }
+  },
+  {
+    "index": 6,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/what-sounds-captured-by-nasas-perseverance-rover-reveal-about-mars/",
+    "evidence": "NASA reports about 250 m/s for high frequencies versus 240 m/s for low frequencies.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.228,
+      "file": "existing.json",
+      "id": 12333,
+      "q": "What is the acoustic phenomenon that gives sound a penetrating quality called?",
+      "a": "Sound projection",
+      "d": "The acoustic phenomenon that gives sound a penetrating quality. Another name is projection."
+    }
+  },
+  {
+    "index": 7,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/centers-and-facilities/glenn/cook-crush-choke-testing-components-before-launching-to-venus/",
+    "evidence": "NASA Glenn describes sulfuric-acid cloud droplets and acid rain that evaporates before reaching the ground.",
+    "duplicateNotes": "Retargeted to sulfuric acid composition; avoids retesting Earth virga evaporation in published11565.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.317,
+      "file": "existing.json",
+      "id": 12446,
+      "q": "Which term fits this clue? Dilute sulfuric acid used in storage batteries.",
+      "a": "Battery acid",
+      "d": "Dilute sulfuric acid used in storage batteries. Another name is electrolyte acid."
+    }
+  },
+  {
+    "index": 8,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/uranus/facts/",
+    "evidence": "NASA identifies methane absorption of red light as the source of the blue-green color.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.284,
+      "file": "existing.json",
+      "id": 18325,
+      "q": "What shade of the blue color is also called angel blue?",
+      "a": "Light blue",
+      "d": ""
+    }
+  },
+  {
+    "index": 9,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/image-article/icy-mountains-of-pluto/",
+    "evidence": "NASA identifies water ice as the probable mountain-building bedrock.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.297,
+      "file": "existing.json",
+      "id": 6224,
+      "q": "An unusual mountain on Pluto may have once erupted water instead of what?",
+      "a": "Lava",
+      "d": "Wright Mons is a large, roughly circular mountain and likely cryovolcano on the dwarf planet Pluto."
+    }
+  },
+  {
+    "index": 10,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+    "evidence": "NASA describes convection: warm ice rises centrally and cold ice sinks at margins.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.171,
+      "file": "existing.json",
+      "id": 703,
+      "q": "What are you looking through if a volcanologist calls a glowing hole in a lava field a “skylight”?",
+      "a": "An opening in the roof of a lava tube.",
+      "d": "Molten lava can keep flowing through the passage beneath an already solid surface."
+    }
+  },
+  {
+    "index": 11,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+    "evidence": "NASA identifies methane-ice grains as the suspected dune material.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Dune material remains an inference.",
+    "highestTextMatch": {
+      "score": 0.198,
+      "file": "existing.json",
+      "id": 10178,
+      "q": "Why does the sand at New Mexico’s White Sands look so pale?",
+      "a": "It is made of gypsum",
+      "d": "Gypsum grains form extensive windblown dunes in the Tularosa Basin."
+    }
+  },
+  {
+    "index": 12,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+    "evidence": "NASA links ice loading and tidal forces to Pluto’s reorientation.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Interpretation of mass loading and tidal reorientation.",
+    "highestTextMatch": {
+      "score": 0.316,
+      "file": "existing.json",
+      "id": 396,
+      "q": "Which moon is so large compared with Pluto that the two are sometimes called a double planet?",
+      "a": "Charon.",
+      "d": "Charon is roughly half Pluto’s diameter. That makes it quite a dance partner for such a small world."
+    }
+  },
+  {
+    "index": 13,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/missions/juno/shallow-lightning-and-mushballs-reveal-ammonia-to-nasas-juno-scientists/",
+    "evidence": "Juno scientists propose ammonia-water hail as a mechanism carrying ammonia into deep atmospheric layers.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Mushballs are a proposed atmospheric mechanism.",
+    "highestTextMatch": {
+      "score": 0.225,
+      "file": "existing.json",
+      "id": 939,
+      "q": "What sharp-smelling substance supplied the molecules in the first atomic clock?",
+      "a": "Ammonia.",
+      "d": "The 1949 instrument used a microwave frequency characteristic of ammonia molecules."
+    }
+  },
+  {
+    "index": 14,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/solar-system/planets/saturn/rings-of-saturn/nasa-research-reveals-saturn-is-losing-its-rings-at-worst-case-scenario-rate/",
+    "evidence": "NASA describes charged ring grains falling along magnetic fields under gravity.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.385,
+      "file": "existing.json",
+      "id": 12311,
+      "q": "What is a line of force in a magnetic field called?",
+      "a": "Magnetic line of force",
+      "d": "A line of force in a magnetic field."
+    }
+  },
+  {
+    "index": 15,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://spaceplace.nasa.gov/io-tides/en/",
+    "evidence": "NASA describes large solid-ground tides on Io.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.186,
+      "file": "existing.json",
+      "id": 16282,
+      "q": "Which type of rock is created by intense heat AND pressure?",
+      "a": "Metamorphic",
+      "d": ""
+    }
+  },
+  {
+    "index": 16,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/moon/solar-wind/",
+    "evidence": "NASA says solar-wind charging can levitate dust.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.199,
+      "file": "space-002.json",
+      "id": "space-0024",
+      "q": "Apollo 17 astronauts made a replacement lunar-rover fender from four pieces of what?",
+      "a": "Maps",
+      "d": "Duct tape joined the maps, and clamps held the improvised mudguard in place against the rover’s spray of lunar dust."
+    }
+  },
+  {
+    "index": 17,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/moon/moonquakes/",
+    "evidence": "NASA identifies deep moonquakes as tidal events caused by Earth’s gravity.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.362,
+      "file": "existing.json",
+      "id": 16283,
+      "q": "How many moons does the Earth have?",
+      "a": "1",
+      "d": ""
+    }
+  },
+  {
+    "index": 18,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question58.html",
+    "evidence": "NASA explains the nearly fixed Earth position and small libration-driven movements.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.38,
+      "file": "existing.json",
+      "id": 16283,
+      "q": "How many moons does the Earth have?",
+      "a": "1",
+      "d": ""
+    }
+  },
+  {
+    "index": 19,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1/",
+    "evidence": "NASA describes polarity exchange around the peak of the sunspot cycle.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.324,
+      "file": "existing.json",
+      "id": 12311,
+      "q": "What is a line of force in a magnetic field called?",
+      "a": "Magnetic line of force",
+      "d": "A line of force in a magnetic field."
+    }
+  },
+  {
+    "index": 20,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/resource/ocean-worlds-triton/",
+    "evidence": "NASA identifies active nitrogen-gas geysers on Triton.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.354,
+      "file": "space-001.json",
+      "id": "space-0003",
+      "q": "Which large moon circles Neptune in the opposite direction from its planet’s spin?",
+      "a": "Triton",
+      "d": "Triton’s backward orbit is a clue that Neptune captured it rather than forming it in place like a regular satellite."
+    }
+  },
+  {
+    "index": 21,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/image-article/dynamic-duo-jupiters-independently-pulsating-x-ray-auroras/",
+    "evidence": "NASA reports regular southern and erratic northern X-ray pulses.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.205,
+      "file": "existing.json",
+      "id": 12316,
+      "q": "What is the aurora of the southern hemisphere called?",
+      "a": "Southern lights",
+      "d": "The aurora of the southern hemisphere. Another name is aurora australis."
+    }
+  },
+  {
+    "index": 22,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts",
+    "evidence": "USGS records the Tucson pool losing water from the Michoacan earthquake.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.21,
+      "file": "existing.json",
+      "id": 14926,
+      "q": "Which term fits this clue? Pool that provides a facility for swimming.",
+      "a": "Swimming pool",
+      "d": "Pool that provides a facility for swimming. Another name is swimming bath."
+    }
+  },
+  {
+    "index": 23,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/media/images/liquefaction",
+    "evidence": "USGS describes liquefaction producing surface sand boils.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.195,
+      "file": "existing.json",
+      "id": 10257,
+      "q": "Which animal fits this clue? A sand snake of southwestern United States; lives in fine to coarse sand or loamy soil in which it `swims'; banding resembles that of coral snakes.",
+      "a": "Banded sand snake",
+      "d": "A sand snake of southwestern United States; lives in fine to coarse sand or loamy soil in which it `swims'; banding resembles that of coral snakes. Another name is Chilomeniscus cinctus."
+    }
+  },
+  {
+    "index": 24,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/moon/moonquakes/",
+    "evidence": "NASA lists thermal expansion and contraction as causes of extremely shallow moonquakes.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.213,
+      "file": "existing.json",
+      "id": 12472,
+      "q": "What is the opposite of cold?",
+      "a": "Hot",
+      "d": ""
+    }
+  },
+  {
+    "index": 25,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/missions/iris/iris-spots-plasma-rain-on-suns-surface/",
+    "evidence": "NASA explains coronal plasma follows paths guided by magnetic forces.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.3,
+      "file": "existing.json",
+      "id": 14810,
+      "q": "Which term fits this clue? Container consisting of any configuration of magnetic fields used to contain a plasma during controlled thermonuclear reactions.",
+      "a": "Magnetic bottle",
+      "d": "Container consisting of any configuration of magnetic fields used to contain a plasma during controlled thermonuclear reactions."
+    }
+  },
+  {
+    "index": 26,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis/",
+    "evidence": "NASA modeled mass redistribution causing a small rotational speedup; this was a theoretical estimate.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Theoretical modeled day shortening, not directly claimed observed.",
+    "highestTextMatch": {
+      "score": 0.155,
+      "file": "existing.json",
+      "id": 16324,
+      "q": "How much is the estimated daily intake of magnesium in humans?",
+      "a": "300 mg",
+      "d": "Double the amount is recommended for athletes or pregnant women: it can be calculated with 6 mg per kg of body weight."
+    }
+  },
+  {
+    "index": 27,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.repository.cam.ac.uk/items/b4e33f09-0bcd-4dec-9f4f-6c5ecdc73da1",
+    "evidence": "The primary study demonstrates wake-mediated repulsion of aqueous dunes without mass exchange; wind-driven extension is only conjectured.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.268,
+      "file": "existing.json",
+      "id": 10152,
+      "q": "Can Colorado’s Great Sand Dunes have snow on the sand in winter?",
+      "a": "Yes",
+      "d": "The dune field sits high in a mountain valley with a real winter."
+    }
+  },
+  {
+    "index": 28,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/observatories/yvo/news/hydrothermal-explosions-yellowstone-national-park",
+    "evidence": "USGS describes pressure-triggered steam explosions without a direct magma association.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.267,
+      "file": "existing.json",
+      "id": 16198,
+      "q": "At what temperature does water boil?",
+      "a": "212°F",
+      "d": ""
+    }
+  },
+  {
+    "index": 29,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-what-fans-flames-observed-volcanic-vents",
+    "evidence": "USGS distinguishes methane flames around flows from other vent-flame mechanisms.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.238,
+      "file": "existing.json",
+      "id": 10104,
+      "q": "What gives Idaho’s Craters of the Moon its otherworldly ground surface?",
+      "a": "Lava flows",
+      "d": "The area includes lava fields, cinder cones and lava tubes."
+    }
+  },
+  {
+    "index": 30,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://home.nps.gov/media/video/view.htm?id=899DBB31-8EC7-42BA-A719-A880E58D823B",
+    "evidence": "NPS records singing sand during sand avalanches; no claim of a universal detailed acoustic mechanism.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.41,
+      "file": "existing.json",
+      "id": 10152,
+      "q": "Can Colorado’s Great Sand Dunes have snow on the sand in winter?",
+      "a": "Yes",
+      "d": "The dune field sits high in a mountain valley with a real winter."
+    }
+  },
+  {
+    "index": 31,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/programs/earthquake-hazards/earthquake-booms-seneca-guns-and-other-sounds",
+    "evidence": "USGS attributes frost quakes to shallow water freezing and fracturing surrounding material.",
+    "duplicateNotes": "Published11576 teaches expansion on freezing. This card tests the specific ground-fracture boom, not the generic expansion rule.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.196,
+      "file": "existing.json",
+      "id": 11576,
+      "q": "Does water normally expand or shrink as it freezes into an ice cube?",
+      "a": "Expand",
+      "d": "Ordinary ice is less dense than liquid water, which is also why it floats."
+    }
+  },
+  {
+    "index": 32,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://home.nps.gov/im/arcn/permafrost.htm",
+    "evidence": "NPS explains ice-core hill growth and collapse in Alaska.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.206,
+      "file": "existing.json",
+      "id": 11506,
+      "q": "What covers twigs with white feathery crystals on some cold mornings?",
+      "a": "Ice deposited from water vapor",
+      "d": "Water vapor can turn directly into ice on a surface below freezing."
+    }
+  },
+  {
+    "index": 33,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull17-5/17505004447.pdf",
+    "evidence": "IAEA’s symposium report describes ancient chain reactions within the uranium ore body.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.281,
+      "file": "existing.json",
+      "id": 8752,
+      "q": "With what was the Nuclear Reactor Building on the University of Washington campus in Seattle designed to \"proudly showcase\" the reactor?",
+      "a": "Large glass windows",
+      "d": "The More Hall Annex, formerly the Nuclear Reactor Building, was a building on the campus of the University of Washington in Seattle, Washington, United States, that once housed a functional nuclear research reactor."
+    }
+  },
+  {
+    "index": 34,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.weather.gov/media/aly/stormbuster/Spring17SB.pdf",
+    "evidence": "NWS describes sharply differing layer velocities producing curling wave clouds.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.258,
+      "file": "existing.json",
+      "id": 209,
+      "q": "Which smooth, lens-shaped clouds near mountains are sometimes mistaken for flying saucers?",
+      "a": "Lenticular clouds.",
+      "d": "Air flowing over high ground can form waves. A cloud may seem to hover at one spot while air keeps moving through it."
+    }
+  },
+  {
+    "index": 35,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.weather.gov/media/owlie/CloudsOutMyWindow.pdf",
+    "evidence": "NOAA’s cloud guide states that sky between rainbows is darker than either side.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.187,
+      "file": "existing.json",
+      "id": 11550,
+      "q": "What does a glass prism do to white light to make a rainbow-like band?",
+      "a": "Separates its colors",
+      "d": "Different wavelengths bend by different amounts as they pass through."
+    }
+  },
+  {
+    "index": 36,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.weather.gov/owlie/weird-weather",
+    "evidence": "NWS describes nearby same-spin hurricanes circling a common center.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.162,
+      "file": "existing.json",
+      "id": 9000,
+      "q": "1980's Hurricane Karl evolved at the center of another, larger storm that occupied much of the North Atlantic, and set what for its unusual location and date?",
+      "a": "Multiple records",
+      "d": "The 1980 Atlantic hurricane season featured nine hurricanes, the most since 1969."
+    }
+  },
+  {
+    "index": 37,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.weather.gov/owlie/weird-weather",
+    "evidence": "NWS explains compressional warming after evaporation exhausts the moisture.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.185,
+      "file": "existing.json",
+      "id": 12336,
+      "q": "Which term fits this clue? A local region of low pressure or descending air that causes a plane to lose height suddenly.",
+      "a": "Air pocket",
+      "d": "A local region of low pressure or descending air that causes a plane to lose height suddenly. Another name is pocket."
+    }
+  },
+  {
+    "index": 38,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.weather.gov/owlie/weird-weather",
+    "evidence": "NWS describes sublimation carving penitente terrain.",
+    "duplicateNotes": "Published11506 is vapor deposition into hoarfrost; penitentes test loss of snow through sublimation, an opposite process in a distinct landform.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.214,
+      "file": "existing.json",
+      "id": 11506,
+      "q": "What covers twigs with white feathery crystals on some cold mornings?",
+      "a": "Ice deposited from water vapor",
+      "d": "Water vapor can turn directly into ice on a surface below freezing."
+    }
+  },
+  {
+    "index": 39,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://preview.weather.gov/safety/wind-dust-storm",
+    "evidence": "NWS directly links haboobs to thunderstorm outflow winds.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.176,
+      "file": "nature-001.json",
+      "id": "nature-0090",
+      "q": "What airborne material can tint rain red and give rise to the term blood rain?",
+      "a": "Colored dust",
+      "d": "Dust carried high into the atmosphere can mix with cloud droplets and fall in rain."
+    }
+  },
+  {
+    "index": 40,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.weather.gov/cle/event_notable_2014",
+    "evidence": "NWS explains light pillars by reflection from plate-shaped ice crystals.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.186,
+      "file": "existing.json",
+      "id": 11506,
+      "q": "What covers twigs with white feathery crystals on some cold mornings?",
+      "a": "Ice deposited from water vapor",
+      "d": "Water vapor can turn directly into ice on a surface below freezing."
+    }
+  },
+  {
+    "index": 41,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/universe/nasas-fermi-catches-thunderstorms-hurling-antimatter-into-space/",
+    "evidence": "Fermi observations gave direct evidence of thunderstorm-produced antimatter particle beams.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.228,
+      "file": "existing.json",
+      "id": 16617,
+      "q": "How are the orbits in which the electrons of the atom reside called?",
+      "a": "Electron shells",
+      "d": ""
+    }
+  },
+  {
+    "index": 42,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/videos/whats-up-april-2021/",
+    "evidence": "NASA identifies the rising dark band opposite sunset as Earth’s shadow.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.238,
+      "file": "existing.json",
+      "id": 12470,
+      "q": "What is the opposite of above?",
+      "a": "Below",
+      "d": ""
+    }
+  },
+  {
+    "index": 43,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/publications/yellowstones-old-faithful-geyser-shut-down-a-severe-13th-century-drought",
+    "evidence": "USGS radiocarbon study uses rooted trees and wood preserved on the geyser mound as evidence of quiescence.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.181,
+      "file": "existing.json",
+      "id": 18978,
+      "q": "What is a prolonged period of time called?",
+      "a": "Long time",
+      "d": "A prolonged period of time. Another name is age."
+    }
+  },
+  {
+    "index": 44,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/earth/earth-observatory/satellites-size-up-bubbles-of-methane-in-lake-ice-146940/",
+    "evidence": "NASA describes methane bubble columns trapped in Arctic lake ice.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.207,
+      "file": "existing.json",
+      "id": 18085,
+      "q": "Which lake is NOT one of the Great Lakes?",
+      "a": "Great Salt Lake",
+      "d": ""
+    }
+  },
+  {
+    "index": 45,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.brown.edu/news/2019-01-23/icedisk",
+    "evidence": "Brown oceanographer Chris Horvat attributed its symmetry to rotation and rubbing against the river’s side.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.152,
+      "file": "nature-001.json",
+      "id": "nature-0094",
+      "q": "What is the name for rounded floating ice discs with raised edges?",
+      "a": "Pancake ice",
+      "d": "Colliding pieces of forming ice can develop rounded shapes and rims from splashing water that freezes."
+    }
+  },
+  {
+    "index": 46,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://nsidc.org/learn/parts-cryosphere/sea-ice/science-sea-ice?trk=public_post_comment-text",
+    "evidence": "NSIDC says snow insulates sea ice and slows winter growth.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.209,
+      "file": "existing.json",
+      "id": 977,
+      "q": "What swirls like the flakes in a snow globe when a soap bubble freezes in sufficiently cold air?",
+      "a": "Tiny ice crystals.",
+      "d": "The first freezing releases heat, setting the liquid film in motion. That flow carries growing crystals across the bubble."
+    }
+  },
+  {
+    "index": 47,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/descent-into-a-frozen-underworld/",
+    "evidence": "JPL’s researcher describes warm volcanic gases escaping ice caves and freezing into towers.",
+    "duplicateNotes": "Published6221 mentions ice towers at Mount Berlin but does not teach how escaping moisture builds them.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.186,
+      "file": "existing.json",
+      "id": 6221,
+      "q": "Mount Berlin, a volcano in Antarctica, has had what in the past and is still fumarolically active through towers of ice?",
+      "a": "Large Plinian eruptions",
+      "d": "Mount Berlin is a glacier-covered volcano in Marie Byrd Land, Antarctica, 100 kilometres from the Amundsen Sea."
+    }
+  },
+  {
+    "index": 48,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.pmel.noaa.gov/arctic-zone/bering-sea-indicators/essays_mcnutt.html",
+    "evidence": "NOAA describes wind-driven polynyas as conveyor belts for ice formation.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.246,
+      "file": "existing.json",
+      "id": 14425,
+      "q": "Which term fits this clue? Masses of ice floating in the open sea.",
+      "a": "Drift ice",
+      "d": "Masses of ice floating in the open sea."
+    }
+  },
+  {
+    "index": 49,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.weather.gov/media/pub/pdf/sdata/022006.pdf",
+    "evidence": "NWS documents an Alaska ice push driven by winds and currents; no tsunami required.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.345,
+      "file": "existing.json",
+      "id": 14425,
+      "q": "Which term fits this clue? Masses of ice floating in the open sea.",
+      "a": "Drift ice",
+      "d": "Masses of ice floating in the open sea."
+    }
+  },
+  {
+    "index": 50,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://svs.gsfc.nasa.gov/10816",
+    "evidence": "NASA researchers directly observed tsunami-triggered iceberg calving far from Japan.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.148,
+      "file": "existing.json",
+      "id": 14429,
+      "q": "Which term fits this clue? A large mass of ice floating at sea; usually broken off of a polar glacier.",
+      "a": "Berg",
+      "d": "A large mass of ice floating at sea; usually broken off of a polar glacier. Another name is iceberg."
+    }
+  },
+  {
+    "index": 51,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/centers-and-facilities/jpl/for-hottest-planet-a-major-meltdown-study-shows/",
+    "evidence": "NASA describes evidence for daytime dissociation and nighttime recombination of hydrogen.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Modeled/observationally inferred molecular dissociation.",
+    "highestTextMatch": {
+      "score": 0.19,
+      "file": "nature-002.json",
+      "id": "nature-0239",
+      "q": "What role for a cassowary’s helmet-like casque was supported by thermal imaging of living birds?",
+      "a": "Releasing excess body heat",
+      "d": "The casque exchanges more heat in warm conditions and limits heat loss in cooler conditions."
+    }
+  },
+  {
+    "index": 52,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine/",
+    "evidence": "NASA identifies Kepler-16 b as a circumbinary gas giant.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.185,
+      "file": "existing.json",
+      "id": 9872,
+      "q": "What real animal repeatedly tried to shrug off the shaggy bantha costume during filming of Star Wars?",
+      "a": "Elephant",
+      "d": "The costume turned a trained animal into a creature of Tatooine. The heat made wearing that disguise uncomfortable."
+    }
+  },
+  {
+    "index": 53,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/missions/hubble/hubble-uncovers-heavy-metal-exoplanet-shaped-like-football/",
+    "evidence": "NASA attributes the elongated planet shape to gravitational tidal forces.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.306,
+      "file": "existing.json",
+      "id": 6181,
+      "q": "Planet WASP-13b, despite a radius 25% larger than Jupiter's, has what?",
+      "a": "Less than half the mass",
+      "d": "WASP-13b, also known as Cruinlagh, is an extrasolar planet that was discovered in 2008 in the orbit of the sunlike star WASP-13."
+    }
+  },
+  {
+    "index": 54,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/resource/blue-and-bizarre/",
+    "evidence": "NASA describes glass rain; explanation retains atmospheric-model qualification.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Glass-rain atmosphere description is modeled, not directly sampled.",
+    "highestTextMatch": {
+      "score": 0.168,
+      "file": "existing.json",
+      "id": 18325,
+      "q": "What shade of the blue color is also called angel blue?",
+      "a": "Light blue",
+      "d": ""
+    }
+  },
+  {
+    "index": 55,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/universe/exoplanets/spitzer-watches-wild-weather-on-a-star-skimming-planet/",
+    "evidence": "NASA ties rapid measured heating to the planet’s close approach on its eccentric orbit.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.158,
+      "file": "existing.json",
+      "id": 12755,
+      "q": "In “Star Trek”, which species has a body temperature close to -30 ° C?",
+      "a": "Breens",
+      "d": "To travel, they therefore travel in refrigerated suits because a temperature above -18 ° C can kill them."
+    }
+  },
+  {
+    "index": 56,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up/",
+    "evidence": "NASA identifies pulsar planets as the earliest clearly identified extrasolar planetary bodies.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.311,
+      "file": "existing.json",
+      "id": 16208,
+      "q": "How many planets are in our Solar System?",
+      "a": "Eight",
+      "d": ""
+    }
+  },
+  {
+    "index": 57,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/missions/hubble/hubble-captures-first-ever-predicted-exploding-star/",
+    "evidence": "NASA describes model-predicted reappearance caused by gravitationally lensed time delays.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.25,
+      "file": "existing.json",
+      "id": 9623,
+      "q": "Until recent XMM-Newton images, the supernova remnant G350.1-0.3 was mistakenly thought to be what?",
+      "a": "Distant galaxy",
+      "d": "G350.1-0.3 is a supernova remnant which is located in the constellation Scorpius. It is in the Milky Way, and possibly associated with a neutron star formed in the same supernova explosion."
+    }
+  },
+  {
+    "index": 58,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.esa.int/articles/about-us/directorates/science/gaia/gaia-reveals-how-sun-like-stars-turn-solid-after-their-demise",
+    "evidence": "ESA reports observational evidence of white-dwarf crystallization.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.141,
+      "file": "existing.json",
+      "id": 11271,
+      "q": "How many cores does the Intel i7-6950X have?",
+      "a": "10",
+      "d": ""
+    }
+  },
+  {
+    "index": 59,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/universe/nasa-missions-unmask-magnetar-eruptions-in-nearby-galaxies/",
+    "evidence": "NASA states the 2004 giant flare measurably changed Earth’s upper atmosphere.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.161,
+      "file": "existing.json",
+      "id": 16263,
+      "q": "Which gas forms about 78% of the Earth's atmosphere?",
+      "a": "Nitrogen",
+      "d": ""
+    }
+  },
+  {
+    "index": 60,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/speeding-bullet-star-leaves-enormous-streak-across-sky/",
+    "evidence": "GALEX directly imaged the long ultraviolet tail behind Mira.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.141,
+      "file": "nature-002.json",
+      "id": "nature-0156",
+      "q": "What kind of flashlight can make a scorpion’s outer covering appear to glow at night?",
+      "a": "Ultraviolet",
+      "d": "Fluorescent material in its covering responds to ultraviolet light."
+    }
+  },
+  {
+    "index": 61,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/the-moon-is-rusting-and-researchers-want-to-know-why/",
+    "evidence": "JPL reports the Earth-oxygen hypothesis, not a fully settled explanation of all lunar hematite.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Proposed oxygen source for lunar hematite.",
+    "highestTextMatch": {
+      "score": 0.316,
+      "file": "existing.json",
+      "id": 16283,
+      "q": "How many moons does the Earth have?",
+      "a": "1",
+      "d": ""
+    }
+  },
+  {
+    "index": 62,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/experiments-show-titan-lakes-may-fizz-with-nitrogen/",
+    "evidence": "NASA laboratory simulations produced nitrogen release; magic-island connection remains a hypothesis.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Lab result, not claimed to settle Titan magic-island observations.",
+    "highestTextMatch": {
+      "score": 0.195,
+      "file": "existing.json",
+      "id": 16263,
+      "q": "Which gas forms about 78% of the Earth's atmosphere?",
+      "a": "Nitrogen",
+      "d": ""
+    }
+  },
+  {
+    "index": 63,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/solar-system/asteroids/dinkinesh/",
+    "evidence": "NASA describes Selam as two smaller touching objects.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.202,
+      "file": "existing.json",
+      "id": 392,
+      "q": "Jupiter shares its path around the Sun with two camps of asteroids. What are they called?",
+      "a": "The Trojan asteroids.",
+      "d": "One group travels ahead of Jupiter and the other trails behind, near two gravitationally stable points."
+    }
+  },
+  {
+    "index": 64,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/saturn/moons/iapetus/",
+    "evidence": "NASA explains thermal segregation feedback; distinct from prior equatorial-ridge card.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.225,
+      "file": "nature-001.json",
+      "id": "nature-0092",
+      "q": "Why can noctilucent clouds shine after sunset even when the ground is dark?",
+      "a": "They are still lit by the Sun",
+      "d": "These very high ice clouds remain in sunlight after sunset at ground level."
+    }
+  },
+  {
+    "index": 65,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/how-the-sun-affects-asteroids-in-our-neighborhood/",
+    "evidence": "NASA explains YORP-driven spin changes and possible breakup.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.166,
+      "file": "food-002.json",
+      "id": "food-0009",
+      "q": "The 3D-printed Oreometer measures how cookies twist apart. What ordinary objects load its little towers to apply a known force?",
+      "a": "Coins",
+      "d": "Adding pennies or dimes supplies controlled torque to the cookie-holding apparatus."
+    }
+  },
+  {
+    "index": 66,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/new-data-confirm-2020-so-to-be-the-upper-centaur-rocket-booster-from-the-1960s/",
+    "evidence": "JPL confirmed 2020 SO as a 1960s Centaur booster.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.182,
+      "file": "existing.json",
+      "id": 150,
+      "q": "Which dwarf planet could you pass on a direct trip from Mars to Jupiter?",
+      "a": "Ceres.",
+      "d": "Ceres orbits in the main asteroid belt. When Giuseppe Piazzi discovered it in 1801, no other object from that belt had been identified."
+    }
+  },
+  {
+    "index": 67,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/asset/hubble/neptune-dark-spot/",
+    "evidence": "Hubble observed the large vortex make a U-turn.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.214,
+      "file": "existing.json",
+      "id": 144,
+      "q": "If you put the Great Red Spot on a weather map of Jupiter, what would it mark?",
+      "a": "A giant storm.",
+      "d": "The colored oval is a long-lived vortex in Jupiter’s atmosphere. Observers have tracked it for generations."
+    }
+  },
+  {
+    "index": 68,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/",
+    "evidence": "NASA identifies trapped atmospheric gas as evidence of Martian origin.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.228,
+      "file": "existing.json",
+      "id": 17347,
+      "q": "What gas is the most abundant gas in the atmospheric air we breathe every day?",
+      "a": "Nitrogen",
+      "d": ""
+    }
+  },
+  {
+    "index": 69,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/nasas-perseverance-captures-googly-eye-during-solar-eclipse/",
+    "evidence": "Perseverance images show the potato-shaped silhouette obscuring only part of the Sun.",
+    "duplicateNotes": "Published398 identifies Stickney and mentions lumpy Phobos. This card concerns the partial, irregular silhouette actually observed in a solar transit.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.191,
+      "file": "existing.json",
+      "id": 398,
+      "q": "Stickney, a crater that dominates one end of a tiny Martian moon, is on which moon?",
+      "a": "Phobos.",
+      "d": "Phobos is the larger of the two Martian moons. Its lumpy body shows the scars of repeated impacts."
+    }
+  },
+  {
+    "index": 70,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/early-results-from-nasas-dart-mission/",
+    "evidence": "NASA identifies ejecta recoil as a major extra momentum contribution.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.18,
+      "file": "existing.json",
+      "id": 1482,
+      "q": "On which large asteroid did NASA’s Dawn spacecraft examine Rheasilvia, a huge south-polar impact basin with a mountain near its center?",
+      "a": "Vesta.",
+      "d": "From some angles the basin looks as though a large part of the asteroid’s rounded bottom has been scooped away."
+    }
+  },
+  {
+    "index": 71,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.esa.int/articles/about-us/directorates/science/earth-s-atmosphere-stretches-out-to-the-moon-and-beyond",
+    "evidence": "ESA reports hydrogen geocorona extending beyond lunar distance.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.313,
+      "file": "existing.json",
+      "id": 16283,
+      "q": "How many moons does the Earth have?",
+      "a": "1",
+      "d": ""
+    }
+  },
+  {
+    "index": 72,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://spdf.gsfc.nasa.gov/pub/documents/old/websites/sunearthday.nasa.gov/2007/locations/ttt_sunlight.php",
+    "evidence": "NASA explains many scattering steps and model-dependent transport times; phrased as energy transport, not one unchanged photon.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.194,
+      "file": "existing.json",
+      "id": 16464,
+      "q": "Which Solar System celestial bodys revolution around the Sun takes 248 years?",
+      "a": "Pluto",
+      "d": ""
+    }
+  },
+  {
+    "index": 73,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/image-article/neutron-stars-create-gold-platinum-their-wake/",
+    "evidence": "NASA identifies gold and platinum production in merger debris.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.186,
+      "file": "existing.json",
+      "id": 16545,
+      "q": "What is a fast-spinning neutron star that emits pulses of radio waves called?",
+      "a": "Pulsar",
+      "d": ""
+    }
+  },
+  {
+    "index": 74,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/asset/hubble/artists-concept-of-extasolar-planet-gj-436b/",
+    "evidence": "Hubble observations establish a huge escaping hydrogen cloud around GJ 436 b.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.317,
+      "file": "existing.json",
+      "id": 16273,
+      "q": "Stars consist mainly of hydrogen and which other gas?",
+      "a": "Helium",
+      "d": ""
+    }
+  },
+  {
+    "index": 75,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/feature/solar-eclipse-guide/",
+    "evidence": "NASA explains Baily’s beads as sunlight through lunar valleys.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.216,
+      "file": "existing.json",
+      "id": 16583,
+      "q": "Which two planets of the Solar System, characterized by a low magnetic field, have no moons at all?",
+      "a": "Mercury and Venus",
+      "d": ""
+    }
+  },
+  {
+    "index": 76,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://astrobiology.nasa.gov/news/salty-antarctic-pond-could-provide-clues-about-mars-water/",
+    "evidence": "NASA attributes the pond’s resistance to freezing to its extreme salinity.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.253,
+      "file": "weather-001.json",
+      "id": "weather-0008",
+      "q": "Cold streams of what liquid can grow hollow tubes of ice called brinicles downward beneath sea ice?",
+      "a": "Concentrated brine",
+      "d": "Very cold, salty liquid drains from sea ice. As it sinks, it freezes surrounding seawater into a tube around its flow."
+    }
+  },
+  {
+    "index": 77,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nps.gov/im/chdn/dune-dynamics.htm",
+    "evidence": "NPS describes closed basins, evaporation and gypsum-sand formation.",
+    "duplicateNotes": "Published10178 tests gypsum identity; this card tests the closed-basin accumulation mechanism.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.453,
+      "file": "existing.json",
+      "id": 10178,
+      "q": "Why does the sand at New Mexico’s White Sands look so pale?",
+      "a": "It is made of gypsum",
+      "d": "Gypsum grains form extensive windblown dunes in the Tularosa Basin."
+    }
+  },
+  {
+    "index": 78,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-weather",
+    "evidence": "NOAA identifies atmospheric pressure disturbances from moving weather systems.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.262,
+      "file": "existing.json",
+      "id": 16457,
+      "q": "Which of these waves have the highest wave length?",
+      "a": "Radio waves",
+      "d": ""
+    }
+  },
+  {
+    "index": 79,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.inp.cnrs.fr/sites/institut_inp/files/download-file/2021%20Une%20ann%C3%A9e%20d%27actualit%C3%A9s%20%C3%A0%20l%27Institut%20de%20physique%20du%20CNRS.pdf",
+    "evidence": "CNRS researchers reproduced Zen stones and identified shadow-limited sublimation.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.243,
+      "file": "existing.json",
+      "id": 11506,
+      "q": "What covers twigs with white feathery crystals on some cold mornings?",
+      "a": "Ice deposited from water vapor",
+      "d": "Water vapor can turn directly into ice on a surface below freezing."
+    }
+  },
+  {
+    "index": 80,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.whoi.edu/oceanus/feature/the-waves-within-the-waves/",
+    "evidence": "WHOI explains Nansen’s dead water through internal-wave generation at a density boundary.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.226,
+      "file": "existing.json",
+      "id": 16457,
+      "q": "Which of these waves have the highest wave length?",
+      "a": "Radio waves",
+      "d": ""
+    }
+  },
+  {
+    "index": 81,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://oceanservice.noaa.gov/facts/sofar.html",
+    "evidence": "NOAA explains up-and-down bending of low-frequency sound through ocean layers.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.255,
+      "file": "existing.json",
+      "id": 12331,
+      "q": "What is the distribution of energy as a function of frequency for a particular sound source called?",
+      "a": "Sound spectrum",
+      "d": "The distribution of energy as a function of frequency for a particular sound source. Another name is acoustic spectrum."
+    }
+  },
+  {
+    "index": 82,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179101/",
+    "evidence": "The primary study measures ultraslow gypsum growth in Naica waters and constrains growth to roughly 54–58°C.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.197,
+      "file": "existing.json",
+      "id": 738,
+      "q": "Which cave room in Kentucky gets its wintry name from white balls stuck to its ceiling?",
+      "a": "The Snowball Room.",
+      "d": "The rounded growths are gypsum, which can also grow into curling mineral flowers."
+    }
+  },
+  {
+    "index": 83,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/20332884/",
+    "evidence": "The primary Applied Optics paper describes and models the polar optical-ducting phenomenon.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.235,
+      "file": "weather-001.json",
+      "id": "weather-0005",
+      "q": "What is the name of the brief optical event that can appear at the Sun’s upper rim as it dips below a clear horizon?",
+      "a": "Green flash",
+      "d": "Different wavelengths bend by different amounts through the atmosphere. Scattering and mirage effects can help make the green edge briefly visible."
+    }
+  },
+  {
+    "index": 84,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/blogs/science-news/2025/07/24/nasa-noaa-satellites-show-smoke-complicates-wildfire-lightning-risk/",
+    "evidence": "NASA describes fire-generated storm clouds and distinguishes cloud-to-cloud from ground strikes.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.246,
+      "file": "weather-001.json",
+      "id": "weather-0001",
+      "q": "What fairy-like name is given to brief red flashes above thunderstorms that can resemble enormous jellyfish?",
+      "a": "Sprites",
+      "d": "These faint electrical events occur high above storm clouds. Sensitive cameras have captured their branching, short-lived shapes."
+    }
+  },
+  {
+    "index": 85,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.aoml.noaa.gov/outreach/bubbles/C_waterspouts.pdf",
+    "evidence": "NOAA’s waterspout fact sheet says the mist is mainly fresh water from atmospheric condensation.",
+    "duplicateNotes": "Published11570 identifies waterspouts; this card tests atmospheric condensation rather than seawater being sucked upward.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.346,
+      "file": "existing.json",
+      "id": 11570,
+      "q": "An atmospheric column resembling a tornado over water is usually called what?",
+      "a": "Waterspout",
+      "d": "Its visible column connects a cloud to the water’s surface."
+    }
+  },
+  {
+    "index": 86,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.antarctica.gov.au/news/2022/when-barry-met-steve-aurora-watcher-captures-rare-hot-glow-over-antarctica/",
+    "evidence": "Australian Antarctic Program explicitly traces the informal name to the film; the scientific backronym came later.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.198,
+      "file": "existing.json",
+      "id": 17451,
+      "q": "In which work does the character The Muppets appear?",
+      "a": "The Steve Allen Show",
+      "d": "The character appears in The Steve Allen Show."
+    }
+  },
+  {
+    "index": 87,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_chemistry_of_lightning",
+    "evidence": "ESA explicitly describes blue jets propagating upward from cloud tops into the stratosphere.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.231,
+      "file": "weather-001.json",
+      "id": "weather-0001",
+      "q": "What fairy-like name is given to brief red flashes above thunderstorms that can resemble enormous jellyfish?",
+      "a": "Sprites",
+      "d": "These faint electrical events occur high above storm clouds. Sensitive cameras have captured their branching, short-lived shapes."
+    }
+  },
+  {
+    "index": 88,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://naturalhistory.si.edu/research/mineral-sciences/programs",
+    "evidence": "Smithsonian describes the ice conveyor, mountain barrier and ablation concentrating meteorites.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.197,
+      "file": "existing.json",
+      "id": 13338,
+      "q": "What very hard matter is mainly ice pack?",
+      "a": "Ice cream",
+      "d": "Pack ice is the layer of ice that forms on the surface of a body of water by solidification of the first layers of water."
+    }
+  },
+  {
+    "index": 89,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/publications/pseudotachylyte-increases-post-slip-strength-faults",
+    "evidence": "USGS research identifies solidified frictional melts formed during earthquake slip.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.214,
+      "file": "existing.json",
+      "id": 14418,
+      "q": "Which term fits this clue? A geological fault in which one of the adjacent surfaces appears to have moved horizontally.",
+      "a": "Strike-slip fault",
+      "d": "A geological fault in which one of the adjacent surfaces appears to have moved horizontally."
+    }
+  },
+  {
+    "index": 90,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://pubs.geoscienceworld.org/gsl/books/edited-volume/1586/chapter-abstract/107345979/The-anisotropy-of-itacolumite-flexibility?redirectedFrom=fulltext",
+    "evidence": "Primary bending experiments link flexibility to open grain boundaries permitting limited quartz-grain rotation.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.12,
+      "file": "existing.json",
+      "id": 774,
+      "q": "How can Finland’s Kvarken Archipelago acquire new islands without volcanic eruptions?",
+      "a": "The land is still rising after an ice sheet melted.",
+      "d": "Released from the ice’s weight, the seabed rebounds slowly enough for shorelines to change over generations."
+    }
+  },
+  {
+    "index": 91,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://ntslf.org/tides/about-tides/tidal-river-bores",
+    "evidence": "The UK National Tidal and Sea Level Facility describes the bore as the onset of the flood tide.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.24,
+      "file": "existing.json",
+      "id": 16457,
+      "q": "Which of these waves have the highest wave length?",
+      "a": "Radio waves",
+      "d": ""
+    }
+  },
+  {
+    "index": 92,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/29590042/",
+    "evidence": "The Science study reports ice-VII inclusions retaining pressure inside host diamonds.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.2,
+      "file": "places-001.json",
+      "id": "places-0004",
+      "q": "The stone in Nördlingen’s St. George’s Church contains microscopic examples of which gemstone, formed by an asteroid impact?",
+      "a": "Diamond",
+      "d": "The building uses suevite from the Ries impact area. Extreme pressure transformed graphite into tiny diamonds too small to see unaided."
+    }
+  },
+  {
+    "index": 93,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nps.gov/articles/cirques.htm",
+    "evidence": "NPS explains that glaciers can flow up bed hills if their ice surface still slopes downward.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.205,
+      "file": "existing.json",
+      "id": 12317,
+      "q": "What is the steady flow of surface ocean water in a prevailing direction called?",
+      "a": "Ocean current",
+      "d": "The steady flow of surface ocean water in a prevailing direction."
+    }
+  },
+  {
+    "index": 94,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://pubs.usgs.gov/gip/dynamic/stripes.html",
+    "evidence": "USGS explains matching seafloor stripes as the record of magnetic reversals and spreading.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.325,
+      "file": "existing.json",
+      "id": 12311,
+      "q": "What is a line of force in a magnetic field called?",
+      "a": "Magnetic line of force",
+      "d": "A line of force in a magnetic field."
+    }
+  },
+  {
+    "index": 95,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nps.gov/articles/000/grcatime-missing-time.htm",
+    "evidence": "NPS describes a 1.2-billion-year gap at the Great Unconformity.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.18,
+      "file": "existing.json",
+      "id": 10111,
+      "q": "Which river runs through the bottom of Arizona’s Grand Canyon?",
+      "a": "Colorado",
+      "d": "The river winds between layers of rock exposed in the canyon walls."
+    }
+  },
+  {
+    "index": 96,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://geology.utah.gov/map-pub/survey-notes/geosights/crystal-geyser/",
+    "evidence": "Utah Geological Survey describes the drilled well and CO2-driven eruption cycle.",
+    "duplicateNotes": "Prior Woodside Utah card mentions a cold geyser; new target is its CO2 power source. Mentos card also uses CO2 but tests surface nucleation, not groundwater pressure.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.382,
+      "file": "food-002.json",
+      "id": "food-0097",
+      "q": "What feature of a Mentos mint helps make a geyser when it is dropped into a fizzy drink?",
+      "a": "Microscopic surface irregularities",
+      "d": "Many tiny sites let dissolved carbon dioxide form bubbles rapidly. The dramatic fountain mainly releases gas already in the drink."
+    }
+  },
+  {
+    "index": 97,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/nasas-lro-finds-lunar-pits-harbor-comfortable-temperatures/",
+    "evidence": "NASA reports approximately 17°C for shaded pit locations using LRO data and modeling; not all pits are asserted identical.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "LRO thermal measurements plus modeling of specific shaded lunar pit locations.",
+    "highestTextMatch": {
+      "score": 0.167,
+      "file": "existing.json",
+      "id": 14442,
+      "q": "What is a natural spring of water at a temperature of 70 F or above called?",
+      "a": "Hot spring",
+      "d": "A natural spring of water at a temperature of 70 F or above. Another name is thermal spring."
+    }
+  },
+  {
+    "index": 98,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/nasa-rover-detects-electric-sparks-in-mars-dust-devils-storms/",
+    "evidence": "JPL reports confirmed electrical discharges and associated mini-sonic booms in Mars dust devils.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.191,
+      "file": "existing.json",
+      "id": 12334,
+      "q": "What is a miniature whirlwind strong enough to whip dust and leaves and litter into the air called?",
+      "a": "Dust devil",
+      "d": "A miniature whirlwind strong enough to whip dust and leaves and litter into the air."
+    }
+  },
+  {
+    "index": 99,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/publications/accretionary-lapilli-altered-tuffs-associated-coal-beds",
+    "evidence": "USGS describes spherical layered aggregates of volcanic ash promoted by moisture and turbulence.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.191,
+      "file": "existing.json",
+      "id": 15009,
+      "q": "Which term fits this clue? Fine porcelain that contains bone ash.",
+      "a": "Bone china",
+      "d": "Fine porcelain that contains bone ash."
+    }
+  },
+  {
+    "index": 100,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://sealevel.nasa.gov/resources/78/monthly-changes-in-gravity-affect-sea-level",
+    "evidence": "NASA’s GRACE-based visualization explains local sea-level fall from reduced ice-sheet gravitational attraction.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.217,
+      "file": "existing.json",
+      "id": 9238,
+      "q": "In April 1952, five Norwegian seal hunting ships disappeared in the West Ice of what?",
+      "a": "Greenland Sea",
+      "d": "The West Ice is a patch of the Greenland Sea covered by pack ice during winter time. It is located north of Iceland, between East Greenland and Jan Mayen island."
+    }
+  },
+  {
+    "index": 101,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/resource/daphnis-waves/",
+    "evidence": "NASA identifies Daphnis’s gravity as the source of the ring-edge waves.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.246,
+      "file": "existing.json",
+      "id": 16457,
+      "q": "Which of these waves have the highest wave length?",
+      "a": "Radio waves",
+      "d": ""
+    }
+  },
+  {
+    "index": 102,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/solar-system/europa-glows-radiation-does-a-bright-number-on-jupiters-moon/",
+    "evidence": "NASA reports a laboratory prediction of nightside ice luminescence, not a directly observed glow.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Laboratory-predicted nightside glow; no direct observation claimed.",
+    "highestTextMatch": {
+      "score": 0.156,
+      "file": "existing.json",
+      "id": 12328,
+      "q": "Which term fits this clue? The energy required to separate particles from a molecule or atom or nucleus; equals the mass defect.",
+      "a": "Separation energy",
+      "d": "The energy required to separate particles from a molecule or atom or nucleus; equals the mass defect. Another name is binding energy."
+    }
+  },
+  {
+    "index": 103,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://newsroom.ucla.edu/releases/cracking-the-mysteries-of-venus",
+    "evidence": "UCLA identifies atmospheric angular-momentum exchange as the likely main cause of observed variations.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.237,
+      "file": "existing.json",
+      "id": 141,
+      "q": "Which planet finishes a trip around the Sun before it finishes one spin on its axis?",
+      "a": "Venus.",
+      "d": "One rotation takes about 243 Earth days. Venus completes its orbit in about 225."
+    }
+  },
+  {
+    "index": 104,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/universe/maxi-j1820070-black-hole-outburst-caught-on-video/",
+    "evidence": "NASA explains apparent superluminal motion through viewing geometry and near-light-speed approach.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.378,
+      "file": "existing.json",
+      "id": 16561,
+      "q": "What is the symbol for the speed of light?",
+      "a": "C",
+      "d": ""
+    }
+  },
+  {
+    "index": 105,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nps.gov/glac/learn/nature/waterquality.htm",
+    "evidence": "NPS attributes the color to glacier-ground rock flour suspended in lake water.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.186,
+      "file": "existing.json",
+      "id": 18325,
+      "q": "What shade of the blue color is also called angel blue?",
+      "a": "Light blue",
+      "d": ""
+    }
+  },
+  {
+    "index": 106,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/resource/auroral-footprints/",
+    "evidence": "NASA describes electron currents connecting moons and ultraviolet auroral footprints.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.365,
+      "file": "existing.json",
+      "id": 18143,
+      "q": "Which planet is 5th from the sun?",
+      "a": "Jupiter",
+      "d": ""
+    }
+  },
+  {
+    "index": 107,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/missions/hubble/shock-wave-sheds-new-light-on-fading-supernova/",
+    "evidence": "NASA identifies the neutrino burst as the first signal, preceding bright light.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.181,
+      "file": "existing.json",
+      "id": 9623,
+      "q": "Until recent XMM-Newton images, the supernova remnant G350.1-0.3 was mistakenly thought to be what?",
+      "a": "Distant galaxy",
+      "d": "G350.1-0.3 is a supernova remnant which is located in the constellation Scorpius. It is in the Milky Way, and possibly associated with a neutron star formed in the same supernova explosion."
+    }
+  },
+  {
+    "index": 108,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://heasarc.gsfc.nasa.gov/docs/nicer/technology/spinoffs/pulsar-pnt.html",
+    "evidence": "NASA’s NICER team describes the successful pulsar-based navigation demonstration.",
+    "duplicateNotes": "Published16545 defines a pulsar; this tests its demonstrated use as an autonomous navigation beacon.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.291,
+      "file": "existing.json",
+      "id": 16545,
+      "q": "What is a fast-spinning neutron star that emits pulses of radio waves called?",
+      "a": "Pulsar",
+      "d": ""
+    }
+  },
+  {
+    "index": 109,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://journals.asm.org/doi/10.1128/AEM.03968-14",
+    "evidence": "The primary paper describes solar heating and a temperature rise to nearly 25°C at the bottom; no volcanic heat claim.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.183,
+      "file": "existing.json",
+      "id": 13338,
+      "q": "What very hard matter is mainly ice pack?",
+      "a": "Ice cream",
+      "d": "Pack ice is the layer of ice that forms on the surface of a body of water by solidification of the first layers of water."
+    }
+  },
+  {
+    "index": 110,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://chandra.si.edu/sound/perseus.html",
+    "evidence": "Chandra describes actual pressure waves in hot cluster gas and pitch-shifted sonification.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.152,
+      "file": "objects-001.json",
+      "id": "objects-0024",
+      "q": "What gas is trapped under pressure inside popping candy such as Pop Rocks?",
+      "a": "Carbon dioxide",
+      "d": "Saliva dissolves the sugar around the pressurized bubbles, releasing the gas and producing the crackle."
+    }
+  },
+  {
+    "index": 111,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/missions/hubble/hubble-sees-an-unexpected-population-of-young-looking-stars/",
+    "evidence": "NASA describes stellar collisions and mass transfer as explanations for blue stragglers.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.156,
+      "file": "existing.json",
+      "id": 11698,
+      "q": "Which plant fits this description? Common Old World herb having grasslike leaves and clusters of star-shaped white flowers with green stripes; naturalized in the eastern United States.",
+      "a": "Sleepy dick",
+      "d": "Common Old World herb having grasslike leaves and clusters of star-shaped white flowers with green stripes; naturalized in the eastern United States. Another name is starflower."
+    }
+  },
+  {
+    "index": 112,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://spaceplace.nasa.gov/barycenter/en/",
+    "evidence": "NASA states the Sun–Jupiter barycenter is just outside the Sun’s surface.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.417,
+      "file": "existing.json",
+      "id": 18143,
+      "q": "Which planet is 5th from the sun?",
+      "a": "Jupiter",
+      "d": ""
+    }
+  },
+  {
+    "index": 113,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://archive.iaa.csic.es/en/news/james-webb-telescope-observes-rings-chariklo-high-precision-occultation-technique",
+    "evidence": "IAA-CSIC describes the occultation’s repeated dips as the discovery evidence for rings.",
+    "duplicateNotes": "Published1191 Quaoar explanation mentions stellar occultation, but tests anomalous ring distance. Parent explicitly approved the distinct paired-blink detection target here.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.174,
+      "file": "existing.json",
+      "id": 1191,
+      "q": "Which distant body beyond Neptune surprised astronomers with a ring much farther out than classical expectations for a dense ring?",
+      "a": "Quaoar",
+      "d": "Observers detected the ring while the body crossed in front of stars. ESA’s Cheops telescope took part in the investigation."
+    }
+  },
+  {
+    "index": 114,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/dwarf-planets/haumea/",
+    "evidence": "NASA explicitly attributes Haumea’s football-like distortion to fast spin.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.176,
+      "file": "existing.json",
+      "id": 12489,
+      "q": "What is the shape of a traditional American football?",
+      "a": "Oval",
+      "d": ""
+    }
+  },
+  {
+    "index": 115,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://doi.org/10.1051/0004-6361/202450629",
+    "evidence": "The 2024 A&A modeling paper describes hydrogen-helium separation, helium rain and thermal evolution.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.379,
+      "file": "existing.json",
+      "id": 16258,
+      "q": "The Sun consists of mostly which two elements?",
+      "a": "Hydrogen & Helium",
+      "d": ""
+    }
+  },
+  {
+    "index": 116,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.jpl.nasa.gov/news/cassini-caught-in-hyperions-particle-beam/",
+    "evidence": "JPL reports a surface-origin electron beam and strongly negative surface potential.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.403,
+      "file": "existing.json",
+      "id": 16576,
+      "q": "Which of these particles has a negative charge?",
+      "a": "Electron",
+      "d": ""
+    }
+  },
+  {
+    "index": 117,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/news-release/marks-on-martian-dunes-may-reveal-tracks-of-dry-ice-sleds/",
+    "evidence": "NASA describes dry-ice block experiments as a possible explanation for a specific gully class.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Dry-ice sled experiments offer a possible explanation for a specific gully type.",
+    "highestTextMatch": {
+      "score": 0.129,
+      "file": "existing.json",
+      "id": 19960,
+      "q": "Where would find a half track?",
+      "a": "In the military",
+      "d": ""
+    }
+  },
+  {
+    "index": 118,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.esa.int/sv/articles/about-us/directorates/science/rosetta/getting-to-know-rosetta-s-comet",
+    "evidence": "ESA describes escaping gas transporting dust and producing dune-like ripples and wind tails.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.187,
+      "file": "existing.json",
+      "id": 391,
+      "q": "As a comet moves outward after rounding the Sun, which way does its ion tail point relative to the Sun?",
+      "a": "Away from the Sun.",
+      "d": "Charged particles carried by the solar wind sweep gas into a tail. The dusty tail can curve along a different path."
+    }
+  },
+  {
+    "index": 119,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/resource/lunar-swirl-reiner-gamma/",
+    "evidence": "NASA describes crustal magnetic anomalies shielding lunar swirl regions from solar wind.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Magnetic shielding is a supported explanation for swirls.",
+    "highestTextMatch": {
+      "score": 0.273,
+      "file": "existing.json",
+      "id": 12311,
+      "q": "What is a line of force in a magnetic field called?",
+      "a": "Magnetic line of force",
+      "d": "A line of force in a magnetic field."
+    }
+  },
+  {
+    "index": 120,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://meteorites.ucla.edu/faq/",
+    "evidence": "UCLA explains brief surface melting with interiors retaining their earlier temperature.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.19,
+      "file": "existing.json",
+      "id": 14916,
+      "q": "What is a thin coating or layer called?",
+      "a": "Film",
+      "d": "A thin coating or layer."
+    }
+  },
+  {
+    "index": 121,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.amnh.org/exhibitions/permanent/meteorites/building-planets/iron-crystals",
+    "evidence": "AMNH explains growth of kamacite plates within cooling taenite and the Widmanstätten pattern.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.217,
+      "file": "objects-001.json",
+      "id": "objects-0042",
+      "q": "Brussels’ Atomium enlarges the crystal structure of which familiar metal to building size?",
+      "a": "Iron",
+      "d": "Its connected spheres model an iron crystal magnified 165 billion times."
+    }
+  },
+  {
+    "index": 122,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/missions/mars-reconnaissance-orbiter/nasa-explores-a-winter-wonderland-on-mars/?site=msl",
+    "evidence": "NASA describes predicted cubic dry-ice snowflakes; this is a symmetry-based expectation.",
+    "duplicateNotes": "Published202 tests sixfold water-snow symmetry; this tests the unexpected cubic expectation for CO2 snow on Mars.",
+    "qualification": "Crystal-symmetry expectation, not microscopy of Martian flakes.",
+    "highestTextMatch": {
+      "score": 0.399,
+      "file": "existing.json",
+      "id": 202,
+      "q": "What gives a classic branching snow crystal its six-fold symmetry?",
+      "a": "The arrangement of water molecules in ice.",
+      "d": "Water molecules organize into a hexagonal structure. Conditions during the crystal’s journey influence how its six branches grow."
+    }
+  },
+  {
+    "index": 123,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nasa.gov/ames-engineering/spaceflight-division/flight-dynamics/orbit-analysis/",
+    "evidence": "NASA Ames identifies mascons as a principal source of low-orbit instability.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.186,
+      "file": "existing.json",
+      "id": 18181,
+      "q": "Which of the following astronauts was not among the first human beings to orbit the moon?",
+      "a": "John Young",
+      "d": ""
+    }
+  },
+  {
+    "index": 124,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/moon/solar-wind/",
+    "evidence": "NASA describes solar-wind hydrogen contributing to lunar water formation.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.349,
+      "file": "existing.json",
+      "id": 16416,
+      "q": "What is the symbol for Hydrogen?",
+      "a": "H",
+      "d": ""
+    }
+  },
+  {
+    "index": 125,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/resource/where-the-nightlife-never-ends/",
+    "evidence": "NASA explicitly says these rogue planets glow from formation heat.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.268,
+      "file": "existing.json",
+      "id": 11593,
+      "q": "When an electric pop-up toaster glows red inside, which part is glowing?",
+      "a": "Heating elements",
+      "d": "Electric current heats resistance wire that radiates heat toward the bread."
+    }
+  },
+  {
+    "index": 126,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-did-you-feel-earthquake-probably-not",
+    "evidence": "USGS explains slow earthquakes as fault slip over days without strong shaking.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.16,
+      "file": "existing.json",
+      "id": 14418,
+      "q": "Which term fits this clue? A geological fault in which one of the adjacent surfaces appears to have moved horizontally.",
+      "a": "Strike-slip fault",
+      "d": "A geological fault in which one of the adjacent surfaces appears to have moved horizontally."
+    }
+  },
+  {
+    "index": 127,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/publications/a-rockslide-generated-tsunami-a-greenland-fjord-rang-earth-9-days",
+    "evidence": "The primary study links the nine-day seismic signal to a tsunami-generated seiche.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.192,
+      "file": "existing.json",
+      "id": 430,
+      "q": "What great mass of ice feeds dozens of glaciers in Alaska’s Kenai Fjords National Park?",
+      "a": "The Harding Icefield.",
+      "d": "The park’s fjords occupy valleys sculpted by advancing ice."
+    }
+  },
+  {
+    "index": 128,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nature.com/articles/nature05536",
+    "evidence": "The research paper models and compares ocean-wave excitation of Earth’s hum.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.238,
+      "file": "existing.json",
+      "id": 16457,
+      "q": "Which of these waves have the highest wave length?",
+      "a": "Radio waves",
+      "d": ""
+    }
+  },
+  {
+    "index": 129,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://pmel.noaa.gov/acoustics/news-story/understanding-unique-tsunami-event-caused-tonga-volcano-eruption",
+    "evidence": "NOAA describes a pressure wave circling Earth three times.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.228,
+      "file": "existing.json",
+      "id": 1551,
+      "q": "Gasparo Berti's experiment in atmospheric pressure and vacuums led to the invention of which instrument?",
+      "a": "Barometer",
+      "d": "A barometer is a scientific instrument that is used to measure air pressure. Pressure tendency, which is derived from barometric readings, can forecast short term changes in the weather."
+    }
+  },
+  {
+    "index": 130,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019GL086178",
+    "evidence": "The Thwaites study directly associates seismic events with iceberg capsizing confirmed by imagery.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.2,
+      "file": "existing.json",
+      "id": 14429,
+      "q": "Which term fits this clue? A large mass of ice floating at sea; usually broken off of a polar glacier.",
+      "a": "Berg",
+      "d": "A large mass of ice floating at sea; usually broken off of a polar glacier. Another name is iceberg."
+    }
+  },
+  {
+    "index": 131,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://ocean.si.edu/ecosystems/deep-sea/deep-sea",
+    "evidence": "Smithsonian describes dense brine lakes with visible boundaries and waves; no claim that mixing is impossible.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.269,
+      "file": "existing.json",
+      "id": 15879,
+      "q": "What is the boundary of a city called?",
+      "a": "City line",
+      "d": "The boundary of a city."
+    }
+  },
+  {
+    "index": 132,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/12881565/",
+    "evidence": "The primary Science study attributes the hydrothermal activity and heat to serpentinization.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.179,
+      "file": "existing.json",
+      "id": 16282,
+      "q": "Which type of rock is created by intense heat AND pressure?",
+      "a": "Metamorphic",
+      "d": ""
+    }
+  },
+  {
+    "index": 133,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/earth/earth-observatory/irans-salt-glaciers-4168/",
+    "evidence": "NASA describes salt diapirs spreading like glaciers into adjacent valleys.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.226,
+      "file": "existing.json",
+      "id": 1268,
+      "q": "Which mountain chain runs up western Iran like a set of wrinkles left by the collision of the Arabian and Eurasian plates?",
+      "a": "Zagros Mountains",
+      "d": "From above, many ridges line up in long, roughly parallel bands. Folded sedimentary rocks form much of the range."
+    }
+  },
+  {
+    "index": 134,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.transportation.gov/testimony/mitigating-impact-volcanic-ash-clouds-aviation-%E2%80%93-what-do-we-need-know",
+    "evidence": "FAA testimony explains melted ash depositing as a hard turbine-nozzle glaze.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.233,
+      "file": "existing.json",
+      "id": 880,
+      "q": "Which liquid from a dressing table might actually run the engine of a 1963 Chrysler turbine car?",
+      "a": "Perfume.",
+      "d": "The turbine could also run on such unlikely fuels as peanut oil."
+    }
+  },
+  {
+    "index": 135,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://news.mit.edu/2015/rainfall-can-release-aerosols-0114",
+    "evidence": "MIT directly observed trapped bubbles and aerosol ejection; the aroma link is described as a proposed explanation.",
+    "duplicateNotes": "Food0038 bubble experiment injects oil downward; this question tests rain-on-soil bubbles ejecting aerosols upward.",
+    "qualification": "Bubble aerosol launch directly observed; aroma transport suggested by researchers.",
+    "highestTextMatch": {
+      "score": 0.278,
+      "file": "food-002.json",
+      "id": "food-0038",
+      "q": "Princeton researchers watched bubbles burst through oil floating on water. Where did some tiny oil droplets unexpectedly go?",
+      "a": "Down into the water",
+      "d": "Bursting bubbles can inject oil droplets beneath the surface, rather than sending everything upward. The effect offers a way to make very fine mixtures."
+    }
+  },
+  {
+    "index": 136,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nesdis.noaa.gov/news/earth-orbit-von-karman-vortices",
+    "evidence": "NOAA identifies elevated terrain diverting prevailing wind as the origin of von Kármán cloud vortices.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.224,
+      "file": "existing.json",
+      "id": 209,
+      "q": "Which smooth, lens-shaped clouds near mountains are sometimes mistaken for flying saucers?",
+      "a": "Lenticular clouds.",
+      "d": "Air flowing over high ground can form waves. A cloud may seem to hover at one spot while air keeps moving through it."
+    }
+  },
+  {
+    "index": 137,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.netl.doe.gov/sites/default/files/netl-file/2017-Methane-Hydrate-Primer%5B1%5D.pdf",
+    "evidence": "DOE explains methane trapped in hydrate cages and released gas burning during dissociation.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.162,
+      "file": "existing.json",
+      "id": 147,
+      "q": "Rain fills lakes on Saturn’s moon Titan. Which substance plays a starring role in its rain cycle?",
+      "a": "Methane.",
+      "d": "On frigid Titan, methane can evaporate, form clouds, fall as rain and flow along channels. Its lakes and seas contain liquid hydrocarbons."
+    }
+  },
+  {
+    "index": 138,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://hub.jhu.edu/2023/06/26/blood-falls-mystery/",
+    "evidence": "Researchers identified iron-rich nanospheres and oxidation in Blood Falls water.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.244,
+      "file": "existing.json",
+      "id": 16234,
+      "q": "Which element has the chemical symbol 'Fe'?",
+      "a": "Iron",
+      "d": ""
+    }
+  },
+  {
+    "index": 139,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.usgs.gov/publications/anchor-ice-seabed-freezing-and-sediment-dynamics-shallow-arctic-seas",
+    "evidence": "USGS diving investigations found anchor ice lifting coarse material into the ice canopy.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.17,
+      "file": "existing.json",
+      "id": 16924,
+      "q": "How can a disc coral free itself when sediment buries it?",
+      "a": "Puff up to escape the sediment",
+      "d": "A disc coral can inflate its tissues and work its way up through the covering sediment."
+    }
+  },
+  {
+    "index": 140,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://atmos.uw.edu/~sgw/PAPERS/2019_Grenth_revisited_JGR.pdf",
+    "evidence": "The primary study proposes iron oxides over dissolved organic carbon as the main color cause.",
+    "duplicateNotes": "Blood Falls138 also involves iron and color, but oxidation of emitted nanospheres differs from the proposed optical role of iron oxides embedded in marine ice.",
+    "qualification": "Iron-oxide color explanation remains a leading proposal.",
+    "highestTextMatch": {
+      "score": 0.207,
+      "file": "existing.json",
+      "id": 12294,
+      "q": "What vitrifiable coating is placed on the surface of a ceramic to harden it?",
+      "a": "E-mail",
+      "d": "Iron oxide produces green, red, yellow, black or brown tones, cobalt oxide blue and chromium oxide green."
+    }
+  },
+  {
+    "index": 141,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/biological-physical/resources/explainers-infographics/why-nasa-is-studying-flames-in-space/",
+    "evidence": "NASA explains spherical microgravity flames through the absence of normal buoyant circulation.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.189,
+      "file": "existing.json",
+      "id": 14698,
+      "q": "What is a duct that admits air to be mixed with fuel called?",
+      "a": "Air-intake",
+      "d": "A duct that admits air to be mixed with fuel."
+    }
+  },
+  {
+    "index": 142,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://ntrs.nasa.gov/api/citations/20210018723/downloads/NETL2021Final.pdf",
+    "evidence": "NASA reports continued lower-temperature burning without a visible flame after hot-flame extinction.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.213,
+      "file": "existing.json",
+      "id": 12308,
+      "q": "Which term fits this clue? Pressure that keeps oil on the moving parts of an internal-combustion engine.",
+      "a": "Oil pressure",
+      "d": "Pressure that keeps oil on the moving parts of an internal-combustion engine."
+    }
+  },
+  {
+    "index": 143,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://science.nasa.gov/image-detail/pool-boiling/",
+    "evidence": "NASA’s experiment description explicitly contrasts rising terrestrial bubbles with one coalesced microgravity bubble.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.229,
+      "file": "existing.json",
+      "id": 14562,
+      "q": "What is a heater and storage tank to supply heated water called?",
+      "a": "Hot-water tank",
+      "d": "A heater and storage tank to supply heated water. Another name is water heater."
+    }
+  },
+  {
+    "index": 144,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://ntrs.nasa.gov/api/citations/19780019211/downloads/19780019211.pdf",
+    "evidence": "NASA’s account reports astronaut observations and ground particle-beam experiments producing eye flashes.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.199,
+      "file": "existing.json",
+      "id": 16524,
+      "q": "Which part of th eye captures light rays and converts the rays into electrical impulses?",
+      "a": "Retina",
+      "d": ""
+    }
+  },
+  {
+    "index": 145,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://ntrs.nasa.gov/citations/20120001877",
+    "evidence": "NASA describes the magnetic-field dip and increased radiation effects on spacecraft electronics.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.193,
+      "file": "existing.json",
+      "id": 18025,
+      "q": "Who depicts features such as the Richat Structure, Atlantic ridge, Paris Basin and Chicxulub crater?",
+      "a": "World Digital Magnetic Anomaly Map",
+      "d": "The World Digital Magnetic Anomaly Map was first made available by the Commission for the Geological Map of the World in 2007."
+    }
+  },
+  {
+    "index": 146,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.nps.gov/iceagefloods/pdf/report.pdf",
+    "evidence": "NPS describes giant parallel ripple marks in lakebed sediments as evidence of rapid flood currents.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.197,
+      "file": "existing.json",
+      "id": 14822,
+      "q": "Which term fits this clue? Usually galvanized sheet iron or sheet steel shaped into straight parallel ridges and hollows.",
+      "a": "Corrugated iron",
+      "d": "Usually galvanized sheet iron or sheet steel shaped into straight parallel ridges and hollows."
+    }
+  },
+  {
+    "index": 147,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.curtin.edu.au/news/media-release/curtin-planetary-scientist-unravels-mystery-of-egyptian-desert-glass/",
+    "evidence": "Curtin’s study found evidence for former reidite and attributes the desert glass to impact.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.196,
+      "file": "places-001.json",
+      "id": "places-0004",
+      "q": "The stone in Nördlingen’s St. George’s Church contains microscopic examples of which gemstone, formed by an asteroid impact?",
+      "a": "Diamond",
+      "d": "The building uses suevite from the Ries impact area. Extreme pressure transformed graphite into tiny diamonds too small to see unaided."
+    }
+  },
+  {
+    "index": 148,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.sciencedirect.com/science/article/pii/S0149197019301817",
+    "evidence": "The primary model explicitly describes cyclic groundwater filling, neutron moderation and steam expulsion.",
+    "duplicateNotes": "Current33 identifies natural reactor fuel; this independently tests the reactor’s water/steam negative-feedback cycle.",
+    "qualification": "Model of water-mediated reactor regulation.",
+    "highestTextMatch": {
+      "score": 0.134,
+      "file": "existing.json",
+      "id": 15056,
+      "q": "Which term fits this clue? Sealed vessel where water is converted to steam.",
+      "a": "Boiler",
+      "d": "Sealed vessel where water is converted to steam. Another name is steam boiler."
+    }
+  },
+  {
+    "index": 149,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://arxiv.org/abs/1604.05507",
+    "evidence": "The primary paper calculates differential elapsed time, not a difference in geological formation date.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "Relativistic calculation of elapsed time; not actual formation-date difference.",
+    "highestTextMatch": {
+      "score": 0.192,
+      "file": "existing.json",
+      "id": 11283,
+      "q": "Unix Time is defined as the number of seconds that have elapsed since when?",
+      "a": "Midnight, January 1, 1970",
+      "d": ""
+    }
+  },
+  {
+    "index": 150,
+    "verdict": "author-reviewed; parent acceptance pending",
+    "source": "https://www.caltech.edu/about/news/contrary-to-previous-belief-strike-slip-faults-can-generate-large-tsunamis",
+    "evidence": "Caltech explains rupture speed above shear-wave speed and the resulting Mach front.",
+    "duplicateNotes": "Full q+a+d keyword and weighted text comparison performed; no same tested fact identified in inspected matches.",
+    "qualification": "",
+    "highestTextMatch": {
+      "score": 0.199,
+      "file": "existing.json",
+      "id": 16457,
+      "q": "Which of these waves have the highest wave length?",
+      "a": "Radio waves",
+      "d": ""
+    }
+  }
+]

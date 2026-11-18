@@ -1,0 +1,202 @@
+[
+  {
+    "index": 4,
+    "original": {
+      "q": "Near the Sun itself, what surprising color can a Martian sunset have?",
+      "a": "Blue",
+      "d": "Fine dust lets blue light remain concentrated near the setting Sun, while much of the surrounding sky looks yellow or orange.",
+      "s": "NASA",
+      "u": "https://science.nasa.gov/solar-system/planets/mars/what-does-a-sunrise-sunset-look-like-on-mars/",
+      "cat": "Deep Time and Distant Skies",
+      "level": "easy",
+      "choices": [
+        "Blue",
+        "Green",
+        "Purple",
+        "Deep red"
+      ],
+      "evidence": "NASA explains the blue glow near the Sun in Mars sunset images."
+    },
+    "replacement": "Why can Earth’s upper atmosphere give off a faint glow on a dark night, even away from an aurora?"
+  },
+  {
+    "index": 27,
+    "original": {
+      "q": "Fresh black lava at Tanzania’s Ol Doinyo Lengai can soon change to which color?",
+      "a": "White",
+      "d": "Its unusual carbonate-rich lava reacts with water after eruption, changing the appearance of the cooled flows.",
+      "s": "USGS",
+      "u": "https://www.usgs.gov/news/volcano-watch-worlds-coolest-lava-africa",
+      "cat": "When Volcanoes Get Weird",
+      "level": "hard",
+      "choices": [
+        "White",
+        "Emerald green",
+        "Cobalt blue",
+        "Metallic silver"
+      ],
+      "evidence": "USGS says fresh black flows turn white through reactions as they absorb water."
+    },
+    "replacement": "In a laboratory water channel, one sand dune pushed another farther away without touching it. What carried the interaction?"
+  },
+  {
+    "index": 43,
+    "original": {
+      "q": "Sea-ice “frost flowers” grow when water vapor does what?",
+      "a": "Deposits directly as ice",
+      "d": "The delicate crystals form on the ice surface without first becoming liquid droplets.",
+      "s": "National Snow and Ice Data Center",
+      "u": "https://nsidc.org/learn/cryosphere-glossary/frost-flowers",
+      "cat": "Earth and Sky",
+      "level": "medium",
+      "choices": [
+        "Deposits directly as ice",
+        "Freezes after falling as rain",
+        "Condenses into salty liquid petals",
+        "Melts old snow into branching channels"
+      ],
+      "evidence": "NSIDC defines frost flowers as direct vapor-to-solid crystal growth."
+    },
+    "replacement": "What evidence showed that Old Faithful once stopped erupting long enough for a very different landscape to develop on its mound?"
+  },
+  {
+    "index": 83,
+    "original": {
+      "q": "What ingredient from smoldering vegetation can combine with moist air to create visibility-destroying superfog?",
+      "a": "Smoke",
+      "d": "Smoke and moisture from damp, smoldering material mix with cool, nearly saturated air, producing exceptionally dense fog.",
+      "s": "National Weather Service",
+      "u": "https://www.weather.gov/safety/fog-super",
+      "cat": "Weather",
+      "level": "easy",
+      "choices": [
+        "Smoke",
+        "Pollen",
+        "Windblown soil",
+        "Sea-salt spray"
+      ],
+      "evidence": "NWS specifies smoke and moisture from smoldering organic material mixed with cool saturated air."
+    },
+    "replacement": "How can polar observers sometimes see a distorted image of the Sun while it is still well below the horizon?"
+  },
+  {
+    "index": 94,
+    "original": {
+      "q": "Which process helps an eruption cloud build the electrical charge needed for volcanic lightning?",
+      "a": "Ash particles colliding and separating",
+      "d": "Fragmentation and interactions among ash particles can separate charge; ice and water processes can contribute higher in the plume.",
+      "s": "USGS",
+      "u": "https://volcanoes.usgs.gov/volcanic_ash/lightning.html",
+      "cat": "When Volcanoes Get Weird",
+      "level": "medium",
+      "choices": [
+        "Ash particles colliding and separating",
+        "Radioactive minerals emitting a directed current",
+        "Sulfur gases reacting with atmospheric ozone",
+        "Lava cooling into naturally magnetized rock"
+      ],
+      "evidence": "USGS describes plume particle processes, fragmentation and hydrometeors as charging mechanisms."
+    },
+    "replacement": "The ocean floor has a magnetic pattern resembling paired zebra stripes. What history does it record?"
+  },
+  {
+    "index": 100,
+    "original": {
+      "q": "On some desert pavements, fine soil accumulates where in relation to the close-packed surface stones?",
+      "a": "Underneath the stones",
+      "d": "Windblown dust can enter and build the fine soil horizon beneath the stony surface, rather than simply burying it.",
+      "s": "Bureau of Land Management",
+      "u": "https://www.blm.gov/sites/default/files/docs/2020-12/Nevada-Gold_Butte-2019_Managers_Report_0.pdf",
+      "cat": "What Lies Underfoot",
+      "level": "hard",
+      "choices": [
+        "Underneath the stones",
+        "Only on top of the stones",
+        "Only inside weathered stone cavities",
+        "In separate dunes beyond the pavement"
+      ],
+      "evidence": "BLM describes the wind-deposited fine-particle horizon directly beneath desert pavement."
+    },
+    "replacement": "Why can melting Greenland ice make sea level fall nearby while raising it far away?"
+  },
+  {
+    "index": 105,
+    "original": {
+      "q": "Which familiar unpleasant smell did Rosetta scientists associate with hydrogen sulfide detected at comet 67P?",
+      "a": "Rotten eggs",
+      "d": "The comet’s gases contain several pungent compounds. This comparison describes the detected chemistry, not an astronaut actually sniffing the coma.",
+      "s": "European Space Agency",
+      "u": "https://blogs.esa.int/rosetta/2014/10/23/the-perfume-of-67pc-g/",
+      "cat": "Deep Time and Distant Skies",
+      "level": "easy",
+      "choices": [
+        "Rotten eggs",
+        "Rancid butter",
+        "Stale fish",
+        "Burnt rubber"
+      ],
+      "evidence": "ESA’s ROSINA account specifically associates cometary hydrogen sulfide with rotten eggs."
+    },
+    "replacement": "What gives many glacier-fed lakes their milky turquoise color?"
+  },
+  {
+    "index": 109,
+    "original": {
+      "q": "Saturn’s diffuse E ring gets fresh icy material from what ongoing source?",
+      "a": "Jets erupting from Enceladus",
+      "d": "Some plume particles escape the moon and join the broad ring; much of the ejected material falls back as snow.",
+      "s": "NASA",
+      "u": "https://science.nasa.gov/saturn/moons/enceladus/",
+      "cat": "Deep Time and Distant Skies",
+      "level": "hard",
+      "choices": [
+        "Jets erupting from Enceladus",
+        "Meteoroid impacts on Titan’s surface",
+        "Ice swept in from passing comets",
+        "Condensation from Saturn’s outer atmosphere"
+      ],
+      "evidence": "NASA identifies Enceladus’s plumes as an E-ring source and describes fallback snow."
+    },
+    "replacement": "What warms the surprisingly mild deep water of Antarctica’s ice-covered Lake Vanda?"
+  },
+  {
+    "index": 90,
+    "original": {
+      "q": "The dome-shaped “volcanoes” discovered off Santa Barbara were built from what unusual flow material?",
+      "a": "Asphalt",
+      "d": "Heavy petroleum seeped out and piled into underwater mounds. These are not magma-fed volcanoes.",
+      "s": "USGS",
+      "u": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-asphalt-volcanoes-where-lava-meets-road",
+      "cat": "When Volcanoes Get Weird",
+      "level": "easy",
+      "choices": [
+        "Asphalt",
+        "Liquid sulfur",
+        "Carbonate mud",
+        "Iron-rich brine"
+      ],
+      "evidence": "USGS identifies the flows as asphalt or tar and explicitly distinguishes them from true volcanoes."
+    },
+    "replacement": "A thin slab of itacolumite can do what surprising thing without first being melted?"
+  },
+  {
+    "index": 146,
+    "original": {
+      "q": "What repeatedly failed to unleash the enormous Ice Age floods from Glacial Lake Missoula?",
+      "a": "An ice dam",
+      "d": "Glacial ice blocked the Clark Fork drainage. When the barrier gave way, huge volumes of lake water escaped across the Pacific Northwest.",
+      "s": "National Park Service",
+      "u": "https://www.nps.gov/iafl/",
+      "cat": "Deep Time and Distant Skies",
+      "level": "medium",
+      "choices": [
+        "An ice dam",
+        "A coastal sandbar",
+        "A lava dam",
+        "A limestone cave roof"
+      ],
+      "evidence": "NPS attributes the lake and catastrophic floods to an ice dam and its failure."
+    },
+    "replacement": "Huge parallel ridges at Montana’s Camas Prairie were recognized as giant versions of what familiar water-made pattern?"
+  }
+]

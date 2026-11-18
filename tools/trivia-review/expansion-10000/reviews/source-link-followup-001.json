@@ -1,0 +1,308 @@
+{
+  "checkedOn": "2026-11-17",
+  "scope": "Follow-up retrieval check of36 references blocked or timed out during the first HTTP audit. This checks text availability, not question accuracy or full release readiness.",
+  "total": 36,
+  "webTextRetrieved": 35,
+  "stillUnresolved": 0,
+  "results": [
+    {
+      "url": "https://1930.dartmouth.org/s/1353/clubs-classes15/start.aspx?gid=289&pgid=10441&sid=1353",
+      "candidateIds": [
+        "culture-0095"
+      ],
+      "webTextRetrieved": false,
+      "responseHeading": "Internal Error ()",
+      "replacementUrl": "https://geiselmed.dartmouth.edu/about/geisels/",
+      "replacementTextRetrieved": true,
+      "resolution": "Original alumni-class link inaccessible; replaced candidate reference with directly retrieved official Dartmouth biography and corroborating first-person alumni-magazine account."
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co48604/original-vacuum-cleaner-from-to-royal-naval-college-vacuum-cleaner",
+      "candidateIds": [
+        "objects-0028"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Original vacuum cleaner, from to Royal Naval College | Science Museum Group Collection (https://collection.sciencemuseumgroup.org.uk/objects/co48604/original-vacuum-cleaner-from-to-royal-naval-college-vacuum-cleaner)"
+    },
+    {
+      "url": "https://digitalvoyages.canterbury.ac.nz/s/wicked-bible/page/home",
+      "candidateIds": [
+        "culture-0061"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Home · The Donnithorne Wicked Bible · UC Library Omeka (https://digitalvoyages.canterbury.ac.nz/s/wicked-bible/page/home)"
+    },
+    {
+      "url": "https://tootsie.com/history/",
+      "candidateIds": [
+        "objects-0055"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "History - Tootsie (https://tootsie.com/history/)"
+    },
+    {
+      "url": "https://www.cooberpedy.sa.gov.au/community",
+      "candidateIds": [
+        "places-0002"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Community | District Council of Coober Pedy (https://www.cooberpedy.sa.gov.au/community)"
+    },
+    {
+      "url": "https://www.invent.org/inductees/earle-dickson",
+      "candidateIds": [
+        "objects-0075"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Earle Dickson │ The National Inventors Hall of Fame® (https://www.invent.org/inductees/earle-dickson)"
+    },
+    {
+      "url": "https://www.kew.org/about-us/press-media/new-species-2025",
+      "candidateIds": [
+        "nature-0096",
+        "nature-0097"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Zombie fungi and ‘bloodstained’ orchids: Kew’s top 10 plant and fungal species named new to science in 2025 | Kew (https://www.kew.org/about-us/press-media/new-species-2025)"
+    },
+    {
+      "url": "https://www.marmite.co.uk/journey.html",
+      "candidateIds": [
+        "objects-0081"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Marmite Ale, Without Beer there is no Marmite | Marmite UK (https://www.marmite.co.uk/journey.html)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/apron",
+      "candidateIds": [
+        "culture-0032"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "APRON Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/apron)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/contronym",
+      "candidateIds": [
+        "culture-0083"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "CONTRONYM Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/contronym)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/eggcorn",
+      "candidateIds": [
+        "culture-0029"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "EGGCORN Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/eggcorn)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/grawlix",
+      "candidateIds": [
+        "culture-0028"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "GRAWLIX Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/grawlix)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/grotesque",
+      "candidateIds": [
+        "culture-0035"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "GROTESQUE Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/grotesque)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/kenning",
+      "candidateIds": [
+        "culture-0084"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "KENNING Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/kenning)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/mumpsimus",
+      "candidateIds": [
+        "culture-0034"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "MUMPSIMUS Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/mumpsimus)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/muscle",
+      "candidateIds": [
+        "culture-0033"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "MUSCLE Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/muscle)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/serendipity",
+      "candidateIds": [
+        "culture-0030"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "SERENDIPITY Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/serendipity)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/tittle",
+      "candidateIds": [
+        "culture-0031"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "TITTLE Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/tittle)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/tmesis",
+      "candidateIds": [
+        "culture-0082"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "TMESIS Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/tmesis)"
+    },
+    {
+      "url": "https://www.merriam-webster.com/wordplay/dord-a-ghost-word",
+      "candidateIds": [
+        "culture-0098"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Dord: How a Non-Word Made it into the Dictionary | Merriam-Webster (https://www.merriam-webster.com/wordplay/dord-a-ghost-word)"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/506816?showOnly=openAccess",
+      "candidateIds": [
+        "culture-0074"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "C. Baudouin - Serpent - French - The Metropolitan Museum of Art (https://www.metmuseum.org/art/collection/search/506816?showOnly=openAccess)"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/739621",
+      "candidateIds": [
+        "culture-0073"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Radio Corporation of America (RCA) - Theremin - American - The Metropolitan Museum of Art (https://www.metmuseum.org/art/collection/search/739621)"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/83437",
+      "candidateIds": [
+        "culture-0090"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Schiaparelli - Hat - French - The Metropolitan Museum of Art (https://www.metmuseum.org/art/collection/search/83437)"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/80997",
+      "candidateIds": [
+        "culture-0020"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Meret Oppenheim. Object. Paris, 1936 | MoMA (https://www.moma.org/collection/works/80997)"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/81119",
+      "candidateIds": [
+        "culture-0099"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Pablo Picasso. Baboon and Young. Vallauris, October 1951 (cast 1955) | MoMA (https://www.moma.org/collection/works/81119)"
+    },
+    {
+      "url": "https://www.nationalgalleries.org/art-and-artists/166050/lobster-telephone?page=0",
+      "candidateIds": [
+        "culture-0076"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Lobster Telephone by Salvador Dali and Edward James | National Galleries of Scotland (https://www.nationalgalleries.org/art-and-artists/166050/lobster-telephone?page=0)"
+    },
+    {
+      "url": "https://www.nts.org.uk/visit/places/the-pineapple/highlights-2/the-building",
+      "candidateIds": [
+        "objects-0066",
+        "objects-0067"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "www.nts.org.uk (https://www.nts.org.uk/visit/places/the-pineapple/highlights-2/the-building)"
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/art-and-sport-pierre-de-coubertin-s-vision-is-just-as-relevant-today",
+      "candidateIds": [
+        "culture-0055",
+        "culture-0056"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Art and sport: Pierre de Coubertin’s vision is just as relevant today! - Olympic News (https://www.olympics.com/ioc/news/art-and-sport-pierre-de-coubertin-s-vision-is-just-as-relevant-today)"
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/melbourne-1956-a-shared-olympic-games",
+      "candidateIds": [
+        "culture-0053"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Melbourne 1956: a shared Olympic Games (https://www.olympics.com/ioc/news/melbourne-1956-a-shared-olympic-games)"
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/the-strange-case-of-the-st-louis-1904-marathon",
+      "candidateIds": [
+        "culture-0054"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "The strange case of the St Louis 1904 marathon (https://www.olympics.com/ioc/news/the-strange-case-of-the-st-louis-1904-marathon)"
+    },
+    {
+      "url": "https://www.oscars.org/oscars/statuette",
+      "candidateIds": [
+        "culture-0016",
+        "culture-0017"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Oscar Statuette | Oscars.org | Academy of Motion Picture Arts and Sciences (https://www.oscars.org/oscars/statuette)"
+    },
+    {
+      "url": "https://www.rauschenbergfoundation.org/art/art-context/monogram",
+      "candidateIds": [
+        "culture-0023"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Monogram | Robert Rauschenberg Foundation",
+      "resolution": "Full indexed source body retrieved on follow-up; title explanation confirmed."
+    },
+    {
+      "url": "https://www.toureiffel.paris/en/explore/gardens",
+      "candidateIds": [
+        "objects-0065"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Eiffel Tower Gardens: belvederes, grotto, ponds | OFFICIAL website (https://www.toureiffel.paris/en/explore/gardens)"
+    },
+    {
+      "url": "https://www.toureiffel.paris/en/news/events/eiffel-tower-center-paris-2024-olympic-medals",
+      "candidateIds": [
+        "culture-0058"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "The Eiffel Tower at the center of the Paris 2024 Olympic medals (https://www.toureiffel.paris/en/news/events/eiffel-tower-center-paris-2024-olympic-medals)"
+    },
+    {
+      "url": "https://www.toureiffel.paris/en/news/history-and-culture/most-incredible-installations-eiffel-tower",
+      "candidateIds": [
+        "objects-0060",
+        "objects-0061"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "The most incredible installations at the Eiffel Tower (https://www.toureiffel.paris/en/news/history-and-culture/most-incredible-installations-eiffel-tower)"
+    },
+    {
+      "url": "https://www.toureiffel.paris/en/the-monument/painting-eiffel-tower",
+      "candidateIds": [
+        "objects-0063",
+        "objects-0064"
+      ],
+      "webTextRetrieved": true,
+      "responseHeading": "Painting and color of the Eiffel Tower - OFFICIAL Website (https://www.toureiffel.paris/en/the-monument/painting-eiffel-tower)"
+    }
+  ],
+  "replacementSourceRetrieved": 1
+}

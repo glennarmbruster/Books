@@ -1,0 +1,727 @@
+[
+  {
+    "candidateId": "botany-0076",
+    "q": "A Caulerpa seaweed can have structures resembling leaves, stems and roots. What is unusual about its cellular organization?",
+    "a": "One giant cell with many nuclei",
+    "d": "The branching body lacks the internal partitions that normally separate a plant into many cells. Its leaf-like and root-like regions share the same continuous cell.",
+    "s": "Caltech · A giant single cell",
+    "u": "https://www.caltech.edu/about/news/growth-of-a-giant-single-cell-is-intertwined-with-daily-self-rhythms",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Many small cells with one nucleus each",
+      "One giant cell with just one nucleus",
+      "Many separate giant cells with many nuclei each",
+      "One giant cell with many nuclei"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.caltech.edu/about/news/growth-of-a-giant-single-cell-is-intertwined-with-daily-self-rhythms",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institution report explicitly describes a meter-scale single extended cell with many unseparated nuclei.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "6bb348de02e48093a61282091314d5370428b281ae71e415f8a21e6b41c2e1dc"
+    }
+  },
+  {
+    "candidateId": "botany-0077",
+    "q": "In Hämmerling’s experiments on the umbrella-shaped alga Acetabularia, transferring which cell component could change the shape of a later-grown cap?",
+    "a": "Nucleus",
+    "d": "A cell could eventually grow a cap resembling the species that supplied its nucleus. These experiments helped establish the nucleus’s role in directing development.",
+    "s": "Developmental Biology · Acetabularia experiments",
+    "u": "https://www.ncbi.nlm.nih.gov/books/NBK10066/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Chloroplast",
+      "Nucleus",
+      "Storage vacuole",
+      "Outer cell wall"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.ncbi.nlm.nih.gov/books/NBK10066/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NCBI textbook describes nucleus transfer and eventual donor-specific cap form; distinct from old parasol-shape identity question.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "af387b01a74bf07fabced51d80542baa7b58e6ee9bfa18b6cd9056defe2a5015"
+    }
+  },
+  {
+    "candidateId": "botany-0078",
+    "q": "A developing Volvox colony starts as a hollow ball of cells. What dramatic maneuver puts its cells into their adult arrangement?",
+    "a": "Turning itself inside out",
+    "d": "The cell sheet bends and moves through an opening. This inversion reorganizes the spherical embryo without simply breaking it into separate cells.",
+    "s": "Höhn and colleagues · Volvox inversion",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/25978266/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Splitting into two matching hemispheres",
+      "Flattening into a permanent disc",
+      "Turning itself inside out",
+      "Rolling itself into a spiral ribbon"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25978266/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary study describes spherical embryo inversion via cell-shape changes.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "f177afb30bbdf8ff864977234aa90d2f440c1a38a69c7c8e5c104ffdfe2ee385"
+    }
+  },
+  {
+    "candidateId": "botany-0079",
+    "q": "Which poisonous gas can make up part of the gas inside a bull kelp’s buoyancy bladder?",
+    "a": "Carbon monoxide",
+    "d": "Experiments on Nereocystis found that replacing its bladder gas with air was followed by fresh carbon monoxide production. The bladder is a gas mixture, not pure carbon monoxide.",
+    "s": "Langdon · Carbon monoxide in Nereocystis",
+    "u": "https://www.journals.uchicago.edu/doi/abs/10.1086/332742",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Carbon monoxide",
+      "Ammonia",
+      "Chlorine",
+      "Hydrogen sulfide"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.journals.uchicago.edu/doi/abs/10.1086/332742",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports several percent CO regenerated within days after air replacement; no all-kelps/puregas claim.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "24c0dd7a87d6d628acc94929d0b11e6c90996c196ebd092e49ee464645b6507b"
+    }
+  },
+  {
+    "candidateId": "botany-0080",
+    "q": "The dung fungus Pilobolus has a transparent swelling beneath its spore capsule. What optical job does that swelling perform?",
+    "a": "Focusing light like a lens",
+    "d": "The swelling concentrates light onto a sensitive region. This helps orient the stalk so its capsule is launched toward light and away from its dung nursery.",
+    "s": "University of Edinburgh · Fungal growth and orientation",
+    "u": "https://archive.bio.ed.ac.uk/jdeacon/microbes/apical.htm",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "Focusing light like a lens",
+      "Splitting light into separate colors",
+      "Reflecting moonlight onto neighboring spores",
+      "Blocking ultraviolet from the capsule"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://archive.bio.ed.ac.uk/jdeacon/microbes/apical.htm",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University teaching resource explicitly identifies vesicle as lens focusing onto carotenoid pigment.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "6382572daf74a03d0cef004c83f3b3e6a99ba90d05806e1d0c1f072ea1dcbfa6"
+    }
+  },
+  {
+    "candidateId": "botany-0081",
+    "q": "What supplies the mechanical force for the rice blast fungus’s infection peg to pierce a leaf’s tough surface?",
+    "a": "Building intense internal water pressure",
+    "d": "Its specialized infection cell accumulates high turgor pressure and directs the force through a penetration peg. The process can breach the leaf’s protective outer layers.",
+    "s": "Magnaporthe membrane-tension study · Nature Microbiology",
+    "u": "https://www.nature.com/articles/s41564-023-01430-x",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Creating strong capillary suction",
+      "Expanding trapped carbon dioxide gas",
+      "Releasing stored elastic tension",
+      "Building intense internal water pressure"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nature.com/articles/s41564-023-01430-x",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary study explicitly describes pressurized appressorium driving rigid penetration peg.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "1b1f684b3e4973fc79a4aa473c42d4a9f4cc2b1da999d9dd720d4b0bac5d65b9"
+    }
+  },
+  {
+    "candidateId": "botany-0082",
+    "q": "Rhizoxin was long attributed to the rice-damaging fungus Rhizopus microsporus. What actually makes this toxin?",
+    "a": "Bacteria living inside the fungus",
+    "d": "The fungus houses bacterial partners that manufacture rhizoxin. The disease-causing relationship therefore involves a plant, a fungus and an internal bacterial producer.",
+    "s": "Scherlach and colleagues · Rhizoxin-producing endosymbionts",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/16939276/",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "Bacteria living inside the fungus",
+      "The rice plant after infection",
+      "A virus multiplying in rice cells",
+      "A second fungus on the leaf surface"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/16939276/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract states rhizoxin is produced by endosymbiotic bacteria rather than fungal host.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "8e2727ddb380938c6a2c0c98df38a45fe3c6bde61b6515c9dbf9347cc83fe60a"
+    }
+  },
+  {
+    "candidateId": "botany-0083",
+    "q": "Why can a cup fungus launch spores farther by releasing many of them together?",
+    "a": "The spores generate a shared airflow",
+    "d": "Synchronized ejection pushes surrounding air into motion. Experiments and models showed that the resulting flow carries spores farther and can help them move around obstacles.",
+    "s": "Roper and colleagues · Cooperatively generated wind",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955148/",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "The spores spread a low-friction surface film",
+      "The spores electrostatically repel one another",
+      "The spores generate a shared airflow",
+      "The spores join into larger clumps"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955148/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary simulations and experiments identify synchronized ejection creating airflow, distinct from earlier evaporative cooling.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "30744789ef62e80e63fe0a771c839bcec8af4adec2626cef2823e3d1001f7e73"
+    }
+  },
+  {
+    "candidateId": "botany-0084",
+    "q": "How can a bloom of algae on a snowfield help speed up melting?",
+    "a": "Making the surface absorb more sunlight",
+    "d": "Pigmented cells darken the snow and reduce its reflectivity. Their color can therefore influence the snow’s energy balance as well as signal a living community.",
+    "s": "Snow-algae color and albedo · New Phytologist",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/41292094/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Releasing salts that lower the freezing point",
+      "Making the surface absorb more sunlight",
+      "Producing heat through rapid metabolism",
+      "Breaking ice crystals apart as colonies expand"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41292094/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary study investigates pigment-dependent albedo reduction and radiative forcing in co-occurring colored blooms.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "80304fd85364636fe00b314a8ff159b7459844683026d0ae496158b7e0848a16"
+    }
+  },
+  {
+    "candidateId": "botany-0085",
+    "q": "Ferns have no flowers, yet some species make which familiar floral reward on their leaves?",
+    "a": "Nectar",
+    "d": "Researchers documented fern nectaries with sugar-rich secretions visited by ants, snails and other animals. A proposed protective benefit from ants is not proven for every fern.",
+    "s": "Fern nectaries · American Journal of Botany",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/34643269/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Starch-rich food bodies",
+      "Resin",
+      "Nutrient-rich oils",
+      "Nectar"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/34643269/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary survey documents nectaries, analyzed sugars and animal nectar feeding; pollination not implied.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "ac34c56a8b9b81706e81f43daf9750a3bc96dd165274ac2fa6d4a3add752af85"
+    }
+  },
+  {
+    "candidateId": "botany-0086",
+    "q": "In Fiji, Philidris nagasau ants practice an unusual kind of farming. What living crop do they plant and tend?",
+    "a": "Plants that provide their nesting chambers",
+    "d": "The ants place Squamellaria seeds in suitable sites and fertilize the growing plants. Mature plants supply sheltered chambers, making the farming partnership more than simple seed dispersal.",
+    "s": "Chomicki and Renner · Plants domesticated by ants",
+    "u": "https://nph.onlinelibrary.wiley.com/doi/10.1002/ppp3.10072",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Plants that provide their nesting chambers",
+      "Fungi that grow on leaf fragments",
+      "Mosses used to line underground chambers",
+      "Algae grown in pools inside leaves"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://nph.onlinelibrary.wiley.com/doi/10.1002/ppp3.10072",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary-author review shows planted seeds, fertilized seedlings and later plant domatia used by ants.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "bf044863014b57970f12b701ff36c4d55958c7bfcd2d2966acf39b49c594a7f1"
+    }
+  },
+  {
+    "candidateId": "botany-0087",
+    "q": "In experiments with well-defended tomato plants, what did hungry caterpillars do sooner instead of eating as much foliage?",
+    "a": "Eat one another",
+    "d": "Induced plant defenses increased cannibalism among the caterpillars. The plants benefited from fewer herbivores and from the survivors consuming less plant material.",
+    "s": "Orrock and colleagues · Plant defenses and cannibalism",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/29046571/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Eat one another",
+      "Feed chiefly on developing fruits",
+      "Switch to feeding only after dark",
+      "Tunnel into stems instead"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29046571/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary experiment reports increased cannibalism and reduced abundance/herbivory; does not claim conscious plant manipulation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "3ae41e40c656656be1b6e97fda812e31e3137a292aee05cb710d158a5ff65f0c"
+    }
+  },
+  {
+    "candidateId": "botany-0088",
+    "q": "What tiny residents can make the nectar inside a winter-flowering hellebore warmer?",
+    "a": "Yeasts",
+    "d": "Yeasts metabolizing nectar sugars release heat. Experiments found warmer flowers when nectar contained these microbes, with the effect related to yeast abundance.",
+    "s": "Oxford University Plants400 · Hellebores",
+    "u": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/GH/Helleborus",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Pollen mites",
+      "Algae",
+      "Yeasts",
+      "Nematodes"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/GH/Helleborus",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Oxford botanical account describes experimental manipulation of yeast density and fermentation-generated nectar heat.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "d8eb91288947214ddcb5b2971aa14c647cb2043f5516797e471ac1901fb601eb"
+    }
+  },
+  {
+    "candidateId": "botany-0089",
+    "q": "Sticky leaves of some dune plants collect a gritty coating that discourages chewing. What is the coating made of?",
+    "a": "Sand",
+    "d": "Removing or adding sand in experiments changed herbivore damage. The grains form an external physical defense on plants such as Abronia latifolia.",
+    "s": "LoPresti and Karban · Sand as plant defense",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/27220199/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Salt crystals",
+      "Sand",
+      "Fungal spores",
+      "Dried latex"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/27220199/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary experiments manipulate sand coating and report less chewing where present or supplemented.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "bcc31fd3dc8d43ebc6a3c0c6eda6172bc376d0cd46afda82aab5afd8a4a6705c"
+    }
+  },
+  {
+    "candidateId": "botany-0090",
+    "q": "When pulled, an older cucumber tendril can behave unlike an ordinary spring. What can its coils do?",
+    "a": "Wind more tightly",
+    "d": "Experiments found that some tendrils overwind under tension rather than unwinding. Their specialized internal fibers produce a spring that stiffens as it is stretched.",
+    "s": "Gerbode and colleagues · Cucumber tendril mechanics",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/22936777/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Expand to a larger coil diameter",
+      "Flatten the coils into a zigzag",
+      "Wind more tightly",
+      "Reverse the handedness of every coil"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/22936777/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract explicitly reports old tendrils and extracted fiber ribbons show twistless overwinding under tension.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "3e6f195f770fe3baeb7ccd7143e95f2e0ac1595a6ee5b4c140567fd5e8b051fb"
+    }
+  },
+  {
+    "candidateId": "botany-0091",
+    "q": "Seedlings of the tropical vine studied as Monstera gigantea can find a tree to climb by growing toward what visual cue?",
+    "a": "Darkness",
+    "d": "A tree trunk creates a dark silhouette on the forest floor. The seedlings’ unusual growth response helps them reach a support before climbing toward better light.",
+    "s": "Strong and Ray · Host-tree location by Monstera",
+    "u": "https://epublications.marquette.edu/liana_articles/630/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "A moving pattern of sun flecks",
+      "Darkness",
+      "The brightest patch of sky",
+      "Reflected ultraviolet from flowers"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://epublications.marquette.edu/liana_articles/630/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract describes directed growth toward host-tree darkness; retained study’s species naming.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "c151c78f2d7aeea1b1128ab286ad82e4baf11d003bd79c3663f47523670608a0"
+    }
+  },
+  {
+    "candidateId": "botany-0092",
+    "q": "Some duckweeds prepare for winter by making special starch-filled buds. Where do these buds spend the cold season?",
+    "a": "On the pond bottom",
+    "d": "The dense buds, called turions, separate and sink. In spring, renewed metabolism helps them return to the surface and resume growth.",
+    "s": "Washington State University Herbarium · Turion duckweed",
+    "u": "https://sbs.wsu.edu/ownbeyherbarium/2026/06/25/turion-duckweed-lemna-turionifera/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Inside the parent’s floating leaves",
+      "In a floating raft of dead stems",
+      "Attached to reeds above the water",
+      "On the pond bottom"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://sbs.wsu.edu/ownbeyherbarium/2026/06/25/turion-duckweed-lemna-turionifera/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Herbarium describes sinking, overwintering and spring resurfacing of turions; scoped some duckweeds.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "5edf1d7afe62c4f6ab0a4a53ae9e7f2f404c5f15905eaeafaf45c54cc38f0b05"
+    }
+  },
+  {
+    "candidateId": "botany-0093",
+    "q": "Some coalified conifer cones millions of years old can still move their scales. What drives that movement?",
+    "a": "Water uptake and loss",
+    "d": "Low mineralization preserved parts of the cones’ original structure. Wetting and drying still made scales open and close through passive physical changes, without living cells.",
+    "s": "Poppinga and colleagues · Fossil cone movement",
+    "u": "https://www.nature.com/articles/srep40302",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Changes in magnetic fields",
+      "Expansion of growing mineral crystals",
+      "Water uptake and loss",
+      "Residual pressure from buried gases"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nature.com/articles/srep40302",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports passive water-driven opening/closing in Eemian and MiddleMiocene coalified cones, linked to low mineralization.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a8dba2b3d814847655e058c34e8036b67cb23ab3bccb62e08807342cc2500020"
+    }
+  },
+  {
+    "candidateId": "botany-0094",
+    "q": "How can the seed pods of Pisonia “birdcatcher” trees accidentally kill birds?",
+    "a": "Sticking to feathers until flight becomes impossible",
+    "d": "The sticky pods normally hitch rides on birds. Too many attached pods can entangle or weigh down the carrier; this is not evidence that the tree digests birds.",
+    "s": "Smithsonian National Museum of Natural History · Birdcatcher trees",
+    "u": "https://naturalhistory.si.edu/research/botany/news/plant-press/researchers-split-birdcatcher-trees-genus-pisonia-three",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Releasing a toxin that paralyzes wings",
+      "Sticking to feathers until flight becomes impossible",
+      "Snapping shut around a bird’s feet",
+      "Expanding inside a bird’s stomach"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://naturalhistory.si.edu/research/botany/news/plant-press/researchers-split-birdcatcher-trees-genus-pisonia-three",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum account explicitly describes sticky pods weighing down and rendering birds flightless; no carnivory claim.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "cad1302c57bc751ddd9800eeb7f1b1329635685fee5a3b889bf9692306b384ef"
+    }
+  },
+  {
+    "candidateId": "botany-0095",
+    "q": "What are male orchid bees collecting when they visit a Coryanthes flower before sometimes falling into its liquid-filled trap?",
+    "a": "Fragrance compounds",
+    "d": "The bees gather perfume used in courtship. A visitor that falls into the bucket must squeeze past the flower’s reproductive column on its way out.",
+    "s": "Cambridge University Botanic Garden · Coryanthes",
+    "u": "https://www.botanic.cam.ac.uk/the-garden/plant-list/coryanthes-macrantha/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Plant fibers for nest walls",
+      "Pollen as food for larvae",
+      "Fragrance compounds",
+      "Resin for sealing brood cells"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.botanic.cam.ac.uk/the-garden/plant-list/coryanthes-macrantha/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Garden account describes males seeking scent for female attraction and bucket escape; page typo sayswasps but correctlybees elsewhere.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "3b4113832ff7e279fd34cb56e7c395d3c6062730f433034ed829156e3e222c70"
+    }
+  },
+  {
+    "candidateId": "botany-0096",
+    "q": "What can change from one growing season to another in an individual jack-in-the-pulpit as its size and resources change?",
+    "a": "Its sexual function",
+    "d": "Smaller flowering individuals tend to function as male, while larger ones can function as female. The same perennial plant can change its reproductive role over time.",
+    "s": "Policansky · Gender in jack-in-the-pulpit",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/28312103/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Its sexual function",
+      "Its number of chromosome sets",
+      "Its basic leaf-vein pattern",
+      "Its method of dispersing seeds"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28312103/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract directly states ability to change sex with changes in plant size.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "8a4244216e2edb98f5b55915a3e2e74e4d5d9af5dc2619827be95e9a9016454f"
+    }
+  },
+  {
+    "candidateId": "botany-0097",
+    "q": "Researchers studying the nonphotosynthetic parasite Rafflesia lagascae found evidence suggesting it may have lost which entire genetic package?",
+    "a": "Its chloroplast genome",
+    "d": "Extensive sequencing failed to find a recognizable complete plastid genome. The finding concerns that genetic package, not the loss of all DNA from the plant.",
+    "s": "Molina and colleagues · Possible Rafflesia plastid-genome loss",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/24458431/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Its nuclear genome",
+      "Its mitochondrial genome",
+      "Its pollen’s nuclear genome",
+      "Its chloroplast genome"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24458431/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper carefully titled possible loss, with multiple genomic searches; maintained evidence-suggests scope. Direct PubMedopen challenged, indexed primary abstract/fulltext read.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "4bcf99007ea3f32bdee1d002c6ad556521bc98c4b183ee0afe802a6621397951"
+    }
+  },
+  {
+    "candidateId": "botany-0098",
+    "q": "A bee preserved in Dominican amber supplied an exceptionally clear fossil record of an orchid. What was attached to the bee?",
+    "a": "Packet of orchid pollen",
+    "d": "The pollen mass on the bee’s back linked a fossil insect directly with an orchid. Its placement also helped researchers infer how the flower had used its pollinator.",
+    "s": "Harvard · Fossil orchid and pollinator",
+    "u": "https://news.harvard.edu/gazette/story/2007/08/first-orchid-fossil-puts-showy-blooms-at-some-80-million-years-old/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Fragment of an orchid petal",
+      "Packet of orchid pollen",
+      "Mite carrying orchid tissue",
+      "Orchid seed"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.harvard.edu/gazette/story/2007/08/first-orchid-fossil-puts-showy-blooms-at-some-80-million-years-old/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institution research report directly describes pollinia on extinct bee’s back and pollination evidence; no outdated first/age claim.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "c898f944b490b8828c6c0287b9f4c35baeb550c59cbae228bbf27eea7f17c32c"
+    }
+  },
+  {
+    "candidateId": "botany-0099",
+    "q": "In tobacco grafting experiments that produced the polyploid Nicotiana tabauca, what crossed between species at the graft junction?",
+    "a": "Entire nuclear genomes",
+    "d": "Researchers regenerated polyploid plants from selected graft-junction tissue. This provided an experimental route to combining genomes without ordinary sexual reproduction.",
+    "s": "Fuentes and colleagues · Horizontal genome transfer",
+    "u": "https://www.nature.com/articles/nature13291",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Chloroplast genomes alone",
+      "Mitochondrial genomes alone",
+      "Messenger RNA molecules alone",
+      "Entire nuclear genomes"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nature.com/articles/nature13291",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper reports nuclear-genome transfer at Nicotiana grafts producing new polyploid; experimental scope retained.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "c32f4749ad5da80e11b1961b9bebffca46991024d5751013fbde63162213257d"
+    }
+  },
+  {
+    "candidateId": "botany-0100",
+    "q": "Why did lightning strikes sometimes benefit the tropical tree Dipteryx oleifera in a field study?",
+    "a": "They killed its competitors and climbing vines",
+    "d": "The studied trees suffered little damage from direct strikes while nearby competitors and many lianas died. Survival of the strike allowed the trees to gain from the destruction around them.",
+    "s": "Gora and colleagues · Trees benefiting from lightning",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/40136034/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "They stimulated a flush of dormant flower buds",
+      "They killed its competitors and climbing vines",
+      "They killed the roots’ fungal parasites",
+      "They thinned its own canopy and reduced water loss"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/40136034/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports ten direct strikes negligible host damage while killing78%lianas and competitor biomass; not alltree lightning claim.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "65d920ab96e3e56131f1fd89ca6f0b9171e0bb5680f86b11c8a203d9dd14ed38"
+    }
+  }
+]

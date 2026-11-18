@@ -1,0 +1,260 @@
+{
+  "checkedOn": "2026-11-18T01:46:08.788035+00:00",
+  "method": "Read-only HTTP GET with4workers; response headers only.403/429/timeouts are unresolved, not factual errors. Checks newly added accepted URLs absent from all prior audits; excludes unaccepted research drafts.",
+  "totalDistinctUrls": 25,
+  "completed": 25,
+  "summary": {
+    "reachable": 21,
+    "unresolved": 4
+  },
+  "urls": [
+    {
+      "url": "https://beta.designmuseum.org/discover-design/all-design-objects/bic-biro",
+      "candidateIds": [
+        "objects-0396",
+        "objects-0397"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://beta.designmuseum.org/discover-design/all-design-objects/bic-biro",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/people/cp37675/nokia-ab",
+      "candidateIds": [
+        "objects-0393"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://ielc.libguides.com/sdzg/factsheets/koala/characteristics",
+      "candidateIds": [
+        "nature-0391"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ielc.libguides.com/sdzg/factsheets/koala/characteristics",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://library.louisiana.edu/news-events/news/20221118/fun-fact-friday-special-collections",
+      "candidateIds": [
+        "nature-0406"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://library.louisiana.edu/news-events/news/20221118/fun-fact-friday-special-collections",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.harvard.edu/gazette/story/2014/03/secrets-of-the-narwhal-tusk/",
+      "candidateIds": [
+        "nature-0400"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.harvard.edu/gazette/story/2014/03/secrets-of-the-narwhal-tusk/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-trap-jaw-ants/",
+      "candidateIds": [
+        "nature-0401"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pateklab.biology.duke.edu/research/mechanics-of-ultrafast-movement/mechanics-of-movement-trap-jaw-ants/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5063634/",
+      "candidateIds": [
+        "nature-0399"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5063634/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://portal.findresearcher.sdu.dk/en/publications/rapid-physiological-integration-of-fused-ctenophores/",
+      "candidateIds": [
+        "nature-0404"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://portal.findresearcher.sdu.dk/en/publications/rapid-physiological-integration-of-fused-ctenophores/",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10069973/",
+      "candidateIds": [
+        "nature-0398"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/10069973/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20832314/",
+      "candidateIds": [
+        "nature-0405"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/20832314/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33689716/",
+      "candidateIds": [
+        "nature-0396"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/33689716/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34520690/",
+      "candidateIds": [
+        "nature-0402"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/34520690/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://stg-images.samsung.com/is/content/samsung/p5/levant/aboutsamsung/levant-aboutsamsung-Samsung_Profile_2013.pdf",
+      "candidateIds": [
+        "objects-0394"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://stg-images.samsung.com/is/content/samsung/p5/levant/aboutsamsung/levant-aboutsamsung-Samsung_Profile_2013.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Acorn_Woodpecker/overview",
+      "candidateIds": [
+        "nature-0408"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.global.hokudai.ac.jp/blog/squid-can-fly-flight-behavior-of-the-squid-explained-for-the-first-time/",
+      "candidateIds": [
+        "nature-0397"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.global.hokudai.ac.jp/blog/squid-can-fly-flight-behavior-of-the-squid-explained-for-the-first-time/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/185344",
+      "candidateIds": [
+        "objects-0387"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ncl.ac.uk/press/articles/archive/2017/11/3dglassesformantises/",
+      "candidateIds": [
+        "nature-0409"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ncl.ac.uk/press/articles/archive/2017/11/3dglassesformantises/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.newswise.com/pdf_docs/172616333475296_RSBL-2024-0371%20(4).pdf",
+      "candidateIds": [
+        "nature-0410"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.newswise.com/pdf_docs/172616333475296_RSBL-2024-0371%20(4).pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/barn-owl-tyto-alba.html",
+      "candidateIds": [
+        "nature-0407"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nhm.ac.uk/discover/barn-owl-tyto-alba.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/immortal-jellyfish-secret-to-cheating-death.html",
+      "candidateIds": [
+        "nature-0403"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nhm.ac.uk/discover/immortal-jellyfish-secret-to-cheating-death.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.orau.org/health-physics-museum/collection/consumer/miscellaneous/spark-plugs.html",
+      "candidateIds": [
+        "objects-0390"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.orau.org/health-physics-museum/collection/consumer/miscellaneous/spark-plugs.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.orau.org/health-physics-museum/collection/miscellaneous/irradiated-golf-balls.html",
+      "candidateIds": [
+        "objects-0392"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.orau.org/health-physics-museum/collection/miscellaneous/irradiated-golf-balls.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.orau.org/health-physics-museum/collection/radioactive-quack-cures/pills-potions-and-other-miscellany/doramad-radioactive-toothpaste.html",
+      "candidateIds": [
+        "objects-0391"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.orau.org/health-physics-museum/collection/radioactive-quack-cures/pills-potions-and-other-miscellany/doramad-radioactive-toothpaste.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.sony.com/en/SonyInfo/CorporateInfo/History/SonyHistory/1-02.html",
+      "candidateIds": [
+        "objects-0388",
+        "objects-0389"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.toyota-global.com/company/history_of_toyota/75years/text/taking_on_the_automotive_business/chapter1/section1/item4.html",
+      "candidateIds": [
+        "objects-0395"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.toyota-global.com/company/history_of_toyota/75years/text/taking_on_the_automotive_business/chapter1/section1/item4.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    }
+  ]
+}

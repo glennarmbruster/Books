@@ -1,0 +1,23 @@
+{
+  "name": "WEIRD Facts & Trivia \u2014 2,500-question reviewed release",
+  "created": "2026-11-17",
+  "targetNewQuestions": 2500,
+  "publishedBaseline": 20100,
+  "firstFutureQuestion": 20101,
+  "lastFutureQuestion": 22600,
+  "publication": "Release the complete 2,500-question batch after source, duplicate, editorial and integration checks. User revised the previous 10,000-question release threshold.",
+  "numbering": "Candidate IDs are editorial identifiers, not published question numbers. Assign permanent folio numbers only at release.",
+  "reviewStages": [
+    "Write an original question around a surprising, worthwhile fact.",
+    "Read a supporting source and check both the answer and explanation.",
+    "Compare the underlying fact with published questions and explanations, and with the other candidates.",
+    "Check clarity, ambiguity, answer spelling, category, difficulty and all four choices.",
+    "Record evidence and the editorial decision for every accepted candidate.",
+    "Review the complete collection, integrate it and test the offline update before publishing."
+  ],
+  "difficulty": "Keep honest adult difficulty labels. Default game mix remains 70% easy, 10% medium, 10% hard and 10% obscure.",
+  "backgroundWork": "This is saved editorial work, not a scheduled or automatically continuing job.",
+  "publishedContentSha256": "e56c551633d7f7a15d26088a05b28b6ddb325c2933d5feca9138603a75f4f656",
+  "originalExpansionGoal": 10000,
+  "releaseTargetChangedOn": "2026-11-17"
+}

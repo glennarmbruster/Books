@@ -1,0 +1,1458 @@
+{
+  "scope": "Independent review of 42 accepted parent additions; rejected entries skipped; no repository edits",
+  "counts": {
+    "accept": 39,
+    "reject": 1,
+    "revise": 2
+  },
+  "reviewer": "batch002_nature",
+  "cards": [
+    {
+      "candidateId": "books-0001",
+      "verdict": "accept",
+      "reason": "Museum account and 2009 institutional news release confirm pocket watch, repairman, location under dial and discovery date. Does not mistakenly reproduce Dillon’s inaccurate remembered wording.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.073,
+          "id": 14357,
+          "file": "existing.json",
+          "q": "Which of these was the tallest U.S. President?",
+          "a": "Abraham Lincoln",
+          "d": ""
+        },
+        {
+          "score": 0.07,
+          "id": 18221,
+          "file": "existing.json",
+          "q": "Which of these fruits has a variety called Abraham Lincoln?",
+          "a": "Tomato",
+          "d": ""
+        },
+        {
+          "score": 0.068,
+          "id": 14730,
+          "file": "existing.json",
+          "q": "What is a watch that is carried in a small watch pocket called?",
+          "a": "Pocket watch",
+          "d": "A watch that is carried in a small watch pocket."
+        }
+      ],
+      "reviewedContentSha256": "1134612b64c4e43158bb1a983bebe28626a6f5161a23ebd0363141e7b91d73b2",
+      "corroboratingUrl": "https://www.si.edu/newsdesk/releases/smithsonian-uncovers-secret-message-inside-abraham-lincoln-s-watch"
+    },
+    {
+      "candidateId": "books-0002",
+      "verdict": "accept",
+      "reason": "NLM digitizer’s firsthand account explicitly describes arsenical wallpaper and protective clothing. Four material choices are reasonable.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.087,
+          "id": 14994,
+          "file": "existing.json",
+          "q": "What is a depository built to contain books and other materials for reading and study called?",
+          "a": "Library",
+          "d": "A depository built to contain books and other materials for reading and study. Another name is depository library."
+        },
+        {
+          "score": 0.063,
+          "id": 751,
+          "file": "existing.json",
+          "q": "What protects the narrow stem of a rock hoodoo much the way a hat shields a head?",
+          "a": "A layer of harder caprock.",
+          "d": "Rock beneath that protective layer survives while erosion lowers its surroundings."
+        },
+        {
+          "score": 0.058,
+          "id": 11498,
+          "file": "existing.json",
+          "q": "Before photocopiers, a typist slipped carbon paper between two sheets to create what?",
+          "a": "A second copy",
+          "d": "Pressure from the typewriter transferred pigment onto the lower sheet."
+        }
+      ],
+      "reviewedContentSha256": "b7c3949f22b9c03766c1b1ab956d271fce2b2b6e32007ce8c1df3fac941fa9ef"
+    },
+    {
+      "candidateId": "books-0004",
+      "verdict": "accept",
+      "reason": "London Museum explicitly identifies working cats at the Money Order Office and weekly allowance. Pigeons are a plausible postal distractor; easy label appropriate.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.083,
+          "id": 12786,
+          "file": "existing.json",
+          "q": "Comedian Florence Foresti was born in 1973 in a family of what origin?",
+          "a": "Italian",
+          "d": "His father is the entrepreneur of an industrial maintenance company and his mother is an office worker."
+        },
+        {
+          "score": 0.078,
+          "id": 16846,
+          "file": "existing.json",
+          "q": "The ____ of the Chief Post Office in Christchurch, New Zealand, is reputed to be a replica of London's Big Ben. Which detail is missing?",
+          "a": "Clock tower",
+          "d": "The clock tower of the Chief Post Office in Christchurch, New Zealand, is reputed to be a replica of London's Big Ben. The Chief Post Office or Christchurch Central Post Office, originally known as the Government Buildings, is located in Cathedral Square, Christchurch, New Zealand."
+        },
+        {
+          "score": 0.073,
+          "id": 19489,
+          "file": "existing.json",
+          "q": "What is a regulated daily food allowance called?",
+          "a": "Dietary",
+          "d": "A regulated daily food allowance."
+        }
+      ],
+      "reviewedContentSha256": "0a3cb2368d4ecc84cc9ab0cd801458a12a03473fc2b7d09831ad20a75d13e900"
+    },
+    {
+      "candidateId": "books-0005",
+      "verdict": "accept",
+      "reason": "Stream-sharing root is precisely scoped to Latin ancestor. Resource alternatives are parallel; no repeated etymology found.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.123,
+          "id": "words-0020",
+          "file": "words-002.json",
+          "q": "A Latin ancestor of plagiarism described someone committing which crime?",
+          "a": "Kidnapping",
+          "d": "Plagiarius moved from stealing people to stealing another writer’s words. The modern offense retained that striking metaphor."
+        },
+        {
+          "score": 0.12,
+          "id": "words-0017",
+          "file": "words-002.json",
+          "q": "Long before its association with drinks, the ancestor of alcohol named a powder used for what?",
+          "a": "Eye makeup",
+          "d": "The Arabic source referred to powdered antimony, or kohl. The word later traveled into chemistry with a very different meaning."
+        },
+        {
+          "score": 0.1,
+          "id": "words-0018",
+          "file": "words-002.json",
+          "q": "The Latin ancestor of sinister combined an unlucky meaning with which direction?",
+          "a": "Left",
+          "d": "English inherited an ominous meaning from a word that also described the left-hand side."
+        }
+      ],
+      "reviewedContentSha256": "19b1e7668ce4fcded71627f86c73e5acb925c36da0bad6e46b01455d72325231"
+    },
+    {
+      "candidateId": "books-0006",
+      "verdict": "accept",
+      "reason": "MW explicitly supports Josef suggesting robot from compulsory labor and its introduction through R.U.R. Published2015 is an unrelated Soviet phrase/Hungary identity, not this origin.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.086,
+          "id": 2015,
+          "file": "existing.json",
+          "q": "Forced labor of Hungarians in the Soviet Union was dubbed malenkij robot (corrupted Russian for \"a little work\") in which country?",
+          "a": "Hungary",
+          "d": "Hungary is a landlocked country in Central Europe."
+        },
+        {
+          "score": 0.073,
+          "id": "words-0013",
+          "file": "words-002.json",
+          "q": "Dandelion’s name means lion’s tooth. Which part of the plant suggested that comparison?",
+          "a": "Leaves",
+          "d": "The deeply notched leaf edges suggested sharp teeth. The name entered English through French dent de lion."
+        },
+        {
+          "score": 0.071,
+          "id": 1707,
+          "file": "existing.json",
+          "q": "Czech composer Jan Rychlík played the drums in the jazz orchestra of whom?",
+          "a": "Karel Vlach",
+          "d": "Karel Vlach was a Czech dance orchestra conductor and arranger. He founded his first orchestra in 1938."
+        }
+      ],
+      "reviewedContentSha256": "8d09f040dff55940db61d8290226c3fd99d4b133d8b9b247ea0f2ea0a62a4f3f"
+    },
+    {
+      "candidateId": "books-0007",
+      "verdict": "accept",
+      "reason": "Correct astrological etymology; source summary is appropriately reflected. Choices are distinguishable and no lexical repetition found.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.076,
+          "id": "words-0012",
+          "file": "words-002.json",
+          "q": "Which flower’s name compresses the Old English words for day’s eye?",
+          "a": "Daisy",
+          "d": "The older form was dægesēage, with the two words later contracting into the familiar flower name."
+        },
+        {
+          "score": 0.076,
+          "id": 542,
+          "file": "existing.json",
+          "q": "Why does December have a name meaning “tenth” when it is month twelve?",
+          "a": "The early Roman year began in March.",
+          "d": "September through December preserve a run of old month numbers in their names."
+        },
+        {
+          "score": 0.074,
+          "id": 4986,
+          "file": "existing.json",
+          "q": "Which term is the Latin American and Caribbean belief that good and evil spirits can affect health, luck and other elements of human life?",
+          "a": "Espiritismo",
+          "d": "Espiritismo is a Latin American and Caribbean belief system that evolved and less evolved spirits can affect health, luck and other aspects of human life."
+        }
+      ],
+      "reviewedContentSha256": "e1e7c14a8f67a00e11e18b58e91f581c8a35afccc11f2b56f7f46370a8581991"
+    },
+    {
+      "candidateId": "books-0008",
+      "verdict": "accept",
+      "reason": "Thread/clew is a clear historical sense, and the explanation avoids asserting one unique myth as the exclusive source. No old fact match.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.094,
+          "id": "words-0007",
+          "file": "words-002.json",
+          "q": "The Greek ancestor of cynic literally compared a person with which animal?",
+          "a": "Dog",
+          "d": "Kynikos meant doglike. The label was associated with an ancient philosophical school before acquiring its modern sense."
+        },
+        {
+          "score": 0.08,
+          "id": 19702,
+          "file": "existing.json",
+          "q": "Which term fits this clue? Forming words with letters according to the principles underlying accepted usage.",
+          "a": "Spelling",
+          "d": "Forming words with letters according to the principles underlying accepted usage."
+        },
+        {
+          "score": 0.076,
+          "id": 11655,
+          "file": "existing.json",
+          "q": "What seven-letter Q-word for a disagreement is also an old name for a bolt shot from a crossbow?",
+          "a": "Quarrel",
+          "d": "The identical spellings have different word histories. The projectile sense is linked to a square shape."
+        }
+      ],
+      "reviewedContentSha256": "134409d2a2a038148b90b823ab1934048566c6ce29cf1367b319e1b2299a7551"
+    },
+    {
+      "candidateId": "books-0009",
+      "verdict": "accept",
+      "reason": "Wind-eye compound is accurately expressed. Anatomical alternatives are parallel and plausible.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.086,
+          "id": 13346,
+          "file": "existing.json",
+          "q": "What is the Swedish word for \"window\"?",
+          "a": "Fönster",
+          "d": ""
+        },
+        {
+          "score": 0.084,
+          "id": 10388,
+          "file": "existing.json",
+          "q": "What is the literal meaning of the word giraffe considering its Arabic origin?",
+          "a": "Tall",
+          "d": ""
+        },
+        {
+          "score": 0.083,
+          "id": 15532,
+          "file": "existing.json",
+          "q": "What is the literal meaning of the Japanese word hime which refers to a popular cut?",
+          "a": "Princess",
+          "d": ""
+        }
+      ],
+      "reviewedContentSha256": "2085056bdbf969563930e488007bbb979ab87079a732a065092b80da10b5a103"
+    },
+    {
+      "candidateId": "books-0010",
+      "verdict": "accept",
+      "reason": "Naked exercise reflects gymnazein/gymnos. Published18734 concerns the covered xystus, not clothing or this etymology.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.131,
+          "id": 18734,
+          "file": "existing.json",
+          "q": "What roofed area of an ancient Greek gymnasium allowed athletes to exercise even when the weather turned bad?",
+          "a": "Xystus",
+          "d": "The Greek term referred to a covered portico. The Romans later applied it to a garden walk as well."
+        },
+        {
+          "score": 0.103,
+          "id": "words-0007",
+          "file": "words-002.json",
+          "q": "The Greek ancestor of cynic literally compared a person with which animal?",
+          "a": "Dog",
+          "d": "Kynikos meant doglike. The label was associated with an ancient philosophical school before acquiring its modern sense."
+        },
+        {
+          "score": 0.103,
+          "id": 9997,
+          "file": "existing.json",
+          "q": "The Greco-Australian dialect, a variety of Modern Greek, blends words with what into the Greek language?",
+          "a": "English roots",
+          "d": "Greek in Australia also referred to as Greco-Australian or Australian Greek is a dialect of the Greek language that is spoken by the Greek diaspora in Australia."
+        }
+      ],
+      "reviewedContentSha256": "259b944caf3d69585f4c0f0af0c2fd73de913d75e3b1cda58eed3efb6df4a4f4"
+    },
+    {
+      "candidateId": "books-0012",
+      "verdict": "accept",
+      "reason": "Collection owner explicitly distinguishes the surviving Gebauer copyist score and Beethoven’s annotations; Bonaparte removal is supported. No attribution overreach.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.095,
+          "id": 13761,
+          "file": "existing.json",
+          "q": "What was Napoleon Bonaparte's name before he changed it?",
+          "a": "Napoleone di Buonaparte",
+          "d": ""
+        },
+        {
+          "score": 0.078,
+          "id": 1635,
+          "file": "existing.json",
+          "q": "The Düben collection contains the sole surviving copies of many works by whom?",
+          "a": "Dieterich Buxtehude",
+          "d": "Dieterich Buxtehude was a Danish composer and organist of the middle Baroque era, whose works are typical of the North German organ school."
+        },
+        {
+          "score": 0.072,
+          "id": 3050,
+          "file": "existing.json",
+          "q": "What was the prefect of Marne from 1800 to 1838, surviving numerous regime changes?",
+          "a": "Claude-Laurent Bourgeois de Jessaint",
+          "d": "Claude-Laurent Bourgeois de Jessaint was a French aristocrat and civic administrator. Born into an aristocratic family, he was a classmate of Napoleon Bonaparte at the military academy at Brienne-le-Château."
+        }
+      ],
+      "reviewedContentSha256": "93931a3eb4e8042769a10094716a1695f0b02efd724ec6d1dcd0d5a3593f253f"
+    },
+    {
+      "candidateId": "space-0019",
+      "verdict": "accept",
+      "reason": "Distinct from published382 tortilla request/crumb reduction: tests the smuggled Gemini sandwich filling. Choices are ordinary viable sandwich fillings.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.091,
+          "id": 382,
+          "file": "existing.json",
+          "q": "What flatbread did Mexican payload specialist Rodolfo Neri Vela request for a 1985 shuttle flight?",
+          "a": "Tortillas.",
+          "d": "His Atlantis crewmates discovered that tortillas held fillings well and left fewer floating crumbs than ordinary bread."
+        },
+        {
+          "score": 0.079,
+          "id": 19519,
+          "file": "existing.json",
+          "q": "Which food fits this description? Bread made of coarse rye flour.",
+          "a": "Black bread",
+          "d": "Bread made of coarse rye flour. Another name is pumpernickel."
+        },
+        {
+          "score": 0.079,
+          "id": 18181,
+          "file": "existing.json",
+          "q": "Which of the following astronauts was not among the first human beings to orbit the moon?",
+          "a": "John Young",
+          "d": ""
+        }
+      ],
+      "reviewedContentSha256": "a24a9841d8a720e20706e908954b8a1ea3f3ddd7c52bc62048440d92b8ee0518"
+    },
+    {
+      "candidateId": "space-0020",
+      "verdict": "accept",
+      "reason": "NASA specifically names hundreds of tiny fishhooks. Other gripping technologies are plausible alternatives.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.087,
+          "id": "space-0022",
+          "file": "space-002.json",
+          "q": "How does NASA’s inchworm-like Ice Worm prototype secure itself while climbing an ice wall?",
+          "a": "It drills into the ice",
+          "d": "The robot fixes one end at a time, then contracts or extends its joints to advance along the frozen surface."
+        },
+        {
+          "score": 0.082,
+          "id": 19476,
+          "file": "existing.json",
+          "q": "What is a small cake with a hard surface said to resemble a rock called?",
+          "a": "Rock cake",
+          "d": "A small cake with a hard surface said to resemble a rock."
+        },
+        {
+          "score": 0.082,
+          "id": 11551,
+          "file": "existing.json",
+          "q": "After noticing burrs stuck to fur and clothing, an inventor developed what familiar type of fastening?",
+          "a": "Hook-and-loop",
+          "d": "Tiny hooks on one strip catch loops on the other."
+        }
+      ],
+      "reviewedContentSha256": "f3e4012b9594b5161f78fd11a3e9772b3bf4f5c04931b7f6fa472af0aaac8fec"
+    },
+    {
+      "candidateId": "space-0022",
+      "verdict": "accept",
+      "reason": "NASA explicitly describes one-end-at-a-time drilling and inchworm movement; distinct from LEMUR hook gripping.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.087,
+          "id": "space-0020",
+          "file": "space-002.json",
+          "q": "What lets NASA’s LEMUR robot catch onto the tiny irregularities of rough rock walls?",
+          "a": "Fishhooks",
+          "d": "The hooks catch small surface irregularities, letting the robot climb places where ordinary wheels would fail."
+        },
+        {
+          "score": 0.079,
+          "id": 9021,
+          "file": "existing.json",
+          "q": "Petra Klingler finished third in what while climbing on one leg?",
+          "a": "Ice Climbing World Cup",
+          "d": "Petra Klingler is a Swiss rock climber and retired competition climber."
+        },
+        {
+          "score": 0.078,
+          "id": 8880,
+          "file": "existing.json",
+          "q": "What part of its digestive tract does a Pacific lugworm turn inside out as it feeds?",
+          "a": "Esophagus",
+          "d": "The worm can extend this part of its body into the sediment while feeding."
+        }
+      ],
+      "reviewedContentSha256": "29e3a688fa62dbf9568a555b3ed833d435a5b7bd44b9ae42c9e055f539763e17"
+    },
+    {
+      "candidateId": "space-0023",
+      "verdict": "accept",
+      "reason": "NASA climbing-robot account independently confirms gecko-inspired microscopic hairs and van der Waals forces. Existing gecko cards test different traits.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.071,
+          "id": "nature-0222",
+          "file": "nature-002.json",
+          "q": "What creates the shifting metallic colors in a golden mole’s fur?",
+          "a": "Microscopic layers in the hairs",
+          "d": "The hair structure reflects light differently with viewing angle; the colors are not simply different dyes."
+        },
+        {
+          "score": 0.069,
+          "id": 667,
+          "file": "existing.json",
+          "q": "Why does a fly leaving a common stinkhorn sometimes act as the mushroom’s delivery service?",
+          "a": "Spore-filled slime sticks to it.",
+          "d": "The odor draws flies onto the sticky top before they carry the spores elsewhere."
+        },
+        {
+          "score": 0.064,
+          "id": 2407,
+          "file": "existing.json",
+          "q": "Which animal can change colour according to the temperature of its surroundings?",
+          "a": "European leaf-toed gecko",
+          "d": "The European leaf-toed gecko is a species of lizard in the family Sphaerodactylidae. It is found in coastal regions of France, Italy and Tunisia and on Mediterranean islands."
+        }
+      ],
+      "reviewedContentSha256": "ac9498183ba98aae0faa3e97b7a64b0ea27ce90166b35be180dddb2b8698f2e9",
+      "corroboratingUrl": "https://www.nasa.gov/technology/robotics/for-climbing-robots-the-skys-the-limit/"
+    },
+    {
+      "candidateId": "space-0024",
+      "verdict": "accept",
+      "reason": "Improvised map fender is distinct from lunar-dust smell20021. Four plausible onboard-material alternatives; no ambiguity detected.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.121,
+          "id": 20021,
+          "file": "released.json",
+          "q": "After lunar dust was brought inside their spacecraft, Apollo astronauts compared its smell to what?",
+          "a": "Gunpowder",
+          "d": "The smell was reported in the spacecraft’s air. It was not an odor astronauts could sniff outside through their sealed helmets."
+        },
+        {
+          "score": 0.09,
+          "id": "space-0013",
+          "file": "space-001.json",
+          "q": "The Apollo 10 command module was Charlie Brown. What was its lunar module called?",
+          "a": "Snoopy",
+          "d": "The astronauts borrowed both names from Peanuts. Snoopy flew close to the lunar surface during the rehearsal for a landing."
+        },
+        {
+          "score": 0.081,
+          "id": 16579,
+          "file": "existing.json",
+          "q": "Which of the three astronauts from Apollo 11 has lost a child in 1962?",
+          "a": "Neil Armstrong",
+          "d": ""
+        }
+      ],
+      "reviewedContentSha256": "f4483b6331992b18ae01f6948570ab368e9149dd9a5bbf79f3e19c7d5e251926"
+    },
+    {
+      "candidateId": "space-0025",
+      "verdict": "accept",
+      "reason": "NASA describes airflow, separate receptacles, foot restraints and handholds. Correct and approachable.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.114,
+          "id": "space-0026",
+          "file": "space-002.json",
+          "q": "What is the usual final journey for most sealed containers of solid toilet waste from the space station?",
+          "a": "Burning up in a cargo ship",
+          "d": "Most are packed aboard departing cargo vehicles that reenter the atmosphere. A few containers return to Earth for evaluation."
+        },
+        {
+          "score": 0.069,
+          "id": 11522,
+          "file": "existing.json",
+          "q": "With a single fixed pulley, can pulling down on a rope help lift a load up?",
+          "a": "Yes",
+          "d": "The wheel changes the direction of the pull even when it offers no ideal force advantage."
+        },
+        {
+          "score": 0.068,
+          "id": 459,
+          "file": "existing.json",
+          "q": "Which instrument answers “how fast is the wind blowing?” at a weather station?",
+          "a": "An anemometer.",
+          "d": "Its reading is wind speed. You need wind direction as a separate piece of information for a full wind report."
+        }
+      ],
+      "reviewedContentSha256": "6fa28bd4646b8ecc560a85fee65378209cf4ec8b78767a39f3c94207270ebe13"
+    },
+    {
+      "candidateId": "space-0026",
+      "verdict": "accept",
+      "reason": "NASA explicitly says most canisters burn on reentry and a small number return for evaluation. Properly qualified; not an all-waste generalization.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.114,
+          "id": "space-0025",
+          "file": "space-002.json",
+          "q": "What pulls waste in the right direction in a space-station toilet, where gravity cannot do the usual job?",
+          "a": "Airflow",
+          "d": "Fans draw waste into separate receptacles. Foot restraints and handholds help the user stay in position."
+        },
+        {
+          "score": 0.083,
+          "id": 7531,
+          "file": "existing.json",
+          "q": "What fills the blank? Although the steam-powered ____ had a maximum forwards speed of 10.5 knots (19.4 km/h), on her final journey she went backwards at 35 knots (65 km/h).",
+          "a": "SS Clan Alpine",
+          "d": "Clan Alpine was a cargo ship built in 1942 for the Ministry of War Transport as Empire Barrie."
+        },
+        {
+          "score": 0.069,
+          "id": 16263,
+          "file": "existing.json",
+          "q": "Which gas forms about 78% of the Earth's atmosphere?",
+          "a": "Nitrogen",
+          "d": ""
+        }
+      ],
+      "reviewedContentSha256": "35bc1b0eee88d3b3c3de1183d3a70a39e76df4c3ee0c3f1aa0b8ae0156e7f36c"
+    },
+    {
+      "candidateId": "space-0027",
+      "verdict": "reject",
+      "reason": "Fact supported, but all three distractors are internal body fluids astronauts would not routinely collect. Adult players can answer without knowing the space fact. Revise the tested choice to the destination/use of recovered water.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.098,
+          "id": 3516,
+          "file": "existing.json",
+          "q": "In 2015, Kjell Lindgren played a plastic set of bagpipes made by McCallum Bagpipes on which station?",
+          "a": "International Space Station",
+          "d": "The International Space Station is a space station in low Earth orbit."
+        },
+        {
+          "score": 0.08,
+          "id": 9212,
+          "file": "existing.json",
+          "q": "What was the launch of the Costa Rican satellite Irazú partly funded through?",
+          "a": "Kickstarter crowdfunding campaign",
+          "d": "Irazú was the first Costa Rican satellite to be launched into space. The nanosatellite was launched into space on 2 April 2018, on board a Falcon 9 rocket headed for the International Space Station."
+        },
+        {
+          "score": 0.078,
+          "id": 93,
+          "file": "existing.json",
+          "q": "Before it became a public space, what did Houston store in the Buffalo Bayou Park Cistern?",
+          "a": "Drinking water.",
+          "d": "Step inside the former reservoir and you face a forest of 221 concrete columns. They have stood there since 1926."
+        }
+      ],
+      "reviewedContentSha256": "3a8e35e7e18c98d36faf0f8976d28fd7df58faacb650c991368c46c74f77d0a3",
+      "suggestedCorrection": {
+        "q": "Water recovered from space-station urine is purified for which use?",
+        "a": "Drinking",
+        "choices": [
+          "Cooling radiator panels",
+          "Washing astronauts’ clothing",
+          "Drinking",
+          "Producing engine propellant"
+        ],
+        "d": "The treated water rejoins the drinking-water supply, reducing what must be launched from Earth."
+      }
+    },
+    {
+      "candidateId": "space-0028",
+      "verdict": "accept",
+      "reason": "NASA explains capillary cup through surface tension/wetting/geometry. Does not confuse ordinary gravity with microgravity; alternative mechanisms credible.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.133,
+          "id": 12411,
+          "file": "existing.json",
+          "q": "Which term fits this clue? A chemical agent capable of reducing the surface tension of a liquid in which it is dissolved.",
+          "a": "Surface-active agent",
+          "d": "A chemical agent capable of reducing the surface tension of a liquid in which it is dissolved. Another name is wetting agent."
+        },
+        {
+          "score": 0.07,
+          "id": 1240,
+          "file": "existing.json",
+          "q": "Which orange garden flower did astronaut Scott Kelly photograph blooming aboard the International Space Station in 2016?",
+          "a": "Zinnia",
+          "d": "The flowers grew in NASA's Veggie plant-growth experiment, where the crew had to manage water and air circulation in microgravity."
+        },
+        {
+          "score": 0.067,
+          "id": 12932,
+          "file": "existing.json",
+          "q": "What woman can survive in the freezing cold of space without a suit?",
+          "a": "Ganymède",
+          "d": "A first-class warrior, she uses a large stick in combat, which, by concentrating, can deliver powerful bursts."
+        }
+      ],
+      "reviewedContentSha256": "3bca50a39d19646b9d7c06cfbc920f9d3a5c822341389fce6a189f6e316b6649"
+    },
+    {
+      "candidateId": "space-0029",
+      "verdict": "accept",
+      "reason": "Source explicitly says needles charged by rubbing paper and charged water released from a Teflon syringe. The charged-droplet wording is supported, not an inference about neutral droplets.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.123,
+          "id": 14523,
+          "file": "existing.json",
+          "q": "What is a printer that produces characters by projecting electrically charged droplets of ink called?",
+          "a": "Ink-jet printer",
+          "d": "A printer that produces characters by projecting electrically charged droplets of ink."
+        },
+        {
+          "score": 0.076,
+          "id": 14649,
+          "file": "existing.json",
+          "q": "Which term fits this clue? Needle consisting of a slender rod with pointed ends; usually used in pairs.",
+          "a": "Knitting needle",
+          "d": "Needle consisting of a slender rod with pointed ends; usually used in pairs."
+        },
+        {
+          "score": 0.075,
+          "id": 18181,
+          "file": "existing.json",
+          "q": "Which of the following astronauts was not among the first human beings to orbit the moon?",
+          "a": "John Young",
+          "d": ""
+        }
+      ],
+      "reviewedContentSha256": "fb480c17a12b812d726fe21fe99d3300089fcf33f267799a0190485ae7b2ee99"
+    },
+    {
+      "candidateId": "space-0030",
+      "verdict": "accept",
+      "reason": "NASA directly connects shaken particulate bags and clumping to planet formation. Explanation sensibly says explores, rather than proves a complete formation mechanism.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.07,
+          "id": "space-0029",
+          "file": "space-002.json",
+          "q": "Astronaut Don Pettit made electrically charged water droplets orbit which ordinary craft tool?",
+          "a": "Knitting needle",
+          "d": "He charged the needle by rubbing it with paper. The orbiting droplets demonstrated electrostatic effects in microgravity."
+        },
+        {
+          "score": 0.067,
+          "id": 6181,
+          "file": "existing.json",
+          "q": "Planet WASP-13b, despite a radius 25% larger than Jupiter's, has what?",
+          "a": "Less than half the mass",
+          "d": "WASP-13b, also known as Cruinlagh, is an extrasolar planet that was discovered in 2008 in the orbit of the sunlike star WASP-13."
+        },
+        {
+          "score": 0.064,
+          "id": 18251,
+          "file": "existing.json",
+          "q": "Which of these is not within the lines of the palm explored by palm readers?",
+          "a": "Past line",
+          "d": ""
+        }
+      ],
+      "reviewedContentSha256": "738f5b813d723ae4c6fa3f942d0e1729c31c4c04a6ff45b850b0c05a1c64bfa0"
+    },
+    {
+      "candidateId": "space-0031",
+      "verdict": "accept",
+      "reason": "NASA explicitly gives 100nm/about1/1000 paper, gold reflectivity and underlying beryllium. No quantitative or material error.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.109,
+          "id": 14916,
+          "file": "existing.json",
+          "q": "What is a thin coating or layer called?",
+          "a": "Film",
+          "d": "A thin coating or layer."
+        },
+        {
+          "score": 0.077,
+          "id": 11475,
+          "file": "existing.json",
+          "q": "What covers a shrimp in a traditional tempura preparation?",
+          "a": "Light batter",
+          "d": "The thin batter fries into a delicate crisp coating."
+        },
+        {
+          "score": 0.077,
+          "id": 11393,
+          "file": "existing.json",
+          "q": "In a tray of baklava, what separates the layers of chopped nuts?",
+          "a": "Thin pastry sheets",
+          "d": "The baked pastry is finished with syrup or honey."
+        }
+      ],
+      "reviewedContentSha256": "b1820b9e4f600e50728ed9e2c35cf83dafef76e2ec7caee8f016ed991d01a8c9"
+    },
+    {
+      "candidateId": "words-0002",
+      "verdict": "accept",
+      "reason": "MW eye-pupil etymology supports diminutive doll and reflected image, distinct from school-pupil ward meaning. Existing eye-aperture16408 is a different fact.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.161,
+          "id": 14646,
+          "file": "existing.json",
+          "q": "Which term fits this clue? A small replica of a person; used as a toy.",
+          "a": "Doll",
+          "d": "A small replica of a person; used as a toy. Another name is dolly."
+        },
+        {
+          "score": 0.153,
+          "id": 16408,
+          "file": "existing.json",
+          "q": "If compared to a camera, what part of the human eye is its aperture?",
+          "a": "Pupil",
+          "d": ""
+        },
+        {
+          "score": 0.091,
+          "id": 14503,
+          "file": "existing.json",
+          "q": "Which term fits this clue? A small digital computer based on a microprocessor and designed to be used by one person at a time.",
+          "a": "Personal computer",
+          "d": "A small digital computer based on a microprocessor and designed to be used by one person at a time. Another name is PC."
+        }
+      ],
+      "reviewedContentSha256": "45f70b84889e1d9ec4734f77998cbd9224981f5b6076c3f0535a48799df4ccab"
+    },
+    {
+      "candidateId": "words-0003",
+      "verdict": "accept",
+      "reason": "Bread-sharing compound is stated without unsupported folklore. Good parallel food choices.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.104,
+          "id": 18123,
+          "file": "existing.json",
+          "q": "What term derives from a Latin word meaning rods bundled around an axe?",
+          "a": "Fascism",
+          "d": ""
+        },
+        {
+          "score": 0.101,
+          "id": 15524,
+          "file": "existing.json",
+          "q": "What is the literal meaning of the Latin phrase per fumum from which the modern word perfume originated?",
+          "a": "Through smoke",
+          "d": ""
+        },
+        {
+          "score": 0.1,
+          "id": "culture-0033",
+          "file": "culture-001.json",
+          "q": "The word muscle descends from a Latin diminutive meaning a little what?",
+          "a": "Mouse",
+          "d": "Latin musculus is formed from mus, meaning mouse."
+        }
+      ],
+      "reviewedContentSha256": "7846cf70aa784cefca70f0e660a3a14a2395d6b2cf1449f0587f0653a07b6f4d"
+    },
+    {
+      "candidateId": "words-0004",
+      "verdict": "accept",
+      "reason": "MW scholarly entry says probably; question preserves qualification. Anteater tail-sunshade nature0037 does not test squirrel etymology.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.169,
+          "id": "nature-0037",
+          "file": "nature-001.json",
+          "q": "A giant anteater can use what bushy body part as both a blanket and a sunshade?",
+          "a": "Tail",
+          "d": "The long tail hair supplies a convenient cover while the animal rests."
+        },
+        {
+          "score": 0.108,
+          "id": 1071,
+          "file": "existing.json",
+          "q": "Which Greek philosopher suggested that if horses and oxen could draw their gods, those gods would look like horses and oxen?",
+          "a": "Xenophanes.",
+          "d": "The thought experiment turned the human habit of picturing gods in our own image back on its audience."
+        },
+        {
+          "score": 0.098,
+          "id": 10239,
+          "file": "existing.json",
+          "q": "Which animal fits this clue? Nocturnal phalangers that move with gliding leaps using parachute-like folds of skin along the sides of the body.",
+          "a": "Flying squirrel",
+          "d": "Nocturnal phalangers that move with gliding leaps using parachute-like folds of skin along the sides of the body. Another name is flying phalanger."
+        }
+      ],
+      "reviewedContentSha256": "3b0139b8771ecb8b66e7621619310b7f733e2c4c314a7c488374029642aba4ca"
+    },
+    {
+      "candidateId": "words-0005",
+      "verdict": "accept",
+      "reason": "MW explains foreign nut versus native hazel. Old English framing avoids implying the walnut is foreign everywhere.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.129,
+          "id": 11787,
+          "file": "existing.json",
+          "q": "Which plant fits this description? North American walnut tree with hard dark wood and edible nut.",
+          "a": "Black walnut tree",
+          "d": "North American walnut tree with hard dark wood and edible nut. Another name is black walnut."
+        },
+        {
+          "score": 0.128,
+          "id": 12166,
+          "file": "existing.json",
+          "q": "Which plant fits this description? Eurasian walnut valued for its large edible nut and its hard richly figured wood; widely cultivated.",
+          "a": "English walnut",
+          "d": "Eurasian walnut valued for its large edible nut and its hard richly figured wood; widely cultivated. Another name is English walnut tree."
+        },
+        {
+          "score": 0.117,
+          "id": 11730,
+          "file": "existing.json",
+          "q": "Which plant fits this description? Chilean shrub bearing coral-red fruit with an edible seed resembling a hazelnut.",
+          "a": "Chile nut",
+          "d": "Chilean shrub bearing coral-red fruit with an edible seed resembling a hazelnut. Another name is Chilean nut."
+        }
+      ],
+      "reviewedContentSha256": "41493503da3825d2312d892b854a8a83eaf588af4bc8e8a9e40029efeed31e4a"
+    },
+    {
+      "candidateId": "words-0006",
+      "verdict": "revise",
+      "reason": "MW directly supports comparison with Capuchin habit. Correct, but cappuccino/Capuchin resemblance and familiar food make medium more fitting than hard.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.196,
+          "id": 14934,
+          "file": "existing.json",
+          "q": "What is a distinctive attire worn by a member of a religious order called?",
+          "a": "Habit",
+          "d": "A distinctive attire worn by a member of a religious order."
+        },
+        {
+          "score": 0.108,
+          "id": 14861,
+          "file": "existing.json",
+          "q": "What is a covering designed to be worn on a person's body called?",
+          "a": "Clothing",
+          "d": "A covering designed to be worn on a person's body. Another name is article of clothing."
+        },
+        {
+          "score": 0.099,
+          "id": 6078,
+          "file": "existing.json",
+          "q": "During the Holocaust, Capuchin friar Père Marie-Benoît created fake passports and baptism certificates in order to smuggle hundreds of Jews out of what?",
+          "a": "Southern France",
+          "d": "Père Marie-Benoît was born Pierre Péteul."
+        }
+      ],
+      "reviewedContentSha256": "7ac1a81d9709fa21c5e160be64c12e48b16477672e95a12714f1d0a89fa453e3",
+      "suggestedCorrection": {
+        "level": "medium"
+      }
+    },
+    {
+      "candidateId": "words-0007",
+      "verdict": "accept",
+      "reason": "Doglike Greek root and philosophical-school association are scoped accurately. No repeated underlying fact found.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.103,
+          "id": "books-0010",
+          "file": "books-002.json",
+          "q": "The Greek ancestor of gymnasium referred to exercising in what state of dress?",
+          "a": "Naked",
+          "d": "Gymnazein meant to exercise naked, from gymnos. Modern workout clothing is a later addition to the word’s world."
+        },
+        {
+          "score": 0.094,
+          "id": "books-0008",
+          "file": "books-002.json",
+          "q": "Before a detective followed a clue, the word could refer to a ball of what?",
+          "a": "Thread",
+          "d": "The older spelling clew meant a ball of thread or yarn. Stories of finding a route through a maze helped give the word its modern sense."
+        },
+        {
+          "score": 0.08,
+          "id": "words-0001",
+          "file": "words-002.json",
+          "q": "The Latin ancestor of muscle described a small version of which animal?",
+          "a": "Mouse",
+          "d": "The Romans compared the shape of certain moving muscles with little mice beneath the skin."
+        }
+      ],
+      "reviewedContentSha256": "b21abfb2207c1c78a0e7d7df15087d11bff784802e0f663e164fe6e10380ed06"
+    },
+    {
+      "candidateId": "words-0008",
+      "verdict": "accept",
+      "reason": "Earlier foolish sense versus modern friendly sense is specific and supported by supplied etymology; wrong traits are plausible.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.108,
+          "id": 15524,
+          "file": "existing.json",
+          "q": "What is the literal meaning of the Latin phrase per fumum from which the modern word perfume originated?",
+          "a": "Through smoke",
+          "d": ""
+        },
+        {
+          "score": 0.098,
+          "id": 19986,
+          "file": "existing.json",
+          "q": "What does the Latin word bellum mean?",
+          "a": "War",
+          "d": ""
+        },
+        {
+          "score": 0.096,
+          "id": "words-0017",
+          "file": "words-002.json",
+          "q": "Long before its association with drinks, the ancestor of alcohol named a powder used for what?",
+          "a": "Eye makeup",
+          "d": "The Arabic source referred to powdered antimony, or kohl. The word later traveled into chemistry with a very different meaning."
+        }
+      ],
+      "reviewedContentSha256": "3d33e2a9996d816bff1491fd63a95edfcd134454092bf74e59c8090a903c9b3d"
+    },
+    {
+      "candidateId": "words-0009",
+      "verdict": "accept",
+      "reason": "MW explicitly links crane foot to genealogy diagram shape. Family-tree wording makes oak branch a useful distractor rather than a second answer.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.087,
+          "id": "nature-0032",
+          "file": "nature-001.json",
+          "q": "What unusually long body parts let jacanas spread their weight across floating lily pads?",
+          "a": "Toes",
+          "d": "Long toes and claws distribute the bird's weight over the vegetation."
+        },
+        {
+          "score": 0.082,
+          "id": 420,
+          "file": "existing.json",
+          "q": "Look at the footprints of a rhea and an ostrich. Which one leaves three toe marks?",
+          "a": "The rhea.",
+          "d": "The ostrich has two toes per foot. Both birds can run, and the rhea uses its wings to help it steer."
+        },
+        {
+          "score": 0.077,
+          "id": 10160,
+          "file": "existing.json",
+          "q": "Despite the name, which plant family does the Joshua tree belong to: yuccas or pines?",
+          "a": "Yuccas",
+          "d": "Its pointed leaves grow in clusters at the tips of its branching stems."
+        }
+      ],
+      "reviewedContentSha256": "5bd83bb840bf622ca0c6ae57cf2557b03d95bf01deb23d2d2c8d558c7edbfe14"
+    },
+    {
+      "candidateId": "words-0010",
+      "verdict": "accept",
+      "reason": "Trivium three roads is correct. Repeating three in every answer prevents the tri- prefix alone giving the answer.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.092,
+          "id": 15524,
+          "file": "existing.json",
+          "q": "What is the literal meaning of the Latin phrase per fumum from which the modern word perfume originated?",
+          "a": "Through smoke",
+          "d": ""
+        },
+        {
+          "score": 0.086,
+          "id": 19989,
+          "file": "existing.json",
+          "q": "In England, names of places ending in chester, like Manchester and Winchester come from a Latin word meaning what?",
+          "a": "Camp",
+          "d": ""
+        },
+        {
+          "score": 0.085,
+          "id": "words-0003",
+          "file": "words-002.json",
+          "q": "The word companion reaches back to the idea of sharing which staple food?",
+          "a": "Bread",
+          "d": "Its Latin roots join togetherness with panis, meaning bread or food."
+        }
+      ],
+      "reviewedContentSha256": "951096cdbb05274fe306e1c0121ff93bd79269e9ce70b8a97207dcb0d6d09136"
+    },
+    {
+      "candidateId": "words-0011",
+      "verdict": "revise",
+      "reason": "Correct literal image, but eaves and drop directly reveal the answer for most adult readers. Recommend easy difficulty; no need to invent a harder fact.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.112,
+          "id": 19676,
+          "file": "existing.json",
+          "q": "Which term fits this clue? Musical compositions intended to evoke images or remind the listener of events.",
+          "a": "Program music",
+          "d": "Musical compositions intended to evoke images or remind the listener of events. Another name is programme music."
+        },
+        {
+          "score": 0.094,
+          "id": 7660,
+          "file": "existing.json",
+          "q": "A male Mischocyttarus flavitarsis marks its mating perch by secreting what from a gland in its abdomen?",
+          "a": "Substance",
+          "d": "Mischocyttarus flavitarsis is a social paper wasp found in western North America. Their nests can be found both in forests close to rivers or in close proximity to human life under the eaves of roofs."
+        },
+        {
+          "score": 0.075,
+          "id": 1337,
+          "file": "existing.json",
+          "q": "What British “pudding” is made from a savory batter and was traditionally baked under roasting meat to catch the drippings?",
+          "a": "Yorkshire pudding",
+          "d": "The batter puffs around the edges in hot fat. Today the hollow in the middle is a welcoming place for gravy."
+        }
+      ],
+      "reviewedContentSha256": "cd8325a7b6335b647ae1425cba37f1c9cd5f7cfc1d593706e9fa25b1f7167cf6",
+      "suggestedCorrection": {
+        "level": "easy"
+      }
+    },
+    {
+      "candidateId": "words-0012",
+      "verdict": "accept",
+      "reason": "Day’s eye contraction is straightforward and rightly easy. Other flower names are fair.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.098,
+          "id": 19779,
+          "file": "existing.json",
+          "q": "What is a function word that can be used in English to form phrasal verbs called?",
+          "a": "Particle",
+          "d": "A function word that can be used in English to form phrasal verbs."
+        },
+        {
+          "score": 0.095,
+          "id": "words-0005",
+          "file": "words-002.json",
+          "q": "To an Old English speaker, the name walnut distinguished it as what kind of nut?",
+          "a": "Foreign nut",
+          "d": "The name contrasted the introduced walnut with the familiar native hazelnut."
+        },
+        {
+          "score": 0.084,
+          "id": 998,
+          "file": "existing.json",
+          "q": "When Bill English built a prototype for Douglas Engelbart’s computer mouse, how many buttons could he fit into its wooden housing?",
+          "a": "One.",
+          "d": "Two wheels detected motion. The ball familiar from later mice was still in the future."
+        }
+      ],
+      "reviewedContentSha256": "b807d0476c0b2ec8c2d392da2d60fc8374a7034bd208eaca7bc520fd5e3880ae"
+    },
+    {
+      "candidateId": "words-0013",
+      "verdict": "accept",
+      "reason": "Asks which structure, not merely literal lion tooth already supplied. Leaf/tooth resemblance differs from botanical identity questions.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.119,
+          "id": 13417,
+          "file": "existing.json",
+          "q": "What English word means to \"think deeply\"?",
+          "a": "Contemplate",
+          "d": ""
+        },
+        {
+          "score": 0.098,
+          "id": 10662,
+          "file": "existing.json",
+          "q": "What does the name of Iraq mean in Arabic?",
+          "a": "Edge",
+          "d": ""
+        },
+        {
+          "score": 0.096,
+          "id": 16417,
+          "file": "existing.json",
+          "q": "What does long in the tooth mean?",
+          "a": "Old",
+          "d": ""
+        }
+      ],
+      "reviewedContentSha256": "1dce24749486a6a91870e1e3e3174a25ea7838cccc7f1436deda2b2d2eefc3d5"
+    },
+    {
+      "candidateId": "words-0014",
+      "verdict": "accept",
+      "reason": "MW supports German goblin and spoiled/stolen silver-ore folklore. Existing cobalt chemistry/color facts are distinct.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.094,
+          "id": 14325,
+          "file": "existing.json",
+          "q": "Nidhogg is a mythical creature from what mythology?",
+          "a": "Norse",
+          "d": ""
+        },
+        {
+          "score": 0.086,
+          "id": 10809,
+          "file": "existing.json",
+          "q": "Which material forms part of “Knight, Death, and the Devil”?",
+          "a": "laid paper",
+          "d": "It is associated with German Renaissance."
+        },
+        {
+          "score": 0.072,
+          "id": 18820,
+          "file": "existing.json",
+          "q": "What old blue-glass colorant begins with Z and was prepared by roasting cobalt ore?",
+          "a": "Zaffer",
+          "d": "Glassmakers valued cobalt compounds because a small quantity could produce an intense blue."
+        }
+      ],
+      "reviewedContentSha256": "a8cefe11d80bb7ae8aff7a216c904f1ac627583521201d21804a6d0d38202007"
+    },
+    {
+      "candidateId": "words-0015",
+      "verdict": "accept",
+      "reason": "MW’s note explicitly rejects unattested Roman salt-money explanation; card correctly separates real linguistic relation from folklore.",
+      "sourceVerification": "Independently read linked or corroborating institutional source during this review",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.088,
+          "id": 11606,
+          "file": "existing.json",
+          "q": "What Latin civic name did Roman orators use when addressing the citizens of Rome in their civilian capacity?",
+          "a": "Quirites",
+          "d": "The word could mark the distinction between citizens at home and soldiers on duty."
+        },
+        {
+          "score": 0.079,
+          "id": "words-0003",
+          "file": "words-002.json",
+          "q": "The word companion reaches back to the idea of sharing which staple food?",
+          "a": "Bread",
+          "d": "Its Latin roots join togetherness with panis, meaning bread or food."
+        },
+        {
+          "score": 0.073,
+          "id": 6053,
+          "file": "existing.json",
+          "q": "The specific name of Laudakia nupta comes from what for a bride who veils herself?",
+          "a": "Latin word",
+          "d": "Laudakia nupta is a species of lizard from Iraq, Iran, Afghanistan, and Pakistan."
+        }
+      ],
+      "reviewedContentSha256": "4444a0d35a442d77508faa31f94449c4f694f74e02bc9d05680bc6b0c82084b7"
+    },
+    {
+      "candidateId": "words-0016",
+      "verdict": "accept",
+      "reason": "Restricts paired tubers to some orchids rather than all species; body-part alternatives are viable paired organs.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.128,
+          "id": "words-0019",
+          "file": "words-002.json",
+          "q": "Which imaginary anatomy is suggested by the roots of ambidextrous?",
+          "a": "Two right hands",
+          "d": "Latin dexter referred to the right-hand side and also to skill. The modern word describes equal ease using either hand."
+        },
+        {
+          "score": 0.111,
+          "id": 19491,
+          "file": "existing.json",
+          "q": "Which food fits this description? Any of various fleshy edible underground roots or tubers.",
+          "a": "Root vegetable",
+          "d": "Any of various fleshy edible underground roots or tubers."
+        },
+        {
+          "score": 0.1,
+          "id": 11828,
+          "file": "existing.json",
+          "q": "Which plant fits this description? Enormous cosmopolitan family of perennial terrestrial or epiphytic plants with fleshy tubers or rootstocks and unusual flowers.",
+          "a": "Orchid family",
+          "d": "Enormous cosmopolitan family of perennial terrestrial or epiphytic plants with fleshy tubers or rootstocks and unusual flowers. Another name is Orchidaceae."
+        }
+      ],
+      "reviewedContentSha256": "57f45a2dea5785dca2327214a1937415e2a1316e8175f6a2e1a6a1ae2509ba42"
+    },
+    {
+      "candidateId": "words-0017",
+      "verdict": "accept",
+      "reason": "Arabic kohl/eye makeup sense is supported by supplied two-entry evidence. No claim that modern drink directly resembles makeup.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.12,
+          "id": "books-0005",
+          "file": "books-002.json",
+          "q": "Long before rival meant your competitor, its Latin ancestor described someone sharing what natural resource with you?",
+          "a": "Stream",
+          "d": "Latin rivalis referred to another user of the same stream. The word’s history links competition with sharing a water source."
+        },
+        {
+          "score": 0.096,
+          "id": "words-0008",
+          "file": "words-002.json",
+          "q": "In Middle English, calling someone nice could mean what decidedly unflattering thing?",
+          "a": "Foolish",
+          "d": "The word traveled through French from Latin nescius, meaning ignorant, long before its friendly modern use."
+        },
+        {
+          "score": 0.096,
+          "id": 12259,
+          "file": "existing.json",
+          "q": "What makeup on the top of the eye is intended to enlarge the look?",
+          "a": "Doe eye",
+          "d": "Doe eye uses loose powder, eye pencil, eyeshadows, liner and mascara."
+        }
+      ],
+      "reviewedContentSha256": "13a11c0cee035c82cd66d60ec26a2866e974051b66ce75e64fdfa499bf67f418"
+    },
+    {
+      "candidateId": "words-0018",
+      "verdict": "accept",
+      "reason": "Left/unlucky Latin meanings are properly separated from modern English association. Four directions viable.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.115,
+          "id": "words-0019",
+          "file": "words-002.json",
+          "q": "Which imaginary anatomy is suggested by the roots of ambidextrous?",
+          "a": "Two right hands",
+          "d": "Latin dexter referred to the right-hand side and also to skill. The modern word describes equal ease using either hand."
+        },
+        {
+          "score": 0.103,
+          "id": 18123,
+          "file": "existing.json",
+          "q": "What term derives from a Latin word meaning rods bundled around an axe?",
+          "a": "Fascism",
+          "d": ""
+        },
+        {
+          "score": 0.101,
+          "id": "words-0020",
+          "file": "words-002.json",
+          "q": "A Latin ancestor of plagiarism described someone committing which crime?",
+          "a": "Kidnapping",
+          "d": "Plagiarius moved from stealing people to stealing another writer’s words. The modern offense retained that striking metaphor."
+        }
+      ],
+      "reviewedContentSha256": "0a729a167f25256ccb7211e9e00527335312dfe96ad7e2c0bde41fd7c3c9ad3f"
+    },
+    {
+      "candidateId": "words-0019",
+      "verdict": "accept",
+      "reason": "Both/right-hand reading supported by source summary. Imaginary-anatomy framing makes fantastical choices permissible, though this is largely a two-way right/left distinction; optional improvement only.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.128,
+          "id": "words-0016",
+          "file": "words-002.json",
+          "q": "The Greek root behind orchid referred to which body part, suggested by the paired tubers of some species?",
+          "a": "Testicle",
+          "d": "The name came through Latin and botanical classification; it describes a resemblance underground, rather than the flower."
+        },
+        {
+          "score": 0.124,
+          "id": 9997,
+          "file": "existing.json",
+          "q": "The Greco-Australian dialect, a variety of Modern Greek, blends words with what into the Greek language?",
+          "a": "English roots",
+          "d": "Greek in Australia also referred to as Greco-Australian or Australian Greek is a dialect of the Greek language that is spoken by the Greek diaspora in Australia."
+        },
+        {
+          "score": 0.115,
+          "id": "words-0018",
+          "file": "words-002.json",
+          "q": "The Latin ancestor of sinister combined an unlucky meaning with which direction?",
+          "a": "Left",
+          "d": "English inherited an ominous meaning from a word that also described the left-hand side."
+        }
+      ],
+      "reviewedContentSha256": "46cac6893dce87f4e81c2c55326fae3e8a7ae793c05723cfc96d942943b4264c"
+    },
+    {
+      "candidateId": "words-0020",
+      "verdict": "accept",
+      "reason": "Kidnapper-to-literary-thief metaphor accurate and memorable. Other crimes make plausible alternatives.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.123,
+          "id": "books-0005",
+          "file": "books-002.json",
+          "q": "Long before rival meant your competitor, its Latin ancestor described someone sharing what natural resource with you?",
+          "a": "Stream",
+          "d": "Latin rivalis referred to another user of the same stream. The word’s history links competition with sharing a water source."
+        },
+        {
+          "score": 0.101,
+          "id": "words-0018",
+          "file": "words-002.json",
+          "q": "The Latin ancestor of sinister combined an unlucky meaning with which direction?",
+          "a": "Left",
+          "d": "English inherited an ominous meaning from a word that also described the left-hand side."
+        },
+        {
+          "score": 0.083,
+          "id": "words-0008",
+          "file": "words-002.json",
+          "q": "In Middle English, calling someone nice could mean what decidedly unflattering thing?",
+          "a": "Foolish",
+          "d": "The word traveled through French from Latin nescius, meaning ignorant, long before its friendly modern use."
+        }
+      ],
+      "reviewedContentSha256": "602f1224e6856aa3265b067c12db81c628b97bfcbf2dd9d2e1a3c73ccc601b61"
+    },
+    {
+      "candidateId": "words-0021",
+      "verdict": "accept",
+      "reason": "Historical meat-market/slaughterhouse meaning retained without collapsing it into modern disorder. Parallel commercial-place distractors.",
+      "sourceVerification": "Editorial review of claim and supplied source evidence; not independently reopened in this targeted spot-check",
+      "duplicateReview": "No repeated underlying fact identified after full q+a+d nearest-match screening and targeted topic searches across 20,100 published and staged candidates. Similarity is a flagging aid, not proof.",
+      "nearestMatches": [
+        {
+          "score": 0.071,
+          "id": "words-0008",
+          "file": "words-002.json",
+          "q": "In Middle English, calling someone nice could mean what decidedly unflattering thing?",
+          "a": "Foolish",
+          "d": "The word traveled through French from Latin nescius, meaning ignorant, long before its friendly modern use."
+        },
+        {
+          "score": 0.07,
+          "id": 19989,
+          "file": "existing.json",
+          "q": "In England, names of places ending in chester, like Manchester and Winchester come from a Latin word meaning what?",
+          "a": "Camp",
+          "d": ""
+        },
+        {
+          "score": 0.064,
+          "id": 19869,
+          "file": "existing.json",
+          "q": "What is a word or phrase that particular people use in particular situations called?",
+          "a": "Saying",
+          "d": "A word or phrase that particular people use in particular situations. Another name is expression."
+        }
+      ],
+      "reviewedContentSha256": "cf5219d7ca43c09cc4792f0b9b383490f7aa4f97ca02d8e67f1d0f301bbc102f"
+    }
+  ]
+}

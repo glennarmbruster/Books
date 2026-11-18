@@ -1,0 +1,97 @@
+[
+  {
+    "original_index": 2,
+    "reason": "Routine conching detail lacks unusual hook.",
+    "card": {
+      "q": "Chocolate makers call a long grinding-and-mixing stage conching. What unpleasant feature of early chocolate does it remove?",
+      "a": "Grittiness",
+      "d": "Reducing and mixing the particles helps turn rough cacao into a smooth confection.",
+      "s": "Ohio State University · The fascinating chemistry of chocolate",
+      "u": "https://news.osu.edu/the-fascinating-chemistry-of-chocolate/",
+      "cat": "Food History",
+      "level": "medium",
+      "choices": [
+        "Grittiness",
+        "Excessive sweetness",
+        "A rubbery texture",
+        "A fizzy mouthfeel"
+      ],
+      "evidence": "The article contrasts gritty ground beans with the smooth texture produced through conching."
+    }
+  },
+  {
+    "original_index": 17,
+    "reason": "Ordinary recipe detail with weak distractors.",
+    "card": {
+      "q": "The Civil War camp dish skillygalee gave hardtack a second life by soaking it and doing what next?",
+      "a": "Frying it in fat",
+      "d": "Soldiers used bacon fat or lard to turn the softened crackers into a hot dish.",
+      "s": "National Park Service · Civil War hardtack",
+      "u": "https://home.nps.gov/mana/learn/kidsyouth/hardtack-during-the-civil-war.htm",
+      "cat": "Food History",
+      "level": "hard",
+      "choices": [
+        "Frying it in fat",
+        "Fermenting it into beer",
+        "Coating it with chocolate",
+        "Drying it into flour"
+      ],
+      "evidence": "NPS describes soaked hardtack fried in bacon fat or lard as skillygalee."
+    }
+  },
+  {
+    "original_index": 19,
+    "reason": "Routine firmness detail lacks unusual hook.",
+    "card": {
+      "q": "Oregon’s early maraschino-cherry process added calcium salts mainly to stop the cherries doing what?",
+      "a": "Turning mushy",
+      "d": "The treated brine helped preserve a firmer texture in local Royal Anne cherries.",
+      "s": "Oregon State University · Modern maraschino cherries",
+      "u": "https://archive.progress.oregonstate.edu/winter-2014/timeline/food-processing-begins-cherry-top",
+      "cat": "Curiosities from the kitchen",
+      "level": "medium",
+      "choices": [
+        "Turning mushy",
+        "Becoming too sour",
+        "Growing larger",
+        "Losing their stems"
+      ],
+      "evidence": "OSU describes calcium salts as the firmness solution for soft American cherries."
+    }
+  },
+  {
+    "original_index": 19,
+    "reason": "Replacement question duplicated the explanation of live137: paper cups inspired Cup Noodles.",
+    "card": {
+      "q": "What improvised bowls used by American supermarket buyers helped inspire Cup Noodles?",
+      "a": "Paper cups",
+      "d": "Ando watched buyers break up noodles, add hot water in paper cups and eat with forks.",
+      "s": "Nissin Foods · Founder history",
+      "u": "https://www.nissin.com/en_jp/about/founder/",
+      "cat": "Food History",
+      "level": "medium",
+      "choices": [
+        "Paper cups",
+        "Takeout soup cartons",
+        "Pie tins",
+        "Egg cartons"
+      ],
+      "evidence": "Nissin describes the 1966 US supermarket visit and paper-cup meal that prompted the product."
+    }
+  },
+  {
+    "originalIndex": 65,
+    "q": "Traditional isinglass used to clarify some beers is obtained from which part of a fish?",
+    "reason": "Underlying fish-bladder fining fact already taught in live question 17481 explanation. Replaced with PEZ anti-smoking history, without changing total count."
+  },
+  {
+    "originalIndex": 38,
+    "q": "A popcorn kernel’s audible pop is associated with the release of what, rather than simply its shell cracking?",
+    "reason": "Although sound-generation differs from hull rupture, live 11535 already teaches steam released by popping corn. Removed to avoid repeating the steam answer."
+  },
+  {
+    "originalIndex": 143,
+    "q": "A splash of lemon can turn blue butterfly-pea tea pink or purple because its pigments respond to what?",
+    "reason": "Underlying pH/anthocyanin color-change fact already taught by live 316, using red cabbage. Changed plant does not justify a duplicate mechanism."
+  }
+]

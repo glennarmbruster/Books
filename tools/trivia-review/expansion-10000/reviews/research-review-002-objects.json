@@ -1,0 +1,74 @@
+{
+  "count": 150,
+  "sha256": "07cb6acb1be5f223a548269a1875b8edc4b23b5563ddd26f8f335a82a7ded59d",
+  "difficulty": {
+    "easy": 59,
+    "medium": 86,
+    "hard": 5
+  },
+  "distinctSources": 116,
+  "maxCardsPerSource": 3,
+  "maxExplanationWords": 22,
+  "schemaAndFourChoiceChecks": "passed",
+  "categoryNames": "All names found in existing baseline/staged category set.",
+  "comparisonCorpus": {
+    "published": 20100,
+    "stagedIncludingRejected": 529,
+    "total": 20629,
+    "includesLatest": [
+      "books-002.json",
+      "words-002.json",
+      "space-002.json",
+      "nature-002.json"
+    ]
+  },
+  "method": "Full question+answer+explanation IDF token screening; nearest-match editorial inspection and targeted full-text entity/fact searches. Not a claim of mathematical semantic uniqueness.",
+  "duplicateFindings": [
+    "Removed Newport gondola overlap with817.",
+    "Removed Zadar sea-organ overlap with newly staged1275.",
+    "Previously discarded Goodyear inflatable airplane869, MONIAC994, Leyat rear steering878, Tipu7607."
+  ],
+  "relatedButDistinct": [
+    {
+      "position": 49,
+      "baseline": 231,
+      "reason": "Existing Wuppertal city/railway identification; new card asks specific Tuffi elephant incident."
+    },
+    {
+      "position": 86,
+      "baseline": 6638,
+      "reason": "Clyde shipping tunnel overlap is general; this card tests Øresund airport flight clearance and shipping constraints together."
+    },
+    {
+      "position": 110,
+      "baseline": 17931,
+      "reason": "Old card asks cantilever frame; new one asks hammock saddle, absent from old explanation."
+    },
+    {
+      "position": 115,
+      "baseline": 1448,
+      "reason": "General vinaigrette function exists; new card asks identity of a silver skull whose vertebrae make its stopper."
+    },
+    {
+      "positions": [
+        147,
+        148
+      ],
+      "baseline": 8513,
+      "reason": "Existing Corpus Clock card covers periodic correctness and grasshopper. New cards cover wooden coffin hour sound and underwater explosion shaping, absent from baseline."
+    },
+    {
+      "position": 150,
+      "staged": "objects-0016",
+      "reason": "Existing puzzle jug uses hidden drinking passage; new Pythagorean cup uses triggered siphon to drain whole overfilled drink."
+    }
+  ],
+  "specialPrecision": [
+    "Monowi framed as Nebraska tourism account checked2026.",
+    "Chastity-belt story explicitly framed as debunked museum claim.",
+    "Musical road designed to perform William Tell: does not claim accurate tuning.",
+    "Pythagorean cup not asserted to have been invented by Pythagoras.",
+    "Forth demonstration identifies material/participants without uncertain specific identities."
+  ],
+  "finalState": "150 candidate array frozen pending parent editorial review; no repo files edited, no live publication."
+}

@@ -1,0 +1,554 @@
+{
+  "checkedOn": "2026-11-17",
+  "scope": "Availability followup for87 source URLs blocked or timed out in second HTTP audit; not a new factual review or full-release readiness assessment.",
+  "total": 87,
+  "retrieved": 74,
+  "unresolved": 13,
+  "results": [
+    {
+      "url": "https://americanhistory.si.edu/explore/stories/pocket-sundial",
+      "retrieved": true,
+      "heading": "Request Rejected (https://americanhistory.si.edu/explore/stories/pocket-sundial)",
+      "responseLength": 425,
+      "note": "Error response is not successful content retrieval.",
+      "method": "Indexed source text read via targeted web search 2026-11-17"
+    },
+    {
+      "url": "https://animals.sandiegozoo.org/animals/shoebill",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 227,
+      "method": "Indexed full page text returned by web search, read 2026-11-17",
+      "note": "Direct-open error resolved by reading indexed source content."
+    },
+    {
+      "url": "https://casce.princeton.edu/teaching-resources/active-learning/human-cantilever-model-forth-bridge",
+      "retrieved": true,
+      "heading": "The Human Cantilever Model of The Forth Bridge | Creative Art of Structural and Civil Engineering (https://casce.princeton.edu/teaching-resources/active-learning/human-cantilever-model-forth-bridge)",
+      "responseLength": 6934
+    },
+    {
+      "url": "https://cincinnatiartmuseum.org/art/exhibitions/exhibition-archive/2025/cycle-thru-the-art-of-the-bike/audio-exhibition-cycle-thru-the-art-of-the-bike/",
+      "retrieved": true,
+      "heading": "Audio Exhibition - Cycle Thru! The Art of the Bike - Cincinnati Art Museum (https://cincinnatiartmuseum.org/art/exhibitions/exhibition-archive/2025/cycle-thru-the-art-of-the-bike/audio-exhibition-cycle-thru-the-art-of-the-bike/)",
+      "responseLength": 11853
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co27065/brennans-gyroscopic-mono-rail-car",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 316,
+      "method": "Indexed full page text returned by web search, read 2026-11-17",
+      "note": "Direct-open error resolved by reading indexed source content."
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co729/chinese-incense-clock",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 298,
+      "method": "Indexed full page text returned by web search, read 2026-11-17",
+      "note": "Direct-open error resolved by reading indexed source content."
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8412068/hoover-constellation-vacuum-cleaner-with-attachments",
+      "retrieved": true,
+      "heading": "Hoover constellation vacuum cleaner with attachments | Science Museum Group Collection (https://collection.sciencemuseumgroup.org.uk/objects/co8412068/hoover-constellation-vacuum-cleaner-with-attachments)",
+      "responseLength": 14348
+    },
+    {
+      "url": "https://collections.si.edu/search/detail/edanmdm:ofeo-sg_2005-0140A?print=yes",
+      "retrieved": true,
+      "heading": "Record Catasetum sp. | Collections Search Center, Smithsonian Institution (https://collections.si.edu/search/detail/edanmdm%3Aofeo-sg_2005-0140A?print=yes ; rewritten summary of https://collections.si.edu/search/detail/edanmdm:ofeo-sg_2005-0140A?print=yes)",
+      "responseLength": 2690
+    },
+    {
+      "url": "https://cto.extension.msstate.edu/publications/experiments-food-science-laboratory-manual-volume-2",
+      "retrieved": true,
+      "heading": "Experiments In Food Science Laboratory Manual, Volume 2 | Mississippi State University Extension Service (https://cto.extension.msstate.edu/publications/experiments-food-science-laboratory-manual-volume-2)",
+      "responseLength": 14832
+    },
+    {
+      "url": "https://doi.org/10.1073/pnas.1016644108",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 324
+    },
+    {
+      "url": "https://emuseum.mfah.org/objects/48701/celery-vase",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 231,
+      "method": "Indexed source text read via targeted web search 2026-11-17"
+    },
+    {
+      "url": "https://groco.com/featured-guests/the-jelly-belly-legacy/",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 245,
+      "method": "Indexed full page text returned by web search, read 2026-11-17",
+      "note": "Direct-open error resolved by reading indexed source content."
+    },
+    {
+      "url": "https://invention.si.edu/invention-stories/alexander-anderson-and-cereal-shot-guns",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 302,
+      "method": "Indexed full page text returned by web search, read 2026-11-17",
+      "note": "Direct-open error resolved by reading indexed source content."
+    },
+    {
+      "url": "https://ir.dominos.com/news-releases/news-release-details/dont-let-bad-potholes-ruin-good-pizza-dominos-starts-paving",
+      "retrieved": true,
+      "heading": "Don't Let Bad Potholes Ruin Good Pizza! Domino's Starts Paving for Pizza | Domino's Pizza (https://ir.dominos.com/news-releases/news-release-details/dont-let-bad-potholes-ruin-good-pizza-dominos-starts-paving)",
+      "responseLength": 8592
+    },
+    {
+      "url": "https://museum-newtonabbot.org.uk/wp-content/uploads/sites/3/2023/01/Newton-Abbot-Museum-Audio-Guide-Transcript.pdf",
+      "retrieved": true,
+      "heading": " (https://museum-newtonabbot.org.uk/wp-content/uploads/sites/3/2023/01/Newton-Abbot-Museum-Audio-Guide-Transcript.pdf)",
+      "responseLength": 14292
+    },
+    {
+      "url": "https://ncceh.ca/resources/evidence-reviews/black-garlic-food-safety-considerations-during-production-and-storage",
+      "retrieved": true,
+      "heading": "Black garlic: Food safety considerations during production and storage (https://ncceh.ca/resources/evidence-reviews/black-garlic-food-safety-considerations-during-production-and-storage)",
+      "responseLength": 14655
+    },
+    {
+      "url": "https://newcastlegateshead.com/business-directory/things-to-do/gateshead-millennium-bridge",
+      "retrieved": true,
+      "heading": "Gateshead Millennium Bridge - Things to see and… | NewcastleGateshead (https://newcastlegateshead.com/business-directory/things-to-do/gateshead-millennium-bridge)",
+      "responseLength": 11692
+    },
+    {
+      "url": "https://ocean.si.edu/ocean-life/marine-mammals/mystery-ambergris",
+      "retrieved": true,
+      "heading": "What is Ambergris? | Smithsonian Ocean (https://ocean.si.edu/ocean-life/marine-mammals/mystery-ambergris)",
+      "responseLength": 8316
+    },
+    {
+      "url": "https://osm.ca/en/news/a-world-premiere-an-octobass-makes-its-arrival-at-the-osm/",
+      "retrieved": true,
+      "heading": "A World Premiere: The Octobass Arrives at the OSM | OSM (https://osm.ca/en/news/a-world-premiere-an-octobass-makes-its-arrival-at-the-osm/)",
+      "responseLength": 14690
+    },
+    {
+      "url": "https://penntoday.upenn.edu/news/penn-physicists-help-show-math-behind-growth-coffee-rings",
+      "retrieved": true,
+      "heading": "Penn Physicists Help Show Math Behind Growth of 'Coffee Rings' | Penn Today (https://penntoday.upenn.edu/news/penn-physicists-help-show-math-behind-growth-coffee-rings)",
+      "responseLength": 11608
+    },
+    {
+      "url": "https://pubs.acs.org/doi/10.1021/acsnano.9b08984",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 227
+    },
+    {
+      "url": "https://pubs.acs.org/doi/10.1021/ed076p624A",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 217
+    },
+    {
+      "url": "https://pursuit.unimelb.edu.au/articles/getting-tomato-sauce-out-of-the-bottle-minus-the-mess",
+      "retrieved": true,
+      "heading": "Getting tomato sauce out of the bottle – minus the mess | Pursuit by the University of Melbourne (https://pursuit.unimelb.edu.au/articles/getting-tomato-sauce-out-of-the-bottle-minus-the-mess)",
+      "responseLength": 9635
+    },
+    {
+      "url": "https://repository.library.noaa.gov/view/noaa/528/noaa_528_DS1.pdf",
+      "retrieved": true,
+      "heading": " (https://repository.library.noaa.gov/view/noaa/528/noaa_528_DS1.pdf)",
+      "responseLength": 15441
+    },
+    {
+      "url": "https://research.colonialwilliamsburg.org/Foundation/journal/Spring10/icecream.cfm",
+      "retrieved": true,
+      "heading": "research.colonialwilliamsburg.org (https://research.colonialwilliamsburg.org/Foundation/journal/Spring10/icecream.cfm)",
+      "responseLength": 13605
+    },
+    {
+      "url": "https://schools.salfordmuseum.com/resource/exploring-the-collection-the-moustache-cup/",
+      "retrieved": true,
+      "heading": "Exploring the Collection: The Moustache Cup - Salford Museums Schools' Hub (https://schools.salfordmuseum.com/resource/exploring-the-collection-the-moustache-cup/)",
+      "responseLength": 4533
+    },
+    {
+      "url": "https://tootsie.com/scientific-studies/",
+      "retrieved": true,
+      "heading": "Scientific Studies - Tootsie (https://tootsie.com/scientific-studies/)",
+      "responseLength": 2747
+    },
+    {
+      "url": "https://visitnebraska.com/trip-idea/itinerary-small-town-tour-northeast-nebraska",
+      "retrieved": true,
+      "heading": "Itinerary: A Small-Town Tour of Northeast Nebraska | VisitNebraska.com (https://visitnebraska.com/trip-idea/itinerary-small-town-tour-northeast-nebraska)",
+      "responseLength": 8492
+    },
+    {
+      "url": "https://wellcomecollection.org/stories/political-brilliance-and-the-power-of-self-promotion",
+      "retrieved": true,
+      "heading": "Political brilliance and the power of self-promotion | Wellcome Collection (https://wellcomecollection.org/stories/political-brilliance-and-the-power-of-self-promotion)",
+      "responseLength": 12681
+    },
+    {
+      "url": "https://wildlifedepartment.com/wildlife/field-guide/reptiles/texas-horned-lizard",
+      "retrieved": true,
+      "heading": "Texas Horned Lizard | Oklahoma Department of Wildlife Conservation (https://wildlifedepartment.com/wildlife/field-guide/reptiles/texas-horned-lizard)",
+      "responseLength": 8556
+    },
+    {
+      "url": "https://www.accoya.com/nz/projects/moses-bridge-uses-accoya-wood/",
+      "retrieved": true,
+      "heading": "Moses Bridge - The Netherlands (https://www.accoya.com/nz/projects/moses-bridge-uses-accoya-wood/)",
+      "responseLength": 10107
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Atlantic_Puffin/lifehistory",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 257
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Belted_Kingfisher/lifehistory",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 261,
+      "method": "Indexed source text read via targeted web search 2026-11-17"
+    },
+    {
+      "url": "https://www.allaboutbirds.org/guide/Pied-billed_Grebe/overview",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 255,
+      "method": "Indexed full page text returned by web search, read 2026-11-17",
+      "note": "Direct-open error resolved by reading indexed source content."
+    },
+    {
+      "url": "https://www.americanhistory.si.edu/explore/stories/chocolate-fighting-food-chocolate-bars-second-world-war?form=FUNPYRYGFFP",
+      "retrieved": false,
+      "heading": "Request Rejected (https://www.americanhistory.si.edu/explore/stories/chocolate-fighting-food-chocolate-bars-second-world-war?form=FUNPYRYGFFP)",
+      "responseLength": 549,
+      "note": "Error response is not successful content retrieval."
+    },
+    {
+      "url": "https://www.americanhistory.si.edu/explore/stories/secret-message-inside-lincolns-watch",
+      "retrieved": true,
+      "heading": "Request Rejected (https://www.americanhistory.si.edu/explore/stories/secret-message-inside-lincolns-watch)",
+      "responseLength": 477,
+      "note": "Error response is not successful content retrieval.",
+      "method": "Indexed source text read via targeted web search 2026-11-17"
+    },
+    {
+      "url": "https://www.bachvereniging.nl/en/bwv/bwv-211",
+      "retrieved": true,
+      "heading": "Kaffeekantate – Bach (https://www.bachvereniging.nl/en/bwv/bwv-211)",
+      "responseLength": 12577
+    },
+    {
+      "url": "https://www.cityoflancasterca.org/Home/Components/News/News/696/",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 259
+    },
+    {
+      "url": "https://www.journalofdairyscience.org/article/S0022-03021000364-4/fulltext",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 279
+    },
+    {
+      "url": "https://www.kansai-airports.co.jp/en/sustainability/society/tech-jacking-up/",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 283,
+      "method": "Indexed source text read via targeted web search 2026-11-17"
+    },
+    {
+      "url": "https://www.kew.org/read-and-watch/vanilla-digitisation",
+      "retrieved": true,
+      "heading": "From pods to puddings: Vanilla and other sweet-tasting orchids | Kew (https://www.kew.org/read-and-watch/vanilla-digitisation)",
+      "responseLength": 8730
+    },
+    {
+      "url": "https://www.louwmanmuseum.nl/meesterwerken-in-mobiliteit/swan-car/",
+      "retrieved": true,
+      "heading": "Swan Car: excentriek kunstwerk op wielen | Louwman Museum (https://www.louwmanmuseum.nl/meesterwerken-in-mobiliteit/swan-car/ ; rewritten summary of https://www.louwmanmuseum.nl/meesterwerken-in-mobiliteit/swan-car)",
+      "responseLength": 3859
+    },
+    {
+      "url": "https://www.lylesgoldensyrup.com/our-story/",
+      "retrieved": true,
+      "heading": "Our Story | Lyle's Golden Syrup (https://www.lylesgoldensyrup.com/our-story/)",
+      "responseLength": 7846
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/alcohol",
+      "retrieved": true,
+      "heading": "ALCOHOL Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/alcohol)",
+      "responseLength": 7615
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/ambidextrous",
+      "retrieved": true,
+      "heading": "AMBIDEXTROUS Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/ambidextrous)",
+      "responseLength": 7897
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/cappuccino",
+      "retrieved": true,
+      "heading": "CAPPUCCINO Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/cappuccino)",
+      "responseLength": 5732
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/clue",
+      "retrieved": true,
+      "heading": "CLUE Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/clue)",
+      "responseLength": 7552
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/cobalt",
+      "retrieved": true,
+      "heading": "COBALT Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/cobalt)",
+      "responseLength": 7457
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/companion",
+      "retrieved": true,
+      "heading": "COMPANION Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/companion)",
+      "responseLength": 9432
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/cynic",
+      "retrieved": true,
+      "heading": "CYNIC Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/cynic)",
+      "responseLength": 8352
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/daisy",
+      "retrieved": true,
+      "heading": "DAISY Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/daisy)",
+      "responseLength": 8596
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/dandelion",
+      "retrieved": true,
+      "heading": "DANDELION Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/dandelion)",
+      "responseLength": 7418
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/disaster",
+      "retrieved": true,
+      "heading": "DISASTER Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/disaster)",
+      "responseLength": 10183
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/eavesdrop",
+      "retrieved": true,
+      "heading": "EAVESDROP Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/eavesdrop)",
+      "responseLength": 6167
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/gymnasium",
+      "retrieved": true,
+      "heading": "GYMNASIUM Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/gymnasium)",
+      "responseLength": 6865
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/nice",
+      "retrieved": true,
+      "heading": "NICE Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/nice)",
+      "responseLength": 11537
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/orchis",
+      "retrieved": true,
+      "heading": "ORCHIS Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/orchis)",
+      "responseLength": 4763
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/pedigree",
+      "retrieved": true,
+      "heading": "PEDIGREE Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/pedigree)",
+      "responseLength": 7444
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/plagiarism",
+      "retrieved": true,
+      "heading": "PLAGIARISM Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/plagiarism)",
+      "responseLength": 7028
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/pupil",
+      "retrieved": true,
+      "heading": "PUPIL Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/pupil)",
+      "responseLength": 8664
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/rival",
+      "retrieved": true,
+      "heading": "RIVAL Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/rival)",
+      "responseLength": 11311
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/robot",
+      "retrieved": true,
+      "heading": "ROBOT Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/robot)",
+      "responseLength": 10020
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/salary",
+      "retrieved": true,
+      "heading": "SALARY Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/salary)",
+      "responseLength": 9432
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/shambles",
+      "retrieved": true,
+      "heading": "SHAMBLES Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/shambles)",
+      "responseLength": 6697
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/sinister",
+      "retrieved": true,
+      "heading": "SINISTER Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/sinister)",
+      "responseLength": 9936
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/squirrel",
+      "retrieved": true,
+      "heading": "SQUIRREL Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/squirrel)",
+      "responseLength": 8285
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/trivial",
+      "retrieved": true,
+      "heading": "TRIVIAL Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/trivial)",
+      "responseLength": 9151
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/walnut",
+      "retrieved": true,
+      "heading": "WALNUT Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/walnut)",
+      "responseLength": 7728
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/window",
+      "retrieved": true,
+      "heading": "WINDOW Definition & Meaning - Merriam-Webster (https://www.merriam-webster.com/dictionary/window)",
+      "responseLength": 9743
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/158756",
+      "retrieved": true,
+      "heading": "Salvatore Ferragamo - \"Invisible Sandal\" - Italian - The Metropolitan Museum of Art (https://www.metmuseum.org/art/collection/search/158756)",
+      "responseLength": 6915
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/501538",
+      "retrieved": true,
+      "heading": "Walking-Stick Flageolet in A - German - The Metropolitan Museum of Art (https://www.metmuseum.org/art/collection/search/501538)",
+      "responseLength": 6317
+    },
+    {
+      "url": "https://www.moma.org/calendar/exhibitions/3369",
+      "retrieved": true,
+      "heading": "Homage to New York: A Self-Constructing and Self-Destroying Work of Art Conceived and Built by Jean Tinguely | MoMA (https://www.moma.org/calendar/exhibitions/3369)",
+      "responseLength": 3846
+    },
+    {
+      "url": "https://www.mountvernon.org/education/primary-source-collections/primary-source-collections/article/fan-chair",
+      "retrieved": true,
+      "heading": "Fan Chair | George Washington's Mount Vernon (https://www.mountvernon.org/education/primary-source-collections/primary-source-collections/article/fan-chair)",
+      "responseLength": 11550
+    },
+    {
+      "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/195800/USAFmuseum/mcdonnell-xf-85-goblin/",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 381,
+      "method": "Indexed source text read via targeted web search 2026-11-17"
+    },
+    {
+      "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/195801/USAFmuseum/avro-canada-vz-9av-avrocar/",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 389
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/news/2022/october/aye-aye-recorded-picking-nose-eating-snot-first-time.html",
+      "retrieved": true,
+      "heading": "Aye-aye recorded picking nose and eating snot for the first time | Natural History Museum (https://www.nhm.ac.uk/discover/news/2022/october/aye-aye-recorded-picking-nose-eating-snot-first-time.html)",
+      "responseLength": 15051
+    },
+    {
+      "url": "https://www.princeton.edu/index.php/news/2014/08/19/bubbling-down-discovery-suggests-surprising-uses-common-bubbles",
+      "retrieved": true,
+      "heading": "Bubbling down: Discovery suggests surprising uses for common bubbles (https://www.princeton.edu/index.php/news/2014/08/19/bubbling-down-discovery-suggests-surprising-uses-common-bubbles ; rewritten summary of https://www.princeton.edu/news/2014/08/19/bubbling-down-discovery-suggests-surprising-uses-common-bubbles)",
+      "responseLength": 14959
+    },
+    {
+      "url": "https://www.rct.uk/collection/61010/gun-shield",
+      "retrieved": true,
+      "heading": "RCIN 61010 - Gun-shield (https://www.rct.uk/collection/61010/gun-shield)",
+      "responseLength": 1817
+    },
+    {
+      "url": "https://www.sciencebuddies.org/science-fair-projects/project-ideas/FoodSci_p079/cooking-food-science/hot-ice-cream",
+      "retrieved": true,
+      "heading": "Hot Ice Cream | Science Project (https://www.sciencebuddies.org/science-fair-projects/project-ideas/FoodSci_p079/cooking-food-science/hot-ice-cream)",
+      "responseLength": 13826
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0960982212010615",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 265
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0960982220303535",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 265
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S2665972720300453",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 265
+    },
+    {
+      "url": "https://www.si.edu/object/nasm_A19610070000",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 217
+    },
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/01650529409360912",
+      "retrieved": false,
+      "heading": "Internal Error ()",
+      "responseLength": 253
+    },
+    {
+      "url": "https://www.travelalaska.com/destinations/cities-towns/whittier",
+      "retrieved": true,
+      "heading": "Whittier, AK | Things to Do, Recreation, & Travel Information | Travel Alaska (https://www.travelalaska.com/destinations/cities-towns/whittier)",
+      "responseLength": 13226
+    },
+    {
+      "url": "https://www.utas.edu.au/about/news-and-stories/articles/2023/a-biting-discovery-about-tasmanian-devils",
+      "retrieved": true,
+      "heading": "Internal Error ()",
+      "responseLength": 332,
+      "method": "Indexed full page text returned by web search, read 2026-11-17",
+      "note": "Direct-open error resolved by reading indexed source content."
+    },
+    {
+      "url": "https://www.wuppertal.de/microsite/WMG/Tourismus/schwebebahn-rallye.php",
+      "retrieved": true,
+      "heading": "Schwebebahn-Rallye | Stadt Wuppertal (https://www.wuppertal.de/microsite/WMG/Tourismus/schwebebahn-rallye.php)",
+      "responseLength": 6430
+    }
+  ]
+}

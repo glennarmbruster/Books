@@ -1,0 +1,31 @@
+{
+  "reviewedOn": "2026-11-17",
+  "candidatesRead": 150,
+  "accepted": 146,
+  "rejected": 4,
+  "published": false,
+  "reviewNotes": [
+    "Read all150 question/answer/explanation/choice sets and revised replacements.",
+    "Revised wolf-eel external eggs, pangolin species/attachment and capybara primary-study scope.",
+    "Replaced answer-giving anting wording, improved plausible distractors and shortened unnecessary article-led answers.",
+    "Reviewed flagged semantic neighbors; species substitution does not automatically make a new fact."
+  ],
+  "rejections": [
+    {
+      "candidateId": "nature-0107",
+      "reason": "The same transfer of live ornaments to a new shell is already taught by published2078 about an anemone-carrying hermit crab; species substitution is too close."
+    },
+    {
+      "candidateId": "nature-0112",
+      "reason": "Rear teeth crushing shells is a routine feeding adaptation here, with weak distractors and too little independent curiosity."
+    },
+    {
+      "candidateId": "nature-0160",
+      "reason": "A generic unpleasant defensive secretion is less distinctive than the retained ladybug leg-joint secretion and largely repeats that defense motif."
+    },
+    {
+      "candidateId": "nature-0185",
+      "reason": "Reusing an abandoned burrow is ordinary ecological behavior; the question tests no sufficiently unusual part of the aardvark relationship."
+    }
+  ]
+}

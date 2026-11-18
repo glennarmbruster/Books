@@ -1,0 +1,727 @@
+[
+  {
+    "candidateId": "botany-0226",
+    "q": "How can a field poppy prevent its own incompatible pollen from completing fertilization?",
+    "a": "Trigger programmed cell death",
+    "d": "Recognition of incompatible pollen sets off a response that acidifies the pollen tube and ultimately kills it. The plant’s reproductive screening can therefore destroy an unwanted suitor.",
+    "s": "Plant Physiology · Wilkins et al., 2015",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/25630437/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Put the pollen into long-term dormancy",
+      "Convert the pollen tube into an embryo",
+      "Reverse the direction of pollen-tube growth",
+      "Trigger programmed cell death"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25630437/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: Papaver rhoeas self-incompatibility triggers pollen programmed cell death; cytosolic acidification is essential to the process.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "65b6f19737aaf0c18ebf31ea8ddc979316bd8d4a0a80078408452e07ee38e168"
+    }
+  },
+  {
+    "candidateId": "botany-0227",
+    "q": "In experiments with Tasmanian Richea scoparia, snow skinks helped the plant reproduce by doing what to its flowers?",
+    "a": "Removing their fused petal caps",
+    "d": "The lizards pull off caps while seeking nectar. This exposes the reproductive structures; experiments also found that cap removal greatly increased subsequent seed release.",
+    "s": "Biological Journal of the Linnean Society · Olsson et al., 2000",
+    "u": "https://www.sciencedirect.com/science/article/pii/S0024406600904425",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Burying the flowers in warm soil",
+      "Removing their fused petal caps",
+      "Chewing holes in the seed coats",
+      "Scraping wax from the pollen grains"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0024406600904425",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Publisher-indexed abstract and quoted paper abstract read: nectar-foraging skinks tear off calyptra; removal facilitates seed release. Direct publisher open returns403; not presented as proven pollen-carrying.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "47859974c7049d2bf39fabea5cfbf8df4444fcd1e53f10e1befd1db842b68c3b"
+    }
+  },
+  {
+    "candidateId": "botany-0228",
+    "q": "In studied wild Bolivian chilies, capsaicin helped protect the seeds against what attacker?",
+    "a": "Seed-killing fungus",
+    "d": "Fusarium can enter fruit through insect punctures and damage seeds. The chemicals that make chilies hot inhibited this fungal threat in the studied system.",
+    "s": "University of Washington · Bugs put the heat in chili peppers",
+    "u": "https://www.washington.edu/news/2008/08/21/bugs-put-the-heat-in-chili-peppers-2/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Root-boring nematode",
+      "Seed-eating bird",
+      "Seed-killing fungus",
+      "Pollen-feeding bee"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.washington.edu/news/2008/08/21/bugs-put-the-heat-in-chili-peppers-2/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party research account read: capsaicinoids inhibit Fusarium entering insect-damaged fruit; birds disperse seeds without capsaicin pain.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "5a7c737dec9b5da57d50abfe61e312e1e0da4dcfbdfb473bc6daaf838f3cb1c7"
+    }
+  },
+  {
+    "candidateId": "botany-0229",
+    "q": "In tracer experiments, root-associated Metarhizium fungi supplied plants with nitrogen from which unusual source?",
+    "a": "Insects infected by the fungus",
+    "d": "Metarhizium can infect insects while associating with plant roots. Tracer experiments showed insect-derived nitrogen moving to the plants through this fungal connection.",
+    "s": "Applied and Environmental Microbiology · Behie and Bidochka, 2014",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/24334669/",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Insects infected by the fungus",
+      "The atmosphere",
+      "Decomposing leaves",
+      "Soil minerals"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24334669/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary indexed research read: nitrogen-15 injected wax-moth larvae supplied nitrogen transferred by five Metarhizium species. Direct PubMed open challenged.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "f99c8eb45f9a6d9a5d4fbf85dff23b1b37a962df2448644c3b5db4e930f541f0"
+    }
+  },
+  {
+    "candidateId": "botany-0230",
+    "q": "Experiments on Epichloë grass fungi found that which material from visiting flies could cross-fertilize another fungal individual?",
+    "a": "Fly droppings",
+    "d": "The flies ingest fungal reproductive cells and pass viable ones in their feces. Transferring those droppings to an unfertilized fungal structure produced cross-fertilization.",
+    "s": "Mycological Research · A new kind of mutualism between fungi and insects",
+    "u": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3182706D2D45489270874B2276124B6A/S0953756297004802a.pdf/new_kind_of_mutualism_between_fungi_and_insects.pdf",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "Fragments of fly cuticle",
+      "Fly eggs",
+      "Fly saliva",
+      "Fly droppings"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3182706D2D45489270874B2276124B6A/S0953756297004802a.pdf/new_kind_of_mutualism_between_fungi_and_insects.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary indexed abstract read: flies cross-fertilize Epichloë; experimentally transferring fly feces to unfertilized stromata caused fertilization. Direct PDF request returned publisher navigation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "fa322ff6c21601cbcffef32634939e1caf470ec0bd271b3b8b4a08459e8aef66"
+    }
+  },
+  {
+    "candidateId": "botany-0231",
+    "q": "Pain-inducing miniproteins in Australian stinging trees have a folded structure resembling what?",
+    "a": "Animal venom peptides",
+    "d": "The proteins form a knot-like structure also found in some spider and cone-snail toxins. These plants and animals independently evolved similar molecular tools for delivering painful stings.",
+    "s": "Science Advances · Gilding et al., 2020",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/32938666/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Photosynthetic reaction-center proteins",
+      "Animal venom peptides",
+      "Milk casein proteins",
+      "Ice-binding antifreeze proteins"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/32938666/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract/full indexed paper read: Dendrocnide gympietides have inhibitory cystine-knot folds shared with spider/cone-snail toxins and affect sodium channels.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "41ab9c0670cd0c5795a889365c82db28958a59cdd474f44966529f640fbc351e"
+    }
+  },
+  {
+    "candidateId": "botany-0232",
+    "q": "How can the walls of many pollen grains protect their contents as the grains dry out during travel?",
+    "a": "Fold inward to seal vulnerable surfaces",
+    "d": "Flexible regions guide a reversible folding pattern. The wall’s geometry lets the grain reduce exposed surfaces as it dries, then unfold after taking up water.",
+    "s": "PNAS · Katifori et al., 2010",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/20404200/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Plug openings with swollen starch",
+      "Fold inward to seal vulnerable surfaces",
+      "Secrete a water-retaining mucilage coat",
+      "Add a fresh outer layer of wax"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/20404200/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: compliant elongated apertures permit predictable reversible pollen-wall folding; sculpturing assists closure and prevents mirror buckling.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "9dff32b4c7205e27268f4d15351686e5c33f908ae6d6cac6483726ff1eb73893"
+    }
+  },
+  {
+    "candidateId": "botany-0233",
+    "q": "The blue color of many bigleaf hydrangeas depends on taking up which metal from the soil?",
+    "a": "Aluminum",
+    "d": "Soil acidity changes how available aluminum is to the roots. In responsive varieties, aluminum helps produce blue sepals; the same plant may appear pink when aluminum is less available.",
+    "s": "Biometals · Schreiber et al., 2011",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/21584711/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Copper",
+      "Iron",
+      "Magnesium",
+      "Aluminum"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/21584711/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: red, purple and blue Hydrangea macrophylla sepals differed in aluminum content; aluminum–anthocyanin mixtures reproduced their spectra. University extension sources explain soil-pH effects on aluminum availability.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "e581b5f6bcb8663f700d7f919c29c3e0c9dfa694b018a30607ae96551edb0fdf"
+    }
+  },
+  {
+    "candidateId": "botany-0234",
+    "q": "What surprising change can rain cause in the normally white petals of Diphylleia grayi?",
+    "a": "They become transparent",
+    "d": "Water fills spaces that normally contain air, reducing the light scattering that makes the dry petals look white. The effect inspired research into water-responsive transparent surfaces.",
+    "s": "Journal of Materials Chemistry A · Yong et al., 2015",
+    "u": "https://pubs.rsc.org/en/content/articlelanding/2015/ta/c5ta01104c",
+    "cat": "The Botanical Bizarre",
+    "level": "easy",
+    "choices": [
+      "They develop bright red spots",
+      "They turn deep blue",
+      "They become transparent",
+      "They become metallic silver"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubs.rsc.org/en/content/articlelanding/2015/ta/c5ta01104c",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Research-paper introduction read in indexed PDF: white-to-transparent rain response arises when water fills intercellular spaces and reduces refractive-index contrast. Botanical observation is background, not the paper’s original experiment.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release source repair: replaced broken CiteSeer copy with verified publisher DOI landing. Original introductory observation read in indexed full text; independently corroborated in iScience2021 PMC8193611 introduction. Publisher identity/metadata verified; direct publisher requests may challenge automated access.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "7f71f24b42eebadce88b19b752e0dcea4212bf4404b4848fd88edc0a846379c5"
+    }
+  },
+  {
+    "candidateId": "botany-0235",
+    "q": "Kelp stores iodide that researchers found can perform what protective chemical job?",
+    "a": "Act as an antioxidant",
+    "d": "Iodide can neutralize reactive oxygen compounds around kelp tissues. The study identified a defense based on an inorganic ion, rather than the organic antioxidants more familiar in living things.",
+    "s": "PNAS · Küpper et al., 2008",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/18458346/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Serve as a light-harvesting pigment",
+      "Replace magnesium in chlorophyll",
+      "Cross-link the cell-wall cellulose",
+      "Act as an antioxidant"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/18458346/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: X-ray spectroscopy identifies accumulated iodide; it scavenges reactive oxygen species and effluxes under oxidative stress; antioxidant biological role proposed.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "ad97e82aa6afb7e35456e28ba556a8dc8567f86fd084f0865b1a8abc519a87eb"
+    }
+  },
+  {
+    "candidateId": "botany-0236",
+    "q": "Microscope experiments found that airborne mushroom spores can encourage which weather-related process?",
+    "a": "Water droplets condensing",
+    "d": "Droplets formed again on spores placed in humid air. The researchers proposed that this ability could help cloud droplets grow, though the experiment did not measure a forest’s total rainfall.",
+    "s": "PLOS ONE · Hassett et al., 2015",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/26509436/",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Water droplets condensing",
+      "Ozone splitting into oxygen",
+      "Fog droplets repelling one another",
+      "Ice melting at colder temperatures"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/26509436/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: environmental electron microscopy demonstrated droplet reformation on spores; rainfall promotion is proposed, not directly measured. Distinct from Buller-drop launch55.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "d6fba72e855c641014efd864d48e692f707f677c88bd6f1eb173d6dcf149c73a"
+    }
+  },
+  {
+    "candidateId": "botany-0237",
+    "q": "Cells shed from pea and corn root tips build external protective traps containing which surprising molecule?",
+    "a": "DNA",
+    "d": "DNA is part of the sticky material surrounding living root border cells. An enzyme that breaks down DNA disrupted these structures, showing that genetic material also has a role outside the cells.",
+    "s": "Applications in Plant Sciences · Wen et al., 2017",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/28710125/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Chlorophyll",
+      "DNA",
+      "Lignin",
+      "Starch"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28710125/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: DNA-specific staining visualized extracellular structures; DNase altered them; no extracellular DNA accompanied killed cells.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "b13bfd68158273f21fc3187e42ae9588fa4f48a6a3daec8b318425bdf4a14fd4"
+    }
+  },
+  {
+    "candidateId": "botany-0238",
+    "q": "Besides attracting pollinators, larger ultraviolet pigment patterns in studied sunflower petals were linked with which benefit?",
+    "a": "Slower water loss",
+    "d": "Petal-like ligules with larger UV-absorbing patterns resisted drying better. The researchers proposed that the pigments help sunflowers cope with dry environments as well as advertise to insects.",
+    "s": "eLife · Genetic basis and dual adaptive role of floral pigmentation in sunflowers",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8765750/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Reduced damage from freezing",
+      "Greater cooling by evaporation",
+      "Slower water loss",
+      "Improved shedding of rain droplets"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8765750/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper read: largerUV patterns correlated with arid sites and desiccation resistance; reduced field transpiration is inferred from proxy measurements, retained as linked/proposed.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "eb2cbb2b2158d7ba91faabae32dd93afcdf4c8ffa78031159e4e8b74e380c5bb"
+    }
+  },
+  {
+    "candidateId": "botany-0239",
+    "q": "As many seeds dry out, their cell contents can assume what unusual physical state?",
+    "a": "Glassy state",
+    "d": "The contents become extremely viscous, limiting molecular movement. This biological glass helps stabilize dry tissue; taking up water allows biochemical activity to resume.",
+    "s": "Comptes Rendus Biologies · Buitink and Leprince, 2008",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/18926493/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Glassy state",
+      "Crystalline solid state",
+      "Dilute liquid state",
+      "Liquid-crystal state"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/18926493/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Authoritative review abstract read: orthodox-seed cytoplasm becomes glassy during drying; primary corn-embryo paper PMID16666651 independently measures glass transitions. Not all seeds tolerate drying.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "581d8778c5b4b8741df63b9d8a5f6a1176d7532344d518963c556a6139d7711a"
+    }
+  },
+  {
+    "candidateId": "botany-0240",
+    "q": "Macropis bees collect oil from loosestrife flowers. Besides feeding their young, what do they use this oil to do?",
+    "a": "Waterproof their underground brood cells",
+    "d": "Some flowers reward pollinators with fatty oil. These bees use it both in provisions and as a protective lining for their nesting chambers.",
+    "s": "Ecology and Evolution · Radchenko et al., 2025",
+    "u": "https://orbi.umons.ac.be/bitstream/20.500.12907/53797/1/_Radchenko_2025_Structural%20and%20Functional%20Co%E2%80%90Adaptation%20of%20Plants%20of%20the%20Genus%20Lysimachia%20L%20_Ecology_Evolution.pdf",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Lubricate their wing joints",
+      "Mark flowers that have already been visited",
+      "Waterproof their underground brood cells",
+      "Soften the soil before excavation"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://orbi.umons.ac.be/bitstream/20.500.12907/53797/1/_Radchenko_2025_Structural%20and%20Functional%20Co%E2%80%90Adaptation%20of%20Plants%20of%20the%20Genus%20Lysimachia%20L%20_Ecology_Evolution.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper indexed full-text read: pure floral oil brought to nests waterproofs new cell walls; study examines Lysimachia–Macropis collecting structures.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "5a22c4845f94f0d872a1560bf9e785efa82b71380c634b9308def0c716837d11"
+    }
+  },
+  {
+    "candidateId": "botany-0241",
+    "q": "In tapegrass, Vallisneria, what leaves the male plant and travels to female flowers at the water surface?",
+    "a": "Entire tiny male flowers",
+    "d": "Male flowers detach and float upward. Female flowers remain tethered on long stalks, and contact at the surface transfers pollen.",
+    "s": "University of New Hampshire · Phycokey Vallisneria",
+    "u": "https://cfb.unh.edu/phycokey/Choices/Anomalous_Items/Aquatic_macrophytes/submerged_leaves/VALLISNERIA/Vallisneria_key.html",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Entire tiny male flowers",
+      "Sections of the male root system",
+      "Bubbles containing naked sperm",
+      "Leaf buds carrying germinating seeds"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://cfb.unh.edu/phycokey/Choices/Anomalous_Items/Aquatic_macrophytes/submerged_leaves/VALLISNERIA/Vallisneria_key.html",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University morphology account fully read: detached male flowers rise, expose anthers/pollen and contact female flowers along the water-surface slope.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a8e4ad958da48b4694ac367474f012d772ab40fba09e184ea2de2ce88549dc0a"
+    }
+  },
+  {
+    "candidateId": "botany-0242",
+    "q": "In a 2021 experiment, electrical activity in Venus flytraps produced what detectable effect outside their tissues?",
+    "a": "Tiny magnetic fields",
+    "d": "Sensitive instruments recorded magnetic signals accompanying heat-triggered electrical impulses. The result measured a physical consequence of the plant’s electrical activity.",
+    "s": "Scientific Reports · Fabricant et al., 2021",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/33446898/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Visible light flashes",
+      "Ultrasonic pressure pulses",
+      "Electromagnetic radio bursts",
+      "Tiny magnetic fields"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/33446898/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: optically pumped atomic magnetometers recorded biomagnetism accompanying heat-induced action potentials. No claim of plant magnetoreception.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "390a4af24d6a0af990409fa2fda803171d3bd9d9ffe7aa8925bbe8900e37cf21"
+    }
+  },
+  {
+    "candidateId": "botany-0243",
+    "q": "A 2024 forest study found that microbes associated with tree bark can remove which greenhouse gas directly from the air?",
+    "a": "Methane",
+    "d": "Measurements on woody surfaces revealed atmospheric methane uptake, especially above the trunk base. Isotope and wood-core evidence was consistent with methane-consuming microbes.",
+    "s": "University of Birmingham · Tree bark removes atmospheric methane",
+    "u": "https://www.birmingham.ac.uk/news/2024/trees-reveal-climate-surprise-bark-removes-methane-from-the-atmosphere",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Carbon tetrafluoride",
+      "Nitrous oxide",
+      "Sulfur hexafluoride",
+      "Methane"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.birmingham.ac.uk/news/2024/trees-reveal-climate-surprise-bark-removes-methane-from-the-atmosphere",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party account and primary Nature paper DOI10.1038/s41586-024-07592-w read: upland woody surfaces consume methane, isotope/core tests support methanotrophy. Does not claim all trees are always sinks.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "3f9a378934a9a9fce757a2452c46870dfd2b7c3db10e652d374b1709f8c899cd"
+    }
+  },
+  {
+    "candidateId": "botany-0244",
+    "q": "Lab-grown Ulva seaweed can develop an abnormal body when deprived of which tiny partners?",
+    "a": "Bacteria",
+    "d": "Certain bacteria supply signals needed for normal cell division and body development. Adding suitable partners can restore the seaweed’s characteristic form in culture.",
+    "s": "Annals of Botany · Bacteria-induced morphogenesis of Ulva",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/28810708/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Rotifers",
+      "Bacteria",
+      "Ciliate grazers",
+      "Fungal spores"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28810708/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary indexed paper read: bacteria individually and paired induce distinct growth/morphogenesis functions in U.mutabilis and U.intestinalis; normal culture morphology requires suitable signals.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "e3ffabbe9116ea036e287d00b696360f84941acbfb9a80fff6fd60806c7ff81c"
+    }
+  },
+  {
+    "candidateId": "botany-0245",
+    "q": "What powers green algal growth deep inside some caves opened to tourists?",
+    "a": "Artificial lighting",
+    "d": "Artificial illumination can sustain algae, mosses and bacteria where little photosynthesis would otherwise occur. This growth can alter cave food supplies and affect cave formations.",
+    "s": "National Park Service · Making the Cave Less Green",
+    "u": "https://home.nps.gov/articles/000/making-the-cave-less-green.htm",
+    "cat": "The Botanical Bizarre",
+    "level": "easy",
+    "choices": [
+      "Chemical reactions in limestone",
+      "Heat from decomposing guano",
+      "Artificial lighting",
+      "Geothermal heat"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://home.nps.gov/articles/000/making-the-cave-less-green.htm",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party park ecologist account read: algae,moss,bacteria grow beside artificial lamps; unnatural food sources and speleothem damage motivate management.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "03a5ad5b42ce2e18dcbe8b9e56fed609082c90fa3ecd7781f98f481de2215ffb"
+    }
+  },
+  {
+    "candidateId": "botany-0246",
+    "q": "The silvery crust exuded by some alpine saxifrages contains vaterite, an unusual form of which substance?",
+    "a": "Calcium carbonate",
+    "d": "Leaf-margin glands release a mineral crust. Researchers found substantial vaterite, a relatively unstable calcium-carbonate form rarely encountered in large amounts in nature.",
+    "s": "Cambridge University Botanic Garden · Saxifraga sempervivum",
+    "u": "https://www.botanic.cam.ac.uk/learning/trails/design-technology/saxifraga-sempervivum/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Calcium carbonate",
+      "Silicon dioxide",
+      "Calcium sulfate",
+      "Calcium phosphate"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.botanic.cam.ac.uk/learning/trails/design-technology/saxifraga-sempervivum/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party botanical-garden research account read: S.sempervivum protectivecrust contains calcium-carbonatepolymorphvaterite exudedbyhydathodes.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "329e53d5edca453aaa875b7fbd31921c2724457ba9af3ccdf921508eae40da24"
+    }
+  },
+  {
+    "candidateId": "botany-0247",
+    "q": "Some naturally blue-green pieces of decaying wood are prized by craftspeople. What creates their color?",
+    "a": "Wood-inhabiting fungus",
+    "d": "Green elfcup fungi stain the wood as they grow through it. The pigmented timber can be conspicuous even when the tiny fungal fruiting bodies are absent.",
+    "s": "University of Gothenburg · Green elfcup fungus",
+    "u": "https://www.gu.se/en/research/closer-look-the-fungus-that-breaks-down-wood-and-stains-green",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Chlorophyll retained from living bark",
+      "Copper-rich groundwater",
+      "Wood-inhabiting fungus",
+      "Reaction with tannin-rich rainwater"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.gu.se/en/research/closer-look-the-fungus-that-breaks-down-wood-and-stains-green",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University fungal researcher’s field account fully read: Chlorociboria aeruginascens pigments rottingwood; stainedwood morecommonthanfruitbodies andvaluedincarpentry.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "6d7ed4c75cd3f60719b860f13d552cc03db1d444e0e3fdfaeb8a5f22c0c4fc03"
+    }
+  },
+  {
+    "candidateId": "botany-0248",
+    "q": "When a bird bites an edible stamen appendage of an Axinaea flower, how does the flower shoot pollen onto the bird?",
+    "a": "Puff of air from the squeezed appendage",
+    "d": "The food body doubles as a tiny bellows. Compression forces air into a hollow anther, blowing pollen onto the bird’s head and beak.",
+    "s": "Current Biology · Dellinger et al., 2014",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/24998529/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Spring-loaded stalk strikes the beak",
+      "Burst of carbon dioxide ruptures the anther",
+      "Puff of air from the squeezed appendage",
+      "Liquid jet carries pollen through a nozzle"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24998529/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary publisher abstract read: bird compression of aerenchymatous appendage forcesair into hollowanther, ejectingpollen; distinctfrompublished2482speciesidentity.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a08e7f9eef6241fc0255cae9fe36625a6836846ced427701d2c991ba69b0de36"
+    }
+  },
+  {
+    "candidateId": "botany-0249",
+    "q": "Male periodical cicadas with an infectious stage of Massospora fungus were observed making which misleading signals?",
+    "a": "Female courtship wing flicks",
+    "d": "The infected males answered calls with female-like wing movements, attracting mating attempts from other males. The close contact apparently helps spread the infectious spores.",
+    "s": "Scientific Reports · Cooley et al., 2018",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/29362478/",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Longer male calling bouts",
+      "Female courtship wing flicks",
+      "Higher-pitched male calls",
+      "Rapid repetitions of male alarm calls"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29362478/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract read: males carrying conidiospores made precisely timed female-specific wing flicks; males with resting-spore infections did not. This behavioral observation differs from the alkaloid finding in card179.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "e31399df2e7c27efda19346c2d11eab8815ea15b446fa38a6b386687751a2597"
+    }
+  },
+  {
+    "candidateId": "botany-0250",
+    "q": "In a letter about testing whether sensitive plants responded to sound, Charles Darwin mentioned trying sustained notes from which instrument?",
+    "a": "Bassoon",
+    "d": "Darwin described the observation cautiously and sought a siren for further tests. The episode shows how even a household musical instrument could become part of his botanical experiments.",
+    "s": "Darwin Correspondence Project · Letter to John Tyndall, 4 December 1878",
+    "u": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-11771",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Oboe",
+      "Bassoon",
+      "Clarinet",
+      "Flute"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.darwinproject.ac.uk/view/letters/DCP-LETT-11771",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "The indexed primary letter and Cambridge editorial notes describe prolonged bassoon notes and a request for a siren. No claim of demonstrated plant hearing; the correspondence introduction records a later withdrawal.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "557697aac6bb784c702fc689dc7ce19c1d50626a7610e2c6355bee09de428bb3"
+    }
+  }
+]

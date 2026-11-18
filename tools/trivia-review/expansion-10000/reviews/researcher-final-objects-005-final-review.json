@@ -1,0 +1,737 @@
+{
+  "file": "/tmp/trivia-next/objects-005.json",
+  "accepted_candidate_count": 136,
+  "status": "Author review complete; parent has reviewed every card. No repo edits or publication by this agent.",
+  "levels": {
+    "medium": 90,
+    "easy": 34,
+    "hard": 12
+  },
+  "duplicate_review": "Whole question, answer and explanation comparison against published 20,100, all editorial candidates and sibling 005 raws; entity searches and full relevant nearest-neighbor reads. Parent independently reviewed and rejected underlying-fact repeats.",
+  "replacements": [
+    {
+      "original_index": 6,
+      "rejected_fact": "Baseball rubbing mud",
+      "reason": "Duplicates customs0097",
+      "replacement": "Flexible-straw prototype used dental floss"
+    },
+    {
+      "original_index": 12,
+      "rejected_fact": "Pig-bladder rugby ball",
+      "reason": "Underlying material fact already taught by curiosities0011 Stirling football",
+      "replacement": "Hospital as early flexible-straw customer"
+    },
+    {
+      "original_index": 78,
+      "rejected_fact": "Dymaxion rear-wheel steering",
+      "reason": "Underlying unusual steering fact already taught by published Hélicron",
+      "replacement": "Cray-1 padded bench concealed power supplies"
+    },
+    {
+      "original_index": 111,
+      "rejected_fact": "Oreo filling amount failed to produce an even cream split",
+      "reason": "Underlying one-wafer finding already taught by food0008",
+      "replacement": "Sony predecessor failed rice-cooker prototype"
+    }
+  ],
+  "additional_prospects_excluded": [
+    "LEGO wooden-duck varnish: objects0082 duplicate",
+    "Shoe-fitting X-rays: parent objects006 duplicate",
+    "Tritium self-lit exit signs: science004f duplicate",
+    "Hoover Constellation hovering: prior objects duplicate",
+    "Peel P50 reverse handle: published duplicate",
+    "Super Soaker heat-pump origin: published duplicate",
+    "Etch A Sketch powder: published duplicate",
+    "Post-it choir origin: published duplicate",
+    "Liquid Paper tempera and name: prior objects duplicates",
+    "Bubble Wrap wallpaper: published duplicate",
+    "Crayola color-blind molder: reliable primary support not located",
+    "Radio shirt-pocket tailoring: not supported by Sony page read",
+    "Harrods escalator brandy: primary support not established in this bounded pass",
+    "ATM radioactive vouchers: source inconsistencies and unnecessary verification cost; not included"
+  ],
+  "cross_agent_note": "Flagged culture agent Headrick ashes duplicate against this set raw94; culture replaced its candidate.",
+  "final_precision_notes": [
+    "126 now tests Walkman hotline microphone function, not obvious two-socket purpose.",
+    "131 explanation omits uncertain G7 souvenir claim; tested fact is electron-beam treatment of golf-ball cores.",
+    "133 company PDF is large; its indexed first-party text explicitly states dried fish, vegetables and fruit.",
+    "Frozen imported parent versions of 51 and66 contain parent foil polishes not copied back into raw."
+  ],
+  "source_count": 107,
+  "maximum_words_per_page": 138,
+  "source_budgets": {
+    "https://www.usga.org/content/dam/usga/pdf/science-of-golf/middle-school/The%20Ball/aerodynamics_facilitator_guide_MS.pdf": {
+      "cards": [
+        1,
+        2,
+        3
+      ],
+      "derived_words": 123
+    },
+    "https://www.wimbledon.com/pdf/Online_Pack_Bouncing_Along.pdf": {
+      "cards": [
+        4
+      ],
+      "derived_words": 38
+    },
+    "https://www.babolat.com/us/news-articles-blog-tennis-natural-gut/tennis-natural-gut.html": {
+      "cards": [
+        5
+      ],
+      "derived_words": 47
+    },
+    "https://invention.si.edu/invention-stories/straight-truth-about-flexible-drinking-straw": {
+      "cards": [
+        6,
+        12
+      ],
+      "derived_words": 95
+    },
+    "https://bowlingmuseum.com/Portals/0/Documents/TOUR%20-%20Museum%20Map%20w%20Exhibit%20Guide.pdf": {
+      "cards": [
+        7
+      ],
+      "derived_words": 44
+    },
+    "https://ussquash.org/squash-equipment/": {
+      "cards": [
+        8
+      ],
+      "derived_words": 46
+    },
+    "https://worldathletics.org/disciplines/throwing-event/javelin-throw": {
+      "cards": [
+        9
+      ],
+      "derived_words": 42
+    },
+    "https://about.nike.com/en/magazine/nike-moon-shoe-waffle-iron-true-history": {
+      "cards": [
+        10,
+        11
+      ],
+      "derived_words": 89
+    },
+    "https://zamboni.com/zamboni-company-completes-restoration-of-historic-machine/": {
+      "cards": [
+        13
+      ],
+      "derived_words": 39
+    },
+    "https://wiffle.com/history": {
+      "cards": [
+        14,
+        15
+      ],
+      "derived_words": 79
+    },
+    "https://baseball.physics.illinois.edu/AJP-June2011.pdf": {
+      "cards": [
+        16
+      ],
+      "derived_words": 51
+    },
+    "https://www.chiefs.com/team/ownership/lamarhuntsr": {
+      "cards": [
+        17
+      ],
+      "derived_words": 43
+    },
+    "https://www.museumofplay.org/blog/the-history-of-play-doh-good-clean-fun/": {
+      "cards": [
+        18,
+        19
+      ],
+      "derived_words": 102
+    },
+    "https://www.si.edu/object/snowboarding-snurfer-prototype-created-sherman-poppen%3Anmah_1359395": {
+      "cards": [
+        20,
+        21
+      ],
+      "derived_words": 83
+    },
+    "https://www.museumofplay.org/toys/nerf-toys/": {
+      "cards": [
+        22,
+        23
+      ],
+      "derived_words": 87
+    },
+    "https://winmau.com/en-eu/products/blade-7-dartboard": {
+      "cards": [
+        24
+      ],
+      "derived_words": 39
+    },
+    "https://www.ittf.com/2020/01/28/transition-celluloid-plastic-balls/": {
+      "cards": [
+        25
+      ],
+      "derived_words": 39
+    },
+    "https://www.invent.org/inductees/james-ritty": {
+      "cards": [
+        26,
+        27
+      ],
+      "derived_words": 78
+    },
+    "https://www.oxo.com/aboutus/": {
+      "cards": [
+        28
+      ],
+      "derived_words": 43
+    },
+    "https://www.dyson.com/james-dyson": {
+      "cards": [
+        29,
+        30,
+        31
+      ],
+      "derived_words": 120
+    },
+    "https://www.invent.org/inductees/laszlo-josef-biro": {
+      "cards": [
+        32
+      ],
+      "derived_words": 42
+    },
+    "https://www.ibm.com/history/magnetic-stripe": {
+      "cards": [
+        33,
+        34
+      ],
+      "derived_words": 83
+    },
+    "https://www.ibm.com/history/floppy-disk": {
+      "cards": [
+        35
+      ],
+      "derived_words": 45
+    },
+    "https://www.computerhistory.org/revolution/input-output/14/350": {
+      "cards": [
+        36,
+        37
+      ],
+      "derived_words": 77
+    },
+    "https://www.ibm.com/history/punched-card": {
+      "cards": [
+        38
+      ],
+      "derived_words": 40
+    },
+    "https://www.computerhistory.org/timeline/memory-storage/": {
+      "cards": [
+        39,
+        40
+      ],
+      "derived_words": 84
+    },
+    "https://www.ibm.com/history/ramac": {
+      "cards": [
+        41
+      ],
+      "derived_words": 43
+    },
+    "https://www.computerhistory.org/timeline/1961/": {
+      "cards": [
+        42
+      ],
+      "derived_words": 43
+    },
+    "https://www.nationalmuseum.af.mil/Upcoming/Photos/igsearch/x-13/": {
+      "cards": [
+        43
+      ],
+      "derived_words": 48
+    },
+    "https://collections.si.edu/search/detail/edanmdm%3Anasm_A19740156000": {
+      "cards": [
+        44
+      ],
+      "derived_words": 52
+    },
+    "https://collection.sciencemuseumgroup.org.uk/objects/co205802/fireless-locomotive-named-imperial": {
+      "cards": [
+        45
+      ],
+      "derived_words": 46
+    },
+    "https://www.michelin.com/en/group/heritage": {
+      "cards": [
+        46
+      ],
+      "derived_words": 39
+    },
+    "https://www.acs.org/pressroom/presspacs/2025/september/4-beer-and-wine-discoveries.html": {
+      "cards": [
+        47
+      ],
+      "derived_words": 46
+    },
+    "https://corporate.ford.com//articles/sustainability/ford-mcdonalds-coffee-bean-car-parts-collaboration/": {
+      "cards": [
+        48
+      ],
+      "derived_words": 42
+    },
+    "https://www.press.bmwgroup.com/global/article/detail/T0367513EN/from-las-vegas-to-munich%3A-the-bmw-ix-flow-featuring-e-ink-at-bmw-welt?language=en": {
+      "cards": [
+        49
+      ],
+      "derived_words": 41
+    },
+    "https://newsroom.rolls-roycemotorcars.com/the-pursuit-of-perfection--craftsmanship-at-the-home-of-rolls-royce": {
+      "cards": [
+        50
+      ],
+      "derived_words": 41
+    },
+    "https://www.pringles.com/en-us/faq.html": {
+      "cards": [
+        51,
+        52
+      ],
+      "derived_words": 91
+    },
+    "https://www.nutella.com/us/en/inside-nutella/our-heritage": {
+      "cards": [
+        53,
+        54
+      ],
+      "derived_words": 83
+    },
+    "https://www.nestle.com/media/news/90-years-chocolate-kitkat-breaks": {
+      "cards": [
+        55
+      ],
+      "derived_words": 46
+    },
+    "https://www.nestle.com/media/news/baked-kitkat-japan": {
+      "cards": [
+        56
+      ],
+      "derived_words": 41
+    },
+    "https://www.nestle.com/sites/default/files/asset-library/documents/library/documents/corporate_social_responsibility/nestle-in-society-2012-japan.pdf": {
+      "cards": [
+        57
+      ],
+      "derived_words": 48
+    },
+    "https://jp.factory.nestle.com/sites/g/files/pydnoa331/files/2019-12/20191129_kitkat_eng.pdf": {
+      "cards": [
+        58
+      ],
+      "derived_words": 47
+    },
+    "https://www.mms.com/en-us/explore/about-us": {
+      "cards": [
+        59,
+        60
+      ],
+      "derived_words": 76
+    },
+    "https://www.mars.com/en-in/about/history": {
+      "cards": [
+        61
+      ],
+      "derived_words": 52
+    },
+    "https://www.popcorn.org/All-About-Popcorn/Corny-Facts": {
+      "cards": [
+        62,
+        63
+      ],
+      "derived_words": 91
+    },
+    "https://www.thehenryford.org/collections/explore/artifact/146626": {
+      "cards": [
+        64
+      ],
+      "derived_words": 43
+    },
+    "https://www.genenames.org/help/faq/": {
+      "cards": [
+        65
+      ],
+      "derived_words": 45
+    },
+    "https://www.acs.org/content/dam/acsorg/events/culinary-chemistry/Slides/2016-06-30-ice-cream-slides.pdf": {
+      "cards": [
+        66
+      ],
+      "derived_words": 52
+    },
+    "https://www.acs.org/pressroom/presspacs/2024/february/three-unexpected-foods-in-alternatives-to-traditional-plastics.html": {
+      "cards": [
+        67,
+        68,
+        69
+      ],
+      "derived_words": 131
+    },
+    "https://www.acs.org/pressroom/presspacs/2025/march/researchers-create-eco-friendly-detergent-from-wood-fiber-and-corn-protein.html": {
+      "cards": [
+        70
+      ],
+      "derived_words": 46
+    },
+    "https://www.americanhistory.si.edu/explore/exhibitions/object-project/online/household-hits/toaster": {
+      "cards": [
+        71
+      ],
+      "derived_words": 49
+    },
+    "https://www.acs.org/pressroom/presspacs/2025/october/a-step-toward-diagnosing-the-flu-with-your-tongue.html": {
+      "cards": [
+        72
+      ],
+      "derived_words": 48
+    },
+    "https://www.ed.ac.uk/news/2021/bacteria-serves-tasty-solution-to-plastic-crisis": {
+      "cards": [
+        73
+      ],
+      "derived_words": 45
+    },
+    "https://www.acs.org/pressroom/presspacs/2024/december/what-brings-richness-to-sparkling-wines.html": {
+      "cards": [
+        74
+      ],
+      "derived_words": 50
+    },
+    "https://www.acs.org/pressroom/presspacs/2025/march/chewing-gum-can-shed-microplastics-into-saliva-pilot-study-finds.html": {
+      "cards": [
+        75
+      ],
+      "derived_words": 58
+    },
+    "https://www.fountainheadmuseum.com/fountainheadauto/2009/12/snow-devils.html": {
+      "cards": [
+        76
+      ],
+      "derived_words": 47
+    },
+    "https://collection.sciencemuseumgroup.org.uk/objects/co8062000/micro-go-round-plus-clockwork-pressure-activated-turntable": {
+      "cards": [
+        77
+      ],
+      "derived_words": 37
+    },
+    "https://www.computerhistory.org/revolution/supercomputers/10/7": {
+      "cards": [
+        78
+      ],
+      "derived_words": 62
+    },
+    "https://americanmotorcyclist.com/wp-content/uploads/2024/01/202402-AMA2024-100years.pdf": {
+      "cards": [
+        79
+      ],
+      "derived_words": 40
+    },
+    "https://www.lanemotormuseum.org/collection/cars/item/citroen-2cv-bicephale-cogolin-replica-1952/": {
+      "cards": [
+        80
+      ],
+      "derived_words": 57
+    },
+    "https://www.lanemotormuseum.org/collection/cars/item/ptv-1956/": {
+      "cards": [
+        81
+      ],
+      "derived_words": 40
+    },
+    "https://www.lanemotormuseum.org/collection/cars/item/messerschmitt-kr200-1957/": {
+      "cards": [
+        82
+      ],
+      "derived_words": 34
+    },
+    "https://www.lanemotormuseum.org/collection/cars/item/inter-175a-berline-1956/": {
+      "cards": [
+        83
+      ],
+      "derived_words": 48
+    },
+    "https://www.itftennis.com/en/tours/grand-slam-tournaments/": {
+      "cards": [
+        84
+      ],
+      "derived_words": 44
+    },
+    "https://worldcurling.org/2026/02/olympic-curling-stone-feature/": {
+      "cards": [
+        85
+      ],
+      "derived_words": 55
+    },
+    "https://www.yonex.com/badminton/shuttlecocks/m-250": {
+      "cards": [
+        86
+      ],
+      "derived_words": 49
+    },
+    "https://www.ittf.com/2021/09/30/distinct-difference-new-colours-effect-friday-1st-october-2021/": {
+      "cards": [
+        87
+      ],
+      "derived_words": 55
+    },
+    "https://www.worldbowls.com/wp-content/uploads/2015/11/WB-intro-to-the-game.pdf": {
+      "cards": [
+        88
+      ],
+      "derived_words": 58
+    },
+    "https://olympic.ca/2019/11/13/short-track-vs-long-track-speed-skating-whats-the-difference/": {
+      "cards": [
+        89
+      ],
+      "derived_words": 46
+    },
+    "https://www.olympics.com/ioc/news/ioc-announces-finalists-for-climate-action-awards-2024": {
+      "cards": [
+        90
+      ],
+      "derived_words": 57
+    },
+    "https://www.worldaquatics.com/news/3704436/taming-a-swimmers-wake-a-look-into-the-history-and-innovative-spirit-of-malmstem-ab": {
+      "cards": [
+        91,
+        92
+      ],
+      "derived_words": 86
+    },
+    "https://siarchives.si.edu/sites/default/files/pdfs/torch/Torch%201978/SIA_000371_1978_08.pdf": {
+      "cards": [
+        93
+      ],
+      "derived_words": 45
+    },
+    "https://discgolf.com/disc-golf-education-development/ed-headrick-father-disc-golf/": {
+      "cards": [
+        94
+      ],
+      "derived_words": 47
+    },
+    "https://www.lego.com/en-us/aboutus/news/2025/february/the-lego-group-introduces-tires-made-with-recycled-materials?age-gate=grown_up&locale=en-us": {
+      "cards": [
+        95
+      ],
+      "derived_words": 50
+    },
+    "https://www.ibm.com/history/thinkpad": {
+      "cards": [
+        96,
+        97,
+        98
+      ],
+      "derived_words": 138
+    },
+    "https://www.computerhistory.org/pdp-1/spacewar/?trk=article-ssr-frontend-pulse_x-social-details_comments-action_comment-text": {
+      "cards": [
+        99,
+        100
+      ],
+      "derived_words": 79
+    },
+    "https://www.ibm.com/history/excimer-laser-surgery-lasik": {
+      "cards": [
+        101
+      ],
+      "derived_words": 53
+    },
+    "https://www.computerhistory.org/revolution/input-output/14/350/1688": {
+      "cards": [
+        102
+      ],
+      "derived_words": 49
+    },
+    "https://libraries.wright.edu/about/library-news/2026/02/27/america-250-ohio-celebrating-the-innovative-mind-of-ermal-c-fraze": {
+      "cards": [
+        103
+      ],
+      "derived_words": 55
+    },
+    "https://sca.coffee/sca-news/coffee-decoded-21-chemistry-of-decaf": {
+      "cards": [
+        104
+      ],
+      "derived_words": 49
+    },
+    "https://www.castellocheese.com/en-us/cheese-types/blue-mold-cheese/": {
+      "cards": [
+        105
+      ],
+      "derived_words": 44
+    },
+    "https://pubmed.ncbi.nlm.nih.gov/16092607/": {
+      "cards": [
+        106
+      ],
+      "derived_words": 47
+    },
+    "https://pubs.acs.org/doi/10.1021/acs.analchem.6b01632": {
+      "cards": [
+        107
+      ],
+      "derived_words": 46
+    },
+    "https://intrepidmuseum.org/2025-07-15/celebrate-national-ice-cream-month-scoop-history-taste-joy": {
+      "cards": [
+        108
+      ],
+      "derived_words": 55
+    },
+    "https://patents.justia.com/patent/5294765": {
+      "cards": [
+        109
+      ],
+      "derived_words": 62
+    },
+    "https://www.computerhistory.org/revolution/artificial-intelligence-robotics/13/324": {
+      "cards": [
+        110
+      ],
+      "derived_words": 46
+    },
+    "https://www.sony.com/en/SonyInfo/CorporateInfo/History/SonyHistory/1-01.html": {
+      "cards": [
+        111
+      ],
+      "derived_words": 57
+    },
+    "https://www.volvocars.com/intl/media/press-releases/B9D7CD66A06448F7/": {
+      "cards": [
+        112,
+        113
+      ],
+      "derived_words": 118
+    },
+    "https://www.cdc.gov/chemical-emergencies/chemical-fact-sheets/sodium-azide.html": {
+      "cards": [
+        114
+      ],
+      "derived_words": 47
+    },
+    "https://amhistory.si.edu/thinkfinity/podcast/transcripts/Podcast_Shoppingcart_Transcript.pdf": {
+      "cards": [
+        115,
+        116
+      ],
+      "derived_words": 94
+    },
+    "https://www.uspto.gov/learning-and-resources/journeys-innovation/historical-stories/brilliant-touch": {
+      "cards": [
+        117
+      ],
+      "derived_words": 51
+    },
+    "https://blogs.loc.gov/law/2026/07/the-invention-behind-your-morning-coffee-turns-118/": {
+      "cards": [
+        118
+      ],
+      "derived_words": 51
+    },
+    "https://corporate.mcdonalds.com/corpmcd/our-stories/article/filet_o_fish_journey.html": {
+      "cards": [
+        119
+      ],
+      "derived_words": 47
+    },
+    "https://www.oregonencyclopedia.org/articles/tater-tots-and-ore-ida-foods-co/": {
+      "cards": [
+        120,
+        121
+      ],
+      "derived_words": 113
+    },
+    "https://www.cameramuseum.ch/en/discover/permanent-exhibition/the-digital-revolution/1975-the-invention/": {
+      "cards": [
+        122
+      ],
+      "derived_words": 42
+    },
+    "https://www.nintendo.com/en-gb/News/2021/August/Revisit-Nintendo-s-roots-with-Hanafuda-2019412.html": {
+      "cards": [
+        123
+      ],
+      "derived_words": 39
+    },
+    "https://www.en.hosei.ac.jp/LUC2HOSEI/cdata/luc2hosei_12907_jaen.html": {
+      "cards": [
+        124
+      ],
+      "derived_words": 56
+    },
+    "https://www.henkel.co.uk/spotlight/2019-07-19-celebrating-pritts-golden-anniversary-963874": {
+      "cards": [
+        125
+      ],
+      "derived_words": 49
+    },
+    "https://www.moma.org/collection/works/185344": {
+      "cards": [
+        126
+      ],
+      "derived_words": 53
+    },
+    "https://www.sony.com/en/SonyInfo/CorporateInfo/History/SonyHistory/1-02.html": {
+      "cards": [
+        127,
+        128
+      ],
+      "derived_words": 104
+    },
+    "https://www.orau.org/health-physics-museum/collection/consumer/miscellaneous/spark-plugs.html": {
+      "cards": [
+        129
+      ],
+      "derived_words": 50
+    },
+    "https://www.orau.org/health-physics-museum/collection/radioactive-quack-cures/pills-potions-and-other-miscellany/doramad-radioactive-toothpaste.html": {
+      "cards": [
+        130
+      ],
+      "derived_words": 53
+    },
+    "https://www.orau.org/health-physics-museum/collection/miscellaneous/irradiated-golf-balls.html": {
+      "cards": [
+        131
+      ],
+      "derived_words": 47
+    },
+    "https://collection.sciencemuseumgroup.org.uk/people/cp37675/nokia-ab": {
+      "cards": [
+        132
+      ],
+      "derived_words": 50
+    },
+    "https://stg-images.samsung.com/is/content/samsung/p5/levant/aboutsamsung/levant-aboutsamsung-Samsung_Profile_2013.pdf": {
+      "cards": [
+        133
+      ],
+      "derived_words": 47
+    },
+    "https://www.toyota-global.com/company/history_of_toyota/75years/text/taking_on_the_automotive_business/chapter1/section1/item4.html": {
+      "cards": [
+        134
+      ],
+      "derived_words": 56
+    },
+    "https://beta.designmuseum.org/discover-design/all-design-objects/bic-biro": {
+      "cards": [
+        135,
+        136
+      ],
+      "derived_words": 111
+    }
+  },
+  "evidence_location": "Per-card evidence field in objects-005.json",
+  "automated_overlap_report": "/tmp/trivia-next/objects-005-overlap-review.json"
+}

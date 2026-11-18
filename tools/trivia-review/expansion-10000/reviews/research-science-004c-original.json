@@ -1,0 +1,402 @@
+[
+  {
+    "q": "In experiments with an oil droplet bouncing on a vibrating oil bath, what can steer the droplet as it appears to walk across the surface?",
+    "a": "Waves created by its own bounces",
+    "d": "Each impact produces ripples. The droplet interacts with the evolving wave field, creating a visible example of a particle-like object guided by waves.",
+    "u": "https://news.mit.edu/2013/when-fluid-dynamics-mimic-quantum-mechanics-0729",
+    "s": "MIT · Fluid Dynamics Mimicking Quantum Mechanics",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Waves created by its own bounces",
+      "An electric charge applied to the droplet",
+      "A chemical trail left behind it",
+      "A temperature gradient across the bath"
+    ],
+    "evidence": "MIT experiment describes bouncing oil droplets propelled and guided by their self-generated waves. This is a classical analogue, not proof of a quantum interpretation."
+  },
+  {
+    "q": "NC State researchers made experimental wires that could reconnect after being cut and pressed together. What unusual material carried electricity inside them?",
+    "a": "Liquid metal",
+    "d": "A gallium–indium alloy filled channels in a self-healing polymer. Rejoining the cut ends restored both the conducting path and the surrounding sheath.",
+    "u": "https://news.ncsu.edu/2013/01/wms-dickey-healing-wires-2013/",
+    "s": "NC State · Self-Healing Stretchable Wires",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Braided carbon fibers",
+      "Liquid metal",
+      "Dissolved copper salts",
+      "Silver-coated glass beads"
+    ],
+    "evidence": "First-party report identifies liquid gallium–indium channels inside self-healing polymer and reconnection after severed ends are reunited."
+  },
+  {
+    "q": "In a 2020 fluid-physics experiment, small model boats floated upside down beneath a suspended liquid layer. What kept this strange arrangement stable?",
+    "a": "Vertical vibration",
+    "d": "Repeated up-and-down motion stabilized both the liquid layer and the inverted floaters. The apparent reversal of buoyancy depended on the continuous vibration.",
+    "u": "https://www.nature.com/articles/s41586-020-2643-8",
+    "s": "Nature · Floating under a levitating liquid",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "An upward jet of compressed air",
+      "A strong magnetic field",
+      "Continuous rotation of the container",
+      "Vertical vibration"
+    ],
+    "evidence": "Primary experiment reports inverted buoyancy under vertical shaking. Its linked correction changes a reference-author surname only, not the result."
+  },
+  {
+    "q": "Rice researchers showed that used coffee grounds and other carbon-rich waste could be transformed by brief intense electrical heating into what valuable material?",
+    "a": "Graphene",
+    "d": "Flash Joule heating rearranged the carbon into thin graphene sheets. The 2020 work demonstrated a route for converting low-value carbon sources into a useful engineering material.",
+    "u": "https://news.rice.edu/news/2020/rice-lab-turns-trash-valuable-graphene-flash",
+    "s": "Rice University · Trash into Graphene in a Flash",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Graphene",
+      "Synthetic diamond",
+      "Carbon fiber cloth",
+      "Silicon carbide"
+    ],
+    "evidence": "University report explicitly describes flash Joule heating of carbon sources and coffee grounds yielding graphene; speculative cost and environmental claims omitted."
+  },
+  {
+    "q": "MIT Lincoln Laboratory demonstrated a laser system that delivered sound near a listener’s ear without headphones. Which substance in the air absorbed the light to create sound?",
+    "a": "Water vapor",
+    "d": "The chosen infrared wavelength is strongly absorbed by airborne water molecules. Their response to the laser produces localized sound through the photoacoustic effect.",
+    "u": "https://www.ll.mit.edu/partner-us/available-technologies/targeted-acoustic-laser-communication-talc",
+    "s": "MIT Lincoln Laboratory · Targeted Acoustic Laser Communication",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Carbon dioxide",
+      "Water vapor",
+      "Nitrogen",
+      "Oxygen"
+    ],
+    "evidence": "Laboratory technology description identifies ambient water vapor as the absorber and photoacoustic conversion as the mechanism."
+  },
+  {
+    "q": "Some carbon-nanotube loudspeakers produce sound without a vibrating speaker cone. What directly disturbs the surrounding air?",
+    "a": "Rapid heating and cooling",
+    "d": "An electrical signal changes the temperature of an extremely light nanotube sheet. The adjacent air repeatedly expands and contracts, creating pressure waves.",
+    "u": "https://downtime.utdallas.edu/research/nanotech/publications/documents/UnderwaterSoundGenerationUsingCarbonNanotubeProjectors.pdf",
+    "s": "Nano Letters · Underwater Sound Generation Using Carbon Nanotube Projectors",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Rapid heating and cooling",
+      "Repeated electrical sparks",
+      "Light-driven chemical reactions",
+      "A rotating magnetic field"
+    ],
+    "evidence": "Primary paper explains nanotube thermoacoustics and reports no sheet mechanical vibration detected by a laser vibrometer."
+  },
+  {
+    "q": "An MIT camera system reconstructed objects hidden around a corner by treating what ordinary surface as an indirect reflector?",
+    "a": "Wall",
+    "d": "Short laser pulses scattered from a visible wall to a hidden object and back. Careful measurements of their travel times helped reconstruct the object’s shape.",
+    "u": "https://news.mit.edu/2012/camera-sees-around-corners-0321",
+    "s": "MIT · A Camera That Peers Around Corners",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "A polished metal door handle",
+      "Wall",
+      "A pool of water",
+      "A windowpane"
+    ],
+    "evidence": "University account describes reconstruction using diffusely reflecting ordinary walls rather than mirror-like surfaces."
+  },
+  {
+    "q": "A Stanford computer prototype reported in 2015 represented and manipulated bits using what moving objects?",
+    "a": "Water droplets",
+    "d": "Magnetic nanoparticles allowed droplets to move in step with a rotating magnetic field. The project linked computation to physically routing tiny amounts of liquid.",
+    "u": "https://news.stanford.edu/stories/2015/06/computer-water-drops-060815",
+    "s": "Stanford University · A Computer Operating on Water Droplets",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Grains of sand",
+      "Water droplets",
+      "Steel ball bearings",
+      "Tiny soap bubbles"
+    ],
+    "evidence": "First-party report describes synchronous droplet logic, nanoparticle-loaded water droplets, and a rotating magnetic clock."
+  },
+  {
+    "q": "In a 2019 Boston University experiment, what shape of acoustic device quieted a tone while leaving an open air passage?",
+    "a": "Hollow ring",
+    "d": "The internal structure redirected sound waves while leaving a passage for air. The 2019 demonstration targeted a particular tone rather than eliminating every possible noise.",
+    "u": "https://www.bu.edu/eng/files/2021/03/Annual-Report-2019_FINAL.pdf",
+    "s": "Boston University Engineering · 2019 Annual Report",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Bundle of drinking straws",
+      "Hollow ring",
+      "Porous foam plug",
+      "Perforated steel plate"
+    ],
+    "evidence": "First-party annual-report project describes an open acoustic metamaterial cutting a tone while preserving air passage; no unsupported broadband claim."
+  },
+  {
+    "q": "Empa’s disposable paper-battery prototype could be switched on by adding what?",
+    "a": "Water",
+    "d": "Moistening the paper dissolved its embedded salt and made the electrolyte conductive. In a demonstration, two connected cells powered an LCD alarm clock.",
+    "u": "https://www.empa.ch/web/s604/wasser-aktivierte-batterie?inheritRedirect=true",
+    "s": "Empa · A Paper Battery with a Water Switch",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Water",
+      "Rubbing alcohol",
+      "Vegetable oil",
+      "Liquid soap"
+    ],
+    "evidence": "Institutional 2022 report describes water activation, salt dissolution, printed electrodes, and the alarm-clock proof of concept."
+  },
+  {
+    "q": "MIT’s PhotoChromeleon experiment could replace a colorful pattern on a coated shoe or phone case without repainting it. What reprogrammed the coating?",
+    "a": "Projected light",
+    "d": "A mix of light-sensitive dyes could be activated and selectively faded. UV and visible illumination erased or created patterns on the same coated object.",
+    "u": "https://news.mit.edu/2019/changing-colors-photochromeleon-mit-csail-0910",
+    "s": "MIT · Objects Change Colors with PhotoChromeleon",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Ultrasonic pulses",
+      "A changing magnetic field",
+      "Projected light",
+      "Controlled air pressure"
+    ],
+    "evidence": "University report describes cyan, magenta, and yellow photochromic dyes controlled by UV light and projected visible light."
+  },
+  {
+    "q": "When an auxetic material is stretched lengthwise, how can its overall width respond in contrast to an ordinary rubber band?",
+    "a": "Become wider",
+    "d": "Its internal geometry opens outward under tension. This counterintuitive sideways expansion is described by a negative Poisson’s ratio.",
+    "u": "https://news.gatech.edu/news/2023/11/30/hollister-lab-develops-3d-printing-soft-tissue-engineering",
+    "s": "Georgia Tech · Architected Auxetic Materials",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Become wider",
+      "Remain unchanged",
+      "Alternate repeatedly between wider and narrower",
+      "Become narrower"
+    ],
+    "evidence": "Institutional research explanation states longitudinal stretching causes lateral expansion; ordinary elastics narrow. No medical-use claim is tested."
+  },
+  {
+    "q": "JILA researchers measured a gravitational difference in ticking rates within a single cloud of atoms in 2022. Roughly how far apart vertically were its top and bottom?",
+    "a": "About a millimeter",
+    "d": "Clocks at a slightly greater height run faster in Earth’s gravitational field. The experiment measured the tiny difference within one cloud of ultracold strontium atoms.",
+    "u": "https://www.nist.gov/news-events/news/2022/02/jila-atomic-clocks-measure-einsteins-general-relativity-millimeter-scale",
+    "s": "NIST · General Relativity at Millimeter Scale",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "About a millimeter",
+      "About a kilometer",
+      "About a meter",
+      "About a centimeter"
+    ],
+    "evidence": "NIST reports gravitational frequency differences across roughly one millimeter within a single strontium cloud. The tested fact is experimental resolution, not the general time-dilation principle already in earth003."
+  },
+  {
+    "q": "Albert Einstein and Leo Szilard worked on a safer version of which household appliance after concerns about lethal gas leaks?",
+    "a": "Refrigerator",
+    "d": "They pursued refrigeration designs that avoided vulnerable mechanical pumping parts. Their engineering work produced patents, though it did not become a successful mass-market appliance.",
+    "u": "https://invention.si.edu/invention-stories/einstein-szilard-refrigerator",
+    "s": "Smithsonian Lemelson Center · The Einstein-Szilard Refrigerator",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Refrigerator",
+      "Gas cooker",
+      "Water heater",
+      "Clothes dryer"
+    ],
+    "evidence": "Smithsonian account documents their refrigeration project, toxic refrigerant leaks, hermetically sealed pump, and commercialization difficulties."
+  },
+  {
+    "q": "In a disappearing-glass demonstration, a clear rod becomes almost invisible when immersed in a particular liquid. Which property must the rod and liquid closely match?",
+    "a": "Refractive index",
+    "d": "Matching how they bend light greatly reduces the visible optical boundary. The rod is still present; its outline has become much harder to distinguish.",
+    "u": "https://annex.exploratorium.edu/xref/exhibits/disappearing_glass_rods.html",
+    "s": "Exploratorium · Disappearing Glass Rods",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Electrical conductivity",
+      "Thermal expansion rate",
+      "Refractive index",
+      "Mass density"
+    ],
+    "evidence": "Museum exhibit explanation attributes disappearance to matching refractive indices; a rod of different glass remains visible."
+  },
+  {
+    "q": "Rice’s 2022 necrobotics experiment turned which deceased creatures into miniature mechanical grippers?",
+    "a": "Spiders",
+    "d": "Puffs of air extended the legs, which curled again when pressure was released. The researchers used that motion to grasp and move small objects.",
+    "u": "https://news.rice.edu/news/2022/rice-engineers-get-grip-necrobotic-spiders",
+    "s": "Rice University · Necrobotic Spiders",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Spiders",
+      "Praying mantises",
+      "Crabs",
+      "Scorpions"
+    ],
+    "evidence": "University account describes deceased wolf spiders used as pressure-actuated grippers; this tests an engineering application rather than general spider anatomy."
+  },
+  {
+    "q": "Cornell’s microscopic nanoguitar demonstrated in 2003 was played using what instead of a musician’s fingers?",
+    "a": "Laser",
+    "d": "Its strings were tiny silicon bars vibrating far above audible guitar frequencies. The device demonstrated miniature mechanical components with possible uses in electronics and sensing.",
+    "u": "https://news.cornell.edu/stories/2003/11/new-playable-nanoguitar-promises-circuit-applications",
+    "s": "Cornell University · A Playable Nanoguitar",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "An ultrasonic needle",
+      "A rotating magnetic field",
+      "A microscopic air jet",
+      "Laser"
+    ],
+    "evidence": "University article title explicitly states laser-played; body identifies silicon-bar strings and vibrations 17 octaves above ordinary guitar frequencies."
+  },
+  {
+    "q": "Swedish researchers demonstrated a working transistor in 2023 using which unexpected structural material infused with a conducting polymer?",
+    "a": "Wood",
+    "d": "They removed lignin from balsa and filled the remaining structure with a conductive polymer. The resulting device could regulate current, although it was bulky and slow compared with conventional electronics.",
+    "u": "https://liu.se/en/news-item/varldens-forsta-tratransistor",
+    "s": "Linköping University · A Wood Transistor",
+    "cat": "Science in Plain Sight",
+    "level": "medium",
+    "choices": [
+      "Wood",
+      "Chalk",
+      "Leather",
+      "Cork"
+    ],
+    "evidence": "First-party university account specifies delignified balsa filled with PEDOT:PSS and a working current-regulating transistor; no first-ever or commercial-replacement claim."
+  },
+  {
+    "q": "Canada’s NRC used a special impact simulator to fire which unusual projectiles at aircraft components?",
+    "a": "Dead birds",
+    "d": "The high-speed impacts simulated collisions that can damage windscreens, engines, and other aircraft parts. The device acquired nicknames such as the chicken gun.",
+    "u": "https://publications.gc.ca/collections/collection_2016/statcan/CS51-501-1972-eng.pdf",
+    "s": "Statistics Canada · Aviation in Canada, 1972",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Rubber balls",
+      "Bags of sand",
+      "Dead birds",
+      "Frozen fish"
+    ],
+    "evidence": "Contemporary government report page61 explicitly describes pre-killed birds fired to duplicate in-flight collisions; no frozen-chicken urban legend."
+  },
+  {
+    "q": "A robotic gripper reported by Cornell and collaborators in 2010 used a party balloon filled with which lightweight material?",
+    "a": "Ground coffee",
+    "d": "The soft bag molded itself around an object. Removing air jammed the grains together, letting the gripper hold objects without individual mechanical fingers.",
+    "u": "https://news.cornell.edu/stories/2010/10/researchers-develop-universal-robotic-gripper",
+    "s": "Cornell University · A Universal Robotic Gripper",
+    "cat": "Science in Plain Sight",
+    "level": "medium",
+    "choices": [
+      "Table salt",
+      "Wheat flour",
+      "Cocoa powder",
+      "Ground coffee"
+    ],
+    "evidence": "University account documents selected coffee-filled latex balloon and vacuum-triggered granular jamming. Rice and couscous were also tested, so neither is a distractor."
+  },
+  {
+    "q": "Lancaster physicists found that structures made from which familiar toy could act as unusually effective thermal insulators at very low temperatures?",
+    "a": "LEGO bricks",
+    "d": "The plastic modules and the gaps between them greatly restricted heat flow in the tested cryogenic range. The result suggested inexpensive ways to build supports for ultra-cold experiments.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/31873080/",
+    "s": "Scientific Reports · LEGO Block Structures as a Sub-Kelvin Thermal Insulator",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Glass marbles",
+      "Wooden building blocks",
+      "LEGO bricks",
+      "Steel construction sets"
+    ],
+    "evidence": "Primary paper measures LEGO ABS/void structures from70mK to1.8K and reports strong thermal isolation with mechanical support; no room-temperature extrapolation."
+  },
+  {
+    "q": "For a 2012 airplane wireless-signal test, Boeing filled passenger seats with sacks of what as stand-ins for people?",
+    "a": "Potatoes",
+    "d": "The potatoes interacted with radio signals in useful ways similar to human bodies. The engineers later checked their test data using human stand-ins on the ground.",
+    "u": "https://boeing.mediaroom.com/2012-12-19-Boeing-test-breakthrough-means-more-reliable-connectivity-on-airplanes",
+    "s": "Boeing · Wireless-Signal Test Breakthrough",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Rice",
+      "Coffee beans",
+      "Peanuts",
+      "Potatoes"
+    ],
+    "evidence": "Manufacturer’s dated release documents potato sacks in a grounded decommissioned aircraft and subsequent human validation."
+  },
+  {
+    "q": "A physics team studied how nonspherical objects pack together by filling containers with which familiar sweets?",
+    "a": "M&M’s",
+    "d": "The flattened candies packed more densely than randomly arranged spheres in the experiments. Their shape helped researchers investigate the geometry of crowded particles.",
+    "u": "https://fhstillinger.github.io/FrankStillingerWebsite/fhspapers/fhspaper279.pdf",
+    "s": "Science · Improving the Density of Jammed Disordered Packings Using Ellipsoids",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Gummy bears",
+      "Candy corn",
+      "Jelly beans",
+      "M&M’s"
+    ],
+    "evidence": "Primary paper describes regular and mini M&M experiments and higher random packing fractions than ball bearings; comparison does not claim superiority to optimally ordered spheres."
+  },
+  {
+    "q": "Cambridge researchers demonstrated a way to make toner-printed office paper reusable without turning it back into pulp. What removed the print?",
+    "a": "Laser pulses",
+    "d": "Carefully chosen laser conditions removed toner while leaving the paper largely intact. The 2012 study explored unprinting as an alternative to recycling the whole sheet.",
+    "u": "https://www.eng.cam.ac.uk/node/199",
+    "s": "University of Cambridge · Use a Laser, Save a Tree",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "A freezing-and-thawing cycle",
+      "Laser pulses",
+      "High-pressure steam",
+      "Ultrasonic washing"
+    ],
+    "evidence": "Institutional study account documents tests of laser toner removal on standard copy paper, analysis of damage, and the reuse concept."
+  },
+  {
+    "q": "A 2022 MIT and Rhode Island School of Design project made a washable shirt fabric function as what?",
+    "a": "Microphone",
+    "d": "Special fibers produced electrical signals when sound made the cloth vibrate. The team demonstrated acoustic detection, including the direction of handclaps, in fabric panels.",
+    "u": "https://news.mit.edu/2022/fabric-acoustic-microphone-0316",
+    "s": "MIT · Acoustic Fabric",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Microphone",
+      "Touchscreen",
+      "Solar panel",
+      "Radio antenna"
+    ],
+    "evidence": "First-party study report describes piezoelectric fiber, machine-washable cloth, acoustic detection, and clap-direction demonstration. No clinical performance claim."
+  }
+]

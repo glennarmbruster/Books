@@ -1,0 +1,112 @@
+{
+  "status": "Frozen for parent editorial review; research candidates only, no publication.",
+  "count": 150,
+  "sha256": "3a366cc6352066fa916b24afed688e2e08de5be85462278e27305087da682ab6",
+  "difficulty": {
+    "medium": 80,
+    "easy": 66,
+    "hard": 4
+  },
+  "sourcePages": 128,
+  "fullQadBaselineRows": 21717,
+  "baselineFiles": [
+    "/tmp/trivia100k/existing.json",
+    "/tmp/trivia100k/released.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/nature-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/food-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/culture-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/words-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/books-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/space-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/words-003.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/objects-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/words-004.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/sound-003.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/weather-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/places-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/objects-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/discovery-003.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/space-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/misc-003.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/nature-002.json",
+    "/tmp/trivia-next/food-002.json",
+    "/tmp/trivia-next/books-002.json",
+    "/tmp/trivia-next/objects-002.json",
+    "/tmp/trivia-next/earth-003.json",
+    "/tmp/trivia-next/human-003.json",
+    "/tmp/trivia-next/nature-002.json"
+  ],
+  "duplicateReview": "Full question+answer+explanation IDF neighbors plus topic keyword review, parent independent scan, and final literal duplicate checks. This is an editorial screen, not a claim of infallible semantic detection.",
+  "exactDuplicateQuestions": [],
+  "internalExactDuplicates": [],
+  "knownDuplicateRemovals": [
+    {
+      "draftIndex": 59,
+      "q": "At Hungary’s Busó carnival, winter receives a symbolic funeral when what object is burned?",
+      "a": "A coffin",
+      "reason": "Underlying fact already in published550; reverse question remains a duplicate."
+    },
+    {
+      "draftIndex": 63,
+      "q": "At Congham’s snail-racing world championship, what shape is the racing course?",
+      "a": "Concentric circles",
+      "reason": "Same snail racing circular course/direction fact as published636."
+    },
+    {
+      "draftIndex": 83,
+      "q": "The drivers steering Madeira’s wicker downhill sledges brake with what?",
+      "a": "Their boots",
+      "reason": "Madeira boot braking already in objects0185."
+    },
+    {
+      "draftIndex": 101,
+      "q": "At the first modern Olympics in 1896, which metal medal went to event winners?",
+      "a": "Silver",
+      "reason": "1896 winner silver award is already taught in published13468 explanation."
+    },
+    {
+      "draftIndex": 128,
+      "q": "Tokyo 2020’s medals used metal recovered from what donated household items?",
+      "a": "Electronic devices",
+      "reason": "Tokyo medals from electronics already in culture0057."
+    }
+  ],
+  "weakQuestionRemoved": [
+    {
+      "draftIndex": 111,
+      "q": "Organizers of the Air Guitar World Championships promote which ideal through the joke that occupied hands cannot hold guns?",
+      "a": "World peace",
+      "reason": "World-peace answer was disclosed by the stem; weak card rejected."
+    }
+  ],
+  "relatedFactsRetained": {
+    "4": "Cycle-ball foot-down reset differs from staged culture0080 wheel-based striking.",
+    "13,14": "Carried minimum-weight equipment and absence of marriage requirement differ from published646 prize in beer.",
+    "17": "Communication with ancestors differs from published546 identification of kites.",
+    "19": "Waist sash as climbing handhold differs from published547 tower participants.",
+    "30,31": "Birth-bank team allocation and three taps differ from published642 goal distance/time rule.",
+    "59": "Shoe gifts from Yule Lads differ from published9876 Yule Cat clothing taboo.",
+    "67": "Scissors dancers’ church taboo differs from culture0071 metal musical rods.",
+    "107": "Firefighter cleanup differs from published638 gravy-wrestling scoring/costumes.",
+    "109,110": "Original throw-in possession and three-foul goal differ from published249 peach-basket identity.",
+    "111": "Television reason differs from published17320 tennis ball color and17243 material.",
+    "145": "Published354 covers 1968 UH/UCLA game;9494 covers Umbricht ashes. Neither teaches1976 flood-access cancellation."
+  },
+  "checks": [
+    "150 cards; each has four distinct choices and exact correct answer",
+    "All explanations <=40 words",
+    "Source facts rewritten to support the answer, not only background",
+    "All 150 choice sets reviewed; specific final corrections recorded in revision map",
+    "At most3 cards per source page and under180 derived words per page, including repeated correct choice and evidence",
+    "MLB/NHL source cards <=25 derived words including short evidence and repeated correct choice",
+    "Historical sports rules date-anchored where needed; other changing numerical claims omitted",
+    "No repository or live app/cache edits"
+  ],
+  "otherResearchRejected": [
+    "Namahage masks; Turkish kispet; Mongolian knucklebones; Jultagi clown; Mari Lwyd skull/rhyme; scissors dancer rods; gurning horse collar; wife-weight beer; pancake race flips; crying baby sumo; Haxey Hood goal; Yule Cat clothing;1956 separate equestrian quarantine;Lorz car ride;Hajos stadium medal;Ultimate self-refereeing;stone-skimming distance;nettle stem measurement;Olympic Waldi route;Vanuatu land diving: existing underlying facts.",
+    "India1950 barefoot withdrawal story: unreliable myth despite a source repeating it.",
+    "Swamp-soccer shoe-changing rule and inaccessible conker rules: insufficient current primary verification.",
+    "Gold-panning contest and seven-wave New Year count: considered, omitted in favor of stronger curiosities."
+  ],
+  "evidenceCaveat": "Cards145 and148 use compact evidence locators because primary-source derived-word limits are25; their question, answer, explanation and source URL jointly state the fact."
+}

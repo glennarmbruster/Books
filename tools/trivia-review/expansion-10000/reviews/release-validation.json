@@ -1,0 +1,24 @@
+{
+  "checkedOn": "2026-11-17",
+  "result": "passed",
+  "tests": [
+    {
+      "tool": "check-trivia-bank.cjs",
+      "result": "22600contiguous unique numbered questions, reviewed-batch metadata, choices and difficulty pass."
+    },
+    {
+      "tool": "check-trivia-mix.cjs",
+      "result": "Baseline A–Z minimums and difficulty allocation pass."
+    },
+    {
+      "tool": "check-trivia-release.cjs",
+      "result": "All2500integrated rows match accepted originals; baseline fingerprint unchanged; trivia9offline manifest complete."
+    },
+    {
+      "tool": "check-trivia-offline-upgrade.cjs",
+      "result": "Old20100edition installed,23-question Xround saved, upgraded to22600, then disconnected. Same question IDs, current question, shared round code, marks and revealed state restored. Final question and back/next navigation work offline; default10-question round is7easy/1medium/1hard/1obscure."
+    }
+  ],
+  "browser": "Local Chromium with iPad viewport/touch emulation; actual iPad Safari hardware not tested.",
+  "testHarnessCorrection": "Initial upgrade-test run selected the first form button (Any mix) instead of Start. Corrected selector to#start-round; complete rerun passed. No application fix was needed."
+}

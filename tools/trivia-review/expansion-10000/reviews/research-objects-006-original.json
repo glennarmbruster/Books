@@ -1,0 +1,130 @@
+[
+  {
+    "q": "Frank Clarke’s early-twentieth-century alarm-clock machine could wake its owner and automatically prepare which drink?",
+    "a": "Tea",
+    "d": "Its mechanism could strike a match, heat a kettle and pour the water. The device was an early ancestor of the electric Teasmade.",
+    "u": "https://collection.sciencemuseumgroup.org.uk/objects/co48630",
+    "s": "Science Museum Group · Automatic tea-making machine",
+    "cat": "Little Machines and Unruly Ideas",
+    "level": "easy",
+    "choices": [
+      "Coffee",
+      "Cocoa",
+      "Broth",
+      "Tea"
+    ],
+    "evidence": "Museum catalog details alarm clock,kettle tilter and spirit stove,with arm striking match,boiling kettle and pouring; explicitly calls early teasmade."
+  },
+  {
+    "q": "Which birds were fitted with tiny automatic cameras for an unusual form of early aerial photography?",
+    "a": "Pigeons",
+    "d": "A harness carried the camera during flight. The International Spy Museum displays a replica of a German pigeon-camera setup dated 1917–1918.",
+    "u": "https://www.spymuseum.org/exhibition-experiences/about-the-collection/collection-highlights/pigeon-camera/",
+    "s": "International Spy Museum · Pigeon Camera",
+    "cat": "Tinkerers and Their Machines",
+    "level": "medium",
+    "choices": [
+      "Ravens",
+      "Pigeons",
+      "Gulls",
+      "Falcons"
+    ],
+    "evidence": "Museum object identifies replica German pigeon camera1917–18 and automatic photos in flight; avoids strong wartime-success and mission-rate claims."
+  },
+  {
+    "q": "An object in the Met’s library imitates a small decorated book. When its hidden mechanism runs, what rises from inside?",
+    "a": "Singing mechanical bird",
+    "d": "A hidden mechanism makes the bird turn and move its wings, tail and beak while producing birdsong. It retreats when the performance ends.",
+    "u": "https://www.metmuseum.org/art/collection/search/910012",
+    "s": "Metropolitan Museum of Art · Singing bird box in book form",
+    "cat": "Objects with a Past",
+    "level": "easy",
+    "choices": [
+      "Moving astronomical clock",
+      "Singing mechanical bird",
+      "Dancing mechanical doll",
+      "Rotating candleholder"
+    ],
+    "evidence": "Holding library describes silver and feather bird box mimicking leather bookbinding,with bird emerging,moving and singing before returning."
+  },
+  {
+    "q": "How did an operator choose a letter on a Mignon index typewriter, which lacked a normal alphabet keyboard?",
+    "a": "Pointing at a character chart",
+    "d": "A separate key printed the selected character. Replacing the chart and matching type sleeve could change the font or language.",
+    "u": "https://collection.sciencemuseumgroup.org.uk/objects/co37733",
+    "s": "Science Museum Group · Mignon typewriter",
+    "cat": "Tinkerers and Their Machines",
+    "level": "medium",
+    "choices": [
+      "Pointing at a character chart",
+      "Setting a row of numbered levers",
+      "Inserting a punched card",
+      "Rotating a labeled dial"
+    ],
+    "evidence": "Catalog describes pointer over index card plus printing key; replaceable index/type sleeve changesfont/language. Ignores erroneous treaty date/world-war paragraph."
+  },
+  {
+    "q": "An Austrian alarm clock in the Science Museum’s fire-making collection is coupled to a tinder pistol. Besides sounding the alarm, what could it light?",
+    "a": "Candle",
+    "d": "The clock released the flintlock trigger, turning a time signal into a source of bedside light.",
+    "u": "https://collection.sciencemuseumgroup.org.uk/objects/co8076803/tinder-pistol-combined-with-elaborate-clock-movement-tinder-pistol",
+    "s": "Science Museum Group · Tinder-pistol alarm clock",
+    "cat": "Clocks That Surprise",
+    "level": "medium",
+    "choices": [
+      "Candle",
+      "Gas mantle",
+      "Coal brazier",
+      "Oil lantern"
+    ],
+    "evidence": "Holding museum explicitly says alarm releases trigger and candle lights. No operational or construction instructions."
+  },
+  {
+    "q": "Some twentieth-century shoe shops used a pedoscope to look at customers’ feet with what?",
+    "a": "X-rays",
+    "d": "The machines showed foot bones inside shoes. Their use declined because of radiation concerns, despite little evidence that they improved shoe fitting.",
+    "u": "https://collection.sciencemuseumgroup.org.uk/objects/co134431/pedoscope-shoe-fitting-x-ray-viewer-pedoscope",
+    "s": "Science Museum Group · Shoe-fitting X-ray viewer",
+    "cat": "Objects with a Past",
+    "level": "easy",
+    "choices": [
+      "Infrared light",
+      "Ultraviolet light",
+      "X-rays",
+      "Ultrasound"
+    ],
+    "evidence": "Museum describes foot-bone and shoeoutline images and withdrawal with exposure-risk concerns; doesnot claim medically useful or safe."
+  },
+  {
+    "q": "On Philip Lea’s pocket globe from around 1700, Earth fits inside a small case. What is mapped on the inside of that case?",
+    "a": "Constellations",
+    "d": "The tiny portable object pairs a terrestrial sphere with a colored map of the heavens surrounding it.",
+    "u": "https://www.rmg.co.uk/collections/objects/rmgc-object-383120",
+    "s": "Royal Museums Greenwich · Philip Lea pocket globe",
+    "cat": "Objects with a Past",
+    "level": "medium",
+    "choices": [
+      "Ocean currents",
+      "Constellations",
+      "Trade routes",
+      "London streets"
+    ],
+    "evidence": "Object catalog explicitly describes colored constellations inside the case and terrestrial sphere, circa1700."
+  },
+  {
+    "q": "Why were the BBC’s original Concert Hall chairs heavily upholstered even where no audience member was sitting?",
+    "a": "To absorb sound",
+    "d": "The padded seats helped reduce how much the room’s reverberation changed as the audience size changed.",
+    "u": "https://collection.sciencemuseumgroup.org.uk/objects/co8356191/bbc-concert-hall-seating",
+    "s": "Science Museum Group · BBC Concert Hall seating",
+    "cat": "A Cabinet of Sound",
+    "level": "medium",
+    "choices": [
+      "To increase echoes",
+      "To shield radio interference",
+      "To amplify quiet voices",
+      "To absorb sound"
+    ],
+    "evidence": "Holding museum explains heavyupholstery absorption mitigates acoustic effect of changing audience numbers."
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "q": "Researchers used the dirty feathers of old museum bird specimens to reconstruct the history of what?",
+    "a": "Air pollution",
+    "d": "Soot trapped on pale feathers preserved a record of industrial smoke. Specimens labeled with collection dates and places helped researchers compare conditions across decades.",
+    "u": "https://news.uchicago.edu/story/soot-covered-birds-provide-clues-20th-century-pollution",
+    "s": "University of Chicago · Soot on museum birds",
+    "cat": "Feathers and Flight",
+    "level": "easy",
+    "choices": [
+      "Air pollution",
+      "Seasonal food shortages",
+      "Bird migration routes",
+      "Changes in nesting materials"
+    ],
+    "evidence": "First-party2017 account describes more than1000 preserved birds and measurements of feather soiling as a historical record of atmospheric black carbon. Not a study of inherited dark plumage."
+  },
+  {
+    "q": "Which ocean-going fish can leave nutrients in the tissues of forest trees after bears carry its remains inland?",
+    "a": "Salmon",
+    "d": "Returning fish bring marine nutrients into rivers. Bears and other animals move some of that material onto land, where it can contribute to the forest’s nutrient supply.",
+    "u": "https://research.fs.usda.gov/download/treesearch/80689.pdf",
+    "s": "US Forest Service research archive · Animal-mediated nutrient transport",
+    "cat": "Animal Encounters",
+    "level": "easy",
+    "choices": [
+      "Sardines",
+      "Salmon",
+      "Halibut",
+      "Herring"
+    ],
+    "evidence": "Primary Current Biology report describes bears and eagles moving salmon-derived nitrogen via carcasses and excrement into terrestrial soils and vegetation. USDA Tongass document independently states salmon-derived nitrogen detected in trees. No exact distance or universal dependence claim."
+  },
+  {
+    "q": "Seen in cross-section, a seahorse’s armored tail has an unusual basic shape. What is it?",
+    "a": "Square",
+    "d": "Overlapping bony plates surround the tail. Tests with models linked this shape to a useful combination of gripping ability and resistance to crushing.",
+    "u": "https://meyersgroup.ucsd.edu/papers/journals/Meyers%20399.pdf",
+    "s": "Science · Why the seahorse tail is square",
+    "cat": "Ocean Life",
+    "level": "medium",
+    "choices": [
+      "Star-shaped",
+      "Square",
+      "Triangular",
+      "Circular"
+    ],
+    "evidence": "Primary2015 paper describes square-prism tail architecture and compares printed square/cylindrical models for grasping and crushing resistance. Avoids claiming all other animals have circular tails."
+  },
+  {
+    "q": "Nissin changed the soup for its 2005 Space Ram noodles to make meals less messy in weightlessness. How?",
+    "a": "Made it thicker",
+    "d": "The more viscous soup stayed with the noodles more readily instead of scattering around the cabin. The noodles were also designed for the shuttle’s available hot water.",
+    "u": "https://media.www.nissin.com/jp/company/ir/library/annual/pdf/anr_0503_01.pdf",
+    "s": "Nissin Foods · Annual report2005, Space Ram",
+    "cat": "Curiosities from the kitchen",
+    "level": "easy",
+    "choices": [
+      "Kept it frozen",
+      "Made it thicker",
+      "Made it fizzy",
+      "Turned it into a clear oil"
+    ],
+    "evidence": "Manufacturer’s report explicitly describes increased viscosity to avoid splashing and keep soup/noodles together; reconstitution was adjusted for70C shuttle water. No medical or nutrition claims."
+  },
+  {
+    "q": "What spilled cargo became an accidental ocean-current experiment after a container was lost in the Pacific in 1992?",
+    "a": "Bath toys",
+    "d": "Reports of floating toy animals reaching beaches helped researchers compare predicted drift with real journeys. The cargo included ducks, turtles, beavers and frogs.",
+    "u": "https://repository.library.noaa.gov/view/noaa/19959/noaa_19959_DS1.pdf",
+    "s": "NOAA · OSCURS and drifting bath toys",
+    "cat": "Earth and Sky",
+    "level": "easy",
+    "choices": [
+      "Fishing floats",
+      "Beach balls",
+      "Bath toys",
+      "Cork bottle stoppers"
+    ],
+    "evidence": "NOAA’s research report describes OSCURS modeling of the1992 bathtub-toy spill, named animal shapes and subsequent beach reports. Avoids unsupported global routes and the claim that all toys were rubber ducks."
+  },
+  {
+    "q": "During World War II, B. F. Skinner proposed putting which trained birds inside an experimental missile-guidance system?",
+    "a": "Pigeons",
+    "d": "The idea relied on trained pecking responses to a target image. The museum’s surviving prototype represents a proposal that never became an operational weapon.",
+    "u": "https://americanhistory.si.edu/collections/object/nmah_690069",
+    "s": "Smithsonian National Museum of American History · Skinner prototype",
+    "cat": "Tinkerers and Their Machines",
+    "level": "medium",
+    "choices": [
+      "Pigeons",
+      "Falcons",
+      "Parrots",
+      "Crows"
+    ],
+    "evidence": "Museum collection record identifies Skinner’s pigeon-guided missile nose cone and trained birds; prototype did not become operational. Historical identification only, without engineering instructions."
+  },
+  {
+    "q": "When other squirrels watched them hide food, eastern gray squirrels in a study preferentially turned which way?",
+    "a": "With their backs to the watchers",
+    "d": "They also spread caches farther apart. The behavior changed when other squirrels were present, suggesting tactics that could reduce theft.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/16802144/",
+    "s": "Animal Behaviour · Audience effects on squirrel caching",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "With their backs to the watchers",
+      "Sideways with one eye on each side",
+      "Uphill regardless of where watchers stood",
+      "Facing directly toward the watchers"
+    ],
+    "evidence": "Primary2006 abstract reports caching with backs toward conspecific observers and greater cache spacing, without the same effect from corvid audiences. Does not infer human-like deception or consciousness."
+  }
+]

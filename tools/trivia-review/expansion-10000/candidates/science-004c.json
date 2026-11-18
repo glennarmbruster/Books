@@ -1,0 +1,727 @@
+[
+  {
+    "candidateId": "science-0101",
+    "q": "In experiments with an oil droplet bouncing on a vibrating oil bath, what can steer the droplet as it appears to walk across the surface?",
+    "a": "Waves created by its own bounces",
+    "d": "Each impact produces ripples. The droplet interacts with the evolving wave field, creating a visible example of a particle-like object guided by waves.",
+    "s": "MIT · Fluid Dynamics Mimicking Quantum Mechanics",
+    "u": "https://news.mit.edu/2013/when-fluid-dynamics-mimic-quantum-mechanics-0729",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Waves created by its own bounces",
+      "An electric charge applied to the droplet",
+      "A chemical trail left behind it",
+      "A temperature gradient across the bath"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2013/when-fluid-dynamics-mimic-quantum-mechanics-0729",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "MIT experiment describes bouncing oil droplets propelled and guided by their self-generated waves. This is a classical analogue, not proof of a quantum interpretation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "7298bdfc7a48c3f976e776b266f3c6bc12535f6ae6c8e9b1e6f5e476ae30ecae"
+    }
+  },
+  {
+    "candidateId": "science-0102",
+    "q": "NC State researchers made experimental wires that could reconnect after being cut and pressed together. What unusual material carried electricity inside them?",
+    "a": "Liquid metal",
+    "d": "A gallium–indium alloy filled channels in a self-healing polymer. Rejoining the cut ends restored both the conducting path and the surrounding sheath.",
+    "s": "NC State · Self-Healing Stretchable Wires",
+    "u": "https://news.ncsu.edu/2013/01/wms-dickey-healing-wires-2013/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Braided carbon fibers",
+      "Liquid metal",
+      "Dissolved copper salts",
+      "Silver-coated glass beads"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.ncsu.edu/2013/01/wms-dickey-healing-wires-2013/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report identifies liquid gallium–indium channels inside self-healing polymer and reconnection after severed ends are reunited.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "3806b5542637980e7e683df0bf6351ca2c245bde8abd5eefb1f74b742a7aac5c"
+    }
+  },
+  {
+    "candidateId": "science-0103",
+    "q": "In a 2020 fluid-physics experiment, small model boats floated upside down beneath a suspended liquid layer. What kept this strange arrangement stable?",
+    "a": "Vertical vibration",
+    "d": "Repeated up-and-down motion stabilized both the liquid layer and the inverted floaters. The apparent reversal of buoyancy depended on the continuous vibration.",
+    "s": "Nature · Floating under a levitating liquid",
+    "u": "https://www.nature.com/articles/s41586-020-2643-8",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "An upward jet of compressed air",
+      "A strong magnetic field",
+      "Continuous rotation of the container",
+      "Vertical vibration"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nature.com/articles/s41586-020-2643-8",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary experiment reports inverted buoyancy under vertical shaking. Its linked correction changes a reference-author surname only, not the result.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "2882355de1155c158fce8f8ea45782e99443a552be017d4459ed617f0755d72a"
+    }
+  },
+  {
+    "candidateId": "science-0104",
+    "q": "Rice researchers showed that used coffee grounds and other carbon-rich waste could be transformed by brief intense electrical heating into what valuable material?",
+    "a": "Graphene",
+    "d": "Flash Joule heating rearranged the carbon into thin graphene sheets. The 2020 work demonstrated a route for converting low-value carbon sources into a useful engineering material.",
+    "s": "Rice University · Trash into Graphene in a Flash",
+    "u": "https://news.rice.edu/news/2020/rice-lab-turns-trash-valuable-graphene-flash",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Graphene",
+      "Synthetic diamond",
+      "Carbon fiber cloth",
+      "Silicon carbide"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.rice.edu/news/2020/rice-lab-turns-trash-valuable-graphene-flash",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University report explicitly describes flash Joule heating of carbon sources and coffee grounds yielding graphene; speculative cost and environmental claims omitted.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "d34ed974413e276ad22976ba4ff61ab1f837357247869c604c05547f7178cd7e"
+    }
+  },
+  {
+    "candidateId": "science-0105",
+    "q": "MIT Lincoln Laboratory demonstrated a laser system that delivered sound near a listener’s ear without headphones. Which substance in the air absorbed the light to create sound?",
+    "a": "Water vapor",
+    "d": "The chosen infrared wavelength is strongly absorbed by airborne water molecules. Their response to the laser produces localized sound through the photoacoustic effect.",
+    "s": "MIT Lincoln Laboratory · Targeted Acoustic Laser Communication",
+    "u": "https://www.ll.mit.edu/partner-us/available-technologies/targeted-acoustic-laser-communication-talc",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Carbon dioxide",
+      "Water vapor",
+      "Nitrogen",
+      "Oxygen"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.ll.mit.edu/partner-us/available-technologies/targeted-acoustic-laser-communication-talc",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Laboratory technology description identifies ambient water vapor as the absorber and photoacoustic conversion as the mechanism.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "7096cdce81833c4fe76dcc197e6f47d52324f7c298d07c0b0a4dbabf58a55728"
+    }
+  },
+  {
+    "candidateId": "science-0106",
+    "q": "Some carbon-nanotube loudspeakers produce sound without a vibrating speaker cone. What directly disturbs the surrounding air?",
+    "a": "Rapid heating and cooling",
+    "d": "An electrical signal changes the temperature of an extremely light nanotube sheet. The adjacent air repeatedly expands and contracts, creating pressure waves.",
+    "s": "ISMA 2018 · Carbon Nanotube Thermophones",
+    "u": "https://past.isma-isaac.be/downloads/isma2018/proceedings/Contribution_267_proceeding_3.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Rapid heating and cooling",
+      "Repeated electrical sparks",
+      "Light-driven chemical reactions",
+      "A rotating magnetic field"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://past.isma-isaac.be/downloads/isma2018/proceedings/Contribution_267_proceeding_3.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary2018 Barnard/Senczyszyn conferencepaper pages107–108 describes electrically driven temperature oscillations, expansion/contraction of surrounding air, and sound production without moving parts. Delegated researcher opened and read completePDF; HTTP200verified.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Replaced staleUTDallasPDF404 after audit006 with accessible primaryconferencepaper.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "86d4da00a861d29af992148467e274fa907fd02beb10d11c90a51efc26633464"
+    }
+  },
+  {
+    "candidateId": "science-0107",
+    "q": "An MIT camera system reconstructed objects hidden around a corner by treating what ordinary surface as an indirect reflector?",
+    "a": "Wall",
+    "d": "Short laser pulses scattered from a visible wall to a hidden object and back. Careful measurements of their travel times helped reconstruct the object’s shape.",
+    "s": "MIT · A Camera That Peers Around Corners",
+    "u": "https://news.mit.edu/2012/camera-sees-around-corners-0321",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "A polished metal door handle",
+      "Wall",
+      "A pool of water",
+      "A windowpane"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2012/camera-sees-around-corners-0321",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University account describes reconstruction using diffusely reflecting ordinary walls rather than mirror-like surfaces.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "49d7293810f5450585d1b849ebbbd4e3684d894e9750474d13930ff95e4f49b8"
+    }
+  },
+  {
+    "candidateId": "science-0108",
+    "q": "A Stanford computer prototype reported in 2015 represented and manipulated bits using what moving objects?",
+    "a": "Water droplets",
+    "d": "Magnetic nanoparticles allowed droplets to move in step with a rotating magnetic field. The project linked computation to physically routing tiny amounts of liquid.",
+    "s": "Stanford University · A Computer Operating on Water Droplets",
+    "u": "https://news.stanford.edu/stories/2015/06/computer-water-drops-060815",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Grains of sand",
+      "Water droplets",
+      "Steel ball bearings",
+      "Tiny soap bubbles"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.stanford.edu/stories/2015/06/computer-water-drops-060815",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party report describes synchronous droplet logic, nanoparticle-loaded water droplets, and a rotating magnetic clock.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "6d21b930443b10847327251679a9c5493c82b518cdf7bf7ebaff1141ecef3dd0"
+    }
+  },
+  {
+    "candidateId": "science-0109",
+    "q": "In a 2019 Boston University experiment, what shape of acoustic device quieted a tone while leaving an open air passage?",
+    "a": "Hollow ring",
+    "d": "The internal structure redirected sound waves while leaving a passage for air. The 2019 demonstration targeted a particular tone rather than eliminating every possible noise.",
+    "s": "Boston University Engineering · 2019 Annual Report",
+    "u": "https://www.bu.edu/eng/files/2021/03/Annual-Report-2019_FINAL.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Bundle of drinking straws",
+      "Hollow ring",
+      "Porous foam plug",
+      "Perforated steel plate"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.bu.edu/eng/files/2021/03/Annual-Report-2019_FINAL.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party annual-report project describes an open acoustic metamaterial cutting a tone while preserving air passage; no unsupported broadband claim.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "752e975e79adbf495aba3ee7ee496da6b7fe2de0e853e80b5ca671a74e28b618"
+    }
+  },
+  {
+    "candidateId": "science-0110",
+    "q": "Empa’s disposable paper-battery prototype could be switched on by adding what?",
+    "a": "Water",
+    "d": "Moistening the paper dissolved its embedded salt and made the electrolyte conductive. In a demonstration, two connected cells powered an LCD alarm clock.",
+    "s": "Empa · A Paper Battery with a Water Switch",
+    "u": "https://www.empa.ch/web/s604/wasser-aktivierte-batterie?inheritRedirect=true",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Water",
+      "Rubbing alcohol",
+      "Vegetable oil",
+      "Liquid soap"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.empa.ch/web/s604/wasser-aktivierte-batterie?inheritRedirect=true",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional 2022 report describes water activation, salt dissolution, printed electrodes, and the alarm-clock proof of concept.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "4ac96db0e79ab6276df28129d3200e87f4f8263f7fb7c6bf606d1189b30dbbc8"
+    }
+  },
+  {
+    "candidateId": "science-0111",
+    "q": "MIT’s PhotoChromeleon experiment could replace a colorful pattern on a coated shoe or phone case without repainting it. What reprogrammed the coating?",
+    "a": "Projected light",
+    "d": "A mix of light-sensitive dyes could be activated and selectively faded. UV and visible illumination erased or created patterns on the same coated object.",
+    "s": "MIT · Objects Change Colors with PhotoChromeleon",
+    "u": "https://news.mit.edu/2019/changing-colors-photochromeleon-mit-csail-0910",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Ultrasonic pulses",
+      "A changing magnetic field",
+      "Projected light",
+      "Controlled air pressure"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2019/changing-colors-photochromeleon-mit-csail-0910",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University report describes cyan, magenta, and yellow photochromic dyes controlled by UV light and projected visible light.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "95b9761727c45db42941b2234cbb2a680ef3a8d0155d1dbb4921973958e4c80a"
+    }
+  },
+  {
+    "candidateId": "science-0112",
+    "q": "When an auxetic material is stretched lengthwise, how can its overall width respond in contrast to an ordinary rubber band?",
+    "a": "Become wider",
+    "d": "Its internal geometry opens outward under tension. This counterintuitive sideways expansion is described by a negative Poisson’s ratio.",
+    "s": "Georgia Tech · Architected Auxetic Materials",
+    "u": "https://news.gatech.edu/news/2023/11/30/hollister-lab-develops-3d-printing-soft-tissue-engineering",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Become wider",
+      "Remain unchanged",
+      "Alternate repeatedly between wider and narrower",
+      "Become narrower"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.gatech.edu/news/2023/11/30/hollister-lab-develops-3d-printing-soft-tissue-engineering",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional research explanation states longitudinal stretching causes lateral expansion; ordinary elastics narrow. No medical-use claim is tested.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a20894c4261f33069a6cbed3125333500fca33964c60fd67551a869361c97d2f"
+    }
+  },
+  {
+    "candidateId": "science-0113",
+    "q": "JILA researchers measured a gravitational difference in ticking rates within a single cloud of atoms in 2022. Roughly how far apart vertically were its top and bottom?",
+    "a": "About a millimeter",
+    "d": "Clocks at a slightly greater height run faster in Earth’s gravitational field. The experiment measured the tiny difference within one cloud of ultracold strontium atoms.",
+    "s": "NIST · General Relativity at Millimeter Scale",
+    "u": "https://www.nist.gov/news-events/news/2022/02/jila-atomic-clocks-measure-einsteins-general-relativity-millimeter-scale",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "About a millimeter",
+      "About a kilometer",
+      "About a meter",
+      "About a centimeter"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nist.gov/news-events/news/2022/02/jila-atomic-clocks-measure-einsteins-general-relativity-millimeter-scale",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NIST reports gravitational frequency differences across roughly one millimeter within a single strontium cloud. The tested fact is experimental resolution, not the general time-dilation principle already in earth003.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "b111833ea94dcbbc39233c845e6413bc7137708fa6c47c37af295fb32ecdbf31"
+    }
+  },
+  {
+    "candidateId": "science-0114",
+    "q": "Albert Einstein and Leo Szilard worked on a safer version of which household appliance after concerns about lethal gas leaks?",
+    "a": "Refrigerator",
+    "d": "They pursued refrigeration designs that avoided vulnerable mechanical pumping parts. Their engineering work produced patents, though it did not become a successful mass-market appliance.",
+    "s": "Smithsonian Lemelson Center · The Einstein-Szilard Refrigerator",
+    "u": "https://invention.si.edu/invention-stories/einstein-szilard-refrigerator",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Refrigerator",
+      "Gas cooker",
+      "Water heater",
+      "Clothes dryer"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://invention.si.edu/invention-stories/einstein-szilard-refrigerator",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Smithsonian account documents their refrigeration project, toxic refrigerant leaks, hermetically sealed pump, and commercialization difficulties.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "cac7bbaf5f5776a32202e4b845925bb685857d5821d4f7b79489d08cce2e4d55"
+    }
+  },
+  {
+    "candidateId": "science-0115",
+    "q": "In a disappearing-glass demonstration, a clear rod becomes almost invisible when immersed in a particular liquid. Which property must the rod and liquid closely match?",
+    "a": "Refractive index",
+    "d": "Matching how they bend light greatly reduces the visible optical boundary. The rod is still present; its outline has become much harder to distinguish.",
+    "s": "Exploratorium · Disappearing Glass Rods",
+    "u": "https://annex.exploratorium.edu/xref/exhibits/disappearing_glass_rods.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Electrical conductivity",
+      "Thermal expansion rate",
+      "Refractive index",
+      "Mass density"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://annex.exploratorium.edu/xref/exhibits/disappearing_glass_rods.html",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum exhibit explanation attributes disappearance to matching refractive indices; a rod of different glass remains visible.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "99f6d4cfa216120ff91c0370fefb36e1a62643db55d2d28951d7f431da364566"
+    }
+  },
+  {
+    "candidateId": "science-0116",
+    "q": "Rice’s 2022 necrobotics experiment turned which deceased creatures into miniature mechanical grippers?",
+    "a": "Spiders",
+    "d": "Puffs of air extended the legs, which curled again when pressure was released. The researchers used that motion to grasp and move small objects.",
+    "s": "Rice University · Necrobotic Spiders",
+    "u": "https://news.rice.edu/news/2022/rice-engineers-get-grip-necrobotic-spiders",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Spiders",
+      "Praying mantises",
+      "Crabs",
+      "Scorpions"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.rice.edu/news/2022/rice-engineers-get-grip-necrobotic-spiders",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University account describes deceased wolf spiders used as pressure-actuated grippers; this tests an engineering application rather than general spider anatomy.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "2762443008dff9e9e59a819300b7eb692e09a5ca1ba82f5a0bbd32ce32ba4c02"
+    }
+  },
+  {
+    "candidateId": "science-0117",
+    "q": "Cornell’s microscopic nanoguitar demonstrated in 2003 was played using what instead of a musician’s fingers?",
+    "a": "Laser",
+    "d": "Its strings were tiny silicon bars vibrating far above audible guitar frequencies. The device demonstrated miniature mechanical components with possible uses in electronics and sensing.",
+    "s": "Cornell University · A Playable Nanoguitar",
+    "u": "https://news.cornell.edu/stories/2003/11/new-playable-nanoguitar-promises-circuit-applications",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "An ultrasonic needle",
+      "A rotating magnetic field",
+      "A microscopic air jet",
+      "Laser"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.cornell.edu/stories/2003/11/new-playable-nanoguitar-promises-circuit-applications",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University article title explicitly states laser-played; body identifies silicon-bar strings and vibrations 17 octaves above ordinary guitar frequencies.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "e4ab66fff1c5b74a82696f013010304fdd513c18d7c33d3446d7ffd6bb2e4d8d"
+    }
+  },
+  {
+    "candidateId": "science-0118",
+    "q": "Swedish researchers demonstrated a working transistor in 2023 using which unexpected structural material infused with a conducting polymer?",
+    "a": "Wood",
+    "d": "They removed lignin from balsa and filled the remaining structure with a conductive polymer. The resulting device could regulate current, although it was bulky and slow compared with conventional electronics.",
+    "s": "Linköping University · A Wood Transistor",
+    "u": "https://liu.se/en/news-item/varldens-forsta-tratransistor",
+    "cat": "Science in Plain Sight",
+    "level": "medium",
+    "choices": [
+      "Wood",
+      "Chalk",
+      "Leather",
+      "Cork"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://liu.se/en/news-item/varldens-forsta-tratransistor",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party university account specifies delignified balsa filled with PEDOT:PSS and a working current-regulating transistor; no first-ever or commercial-replacement claim.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a8560a076b11372a1f3cb48a66c1ced09e11438fe5383b46e572dcae998a9b8c"
+    }
+  },
+  {
+    "candidateId": "science-0119",
+    "q": "Canada’s NRC used a special impact simulator to fire which unusual projectiles at aircraft components?",
+    "a": "Dead birds",
+    "d": "The high-speed impacts simulated collisions that can damage windscreens, engines, and other aircraft parts. The device acquired nicknames such as the chicken gun.",
+    "s": "Statistics Canada · Aviation in Canada, 1972",
+    "u": "https://publications.gc.ca/collections/collection_2016/statcan/CS51-501-1972-eng.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Rubber balls",
+      "Bags of sand",
+      "Dead birds",
+      "Frozen fish"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://publications.gc.ca/collections/collection_2016/statcan/CS51-501-1972-eng.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Contemporary government report page61 explicitly describes pre-killed birds fired to duplicate in-flight collisions; no frozen-chicken urban legend.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "9a71cdb445fc21a35391ad4680be1414d9f8dc55322be728ca363322aa498973"
+    }
+  },
+  {
+    "candidateId": "science-0120",
+    "q": "A robotic gripper reported by Cornell and collaborators in 2010 used a party balloon filled with which lightweight material?",
+    "a": "Ground coffee",
+    "d": "The soft bag molded itself around an object. Removing air jammed the grains together, letting the gripper hold objects without individual mechanical fingers.",
+    "s": "Cornell University · A Universal Robotic Gripper",
+    "u": "https://news.cornell.edu/stories/2010/10/researchers-develop-universal-robotic-gripper",
+    "cat": "Science in Plain Sight",
+    "level": "medium",
+    "choices": [
+      "Table salt",
+      "Wheat flour",
+      "Cocoa powder",
+      "Ground coffee"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.cornell.edu/stories/2010/10/researchers-develop-universal-robotic-gripper",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University account documents selected coffee-filled latex balloon and vacuum-triggered granular jamming. Rice and couscous were also tested, so neither is a distractor.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "014b7dc1ba219f9d5adf7238e4f13ccd5ae3c8fa06aa0af2886c9c1e6d7bd051"
+    }
+  },
+  {
+    "candidateId": "science-0121",
+    "q": "Lancaster physicists found that structures made from which familiar toy could act as unusually effective thermal insulators at very low temperatures?",
+    "a": "LEGO bricks",
+    "d": "The plastic modules and the gaps between them greatly restricted heat flow in the tested cryogenic range. The result suggested inexpensive ways to build supports for ultra-cold experiments.",
+    "s": "Scientific Reports · LEGO Block Structures as a Sub-Kelvin Thermal Insulator",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/31873080/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Glass marbles",
+      "Wooden building blocks",
+      "LEGO bricks",
+      "Steel construction sets"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/31873080/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper measures LEGO ABS/void structures from70mK to1.8K and reports strong thermal isolation with mechanical support; no room-temperature extrapolation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "67b48400a766592c270a6efc207bd8c1f7566bb4fbff637e02ef98da28d038d3"
+    }
+  },
+  {
+    "candidateId": "science-0122",
+    "q": "For a 2012 airplane wireless-signal test, Boeing filled passenger seats with sacks of what as stand-ins for people?",
+    "a": "Potatoes",
+    "d": "The potatoes interacted with radio signals in useful ways similar to human bodies. The engineers later checked their test data using human stand-ins on the ground.",
+    "s": "Boeing · Wireless-Signal Test Breakthrough",
+    "u": "https://boeing.mediaroom.com/2012-12-19-Boeing-test-breakthrough-means-more-reliable-connectivity-on-airplanes",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Rice",
+      "Coffee beans",
+      "Peanuts",
+      "Potatoes"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://boeing.mediaroom.com/2012-12-19-Boeing-test-breakthrough-means-more-reliable-connectivity-on-airplanes",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Manufacturer’s dated release documents potato sacks in a grounded decommissioned aircraft and subsequent human validation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "c1248c3b313a32c60989f1e92b2bf783ff7aef22e0eb9cd7f6d1235ce990bfc1"
+    }
+  },
+  {
+    "candidateId": "science-0123",
+    "q": "A physics team studied how nonspherical objects pack together by filling containers with which familiar sweets?",
+    "a": "M&M’s",
+    "d": "The flattened candies packed more densely than randomly arranged spheres in the experiments. Their shape helped researchers investigate the geometry of crowded particles.",
+    "s": "Science · Improving the Density of Jammed Disordered Packings Using Ellipsoids",
+    "u": "https://fhstillinger.github.io/FrankStillingerWebsite/fhspapers/fhspaper279.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Gummy bears",
+      "Candy corn",
+      "Jelly beans",
+      "M&M’s"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://fhstillinger.github.io/FrankStillingerWebsite/fhspapers/fhspaper279.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper describes regular and mini M&M experiments and higher random packing fractions than ball bearings; comparison does not claim superiority to optimally ordered spheres.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "bef752c9d1ca5426455706821c470797404638106b180307c440a84a9faf823a"
+    }
+  },
+  {
+    "candidateId": "science-0124",
+    "q": "Cambridge researchers demonstrated a way to make toner-printed office paper reusable without turning it back into pulp. What removed the print?",
+    "a": "Laser pulses",
+    "d": "Carefully chosen laser conditions removed toner while leaving the paper largely intact. The 2012 study explored unprinting as an alternative to recycling the whole sheet.",
+    "s": "University of Cambridge · Use a Laser, Save a Tree",
+    "u": "https://www.eng.cam.ac.uk/node/199",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "A freezing-and-thawing cycle",
+      "Laser pulses",
+      "High-pressure steam",
+      "Ultrasonic washing"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.eng.cam.ac.uk/node/199",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional study account documents tests of laser toner removal on standard copy paper, analysis of damage, and the reuse concept.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a75352a820b92691af136f48d617ce414e17a7ea0cc7c5bf6c9d7dd02ac060ed"
+    }
+  },
+  {
+    "candidateId": "science-0125",
+    "q": "A 2022 MIT and Rhode Island School of Design project made a washable shirt fabric function as what?",
+    "a": "Microphone",
+    "d": "Special fibers produced electrical signals when sound made the cloth vibrate. The team demonstrated acoustic detection, including the direction of handclaps, in fabric panels.",
+    "s": "MIT · Acoustic Fabric",
+    "u": "https://news.mit.edu/2022/fabric-acoustic-microphone-0316",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Microphone",
+      "Touchscreen",
+      "Solar panel",
+      "Radio antenna"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2022/fabric-acoustic-microphone-0316",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "First-party study report describes piezoelectric fiber, machine-washable cloth, acoustic detection, and clap-direction demonstration. No clinical performance claim.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "2a8a81cf74e6e6d51faccee753ecd57467748fda2db3437871d3b2641eca8f55"
+    }
+  }
+]

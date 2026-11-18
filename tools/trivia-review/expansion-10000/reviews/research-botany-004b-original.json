@@ -1,0 +1,402 @@
+[
+  {
+    "q": "A Caulerpa seaweed can have structures resembling leaves, stems and roots. What is unusual about its cellular organization?",
+    "a": "One giant cell with many nuclei",
+    "d": "The branching body lacks the internal partitions that normally separate a plant into many cells. Its leaf-like and root-like regions share the same continuous cell.",
+    "u": "https://www.caltech.edu/about/news/growth-of-a-giant-single-cell-is-intertwined-with-daily-self-rhythms",
+    "s": "Caltech · A giant single cell",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Many small cells with one nucleus each",
+      "One giant cell with just one nucleus",
+      "Many separate giant cells with many nuclei each",
+      "One giant cell with many nuclei"
+    ],
+    "evidence": "Institution report explicitly describes a meter-scale single extended cell with many unseparated nuclei."
+  },
+  {
+    "q": "In Hämmerling’s experiments on the umbrella-shaped alga Acetabularia, transferring which cell component could change the shape of a later-grown cap?",
+    "a": "The nucleus",
+    "d": "A cell could eventually grow a cap resembling the species that supplied its nucleus. These experiments helped establish the nucleus’s role in directing development.",
+    "u": "https://www.ncbi.nlm.nih.gov/books/NBK10066/",
+    "s": "Developmental Biology · Acetabularia experiments",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "A chloroplast",
+      "The nucleus",
+      "A storage vacuole",
+      "The outer cell wall"
+    ],
+    "evidence": "NCBI textbook describes nucleus transfer and eventual donor-specific cap form; distinct from old parasol-shape identity question."
+  },
+  {
+    "q": "A developing Volvox colony starts as a hollow ball of cells. What dramatic maneuver puts its cells into their adult arrangement?",
+    "a": "Turning itself inside out",
+    "d": "The cell sheet bends and moves through an opening. This inversion reorganizes the spherical embryo without simply breaking it into separate cells.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/25978266/",
+    "s": "Höhn and colleagues · Volvox inversion",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Splitting into two matching hemispheres",
+      "Flattening into a permanent disc",
+      "Turning itself inside out",
+      "Rolling itself into a spiral ribbon"
+    ],
+    "evidence": "Primary study describes spherical embryo inversion via cell-shape changes."
+  },
+  {
+    "q": "Which poisonous gas can make up part of the gas inside a bull kelp’s buoyancy bladder?",
+    "a": "Carbon monoxide",
+    "d": "Experiments on Nereocystis found that replacing its bladder gas with air was followed by fresh carbon monoxide production. The bladder is a gas mixture, not pure carbon monoxide.",
+    "u": "https://www.journals.uchicago.edu/doi/abs/10.1086/332742",
+    "s": "Langdon · Carbon monoxide in Nereocystis",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Carbon monoxide",
+      "Ammonia",
+      "Chlorine",
+      "Hydrogen sulfide"
+    ],
+    "evidence": "Primary abstract reports several percent CO regenerated within days after air replacement; no all-kelps/puregas claim."
+  },
+  {
+    "q": "The dung fungus Pilobolus has a transparent swelling beneath its spore capsule. What optical job does that swelling perform?",
+    "a": "Focusing light like a lens",
+    "d": "The swelling concentrates light onto a sensitive region. This helps orient the stalk so its capsule is launched toward light and away from its dung nursery.",
+    "u": "https://archive.bio.ed.ac.uk/jdeacon/microbes/apical.htm",
+    "s": "University of Edinburgh · Fungal growth and orientation",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "Focusing light like a lens",
+      "Splitting light into separate colors",
+      "Reflecting moonlight onto neighboring spores",
+      "Blocking ultraviolet from the capsule"
+    ],
+    "evidence": "University teaching resource explicitly identifies vesicle as lens focusing onto carotenoid pigment."
+  },
+  {
+    "q": "What supplies the mechanical force for the rice blast fungus’s infection peg to pierce a leaf’s tough surface?",
+    "a": "Building intense internal water pressure",
+    "d": "Its specialized infection cell accumulates high turgor pressure and directs the force through a penetration peg. The process can breach the leaf’s protective outer layers.",
+    "u": "https://www.nature.com/articles/s41564-023-01430-x",
+    "s": "Magnaporthe membrane-tension study · Nature Microbiology",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Creating strong capillary suction",
+      "Expanding trapped carbon dioxide gas",
+      "Releasing stored elastic tension",
+      "Building intense internal water pressure"
+    ],
+    "evidence": "Primary study explicitly describes pressurized appressorium driving rigid penetration peg."
+  },
+  {
+    "q": "Rhizoxin was long attributed to the rice-damaging fungus Rhizopus microsporus. What actually makes this toxin?",
+    "a": "Bacteria living inside the fungus",
+    "d": "The fungus houses bacterial partners that manufacture rhizoxin. The disease-causing relationship therefore involves a plant, a fungus and an internal bacterial producer.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/16939276/",
+    "s": "Scherlach and colleagues · Rhizoxin-producing endosymbionts",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "Bacteria living inside the fungus",
+      "The rice plant after infection",
+      "A virus multiplying in rice cells",
+      "A second fungus on the leaf surface"
+    ],
+    "evidence": "Primary abstract states rhizoxin is produced by endosymbiotic bacteria rather than fungal host."
+  },
+  {
+    "q": "Why can a cup fungus launch spores farther by releasing many of them together?",
+    "a": "The spores generate a shared airflow",
+    "d": "Synchronized ejection pushes surrounding air into motion. Experiments and models showed that the resulting flow carries spores farther and can help them move around obstacles.",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2955148/",
+    "s": "Roper and colleagues · Cooperatively generated wind",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "The spores spread a low-friction surface film",
+      "The spores electrostatically repel one another",
+      "The spores generate a shared airflow",
+      "The spores join into larger clumps"
+    ],
+    "evidence": "Primary simulations and experiments identify synchronized ejection creating airflow, distinct from earlier evaporative cooling."
+  },
+  {
+    "q": "How can a bloom of algae on a snowfield help speed up melting?",
+    "a": "Making the surface absorb more sunlight",
+    "d": "Pigmented cells darken the snow and reduce its reflectivity. Their color can therefore influence the snow’s energy balance as well as signal a living community.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/41292094/",
+    "s": "Snow-algae color and albedo · New Phytologist",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Releasing salts that lower the freezing point",
+      "Making the surface absorb more sunlight",
+      "Producing heat through rapid metabolism",
+      "Breaking ice crystals apart as colonies expand"
+    ],
+    "evidence": "Primary study investigates pigment-dependent albedo reduction and radiative forcing in co-occurring colored blooms."
+  },
+  {
+    "q": "Ferns have no flowers, yet some species make which familiar floral reward on their leaves?",
+    "a": "Nectar",
+    "d": "Researchers documented fern nectaries with sugar-rich secretions visited by ants, snails and other animals. A proposed protective benefit from ants is not proven for every fern.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/34643269/",
+    "s": "Fern nectaries · American Journal of Botany",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Starch-rich food bodies",
+      "Resin",
+      "Nutrient-rich oils",
+      "Nectar"
+    ],
+    "evidence": "Primary survey documents nectaries, analyzed sugars and animal nectar feeding; pollination not implied."
+  },
+  {
+    "q": "In Fiji, Philidris nagasau ants practice an unusual kind of farming. What living crop do they plant and tend?",
+    "a": "Plants that provide their nesting chambers",
+    "d": "The ants place Squamellaria seeds in suitable sites and fertilize the growing plants. Mature plants supply sheltered chambers, making the farming partnership more than simple seed dispersal.",
+    "u": "https://nph.onlinelibrary.wiley.com/doi/10.1002/ppp3.10072",
+    "s": "Chomicki and Renner · Plants domesticated by ants",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Plants that provide their nesting chambers",
+      "Fungi that grow on leaf fragments",
+      "Mosses used to line underground chambers",
+      "Algae grown in pools inside leaves"
+    ],
+    "evidence": "Primary-author review shows planted seeds, fertilized seedlings and later plant domatia used by ants."
+  },
+  {
+    "q": "In experiments with well-defended tomato plants, what did hungry caterpillars do sooner instead of eating as much foliage?",
+    "a": "Eat one another",
+    "d": "Induced plant defenses increased cannibalism among the caterpillars. The plants benefited from fewer herbivores and from the survivors consuming less plant material.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/29046571/",
+    "s": "Orrock and colleagues · Plant defenses and cannibalism",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Eat one another",
+      "Feed chiefly on developing fruits",
+      "Switch to feeding only after dark",
+      "Tunnel into stems instead"
+    ],
+    "evidence": "Primary experiment reports increased cannibalism and reduced abundance/herbivory; does not claim conscious plant manipulation."
+  },
+  {
+    "q": "What tiny residents can make the nectar inside a winter-flowering hellebore warmer?",
+    "a": "Yeasts",
+    "d": "Yeasts metabolizing nectar sugars release heat. Experiments found warmer flowers when nectar contained these microbes, with the effect related to yeast abundance.",
+    "u": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/GH/Helleborus",
+    "s": "Oxford University Plants400 · Hellebores",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Pollen mites",
+      "Algae",
+      "Yeasts",
+      "Nematodes"
+    ],
+    "evidence": "Oxford botanical account describes experimental manipulation of yeast density and fermentation-generated nectar heat."
+  },
+  {
+    "q": "Sticky leaves of some dune plants collect a gritty coating that discourages chewing. What is the coating made of?",
+    "a": "Sand",
+    "d": "Removing or adding sand in experiments changed herbivore damage. The grains form an external physical defense on plants such as Abronia latifolia.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/27220199/",
+    "s": "LoPresti and Karban · Sand as plant defense",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Salt crystals",
+      "Sand",
+      "Fungal spores",
+      "Dried latex"
+    ],
+    "evidence": "Primary experiments manipulate sand coating and report less chewing where present or supplemented."
+  },
+  {
+    "q": "When pulled, an older cucumber tendril can behave unlike an ordinary spring. What can its coils do?",
+    "a": "Wind more tightly",
+    "d": "Experiments found that some tendrils overwind under tension rather than unwinding. Their specialized internal fibers produce a spring that stiffens as it is stretched.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/22936777/",
+    "s": "Gerbode and colleagues · Cucumber tendril mechanics",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Expand to a larger coil diameter",
+      "Flatten the coils into a zigzag",
+      "Wind more tightly",
+      "Reverse the handedness of every coil"
+    ],
+    "evidence": "Primary abstract explicitly reports old tendrils and extracted fiber ribbons show twistless overwinding under tension."
+  },
+  {
+    "q": "Seedlings of the tropical vine studied as Monstera gigantea can find a tree to climb by growing toward what visual cue?",
+    "a": "Darkness",
+    "d": "A tree trunk creates a dark silhouette on the forest floor. The seedlings’ unusual growth response helps them reach a support before climbing toward better light.",
+    "u": "https://epublications.marquette.edu/liana_articles/630/",
+    "s": "Strong and Ray · Host-tree location by Monstera",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "A moving pattern of sun flecks",
+      "Darkness",
+      "The brightest patch of sky",
+      "Reflected ultraviolet from flowers"
+    ],
+    "evidence": "Primary abstract describes directed growth toward host-tree darkness; retained study’s species naming."
+  },
+  {
+    "q": "Some duckweeds prepare for winter by making special starch-filled buds. Where do these buds spend the cold season?",
+    "a": "On the pond bottom",
+    "d": "The dense buds, called turions, separate and sink. In spring, renewed metabolism helps them return to the surface and resume growth.",
+    "u": "https://sbs.wsu.edu/ownbeyherbarium/2026/06/25/turion-duckweed-lemna-turionifera/",
+    "s": "Washington State University Herbarium · Turion duckweed",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Inside the parent’s floating leaves",
+      "In a floating raft of dead stems",
+      "Attached to reeds above the water",
+      "On the pond bottom"
+    ],
+    "evidence": "Herbarium describes sinking, overwintering and spring resurfacing of turions; scoped some duckweeds."
+  },
+  {
+    "q": "Some coalified conifer cones millions of years old can still move their scales. What drives that movement?",
+    "a": "Water uptake and loss",
+    "d": "Low mineralization preserved parts of the cones’ original structure. Wetting and drying still made scales open and close through passive physical changes, without living cells.",
+    "u": "https://www.nature.com/articles/srep40302",
+    "s": "Poppinga and colleagues · Fossil cone movement",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Changes in magnetic fields",
+      "Expansion of growing mineral crystals",
+      "Water uptake and loss",
+      "Residual pressure from buried gases"
+    ],
+    "evidence": "Primary abstract reports passive water-driven opening/closing in Eemian and MiddleMiocene coalified cones, linked to low mineralization."
+  },
+  {
+    "q": "How can the seed pods of Pisonia “birdcatcher” trees accidentally kill birds?",
+    "a": "Sticking to feathers until flight becomes impossible",
+    "d": "The sticky pods normally hitch rides on birds. Too many attached pods can entangle or weigh down the carrier; this is not evidence that the tree digests birds.",
+    "u": "https://naturalhistory.si.edu/research/botany/news/plant-press/researchers-split-birdcatcher-trees-genus-pisonia-three",
+    "s": "Smithsonian National Museum of Natural History · Birdcatcher trees",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Releasing a toxin that paralyzes wings",
+      "Sticking to feathers until flight becomes impossible",
+      "Snapping shut around a bird’s feet",
+      "Expanding inside a bird’s stomach"
+    ],
+    "evidence": "Museum account explicitly describes sticky pods weighing down and rendering birds flightless; no carnivory claim."
+  },
+  {
+    "q": "What are male orchid bees collecting when they visit a Coryanthes flower before sometimes falling into its liquid-filled trap?",
+    "a": "Fragrance compounds",
+    "d": "The bees gather perfume used in courtship. A visitor that falls into the bucket must squeeze past the flower’s reproductive column on its way out.",
+    "u": "https://www.botanic.cam.ac.uk/the-garden/plant-list/coryanthes-macrantha/",
+    "s": "Cambridge University Botanic Garden · Coryanthes",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Plant fibers for nest walls",
+      "Pollen as food for larvae",
+      "Fragrance compounds",
+      "Resin for sealing brood cells"
+    ],
+    "evidence": "Garden account describes males seeking scent for female attraction and bucket escape; page typo sayswasps but correctlybees elsewhere."
+  },
+  {
+    "q": "What can change from one growing season to another in an individual jack-in-the-pulpit as its size and resources change?",
+    "a": "Its sexual function",
+    "d": "Smaller flowering individuals tend to function as male, while larger ones can function as female. The same perennial plant can change its reproductive role over time.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/28312103/",
+    "s": "Policansky · Gender in jack-in-the-pulpit",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Its sexual function",
+      "Its number of chromosome sets",
+      "Its basic leaf-vein pattern",
+      "Its method of dispersing seeds"
+    ],
+    "evidence": "Primary abstract directly states ability to change sex with changes in plant size."
+  },
+  {
+    "q": "Researchers studying the nonphotosynthetic parasite Rafflesia lagascae found evidence suggesting it may have lost which entire genetic package?",
+    "a": "Its chloroplast genome",
+    "d": "Extensive sequencing failed to find a recognizable complete plastid genome. The finding concerns that genetic package, not the loss of all DNA from the plant.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/24458431/",
+    "s": "Molina and colleagues · Possible Rafflesia plastid-genome loss",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Its nuclear genome",
+      "Its mitochondrial genome",
+      "Its pollen’s nuclear genome",
+      "Its chloroplast genome"
+    ],
+    "evidence": "Primary paper carefully titled possible loss, with multiple genomic searches; maintained evidence-suggests scope. Direct PubMedopen challenged, indexed primary abstract/fulltext read."
+  },
+  {
+    "q": "A bee preserved in Dominican amber supplied an exceptionally clear fossil record of an orchid. What was attached to the bee?",
+    "a": "A packet of orchid pollen",
+    "d": "The pollen mass on the bee’s back linked a fossil insect directly with an orchid. Its placement also helped researchers infer how the flower had used its pollinator.",
+    "u": "https://news.harvard.edu/gazette/story/2007/08/first-orchid-fossil-puts-showy-blooms-at-some-80-million-years-old/",
+    "s": "Harvard · Fossil orchid and pollinator",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "A fragment of an orchid petal",
+      "A packet of orchid pollen",
+      "A mite carrying orchid tissue",
+      "An orchid seed"
+    ],
+    "evidence": "Institution research report directly describes pollinia on extinct bee’s back and pollination evidence; no outdated first/age claim."
+  },
+  {
+    "q": "In tobacco grafting experiments that produced the polyploid Nicotiana tabauca, what crossed between species at the graft junction?",
+    "a": "Entire nuclear genomes",
+    "d": "Researchers regenerated polyploid plants from selected graft-junction tissue. This provided an experimental route to combining genomes without ordinary sexual reproduction.",
+    "u": "https://www.nature.com/articles/nature13291",
+    "s": "Fuentes and colleagues · Horizontal genome transfer",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Chloroplast genomes alone",
+      "Mitochondrial genomes alone",
+      "Messenger RNA molecules alone",
+      "Entire nuclear genomes"
+    ],
+    "evidence": "Primary paper reports nuclear-genome transfer at Nicotiana grafts producing new polyploid; experimental scope retained."
+  },
+  {
+    "q": "Why did lightning strikes sometimes benefit the tropical tree Dipteryx oleifera in a field study?",
+    "a": "They killed its competitors and climbing vines",
+    "d": "The studied trees suffered little damage from direct strikes while nearby competitors and many lianas died. Survival of the strike allowed the trees to gain from the destruction around them.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/40136034/",
+    "s": "Gora and colleagues · Trees benefiting from lightning",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "They stimulated a flush of dormant flower buds",
+      "They killed its competitors and climbing vines",
+      "They killed the roots’ fungal parasites",
+      "They thinned its own canopy and reduced water loss"
+    ],
+    "evidence": "Primary abstract reports ten direct strikes negligible host damage while killing78%lianas and competitor biomass; not alltree lightning claim."
+  }
+]

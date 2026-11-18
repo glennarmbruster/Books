@@ -1,0 +1,271 @@
+{
+  "scope": "25 accepted records only in words-003.json and words-004.json; two rejected records excluded.",
+  "reviewedOn": "2026-11-17",
+  "reviewer": "Independent peer agent batch002_culture",
+  "inputHashes": {
+    "words-003.json": "e245fe1cd7a54381d13350b567a150d7a8b55ebf4e8246a795036a94a1b9553c",
+    "words-004.json": "899ee3c3f773a8fb58b72b1ace4563144515a75242c80465a1dd34ba9a04aba4"
+  },
+  "summary": {
+    "reviewed": 25,
+    "verifiedLinkedEntries": 25,
+    "definiteFactualErrors": 0,
+    "definiteUnderlyingFactDuplicates": 0,
+    "selfAnsweringStems": 0,
+    "minorPrecisionEditsRecommended": 1,
+    "optionalDistractorRefinements": 1,
+    "borderlineVarietyRepeat": 1
+  },
+  "method": "Read every accepted question, answer, explanation and choices. Re-read all25 linked dictionary etymologies via web, and additional Word Origin/Did You Know passages where needed; also checked gage for mortgage. Compared full q+a+d against published, staged including rejected, and sibling raw candidates, excluding current card copies; read nearest neighbors and targeted word/stem matches. Direct HTTP attempts were403 but browser-indexed dictionary content was successfully read.",
+  "baselineUniqueRows": 21313,
+  "recommendations": [
+    {
+      "candidateId": "words-0029",
+      "priority": "minor precision",
+      "issue": "The explanation can imply that guide was a later English use. The source says constellation, Polaris and guide were all used on English adoption in the16th century; center of attention appears in17th.",
+      "suggestedExplanation": "In English, the word named the constellation, Polaris and a guide. Its figurative use for a focus of attention followed.",
+      "supportingSource": "https://www.merriam-webster.com/dictionary/cynosure"
+    },
+    {
+      "candidateId": "words-0026",
+      "priority": "optional choice polish",
+      "issue": "Freezing flesh is an implausible activity for the relevant stone/coffin context.",
+      "suggestedChange": "Replace Freezing it with Drying it."
+    },
+    {
+      "candidateId": "words-0041",
+      "priority": "optional variety judgment",
+      "issue": "Orchid and avocado independently yielding testicle are factual distinct histories but reuse the same surprise.",
+      "comparisonCandidate": "words-0016",
+      "suggestedChange": "Retain if distinct etymologies meet the editorial policy; otherwise hold this one for a later batch. This is not a definite duplicate."
+    }
+  ],
+  "items": [
+    {
+      "candidateId": "words-0022",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/porcelain",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Cowrie-shell ancestry is directly supported. Optional wording refinement: use “The word porcelain traces through a name for which shell?” to avoid relying on a chronology that the short etymology lists rather than narrates."
+    },
+    {
+      "candidateId": "words-0023",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/mortgage",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Dead plus pledge supported by mortgage and linked gage entries. The ominous adjective is a mild clue, not an answer giveaway; all alternatives have negative financial associations."
+    },
+    {
+      "candidateId": "words-0025",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/oxymoron",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Sharp/keen plus foolish verified. Published442 asks the figure of speech, not its components; distinct. Explanation’s keen intelligence is a reasonable gloss, although simply sharp/keen is closer to the dictionary."
+    },
+    {
+      "candidateId": "words-0026",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/sarcophagus",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Flesh-eating stone verified. The stone’s supposed flesh-dissolving mechanism is not asserted as real. Freezing it is the weakest distractor; optional swap to Drying it for a more plausible stone/coffin association."
+    },
+    {
+      "candidateId": "words-0027",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/ostracize",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Pottery-shard ballots directly verified; no same underlying fact located."
+    },
+    {
+      "candidateId": "words-0028",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/amethyst",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "The historical anti-intoxication belief and nonmedical qualification are correct; older amethyst cards concern color/mineral use."
+    },
+    {
+      "candidateId": "words-0029",
+      "recommendation": "retain_with_minor_precision_edit",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/cynosure",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Ursa Minor and Polaris verified. Minor chronology refinement: the source says guide was already an English use in the16th century, alongside constellation/star; focus of attention followed in the17th. Avoid implying all guide uses arose later than English adoption."
+    },
+    {
+      "candidateId": "words-0030",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/pansy",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "French thought ancestry and pensive connection verified; parallel mental-activity choices."
+    },
+    {
+      "candidateId": "words-0031",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/geranium",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Crane diminutive and seedpod/bill comparison verified in the entry’s Word Origin. Older Herb Robert card does not teach the name’s derivation."
+    },
+    {
+      "candidateId": "words-0032",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/delphinium",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Dolphin derivation verified; explanation correctly preserves the source’s probably for the nectary-shape account."
+    },
+    {
+      "candidateId": "words-0033",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/pancreas",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "All plus flesh/meat verified. Pan- gives knowledgeable players a fair language clue, not a literal answer in the stem."
+    },
+    {
+      "candidateId": "words-0034",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/placenta",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Latin flat-cake ancestry verified; existing placenta cards teach anatomy, not this naming fact."
+    },
+    {
+      "candidateId": "words-0035",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/patella",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Patina shallow-dish diminutive verified; existing16212 only identifies the kneecap name."
+    },
+    {
+      "candidateId": "words-0036",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/shampoo",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Imperative press/massage verified for Hindi/Urdu. Existing13276 asks the language’s country; massage meaning is distinct."
+    },
+    {
+      "candidateId": "words-0037",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/juggernaut",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Lord of the world and Vishnu title verified. No disputed crushed-worshipper account included."
+    },
+    {
+      "candidateId": "words-0038",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/denim",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Serge from Nimes verified. Nimes resembles denim by design; that is a legitimate etymological clue."
+    },
+    {
+      "candidateId": "words-0039",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/jean",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Middle English Gene/Genoa verified. Complementary to denim/Nimes, not a duplicate of that distinct word history."
+    },
+    {
+      "candidateId": "words-0040",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/vanilla",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Diminutive of sheath/pod verified. Both synonyms are legitimate; correct answer is unambiguous relative to distractors."
+    },
+    {
+      "candidateId": "words-0041",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/avocado",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Avocado/testicle senses verified without unsupported priority. Borderline editorial repetition with staged words0016 orchid/testicle: independent language histories, so not a factual duplicate, but the same plant-name/body-part punchline. Consider keeping just one if maximizing variety."
+    },
+    {
+      "candidateId": "words-0042",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/slogan",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Army/host plus cry verified; military meaning supported. Alternatives parallel."
+    },
+    {
+      "candidateId": "words-0043",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/whiskey",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Water of life verified for both Irish and Scottish Gaelic. No aquavit/eau-de-vie equivalent underlying fact found in the compared corpus."
+    },
+    {
+      "candidateId": "words-0044",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/tragedy",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Goat plus singing verified; omitted speculative explanation of the ritual origin is appropriate."
+    },
+    {
+      "candidateId": "words-0045",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/candidate",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Whitened candidate togas explicitly verified; no same fact found."
+    },
+    {
+      "candidateId": "words-0046",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/decimate",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Every tenth member selected by lot verified; broader later meaning correctly accepted. Could be easy rather than medium for this audience, but not a required relabel."
+    },
+    {
+      "candidateId": "words-0047",
+      "recommendation": "retain",
+      "factCheck": "verified against linked Merriam-Webster entry in this peer review",
+      "sourceUrl": "https://www.merriam-webster.com/dictionary/vaccine",
+      "choices": "Four distinct choices with one supported correct answer; no answer explicitly disclosed in stem. See note for optional distractor refinement.",
+      "duplicateCheck": "No definite repeated underlying fact located in full q+a+d review.",
+      "note": "Cowpox to vaccinus/vacca verified; no same word-derivation fact found."
+    }
+  ],
+  "repositoryChanges": "None"
+}

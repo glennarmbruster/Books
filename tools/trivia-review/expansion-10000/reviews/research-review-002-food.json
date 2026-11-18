@@ -1,0 +1,3060 @@
+{
+  "status": "150 frozen research candidates ready for independent parent review; held only, not published",
+  "liveQuestionCountUnchanged": 20100,
+  "candidatePath": "/tmp/trivia-next/food-002.json",
+  "difficultyCounts": {
+    "medium": 84,
+    "hard": 32,
+    "easy": 31,
+    "obscure": 3
+  },
+  "sourcePages": 146,
+  "maxCardsPerPage": 2,
+  "sourceWordBudget": "Every page is <=180 derived words across q,a,d and evidence; repeated-source pages have 93–123 combined words. Question count per page max2.",
+  "baselineFilesChecked": [
+    "/tmp/trivia100k/existing.json",
+    "/tmp/trivia100k/released.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/nature-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/culture-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/words-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/books-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/space-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/objects-002.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/sound-003.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/weather-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/places-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/objects-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/space-001.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/misc-003.json",
+    "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/nature-002.json",
+    "/tmp/trivia-next/books-002.json",
+    "/tmp/trivia-next/objects-002.json",
+    "/tmp/trivia-next/nature-002.json"
+  ],
+  "duplicateMethod": "Full q+a+d TF-IDF top3 plus human semantic comparison, broad concept/entity keyword scans across live/released/repo staged/sibling files. Underlying-fact duplicates removed even when wording or example changed. Automated score is not proof of uniqueness.",
+  "removedCandidateCount": 7,
+  "additionalResearchNotUsed": [
+    "Albius vanilla pollination:live1461",
+    "Pink pepper cashew family:released20058",
+    "Wood-pulp vanillin:live8653",
+    "Nutmeg/mace:released20012",
+    "Saffron:candidates released20003/20041",
+    "Moustache cup:sibling objects002",
+    "Carmine/cochineal:live6057",
+    "Portable soup:live384",
+    "Natto:live11418",
+    "Tempeh:live11407",
+    "Capers:released20007",
+    "Allspice:released20090",
+    "Cloves:released20014",
+    "Cassava/tapioca:live1332",
+    "Banana beer:live11438",
+    "Spaghetti break waves:live632",
+    "DumDum mystery flavor between batches:official page did not support popular claim",
+    "Fanta WWII origin:authoritative direct supporting page not found",
+    "Pompeii thermopolium duck bones:official support not found in this pass",
+    "Castoreum flavor folklore:not used"
+  ],
+  "reviews": [
+    {
+      "index": 1,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.334,
+          "id": "existing.json:15543",
+          "q": "Which of these types of chocolate is based on cocoa butter, but does not contain cocoa solids?",
+          "d": ""
+        },
+        {
+          "sim": 0.288,
+          "id": "existing.json:15536",
+          "q": "Which type of chocolate is richest in fat?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "The food-science professor describes fat crystal changes producing a pale bloom."
+    },
+    {
+      "index": 2,
+      "decision": "accept_for_parent_review",
+      "notes": "Tempura-inspired flash frying is distinct from live137 chicken flavor and US paper-cup observation.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.357,
+          "id": "existing.json:137",
+          "q": "What flavor was Momofuku Ando’s pioneering instant ramen when it went on sale in Japan in 1958?",
+          "d": "His next idea came while watching Americans break noodles into cups and eat them with forks. That observation helped inspire Cup Noodles."
+        },
+        {
+          "sim": 0.209,
+          "id": "existing.json:11521",
+          "q": "If you pour cooked pasta and hot water into a colander, which part normally passes through?",
+          "d": "The holes allow liquid out while retaining pieces larger than the openings."
+        }
+      ],
+      "sourceReadEvidence": "Founder history explicitly describes his wife frying tempura as the inspiration for flash-frying noodles."
+    },
+    {
+      "index": 3,
+      "decision": "accept_for_parent_review",
+      "notes": "Static-reduction discovery distinct from instrument borrowing in4.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.189,
+          "id": "released.json:20034",
+          "q": "Before roasting, coffee beans sit inside a fruit. What familiar fruit name do growers use for those coffee fruits?",
+          "d": "Coffee beans are seeds extracted from fruits commonly called coffee cherries."
+        },
+        {
+          "sim": 0.174,
+          "id": "existing.json:3652",
+          "q": "Before cola became widespread, the hamburger was typically served with which drink?",
+          "d": "Coffee is a beverage brewed from roasted, ground coffee beans."
+        }
+      ],
+      "sourceReadEvidence": "The research announcement explicitly connects added water with reduced static charge and clumping."
+    },
+    {
+      "index": 4,
+      "decision": "accept_for_parent_review",
+      "notes": "Instrument borrowed from volcanology distinct from practical water-spritz result in3; hard.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.288,
+          "id": "existing.json:11517",
+          "q": "In drip coffee, which part should a paper filter retain?",
+          "d": "Water carrying dissolved coffee compounds moves through the paper."
+        },
+        {
+          "sim": 0.24,
+          "id": "existing.json:11537",
+          "q": "What does the plunger screen separate in a French press?",
+          "d": "After steeping, the screen pushes the grounds toward the bottom."
+        }
+      ],
+      "sourceReadEvidence": "The team repurposed equipment used to measure charges on volcanic and wildfire ash."
+    },
+    {
+      "index": 5,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.227,
+          "id": "existing.json:3640",
+          "q": "Which food is an Apulian pasta dish that originated from Arabs who at one time ruled the region?",
+          "d": "Ciceri e tria is a pasta dish originating in the Salento region. It is prepared with pasta and chickpeas as the primary ingredients, and includes fried pasta."
+        },
+        {
+          "sim": 0.205,
+          "id": "existing.json:15884",
+          "q": "What is the side that is on the west called?",
+          "d": "The side that is on the west."
+        }
+      ],
+      "sourceReadEvidence": "Grooves control differential expansion of semolina-and-water pasta during cooking."
+    },
+    {
+      "index": 6,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.257,
+          "id": "existing.json:19433",
+          "q": "Which food fits this description? Liver of a chicken used as meat.",
+          "d": "Liver of a chicken used as meat."
+        },
+        {
+          "sim": 0.243,
+          "id": "existing.json:11418",
+          "q": "What makes natto trail thin sticky threads when stirred?",
+          "d": "Its strong aroma and sticky texture develop during fermentation."
+        }
+      ],
+      "sourceReadEvidence": "The strongest onion ferment had a fatty, meaty smell compared with liver sausage."
+    },
+    {
+      "index": 7,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.152,
+          "id": "existing.json:12437",
+          "q": "Which term fits this clue? Material derived from animals.",
+          "d": "Material derived from animals."
+        },
+        {
+          "sim": 0.149,
+          "id": "existing.json:12559",
+          "q": "\"The first rule is: you don't talk about it\" is a reference to which movie?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "The certificate identifies creamy peanut butter used to validate compositional measurements and laboratory methods."
+    },
+    {
+      "index": 8,
+      "decision": "accept_for_parent_review",
+      "notes": "Filling location result distinct from coin-loaded instrument in9.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.138,
+          "id": "existing.json:11647",
+          "q": "What Chinese range helps mark the divide between the Yellow River and Yangtze drainage basins?",
+          "d": "The mountains stretch across central China. Their climatic divide helps make them a traditional boundary between north and south."
+        },
+        {
+          "sim": 0.123,
+          "id": "objects-001.json:objects-0062",
+          "q": "Gustave Eiffel’s private apartment at the top of his tower was used primarily for guests, experiments and what everyday purpose?",
+          "d": "The summit rooms provided an office and laboratory, as well as somewhere to receive distinguished visitors. They were not an ordinary public attraction."
+        }
+      ],
+      "sourceReadEvidence": "The researcher describes most filling remaining on one wafer, with occasional exceptions."
+    },
+    {
+      "index": 9,
+      "decision": "accept_for_parent_review",
+      "notes": "Instrument construction distinct from cookie result in8.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.167,
+          "id": "existing.json:19436",
+          "q": "Which food fits this description? Cookies containing rolled oats.",
+          "d": "Cookies containing rolled oats."
+        },
+        {
+          "sim": 0.118,
+          "id": "existing.json:11509",
+          "q": "Does a traditional cookie cutter stamp a shape before or after the cookies bake?",
+          "d": "The outline cuts through rolled dough, leaving shaped pieces to transfer to the tray."
+        }
+      ],
+      "sourceReadEvidence": "The author’s assembly guide specifies penny castles loaded with coins to apply torque."
+    },
+    {
+      "index": 10,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.118,
+          "id": "existing.json:8520",
+          "q": "One account of Karsten Solheim’s golf-club experiments has him gluing what snack to a drinking straw?",
+          "d": "The story concerns the high-lofted lob wedge. The small improvised model offered a way to picture its shape."
+        },
+        {
+          "sim": 0.111,
+          "id": "existing.json:16554",
+          "q": "Which of these is not one of the state-changing processes through which water goes in nature?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "The primary paper abstract reports increased freshness and crispness judgments when bite sounds were amplified; read via indexed institutional record."
+    },
+    {
+      "index": 11,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.434,
+          "id": "existing.json:19480",
+          "q": "What is a beverage that resembles tea but is not made from tea leaves called?",
+          "d": "A beverage that resembles tea but is not made from tea leaves."
+        },
+        {
+          "sim": 0.431,
+          "id": "released.json:20015",
+          "q": "Black tea and green tea can come from the same species. Which chemical process is encouraged for black tea but limited for green tea?",
+          "d": "Processing changes the tea: black-tea leaves are allowed to oxidize, while green-tea processing limits that reaction."
+        }
+      ],
+      "sourceReadEvidence": "The 2023 primary-paper abstract identifies polyphenols complexed with tap-water ions; read via indexed abstract."
+    },
+    {
+      "index": 12,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.29,
+          "id": "existing.json:18325",
+          "q": "What shade of the blue color is also called angel blue?",
+          "d": ""
+        },
+        {
+          "sim": 0.267,
+          "id": "released.json:20032",
+          "q": "What gives a blue morpho butterfly its brilliant blue appearance?",
+          "d": "The scales manipulate reflected light. The blue display does not require a blue pigment in the wings."
+        }
+      ],
+      "sourceReadEvidence": "ACS reports acid reacting with garlic compounds and amino acids to produce blue pigments; full indexed article read."
+    },
+    {
+      "index": 13,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.218,
+          "id": "existing.json:972",
+          "q": "Two soap bubbles of different sizes share a wall. Does their dividing wall bulge into the bigger bubble or the smaller one?",
+          "d": "The smaller bubble has higher internal pressure. Equal-sized bubbles can share a flat wall."
+        },
+        {
+          "sim": 0.173,
+          "id": "existing.json:11544",
+          "q": "What does a whisk introduce to egg whites as its wires pass through them?",
+          "d": "The proteins help stabilize the bubbles, building a foam."
+        }
+      ],
+      "sourceReadEvidence": "Stanford researchers explain downward wall flow carrying small bubbles while bubbles rise in the center."
+    },
+    {
+      "index": 14,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.273,
+          "id": "objects-001.json:objects-0024",
+          "q": "What gas is trapped under pressure inside popping candy such as Pop Rocks?",
+          "d": "Saliva dissolves the sugar around the pressurized bubbles, releasing the gas and producing the crackle."
+        },
+        {
+          "sim": 0.273,
+          "id": "existing.json:17347",
+          "q": "What gas is the most abundant gas in the atmospheric air we breathe every day?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "The experiment FAQ describes a widget containing pressurized nitrogen and beer."
+    },
+    {
+      "index": 15,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.177,
+          "id": "new-6",
+          "q": "In a 2023 food-science experiment, fungus-fermented onions developed an aroma resembling which food?",
+          "d": "The fermentation produced sulfur-containing aroma compounds also associated with meat."
+        },
+        {
+          "sim": 0.145,
+          "id": "existing.json:16561",
+          "q": "What is the symbol for the speed of light?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "ACS identifies light as the trigger; mechanism also read in ACS January2002 Skunk of a Mechanism."
+    },
+    {
+      "index": 16,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.159,
+          "id": "existing.json:19499",
+          "q": "What is a drink resembling coffee that is sometimes substituted for it called?",
+          "d": "A drink resembling coffee that is sometimes substituted for it."
+        },
+        {
+          "sim": 0.154,
+          "id": "existing.json:13120",
+          "q": "Which drink do we eat almost everywhere in Europe in the morning?",
+          "d": "The Coffee can be served as it is, mixed with milk or cream, or accompanied by a small piece of chocolate (Neapolitan)."
+        }
+      ],
+      "sourceReadEvidence": "NPS describes softening hardtack in coffee and skimming off worms; full indexed page read, direct open timed out."
+    },
+    {
+      "index": 17,
+      "decision": "accept_for_parent_review",
+      "notes": "Packing by lowering cup over block is distinct from live137 paper-cup inspiration.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.307,
+          "id": "existing.json:1246",
+          "q": "Which Japanese noodle dish takes its name from the draining basket on which the chilled buckwheat noodles are served?",
+          "d": "The diner usually dips a mouthful of noodles into a separate cup of sauce."
+        },
+        {
+          "sim": 0.298,
+          "id": "existing.json:137",
+          "q": "What flavor was Momofuku Ando’s pioneering instant ramen when it went on sale in Japan in 1958?",
+          "d": "His next idea came while watching Americans break noodles into cups and eat them with forks. That observation helped inspire Cup Noodles."
+        }
+      ],
+      "sourceReadEvidence": "Founder history says the block was inverted and the cup placed face down over it, enabling reliable filling."
+    },
+    {
+      "index": 18,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.216,
+          "id": "existing.json:13258",
+          "q": "Which candy is NOT made by Mars?",
+          "d": ""
+        },
+        {
+          "sim": 0.183,
+          "id": "existing.json:5246",
+          "q": "Which Swiss layer cake owes its cherry flavor to brandy and stacks sponge with buttercream and nut meringue?",
+          "d": "The name ties the cake to the Swiss city of Zug and to kirsch, a spirit made from cherries."
+        }
+      ],
+      "sourceReadEvidence": "OSU says almond extract simulated the taste of marasca pits."
+    },
+    {
+      "index": 19,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.237,
+          "id": "new-13",
+          "q": "Why can tiny bubbles travel downward near the side of a freshly poured stout, despite being lighter than the beer?",
+          "d": "Bubbles rise through the interior while returning liquid flows down near the glass wall, carrying small bubbles with it."
+        },
+        {
+          "sim": 0.2,
+          "id": "existing.json:19737",
+          "q": "What is a notation representing the pitch and duration of a musical sound called?",
+          "d": "A notation representing the pitch and duration of a musical sound. Another name is note."
+        }
+      ],
+      "sourceReadEvidence": "Authors’ lay-language abstract says pitch rises as foam clears because bubbles reduce sound speed in the liquid."
+    },
+    {
+      "index": 20,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.144,
+          "id": "existing.json:17320",
+          "q": "What is the color of the ball used in tennis?",
+          "d": "Coated with felt, balls must be yellow or white in official competitions."
+        },
+        {
+          "sim": 0.139,
+          "id": "existing.json:18726",
+          "q": "Which yellow pigment in butterfly wings combines Greek roots for yellow and wing?",
+          "d": "The compound belongs to a group called pteridines. Butterfly scales are one place where its yellow color can show."
+        }
+      ],
+      "sourceReadEvidence": "Historical Society account says yellow coloring let white oleomargarine resemble butter and describes prohibition of colored margarine; indexed record read."
+    },
+    {
+      "index": 21,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.239,
+          "id": "existing.json:17273",
+          "q": "What fruit did a supporter throw on the field in the direction of Daniel Alves?",
+          "d": "During a Villarreal-Barça, a supporter sent a banana on the field that the side simply ate."
+        },
+        {
+          "sim": 0.235,
+          "id": "existing.json:11800",
+          "q": "Which plant fits this description? Widely cultivated species of banana trees bearing compact hanging clusters of commercially important edible yellow fruit.",
+          "d": "Widely cultivated species of banana trees bearing compact hanging clusters of commercially important edible yellow fruit. Another name is Musa paradisiaca sapientum."
+        }
+      ],
+      "sourceReadEvidence": "Hostess’s own 2011 announcement explicitly calls banana the original filling recipe."
+    },
+    {
+      "index": 22,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.242,
+          "id": "existing.json:12313",
+          "q": "What is the atmospheric pressure reduced by a formula to the pressure at sea level called?",
+          "d": "The atmospheric pressure reduced by a formula to the pressure at sea level."
+        },
+        {
+          "sim": 0.222,
+          "id": "existing.json:11534",
+          "q": "Which changes move the reading of a barometer: air pressure or ordinary daylight?",
+          "d": "Pressure changes are one clue used in weather forecasting."
+        }
+      ],
+      "sourceReadEvidence": "Smithsonian article describes heated sealed tubes, sudden pressure release and puffed grains; indexed page text read."
+    },
+    {
+      "index": 23,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.263,
+          "id": "existing.json:19031",
+          "q": "In the \"Metal Gear Solid\" series, what's the name of Solid Snake's brother?",
+          "d": ""
+        },
+        {
+          "sim": 0.214,
+          "id": "existing.json:14506",
+          "q": "Which term fits this clue? Any engine that makes use of heat to do work.",
+          "d": "Any engine that makes use of heat to do work."
+        }
+      ],
+      "sourceReadEvidence": "UCL’s material description says disc-triggered crystallization releases heat and the pouch can be reset by heating."
+    },
+    {
+      "index": 24,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.173,
+          "id": "existing.json:70",
+          "q": "What is tangzhong, the secret to some extra-soft milk breads?",
+          "d": "Heating part of the flour changes its starch so it can hold more liquid. The paste then goes back into the rest of the dough."
+        },
+        {
+          "sim": 0.163,
+          "id": "existing.json:11488",
+          "q": "How do little flakes of chocolate get into traditional stracciatella gelato?",
+          "d": "A thin stream of melted chocolate freezes and breaks into small irregular pieces."
+        }
+      ],
+      "sourceReadEvidence": "The test kitchen added water dropwise, observed seizing, and restored smoothness by adding more water."
+    },
+    {
+      "index": 25,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.203,
+          "id": "existing.json:11790",
+          "q": "Which plant fits this description? Fern of eastern North America with pale green fronds and an aroma like hay.",
+          "d": "Fern of eastern North America with pale green fronds and an aroma like hay. Another name is hay-scented."
+        },
+        {
+          "sim": 0.183,
+          "id": "existing.json:15549",
+          "q": "What should cows be fed on to produce the milk used for the making of Cantal cheese?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Court’s primary release explains fewer airborne hay particles with modern milking and the resulting reduced holes."
+    },
+    {
+      "index": 26,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.167,
+          "id": "existing.json:11467",
+          "q": "Which filling is common in devils on horseback: dried fruit or fish eggs?",
+          "d": "Prunes and dates are popular centers for the bacon-wrapped appetizer."
+        },
+        {
+          "sim": 0.149,
+          "id": "existing.json:19474",
+          "q": "Which food fits this description? Shaped and dried dough made from flour and water and sometimes egg.",
+          "d": "Shaped and dried dough made from flour and water and sometimes egg. Another name is alimentary paste."
+        }
+      ],
+      "sourceReadEvidence": "The laboratory harvested and dried kombucha SCOBY to produce a breastplate shirt."
+    },
+    {
+      "index": 27,
+      "decision": "accept_for_parent_review",
+      "notes": "Source identifies banana rachis/fruit stems, not generic plant stalks. Plausible plant-part distractors.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.334,
+          "id": "existing.json:19511",
+          "q": "What is a drink with ice cream floating in it called?",
+          "d": "A drink with ice cream floating in it. Another name is ice-cream float."
+        },
+        {
+          "sim": 0.283,
+          "id": "existing.json:5430",
+          "q": "In \"Ice Cream\" by Hyuna, Psy makes a cameo appearance and starts the music video eating what?",
+          "d": "\"Ice Cream\" is a song recorded by South Korean singer Hyuna, and it was taken from her second extended play, Melting. The song alternative also features Maboos."
+        }
+      ],
+      "sourceReadEvidence": "ACS describes cellulose nanofibrils extracted from ground banana rachis, the fruit stems, and slower melting."
+    },
+    {
+      "index": 28,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.137,
+          "id": "existing.json:2210",
+          "q": "Bagenal's Castle in Newry was long thought lost. In 1996 its remains were identified inside the premises of what business?",
+          "d": "The sixteenth-century fortified house had survived inside the former McCann's Bakery. A familiar workplace had concealed a much older building."
+        },
+        {
+          "sim": 0.124,
+          "id": "existing.json:14520",
+          "q": "Which term fits this clue? Repository in a public building where lost articles can be kept until their owners reclaim them.",
+          "d": "Repository in a public building where lost articles can be kept until their owners reclaim them."
+        }
+      ],
+      "sourceReadEvidence": "Puratos identifies its Sankt Vith collection as a sourdough library and explains restoration after bakery fires."
+    },
+    {
+      "index": 29,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.147,
+          "id": "existing.json:19580",
+          "q": "What kind of environment does a mite need to live?",
+          "d": "Without the mites, which nest in our mattresses but especially in damp places, the forests would be submerged with dead leaves."
+        },
+        {
+          "sim": 0.143,
+          "id": "existing.json:11692",
+          "q": "What Italian two-word pizza description would you order if you wanted four cheeses?",
+          "d": "The cheeses vary by recipe. Mozzarella and a blue cheese such as gorgonzola are common choices."
+        }
+      ],
+      "sourceReadEvidence": "Indexed primary abstract explicitly identifies mites used to produce Mimolette and Milbenkäse. Direct page returned403."
+    },
+    {
+      "index": 30,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.194,
+          "id": "existing.json:14059",
+          "q": "What is an electromagnetic unit of magnetic intensity called?",
+          "d": "An electromagnetic unit of magnetic intensity."
+        },
+        {
+          "sim": 0.148,
+          "id": "existing.json:14432",
+          "q": "Which term fits this clue? A hypothetical object capable of absorbing all the electromagnetic radiation falling on it.",
+          "d": "A hypothetical object capable of absorbing all the electromagnetic radiation falling on it. Another name is blackbody."
+        }
+      ],
+      "sourceReadEvidence": "Primary abstract describes grape hemispheres and whole grape-sized aqueous dimers producing plasma through resonant hotspots."
+    },
+    {
+      "index": 31,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.203,
+          "id": "new-19",
+          "q": "After you stir hot chocolate, why can tapping the mug produce a rising pitch as the drink settles?",
+          "d": "Bubbles slow sound through the liquid. As they leave, sound travels faster and the tapping note rises."
+        },
+        {
+          "sim": 0.2,
+          "id": "new-13",
+          "q": "Why can tiny bubbles travel downward near the side of a freshly poured stout, despite being lighter than the beer?",
+          "d": "Bubbles rise through the interior while returning liquid flows down near the glass wall, carrying small bubbles with it."
+        }
+      ],
+      "sourceReadEvidence": "Museum explanation explicitly describes carbon dioxide bubbles carrying raisins upward and bursting at the top."
+    },
+    {
+      "index": 32,
+      "decision": "accept_for_parent_review",
+      "notes": "Fresh-versus-canned pineapple protease fact absent from complete baseline q/a/d keyword scan.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.262,
+          "id": "existing.json:13484",
+          "q": "Where did the pineapple plant originate?",
+          "d": ""
+        },
+        {
+          "sim": 0.236,
+          "id": "existing.json:8223",
+          "q": "Côte d'Ivoire once quasi-monopolised what on fresh pineapples?",
+          "d": "Ivory Coast dominates the fresh pineapple trade."
+        }
+      ],
+      "sourceReadEvidence": "Indexed primary abstract names bromelain and says canning heat denatures enzymes so they cannot cleave proteins."
+    },
+    {
+      "index": 33,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.232,
+          "id": "existing.json:14645",
+          "q": "Which term fits this clue? White goods in which food can be stored at low temperatures.",
+          "d": "White goods in which food can be stored at low temperatures. Another name is icebox."
+        },
+        {
+          "sim": 0.131,
+          "id": "existing.json:15587",
+          "q": "What type of bread is the German bread variety called Dampfnudel?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Section9.14 explicitly says refrigeration accelerates staling through retrogradation and describes starch realignment."
+    },
+    {
+      "index": 34,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.227,
+          "id": "existing.json:11692",
+          "q": "What Italian two-word pizza description would you order if you wanted four cheeses?",
+          "d": "The cheeses vary by recipe. Mozzarella and a blue cheese such as gorgonzola are common choices."
+        },
+        {
+          "sim": 0.133,
+          "id": "new-29",
+          "q": "Which tiny creatures are deliberately involved in ripening traditional Mimolette and Milbenkäse cheeses?",
+          "d": "Researchers have collected and identified cheese mites from the ripening cabinets used for these specialties."
+        }
+      ],
+      "sourceReadEvidence": "UCLA describes bacteria from feet, belly buttons and other body parts and quotes the researcher that the cheese was not for eating."
+    },
+    {
+      "index": 35,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.175,
+          "id": "existing.json:19475",
+          "q": "Which food fits this description? Mild white cheese made from curds of soured skim milk.",
+          "d": "Mild white cheese made from curds of soured skim milk. Another name is cottage cheese."
+        },
+        {
+          "sim": 0.173,
+          "id": "existing.json:3669",
+          "q": "What is produced by repeatedly stirring and draining a mixture of curds and whey?",
+          "d": "Granular cheese, also known as stirred curd cheese and hard cheese, is a type of cheese produced by repeatedly stirring and draining a mixture of curd and whey."
+        }
+      ],
+      "sourceReadEvidence": "Research institution reports cheese fragments on the neck and chest and bacteria-and-yeast fermentation resembling kefir."
+    },
+    {
+      "index": 36,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.18,
+          "id": "existing.json:3660",
+          "q": "What fills the blank? In Great Britain, the term plum cake typically refers to what most Americans think of as a type of ____.",
+          "d": "Fruitcake or fruit cake is a cake made with candied or dried fruit, nuts, and spices, and optionally soaked in spirits. In the United Kingdom, certain rich versions may be iced and decorated."
+        },
+        {
+          "sim": 0.128,
+          "id": "existing.json:14996",
+          "q": "Which term fits this clue? A mechanism capable of returning to a safe state in case there is a failure or malfunction.",
+          "d": "A mechanism capable of returning to a safe state in case there is a failure or malfunction."
+        }
+      ],
+      "sourceReadEvidence": "Trust conservation report identifies the century-old cake, wrapping and tin; describes it as looking and smelling almost edible."
+    },
+    {
+      "index": 37,
+      "decision": "accept_for_parent_review",
+      "notes": "Starch leg launching corn is distinct from live11535 steam-pressure fact; steam-sound candidate38 removed.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.241,
+          "id": "existing.json:11392",
+          "q": "When a cook makes risotto, which ingredient releases starch to make the dish creamy?",
+          "d": "Starch from the grains thickens the liquid during cooking."
+        },
+        {
+          "sim": 0.207,
+          "id": "existing.json:19437",
+          "q": "What is a small yellow and white candy shaped to resemble a kernel of corn called?",
+          "d": "A small yellow and white candy shaped to resemble a kernel of corn."
+        }
+      ],
+      "sourceReadEvidence": "Primary abstract explicitly states that popcorn jumps with a starch leg compressed against the ground."
+    },
+    {
+      "index": 38,
+      "decision": "accept_for_parent_review",
+      "notes": "Replacement after conservative duplicate rejection: oil droplets injected down by bursting bubbles, supported directly by Princeton.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.256,
+          "id": "existing.json:12418",
+          "q": "Which term fits this clue? Any oil used to oil wool before spinning.",
+          "d": "Any oil used to oil wool before spinning."
+        },
+        {
+          "sim": 0.25,
+          "id": "existing.json:14604",
+          "q": "What is a film of oil or garbage floating on top of water called?",
+          "d": "A film of oil or garbage floating on top of water."
+        }
+      ],
+      "sourceReadEvidence": "University researchers directly describe bursting bubbles injecting tiny oil droplets into underlying water. Full indexed research account read; distinct from cereal surface attraction and coffee-ring deposition."
+    },
+    {
+      "index": 39,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.149,
+          "id": "existing.json:11289",
+          "q": "The teapot often seen in many 3D modeling applications is called what?",
+          "d": ""
+        },
+        {
+          "sim": 0.143,
+          "id": "existing.json:13601",
+          "q": "Into which basin does the Jordan River flow into?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Institutional account identifies slow pouring as the condition in which the stream redirects down the outer surface."
+    },
+    {
+      "index": 40,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.203,
+          "id": "existing.json:14543",
+          "q": "Which term fits this clue? Forward edge of an airfoil.",
+          "d": "Forward edge of an airfoil."
+        },
+        {
+          "sim": 0.185,
+          "id": "existing.json:14902",
+          "q": "Which term fits this clue? Edge tool used as a cutting instrument; has a pointed blade with a sharp edge and a handle.",
+          "d": "Edge tool used as a cutting instrument; has a pointed blade with a sharp edge and a handle."
+        }
+      ],
+      "sourceReadEvidence": "Penn states that pinned drop edges prevent shrinking circumference and particles are convectively pushed toward the edges."
+    },
+    {
+      "index": 41,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.237,
+          "id": "existing.json:11506",
+          "q": "What covers twigs with white feathery crystals on some cold mornings?",
+          "d": "Water vapor can turn directly into ice on a surface below freezing."
+        },
+        {
+          "sim": 0.221,
+          "id": "existing.json:11780",
+          "q": "Which plant fits this description? Eurasian perennial herb with white flowers that emit flammable vapor in hot weather.",
+          "d": "Eurasian perennial herb with white flowers that emit flammable vapor in hot weather. Another name is fraxinella."
+        }
+      ],
+      "sourceReadEvidence": "Bath describes levitating droplets; associated Bath paper states the film is gas from the droplets’ own evaporation."
+    },
+    {
+      "index": 42,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.117,
+          "id": "released.json:20092",
+          "q": "In Wilbur Scoville’s original pepper-heat test, an extract was diluted until a human panel could no longer taste it. What sweet liquid did he use?",
+          "d": "The original scale depended on taste tests and dilution, rather than an electronic heat sensor."
+        },
+        {
+          "sim": 0.113,
+          "id": "existing.json:486",
+          "q": "Augsburg once piped water through its butchers’ hall. What job did the water do for the meat?",
+          "d": "The hall dates to the early 1600s. Elsewhere in the city, engineers built separate channels for drinking water and industrial water."
+        }
+      ],
+      "sourceReadEvidence": "Primary research title and abstract identify sweet taste of water induced by artichoke; active components include cynarin salts."
+    },
+    {
+      "index": 43,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.226,
+          "id": "released.json:20006",
+          "q": "Which body part lets a butterfly taste a leaf simply by standing on it?",
+          "d": "Taste receptors on the feet help a female assess whether a plant is suitable for her eggs and future caterpillars."
+        },
+        {
+          "sim": 0.179,
+          "id": "existing.json:15772",
+          "q": "What will you eat when you buy a Rennes squirrel on a Breton market?",
+          "d": "It is characterized by a small fruit size, a gray-green color and a very sweet taste."
+        }
+      ],
+      "sourceReadEvidence": "Primary research reports acid-induced sweetness mediated by miraculin and human sweet receptors."
+    },
+    {
+      "index": 44,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.179,
+          "id": "existing.json:10329",
+          "q": "Which of the following color of egg is incorrect for a chicken egg?",
+          "d": ""
+        },
+        {
+          "sim": 0.179,
+          "id": "existing.json:13239",
+          "q": "How is an egg cooked in its shell?",
+          "d": "The soft-boiled egg is an egg cooked in boiling water in its shell, longer than a soft-boiled egg and less than a hard-boiled egg."
+        }
+      ],
+      "sourceReadEvidence": "Full indexed UCI release read: urea liquefied whites and a vortex device restored folding of lysozyme. Direct page returned502."
+    },
+    {
+      "index": 45,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.223,
+          "id": "existing.json:18325",
+          "q": "What shade of the blue color is also called angel blue?",
+          "d": ""
+        },
+        {
+          "sim": 0.208,
+          "id": "existing.json:11490",
+          "q": "Does a Sicilian granita feel more like flavored ice crystals or a buttery pastry?",
+          "d": "Sugar, water and flavoring form the base of the partially frozen dessert."
+        }
+      ],
+      "sourceReadEvidence": "Handbook explains methyl salicylate absorbing ultraviolet from excited nitrogen and re-emitting visible blue light during crushing."
+    },
+    {
+      "index": 46,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.297,
+          "id": "existing.json:12411",
+          "q": "Which term fits this clue? A chemical agent capable of reducing the surface tension of a liquid in which it is dissolved.",
+          "d": "A chemical agent capable of reducing the surface tension of a liquid in which it is dissolved. Another name is wetting agent."
+        },
+        {
+          "sim": 0.256,
+          "id": "existing.json:16297",
+          "q": "What is the name of the tablet designed by Microsoft designers?",
+          "d": "The first tablet generation was introduced in 2012 where two versions of Surface are presented: Surface RT and Surface Pro."
+        }
+      ],
+      "sourceReadEvidence": "Brown directly attributes the effect to interaction of gravity and surface tension."
+    },
+    {
+      "index": 47,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.307,
+          "id": "existing.json:15098",
+          "q": "What is a bottle for holding soft drinks called?",
+          "d": "A bottle for holding soft drinks. Another name is soda bottle."
+        },
+        {
+          "sim": 0.266,
+          "id": "existing.json:14925",
+          "q": "What is a range with gas rings and an oven for cooking with gas called?",
+          "d": "A range with gas rings and an oven for cooking with gas. Another name is gas stove."
+        }
+      ],
+      "sourceReadEvidence": "TU Wien explicitly contrasts cork speeds around20m/s with the gas jet exceeding the speed of sound."
+    },
+    {
+      "index": 48,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.311,
+          "id": "existing.json:15767",
+          "q": "What produce, in AOC classification, 612 communes of Périgord?",
+          "d": "Perigord nut is an appellation of origin that means fresh or early-season nuts, dried nuts and walnut kernels."
+        },
+        {
+          "sim": 0.236,
+          "id": "existing.json:13172",
+          "q": "What nuts are used in the production of marzipan?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Primary abstract reports rotation toward the vertical axis preceding rise and flat orientation again at the surface."
+    },
+    {
+      "index": 49,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.244,
+          "id": "existing.json:3679",
+          "q": "Volkswagen part number 199 398 500 A is typically lubricated with which food?",
+          "d": "Ketchup or catsup is a table condiment with a sweet and sour flavor."
+        },
+        {
+          "sim": 0.121,
+          "id": "existing.json:12406",
+          "q": "Which term fits this clue? Air that has been heated and tends to rise.",
+          "d": "Air that has been heated and tends to rise."
+        }
+      ],
+      "sourceReadEvidence": "Institutional article explicitly describes viscosity decreasing as flow increases and associates this with sauce explosions."
+    },
+    {
+      "index": 50,
+      "decision": "accept_for_parent_review",
+      "notes": "Rewritten stem and choices remove answer-repeating foamy-beer phrasing and grammatical inconsistency.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.204,
+          "id": "existing.json:16165",
+          "q": "What is the liquid parts of the body called?",
+          "d": "The liquid parts of the body. Another name is liquid body substance."
+        },
+        {
+          "sim": 0.193,
+          "id": "new-13",
+          "q": "Why can tiny bubbles travel downward near the side of a freshly poured stout, despite being lighter than the beer?",
+          "d": "Bubbles rise through the interior while returning liquid flows down near the glass wall, carrying small bubbles with it."
+        }
+      ],
+      "sourceReadEvidence": "Authors’ conference abstract says wall motion of foam damps sloshing through viscous dissipation."
+    },
+    {
+      "index": 51,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.246,
+          "id": "existing.json:19446",
+          "q": "What is a stock made with chicken called?",
+          "d": "A stock made with chicken. Another name is chicken broth."
+        },
+        {
+          "sim": 0.216,
+          "id": "existing.json:15507",
+          "q": "Which of these vitamins is fat-soluble and is found in the milk fat?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "ACS report describes waste chicken-fat oil, oil-wick flame pyrolysis and multilayer graphitic carbon nano-onions; links study DOI 10.1021/acsami.4c02753. Read article body."
+    },
+    {
+      "index": 52,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.274,
+          "id": "new-4",
+          "q": "Researchers studying charged coffee grounds borrowed an instrument normally used to examine what dramatic natural material?",
+          "d": "A Faraday cup measured charge on falling grounds, bringing a volcanology tool into a coffee lab."
+        },
+        {
+          "sim": 0.207,
+          "id": "existing.json:11537",
+          "q": "What does the plunger screen separate in a French press?",
+          "d": "After steeping, the screen pushes the grounds toward the bottom."
+        }
+      ],
+      "sourceReadEvidence": "University research report explicitly says coffee biochar replaces a portion of the sand used in concrete; grounds undergo pyrolysis without oxygen. Read body."
+    },
+    {
+      "index": 53,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.194,
+          "id": "existing.json:12743",
+          "q": "What a fabulous Savoyard chef survived a terrible skiing accident?",
+          "d": "He is recognized by the gastronomic guides as an exceptional cook, having obtained three times three stars in the Michelin Guide."
+        },
+        {
+          "sim": 0.192,
+          "id": "existing.json:14502",
+          "q": "What is a rope used to guide the movement of the load of a crane called?",
+          "d": "A rope used to guide the movement of the load of a crane."
+        }
+      ],
+      "sourceReadEvidence": "Official company history identifies tire business and free 1900 guide for motorists and cyclists. Read body; do not claim restaurant stars existed in 1900."
+    },
+    {
+      "index": 54,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.315,
+          "id": "existing.json:10383",
+          "q": "What is a fish that is young called?",
+          "d": "A fish that is young."
+        },
+        {
+          "sim": 0.236,
+          "id": "existing.json:10272",
+          "q": "Which animal fits this clue? Any fish providing sport for the angler.",
+          "d": "Any fish providing sport for the angler. Another name is sport fish."
+        }
+      ],
+      "sourceReadEvidence": "Government regional-food account says narezushi developed to preserve fish and the rice was originally discarded. Read relevant body."
+    },
+    {
+      "index": 55,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.215,
+          "id": "existing.json:11391",
+          "q": "Which Japanese seasoning starts with fermenting soybeans with salt and kōji?",
+          "d": "Many varieties also use rice or barley."
+        },
+        {
+          "sim": 0.191,
+          "id": "existing.json:16165",
+          "q": "What is the liquid parts of the body called?",
+          "d": "The liquid parts of the body. Another name is liquid body substance."
+        }
+      ],
+      "sourceReadEvidence": "Company food-history account describes liquid accumulating on the surface of miso as the origin of soy sauce. Read body; no unsupported invention-date claim."
+    },
+    {
+      "index": 56,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.275,
+          "id": "existing.json:12621",
+          "q": "What other name is sometimes given to the ceremonial of the Caesar?",
+          "d": "On April 3, 1976, the first César ceremony was held under the presidency of Jean Gabin, a few months before his death."
+        },
+        {
+          "sim": 0.273,
+          "id": "existing.json:12924",
+          "q": "Which sculptor made the trophy given during the Caesar ceremony?",
+          "d": "César Baldaccini, known as Caesar, died in 1998 in Paris, is a member of the New Realists, movement born in 1960."
+        }
+      ],
+      "sourceReadEvidence": "Official regional tourism page identifies Tijuana and 1924. Indexed source text read; restaurant tijuanacaesars.com and Mexican tourism guide independently confirm. Avoid disputed shortage origin story."
+    },
+    {
+      "index": 57,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.237,
+          "id": "existing.json:3679",
+          "q": "Volkswagen part number 199 398 500 A is typically lubricated with which food?",
+          "d": "Ketchup or catsup is a table condiment with a sweet and sour flavor."
+        },
+        {
+          "sim": 0.184,
+          "id": "new-49",
+          "q": "Once ketchup starts flowing, what tends to happen to its resistance as it is sheared faster?",
+          "d": "Ketchup is shear-thinning. That helps explain why vigorous encouragement can suddenly deliver far too much sauce."
+        }
+      ],
+      "sourceReadEvidence": "Museum culinary historian cites mushroom liquor/ketchup recipes in Smith, Rundell, Acton and Beeton. Full relevant article read. Other historical ketchup ingredients exist; question narrows woodland ingredient to mushrooms among choices."
+    },
+    {
+      "index": 58,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.203,
+          "id": "nature-001.json:nature-0022",
+          "q": "Where do wild geladas gather to sleep away from many ground-level dangers?",
+          "d": "Geladas graze on high plateaus and descend to cliffs and ledges for the night."
+        },
+        {
+          "sim": 0.138,
+          "id": "existing.json:8868",
+          "q": "What is the fossil dormouse Seorsumuscardinus known only from?",
+          "d": "Seorsumuscardinus is a genus of fossil dormice from the early Miocene of Europe."
+        }
+      ],
+      "sourceReadEvidence": "University record of Fisker and Heilmann research describes dormouse-fattening jars, ventilation holes, ledges and food tray. Research abstract read."
+    },
+    {
+      "index": 59,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.238,
+          "id": "existing.json:19395",
+          "q": "Which food fits this description? Dessert resembling ice cream but with a boiled custard base.",
+          "d": "Dessert resembling ice cream but with a boiled custard base. Another name is frozen custard."
+        },
+        {
+          "sim": 0.218,
+          "id": "existing.json:19511",
+          "q": "What is a drink with ice cream floating in it called?",
+          "d": "A drink with ice cream floating in it. Another name is ice-cream float."
+        }
+      ],
+      "sourceReadEvidence": "Colonial Williamsburg article explicitly identifies Mary Randolph’s oyster ice cream and strained unsweetened oyster mixture. Relevant body read."
+    },
+    {
+      "index": 60,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.269,
+          "id": "existing.json:13269",
+          "q": "What country does the recipe for cappuccino and its milk cap come from?",
+          "d": "This coffee is served in a large cup, made from an espresso and topped with steamed milk until it foams."
+        },
+        {
+          "sim": 0.257,
+          "id": "existing.json:13098",
+          "q": "Which French cheese from Dauphiné is a close cousin of Saint-Félicien?",
+          "d": "This small cheese made from cow's milk is made with milk from 274 municipalities."
+        }
+      ],
+      "sourceReadEvidence": "Museum cites American Cookery (1796) instruction to milk cow directly into liquor; full relevant body read. Explanation paraphrased."
+    },
+    {
+      "index": 61,
+      "decision": "accept_for_parent_review",
+      "notes": "Wording retains designated second life after2026show, not assertion processing already occurred.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.299,
+          "id": "existing.json:14509",
+          "q": "What is a building on a farm called?",
+          "d": "A building on a farm."
+        },
+        {
+          "sim": 0.241,
+          "id": "existing.json:8343",
+          "q": "What pair of farm products gave Ontario’s London, Huron and Bruce Railway its breakfast-like nickname?",
+          "d": "The volume of agricultural freight earned the line the name Butter and Egg Special."
+        }
+      ],
+      "sourceReadEvidence": "Official announcement explicitly designates Land O’Lakes butter for Reinford Farms methane digester following show. Indexed primary text read. Wording is designated/announced plan, not independently observed completion."
+    },
+    {
+      "index": 62,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.305,
+          "id": "existing.json:11843",
+          "q": "Which plant fits this description? Plant with an elongated head of broad stalked leaves resembling celery; used as a vegetable in east Asia.",
+          "d": "Plant with an elongated head of broad stalked leaves resembling celery; used as a vegetable in east Asia. Another name is celery cabbage."
+        },
+        {
+          "sim": 0.235,
+          "id": "existing.json:19522",
+          "q": "Which food fits this description? Thickened edible aromatic root of a variety of celery plant.",
+          "d": "Thickened edible aromatic root of a variety of celery plant. Another name is celeriac."
+        }
+      ],
+      "sourceReadEvidence": "Museum collection description read through indexed text: vegetable displayed almost like flower arrangement, stalks upright in cold water. Direct page returned403; Philadelphia Museum object203211 and Bowers Museum corroborate."
+    },
+    {
+      "index": 63,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.227,
+          "id": "new-39",
+          "q": "A teapot dribbles down its spout when you pour very slowly. Which change can help the stream break free?",
+          "d": "At low flow rates, forces around the wet spout edge can redirect liquid down the pot. Greater flow can overcome that tendency."
+        },
+        {
+          "sim": 0.184,
+          "id": "existing.json:5183",
+          "q": "What traditional Central Asian snack turns tangy dairy curds into firm little balls that can travel without spilling?",
+          "d": "Drying makes the curds compact. Regional versions also go back into soups and other dishes."
+        }
+      ],
+      "sourceReadEvidence": "Museum describes curdled milk/cream with alcohol: whey drunk through spout, curds eaten. Relevant object description read."
+    },
+    {
+      "index": 64,
+      "decision": "accept_for_parent_review",
+      "notes": "Full q/a/d shellac/lac scan found no baseline ingredient-origin duplicate.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.222,
+          "id": "existing.json:14856",
+          "q": "Which term fits this clue? Any smooth glossy coating that resembles ceramic glaze.",
+          "d": "Any smooth glossy coating that resembles ceramic glaze."
+        },
+        {
+          "sim": 0.188,
+          "id": "existing.json:16507",
+          "q": "Which sweets are stored by an Internet browser?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "University chemistry explainer identifies female lac bug secretion, trees, confectioner’s glaze and candy applications. Full body read."
+    },
+    {
+      "index": 65,
+      "decision": "accept_for_parent_review",
+      "notes": "Replaced fish-bladder isinglass duplication of live17481 explanation with PEZ anti-smoking history.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.185,
+          "id": "existing.json:4647",
+          "q": "Who took up horse riding during a six-month period when she was not allowed to play football?",
+          "d": "Victoria López Serrano Felix is a Spanish professional footballer who plays as an attacking midfielder and a winger for Liga F club Barcelona and the Spain national team."
+        },
+        {
+          "sim": 0.16,
+          "id": "existing.json:4449",
+          "q": "Which Spanish footballer once scored three penalty kicks in the same game?",
+          "d": "Airam López Cabrera, known simply as Airam, is a Spanish former professional footballer who played as a striker."
+        }
+      ],
+      "sourceReadEvidence": "Indexed official FAQ directly answers why the original dispenser resembled a lighter: anti-smoking campaign. Company history corroborates."
+    },
+    {
+      "index": 66,
+      "decision": "accept_for_parent_review",
+      "notes": "Alkaline protein transformation distinct from live11482 joke about not actually taking100years.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.217,
+          "id": "existing.json:10329",
+          "q": "Which of the following color of egg is incorrect for a chicken egg?",
+          "d": ""
+        },
+        {
+          "sim": 0.198,
+          "id": "existing.json:18923",
+          "q": "What is the century from 1901 to 2000 called?",
+          "d": "The century from 1901 to 2000."
+        }
+      ],
+      "sourceReadEvidence": "Official egg-products standard identifies pidan/century eggs as alkalized eggs, final pH at least10. Indexed PDF text read. Existing11482 asks whether age100years; this asks chemical process, not age; flag topical adjacency for parent."
+    },
+    {
+      "index": 67,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.152,
+          "id": "existing.json:5711",
+          "q": "What can the prolific spawning of the Pacific herring lead to egg densities of six million eggs/m on?",
+          "d": "The Pacific herring is a species of the herring family associated with the Pacific Ocean environment of North America and northeast Asia."
+        },
+        {
+          "sim": 0.151,
+          "id": "existing.json:13693",
+          "q": "When did the Battle of the Bulge end?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Official tourism source says fermentation continues in can and produces bulging tins. Indexed article text read. Question explicitly traditional product; no can-safety advice."
+    },
+    {
+      "index": 68,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.282,
+          "id": "existing.json:3679",
+          "q": "Volkswagen part number 199 398 500 A is typically lubricated with which food?",
+          "d": "Ketchup or catsup is a table condiment with a sweet and sour flavor."
+        },
+        {
+          "sim": 0.244,
+          "id": "new-57",
+          "q": "Before tomato ketchup dominated, British recipes made a dark, savory ketchup using which woodland ingredient?",
+          "d": "Mushroom ketchups appear in eighteenth- and nineteenth-century cookbooks. Their strained, seasoned liquid flavored soups, gravies and meat."
+        }
+      ],
+      "sourceReadEvidence": "NPS biography lists banana ketchup among Orosa’s innovations; indexed relevant paragraph read. Philippine National Nutrition Council biography also explicitly confirms."
+    },
+    {
+      "index": 69,
+      "decision": "accept_for_parent_review",
+      "notes": "Manufacturer explicitly names malted-milk drink, not inferred from ingredient/flavor resemblance; parent independently verified.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.338,
+          "id": "existing.json:19479",
+          "q": "What is a candy shaped as a bar called?",
+          "d": "A candy shaped as a bar."
+        },
+        {
+          "sim": 0.291,
+          "id": "existing.json:13361",
+          "q": "Earth is located in which galaxy?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Manufacturer page explicitly says created1923 and designed to capture malted milkshakes, then says candy was named after a famed malted milk drink of the day, not the galaxy. Indexed primary paragraph re-read and exact wording verified."
+    },
+    {
+      "index": 70,
+      "decision": "accept_for_parent_review",
+      "notes": "Historical Chicken Feed marketing distinct from live19437 generic candy-corn shape definition.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.523,
+          "id": "existing.json:19437",
+          "q": "What is a small yellow and white candy shaped to resemble a kernel of corn called?",
+          "d": "A small yellow and white candy shaped to resemble a kernel of corn."
+        },
+        {
+          "sim": 0.429,
+          "id": "existing.json:19393",
+          "q": "Which food fits this description? Egg-shaped candy.",
+          "d": "Egg-shaped candy."
+        }
+      ],
+      "sourceReadEvidence": "State museum PDF says Goelitz popularized candy corn under Chicken Feed name. Indexed PDF text read. Existing19437 is simple shape identification; new fact concerns historical marketing name."
+    },
+    {
+      "index": 71,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.181,
+          "id": "existing.json:74",
+          "q": "Which Liverpool-themed song shared a double A-side with Penny Lane?",
+          "d": "The real Strawberry Field was a Salvation Army children’s home in Woolton, close to John Lennon’s childhood home."
+        },
+        {
+          "sim": 0.166,
+          "id": "existing.json:19486",
+          "q": "Which food fits this description? Fragrant dark green leaves used to flavor May wine.",
+          "d": "Fragrant dark green leaves used to flavor May wine. Another name is waldmeister."
+        }
+      ],
+      "sourceReadEvidence": "Manufacturer US FAQ maps green to strawberry, red raspberry, yellow lemon, orange orange, clear pineapple. Indexed exact list read. Region explicitly scoped to US."
+    },
+    {
+      "index": 72,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.249,
+          "id": "existing.json:13092",
+          "q": "What type of glass is traditionally used for gin and tonic?",
+          "d": "The tumbler is a flat-bottomed glass with a capacity of 25 cl, ideal for serving long drinks cocktails."
+        },
+        {
+          "sim": 0.129,
+          "id": "existing.json:14076",
+          "q": "Which term fits this clue? A system of measurement of information based on the probabilities of the events that convey information.",
+          "d": "A system of measurement of information based on the probabilities of the events that convey information."
+        }
+      ],
+      "sourceReadEvidence": "Project’s own page says customized tumbler digitally simulates sensed color and pH properties using plain water. Full body read; no claim perfect flavor replication."
+    },
+    {
+      "index": 73,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.151,
+          "id": "existing.json:3666",
+          "q": "Which food was a common peasant food in Japan during the Meiji and Taishō periods?",
+          "d": "Katemeshi, also spelled katé-meshi, was a common peasant food in Japan during the Meiji and Taishō periods."
+        },
+        {
+          "sim": 0.142,
+          "id": "existing.json:18303",
+          "q": "What is the basic chemical compound that table salt is composed of?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "University press release describes weak electrical waveform/chopsticks and tests with36participants. Full research description read. Does not frame prototype as medical recommendation."
+    },
+    {
+      "index": 74,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.165,
+          "id": "existing.json:68",
+          "q": "Which part of an egg helps keep the oil in mayonnaise dispersed in tiny droplets?",
+          "d": "A thin coating around the fat droplets helps them stay suspended. Hollandaise and béarnaise use the same emulsifying talent."
+        },
+        {
+          "sim": 0.154,
+          "id": "existing.json:16457",
+          "q": "Which of these waves have the highest wave length?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "University report explicitly identifies ultrasound, standing waves and manipulation of tiny food morsels. Full article body read. Only prototype-scale claims retained."
+    },
+    {
+      "index": 75,
+      "decision": "accept_for_parent_review",
+      "notes": "Sensory vibration study distinct from released20056 citrus-family classification.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.31,
+          "id": "released.json:20056",
+          "q": "The tingling Sichuan pepper belongs to the plant family of which familiar group of fruits?",
+          "d": "Sichuan pepper comes from Zanthoxylum plants in the citrus family, not the black-pepper family."
+        },
+        {
+          "sim": 0.238,
+          "id": "existing.json:19405",
+          "q": "Which food fits this description? Round sweet pepper.",
+          "d": "Round sweet pepper."
+        }
+      ],
+      "sourceReadEvidence": "Primary study results read: mean matched mechanical finger-vibration frequency50.0Hz; chemical stimulates tactile pathways. Existing20056 covers citrus family, not sensory mechanism. Do not claim lips physically vibrate."
+    },
+    {
+      "index": 76,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.298,
+          "id": "existing.json:19511",
+          "q": "What is a drink with ice cream floating in it called?",
+          "d": "A drink with ice cream floating in it. Another name is ice-cream float."
+        },
+        {
+          "sim": 0.245,
+          "id": "existing.json:19441",
+          "q": "What is an ice-cream soda made with ice cream floating in root beer called?",
+          "d": "An ice-cream soda made with ice cream floating in root beer."
+        }
+      ],
+      "sourceReadEvidence": "Authors’ experiment and explanation read in full relevant body: methyl cellulose thermogelling, solid hot and melts as cools. No ordinary ice cream claim."
+    },
+    {
+      "index": 77,
+      "decision": "accept_for_parent_review",
+      "notes": "Iron extraction not a claim all fortified cereals contain magnetic iron.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.238,
+          "id": "existing.json:14815",
+          "q": "What is the pole of a magnet that points toward the south when the magnet is suspended freely called?",
+          "d": "The pole of a magnet that points toward the south when the magnet is suspended freely. Another name is negative pole."
+        },
+        {
+          "sim": 0.201,
+          "id": "existing.json:16621",
+          "q": "What is the symbol for Iron?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Extension’s own iron-extraction experiment read: magnetic stir bar collects grey powder; notes identify metallic food-grade iron. Only some fortified cereals."
+    },
+    {
+      "index": 78,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.322,
+          "id": "existing.json:19412",
+          "q": "Which food fits this description? Fragrant yellow oil obtained from the lemon peel.",
+          "d": "Fragrant yellow oil obtained from the lemon peel."
+        },
+        {
+          "sim": 0.268,
+          "id": "existing.json:12418",
+          "q": "Which term fits this clue? Any oil used to oil wool before spinning.",
+          "d": "Any oil used to oil wool before spinning."
+        }
+      ],
+      "sourceReadEvidence": "Museum experiment and explanation fully read in indexed result: limonene dissolves nonpolar rubber, creates failure in stretched thin balloon. Avoid extending claim to all balloon materials."
+    },
+    {
+      "index": 79,
+      "decision": "accept_for_parent_review",
+      "notes": "Damp-cargo self-heating scoped to fats; distractors revised from absurd sunlight mechanism.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.257,
+          "id": "existing.json:14506",
+          "q": "Which term fits this clue? Any engine that makes use of heat to do work.",
+          "d": "Any engine that makes use of heat to do work."
+        },
+        {
+          "sim": 0.251,
+          "id": "nature-002.json:139",
+          "q": "What role for a cassowary’s helmet-like casque was supported by thermal imaging of living birds?",
+          "d": "The casque exchanges more heat in warm conditions and limits heat loss in cooler conditions."
+        }
+      ],
+      "sourceReadEvidence": "Industry cargo guidance read: hydrolytic/enzymatic and oxidative fat cleavage, respiration consumes fatty acids with heat, self-heating/cargo-fire risk. Scope bulk damp/improperly stored cargo, not snack bowl."
+    },
+    {
+      "index": 80,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.281,
+          "id": "existing.json:12446",
+          "q": "Which term fits this clue? Dilute sulfuric acid used in storage batteries.",
+          "d": "Dilute sulfuric acid used in storage batteries. Another name is electrolyte acid."
+        },
+        {
+          "sim": 0.215,
+          "id": "existing.json:15507",
+          "q": "Which of these vitamins is fat-soluble and is found in the milk fat?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Museum description read via indexed primary text: sulfuric acid dissolves milk proteins, centrifuge separates milk fats, butterfat percentage measured. Smithsonian nmah721593 corroborates precise acid and milk sample."
+    },
+    {
+      "index": 81,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.278,
+          "id": "new-20",
+          "q": "Under Wisconsin’s old anti-oleo rules, which color could make margarine illegal to sell?",
+          "d": "Yellow margarine resembled butter. Dairy-industry opposition helped keep a ban on the colored substitute in force for decades."
+        },
+        {
+          "sim": 0.191,
+          "id": "existing.json:3949",
+          "q": "Who was buried in St Mary's Church, Chislehurst, before his remains were moved to Farnborough Abbey 15 years later?",
+          "d": "Napoleon III was the first president of France from 1848 to 1852 and then Emperor of the French from 1852 until his deposition in 1870."
+        }
+      ],
+      "sourceReadEvidence": "Museum account explicitly says invention resulted from Napoleon III contest for inexpensive butter alternative for Navy. Indexed primary paragraph read. Distinct from card20 Wisconsin color restriction."
+    },
+    {
+      "index": 82,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.163,
+          "id": "existing.json:19511",
+          "q": "What is a drink with ice cream floating in it called?",
+          "d": "A drink with ice cream floating in it. Another name is ice-cream float."
+        },
+        {
+          "sim": 0.14,
+          "id": "existing.json:19441",
+          "q": "What is an ice-cream soda made with ice cream floating in root beer called?",
+          "d": "An ice-cream soda made with ice cream floating in root beer."
+        }
+      ],
+      "sourceReadEvidence": "Kew botanists’ article says tuberous roots of Orchis mascula ground to thickening powder used in salep and Turkish mastic ice cream. Indexed relevant body read. Do not imply single orchid species used universally."
+    },
+    {
+      "index": 83,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.192,
+          "id": "existing.json:5091",
+          "q": "What do materials scientists call the solid left when a gel dries and is free to shrink?",
+          "d": "The material can retain pores even as it contracts. Conventional dried silica gel is a familiar example of this class."
+        },
+        {
+          "sim": 0.144,
+          "id": "existing.json:10402",
+          "q": "What important bone-building mineral do the cartilage of bats finger bones lack, which makes them very flexible?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "RSC demonstration describes alginate ionic crosslinking; indexed material read; direct open405. US Army master recipe book p109 explicitly calcium chloride bath and sodium alginate solution; RSC primary paper d5fb00772k directly confirms calcium crosslinking."
+    },
+    {
+      "index": 84,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.293,
+          "id": "existing.json:11957",
+          "q": "Which plant fits this description? Corn having kernels with a hard outer layer enclosing the soft endosperm.",
+          "d": "Corn having kernels with a hard outer layer enclosing the soft endosperm. Another name is flint corn."
+        },
+        {
+          "sim": 0.289,
+          "id": "existing.json:19431",
+          "q": "Which food fits this description? Corn that can be eaten as a vegetable while still young and soft.",
+          "d": "Corn that can be eaten as a vegetable while still young and soft. Another name is green corn."
+        }
+      ],
+      "sourceReadEvidence": "UW Plant Disease Diagnostics Clinic describes Ustilago maydis corn smut galls and culinary delicacy; APS plant-disease lesson corroborates. Indexed primary body read."
+    },
+    {
+      "index": 85,
+      "decision": "accept_for_parent_review",
+      "notes": "No ambergris in complete baseline/released/staged/sibling q/a/d search.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.162,
+          "id": "existing.json:14752",
+          "q": "What is a small restaurant where drinks and snacks are sold called?",
+          "d": "A small restaurant where drinks and snacks are sold. Another name is cafe."
+        },
+        {
+          "sim": 0.159,
+          "id": "existing.json:14958",
+          "q": "What is a counter at a large party where you can purchase drinks by the glass called?",
+          "d": "A counter at a large party where you can purchase drinks by the glass."
+        }
+      ],
+      "sourceReadEvidence": "Smithsonian article full body read: origin in sperm whale bowels and historical food/beverage use. Avoid uncertain claims about exact expulsion mechanism and anecdotal royal preferences."
+    },
+    {
+      "index": 86,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.186,
+          "id": "existing.json:15508",
+          "q": "What is the main ingredient of the traditional Indonesian meal called Rendang?",
+          "d": ""
+        },
+        {
+          "sim": 0.174,
+          "id": "existing.json:7708",
+          "q": "Nixon's \"Slaughtergate\" scandal involved selling what as beef?",
+          "d": "The Australian meat substitution scandal of 1981 involved the widespread substitution of horse meat and kangaroo meat for beef in Australia."
+        }
+      ],
+      "sourceReadEvidence": "University explainer full relevant body read: enzyme links lysine/glutamine in different protein chains; shrimp noodles example. No unsupported safety generalizations retained."
+    },
+    {
+      "index": 87,
+      "decision": "accept_for_parent_review",
+      "notes": "Four plausible food separators; source identifies nori.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.226,
+          "id": "existing.json:11427",
+          "q": "What dark wrapping holds the rice and fillings together in Korean gimbap?",
+          "d": "Gim is edible seaweed, and bap is cooked rice."
+        },
+        {
+          "sim": 0.224,
+          "id": "existing.json:9818",
+          "q": "The men of Wade's Battery attempted to tunnel beneath enemy lines during the Siege of what?",
+          "d": "Wade's Battery was an artillery battery in the Confederate States Army during the American Civil War."
+        }
+      ],
+      "sourceReadEvidence": "Institute research report full body read: nori separator prevents short circuits; beeswax/gold contacts described. Clearly experimental battery, not advice to eat ordinary batteries."
+    },
+    {
+      "index": 88,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.282,
+          "id": "new-38",
+          "q": "Princeton researchers watched bubbles burst through oil floating on water. Where did some tiny oil droplets unexpectedly go?",
+          "d": "Bursting bubbles can inject oil droplets beneath the surface, rather than sending everything upward. The effect offers a way to make very fine mixtures."
+        },
+        {
+          "sim": 0.221,
+          "id": "existing.json:68",
+          "q": "Which part of an egg helps keep the oil in mayonnaise dispersed in tiny droplets?",
+          "d": "A thin coating around the fat droplets helps them stay suspended. Hollandaise and béarnaise use the same emulsifying talent."
+        }
+      ],
+      "sourceReadEvidence": "Researchers’ APS abstract read: anethole/ethanol/water miscibility, adding water triggers anise-oil emulsification and milky appearance. Bristol chemistry anethole page separately confirms mechanism."
+    },
+    {
+      "index": 89,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.382,
+          "id": "existing.json:16395",
+          "q": "What is the lightest element that is a metal?",
+          "d": ""
+        },
+        {
+          "sim": 0.216,
+          "id": "existing.json:16559",
+          "q": "What mineral present in some mineral waters is used as a cure for different types of depression?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Full university article read:1929 Bib-Label Lithiated Lemon-Lime Soda, lithium citrate ingredient, subsequently removed. No unproven claim about origin of numeral7 or efficacy as medicine."
+    },
+    {
+      "index": 90,
+      "decision": "accept_for_parent_review",
+      "notes": "Removed answer-giving sawmill clue.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.216,
+          "id": "existing.json:50",
+          "q": "At the ice bar that debuted on Norwegian Epic in 2010, what were even the stools and glasses made of?",
+          "d": "The frozen furnishings went beyond the drinkware. The walls, tables and life-size sculptures were also made of ice."
+        },
+        {
+          "sim": 0.208,
+          "id": "existing.json:17155",
+          "q": "Which Frozen number transforms a fugitive queen's trip up a mountain into the construction of an ice palace?",
+          "d": "“Let It Go” won the original-song Oscar at the 2014 Academy Awards for its appearance in “Frozen”."
+        }
+      ],
+      "sourceReadEvidence": "NPS body read via indexed text: ice packed tightly insulated with sawdust/straw; Tudor shipping. NPS Stamboul historic-register document explicitly describes double-sheathed holds filled with sawdust for long voyages."
+    },
+    {
+      "index": 91,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.25,
+          "id": "existing.json:13094",
+          "q": "Which creamy cheese owes its fame to its nutty taste?",
+          "d": "A peasant cheese, often made by women, until the 17th century Saint-Nectaire was called rye cheese."
+        },
+        {
+          "sim": 0.245,
+          "id": "existing.json:15565",
+          "q": "What texture does Gruyere cheese traditionally have?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Official regional product record identifies casu marzu synonyms, Piophila casei larvae and breakdown causing creamy texture. Indexed Italian PDF read and translated. No legal or medical claim."
+    },
+    {
+      "index": 92,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.251,
+          "id": "existing.json:19519",
+          "q": "Which food fits this description? Bread made of coarse rye flour.",
+          "d": "Bread made of coarse rye flour. Another name is pumpernickel."
+        },
+        {
+          "sim": 0.239,
+          "id": "new-33",
+          "q": "What can happen faster to bread in a refrigerator, even while mold growth is slowed?",
+          "d": "Cold refrigerator temperatures speed the rearrangement of starch molecules that firms the crumb."
+        }
+      ],
+      "sourceReadEvidence": "Producers’ account read: rye bread in cellar or glass bottle, Penicillium inoculated crumb then collected/crushed/sieved and introduced to milk or curd. Maison Carles account independently confirms maintained rye-bread culture. Do not imply all modern makers still use bread."
+    },
+    {
+      "index": 93,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.17,
+          "id": "existing.json:14277",
+          "q": "EDM producer Marshmello performs live wearing clothes and a marshmallow mask of what colour?",
+          "d": ""
+        },
+        {
+          "sim": 0.147,
+          "id": "existing.json:11927",
+          "q": "Which plant fits this description? Twining plant of Amazon basin having large edible roots.",
+          "d": "Twining plant of Amazon basin having large edible roots. Another name is potato bean."
+        }
+      ],
+      "sourceReadEvidence": "University article relevant body read: spongy roots extracted hot water, sweetened/aerated/cooled, mucilage interferes with crystallization. Cornell maple-marshmallow fact sheet corroborates root history and modern no-root formula."
+    },
+    {
+      "index": 94,
+      "decision": "accept_for_parent_review",
+      "notes": "Edible drone wings/body distinct from edible aquatic fish-feed pellets in98.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.203,
+          "id": "existing.json:5635",
+          "q": "During the 11½ day rescue of Bat 21 Bravo, the Americans flew an average of 90 sorties a day to protect their airman, hitting what with over 800 air strikes in direct support of his rescue?",
+          "d": "The rescue of Bat 21 Bravo, the call sign for Iceal \"Gene\" Hambleton, was the \"largest, longest, and most complex search-and-rescue\" operation during the Vietnam War."
+        },
+        {
+          "sim": 0.159,
+          "id": "existing.json:5682",
+          "q": "British charity SARbot UK use remote-controlled robots to perform what?",
+          "d": "SARbot UK is an underwater search and rescue charity based in the United Kingdom. They can be called to assist the emergency services who are unable to perform rescues below the water's surface."
+        }
+      ],
+      "sourceReadEvidence": "Funded-project report full body read: semi-edible drone wings and body edible, frees payload for water. Do not attach unverified rice-cake detail from earlier prototype or claim entire drone edible."
+    },
+    {
+      "index": 95,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.23,
+          "id": "new-12",
+          "q": "Garlic can turn blue during pickling without blue food coloring. Which ingredient can help trigger the pigment-forming reaction?",
+          "d": "Acidic conditions let garlic compounds react into linked ring structures that produce blue pigments."
+        },
+        {
+          "sim": 0.214,
+          "id": "existing.json:11396",
+          "q": "Which ingredient gives North African harissa paste its characteristic heat?",
+          "d": "Seasonings vary, often including garlic and spices."
+        }
+      ],
+      "sourceReadEvidence": "Evidence review full relevant production section read: high-temperature/high-humidity aging, no active cultures, Maillard sugars cause dark color. Primary research Food Chemistry DOI10.1016/j.foodchem.2017.06.079 separately directly supports primary-darkening claim. No home-making instructions."
+    },
+    {
+      "index": 96,
+      "decision": "accept_for_parent_review",
+      "notes": "Specific pancake/glaucoma analogy is obscure; labeled accordingly.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.248,
+          "id": "existing.json:16284",
+          "q": "Which part of the body does glaucoma affect?",
+          "d": ""
+        },
+        {
+          "sim": 0.223,
+          "id": "existing.json:4324",
+          "q": "Which glaucoma medication is more than 60 times as active as its mirror image?",
+          "d": "Levobunolol is a non-selective beta blocker. It is used topically in the form of eye drops to manage ocular hypertension and open-angle glaucoma."
+        }
+      ],
+      "sourceReadEvidence": "Institute event text and annual report pp70–71 read: Bouremel demonstrates relation of pancake patterns to glaucoma fluid drainage. Wording analogy/model, not proven clinical treatment improvement."
+    },
+    {
+      "index": 97,
+      "decision": "accept_for_parent_review",
+      "notes": "No Mentos eruption/nucleation duplicate found in complete q/a/d search.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.208,
+          "id": "existing.json:16209",
+          "q": "Dry ice is the solid form of what substance?",
+          "d": ""
+        },
+        {
+          "sim": 0.192,
+          "id": "new-14",
+          "q": "The rattling widget in a draught-style stout can helps recreate a creamy head by releasing which gas?",
+          "d": "Opening the can releases pressurized gas through tiny holes, creating many small bubbles."
+        }
+      ],
+      "sourceReadEvidence": "University geology department explanation full body read: nucleation points on candy cause rapid bubbles of dissolvedCO2. Primary Tonya Coffey DietCokeandMentos.pdf search confirms. No dangerous reaction instructions."
+    },
+    {
+      "index": 98,
+      "decision": "accept_for_parent_review",
+      "notes": "Retargeted from obvious prey-like-motion clue to intended fish-feed application.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.209,
+          "id": "existing.json:453",
+          "q": "In U.S. forecasts, which winter precipitation often bounces on the sidewalk like tiny beads?",
+          "d": "The pellets are already frozen when they reach the pavement."
+        },
+        {
+          "sim": 0.191,
+          "id": "nature-001.json:nature-0095",
+          "q": "Ice pellets can form when falling snow partly melts and then passes through what kind of air layer?",
+          "d": "The partially melted precipitation freezes again into small hard pellets before reaching the ground."
+        }
+      ],
+      "sourceReadEvidence": "Project funder’s report read: edible aquatic robots are moving fish-food pellets resembling natural prey; potential feeding-efficiency benefit. Do not claim field-proven ecological outcome."
+    },
+    {
+      "index": 99,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.252,
+          "id": "existing.json:12446",
+          "q": "Which term fits this clue? Dilute sulfuric acid used in storage batteries.",
+          "d": "Dilute sulfuric acid used in storage batteries. Another name is electrolyte acid."
+        },
+        {
+          "sim": 0.248,
+          "id": "existing.json:12433",
+          "q": "What is a hydrogen atom in an acid that forms a positive ion when the acid dissociates called?",
+          "d": "A hydrogen atom in an acid that forms a positive ion when the acid dissociates. Another name is acidic hydrogen."
+        }
+      ],
+      "sourceReadEvidence": "USDA technical evaluation relevant indexed text read: commercial production shifted from Italian lemons to Aspergillus niger fermentation; other Candida processes also exist. Question major method, not exclusively or all citric acid."
+    },
+    {
+      "index": 100,
+      "decision": "accept_for_parent_review",
+      "notes": "No saccharin/Fahlberg duplicate found in complete q/a/d search.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.127,
+          "id": "existing.json:14795",
+          "q": "What is a theater at which dinner is included in the price of admission called?",
+          "d": "A theater at which dinner is included in the price of admission. Another name is dinner theater."
+        },
+        {
+          "sim": 0.122,
+          "id": "existing.json:15587",
+          "q": "What type of bread is the German bread variety called Dampfnudel?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Museum history full body read: Fahlberg sweet roll after spill on hands and identified benzoic sulfinide. Avoid exactyear conflict with other accounts and unsafe laboratory tasting procedures."
+    },
+    {
+      "index": 101,
+      "decision": "accept_for_parent_review",
+      "notes": "Short natural Tootsie Pop answer replaces long clause; compares4candies.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.153,
+          "id": "existing.json:3365",
+          "q": "What bought filming rights for the untitled Tom Cruise project from Disney after the latter refused to produce a PG-13 rated film?",
+          "d": "Universal City Studios LLC, commonly known as Universal Studios or simply Universal, is an American film production and distribution company headquartered at the Universal Studios complex in Universal City, California."
+        },
+        {
+          "sim": 0.129,
+          "id": "existing.json:19393",
+          "q": "Which food fits this description? Egg-shaped candy.",
+          "d": "Egg-shaped candy."
+        }
+      ],
+      "sourceReadEvidence": "Manufacturer summarizes Purdue tongue-model machine, 364 average, and differing human and machine trials. Full indexed body read."
+    },
+    {
+      "index": 102,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.189,
+          "id": "existing.json:11427",
+          "q": "What dark wrapping holds the rice and fillings together in Korean gimbap?",
+          "d": "Gim is edible seaweed, and bap is cooked rice."
+        },
+        {
+          "sim": 0.181,
+          "id": "new-87",
+          "q": "IIT researchers used which sushi ingredient as the separator inside their experimental edible rechargeable battery?",
+          "d": "The seaweed layer kept the battery’s electrodes apart. Other components included food-derived compounds, beeswax and edible gold contacts."
+        }
+      ],
+      "sourceReadEvidence": "University describes its patented dulse strain as bacon-flavored when fried; university press release explains abalone origin. Indexed university text read."
+    },
+    {
+      "index": 103,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.247,
+          "id": "existing.json:15587",
+          "q": "What type of bread is the German bread variety called Dampfnudel?",
+          "d": ""
+        },
+        {
+          "sim": 0.194,
+          "id": "words-002.json:words-0003",
+          "q": "The word companion reaches back to the idea of sharing which staple food?",
+          "d": "Its Latin roots join togetherness with panis, meaning bread or food."
+        }
+      ],
+      "sourceReadEvidence": "University report dates flatbread remains to 14,400 years and says 4,000 years before agriculture; Cambridge paper abstract corroborates 24 remains."
+    },
+    {
+      "index": 104,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.217,
+          "id": "existing.json:11778",
+          "q": "Which plant fits this description? Birch of western United States resembling the paper birch but having brownish bark.",
+          "d": "Birch of western United States resembling the paper birch but having brownish bark. Another name is water birch."
+        },
+        {
+          "sim": 0.167,
+          "id": "existing.json:10258",
+          "q": "Which animal fits this clue? All of the living human inhabitants of the earth.",
+          "d": "All of the living human inhabitants of the earth. Another name is human race."
+        }
+      ],
+      "sourceReadEvidence": "Primary paper title and abstract identify 5,700-year-old human genome and oral microbiome from chewed birch pitch; York university account corroborates."
+    },
+    {
+      "index": 105,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.189,
+          "id": "existing.json:16216",
+          "q": "On the periodic table of elements, what is the symbol for Tin?",
+          "d": ""
+        },
+        {
+          "sim": 0.15,
+          "id": "existing.json:11562",
+          "q": "What determines the separate shapes of muffins baked in one tin?",
+          "d": "Each hollow keeps one portion of batter apart from its neighbors."
+        }
+      ],
+      "sourceReadEvidence": "Manufacturer history explicitly describes dead lion surrounded by bees and Samson story. Scope is traditional tin, not every modern package."
+    },
+    {
+      "index": 106,
+      "decision": "accept_for_parent_review",
+      "notes": "No spit-dog/turnspit duplicate found.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.171,
+          "id": "existing.json:14893",
+          "q": "Which term fits this clue? Water wheel that is used to drive machinery in a mill.",
+          "d": "Water wheel that is used to drive machinery in a mill. Another name is millwheel."
+        },
+        {
+          "sim": 0.166,
+          "id": "existing.json:13226",
+          "q": "What is Cynophobia the fear of?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Collection entry describes 17th-century wooden wheel, chain and spit, with short-legged dogs running inside. Indexed collection description read."
+    },
+    {
+      "index": 107,
+      "decision": "accept_for_parent_review",
+      "notes": "Specific Robert May snake in surprise pie is obscure; primary-library exhibit.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.166,
+          "id": "existing.json:11583",
+          "q": "What escapes through a ceramic pie bird standing in a pie crust?",
+          "d": "The hollow bird provides a vent while the filling cooks."
+        },
+        {
+          "sim": 0.14,
+          "id": "existing.json:19365",
+          "q": "What does Solid Snake use to hide himself with?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Primary-library exhibit of May’s Accomplisht Cook describes bride pie with live birds or snake; related Folger historian interview explains empty baked crust technique."
+    },
+    {
+      "index": 108,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.368,
+          "id": "existing.json:10222",
+          "q": "Which animal fits this clue? Large tropical turtle with greenish flesh used for turtle soup.",
+          "d": "Large tropical turtle with greenish flesh used for turtle soup. Another name is Chelonia mydas."
+        },
+        {
+          "sim": 0.164,
+          "id": "existing.json:15832",
+          "q": "Which lake in Central Park is located between Vista Rock and the Great Lawn?",
+          "d": "As its name suggests, Turtle Pond is populated by turtles but also dragonflies, frogs and various species of birds."
+        }
+      ],
+      "sourceReadEvidence": "Heritage project account identifies 1758 Glasse recipe using calf’s head and hooves and relates it to Carroll’s Mock Turtle. Full body read."
+    },
+    {
+      "index": 109,
+      "decision": "accept_for_parent_review",
+      "notes": "Mouse-study scope retained; sour cells sensing CO2 distinct from optogenetic water-sensing in110.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.265,
+          "id": "existing.json:18308",
+          "q": "What is found in plant cells, but not in animal cells?",
+          "d": ""
+        },
+        {
+          "sim": 0.244,
+          "id": "existing.json:16449",
+          "q": "What kind of cells carry oxygen around your body?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Primary 2009 paper abstract describes sour-sensing cells and carbonic anhydrase 4 as carbonation sensor. Mouse-study scope retained."
+    },
+    {
+      "index": 110,
+      "decision": "accept_for_parent_review",
+      "notes": "Specially engineered mouse cells, not ordinary light making people thirsty; hard.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.341,
+          "id": "existing.json:18308",
+          "q": "What is found in plant cells, but not in animal cells?",
+          "d": ""
+        },
+        {
+          "sim": 0.313,
+          "id": "existing.json:16449",
+          "q": "What kind of cells carry oxygen around your body?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "University report and linked primary abstract describe optogenetic stimulation with light without water causing robust drinking responses; not ordinary mice drinking light."
+    },
+    {
+      "index": 111,
+      "decision": "accept_for_parent_review",
+      "notes": "Named Oxford experiment; does not generalize all light spoons; obscure exact study result.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.336,
+          "id": "existing.json:15538",
+          "q": "What is the origin of the word yogurt?",
+          "d": ""
+        },
+        {
+          "sim": 0.186,
+          "id": "existing.json:16912",
+          "q": "What governed the speed and color of clouds on a London frozen-yogurt shop’s virtual ceiling?",
+          "d": "Cinimod Studio in London, United Kingdom, designed a virtual sky ceiling for a Snog frozen yogurt outlet with clouds whose speeds and colors depend upon the time of day."
+        }
+      ],
+      "sourceReadEvidence": "Primary paper abstract explicitly reports denser and more expensive from lighter spoon than artificially weighted spoon. Indexed abstract read; direct page access restricted."
+    },
+    {
+      "index": 112,
+      "decision": "accept_for_parent_review",
+      "notes": "Receptor mechanism distinct from live1063 xylitol endothermic dissolution; distractors revised.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.309,
+          "id": "existing.json:1063",
+          "q": "Which five-carbon sweetener can produce a cooling sensation in your mouth as its crystals dissolve?",
+          "d": "It is a sugar alcohol. Dissolving the crystals takes up heat, so the cooling need not come from mint flavoring."
+        },
+        {
+          "sim": 0.284,
+          "id": "existing.json:18767",
+          "q": "The name of what dry sensation combines the Greek roots xero- and stoma, the second meaning “mouth”?",
+          "d": "It's the sensation of a dry mouth, which can occur with a change in saliva."
+        }
+      ],
+      "sourceReadEvidence": "Primary McKemy et al. abstract identifies receptor activated by menthol and cool-to-cold temperatures. Technical receptor mechanism supported."
+    },
+    {
+      "index": 113,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.274,
+          "id": "existing.json:18303",
+          "q": "What is the basic chemical compound that table salt is composed of?",
+          "d": ""
+        },
+        {
+          "sim": 0.149,
+          "id": "existing.json:9008",
+          "q": "One of the worst radiation spill accidents occurred when ignorant thieves broke a steel container with about 90 grams of what?",
+          "d": "Caesium chloride or cesium chloride is the inorganic compound with the formula CsCl. This colorless salt is an important source of caesium ions in a variety of niche applications."
+        }
+      ],
+      "sourceReadEvidence": "Official tourism article identifies ammonium chloride in salmiakki; Finnish Food Authority document explicitly defines salmiakki as ammonium chloride, NH4Cl."
+    },
+    {
+      "index": 114,
+      "decision": "accept_for_parent_review",
+      "notes": "No civet-coffee/kopi-luwak fact found; generic animal definition10375 is distinct.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.4,
+          "id": "released.json:20034",
+          "q": "Before roasting, coffee beans sit inside a fruit. What familiar fruit name do growers use for those coffee fruits?",
+          "d": "Coffee beans are seeds extracted from fruits commonly called coffee cherries."
+        },
+        {
+          "sim": 0.331,
+          "id": "existing.json:3652",
+          "q": "Before cola became widespread, the hamburger was typically served with which drink?",
+          "d": "Coffee is a beverage brewed from roasted, ground coffee beans."
+        }
+      ],
+      "sourceReadEvidence": "Primary research article abstract describes partly digested coffee beans from Asian palm civets. Avoids unsupported claims about improved flavor or welfare."
+    },
+    {
+      "index": 115,
+      "decision": "accept_for_parent_review",
+      "notes": "No bubblegum-pink/Diemer origin fact found; union primary trade history.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.268,
+          "id": "existing.json:13270",
+          "q": "\"Gum arabic\" is a natural gum consisting of the hardened sap of which tree species?",
+          "d": ""
+        },
+        {
+          "sim": 0.258,
+          "id": "objects-001.json:objects-0053",
+          "q": "William Wrigley Jr. once offered free chewing gum with cans of what household product before gum became his main business?",
+          "d": "The gum proved more popular than the item it promoted. Wrigley shifted his attention from soap and baking powder to chewing gum."
+        }
+      ],
+      "sourceReadEvidence": "Union newsletter page 10 states pink was the only food coloring available when Diemer made the successful batch. Indexed PDF text read."
+    },
+    {
+      "index": 116,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.264,
+          "id": "existing.json:19154",
+          "q": "What was the FIRST Valve game to have VR?",
+          "d": ""
+        },
+        {
+          "sim": 0.196,
+          "id": "existing.json:18348",
+          "q": "What blood song did Michael Jackson release in 1997?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "First-party experimental account by Elisabeth Paul describes egg substitution using blood and successful blood meringues. Full indexed body read."
+    },
+    {
+      "index": 117,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.218,
+          "id": "existing.json:15546",
+          "q": "Which vitamin is the orange pigment beta-carotene converted to by the human body?",
+          "d": ""
+        },
+        {
+          "sim": 0.171,
+          "id": "existing.json:15528",
+          "q": "What is the color of the blossoms of the apple tree?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "FDA 2016 consultation describes lower enzyme conversion from lycopene to beta-carotene and identifies tomato and watermelon colors. Full indexed government text read."
+    },
+    {
+      "index": 118,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.34,
+          "id": "existing.json:11636",
+          "q": "What category includes soda bread and many muffins because they rise without waiting for yeast to work?",
+          "d": "Baking soda or baking powder can supply the gas. That shortens the wait before baking."
+        },
+        {
+          "sim": 0.216,
+          "id": "existing.json:11509",
+          "q": "Does a traditional cookie cutter stamp a shape before or after the cookies bake?",
+          "d": "The outline cuts through rolled dough, leaving shaped pieces to transfer to the tray."
+        }
+      ],
+      "sourceReadEvidence": "Manufacturer FAQ explicitly attributes green cookies to chlorogenic acid reacting with baking soda or baking powder. Neither baking powder nor another alkaline leavener appears as a distractor."
+    },
+    {
+      "index": 119,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.454,
+          "id": "existing.json:12030",
+          "q": "Which plant fits this description? Tree bearing pear-shaped fruit with a thick woody epicarp.",
+          "d": "Tree bearing pear-shaped fruit with a thick woody epicarp. Another name is woody pear."
+        },
+        {
+          "sim": 0.322,
+          "id": "existing.json:15098",
+          "q": "What is a bottle for holding soft drinks called?",
+          "d": "A bottle for holding soft drinks. Another name is soda bottle."
+        }
+      ],
+      "sourceReadEvidence": "Producer describes hanging bottles over small pears on branches at Boates Farm in spring and allowing them to grow. Full indexed product explanation read."
+    },
+    {
+      "index": 120,
+      "decision": "accept_for_parent_review",
+      "notes": "No stargazey-pie fact found.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.247,
+          "id": "existing.json:11583",
+          "q": "What escapes through a ceramic pie bird standing in a pie crust?",
+          "d": "The hollow bird provides a vent while the filling cooks."
+        },
+        {
+          "sim": 0.215,
+          "id": "existing.json:15576",
+          "q": "What type of dessert is the Boston cream pie?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Ark of Taste heritage entry describes fish heads and sometimes tails projecting through pastry. Origin legend is not presented as verified history."
+    },
+    {
+      "index": 121,
+      "decision": "accept_for_parent_review",
+      "notes": "Firsthand inventor account scoped because later recipes can use coconut.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.366,
+          "id": "existing.json:19488",
+          "q": "Which food fits this description? White sauce made with cream.",
+          "d": "White sauce made with cream."
+        },
+        {
+          "sim": 0.276,
+          "id": "existing.json:19438",
+          "q": "Which food fits this description? Egg-shaped chocolate candy.",
+          "d": "Egg-shaped chocolate candy."
+        }
+      ],
+      "sourceReadEvidence": "Firsthand inventor interview explicitly describes grating a white-chocolate Easter egg. Question limited to his account because other versions may use coconut."
+    },
+    {
+      "index": 122,
+      "decision": "accept_for_parent_review",
+      "notes": "Removed alkaline adjective from stem so lye is not singled out before answering.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.26,
+          "id": "new-66",
+          "q": "Which kind of treatment transforms the proteins in a traditional century egg?",
+          "d": "Century eggs are preserved in an alkaline environment that changes their color and texture. This is chemically different from acid-pickling an egg."
+        },
+        {
+          "sim": 0.214,
+          "id": "existing.json:10383",
+          "q": "What is a fish that is young called?",
+          "d": "A fish that is young."
+        }
+      ],
+      "sourceReadEvidence": "Primary food-microbiology abstract FEMS7-0932 explicitly describes lutefisk processing with lye made by boiling wood ash in water. No preparation advice given."
+    },
+    {
+      "index": 123,
+      "decision": "accept_for_parent_review",
+      "notes": "Formula checked2026; exact percentages removed from explanation. Named-product scope avoids unjustified all-wasabi generalization.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.241,
+          "id": "objects-001.json:objects-0047",
+          "q": "Before ketchup made his name famous, Henry Heinz launched his business selling which pungent condiment?",
+          "d": "In 1869, Heinz began with his mother’s recipe for grated horseradish. He prepared it at home with her help."
+        },
+        {
+          "sim": 0.172,
+          "id": "existing.json:13040",
+          "q": "What Japanese food is made with slices of fresh fish eaten raw?",
+          "d": "This traditional dish is too often equated with sushi, which is also eaten with wasabi and soy sauce."
+        }
+      ],
+      "sourceReadEvidence": "Manufacturer ingredient panel read: European formula horseradish 31.7%, wasabi 4.5%. Scoped to named product rather than claiming all wasabi products are identical."
+    },
+    {
+      "index": 124,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.245,
+          "id": "existing.json:7707",
+          "q": "The increased prominence of pizza in China had the secondary effect of introducing Chinese consumers to cheese as what?",
+          "d": "The presence of pizza restaurant chains has contributed to a significant increase in pizza consumption in mainland China and Hong Kong."
+        },
+        {
+          "sim": 0.215,
+          "id": "existing.json:404",
+          "q": "Which namesake jelly actually traveled into space aboard the shuttle Columbia in 1991?",
+          "d": "Nearly 2,500 young jellies in two early stages of development traveled in the experiment."
+        }
+      ],
+      "sourceReadEvidence": "Firsthand interview transcript lines 138–142: Rowland recounts failed pepperoni-pizza flavor reused with citric acid for Harry Potter vomit beans. Full passage read."
+    },
+    {
+      "index": 125,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.358,
+          "id": "existing.json:19480",
+          "q": "What is a beverage that resembles tea but is not made from tea leaves called?",
+          "d": "A beverage that resembles tea but is not made from tea leaves."
+        },
+        {
+          "sim": 0.308,
+          "id": "released.json:20015",
+          "q": "Black tea and green tea can come from the same species. Which chemical process is encouraged for black tea but limited for green tea?",
+          "d": "Processing changes the tea: black-tea leaves are allowed to oxidize, while green-tea processing limits that reaction."
+        }
+      ],
+      "sourceReadEvidence": "University chemist Joe Schwarcz explicitly identifies Ya Shi Xiang Dan Cong tea and translation; states it contains no duck feces and has floral aroma. No origin legend asserted as fact."
+    },
+    {
+      "index": 126,
+      "decision": "accept_for_parent_review",
+      "notes": "Actual cheese acoustic experiment differs from parent vegetable orchestra instruments; primary2025abstract.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.175,
+          "id": "existing.json:3669",
+          "q": "What is produced by repeatedly stirring and draining a mixture of curds and whey?",
+          "d": "Granular cheese, also known as stirred curd cheese and hard cheese, is a type of cheese produced by repeatedly stirring and draining a mixture of curd and whey."
+        },
+        {
+          "sim": 0.173,
+          "id": "existing.json:7690",
+          "q": "During what was the cheese dream popularized as \"an inexpensive company supper dish\"?",
+          "d": "Cheese on toast is made by placing sliced or grated cheese on toasted bread and melting it under a grill."
+        }
+      ],
+      "sourceReadEvidence": "Primary conference abstract describes 100 bread-cheese and mozzarella samples, wetted blade slip-stick motion, air bubbles as resonators and bread-cheese orchestra. Full abstract read."
+    },
+    {
+      "index": 127,
+      "decision": "accept_for_parent_review",
+      "notes": "Removed wheels clue so only cheese is not given away.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.175,
+          "id": "existing.json:19475",
+          "q": "Which food fits this description? Mild white cheese made from curds of soured skim milk.",
+          "d": "Mild white cheese made from curds of soured skim milk. Another name is cottage cheese."
+        },
+        {
+          "sim": 0.171,
+          "id": "existing.json:7690",
+          "q": "During what was the cheese dream popularized as \"an inexpensive company supper dish\"?",
+          "d": "Cheese on toast is made by placing sliced or grated cheese on toasted bread and melting it under a grill."
+        }
+      ],
+      "sourceReadEvidence": "USDA Rome 2009 report says Credito Emiliano accepts Parmesan as collateral and stores it in climate-controlled warehouses. Credem own 2018 sustainability report corroborates. No current quantity claimed."
+    },
+    {
+      "index": 128,
+      "decision": "accept_for_parent_review",
+      "notes": "Historical reserve purpose only, no claim current inventory is full.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.194,
+          "id": "existing.json:5623",
+          "q": "The hunting lodge that gave its name to Jaktstuguskogen Nature Reserve in Sweden was built to resemble what?",
+          "d": "Jaktstuguskogen Nature Reserve is a nature reserve in Södermanland County, on the southeast coast of Sweden. Established in 1919, it is the oldest nature reserve in the county and the first natural monument of Sweden."
+        },
+        {
+          "sim": 0.173,
+          "id": "existing.json:15519",
+          "q": "Which state produces the most maple syrup in New England?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "First-party industry filing describes PPAQ reserve established in 2002 to mitigate weather-driven production fluctuations. Historical design only; no claim about current inventory."
+    },
+    {
+      "index": 129,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.237,
+          "id": "existing.json:14439",
+          "q": "What is a part of Niagara Falls in Ontario called?",
+          "d": "A part of Niagara Falls in Ontario. Another name is Horseshoe Falls."
+        },
+        {
+          "sim": 0.22,
+          "id": "new-46",
+          "q": "In the “Cheerios effect,” what helps floating cereal pieces gather together?",
+          "d": "The pieces deform the liquid surface. Surface tension and gravity together help draw them into clusters."
+        }
+      ],
+      "sourceReadEvidence": "Researcher’s primary account explicitly states alcohol evaporation creates Marangoni stresses, upward flow and gravitationally unstable band. Indexed account read."
+    },
+    {
+      "index": 130,
+      "decision": "accept_for_parent_review",
+      "notes": "Full q/a/d scan found no sticky-rice-mortar fact; existing rice food names unrelated.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.204,
+          "id": "existing.json:3647",
+          "q": "Vietnam, one of the world’s richest agricultural regions, is the second-largest exporter worldwide and the seventh-largest consumer of which food?",
+          "d": "Rice is a cereal grain and, in its domesticated form, is the staple food of over half of the world's population, particularly in Africa and Asia."
+        },
+        {
+          "sim": 0.2,
+          "id": "existing.json:19514",
+          "q": "Which food fits this description? Japanese alcoholic beverage made from fermented rice; usually served hot.",
+          "d": "Japanese alcoholic beverage made from fermented rice; usually served hot. Another name is sake."
+        }
+      ],
+      "sourceReadEvidence": "ACS-issued 2010 research release identifies sticky-rice soup and slaked lime in roughly 1,500-year-old mortar. Full indexed release read; not claiming every Great Wall section used it."
+    },
+    {
+      "index": 131,
+      "decision": "accept_for_parent_review",
+      "notes": "Capillary-network biomedical use distinct from existing sugar spinning/fiberglass analogy.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.222,
+          "id": "existing.json:12439",
+          "q": "Which term fits this clue? Glass fibers spun and massed into bundles resembling wool.",
+          "d": "Glass fibers spun and massed into bundles resembling wool."
+        },
+        {
+          "sim": 0.213,
+          "id": "existing.json:11560",
+          "q": "What does a cotton candy machine spin into fluffy threads?",
+          "d": "The liquid sugar forms fine strands as it cools."
+        }
+      ],
+      "sourceReadEvidence": "University’s 2017 account explicitly describes department-store cotton candy machine and polymer networks for capillaries. Application differs from existing sugar-fiber/fiberglass facts."
+    },
+    {
+      "index": 132,
+      "decision": "accept_for_parent_review",
+      "notes": "Two-link pendulum model is hard, not easy; primary study figure caption.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.149,
+          "id": "existing.json:11446",
+          "q": "Which two familiar foods meet in the name and on the plate of Japanese omurice?",
+          "d": "The eggs wrap or top a mound of seasoned rice."
+        },
+        {
+          "sim": 0.147,
+          "id": "existing.json:17090",
+          "q": "Who contributed words to “A Whole New World”?",
+          "d": "Its lyrics are credited to Tim Rice."
+        }
+      ],
+      "sourceReadEvidence": "Primary study abstract describes translational and rotational motion; figure 1 caption explicitly calls model a two-link pendulum. No exaggerated food-temperature claim used."
+    },
+    {
+      "index": 133,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.26,
+          "id": "existing.json:15767",
+          "q": "What produce, in AOC classification, 612 communes of Périgord?",
+          "d": "Perigord nut is an appellation of origin that means fresh or early-season nuts, dried nuts and walnut kernels."
+        },
+        {
+          "sim": 0.222,
+          "id": "new-48",
+          "q": "X-ray movies of mixed nuts revealed that large Brazil nuts often do what before rising through the smaller nuts?",
+          "d": "In the experiment, they rose after rotating toward vertical, then lay flatter again at the surface."
+        }
+      ],
+      "sourceReadEvidence": "Manufacturer page directly identifies whole-grain wheat and barley and says no grapes or nuts; both name-origin stories explicitly marked uncertain."
+    },
+    {
+      "index": 134,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.289,
+          "id": "existing.json:19395",
+          "q": "Which food fits this description? Dessert resembling ice cream but with a boiled custard base.",
+          "d": "Dessert resembling ice cream but with a boiled custard base. Another name is frozen custard."
+        },
+        {
+          "sim": 0.21,
+          "id": "existing.json:1247",
+          "q": "What Italian dessert sounds like “English soup” but arrives in layers of custard and soaked cake or ladyfingers?",
+          "d": "A traditional soaking liquor is red alchermes, which can leave vivid stripes between the custard layers."
+        }
+      ],
+      "sourceReadEvidence": "Official manufacturer history explicitly gives wife’s egg allergy and 1837 invention. Oxford biography and local heritage record corroborate. Dinner-party anecdote omitted."
+    },
+    {
+      "index": 135,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.177,
+          "id": "existing.json:13076",
+          "q": "What fruit juice is at war with its competitor Tropicana?",
+          "d": "It was now possible to eat fresh orange juice at any time of the year and away from the producing regions."
+        },
+        {
+          "sim": 0.172,
+          "id": "existing.json:19407",
+          "q": "Which food fits this description? A fermented and often effervescent beverage made from juice of pears; similar in taste to hard cider.",
+          "d": "A fermented and often effervescent beverage made from juice of pears; similar in taste to hard cider."
+        }
+      ],
+      "sourceReadEvidence": "RSC educational account identifies detergent sodium lauryl sulfate and inhibition of sweet receptors. No claim that every toothpaste formula behaves identically."
+    },
+    {
+      "index": 136,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.215,
+          "id": "existing.json:15995",
+          "q": "What is the main ingredient of the traditional Swiss dish Rosti?",
+          "d": ""
+        },
+        {
+          "sim": 0.212,
+          "id": "existing.json:15550",
+          "q": "What vegetables are used for the making of the traditional Native American meal called Llapingacho?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "Primary study identifies traditional Andean freeze-dried potatoes; UNESCO Water and Culture account details freezing, pressing and sun drying. No equipment-free space-food superlative."
+    },
+    {
+      "index": 137,
+      "decision": "accept_for_parent_review",
+      "notes": "Retargeted routine amylase definition to unusual cassava-chewing preparation; uses primary deposited study.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.181,
+          "id": "released.json:20081",
+          "q": "Classic bubble-tea pearls get their chewy texture from tapioca starch extracted from which root crop?",
+          "d": "Tapioca is processed cassava starch; the pearls become chewy when cooked."
+        },
+        {
+          "sim": 0.158,
+          "id": "new-104",
+          "q": "Researchers recovered a 5,700-year-old human genome in Denmark from which object instead of a skeleton?",
+          "d": "The ancient chewing material preserved human DNA and traces of microbes from the mouth."
+        }
+      ],
+      "sourceReadEvidence": "Primary deposited study abstract describes chicha made after chewing boiled cassava and human oral bacteria in chewed and non-chewed samples. No assertion that every chicha uses chewing."
+    },
+    {
+      "index": 138,
+      "decision": "accept_for_parent_review",
+      "notes": "Ancient-text translation directly supports fish-viscera condiment; unlike modern fish-bladder fining.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.207,
+          "id": "existing.json:10383",
+          "q": "What is a fish that is young called?",
+          "d": "A fish that is young."
+        },
+        {
+          "sim": 0.2,
+          "id": "existing.json:11391",
+          "q": "Which Japanese seasoning starts with fermenting soybeans with salt and kōji?",
+          "d": "Many varieties also use rice or barley."
+        }
+      ],
+      "sourceReadEvidence": "University page reproduces ancient Pliny and Manilius descriptions of fish viscera in salt and allex residue. Distinct from modern fish-bladder fining; no modern microbiological recipe claim."
+    },
+    {
+      "index": 139,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.168,
+          "id": "existing.json:8355",
+          "q": "Instead of simply heating particles, the Migma fusion reactor uses small particle accelerators to initiate what?",
+          "d": "Migma, sometimes migmatron or migmacell, was a proposed colliding beam fusion reactor designed by Bogdan Maglich in 1969."
+        },
+        {
+          "sim": 0.151,
+          "id": "existing.json:8925",
+          "q": "What did Nicholas Christofilos design while selling elevators?",
+          "d": "The Astron is a type of fusion power device pioneered by Nicholas Christofilos and built at the Lawrence Livermore National Laboratory during the 1960s and 70s."
+        }
+      ],
+      "sourceReadEvidence": "University-issued August 2024 release explicitly identifies mayonnaise and Rayleigh–Taylor instability, elastic/plastic phases, with linked Physical Review E paper."
+    },
+    {
+      "index": 140,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.152,
+          "id": "existing.json:10473",
+          "q": "What is a group of jellyfish called?",
+          "d": ""
+        },
+        {
+          "sim": 0.14,
+          "id": "existing.json:5091",
+          "q": "What do materials scientists call the solid left when a gel dries and is free to shrink?",
+          "d": "The material can retain pores even as it contracts. Conventional dried silica gel is a familiar example of this class."
+        }
+      ],
+      "sourceReadEvidence": "Primary 2018 Biophysical Journal conference abstract explicitly reports ethanol-prepared crispy jellyfish chips; full university abstract read."
+    },
+    {
+      "index": 141,
+      "decision": "accept_for_parent_review",
+      "notes": "Specific2020 conditions retained; no assertion that only American whiskey can ever form webs.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.191,
+          "id": "existing.json:14959",
+          "q": "What is a delicate decorative fabric woven in an open web of symmetrical patterns called?",
+          "d": "A delicate decorative fabric woven in an open web of symmetrical patterns."
+        },
+        {
+          "sim": 0.157,
+          "id": "existing.json:15857",
+          "q": "What element of the Japanese garden are patterns drawn on?",
+          "d": "The undulating patterns drawn on the sand give an impression of movement, and offer a clear contrast with the rocks."
+        }
+      ],
+      "sourceReadEvidence": "Primary paper abstract reports diluted American whiskey droplets, monolayer collapse and distinctive brand patterns. Does not claim all other spirits can never form similar structures."
+    },
+    {
+      "index": 142,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.175,
+          "id": "new-113",
+          "q": "Finnish salmiakki gets its characteristic salty bite from which compound rather than ordinary table salt alone?",
+          "d": "This distinctive flavoring gives salty licorice its unusually sharp taste."
+        },
+        {
+          "sim": 0.168,
+          "id": "existing.json:10605",
+          "q": "In which state would one see the House on the Rock?",
+          "d": ""
+        }
+      ],
+      "sourceReadEvidence": "County coalition report hosted by UW Extension directly states highway department uses local cheese-factory brine on winter roads. No current cost claim included."
+    },
+    {
+      "index": 143,
+      "decision": "accept_for_parent_review",
+      "notes": "Replaced butterfly-pea color-change question because live316 already taught same anthocyanin/acidity fact. New card is rhubarb candlelight harvest, supported by growers’ government-hosted specification.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.143,
+          "id": "existing.json:14546",
+          "q": "What is an artificial source of visible illumination called?",
+          "d": "An artificial source of visible illumination."
+        },
+        {
+          "sim": 0.139,
+          "id": "existing.json:15243",
+          "q": "Which place appears as a setting in “The Secret Garden”?",
+          "d": "Part of the story is set in Yorkshire."
+        }
+      ],
+      "sourceReadEvidence": "Growers’ specification hosted by UK government explicitly says harvest by candlelight wherever possible to avoid photosynthesis and toughened fibers. Primary grower E. Oldroyd account corroborates; no claim all growers always do so."
+    },
+    {
+      "index": 144,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.295,
+          "id": "existing.json:14925",
+          "q": "What is a range with gas rings and an oven for cooking with gas called?",
+          "d": "A range with gas rings and an oven for cooking with gas. Another name is gas stove."
+        },
+        {
+          "sim": 0.232,
+          "id": "objects-001.json:objects-0024",
+          "q": "What gas is trapped under pressure inside popping candy such as Pop Rocks?",
+          "d": "Saliva dissolves the sugar around the pressurized bubbles, releasing the gas and producing the crackle."
+        }
+      ],
+      "sourceReadEvidence": "EPA report bakery section explicitly gives ammonium bicarbonate releasing ammonia and CO2 and moisture-dependent retention; avoids recipe quantities and household-cleaner confusion."
+    },
+    {
+      "index": 145,
+      "decision": "accept_for_parent_review",
+      "notes": "Conventional breeding and storage change from developer; does not claim genetic engineering.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.173,
+          "id": "new-51",
+          "q": "In a 2024 materials study, what kitchen waste became tiny carbon \"onions\" for energy-storage electrodes?",
+          "d": "Researchers converted waste chicken fat into layered carbon particles, then modified them for use in energy-storage devices."
+        },
+        {
+          "sim": 0.151,
+          "id": "existing.json:5676",
+          "q": "Besides damp, what living culprits had damaged the Treaty of Waitangi when it was found in storage?",
+          "d": "The document survived a fire scare before its years of poor storage. Its damage includes the marks left by gnawing."
+        }
+      ],
+      "sourceReadEvidence": "Developer’s February 2022 release explicitly contrasts conventional onions with variety becoming milder/sweeter over time, and conventional breeding. No genetically-engineered claim."
+    },
+    {
+      "index": 146,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.303,
+          "id": "existing.json:19455",
+          "q": "What is a rich steamed or boiled pudding that resembles cake called?",
+          "d": "A rich steamed or boiled pudding that resembles cake. Another name is Christmas pudding."
+        },
+        {
+          "sim": 0.258,
+          "id": "existing.json:1337",
+          "q": "What British “pudding” is made from a savory batter and was traditionally baked under roasting meat to catch the drippings?",
+          "d": "The batter puffs around the edges in hot fat. Today the hollow in the middle is a welcoming place for gravy."
+        }
+      ],
+      "sourceReadEvidence": "Government cuisine page gives chicken breast, milk, rice and sugar and directs tearing chicken into hairlike fibers. Full recipe text read; question does not give translation away."
+    },
+    {
+      "index": 147,
+      "decision": "accept_for_parent_review",
+      "notes": "Removed cocktail name from question to avoid toe giveaway; no earlier Sourtoe fact in full scan.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.215,
+          "id": "existing.json:18286",
+          "q": "In which one of these sciences is the TOE theory studied?",
+          "d": ""
+        },
+        {
+          "sim": 0.166,
+          "id": "existing.json:10023",
+          "q": "Mark Goffeney, nicknamed \"Big Toe\", is a professional guitarist who plays with his feet because he was born without ____. Which detail is missing?",
+          "d": "Mark Goffeney, nicknamed \"Big Toe\", is a professional guitarist who plays with his feet because he was born without hands. Mark Goffeney was an American musician from San Diego, California, known as \"Big Toe\" because, being born without arms, he played guitar with his feet."
+        }
+      ],
+      "sourceReadEvidence": "Venue’s own description explicitly identifies severed human toe and lip-contact rule. Stem omits Sourtoe name to avoid answer giveaway; no encouragement to imitate."
+    },
+    {
+      "index": 148,
+      "decision": "accept_for_parent_review",
+      "notes": "No RationD/potato fact in baseline/released/staged/sibling q/a/d search.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.14,
+          "id": "existing.json:13239",
+          "q": "How is an egg cooked in its shell?",
+          "d": "The soft-boiled egg is an egg cooked in boiling water in its shell, longer than a soft-boiled egg and less than a hard-boiled egg."
+        },
+        {
+          "sim": 0.131,
+          "id": "existing.json:19438",
+          "q": "Which food fits this description? Egg-shaped chocolate candy.",
+          "d": "Egg-shaped chocolate candy."
+        }
+      ],
+      "sourceReadEvidence": "Smithsonian museum account quotes 1937 Paul Logan correspondence specifying boiled potato. Quoted phrase in card is short; rest is original paraphrase."
+    },
+    {
+      "index": 149,
+      "decision": "accept_for_parent_review",
+      "notes": "Direct source evidence checked; clear answer and four distinct choices; nearest q/a/d matches concern different facts.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.141,
+          "id": "existing.json:15022",
+          "q": "What is a shop specializing in repairs and maintenance called?",
+          "d": "A shop specializing in repairs and maintenance. Another name is fix-it shop."
+        },
+        {
+          "sim": 0.123,
+          "id": "existing.json:507",
+          "q": "Driving from Seattle to the post office in Point Roberts, Washington, takes you through which other country?",
+          "d": "British Columbia provides the road approach. A boat can make the trip without taking that detour."
+        }
+      ],
+      "sourceReadEvidence": "First-party June 11 2018 release directly announces municipal pothole-repair grants and four participating towns. Campaign name withheld from stem to prevent giveaway."
+    },
+    {
+      "index": 150,
+      "decision": "accept_for_parent_review",
+      "notes": "No geothermal rye-bread fact found; distinct from existing WonderPot stovetop baking9790.",
+      "nearestPriorFacts": [
+        {
+          "sim": 0.392,
+          "id": "existing.json:9790",
+          "q": "Israel's Wonder Pot could bake a cake in a kitchen with no oven. Where did the cook put the pot?",
+          "d": "The pot turned the heat of a gas burner into enough circulating heat to bake cakes and casseroles."
+        },
+        {
+          "sim": 0.315,
+          "id": "existing.json:19519",
+          "q": "Which food fits this description? Bread made of coarse rye flour.",
+          "d": "Bread made of coarse rye flour. Another name is pumpernickel."
+        }
+      ],
+      "sourceReadEvidence": "Bakery’s own description says pot buried in warm black sand and baked 24 hours by geothermal heat. No home preparation instruction."
+    }
+  ]
+}

@@ -1,0 +1,727 @@
+[
+  {
+    "candidateId": "botany-0101",
+    "q": "Some ants housed by Cordia nodosa trees cheat their hosts by destroying which structures?",
+    "a": "Flower buds",
+    "d": "Allomerus ants can suppress the tree’s reproduction by attacking its flowers. Castrated hosts can produce more of the swollen chambers that house the ants.",
+    "s": "Yu and Pierce · Ant castration of host plants",
+    "u": "https://tbb.bio.uu.nl/BINF/cash2-s/References_for_exercises/Yu-Pierce.pdf",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Root tips",
+      "Leaf buds",
+      "Flower buds",
+      "Seed coats"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://tbb.bio.uu.nl/BINF/cash2-s/References_for_exercises/Yu-Pierce.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper describes Allomerus castrating Cordia nodosa and increased domatia production by castrated hosts.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "677325ab676dee1a65c3a35d13234ae2cfae477c8cb350950674aadfa42d3230"
+    }
+  },
+  {
+    "candidateId": "botany-0102",
+    "q": "Allomerus ants build galleries for ambushing large prey. What living material binds the plant hairs used in these traps?",
+    "a": "Fungal threads",
+    "d": "The ants cultivate fungal mycelium as a construction material. It holds together the cut plant hairs forming the perforated galleries where ants wait to seize prey.",
+    "s": "Dejean and colleagues · Arboreal ant traps",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/15846335/",
+    "cat": "The Cabinet of Fungi",
+    "level": "hard",
+    "choices": [
+      "Algal filaments",
+      "Plant root hairs",
+      "Moss shoots",
+      "Fungal threads"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/15846335/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract describes hairs cut from host plants bound by specially grown fungal mycelium.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "da3f4a12d9ef4eb5a50768bbee52a4f754e417f852b454736a325c5c577fb714"
+    }
+  },
+  {
+    "candidateId": "botany-0103",
+    "q": "How can some fig trees penalize wasps that lay eggs without providing pollination?",
+    "a": "Dropping the occupied figs",
+    "d": "Aborting an unpollinated fig can kill the wasp offspring developing inside it. Such sanctions help keep the tree–pollinator partnership from becoming one-sided.",
+    "s": "Smithsonian Tropical Research Institute · Fig sanctions",
+    "u": "https://stri.si.edu/story/lex-talionis",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Producing sterile flowers inside the fig",
+      "Coating the wasps in sticky resin",
+      "Dropping the occupied figs",
+      "Closing the fig entrance before egg laying"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://stri.si.edu/story/lex-talionis",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional research account describes unpollinated figs being dropped, killing developing wasp offspring; applies to studied species, not all figs.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "5f73e55a0996d036487f9025a1441835efb6a8339c8f3b657ac0e1624387efda"
+    }
+  },
+  {
+    "candidateId": "botany-0104",
+    "q": "In a Kenyan experiment, excluding large plant-eating mammals from ant-protected acacias had what unexpected consequence?",
+    "a": "Weaker tree–ant partnership",
+    "d": "After large herbivores were excluded, trees reduced food and housing for protective ants. The ant community shifted, and the long-standing defensive partnership deteriorated.",
+    "s": "Palmer and colleagues · Breakdown of an ant–plant mutualism",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/18187652/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Increase in ant housing without a change in food",
+      "Stronger defensive partnership",
+      "Switch from ants to defending bees",
+      "Weaker tree–ant partnership"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/18187652/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Ten-year exclusion experiment reports reduced nectar and housing and a shift toward antagonistic ants.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "0d07e1ec91033a027d82b53d2f5e1c68f3b60c4a2bf79acaad8a667d78197620"
+    }
+  },
+  {
+    "candidateId": "botany-0105",
+    "q": "The Australian sundew Drosera glanduligera has fast-moving, nonsticky tentacles. What do they do to an insect?",
+    "a": "Catapult it onto sticky tentacles",
+    "d": "Outer tentacles snap inward and throw prey onto the sticky trapping surface. This combines a rapid mechanical launcher with the familiar adhesive traps of a sundew.",
+    "s": "Poppinga and colleagues · Catapult-flypaper traps",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/23049849/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Push it into an underwater bladder",
+      "Pin it between two leaf edges",
+      "Catapult it onto sticky tentacles",
+      "Wrap it in a spiral of tentacles"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/23049849/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract identifies nonsticky snap tentacles catapulting prey onto adjacent sticky tentacles.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "0f6ed1a5d58c661462439ce4e984b59c26c01ebe90d34214022e0787d1b95e3d"
+    }
+  },
+  {
+    "candidateId": "botany-0106",
+    "q": "Australian blue-banded bees have been filmed knocking pollen out of tomato flowers using which body part as a rapid hammer?",
+    "a": "Their heads",
+    "d": "High-speed footage showed the bees striking the flower’s anther cone with their heads. This differs from the familiar bumblebee technique of gripping and vibrating the flower.",
+    "s": "Harvard University · Blue-banded bee pollination",
+    "u": "https://news.harvard.edu/gazette/story/2016/02/making-use-of-the-head/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Their hind legs",
+      "Their abdomens",
+      "Their wing tips",
+      "Their heads"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.harvard.edu/gazette/story/2016/02/making-use-of-the-head/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Researcher account and high-speed video describe blue-banded bees banging heads against tomato anther cones.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "b3b881d9e7ca073cec794c0a1f589e1644cf90215ae944d588328c92b157dd05"
+    }
+  },
+  {
+    "candidateId": "botany-0107",
+    "q": "What living movements were supposed to tell the time in Carl Linnaeus’s proposed flower clock?",
+    "a": "Flowers opening and closing",
+    "d": "Linnaeus hoped to combine plants whose flowers opened or closed at different hours. Weather, season and growing conditions complicate the idea.",
+    "s": "Linnean Society · Flower Power Time",
+    "u": "https://www.linnean.org/learning/media/curious-cases/flower-power-time",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Drops falling from leaf tips",
+      "Leaves following the Sun",
+      "Flowers opening and closing",
+      "Flower stalks casting moving shadows"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.linnean.org/learning/media/curious-cases/flower-power-time",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Society explains different opening and closing times inspired a garden clock and that Linnaeus did not make a successful one.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "8a3983be71290802bb00757d150e0f69e87e290c0b180ad4667c82bf5a748237"
+    }
+  },
+  {
+    "candidateId": "botany-0108",
+    "q": "In research on European holly, branches with recent browsing damage tended to make more leaves with what feature?",
+    "a": "Prickly edges",
+    "d": "A single holly can carry both smooth-edged and spiny leaves. Researchers found an association between browsing and pricklier leaves, alongside differences in DNA methylation.",
+    "s": "Linnean Society · Holly heterophylly",
+    "u": "https://www.linnean.org/news/2012/12/03/december-2012-why-is-holly-prickly",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Hairy undersides",
+      "Deeply divided lobes",
+      "Prickly edges",
+      "Thick waxy upper surfaces"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.linnean.org/news/2012/12/03/december-2012-why-is-holly-prickly",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Account of Ilex aquifolium study links browsing to prickly leaves and reports methylation differences; association, not universal causation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "7d9ba714d8c0a2c0a543857a60132c760613d6029ab0768679e2e6aab061796d"
+    }
+  },
+  {
+    "candidateId": "botany-0109",
+    "q": "What makes the rare flowering of certain bamboos remarkable even when plants have been taken to distant gardens?",
+    "a": "Distant plants can flower together",
+    "d": "Related bamboo plants can retain broadly synchronized flowering schedules across distant locations. The long quiet interval is followed by a coordinated reproductive event, not simply a local response to that week’s weather.",
+    "s": "University of Vienna Botanical Garden · Bamboo grove",
+    "u": "https://botanischergarten.univie.ac.at/en/the-garden/map/bamboo-grove/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Each garden develops its own annual flowering season",
+      "Only plants left in the native forest flower",
+      "Transplanted plants flower before the original population",
+      "Distant plants can flower together"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://botanischergarten.univie.ac.at/en/the-garden/map/bamboo-grove/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Botanical garden describes common-lineage bamboo flowering synchronously worldwide. Distinct from card46 death after flowering.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "0926a9163f15ba4258650dac04412b53644028f7ff4c5d05b3e13da2d3367bac"
+    }
+  },
+  {
+    "candidateId": "botany-0110",
+    "q": "Why can a huge bamboo seed crop be followed by severe damage to nearby human food crops?",
+    "a": "Boom in seed-eating rodents",
+    "d": "Abundant bamboo seeds can fuel rodent population growth. When that food dwindles, the animals turn to crops and stored grain, linking a forest flowering event to an agricultural crisis.",
+    "s": "Singh and colleagues · Bamboo flowering and rodent outbreaks",
+    "u": "https://escholarship.org/uc/item/9g4962ck",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Outbreak of grain-rusting fungi",
+      "Surge of parasitic vines",
+      "Boom in leaf-eating caterpillars",
+      "Boom in seed-eating rodents"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://escholarship.org/uc/item/9g4962ck",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Research overview connects bamboo seed abundance, rodent multiplication and later crop and stored-food losses.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "63f93be4466d5e851153bdd0159b927bf9253e194b34c7ae941395983b114ef1"
+    }
+  },
+  {
+    "candidateId": "botany-0111",
+    "q": "Horsetail spores can crawl and jump without muscles. What powers their ribbonlike appendages?",
+    "a": "Changes in humidity",
+    "d": "The appendages curl and uncurl as moisture changes. Their movements can drag a spore across a surface or release stored elastic energy in a jump.",
+    "s": "Marmottant and colleagues · Walking and jumping horsetail spores",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/24026816/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Changes in surrounding acidity",
+      "Changes in electrical charge",
+      "Changes in light direction",
+      "Changes in humidity"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/24026816/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports humidity-driven elater movements producing walking and jumping. Different locomotion from filaree seed drilling.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "4d35831cfe2962cb1465ec6f1cf6263c531005e62e17b3bdbfcaf16dec9ac4bc"
+    }
+  },
+  {
+    "candidateId": "botany-0112",
+    "q": "A ripe Sphagnum moss capsule can fire its spores like a miniature air gun. What provides the launch pressure?",
+    "a": "Compressed air",
+    "d": "As the capsule dries, trapped air is compressed. The sudden release fires spores upward, with a vortex ring helping carry them beyond the still air beside the moss.",
+    "s": "Whitaker and Edwards · Sphagnum vortex rings",
+    "u": "https://www.sciencemagazinedigital.org/sciencemagazine/20100723?pg=54",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Carbon dioxide from fermentation",
+      "Compressed air",
+      "Elastic recoil of a seed stalk",
+      "Pressurized sap"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.sciencemagazinedigital.org/sciencemagazine/20100723?pg=54",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary Science article describes sudden release of compressed air and spores creating a vortex ring; not dandelion’s sustained aerodynamic vortex.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "5e551ccb2e7eac43460402148c0c26b036bda0ae3f0b7e926617af1bbad2477a"
+    }
+  },
+  {
+    "candidateId": "botany-0113",
+    "q": "Scientists identified three previously unnamed porcini species in specimens obtained from what surprisingly ordinary place?",
+    "a": "Packet of dried mushrooms",
+    "d": "DNA analysis of dried porcini sold commercially revealed three species without scientific names. A grocery product turned out to contain unrecognized fungal diversity.",
+    "s": "Dentinger and Suz · Three porcini species",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/25279259/",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Packet of dried mushrooms",
+      "Garden compost bag",
+      "Wooden shipping crate",
+      "Florist’s potting mix"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/25279259/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper identifies three new Boletus species from a commercial packet of dried Chinese porcini.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "b3e47ef53fc5958a2e45727bc42bb0395cdb0a607dd5f6269435e308aa220c07"
+    }
+  },
+  {
+    "candidateId": "botany-0114",
+    "q": "What can infect the chestnut-blight fungus and make some infections less damaging to trees?",
+    "a": "Virus",
+    "d": "Chestnut hypovirus 1 can weaken the fungus responsible for blight. It has helped control the disease in parts of Europe, although the outcome depends on local conditions.",
+    "s": "Forest Research · Chestnut blight",
+    "u": "https://www.forestresearch.gov.uk/tools-and-resources/pests-and-diseases/database/sweet-chestnut-blight-cryphonectria-parasitica/",
+    "cat": "The Cabinet of Fungi",
+    "level": "medium",
+    "choices": [
+      "Second species of rust fungus",
+      "Parasitic roundworm",
+      "Amoeba",
+      "Virus"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.forestresearch.gov.uk/tools-and-resources/pests-and-diseases/database/sweet-chestnut-blight-cryphonectria-parasitica/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Official account identifies CHV1 infecting Cryphonectria parasitica, reducing growth and sporulation and allowing recovery; not universal cure.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "19b0e7d95ee2b06894eb1bc82cd5d322d7f607e2b86e6fbda49d341cce835d76"
+    }
+  },
+  {
+    "candidateId": "botany-0115",
+    "q": "The water fern Azolla can pass what useful living partner directly to its next generation through its reproductive structures?",
+    "a": "Nitrogen-fixing bacteria",
+    "d": "Its cyanobacterial partner is transmitted between generations rather than having to be newly recruited from the surroundings each time. The bacteria supply usable nitrogen to the fern.",
+    "s": "Dijkhuizen and colleagues · The Azolla microbiome",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5901025/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Phosphorus-supplying fungi",
+      "Sugar-producing green algae",
+      "Methane-consuming archaea",
+      "Nitrogen-fixing bacteria"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5901025/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary study describes vertical transmission of Nostoc azollae through megaspores and dependence on the fern.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "cdd92a68b07f2c97b17e4a9e6d360a0eb1180001849dfc2a699659250995de56"
+    }
+  },
+  {
+    "candidateId": "botany-0116",
+    "q": "In studies of wild tobacco nectar, what effect did nicotine have on hummingbirds’ feeding visits?",
+    "a": "It shortened their visits",
+    "d": "The bitter nectar component discouraged lingering at a flower. Shorter visits can promote movement between flowers and outcrossing.",
+    "s": "Kessler and colleagues · Nectar nicotine and pollination",
+    "u": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-313X.2012.05008.x",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "It lengthened individual visits",
+      "It shifted visits entirely to nighttime",
+      "It made birds return only to the same flower",
+      "It shortened their visits"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-313X.2012.05008.x",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper examines Nicotiana attenuata nicotine effects on Archilochus alexandri; reduced nectar feeding and promoted outcrossing.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "f7b4f7384ff6d743bc77e370a9241b4887722c2434a2cfb4b29c5961c84c16f0"
+    }
+  },
+  {
+    "candidateId": "botany-0117",
+    "q": "Explosively launched Ruellia seeds are flat little discs. What helps stabilize their flight and reduce air resistance?",
+    "a": "Rapid backspin",
+    "d": "The spinning seeds keep a favorable orientation instead of presenting a broad tumbling face to the air. Their launcher supplies both speed and spin.",
+    "s": "Cooper and colleagues · Backspin in exploding fruits",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/29514987/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Alternating side-to-side flutter",
+      "Expansion of a parachute of hairs",
+      "Slow end-over-end tumbling",
+      "Rapid backspin"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/29514987/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports backspin stabilizing disc-shaped seeds and minimizing frontal area and drag.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "6433ebd20359c76e18dbc09907230a1ae26f426a3d7a8cebb968c1d40b6e58b6"
+    }
+  },
+  {
+    "candidateId": "botany-0118",
+    "q": "How do Alsomitra macrocarpa seeds travel away from their vine?",
+    "a": "Gliding",
+    "d": "A seed and its broad, thin wing form a light, stable glider. Filmed flights show sustained forward travel while descending, rather than the helicopter-like spinning familiar from maple seeds.",
+    "s": "Azuma and Okuno · Flight of a tropical seed",
+    "u": "https://www.sciencedirect.com/science/article/pii/S0022519387800012",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Spinning like a helicopter",
+      "Floating vertically like a parachute",
+      "Gliding",
+      "Tumbling repeatedly end over end"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S0022519387800012",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary aerodynamic paper uses filmed seed flight to analyze steady gliding.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "f425d54b013a2a36cb4bb72668ce5d94d653578b32cef815acc1007aa2e2e566"
+    }
+  },
+  {
+    "candidateId": "botany-0119",
+    "q": "Before a bunya pine seedling sends up its leafy shoot, what unusual reserve can it form underground?",
+    "a": "Storage tuber",
+    "d": "The seed transfers reserves into an underground swelling. This can remain below ground before the shoot emerges, separating germination from the appearance of an obvious young tree.",
+    "s": "Macquarie University · Bunya pine",
+    "u": "https://www.mq.edu.au/__data/assets/pdf_file/0005/1255433/Plant-of-the-week-Araucaria-bidwillii-Bunya-Bunya-Pine-2023-1.pdf",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Woody rhizome",
+      "Cluster of root nodules",
+      "Storage tuber",
+      "Layered bulb"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.mq.edu.au/__data/assets/pdf_file/0005/1255433/Plant-of-the-week-Araucaria-bidwillii-Bunya-Bunya-Pine-2023-1.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University account describes cryptogeal germination and an underground hypocotyl tuber receiving seed reserves; avoid claiming proven fire function.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "001481758c618181f5327acb602e21d4677eb08a102761ea4dc7951d57dd1b6f"
+    }
+  },
+  {
+    "candidateId": "botany-0120",
+    "q": "Some giant lobelias on East African mountains retain a skirt of dead leaves around the stem. What protection does this provide?",
+    "a": "Thermal insulation",
+    "d": "The dead foliage helps shelter the stem in a climate with large temperature swings and frequent freezing nights.",
+    "s": "Antonelli · Evolution of giant lobelias",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2789055/",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Camouflage from grazing mammals",
+      "A filter for windblown salt",
+      "A barrier against climbing vines",
+      "Thermal insulation"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2789055/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary phylogenetic paper’s discussion describes retained leaves insulating stems in East African giant lobelias.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "e6b5f1ecc073b87cf701501650bf904143978244fb90de02368be6010157328e"
+    }
+  },
+  {
+    "candidateId": "botany-0121",
+    "q": "A Māori wayfinding practice turns silver-fern fronds pale-side upward for what purpose?",
+    "a": "Marking a trail",
+    "d": "The pale underside stands out in low light. Arranging overturned fronds can help others follow a route through the bush; the fern does not need to produce its own light.",
+    "s": "New Zealand Story · Silver fern history",
+    "u": "https://www.nzstory.govt.nz/about-us/news/the-history-of-our-national-symbol",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Attracting birds toward a snare",
+      "Collecting dew for drinking",
+      "Marking a trail",
+      "Testing the direction of a coming storm"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nzstory.govt.nz/about-us/news/the-history-of-our-national-symbol",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Government cultural account describes overturned fronds forming visible trail arrows by moonlight or torchlight.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "511cf20f35840f2041914d1d263fba8f4e4518337e02144b25ab681f6bafa867"
+    }
+  },
+  {
+    "candidateId": "botany-0122",
+    "q": "Franklinia can put seed development on hold through winter. Which already-created cell waits without dividing?",
+    "a": "Fertilized egg",
+    "d": "Fertilization occurs before winter, but the zygote remains dormant. Embryo development resumes in spring, so this is a pause after fertilization rather than a wait for pollination.",
+    "s": "Povilus and colleagues · Franklinia zygotic dormancy",
+    "u": "https://research.edgehill.ac.uk/en/publications/zygotic-dormancy-underlies-prolonged-seed-development-in-franklin/",
+    "cat": "The Botanical Bizarre",
+    "level": "hard",
+    "choices": [
+      "Unfertilized egg",
+      "Fertilized egg",
+      "Mature pollen grain",
+      "Pollen mother cell"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://research.edgehill.ac.uk/en/publications/zygotic-dormancy-underlies-prolonged-seed-development-in-franklin/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper abstract reports autumn fertilization followed by zygotic dormancy until spring.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "43cf6201f43a254245af43a2944b2daa1a4161df25a68cfed65222de3f46ff6b"
+    }
+  },
+  {
+    "candidateId": "botany-0123",
+    "q": "The pink interior of an active bean-family root nodule comes from a protein related to which familiar blood protein?",
+    "a": "Hemoglobin",
+    "d": "Leghemoglobin manages oxygen around nitrogen-fixing bacteria. Its pinkish color is a useful sign of an active nodule, despite the plant having no blood.",
+    "s": "New Mexico State University · Nitrogen fixation by legumes",
+    "u": "https://pubs.nmsu.edu/_a/A129/index.html",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Hemoglobin",
+      "Immunoglobulin",
+      "Fibrinogen",
+      "Albumin"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubs.nmsu.edu/_a/A129/index.html",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Extension publication states pink/red color comes from leghemoglobin, similar to blood hemoglobin, controlling oxygen flow to bacteria.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "26ff3b4587f6a167ab2467a1320048636a7a319edd7d5ae7ecf2872b1a01ecee"
+    }
+  },
+  {
+    "candidateId": "botany-0124",
+    "q": "In an experiment with beach evening primroses, what changed after the flowers were exposed to nearby pollinator-like sounds?",
+    "a": "Their nectar became sweeter",
+    "d": "Low-frequency sounds caused petals to vibrate and were followed within minutes by increased nectar sugar concentration.",
+    "s": "Veits and colleagues · Flower response to pollinator sound",
+    "u": "https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13331",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Their flower stalks bent toward the sound",
+      "Their pollen grains became larger",
+      "Their nectar became sweeter",
+      "Their petals closed over the nectar"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13331",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper reports Oenothera drummondii petal vibration and rapid increased nectar sugar after bee and matched-frequency sounds.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "2aa1ef270beae93ddb74e0eebe31b1de29e635b5cc8ff1dbb2ee25e64f3fe1c6"
+    }
+  },
+  {
+    "candidateId": "botany-0125",
+    "q": "The dangling, feathery structures beneath the floating fern Salvinia resemble roots. What are they actually?",
+    "a": "Modified leaves",
+    "d": "Each group has two floating leaves and a third, highly divided submerged leaf. That underwater leaf creates the rootlike appearance; Salvinia lacks a normal root system.",
+    "s": "University of Oxford · Salvinia molesta",
+    "u": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/ST/Salvinia",
+    "cat": "The Botanical Bizarre",
+    "level": "medium",
+    "choices": [
+      "Chains of reproductive buds",
+      "Fungal threads",
+      "Modified leaves",
+      "Modified stems"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/ST/Salvinia",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Oxford herbarium account describes two floating leaves and a third rootlike, divided, submerged leaf.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "fa11c0e59bd6576fcf7fb8b48f3041c63196fb60e9917aa268c38ca1b89f92b6"
+    }
+  }
+]

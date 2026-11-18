@@ -1,0 +1,169 @@
+{
+  "reviewedOn": "2026-11-17",
+  "acceptedCount": 2084,
+  "publishedCount": 20100,
+  "method": "Full q+a+d weighted lexical scan plus existing per-card semantic and entity review. Read all20 pairs at >=0.32; no pairs >=0.45. Lexical scoring is triage, not proof of uniqueness.",
+  "pairs": [
+    {
+      "ids": [
+        "arts-0231",
+        "published-13329"
+      ],
+      "score": 0.363,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "botany-0132",
+        "nature-0236"
+      ],
+      "score": 0.338,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "botany-0136",
+        "botany-0249"
+      ],
+      "score": 0.369,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "botany-0161",
+        "botany-0182"
+      ],
+      "score": 0.34,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "culture-0008",
+        "culture-0009"
+      ],
+      "score": 0.326,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "culture-0090",
+        "published-9222"
+      ],
+      "score": 0.327,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "culture-0091",
+        "published-11139"
+      ],
+      "score": 0.324,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "customs-0043",
+        "published-4397"
+      ],
+      "score": 0.328,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "earth-0077",
+        "published-10178"
+      ],
+      "score": 0.322,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "earth-0085",
+        "published-11570"
+      ],
+      "score": 0.331,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "earth-0096",
+        "food-0097"
+      ],
+      "score": 0.331,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "earth-0116",
+        "published-16576"
+      ],
+      "score": 0.37,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "earth-0122",
+        "published-16209"
+      ],
+      "score": 0.358,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "food-0070",
+        "published-19437"
+      ],
+      "score": 0.32,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "nature-0059",
+        "nature-0060"
+      ],
+      "score": 0.321,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "nature-0066",
+        "nature-0067"
+      ],
+      "score": 0.384,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "nature-0156",
+        "objects-0026"
+      ],
+      "score": 0.337,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "objects-0122",
+        "objects-0123"
+      ],
+      "score": 0.325,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "published-14934",
+        "words-0006"
+      ],
+      "score": 0.338,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    },
+    {
+      "ids": [
+        "published-2564",
+        "words-0029"
+      ],
+      "score": 0.335,
+      "decision": "Distinct underlying facts; full questions, answers and explanations read."
+    }
+  ],
+  "sourceBudgets": "All current accepted source-page q+a+d aggregates at most180 words; individual references were read during research."
+}

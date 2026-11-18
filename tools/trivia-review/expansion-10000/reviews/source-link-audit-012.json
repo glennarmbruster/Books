@@ -1,0 +1,657 @@
+{
+  "checkedOn": "2026-11-18T01:44:03.010089+00:00",
+  "method": "Read-only HTTP GET with4workers; response headers only.403/429/timeouts are unresolved, not factual errors. Checks newly added accepted URLs absent from all prior audits; excludes unaccepted research drafts.",
+  "totalDistinctUrls": 65,
+  "completed": 65,
+  "summary": {
+    "reachable": 49,
+    "unresolved": 15,
+    "broken": 1
+  },
+  "urls": [
+    {
+      "url": "https://academic.oup.com/aesa/article/94/5/686/16516",
+      "candidateIds": [
+        "nature-0383"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://amhistory.si.edu/thinkfinity/podcast/transcripts/Podcast_Shoppingcart_Transcript.pdf",
+      "candidateIds": [
+        "objects-0376",
+        "objects-0377"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://amhistory.si.edu/thinkfinity/podcast/transcripts/Podcast_Shoppingcart_Transcript.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://antlab.gatech.edu/antlab/Welcome.html",
+      "candidateIds": [
+        "nature-0379"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://antlab.gatech.edu/antlab/Welcome.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://australian.museum/learn/animals/reptiles/mary-river-turtle/",
+      "candidateIds": [
+        "nature-0384"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://australian.museum/learn/animals/reptiles/mary-river-turtle/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://blog.historicenvironment.scot/2024/12/scottish-wedding-traditions/",
+      "candidateIds": [
+        "culture-0217",
+        "culture-0218",
+        "culture-0219"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://blog.historicenvironment.scot/2024/12/scottish-wedding-traditions/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://blogs.loc.gov/law/2026/07/the-invention-behind-your-morning-coffee-turns-118/",
+      "candidateIds": [
+        "objects-0379"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://blogs.loc.gov/law/2026/07/the-invention-behind-your-morning-coffee-turns-118/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/filet_o_fish_journey.html",
+      "candidateIds": [
+        "objects-0380"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://digital.library.adelaide.edu.au/items/ad4f9181-6877-4d5b-bcf9-55a0446bd65b",
+      "candidateIds": [
+        "nature-0391"
+      ],
+      "status": 404,
+      "result": "broken",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://finland.fi/christmas/the-original-finnish-christmas-ornament/",
+      "candidateIds": [
+        "culture-0216"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://finland.fi/christmas/the-original-finnish-christmas-ornament/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://hundertwasser.com/originalgraphik/846_a_hwg92_window_right_890",
+      "candidateIds": [
+        "culture-0227"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://hundertwasser.com/originalgraphik/846_a_hwg92_window_right_890",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/doc/src/Signed%20periodic%20report%20-%20Periodic%20report-65416.pdf",
+      "candidateIds": [
+        "culture-0225"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/doc/src/Signed%20periodic%20report%20-%20Periodic%20report-65416.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/namur-stilt-jousting-01590",
+      "candidateIds": [
+        "culture-0221"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/namur-stilt-jousting-01590",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://intrepidmuseum.org/2025-07-15/celebrate-national-ice-cream-month-scoop-history-taste-joy",
+      "candidateIds": [
+        "objects-0369"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://intrepidmuseum.org/2025-07-15/celebrate-national-ice-cream-month-scoop-history-taste-joy",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://libraries.wright.edu/about/library-news/2026/02/27/america-250-ohio-celebrating-the-innovative-mind-of-ermal-c-fraze",
+      "candidateIds": [
+        "objects-0364"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://libraries.wright.edu/about/library-news/2026/02/27/america-250-ohio-celebrating-the-innovative-mind-of-ermal-c-fraze",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://libraryidm.web.illinois.edu/stage/exhibit/operation_game/",
+      "candidateIds": [
+        "culture-0232"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://libraryidm.web.illinois.edu/stage/exhibit/operation_game/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://marinewaters.fish.wa.gov.au/resource/fact-sheet-talbot-bay/?pdf_export=1",
+      "candidateIds": [
+        "nature-0373"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://marinewaters.fish.wa.gov.au/resource/fact-sheet-talbot-bay/?pdf_export=1",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://naturalhistory.si.edu/visit/accessibility/audio-and-visual-description/insect-zoo-audio-description-tour",
+      "candidateIds": [
+        "nature-0377"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://news.exeter.ac.uk/faculty-of-health-and-life-sciences/killer-whales-make-seaweed-tools-to-scratch-each-others-backs/",
+      "candidateIds": [
+        "nature-0386"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.exeter.ac.uk/faculty-of-health-and-life-sciences/killer-whales-make-seaweed-tools-to-scratch-each-others-backs/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://news.research.gatech.edu/feature/cicadas-unique-urination-unlocks-new-understanding-fluid-dynamics",
+      "candidateIds": [
+        "nature-0389"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.research.gatech.edu/feature/cicadas-unique-urination-unlocks-new-understanding-fluid-dynamics",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ocean.si.edu/ocean-life/marine-mammals/seals-sea-lions-and-walruses",
+      "candidateIds": [
+        "nature-0388"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/fwb.14039",
+      "candidateIds": [
+        "nature-0375"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://patents.justia.com/patent/5294765",
+      "candidateIds": [
+        "objects-0370"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3061186",
+      "candidateIds": [
+        "nature-0394"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3061186/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6804081/",
+      "candidateIds": [
+        "nature-0395"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6804081/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16092607/",
+      "candidateIds": [
+        "objects-0367"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/16092607/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16592808/",
+      "candidateIds": [
+        "nature-0376"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/16592808/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16777740/",
+      "candidateIds": [
+        "nature-0385"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/16777740/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21697434/",
+      "candidateIds": [
+        "nature-0380"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/21697434/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubs.acs.org/doi/10.1021/acs.analchem.6b01632",
+      "candidateIds": [
+        "objects-0368"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://repository.lsu.edu/biosci_pubs/98/",
+      "candidateIds": [
+        "nature-0374"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://repository.lsu.edu/biosci_pubs/98/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://resjournals.onlinelibrary.wiley.com/doi/10.1111/j.0307-6946.2005.00730.x",
+      "candidateIds": [
+        "nature-0392"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://sca.coffee/sca-news/coffee-decoded-21-chemistry-of-decaf",
+      "candidateIds": [
+        "objects-0365"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://sca.coffee/sca-news/coffee-decoded-21-chemistry-of-decaf",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/when-rivers-take-a-weird-turn-154394/",
+      "candidateIds": [
+        "nature-0371"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/earth/earth-observatory/when-rivers-take-a-weird-turn-154394/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://scripps.ucsd.edu/news/elephant-seals-drift-sleep-while-diving-far-below-ocean-surface",
+      "candidateIds": [
+        "nature-0393"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://scripps.ucsd.edu/news/elephant-seals-drift-sleep-while-diving-far-below-ocean-surface",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://web.mit.edu/towtank/www/sealWhiskers.html",
+      "candidateIds": [
+        "nature-0390"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://web.mit.edu/towtank/www/sealWhiskers.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.americanhistory.si.edu/collections/object/nmah_1068795",
+      "candidateIds": [
+        "culture-0226"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.beamish.org.uk/101-things-to-do-at-beamish/",
+      "candidateIds": [
+        "culture-0228"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.beamish.org.uk/101-things-to-do-at-beamish/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.bristol.ac.uk/news/2020/october/moths-acoustic-camouflage.html",
+      "candidateIds": [
+        "nature-0382"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bristol.ac.uk/news/2020/october/moths-acoustic-camouflage.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cameramuseum.ch/en/discover/permanent-exhibition/the-digital-revolution/1975-the-invention/",
+      "candidateIds": [
+        "objects-0383"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cameramuseum.ch/en/discover/permanent-exhibition/the-digital-revolution/1975-the-invention/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.castellocheese.com/en-us/cheese-types/blue-mold-cheese/",
+      "candidateIds": [
+        "objects-0366"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.castellocheese.com/en-us/cheese-types/blue-mold-cheese/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cdc.gov/chemical-emergencies/chemical-fact-sheets/sodium-azide.html",
+      "candidateIds": [
+        "objects-0375"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.centralparknyc.org/articles/tips-from-volunteers",
+      "candidateIds": [
+        "culture-0239"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.centralparknyc.org/articles/tips-from-volunteers",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.computerhistory.org/revolution/artificial-intelligence-robotics/13/324",
+      "candidateIds": [
+        "objects-0371"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.computerhistory.org/revolution/artificial-intelligence-robotics/13/324",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.computerhistory.org/revolution/input-output/14/350/1688",
+      "candidateIds": [
+        "objects-0363"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.computerhistory.org/revolution/input-output/14/350/1688",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.emilydickinsonmuseum.org/roomitem/i-prefer-pestilence/",
+      "candidateIds": [
+        "culture-0233"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.emilydickinsonmuseum.org/roomitem/i-prefer-pestilence/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.en.hosei.ac.jp/LUC2HOSEI/cdata/luc2hosei_12907_jaen.html",
+      "candidateIds": [
+        "objects-0385"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.en.hosei.ac.jp/LUC2HOSEI/cdata/luc2hosei_12907_jaen.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fisheries.noaa.gov/species/humpback-whale/management",
+      "candidateIds": [
+        "nature-0387"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.fisheries.noaa.gov/species/humpback-whale/management",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.floridamuseum.ufl.edu/science/luna-moths-evolved-long-spinning-tails-to-defend-against-bats/",
+      "candidateIds": [
+        "nature-0381"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.floridamuseum.ufl.edu/science/luna-moths-evolved-long-spinning-tails-to-defend-against-bats/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.fws.gov/species/southern-sea-otter-enhydra-lutris-nereis",
+      "candidateIds": [
+        "nature-0378"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.fws.gov/species/southern-sea-otter-enhydra-lutris-nereis",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.habitat.org/about/history/timeline",
+      "candidateIds": [
+        "culture-0237"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.habitat.org/about/history/timeline",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.henkel.co.uk/spotlight/2019-07-19-celebrating-pritts-golden-anniversary-963874",
+      "candidateIds": [
+        "objects-0386"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.henkel.co.uk/spotlight/2019-07-19-celebrating-pritts-golden-anniversary-963874",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.heritage.nf.ca/articles/arts/performing-arts.php",
+      "candidateIds": [
+        "culture-0220"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://www.ibm.com/history/excimer-laser-surgery-lasik",
+      "candidateIds": [
+        "objects-0362"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ibm.com/history/excimer-laser-surgery-lasik",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.kunsthauswien.com/en/museum-hundertwasser/architecture",
+      "candidateIds": [
+        "culture-0240"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.kunsthauswien.com/en/museum-hundertwasser/architecture",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nationalparks.nsw.gov.au/visit-a-park/parks/burning-mountain-nature-reserve",
+      "candidateIds": [
+        "nature-0372"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nationalparks.nsw.gov.au/visit-a-park/parks/burning-mountain-nature-reserve",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nintendo.com/en-gb/News/2021/August/Revisit-Nintendo-s-roots-with-Hanafuda-2019412.html",
+      "candidateIds": [
+        "objects-0384"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nintendo.com/en-gb/News/2021/August/Revisit-Nintendo-s-roots-with-Hanafuda-2019412.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.oregonencyclopedia.org/articles/tater-tots-and-ore-ida-foods-co/",
+      "candidateIds": [
+        "objects-0381",
+        "objects-0382"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.parliament.uk/business/news/2026/may-2026/the-house-of-commons-and-the-state-opening-of-parliament/",
+      "candidateIds": [
+        "culture-0229",
+        "culture-0230",
+        "culture-0231"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.shakespearesglobe.com/discover/blogs-and-features/2020/04/30/original-practices-at-shakespeares-globe/",
+      "candidateIds": [
+        "culture-0234",
+        "culture-0235"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.shakespearesglobe.com/discover/blogs-and-features/2020/04/30/original-practices-at-shakespeares-globe/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.sony.com/en/SonyInfo/CorporateInfo/History/SonyHistory/1-01.html",
+      "candidateIds": [
+        "objects-0372"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.spain.info/en/top/christmas-traditions-spain/",
+      "candidateIds": [
+        "culture-0238"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.spain.info/en/top/christmas-traditions-spain/",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.timessquarenyc.org/nye/wishing-wall",
+      "candidateIds": [
+        "culture-0236"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.timessquarenyc.org/nye/wishing-wall",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.uspto.gov/learning-and-resources/journeys-innovation/historical-stories/brilliant-touch",
+      "candidateIds": [
+        "objects-0378"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.uspto.gov/learning-and-resources/journeys-innovation/historical-stories/brilliant-touch",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.visitgreece.gr/inspirations/christmas-holidays-in-greece",
+      "candidateIds": [
+        "culture-0222",
+        "culture-0223",
+        "culture-0224"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitgreece.gr/en/inspirations/christmas-holidays-in-greece",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.volvocars.com/intl/media/press-releases/B9D7CD66A06448F7/",
+      "candidateIds": [
+        "objects-0373",
+        "objects-0374"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

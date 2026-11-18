@@ -1,0 +1,2172 @@
+{
+  "scope": "Editorially read snapshot125 cards; emphasis first100. Direct primary/source spot checks for33,42,63,75,79,81,88,92,97 and114. Similarity screening against published20100 plus staged/temp candidates; top match manually inspected for all125, targeted keyword scan for classic body facts. This is not a full independent source audit of every card. Indices may shift: match findings by question text.",
+  "snapshotPath": "/tmp/trivia-next/human-003-peer-snapshot.json",
+  "snapshotSha256": "bf295b10c0475ed15e4261ef804dfd9b6e2d10936bffe73b7b1e0fe8b96a836f",
+  "cards": [
+    {
+      "snapshotIndex": 1,
+      "q": "In the rubber-hand illusion, what helps a visible fake hand start to feel like part of your own body?",
+      "a": "Matching brushstrokes on the real and fake hands",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15077,
+          "q": "Which term fits this clue? A puppet with a cloth body and hollow head; fits over the hand."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 2,
+      "q": "Vibrating an arm tendon while a person holds their own nose can create which bizarre sensation?",
+      "a": "Nose is growing longer",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16104,
+          "q": "What is a nose curved downward like the beak of a hawk called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 3,
+      "q": "In Aristotle’s touch illusion, one small object touching crossed fingertips can seem like what?",
+      "a": "Two separate objects",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16328,
+          "q": "What is the 3D Touch technology embedded in some iPhone models?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 4,
+      "q": "A thermal grill combines harmless warm and cool bars under the hand. What surprising sensation can the combination produce?",
+      "a": "Burning heat",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15364,
+          "q": "Which of these is not a No Doubt song?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 5,
+      "q": "Two objects weigh exactly the same, but one is much smaller. In the classic size–weight illusion, which generally feels heavier?",
+      "a": "Smaller object",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 14048,
+          "q": "What is the product of two equal terms called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 6,
+      "q": "In the “cutaneous rabbit” illusion, taps at separated points on the skin can seem to do what?",
+      "a": "Hop through the untouched space between them",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 10562,
+          "q": "What is the name of a rabbit's abode?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 7,
+      "q": "After pushing an arm outward against an immovable support, what odd movement can occur when the person relaxes?",
+      "a": "Arm rises involuntarily",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18086,
+          "q": "Which of the following is the the odd one?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 8,
+      "q": "You glance quickly at a clock and its second hand seems frozen for an unusually long moment. What has apparently stretched?",
+      "a": "The first moment after your eyes land",
+      "verdict": "revise",
+      "severity": "medium",
+      "finding": "The stem already describes the first viewed interval seeming unusually long; the answer restates it. Retarget to a less disclosed aspect or omit this version.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 970,
+          "q": "A printed ring in the Rotating Snakes illusion seems to spin out of the corner of your eye. How can you make that ring seem to stop without touching the page?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 9,
+      "q": "Researchers made completely dry surfaces feel damp in a moisture-free chamber. Which property did they vary?",
+      "a": "Surface temperature",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Only temperature is a direct touch cue among color, brightness and sound. Competing tactile variables would make better adult distractors.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "food-002.json",
+          "id": "food-0112",
+          "q": "Why can room-temperature menthol give your mouth a chilly sensation?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 10,
+      "q": "Cambridge’s wearable robotic “Third Thumb” is strapped beside the hand. Which body parts control it through pressure sensors?",
+      "a": "Big toes",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16167,
+          "q": "What is the finger next to the thumb called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 11,
+      "q": "Durham researchers trained both blind and sighted adults to judge objects without vision by listening to echoes of what?",
+      "a": "Clicking sounds",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 10327,
+          "q": "Which animal fits this clue? Nocturnal mouselike mammal with forelimbs modified to form membranous wings and anatomical adaptations for echolocation by which they navigate."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 12,
+      "q": "A 20-person listening study found that a difficult podcast task activated vestigial muscles normally associated with moving what?",
+      "a": "Outer ears",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 415,
+          "q": "Which desert fox has ears that help it both shed heat and hear prey beneath sand?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 13,
+      "q": "In a lightproof room, a 2009 experiment’s ultrasensitive camera recorded a faint spontaneous glow from which unlit subjects?",
+      "a": "Human bodies",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16408,
+          "q": "If compared to a camera, what part of the human eye is its aperture?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 14,
+      "q": "In grip experiments, water-wrinkled fingertips let people use less force to hold which objects securely than smooth wet fingertips did?",
+      "a": "Wet objects",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "culture-001.json",
+          "id": "culture-0068",
+          "q": "How does a musician sound the spinning bowls of Benjamin Franklin’s glass armonica?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 15,
+      "q": "A sensitive microphone in an ear canal can detect faint sounds generated by what unexpected source?",
+      "a": "Inner ear itself",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Tear ducts, nasal cartilage and optic nerve are conspicuously weak alternatives to the ear itself. The fact is good; improve plausible neighboring sound sources.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "nature-002.json",
+          "id": "nature-0223",
+          "q": "Some golden moles have an exceptionally enlarged bone in which sensory organ?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 16,
+      "q": "To test human scent-tracking, Berkeley researchers had blindfolded volunteers crawl along a grassy trail smelling of what?",
+      "a": "Chocolate",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16039,
+          "q": "What US state is known as The Volunteer State?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 17,
+      "q": "In a GPS-tracked study, people trying to walk straight without a reliable directional cue often followed what unexpected paths?",
+      "a": "Circles",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Square spirals and consistent eastward travel are weak alternatives. Keep the circling finding; use plausible wandering-path alternatives.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19251,
+          "q": "What does the D stand for in D-pad, found on most video game controllers?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 18,
+      "q": "In robot-mediated self-tickling experiments, what alteration made a person’s own touch feel more ticklish?",
+      "a": "A short delay before the robot delivered the touch",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16328,
+          "q": "What is the 3D Touch technology embedded in some iPhone models?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 19,
+      "q": "In a visual-imagination experiment, vividly picturing a bright shape could cause which real bodily response even without extra light?",
+      "a": "Pupils constricted",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16142,
+          "q": "What is a visual receptor cell in the retina that is sensitive to bright light and to color called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 20,
+      "q": "In a 2021 study, some people answered simple questions while still lucid dreaming. How did they send replies to the researchers?",
+      "a": "Eye movements or facial-muscle signals",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19937,
+          "q": "What is a question that can be answered by yes or no called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 21,
+      "q": "When a familiar sign was “on the tip of the fingers,” which part of its form was least readily recalled in a study of deaf signers?",
+      "a": "Its movement",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19805,
+          "q": "Which term fits this clue? Language that is spoken or written."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 22,
+      "q": "In people blind from birth, research has found that spoken language can recruit brain regions usually associated with which other ability?",
+      "a": "Vision",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19974,
+          "q": "What language is spoken by the most people in the European Union as their native language?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 23,
+      "q": "In the nasal cycle, what changes inside the nose to let airflow dominance shift between the nostrils?",
+      "a": "Swelling and shrinking tissue",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Septum swinging and nostrils sealing on alternate breaths make the answer too easy. Use plausible physiological mechanisms.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18940,
+          "q": "What is the time in a woman's life in which the menstrual cycle ends called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 24,
+      "q": "A face photograph has its eyes and mouth flipped within the face. Which change can make the grotesque alteration much harder to notice?",
+      "a": "Turning the whole photograph upside down",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19838,
+          "q": "What is a serious facial expression giving no evidence of interest or amusement called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 25,
+      "q": "In the McCollough illusion, black-and-white striped patterns can acquire apparent colors linked to which feature?",
+      "a": "Direction of the stripes",
+      "verdict": "revise",
+      "severity": "medium",
+      "finding": "Breathing rate, mirror distance and direction of room lighting are weak alternatives to stripe orientation. Prefer alternative properties of the viewed pattern.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15110,
+          "q": "Which performer recorded the work “Seven Nation Army”?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 26,
+      "q": "In a famous attention experiment, people counting basketball passes often missed someone walking through the scene dressed as what?",
+      "a": "A gorilla",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16254,
+          "q": "The Western Lowland Gorilla is scientifically know as?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 27,
+      "q": "During a real-world conversation experiment, some pedestrians failed to notice which remarkable switch?",
+      "a": "The person talking to them was replaced",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Repeating every sentence backward is implausible in this conversation paradigm. Replace that distractor.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19904,
+          "q": "Which term fits this clue? Conversation during a meal."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 28,
+      "q": "If a cough replaces a speech sound in a recorded sentence, listeners may believe they heard what?",
+      "a": "Missing speech sound",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "The missing phoneme is much more plausible than a duplicated sentence or every word changing pitch. Improve sound-level alternatives.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 983,
+          "q": "While editing a recording of her own speech, psychologist Diana Deutsch looped a short passage. What did the repeated speech begin to sound like?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 29,
+      "q": "An odd recording of “sine-wave speech” may initially sound like whistles. What can suddenly make the same recording intelligible?",
+      "a": "Hearing the original clear sentence first",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 983,
+          "q": "While editing a recording of her own speech, psychologist Diana Deutsch looped a short passage. What did the repeated speech begin to sound like?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 30,
+      "q": "Across many languages, people tend to pair the made-up word “kiki” with what sort of shape?",
+      "a": "A spiky shape",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 6456,
+          "q": "The Japanese actress Kirin Kiki auctioned off her first stage name on what because she claimed she had \"nothing else to sell\"?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 31,
+      "q": "In a “choice blindness” experiment, people sometimes explained why they preferred a face photograph that had actually been what?",
+      "a": "Secretly swapped for the one they rejected",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19875,
+          "q": "What is a note explaining an absence called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 32,
+      "q": "In a Reading study, which simple activity reduced reports of a catchy song repeating in participants’ minds?",
+      "a": "Chewing gum",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "objects-001.json",
+          "id": "objects-0053",
+          "q": "William Wrigley Jr. once offered free chewing gum with cans of what household product before gum became his main business?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 33,
+      "q": "In a 2003 case study, particular combinations of speech sounds consistently triggered which unusual sensation?",
+      "a": "Tastes in the mouth",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://www.sciencedirect.com/science/article/pii/S0010027703001227",
+        "finding": "Primary abstract: one individual; combinations of phonemes reliably induced tastes subjectively in the mouth. Current case-study framing accurate."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15512,
+          "q": "What kind of disturbance can pine nuts cause in about 1 to 3 days following their consumption?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 34,
+      "q": "Which task is typically slowed by the Stroop effect?",
+      "a": "Naming ink colors when the printed words name different colors",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 5281,
+          "q": "What psychology term names the proposed memory advantage of tasks interrupted halfway through, compared with tasks already finished?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 35,
+      "q": "After studying words such as bed, rest and awake, people in a classic memory experiment often “remembered” which word that had never appeared?",
+      "a": "Sleep",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 10443,
+          "q": "Which of the following words is NOT related to the octopus?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 36,
+      "q": "For people with the photic sneeze response, which unexpected event can trigger a sneeze?",
+      "a": "A sudden increase in bright light",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15609,
+          "q": "Who fits this description? A person who is not very bright."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 37,
+      "q": "In some people, stimulating the outer ear canal can unexpectedly trigger which reflex?",
+      "a": "Coughing",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16105,
+          "q": "Which term fits this clue? Either of the passages in the outer ear from the auricle to the tympanic membrane."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 38,
+      "q": "Identical twins can share virtually the same inherited DNA yet still differ in which familiar identification feature?",
+      "a": "Fingerprints",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15027,
+          "q": "What is a thing made to be similar or identical to another thing called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 39,
+      "q": "NC State researchers found thousands of microbial genetic types across samples from which small, often-overlooked body feature?",
+      "a": "Belly buttons",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 8486,
+          "q": "Microbial mats increase our understanding of evolution by helping to preserve soft-bodied organisms and soft parts of what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 40,
+      "q": "What can persist in a mother’s tissues for years after childbirth as a result of fetal microchimerism?",
+      "a": "A small population of her child’s cells",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Stored hormones, plasma and amniotic fluid persisting for years are very weak choices. Retain the surprising cellular persistence but improve alternatives.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18308,
+          "q": "What is found in plant cells, but not in animal cells?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 41,
+      "q": "When researchers filmed knuckles cracking inside an MRI scanner, what appeared rapidly in the joint fluid?",
+      "a": "A gas-filled cavity",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16138,
+          "q": "Which term fits this clue? The cavity containing the major viscera; in mammals it is separated from the thorax by the diaphragm."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 42,
+      "q": "A Brown sleep study found a “night watch” effect during the first night in unfamiliar surroundings. What was unusually uneven?",
+      "a": "Sleep depth between parts of the two brain hemispheres",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27112296/",
+        "finding": "Primary abstract: regional DMN sleep-depth asymmetry and enhanced responses to deviant stimuli in the first session; later sessions lack asymmetry. Current regional qualification is important."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15920,
+          "q": "What is an area on which a drove of cattle or sheep can sleep for a night called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 43,
+      "q": "A gene variant associated with dry earwax also affects production of which surprisingly separate personal trait?",
+      "a": "Underarm odor",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "nature-002.json",
+          "id": "nature-0106",
+          "q": "Aquarists cleaning a melibe sea-slug exhibit have compared its secretions’ smell to which fruit?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 44,
+      "q": "Inherited differences in odor detection help explain why some people cannot smell a distinctive urine odor after eating which vegetable?",
+      "a": "Asparagus",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "released.json",
+          "id": 20021,
+          "q": "After lunar dust was brought inside their spacecraft, Apollo astronauts compared its smell to what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 45,
+      "q": "Chemical growth records in baby teeth have helped researchers reconstruct which event from infancy?",
+      "a": "Weaning from breast milk",
+      "verdict": "revise",
+      "severity": "medium",
+      "finding": "Only diet among the choices has a plausible direct chemical record in teeth. Alternatives should be plausible physiological or dietary events.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16417,
+          "q": "What does long in the tooth mean?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 46,
+      "q": "After handshakes, hidden-camera research at Weizmann found an increase in what easily overlooked behavior?",
+      "a": "Sniffing one’s own hands",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19582,
+          "q": "From what distance can horses recognize odors?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 47,
+      "q": "In a sleep-onset study, even participants with amnesia who could not recall playing a game reported images from which game?",
+      "a": "Tetris",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19162,
+          "q": "What is a Tetris piece called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 48,
+      "q": "Under special laboratory conditions, people have perceived near-infrared light through what unusual retinal process?",
+      "a": "Absorbing two photons together",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16424,
+          "q": "Which of these thermal emissions of light is the rarest in nature?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 49,
+      "q": "In a detailed study of two people with six functional fingers per hand, brain scans found what for the extra finger?",
+      "a": "A distinct cortical representation",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Control only through toe representation is an obviously weak distractor. Other cortical representation arrangements would be more credible.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16098,
+          "q": "What is a wave made with the fingers called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 50,
+      "q": "The BrainPort system converts a camera image into patterns of electrical stimulation delivered to which body part?",
+      "a": "Tongue",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16408,
+          "q": "If compared to a camera, what part of the human eye is its aperture?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 51,
+      "q": "In a laboratory illusion, a gently tapped hand began to feel harder and stiffer after researchers changed what?",
+      "a": "Sound of each tap",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 984,
+          "q": "How can a gently tapped metal coat hanger sound like a great church bell to one listener and a faint clink to someone standing nearby?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 52,
+      "q": "When people located landmarks on their own hidden hands, the resulting mental maps tended to depict what distortion?",
+      "a": "Broader hands with shorter fingers",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "culture-001.json",
+          "id": "culture-0073",
+          "q": "Which electronic instrument is played by moving your hands in the air without touching it?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 53,
+      "q": "In an audio experiment, boosting high frequencies in the sound of hands rubbing together made the skin feel what?",
+      "a": "Drier",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "food-002.json",
+          "id": "food-0010",
+          "q": "In a potato-chip experiment, amplifying the eater’s crunch through headphones made unchanged chips seem what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 54,
+      "q": "In a Keele experiment comparing four utterances during a cold-water task, which increased pain tolerance?",
+      "a": "A familiar swear word",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "culture-001.json",
+          "id": "culture-0028",
+          "q": "In a comic strip, a grawlix such as #$%! is usually standing in for what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 55,
+      "q": "The DishBrain experiment connected living neurons in a dish to a simplified version of which video game?",
+      "a": "Pong",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16152,
+          "q": "What is the flattened end of a motor neuron that transmits neural impulses to a muscle called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 56,
+      "q": "In an experiment with an itchy right forearm, scratching the left forearm reduced the itch most when participants saw what?",
+      "a": "A mirror view making the left arm look like the right",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16455,
+          "q": "Where is the radial artery located?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 57,
+      "q": "Repeatedly copying a familiar word can sometimes make it feel strangely unfamiliar. What is this opposite-of-déjà-vu experience called?",
+      "a": "Jamais vu",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 12487,
+          "q": "What is the opposite of wrong?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 58,
+      "q": "In a UCLA memory study, only one of 85 participants drew which familiar technology logo completely correctly?",
+      "a": "Apple’s apple",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 13278,
+          "q": "What year was Apple Inc. founded?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 59,
+      "q": "A study of shared false visual memories examined people “remembering” which accessory on the usual Monopoly mascot?",
+      "a": "A monocle",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 13343,
+          "q": "Which restaurant's mascot is a clown?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 60,
+      "q": "In photo-preference research, people tended to prefer which version of their own face, unlike their friends’ usual preference?",
+      "a": "Mirror-reversed version",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 11514,
+          "q": "A simple periscope lets someone see over an obstacle using what at either end?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 61,
+      "q": "People wearing a potentially embarrassing T-shirt in the “spotlight effect” experiments tended to overestimate what?",
+      "a": "How many observers would remember the shirt",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 14951,
+          "q": "What is a shirt with short sleeves designed for comfort and casual wear called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 62,
+      "q": "What unusual covering did University of Tokyo researchers attach to a robotic face that could smile?",
+      "a": "Living skin grown from human cells",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 13414,
+          "q": "What is the largest organ of the human body?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 63,
+      "q": "In an experiment probing the limit of human vision, researchers generated pairs of photons. What happened to the partner of the photon sent toward the eye?",
+      "a": "It went to a detector",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "Primary SPDC methods and institutional report support partner photon detection. A criticism located in search was withdrawn; it is not a reason to reject. Keep the restrained statistical finding and do not imply reliable seeing on every trial.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4960318/",
+        "finding": "Primary methods search extraction: signal/idler pairs; EMCCD records the partner during human-subject experiments. Above-chance detection described by original institution. Withdrawn criticism checked at https://arxiv.org/abs/1707.09341."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 8333,
+          "q": "What fills the blank? The deep water ____ fish is so named because of its unusual visual system which uses barrel-shaped, telescopic eyes that are generally directed upwards."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 64,
+      "q": "To create the intensely saturated color perception called “olo,” Berkeley’s Oz system selectively stimulated what?",
+      "a": "One type of retinal cone cell",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16142,
+          "q": "What is a visual receptor cell in the retina that is sensitive to bright light and to color called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 65,
+      "q": "A study of people newly able to see after congenital blindness tested whether they could immediately identify by sight objects known by what other sense?",
+      "a": "Touch",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 10503,
+          "q": "What is the most important sense for raccoons?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 66,
+      "q": "The tiny moving lights known as “blue-sky sprites” arise from which cells moving through vessels in the eye?",
+      "a": "White blood cells",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16449,
+          "q": "What kind of cells carry oxygen around your body?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 67,
+      "q": "When the body metabolizes stored fat, most of that fat’s mass eventually leaves by which route?",
+      "a": "Exhaled carbon dioxide",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16209,
+          "q": "Dry ice is the solid form of what substance?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 68,
+      "q": "In developmental experiments, some young children thought they could hide themselves merely by concealing what?",
+      "a": "Their eyes",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 9074,
+          "q": "Construction of Roosevelt High School in St. Louis, Missouri, required the removal of a cemetery, yet not all bodies were removed and local children took what away from the work site?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 69,
+      "q": "After practice stepping onto a moving platform, participants were explicitly told it had stopped. What happened on their first step onto it?",
+      "a": "Their bodies still overcompensated for movement",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 564,
+          "q": "Which film worker may spend a shift taking carefully timed steps without appearing on camera?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 70,
+      "q": "In the autokinetic illusion, a single dim light in an otherwise dark room seems to do what while actually staying still?",
+      "a": "Wander or drift",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "earth-003.json",
+          "id": "earth-0104",
+          "q": "A black-hole jet can appear to move faster than light without breaking relativity. What creates that illusion?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 71,
+      "q": "A mouse study investigating why tattoos persist found that replacement immune cells did what with pigment released by older cells?",
+      "a": "Captured it again",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "All three distractors say ALL pigment disappears by some route, despite the stem asking why tattoos persist. Remove absolute outcomes or retarget without revealing persistence.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18308,
+          "q": "What is found in plant cells, but not in animal cells?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 72,
+      "q": "Using synchrotron analysis, researchers found that some particles from human tattoos had traveled beyond the skin to where?",
+      "a": "Lymph nodes",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16103,
+          "q": "What is the source of lymph and lymphocytes called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 73,
+      "q": "Some skin pigmentation patterns follow the curved lines of Blaschko. These patterns can reveal what hidden biological patchwork?",
+      "a": "Genetically different populations of skin cells",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "Related to published18714 cat X-inactivation, but human Blaschko patterns and skin mosaicism are a distinct recognition target. Do not expand explanation into a second generic X-inactivation quiz.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18714,
+          "q": "What chromosome-silencing process helps turn a tortoiseshell cat's coat into a patchwork of orange and black?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 74,
+      "q": "Rapidly cycling through aligned photographs of ordinary faces can make them appear like what, despite leaving the photos unedited?",
+      "a": "Grotesque caricatures",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 10580,
+          "q": "Whose portrait appears on the face of the $20 bill?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 75,
+      "q": "Tiny experimental Anthrobots were made from adult human cells normally found lining which part of the body?",
+      "a": "Windpipe",
+      "verdict": "revise",
+      "severity": "medium",
+      "finding": "Tufts press report calls the source tracheal, but the primary paper repeatedly identifies normal human bronchial epithelial cells and lung/airway origin. Prefer Airway lining to precise Windpipe and adjust the question grammar. Primary methods confirm NHBE cells from Lonza.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202303575",
+        "finding": "Primary full text sections1,2.1,5: bronchial epithelial progenitor cells, cilia-driven locomotion and neural-sheet scratch closure. Specific windpipe wording is less precise than airway."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16505,
+          "q": "What type of cells are Betz cells that are found in the human body?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 76,
+      "q": "A prototype fingertip fuel cell developed at UC San Diego generated electricity while its wearer slept by harvesting what?",
+      "a": "Sweat",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18308,
+          "q": "What is found in plant cells, but not in animal cells?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 77,
+      "q": "In the experimental BrainNet system, what did a receiver perceive when a teammate sent a “rotate the block” instruction through the brain interface?",
+      "a": "A flash of light",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 986,
+          "q": "One flash of light is paired with two quick beeps. What do people sometimes report seeing?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 78,
+      "q": "In thermal-taste experiments, warming a previously cooled tongue tip can produce which taste even without sugar?",
+      "a": "Sweetness",
+      "verdict": "revise",
+      "severity": "medium",
+      "finding": "Even without sugar gives away Sweetness. Remove the sugar cue; temperature alone already establishes the surprise.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 1063,
+          "q": "Which five-carbon sweetener can produce a cooling sensation in your mouth as its crystals dissolve?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 79,
+      "q": "Syncytin, a protein that helps human placental cells fuse, was adapted during evolution from what source?",
+      "a": "An ancient retrovirus",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10693809/",
+        "finding": "Primary abstract: HERV-W envelope gene, placental expression and experimentally supported cell fusion. Supports retroviral origin with no new infection implied."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16434,
+          "q": "Which part of a cell contains the chromosomes or genetic material?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 80,
+      "q": "The antibiotic compound lugdunin was discovered in bacteria living in which surprisingly ordinary human location?",
+      "a": "Nose",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 8486,
+          "q": "Microbial mats increase our understanding of evolution by helping to preserve soft-bodied organisms and soft parts of what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 81,
+      "q": "A study of 60 French and German newborns found a difference in their cries that echoed the melody of their surroundings. Which sound feature differed?",
+      "a": "Rising versus falling pitch",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19896378/",
+        "finding": "Primary abstract: 30 French and30 German newborns; preferential rising and falling contours respectively. Current study-specific framing and attributed prenatal interpretation acceptable."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "nature-002.json",
+          "id": "nature-0213",
+          "q": "What are a newborn porcupine’s quills like before they harden?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 82,
+      "q": "In research in the Australian Aboriginal community of Pormpuraaw, people often arranged chronological pictures according to what reference?",
+      "a": "Compass directions",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 9133,
+          "q": "The collapse of the Aboriginal Community Benefit Fund left 14,500 customers A$66 million out of what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 83,
+      "q": "A Russian-English color experiment explored a linguistic boundary between which two colors that English usually groups under one basic color name?",
+      "a": "Light blue and dark blue",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 15900,
+          "q": "What is the boundary between two states called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 84,
+      "q": "In a sleep-learning experiment, tones were paired with pleasant or unpleasant odors. What did participants later do when the tones played without any odor?",
+      "a": "Change their sniffing",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Sniffing is much more plausible than recalling a named odor or matching dream image after odor conditioning. Better competing physiological responses or retarget persistence into waking.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19746,
+          "q": "What is a birdcall that resembles the tone of a bell called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 85,
+      "q": "The faint bow-tie pattern called Haidinger’s brushes reveals that human eyes can detect which property of light?",
+      "a": "Polarization",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "earth-003.json",
+          "id": "earth-0144",
+          "q": "What can make an astronaut see a flash even with closed eyes in a dark spacecraft?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 86,
+      "q": "An EPFL robotic experiment created a spooky feeling by introducing a mismatch between a participant’s movement and touch on their back. What did some participants sense?",
+      "a": "An unseen person nearby",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 10503,
+          "q": "What is the most important sense for raccoons?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 87,
+      "q": "Research on developing fingerprints found that their ridges follow a shortened version of the developmental program for what other skin structure?",
+      "a": "Hair follicles",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19880,
+          "q": "What is a program broadcast by television called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 88,
+      "q": "In a 2023 experiment, men exposed to women’s emotional tears showed less of which behavior during a competitive laboratory game?",
+      "a": "Aggressive retaliation",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002442",
+        "finding": "Primary abstract: sniffed emotional tears without odor percept reduced male aggression in a standard task. No universal behavioral effect claimed by card."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 7895,
+          "q": "In Viggo Stuckenberg's poetry, men were often depicted as what while women showed will and ability?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 89,
+      "q": "After using a mechanical grabber, participants in a body-perception experiment judged touches at their elbow and fingertip as if their arm had become what?",
+      "a": "Longer",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16161,
+          "q": "What is a bone in the arm called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 90,
+      "q": "In the Pulfrich illusion, darkening the view through one eye can make a pendulum swinging side to side appear to follow what path?",
+      "a": "An ellipse in depth",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 11526,
+          "q": "Which motion supplies the regular beat in a traditional pendulum clock?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 91,
+      "q": "A 2021 Stanford brain-interface study produced on-screen text while a participant imagined performing which action?",
+      "a": "Writing letters by hand",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 2648,
+          "q": "Reading garden path sentences can trigger a spike in brain activity called which landform?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 92,
+      "q": "The memory-related protein Arc can assemble into tiny virus-like packages. What cargo did researchers find these packages could carry between laboratory-grown neurons?",
+      "a": "RNA",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "RNA cargo and transfer between cultured neurons are supported. The explicit laboratory scope avoids claiming proven memory transfer in humans.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://neuroscience.stanford.edu/sites/default/files/pastuzyn_cell_paper_pdf.pdf",
+        "finding": "Primary paper indexed passage: Arc capsids/vesicles transfer RNA between neurons. Institution full text independently describes own mRNA cargo in cultured mouse neurons. Direct PDF later unavailable, so the primary indexed passage and institution text were used."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16505,
+          "q": "What type of cells are Betz cells that are found in the human body?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 93,
+      "q": "A University of Tokyo two-legged robot reported in 2024 moved using electrically stimulated pieces of what?",
+      "a": "Lab-grown muscle",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16116,
+          "q": "Which term fits this clue? The muscle tissue of the heart; adapted to continued rhythmic contraction."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 94,
+      "q": "In a small study of two people with severe amnesia, what happened when another meal was offered shortly after one they had forgotten eating?",
+      "a": "They ate again",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 8841,
+          "q": "Edward Dando ate a loaf and a half of buttered bread at one sitting. What shellfish did he reportedly put away 300 of alongside it?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 95,
+      "q": "In a study of 32 Turkish-English bilinguals, taboo words produced a stronger skin-conductance response when presented in which language?",
+      "a": "Their first language",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19865,
+          "q": "What is the language that a person has spoken from earliest childhood called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 96,
+      "q": "In an experiment involving a simulated walk through rooms, when did recognition memory start to worsen around a doorway?",
+      "a": "Before the doorway was crossed",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 9751,
+          "q": "An automatic number plate recognition system uses optical character recognition to read the license plates on what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 97,
+      "q": "In a 2025 study, fingertips were soaked on separate occasions and their wrinkles compared. What did the researchers find about the wrinkle patterns?",
+      "a": "They tended to recur in similar places",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "Repeatability is supported by orientation correlations across two time points. Vascular architecture is the proposed reason, not independently demonstrated causation in this abstract; prefer researchers suggested over linked if revising.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39965356/",
+        "finding": "Primary abstract: repeated fingertip images, matched wrinkle orientations and comparison with random vectors. Static vascular arrangement is hypothesized as explanation."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 6055,
+          "q": "Which animal is able to bite 20% harder than other bats of a similar size allowing it to eat a wider range of fruits?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 98,
+      "q": "Participants in a frightening free-fall experiment remembered their fall as unusually long. What did a flashing-digit test reveal about their vision during the fall?",
+      "a": "It did not resolve faster flashes",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 14439,
+          "q": "What is a part of Niagara Falls in Ontario called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 99,
+      "q": "In research on why a return journey can feel shorter, what happened when cyclists returned by a different but equally long route?",
+      "a": "The shorter-feeling return trip still occurred",
+      "verdict": "revise",
+      "severity": "low",
+      "finding": "Twice as long is an exaggerated distractor and the answer set is close to a binary effect/no-effect question. Core result is valid and interesting; optional choice refinement.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19878,
+          "q": "What is a tax return that corrects the information in an earlier return called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 100,
+      "q": "In a human brain-recording study, what weakened when participants switched from breathing through the nose to breathing through the mouth?",
+      "a": "The coupling of breathing and brain rhythms",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 10195,
+          "q": "Which animal fits this clue? Small air-breathing arthropod."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 101,
+      "q": "Researchers made an experimental yarn for weaving tissue-engineering materials from sheets of what?",
+      "a": "Matrix produced by human cells",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 14735,
+          "q": "What is the yarn woven across the warp yarn in weaving called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 102,
+      "q": "University of Cape Town researchers grew experimental bricks at room temperature using sand, bacteria, and which human waste product?",
+      "a": "Urine",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "nature-001.json",
+          "id": "nature-0048",
+          "q": "Which microorganisms help a cobra plant break down prey captured in its pitcher?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 103,
+      "q": "A Harvard biohybrid fish described in 2022 swam using human stem-cell-derived cells of which type?",
+      "a": "Heart muscle cells",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16505,
+          "q": "What type of cells are Betz cells that are found in the human body?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 104,
+      "q": "Wind-tunnel experiments with model eyelashes found that excessively long lashes could have what surprising effect?",
+      "a": "Channel more airflow toward the eye",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 12289,
+          "q": "With what do you open your eyes by curling and lengthening the lashes?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 105,
+      "q": "Patients with severe memory impairment could improve at which task despite poor recollection of the practice sessions?",
+      "a": "Tracing a pattern seen in a mirror",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19666,
+          "q": "What is a law providing support for the poor called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 106,
+      "q": "In experiments using a computerized balloon-risk game, which basic taste was associated with more risk-taking?",
+      "a": "Sour",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "food-002.json",
+          "id": "food-0109",
+          "q": "In a mouse study, taste cells best known for detecting which taste also responded to carbonation?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 107,
+      "q": "People listening attentively to the same story can show correlated fluctuations in which bodily measure, even without interacting?",
+      "a": "Heart rate",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "Published635 already concerns synchronized heart rates during attraction. This version adds shared narrative, no interaction and attention dependence: sufficiently different causal setting if those distinctions remain explicit.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 635,
+          "q": "On blind dates in an Ig Nobel-winning study, what two internal metronomes tended to fall into step when attraction was mutual?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 108,
+      "q": "When people watched the same short video stories, their blinks often synchronized at which moments?",
+      "a": "Moments demanding less visual attention",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 12983,
+          "q": "Which superhero has the power to be over long distances?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 109,
+      "q": "Human egg cells activated in laboratory experiments released a burst of which metal, visualized with fluorescent probes?",
+      "a": "Zinc",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18135,
+          "q": "What alloy contains copper and zinc, with a content of copper typically more than 50%?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 110,
+      "q": "Duke researchers found that shifting your eyes while keeping your head still also produces tiny movements in which structures?",
+      "a": "Eardrums",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19934,
+          "q": "What is a name between your first name and your surname called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 111,
+      "q": "A fingertip-inspired sensor suggested that fingerprint ridges help fine-texture perception by selecting and amplifying what?",
+      "a": "Vibrations",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 336,
+          "q": "What kind of identifying mark fills the cover of Chicago XIV?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 112,
+      "q": "During a guided museum-tour study, photographing an entire object was followed by what result compared with simply observing it?",
+      "a": "Less memory of its details",
+      "verdict": "revise",
+      "severity": "medium",
+      "finding": "Better memory of EVERY detail and NO recognition are straw alternatives. Use moderate changes rather than absolute outcomes.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 17809,
+          "q": "Migralepsy is a rare condition where a ____ is followed by an epileptic seizure. Which detail is missing?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 113,
+      "q": "In a Yale experiment, adding logically irrelevant information from which field made poor psychological explanations more satisfying to nonexperts?",
+      "a": "Neuroscience",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "earth-003.json",
+          "id": "earth-0005",
+          "q": "In the leading explanation, what carves the branching “spider” scars near Mars’s south pole?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 114,
+      "q": "Bone has a tiny piezoelectric response: mechanical and electrical effects are coupled. Which major bone component is a principal contributor?",
+      "a": "Collagen",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "Original paper PMID42777739 supports collagen as principal contributor in measured cortical bone, reduced response after deproteinization. Avoid generalizing to every electromechanical response in all bone.",
+      "sourceSpotChecked": true,
+      "verification": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42777739/",
+        "finding": "Primary abstract: selective organic-matrix reduction and nanoscale piezoresponse microscopy; collagen identified as principal contributor to cortical-bone electromechanical coupling."
+      },
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 16161,
+          "q": "What is a bone in the arm called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 115,
+      "q": "Radiocarbon from nuclear weapons testing helped researchers estimate people’s birth years by examining long-lived proteins in which part of the eye?",
+      "a": "Lens",
+      "verdict": "reject",
+      "severity": "high",
+      "finding": "Same carbon-dating persistent eye-lens protein fact as published20039 Greenland shark; changing species is insufficient. Parent already identified this removal.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "released.json",
+          "id": 20039,
+          "q": "To estimate the age of a centuries-old Greenland shark, researchers carbon-date proteins in which body part?"
+        },
+        "finding": "Same underlying fact confirmed."
+      }
+    },
+    {
+      "snapshotIndex": 116,
+      "q": "X-rays overturned an early death-date claim for the Mütter Museum’s “Soap Lady” by revealing which hidden evidence?",
+      "a": "Clothing buttons and pins",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 13616,
+          "q": "Which nation claims ownership of Antarctica?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 117,
+      "q": "A study of people blind from birth found that, when speaking to another blind person, they did what with their hand gestures?",
+      "a": "They still gestured",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 14648,
+          "q": "What is a blind for privacy or to keep out light called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 118,
+      "q": "In experiments on unfamiliar sayings, which wording change made a statement seem more accurate without changing its basic meaning?",
+      "a": "Making it rhyme",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19884,
+          "q": "What is a statement that deviates from or perverts the truth called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 119,
+      "q": "In a tactile illusion, moving two parallel metal wires between the palms can make people feel they are touching what kind of surface?",
+      "a": "Soft fabric",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 14574,
+          "q": "Which term fits this clue? Fabric woven of metallic wire."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 120,
+      "q": "Research into an old art-conservation technique identified an enzyme in which bodily fluid as an effective cleaning agent?",
+      "a": "Saliva",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 19825,
+          "q": "What is the name by which a corporation is identified called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 121,
+      "q": "Worcester Polytechnic Institute researchers grew beating human heart cells on the stripped-down framework of which vegetable?",
+      "a": "Spinach",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18308,
+          "q": "What is found in plant cells, but not in animal cells?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 122,
+      "q": "In a 2015 study, repeated false statements gained credibility even when participants had what?",
+      "a": "Knowledge of the correct fact",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 18943,
+          "q": "Which term fits this clue? Time available for ease and relaxation."
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 123,
+      "q": "A tongue-in-cheek randomized trial found no injury benefit from parachutes versus empty backpacks. What crucial detail explains the result?",
+      "a": "The aircraft were stationary on the ground",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 7414,
+          "q": "The Gloster Gannet aircraft, which was originally built solely to compete in the Lympne Trials, never flew at the event due to what?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 124,
+      "q": "Four adults in a 2008 study could hear something while watching silent flashes or visual motion. What gave them an advantage on a visual rhythm task?",
+      "a": "Sound sensations triggered by the images",
+      "verdict": "reject",
+      "severity": "high",
+      "finding": "Stem says the participants could hear silent flashes, then asks what gave them an advantage: sound sensations triggered by images. The answer is already disclosed. Retarget or omit this version.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 14949,
+          "q": "What is a movie camera that records sounds in synchrony with the visual images called?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    },
+    {
+      "snapshotIndex": 125,
+      "q": "In the magician’s Criss-Cross force, a spectator freely chooses where to cut a deck. Which card is ultimately presented as their selection?",
+      "a": "Original top card",
+      "verdict": "accept",
+      "severity": "none",
+      "finding": "No specific factual overreach, answer ambiguity or self-answering clue identified in editorial reading.",
+      "sourceSpotChecked": false,
+      "duplicateScreen": {
+        "closestReviewedMatch": {
+          "file": "existing.json",
+          "id": 7746,
+          "q": "A yeshiva student turned magician went from practicing what in his free time to performing for major league baseball teams?"
+        },
+        "finding": "Closest lexical candidate is not by itself evidence of duplicate fact."
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "originalIndex": 25,
+    "q": "In classic experiments matching drawings of rotated objects, which difference made people take longer to recognize the same shape?",
+    "reason": "Low curiosity value: slower matching after a larger mental rotation is too unsurprising. Replaced with long-lasting orientation-contingent color illusion."
+  },
+  {
+    "originalIndex": 55,
+    "q": "Watching a video of another person scratching can produce which sensation in the viewer without anyone touching them?",
+    "reason": "Scratching video causing itch too self-evident in quiz format."
+  },
+  {
+    "originalIndex": 62,
+    "q": "In a classic study of memory in different environments, divers were sent underwater to learn what?",
+    "reason": "Underwater word-learning question tested an arbitrary study detail; replaced with more compelling curiosity."
+  },
+  {
+    "originalIndex": 75,
+    "q": "A 2021 study mapped individual hair shafts and documented which change without hair dye?",
+    "reason": "Hair repigmentation is real but question relied on implausible distractors; retained as rejected research, not padded into count."
+  },
+  {
+    "original_index": 113,
+    "question": "In a visual experiment with equally luminous dot patterns, pupil responses changed with what unexpected feature?",
+    "reason": "Numerosity fact accurate, but four strong distinct nonambiguous distractors were not achieved; replaced rather than padded.",
+    "replacement": "In a Yale experiment, adding logically irrelevant information from which field made poor psychological explanations more satisfying to nonexperts?"
+  },
+  {
+    "original_index": 118,
+    "question": "After volunteers’ immune systems were experimentally activated, other people rated their body odor as what compared with a saline-control condition?",
+    "reason": "Body-odor inflammation study was accurate but low-curiosity quiz execution; replaced with more distinctive observation.",
+    "replacement": "A study of people blind from birth found that, when speaking to another blind person, they did what with their hand gestures?"
+  },
+  {
+    "original_index": 119,
+    "question": "A friction study of banana peels linked their slipperiness mainly to what released when the peel’s tiny structures were crushed?",
+    "reason": "Conservative semantic exclusion: live #630 already teaches banana-peel friction experiment. Gel detail new but shared underlying curiosity.",
+    "replacement": "In experiments on unfamiliar sayings, which wording change made a statement seem more accurate without changing its basic meaning?"
+  },
+  {
+    "original_index": 124,
+    "question": "Researchers took a model containing kidney stones on 20 rides at Walt Disney World to study their movement. Which attraction did they use?",
+    "reason": "Genuine semantic duplicate of live #627: model kidney stones on roller coaster. More specific ride name is not a new curiosity.",
+    "replacement": "In a 2015 study, repeated false statements gained credibility even when participants had what?"
+  },
+  {
+    "original_index": 116,
+    "question": "Stable carbon and nitrogen isotopes in ancient human hair can help reconstruct what aspect of a person’s life?",
+    "reason": "Parent editorial review: isotope-based diet reconstruction is an ordinary archaeological technique without a sufficiently distinctive hook.",
+    "replacement": null
+  },
+  {
+    "original_index": 120,
+    "question": "Why can an ordinary walking pace be especially good at making coffee slosh in a typical mug?",
+    "reason": "Parent editorial review: coffee resonance is a routine mechanism and four good alternatives were not achieved.",
+    "replacement": null
+  },
+  {
+    "original_index": 115,
+    "question": "Radiocarbon from nuclear weapons testing helped researchers estimate people’s birth years by examining long-lived proteins in which part of the eye?",
+    "reason": "Semantic duplicate of released #20039: long-lived eye-lens proteins carbon-dated to estimate age. Human/bomb-pulse context does not make the tested lens fact new.",
+    "replacement": null
+  }
+]

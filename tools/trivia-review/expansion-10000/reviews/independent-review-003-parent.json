@@ -1,0 +1,519 @@
+{
+  "acceptedReviewed": 16,
+  "blockingIssues": 0,
+  "optionalImprovements": 2,
+  "reviews": [
+    {
+      "file": "misc-003.json",
+      "index": 1,
+      "candidateId": "misc-0001",
+      "decision": "accept",
+      "sourceUrl": "https://periodic-table.rsc.org/element/15/phosphorus",
+      "sourceCheck": "RSC history explicitly says Brand evaporated urine and obtained phosphorus; full passage read.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.141,
+          "id": "existing.json:16165",
+          "q": "What is the liquid parts of the body called?",
+          "d": "The liquid parts of the body. Another name is liquid body substance."
+        },
+        {
+          "sim": 0.133,
+          "id": "objects-002.json:28",
+          "q": "Among the nails and pins in historical “witch bottles,” archaeologists have found which liquid?",
+          "d": "The concealed vessels were used in folk practices intended as protection or cures against witchcraft."
+        },
+        {
+          "sim": 0.133,
+          "id": "objects-002.json:objects-0128",
+          "q": "Among the nails and pins in historical “witch bottles,” archaeologists have found which liquid?",
+          "d": "The concealed vessels were used in folk practices intended as protection or cures against witchcraft."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "misc-003.json",
+      "index": 3,
+      "candidateId": "misc-0003",
+      "decision": "accept",
+      "sourceUrl": "https://www.nationaltrust.org.uk/discover/history/art-collections/revealing-the-national-trusts-fashion-treasures",
+      "sourceCheck": "National Trust lines267–273 establish all-in-one outfit and rapid dressing for air raids, plus velvet entertaining version.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.311,
+          "id": "existing.json:15460",
+          "q": "Blenheim Palace is in England, although its name commemorates a battle elsewhere. Which British prime minister was born there?",
+          "d": "The palace was built for Churchill's ancestor John Churchill, the first Duke of Marlborough."
+        },
+        {
+          "sim": 0.3,
+          "id": "existing.json:13672",
+          "q": "Who was the Prime Minister of the United Kingdom for most of World War II?",
+          "d": ""
+        },
+        {
+          "sim": 0.278,
+          "id": "existing.json:13130",
+          "q": "What British statesman was a gin drinker of exception?",
+          "d": "It was Winston Churchill who said: “Gin and tonic saved the lives of more English than all the doctors of the Empire”."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "misc-003.json",
+      "index": 4,
+      "candidateId": "misc-0004",
+      "decision": "accept",
+      "sourceUrl": "https://www.sydney.edu.au/news-opinion/news/2017/07/05/gold-slips-past-nazis.html",
+      "sourceCheck": "Sydney lines60–68 directly describe medals dissolved, solution left untouched, gold recovered and recast.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.282,
+          "id": "existing.json:9526",
+          "q": "In 1904, gymnast George Eyser won six Olympic medals, including gold in the vault, even though he had a wooden prosthesis for what?",
+          "d": "George Louis Eyser was a German-American gymnast who competed in the 1904 Summer Olympics, earning six medals in one day, including three gold and two silver medals."
+        },
+        {
+          "sim": 0.21,
+          "id": "existing.json:16404",
+          "q": "What is the symbol for Gold?",
+          "d": ""
+        },
+        {
+          "sim": 0.198,
+          "id": "existing.json:4711",
+          "q": "Which disabled swimmer won five gold medals for Australia at the 1996 Summer Paralympics?",
+          "d": "Priya Naree Cooper, is an Australian world champion disabled swimmer, winning nine Paralympic gold medals as well as world records and world championships."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "misc-003.json",
+      "index": 5,
+      "candidateId": "misc-0005",
+      "decision": "accept",
+      "sourceUrl": "https://osm.ca/en/news/a-world-premiere-an-octobass-makes-its-arrival-at-the-osm/",
+      "sourceCheck": "OSM lines102–104 describe levers, pedals, unreachable fretboard and replica of original1851instrument.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.287,
+          "id": "existing.json:228",
+          "q": "On an Indian sitar, what are the strings that ring in response to other strings called?",
+          "d": "The Met’s 1997 sitar by Murari Adhikari has thirteen of them alongside seven melody strings."
+        },
+        {
+          "sim": 0.248,
+          "id": "existing.json:1452",
+          "q": "Which bowed instrument has a name meaning “viola of love” and extra strings that can sound without being touched by the bow?",
+          "d": "The extra strings vibrate in sympathy with the played strings. Their resonance gives the instrument a lingering shimmer."
+        },
+        {
+          "sim": 0.238,
+          "id": "existing.json:229",
+          "q": "How many foot pedals does a standard modern concert pedal harp have?",
+          "d": "Together they change the pitches of the strings. An orchestral harpist can be working with both feet while both hands are busy plucking."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "misc-003.json",
+      "index": 6,
+      "candidateId": "misc-0006",
+      "decision": "accept",
+      "sourceUrl": "https://www.olympedia.org/results/4433",
+      "sourceCheck": "Olympedia event entry explicitly lists pole, boats over and second boats under.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.136,
+          "id": "existing.json:9335",
+          "q": "What did A. K. M. Miraj Uddin set in the pole vault by clearing 12 feet 2 inches (3.71 m) with a bamboo pole instead of a carbon-fiber pole?",
+          "d": "A. K. M. Miraj Uddin set a Pakistani national record in the pole vault by clearing 12 feet 2 inches (3.71 m) with a bamboo pole instead of a carbon-fiber pole."
+        },
+        {
+          "sim": 0.136,
+          "id": "existing.json:16066",
+          "q": "What river flows through the central part of the French capital, Paris?",
+          "d": ""
+        },
+        {
+          "sim": 0.134,
+          "id": "existing.json:19900",
+          "q": "Which term fits this clue? Striped pole outside a barbershop.",
+          "d": "Striped pole outside a barbershop."
+        }
+      ],
+      "editorialNotes": [
+        "Optional stronger distractor: replace Rafts of ice with Floating platforms; ice is implausible in an August Seine swimming event."
+      ]
+    },
+    {
+      "file": "misc-003.json",
+      "index": 7,
+      "candidateId": "misc-0007",
+      "decision": "accept",
+      "sourceUrl": "https://www.nationalgallery.org.uk/media/15510/kirby_saunders2004.pdf",
+      "sourceCheck": "National Gallery PDFp4/printed75 explicitly states1724recipe dried cattle blood; p2 discusses inexpensive blue.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.226,
+          "id": "existing.json:18325",
+          "q": "What shade of the blue color is also called angel blue?",
+          "d": ""
+        },
+        {
+          "sim": 0.202,
+          "id": "released.json:20032",
+          "q": "What gives a blue morpho butterfly its brilliant blue appearance?",
+          "d": "The scales manipulate reflected light. The blue display does not require a blue pigment in the wings."
+        },
+        {
+          "sim": 0.171,
+          "id": "food-002.json:food-0012",
+          "q": "Garlic can turn blue during pickling without blue food coloring. Which ingredient can help trigger the pigment-forming reaction?",
+          "d": "Acidic conditions let garlic compounds react into linked ring structures that produce blue pigments."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 1,
+      "candidateId": "sound-0001",
+      "decision": "accept",
+      "sourceUrl": "https://luraycaverns.com/news/the-great-stalacpipe-organ/",
+      "sourceCheck": "Luray operator lines102–105 explicitly identifies tuned stalactites and rubber-tipped plungers.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.161,
+          "id": "existing.json:14665",
+          "q": "Which term fits this clue? Any of various devices or contrivances that can be used to produce musical tones or sounds.",
+          "d": "Any of various devices or contrivances that can be used to produce musical tones or sounds. Another name is instrument."
+        },
+        {
+          "sim": 0.16,
+          "id": "existing.json:12349",
+          "q": "Which reddish rock was worn into striking formations in Kazakhstan’s Sharyn Canyon?",
+          "d": "The geology of the Sharyn Canyon is sedimentary red sandstone, which has weathered to create unusual formations."
+        },
+        {
+          "sim": 0.156,
+          "id": "existing.json:14471",
+          "q": "What is a musical instrument that generates sounds electronically called?",
+          "d": "A musical instrument that generates sounds electronically. Another name is electronic musical instrument."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 2,
+      "candidateId": "sound-0002",
+      "decision": "accept",
+      "sourceUrl": "https://www.vegetableorchestra.org/qa.php",
+      "sourceCheck": "Artist FAQ lines25–29 distinguishes preparation leftovers made into soup from instruments given away/discarded.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.173,
+          "id": "existing.json:15550",
+          "q": "What vegetables are used for the making of the traditional Native American meal called Llapingacho?",
+          "d": ""
+        },
+        {
+          "sim": 0.17,
+          "id": "existing.json:14882",
+          "q": "What is the member with the lowest range of a family of musical instruments called?",
+          "d": "The member with the lowest range of a family of musical instruments."
+        },
+        {
+          "sim": 0.156,
+          "id": "existing.json:14527",
+          "q": "What is a small garden where vegetables are grown called?",
+          "d": "A small garden where vegetables are grown. Another name is vegetable garden."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 3,
+      "candidateId": "sound-0003",
+      "decision": "accept",
+      "sourceUrl": "https://www.mim.be/index.php/en/collection-piece/serpent-chandelier",
+      "sourceCheck": "MIM lines15–17 identify Puurs band chandelier and mouthpieces replaced by candles.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.185,
+          "id": "existing.json:14882",
+          "q": "What is the member with the lowest range of a family of musical instruments called?",
+          "d": "The member with the lowest range of a family of musical instruments."
+        },
+        {
+          "sim": 0.163,
+          "id": "places-001.json:places-0003",
+          "q": "An enormous chandelier in Wieliczka’s historic Michałowice Chamber was made from crystals of which material?",
+          "d": "The underground chamber hosted festivities with a chandelier lit by hundreds of candles. Local salt crystals supplied its glittering decoration."
+        },
+        {
+          "sim": 0.149,
+          "id": "existing.json:1709",
+          "q": "Benjamin Britten composed many viola parts for Cecil Aronowitz, a co-founder of which musical group?",
+          "d": "The Melos Ensemble is a group of musicians who started in 1950 in London to play chamber music in mixed instrumentation of string instruments, wind instruments and others."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 4,
+      "candidateId": "sound-0004",
+      "decision": "accept",
+      "sourceUrl": "https://www.metmuseum.org/art/collection/search/501538",
+      "sourceCheck": "Met collection description identifies walking-stick flageolet and finger/blowholes.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.201,
+          "id": "existing.json:15065",
+          "q": "Which term fits this clue? Egg-shaped terra cotta wind instrument with a mouthpiece and finger holes.",
+          "d": "Egg-shaped terra cotta wind instrument with a mouthpiece and finger holes. Another name is ocarina."
+        },
+        {
+          "sim": 0.152,
+          "id": "existing.json:14257",
+          "q": "What is not a wind instrument?",
+          "d": ""
+        },
+        {
+          "sim": 0.151,
+          "id": "existing.json:14954",
+          "q": "Which term fits this clue? Device that resembles a spiked walking stick but the top opens into a seat.",
+          "d": "Device that resembles a spiked walking stick but the top opens into a seat."
+        }
+      ],
+      "editorialNotes": [
+        "Optional stronger distractor: replace Hatpin with Umbrella; several offered accessories are too small for a normally fingered flageolet."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 5,
+      "candidateId": "sound-0005",
+      "decision": "accept",
+      "sourceUrl": "https://www.leroyanderson.com/news-about-leroy-anderson.php",
+      "sourceCheck": "Directopen timed out; full indexed family-managed official page read and explicitly identifies manual typewriter featured in orchestral work.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.214,
+          "id": "existing.json:15033",
+          "q": "What is a machine used in farming called?",
+          "d": "A machine used in farming."
+        },
+        {
+          "sim": 0.211,
+          "id": "existing.json:7741",
+          "q": "Scottish actor J. Grant Anderson served in both World Wars, founded a theatre in India, and played what in a Burmese circus?",
+          "d": "James Grant Anderson was a Scottish actor, writer, and theatre director, usually credited as J. Grant Anderson or Grant Anderson."
+        },
+        {
+          "sim": 0.173,
+          "id": "existing.json:17505",
+          "q": "Who became interested in quilting after finishing her grandmother's quilt, which had been started decades earlier, for a college credit?",
+          "d": "Alexandra Sladky Anderson is an American quilter, television series host, and author. Anderson is the author of various quilting books, fabric lines, and developed an award winning magazine."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 6,
+      "candidateId": "sound-0006",
+      "decision": "accept",
+      "sourceUrl": "https://ressources.ircam.fr/en/work/poeme-symphonique",
+      "sourceCheck": "IRCAM work entry specifies100metronomes.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.123,
+          "id": "new-11",
+          "q": "Which office machine becomes a featured percussion instrument in a short Leroy Anderson orchestral piece?",
+          "d": "Anderson built music around the familiar noises of a mechanical writing machine, bringing office work into the concert hall."
+        },
+        {
+          "sim": 0.121,
+          "id": "existing.json:18958",
+          "q": "What is a period of time during which a person is normally in a particular life state called?",
+          "d": "A period of time during which a person is normally in a particular life state."
+        },
+        {
+          "sim": 0.119,
+          "id": "existing.json:14892",
+          "q": "What is a mechanical device that prevents a vessel from moving called?",
+          "d": "A mechanical device that prevents a vessel from moving. Another name is ground tackle."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 7,
+      "candidateId": "sound-0007",
+      "decision": "accept",
+      "sourceUrl": "https://www.stockhausen-verlag.com/Verlag_Edition_MITTWOCH_aus_LICHT.php",
+      "sourceCheck": "Publisher score69 listing explicitly gives quartet,4helicopters,cameras,transmission hardware.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.151,
+          "id": "existing.json:3538",
+          "q": "Which vehicle could be purchased for home assembly or ready to fly?",
+          "d": "The Airborne Avenger is an American ultralight aircraft that was designed and produced by Airborne Wing Design in the early 1980s."
+        },
+        {
+          "sim": 0.148,
+          "id": "existing.json:10677",
+          "q": "Which of the following aircraft controls is usually located in a helicopters cockpit?",
+          "d": ""
+        },
+        {
+          "sim": 0.147,
+          "id": "existing.json:19754",
+          "q": "What is a list of musical selections for performance or for broadcast by radio called?",
+          "d": "A list of musical selections for performance or for broadcast by radio. Another name is playlist."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 9,
+      "candidateId": "sound-0009",
+      "decision": "accept",
+      "sourceUrl": "https://www.moma.org/calendar/exhibitions/3369",
+      "sourceCheck": "MoMA exhibition title itself identifies self-constructing/self-destroying work; intended rather than completed destruction wording correct.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.143,
+          "id": "existing.json:19861",
+          "q": "What is a movie that is advertised to draw customers called?",
+          "d": "A movie that is advertised to draw customers."
+        },
+        {
+          "sim": 0.129,
+          "id": "existing.json:15292",
+          "q": "Which work by Kate Atkinson, published in 1995, uses York as a setting?",
+          "d": "Part of the story is set in York."
+        },
+        {
+          "sim": 0.126,
+          "id": "nature-002.json:74",
+          "q": "A click beetle stranded on its back can launch itself into the air using what?",
+          "d": "The sudden snap helps the beetle turn itself upright."
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 10,
+      "candidateId": "sound-0010",
+      "decision": "accept",
+      "sourceUrl": "https://www.bachvereniging.nl/en/bwv/bwv-211",
+      "sourceCheck": "Performing organization synopsis lines60–62 and libretto establish father-daughter coffee dispute.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.209,
+          "id": "existing.json:3652",
+          "q": "Before cola became widespread, the hamburger was typically served with which drink?",
+          "d": "Coffee is a beverage brewed from roasted, ground coffee beans."
+        },
+        {
+          "sim": 0.204,
+          "id": "existing.json:19499",
+          "q": "What is a drink resembling coffee that is sometimes substituted for it called?",
+          "d": "A drink resembling coffee that is sometimes substituted for it."
+        },
+        {
+          "sim": 0.197,
+          "id": "existing.json:15523",
+          "q": "What type of alcoholic beverage is the popular South African drink Umqombothi?",
+          "d": ""
+        }
+      ],
+      "editorialNotes": [
+        "Clear stem, unique supported answer, acceptable distractors and difficulty."
+      ]
+    },
+    {
+      "file": "sound-003.json",
+      "index": 11,
+      "candidateId": "sound-0011",
+      "decision": "accept",
+      "sourceUrl": "https://www.aslsp.org/",
+      "sourceCheck": "Organ project homepage describes ORGAN2/ASLSP,25years by2026,closing2640; association page gives639years.",
+      "novelty": "Nearest three complete q+a+d matches and targeted topic/entity search show distinct facts; no new duplicate found.",
+      "neighbors": [
+        {
+          "sim": 0.173,
+          "id": "culture-001.json:culture-0022",
+          "q": "For a long Rauschenberg print in 1953, composer John Cage contributed by operating what?",
+          "d": "Cage drove a Model A Ford across joined sheets of paper, leaving a painted tire track."
+        },
+        {
+          "sim": 0.167,
+          "id": "culture-001.json:culture-0025",
+          "q": "Following the notorious repeat instruction in Satie’s Vexations means playing its short piano passage how many times?",
+          "d": "John Cage’s 1963 relay performance lasted almost nineteen hours."
+        },
+        {
+          "sim": 0.159,
+          "id": "existing.json:19896",
+          "q": "Which term fits this clue? Performance of a play by a group of readers.",
+          "d": "Performance of a play by a group of readers."
+        }
+      ],
+      "editorialNotes": [
+        "Easy is defensible through sustained-tone reasoning, though medium is also reasonable for uncued recognition; no factual issue."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "reviewedOn": "2026-11-17",
+  "acceptedCount": 2434,
+  "method": "Full corpus QA+D triage rerun; primary editor read the four newly added pairs at or above0.30, in addition to every chunk’s lower-threshold neighbors and entity checks. Earlier2084 high-overlap pairs already reviewed.",
+  "pairs": [
+    {
+      "candidateId": "culture-0186",
+      "neighborId": "published-13045",
+      "similarity": 0.304,
+      "decision": "Retained after reading full question, answer and explanation: distinct tested fact."
+    },
+    {
+      "candidateId": "nature-0276",
+      "neighborId": "published-10256",
+      "similarity": 0.327,
+      "decision": "Retained after reading full question, answer and explanation: distinct tested fact."
+    },
+    {
+      "candidateId": "objects-0290",
+      "neighborId": "objects-0291",
+      "similarity": 0.332,
+      "decision": "Retained after reading full question, answer and explanation: distinct tested fact."
+    },
+    {
+      "candidateId": "objects-0293",
+      "neighborId": "science-0083",
+      "similarity": 0.304,
+      "decision": "Retained after reading full question, answer and explanation: distinct tested fact."
+    }
+  ],
+  "limitation": "Lexical scores do not prove semantic uniqueness."
+}

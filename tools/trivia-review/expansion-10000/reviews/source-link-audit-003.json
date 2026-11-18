@@ -1,0 +1,2900 @@
+{
+  "checkedOn": "2026-11-17T21:48:18.073031+00:00",
+  "method": "Read-only HTTP GET with4workers; response headers only.403/429/timeouts are unresolved, not factual errors. Checks newly added accepted URLs absent from all prior audits; excludes unaccepted research drafts.",
+  "totalDistinctUrls": 292,
+  "completed": 292,
+  "summary": {
+    "unresolved": 55,
+    "reachable": 233,
+    "broken": 4
+  },
+  "urls": [
+    {
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019GL086178",
+      "candidateIds": [
+        "earth-0130"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://archive.iaa.csic.es/en/news/james-webb-telescope-observes-rings-chariklo-high-precision-occultation-technique",
+      "candidateIds": [
+        "earth-0113"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://archive.iaa.csic.es/en/news/james-webb-telescope-observes-rings-chariklo-high-precision-occultation-technique",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://arxiv.org/abs/1604.05507",
+      "candidateIds": [
+        "earth-0149"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://arxiv.org/abs/1604.05507",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://astrobiology.nasa.gov/news/salty-antarctic-pond-could-provide-clues-about-mars-water/",
+      "candidateIds": [
+        "earth-0076"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://astrobiology.nasa.gov/news/salty-antarctic-pond-could-provide-clues-about-mars-water/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://atmos.uw.edu/~sgw/PAPERS/2019_Grenth_revisited_JGR.pdf",
+      "candidateIds": [
+        "earth-0140"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://atmos.uw.edu/~sgw/PAPERS/2019_Grenth_revisited_JGR.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://baseballrubbingmud.com/",
+      "candidateIds": [
+        "customs-0097"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://baseballrubbingmud.com/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://beercanregatta.org.au/the-event/",
+      "candidateIds": [
+        "customs-0062"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://beercanregatta.org.au/the-event/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://bhutan.travel/adventure-experiences",
+      "candidateIds": [
+        "customs-0086"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bhutan.travel/adventure-experiences",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://bid.barcelonaturisme.com/wv3/en/enjoy/48/this-christmas-be-a-local.html",
+      "candidateIds": [
+        "customs-0077"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bid.barcelonaturisme.com/wv3/en/enjoy/48/this-christmas-be-a-local.html",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://chandra.si.edu/sound/perseus.html",
+      "candidateIds": [
+        "earth-0110"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://chandra.si.edu/sound/perseus.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://collections.tepapa.govt.nz/object/206769",
+      "candidateIds": [
+        "customs-0142"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://collections.tepapa.govt.nz/object/206769",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://collections.tepapa.govt.nz/topic/2069",
+      "candidateIds": [
+        "customs-0103"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://collections.tepapa.govt.nz/topic/2069",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://colombia.co/en/colombia-country/colombia-culture/art/colombias-favorite-superstitions",
+      "candidateIds": [
+        "customs-0139",
+        "customs-0147"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://db.go-nagano.net/en/topics_detail6/id%3D16577",
+      "candidateIds": [
+        "customs-0072"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://db.go-nagano.net/en/topics_detail6/id%3D16577",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://doi.org/10.1051/0004-6361/202450629",
+      "candidateIds": [
+        "earth-0115"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://eng.huaihua.gov.cn/enghuaihua/c133481/202212/c1b4bdf2cf6d40dbbe540bc7c359fc1f.shtml",
+      "candidateIds": [
+        "customs-0146"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://eng.huaihua.gov.cn/enghuaihua/c133481/202212/c1b4bdf2cf6d40dbbe540bc7c359fc1f.shtml",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://eukonkanto.fi/en/competition-track-and-rules/",
+      "candidateIds": [
+        "customs-0013",
+        "customs-0014"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://eukonkanto.fi/en/competition-track-and-rules/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://fitb.org/wp-content/uploads/2026/04/rules-en.pdf",
+      "candidateIds": [
+        "customs-0094"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://fitb.org/wp-content/uploads/2026/04/rules-en.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://geology.utah.gov/map-pub/survey-notes/geosights/crystal-geyser/",
+      "candidateIds": [
+        "earth-0096"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://geology.utah.gov/map-pub/survey-notes/geosights/crystal-geyser/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://heasarc.gsfc.nasa.gov/docs/nicer/technology/spinoffs/pulsar-pnt.html",
+      "candidateIds": [
+        "earth-0108"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://heasarc.gsfc.nasa.gov/docs/nicer/technology/spinoffs/pulsar-pnt.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://heavymetalknitting.com/",
+      "candidateIds": [
+        "customs-0144"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://help.bananaball.com/knowledge-base/the-11-rules-of-banana-ball-overview/",
+      "candidateIds": [
+        "customs-0125",
+        "customs-0126",
+        "customs-0127"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://help.bananaball.com/knowledge-base/the-11-rules-of-banana-ball-overview/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://home.nps.gov/im/arcn/permafrost.htm",
+      "candidateIds": [
+        "earth-0032"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://home.nps.gov/im/arcn/permafrost.htm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://home.nps.gov/media/video/view.htm?id=899DBB31-8EC7-42BA-A719-A880E58D823B",
+      "candidateIds": [
+        "earth-0030"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://home.nps.gov/media/video/view.htm?id=899DBB31-8EC7-42BA-A719-A880E58D823B",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://hub.jhu.edu/2023/06/26/blood-falls-mystery/",
+      "candidateIds": [
+        "earth-0138"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://ibsasport.org/wp-content/uploads/2025/01/IBSA-Football-Laws-of-The-Game.pdf",
+      "candidateIds": [
+        "customs-0043"
+      ],
+      "status": 404,
+      "result": "broken",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://ich.unesco.org/doc/src/00010-EN.pdf",
+      "candidateIds": [
+        "customs-0034"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/doc/src/00010-EN.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://ich.unesco.org/doc/src/17331-EN.pdf?t=1344431867",
+      "candidateIds": [
+        "customs-0019"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/doc/src/17331-EN.pdf?t=1344431867",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://ich.unesco.org/doc/src/33823.pdf?t=1461666838",
+      "candidateIds": [
+        "customs-0009"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/doc/src/33823.pdf?t=1461666838",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/gule-wamkulu-00142?RL=00142",
+      "candidateIds": [
+        "customs-0033"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/gule-wamkulu-00142?RL=00142",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/krakelingen-and-tonnekensbrand-end-of-winter-bread-and-fire-feast-at-geraardsbergen-00401",
+      "candidateIds": [
+        "customs-0140"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/krakelingen-and-tonnekensbrand-end-of-winter-bread-and-fire-feast-at-geraardsbergen-00401",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/mesir-macunu-festival-00642?RL=00642",
+      "candidateIds": [
+        "customs-0057"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/mesir-macunu-festival-00642?RL=00642",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/nestinarstvo-messages-from-the-past-the-panagyr-of-saints-constantine-and-helena-in-the-village-of-bulgari-00191",
+      "candidateIds": [
+        "customs-0118"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/nestinarstvo-messages-from-the-past-the-panagyr-of-saints-constantine-and-helena-in-the-village-of-bulgari-00191",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/ride-of-the-kings-in-the-south-east-of-the-czech-republic-00564",
+      "candidateIds": [
+        "customs-0015",
+        "customs-0016"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/ride-of-the-kings-in-the-south-east-of-the-czech-republic-00564",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/ritual-ceremony-of-the-voladores-00175",
+      "candidateIds": [
+        "customs-0018"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/ritual-ceremony-of-the-voladores-00175",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/scissors-dance-00391?RL=00391",
+      "candidateIds": [
+        "customs-0067"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/scissors-dance-00391?RL=00391",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/technique-of-making-the-giant-kites-of-santiago-sacatepequez-and-sumpango-guatemala-01991",
+      "candidateIds": [
+        "customs-0017"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/technique-of-making-the-giant-kites-of-santiago-sacatepequez-and-sumpango-guatemala-01991",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/traditional-korean-wrestling-ssirum-ssireum-01533?lang=en",
+      "candidateIds": [
+        "customs-0007",
+        "customs-0008"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/traditional-korean-wrestling-ssirum-ssireum-01533?lang=en",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/USL/coaxing-ritual-for-camels-01061?USL=01061",
+      "candidateIds": [
+        "customs-0121"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/USL/coaxing-ritual-for-camels-01061?USL=01061",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/rl/kok-boru-traditional-horse-game-01294",
+      "candidateIds": [
+        "customs-0001"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/rl/kok-boru-traditional-horse-game-01294",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://iftwa.org/the-official-rules-of-tiddlywinks/",
+      "candidateIds": [
+        "customs-0128"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://iftwa.org/the-official-rules-of-tiddlywinks/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://journals.asm.org/doi/10.1128/AEM.03968-14",
+      "candidateIds": [
+        "earth-0109"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://leadville.com/ski-joring-leadvilles-signature-event/",
+      "candidateIds": [
+        "customs-0130"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://leadville.com/ski-joring-leadvilles-signature-event/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=157349&parentDocumentId=60858&skipCopyright=true&skipWatermark=true",
+      "candidateIds": [
+        "customs-0123"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=157349&parentDocumentId=60858&skipCopyright=true&skipWatermark=true",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://meteorites.ucla.edu/faq/",
+      "candidateIds": [
+        "earth-0120"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://meteorites.ucla.edu/faq/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://naismithbasketballfoundation.com/about-basketball/naismiths-rules-for-basketball/",
+      "candidateIds": [
+        "customs-0109",
+        "customs-0110"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://naismithbasketballfoundation.com/about-basketball/naismiths-rules-for-basketball/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://naturalhistory.si.edu/research/mineral-sciences/programs",
+      "candidateIds": [
+        "earth-0088"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://news.mit.edu/2015/rainfall-can-release-aerosols-0114",
+      "candidateIds": [
+        "earth-0135"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.mit.edu/2015/rainfall-can-release-aerosols-0114",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.st-andrews.ac.uk/archive/foam-o-dont-miss-out-on-raisin-monday/",
+      "candidateIds": [
+        "customs-0137"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.st-andrews.ac.uk/archive/foam-o-dont-miss-out-on-raisin-monday/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://newsroom.ucla.edu/releases/cracking-the-mysteries-of-venus",
+      "candidateIds": [
+        "earth-0103"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://newsroom.ucla.edu/releases/cracking-the-mysteries-of-venus",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://nsidc.org/learn/parts-cryosphere/sea-ice/science-sea-ice?trk=public_post_comment-text",
+      "candidateIds": [
+        "earth-0046"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://nsidc.org/learn/parts-cryosphere/sea-ice/science-sea-ice?trk=public_post_comment-text",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ntrs.nasa.gov/api/citations/19780019211/downloads/19780019211.pdf",
+      "candidateIds": [
+        "earth-0144"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ntrs.nasa.gov/api/citations/19780019211/downloads/19780019211.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://ntrs.nasa.gov/api/citations/20210018723/downloads/NETL2021Final.pdf",
+      "candidateIds": [
+        "earth-0142"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ntrs.nasa.gov/api/citations/20210018723/downloads/NETL2021Final.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://ntrs.nasa.gov/citations/20120001877",
+      "candidateIds": [
+        "earth-0145"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ntrs.nasa.gov/citations/20120001877",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ntslf.org/tides/about-tides/tidal-river-bores",
+      "candidateIds": [
+        "earth-0091"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ntslf.org/tides/about-tides/tidal-river-bores",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ocean.si.edu/ecosystems/deep-sea/deep-sea",
+      "candidateIds": [
+        "earth-0131"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://oceanservice.noaa.gov/facts/sofar.html",
+      "candidateIds": [
+        "earth-0081"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://oceanservice.noaa.gov/facts/sofar.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://pbholland.com/index.php/fierljeppen/",
+      "candidateIds": [
+        "customs-0011"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pbholland.com/index.php/fierljeppen/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179101/",
+      "candidateIds": [
+        "earth-0082"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179101/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmel.noaa.gov/acoustics/news-story/understanding-unique-tsunami-event-caused-tonga-volcano-eruption",
+      "candidateIds": [
+        "earth-0129"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.pmel.noaa.gov/acoustics/news-story/understanding-unique-tsunami-event-caused-tonga-volcano-eruption/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://preview.weather.gov/safety/wind-dust-storm",
+      "candidateIds": [
+        "earth-0039"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://preview.weather.gov/safety/wind-dust-storm",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12881565/",
+      "candidateIds": [
+        "earth-0132"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/12881565/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20332884/",
+      "candidateIds": [
+        "earth-0083"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/20332884/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29590042/",
+      "candidateIds": [
+        "earth-0092"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/29590042/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubs.geoscienceworld.org/gsl/books/edited-volume/1586/chapter-abstract/107345979/The-anisotropy-of-itacolumite-flexibility?redirectedFrom=fulltext",
+      "candidateIds": [
+        "earth-0090"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://pubs.usgs.gov/gip/dynamic/stripes.html",
+      "candidateIds": [
+        "earth-0094"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pubs.usgs.gov/gip/dynamic/stripes.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://repository.si.edu/server/api/core/bitstreams/927772e4-e587-4c87-ab4a-3c8831bfba4f/content",
+      "candidateIds": [
+        "customs-0071"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://rusecure.fifa.com/en/tournaments/mens/worldcup/1966england/news/1966-world-cup-gripping-tales-and-inspirational-traffic-lights-2812820",
+      "candidateIds": [
+        "customs-0112"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://rusecure.fifa.com/en/tournaments/mens/worldcup/1966england/news/1966-world-cup-gripping-tales-and-inspirational-traffic-lights-2812820",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://science.nasa.gov/asset/hubble/artists-concept-of-extasolar-planet-gj-436b/",
+      "candidateIds": [
+        "earth-0074"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/asset/hubble/artists-concept-of-extasolar-planet-gj-436b/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/asset/hubble/neptune-dark-spot/",
+      "candidateIds": [
+        "earth-0067"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/asset/hubble/neptune-dark-spot/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/biological-physical/resources/explainers-infographics/why-nasa-is-studying-flames-in-space/",
+      "candidateIds": [
+        "earth-0141"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/biological-physical/resources/explainers-infographics/why-nasa-is-studying-flames-in-space/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/blogs/science-news/2025/07/24/nasa-noaa-satellites-show-smoke-complicates-wildfire-lightning-risk/",
+      "candidateIds": [
+        "earth-0084"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/blogs/science-news/2025/07/24/nasa-noaa-satellites-show-smoke-complicates-wildfire-lightning-risk/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/dwarf-planets/haumea/",
+      "candidateIds": [
+        "earth-0114"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/dwarf-planets/haumea/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/earth/10-things-to-know-about-the-ionosphere/",
+      "candidateIds": [
+        "earth-0004"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/earth/10-things-to-know-about-the-ionosphere/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/irans-salt-glaciers-4168/",
+      "candidateIds": [
+        "earth-0133"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/earth/earth-observatory/irans-salt-glaciers-4168/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/satellites-size-up-bubbles-of-methane-in-lake-ice-146940/",
+      "candidateIds": [
+        "earth-0044"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/earth/earth-observatory/satellites-size-up-bubbles-of-methane-in-lake-ice-146940/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine/",
+      "candidateIds": [
+        "earth-0052"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/feature/solar-eclipse-guide/",
+      "candidateIds": [
+        "earth-0075"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/feature/solar-eclipse-guide/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/image-detail/pool-boiling/",
+      "candidateIds": [
+        "earth-0143"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/image-detail/pool-boiling/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1/",
+      "candidateIds": [
+        "earth-0019"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/mars/facts/",
+      "candidateIds": [
+        "earth-0003"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/mars/facts/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/mercury/facts/",
+      "candidateIds": [
+        "earth-0001",
+        "earth-0002"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/mercury/facts/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/hubble-captures-first-ever-predicted-exploding-star/",
+      "candidateIds": [
+        "earth-0057"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/missions/hubble/hubble-captures-first-ever-predicted-exploding-star/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/hubble-sees-an-unexpected-population-of-young-looking-stars/",
+      "candidateIds": [
+        "earth-0111"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/missions/hubble/hubble-sees-an-unexpected-population-of-young-looking-stars/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/hubble-uncovers-heavy-metal-exoplanet-shaped-like-football/",
+      "candidateIds": [
+        "earth-0053"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/missions/hubble/hubble-uncovers-heavy-metal-exoplanet-shaped-like-football/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/missions/hubble/shock-wave-sheds-new-light-on-fading-supernova/",
+      "candidateIds": [
+        "earth-0107"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/missions/hubble/shock-wave-sheds-new-light-on-fading-supernova/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/moon/moonquakes/",
+      "candidateIds": [
+        "earth-0017",
+        "earth-0024"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/moon/moonquakes/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/moon/solar-wind/",
+      "candidateIds": [
+        "earth-0016",
+        "earth-0124"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/moon/solar-wind/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/auroral-footprints/",
+      "candidateIds": [
+        "earth-0106"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/resource/auroral-footprints/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/blue-and-bizarre/",
+      "candidateIds": [
+        "earth-0054"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/resource/blue-and-bizarre/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/daphnis-waves/",
+      "candidateIds": [
+        "earth-0101"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/resource/daphnis-waves/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/lunar-swirl-reiner-gamma/",
+      "candidateIds": [
+        "earth-0119"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/resource/lunar-swirl-reiner-gamma/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/ocean-worlds-triton/",
+      "candidateIds": [
+        "earth-0020"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/resource/ocean-worlds-triton/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/resource/where-the-nightlife-never-ends/",
+      "candidateIds": [
+        "earth-0125"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/resource/where-the-nightlife-never-ends/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/asteroids/dinkinesh/",
+      "candidateIds": [
+        "earth-0063"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/solar-system/asteroids/dinkinesh/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/",
+      "candidateIds": [
+        "earth-0068"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/solar-system/planets/saturn/rings-of-saturn/nasa-research-reveals-saturn-is-losing-its-rings-at-worst-case-scenario-rate/",
+      "candidateIds": [
+        "earth-0014"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/solar-system/planets/saturn/rings-of-saturn/nasa-research-reveals-saturn-is-losing-its-rings-at-worst-case-scenario-rate/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up/",
+      "candidateIds": [
+        "earth-0056"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/uranus/facts/",
+      "candidateIds": [
+        "earth-0008"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/uranus/facts/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://sealevel.nasa.gov/resources/78/monthly-changes-in-gravity-affect-sea-level",
+      "candidateIds": [
+        "earth-0100"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://sealevel.nasa.gov/resources/78/monthly-changes-in-gravity-affect-sea-level",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://spaceplace.nasa.gov/barycenter/en/",
+      "candidateIds": [
+        "earth-0112"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://spaceplace.nasa.gov/barycenter/en/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://spaceplace.nasa.gov/io-tides/en/",
+      "candidateIds": [
+        "earth-0015"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://spaceplace.nasa.gov/io-tides/en/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://spanish.korea.net/Events/Overseas/view?articleId=23101",
+      "candidateIds": [
+        "customs-0070"
+      ],
+      "status": 302,
+      "result": "unresolved",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily"
+    },
+    {
+      "url": "https://spdf.gsfc.nasa.gov/pub/documents/old/websites/sunearthday.nasa.gov/2007/locations/ttt_sunlight.php",
+      "candidateIds": [
+        "earth-0072"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://spdf.gsfc.nasa.gov/pub/documents/old/websites/sunearthday.nasa.gov/2007/locations/ttt_sunlight.php",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question58.html",
+      "candidateIds": [
+        "earth-0018"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question58.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://static1.squarespace.com/static/56be8943ab48de01abac18cc/t/5b6cf4c3758d46acbe20c46d/1533867204363/Kubb%2BUnited%2BRules%2Bof%2BOpen%2BPlay%2B1.2.pdf",
+      "candidateIds": [
+        "customs-0022"
+      ],
+      "status": 404,
+      "result": "broken",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://sustainability.spain.info/en/top/original-fiestas-spain/",
+      "candidateIds": [
+        "customs-0082",
+        "customs-0083",
+        "customs-0084"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://sustainability.spain.info/en/top/original-fiestas-spain/",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://svs.gsfc.nasa.gov/10816",
+      "candidateIds": [
+        "earth-0050"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://tetburywoolsack.co.uk/",
+      "candidateIds": [
+        "customs-0020"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://tetburywoolsack.co.uk/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://toolbox.finland.fi/life-society/finland-as-a-tourist-destination/",
+      "candidateIds": [
+        "customs-0105"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://toolbox.finland.fi/life-society/finland-as-a-tourist-destination/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://umbraco.cherokee.org/about-the-nation/frequently-asked-questions/culture/",
+      "candidateIds": [
+        "customs-0131"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://unicycling.org/files/iuf-rulebook-2015-prelim.pdf",
+      "candidateIds": [
+        "customs-0108"
+      ],
+      "status": 404,
+      "result": "broken",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://visitestonia.com/en/european-sauna-marathon",
+      "candidateIds": [
+        "customs-0150"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://visitestonia.com/en/european-sauna-marathon",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/midsummer-tradition/midsummer/",
+      "candidateIds": [
+        "customs-0055",
+        "customs-0056"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/midsummer-tradition/midsummer/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://worldgravywrestling.com/info/",
+      "candidateIds": [
+        "customs-0107"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://worldgravywrestling.com/info/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://worldpeashoot.com/peashoot-rules/",
+      "candidateIds": [
+        "customs-0060"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://worldpeashoot.com/peashoot-rules/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://wpdev.iqasport.org/play/",
+      "candidateIds": [
+        "customs-0025"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://wpdev.iqasport.org/play/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.activesgcircle.gov.sg/learn/sepak-takraw/rules-and-regulations-of-sepak-takraw",
+      "candidateIds": [
+        "customs-0024"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://www.amnh.org/exhibitions/permanent/meteorites/building-planets/iron-crystals",
+      "candidateIds": [
+        "earth-0121"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.antarctica.gov.au/news/2022/when-barry-met-steve-aurora-watcher-captures-rare-hot-glow-over-antarctica/",
+      "candidateIds": [
+        "earth-0086"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.antarctica.gov.au/news/2022/when-barry-met-steve-aurora-watcher-captures-rare-hot-glow-over-antarctica/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.aoml.noaa.gov/outreach/bubbles/C_waterspouts.pdf",
+      "candidateIds": [
+        "earth-0085"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://www.ashbournetowncouncil.gov.uk/ashbourne-shrovetide",
+      "candidateIds": [
+        "customs-0030",
+        "customs-0031"
+      ],
+      "status": 401,
+      "result": "unresolved",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "url": "https://www.bathtubbing.com/championship-race/official-rules/",
+      "candidateIds": [
+        "customs-0090"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bathtubbing.com/championship-race/official-rules/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.bedrace.co.uk/about/race-rules",
+      "candidateIds": [
+        "customs-0089"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bedrace.co.uk/about/race-rules",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.bossaballsports.com/portfolio-item/rules-of-sport/",
+      "candidateIds": [
+        "customs-0023"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://www.broomball.au/what-is-broomball",
+      "candidateIds": [
+        "customs-0046"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.broomball.au/what-is-broomball",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.brown.edu/news/2019-01-23/icedisk",
+      "candidateIds": [
+        "earth-0045"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.brown.edu/news/2019-01-23/icedisk",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.caltech.edu/about/news/contrary-to-previous-belief-strike-slip-faults-can-generate-large-tsunamis",
+      "candidateIds": [
+        "earth-0150"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.caltech.edu/about/news/contrary-to-previous-belief-strike-slip-faults-can-generate-large-tsunamis",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.chios.gr/rouketopolemos/index-en.html",
+      "candidateIds": [
+        "customs-0136"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.chios.gr/rouketopolemos/index-en.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.cmas.org/rugby/fun-facts.html",
+      "candidateIds": [
+        "customs-0002"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cmas.org/rugby/fun-facts.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cmas.org/rugby/how-to-regulations.html",
+      "candidateIds": [
+        "customs-0003"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cmas.org/rugby/how-to-regulations.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.comune.firenze.it/system/files/2024-03/Calcio%20Storico21032024.pdf",
+      "candidateIds": [
+        "customs-0050"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.comune.firenze.it/system/files/2024-03/Calcio%20Storico21032024.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.comunitatvalenciana.com/en/alacant-alicante/ibi/festivals/festes-d-hivern-winter-fiestas",
+      "candidateIds": [
+        "customs-0058"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.comunitatvalenciana.com/en/alacant-alicante/ibi/festivals/festes-d-hivern-winter-fiestas",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.coubertin.org/pierre-de-coubertin/pierre-coubertins-ioc-presidency-1896-1925/the-introduction-of-olympic-art-competitions/",
+      "candidateIds": [
+        "customs-0120"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.coubertin.org/pierre-de-coubertin/pierre-coubertins-ioc-presidency-1896-1925/the-introduction-of-olympic-art-competitions/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.culturarecreacionydeporte.gov.co/es/bogotanitos/recreaccion/tejo",
+      "candidateIds": [
+        "customs-0012"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://www.curtin.edu.au/news/media-release/curtin-planetary-scientist-unravels-mystery-of-egyptian-desert-glass/",
+      "candidateIds": [
+        "earth-0147"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.curtin.edu.au/news/media-release/curtin-planetary-scientist-unravels-mystery-of-egyptian-desert-glass/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_chemistry_of_lightning",
+      "candidateIds": [
+        "earth-0087"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.esa.int/articles/about-us/directorates/human-and-robotic-exploration/the-chemistry-of-lightning",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.esa.int/articles/about-us/directorates/science/earth-s-atmosphere-stretches-out-to-the-moon-and-beyond",
+      "candidateIds": [
+        "earth-0071"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.esa.int/articles/about-us/directorates/science/earth-s-atmosphere-stretches-out-to-the-moon-and-beyond",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.esa.int/articles/about-us/directorates/science/gaia/gaia-reveals-how-sun-like-stars-turn-solid-after-their-demise",
+      "candidateIds": [
+        "earth-0058"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.esa.int/articles/about-us/directorates/science/gaia/gaia-reveals-how-sun-like-stars-turn-solid-after-their-demise",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.esa.int/sv/articles/about-us/directorates/science/rosetta/getting-to-know-rosetta-s-comet",
+      "candidateIds": [
+        "earth-0118"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.esa.int/sv/articles/about-us/directorates/science/rosetta/getting-to-know-rosetta-s-comet",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ferryfair.co.uk/event-details-registration/the-burryman-day",
+      "candidateIds": [
+        "customs-0032"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ferryfair.co.uk/event-details-registration/the-burryman-day",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/trophy-design-history-jules-rimet",
+      "candidateIds": [
+        "customs-0113",
+        "customs-0114"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/trophy-design-history-jules-rimet",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.fungal-toxins.uni-goettingen.de/people/Gaenseliesel/gaenseliesel.html",
+      "candidateIds": [
+        "customs-0101"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.fungal-toxins.uni-goettingen.de/people/Gaenseliesel/gaenseliesel.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.furanotourism.com/en/spot/spot_D.php?id=450",
+      "candidateIds": [
+        "customs-0039"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.furanotourism.com/en/spot/spot_D.php?id=450",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/AMRAVATI/people_Games%20and%20Amusements.html",
+      "candidateIds": [
+        "customs-0134"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.gcvr.org.nz/",
+      "candidateIds": [
+        "objects-0230"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.gcvr.org.nz/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.green-events.co.uk/bog-snorkelling-rules",
+      "candidateIds": [
+        "customs-0068"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.green-events.co.uk/bog-snorkelling-rules",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.green-events.co.uk/man-v-horse",
+      "candidateIds": [
+        "customs-0132"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.green-events.co.uk/man-v-horse",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.green-events.co.uk/mountain-bike-chariot-racing",
+      "candidateIds": [
+        "customs-0069"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.green-events.co.uk/mountain-bike-chariot-racing",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.guinnessworldrecords.com/world-records/most-people-extreme-ironing-underwater",
+      "candidateIds": [
+        "customs-0106"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.guinnessworldrecords.com/world-records/most-people-extreme-ironing-underwater",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.hairfreezingcontest.com/",
+      "candidateIds": [
+        "customs-0122"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.hairfreezingcontest.com/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.halipuu.com/treehuggingworldchampionships/",
+      "candidateIds": [
+        "customs-0104"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.halipuu.com/treehuggingworldchampionships/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.helsinki.fi/en/projects/conferment-ceremony-faculty-philosophy/sword-mightier-pen-doctoral-sword-finnish-curiosity",
+      "candidateIds": [
+        "customs-0102"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.helsinki.fi/en/projects/conferment-ceremony-faculty-philosophy/sword-mightier-pen-doctoral-sword-finnish-curiosity",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.henleyontodd.com.au/faqs",
+      "candidateIds": [
+        "customs-0038"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.henleyontodd.com.au/faqs",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull17-5/17505004447.pdf",
+      "candidateIds": [
+        "earth-0033"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull17-5/17505004447.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.indonesia.travel/id/id/travel-ideas/culture/planning-to-spend-nyepi-in-bali-read-these-frequently-asked-questions",
+      "candidateIds": [
+        "customs-0074"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.indonesia.travel/id/id/travel-ideas/culture/planning-to-spend-nyepi-in-bali-read-these-frequently-asked-questions",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.indonesia.travel/sa/ar/news-update/gordon-ramsay-gets-a-taste-of-west-sumatra",
+      "candidateIds": [
+        "customs-0076"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.indonesia.travel/sa/ar/news-update/gordon-ramsay-gets-a-taste-of-west-sumatra",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.indonesia.travel/uk/en/muslim-friendly-travel/events/festival-budaya-sekura-cakak-buah",
+      "candidateIds": [
+        "customs-0075"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.indonesia.travel/uk/en/muslim-friendly-travel/events/festival-budaya-sekura-cakak-buah",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.inp.cnrs.fr/sites/institut_inp/files/download-file/2021%20Une%20ann%C3%A9e%20d%27actualit%C3%A9s%20%C3%A0%20l%27Institut%20de%20physique%20du%20CNRS.pdf",
+      "candidateIds": [
+        "earth-0079"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.inp.cnrs.fr/sites/institut_inp/files/download-file/2021%20Une%20ann%C3%A9e%20d%27actualit%C3%A9s%20%C3%A0%20l%27Institut%20de%20physique%20du%20CNRS.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.italia.it/en/italy/things-to-do/epiphany-in-italy-befana-meaning-and-traditions",
+      "candidateIds": [
+        "customs-0081"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.italia.it/en/italy/things-to-do/epiphany-in-italy-befana-meaning-and-traditions",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.itftennis.com/media/2280/balls-history-of-tennis-balls.pdf",
+      "candidateIds": [
+        "customs-0111"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.world.tennis/media/2280/balls-history-of-tennis-balls.pdf",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.japan.travel/en/sg/jbyj-blog/demons-beans-and-stinky-fish/",
+      "candidateIds": [
+        "customs-0078",
+        "customs-0079"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.japan.travel/en/sg/jbyj-blog/demons-beans-and-stinky-fish/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.japan.travel/en/spot/362/",
+      "candidateIds": [
+        "customs-0119"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.japan.travel/en/spot/362/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.japan.travel/japan-heritage/spirit_of_japan/5",
+      "candidateIds": [
+        "customs-0143"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.japan.travel/japan-heritage/spirit_of_japan/5",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/cassini-caught-in-hyperions-particle-beam/",
+      "candidateIds": [
+        "earth-0116"
+      ],
+      "status": 202,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/cassini-caught-in-hyperions-particle-beam/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/descent-into-a-frozen-underworld/",
+      "candidateIds": [
+        "earth-0047"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/descent-into-a-frozen-underworld/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/experiments-show-titan-lakes-may-fizz-with-nitrogen/",
+      "candidateIds": [
+        "earth-0062"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/experiments-show-titan-lakes-may-fizz-with-nitrogen/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis/",
+      "candidateIds": [
+        "earth-0026"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/nasa-rover-detects-electric-sparks-in-mars-dust-devils-storms/",
+      "candidateIds": [
+        "earth-0098"
+      ],
+      "status": 202,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/nasa-rover-detects-electric-sparks-in-mars-dust-devils-storms/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/nasas-perseverance-captures-googly-eye-during-solar-eclipse/",
+      "candidateIds": [
+        "earth-0069"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/nasas-perseverance-captures-googly-eye-during-solar-eclipse/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/new-data-confirm-2020-so-to-be-the-upper-centaur-rocket-booster-from-the-1960s/",
+      "candidateIds": [
+        "earth-0066"
+      ],
+      "status": 202,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/new-data-confirm-2020-so-to-be-the-upper-centaur-rocket-booster-from-the-1960s/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/speeding-bullet-star-leaves-enormous-streak-across-sky/",
+      "candidateIds": [
+        "earth-0060"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/speeding-bullet-star-leaves-enormous-streak-across-sky/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/the-moon-is-rusting-and-researchers-want-to-know-why/",
+      "candidateIds": [
+        "earth-0061"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/news/the-moon-is-rusting-and-researchers-want-to-know-why/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/videos/whats-up-april-2021/",
+      "candidateIds": [
+        "earth-0042"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.jpl.nasa.gov/videos/whats-up-april-2021/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.kiiking.ee/wp-content/uploads/2021/05/Kiikingumaarustik_ENG-2021.pdf",
+      "candidateIds": [
+        "customs-0006"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.kiiking.ee/wp-content/uploads/2021/05/Kiikingumaarustik_ENG-2021.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.kin-ball.in/",
+      "candidateIds": [
+        "customs-0093"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.kin-ball.in/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.lcsd.gov.hk/en/bun/common/pdf/bsc_ntp_en.pdf",
+      "candidateIds": [
+        "customs-0027"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.lcsd.gov.hk/en/bun/common/pdf/bsc_ntp_en.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.marathondumedoc.com/en/official-rules/",
+      "candidateIds": [
+        "customs-0087",
+        "customs-0088"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.marathondumedoc.com/en/official-rules/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.mas-wrestling.com/en/mas-wrestling/",
+      "candidateIds": [
+        "customs-0045"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mas-wrestling.com/en/mas-wrestling/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/amethyst",
+      "candidateIds": [
+        "words-0028"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/avocado",
+      "candidateIds": [
+        "words-0041"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/candidate",
+      "candidateIds": [
+        "words-0045"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/cynosure",
+      "candidateIds": [
+        "words-0029"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/decimate",
+      "candidateIds": [
+        "words-0046"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/delphinium",
+      "candidateIds": [
+        "words-0032"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/denim",
+      "candidateIds": [
+        "words-0038"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/geranium",
+      "candidateIds": [
+        "words-0031"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/jean",
+      "candidateIds": [
+        "words-0039"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/juggernaut",
+      "candidateIds": [
+        "words-0037"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/mortgage",
+      "candidateIds": [
+        "words-0023"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/ostracize",
+      "candidateIds": [
+        "words-0027"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/oxymoron",
+      "candidateIds": [
+        "words-0025"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/pancreas",
+      "candidateIds": [
+        "words-0033"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/pansy",
+      "candidateIds": [
+        "words-0030"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/patella",
+      "candidateIds": [
+        "words-0035"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/placenta",
+      "candidateIds": [
+        "words-0034"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/porcelain",
+      "candidateIds": [
+        "words-0022"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/sarcophagus",
+      "candidateIds": [
+        "words-0026"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/shampoo",
+      "candidateIds": [
+        "words-0036"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/slogan",
+      "candidateIds": [
+        "words-0042"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/tragedy",
+      "candidateIds": [
+        "words-0044"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/vaccine",
+      "candidateIds": [
+        "words-0047"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/vanilla",
+      "candidateIds": [
+        "words-0040"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/whiskey",
+      "candidateIds": [
+        "words-0043"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.mlb.com/news/astrodome-has-only-rainout-during-flood-in-76-c236681020",
+      "candidateIds": [
+        "customs-0145"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mlb.com/news/astrodome-has-only-rainout-during-flood-in-76-c236681020",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.mot.gov.zm/?p=3367",
+      "candidateIds": [
+        "customs-0035",
+        "customs-0036"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mot.gov.zm/?p=3367",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.myswitzerland.com/en-ch/planning/about-switzerland/custom-and-tradition/hornussen-where-the-nouss-flies-from-the-ramp-and-into-the-playing-field/",
+      "candidateIds": [
+        "customs-0005"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.myswitzerland.com/en-ch/planning/about-switzerland/custom-and-tradition/hornussen-where-the-nouss-flies-from-the-ramp-and-into-the-playing-field/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.myswitzerland.com/ja/planning/about-switzerland/custom-and-tradition/swiss-wrestling-schwingen-from-herdsmans-pastime-to-elite-sport/",
+      "candidateIds": [
+        "customs-0044"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.myswitzerland.com/ja/planning/about-switzerland/custom-and-tradition/swiss-wrestling-schwingen-from-herdsmans-pastime-to-elite-sport/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nasa.gov/ames-engineering/spaceflight-division/flight-dynamics/orbit-analysis/",
+      "candidateIds": [
+        "earth-0123"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/ames-engineering/spaceflight-division/flight-dynamics/orbit-analysis/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/centers-and-facilities/glenn/cook-crush-choke-testing-components-before-launching-to-venus/",
+      "candidateIds": [
+        "earth-0007"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/centers-and-facilities/glenn/cook-crush-choke-testing-components-before-launching-to-venus/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/centers-and-facilities/jpl/for-hottest-planet-a-major-meltdown-study-shows/",
+      "candidateIds": [
+        "earth-0051"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/centers-and-facilities/jpl/for-hottest-planet-a-major-meltdown-study-shows/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/image-article/dynamic-duo-jupiters-independently-pulsating-x-ray-auroras/",
+      "candidateIds": [
+        "earth-0021"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/image-article/dynamic-duo-jupiters-independently-pulsating-x-ray-auroras/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/image-article/icy-mountains-of-pluto/",
+      "candidateIds": [
+        "earth-0009"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/image-article/icy-mountains-of-pluto/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/image-article/neutron-stars-create-gold-platinum-their-wake/",
+      "candidateIds": [
+        "earth-0073"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/image-article/neutron-stars-create-gold-platinum-their-wake/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/missions/iris/iris-spots-plasma-rain-on-suns-surface/",
+      "candidateIds": [
+        "earth-0025"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/missions/iris/iris-spots-plasma-rain-on-suns-surface/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/missions/juno/shallow-lightning-and-mushballs-reveal-ammonia-to-nasas-juno-scientists/",
+      "candidateIds": [
+        "earth-0013"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/missions/juno/shallow-lightning-and-mushballs-reveal-ammonia-to-nasas-juno-scientists/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/missions/mars-reconnaissance-orbiter/nasa-explores-a-winter-wonderland-on-mars/?site=msl",
+      "candidateIds": [
+        "earth-0122"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/missions/mars-reconnaissance-orbiter/nasa-explores-a-winter-wonderland-on-mars/?site=msl",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/news-release/marks-on-martian-dunes-may-reveal-tracks-of-dry-ice-sleds/",
+      "candidateIds": [
+        "earth-0117"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/news-release/marks-on-martian-dunes-may-reveal-tracks-of-dry-ice-sleds/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/solar-system/early-results-from-nasas-dart-mission/",
+      "candidateIds": [
+        "earth-0070"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/solar-system/early-results-from-nasas-dart-mission/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/solar-system/europa-glows-radiation-does-a-bright-number-on-jupiters-moon/",
+      "candidateIds": [
+        "earth-0102"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/solar-system/europa-glows-radiation-does-a-bright-number-on-jupiters-moon/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+      "candidateIds": [
+        "earth-0010",
+        "earth-0011",
+        "earth-0012"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/solar-system/how-the-sun-affects-asteroids-in-our-neighborhood/",
+      "candidateIds": [
+        "earth-0065"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/solar-system/how-the-sun-affects-asteroids-in-our-neighborhood/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/solar-system/nasas-lro-finds-lunar-pits-harbor-comfortable-temperatures/",
+      "candidateIds": [
+        "earth-0097"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/solar-system/nasas-lro-finds-lunar-pits-harbor-comfortable-temperatures/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/solar-system/planets/mars/nasa-scientists-re-create-mars-spiders-in-a-lab-for-first-time/",
+      "candidateIds": [
+        "earth-0005"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/solar-system/planets/mars/nasa-scientists-re-create-mars-spiders-in-a-lab-for-first-time/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/solar-system/what-sounds-captured-by-nasas-perseverance-rover-reveal-about-mars/",
+      "candidateIds": [
+        "earth-0006"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/solar-system/what-sounds-captured-by-nasas-perseverance-rover-reveal-about-mars/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/universe/exoplanets/spitzer-watches-wild-weather-on-a-star-skimming-planet/",
+      "candidateIds": [
+        "earth-0055"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/universe/exoplanets/spitzer-watches-wild-weather-on-a-star-skimming-planet/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/universe/maxi-j1820070-black-hole-outburst-caught-on-video/",
+      "candidateIds": [
+        "earth-0104"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/universe/maxi-j1820070-black-hole-outburst-caught-on-video/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/universe/nasa-missions-unmask-magnetar-eruptions-in-nearby-galaxies/",
+      "candidateIds": [
+        "earth-0059"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/universe/nasa-missions-unmask-magnetar-eruptions-in-nearby-galaxies/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nasa.gov/universe/nasas-fermi-catches-thunderstorms-hurling-antimatter-into-space/",
+      "candidateIds": [
+        "earth-0041"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nasa.gov/universe/nasas-fermi-catches-thunderstorms-hurling-antimatter-into-space/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/nature05536",
+      "candidateIds": [
+        "earth-0128"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/nature05536?error=cookies_not_supported&code=a255daab-4b2f-4aa5-a563-abec437f162d",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nbba.org/wp-content/uploads/2018/02/BeepBaseballInANutshell.pdf",
+      "candidateIds": [
+        "customs-0048",
+        "customs-0049"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nbba.org/wp-content/uploads/2018/02/BeepBaseballInANutshell.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.nesdis.noaa.gov/news/earth-orbit-von-karman-vortices",
+      "candidateIds": [
+        "earth-0136"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nesdis.noaa.gov/news/earth-orbit-von-karman-vortices",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.netl.doe.gov/sites/default/files/netl-file/2017-Methane-Hydrate-Primer%5B1%5D.pdf",
+      "candidateIds": [
+        "earth-0137"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.netl.doe.gov/sites/default/files/netl-file/2017-Methane-Hydrate-Primer%5B1%5D.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.nhl.com/news/nhl-stanley-cup-champions-1950-1959-287933632",
+      "candidateIds": [
+        "customs-0148"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nhl.com/news/nhl-stanley-cup-champions-1950-1959-287933632",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-weather",
+      "candidateIds": [
+        "earth-0078"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-weather",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.nps.gov/articles/000/grcatime-missing-time.htm",
+      "candidateIds": [
+        "earth-0095"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nps.gov/articles/000/grcatime-missing-time.htm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.nps.gov/articles/cirques.htm",
+      "candidateIds": [
+        "earth-0093"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nps.gov/articles/cirques.htm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.nps.gov/glac/learn/nature/waterquality.htm",
+      "candidateIds": [
+        "earth-0105"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nps.gov/glac/learn/nature/waterquality.htm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.nps.gov/iceagefloods/pdf/report.pdf",
+      "candidateIds": [
+        "earth-0146"
+      ],
+      "status": 404,
+      "result": "broken",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.nps.gov/im/chdn/dune-dynamics.htm",
+      "candidateIds": [
+        "earth-0077"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nps.gov/im/chdn/dune-dynamics.htm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.okayama-japan.jp/en/spot/13458",
+      "candidateIds": [
+        "customs-0073"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.okayama-japan.jp/en/spot/13458",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.olympic.lk/img/goodsportmagazines/pdffiles/goodsport-1.pdf",
+      "candidateIds": [
+        "customs-0010"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/five-historic-firsts-for-female-olympians",
+      "candidateIds": [
+        "customs-0117"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/montreal-celebrates-30th-anniversary-of-1976-olympic-games",
+      "candidateIds": [
+        "customs-0099"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/sporting-highlights-x2424",
+      "candidateIds": [
+        "customs-0124"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.otterystmary.info/about/portfolio/project/tar-barrels/",
+      "candidateIds": [
+        "customs-0028"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.otterystmary.info/about/portfolio/project/tar-barrels/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.padelfip.com/wp-content/uploads/2025/12/FIP_Rules-of-Padel.pdf",
+      "candidateIds": [
+        "customs-0129"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.padelfip.com/wp-content/uploads/2025/12/FIP_Rules-of-Padel.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.paralympic.org/feature/how-paralympic-boccia-medallists-and-assistants-create-dream-team",
+      "candidateIds": [
+        "customs-0047"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.paralympic.org/feature/how-paralympic-boccia-medallists-and-assistants-create-dream-team",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.paralympic.org/goalball",
+      "candidateIds": [
+        "customs-0041"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.paralympic.org/goalball",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.paralympic.org/wheelchair-rugby",
+      "candidateIds": [
+        "customs-0042"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.paralympic.org/wheelchair-rugby",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.pesis.fi/ajankohtaista/pesapallon-world-cup-alkaa-sydneyssa-perjantaina-in-english-below",
+      "candidateIds": [
+        "customs-0091",
+        "customs-0092"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.pesis.fi/ajankohtaista/pesapallon-world-cup-alkaa-sydneyssa-perjantaina-in-english-below",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.pmel.noaa.gov/arctic-zone/bering-sea-indicators/essays_mcnutt.html",
+      "candidateIds": [
+        "earth-0048"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.pmel.noaa.gov/arctic-zone/bering-sea-indicators/essays_mcnutt.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.repository.cam.ac.uk/items/b4e33f09-0bcd-4dec-9f4f-6c5ecdc73da1",
+      "candidateIds": [
+        "earth-0027"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.repository.cam.ac.uk/items/b4e33f09-0bcd-4dec-9f4f-6c5ecdc73da1",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.rhs.org.uk/shows-events/rhs-chelsea-flower-show/news/2026/gnome-ban-lifted",
+      "candidateIds": [
+        "customs-0149"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.rhs.org.uk/shows-events/rhs-chelsea-flower-show/news/2026/gnome-ban-lifted",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0149197019301817",
+      "candidateIds": [
+        "earth-0148"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.si.edu/object/archives/components/sova-eepa-1973-001-ref35719",
+      "candidateIds": [
+        "customs-0085"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.storicocarnevaleivrea.it/en/2026-Program/Official-Merchandising/",
+      "candidateIds": [
+        "customs-0026"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.storicocarnevaleivrea.it/en/2026-Program/Official-Merchandising/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.thorndownprimaryschool.co.uk/wp-content/uploads/The-18-Rules-of-Worm-Charming.pdf",
+      "candidateIds": [
+        "customs-0021"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.thorndownprimaryschool.co.uk/wp-content/uploads/The-18-Rules-of-Worm-Charming.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.transportation.gov/testimony/mitigating-impact-volcanic-ash-clouds-aviation-%E2%80%93-what-do-we-need-know",
+      "candidateIds": [
+        "earth-0134"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.tualatinoregon.gov/pumpkinregatta",
+      "candidateIds": [
+        "customs-0135"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://parks.tualatinoregon.gov/events/pumpkin-regatta/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.turismocastillayleon.com/cm/turismocyl/connector?alias=turismocyl&formatType=printable-pdf&idContent=23734&locale=en_UK&ownerIso=en_UK",
+      "candidateIds": [
+        "customs-0037"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.turismocastillayleon.com/cm/turismocyl/connector?alias=turismocyl&formatType=printable-pdf&idContent=23734&locale=en_UK&ownerIso=en_UK",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.uphellyaa.org/about-up-helly-aa/galley/",
+      "candidateIds": [
+        "customs-0029"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.uphellyaa.org/about-up-helly-aa/galley/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.usgs.gov/media/images/liquefaction",
+      "candidateIds": [
+        "earth-0023"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/media/images/liquefaction",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-did-you-feel-earthquake-probably-not",
+      "candidateIds": [
+        "earth-0126"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-did-you-feel-earthquake-probably-not",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-what-fans-flames-observed-volcanic-vents",
+      "candidateIds": [
+        "earth-0029"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-what-fans-flames-observed-volcanic-vents",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/observatories/yvo/news/hydrothermal-explosions-yellowstone-national-park",
+      "candidateIds": [
+        "earth-0028"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/observatories/yvo/news/hydrothermal-explosions-yellowstone-national-park",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts",
+      "candidateIds": [
+        "earth-0022"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/programs/earthquake-hazards/earthquake-booms-seneca-guns-and-other-sounds",
+      "candidateIds": [
+        "earth-0031"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/programs/earthquake-hazards/earthquake-booms-seneca-guns-and-other-sounds",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/publications/a-rockslide-generated-tsunami-a-greenland-fjord-rang-earth-9-days",
+      "candidateIds": [
+        "earth-0127"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/publications/a-rockslide-generated-tsunami-a-greenland-fjord-rang-earth-9-days",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/publications/accretionary-lapilli-altered-tuffs-associated-coal-beds",
+      "candidateIds": [
+        "earth-0099"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/publications/accretionary-lapilli-altered-tuffs-associated-coal-beds",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/publications/anchor-ice-seabed-freezing-and-sediment-dynamics-shallow-arctic-seas",
+      "candidateIds": [
+        "earth-0139"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/publications/anchor-ice-seabed-freezing-and-sediment-dynamics-shallow-arctic-seas",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/publications/pseudotachylyte-increases-post-slip-strength-faults",
+      "candidateIds": [
+        "earth-0089"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/publications/pseudotachylyte-increases-post-slip-strength-faults",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.usgs.gov/publications/yellowstones-old-faithful-geyser-shut-down-a-severe-13th-century-drought",
+      "candidateIds": [
+        "earth-0043"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.usgs.gov/publications/yellowstones-old-faithful-geyser-shut-down-a-severe-13th-century-drought",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitbritain.com/en/things-to-do/britains-alternative-sports",
+      "candidateIds": [
+        "customs-0133"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitbritain.com/en/things-to-do/britains-alternative-sports",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitczechia.com/en-us/campaigns/traditions-2022/spirituality/easter",
+      "candidateIds": [
+        "customs-0100"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitczechia.com/en-us/campaigns/traditions-2022/spirituality/easter",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitdenmark.com/denmark/plan-your-trip/danish-fastelavn-traditions-on-denmarks-well-known-holiday-islands-gdk1148106",
+      "candidateIds": [
+        "customs-0054"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitdenmark.com/denmark/plan-your-trip/danish-fastelavn-traditions-on-denmarks-well-known-holiday-islands-gdk1148106",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitdenmark.com/denmark/things-do/traditions-lifestyle/danish-traditions",
+      "candidateIds": [
+        "customs-0051",
+        "customs-0052",
+        "customs-0053"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitdenmark.com/denmark/things-do/traditions-lifestyle/danish-traditions",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitdubai.com/places-to-visit/al-marmoom-camel-racing",
+      "candidateIds": [
+        "customs-0040"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.visitfinland.com/en/articles/quirky-summer-events-in-finland/",
+      "candidateIds": [
+        "customs-0141"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitfinland.com/en/articles/quirky-summer-events-in-finland/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitgreece.gr/inspirations/easter-in-greece",
+      "candidateIds": [
+        "customs-0096"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitgreece.gr/en/inspirations/easter-in-greece",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visiticeland.com/article/meet-the-icelandic-yule-troll-family/",
+      "candidateIds": [
+        "customs-0059"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visiticeland.com/article/meet-the-icelandic-yule-troll-family/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitportugal.com/en/destinos/porto-e-norte/210955",
+      "candidateIds": [
+        "customs-0080"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.waseda.jp/inst/athletic/en/wasedasports/olympic/",
+      "candidateIds": [
+        "customs-0098"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.waseda.jp/inst/athletic/en/wasedasports/olympic/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.weather.gov/cle/event_notable_2014",
+      "candidateIds": [
+        "earth-0040"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.weather.gov/cle/event_notable_2014",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.weather.gov/media/aly/stormbuster/Spring17SB.pdf",
+      "candidateIds": [
+        "earth-0034"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.weather.gov/media/aly/stormbuster/Spring17SB.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.weather.gov/media/owlie/CloudsOutMyWindow.pdf",
+      "candidateIds": [
+        "earth-0035"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.weather.gov/media/owlie/CloudsOutMyWindow.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.weio.org/games",
+      "candidateIds": [
+        "customs-0063",
+        "customs-0064",
+        "customs-0065"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.weio.org/games",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.whoi.edu/oceanus/feature/the-waves-within-the-waves/",
+      "candidateIds": [
+        "earth-0080"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.whoi.edu/oceanus/feature/the-waves-within-the-waves/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.wimbledon.com/pdf/7.%20Media%20Fact%20Sheet%20-%20Trophies%202023.pdf",
+      "candidateIds": [
+        "customs-0095"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.wimbledon.com/pdf/7.%20Media%20Fact%20Sheet%20-%20Trophies%202023.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.worldnomadgames.com/en/sport/Er-Enish/",
+      "candidateIds": [
+        "customs-0066"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://www.wtwf.co.uk/news/2025-world-toe-wrestling-championship",
+      "candidateIds": [
+        "customs-0061"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.wtwf.co.uk/news/2025-world-toe-wrestling-championship",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.zuerich.com/en/events-nightlife/zurich-traditions/sechselauten",
+      "candidateIds": [
+        "customs-0138"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.zuerich.com/en/events-nightlife/zurich-traditions/sechselauten",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    }
+  ]
+}

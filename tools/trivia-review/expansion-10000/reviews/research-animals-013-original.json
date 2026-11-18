@@ -1,0 +1,82 @@
+[
+  {
+    "q": "Why do people normally need special equipment to hear the play-associated calls made by tickled laboratory rats?",
+    "a": "They are above human hearing range",
+    "d": "The studied calls are ultrasonic, around 50 kilohertz. Research links them to positive responses during tickling, with differences between individual rats.",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/32961155/",
+    "s": "Current Biology - Rat calls during tickling",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "They are above human hearing range",
+      "They are vibrations transmitted only through the floor",
+      "They are below human hearing range",
+      "They are too faint despite having ordinary speech frequencies"
+    ],
+    "evidence": "Primary2020 abstract describes50kHz ultrasonic calls as graded indicators of positive affect during tickling. No claim that every rat enjoys tickling or that all vocalizations have one meaning."
+  },
+  {
+    "q": "In a 2022 study of possible insect play, what did bumblebees repeatedly roll without getting a food reward?",
+    "a": "Wooden balls",
+    "d": "The bees could take an unobstructed route to food but detoured to interact with the objects. Their voluntary behavior met the researchers' criteria for object play.",
+    "u": "https://www.qmul.ac.uk/news/latest-news/2022/se/first-ever-study-shows-bumble-bees-play.html",
+    "s": "Queen Mary University of London - Bumblebee object play",
+    "cat": "Small Worlds and Many Legs",
+    "level": "easy",
+    "choices": [
+      "Pebbles",
+      "Empty snail shells",
+      "Wooden balls",
+      "Dried seedpods"
+    ],
+    "evidence": "First-party2022 account describes voluntary wooden-ball rolling, no food reward, and preference for a previously ball-associated chamber. Does not assert direct measurement of subjective happiness."
+  },
+  {
+    "q": "Which marine animals waited for a preferred shrimp snack in a 2021 version of the marshmallow test?",
+    "a": "Cuttlefish",
+    "d": "The animals could take a less-preferred piece of prawn immediately or wait for a live grass shrimp. Some sustained the wait for more than two minutes.",
+    "u": "https://www.cam.ac.uk/research/news/cuttlefish-show-their-intelligence-by-snubbing-sub-standard-snacks",
+    "s": "University of Cambridge - Cuttlefish delayed reward",
+    "cat": "Ocean Life",
+    "level": "medium",
+    "choices": [
+      "Squid",
+      "Cuttlefish",
+      "Octopuses",
+      "Nautiluses"
+    ],
+    "evidence": "First-party account of primary2021 study describes six common cuttlefish in delay-maintenance trials, immediate king prawn versus delayed live grass shrimp, with maximum130seconds. No general intelligence ranking or claim about every cephalopod."
+  },
+  {
+    "q": "Researchers watched the wild orangutan Rakus cover a facial wound with what material?",
+    "a": "Chewed leaves and their juice",
+    "d": "He applied material from a climbing plant directly to the injury. The report documents one observed case; it does not establish how much the plant contributed to the later healing.",
+    "u": "https://www.nature.com/articles/s41598-024-58988-7",
+    "s": "Scientific Reports - Rakus and a facial wound",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Chewed leaves and their juice",
+      "Crushed insects",
+      "Wet river clay",
+      "Sticky tree resin"
+    ],
+    "evidence": "Primary2024 report records June2022 observations of Rakus chewing Fibraurea tinctoria, applying juice, then covering a facial wound with pulp. Observation not a controlled test of healing efficacy."
+  },
+  {
+    "q": "A 2016 Oxford study found that newly hatched ducklings could imprint on which abstract relationship between pairs of objects?",
+    "a": "Same versus different",
+    "d": "After seeing a matching or mismatching pair, the birds tended to follow new pairs with the corresponding relationship. They did not simply follow the original shapes or colors.",
+    "u": "https://ora.ox.ac.uk/objects/uuid%3Ad6082696-1c56-49fc-abf8-147c9f8557fe",
+    "s": "Science - Duckling relational imprinting",
+    "cat": "Feathers and Flight",
+    "level": "hard",
+    "choices": [
+      "Heavier versus lighter",
+      "Same versus different",
+      "Nearer versus farther",
+      "More versus fewer"
+    ],
+    "evidence": "Primary2016 abstract describes newly hatched mallards imprinting on same/different shape or color and transferring the relation to new stimuli without reinforcement training. No universal claim about adult reasoning."
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "range": [
+    126,
+    150
+  ],
+  "rawCount": 150,
+  "frozenThrough": 150,
+  "hashFirst150": "dd0e57ff87222e2cdeb20a3b9ed0bd1068049a429c3ae34b0c0445a057122e44",
+  "knownRejected": [
+    68,
+    139
+  ],
+  "review": "Read source content, checked entity and q+a+d similarity neighbors, all four choices reviewed. No new duplicate identified.",
+  "maxDerivedWordsPerSource": 116,
+  "newSourceCaveats": [
+    "Automated requests to NMAI and Waddesdon returned403; source content was read through web tool. Ann Hamilton studio returns406 to urllib but full page was read through web. Science Museum co2043 TLS issue to urllib; page read through web. UNESCO Kanjur request reset in HTTP audit, PDF subsequently opened and read successfully."
+  ],
+  "rejectedResearch": [
+    "Quilling is already published1122; not added.",
+    "Rousseau travel fact not used; weaker question framing.",
+    "Blind-printing generic definition not added."
+  ],
+  "rejection139": "Underlying quillwork material fact already published1121; retain raw position, reject from accepted count."
+}

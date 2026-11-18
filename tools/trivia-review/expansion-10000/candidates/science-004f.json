@@ -1,0 +1,727 @@
+[
+  {
+    "candidateId": "science-0176",
+    "q": "NASA’s early ferrofluid research tried to use magnets to guide which troublesome liquid inside a spacecraft?",
+    "a": "Rocket fuel",
+    "d": "Suspended magnetic particles offered a way to pull liquid propellant toward a pump when gravity could not reliably settle it there. Other methods were ultimately chosen for that application.",
+    "s": "NASA · Ferrofluid Origins",
+    "u": "https://www.nasa.gov/history/novel-rocket-fuel-spawned-ferrofluid-industry/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Hydraulic brake fluid",
+      "Liquid oxygen for breathing",
+      "Drinking water",
+      "Rocket fuel"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/history/novel-rocket-fuel-spawned-ferrofluid-industry/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NASA history describes Papell’s magnetic propellant concept, pump-intake guidance in low gravity, and eventual choice of simpler methods.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "f7ea3c1a406b4370c395f384f172a2c416c9d76927c2d80198be85dbd8852784"
+    }
+  },
+  {
+    "candidateId": "science-0177",
+    "q": "A 2018 MIT fog collector pulled tiny airborne water droplets toward its collecting mesh by giving them what?",
+    "a": "Electrical charge",
+    "d": "An ion emitter charged the droplets. An electric field then helped redirect them to the collector, rather than relying only on droplets bumping into a passive mesh.",
+    "s": "MIT · Electrically Driven Fog Collection",
+    "u": "https://dspace.mit.edu/entities/publication/79ee3b02-417d-425a-ac4e-c7e6209d6860",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Sudden temperature rise",
+      "Coating of oil",
+      "Magnetic core",
+      "Electrical charge"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://dspace.mit.edu/entities/publication/79ee3b02-417d-425a-ac4e-c7e6209d6860",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary study abstract describes space-charge injection, net droplet charge, and electric-field-guided collection.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "c1ef39eb5b56f67ef4067cb418229600be955d391a087d953f02c370392af7a1"
+    }
+  },
+  {
+    "candidateId": "science-0178",
+    "q": "What physical effect makes magnetostriction a source of hum in an electrical transformer?",
+    "a": "Tiny repeated changes in the core’s shape",
+    "d": "Magnetization slightly changes the core’s shape, an effect called magnetostriction. An alternating field repeats the deformation and can produce an audible hum.",
+    "s": "Ansys · Magnetostriction",
+    "u": "https://ansyshelp.ansys.com/public/Views/Secured/Electronics/v242/en/Subsystems/Maxwell/Content/MagnetostrictionandInverseMagnetostriction.htm",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Repeated electrical sparks between layers",
+      "Air bubbles bursting in cooling liquid",
+      "Rapid heating and cooling of its wires",
+      "Tiny repeated changes in the core’s shape"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://ansyshelp.ansys.com/public/Views/Secured/Electronics/v242/en/Subsystems/Maxwell/Content/MagnetostrictionandInverseMagnetostriction.htm",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Engineering documentation explicitly describes magnetization-induced dimensional changes and the resulting transformer hum; replacement avoids original university host’s certificate error.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "ef2bd2793376bd1334d7bdc13112a6a203b9347282914110880736eaf0c1d97b"
+    }
+  },
+  {
+    "candidateId": "science-0179",
+    "q": "Some originally clear antique glass develops a purple tint after long exposure to what?",
+    "a": "Sunlight",
+    "d": "Manganese-containing glass can undergo solarization. Ultraviolet exposure changes the chemistry responsible for its color, so the purple need not have been intentional.",
+    "s": "Corning Museum of Glass · Solarized Bottles",
+    "u": "https://libanswers.cmog.org/faq/144135",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Salt water",
+      "High humidity",
+      "Wood smoke",
+      "Sunlight"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://libanswers.cmog.org/faq/144135",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum glass-science explanation identifies sunlight/UV-induced purple coloration in glass decolorized with manganese compounds.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "72c3e69bb1e54e50605426d8b10b86877f993e8901b3d1e55abcba1bb2b9fd64"
+    }
+  },
+  {
+    "candidateId": "science-0180",
+    "q": "On a conventional safety-match box, which part contains the red phosphorus needed for striking?",
+    "a": "Striking strip",
+    "d": "The reactive ingredients are divided between the match head and its special striking surface. Keeping them separate is part of the safety-match design.",
+    "s": "Smithsonian · Safety Matches",
+    "u": "https://americanhistory.si.edu/collections/object/nmah_308644",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Wooden stem",
+      "Wax coating",
+      "Striking strip",
+      "Printed paper label"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://americanhistory.si.edu/collections/object/nmah_308644",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum specimen materials identify potassium chlorate in heads and red phosphorus in the striking medium; no mixture amounts or making instructions used.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "4c86b9f39ac5b7b4d762bbcf59749a3c7cbad70c2ae6024508d00f3e5f665799"
+    }
+  },
+  {
+    "candidateId": "science-0181",
+    "q": "Some supermarket barcode-scanner windows are protected by a scratch-resistant layer of which synthetic gemstone material?",
+    "a": "Sapphire",
+    "d": "A thin sapphire sheet can be bonded to glass over the scanner. Its hardness helps resist scratches caused by merchandise sliding across the window.",
+    "s": "Saphikon · Laser-Scanning Window Patent",
+    "u": "https://patents.google.com/patent/EP0494829A2/en",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Turquoise",
+      "Sapphire",
+      "Opal",
+      "Emerald"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://patents.google.com/patent/EP0494829A2/en",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary patent describes commercial sapphire/glass scanning windows and explicitly identifies scratch resistance as their purpose.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "417c4449b4df7e81c1ae2c3686a8e47c030bcdc5c34b8971135df719297b7acf"
+    }
+  },
+  {
+    "candidateId": "science-0182",
+    "q": "A miniature caterpillar-like robot made from liquid-crystal elastomer could inch along under which external energy source?",
+    "a": "Visible light",
+    "d": "The polymer film changed shape under illumination, translating deformation into crawling. The researchers demonstrated movement on surfaces including paper.",
+    "s": "Macromolecular Rapid Communications · Light-Driven Inching Robot",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/28561989/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Magnetic pulses",
+      "Visible light",
+      "Ultrasound",
+      "Microwaves"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28561989/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper describes a monolithic liquid-crystal-elastomer film, visible-light excitation, and inching on paper and a blazed grating.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "88144cac714be486d29884c050821db106c176672e140b9479d244a89e0238f4"
+    }
+  },
+  {
+    "candidateId": "science-0183",
+    "q": "In classic black-and-white E Ink displays, the page image is made by moving what toward the viewing surface?",
+    "a": "Charged pigment particles",
+    "d": "Tiny capsules contain contrasting pigment particles in clear fluid. An electric field rearranges which particles are visible, making the display behave more like movable ink than a lamp.",
+    "s": "E Ink · How Electronic Ink Works",
+    "u": "https://www.eink.com/tech/detail/How_it_works",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Colored gas bubbles",
+      "Liquid-crystal shutters",
+      "Microscopic mirrors",
+      "Charged pigment particles"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.eink.com/tech/detail/How_it_works",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Manufacturer describes microcapsules, black and white charged pigments, clear fluid, and electric-field-driven particle movement.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "680d1b41a295937b4dcdb49230913e8d5c20e2780120bf07bc3af35eae2157cb"
+    }
+  },
+  {
+    "candidateId": "science-0184",
+    "q": "Percy Shaw’s self-cleaning Cat’s Eye road studs used passing tires to help wash the reflectors with what?",
+    "a": "Collected rainwater",
+    "d": "A vehicle depressed the rubber block into its housing. This movement brought the reflectors against their mounting and pushed stored water over the glass.",
+    "s": "MyLearning Museum Resources · Percy Shaw",
+    "u": "https://www.mylearning.org/stories/inventors-and-inventions-from-yorkshire/percy-shaw-and-the-catseyes",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Collected rainwater",
+      "Compressed steam",
+      "Windshield washer fluid",
+      "Engine oil"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.mylearning.org/stories/inventors-and-inventions-from-yorkshire/percy-shaw-and-the-catseyes",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum educational account describes a rainwater-collecting base and tire pressure depressing the block to clean its reflectors.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "d604e9583190b3e1ceca888e5082a527661cdeb156f96fe70bae73857a42e473"
+    }
+  },
+  {
+    "candidateId": "science-0185",
+    "q": "James Dewar developed his 1892 vacuum flask mainly to preserve which kind of laboratory material?",
+    "a": "Liquefied gases",
+    "d": "Producing extremely cold liquid gases was costly, and they quickly boiled away. The insulated vessel gave researchers more time to investigate them.",
+    "s": "Royal Institution · Dewar’s Vacuum Flask",
+    "u": "https://www.rigb.org/explore-science/explore/collection/james-dewars-vacuum-flask",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Light-sensitive dyes",
+      "Sterile bacterial cultures",
+      "Liquefied gases",
+      "Boiling acids"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.rigb.org/explore-science/explore/collection/james-dewars-vacuum-flask",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institution holding the flask explains its development for cryogenic research and slowing evaporation of liquefied gases.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "0012753ea1b3b0cdde813f723c3044733406d7076876377bc26f82aac5886f37"
+    }
+  },
+  {
+    "candidateId": "science-0186",
+    "q": "What provides the ignition heat in a fire piston, without a flame or spark?",
+    "a": "Rapid compression of air",
+    "d": "Work done on the air raises its temperature. The principle is also central to compression ignition in a diesel engine.",
+    "s": "Colorado State University · Fire Piston",
+    "u": "https://www.physics.colostate.edu/physics-demos/fire-starter-fire-piston/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Oxidation of the metal cylinder",
+      "Rapid compression of air",
+      "Expansion of a compressed gas",
+      "Friction at the piston seal"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.physics.colostate.edu/physics-demos/fire-starter-fire-piston/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University demonstration explains increased gas temperature under rapid compression and explicitly connects the effect to diesel ignition.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "702b0691571cdeabe6f7780c9ad65c815fe63075ea76061b37598adaaafb97ac"
+    }
+  },
+  {
+    "candidateId": "science-0187",
+    "q": "Stanford researchers built a pocket microscope around a surprisingly simple structural material. What formed the Foldscope’s main body?",
+    "a": "Paper",
+    "d": "Precisely folded paper aligned the optical components and provided a compact focusing mechanism. The design made a lightweight microscope suitable for fieldwork and education.",
+    "s": "PLOS ONE · Foldscope",
+    "u": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0098781",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Balsa wood",
+      "Silicone rubber",
+      "Paper",
+      "Steel foil"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0098781",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary 2014 paper describes folded-paper structural loops, passive optical alignment, flexure mechanisms, and portable microscopy.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "2aa6a08c3e4257f6a0737021df29e2e6ecff8b194f467971afc958055e263ebb"
+    }
+  },
+  {
+    "candidateId": "science-0188",
+    "q": "The hand-cranked chain saw called Heine’s osteotome was designed for work on what?",
+    "a": "Human bones",
+    "d": "This nineteenth-century surgical instrument could remove diseased joint surfaces through smaller openings. Its toothed chain belongs to medical history rather than forestry.",
+    "s": "Thackray Museum · Heine Osteotome",
+    "u": "https://collections.thackraymuseum.co.uk/object-250715",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Marble sculpture",
+      "Human bones",
+      "Clock gears",
+      "Leather belts"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://collections.thackraymuseum.co.uk/object-250715",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Custodian museum identifies a surgical chainsaw and cites its purpose as joint-surface resection through relatively small incisions. Does not repeat unsupported childbirth origin.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "7b562168e7bef29fd500983cf9d7aef871949a1b60ccd71c600b338ea6fdfbd2"
+    }
+  },
+  {
+    "candidateId": "science-0189",
+    "q": "An ordinary flat mirror is often said to swap left and right. Which direction does its geometry actually reverse?",
+    "a": "Front to back",
+    "d": "The reflection reverses the direction perpendicular to the mirror. Our usual comparison with someone turned around makes that reversal seem like a left–right swap.",
+    "s": "Exploratorium · Cylindrical Mirror",
+    "u": "https://www.exploratorium.edu/snacks/cylindrical-mirror",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Front to back",
+      "Up to down only",
+      "Left to right only",
+      "Every direction equally"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.exploratorium.edu/snacks/cylindrical-mirror",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum’s Going Further section explicitly explains flat-mirror reversal as in/out, with the apparent right/left relation depending on orientation.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "973054fd4ed3b9dd5f89512993668c32b2ce20dbf1e588851d43138da21e1223"
+    }
+  },
+  {
+    "candidateId": "science-0190",
+    "q": "The cushioning material now called memory foam grew out of NASA work to improve what?",
+    "a": "Airplane passenger seats",
+    "d": "The original project sought safer seating for aircraft passengers. The foam later spread into mattresses, cushions, and other everyday products.",
+    "s": "NASA Spinoff 2019 · Memory Foam",
+    "u": "https://spinoff.nasa.gov/Spinoff2019/pdf/Spinoff2019.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Airplane passenger seats",
+      "Rocket fuel tank liners",
+      "Astronaut food packaging",
+      "Underwater breathing equipment"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://spinoff.nasa.gov/Spinoff2019/pdf/Spinoff2019.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NASA first-party history explicitly identifies commercial airplane passenger-seat safety as the origin, distinguishing it from later spacecraft uses.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "7fea910bac0bf27e2d63a6e8ca9ce0f25569a10374981f45e8598eed15faa890"
+    }
+  },
+  {
+    "candidateId": "science-0191",
+    "q": "Some self-lit EXIT signs glow without wires or batteries because they contain which radioactive gas?",
+    "a": "Tritium",
+    "d": "Beta particles from the gas excite a phosphor inside sealed tubes. That light-producing process can continue even during an electrical outage.",
+    "s": "US EPA · Tritium Exit Signs",
+    "u": "https://www.epa.gov/radtown/tritium-exit-signs",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Tritium",
+      "Neon",
+      "Argon",
+      "Xenon"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.epa.gov/radtown/tritium-exit-signs",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "EPA explanation identifies tritium beta decay, phosphor light emission, and operation without conventional electrical power.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "8300220b58b6564e7a159f034095b1c24c851cbb146009bda13bccd9b01370b4"
+    }
+  },
+  {
+    "candidateId": "science-0192",
+    "q": "Walter Jaeger’s early device unexpectedly responded to cigarette smoke while he was trying to detect what?",
+    "a": "Poison gas",
+    "d": "The intended gas sensor failed its initial purpose. According to the NRC’s history, smoke from his cigarette moved its meter, pointing toward smoke detection.",
+    "s": "US NRC · Smoke-Detector History",
+    "u": "https://www.nrc.gov/regulations-legislation/fact-sheets-brochures/backgrounder-on-smoke-detectors",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Alcohol vapor",
+      "Steam leaks",
+      "Carbon dioxide from breathing",
+      "Poison gas"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nrc.gov/regulations-legislation/fact-sheets-brochures/backgrounder-on-smoke-detectors",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Regulator’s historical account describes a late-1930s poison-gas sensor responding when Jaeger lit a cigarette.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "049ed2b23e6e9dd785759dd515640c99ab3eda371bf2104b291a0f1c27513ca1"
+    }
+  },
+  {
+    "candidateId": "science-0193",
+    "q": "To study how atoms rearrange when a metal surface is dented, an MIT team built a much larger model out of what?",
+    "a": "Soap bubbles",
+    "d": "A single-layer raft of bubbles stood in for atoms. Watching the raft deform let researchers compare visible movements with defects forming in real metal surfaces.",
+    "s": "MIT · Bubbles Used to Simulate Atoms",
+    "u": "https://news.mit.edu/2001/bubbles-used-simulate-atoms-behavior",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Soap bubbles",
+      "Stacked coins",
+      "Rubber bands",
+      "Iron filings"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2001/bubbles-used-simulate-atoms-behavior",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "MIT institutional report describes a one-layer bubble raft modeling nanoindentation and surface defects; its measured behavior matched metal experiments.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "aec6e105443f3f48529092e317b7cf0631bcd8b9e63e0b135e5a215d6747d760"
+    }
+  },
+  {
+    "candidateId": "science-0194",
+    "q": "A 2011 experimental 3-D printer tested in the desert fused sand into glass objects using which heat source?",
+    "a": "Focused sunlight",
+    "d": "Markus Kayser’s Solar Sinter used the desert’s abundant sand and solar energy. Layered construction produced objects including a bowl now in MoMA’s collection.",
+    "s": "MoMA · Solar-Sintered Bowl",
+    "u": "https://www.moma.org/collection/works/163891",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "A heated steel nozzle",
+      "Focused sunlight",
+      "A gas torch",
+      "A microwave cavity"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.moma.org/collection/works/163891",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Custodian museum and designer’s project page describe sunlight and sand, desert testing, layered 3-D printing, and the resulting bowl.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "f33375cef15511a45be7978af9bd5a53cc1b1be07bdd0145bc8f4ffa6fc0986f"
+    }
+  },
+  {
+    "candidateId": "science-0195",
+    "q": "Cloudflare has used footage of which decorative objects as an extra source of randomness for internet security?",
+    "a": "Lava lamps",
+    "d": "A camera records their unpredictable changing patterns. The resulting data is mixed with other sources when generating cryptographic randomness.",
+    "s": "Cloudflare · Lava Lamps and Encryption",
+    "u": "https://www.cloudflare.com/learning/ssl/lava-lamp-encryption/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Snow globes",
+      "Water clocks",
+      "Plasma globes",
+      "Lava lamps"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.cloudflare.com/learning/ssl/lava-lamp-encryption/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Company’s technical explanation explicitly describes lava-lamp camera footage and mixing its data with other entropy sources.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "902ecdfc005dbc754514acf2a4c33ebeccf805f6cb0e624c041c1e656ae80edc"
+    }
+  },
+  {
+    "candidateId": "science-0196",
+    "q": "The Cray-2 supercomputer kept its densely packed electronics cool by placing them directly in what?",
+    "a": "Electrically insulating liquid",
+    "d": "Its cabinet held an inert fluorocarbon coolant that flowed around the components. Immersion allowed close packing while carrying heat away.",
+    "s": "Cray Research · Cray-2 Brochure",
+    "u": "https://s3data.computerhistory.org/brochures/cray.cray2.1985.102646185.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Circulating brine solution",
+      "Pressurized helium atmosphere",
+      "Bath of liquid nitrogen",
+      "Electrically insulating liquid"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://s3data.computerhistory.org/brochures/cray.cray2.1985.102646185.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Original manufacturer brochure describes direct liquid immersion in an insulating fluorocarbon coolant, including integrated circuits and power supplies.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending. Release wording review: removed an unnecessary opening article from the noun-phrase answer for natural letter-game indexing; factual meaning unchanged. Parallelized noun-choice articles to avoid a correct-answer style cue.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "4120673ea84d26754c6fb52ce5968f54aa11b47baf3df210f1a82e6a85224f26"
+    }
+  },
+  {
+    "candidateId": "science-0197",
+    "q": "A 2015 experimental heat engine generated rotation and electrical power using levitating blocks of what?",
+    "a": "Dry ice",
+    "d": "Escaping carbon dioxide vapor drove the blocks around a hot surface. The bearing-free rotors demonstrated a way to turn sublimation into useful power.",
+    "s": "Northumbria University · Sublimation Heat Engine",
+    "u": "https://www.northumbria.ac.uk/about-us/news-events/news/2015/03/breakthrough-in-energy-harvesting-could-power-life-on-mars/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Sulfur",
+      "Paraffin wax",
+      "Water ice",
+      "Dry ice"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.northumbria.ac.uk/about-us/news-events/news/2015/03/breakthrough-in-energy-harvesting-could-power-life-on-mars/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University authors explain demonstrated dry-ice rotors hovering on their vapor above heated surfaces; vapor drives rotation converted into power. Tested fact is the solid working material.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "8732e8e2c6eeff668d592f87f84cfdded14e48b644e7408294d4af6e35edb0a5"
+    }
+  },
+  {
+    "candidateId": "science-0198",
+    "q": "A laser beam can follow a curving stream of water from a bottle because of what optical effect?",
+    "a": "Repeated internal reflection",
+    "d": "Light bounces inside the water–air boundary instead of escaping immediately. The flowing stream acts like a temporary liquid version of an optical fiber.",
+    "s": "Harvard · Bucket of Light",
+    "u": "https://sciencedemonstrations.fas.harvard.edu/presentations/bucket-light",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Fluorescence of the water",
+      "Repeated internal reflection",
+      "Absorption by dissolved minerals",
+      "Diffraction around the stream"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://sciencedemonstrations.fas.harvard.edu/presentations/bucket-light",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University demonstration explicitly describes laser light trapped in a water stream by total internal reflection.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "7253670daf95eb79f5aa6a395ba3f228676fbcecf01f25a88a607f5a41543b8c"
+    }
+  },
+  {
+    "candidateId": "science-0199",
+    "q": "A NIST schlieren photograph of an ordinary warm hand made what normally invisible feature visible?",
+    "a": "Rising air currents",
+    "d": "Warm and cool air have slightly different optical properties. Schlieren arrangements turn those tiny differences into visible patterns of otherwise transparent airflow.",
+    "s": "NIST · Seeing Air Around a Hand",
+    "u": "https://www.nist.gov/system/files/documents/2017/05/09/small_EngAft-REAL-Photo-Journal.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Individual skin cells",
+      "Bones beneath the skin",
+      "Rising air currents",
+      "Sweat-gland pores"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nist.gov/system/files/documents/2017/05/09/small_EngAft-REAL-Photo-Journal.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NIST research image caption describes its own schlieren optical system revealing refractive-index gradients and heat-driven airflow from a human hand.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "f03a303518efe37dda41e51d2956f92addd3b76022cebcaa889b56353a733052"
+    }
+  },
+  {
+    "candidateId": "science-0200",
+    "q": "In traditional vat dyeing with indigo, what makes the dye regain its blue color after the cloth leaves the bath?",
+    "a": "Oxygen in the air",
+    "d": "The dye is applied in a chemically reduced, soluble form. Air oxidizes it back to the blue form, which is much less soluble in water.",
+    "s": "University of Bristol · Indigotin",
+    "u": "https://www.chm.bris.ac.uk/motm/indigotin/Indigotin%20-%20Molecule%20of%20the%20Month%20-%20February%202009.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Salt left on the cloth",
+      "Oxygen in the air",
+      "Sunlight alone",
+      "Cooling to room temperature"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.chm.bris.ac.uk/motm/indigotin/Indigotin%20-%20Molecule%20of%20the%20Month%20-%20February%202009.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University chemistry explanation identifies soluble leucoindigo and atmospheric reoxidation restoring the insoluble blue dye. No claim about indigo word origin used.",
+      "sourceReviewer": "Codex delegated researcher; exact institutional source or research paper read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "0eb00d2c8953b92fc856fa65f322392c1b304e78be46785401ac42e6fc5034c3"
+    }
+  }
+]

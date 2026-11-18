@@ -1,0 +1,402 @@
+[
+  {
+    "q": "UMass Amherst’s 2020 Air-gen device generated electricity from which normally overlooked feature of the surrounding air?",
+    "a": "Humidity",
+    "d": "A thin film of microbial protein nanowires developed a moisture gradient. The researchers reported a sustained small electrical output from this arrangement.",
+    "s": "UMass Amherst · Air-Gen",
+    "u": "https://www.umass.edu/news/article/new-green-technology-umass-amherst",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Static dust particles",
+      "Humidity",
+      "Air pressure fluctuations",
+      "Carbon dioxide concentration"
+    ],
+    "evidence": "First-party report and primary PMID 32066937 identify atmospheric water vapor and a self-maintained moisture gradient in protein-nanowire films."
+  },
+  {
+    "q": "What controlled the movements of CUHK’s experimental “slimebot,” which could squeeze through gaps and wrap around objects?",
+    "a": "Magnetic fields",
+    "d": "Magnetic particles embedded in a soft polymer mixture allowed external fields to guide and reshape it. Demonstrations included surrounding a battery in a model stomach.",
+    "s": "CUHK · Slime Robot",
+    "u": "https://www3.erg.cuhk.edu.hk/erg/node/2403",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Changes in air pressure",
+      "Magnetic fields",
+      "Ultraviolet flashes",
+      "Ultrasound pulses"
+    ],
+    "evidence": "First-party 2022 report describes externally magnetically controlled slime, gap navigation, and battery-encircling demonstration in a stomach model."
+  },
+  {
+    "q": "MIT’s see-through solar-cell research aimed to harvest which parts of sunlight while letting most visible light pass?",
+    "a": "Ultraviolet and near-infrared",
+    "d": "Selective absorption could turn a window into a power-generating surface while keeping it see-through. The design sacrifices visible-light harvesting to preserve transparency.",
+    "s": "MIT Energy Initiative · Transparent Solar Cells",
+    "u": "https://energy.mit.edu/news-events/news/transparent-solar-cells",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Green and yellow visible light",
+      "Red and blue visible light",
+      "All visible colors equally",
+      "Ultraviolet and near-infrared"
+    ],
+    "evidence": "Institutional research explanation explicitly describes ultraviolet and near-infrared absorption with low visible absorption."
+  },
+  {
+    "q": "What supplied the force that moved the fingers of MIT’s transparent hydrogel fish-gripper in 2017?",
+    "a": "Pumped water",
+    "d": "Water pumped into hollow gel structures inflated them in controlled directions. The soft hand could close around a live fish and then release it.",
+    "s": "MIT · Transparent Gel Robots",
+    "u": "https://news.mit.edu/2017/transparent-gel-robots-catch-release-fish-0201",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Pumped water",
+      "Compressed air",
+      "Electric motors",
+      "Magnetic fields"
+    ],
+    "evidence": "First-party report identifies mostly-water hydrogel, water-pumped actuation, underwater camouflage, and fish-gripping demonstration."
+  },
+  {
+    "q": "Early HASEL artificial muscles at CU Boulder contained which supermarket liquid inside their flexible pouches?",
+    "a": "Canola oil",
+    "d": "Electrical forces displaced the insulating liquid and changed the pouch’s shape. The liquid also helped the actuators recover after electrical breakdown.",
+    "s": "CU Boulder · Soft Robotic Muscles",
+    "u": "https://www.colorado.edu/engineering/2018/01/04/cu-engineering-researchers-create-soft-robotic-muscles",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Lemon juice",
+      "White vinegar",
+      "Maple syrup",
+      "Canola oil"
+    ],
+    "evidence": "Institutional report explicitly identifies supermarket canola oil, electrostatic displacement, and recovery from dielectric breakdown."
+  },
+  {
+    "q": "A Harvard–MIT robot began as a flat sheet, folded itself, then walked away in 2014. What triggered its folds?",
+    "a": "Heating the fold lines",
+    "d": "Embedded electrical heaters activated shrinking material at selected hinges. A programmed sequence turned the flat structure into a standing robot before it began crawling.",
+    "s": "MIT · Self-Folding Robot",
+    "u": "https://news.mit.edu/index.php/2014/mobile-folding-robots-0807",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Rotating tiny gears at each crease",
+      "Inflating sealed air pockets",
+      "Heating the fold lines",
+      "Moistening the paper layers"
+    ],
+    "evidence": "First-party report distinguishes electrical leads heating joints from earlier oven-heated prototypes and describes autonomous folding followed by walking."
+  },
+  {
+    "q": "In a famous 1999 experiment, which kind of pulse was slowed to roughly 38 miles per hour inside an ultracold gas?",
+    "a": "Light pulses",
+    "d": "A carefully prepared sodium gas dramatically reduced the pulses’ propagation speed. The experiment concerned light traveling through a special medium, not its speed in a vacuum.",
+    "s": "Nature · Slow Light in Ultracold Gas",
+    "u": "https://www.nature.com/articles/17561",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Light pulses",
+      "Heat pulses",
+      "Electrical current pulses",
+      "Sound pulses"
+    ],
+    "evidence": "Primary paper reports optical pulse propagation at 17 metres per second through an ultracold sodium gas; 38 mph is a rounded conversion."
+  },
+  {
+    "q": "Yale’s 2011 device could make suitably matched incoming laser beams almost entirely disappear into an absorber. What was its popular nickname?",
+    "a": "Anti-laser",
+    "d": "The coherent perfect absorber used interference and an absorbing silicon wafer. Instead of amplifying outgoing light, the arrangement trapped incoming light and converted its energy to heat.",
+    "s": "Yale · Anti-Laser",
+    "u": "https://news.yale.edu/2011/02/17/scientists-build-world-s-first-anti-laser",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Laser diode",
+      "Optical maser",
+      "Anti-laser",
+      "Photonic lantern"
+    ],
+    "evidence": "First-party report identifies the anti-laser nickname, coherent perfect absorber, silicon wafer, matched incoming beams, and heat generation."
+  },
+  {
+    "q": "University of Chicago physicists used shaped underwater wings in 2013 to tie knots in what?",
+    "a": "Vortex loops",
+    "d": "The moving water formed linked or knotted swirling loops. Tracking them showed that the knots could stretch, reconnect, and come apart.",
+    "s": "University of Chicago · Vortex Knots",
+    "u": "https://news.uchicago.edu/story/vortex-loops-could-untie-knotty-physics-problems",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Surface ripples",
+      "Streams of sand",
+      "Oil filaments",
+      "Vortex loops"
+    ],
+    "evidence": "First-party report describes 3-D-printed hydrofoils making water vortex knots and their reconnection dynamics."
+  },
+  {
+    "q": "In 2011, researchers used a single living cell containing fluorescent protein as the light-amplifying part of what device?",
+    "a": "Laser",
+    "d": "The cell sat between mirrors and received external light pulses. It emitted laser pulses and remained alive after repeated operation.",
+    "s": "Nature Photonics · Single-Cell Biological Lasers",
+    "u": "https://www.nature.com/articles/nphoton.2011.99",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Solar cell",
+      "Laser",
+      "Light-emitting diode",
+      "Optical fiber"
+    ],
+    "evidence": "Primary paper reports GFP-expressing live cells in an optical cavity, externally pumped laser emission, and survival after prolonged lasing."
+  },
+  {
+    "q": "A study of the Alhambra traced unexpected purple patches in its gilded decoration to tiny particles of which metal?",
+    "a": "Gold",
+    "d": "Corrosion processes produced gold nanoparticles. At that scale, the metal interacts with light differently from a continuous golden surface, helping explain the purple discoloration.",
+    "s": "Science Advances · Purple Alhambra Gilding",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9462697/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Iron",
+      "Cobalt",
+      "Gold",
+      "Copper"
+    ],
+    "evidence": "Primary 2022 conservation study identifies gold nanoparticles as the cause of purple discoloration in gilded Alhambra decoration."
+  },
+  {
+    "q": "Some heated crystals suddenly leap off a hotplate. What supplies the mechanical kick in the thermosalient effect?",
+    "a": "Release of internal strain",
+    "d": "A rapid structural transformation builds and releases stress inside the crystal. The resulting motion can throw a tiny crystal into the air.",
+    "s": "Max Planck Institute · Jumping Crystals",
+    "u": "https://www.fkf.mpg.de/8844666/news_publication_8824541_transferred",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Rising convection currents underneath",
+      "Escaping trapped water vapor",
+      "Electrostatic repulsion from the hotplate",
+      "Release of internal strain"
+    ],
+    "evidence": "Institutional study explanation attributes jumping to rapid release of mechanical tension during a structural phase change."
+  },
+  {
+    "q": "The “metallic” smell left on your hand after touching iron largely comes from reactions involving what?",
+    "a": "Skin oils",
+    "d": "Iron helps generate volatile molecules from substances on the skin. The familiar odor is therefore produced at the metal–skin encounter, rather than by airborne iron atoms.",
+    "s": "Virginia Tech · The Smell of Metal",
+    "u": "https://news.vt.edu/articles/2006/11/2006-611.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Dissolved nitrogen",
+      "Water vapor alone",
+      "Skin oils",
+      "Rust dust"
+    ],
+    "evidence": "First-party report identifies metal-induced oxidation of skin lipids and odor-producing aldehydes and ketones."
+  },
+  {
+    "q": "Harvard’s 2013 soft jumping robot got its sudden upward kick from what?",
+    "a": "Tiny internal combustion events",
+    "d": "Brief combustion inflated channels in the flexible robot rapidly enough to launch it. The system demonstrated jumping as a new movement for soft machines.",
+    "s": "Harvard · Robots with Lift",
+    "u": "https://news.harvard.edu/gazette/story/2013/02/robots-with-lift/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Electromagnets pulling on the floor",
+      "Rapidly spinning flywheels",
+      "Compressed coil springs",
+      "Tiny internal combustion events"
+    ],
+    "evidence": "First-party report describes combustion-driven pressure inside silicone channels producing repeated jumps; no construction instructions included."
+  },
+  {
+    "q": "In MIT’s “fluid trampoline” experiment, a water droplet bounced repeatedly on what thin vibrating surface?",
+    "a": "Soap film",
+    "d": "An oscillating liquid film could support bouncing droplets instead of immediately swallowing them. The experiment offered a compact system for studying chaotic motion.",
+    "s": "MIT · Fluid Trampoline",
+    "u": "https://news.mit.edu/2008/math-professor-discovers-chaos-fluid-trampoline",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Oil-coated rubber",
+      "Soap film",
+      "Liquid mercury",
+      "Molten wax"
+    ],
+    "evidence": "First-party report describes water drops bouncing on a vertically vibrating soap film; primary follow-up paper details the fluid system."
+  },
+  {
+    "q": "For IBM’s 2013 stop-motion film, the animators physically repositioned which microscopic objects between frames?",
+    "a": "Carbon monoxide molecules",
+    "d": "A scanning tunneling microscope moved the molecules on a surface. The tiny arrangements became successive frames of A Boy and His Atom.",
+    "s": "Nico Casavecchia · A Boy and His Atom",
+    "u": "https://www.nicocasavecchia.com/a-boy-and-his-atom",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Silica beads",
+      "DNA strands",
+      "Gold nanoparticles",
+      "Carbon monoxide molecules"
+    ],
+    "evidence": "Film director’s first-party project description identifies carbon monoxide molecules, scanning tunneling microscopy, and frame-by-frame repositioning."
+  },
+  {
+    "q": "Caltech researchers made nanoscale smiley faces by folding long strands of what material with shorter molecular “staples”?",
+    "a": "DNA",
+    "d": "Short DNA strands bound to chosen parts of a longer strand, pulling it into a designed shape. The result was molecular construction rather than a printed picture.",
+    "s": "Caltech Rothemund Lab · DNA Origami",
+    "u": "https://rothemundlab.caltech.edu/dna_origami",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Silk protein",
+      "Carbon nanotubes",
+      "Cellulose",
+      "DNA"
+    ],
+    "evidence": "Researcher’s own description specifies a long DNA strand, short folding strands, and nanoscale smiley-face structures."
+  },
+  {
+    "q": "A special drill based on a rounded triangular shape can cut a hole that is approximately what shape?",
+    "a": "Square",
+    "d": "A Reuleaux-triangle-based cutter can follow an almost square boundary when properly constrained. The resulting corners are slightly rounded rather than mathematically perfect.",
+    "s": "Procedia Materials Science · Square-Hole Tool",
+    "u": "https://www.sciencedirect.com/science/article/pii/S2211812814005781",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Perfect circle",
+      "Regular pentagon",
+      "Figure eight",
+      "Square"
+    ],
+    "evidence": "Primary fabrication paper reports Reuleaux-triangle geometry, constrained moving center, and removal of 98.7 percent of the desired square area."
+  },
+  {
+    "q": "How many stable resting positions does an ideal uniform-density Gömböc have on a level surface?",
+    "a": "One",
+    "d": "Its carefully designed shape makes it return to a single stable orientation without a hidden bottom weight. It also has one unstable balance point.",
+    "s": "Cambridge Whipple Museum · Gömböc",
+    "u": "https://collections.whipplemuseum.cam.ac.uk/objects/14982/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Two",
+      "Three",
+      "Four",
+      "One"
+    ],
+    "evidence": "Museum object description identifies homogeneous material, exactly one stable and one unstable equilibrium, and shape-based self-righting."
+  },
+  {
+    "q": "Davy and Faraday’s experiment in Florence showed that which precious stone could keep burning in pure oxygen once ignited?",
+    "a": "Diamond",
+    "d": "Faraday described the gem continuing to burn after the initial heat source was removed. A diamond is combustible despite its reputation for hardness and durability.",
+    "s": "Michael Faraday · Combustion of Diamond",
+    "u": "https://en.wikisource.org/wiki/Experimental_Researches_in_Chemistry_and_Physics/Apparatus_for_the_combustion_of_the_diamond",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Ruby",
+      "Emerald",
+      "Diamond",
+      "Sapphire"
+    ],
+    "evidence": "Primary Faraday text recounts Davy’s Florence experiment and continued combustion of diamond in oxygen after removal of the original heat source."
+  },
+  {
+    "q": "What hidden component lets a heated Rijke tube keep roaring briefly after the flame is removed?",
+    "a": "Wire gauze",
+    "d": "The hot mesh transfers heat to air moving through the tube. Under the right conditions, that energy reinforces a loud acoustic oscillation.",
+    "s": "UCLA Physics · Rijke Tubes",
+    "u": "https://demoweb.physics.ucla.edu/content/110-rijke-tubes",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Steel coil spring",
+      "Rubber reed",
+      "Piezoelectric disc",
+      "Wire gauze"
+    ],
+    "evidence": "University demonstration description identifies internal wire gauze and sustained roaring from retained heat after removal from a flame."
+  },
+  {
+    "q": "A 2021 study made flexible microfibers from which normally brittle material, allowing them to bend and spring back while very cold?",
+    "a": "Ice",
+    "d": "Nearly defect-free single-crystal fibers of frozen water could deform elastically. Their tiny dimensions allowed behavior very different from an ordinary ice cube cracking.",
+    "s": "Science · Elastic Ice Microfibers",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/34244408/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Table salt",
+      "Quartz",
+      "Ice",
+      "Chalk"
+    ],
+    "evidence": "Primary paper reports reversible bending of single-crystal ice microfibers under cryogenic conditions, approaching the theoretical elastic limit."
+  },
+  {
+    "q": "Washington State researchers made experimental memory components in 2022 using a solidified layer of which sweet substance?",
+    "a": "Honey",
+    "d": "The honey layer sat between metal electrodes in a memristor. Tests showed switching and memory-like electrical behavior relevant to experimental brain-inspired computing.",
+    "s": "Washington State University · Honey Memristors",
+    "u": "https://news.wsu.edu/press-release/2022/04/05/honey-holds-potential-for-making-brain-like-computer-chips/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Corn syrup",
+      "Maple syrup",
+      "Molasses",
+      "Honey"
+    ],
+    "evidence": "First-party report identifies solidified honey between electrodes and measured memristor switching and synapse-like responses, not a complete artificial brain."
+  },
+  {
+    "q": "Form Energy’s iron-air battery takes advantage of a reversible version of which familiar process?",
+    "a": "Rusting",
+    "d": "Discharging converts iron to rust using oxygen from the air. Charging reverses the transformation, restoring iron and releasing oxygen.",
+    "s": "Form Energy · Iron-Air Battery Cycle",
+    "u": "https://formenergy.com/technology/battery-technology/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Dissolving in acid",
+      "Melting",
+      "Electroplating with copper",
+      "Rusting"
+    ],
+    "evidence": "Manufacturer’s technical description explicitly identifies reversible rusting and the charge/discharge transformations; no price or performance forecast used."
+  },
+  {
+    "q": "In the MycelioTronics study, researchers grew a biodegradable support for electronic circuits from what?",
+    "a": "Fungal mycelium",
+    "d": "Thin fungal skins served as flexible substrates for conducting traces. The study demonstrated electronic components on the material, including battery-powered sensing devices.",
+    "s": "Science Advances · MycelioTronics",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/36367944/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Algal shells",
+      "Bacterial spores",
+      "Moss leaves",
+      "Fungal mycelium"
+    ],
+    "evidence": "Primary 2022 paper reports fungal mycelium skins as substrates, deposited conducting traces, flexible circuits, and autonomous sensing demonstrations."
+  }
+]

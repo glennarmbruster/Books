@@ -1,0 +1,287 @@
+[
+  {
+    "q": "What fairy-like name is given to brief red flashes above thunderstorms that can resemble enormous jellyfish?",
+    "a": "Sprites",
+    "d": "These faint electrical events occur high above storm clouds. Sensitive cameras have captured their branching, short-lived shapes.",
+    "s": "NOAA National Severe Storms Laboratory · Lightning Types",
+    "u": "https://www.nssl.noaa.gov/education/svrwx101/lightning/types/",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Glories",
+      "Sprites",
+      "Sun dogs",
+      "Light pillars"
+    ],
+    "candidateId": "weather-0001",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nssl.noaa.gov/education/svrwx101/lightning/types/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "These faint electrical events occur high above storm clouds. Sensitive cameras have captured their branching, short-lived shapes.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Read the complete card, supporting fact, choices and difficulty; retained its specific curiosity after the source and overlap review.",
+      "duplicateNotes": "Reviewed the question, answer and explanation against the published collection and the other candidates; no repeated underlying fact identified.",
+      "choiceOrder": "Stable shuffled order; does not put the correct answer in a fixed position.",
+      "acceptedOn": "2026-11-17",
+      "editorialReviewer": "Codex primary editor",
+      "nearestComparisonIds": [
+        "published-451",
+        "published-18753",
+        "published-10171"
+      ],
+      "comparedAgainstPublishedCount": 20100,
+      "comparedAgainstStagedCount": 333,
+      "fullReleaseReviewStillRequired": true,
+      "contentSha256": "5365b7d00e15a848e1d37941a1fc23c50ba72a14dfd88d9616d5b2d3baf9da6e"
+    }
+  },
+  {
+    "q": "Which weather phenomenon can leave a field dotted with hollow snow cylinders that look like miniature hay bales?",
+    "a": "Snow rollers",
+    "d": "Snow rollers require a delicate combination of snow texture, temperature and wind. Some also form when snow rolls downhill under gravity.",
+    "s": "National Weather Service · Weird Weather",
+    "u": "https://www.weather.gov/owlie/weird-weather",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Ice spikes",
+      "Snow rollers",
+      "Rime feathers",
+      "Snow penitentes"
+    ],
+    "candidateId": "weather-0002",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.weather.gov/owlie/weird-weather",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Snow rollers require a delicate combination of snow texture, temperature and wind. Some also form when snow rolls downhill under gravity.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Revised after independent editorial review to remove a giveaway, improve plausible choices, or calibrate adult difficulty.",
+      "duplicateNotes": "Reviewed the question, answer and explanation against the published collection and the other candidates; no repeated underlying fact identified.",
+      "choiceOrder": "Stable shuffled order; does not put the correct answer in a fixed position.",
+      "acceptedOn": "2026-11-17",
+      "editorialReviewer": "Codex primary editor",
+      "nearestComparisonIds": [
+        "published-14876",
+        "published-11387",
+        "published-14981"
+      ],
+      "comparedAgainstPublishedCount": 20100,
+      "comparedAgainstStagedCount": 333,
+      "fullReleaseReviewStillRequired": true,
+      "contentSha256": "d270d3a01b6176d75c418f29019c3df18370d6fc8fac3261c1f102c2a701a1ff"
+    }
+  },
+  {
+    "q": "Which high polar clouds are nicknamed mother-of-pearl clouds because of their intense iridescent colors?",
+    "a": "Nacreous clouds",
+    "d": "These stratospheric clouds can remain illuminated when the Sun is below the observer’s horizon, making their colors especially striking around twilight.",
+    "s": "Met Office · Unusual Cloud Formations",
+    "u": "https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/clouds/unusual-cloud-formations",
+    "cat": "Weather",
+    "level": "hard",
+    "choices": [
+      "Nimbostratus clouds",
+      "Mammatus clouds",
+      "Cumulus clouds",
+      "Nacreous clouds"
+    ],
+    "candidateId": "weather-0003",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/clouds/unusual-cloud-formations",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "These stratospheric clouds can remain illuminated when the Sun is below the observer’s horizon, making their colors especially striking around twilight.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Read the complete card, supporting fact, choices and difficulty; retained its specific curiosity after the source and overlap review.",
+      "duplicateNotes": "Reviewed the question, answer and explanation against the published collection and the other candidates; no repeated underlying fact identified.",
+      "choiceOrder": "Stable shuffled order; does not put the correct answer in a fixed position.",
+      "acceptedOn": "2026-11-17",
+      "editorialReviewer": "Codex primary editor",
+      "nearestComparisonIds": [
+        "nature-0092",
+        "published-10191",
+        "published-203"
+      ],
+      "comparedAgainstPublishedCount": 20100,
+      "comparedAgainstStagedCount": 333,
+      "fullReleaseReviewStillRequired": true,
+      "contentSha256": "76b80cdb2c7a9b64ab99f1c06709eb5359707bd4988ff624d9a4d3726139e05b"
+    }
+  },
+  {
+    "q": "What cloud feature can begin when an aircraft makes supercooled droplets freeze and fall out of a cloud layer?",
+    "a": "Fallstreak hole",
+    "d": "Air expanding around wings or propellers can cool enough to start ice formation. The resulting gap is called a fallstreak hole or hole-punch cloud.",
+    "s": "Met Office · Fallstreak Hole",
+    "u": "https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/clouds/unusual-cloud-formations/fallstreak-hole",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Thunderstorm anvil",
+      "Lenticular cap",
+      "Mammatus pouch",
+      "Fallstreak hole"
+    ],
+    "candidateId": "weather-0004",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/clouds/unusual-cloud-formations/fallstreak-hole",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Air expanding around wings or propellers can cool enough to start ice formation. The resulting gap is called a fallstreak hole or hole-punch cloud.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Revised after independent editorial review to remove a giveaway, improve plausible choices, or calibrate adult difficulty.",
+      "duplicateNotes": "Reviewed the question, answer and explanation against the published collection and the other candidates; no repeated underlying fact identified.",
+      "choiceOrder": "Stable shuffled order; does not put the correct answer in a fixed position.",
+      "acceptedOn": "2026-11-17",
+      "editorialReviewer": "Codex primary editor",
+      "nearestComparisonIds": [
+        "published-11516",
+        "published-205",
+        "published-9855"
+      ],
+      "comparedAgainstPublishedCount": 20100,
+      "comparedAgainstStagedCount": 333,
+      "fullReleaseReviewStillRequired": true,
+      "contentSha256": "62671916eefec7d5d3d74c5caa32c003977b11ff74888d94d0a72d1fbdc14d98"
+    }
+  },
+  {
+    "q": "What is the name of the brief optical event that can appear at the Sun’s upper rim as it dips below a clear horizon?",
+    "a": "Green flash",
+    "d": "Different wavelengths bend by different amounts through the atmosphere. Scattering and mirage effects can help make the green edge briefly visible.",
+    "s": "Hong Kong Observatory · Green Flash",
+    "u": "https://www.weather.gov.hk/en/education/earth-science/optical-phenomena/00743-Green-Flash.html",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Solar halo",
+      "Green flash",
+      "Zodiacal light",
+      "Crepuscular rays"
+    ],
+    "candidateId": "weather-0005",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.weather.gov.hk/en/education/earth-science/optical-phenomena/00743-Green-Flash.html",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Different wavelengths bend by different amounts through the atmosphere. Scattering and mirage effects can help make the green edge briefly visible.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Revised after independent editorial review to remove a giveaway, improve plausible choices, or calibrate adult difficulty.",
+      "duplicateNotes": "Reviewed the question, answer and explanation against the published collection and the other candidates; no repeated underlying fact identified.",
+      "choiceOrder": "Stable shuffled order; does not put the correct answer in a fixed position.",
+      "acceptedOn": "2026-11-17",
+      "editorialReviewer": "Codex primary editor",
+      "nearestComparisonIds": [
+        "published-11550",
+        "published-11588",
+        "published-680"
+      ],
+      "comparedAgainstPublishedCount": 20100,
+      "comparedAgainstStagedCount": 333,
+      "fullReleaseReviewStillRequired": true,
+      "contentSha256": "6bd430830c36bab9deda1c400d9aef69b6467316fcccd0df866c8af447cb493a"
+    }
+  },
+  {
+    "q": "Which tiny particles act as prisms to make the bright patches called sun dogs on either side of the Sun?",
+    "a": "Ice crystals",
+    "d": "Hexagonal crystals refract sunlight into bright spots, often roughly 22 degrees from the Sun. Similar displays can occasionally occur around a bright Moon.",
+    "s": "Met Office · Optical Effects: Nature’s Light Show",
+    "u": "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Ice crystals",
+      "Soot particles",
+      "Water droplets",
+      "Pollen grains"
+    ],
+    "candidateId": "weather-0006",
+    "review": {
+      "status": "rejected",
+      "sourceUrl": "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Hexagonal crystals refract sunlight into bright spots, often roughly 22 degrees from the Sun. Similar displays can occasionally occur around a bright Moon.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "",
+      "duplicateNotes": "",
+      "rejectionReason": "Same sun-dog ice-crystal/refraction fact already asked and explained in published question 11510."
+    }
+  },
+  {
+    "q": "A mountain walker sees an enormous human figure in the mist during a Brocken spectre. What is the figure really?",
+    "a": "Their own shadow",
+    "d": "Sunlight from behind the observer projects their shadow onto mist or cloud. With few distance cues, the figure can seem startlingly large.",
+    "s": "Met Office · Optical Effects: Nature’s Light Show",
+    "u": "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects",
+    "cat": "Weather",
+    "level": "easy",
+    "choices": [
+      "Their own shadow",
+      "Image of the mountain peak",
+      "Reflected cloud silhouette",
+      "Mirage of a distant walker"
+    ],
+    "candidateId": "weather-0007",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://weather.metoffice.gov.uk/learn-about/weather/optical-effects",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Sunlight from behind the observer projects their shadow onto mist or cloud. With few distance cues, the figure can seem startlingly large.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Read the complete card, supporting fact, choices and difficulty; retained its specific curiosity after the source and overlap review.",
+      "duplicateNotes": "Reviewed the question, answer and explanation against the published collection and the other candidates; no repeated underlying fact identified.",
+      "choiceOrder": "Stable shuffled order; does not put the correct answer in a fixed position.",
+      "acceptedOn": "2026-11-17",
+      "editorialReviewer": "Codex primary editor",
+      "nearestComparisonIds": [
+        "places-0005",
+        "published-209",
+        "nature-0092"
+      ],
+      "comparedAgainstPublishedCount": 20100,
+      "comparedAgainstStagedCount": 333,
+      "fullReleaseReviewStillRequired": true,
+      "contentSha256": "e9375ed452f10d6dbe9110fd3722158363715c6d892ac8415b13bf0f20345015"
+    }
+  },
+  {
+    "q": "Cold streams of what liquid can grow hollow tubes of ice called brinicles downward beneath sea ice?",
+    "a": "Concentrated brine",
+    "d": "Very cold, salty liquid drains from sea ice. As it sinks, it freezes surrounding seawater into a tube around its flow.",
+    "s": "The Cryosphere · Experimental Modelling of Ice Brinicles",
+    "u": "https://tc.copernicus.org/articles/18/2195/2024/tc-18-2195-2024.html",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Warm vent water",
+      "Ordinary seawater",
+      "Fresh meltwater",
+      "Concentrated brine"
+    ],
+    "candidateId": "weather-0008",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://tc.copernicus.org/articles/18/2195/2024/tc-18-2195-2024.html",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Very cold, salty liquid drains from sea ice. As it sinks, it freezes surrounding seawater into a tube around its flow.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Revised after independent editorial review to remove a giveaway, improve plausible choices, or calibrate adult difficulty.",
+      "duplicateNotes": "Reviewed the question, answer and explanation against the published collection and the other candidates; no repeated underlying fact identified.",
+      "choiceOrder": "Stable shuffled order; does not put the correct answer in a fixed position.",
+      "acceptedOn": "2026-11-17",
+      "editorialReviewer": "Codex primary editor",
+      "nearestComparisonIds": [
+        "published-977",
+        "published-11576",
+        "published-997"
+      ],
+      "comparedAgainstPublishedCount": 20100,
+      "comparedAgainstStagedCount": 333,
+      "fullReleaseReviewStillRequired": true,
+      "contentSha256": "c7b101340c3a64b0573a3c0136eb5189896177f92fdb1294ae5fc2e2afb48d39"
+    }
+  }
+]

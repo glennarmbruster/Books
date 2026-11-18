@@ -1,0 +1,402 @@
+[
+  {
+    "q": "Which liquid helped a laboratory bubble survive for more than a year by compensating for water lost to evaporation?",
+    "a": "Glycerol",
+    "d": "The bubble had a shell of tiny plastic particles. Glycerol in its liquid film attracted moisture from the air, helping keep the film from drying out.",
+    "s": "University of Lille · Long-Lived Bubbles",
+    "u": "https://newsroom.univ-lille.fr/en/news/bubbles-that-last-for-years",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Kerosene",
+      "Acetone",
+      "Glycerol",
+      "Ethanol"
+    ],
+    "evidence": "Institutional report describes a 465-day particle-armored bubble; glycerol absorbs atmospheric water and counters evaporation."
+  },
+  {
+    "q": "Rochester researchers made water climb a metal surface without a pump in 2009. What modification helped it happen?",
+    "a": "Laser-etched surface patterns",
+    "d": "Tiny laser-made features strongly attracted water. Channels could guide the liquid as it wicked along the metal, including uphill.",
+    "s": "University of Rochester · Water Runs Uphill",
+    "u": "https://www.rochester.edu/news/email.php?refno=3387",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "A continuously vibrating base",
+      "An electrically heated coating",
+      "A thin layer of grease",
+      "Laser-etched surface patterns"
+    ],
+    "evidence": "First-party report describes femtosecond-laser surface structures, guided flow, and upward wicking without a pump."
+  },
+  {
+    "q": "A 2022 University of Maryland battery used a gel derived from which discarded seafood material?",
+    "a": "Crab shells",
+    "d": "Chitosan from crustacean shells formed a biodegradable gel electrolyte for an experimental zinc battery. The study explored a different fate for seafood waste.",
+    "s": "University of Maryland · Crab-Shell Battery",
+    "u": "https://today.umd.edu/umd-engineers-get-cracking-on-sustainability-with-crab-shell-based-battery",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Tuna scales",
+      "Oyster pearls",
+      "Crab shells",
+      "Squid beaks"
+    ],
+    "evidence": "First-party report identifies crab-shell chitosan as the basis of a biodegradable zinc-battery electrolyte."
+  },
+  {
+    "q": "Stanford’s experimental cooling cloth was opaque to visible light but allowed which kind of radiation from the body to escape?",
+    "a": "Infrared",
+    "d": "The specially structured polyethylene fabric could let body heat radiate through. Its cooling performance was tested with a heated surface that simulated skin.",
+    "s": "Stanford · Cooling Plastic Clothing",
+    "u": "https://news.stanford.edu/stories/2016/09/plastic-clothing-material-cools-skin",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Microwaves",
+      "Visible light",
+      "Infrared",
+      "Ultraviolet"
+    ],
+    "evidence": "First-party 2016 report distinguishes visible opacity and infrared transmission and describes a skin-temperature device test."
+  },
+  {
+    "q": "In a 2022 SLAC experiment, an intense laser shock helped turn which familiar packaging material into nanodiamonds?",
+    "a": "PET plastic",
+    "d": "The researchers compressed plastic containing carbon, hydrogen, and oxygen. X-ray measurements tracked tiny diamonds forming under the extreme laboratory conditions.",
+    "s": "SLAC · Nanodiamonds from Plastic",
+    "u": "https://www6.slac.stanford.edu/news/2022-09-02-diamond-rain-giant-icy-planets-could-be-more-common",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Waxed paper",
+      "Soda-lime glass",
+      "PET plastic",
+      "Aluminum foil"
+    ],
+    "evidence": "First-party experiment report identifies PET plastic and X-ray evidence of nanodiamond formation under laser-driven shock compression."
+  },
+  {
+    "q": "Viewed between polarizing filters, a loaded clear plastic model can reveal otherwise invisible patterns of what?",
+    "a": "Mechanical stress",
+    "d": "Some transparent plastics change their optical behavior under load. Polarized light makes the resulting stress patterns visible without cutting the model apart.",
+    "s": "Exploratorium · Bone Stress",
+    "u": "https://annex.exploratorium.edu/xref/exhibits/bone_stress.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Electrical charge",
+      "Mechanical stress",
+      "Surface temperature",
+      "Trapped moisture"
+    ],
+    "evidence": "Museum exhibit describes a clear plastic femur whose stress becomes visible between polarizing sheets when force is applied."
+  },
+  {
+    "q": "If half of a conventional holographic plate is covered, what can the uncovered portion still show?",
+    "a": "The whole object",
+    "d": "A hologram spreads information about the recorded object across its surface. Blocking part of the plate does not simply erase the matching half of the object.",
+    "s": "Exploratorium · Facets of Light",
+    "u": "https://www.exploratorium.edu/sites/default/files/pdfs/facets_of_light1980.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "The whole object",
+      "Only the object’s outline",
+      "Only the left half",
+      "Only the right half"
+    ],
+    "evidence": "Museum explanation states that hiding half a hologram still leaves the whole object visible. No claim of unchanged viewing range or quality."
+  },
+  {
+    "q": "The protective material D3O stays flexible during ordinary movement but resists deformation much more during what?",
+    "a": "A sudden impact",
+    "d": "D3O is rate-sensitive: it absorbs and dissipates energy under rapid loading, then returns to its flexible state. This is useful in protective pads.",
+    "s": "D3O · Impact Magazine, Issue 2",
+    "u": "https://www.d3o.com/media/1171/d3o-impact-magazine-issue-02.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Prolonged moisture exposure",
+      "A sudden impact",
+      "Gradual warming",
+      "Bright sunlight"
+    ],
+    "evidence": "Manufacturer technical article describes rate-sensitive response, energy absorption during impact, and return to flexibility. Avoids literal molecular-locking metaphor."
+  },
+  {
+    "q": "The 2014 Rochester optical cloak hid objects over a limited viewing range using four ordinary examples of what?",
+    "a": "Lenses",
+    "d": "Careful spacing redirected light around a hidden region while preserving the view behind it. The demonstration did not make an object invisible from every direction.",
+    "s": "University of Rochester · Rochester Cloak",
+    "u": "https://www.rochester.edu/newscenter/watch-rochester-cloak-uses-ordinary-lenses-to-hide-objects-across-continuous-range-of-angles-70592/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Polarizing filters",
+      "Lenses",
+      "Prisms",
+      "Mirrors"
+    ],
+    "evidence": "First-party report identifies four standard lenses and continuous but limited viewing angles."
+  },
+  {
+    "q": "A 2021 experiment briefly gave a thin layer of which familiar liquid a metallic, golden appearance by supplying it with electrons?",
+    "a": "Water",
+    "d": "Electrons from an alkali-metal alloy entered the water layer. Spectroscopy supported the formation of a transient metallic aqueous solution, rather than ordinary yellow-colored water.",
+    "s": "Helmholtz-Zentrum Berlin · Metallic Water",
+    "u": "https://www.helmholtz-berlin.de/pubbin/news_seite?nid=23121;sprache=de",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Liquid nitrogen",
+      "Molten sulfur",
+      "Water",
+      "Liquid ammonia"
+    ],
+    "evidence": "Institutional study report describes an electron-rich aqueous layer on sodium-potassium alloy, golden color, and spectroscopic evidence of metallic behavior."
+  },
+  {
+    "q": "What was unusual about Berkeley Lab’s magnetic liquid droplets after the external magnetizing field was removed in 2019?",
+    "a": "They retained their magnetism",
+    "d": "Nanoparticles jammed at the droplets’ surfaces helped preserve magnetic order. The researchers had made permanently magnetic droplets that could still behave as liquids.",
+    "s": "Berkeley Lab · Magnetic Liquid Droplets",
+    "u": "https://newscenter.lbl.gov/2019/07/18/new-laws-of-attraction-scientists-print-magnetic-liquid-droplets/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "They immediately lost their magnetism",
+      "They expelled all their nanoparticles",
+      "They retained their magnetism",
+      "They became rigid solid spheres"
+    ],
+    "evidence": "First-party report distinguishes permanently magnetic droplets from ordinary ferrofluids and explains the role of jammed iron-oxide nanoparticles."
+  },
+  {
+    "q": "A bar of tin can make a crackling “cry” when bent. What produces the sound?",
+    "a": "Deformation of its crystals",
+    "d": "Bending tin can cause deformation twinning within the metal’s crystal structure. The audible result has long been called tin cry.",
+    "s": "University of Toledo · Tin",
+    "u": "https://www.utoledo.edu/nsm/ic/elements/tin.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "An oxide coating flaking away",
+      "Small electrical sparks between grains",
+      "Tiny trapped air bubbles bursting",
+      "Deformation of its crystals"
+    ],
+    "evidence": "University element demonstration explicitly attributes tin cry to deformation twinning."
+  },
+  {
+    "q": "Zirconium tungstate is unusual because, over a substantial temperature range, heating can make it do what?",
+    "a": "Contract in all directions",
+    "d": "Most familiar solids expand when heated. This material is a well-studied example of negative thermal expansion, reversing that everyday expectation.",
+    "s": "Max Planck Institute · Negative Thermal Expansion",
+    "u": "https://www.fkf.mpg.de/44221/19_jb2001.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Maintain an exactly fixed volume",
+      "Expand only along one axis",
+      "Expand equally in all directions",
+      "Contract in all directions"
+    ],
+    "evidence": "Institutional research report describes zirconium tungstate as a prototype isotropic negative-thermal-expansion material across a broad temperature range."
+  },
+  {
+    "q": "An MIT microscopy technique made fine structures easier to see by doing what to the prepared tissue itself?",
+    "a": "Physically enlarging it",
+    "d": "The fixed tissue was embedded in a swellable gel. Adding water expanded the sample, allowing an ordinary light microscope to distinguish previously crowded structures.",
+    "s": "MIT Koch Institute · Expansion Microscopy",
+    "u": "https://ki-images.mit.edu/2016/chen",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Turning it into a metal replica",
+      "Compressing it into a thinner sheet",
+      "Physically enlarging it",
+      "Freezing it into a crystalline block"
+    ],
+    "evidence": "Research image explanation describes tissue embedded in hydrogel, physical magnification in all directions, and improved optical resolution."
+  },
+  {
+    "q": "Why can molten sulfur become dramatically thicker over part of its heating range instead of simply getting runnier?",
+    "a": "Its atoms join into long chains",
+    "d": "Sulfur rings open and form polymer chains as the liquid is heated through the relevant range. Those long chains greatly increase its viscosity.",
+    "s": "NC State · Sulfur Polymerization Research",
+    "u": "https://repository.lib.ncsu.edu/bitstreams/dd8f3c0b-7a90-436c-b73c-7461e7f7cddf/download",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "It absorbs moisture from the air",
+      "Its atoms join into long chains",
+      "Tiny gas bubbles become trapped",
+      "Suspended crystals begin forming"
+    ],
+    "evidence": "Research thesis describes the viscosity rise near the sulfur polymerization transition and formation of long chains; no claim of thickening at every temperature."
+  },
+  {
+    "q": "The discovery of liquid crystals began with a puzzling cloudy phase in compounds derived from which substance?",
+    "a": "Cholesterol",
+    "d": "In 1888, Friedrich Reinitzer studied cholesterol derivatives that appeared to melt twice: first becoming cloudy liquid, then clear liquid at a higher temperature.",
+    "s": "Kent State · Liquid Crystal Institute Legacy",
+    "u": "https://www.kent.edu/amlci/our-legacy",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Paraffin wax",
+      "Cellulose",
+      "Table sugar",
+      "Cholesterol"
+    ],
+    "evidence": "Institute history identifies cholesterol acetate and benzoate, cloudy intermediate liquid, and a second transition to clear liquid."
+  },
+  {
+    "q": "A 2014 chemistry study repurposed which packing material as an array of little containers for laboratory tests?",
+    "a": "Bubble wrap",
+    "d": "Its separate transparent compartments could hold liquid samples. Researchers demonstrated tests including glucose and hemoglobin measurements in this unexpected laboratory material.",
+    "s": "Analytical Chemistry · Bubble Wrap for Diagnostics",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/24983331/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Bubble wrap",
+      "Molded pulp trays",
+      "Packing peanuts",
+      "Corrugated cardboard"
+    ],
+    "evidence": "Primary study abstract describes bubble-wrap compartments for liquid storage and analytical assays, including glucose and hemoglobin."
+  },
+  {
+    "q": "Which natural material helped Tufts researchers preserve heat-sensitive vaccines in dry experimental films in a 2012 study?",
+    "a": "Silk protein",
+    "d": "The researchers used silk fibroin films to stabilize fragile biological molecules during warm storage. Their experiments tested vaccine preservation at temperatures above normal refrigerated storage.",
+    "s": "Tufts · Silk Preserves Heat-Sensitive Drugs",
+    "u": "https://now.tufts.edu/2012/07/09/new-silk-technology-preserves-heat-sensitive-drugs-months-without-refrigeration",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Natural rubber",
+      "Cotton cellulose",
+      "Beeswax",
+      "Silk protein"
+    ],
+    "evidence": "First-party study report describes silk-fibroin films preserving vaccine potency during elevated-temperature storage experiments."
+  },
+  {
+    "q": "The DuoSkin research project turned decorative temporary tattoos into touch controls using which conductive craft material?",
+    "a": "Gold leaf",
+    "d": "Thin patterned metal on tattoo paper formed wearable interfaces. The researchers demonstrated touch input and wireless communication in designs intended to look like body decoration.",
+    "s": "MIT and Microsoft Research · DuoSkin",
+    "u": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/10/duoskin-2016.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Gold leaf",
+      "Graphite powder",
+      "Silver thread",
+      "Copper wire"
+    ],
+    "evidence": "Primary 2016 paper identifies gold leaf, tattoo paper, touch sensors, and near-field communication demonstrations."
+  },
+  {
+    "q": "Ray McIntire’s work toward what wartime substitute unexpectedly led to the foam sold as STYROFOAM?",
+    "a": "Rubber-like insulator",
+    "d": "An experiment produced tiny bubbles within polystyrene, creating a lightweight foam. The resulting material became useful for insulation rather than the rubber-like material he had sought.",
+    "s": "National Inventors Hall of Fame · Ray McIntire",
+    "u": "https://www.invent.org/inductees/otis-ray-mcintire",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Glass-like optical coating",
+      "Silk-like parachute fabric",
+      "Cork-like bottle stopper",
+      "Rubber-like insulator"
+    ],
+    "evidence": "Inventor profile identifies wartime rubber shortage, flexible-insulator goal, styrene/isobutylene experiment, and foam formation."
+  },
+  {
+    "q": "A diamond battery announced by UK researchers in 2024 draws energy from what process?",
+    "a": "Radioactive decay",
+    "d": "The experimental device uses carbon-14 within synthetic diamond. Its radioactive decay supplies small amounts of electrical energy over a potentially very long life.",
+    "s": "UK Atomic Energy Authority · Carbon-14 Diamond Battery",
+    "u": "https://www.gov.uk/government/news/diamonds-are-forever-world-first-carbon-14-diamond-battery-made",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Radioactive decay",
+      "Slow chemical corrosion",
+      "Repeated thermal expansion",
+      "Absorption of room light"
+    ],
+    "evidence": "UKAEA first-party announcement identifies a carbon-14 diamond battery and energy from radioactive decay; applications remain prospective."
+  },
+  {
+    "q": "In a UT Dallas demonstration, specially made yarn sewn into a shirt generated electricity from which ordinary action?",
+    "a": "Breathing",
+    "d": "Chest movement stretched carbon-nanotube yarn. The resulting electrical signal demonstrated a possible self-powered breathing sensor.",
+    "s": "UT Dallas · Twistron Energy-Harvesting Yarn",
+    "u": "https://news.utdallas.edu/science-technology/no-batteries-required-energy-harvesting-yarns-gene/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Sweating",
+      "Breathing",
+      "Standing in sunshine",
+      "Brushing the fabric"
+    ],
+    "evidence": "First-party 2017 report explicitly describes shirt-sewn twistron yarn stretched by normal breathing and generating an electrical signal."
+  },
+  {
+    "q": "A small MIT airplane flew indoors in 2018 without propellers or turbines. What supplied its thrust?",
+    "a": "Ionic wind",
+    "d": "High voltage accelerated ions that pushed surrounding air. The lightweight demonstrator carried its power supply and completed powered flights without moving parts in its propulsion system.",
+    "s": "MIT · Ionic-Wind Airplane",
+    "u": "https://news.mit.edu/2018/first-ionic-wind-plane-no-moving-parts-1121",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Pulsed steam jets",
+      "Laser-heated air",
+      "Compressed-air jets",
+      "Ionic wind"
+    ],
+    "evidence": "First-party report and linked primary paper describe electroaerodynamic thrust, onboard power, and sustained indoor flight without moving propulsion parts."
+  },
+  {
+    "q": "MIT researchers made bacteria retain records of chemical exposure in 2014 by writing changes into what?",
+    "a": "Their DNA",
+    "d": "The engineered cells stored exposure information as genetic changes. That record could persist through generations of the bacterial population and later be read experimentally.",
+    "s": "MIT · Bacteria as Genomic Tape Recorders",
+    "u": "https://news.mit.edu/2014/bacteria-storage-device-memory-1113",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Their cell walls",
+      "Their DNA",
+      "Their stored sugar granules",
+      "Their membrane fats"
+    ],
+    "evidence": "First-party report describes engineered E. coli genomic memory, recorded chemical exposure, and inheritance of the record across generations."
+  },
+  {
+    "q": "In MIT’s experimental all-liquid battery, what keeps the molten metal and salt components arranged in separate layers?",
+    "a": "Differences in density",
+    "d": "The molten ingredients naturally sort into layers, rather like oil floating on water. The salt layer lies between the two metal electrodes.",
+    "s": "MIT · All-Liquid Battery",
+    "u": "https://news.mit.edu/2014/liquid-batteries-renewable-energy-0921",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Continuously rotating paddles",
+      "Differences in density",
+      "Magnetic suspension",
+      "Solid ceramic dividing plates"
+    ],
+    "evidence": "First-party 2014 report explicitly attributes three self-separated liquid layers to different densities."
+  }
+]

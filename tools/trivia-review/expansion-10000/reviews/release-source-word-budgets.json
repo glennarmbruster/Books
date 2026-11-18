@@ -1,0 +1,122 @@
+{
+  "reviewedOn": "2026-11-17",
+  "accepted": 2500,
+  "method": "Count question+answer+explanation words per normalized source page across2500additions and20100baseline; remove protocol,www,query andtrailing slash to conservatively group URL variants.",
+  "normalizedSources": 2159,
+  "maximumWordsPerPage": 158,
+  "over180": 0,
+  "highestUsage": [
+    {
+      "page": "journals.plos.org/plosone/article",
+      "words": 158,
+      "cards": [
+        "science-0187",
+        "human-0013",
+        "nature-0114",
+        5003
+      ]
+    },
+    {
+      "page": "weather.gov/owlie/weird-weather",
+      "words": 134,
+      "cards": [
+        "weather-0002",
+        "earth-0036",
+        "earth-0037",
+        "earth-0038"
+      ]
+    },
+    {
+      "page": "nationalgallery.org.uk/stories/10-times-the-gallery-and-its-collection-popped-up-in-culture",
+      "words": 124,
+      "cards": [
+        "arts-0230",
+        "arts-0231",
+        "arts-0232"
+      ]
+    },
+    {
+      "page": "nga.gov/stories/articles/delicious-daring-and-deadly-materials-art",
+      "words": 122,
+      "cards": [
+        "arts-0210",
+        "arts-0211",
+        "arts-0212"
+      ]
+    },
+    {
+      "page": "vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear",
+      "words": 122,
+      "cards": [
+        "culture-0101",
+        "culture-0102",
+        894,
+        900
+      ]
+    },
+    {
+      "page": "womenshistory.org/articles/three-every-day-items-invented-women",
+      "words": 118,
+      "cards": [
+        "objects-0059",
+        "objects-0072",
+        "objects-0073"
+      ]
+    },
+    {
+      "page": "animals.sandiegozoo.org/animals/echidna",
+      "words": 117,
+      "cards": [
+        "nature-0026",
+        "nature-0027",
+        "nature-0028",
+        168
+      ]
+    },
+    {
+      "page": "press.moma.org/wp-content/uploads/2025/12/2026-MoMA-MarcelDuchamp-ExtendedLabels-Press.pdf",
+      "words": 116,
+      "cards": [
+        "arts-0150",
+        "arts-0197",
+        "arts-0198"
+      ]
+    },
+    {
+      "page": "tabasco.com/blog/about-our-barrels",
+      "words": 115,
+      "cards": [
+        "objects-0050",
+        "objects-0051",
+        "objects-0052"
+      ]
+    },
+    {
+      "page": "science.nasa.gov/solar-system/meteors-meteorites/facts",
+      "words": 115,
+      "cards": [
+        "earth-0068",
+        393,
+        400
+      ]
+    },
+    {
+      "page": "vam.ac.uk/articles/an-az-of-metalwork",
+      "words": 114,
+      "cards": [
+        "objects-0001",
+        "objects-0002",
+        "objects-0003"
+      ]
+    },
+    {
+      "page": "vam.ac.uk/articles/the-story-of-michelangelos-david",
+      "words": 111,
+      "cards": [
+        "objects-0010",
+        "objects-0011",
+        "objects-0012"
+      ]
+    }
+  ]
+}

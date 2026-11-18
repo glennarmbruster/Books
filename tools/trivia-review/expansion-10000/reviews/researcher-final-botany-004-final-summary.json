@@ -1,0 +1,23 @@
+{
+  "status": "Held research only; no application or offline cache edited. Parent review determines canonical accepted versions.",
+  "rawCards": 250,
+  "parentFrozenThrough": 225,
+  "difficulty": {
+    "hard": 96,
+    "medium": 152,
+    "easy": 2
+  },
+  "maxDefinitionWords": 32,
+  "sources": 249,
+  "fourUniqueChoicesEach": true,
+  "rawSha256": "cf33a614c46948ae5a100b824caca477b83c6d348199f8d5876d28a0cedbe388",
+  "sourceAccessLimitations": [
+    "Some PubMed pages returned a browser check or footer; cited primary indexed abstracts were read and sufficient to substantiate the scoped question.",
+    "227 direct publisher403; publisher-indexed abstract read.",
+    "230 direct PDF opens publisher navigation; indexed primary abstract read.",
+    "234 botanical observation from engineering-paper introduction; indexed PDF read, source type qualified.",
+    "250 primary letter indexed text and scholarly correspondence notes read; direct page often dominated by navigation.",
+    "Frozen133 raw URL is stale; use parent canonical repair documented in evidence."
+  ],
+  "finalChecks": "Four options, exact answer membership, unique choices, valid difficulty and <=40-word explanations pass. Source-word budget audit passes: at most3 cards and <180 derived words per page including explanations, choices and evidence. Full q+a+d nearest-neighbor and entity comparisons include published20100, current staged candidates and sibling research; semantic review prevents treating mere word overlap as duplicate proof."
+}

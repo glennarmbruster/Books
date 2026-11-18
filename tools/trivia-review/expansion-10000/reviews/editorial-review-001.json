@@ -1,0 +1,110 @@
+{
+  "reviewedOn": "2026-11-17",
+  "candidatesRead": 333,
+  "accepted": 310,
+  "rejected": 23,
+  "published": false,
+  "reviewScope": "Original question and explanation, supporting source, choice plausibility, honest difficulty, related facts in 20,100 live questions and the staged set. Similarity tools were editorial aids, not automatic acceptance.",
+  "revisions": [
+    "Removed answer-giving phrases and implausible alternatives.",
+    "Retargeted questions that tested ordinary facts instead of the unusual part.",
+    "Removed unnecessary answer articles where they interfered with starts-with-letter play; preserved real titles.",
+    "Shuffled answer positions, with totals of 72, 78, 84 and 76 across the four positions.",
+    "Repaired confirmed broken source links and replaced inferred paths with exact sources."
+  ],
+  "rejections": [
+    {
+      "candidateId": "culture-0050",
+      "reason": "Reject: basic location of play follows directly from underwater hockey and distractors are implausible; does not meet adult curiosity bar."
+    },
+    {
+      "candidateId": "culture-0052",
+      "reason": "Reject: simply asks the ordinary winning condition of chess; unusual composite sport is supplied rather than tested."
+    },
+    {
+      "candidateId": "culture-0087",
+      "reason": "Reject: routine profession identification; also already given explicitly in existing 8908 question/explanation describing Spanish opera singer Montserrat Caballé."
+    },
+    {
+      "candidateId": "nature-0005",
+      "reason": "Defines pollination in the prompt; too elementary, with the kinkajou nectar relationship already covered nearby."
+    },
+    {
+      "candidateId": "nature-0015",
+      "reason": "Tree roosting is ordinary bird behavior; weak curiosity value compared with the secretary bird’s unusual hunting mechanism."
+    },
+    {
+      "candidateId": "nature-0016",
+      "reason": "The scientific name gives away the snake answer, and the nearby hunting question carries the more interesting secretary-bird fact."
+    },
+    {
+      "candidateId": "nature-0030",
+      "reason": "Ordinary sleeping posture offers too little curiosity value for this expansion."
+    },
+    {
+      "candidateId": "nature-0042",
+      "reason": "Explosive seed dispersal repeats nature-0041 and the published squirting-cucumber explanation (#12110) with a different plant."
+    },
+    {
+      "candidateId": "nature-0047",
+      "reason": "Same bladderwort/Utricularia suction-trap mechanism already asked and explained in published question 1399."
+    },
+    {
+      "candidateId": "nature-0054",
+      "reason": "Counterillumination by squid light organs already explained by published question 11351; naming the organ does not add enough distinct curiosity."
+    },
+    {
+      "candidateId": "nature-0056",
+      "reason": "Comb-jelly propulsion by rows of cilia already stated in published question 10516."
+    },
+    {
+      "candidateId": "nature-0074",
+      "reason": "Density explanation is already included in nature-0073; retain one fresh underwater-waterfall curiosity rather than testing the same mechanism again."
+    },
+    {
+      "candidateId": "nature-0083",
+      "reason": "Hollowing a tree into a canoe is too generic; species substitution does not create a worthwhile weird fact."
+    },
+    {
+      "candidateId": "nature-0089",
+      "reason": "Drought leaf-shedding is too ordinary and the choices make it trivial."
+    },
+    {
+      "candidateId": "nature-0095",
+      "reason": "Basic ice-pellet formation is routine weather knowledge; insufficient curiosity value for this reviewed expansion."
+    },
+    {
+      "candidateId": "nature-0098",
+      "reason": "The wording windows and translucent gives away light; the existing living-stone question (#661) already presents the more distinctive curiosity."
+    },
+    {
+      "candidateId": "objects-0018",
+      "reason": "Lifelike plant-shaped handles merely echo the nearby trompe-l’oeil vessel question; weak standalone surprise."
+    },
+    {
+      "candidateId": "objects-0023",
+      "reason": "Routine weight distribution is obvious engineering, not a sufficiently curious standalone fact for this collection. Retain only as background to #22."
+    },
+    {
+      "candidateId": "objects-0062",
+      "reason": "An apartment functioning as an office is mundane and choices make it nearly automatic. The interesting summit-apartment fact is already supplied in the prompt; this asks the least surprising part."
+    },
+    {
+      "candidateId": "objects-0071",
+      "reason": "Day-old bread becoming breadcrumbs is self-evident; distractors corn starch, malt syrup and yeast amplify the problem. Insufficient curiosity as currently targeted."
+    },
+    {
+      "candidateId": "objects-0074",
+      "reason": "Zipper extension solving a zipper-reaching problem is routine, and every wrong option concerns a different garment feature. Do not count as meaningful weird trivia merely because an inventor is named."
+    },
+    {
+      "candidateId": "objects-0096",
+      "reason": "Cotton research reducing ironing is generic and the only clothes-related chore among options. Keep the more unusual petrified-cotton #97 instead."
+    },
+    {
+      "candidateId": "weather-0006",
+      "reason": "Same sun-dog ice-crystal/refraction fact already asked and explained in published question 11510."
+    }
+  ],
+  "remaining": "This is a checkpoint toward one held 10,000-question release, not a completed expansion."
+}

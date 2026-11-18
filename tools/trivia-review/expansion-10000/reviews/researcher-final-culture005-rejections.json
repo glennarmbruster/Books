@@ -1,0 +1,80 @@
+[
+  {
+    "index": 71,
+    "card": {
+      "q": "Many European women’s pockets from the seventeenth through nineteenth centuries were attached how?",
+      "a": "Tied separately around the waist",
+      "d": "Openings in skirts and petticoats allowed access to roomy pockets that were independent of the dress.",
+      "s": "Victoria and Albert Museum",
+      "u": "https://www.vam.ac.uk/articles/womens-tie-pockets",
+      "cat": "Wardrobe Oddities",
+      "level": "medium",
+      "choices": [
+        "Hooked to the hat lining",
+        "Tied separately around the waist",
+        "Buttoned inside the sleeves",
+        "Laced onto the shoes"
+      ],
+      "evidence": {
+        "sourceUrl": "https://www.vam.ac.uk/articles/womens-tie-pockets",
+        "sourceCheckedOn": "2026-11-17",
+        "supportingFact": "Tie-on pockets were independent accessories tied at the waist and reached through clothing openings.",
+        "evidenceType": "Source fact paraphrase",
+        "reviewNote": "Primary source read. Pending parent review; not published."
+      }
+    },
+    "reason": "Underlying fact already accepted as objects-0007/0008"
+  },
+  {
+    "index": 72,
+    "card": {
+      "q": "The V&A records a thief using her capacious hidden pockets to carry off two live what?",
+      "a": "Ducks",
+      "d": "Jane Griffiths’ unusual stolen cargo illustrates just how much a historic tie-on pocket could conceal.",
+      "s": "Victoria and Albert Museum",
+      "u": "https://www.vam.ac.uk/articles/womens-tie-pockets",
+      "cat": "Wardrobe Oddities",
+      "level": "medium",
+      "choices": [
+        "Ducks",
+        "Rabbits",
+        "Ferrets",
+        "Kittens"
+      ],
+      "evidence": {
+        "sourceUrl": "https://www.vam.ac.uk/articles/womens-tie-pockets",
+        "sourceCheckedOn": "2026-11-17",
+        "supportingFact": "The article records Jane Griffiths concealing two live ducks stolen from her neighbor in her pockets.",
+        "evidenceType": "Source fact paraphrase",
+        "reviewNote": "Primary source read. Pending parent review; not published."
+      }
+    },
+    "reason": "Underlying fact already accepted as objects-0007/0008"
+  },
+  {
+    "originalIndex": 121,
+    "rejected": {
+      "q": "In the Easter rocket-war tradition of Vrontados on Chios, rival teams aim fireworks at what?",
+      "a": "Each other’s churches",
+      "d": "The opposing parishes target features of the rival church, turning the Easter celebration into a spectacular local rivalry.",
+      "s": "Municipality of Chios",
+      "u": "https://www.chios.gr/rouketopolemos/index-en.html",
+      "cat": "Festival Rituals",
+      "level": "medium",
+      "choices": [
+        "Empty fishing boats",
+        "Harbor buoys",
+        "Each other’s churches",
+        "Mountain beacons"
+      ],
+      "evidence": {
+        "sourceUrl": "https://www.chios.gr/rouketopolemos/index-en.html",
+        "sourceCheckedOn": "2026-11-17",
+        "supportingFact": "The municipal account describes rockets aimed at the opponent’s church, with designated dome, icon and clock targets.",
+        "evidenceType": "Source fact paraphrase",
+        "reviewNote": "Primary source read. Pending parent review; not published."
+      }
+    },
+    "reason": "Same underlying fact as customs-0136, rival Vrontados parishes target churches. Replaced in place by Namur stilt jousting."
+  }
+]

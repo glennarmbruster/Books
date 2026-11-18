@@ -1,0 +1,2176 @@
+{
+  "note": "Triage only. Read questions and explanations; matching words are not matching facts, and low overlap does not prove uniqueness.",
+  "publishedCount": 20100,
+  "candidateCount": 1671,
+  "researchCount": 50,
+  "candidates": [
+    {
+      "id": "research-science004-next-review-0001",
+      "q": "In experiments with an oil droplet bouncing on a vibrating oil bath, what can steer the droplet as it appears to walk across the surface?",
+      "a": "Waves created by its own bounces",
+      "d": "Each impact produces ripples. The droplet interacts with the evolving wave field, creating a visible example of a particle-like object guided by waves.",
+      "matches": [
+        {
+          "id": "earth-0131",
+          "similarity": 0.165,
+          "sameAnswer": false,
+          "q": "How can an underwater “lake” have a visible surface and even its own waves?",
+          "a": "It is a pool of much denser brine",
+          "d": "Very salty water can collect below ordinary seawater, creating a distinct density boundary. Disturbances can send waves along that boundary."
+        },
+        {
+          "id": "science-0011",
+          "similarity": 0.158,
+          "sameAnswer": false,
+          "q": "Duke’s 2014 pyramid-like cloak of perforated plastic was designed to hide an object from what?",
+          "a": "Sound waves",
+          "d": "The structure redirected the waves so their reflection resembled an empty flat surface. The object remained visible to the eye."
+        },
+        {
+          "id": "earth-0101",
+          "similarity": 0.142,
+          "sameAnswer": false,
+          "q": "What makes the wave-like scallops along the edges of Saturn’s Keeler Gap?",
+          "a": "Small moon’s gravity",
+          "d": "Daphnis orbits inside the gap and disturbs nearby ring particles, raising waves along its edges."
+        },
+        {
+          "id": "research-science004-next-review-0006",
+          "similarity": 0.137,
+          "sameAnswer": false,
+          "q": "Some carbon-nanotube loudspeakers produce sound without a vibrating speaker cone. What directly disturbs the surrounding air?",
+          "a": "Rapid heating and cooling",
+          "d": "An electrical signal changes the temperature of an extremely light nanotube sheet. The adjacent air repeatedly expands and contracts, creating pressure waves."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0002",
+      "q": "NC State researchers made experimental wires that could reconnect after being cut and pressed together. What unusual material carried electricity inside them?",
+      "a": "Liquid metal",
+      "d": "A gallium–indium alloy filled channels in a self-healing polymer. Rejoining the cut ends restored both the conducting path and the surrounding sheath.",
+      "matches": [
+        {
+          "id": "research-science004-next-review-0018",
+          "similarity": 0.151,
+          "sameAnswer": false,
+          "q": "Swedish researchers demonstrated a working transistor in 2023 using which unexpected structural material infused with a conducting polymer?",
+          "a": "Wood",
+          "d": "They removed lignin from balsa and filled the remaining structure with a conductive polymer. The resulting device could regulate current, although it was bulky and slow compared with conventional electronics."
+        },
+        {
+          "id": "science-0019",
+          "similarity": 0.143,
+          "sameAnswer": false,
+          "q": "A glassy polymer reported by Tokyo researchers in 2017 could repair a break at room temperature after what simple action?",
+          "a": "Pressing the broken faces together",
+          "d": "This was an experimental polymer glass, not ordinary window glass. Its molecular structure allowed the joined surfaces to bond again without first melting the material."
+        },
+        {
+          "id": "science-0031",
+          "similarity": 0.143,
+          "sameAnswer": false,
+          "q": "In a 2001 self-healing polymer experiment, what hidden ingredient released repair liquid when an advancing crack broke it open?",
+          "a": "Microscopic capsules",
+          "d": "The capsules released a healing agent into the crack. Contact with an embedded catalyst then made the agent polymerize and bond the damaged faces."
+        },
+        {
+          "id": "objects-0036",
+          "similarity": 0.142,
+          "sameAnswer": false,
+          "q": "Some experimental self-healing concrete includes which living repair crew?",
+          "a": "Bacteria",
+          "d": "Dormant bacteria and food are embedded in the material. Water entering a crack activates them, and mineral deposits help seal it."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0003",
+      "q": "In a 2020 fluid-physics experiment, small model boats floated upside down beneath a suspended liquid layer. What kept this strange arrangement stable?",
+      "a": "Vertical vibration",
+      "d": "Repeated up-and-down motion stabilized both the liquid layer and the inverted floaters. The apparent reversal of buoyancy depended on the continuous vibration.",
+      "matches": [
+        {
+          "id": "food-0050",
+          "similarity": 0.132,
+          "sameAnswer": false,
+          "q": "In a fluid-dynamics experiment inspired by beer, a few layers of what strongly damped liquid sloshing?",
+          "a": "Foam bubbles",
+          "d": "Foam moving against the container walls dissipates energy and damps the sloshing liquid."
+        },
+        {
+          "id": "published-7478",
+          "similarity": 0.129,
+          "sameAnswer": false,
+          "q": "When New York City's Harlem Ship Canal Bridge had to be replaced, it was floated down the river to become what?",
+          "a": "University Heights Bridge",
+          "d": "The Broadway Bridge is a vertical-lift bridge across the Harlem River Ship Canal in the borough of Manhattan in New York City."
+        },
+        {
+          "id": "published-1422",
+          "similarity": 0.117,
+          "sameAnswer": false,
+          "q": "Which dessert gets its finished pattern when a layer of fruit baked beneath the batter is turned out on top?",
+          "a": "Upside-down cake",
+          "d": "Pineapple rings are a familiar version. The fruit and sugar cook against the pan, producing the topping without a separate frosting step."
+        },
+        {
+          "id": "published-515",
+          "similarity": 0.114,
+          "sameAnswer": false,
+          "q": "On the famous 1918 Inverted Jenny stamp, what is doing an accidental loop-the-loop?",
+          "a": "The pictured airplane is upside down.",
+          "d": "The error put the aircraft at odds with the orientation of the stamp’s frame."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0004",
+      "q": "Rice researchers showed that used coffee grounds and other carbon-rich waste could be transformed by brief intense electrical heating into what valuable material?",
+      "a": "Graphene",
+      "d": "Flash Joule heating rearranged the carbon into thin graphene sheets. The 2020 work demonstrated a route for converting low-value carbon sources into a useful engineering material.",
+      "matches": [
+        {
+          "id": "food-0052",
+          "similarity": 0.233,
+          "sameAnswer": false,
+          "q": "RMIT researchers heated spent coffee grounds without oxygen so the resulting material could replace part of which concrete ingredient?",
+          "a": "Sand",
+          "d": "Heating the grounds makes a carbon-rich material called biochar. In the experiments it replaced some of the natural sand."
+        },
+        {
+          "id": "science-0037",
+          "similarity": 0.163,
+          "sameAnswer": false,
+          "q": "MIT’s 2023 cement-and-carbon-black research gave a building material which unexpected additional ability?",
+          "a": "Storing electrical energy",
+          "d": "The researchers made a supercapacitor from cement, water and carbon black. A building foundation that stores energy was a proposed application, rather than an already demonstrated house."
+        },
+        {
+          "id": "earth-0120",
+          "similarity": 0.145,
+          "sameAnswer": false,
+          "q": "Why can the inside of a freshly fallen meteorite remain cool despite its fiery passage through the sky?",
+          "a": "Intense surface heating is brief",
+          "d": "Atmospheric entry melts or removes a thin outer layer, but heat has little time to reach the interior."
+        },
+        {
+          "id": "food-0051",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "In a 2024 materials study, what kitchen waste became tiny carbon \"onions\" for energy-storage electrodes?",
+          "a": "Chicken fat",
+          "d": "Researchers converted waste chicken fat into layered carbon particles, then modified them for use in energy-storage devices."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0005",
+      "q": "MIT Lincoln Laboratory demonstrated a laser system that delivered sound near a listener’s ear without headphones. Which substance in the air absorbed the light to create sound?",
+      "a": "Water vapor",
+      "d": "The chosen infrared wavelength is strongly absorbed by airborne water molecules. Their response to the laser produces localized sound through the photoacoustic effect.",
+      "matches": [
+        {
+          "id": "human-0048",
+          "similarity": 0.157,
+          "sameAnswer": false,
+          "q": "Under special laboratory conditions, people have perceived near-infrared light through what unusual retinal process?",
+          "a": "Absorbing two photons together",
+          "d": "Two lower-energy photons can jointly activate a visual pigment. This controlled effect does not give people ordinary thermal vision."
+        },
+        {
+          "id": "science-0033",
+          "similarity": 0.133,
+          "sameAnswer": false,
+          "q": "A Los Alamos experiment cooled a specially doped glass fiber from room temperature to below freezing using what?",
+          "a": "Laser light",
+          "d": "Under carefully chosen conditions, fluorescence carried more energy out than the absorbed laser light brought in. This is optical refrigeration, rather than ordinary heating by a beam."
+        },
+        {
+          "id": "human-0035",
+          "similarity": 0.13,
+          "sameAnswer": false,
+          "q": "After studying words such as bed, rest and awake, people in a classic memory experiment often “remembered” which word that had never appeared?",
+          "a": "Sleep",
+          "d": "Related words can activate a missing theme word strongly enough to create a confident false memory. The effect was demonstrated with carefully constructed word lists."
+        },
+        {
+          "id": "research-science004-next-review-0024",
+          "similarity": 0.122,
+          "sameAnswer": false,
+          "q": "Cambridge researchers demonstrated a way to make toner-printed office paper reusable without turning it back into pulp. What removed the print?",
+          "a": "Laser pulses",
+          "d": "Carefully chosen laser conditions removed toner while leaving the paper largely intact. The 2012 study explored unprinting as an alternative to recycling the whole sheet."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0006",
+      "q": "Some carbon-nanotube loudspeakers produce sound without a vibrating speaker cone. What directly disturbs the surrounding air?",
+      "a": "Rapid heating and cooling",
+      "d": "An electrical signal changes the temperature of an extremely light nanotube sheet. The adjacent air repeatedly expands and contracts, creating pressure waves.",
+      "matches": [
+        {
+          "id": "science-0013",
+          "similarity": 0.283,
+          "sameAnswer": false,
+          "q": "In single-bubble sonoluminescence, what repeatedly drives a bubble to collapse and produce flashes of light?",
+          "a": "Sound waves",
+          "d": "A sound field makes the gas bubble expand and contract. Its collapse concentrates energy enough to generate extremely brief light emissions."
+        },
+        {
+          "id": "published-11501",
+          "similarity": 0.159,
+          "sameAnswer": false,
+          "q": "What expands and contracts between the two ends of an accordion?",
+          "a": "Bellows",
+          "d": "Moving air through reeds makes the sound as the player operates keys or buttons."
+        },
+        {
+          "id": "published-941",
+          "similarity": 0.155,
+          "sameAnswer": false,
+          "q": "What small change in a room can keep an Atmos clock going for roughly two days?",
+          "a": "A temperature change of one degree Celsius.",
+          "d": "A gas-filled mechanism expands or contracts and winds the spring."
+        },
+        {
+          "id": "earth-0098",
+          "similarity": 0.154,
+          "sameAnswer": false,
+          "q": "Perseverance detected snaps inside Martian dust devils. What caused the brief sounds?",
+          "a": "Electrical sparks",
+          "d": "Rubbing dust grains can build static charge. The rover recorded discharges and their small pressure waves in the thin Martian air."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0007",
+      "q": "An MIT camera system reconstructed objects hidden around a corner by treating what ordinary surface as an indirect reflector?",
+      "a": "Wall",
+      "d": "Short laser pulses scattered from a visible wall to a hidden object and back. Careful measurements of their travel times helped reconstruct the object’s shape.",
+      "matches": [
+        {
+          "id": "published-997",
+          "similarity": 0.138,
+          "sameAnswer": false,
+          "q": "Some early computers remembered bits by sending sound pulses through tubes of which liquid metal?",
+          "a": "Mercury.",
+          "d": "Data took time to travel down the tube. The machine could turn arriving pulses back into signals and send them around again."
+        },
+        {
+          "id": "arts-0043",
+          "similarity": 0.138,
+          "sameAnswer": false,
+          "q": "What ordinary photographic equipment could Man Ray leave out entirely when making a rayograph?",
+          "a": "Camera",
+          "d": "Objects placed on light-sensitive paper blocked the light directly, producing shapes without a camera’s lens."
+        },
+        {
+          "id": "published-14513",
+          "similarity": 0.128,
+          "sameAnswer": false,
+          "q": "What is a circuit that times pulses called?",
+          "a": "Pulse timing circuit",
+          "d": "A circuit that times pulses."
+        },
+        {
+          "id": "published-11549",
+          "similarity": 0.119,
+          "sameAnswer": false,
+          "q": "Which shape of lens is used for an ordinary magnifying glass?",
+          "a": "Convex",
+          "d": "A converging lens can make a nearby object appear larger."
+        },
+        {
+          "id": "published-17904",
+          "similarity": 0.045,
+          "sameAnswer": true,
+          "q": "The Trinity Chapel in Salisbury Cathedral contains a 13th-century consecration cross painted on the ____. Which detail is missing?",
+          "a": "Wall",
+          "d": "The Trinity Chapel in Salisbury Cathedral contains a 13th-century consecration cross painted on the wall."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0008",
+      "q": "A Stanford computer prototype reported in 2015 represented and manipulated bits using what moving objects?",
+      "a": "Water droplets",
+      "d": "Magnetic nanoparticles allowed droplets to move in step with a rotating magnetic field. The project linked computation to physically routing tiny amounts of liquid.",
+      "matches": [
+        {
+          "id": "objects-0032",
+          "similarity": 0.198,
+          "sameAnswer": false,
+          "q": "Which magnetic liquid has been used around a computer hard drive’s rotating shaft to keep dust out?",
+          "a": "Ferrofluid",
+          "d": "Magnetic control holds the liquid in place around the moving shaft, creating a seal against dust."
+        },
+        {
+          "id": "objects-0031",
+          "similarity": 0.166,
+          "sameAnswer": false,
+          "q": "A puddle of ferrofluid can grow dramatic spikes when placed near what?",
+          "a": "Magnet",
+          "d": "Iron-oxide nanoparticles suspended in liquid respond to the magnetic field, making the surface form striking patterns."
+        },
+        {
+          "id": "published-995",
+          "similarity": 0.15,
+          "sameAnswer": false,
+          "q": "Some Apollo computer programs were stored in “rope memory.” What did workers physically do to record the bits?",
+          "a": "Thread wires through or around tiny cores.",
+          "d": "The route of each wire encoded ones and zeros. Weaving a program could take months."
+        },
+        {
+          "id": "food-0041",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "What cushions the water droplets that skate across a sufficiently hot pan in the Leidenfrost effect?",
+          "a": "Their own vapor",
+          "d": "A vapor layer separates the liquid from the hot metal, allowing droplets to hover and move."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0009",
+      "q": "In a 2019 Boston University experiment, what shape of acoustic device quieted a tone while leaving an open air passage?",
+      "a": "Hollow ring",
+      "d": "The internal structure redirected sound waves while leaving a passage for air. The 2019 demonstration targeted a particular tone rather than eliminating every possible noise.",
+      "matches": [
+        {
+          "id": "science-0011",
+          "similarity": 0.159,
+          "sameAnswer": false,
+          "q": "Duke’s 2014 pyramid-like cloak of perforated plastic was designed to hide an object from what?",
+          "a": "Sound waves",
+          "d": "The structure redirected the waves so their reflection resembled an empty flat surface. The object remained visible to the eye."
+        },
+        {
+          "id": "published-12331",
+          "similarity": 0.152,
+          "sameAnswer": false,
+          "q": "What is the distribution of energy as a function of frequency for a particular sound source called?",
+          "a": "Sound spectrum",
+          "d": "The distribution of energy as a function of frequency for a particular sound source. Another name is acoustic spectrum."
+        },
+        {
+          "id": "published-14785",
+          "similarity": 0.141,
+          "sameAnswer": false,
+          "q": "What is a hollow device made of metal that makes a ringing sound when struck called?",
+          "a": "Bell",
+          "d": "A hollow device made of metal that makes a ringing sound when struck."
+        },
+        {
+          "id": "published-14764",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? A hollow chamber whose dimensions allow the resonant oscillation of electromagnetic or acoustic waves.",
+          "a": "Cavity resonator",
+          "d": "A hollow chamber whose dimensions allow the resonant oscillation of electromagnetic or acoustic waves. Another name is resonator."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0010",
+      "q": "Empa’s disposable paper-battery prototype could be switched on by adding what?",
+      "a": "Water",
+      "d": "Moistening the paper dissolved its embedded salt and made the electrolyte conductive. In a demonstration, two connected cells powered an LCD alarm clock.",
+      "matches": [
+        {
+          "id": "published-12446",
+          "similarity": 0.149,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? Dilute sulfuric acid used in storage batteries.",
+          "a": "Battery acid",
+          "d": "Dilute sulfuric acid used in storage batteries. Another name is electrolyte acid."
+        },
+        {
+          "id": "published-11517",
+          "similarity": 0.139,
+          "sameAnswer": false,
+          "q": "In drip coffee, which part should a paper filter retain?",
+          "a": "Coffee grounds",
+          "d": "Water carrying dissolved coffee compounds moves through the paper."
+        },
+        {
+          "id": "published-14644",
+          "similarity": 0.123,
+          "sameAnswer": false,
+          "q": "What is a portable battery-powered computer small enough to be carried in your pocket called?",
+          "a": "Hand-held computer",
+          "d": "A portable battery-powered computer small enough to be carried in your pocket. Another name is hand-held microcomputer."
+        },
+        {
+          "id": "science-0066",
+          "similarity": 0.115,
+          "sameAnswer": false,
+          "q": "A Penn State prototype demonstrated at a Ben & Jerry’s shop kept ice cream cold using which unusual refrigeration tool?",
+          "a": "Sound waves",
+          "d": "A thermoacoustic system used repeated compression and expansion of gas to move heat. The demonstration connected the chiller to an ice-cream display cabinet."
+        },
+        {
+          "id": "published-384",
+          "similarity": 0.028,
+          "sameAnswer": true,
+          "q": "What did the Lewis and Clark expedition’s portable soup need before the men could eat it as soup?",
+          "a": "Water.",
+          "d": "The expedition carried meat and vegetables in a concentrated paste. It served as a reserve when other food ran short."
+        },
+        {
+          "id": "published-994",
+          "similarity": 0.027,
+          "sameAnswer": true,
+          "q": "What literal fluid did Bill Phillips use to model the flow of money in an economy?",
+          "a": "Water.",
+          "d": "Water moving between parts of his machine represented economic relationships. The working model made a financial metaphor visible."
+        },
+        {
+          "id": "published-11181",
+          "similarity": 0.034,
+          "sameAnswer": true,
+          "q": "In \"Avatar: The Last Airbender\", which element does Aang begin to learn after being defrosted?",
+          "a": "Water",
+          "d": ""
+        },
+        {
+          "id": "published-11521",
+          "similarity": 0.028,
+          "sameAnswer": true,
+          "q": "If you pour cooked pasta and hot water into a colander, which part normally passes through?",
+          "a": "The water",
+          "d": "The holes allow liquid out while retaining pieces larger than the openings."
+        },
+        {
+          "id": "published-15730",
+          "similarity": 0.033,
+          "sameAnswer": true,
+          "q": "What element of the garden plays a purifying role in Shintoism?",
+          "a": "Water",
+          "d": "Water also played an aesthetic role from the design of the first gardens, strongly inspired by Chinese gardens."
+        },
+        {
+          "id": "published-16196",
+          "similarity": 0.039,
+          "sameAnswer": true,
+          "q": "What is the common name of the chemical compound \"dihydrogen monoxide\"?",
+          "a": "Water",
+          "d": ""
+        },
+        {
+          "id": "customs-0021",
+          "similarity": 0.027,
+          "sameAnswer": true,
+          "q": "In the traditional rules of worm charming, which ordinary substance is banned as a “drug” or stimulant?",
+          "a": "Water",
+          "d": "Competitors must rely on vibrations to bring worms to the surface rather than soaking the ground."
+        },
+        {
+          "id": "science-0035",
+          "similarity": 0.025,
+          "sameAnswer": true,
+          "q": "Cambridge’s 2017 silk-inspired fibers were pulled from a gel that was overwhelmingly made of what?",
+          "a": "Water",
+          "d": "The starting hydrogel was 98 percent water, with small amounts of silica, cellulose and molecular binders. Water evaporated after the thin fibers were drawn out."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0011",
+      "q": "MIT’s PhotoChromeleon experiment could replace a colorful pattern on a coated shoe or phone case without repainting it. What reprogrammed the coating?",
+      "a": "Projected light",
+      "d": "A mix of light-sensitive dyes could be activated and selectively faded. UV and visible illumination erased or created patterns on the same coated object.",
+      "matches": [
+        {
+          "id": "arts-0043",
+          "similarity": 0.126,
+          "sameAnswer": false,
+          "q": "What ordinary photographic equipment could Man Ray leave out entirely when making a rayograph?",
+          "a": "Camera",
+          "d": "Objects placed on light-sensitive paper blocked the light directly, producing shapes without a camera’s lens."
+        },
+        {
+          "id": "human-0085",
+          "similarity": 0.125,
+          "sameAnswer": false,
+          "q": "The faint bow-tie pattern called Haidinger’s brushes reveals that human eyes can detect which property of light?",
+          "a": "Polarization",
+          "d": "Macular pigments interact differently with differently oriented light. Under suitable conditions, this produces a subtle yellowish-blue pattern even without a visible object in that shape."
+        },
+        {
+          "id": "published-14546",
+          "similarity": 0.12,
+          "sameAnswer": false,
+          "q": "What is an artificial source of visible illumination called?",
+          "a": "Lamp",
+          "d": "An artificial source of visible illumination."
+        },
+        {
+          "id": "human-0064",
+          "similarity": 0.119,
+          "sameAnswer": false,
+          "q": "To create the intensely saturated color perception called “olo,” Berkeley’s Oz system selectively stimulated what?",
+          "a": "One type of retinal cone cell",
+          "d": "The 2025 experiment targeted M cones in five participants. Ordinary light generally stimulates overlapping cone types, so the unusual pattern produced an unusual color experience."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0012",
+      "q": "When an auxetic material is stretched lengthwise, how can its overall width respond in contrast to an ordinary rubber band?",
+      "a": "Become wider",
+      "d": "Its internal geometry opens outward under tension. This counterintuitive sideways expansion is described by a negative Poisson’s ratio.",
+      "matches": [
+        {
+          "id": "botany-0090",
+          "similarity": 0.158,
+          "sameAnswer": false,
+          "q": "When pulled, an older cucumber tendril can behave unlike an ordinary spring. What can its coils do?",
+          "a": "Wind more tightly",
+          "d": "Experiments found that some tendrils overwind under tension rather than unwinding. Their specialized internal fibers produce a spring that stiffens as it is stretched."
+        },
+        {
+          "id": "science-0093",
+          "similarity": 0.135,
+          "sameAnswer": false,
+          "q": "In experiments inspired by spider silk junctions, ordinary adhesive-tape joints could become much harder to peel apart by changing what?",
+          "a": "Angle at which the strips crossed",
+          "d": "The crossing geometry could force the joint into a different mechanical response under tension. The stronger junction did not require inventing a new glue."
+        },
+        {
+          "id": "published-11527",
+          "similarity": 0.111,
+          "sameAnswer": false,
+          "q": "What does rolling dough usually do to its width as its thickness decreases?",
+          "a": "Spreads it outward",
+          "d": "The pressure levels the dough and helps form a broad sheet."
+        },
+        {
+          "id": "published-586",
+          "similarity": 0.094,
+          "sameAnswer": false,
+          "q": "What letter is traced by the green band on South Africa’s flag?",
+          "a": "A sideways Y.",
+          "d": "Two arms enter from the hoist and join in a single band toward the fly."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0013",
+      "q": "In JILA’s 2022 atomic-clock experiment, atoms near the top and bottom of a cloud only about a millimeter tall ticked differently. Which part ticked faster?",
+      "a": "Upper part",
+      "d": "Clocks at a slightly greater height run faster in Earth’s gravitational field. The experiment measured the tiny difference within one cloud of ultracold strontium atoms.",
+      "matches": [
+        {
+          "id": "earth-0149",
+          "similarity": 0.219,
+          "sameAnswer": false,
+          "q": "In a calculation of elapsed time since Earth formed, why can its center be slightly “younger” than its surface?",
+          "a": "Gravitational time dilation",
+          "d": "Clocks deeper in a gravitational potential run more slowly. Across Earth’s history, the calculated difference accumulates to years."
+        },
+        {
+          "id": "published-11360",
+          "similarity": 0.153,
+          "sameAnswer": false,
+          "q": "Which length fits the tiny fossil wasp Myanmymar?",
+          "a": "Half a millimeter",
+          "d": "The tiny fossil wasp Myanmymar measured about half a millimeter long."
+        },
+        {
+          "id": "published-16203",
+          "similarity": 0.148,
+          "sameAnswer": false,
+          "q": "What is the atomic number of the element Strontium?",
+          "a": "38",
+          "d": ""
+        },
+        {
+          "id": "science-0075",
+          "similarity": 0.122,
+          "sameAnswer": false,
+          "q": "When the top of a freely hanging, settled Slinky is released, what does its bottom end initially do?",
+          "a": "Briefly stay at the same height",
+          "d": "The change in tension travels down the spring. Until that disturbance arrives, the bottom can appear to hang in midair while the upper coils collapse toward it."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0014",
+      "q": "Albert Einstein and Leo Szilard worked on a safer version of which household appliance after concerns about lethal gas leaks?",
+      "a": "Refrigerator",
+      "d": "They pursued refrigeration designs that avoided vulnerable mechanical pumping parts. Their engineering work produced patents, though it did not become a successful mass-market appliance.",
+      "matches": [
+        {
+          "id": "published-9733",
+          "similarity": 0.13,
+          "sameAnswer": false,
+          "q": "What fills the blank? Charles Richards, the designer of the ____, later became chair of Mechanical Engineering at Yale University.",
+          "a": "Colt Peacemaker",
+          "d": "Charles Brinckerhoff Richards was an engineer who worked for Colt's Patent Fire Arms Co., where he was responsible for the development of the Colt Single Action Army revolver."
+        },
+        {
+          "id": "published-13795",
+          "similarity": 0.113,
+          "sameAnswer": false,
+          "q": "How many times was Albert Einstein married in his lifetime?",
+          "a": "Twice",
+          "d": ""
+        },
+        {
+          "id": "published-16322",
+          "similarity": 0.11,
+          "sameAnswer": false,
+          "q": "What physicist's work was Alan Turing inspired in 1928?",
+          "a": "Albert Einstein",
+          "d": "Einstein's work challenged Euclid's axioms and the laws of celestial mechanics of Galileo and Newton."
+        },
+        {
+          "id": "published-10664",
+          "similarity": 0.109,
+          "sameAnswer": false,
+          "q": "Which of the following was never named Man (or Person) of the Year by Time magazine?",
+          "a": "Albert Einstein",
+          "d": ""
+        },
+        {
+          "id": "published-14645",
+          "similarity": 0.06,
+          "sameAnswer": true,
+          "q": "Which term fits this clue? White goods in which food can be stored at low temperatures.",
+          "a": "Refrigerator",
+          "d": "White goods in which food can be stored at low temperatures. Another name is icebox."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0015",
+      "q": "In a disappearing-glass demonstration, a clear rod becomes almost invisible when immersed in a particular liquid. Which property must the rod and liquid closely match?",
+      "a": "Refractive index",
+      "d": "Matching how they bend light greatly reduces the visible optical boundary. The rod is still present; its outline has become much harder to distinguish.",
+      "matches": [
+        {
+          "id": "published-12444",
+          "similarity": 0.224,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? Optical glass of low dispersion and low refractive index.",
+          "a": "Crown glass",
+          "d": "Optical glass of low dispersion and low refractive index. Another name is optical crown."
+        },
+        {
+          "id": "weather-0005",
+          "similarity": 0.142,
+          "sameAnswer": false,
+          "q": "What is the name of the brief optical event that can appear at the Sun’s upper rim as it dips below a clear horizon?",
+          "a": "Green flash",
+          "d": "Different wavelengths bend by different amounts through the atmosphere. Scattering and mirage effects can help make the green edge briefly visible."
+        },
+        {
+          "id": "objects-0114",
+          "similarity": 0.135,
+          "sameAnswer": false,
+          "q": "The Roman Lycurgus Cup looks green in reflected light. What color does it become when light shines through it?",
+          "a": "Red",
+          "d": "Tiny amounts of gold and silver in the glass create the striking optical effect."
+        },
+        {
+          "id": "science-0090",
+          "similarity": 0.128,
+          "sameAnswer": false,
+          "q": "Litracon concrete can show the shadow of someone standing behind it. What carries light through the solid-looking blocks?",
+          "a": "Optical fibers",
+          "d": "Fine fibers cross the concrete and transmit light from one face to the other. The block can reveal silhouettes without turning into a clear pane of glass."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0016",
+      "q": "Rice’s 2022 necrobotics experiment turned which deceased creatures into miniature mechanical grippers?",
+      "a": "Spiders",
+      "d": "Puffs of air extended the legs, which curled again when pressure was released. The researchers used that motion to grasp and move small objects.",
+      "matches": [
+        {
+          "id": "published-11534",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "Which changes move the reading of a barometer: air pressure or ordinary daylight?",
+          "a": "Air pressure",
+          "d": "Pressure changes are one clue used in weather forecasting."
+        },
+        {
+          "id": "research-science004-next-review-0020",
+          "similarity": 0.139,
+          "sameAnswer": false,
+          "q": "A robotic gripper reported by Cornell and collaborators in 2010 used a party balloon filled with which lightweight material?",
+          "a": "Ground coffee",
+          "d": "The soft bag molded itself around an object. Removing air jammed the grains together, letting the gripper hold objects without individual mechanical fingers."
+        },
+        {
+          "id": "botany-0083",
+          "similarity": 0.132,
+          "sameAnswer": false,
+          "q": "Why can a cup fungus launch spores farther by releasing many of them together?",
+          "a": "The spores generate a shared airflow",
+          "d": "Synchronized ejection pushes surrounding air into motion. Experiments and models showed that the resulting flow carries spores farther and can help them move around obstacles."
+        },
+        {
+          "id": "nature-0121",
+          "similarity": 0.13,
+          "sameAnswer": false,
+          "q": "In sea spiders, contractions of which organ help circulate oxygen despite a weak heart?",
+          "a": "Gut",
+          "d": "Digestive branches extend into the legs, where their contractions also move body fluids."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0017",
+      "q": "Cornell’s microscopic nanoguitar demonstrated in 2003 was played using what instead of a musician’s fingers?",
+      "a": "Laser",
+      "d": "Its strings were tiny silicon bars vibrating far above audible guitar frequencies. The device demonstrated miniature mechanical components with possible uses in electronics and sensing.",
+      "matches": [
+        {
+          "id": "science-0094",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "Cornell researchers built soft robotic fingers that dealt with excess heat using which surprisingly lifelike trick?",
+          "a": "Sweating",
+          "d": "Temperature-responsive pores released water from the hydrogel fingers. Evaporation carried heat away, providing cooling without a separate electronic thermostat."
+        },
+        {
+          "id": "published-14817",
+          "similarity": 0.128,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? An electronic device in a computer that issues a steady high-frequency signal that synchronizes all the internal components.",
+          "a": "System clock",
+          "d": "An electronic device in a computer that issues a steady high-frequency signal that synchronizes all the internal components."
+        },
+        {
+          "id": "published-6696",
+          "similarity": 0.127,
+          "sameAnswer": false,
+          "q": "A mechanical filter of phonograph parts was designed by Edward Norton as what prior to Stephen Butterworth publishing his electronic design?",
+          "a": "Butterworth filter",
+          "d": "A mechanical filter is a signal processing filter usually used in place of an electronic filter at radio frequencies."
+        },
+        {
+          "id": "earth-0110",
+          "similarity": 0.123,
+          "sameAnswer": false,
+          "q": "What physical signal underlies the extremely low “sound” detected around the Perseus cluster’s central black hole?",
+          "a": "Pressure ripples in hot gas",
+          "d": "Pressure ripples can travel through that gas. NASA shifted their frequencies far upward to make an audible version."
+        },
+        {
+          "id": "published-16602",
+          "similarity": 0.064,
+          "sameAnswer": true,
+          "q": "How are CDs and DVDs read?",
+          "a": "Laser",
+          "d": ""
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0018",
+      "q": "Swedish researchers demonstrated a working transistor in 2023 using which unexpected structural material infused with a conducting polymer?",
+      "a": "Wood",
+      "d": "They removed lignin from balsa and filled the remaining structure with a conductive polymer. The resulting device could regulate current, although it was bulky and slow compared with conventional electronics.",
+      "matches": [
+        {
+          "id": "science-0037",
+          "similarity": 0.16,
+          "sameAnswer": false,
+          "q": "MIT’s 2023 cement-and-carbon-black research gave a building material which unexpected additional ability?",
+          "a": "Storing electrical energy",
+          "d": "The researchers made a supercapacitor from cement, water and carbon black. A building foundation that stores energy was a proposed application, rather than an already demonstrated house."
+        },
+        {
+          "id": "research-science004-next-review-0002",
+          "similarity": 0.151,
+          "sameAnswer": false,
+          "q": "NC State researchers made experimental wires that could reconnect after being cut and pressed together. What unusual material carried electricity inside them?",
+          "a": "Liquid metal",
+          "d": "A gallium–indium alloy filled channels in a self-healing polymer. Rejoining the cut ends restored both the conducting path and the surrounding sheath."
+        },
+        {
+          "id": "science-0092",
+          "similarity": 0.143,
+          "sameAnswer": false,
+          "q": "A 2021 materials study demonstrated a knife that could cut steak despite being made mainly from what?",
+          "a": "Hardened wood",
+          "d": "Researchers processed wood to make it denser and harder, then shaped and coated it for a working knife. The demonstration used specially treated wood, not an ordinary wooden utensil."
+        },
+        {
+          "id": "science-0002",
+          "similarity": 0.139,
+          "sameAnswer": true,
+          "q": "Maryland researchers made nearly transparent panels by bleaching color-bearing structures and adding clear polymer to which normally opaque material?",
+          "a": "Wood",
+          "d": "The treatment reduces light absorption and fills spaces that would otherwise scatter light. The material keeps a wood scaffold while admitting much more light."
+        },
+        {
+          "id": "published-4840",
+          "similarity": 0.057,
+          "sameAnswer": true,
+          "q": "The bricks in Buckminster Fuller's Stockade Building System combined plaster with fibers from what material?",
+          "a": "Wood",
+          "d": "Fuller's building experiments included these composite blocks alongside the domes for which he became better known."
+        },
+        {
+          "id": "published-13832",
+          "similarity": 0.036,
+          "sameAnswer": true,
+          "q": "What is the outer sarcophagus protecting Tutankhamun's mummy made of?",
+          "a": "Wood",
+          "d": "Tutankhamun's tomb is said to have been visited twice by tomb robbers."
+        },
+        {
+          "id": "published-13842",
+          "similarity": 0.034,
+          "sameAnswer": true,
+          "q": "At the beginning of the Middle Ages, in what subject were the first strong castles built?",
+          "a": "Wood",
+          "d": "The castle is a European innovation that appeared in the 9th century after the fall of the Carolingian Empire."
+        },
+        {
+          "id": "published-17264",
+          "similarity": 0.063,
+          "sameAnswer": true,
+          "q": "What material was his racquet made of until the end of 1982?",
+          "a": "Wood",
+          "d": "In 1988, McEnroe was the record holder for the winning percentage over a season with 82 wins and only 3 losses."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0019",
+      "q": "Canada’s NRC used a special impact simulator to fire which unusual projectiles at aircraft components?",
+      "a": "Dead birds",
+      "d": "The high-speed impacts simulated collisions that can damage windscreens, engines, and other aircraft parts. The device acquired nicknames such as the chicken gun.",
+      "matches": [
+        {
+          "id": "published-17297",
+          "similarity": 0.135,
+          "sameAnswer": false,
+          "q": "How many depressions do most golf balls put on sale?",
+          "a": "450",
+          "d": "The impact of a hit ball (one millisecond) determines the speed of the ball, its angle of fire and its speed of rotation."
+        },
+        {
+          "id": "published-14859",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? A forward gear with a gear ratio that gives the greatest vehicle velocity for a given engine speed.",
+          "a": "High",
+          "d": "A forward gear with a gear ratio that gives the greatest vehicle velocity for a given engine speed. Another name is high gear."
+        },
+        {
+          "id": "published-14817",
+          "similarity": 0.126,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? An electronic device in a computer that issues a steady high-frequency signal that synchronizes all the internal components.",
+          "a": "System clock",
+          "d": "An electronic device in a computer that issues a steady high-frequency signal that synchronizes all the internal components."
+        },
+        {
+          "id": "published-9714",
+          "similarity": 0.122,
+          "sameAnswer": false,
+          "q": "What fills the blank? Ning Bin, who won a national special prize for his contribution to the ____, died in a traffic accident.",
+          "a": "Beijing–Shanghai high-speed railway",
+          "d": "Ning Bin, who won a national special prize for his contribution to the Beijing–Shanghai high-speed railway, died in a traffic accident."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0020",
+      "q": "A robotic gripper reported by Cornell and collaborators in 2010 used a party balloon filled with which lightweight material?",
+      "a": "Ground coffee",
+      "d": "The soft bag molded itself around an object. Removing air jammed the grains together, letting the gripper hold objects without individual mechanical fingers.",
+      "matches": [
+        {
+          "id": "science-0094",
+          "similarity": 0.167,
+          "sameAnswer": false,
+          "q": "Cornell researchers built soft robotic fingers that dealt with excess heat using which surprisingly lifelike trick?",
+          "a": "Sweating",
+          "d": "Temperature-responsive pores released water from the hydrogel fingers. Evaporation carried heat away, providing cooling without a separate electronic thermostat."
+        },
+        {
+          "id": "research-science004-next-review-0016",
+          "similarity": 0.139,
+          "sameAnswer": false,
+          "q": "Rice’s 2022 necrobotics experiment turned which deceased creatures into miniature mechanical grippers?",
+          "a": "Spiders",
+          "d": "Puffs of air extended the legs, which curled again when pressure was released. The researchers used that motion to grasp and move small objects."
+        },
+        {
+          "id": "food-0052",
+          "similarity": 0.123,
+          "sameAnswer": false,
+          "q": "RMIT researchers heated spent coffee grounds without oxygen so the resulting material could replace part of which concrete ingredient?",
+          "a": "Sand",
+          "d": "Heating the grounds makes a carbon-rich material called biochar. In the experiments it replaced some of the natural sand."
+        },
+        {
+          "id": "space-0018",
+          "similarity": 0.118,
+          "sameAnswer": false,
+          "q": "During Apollo 15, David Scott dropped a feather and which tool together to demonstrate falling without air resistance?",
+          "a": "Hammer",
+          "d": "The two objects reached the lunar surface together. The feather did not drift slowly downward as it would in Earth’s air."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0021",
+      "q": "Lancaster physicists found that structures made from which familiar toy could act as unusually effective thermal insulators at very low temperatures?",
+      "a": "LEGO bricks",
+      "d": "The plastic modules and the gaps between them greatly restricted heat flow in the tested cryogenic range. The result suggested inexpensive ways to build supports for ultra-cold experiments.",
+      "matches": [
+        {
+          "id": "science-0061",
+          "similarity": 0.154,
+          "sameAnswer": true,
+          "q": "MIT researchers built reconfigurable miniature fluid-handling devices by cutting channels into which familiar objects?",
+          "a": "LEGO bricks",
+          "d": "The blocks’ consistent dimensions let channels line up when pieces snapped together. The researchers made modules that acted as mixers, flow resistors and droplet generators."
+        },
+        {
+          "id": "space-0014",
+          "similarity": 0.125,
+          "sameAnswer": false,
+          "q": "Tiny figures of Galileo, Jupiter and Juno rode aboard NASA’s Juno spacecraft. Which toy brand supplied their familiar design?",
+          "a": "LEGO",
+          "d": "The three figures were made from aluminum rather than ordinary toy plastic. Their miniature accessories include a telescope and a lightning bolt."
+        },
+        {
+          "id": "human-0046",
+          "similarity": 0.111,
+          "sameAnswer": false,
+          "q": "After handshakes, hidden-camera research at Weizmann found an increase in what easily overlooked behavior?",
+          "a": "Sniffing one’s own hands",
+          "d": "The researchers also tested transferred odors. The results suggested a possible scent-sampling role for handshakes, without proving that this is why the custom evolved."
+        },
+        {
+          "id": "science-0089",
+          "similarity": 0.11,
+          "sameAnswer": false,
+          "q": "A North Carolina State armor experiment pulverized an incoming armor-piercing bullet using a composite that incorporated which unusually airy material?",
+          "a": "Metal foam",
+          "d": "The tested armor incorporated composite metal foam, combining low weight with energy absorption. Its dramatic performance involved a particular laboratory-tested armor system, not ordinary household foam."
+        },
+        {
+          "id": "published-8515",
+          "similarity": 0.077,
+          "sameAnswer": true,
+          "q": "One of the largest shoe companies in Germany, Klauser Schuhe, sponsored the painting of the Lego Bridge in the style of what?",
+          "a": "Lego bricks",
+          "d": "The company Klauser, also known as Klauser Schuhe or Schuhhaus Klauser, is one of the largest owner-operated shoe retailers in Germany."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0022",
+      "q": "For a 2012 airplane wireless-signal test, Boeing filled passenger seats with sacks of what as stand-ins for people?",
+      "a": "Potatoes",
+      "d": "The potatoes interacted with radio signals in useful ways similar to human bodies. The engineers later checked their test data using human stand-ins on the ground.",
+      "matches": [
+        {
+          "id": "published-16899",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "Before people rode an early looping roller coaster, which animal joined its unusual list of test passengers?",
+          "a": "Monkey",
+          "d": "Before human riders tried an early looping roller coaster, the test runs carried eggs, flowers, glasses of water and even a monkey."
+        },
+        {
+          "id": "customs-0020",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "Racers on Tetbury’s steep Gumstool Hill carry heavy sacks filled with what?",
+          "a": "Wool",
+          "d": "The local race turns the town’s wool-trading heritage into an uphill test of strength and speed."
+        },
+        {
+          "id": "published-5297",
+          "similarity": 0.118,
+          "sameAnswer": false,
+          "q": "What field studies how a signal comes to stand for something to an animal, whether it's a gesture, a call or another sign?",
+          "a": "Zoosemiotics",
+          "d": "It brings semiotics, the study of signs, to the ways animals perceive and exchange meaning."
+        },
+        {
+          "id": "published-126",
+          "similarity": 0.118,
+          "sameAnswer": false,
+          "q": "Which Hollywood actor shared a patent with composer George Antheil for frequency-hopping radio communication?",
+          "a": "Hedy Lamarr.",
+          "d": "Their idea made signals harder to jam by changing frequencies in step. It became an early milestone in wireless communications."
+        },
+        {
+          "id": "published-11422",
+          "similarity": 0.059,
+          "sameAnswer": true,
+          "q": "What vegetable often supplies the dough in Italian gnocchi?",
+          "a": "Potatoes",
+          "d": "The small dumplings can also be made in other regional styles."
+        },
+        {
+          "id": "published-15550",
+          "similarity": 0.066,
+          "sameAnswer": true,
+          "q": "What vegetables are used for the making of the traditional Native American meal called Llapingacho?",
+          "a": "Potatoes",
+          "d": ""
+        },
+        {
+          "id": "published-15995",
+          "similarity": 0.066,
+          "sameAnswer": true,
+          "q": "What is the main ingredient of the traditional Swiss dish Rosti?",
+          "a": "Potatoes",
+          "d": ""
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0023",
+      "q": "A physics team studied how nonspherical objects pack together by filling containers with which familiar sweets?",
+      "a": "M&M’s",
+      "d": "The flattened candies packed more densely than randomly arranged spheres in the experiments. Their shape helped researchers investigate the geometry of crowded particles.",
+      "matches": [
+        {
+          "id": "space-0030",
+          "similarity": 0.135,
+          "sameAnswer": false,
+          "q": "Don Pettit shook coffee, sugar and other small particles in bags in orbit to investigate an early step in what?",
+          "a": "Planet formation",
+          "d": "Particles clumped together within seconds. The tabletop experiment explored how tiny grains might start assembling larger bodies."
+        },
+        {
+          "id": "published-18286",
+          "similarity": 0.125,
+          "sameAnswer": false,
+          "q": "In which one of these sciences is the TOE theory studied?",
+          "a": "Physics",
+          "d": ""
+        },
+        {
+          "id": "published-11455",
+          "similarity": 0.121,
+          "sameAnswer": false,
+          "q": "Glutinous rice flour becomes tangyuan. When served in sweet broth, what shape are the pieces?",
+          "a": "Balls",
+          "d": "The round dumplings can have fillings such as black sesame."
+        },
+        {
+          "id": "earth-0138",
+          "similarity": 0.118,
+          "sameAnswer": false,
+          "q": "What element-rich particles help turn Antarctica’s Blood Falls water red as it reaches the air?",
+          "a": "Iron",
+          "d": "Johns Hopkins researchers found tiny iron-rich spheres that oxidize after the brine emerges."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0024",
+      "q": "Cambridge researchers demonstrated a way to make toner-printed office paper reusable without turning it back into pulp. What removed the print?",
+      "a": "Laser pulses",
+      "d": "Carefully chosen laser conditions removed toner while leaving the paper largely intact. The 2012 study explored unprinting as an alternative to recycling the whole sheet.",
+      "matches": [
+        {
+          "id": "culture-0022",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "For a long Rauschenberg print in 1953, composer John Cage contributed by operating what?",
+          "a": "Car",
+          "d": "Cage drove a Model A Ford across joined sheets of paper, leaving a painted tire track."
+        },
+        {
+          "id": "science-0033",
+          "similarity": 0.133,
+          "sameAnswer": false,
+          "q": "A Los Alamos experiment cooled a specially doped glass fiber from room temperature to below freezing using what?",
+          "a": "Laser light",
+          "d": "Under carefully chosen conditions, fluorescence carried more energy out than the absorbed laser light brought in. This is optical refrigeration, rather than ordinary heating by a beam."
+        },
+        {
+          "id": "science-0063",
+          "similarity": 0.133,
+          "sameAnswer": false,
+          "q": "Stanford’s Paperfuge adapted a string-powered whirligig toy to perform which laboratory job?",
+          "a": "Separating blood by spinning",
+          "d": "Pulling the strings spun a paper disk rapidly enough to act as a centrifuge. The researchers demonstrated separation of plasma from whole blood without an electric motor."
+        },
+        {
+          "id": "published-1015",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "What fine Chinese painting paper from Jing County is made with rice straw and the bark of a local tree?",
+          "a": "Xuan paper.",
+          "d": "The papermakers process the ingredients into a pulp. Painters prize the way the finished sheet receives ink."
+        }
+      ]
+    },
+    {
+      "id": "research-science004-next-review-0025",
+      "q": "A 2022 MIT and Rhode Island School of Design project made a washable shirt fabric function as what?",
+      "a": "Microphone",
+      "d": "Special fibers produced electrical signals when sound made the cloth vibrate. The team demonstrated acoustic detection, including the direction of handclaps, in fabric panels.",
+      "matches": [
+        {
+          "id": "science-0015",
+          "similarity": 0.154,
+          "sameAnswer": false,
+          "q": "In MIT’s 2014 visual-microphone demonstrations, recognizable speech was recovered by filming a small patch of which food package?",
+          "a": "A potato-chip bag",
+          "d": "Sound made the package vibrate minutely. High-speed video captured those movements, and analysis reconstructed some of the sound without an ordinary microphone recording."
+        },
+        {
+          "id": "published-12331",
+          "similarity": 0.154,
+          "sameAnswer": false,
+          "q": "What is the distribution of energy as a function of frequency for a particular sound source called?",
+          "a": "Sound spectrum",
+          "d": "The distribution of energy as a function of frequency for a particular sound source. Another name is acoustic spectrum."
+        },
+        {
+          "id": "published-14799",
+          "similarity": 0.132,
+          "sameAnswer": false,
+          "q": "What is a fabric treated to be easily washable and to require no ironing called?",
+          "a": "Wash-and-wear",
+          "d": "A fabric treated to be easily washable and to require no ironing."
+        },
+        {
+          "id": "objects-0139",
+          "similarity": 0.124,
+          "sameAnswer": false,
+          "q": "A French “mixed motowasher” demonstrated in 1925 could wash clothing and what other household items?",
+          "a": "Dishes",
+          "d": "The machine combined laundry and dishwashing functions without requiring special plumbing."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0001",
+      "q": "What unexpected genetic cargo has the flowering shrub Amborella accumulated inside its mitochondria?",
+      "a": "DNA from other kinds of plants",
+      "d": "Its mitochondrial genome contains large amounts of foreign DNA, including material from mosses and green algae. These transfers crossed branches of the plant family tree rather than following ordinary parent-to-offspring inheritance.",
+      "matches": [
+        {
+          "id": "published-2470",
+          "similarity": 0.152,
+          "sameAnswer": false,
+          "q": "Which plant can range from a 30-centimetre (12 in) shrub to a 25-metre (82 ft) tree?",
+          "a": "Persoonia media",
+          "d": "Persoonia media is a species of flowering plant in the family Proteaceae and is endemic to eastern Australia."
+        },
+        {
+          "id": "botany-0014",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "The New Caledonian tree Pycnandra acuminata produces striking blue-green latex rich in which metal?",
+          "a": "Nickel",
+          "d": "This hyperaccumulator can concentrate extraordinary amounts of nickel in its tissues. Nickel ions color the latex rather than an ordinary green plant pigment."
+        },
+        {
+          "id": "published-16434",
+          "similarity": 0.129,
+          "sameAnswer": false,
+          "q": "Which part of a cell contains the chromosomes or genetic material?",
+          "a": "Nucleus",
+          "d": ""
+        },
+        {
+          "id": "published-11875",
+          "similarity": 0.127,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? A dwarfed evergreen conifer or shrub shaped to have flat-topped asymmetrical branches and grown in a container.",
+          "a": "Ming tree",
+          "d": "A dwarfed evergreen conifer or shrub shaped to have flat-topped asymmetrical branches and grown in a container."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0002",
+      "q": "Cardamine chenopodiifolia hedges its reproductive bets by making fruits in which two places on the same plant?",
+      "a": "Above and below ground",
+      "d": "Its aerial fruits explode and scatter seeds. Separate underground fruits remain non-explosive and contain fewer, larger seeds, keeping some offspring near the parent’s successful site.",
+      "matches": [
+        {
+          "id": "words-0062",
+          "similarity": 0.162,
+          "sameAnswer": false,
+          "q": "Which fruit shares its Middle French name with the explosive called a grenade?",
+          "a": "Pomegranate",
+          "d": "The borrowed word literally named the fruit. Its Latin ancestry also contains a reference to seeds or grains."
+        },
+        {
+          "id": "published-3491",
+          "similarity": 0.139,
+          "sameAnswer": false,
+          "q": "When a highway between Acapulco and Cuernavaca encountered an archaeological site, how did engineers take traffic past it without clearing the ruins?",
+          "a": "Tunnel beneath the site",
+          "d": "Sending the roadway underground allowed the archaeological remains to stay in place above the traffic."
+        },
+        {
+          "id": "botany-0096",
+          "similarity": 0.121,
+          "sameAnswer": false,
+          "q": "What can change from one growing season to another in an individual jack-in-the-pulpit as its size and resources change?",
+          "a": "Its sexual function",
+          "d": "Smaller flowering individuals tend to function as male, while larger ones can function as female. The same perennial plant can change its reproductive role over time."
+        },
+        {
+          "id": "nature-0125",
+          "similarity": 0.119,
+          "sameAnswer": false,
+          "q": "Which rainforest rodent cracks Brazil-nut pods and helps plant new trees by burying spare nuts?",
+          "a": "Agouti",
+          "d": "Some cached seeds remain uneaten and germinate away from the parent tree."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0003",
+      "q": "Where have researchers shown brewing yeast can spend the winter and then pass to a new insect generation?",
+      "a": "Inside queen wasps",
+      "d": "Overwintering social-wasp queens carried Saccharomyces cerevisiae from autumn to spring and transmitted it to offspring. An insect gut can connect yeast populations across seasons.",
+      "matches": [
+        {
+          "id": "botany-0103",
+          "similarity": 0.145,
+          "sameAnswer": false,
+          "q": "How can some fig trees penalize wasps that lay eggs without providing pollination?",
+          "a": "Dropping the occupied figs",
+          "d": "Aborting an unpollinated fig can kill the wasp offspring developing inside it. Such sanctions help keep the tree–pollinator partnership from becoming one-sided."
+        },
+        {
+          "id": "published-1057",
+          "similarity": 0.133,
+          "sameAnswer": false,
+          "q": "Which insect has females that remain lodged inside paper wasps while their tiny adult males leave the host and fly?",
+          "a": "Xenos vesparum.",
+          "d": "The sexes of this twisted-wing parasite lead visibly different adult lives. Parasitized wasp workers may also leave their colony."
+        },
+        {
+          "id": "published-10308",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "Which animal fits this clue? Social insect living in organized colonies; characteristically the males and fertile queen have wings during breeding season; wingless sterile females are the workers.",
+          "a": "Ant",
+          "d": "Social insect living in organized colonies; characteristically the males and fertile queen have wings during breeding season; wingless sterile females are the workers. Another name is emmet."
+        },
+        {
+          "id": "nature-0192",
+          "similarity": 0.129,
+          "sameAnswer": false,
+          "q": "In the fig-wasp life cycle, which sex commonly spends its whole life inside its birth fig?",
+          "a": "Males",
+          "d": "Females leave with pollen after mating, while males remain inside."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0004",
+      "q": "In germination experiments on Suaeda aralocaspica, how did its fresh brown and black seeds differ?",
+      "a": "Brown seeds were ready; black seeds were dormant",
+      "d": "Brown seeds in the study were ready to germinate, while black seeds showed physiological dormancy. Producing both types spreads the risk of committing every seed to the same opportunity.",
+      "matches": [
+        {
+          "id": "botany-0051",
+          "similarity": 0.136,
+          "sameAnswer": false,
+          "q": "Why did William Beal bury his long-running seed experiment in uncorked bottles with their mouths tilted downward?",
+          "a": "To prevent water accumulating",
+          "d": "The sand-filled bottles were meant to test how long buried seeds could remain capable of germination. The downward openings kept them from becoming little water reservoirs."
+        },
+        {
+          "id": "botany-0067",
+          "similarity": 0.13,
+          "sameAnswer": false,
+          "q": "Tiny amounts of which notorious poison can help certain fire-responsive seeds germinate when released from a smoke compound?",
+          "a": "Cyanide",
+          "d": "Researchers identified a smoke compound that slowly releases cyanide in water. In tested fire-responsive plants, this can act as a germination cue at suitable concentrations."
+        },
+        {
+          "id": "botany-0045",
+          "similarity": 0.115,
+          "sameAnswer": false,
+          "q": "Why do many tiny orchid seeds need a fungal partner to begin growing in nature?",
+          "a": "Very little stored food",
+          "d": "Unlike a bean, an orchid seed has almost no nutritional reserve. A suitable fungus can supply resources during germination, although some orchids are exceptions."
+        },
+        {
+          "id": "published-12008",
+          "similarity": 0.107,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? Australian tree with small flattened scales as leaves and numerous dark brown seed; valued for its timber and resin.",
+          "a": "Black cypress pine",
+          "d": "Australian tree with small flattened scales as leaves and numerous dark brown seed; valued for its timber and resin. Another name is red cypress pine."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0005",
+      "q": "What can a dried-out fairy-ring champignon mushroom do when rain returns?",
+      "a": "Re-expand to its former shape",
+      "d": "Marasmius oreades fruiting bodies can shrivel during dry weather and expand again after becoming wet. This drying-and-rehydrating behavior has earned it the nickname resurrection mushroom.",
+      "matches": [
+        {
+          "id": "published-680",
+          "similarity": 0.213,
+          "sameAnswer": false,
+          "q": "Why can mushrooms appear to have lined themselves up in a fairy ring overnight?",
+          "a": "The fungus below is growing outward from a center.",
+          "d": "Its visible fruiting bodies can pop up around the expanding edge."
+        },
+        {
+          "id": "published-5016",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "Which genus of resurrection plants includes species that dismantle their green pigment while dry and rebuild it when water returns?",
+          "a": "Xerophyta",
+          "d": "Losing chlorophyll interrupts photosynthesis. The ability to start up again distinguishes this trick from a leaf simply dying of drought."
+        },
+        {
+          "id": "science-0034",
+          "similarity": 0.12,
+          "sameAnswer": false,
+          "q": "What activates the small spikes in Harvard and MIT’s experimental kirigami shoe grips?",
+          "a": "Bending the shoe sole",
+          "d": "Cuts in a thin steel sheet pop out as the sole bends. The spikes flatten again as the shoe returns toward its original shape."
+        },
+        {
+          "id": "food-0002",
+          "similarity": 0.115,
+          "sameAnswer": false,
+          "q": "Watching which food being cooked gave Momofuku Ando the breakthrough for quick-rehydrating instant noodles?",
+          "a": "Tempura",
+          "d": "Hot oil drove moisture out of noodles, leaving tiny openings through which hot water could quickly return."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0006",
+      "q": "Some fungus-farming ants maintain helpful bacteria on their outer bodies. What service do those microbes provide?",
+      "a": "Antibiotics against garden parasites",
+      "d": "The bacteria produce compounds that suppress fungi attacking the ants’ crop. Specialized body structures and glands help support this microbial defense.",
+      "matches": [
+        {
+          "id": "published-20036",
+          "similarity": 0.216,
+          "sameAnswer": false,
+          "q": "Leafcutter ants carry home chopped greenery largely to cultivate what underground food crop?",
+          "a": "Fungus",
+          "d": "The leaf pieces help support a fungus garden. These ants were practicing agriculture long before people."
+        },
+        {
+          "id": "botany-0034",
+          "similarity": 0.202,
+          "sameAnswer": false,
+          "q": "Where does the bullhorn acacia house the ants that defend it against plant-eaters?",
+          "a": "Inside hollow thorns",
+          "d": "The tree provides nesting space plus food from nectar glands and nutrient-rich bodies. Its resident ants help defend this living home."
+        },
+        {
+          "id": "botany-0101",
+          "similarity": 0.189,
+          "sameAnswer": false,
+          "q": "Some ants housed by Cordia nodosa trees cheat their hosts by destroying which structures?",
+          "a": "Flower buds",
+          "d": "Allomerus ants can suppress the tree’s reproduction by attacking its flowers. Castrated hosts can produce more of the swollen chambers that house the ants."
+        },
+        {
+          "id": "human-0080",
+          "similarity": 0.17,
+          "sameAnswer": false,
+          "q": "The antibiotic compound lugdunin was discovered in bacteria living in which surprisingly ordinary human location?",
+          "a": "Nose",
+          "d": "Researchers found that a nasal Staphylococcus species makes a compound that inhibits competing bacteria. The discovery came from studying our own microbial residents."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0007",
+      "q": "Leaf-cutting ants add fecal droplets to fresh leaves in their gardens. What useful material do these droplets recycle from the fungus they eat?",
+      "a": "Digestive enzymes",
+      "d": "Fungal enzymes survive passage through the ants and reach newly cut leaves. They help break down plant material for the growing fungal crop.",
+      "matches": [
+        {
+          "id": "nature-0236",
+          "similarity": 0.336,
+          "sameAnswer": false,
+          "q": "Which part of a hoatzin’s digestive system acts as a leaf-fermenting chamber?",
+          "a": "Crop",
+          "d": "Bacteria help break down leaves before they reach the stomach."
+        },
+        {
+          "id": "published-20036",
+          "similarity": 0.229,
+          "sameAnswer": false,
+          "q": "Leafcutter ants carry home chopped greenery largely to cultivate what underground food crop?",
+          "a": "Fungus",
+          "d": "The leaf pieces help support a fungus garden. These ants were practicing agriculture long before people."
+        },
+        {
+          "id": "food-0032",
+          "similarity": 0.172,
+          "sameAnswer": false,
+          "q": "Why can canned pineapple work in a gelatin dessert when fresh pineapple prevents it setting?",
+          "a": "Heat disables a protein-cutting enzyme",
+          "d": "Fresh pineapple contains bromelain, which breaks gelatin proteins. The heating involved in canning disables the enzyme."
+        },
+        {
+          "id": "research-botany004-next-review-0006",
+          "similarity": 0.16,
+          "sameAnswer": false,
+          "q": "Some fungus-farming ants maintain helpful bacteria on their outer bodies. What service do those microbes provide?",
+          "a": "Antibiotics against garden parasites",
+          "d": "The bacteria produce compounds that suppress fungi attacking the ants’ crop. Specialized body structures and glands help support this microbial defense."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0008",
+      "q": "The dyes in traditional litmus paper were extracted from what living material?",
+      "a": "Lichens",
+      "d": "Several lichens supply the dye mixture used to distinguish acidic from alkaline solutions. A familiar laboratory indicator therefore has a biological source.",
+      "matches": [
+        {
+          "id": "food-0122",
+          "similarity": 0.151,
+          "sameAnswer": false,
+          "q": "Traditional lutefisk is made from dried fish soaked in what before it is rinsed for cooking?",
+          "a": "Lye",
+          "d": "The alkaline treatment gives the fish its unusual texture. Historically the solution could be made using wood ash."
+        },
+        {
+          "id": "published-14549",
+          "similarity": 0.135,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? Paper impregnated with an indicator for use in chemical tests.",
+          "a": "Test paper",
+          "d": "Paper impregnated with an indicator for use in chemical tests."
+        },
+        {
+          "id": "objects-0100",
+          "similarity": 0.134,
+          "sameAnswer": false,
+          "q": "Casein plastic, once used for buttons and beads, begins with a protein from which drink?",
+          "a": "Milk",
+          "d": "Casein is a milk protein that can be extracted and dried into a hard material. It supplied an unusual source for early plastic objects."
+        },
+        {
+          "id": "published-8653",
+          "similarity": 0.134,
+          "sameAnswer": false,
+          "q": "A paper manufacturer can supply wood-pulp byproducts for making what familiar vanilla-scented flavor compound?",
+          "a": "Vanillin",
+          "d": "Lignosulfonates from pulping can serve as a raw material for synthetic vanillin. The same family of byproducts also has industrial uses in concrete."
+        },
+        {
+          "id": "published-678",
+          "similarity": 0.065,
+          "sameAnswer": true,
+          "q": "In perfume-making, the ingredient called oak moss belongs to what group of organisms?",
+          "a": "Lichens.",
+          "d": "Evernia prunastri is a branching lichen that grows on bark."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0009",
+      "q": "What human-made debris has been found tangled in Mediterranean seagrass fiber bundles called Neptune balls?",
+      "a": "Plastic fragments",
+      "d": "Wave-worked Posidonia fibers can trap pieces of plastic and carry them ashore. Researchers measured this natural trapping process in material washed onto beaches in Mallorca.",
+      "matches": [
+        {
+          "id": "published-16945",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "What artificial-reef material did Hurricane Bonnie wash ashore by the thousand in North Carolina?",
+          "a": "Old tires",
+          "d": "Strong waves from Hurricane Bonnie in 1998 washed thousands of tires, part of an artificial reef, ashore in North Carolina."
+        },
+        {
+          "id": "published-4226",
+          "similarity": 0.117,
+          "sameAnswer": false,
+          "q": "Which crab can be found along the coasts of the eastern Atlantic Ocean and eastern Mediterranean Sea, but not in between?",
+          "a": "Ocypode cursor",
+          "d": "Ocypode cursor, the tufted ghost crab, is a species of ghost crab found on sandy beaches along the coasts of the eastern Atlantic Ocean and eastern Mediterranean Sea."
+        },
+        {
+          "id": "published-4161",
+          "similarity": 0.116,
+          "sameAnswer": false,
+          "q": "Which Alaskan fiber artist was known for her distinctive baskets made from dried fish skins?",
+          "a": "Fran Reed",
+          "d": "Frances Ann Reed was an American fiber artist and teacher based in Alaska who specialized in a distinctive style of basketry made from dried fish skins and other natural materials found in the state."
+        },
+        {
+          "id": "published-14908",
+          "similarity": 0.11,
+          "sameAnswer": false,
+          "q": "Which term fits this clue? Artifact made by weaving or felting or knitting or crocheting natural or synthetic fibers.",
+          "a": "Material",
+          "d": "Artifact made by weaving or felting or knitting or crocheting natural or synthetic fibers. Another name is fabric."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0010",
+      "q": "In a landmark Arizona murder investigation, DNA from which overlooked plant material helped connect a vehicle to the crime scene?",
+      "a": "Seedpods",
+      "d": "Palo verde pods found in a truck were compared with trees near the body. The plant evidence challenged the suspect’s account of where the vehicle had been.",
+      "matches": [
+        {
+          "id": "published-5637",
+          "similarity": 0.142,
+          "sameAnswer": false,
+          "q": "An investigation into the case of Juan Rivera uncovered proof of evidence tampering when his shoes, which had the victim's blood on them, also bore DNA from what?",
+          "a": "Real killer",
+          "d": "An investigation into the case of Juan Rivera uncovered proof of evidence tampering when his shoes, which had the victim's blood on them, also bore DNA from the real killer."
+        },
+        {
+          "id": "published-257",
+          "similarity": 0.111,
+          "sameAnswer": false,
+          "q": "What familiar delivery vehicle speeds past the dentist’s office during Gill’s escape-plan scene in Finding Nemo?",
+          "a": "The Pizza Planet truck.",
+          "d": "For this Pixar cameo, the place to watch is the street outside the aquarium."
+        },
+        {
+          "id": "botany-0097",
+          "similarity": 0.107,
+          "sameAnswer": false,
+          "q": "Researchers studying the nonphotosynthetic parasite Rafflesia lagascae found evidence suggesting it may have lost which entire genetic package?",
+          "a": "Its chloroplast genome",
+          "d": "Extensive sequencing failed to find a recognizable complete plastid genome. The finding concerns that genetic package, not the loss of all DNA from the plant."
+        },
+        {
+          "id": "botany-0094",
+          "similarity": 0.102,
+          "sameAnswer": false,
+          "q": "How can the seed pods of Pisonia “birdcatcher” trees accidentally kill birds?",
+          "a": "Sticking to feathers until flight becomes impossible",
+          "d": "The sticky pods normally hitch rides on birds. Too many attached pods can entangle or weigh down the carrier; this is not evidence that the tree digests birds."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0011",
+      "q": "How does the fungus Entomophthora muscae help infected female housefly corpses spread infection to healthy males?",
+      "a": "Making them sexually attractive",
+      "d": "Fungal infection changes the dead female’s chemical signals. Males attracted to attempt mating can pick up infectious spores from the corpse.",
+      "matches": [
+        {
+          "id": "botany-0030",
+          "similarity": 0.183,
+          "sameAnswer": false,
+          "q": "On infected yellow-eyed grasses, what are the petal-like yellow structures made by Fusarium xyrophilum actually made of?",
+          "a": "Fungal tissue",
+          "d": "The fungus constructs flower lookalikes, complete with color and scent. Researchers propose that the imitation recruits insects to spread spores instead of pollen."
+        },
+        {
+          "id": "nature-0192",
+          "similarity": 0.137,
+          "sameAnswer": false,
+          "q": "In the fig-wasp life cycle, which sex commonly spends its whole life inside its birth fig?",
+          "a": "Males",
+          "d": "Females leave with pollen after mating, while males remain inside."
+        },
+        {
+          "id": "nature-0099",
+          "similarity": 0.129,
+          "sameAnswer": false,
+          "q": "The tiny eggs in a bird's nest fungus actually contain what reproductive material?",
+          "a": "Spores",
+          "d": "The egglike packets, called peridioles, hold fungal spores rather than baby birds or insects."
+        },
+        {
+          "id": "nature-0154",
+          "similarity": 0.123,
+          "sameAnswer": false,
+          "q": "During courtship, what do the leg spurs of many male tarantulas hold away?",
+          "a": "Female’s fangs",
+          "d": "The spurs help keep the male out of reach while mating."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0012",
+      "q": "The ants living with Nepenthes bicalcarata can do what inside the plant’s fluid-filled pitchers?",
+      "a": "Dive for captured prey",
+      "d": "Camponotus schmitzi ants swim in the pitcher liquid and retrieve food. Their partnership with the carnivorous plant includes food, shelter and services that help the plant capture or process prey.",
+      "matches": [
+        {
+          "id": "nature-0048",
+          "similarity": 0.295,
+          "sameAnswer": false,
+          "q": "Which microorganisms help a cobra plant break down prey captured in its pitcher?",
+          "a": "Bacteria",
+          "d": "Bacteria living in the trap help process captured insects."
+        },
+        {
+          "id": "botany-0019",
+          "similarity": 0.202,
+          "sameAnswer": false,
+          "q": "Where does the Bornean carnivorous plant Nepenthes pudica hide many of its working pitcher traps?",
+          "a": "Underground",
+          "d": "Its buried pitchers catch soil-dwelling prey. Researchers initially encountered plants that appeared to be missing the usual visible traps."
+        },
+        {
+          "id": "botany-0034",
+          "similarity": 0.172,
+          "sameAnswer": false,
+          "q": "Where does the bullhorn acacia house the ants that defend it against plant-eaters?",
+          "a": "Inside hollow thorns",
+          "d": "The tree provides nesting space plus food from nectar glands and nutrient-rich bodies. Its resident ants help defend this living home."
+        },
+        {
+          "id": "botany-0016",
+          "similarity": 0.134,
+          "sameAnswer": false,
+          "q": "What supplies the sudden push that knocks insects from the lid of Nepenthes gracilis into its pitcher?",
+          "a": "Falling raindrops",
+          "d": "Raindrop impacts make the lid oscillate. Insects on its underside can lose their grip and fall into the digestive fluid."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0013",
+      "q": "Why can temporarily ineffective, dry pitcher-plant traps eventually catch more ants than continuously slippery traps?",
+      "a": "Scouts return and recruit nestmates",
+      "d": "Experiments supported a model in which dry rims let scouting ants visit safely. Later wet conditions make the surface slippery when a larger recruited group arrives.",
+      "matches": [
+        {
+          "id": "human-0014",
+          "similarity": 0.15,
+          "sameAnswer": false,
+          "q": "In grip experiments, water-wrinkled fingertips let people use less force to hold which objects securely than smooth wet fingertips did?",
+          "a": "Wet objects",
+          "d": "A study comparing dry, wet and wrinkled fingers found more efficient grip with wrinkled fingertips under wet conditions. That supports, rather than proves, a possible grip-related advantage."
+        },
+        {
+          "id": "botany-0019",
+          "similarity": 0.131,
+          "sameAnswer": false,
+          "q": "Where does the Bornean carnivorous plant Nepenthes pudica hide many of its working pitcher traps?",
+          "a": "Underground",
+          "d": "Its buried pitchers catch soil-dwelling prey. Researchers initially encountered plants that appeared to be missing the usual visible traps."
+        },
+        {
+          "id": "culture-0068",
+          "similarity": 0.112,
+          "sameAnswer": false,
+          "q": "How does a musician sound the spinning bowls of Benjamin Franklin’s glass armonica?",
+          "a": "Touching them with wet fingers",
+          "d": "A foot pedal turns the glass bowls, and moistened fingertips make their rims sing."
+        },
+        {
+          "id": "published-18396",
+          "similarity": 0.111,
+          "sameAnswer": false,
+          "q": "In which decade did “Slippery When Wet” first appear on record?",
+          "a": "1980s",
+          "d": "One of its record labels is Mercury Records."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0014",
+      "q": "Why can’t ordinary seed-bank drying and freezing preserve many oak acorns?",
+      "a": "They cannot tolerate that much drying",
+      "d": "Such seeds are called recalcitrant. Researchers instead explore carefully prepared tissues and cryopreservation methods, because treating whole acorns like dry grain can kill them.",
+      "matches": [
+        {
+          "id": "food-0136",
+          "similarity": 0.161,
+          "sameAnswer": false,
+          "q": "The traditional Andean food chuño preserves potatoes using which natural combination?",
+          "a": "Freezing nights and drying days",
+          "d": "Potatoes are frozen, pressed to remove moisture, and dried. The method makes use of high-altitude conditions."
+        },
+        {
+          "id": "botany-0052",
+          "similarity": 0.133,
+          "sameAnswer": false,
+          "q": "Researchers regenerated a flowering Silene plant from a prehistoric squirrel cache in Siberian permafrost. What did they grow it from?",
+          "a": "Fruit tissue",
+          "d": "The team cultured placental tissue from immature fruits, rather than simply germinating an ancient seed. The regenerated plants flowered and produced viable seeds."
+        },
+        {
+          "id": "botany-0030",
+          "similarity": 0.11,
+          "sameAnswer": false,
+          "q": "On infected yellow-eyed grasses, what are the petal-like yellow structures made by Fusarium xyrophilum actually made of?",
+          "a": "Fungal tissue",
+          "d": "The fungus constructs flower lookalikes, complete with color and scent. Researchers propose that the imitation recruits insects to spread spores instead of pollen."
+        },
+        {
+          "id": "published-15473",
+          "similarity": 0.11,
+          "sameAnswer": false,
+          "q": "A row of trulli in Alberobello can look like a cluster of stone hats. What shape are their roofs?",
+          "a": "Cones",
+          "d": "The small limestone buildings use a traditional dry-stone construction method."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0015",
+      "q": "What unexpected growing position helped Kew propagate the tiny waterlily Nymphaea thermarum successfully?",
+      "a": "On wet mud exposed to air",
+      "d": "The breakthrough came from copying its hot-spring-edge habitat. Seedlings improved when kept at the surface of wet soil instead of being submerged like typical waterlily seedlings.",
+      "matches": [
+        {
+          "id": "food-0126",
+          "similarity": 0.129,
+          "sameAnswer": false,
+          "q": "For a 2025 acoustics experiment, researchers produced an orchestra-like racket by rubbing wet blades across which food?",
+          "a": "Cheese",
+          "d": "The blade acted like a bow, while tiny air spaces helped resonate. Their experimental bread-cheese orchestra was compared to a flock of seagulls."
+        },
+        {
+          "id": "food-0002",
+          "similarity": 0.125,
+          "sameAnswer": false,
+          "q": "Watching which food being cooked gave Momofuku Ando the breakthrough for quick-rehydrating instant noodles?",
+          "a": "Tempura",
+          "d": "Hot oil drove moisture out of noodles, leaving tiny openings through which hot water could quickly return."
+        },
+        {
+          "id": "nature-0034",
+          "similarity": 0.123,
+          "sameAnswer": false,
+          "q": "To hide underwater, a jacana can leave only the tip of what body part exposed?",
+          "a": "Bill",
+          "d": "Jacanas can remain submerged with just the bill tip above the surface."
+        },
+        {
+          "id": "customs-0122",
+          "similarity": 0.123,
+          "sameAnswer": false,
+          "q": "Contestants at a Yukon hot spring create unusual hairstyles by letting what stiffen their wet hair?",
+          "a": "Ice",
+          "d": "The winter air freezes hair above the warm pool, producing dramatic frosted shapes for photographs."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0016",
+      "q": "The long twining part of a Lygodium climbing fern may look like a vine stem. What is it actually part of?",
+      "a": "A leaf",
+      "d": "Its frond’s central axis can keep extending and coil around supports. The climbing structure is an unusually long-growing leaf rather than the main shoot of a flowering vine.",
+      "matches": [
+        {
+          "id": "published-6114",
+          "similarity": 0.185,
+          "sameAnswer": false,
+          "q": "The flowerheads of the fern-leaf spider flower, Grevillea longifolia, look like what?",
+          "a": "Toothbrushes",
+          "d": "Grevillea longifolia, commonly known as fern-leaf spider flower, is a species of flowering plant in the family Proteaceae and is endemic to the Sydney Basin in New South Wales."
+        },
+        {
+          "id": "botany-0072",
+          "similarity": 0.157,
+          "sameAnswer": false,
+          "q": "Between flowering episodes, a titan arum can look like a small tree. What is that entire branching green structure botanically?",
+          "a": "One enormous leaf",
+          "d": "Its single compound leaf has a tall stalk and many leaflets. That tree-like phase helps the underground storage organ build reserves."
+        },
+        {
+          "id": "nature-0075",
+          "similarity": 0.153,
+          "sameAnswer": false,
+          "q": "The long eyelashes of a hornbill are actually modified what?",
+          "a": "Feathers",
+          "d": "The eyelash-like structures surrounding the eyes are specialized feathers."
+        },
+        {
+          "id": "published-5132",
+          "similarity": 0.147,
+          "sameAnswer": false,
+          "q": "Which shinnery oak of the southern Great Plains can keep its underground clone alive far longer than any visible stem?",
+          "a": "Quercus havardii",
+          "d": "Individual shoots may last only about a decade or two. The connected plant can persist for centuries."
+        },
+        {
+          "id": "published-19007",
+          "similarity": 0.06,
+          "sameAnswer": true,
+          "q": "What is the name of Nissan's most popular electric car?",
+          "a": "Leaf",
+          "d": ""
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0017",
+      "q": "What holds some lodgepole-pine cones shut for years until sufficient heat allows their seeds to escape?",
+      "a": "A resin seal",
+      "d": "In serotinous cones, resin bonds the scales together. Heat can melt that bond, releasing stored seeds after a fire has opened space for new seedlings.",
+      "matches": [
+        {
+          "id": "nature-0041",
+          "similarity": 0.162,
+          "sameAnswer": false,
+          "q": "How does lodgepole pine dwarf mistletoe launch its sticky seeds toward new hosts?",
+          "a": "Explosive fruit",
+          "d": "The fruit ejects its seed rapidly; the sticky coating helps the seed adhere to a new host."
+        },
+        {
+          "id": "published-12008",
+          "similarity": 0.138,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? Australian tree with small flattened scales as leaves and numerous dark brown seed; valued for its timber and resin.",
+          "a": "Black cypress pine",
+          "d": "Australian tree with small flattened scales as leaves and numerous dark brown seed; valued for its timber and resin. Another name is red cypress pine."
+        },
+        {
+          "id": "published-12228",
+          "similarity": 0.107,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? Australian cypress pine having globular cones.",
+          "a": "Port Jackson pine",
+          "d": "Australian cypress pine having globular cones. Another name is Callitris cupressiformis."
+        },
+        {
+          "id": "published-2278",
+          "similarity": 0.103,
+          "sameAnswer": false,
+          "q": "Which building opened in the Market Hall six years after a fire partly destroyed the building?",
+          "a": "Monmouth Museum",
+          "d": "The Monmouth Museum, previously known as The Nelson Museum and Local History Centre, was a museum in Monmouth, Monmouthshire, south east Wales."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0018",
+      "q": "Researchers proposed that pale patches on Caladium steudneriifolium leaves deter egg-laying moths by resembling what?",
+      "a": "Damage from earlier leaf miners",
+      "d": "The variegated patches look like mines left by feeding larvae. Experiments with natural and painted markings supported the idea that appearing already attacked can discourage new attacks.",
+      "matches": [
+        {
+          "id": "botany-0041",
+          "similarity": 0.16,
+          "sameAnswer": false,
+          "q": "Some passion vines bear little leaf bumps that resemble butterfly eggs. How can these decoys protect the vine?",
+          "a": "Discourage further egg laying",
+          "d": "Some female butterflies avoid plants already carrying eggs, where their offspring would face competitors. The plant’s false eggs can exploit that preference."
+        },
+        {
+          "id": "botany-0089",
+          "similarity": 0.126,
+          "sameAnswer": false,
+          "q": "Sticky leaves of some dune plants collect a gritty coating that discourages chewing. What is the coating made of?",
+          "a": "Sand",
+          "d": "Removing or adding sand in experiments changed herbivore damage. The grains form an external physical defense on plants such as Abronia latifolia."
+        },
+        {
+          "id": "botany-0049",
+          "similarity": 0.115,
+          "sameAnswer": false,
+          "q": "The pitcher plant Nepenthes ampullaria gets a substantial nutrient contribution from what falling material?",
+          "a": "Dead leaves",
+          "d": "Its pitchers collect forest leaf litter as well as other material. Isotope studies and feeding experiments support nutrition from this plant debris."
+        },
+        {
+          "id": "botany-0038",
+          "similarity": 0.109,
+          "sameAnswer": false,
+          "q": "When pollen was scarce, researchers saw bumblebees puncture leaves of nonflowering plants. What happened to the damaged plants?",
+          "a": "They flowered earlier",
+          "d": "The bee damage accelerated flowering in the tested plants. Researchers’ attempts to copy the damage mechanically did not reproduce its full effect."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0019",
+      "q": "What unusual process clears away the aging gills of the mushroom Coprinus comatus as its spores mature?",
+      "a": "Self-digestion into liquid",
+      "d": "Its cap progressively breaks down into a dark, spore-bearing fluid. Dissolving older tissue helps expose the remaining spore-producing surfaces.",
+      "matches": [
+        {
+          "id": "botany-0055",
+          "similarity": 0.183,
+          "sameAnswer": false,
+          "q": "Many mushrooms launch individual spores with a microscopic catapult. What supplies the sudden kick?",
+          "a": "Merging water droplets",
+          "d": "As a drop beside the spore merges with fluid on it, surface tension releases energy. High-speed filming captured the spore shooting away with the joined liquid."
+        },
+        {
+          "id": "botany-0004",
+          "similarity": 0.165,
+          "sameAnswer": false,
+          "q": "Some mushrooms can make tiny air currents to carry spores away even when the surrounding air is still. What drives these currents?",
+          "a": "Evaporative cooling",
+          "d": "Water evaporating from the mushroom cools nearby air. The resulting convection helps move spores beyond the crowded underside of the cap."
+        },
+        {
+          "id": "published-11901",
+          "similarity": 0.138,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? Common edible mushroom having an elongated shaggy white cap and black spores.",
+          "a": "Shaggy cap",
+          "d": "Common edible mushroom having an elongated shaggy white cap and black spores. Another name is shaggymane."
+        },
+        {
+          "id": "nature-0216",
+          "similarity": 0.132,
+          "sameAnswer": false,
+          "q": "Why do capybaras deliberately eat some of their own droppings?",
+          "a": "Aid fiber digestion",
+          "d": "This helps maintain the bacteria needed to process their plant-heavy diet."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0020",
+      "q": "The white patches on a typical red fly-agaric mushroom cap are leftovers from what?",
+      "a": "A covering around the young mushroom",
+      "d": "The universal veil surrounds the developing mushroom. As it expands, pieces of that covering can remain as patches on the cap.",
+      "matches": [
+        {
+          "id": "published-2472",
+          "similarity": 0.192,
+          "sameAnswer": false,
+          "q": "Which agaric mushroom species is found under the pines of Monterey Cypress trees and bruises pinkish-red when injured?",
+          "a": "Agaricus benesii",
+          "d": "Agaricus benesii is an agaric mushroom of the genus Agaricus known in English as the mull mushroom. This mushroom can be distinguished by a white cap that bruises pinkish-red when injured, a scaly lower stipe, and a conifer habitat."
+        },
+        {
+          "id": "published-11782",
+          "similarity": 0.182,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? Edible agaric with a soft greyish cap growing in shelving masses on dead wood.",
+          "a": "Oyster mushroom",
+          "d": "Edible agaric with a soft greyish cap growing in shelving masses on dead wood. Another name is oyster fungus."
+        },
+        {
+          "id": "published-11842",
+          "similarity": 0.177,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? Yellowish edible agaric that usually turns red when touched.",
+          "a": "Blushing mushroom",
+          "d": "Yellowish edible agaric that usually turns red when touched. Another name is blusher."
+        },
+        {
+          "id": "published-11901",
+          "similarity": 0.162,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? Common edible mushroom having an elongated shaggy white cap and black spores.",
+          "a": "Shaggy cap",
+          "d": "Common edible mushroom having an elongated shaggy white cap and black spores. Another name is shaggymane."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0021",
+      "q": "Some dramatically streaked tulips prized during Dutch tulip mania owed their patterns to what unexpected cause?",
+      "a": "A viral infection",
+      "d": "Tulip breaking virus can disrupt flower coloration, creating contrasting streaks. A visually prized pattern could therefore be a symptom of disease.",
+      "matches": [
+        {
+          "id": "published-8725",
+          "similarity": 0.141,
+          "sameAnswer": false,
+          "q": "ATR-16 syndrome causes very similar symptoms to ATR-X syndrome, despite being on what?",
+          "a": "Different chromosomes",
+          "d": "ATR-16 syndrome, also called alpha-thalassemia-intellectual disability syndrome, is a rare disease characterized by monosomy on part of chromosome 16."
+        },
+        {
+          "id": "botany-0114",
+          "similarity": 0.141,
+          "sameAnswer": false,
+          "q": "What can infect the chestnut-blight fungus and make some infections less damaging to trees?",
+          "a": "A virus",
+          "d": "Chestnut hypovirus 1 can weaken the fungus responsible for blight. It has helped control the disease in parts of Europe, although the outcome depends on local conditions."
+        },
+        {
+          "id": "published-19256",
+          "similarity": 0.115,
+          "sameAnswer": false,
+          "q": "In Left 4 Dead, what is the name of the virus, as designated by CEDA, that causes most humans to turn into the Infected?",
+          "a": "Green Flu",
+          "d": ""
+        },
+        {
+          "id": "published-17246",
+          "similarity": 0.1,
+          "sameAnswer": false,
+          "q": "What disease does Ronaldo, nicknamed Gronaldo, suffer from at the end of the 2000s?",
+          "a": "Hypothyroidism",
+          "d": "Symptoms include drowsiness, chilliness, weight gain, pale skin, and muscle stiffness."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0022",
+      "q": "During its heat-producing flowering phase, what does a sacred lotus do when the surrounding air becomes colder?",
+      "a": "Increase its own heat production",
+      "d": "The flowers can keep a relatively steady warm temperature across large environmental changes. Measurements show stronger metabolic heat output as ambient temperature falls.",
+      "matches": [
+        {
+          "id": "nature-0200",
+          "similarity": 0.286,
+          "sameAnswer": false,
+          "q": "How can eastern skunk cabbage keep its flowers warm while snow remains on the ground?",
+          "a": "Metabolic heat",
+          "d": "Its flower cluster can stay much warmer than the surrounding air."
+        },
+        {
+          "id": "published-208",
+          "similarity": 0.172,
+          "sameAnswer": false,
+          "q": "What kind of snowfall can form when cold air crosses the relatively warm, open water of a Great Lake?",
+          "a": "Lake-effect snow.",
+          "d": "The lake supplies heat and moisture. Snow then falls downwind, sometimes in narrow bands that give nearby towns very different totals."
+        },
+        {
+          "id": "science-0065",
+          "similarity": 0.138,
+          "sameAnswer": false,
+          "q": "An industrial vortex tube can turn a single compressed-air supply into what pair of outputs without moving machinery inside it?",
+          "a": "Hot air and cold air",
+          "d": "The swirling flow separates into streams at different temperatures. The compressed-air supply provides energy; the tube is not producing cooling for free."
+        },
+        {
+          "id": "nature-0012",
+          "similarity": 0.133,
+          "sameAnswer": false,
+          "q": "Besides hearing, what useful job do a bat-eared fox's oversized ears perform?",
+          "a": "Cooling the body",
+          "d": "Blood vessels in the large ears release heat to the surrounding air."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0023",
+      "q": "Bubbles can emerge from the center of a lotus leaf where water has collected. What internal process causes them?",
+      "a": "Air circulating through the plant",
+      "d": "A canal system sends pressurized air through leaf stalks and submerged rhizomes. Gas can vent through central leaf pores, producing visible bubbles if water covers the outlet.",
+      "matches": [
+        {
+          "id": "objects-0024",
+          "similarity": 0.169,
+          "sameAnswer": false,
+          "q": "What gas is trapped under pressure inside popping candy such as Pop Rocks?",
+          "a": "Carbon dioxide",
+          "d": "Saliva dissolves the sugar around the pressurized bubbles, releasing the gas and producing the crackle."
+        },
+        {
+          "id": "published-13522",
+          "similarity": 0.134,
+          "sameAnswer": false,
+          "q": "What are the car tires made of?",
+          "a": "Rubber",
+          "d": "A tire is designed to be mounted on the wheel rim and inflated with pressurized gas, usually air or nitrogen."
+        },
+        {
+          "id": "published-14657",
+          "similarity": 0.132,
+          "sameAnswer": false,
+          "q": "What is the pump in the cooling system of an automobile that cause the water to circulate called?",
+          "a": "Water pump",
+          "d": "The pump in the cooling system of an automobile that cause the water to circulate."
+        },
+        {
+          "id": "food-0014",
+          "similarity": 0.128,
+          "sameAnswer": false,
+          "q": "The rattling widget in a draught-style stout can helps recreate a creamy head by releasing which gas?",
+          "a": "Nitrogen",
+          "d": "Opening the can releases pressurized gas through tiny holes, creating many small bubbles."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0024",
+      "q": "Some fern colonies survive far beyond the range of the familiar leafy plants. Which living stage can make up these colonies?",
+      "a": "Tiny gametophytes",
+      "d": "The small sexual generation can live independently and spread vegetatively. Its distribution may extend far beyond that of the recognizable, spore-producing leafy generation.",
+      "matches": [
+        {
+          "id": "botany-0025",
+          "similarity": 0.295,
+          "sameAnswer": false,
+          "q": "In many ferns, chemical signals from older reproductive plants can make nearby young gametophytes develop as what?",
+          "a": "Males",
+          "d": "The tiny gametophyte stage can respond to signals called antheridiogens. This influences sex expression before the familiar leafy fern develops."
+        },
+        {
+          "id": "published-12225",
+          "similarity": 0.156,
+          "sameAnswer": false,
+          "q": "Which plant fits this description? The asexual spore of ferns that resembles dust; once thought to be seeds and to make the possessor invisible.",
+          "a": "Fern seed",
+          "d": "The asexual spore of ferns that resembles dust; once thought to be seeds and to make the possessor invisible."
+        },
+        {
+          "id": "published-5210",
+          "similarity": 0.152,
+          "sameAnswer": false,
+          "q": "What genus of bulbs in the amaryllis family is nicknamed “rain lilies” for flowers that can appear after a soaking?",
+          "a": "Zephyranthes",
+          "d": "These American bulbs spread far beyond their native range as ornamentals. Their common name describes the timing gardeners watch for."
+        },
+        {
+          "id": "published-451",
+          "similarity": 0.14,
+          "sameAnswer": false,
+          "q": "What blacksmith’s tool gives its name to the flattened top of a thunderstorm cloud?",
+          "a": "An anvil.",
+          "d": "The cloud top spreads horizontally. It can extend far downwind of the storm below."
+        }
+      ]
+    },
+    {
+      "id": "research-botany004-next-review-0025",
+      "q": "In Charles and Francis Darwin’s grass-seedling experiments, shading which small region could prevent bending toward light?",
+      "a": "The shoot tip",
+      "d": "Opaque caps over the tip greatly reduced bending even when the lower shoot remained illuminated. Removing the caps restored the response, separating light detection from the growth response farther down.",
+      "matches": [
+        {
+          "id": "botany-0091",
+          "similarity": 0.161,
+          "sameAnswer": false,
+          "q": "Seedlings of the tropical vine studied as Monstera gigantea can find a tree to climb by growing toward what visual cue?",
+          "a": "Darkness",
+          "d": "A tree trunk creates a dark silhouette on the forest floor. The seedlings’ unusual growth response helps them reach a support before climbing toward better light."
+        },
+        {
+          "id": "human-0114",
+          "similarity": 0.139,
+          "sameAnswer": false,
+          "q": "Bone has a tiny piezoelectric response: mechanical and electrical effects are coupled. Which major bone component is a principal contributor?",
+          "a": "Collagen",
+          "d": "Experiments separating organic and mineral contributions found a much smaller response after removing the organic matrix. Bone’s protein structure can participate in this electromechanical behavior."
+        },
+        {
+          "id": "botany-0026",
+          "similarity": 0.128,
+          "sameAnswer": false,
+          "q": "When researchers offered dodder a fake tomato plant and tomato scent on rubber, which cue guided the parasite’s growth?",
+          "a": "The scent",
+          "d": "Dodder seedlings grew toward extracted plant odors even without a real host present. In choice tests they also distinguished scents from different potential hosts."
+        },
+        {
+          "id": "botany-0119",
+          "similarity": 0.124,
+          "sameAnswer": false,
+          "q": "Before a bunya pine seedling sends up its leafy shoot, what unusual reserve can it form underground?",
+          "a": "A storage tuber",
+          "d": "The seed transfers reserves into an underground swelling. This can remain below ground before the shoot emerges, separating germination from the appearance of an obvious young tree."
+        }
+      ]
+    }
+  ]
+}

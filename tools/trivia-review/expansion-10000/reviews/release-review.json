@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "reviewedOn": "2026-11-17",
+  "newQuestions": 2500,
+  "baselineQuestions": 20100,
+  "resultingQuestions": 22600,
+  "checks": [
+    "Per-card supporting source read and evidence recorded by researchers; primary editor reviewed question, answer, explanation, difficulty and four choices.",
+    "Compared full question+answer+explanation text and related entities against20100baseline and other additions; replaced identified repeated facts.",
+    "Kept original wording, short explanations and natural answers; removed giveaway phrasing and weak distractors.",
+    "Reviewed subject variety and independent adult difficulty estimates; games retain70/10/10/10default.",
+    "Confirmed all2164canonical source URLs covered by availability audits; repaired confirmed missing references.",
+    "Normalized source-page derived-word totals checked against baseline plus additions; maximum158words.",
+    "Preserved source and editorial fingerprints and historical rejections."
+  ],
+  "remainingBeforePublication": [],
+  "validationRecord": "release-validation.json"
+}

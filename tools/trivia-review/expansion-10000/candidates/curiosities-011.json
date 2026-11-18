@@ -1,0 +1,31 @@
+[
+  {
+    "candidateId": "curiosities-0024",
+    "q": "Which spotted Australian marsupials were given special toad sausages in experiments aimed at teaching them to avoid poisonous cane toads?",
+    "a": "Quolls",
+    "d": "In a captive trial, trained northern quolls showed less interest in toads and fewer attacks. The bait was being investigated as a way to reduce encounters with dangerous prey.",
+    "s": "Austral Ecology · Toad-aversion sausage trial",
+    "u": "https://onlinelibrary.wiley.com/doi/10.1111/aec.12595",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Possums",
+      "Bandicoots",
+      "Numbats",
+      "Quolls"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://onlinelibrary.wiley.com/doi/10.1111/aec.12595",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary2018 abstract describes toad-sausage training in northern quolls and reduced interaction/attack behavior in captive tests. Field results establish bait uptake and aversion, not proof of universal population rescue. No preparation or dosing instructions.",
+      "sourceReviewer": "Codex primary researcher; exact institutional source read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Read all wording, choices and evidence; retained study/species scope, replaced weak foils and confirmed requested revisions. Full-release review remains pending.",
+      "duplicateNotes": "Compared full questions,answers and explanations with published/staged corpus; reviewed relevant nearest neighbors and additional entity searches. Novel fact required, not merely new wording.",
+      "contentSha256": "a80b4af3b106ee693f5e13fa21c67db90419d29ad114833091ccda592fcffb61"
+    }
+  }
+]

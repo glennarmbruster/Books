@@ -1,0 +1,402 @@
+[
+  {
+    "q": "Australian researchers made inexpensive microscope lenses by hanging droplets and baking them. What were the droplets made from?",
+    "a": "Silicone",
+    "d": "Gravity shaped the hanging droplets into curved lenses before heat cured them. The small lenses could be attached to a phone camera.",
+    "s": "Optica · Bake Your Own Droplet Lens",
+    "u": "https://www.eurekalert.org/news-releases/905092",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Gelatin",
+      "Molten glass",
+      "Wax",
+      "Silicone"
+    ],
+    "evidence": "Publisher’s 2014 research release describes transparent PDMS silicone droplets shaped by hanging and cured in an oven; phone attachments were demonstrated."
+  },
+  {
+    "q": "One Deciwatt lamp can run without batteries or sunshine after a user lifts a weighted bag. What powers it afterward?",
+    "a": "Slow descent of the bag",
+    "d": "GravityLight turns the descending weight’s stored energy into electricity through gears and a generator. The user supplies that energy by lifting the bag again.",
+    "s": "QEPrize · GravityLight, by Caroline Angus",
+    "u": "https://qeprize.org/news/nowlight",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "The bag absorbing moisture",
+      "The bag swinging like a pendulum",
+      "Slow descent of the bag",
+      "The bag cooling toward room temperature"
+    ],
+    "evidence": "First-person product-development account explains lifting the bag, slow descent, gear train, and generator; power is stored human work, not free energy."
+  },
+  {
+    "q": "A key strengthening step for Gorilla Glass involves giving it a hot bath in what?",
+    "a": "Molten salt",
+    "d": "Larger potassium ions replace smaller sodium ions near the surface. The resulting compression makes the glass more resistant to damage.",
+    "s": "Corning · Gorilla Glass FAQ",
+    "u": "https://www.corning.com/gorillaglass/worldwide/en/faqs.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Molten salt",
+      "Liquid nitrogen",
+      "Mineral oil",
+      "Molten wax"
+    ],
+    "evidence": "Manufacturer describes molten-salt ion exchange: larger potassium ions replace sodium ions and create surface compression."
+  },
+  {
+    "q": "Compared with an identical glow stick at room temperature, what usually happens when an activated glow stick is warmed?",
+    "a": "Brighter glow, shorter life",
+    "d": "Warming speeds the light-producing chemical reaction. The brighter display uses up its reacting ingredients sooner.",
+    "s": "American Chemical Society · Slow the Glow",
+    "u": "https://www.acs.org/education/activities/slow-the-glow.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Dimmer glow, shorter life",
+      "Dimmer glow, longer life",
+      "Brighter glow, longer life",
+      "Brighter glow, shorter life"
+    ],
+    "evidence": "ACS comparison explains temperature-dependent reaction rates, stronger brightness when warm, and shorter duration."
+  },
+  {
+    "q": "A NIST-led team studied an alloy in 2009 that could be cooled by removing what, after first allowing it to shed heat?",
+    "a": "Magnetic field",
+    "d": "Certain materials warm when magnetized. After that heat is shed, removing the field cools them, allowing the cycle to move heat.",
+    "s": "NIST · Magnetically Attractive Refrigeration",
+    "u": "https://www.nist.gov/news-events/news/2009/01/refrigeration-problems-magnetically-attractive-solution",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Ultraviolet beam",
+      "Magnetic field",
+      "Electric current through a resistor",
+      "Mechanical tension"
+    ],
+    "evidence": "NIST describes magnetocaloric heating in a magnetic field, heat rejection, and cooling when that field is removed."
+  },
+  {
+    "q": "In a 2016 MIT experiment, which grocery-store plant became part of a system that detected explosive-related chemicals and sent email alerts?",
+    "a": "Spinach",
+    "d": "Engineered nanotube sensors in the leaves changed their fluorescent signal when certain chemicals arrived from the roots. A camera and computer read the signal and sent the alert.",
+    "s": "MIT · Nanobionic Spinach",
+    "u": "https://news.mit.edu/2016/nanobionic-spinach-plants-detect-explosives-1031",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Basil",
+      "Spinach",
+      "Celery",
+      "Lettuce"
+    ],
+    "evidence": "Institutional report directly identifies spinach, embedded nanotube nitroaromatic sensors, groundwater uptake, infrared camera, and computer-generated email. This is engineering, not natural plant email."
+  },
+  {
+    "q": "In NYU’s low-friction tests, a submerged sprinkler sucked water inward instead of spraying it out. How did its rotation compare with an ordinary sprinkler?",
+    "a": "Opposite direction, more slowly",
+    "d": "The reverse sprinkler did turn, but not as a mirror-image version of the familiar lawn device. The experiment addressed a long-debated fluid-mechanics puzzle associated with Richard Feynman.",
+    "s": "NYU Courant · Feynman Sprinkler",
+    "u": "https://math.nyu.edu/dynamic/news/99/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Same direction, more slowly",
+      "Opposite direction, more slowly",
+      "No steady rotation",
+      "Opposite direction, at the same speed"
+    ],
+    "evidence": "Courant’s research report explicitly states opposite rotation at much slower speed in submerged suction experiments; date not tested because institutional page metadata is inconsistent with earlier reporting."
+  },
+  {
+    "q": "The “flint” in a typical disposable cigarette lighter is usually made from what?",
+    "a": "Metal alloy",
+    "d": "Ferrocerium contains reactive metals that shed tiny burning particles when scraped. The familiar name hides a material very different from geological flint.",
+    "s": "Royal Society of Chemistry · Strike a Light",
+    "u": "https://edu.rsc.org/opinion/strike-a-light/2021061.article",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Metal alloy",
+      "Quartz rock",
+      "Compressed charcoal",
+      "Carbon ceramic"
+    ],
+    "evidence": "RSC chemist explains that lighter flints are ferrocerium alloy, not silicon-dioxide stone, and scraped particles ignite."
+  },
+  {
+    "q": "Which building material can be supplied inside a flexible fabric roll, then hardened into a durable lining by adding water?",
+    "a": "Concrete",
+    "d": "Concrete Canvas carries a dry cementitious mixture inside fabric. Hydration turns the flexible sheet into a rigid protective layer.",
+    "s": "Concrete Canvas · Technology Interview",
+    "u": "https://www.concretecanvas.com/fr/simon-lester-featured-in-irrigation-leader-magazine/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Asphalt",
+      "Fiberglass",
+      "Cork",
+      "Concrete"
+    ],
+    "evidence": "Manufacturer’s technical manager describes flexible concrete-filled fabric that hardens on hydration and is used for canal and ditch linings."
+  },
+  {
+    "q": "ETH Zurich researchers describe a friction-welding method for joining pieces of which familiar construction material?",
+    "a": "Wood",
+    "d": "Rapid rubbing heats and softens material where the timber surfaces touch, forming a fused bond. The method joins pieces without conventional glue.",
+    "s": "ETH Zurich · Wood Friction Welding",
+    "u": "https://ifb.ethz.ch/woodmaterialsscience/news-and-events/news/wood-highlights-news/project-overview.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Concrete",
+      "Plaster",
+      "Wood",
+      "Brick"
+    ],
+    "evidence": "ETH research description states that linear friction heats timber interfaces, leading to melting and fusion across a stable bondline."
+  },
+  {
+    "q": "A stretched rubber band supporting a small weight is gently warmed in a physics demonstration. What unexpected movement can occur?",
+    "a": "The weight rises",
+    "d": "Under these conditions the stretched rubber contracts as it warms. Its long polymer chains favor a less extended arrangement.",
+    "s": "University of Illinois · Entropy and Rubber Bands",
+    "u": "https://chemdemoroom.web.illinois.edu/demos/entropy-and-rubber-bands.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "The weight rises",
+      "The band twists without shortening",
+      "The weight stays at exactly the same height",
+      "The weight drops as the band lengthens"
+    ],
+    "evidence": "University demonstration explicitly warms a weighted stretched band and measures its contraction; material explanation also supported by University of Washington MatEd module."
+  },
+  {
+    "q": "At Coperni’s 2022 runway show, Fabrican created Bella Hadid’s white dress directly on her body using what?",
+    "a": "Spray guns",
+    "d": "A suspension of fibers formed a nonwoven fabric as it was applied. The team then shaped details such as the neckline and slit.",
+    "s": "Fabrican · Coperni Demonstration",
+    "u": "https://www.fabricanltd.com/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Knitting needles",
+      "Heated rollers",
+      "Spray guns",
+      "A handheld 3D-printing pen"
+    ],
+    "evidence": "Technology developer’s account identifies its team spraying the dress onto the model, followed by cutting the straps and slit."
+  },
+  {
+    "q": "A specially manufactured form of which material can float above an arrangement of permanent magnets at room temperature?",
+    "a": "Graphite",
+    "d": "Pyrolytic graphite strongly repels magnetic fields. With a suitable magnet arrangement, that weak-looking sheet can levitate without being a superconductor.",
+    "s": "Oberlin Physics · Diamagnetic Levitation",
+    "u": "https://www2.oberlin.edu/physics/catalog/demonstrations/em/diamagneticlevitation.html",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Mica",
+      "Silicon",
+      "Graphite",
+      "Aluminum"
+    ],
+    "evidence": "University demonstration uses thin pyrolytic graphite over nine neodymium cube magnets and explicitly attributes levitation to diamagnetism."
+  },
+  {
+    "q": "On Pilkington Activ self-cleaning glass, how is rain encouraged to behave so it can carry dirt away?",
+    "a": "Spread into a thin sheet",
+    "d": "The coating attracts water instead of encouraging separate droplets. It also uses ultraviolet light to help break down organic dirt.",
+    "s": "Pilkington · Glass That Cleans Itself",
+    "u": "https://www.pilkington.com/en-us/united-states-and-canada/knowledge-hub-selection/architectural-and-technical-glass-knowledge-hub/learn-about-glass-technology/glass-in-buildings/glass-that-cleans-itself",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Spread into a thin sheet",
+      "Soak into a porous surface",
+      "Bead up and roll off",
+      "Dissolve a sacrificial surface coating"
+    ],
+    "evidence": "Manufacturer explains hydrophilic sheeting and UV-driven photocatalytic breakdown of organic deposits; water-repellent beading is a different surface strategy."
+  },
+  {
+    "q": "In a 2026 study of squeaks, researchers played the Star Wars theme by sliding specially shaped pieces of what along glass?",
+    "a": "Rubber",
+    "d": "Changing the blocks’ height changed the squeak frequency. Their geometry organized fast slip pulses into repeatable musical pitches.",
+    "s": "Harvard SEAS · Physics of a Squeak",
+    "u": "https://seas.harvard.edu/news/physics-squeak",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Chalk",
+      "Steel",
+      "Rubber",
+      "Cork"
+    ],
+    "evidence": "Institutional report states differently sized rubber blocks were designed to play the Star Wars theme by hand; block height controls frequency."
+  },
+  {
+    "q": "In 2019 experiments, crystals of neopentylglycol showed large thermal changes that suggested a solid refrigerant. What triggered those changes?",
+    "a": "Pressure",
+    "d": "Squeezing and releasing the crystals changes how their molecules are arranged. That reconfiguration produces heat changes that can be used in a cooling cycle.",
+    "s": "Nature Communications · Barocaloric Plastic Crystals",
+    "u": "https://www.nature.com/articles/s41467-019-09730-9",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Humidity",
+      "Visible light",
+      "Pressure",
+      "Electric current"
+    ],
+    "evidence": "Primary abstract and introduction identify large pressure-driven thermal changes near room temperature due to molecular reconfiguration."
+  },
+  {
+    "q": "MIT’s 2022 paper-thin loudspeaker could still work when attached to a rigid wall. What moved to make its sound?",
+    "a": "Tiny domes in the film",
+    "d": "Each small piezoelectric dome could vibrate independently, while spacer layers kept the mounting surface from pinning it down. The entire wall did not need to act as a speaker cone.",
+    "s": "MIT · Paper-Thin Loudspeaker",
+    "u": "https://news.mit.edu/2022/low-power-thin-loudspeaker-0426",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Loose magnetic beads inside the film",
+      "A taut wire stretched across the film",
+      "The entire supporting wall",
+      "Tiny domes in the film"
+    ],
+    "evidence": "Institutional report explains individually vibrating piezoelectric domes and protective spacer layers; distinguishes this design from whole-film vibration."
+  },
+  {
+    "q": "How did NC State’s twisted, pasta-shaped soft robots get around obstacles in maze experiments without a computer directing them?",
+    "a": "Bending and snapping of their bodies",
+    "d": "Heat from the surface made them roll. Contact with obstacles stored and released mechanical energy, turning or flipping the ribbons into a new direction.",
+    "s": "NC State · Twisted Soft Robots",
+    "u": "https://news.ncsu.edu/2022/05/twisted-soft-robots/",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Following an external magnetic field",
+      "Following chemical trails on the floor",
+      "Bending and snapping of their bodies",
+      "Reading light patterns projected overhead"
+    ],
+    "evidence": "Primary institutional report describes thermal rolling, physical rotation or snapping on contact, and maze navigation without software or human control."
+  },
+  {
+    "q": "One design for airliner passenger oxygen masks makes oxygen on demand. What produces it?",
+    "a": "Decomposition of a solid compound",
+    "d": "A controlled reaction releases oxygen from a chlorate-based material and also produces heat. This system generates its oxygen rather than storing all of it as compressed gas.",
+    "s": "Swedish Accident Investigation Board · MD-81 Systems Report",
+    "u": "https://www.faa.gov/sites/faa.gov/files/2022-11/SAS751_Acc_Report_English.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Boiling a small supply of liquid oxygen",
+      "Decomposition of a solid compound",
+      "Filtering nitrogen from cabin air",
+      "Splitting water with onboard electricity"
+    ],
+    "evidence": "Official investigation section1.6.5.5 describes modular passenger oxygen produced by sodium-chlorate decomposition with heat; question explicitly limited to chemical-generator aircraft."
+  },
+  {
+    "q": "Why did metrologists polish almost perfectly round spheres of exceptionally pure silicon?",
+    "a": "To relate mass to a count of atoms",
+    "d": "The sphere’s volume and the spacing of atoms in its crystal lattice reveal how many atoms it contains. This connects an everyday-sized mass with atomic measurements.",
+    "s": "PTB · Experiments for the New SI",
+    "u": "https://oar.ptb.de/files/download/681c519c53218de84f08e72b",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "To compare distant atomic clocks",
+      "To relate mass to a count of atoms",
+      "To calibrate deep-ocean pressure gauges",
+      "To measure an exact volume of water"
+    ],
+    "evidence": "National metrology institute describes calculating silicon atom counts from sphere volume and crystal unit-cell volume, then relating that count to mass."
+  },
+  {
+    "q": "High-speed imaging in Harvard’s 2026 squeaky-rubber study sometimes caught what surprising event at the sliding contact?",
+    "a": "Tiny electrical discharges",
+    "d": "Friction could produce brief electrostatic sparks. In some trials these discharges triggered the rapid detachment pulses associated with the squeak.",
+    "s": "Harvard SEAS · Physics of a Squeak",
+    "u": "https://seas.harvard.edu/news/physics-squeak",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Droplets of melted rubber",
+      "Cracks spreading through the glass",
+      "Tiny electrical discharges",
+      "Tiny chips peeling off the glass"
+    ],
+    "evidence": "Same institutional report explicitly records triboelectric discharges sometimes triggering opening slip pulses. Distinct from the musical-block demonstration."
+  },
+  {
+    "q": "UCL’s 2024 “nanopasta” research pulled flour-based threads through a needle using what?",
+    "a": "Electric charge",
+    "d": "Electrospinning produced strands far narrower than an ordinary pasta strand. The work explored flour as a starting material for industrial and biomedical nanofibers.",
+    "s": "UCL · Thinnest Spaghetti",
+    "u": "https://www.ucl.ac.uk/news/2024/nov/chemists-create-worlds-thinnest-spaghetti",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Ultrasonic vibration",
+      "Centrifugal force",
+      "High-pressure steam",
+      "Electric charge"
+    ],
+    "evidence": "Institutional report identifies electrospinning, electric charge pulling flour/formic-acid mixture through needle, and nonculinary nanofiber research."
+  },
+  {
+    "q": "In Rice’s 2016 “Teslaphoresis” demonstration, what assembled itself into wires that connected and powered two LEDs?",
+    "a": "Carbon nanotubes",
+    "d": "A specially designed Tesla coil aligned the nanotubes into conducting chains. Its field also supplied energy to the resulting circuit.",
+    "s": "Rice University · Teslaphoresis",
+    "u": "https://news.rice.edu/news/2016/nanotubes-assemble-rice-introduces-teslaphoresis",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "hard",
+    "choices": [
+      "Iron filings",
+      "Salt crystals",
+      "Carbon nanotubes",
+      "Copper droplets"
+    ],
+    "evidence": "Research team’s institutional report explicitly describes nanotube wires self-assembling into a two-LED circuit and harvesting power from the Tesla-coil field."
+  },
+  {
+    "q": "Some experimental self-healing asphalt contains which kitchen-scrubber material so an electromagnetic field can heat it and close small cracks?",
+    "a": "Steel wool",
+    "d": "Conductive fibers heat the bitumen inside the asphalt. The softened binder can flow into small cracks, and the treatment can be repeated.",
+    "s": "TU Delft · Self-Healing Asphalt Research",
+    "u": "https://research.tudelft.nl/files/45373235/Self_healing_Technology_for_Asphalt_Pavements_Revised.pdf",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "medium",
+    "choices": [
+      "Cellulose sponge",
+      "Steel wool",
+      "Coconut fiber",
+      "Nylon mesh"
+    ],
+    "evidence": "Authors’ research review explains steel-wool fibers, induction currents, and capillary flow/diffusion of heated bitumen closing microcracks; not bacterial concrete or capsule repair."
+  },
+  {
+    "q": "Where did NIST collect the material used in its carefully measured household-dust reference sample?",
+    "a": "Vacuum cleaner bags",
+    "d": "Dust from homes in several states became a laboratory comparison material. Its measured contaminants help researchers check whether their chemical analyses are accurate.",
+    "s": "NIST · House Dust Reference Material",
+    "u": "https://www.nist.gov/news-events/news/2026/02/space-final-frontier-standards",
+    "cat": "Small Wonders of Matter and Machines",
+    "level": "easy",
+    "choices": [
+      "Municipal drinking-water filters",
+      "Commercial laundry rinse tanks",
+      "Air-conditioner refrigerant lines",
+      "Vacuum cleaner bags"
+    ],
+    "evidence": "NIST states the house dust was collected from vacuum cleaner bags across six US states; source also explains contaminant analysis. Question tests sample origin, not orbital transport."
+  }
+]

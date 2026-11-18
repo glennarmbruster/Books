@@ -1,0 +1,2402 @@
+[
+  {
+    "q": "At certain spots on Mercury, what can the Sun appear to do shortly after rising?",
+    "a": "Set, then rise again",
+    "d": "Near Mercury’s closest approach to the Sun, its changing orbital speed briefly reverses the Sun’s apparent motion.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/mercury/facts/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Set, then rise again",
+      "Move steadily without changing direction",
+      "Stay fixed at one height above the horizon",
+      "Follow a small closed loop without setting"
+    ],
+    "evidence": "NASA describes a brief sunrise, sunset and second sunrise at some surface locations."
+  },
+  {
+    "q": "Mercury’s enormous cliff systems are wrinkles caused by what happening to the planet?",
+    "a": "Its interior cooling and contracting",
+    "d": "As Mercury contracted, its crust broke and one block was pushed over another.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/mercury/facts/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Its interior cooling and contracting",
+      "Crustal plates spreading apart",
+      "Large impacts stretching the crust",
+      "Surface heating making the crust expand"
+    ],
+    "evidence": "NASA attributes large cliffs to cooling and contraction of Mercury’s interior."
+  },
+  {
+    "q": "Mars may acquire a ring someday by breaking apart which existing object?",
+    "a": "Its moon Phobos",
+    "d": "Phobos is gradually spiraling inward. It may eventually break into debris or crash into Mars.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/mars/facts/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Its moon Phobos",
+      "The dwarf planet Ceres",
+      "Its moon Deimos",
+      "The asteroid Vesta"
+    ],
+    "evidence": "NASA says inward-moving Phobos may crash or break up, creating a dusty ring."
+  },
+  {
+    "q": "Why can Earth’s upper atmosphere give off a faint glow on a dark night, even away from an aurora?",
+    "a": "Atoms release energy acquired from sunlight",
+    "d": "Excitation and ionization during the day can lead to light emission as particles relax or recombine. This is airglow.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/earth/10-things-to-know-about-the-ionosphere/",
+    "cat": "Lights at the Edge",
+    "level": "medium",
+    "choices": [
+      "Atoms release energy acquired from sunlight",
+      "Moonlight reflects from invisible high clouds",
+      "Interplanetary dust reflects sunlight toward Earth",
+      "Ground-level lightning illuminates the atmosphere continuously"
+    ],
+    "evidence": "NASA explains airglow from excited particles relaxing and ionized particles recombining."
+  },
+  {
+    "q": "In the leading explanation, what carves the branching “spider” scars near Mars’s south pole?",
+    "a": "Gas escaping beneath seasonal ice",
+    "d": "Sunlight warms soil under carbon-dioxide ice. Pressure builds, then escaping gas carries sediment away; laboratory experiments support this explanation.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/planets/mars/nasa-scientists-re-create-mars-spiders-in-a-lab-for-first-time/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Gas escaping beneath seasonal ice",
+      "Rivers draining into sinkholes",
+      "Lava draining through underground tubes",
+      "Repeated cracking from meteor impacts"
+    ],
+    "evidence": "NASA describes the Kieffer model and laboratory replication; formation is a supported explanation, not fully settled."
+  },
+  {
+    "q": "Perseverance found an odd acoustic rule on Mars: which sounds travel slightly faster?",
+    "a": "Higher-pitched sounds",
+    "d": "The thin, carbon-dioxide-rich atmosphere gives higher and lower frequencies different sound speeds.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/what-sounds-captured-by-nasas-perseverance-rover-reveal-about-mars/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Higher-pitched sounds",
+      "Lower-pitched sounds",
+      "Louder sounds, regardless of pitch",
+      "Quieter sounds, regardless of pitch"
+    ],
+    "evidence": "NASA reports about 250 m/s for high frequencies versus 240 m/s for low frequencies."
+  },
+  {
+    "q": "Venus’s cloud droplets contain large amounts of which corrosive acid?",
+    "a": "Sulfuric acid",
+    "d": "The cloud layer contains sulfuric acid. Falling acid droplets evaporate in the fierce heat below before reaching the surface.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/centers-and-facilities/glenn/cook-crush-choke-testing-components-before-launching-to-venus/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Sulfuric acid",
+      "Hydrochloric acid",
+      "Nitric acid",
+      "Acetic acid"
+    ],
+    "evidence": "NASA Glenn describes sulfuric-acid cloud droplets and acid rain that evaporates before reaching the ground."
+  },
+  {
+    "q": "Methane helps give Uranus its blue-green appearance by absorbing which visible color particularly well?",
+    "a": "Red",
+    "d": "Removing red light from reflected sunlight leaves more blue and green visible to an observer.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/uranus/facts/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Red",
+      "Blue",
+      "Green",
+      "Violet"
+    ],
+    "evidence": "NASA identifies methane absorption of red light as the source of the blue-green color."
+  },
+  {
+    "q": "On frigid Pluto, mountains can be built from a bedrock made chiefly of what?",
+    "a": "Water ice",
+    "d": "At Pluto’s temperatures, water ice is strong enough to support tall mountains; methane and nitrogen ices are weaker.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/image-article/icy-mountains-of-pluto/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Water ice",
+      "Frozen carbon dioxide",
+      "Frozen methane",
+      "Frozen nitrogen"
+    ],
+    "evidence": "NASA identifies water ice as the probable mountain-building bedrock."
+  },
+  {
+    "q": "What keeps slowly renewing the polygonal surface of Pluto’s Sputnik Planitia?",
+    "a": "Churning solid ice",
+    "d": "Warmer nitrogen ice rises and colder ice sinks, like a slow lava lamp.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Churning solid ice",
+      "Fine dust continually settling",
+      "Gas-driven surface erosion",
+      "Lava flooding"
+    ],
+    "evidence": "NASA describes convection: warm ice rises centrally and cold ice sinks at margins."
+  },
+  {
+    "q": "Pluto has dunes whose grains are thought to consist mainly of what?",
+    "a": "Methane ice",
+    "d": "Winds appear to move sand-sized frozen methane grains across parts of Sputnik Planitia.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Methane ice",
+      "Quartz sand",
+      "Volcanic glass",
+      "Iron dust"
+    ],
+    "evidence": "NASA identifies methane-ice grains as the suspected dune material."
+  },
+  {
+    "q": "The great ice accumulation at Pluto’s heart-shaped region helped cause what planet-wide change?",
+    "a": "A reorientation of Pluto",
+    "d": "The changing mass distribution, together with Charon’s tidal pull, helped move Sputnik Planitia toward its present orientation.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "A reorientation of Pluto",
+      "A more elongated orbit",
+      "A faster rotation rate",
+      "A tilt in Charon’s orbital plane"
+    ],
+    "evidence": "NASA links ice loading and tidal forces to Pluto’s reorientation."
+  },
+  {
+    "q": "Jupiter’s proposed “mushballs” are slushy hailstones mixing water with which substance?",
+    "a": "Ammonia",
+    "d": "Ammonia lowers the freezing point. Falling mushballs may transport both ingredients deep into Jupiter’s atmosphere.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/missions/juno/shallow-lightning-and-mushballs-reveal-ammonia-to-nasas-juno-scientists/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Ammonia",
+      "Sulfuric acid",
+      "Sodium chloride",
+      "Liquid methane"
+    ],
+    "evidence": "Juno scientists propose ammonia-water hail as a mechanism carrying ammonia into deep atmospheric layers."
+  },
+  {
+    "q": "Icy grains can follow magnetic field lines down into Saturn’s atmosphere. Where do those grains come from?",
+    "a": "Particles from its orbiting rings",
+    "d": "Electrically charged icy grains can follow magnetic field lines down into Saturn’s upper atmosphere.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/solar-system/planets/saturn/rings-of-saturn/nasa-research-reveals-saturn-is-losing-its-rings-at-worst-case-scenario-rate/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Particles from its orbiting rings",
+      "Water clouds inside its atmosphere",
+      "Vapor escaping its rocky core",
+      "Condensation from the solar wind"
+    ],
+    "evidence": "NASA describes charged ring grains falling along magnetic fields under gravity."
+  },
+  {
+    "q": "Io has tremendous tides even without oceans. What actually rises and falls?",
+    "a": "The solid ground",
+    "d": "Jupiter’s gravity repeatedly deforms Io. This flexing supplies heat for its intense volcanic activity.",
+    "s": "NASA",
+    "u": "https://spaceplace.nasa.gov/io-tides/en/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "The solid ground",
+      "A liquid-metal sea",
+      "A global nitrogen glacier",
+      "Its thin atmosphere alone"
+    ],
+    "evidence": "NASA describes large solid-ground tides on Io."
+  },
+  {
+    "q": "What force is proposed to levitate dust above undisturbed lunar ground?",
+    "a": "Static electricity",
+    "d": "Solar radiation and charged particles can electrically charge the lunar surface and help loft fine dust.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/moon/solar-wind/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Static electricity",
+      "Magnetic attraction to iron alone",
+      "Pressure from sunlight alone",
+      "Outward force from the Moon’s rotation"
+    ],
+    "evidence": "NASA says solar-wind charging can levitate dust."
+  },
+  {
+    "q": "Many deep moonquakes are triggered by a gravitational pull from which body?",
+    "a": "Earth",
+    "d": "Earth’s gravity stretches the Moon’s interior, producing tidal stresses far beneath the surface.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/moon/moonquakes/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "easy",
+    "choices": [
+      "Earth",
+      "The Sun",
+      "Venus",
+      "Jupiter"
+    ],
+    "evidence": "NASA identifies deep moonquakes as tidal events caused by Earth’s gravity."
+  },
+  {
+    "q": "For someone standing near the center of the Moon’s Earth-facing side, how does Earth move across the sky?",
+    "a": "It stays in roughly the same place",
+    "d": "Earth shifts slightly because of libration, but does not make an ordinary daily rise-and-set journey.",
+    "s": "NASA",
+    "u": "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question58.html",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "It stays in roughly the same place",
+      "It rises and sets every 24 hours",
+      "It circles the horizon once each day",
+      "It crosses the sky twice per lunar day"
+    ],
+    "evidence": "NASA explains the nearly fixed Earth position and small libration-driven movements."
+  },
+  {
+    "q": "Around solar maximum, what change occurs in the Sun’s large-scale magnetic field?",
+    "a": "Its polarities reverse",
+    "d": "The magnetic field flips roughly once per sunspot cycle; this does not mean the Sun itself turns upside down.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Its polarities reverse",
+      "Its axis locks at right angles to its spin",
+      "Its strength stays at a permanent maximum",
+      "Its polarity becomes fixed for the next century"
+    ],
+    "evidence": "NASA describes polarity exchange around the peak of the sunspot cycle."
+  },
+  {
+    "q": "Voyager 2 saw geysers on Neptune’s moon Triton that eject which gas?",
+    "a": "Nitrogen",
+    "d": "Triton’s frigid surface can produce active plumes of nitrogen gas.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/resource/ocean-worlds-triton/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Nitrogen",
+      "Oxygen",
+      "Helium",
+      "Sulfur dioxide"
+    ],
+    "evidence": "NASA identifies active nitrogen-gas geysers on Triton."
+  },
+  {
+    "q": "When astronomers compared Jupiter’s northern and southern X-ray auroras, what surprised them?",
+    "a": "The two poles pulsed independently",
+    "d": "One pole showed regular pulses while the other varied erratically, rather than the two matching each other.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/image-article/dynamic-duo-jupiters-independently-pulsating-x-ray-auroras/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "The two poles pulsed independently",
+      "The two poles alternated perfectly",
+      "Both remained completely constant",
+      "Both brightened only during eclipses"
+    ],
+    "evidence": "NASA reports regular southern and erratic northern X-ray pulses."
+  },
+  {
+    "q": "What disturbed a University of Arizona swimming pool in 1985 despite originating about 1,240 miles away?",
+    "a": "An earthquake in Mexico",
+    "d": "Seismic waves can set distant enclosed water bodies oscillating. The resulting slosh is called a seiche.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "An earthquake in Mexico",
+      "A hurricane’s distant pressure waves",
+      "A volcanic eruption’s sonic boom",
+      "A meteor explosion’s shock wave"
+    ],
+    "evidence": "USGS records the Tucson pool losing water from the Michoacan earthquake."
+  },
+  {
+    "q": "After an earthquake, a “sand volcano” is evidence of what happening underground?",
+    "a": "Water-saturated soil losing its strength",
+    "d": "Shaking can make soil behave like a liquid; sand and water then escape at the surface.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/media/images/liquefaction",
+    "cat": "What Lies Underfoot",
+    "level": "medium",
+    "choices": [
+      "Water-saturated soil losing its strength",
+      "Magma reaching a buried sand layer",
+      "Methane catching fire beneath dunes",
+      "Limestone dissolving into a new cave"
+    ],
+    "evidence": "USGS describes liquefaction producing surface sand boils."
+  },
+  {
+    "q": "Some extremely shallow moonquakes follow sunrise because rocks do what?",
+    "a": "Expand as they warm",
+    "d": "The transition from cold lunar night to hot day creates thermal stresses in near-surface rock.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/moon/moonquakes/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Expand as they warm",
+      "Contract as they warm",
+      "Slide on newly melted frost",
+      "Settle as internal pores collapse"
+    ],
+    "evidence": "NASA lists thermal expansion and contraction as causes of extremely shallow moonquakes."
+  },
+  {
+    "q": "Why can cooling plasma falling back toward the Sun trace graceful loops?",
+    "a": "Magnetic fields guide the charged plasma",
+    "d": "The material is cooling plasma, not water. Its charged particles follow the Sun’s magnetic structures.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/missions/iris/iris-spots-plasma-rain-on-suns-surface/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Magnetic fields guide the charged plasma",
+      "The Sun’s gravity pulls along curved tracks",
+      "The Sun’s rotation alone bends every fall",
+      "Pressure from the solar wind forces closed loops"
+    ],
+    "evidence": "NASA explains coronal plasma follows paths guided by magnetic forces."
+  },
+  {
+    "q": "NASA calculated that Japan’s 2011 earthquake could slightly shorten which familiar interval?",
+    "a": "A day",
+    "d": "Redistributing Earth’s mass can alter its rotation. The calculated change was only a few millionths of a second.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis/",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "A day",
+      "A year",
+      "A lunar month",
+      "A season"
+    ],
+    "evidence": "NASA modeled mass redistribution causing a small rotational speedup; this was a theoretical estimate."
+  },
+  {
+    "q": "In a laboratory water channel, one sand dune pushed another farther away without touching it. What carried the interaction?",
+    "a": "Turbulent swirls in the flowing water",
+    "d": "The upstream dune’s wake altered the downstream dune’s movement. Researchers directly demonstrated this for dunes under water.",
+    "s": "University of Cambridge research study",
+    "u": "https://www.repository.cam.ac.uk/items/b4e33f09-0bcd-4dec-9f4f-6c5ecdc73da1",
+    "cat": "Nature’s Shapes",
+    "level": "medium",
+    "choices": [
+      "Turbulent swirls in the flowing water",
+      "Sand transferred from the first dune to the second",
+      "A pressure wave traveling through the channel floor",
+      "A trapped pocket of compressed air"
+    ],
+    "evidence": "The primary study demonstrates wake-mediated repulsion of aqueous dunes without mass exchange; wind-driven extension is only conjectured."
+  },
+  {
+    "q": "Yellowstone can blast out a crater without fresh magma erupting. What supplies the sudden expansion?",
+    "a": "Water flashing into steam",
+    "d": "A pressure drop can let hot underground water boil explosively, throwing out mud and rock.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/observatories/yvo/news/hydrothermal-explosions-yellowstone-national-park",
+    "cat": "When Volcanoes Get Weird",
+    "level": "medium",
+    "choices": [
+      "Water flashing into steam",
+      "Methane igniting underground",
+      "Carbon dioxide escaping a deep magma pocket",
+      "Sulfur-rich gases burning below the surface"
+    ],
+    "evidence": "USGS describes pressure-triggered steam explosions without a direct magma association."
+  },
+  {
+    "q": "Blue flames beside some Hawaiian lava flows can come from which gas produced by buried vegetation?",
+    "a": "Methane",
+    "d": "The lava heats covered organic matter, releasing gas that can burn at the flow’s margins.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-what-fans-flames-observed-volcanic-vents",
+    "cat": "When Volcanoes Get Weird",
+    "level": "medium",
+    "choices": [
+      "Methane",
+      "Hydrogen",
+      "Carbon monoxide",
+      "Hydrogen sulfide"
+    ],
+    "evidence": "USGS distinguishes methane flames around flows from other vent-flame mechanisms."
+  },
+  {
+    "q": "What can make a sand dune produce a deep humming sound?",
+    "a": "An avalanche of sand grains",
+    "d": "At Great Sand Dunes, tumbling dry sand can create an audible vibration as it moves down a dune face.",
+    "s": "National Park Service",
+    "u": "https://home.nps.gov/media/video/view.htm?id=899DBB31-8EC7-42BA-A719-A880E58D823B",
+    "cat": "Sounds That Shouldn’t Exist",
+    "level": "easy",
+    "choices": [
+      "An avalanche of sand grains",
+      "Wind resonating in buried cavities",
+      "Small slips in the bedrock",
+      "Air escaping through water-filled pores"
+    ],
+    "evidence": "NPS records singing sand during sand avalanches; no claim of a universal detailed acoustic mechanism."
+  },
+  {
+    "q": "During a severe cold snap, a sudden “frost quake” boom can come from what?",
+    "a": "Freezing groundwater cracking the ground",
+    "d": "Water expands as it freezes, stressing shallow soil and rock enough to fracture them.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/programs/earthquake-hazards/earthquake-booms-seneca-guns-and-other-sounds",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Freezing groundwater cracking the ground",
+      "Snowpack collapsing over buried hollows",
+      "Falling pressure releasing trapped cave air",
+      "Thermal contraction cracking exposed rock faces"
+    ],
+    "evidence": "USGS attributes frost quakes to shallow water freezing and fracturing surrounding material."
+  },
+  {
+    "q": "What hidden material can push flat Arctic ground upward into a hill called a pingo?",
+    "a": "A growing core of ice",
+    "d": "Water freezing below the surface expands upward. Thawing can later cause the hill to collapse.",
+    "s": "National Park Service",
+    "u": "https://home.nps.gov/im/arcn/permafrost.htm",
+    "cat": "What Lies Underfoot",
+    "level": "medium",
+    "choices": [
+      "A growing core of ice",
+      "A rising plug of lava",
+      "A mound of buried sand",
+      "A lens of compressed peat"
+    ],
+    "evidence": "NPS explains ice-core hill growth and collapse in Alaska."
+  },
+  {
+    "q": "Oklo’s ancient natural reactors ran on deposits rich in which element?",
+    "a": "Uranium",
+    "d": "The ore sustained nuclear fission chain reactions billions of years before people built reactors.",
+    "s": "International Atomic Energy Agency",
+    "u": "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull17-5/17505004447.pdf",
+    "cat": "What Lies Underfoot",
+    "level": "medium",
+    "choices": [
+      "Uranium",
+      "Thorium",
+      "Radium",
+      "Lithium"
+    ],
+    "evidence": "IAEA’s symposium report describes ancient chain reactions within the uranium ore body."
+  },
+  {
+    "q": "Clouds shaped like rows of breaking ocean waves can reveal what happening between air layers?",
+    "a": "Wind moving at different speeds",
+    "d": "Strong shear can roll the boundary into Kelvin–Helmholtz billows, briefly made visible by clouds.",
+    "s": "National Weather Service",
+    "u": "https://www.weather.gov/media/aly/stormbuster/Spring17SB.pdf",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Wind moving at different speeds",
+      "Pressure waves from distant thunderstorms",
+      "Evaporation beneath a descending rain shaft",
+      "Repeated condensation over equally spaced peaks"
+    ],
+    "evidence": "NWS describes sharply differing layer velocities producing curling wave clouds."
+  },
+  {
+    "q": "In a strong double-rainbow display, where does the sky often look noticeably darker?",
+    "a": "Between the two bows",
+    "d": "The paths of light through raindrops leave a darker band between the primary and secondary rainbows.",
+    "s": "National Weather Service",
+    "u": "https://www.weather.gov/media/owlie/CloudsOutMyWindow.pdf",
+    "cat": "Weather",
+    "level": "easy",
+    "choices": [
+      "Between the two bows",
+      "Below the inner bow",
+      "Above the outer bow",
+      "Only inside the red bands"
+    ],
+    "evidence": "NOAA’s cloud guide states that sky between rainbows is darker than either side."
+  },
+  {
+    "q": "Under the Fujiwhara effect, two nearby hurricanes may do what?",
+    "a": "Orbit a shared center",
+    "d": "Their circulations interact; they may eventually merge or move apart.",
+    "s": "National Weather Service",
+    "u": "https://www.weather.gov/owlie/weird-weather",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Orbit a shared center",
+      "Move in parallel without curving",
+      "Travel directly apart without curving",
+      "Each repeatedly reverse its direction of spin"
+    ],
+    "evidence": "NWS describes nearby same-spin hurricanes circling a common center."
+  },
+  {
+    "q": "A dying thunderstorm can produce a sudden hot gust after dark. What heats the descending air in a heat burst?",
+    "a": "Compression as it sinks",
+    "d": "Once its rain has evaporated, descending air warms without further evaporative cooling to offset that warming.",
+    "s": "National Weather Service",
+    "u": "https://www.weather.gov/owlie/weird-weather",
+    "cat": "Weather",
+    "level": "hard",
+    "choices": [
+      "Compression as it sinks",
+      "Friction between hailstones",
+      "Lightning heating the entire storm",
+      "Condensation of new cloud droplets"
+    ],
+    "evidence": "NWS explains compressional warming after evaporation exhausts the moisture."
+  },
+  {
+    "q": "Which surface process helps sculpt high-altitude snow into sharp penitente pinnacles?",
+    "a": "Turning directly into vapor",
+    "d": "Uneven loss of ice enlarges hollows and leaves tall blades in dry mountain environments.",
+    "s": "National Weather Service",
+    "u": "https://www.weather.gov/owlie/weird-weather",
+    "cat": "Weather",
+    "level": "hard",
+    "choices": [
+      "Turning directly into vapor",
+      "Building up layers of freezing rain",
+      "Eroding beneath windblown sand",
+      "Being carved by flowing meltwater"
+    ],
+    "evidence": "NWS describes sublimation carving penitente terrain."
+  },
+  {
+    "q": "A thunderstorm can send a huge wall of dust across a desert. What carries the dust outward?",
+    "a": "Outflowing winds from the storm",
+    "d": "This advancing dust wall is called a haboob; its source is storm winds sweeping loose material from dry ground.",
+    "s": "National Weather Service",
+    "u": "https://preview.weather.gov/safety/wind-dust-storm",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Outflowing winds from the storm",
+      "The warm inflow feeding its base",
+      "An afternoon sea breeze",
+      "A downslope mountain breeze"
+    ],
+    "evidence": "NWS directly links haboobs to thunderstorm outflow winds."
+  },
+  {
+    "q": "On a still, bitterly cold night, streetlights seem to send tall pillars into the sky. What acts as tiny mirrors?",
+    "a": "Flat ice crystals",
+    "d": "Reflections from suspended crystals create apparent columns above or below the light source.",
+    "s": "National Weather Service",
+    "u": "https://www.weather.gov/cle/event_notable_2014",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Flat ice crystals",
+      "Rounded rain droplets",
+      "Airborne grains of sand",
+      "Smooth soot particles"
+    ],
+    "evidence": "NWS explains light pillars by reflection from plate-shaped ice crystals."
+  },
+  {
+    "q": "Fermi detected beams containing antimatter produced by which familiar Earth phenomenon?",
+    "a": "Thunderstorms",
+    "d": "Powerful electric fields can generate gamma rays that produce electron–positron pairs. Positrons are the antimatter counterparts of electrons.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/universe/nasas-fermi-catches-thunderstorms-hurling-antimatter-into-space/",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Thunderstorms",
+      "Volcanic eruptions",
+      "Ocean tides",
+      "Earthquakes"
+    ],
+    "evidence": "Fermi observations gave direct evidence of thunderstorm-produced antimatter particle beams."
+  },
+  {
+    "q": "Just after sunset, what makes the dark blue band that rises along the opposite horizon?",
+    "a": "Earth’s own shadow",
+    "d": "Above it, scattered reddish sunlight can form the pink Belt of Venus.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/videos/whats-up-april-2021/",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Earth’s own shadow",
+      "A distant bank of dark clouds",
+      "A thickening layer of airborne dust",
+      "The reflection of a dark ocean surface"
+    ],
+    "evidence": "NASA identifies the rising dark band opposite sunset as Earth’s shadow."
+  },
+  {
+    "q": "What evidence showed that Old Faithful once stopped erupting long enough for a very different landscape to develop on its mound?",
+    "a": "Rooted remnants of trees",
+    "d": "Mineralized wood and rooted stumps indicate trees grew during a prolonged quiet interval, coinciding with medieval droughts.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/publications/yellowstones-old-faithful-geyser-shut-down-a-severe-13th-century-drought",
+    "cat": "When Volcanoes Get Weird",
+    "level": "medium",
+    "choices": [
+      "Rooted remnants of trees",
+      "Layers of windblown volcanic ash",
+      "Rounded stones deposited by a river",
+      "A bed of marine shell fossils"
+    ],
+    "evidence": "USGS radiocarbon study uses rooted trees and wood preserved on the geyser mound as evidence of quiescence."
+  },
+  {
+    "q": "Stacks of bubbles frozen into some Arctic lakes contain which flammable gas?",
+    "a": "Methane",
+    "d": "Gas released from lake-bottom sediments rises and becomes trapped as the surface ice thickens.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/earth/earth-observatory/satellites-size-up-bubbles-of-methane-in-lake-ice-146940/",
+    "cat": "Earth and Sky",
+    "level": "easy",
+    "choices": [
+      "Methane",
+      "Hydrogen sulfide",
+      "Propane",
+      "Acetylene"
+    ],
+    "evidence": "NASA describes methane bubble columns trapped in Arctic lake ice."
+  },
+  {
+    "q": "A giant disk of river ice spun in Westbrook, Maine. What helped round off its edges?",
+    "a": "Rubbing the riverbank as it rotated",
+    "d": "A back eddy collected and turned the ice; contact with the bank helped shape the circular floe.",
+    "s": "Brown University",
+    "u": "https://www.brown.edu/news/2019-01-23/icedisk",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Rubbing the riverbank as it rotated",
+      "Melting only on its sun-facing edge",
+      "Freezing outward from a single spring",
+      "Repeated cracking along radial stress lines"
+    ],
+    "evidence": "Brown oceanographer Chris Horvat attributed its symmetry to rotation and rubbing against the river’s side."
+  },
+  {
+    "q": "A blanket of snow on sea ice can have what counterintuitive winter effect?",
+    "a": "Slow the growth of the ice underneath",
+    "d": "Snow insulates the ice from the colder air, reducing heat loss and slowing further freezing.",
+    "s": "National Snow and Ice Data Center",
+    "u": "https://nsidc.org/learn/parts-cryosphere/sea-ice/science-sea-ice?trk=public_post_comment-text",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Slow the growth of the ice underneath",
+      "Speed up the growth of the ice underneath",
+      "Prevent all further growth underneath",
+      "Have no effect on ice growth underneath"
+    ],
+    "evidence": "NSIDC says snow insulates sea ice and slows winter growth."
+  },
+  {
+    "q": "On Antarctica’s Mount Erebus, what builds tall ice towers above volcanic vents?",
+    "a": "Escaping moisture freezing in the cold air",
+    "d": "Volcanic warmth carves ice caves and sends moist gases outward, where the moisture freezes into towers.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/descent-into-a-frozen-underworld/",
+    "cat": "When Volcanoes Get Weird",
+    "level": "medium",
+    "choices": [
+      "Escaping moisture freezing in the cold air",
+      "Snow blown around solid lava spires",
+      "Glacier ice squeezed upward through cracks",
+      "Freezing rain coating old rock chimneys"
+    ],
+    "evidence": "JPL’s researcher describes warm volcanic gases escaping ice caves and freezing into towers."
+  },
+  {
+    "q": "How can an open-water patch in polar sea ice act as an “ice factory”?",
+    "a": "Wind keeps removing newly formed ice",
+    "d": "Freshly exposed water freezes again, and the cycle repeats in some coastal polynyas.",
+    "s": "NOAA",
+    "u": "https://www.pmel.noaa.gov/arctic-zone/bering-sea-indicators/essays_mcnutt.html",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Wind keeps removing newly formed ice",
+      "Warm currents repeatedly melt and refreeze it",
+      "Tides lift submerged ice onto the surface",
+      "Blowing snow repeatedly seeds new surface ice"
+    ],
+    "evidence": "NOAA describes wind-driven polynyas as conveyor belts for ice formation."
+  },
+  {
+    "q": "What can pile floating sea ice onto a shoreline in an ice shove?",
+    "a": "Wind and water currents",
+    "d": "An ice shove drives floating ice against shore-fast ice or the coast, where it piles up.",
+    "s": "National Weather Service",
+    "u": "https://www.weather.gov/media/pub/pdf/sdata/022006.pdf",
+    "cat": "Earth and Sky",
+    "level": "easy",
+    "choices": [
+      "Wind and water currents",
+      "Tectonic uplift beneath the beach",
+      "Gas pressure below the seabed",
+      "A sudden drop in atmospheric pressure"
+    ],
+    "evidence": "NWS documents an Alaska ice push driven by winds and currents; no tsunami required."
+  },
+  {
+    "q": "What broke icebergs from Antarctica’s Sulzberger Ice Shelf in 2011, after traveling roughly 8,000 miles?",
+    "a": "A tsunami from Japan",
+    "d": "The arriving swell was small but flexed the Sulzberger Ice Shelf enough to release large chunks.",
+    "s": "NASA",
+    "u": "https://svs.gsfc.nasa.gov/10816",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "A tsunami from Japan",
+      "A Pacific typhoon’s storm surge",
+      "An atmospheric shock from a meteor",
+      "A pressure wave from a volcanic eruption"
+    ],
+    "evidence": "NASA researchers directly observed tsunami-triggered iceberg calving far from Japan."
+  },
+  {
+    "q": "Models of the fiercely hot dayside of KELT-9b suggest that the heat tears apart which molecules?",
+    "a": "Hydrogen",
+    "d": "Dayside heat tears the molecules apart; cooler nightside conditions let the atoms recombine.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/centers-and-facilities/jpl/for-hottest-planet-a-major-meltdown-study-shows/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Hydrogen",
+      "Nitrogen",
+      "Carbon monoxide",
+      "Water vapor"
+    ],
+    "evidence": "NASA describes evidence for daytime dissociation and nighttime recombination of hydrogen."
+  },
+  {
+    "q": "What real feature makes Kepler-16 b resemble the fictional Tatooine?",
+    "a": "It circles two stars",
+    "d": "Unlike Tatooine, it is a cold gas giant, but two stellar disks would appear in its sky.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "easy",
+    "choices": [
+      "It circles two stars",
+      "It has twin desert continents",
+      "It has two enormous ring systems",
+      "It circles a pair of black holes"
+    ],
+    "evidence": "NASA identifies Kepler-16 b as a circumbinary gas giant."
+  },
+  {
+    "q": "What pulls the planet WASP-121 b into a shape compared with an American football?",
+    "a": "Tidal gravity from its star",
+    "d": "The giant planet orbits so close to its host that unequal gravitational forces distort it.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/missions/hubble/hubble-uncovers-heavy-metal-exoplanet-shaped-like-football/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Tidal gravity from its star",
+      "An impact with a passing comet",
+      "Its magnetic field squeezing the poles",
+      "Uneven cooling after formation"
+    ],
+    "evidence": "NASA attributes the elongated planet shape to gravitational tidal forces."
+  },
+  {
+    "q": "Atmospheric models describe the blue exoplanet HD 189733b as having sideways rain made of what?",
+    "a": "Glass",
+    "d": "Silicate particles are thought to form in the blistering atmosphere and be swept by fierce winds. Its blue appearance does not imply an Earthlike ocean.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/resource/blue-and-bizarre/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Glass",
+      "Liquid ammonia",
+      "Sulfuric acid",
+      "Carbon-dioxide ice"
+    ],
+    "evidence": "NASA describes glass rain; explanation retains atmospheric-model qualification."
+  },
+  {
+    "q": "What drives HD 80606 b’s fierce heating episodes as it travels around its star?",
+    "a": "A very elongated orbit",
+    "d": "It swings briefly close to its star, receiving an enormous surge of energy before heading outward again.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/universe/exoplanets/spitzer-watches-wild-weather-on-a-star-skimming-planet/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "A very elongated orbit",
+      "Repeated collisions with a ring system",
+      "Eclipses by a large neighboring planet",
+      "A steady outward spiral"
+    ],
+    "evidence": "NASA ties rapid measured heating to the planet’s close approach on its eccentric orbit."
+  },
+  {
+    "q": "The first clearly identified planets beyond our solar system orbited what surprising kind of host?",
+    "a": "A dead star’s pulsar remnant",
+    "d": "They circle the dense, rapidly rotating core left after a massive star exploded.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "A dead star’s pulsar remnant",
+      "A newly forming Sunlike star",
+      "A pair of red giant stars",
+      "A supermassive black hole"
+    ],
+    "evidence": "NASA identifies pulsar planets as the earliest clearly identified extrasolar planetary bodies."
+  },
+  {
+    "q": "How could astronomers predict seeing the Refsdal supernova again without the star exploding twice?",
+    "a": "Gravity sent its light along different paths",
+    "d": "A foreground galaxy cluster acted as a lens. Different travel times delayed some images of the same explosion.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/missions/hubble/hubble-captures-first-ever-predicted-exploding-star/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Gravity sent its light along different paths",
+      "Dust reflected a delayed light echo",
+      "An orbiting dust cloud uncovered it again",
+      "Shock waves reheated the same debris"
+    ],
+    "evidence": "NASA describes model-predicted reappearance caused by gravitationally lensed time delays."
+  },
+  {
+    "q": "As some white dwarfs cool, what happens deep inside them?",
+    "a": "Their cores crystallize",
+    "d": "Gaia observations revealed a group of stellar remnants undergoing solidification, releasing heat and slowing their cooling.",
+    "s": "European Space Agency",
+    "u": "https://www.esa.int/articles/about-us/directorates/science/gaia/gaia-reveals-how-sun-like-stars-turn-solid-after-their-demise",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Their cores crystallize",
+      "Their cores remain liquid but cease circulating",
+      "Their cores restart hydrogen fusion",
+      "Their cores become a noncrystalline solid"
+    ],
+    "evidence": "ESA reports observational evidence of white-dwarf crystallization."
+  },
+  {
+    "q": "A giant flare from a magnetar thousands of light-years away measurably disturbed which part of Earth?",
+    "a": "The upper atmosphere",
+    "d": "The 2004 burst altered the ionosphere, showing that a distant stellar eruption can have a detectable effect here.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/universe/nasa-missions-unmask-magnetar-eruptions-in-nearby-galaxies/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "The upper atmosphere",
+      "The liquid outer core",
+      "Deep ocean currents",
+      "The continental crust"
+    ],
+    "evidence": "NASA states the 2004 giant flare measurably changed Earth’s upper atmosphere."
+  },
+  {
+    "q": "What unexpected feature did ultraviolet observations reveal trailing behind the star Mira?",
+    "a": "A long cometlike tail",
+    "d": "The fast-moving red giant sheds material into a trail extending far behind it.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/speeding-bullet-star-leaves-enormous-streak-across-sky/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "A long cometlike tail",
+      "A spherical planetary-nebula shell",
+      "A tight spiral of dust rings",
+      "Two narrow opposing jets"
+    ],
+    "evidence": "GALEX directly imaged the long ultraviolet tail behind Mira."
+  },
+  {
+    "q": "Researchers proposed which source of oxygen to help explain rust on the Moon?",
+    "a": "Earth’s atmosphere",
+    "d": "Oxygen can travel along Earth’s extended magnetic tail. Researchers proposed this as one contributor to lunar hematite formation.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/the-moon-is-rusting-and-researchers-want-to-know-why/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Earth’s atmosphere",
+      "Oxygen-rich gas from Venus",
+      "Gas captured from passing comets",
+      "Oxygen from Mars’s escaping atmosphere"
+    ],
+    "evidence": "JPL reports the Earth-oxygen hypothesis, not a fully settled explanation of all lunar hematite."
+  },
+  {
+    "q": "Laboratory experiments suggest Titan’s hydrocarbon lakes can fizz when which dissolved gas comes out of solution?",
+    "a": "Nitrogen",
+    "d": "Changing conditions can release bubbles, one proposed explanation for transient bright patches seen by Cassini radar.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/experiments-show-titan-lakes-may-fizz-with-nitrogen/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Nitrogen",
+      "Carbon dioxide",
+      "Oxygen",
+      "Hydrogen sulfide"
+    ],
+    "evidence": "NASA laboratory simulations produced nitrogen release; magic-island connection remains a hypothesis."
+  },
+  {
+    "q": "Lucy found that the tiny asteroid moon Selam is built in what unexpected way?",
+    "a": "Two lobes touching each other",
+    "d": "It is a contact binary orbiting the asteroid Dinkinesh, initially hidden by the viewing angle.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/solar-system/asteroids/dinkinesh/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Two lobes touching each other",
+      "A single hollow shell",
+      "A thin flat disk",
+      "A loose circular ring of fragments"
+    ],
+    "evidence": "NASA describes Selam as two smaller touching objects."
+  },
+  {
+    "q": "On Iapetus, why can an initially dark patch become even darker while a cold bright region grows brighter?",
+    "a": "Ice vapor moves from warm ground to cold ground",
+    "d": "Dark terrain absorbs more sunlight, loses ice by sublimation, and exposes more dark material. Ice collects in colder places.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/saturn/moons/iapetus/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Ice vapor moves from warm ground to cold ground",
+      "Impacts steadily transport dust from one hemisphere to the other",
+      "Dark grains migrate under electrostatic forces",
+      "Seasonal frost repeatedly washes dark grains into cracks"
+    ],
+    "evidence": "NASA explains thermal segregation feedback; distinct from prior equatorial-ridge card."
+  },
+  {
+    "q": "In the YORP effect, what supplies the tiny torques that can eventually spin an asteroid apart?",
+    "a": "Sunlight and reradiated heat",
+    "d": "Radiation gives an irregular body tiny torques. Over long periods, the spin can become fast enough to loosen material.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/how-the-sun-affects-asteroids-in-our-neighborhood/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Sunlight and reradiated heat",
+      "Passing planets stretching the asteroid",
+      "Repeated impacts by small meteoroids",
+      "Gas venting from buried ice"
+    ],
+    "evidence": "NASA explains YORP-driven spin changes and possible breakup."
+  },
+  {
+    "q": "An object initially tracked as a near-Earth asteroid, 2020 SO, turned out to be what?",
+    "a": "An old rocket booster",
+    "d": "Orbit analysis and telescope observations identified a Centaur upper stage from a 1960s mission.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/new-data-confirm-2020-so-to-be-the-upper-centaur-rocket-booster-from-the-1960s/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "easy",
+    "choices": [
+      "An old rocket booster",
+      "A defunct communications satellite",
+      "A discarded heat shield",
+      "A detached lunar-lander descent stage"
+    ],
+    "evidence": "JPL confirmed 2020 SO as a 1960s Centaur booster."
+  },
+  {
+    "q": "What unexpected maneuver did a large dark storm on Neptune make as Hubble tracked it toward the equator?",
+    "a": "It reversed course",
+    "d": "The vortex turned back north instead of continuing toward the equatorial region where such storms tend to break up.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/asset/hubble/neptune-dark-spot/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "It reversed course",
+      "It stayed fixed at one latitude",
+      "It faded away before reaching the equator",
+      "It split into two separate vortices"
+    ],
+    "evidence": "Hubble observed the large vortex make a U-turn."
+  },
+  {
+    "q": "What trapped evidence lets scientists compare some meteorites with atmospheric measurements made by Mars probes?",
+    "a": "Gas pockets",
+    "d": "Small gas pockets preserve a chemical fingerprint that can be compared with spacecraft measurements at Mars.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/solar-system/meteors-meteorites/facts/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Gas pockets",
+      "Magnetic mineral grains",
+      "Water-rich crystals",
+      "Microscopic zircon grains"
+    ],
+    "evidence": "NASA identifies trapped atmospheric gas as evidence of Martian origin."
+  },
+  {
+    "q": "What kind of silhouette did Phobos make as Perseverance watched it cross the Sun?",
+    "a": "A small, irregular dark patch",
+    "d": "The small, potato-shaped moon blocked part of the solar disk, producing the “googly eye” image NASA described.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/nasas-perseverance-captures-googly-eye-during-solar-eclipse/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "A small, irregular dark patch",
+      "A neat disk fully covering the Sun",
+      "A thin straight band across the Sun",
+      "A bright ring with a clear center"
+    ],
+    "evidence": "Perseverance images show the potato-shaped silhouette obscuring only part of the Sun."
+  },
+  {
+    "q": "DART’s collision gave Dimorphos an extra push beyond the spacecraft’s own impact. What provided it?",
+    "a": "Recoil from expelled rocky debris",
+    "d": "Material thrown into space carried momentum away, adding a reaction force on the asteroid.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/early-results-from-nasas-dart-mission/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Recoil from expelled rocky debris",
+      "Spin energy transferred from the asteroid’s rotation",
+      "Increased solar pressure on the new crater",
+      "A change in the asteroid’s tidal distortion"
+    ],
+    "evidence": "NASA identifies ejecta recoil as a major extra momentum contribution."
+  },
+  {
+    "q": "SOHO observations showed Earth’s extremely thin outer hydrogen cloud reaches beyond what familiar landmark?",
+    "a": "The Moon’s orbit",
+    "d": "This geocorona is extraordinarily sparse; its reach does not mean the Moon sits in breathable air.",
+    "s": "European Space Agency",
+    "u": "https://www.esa.int/articles/about-us/directorates/science/earth-s-atmosphere-stretches-out-to-the-moon-and-beyond",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "The Moon’s orbit",
+      "Mars’s orbit",
+      "The asteroid belt",
+      "Neptune’s orbit"
+    ],
+    "evidence": "ESA reports hydrogen geocorona extending beyond lunar distance."
+  },
+  {
+    "q": "Which journey of solar energy can take thousands of years, despite light traveling so quickly?",
+    "a": "From the Sun’s core to its surface",
+    "d": "Radiant energy undergoes repeated interactions with dense matter inside the Sun. That random walk is far slower than traveling through open space.",
+    "s": "NASA",
+    "u": "https://spdf.gsfc.nasa.gov/pub/documents/old/websites/sunearthday.nasa.gov/2007/locations/ttt_sunlight.php",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "From the Sun’s core to its surface",
+      "From the Sun’s surface to Earth",
+      "From the Sun’s surface to Neptune",
+      "From the Moon’s surface to Earth"
+    ],
+    "evidence": "NASA explains many scattering steps and model-dependent transport times; phrased as energy transport, not one unchanged photon."
+  },
+  {
+    "q": "Which violent cosmic event can forge gold and platinum in neutron-rich debris?",
+    "a": "Two neutron stars merging",
+    "d": "Rapid neutron capture can build heavy elements in the expelled material. Such mergers are one source, not necessarily the only source.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/image-article/neutron-stars-create-gold-platinum-their-wake/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Two neutron stars merging",
+      "A white dwarf undergoing a nova",
+      "A red giant shedding its outer layers",
+      "A young star releasing a powerful flare"
+    ],
+    "evidence": "NASA identifies gold and platinum production in merger debris."
+  },
+  {
+    "q": "The enormous cometlike tail of planet GJ 436 b is made mainly from what escaping substance?",
+    "a": "Hydrogen",
+    "d": "Radiation from its nearby star drives gas out of the planet’s atmosphere into an extended cloud.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/asset/hubble/artists-concept-of-extasolar-planet-gj-436b/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Hydrogen",
+      "Iron vapor",
+      "Silicate dust",
+      "Carbon-dioxide snow"
+    ],
+    "evidence": "Hubble observations establish a huge escaping hydrogen cloud around GJ 436 b."
+  },
+  {
+    "q": "During a solar eclipse, what lets the last bright “beads” of sunlight peek around the Moon?",
+    "a": "Valleys along the Moon’s edge",
+    "d": "Baily’s beads are glimpses through low points in the lunar landscape as the rest of the solar disk is covered.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/feature/solar-eclipse-guide/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Valleys along the Moon’s edge",
+      "Solar prominences beyond the Moon’s edge",
+      "Reflections from lunar mountaintops",
+      "Refraction through Earth’s atmosphere"
+    ],
+    "evidence": "NASA explains Baily’s beads as sunlight through lunar valleys."
+  },
+  {
+    "q": "Why can Antarctica’s Don Juan Pond remain liquid in temperatures that would freeze ordinary seawater?",
+    "a": "Its exceptionally concentrated salts",
+    "d": "The calcium-chloride-rich brine has an exceptionally low freezing point.",
+    "s": "NASA",
+    "u": "https://astrobiology.nasa.gov/news/salty-antarctic-pond-could-provide-clues-about-mars-water/",
+    "cat": "Lakes That Do the Unexpected",
+    "level": "medium",
+    "choices": [
+      "Its exceptionally concentrated salts",
+      "Heat rising from a volcanic vent",
+      "Pressure from an overlying glacier",
+      "Constant mixing by strong currents"
+    ],
+    "evidence": "NASA attributes the pond’s resistance to freezing to its extreme salinity."
+  },
+  {
+    "q": "Gypsum dissolves in water. What geographic trap allows huge gypsum dunes to persist at White Sands?",
+    "a": "A basin with no outlet to the sea",
+    "d": "Runoff carries dissolved gypsum into the closed basin. Evaporation leaves crystals that can become sand.",
+    "s": "National Park Service",
+    "u": "https://www.nps.gov/im/chdn/dune-dynamics.htm",
+    "cat": "Earth’s Odd Corners",
+    "level": "medium",
+    "choices": [
+      "A basin with no outlet to the sea",
+      "A coastline replenished by ocean tides",
+      "A valley sealed beneath a glacier",
+      "A river continually bringing beach sand inland"
+    ],
+    "evidence": "NPS describes closed basins, evaporation and gypsum-sand formation."
+  },
+  {
+    "q": "What starts a meteotsunami, a tsunami-like wave whose origin is above the ocean?",
+    "a": "A moving atmospheric-pressure disturbance",
+    "d": "Fast-moving weather can transfer energy into the sea, producing a traveling wave that grows near some coasts.",
+    "s": "NOAA",
+    "u": "https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-weather",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "A moving atmospheric-pressure disturbance",
+      "An undersea fault suddenly moving",
+      "A submarine landslide accelerating downslope",
+      "A volcanic island flank collapsing"
+    ],
+    "evidence": "NOAA identifies atmospheric pressure disturbances from moving weather systems."
+  },
+  {
+    "q": "Why can a stone on frozen Lake Baikal end up perched on a slender ice pedestal?",
+    "a": "Its shadow protects the ice beneath it",
+    "d": "Sunlit ice around the stone can pass directly into vapor. The shaded ice disappears more slowly, leaving a support.",
+    "s": "CNRS",
+    "u": "https://www.inp.cnrs.fr/sites/institut_inp/files/download-file/2021%20Une%20ann%C3%A9e%20d%27actualit%C3%A9s%20%C3%A0%20l%27Institut%20de%20physique%20du%20CNRS.pdf",
+    "cat": "Nature’s Shapes",
+    "level": "medium",
+    "choices": [
+      "Its shadow protects the ice beneath it",
+      "Its weight squeezes water upward around it",
+      "Its warmth repeatedly melts and refreezes water",
+      "Its minerals make nearby water freeze first"
+    ],
+    "evidence": "CNRS researchers reproduced Zen stones and identified shadow-limited sublimation."
+  },
+  {
+    "q": "In the sailor’s “dead water” phenomenon, what can steal a ship’s propulsion energy even in calm-looking water?",
+    "a": "Waves along submerged water-layer boundaries",
+    "d": "A fresh surface layer over denser saltwater can support internal waves. The ship spends energy making them and slows.",
+    "s": "Woods Hole Oceanographic Institution",
+    "u": "https://www.whoi.edu/oceanus/feature/the-waves-within-the-waves/",
+    "cat": "Sea Stories and Shipwrecks",
+    "level": "medium",
+    "choices": [
+      "Waves along submerged water-layer boundaries",
+      "An opposing tide confined to the surface",
+      "A strong countercurrent flowing along the seabed",
+      "Large surface waves reflected from a distant coast"
+    ],
+    "evidence": "WHOI explains Nansen’s dead water through internal-wave generation at a density boundary."
+  },
+  {
+    "q": "How does the ocean’s SOFAR channel carry some sounds across enormous distances?",
+    "a": "Water layers repeatedly bend sound back into the channel",
+    "d": "Changes in sound speed with depth guide low-frequency sound, reducing how rapidly its energy spreads away.",
+    "s": "NOAA",
+    "u": "https://oceanservice.noaa.gov/facts/sofar.html",
+    "cat": "Odd Sounds and Echoes",
+    "level": "medium",
+    "choices": [
+      "Water layers repeatedly bend sound back into the channel",
+      "Seafloor minerals amplify each passing vibration",
+      "Bubbles pass the sound from one to the next",
+      "Ocean currents carry sound faster than it can spread"
+    ],
+    "evidence": "NOAA explains up-and-down bending of low-frequency sound through ocean layers."
+  },
+  {
+    "q": "The enormous gypsum beams in Mexico’s Naica caves originally grew in what environment?",
+    "a": "Warm mineral-rich water filling the caves",
+    "d": "Extremely slow growth in a narrowly stable temperature range allowed immense crystals to develop before the chambers were drained.",
+    "s": "PNAS research study",
+    "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179101/",
+    "cat": "The Underground Curiosity Shop",
+    "level": "medium",
+    "choices": [
+      "Warm mineral-rich water filling the caves",
+      "Cold groundwater dripping through empty chambers",
+      "Steam depositing minerals in dry chambers",
+      "Salty pools repeatedly freezing and thawing"
+    ],
+    "evidence": "The primary study measures ultraslow gypsum growth in Naica waters and constrains growth to roughly 54–58°C."
+  },
+  {
+    "q": "How can polar observers sometimes see a distorted image of the Sun while it is still well below the horizon?",
+    "a": "Atmospheric layers guide its light around the horizon",
+    "d": "The Novaya Zemlya effect involves long-range optical ducting in the lower atmosphere, creating an apparent early return of the Sun.",
+    "s": "Applied Optics research study",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/20332884/",
+    "cat": "Eyes Playing Tricks",
+    "level": "hard",
+    "choices": [
+      "Atmospheric layers guide its light around the horizon",
+      "Sea ice reflects the Sun upward from below the horizon",
+      "High clouds project a mirror image of the Sun",
+      "Charged particles reproduce the Sun’s outline in an aurora"
+    ],
+    "evidence": "The primary Applied Optics paper describes and models the polar optical-ducting phenomenon."
+  },
+  {
+    "q": "Satellite researchers studying clouds created by the 2021 Sparks Lake wildfire counted thousands of brief flashes. What were they?",
+    "a": "Lightning",
+    "d": "The fire’s heat can drive a thunderstorm. Some lightning may strike the ground, though many flashes remain within clouds.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/blogs/science-news/2025/07/24/nasa-noaa-satellites-show-smoke-complicates-wildfire-lightning-risk/",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Lightning",
+      "Embers thrown from the fire",
+      "Sunlight glinting from ice",
+      "Small meteors burning up"
+    ],
+    "evidence": "NASA describes fire-generated storm clouds and distinguishes cloud-to-cloud from ground strikes."
+  },
+  {
+    "q": "Most of the visible mist in a waterspout’s funnel comes from what?",
+    "a": "Atmospheric moisture condensing",
+    "d": "A waterspout is not simply a hose sucking seawater to the clouds. Its funnel mist is mainly fresh water condensed from the air.",
+    "s": "NOAA",
+    "u": "https://www.aoml.noaa.gov/outreach/bubbles/C_waterspouts.pdf",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Atmospheric moisture condensing",
+      "Sea spray drawn directly up from the surface",
+      "Ice crystals falling out of the parent cloud",
+      "Rainwater caught and recycled by the vortex"
+    ],
+    "evidence": "NOAA’s waterspout fact sheet says the mist is mainly fresh water from atmospheric condensation."
+  },
+  {
+    "q": "Before scientists made STEVE an acronym, observers borrowed the name for a mysterious sky glow from which film?",
+    "a": "Over the Hedge",
+    "d": "In the film, characters give an unfamiliar hedge the reassuring name Steve. Aurora enthusiasts borrowed the joke for the unexplained light.",
+    "s": "Australian Antarctic Program",
+    "u": "https://www.antarctica.gov.au/news/2022/when-barry-met-steve-aurora-watcher-captures-rare-hot-glow-over-antarctica/",
+    "cat": "Lights at the Edge",
+    "level": "hard",
+    "choices": [
+      "Over the Hedge",
+      "Meet the Robinsons",
+      "Monsters, Inc.",
+      "Cloudy with a Chance of Meatballs"
+    ],
+    "evidence": "Australian Antarctic Program explicitly traces the informal name to the film; the scientific backronym came later."
+  },
+  {
+    "q": "Where does a blue jet begin before shooting into the stratosphere?",
+    "a": "At the top of a thundercloud",
+    "d": "These brief electrical discharges travel upward from storm clouds, reaching into thinner air above.",
+    "s": "European Space Agency",
+    "u": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_chemistry_of_lightning",
+    "cat": "Lights at the Edge",
+    "level": "hard",
+    "choices": [
+      "At the top of a thundercloud",
+      "At a tall grounded structure",
+      "Within a layer of high cirrus",
+      "Near the upper edge of an aurora"
+    ],
+    "evidence": "ESA explicitly describes blue jets propagating upward from cloud tops into the stratosphere."
+  },
+  {
+    "q": "Why do some Antarctic ice fields act as natural collecting trays for meteorites?",
+    "a": "Flowing ice concentrates them where the ice disappears",
+    "d": "Ice carries buried meteorites toward barriers. Ablation removes ice at the surface and leaves the rocks behind.",
+    "s": "Smithsonian National Museum of Natural History",
+    "u": "https://naturalhistory.si.edu/research/mineral-sciences/programs",
+    "cat": "What Lies Underfoot",
+    "level": "medium",
+    "choices": [
+      "Flowing ice concentrates them where the ice disappears",
+      "Meltwater rivers wash them into frozen lake basins",
+      "Strong winds roll them into sheltered depressions",
+      "The ice’s repeated freezing pushes every buried rock upward"
+    ],
+    "evidence": "Smithsonian describes the ice conveyor, mountain barrier and ablation concentrating meteorites."
+  },
+  {
+    "q": "Some earthquake faults contain thin veins of once-molten rock. What supplied the heat?",
+    "a": "Friction during rapid slipping",
+    "d": "Rapid movement can melt a thin fault surface. The melt then solidifies as a rock called pseudotachylyte.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/publications/pseudotachylyte-increases-post-slip-strength-faults",
+    "cat": "What Lies Underfoot",
+    "level": "medium",
+    "choices": [
+      "Friction during rapid slipping",
+      "Radioactive heating of newly exposed minerals",
+      "Hot spring water reacting with quartz",
+      "Oxidation of iron along the crack"
+    ],
+    "evidence": "USGS research identifies solidified frictional melts formed during earthquake slip."
+  },
+  {
+    "q": "A thin slab of itacolumite can do what surprising thing without first being melted?",
+    "a": "Bend without breaking",
+    "d": "Its quartz grains have enough space to rotate slightly while remaining interlocked, giving some specimens unusual flexibility.",
+    "s": "Geological Society research study",
+    "u": "https://pubs.geoscienceworld.org/gsl/books/edited-volume/1586/chapter-abstract/107345979/The-anisotropy-of-itacolumite-flexibility?redirectedFrom=fulltext",
+    "cat": "Stones That Fool the Eye",
+    "level": "medium",
+    "choices": [
+      "Bend without breaking",
+      "Float on fresh water",
+      "Become magnetic in sunlight",
+      "Glow brightly when gently rubbed"
+    ],
+    "evidence": "Primary bending experiments link flexibility to open grain boundaries permitting limited quartz-grain rotation."
+  },
+  {
+    "q": "What drives the Severn Bore, the famous wave that travels upstream through a river?",
+    "a": "The incoming ocean tide",
+    "d": "Under suitable estuary and tidal conditions, the advancing flood tide forms a moving wave front that can reverse the river’s current.",
+    "s": "National Tidal and Sea Level Facility",
+    "u": "https://ntslf.org/tides/about-tides/tidal-river-bores",
+    "cat": "Time and Tide",
+    "level": "medium",
+    "choices": [
+      "The incoming ocean tide",
+      "A periodic reservoir release",
+      "A seasonal surge of snowmelt",
+      "A recurring underwater landslide"
+    ],
+    "evidence": "The UK National Tidal and Sea Level Facility describes the bore as the onset of the flood tide."
+  },
+  {
+    "q": "Where did scientists find naturally occurring high-pressure ice that could survive without freezer temperatures?",
+    "a": "Inside diamonds",
+    "d": "The diamonds held their tiny inclusions under immense pressure. The water crystallized as ice VII during the diamonds’ ascent.",
+    "s": "Science research study",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/29590042/",
+    "cat": "Gemstones with Alter Egos",
+    "level": "medium",
+    "choices": [
+      "Inside diamonds",
+      "Inside volcanic pumice",
+      "Inside salt crystals",
+      "Inside amber"
+    ],
+    "evidence": "The Science study reports ice-VII inclusions retaining pressure inside host diamonds."
+  },
+  {
+    "q": "A glacier can climb a buried hill while still flowing downhill overall. Which slope chiefly determines its flow direction?",
+    "a": "The slope of the ice surface",
+    "d": "A descending ice surface can drive flow over an uphill section of the bed, helping glaciers escape bowl-shaped hollows.",
+    "s": "National Park Service",
+    "u": "https://www.nps.gov/articles/cirques.htm",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "The slope of the ice surface",
+      "The slope of the bedrock directly beneath it",
+      "The slope of the nearest valley wall",
+      "The slope of the exposed terminal moraine"
+    ],
+    "evidence": "NPS explains that glaciers can flow up bed hills if their ice surface still slopes downward."
+  },
+  {
+    "q": "The ocean floor has a magnetic pattern resembling paired zebra stripes. What history does it record?",
+    "a": "Reversals of Earth’s magnetic field",
+    "d": "New seafloor rock records the prevailing magnetic direction as it cools. Spreading carries successive bands away from the ridge.",
+    "s": "USGS",
+    "u": "https://pubs.usgs.gov/gip/dynamic/stripes.html",
+    "cat": "What Lies Underfoot",
+    "level": "medium",
+    "choices": [
+      "Reversals of Earth’s magnetic field",
+      "Seasonal reversals of deep ocean currents",
+      "Regular switches in lava’s iron content",
+      "Repeated changes in the direction of plate motion"
+    ],
+    "evidence": "USGS explains matching seafloor stripes as the record of magnetic reversals and spreading."
+  },
+  {
+    "q": "At parts of the Grand Canyon’s Great Unconformity, rocks touching one another differ in age by more than a billion years. What does the contact mark?",
+    "a": "A vast gap in the preserved rock record",
+    "d": "Erosion and times without deposition can remove or omit enormous stretches of geological history.",
+    "s": "National Park Service",
+    "u": "https://www.nps.gov/articles/000/grcatime-missing-time.htm",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "A vast gap in the preserved rock record",
+      "A fault bringing distant rocks into contact",
+      "A younger intrusion cutting through older bedrock",
+      "A mistaken date caused by later mineral alteration"
+    ],
+    "evidence": "NPS describes a 1.2-billion-year gap at the Great Unconformity."
+  },
+  {
+    "q": "Which dissolved gas powers the cold-water eruptions of Utah’s Crystal Geyser?",
+    "a": "Carbon dioxide",
+    "d": "Expanding carbon dioxide drives the eruptions, rather like an opened fizzy drink. Steam is not the driving force.",
+    "s": "Utah Geological Survey",
+    "u": "https://geology.utah.gov/map-pub/survey-notes/geosights/crystal-geyser/",
+    "cat": "Bubbles That Misbehave",
+    "level": "medium",
+    "choices": [
+      "Carbon dioxide",
+      "Methane",
+      "Nitrogen",
+      "Hydrogen sulfide"
+    ],
+    "evidence": "Utah Geological Survey describes the drilled well and CO2-driven eruption cycle."
+  },
+  {
+    "q": "What surprisingly mild thermal environment has NASA modeled inside shaded parts of a lunar pit?",
+    "a": "Temperatures near a cool room",
+    "d": "A studied pit offers shaded locations around 17°C. Nearby exposed lunar ground undergoes far more extreme day-night temperature swings.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/nasas-lro-finds-lunar-pits-harbor-comfortable-temperatures/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Temperatures near a cool room",
+      "Temperatures near boiling water",
+      "Temperatures near liquid nitrogen",
+      "Temperatures near a household freezer"
+    ],
+    "evidence": "NASA reports approximately 17°C for shaded pit locations using LRO data and modeling; not all pits are asserted identical."
+  },
+  {
+    "q": "Perseverance detected snaps inside Martian dust devils. What caused the brief sounds?",
+    "a": "Electrical sparks",
+    "d": "Rubbing dust grains can build static charge. The rover recorded discharges and their small pressure waves in the thin Martian air.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/nasa-rover-detects-electric-sparks-in-mars-dust-devils-storms/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Electrical sparks",
+      "Bursting pockets of carbon-dioxide ice",
+      "Small meteoroids breaking overhead",
+      "Cracks opening in sun-warmed rocks"
+    ],
+    "evidence": "JPL reports confirmed electrical discharges and associated mini-sonic booms in Mars dust devils."
+  },
+  {
+    "q": "Some eruptions drop small layered balls resembling stone hail. What are accretionary lapilli chiefly built from?",
+    "a": "Volcanic ash",
+    "d": "Moisture helps fine ash stick around a nucleus in the turbulent eruption cloud, building layered pellets.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/publications/accretionary-lapilli-altered-tuffs-associated-coal-beds",
+    "cat": "When Volcanoes Get Weird",
+    "level": "medium",
+    "choices": [
+      "Volcanic ash",
+      "Frozen sulfur dioxide",
+      "Crystallized sea salt",
+      "Solidified metal droplets"
+    ],
+    "evidence": "USGS describes spherical layered aggregates of volcanic ash promoted by moisture and turbulence."
+  },
+  {
+    "q": "Why can melting Greenland ice make sea level fall nearby while raising it far away?",
+    "a": "The shrinking ice sheet pulls less strongly on nearby seawater",
+    "d": "Ice has gravitational attraction. As its mass decreases, some water moves away, creating a regional sea-level fingerprint.",
+    "s": "NASA",
+    "u": "https://sealevel.nasa.gov/resources/78/monthly-changes-in-gravity-affect-sea-level",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "The shrinking ice sheet pulls less strongly on nearby seawater",
+      "Fresh meltwater rapidly evaporates from the local ocean",
+      "The meltwater cools the ocean enough to shrink it everywhere nearby",
+      "The loss of floating ice removes all the water it previously displaced"
+    ],
+    "evidence": "NASA’s GRACE-based visualization explains local sea-level fall from reduced ice-sheet gravitational attraction."
+  },
+  {
+    "q": "What makes the wave-like scallops along the edges of Saturn’s Keeler Gap?",
+    "a": "A small moon’s gravity",
+    "d": "Daphnis orbits inside the gap and disturbs nearby ring particles, raising waves along its edges.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/resource/daphnis-waves/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "A small moon’s gravity",
+      "A stream of incoming meteoroids",
+      "Saturn’s changing magnetic field",
+      "Pressure variations in the solar wind"
+    ],
+    "evidence": "NASA identifies Daphnis’s gravity as the source of the ring-edge waves."
+  },
+  {
+    "q": "Laboratory experiments suggest Europa’s ice may glow at night because of what external energy source?",
+    "a": "Bombardment by energetic particles",
+    "d": "Radiation in Jupiter’s environment excites molecules in the icy surface. Laboratory ice mixtures glow differently depending on their salts.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/solar-system/europa-glows-radiation-does-a-bright-number-on-jupiters-moon/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Bombardment by energetic particles",
+      "Heat radiated by nearby volcanic vents",
+      "Stored sunlight released by ice crystals",
+      "Reflected infrared light from Jupiter"
+    ],
+    "evidence": "NASA reports a laboratory prediction of nightside ice luminescence, not a directly observed glow."
+  },
+  {
+    "q": "Why can the time Venus takes to spin once vary noticeably between measurements?",
+    "a": "Its atmosphere exchanges momentum with the ground",
+    "d": "The massive atmosphere can speed or slow the solid planet slightly. Radar measurements found rotation-period differences of at least 20 minutes.",
+    "s": "UCLA",
+    "u": "https://newsroom.ucla.edu/releases/cracking-the-mysteries-of-venus",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Its atmosphere exchanges momentum with the ground",
+      "Solar tides repeatedly deform its crust",
+      "Its core and mantle exchange angular momentum",
+      "Volcanic resurfacing redistributes its crustal mass"
+    ],
+    "evidence": "UCLA identifies atmospheric angular-momentum exchange as the likely main cause of observed variations."
+  },
+  {
+    "q": "A black-hole jet can appear to move faster than light without breaking relativity. What creates that illusion?",
+    "a": "Near-light-speed motion almost toward us",
+    "d": "The moving material chases its own earlier light, compressing the apparent time between positions. Its actual speed remains below light speed.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/universe/maxi-j1820070-black-hole-outburst-caught-on-video/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Near-light-speed motion almost toward us",
+      "Near-light-speed motion directly away from us",
+      "Near-light-speed motion directly across our view",
+      "Slow orbital motion around an unseen companion"
+    ],
+    "evidence": "NASA explains apparent superluminal motion through viewing geometry and near-light-speed approach."
+  },
+  {
+    "q": "What gives many glacier-fed lakes their milky turquoise color?",
+    "a": "Extremely fine rock particles",
+    "d": "Glaciers grind bedrock into rock flour. The suspended particles interact with light, giving lakes their distinctive blue-green appearance.",
+    "s": "National Park Service",
+    "u": "https://www.nps.gov/glac/learn/nature/waterquality.htm",
+    "cat": "Lakes That Do the Unexpected",
+    "level": "easy",
+    "choices": [
+      "Extremely fine rock particles",
+      "Dissolved copper compounds",
+      "Dense colonies of blue-green algae",
+      "Tiny bubbles trapped in the water"
+    ],
+    "evidence": "NPS attributes the color to glacier-ground rock flour suspended in lake water."
+  },
+  {
+    "q": "Jupiter’s large moons leave “footprints” in which part of the planet’s appearance?",
+    "a": "Its auroras",
+    "d": "Electrical interactions link the moons to Jupiter’s upper atmosphere, producing distinctive glowing signatures.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/resource/auroral-footprints/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Its auroras",
+      "Its equatorial cloud stripes",
+      "Its narrow ring gaps",
+      "Its large storm systems"
+    ],
+    "evidence": "NASA describes electron currents connecting moons and ultraviolet auroral footprints."
+  },
+  {
+    "q": "Which elusive particles from Supernova 1987A reached detectors before the explosion became visible?",
+    "a": "Neutrinos",
+    "d": "These weakly interacting particles escaped the collapsing star before its visible display emerged.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/missions/hubble/shock-wave-sheds-new-light-on-fading-supernova/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Neutrinos",
+      "Protons",
+      "Electrons",
+      "Helium nuclei"
+    ],
+    "evidence": "NASA identifies the neutrino burst as the first signal, preceding bright light."
+  },
+  {
+    "q": "NASA’s SEXTANT experiment demonstrated a cosmic navigation system using steady signals from what?",
+    "a": "Pulsars",
+    "d": "The predictable timing of X-ray pulses from rotating neutron stars can act like distant navigation beacons.",
+    "s": "NASA",
+    "u": "https://heasarc.gsfc.nasa.gov/docs/nicer/technology/spinoffs/pulsar-pnt.html",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Pulsars",
+      "Cepheid variable stars",
+      "Quasars",
+      "Brown dwarfs"
+    ],
+    "evidence": "NASA’s NICER team describes the successful pulsar-based navigation demonstration."
+  },
+  {
+    "q": "What warms the surprisingly mild deep water of Antarctica’s ice-covered Lake Vanda?",
+    "a": "Sunlight penetrating the clear ice and water",
+    "d": "Solar energy reaches deep into the lake. Strong salinity layering helps maintain warm bottom water beneath a much colder surface.",
+    "s": "Applied and Environmental Microbiology study",
+    "u": "https://journals.asm.org/doi/10.1128/AEM.03968-14",
+    "cat": "Lakes That Do the Unexpected",
+    "level": "medium",
+    "choices": [
+      "Sunlight penetrating the clear ice and water",
+      "A magma chamber directly beneath the lake",
+      "Friction from rapidly moving glacier ice",
+      "Warm seawater entering through a hidden tidal channel"
+    ],
+    "evidence": "The primary paper describes solar heating and a temperature rise to nearly 25°C at the bottom; no volcanic heat claim."
+  },
+  {
+    "q": "What physical signal underlies the extremely low “sound” detected around the Perseus cluster’s central black hole?",
+    "a": "Pressure ripples in hot gas",
+    "d": "Pressure ripples can travel through that gas. NASA shifted their frequencies far upward to make an audible version.",
+    "s": "NASA",
+    "u": "https://chandra.si.edu/sound/perseus.html",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Pressure ripples in hot gas",
+      "Gravitational waves from infalling matter",
+      "Oscillations of an intergalactic magnetic field",
+      "Fluctuations in the brightness of X-ray light"
+    ],
+    "evidence": "Chandra describes actual pressure waves in hot cluster gas and pitch-shifted sonification."
+  },
+  {
+    "q": "How can a “blue straggler” in an old star cluster acquire an apparently youthful glow?",
+    "a": "By gaining material from another star",
+    "d": "A merger or transfer of material can make an old star hotter and bluer, masking its history.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/missions/hubble/hubble-sees-an-unexpected-population-of-young-looking-stars/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "By gaining material from another star",
+      "By losing all its outer gas to a stellar wind",
+      "By reflecting blue light from nearby dust",
+      "By changing its direction of rotation"
+    ],
+    "evidence": "NASA describes stellar collisions and mass transfer as explanations for blue stragglers."
+  },
+  {
+    "q": "If you considered only the Sun and Jupiter, their shared center of mass would lie where?",
+    "a": "Just outside the Sun’s surface",
+    "d": "Jupiter is massive enough and far enough away to place the pair’s balance point outside the Sun. Both bodies orbit that point.",
+    "s": "NASA",
+    "u": "https://spaceplace.nasa.gov/barycenter/en/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Just outside the Sun’s surface",
+      "At the center of the Sun",
+      "Halfway between the two bodies",
+      "Just inside Jupiter’s surface"
+    ],
+    "evidence": "NASA states the Sun–Jupiter barycenter is just outside the Sun’s surface."
+  },
+  {
+    "q": "A background star blinked before and after Chariklo passed in front of it. What did those extra dips reveal?",
+    "a": "Rings around Chariklo",
+    "d": "The star’s light was briefly blocked by thin rings on either side of the small body.",
+    "s": "Instituto de Astrofísica de Andalucía",
+    "u": "https://archive.iaa.csic.es/en/news/james-webb-telescope-observes-rings-chariklo-high-precision-occultation-technique",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Rings around Chariklo",
+      "Layers in a thick Chariklo atmosphere",
+      "Small moons following Chariklo",
+      "A diffuse coma of escaping gas"
+    ],
+    "evidence": "IAA-CSIC describes the occultation’s repeated dips as the discovery evidence for rings."
+  },
+  {
+    "q": "What helps stretch the dwarf planet Haumea into a shape resembling a squashed football?",
+    "a": "Its rapid rotation",
+    "d": "Haumea turns unusually fast for a body of its size, strongly distorting its shape.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/dwarf-planets/haumea/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Its rapid rotation",
+      "Strong tides from a nearby giant planet",
+      "A recent collision that stretched it",
+      "Uneven accumulation during its growth"
+    ],
+    "evidence": "NASA explicitly attributes Haumea’s football-like distortion to fast spin."
+  },
+  {
+    "q": "Models of Saturn’s interior include droplets of which element falling through hydrogen and releasing heat?",
+    "a": "Helium",
+    "d": "Under deep interior conditions, helium can separate from hydrogen and sink. This helps explain Saturn’s thermal evolution.",
+    "s": "Astronomy & Astrophysics research study",
+    "u": "https://doi.org/10.1051/0004-6361/202450629",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Helium",
+      "Oxygen",
+      "Carbon",
+      "Neon"
+    ],
+    "evidence": "The 2024 A&A modeling paper describes hydrogen-helium separation, helium rain and thermal evolution."
+  },
+  {
+    "q": "Cassini’s remote electric-shock-like encounter with Hyperion involved a beam of which particles?",
+    "a": "Electrons",
+    "d": "A strong negative surface charge drove the encounter, which researchers likened to a remote electric shock.",
+    "s": "NASA",
+    "u": "https://www.jpl.nasa.gov/news/cassini-caught-in-hyperions-particle-beam/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Electrons",
+      "Protons",
+      "Neutrons",
+      "Alpha particles"
+    ],
+    "evidence": "JPL reports a surface-origin electron beam and strongly negative surface potential."
+  },
+  {
+    "q": "Experiments suggest some straight gullies on Martian dunes may be tracks left by sliding blocks of what?",
+    "a": "Dry ice",
+    "d": "A sublimating block can ride on escaping gas and gouge a track, then disappear rather than leave a rock at the bottom.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/news-release/marks-on-martian-dunes-may-reveal-tracks-of-dry-ice-sleds/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Dry ice",
+      "Water ice",
+      "Rock salt",
+      "Frozen methane"
+    ],
+    "evidence": "NASA describes dry-ice block experiments as a possible explanation for a specific gully class."
+  },
+  {
+    "q": "What can move dust into dune-like ripples on comet 67P despite its lack of an Earthlike atmosphere?",
+    "a": "Gas escaping from warming ice",
+    "d": "Outflow from sublimating ice can transport surface dust and leave wind-tail-like features behind boulders.",
+    "s": "European Space Agency",
+    "u": "https://www.esa.int/sv/articles/about-us/directorates/science/rosetta/getting-to-know-rosetta-s-comet",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Gas escaping from warming ice",
+      "Electrostatically lifted grains settling again",
+      "Shaking from thermal cracks in the crust",
+      "Repeated small impacts splashing material outward"
+    ],
+    "evidence": "ESA describes escaping gas transporting dust and producing dune-like ripples and wind tails."
+  },
+  {
+    "q": "What acts like “sunscreen” in one explanation for the Moon’s bright swirl markings?",
+    "a": "Localized magnetic fields",
+    "d": "Small magnetic shields deflect solar-wind particles. Protected ground stays brighter than nearby exposed material.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/resource/lunar-swirl-reiner-gamma/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Localized magnetic fields",
+      "Thin coatings of fresh impact dust",
+      "Different proportions of bright minerals",
+      "Repeated frost deposition in shallow hollows"
+    ],
+    "evidence": "NASA describes crustal magnetic anomalies shielding lunar swirl regions from solar wind."
+  },
+  {
+    "q": "Why can the inside of a freshly fallen meteorite remain cool despite its fiery passage through the sky?",
+    "a": "The intense surface heating is brief",
+    "d": "Atmospheric entry melts or removes a thin outer layer, but heat has little time to reach the interior.",
+    "s": "UCLA Meteorite Museum",
+    "u": "https://meteorites.ucla.edu/faq/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "The intense surface heating is brief",
+      "Expanding trapped gases cool the entire rock",
+      "A layer of ice absorbs the heat as it melts",
+      "A reflective mineral crust prevents heat absorption"
+    ],
+    "evidence": "UCLA explains brief surface melting with interiors retaining their earlier temperature."
+  },
+  {
+    "q": "The interlocking metal plates exposed in some iron meteorites record what ancient condition?",
+    "a": "Extremely slow cooling inside a parent body",
+    "d": "Iron-nickel alloys separated into different crystal structures as they cooled over immense timescales.",
+    "s": "American Museum of Natural History",
+    "u": "https://www.amnh.org/exhibitions/permanent/meteorites/building-planets/iron-crystals",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Extremely slow cooling inside a parent body",
+      "Rapid chilling during atmospheric entry",
+      "Repeated melting from lightning strikes",
+      "Crushing and welding during the final impact"
+    ],
+    "evidence": "AMNH explains growth of kamacite plates within cooling taenite and the Widmanstätten pattern."
+  },
+  {
+    "q": "Because of its crystal symmetry, Martian dry-ice snow is expected to have what basic shape?",
+    "a": "Cubes",
+    "d": "Carbon-dioxide ice has different crystal symmetry from water ice, so its tiny snow crystals are not the familiar six-armed form.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/missions/mars-reconnaissance-orbiter/nasa-explores-a-winter-wonderland-on-mars/?site=msl",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Cubes",
+      "Six-armed stars",
+      "Long needles",
+      "Thin hexagonal plates"
+    ],
+    "evidence": "NASA describes predicted cubic dry-ice snowflakes; this is a symmetry-based expectation."
+  },
+  {
+    "q": "Why can a low lunar orbit become unstable even without appreciable atmospheric drag?",
+    "a": "Uneven concentrations of mass beneath the surface",
+    "d": "The Moon’s lumpy gravity can steadily distort some orbits until a spacecraft approaches the surface.",
+    "s": "NASA",
+    "u": "https://www.nasa.gov/ames-engineering/spaceflight-division/flight-dynamics/orbit-analysis/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Uneven concentrations of mass beneath the surface",
+      "Repeated tidal deformations of the Moon",
+      "Radiation pressure acting on the spacecraft",
+      "The gradual drift of the lunar rotation axis"
+    ],
+    "evidence": "NASA Ames identifies mascons as a principal source of low-orbit instability."
+  },
+  {
+    "q": "Some water-forming hydrogen at the Moon’s surface can arrive directly from what surprising source?",
+    "a": "The Sun",
+    "d": "The solar wind supplies hydrogen that can combine with oxygen associated with lunar material.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/moon/solar-wind/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "The Sun",
+      "Water-rich asteroids",
+      "Icy comets",
+      "Earth’s upper atmosphere"
+    ],
+    "evidence": "NASA describes solar-wind hydrogen contributing to lunar water formation."
+  },
+  {
+    "q": "A planetary-mass world such as PSO J318.5-22 has no parent star, yet glows faintly. What powers that glow?",
+    "a": "Heat left from its formation",
+    "d": "Young free-floating worlds can radiate stored heat even without sunlight. They fade as they cool.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/resource/where-the-nightlife-never-ends/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "hard",
+    "choices": [
+      "Heat left from its formation",
+      "Sustained hydrogen fusion like the Sun",
+      "Reflected light from a hidden nearby planet",
+      "Continuous impacts by interstellar dust"
+    ],
+    "evidence": "NASA explicitly says these rogue planets glow from formation heat."
+  },
+  {
+    "q": "How can a fault move noticeably while producing little of the shaking associated with an ordinary earthquake?",
+    "a": "The slipping unfolds over days rather than seconds",
+    "d": "Slow-slip events release motion gradually. Instruments can detect deformation that people do not feel as a strong quake.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-did-you-feel-earthquake-probably-not",
+    "cat": "What Lies Underfoot",
+    "level": "medium",
+    "choices": [
+      "The slipping unfolds over days rather than seconds",
+      "The two sides move in exactly opposite directions",
+      "The motion stays entirely inside loose surface soil",
+      "The fault moves only when the ocean tide is low"
+    ],
+    "evidence": "USGS explains slow earthquakes as fault slip over days without strong shaking."
+  },
+  {
+    "q": "What kept producing a worldwide seismic signal for days after a 2023 Greenland landslide?",
+    "a": "Water sloshing across a narrow fjord",
+    "d": "The avalanche triggered a tsunami in Dickson Fjord. A long-lived standing oscillation then continued pushing against the fjord’s sides.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/publications/a-rockslide-generated-tsunami-a-greenland-fjord-rang-earth-9-days",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Water sloshing across a narrow fjord",
+      "A fault repeatedly slipping beneath the landslide",
+      "A magma chamber slowly collapsing",
+      "An iceberg scraping along the seabed"
+    ],
+    "evidence": "The primary study links the nine-day seismic signal to a tsunami-generated seiche."
+  },
+  {
+    "q": "What helps drive Earth’s faint continuous seismic “hum,” even without a large earthquake?",
+    "a": "Interactions among ocean waves",
+    "d": "Ocean-wave energy can couple into vibrations of the solid Earth, including the very-low-frequency background hum.",
+    "s": "Nature research study",
+    "u": "https://www.nature.com/articles/nature05536",
+    "cat": "Sounds That Shouldn’t Exist",
+    "level": "hard",
+    "choices": [
+      "Interactions among ocean waves",
+      "Turbulence in high-altitude winds",
+      "Small meteorite impacts around the globe",
+      "Gas moving through volcanic conduits"
+    ],
+    "evidence": "The research paper models and compares ocean-wave excitation of Earth’s hum."
+  },
+  {
+    "q": "After the 2022 Hunga Tonga eruption, what circled Earth repeatedly and appeared in barometer records?",
+    "a": "An atmospheric pressure wave",
+    "d": "The explosion launched a powerful disturbance through the air, detectable far from the eruption.",
+    "s": "NOAA",
+    "u": "https://pmel.noaa.gov/acoustics/news-story/understanding-unique-tsunami-event-caused-tonga-volcano-eruption",
+    "cat": "When Volcanoes Get Weird",
+    "level": "medium",
+    "choices": [
+      "An atmospheric pressure wave",
+      "A narrow band of dense volcanic ash",
+      "A traveling increase in atmospheric oxygen",
+      "An electrically charged ring of volcanic dust"
+    ],
+    "evidence": "NOAA describes a pressure wave circling Earth three times."
+  },
+  {
+    "q": "Satellite images linked two 2018 Thwaites Glacier seismic events to which sudden motion?",
+    "a": "A large iceberg breaks off and capsizes",
+    "d": "The massive change in forces during calving can send seismic waves through the ground.",
+    "s": "Geophysical Research Letters study",
+    "u": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019GL086178",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "A large iceberg breaks off and capsizes",
+      "A subglacial cavity collapses beneath the ice",
+      "A lake drains through the glacier bed",
+      "The glacier front suddenly grounds at low tide"
+    ],
+    "evidence": "The Thwaites study directly associates seismic events with iceberg capsizing confirmed by imagery."
+  },
+  {
+    "q": "How can an underwater “lake” have a visible surface and even its own waves?",
+    "a": "It is a pool of much denser brine",
+    "d": "Very salty water can collect below ordinary seawater, creating a distinct density boundary. Disturbances can send waves along that boundary.",
+    "s": "Smithsonian Ocean",
+    "u": "https://ocean.si.edu/ecosystems/deep-sea/deep-sea",
+    "cat": "Beneath the Surface",
+    "level": "medium",
+    "choices": [
+      "It is a pool of much denser brine",
+      "It is ordinary water held beneath a sheet of oil",
+      "It is freshwater suspended above cold seawater",
+      "It is seawater resting on a film of trapped gas"
+    ],
+    "evidence": "Smithsonian describes dense brine lakes with visible boundaries and waves; no claim that mixing is impossible."
+  },
+  {
+    "q": "The deep-sea Lost City vents obtain heat from which unusual source?",
+    "a": "Chemical reactions between seawater and rock",
+    "d": "Water reacting with mantle-derived rock releases heat through serpentinization, powering this hydrothermal system.",
+    "s": "Science research study",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/12881565/",
+    "cat": "Beneath the Surface",
+    "level": "hard",
+    "choices": [
+      "Chemical reactions between seawater and rock",
+      "Friction from strong tidal currents",
+      "Decay of concentrated radioactive ore",
+      "Burning of methane where it meets oxygen"
+    ],
+    "evidence": "The primary Science study attributes the hydrothermal activity and heat to serpentinization."
+  },
+  {
+    "q": "Some glacier-shaped tongues in Iran’s Zagros Mountains are made chiefly from what flowing solid?",
+    "a": "Rock salt",
+    "d": "Salt rises through overlying rock and can spread slowly downhill under gravity, creating glacier-like forms.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/earth/earth-observatory/irans-salt-glaciers-4168/",
+    "cat": "Stones That Fool the Eye",
+    "level": "medium",
+    "choices": [
+      "Rock salt",
+      "Gypsum",
+      "Volcanic glass",
+      "Sulfur"
+    ],
+    "evidence": "NASA describes salt diapirs spreading like glaciers into adjacent valleys."
+  },
+  {
+    "q": "What happens to volcanic ash when it forms a hard glaze on jet-engine turbine nozzles?",
+    "a": "It melts in the engine, then deposits on the parts",
+    "d": "Ash can melt in the burner section and deposit on turbine nozzles, disrupting the engine’s operation.",
+    "s": "Federal Aviation Administration",
+    "u": "https://www.transportation.gov/testimony/mitigating-impact-volcanic-ash-clouds-aviation-%E2%80%93-what-do-we-need-know",
+    "cat": "When Volcanoes Get Weird",
+    "level": "medium",
+    "choices": [
+      "It melts in the engine, then deposits on the parts",
+      "It dissolves in fuel, then crystallizes on the parts",
+      "It reacts with engine oil to make a sticky resin",
+      "It absorbs water and hardens into a cement coating"
+    ],
+    "evidence": "FAA testimony explains melted ash depositing as a hard turbine-nozzle glaze."
+  },
+  {
+    "q": "High-speed filming found that a raindrop hitting porous ground can fling aromatic material into the air through what tiny action?",
+    "a": "Air bubbles bursting inside the drop",
+    "d": "Trapped bubbles rise and burst, ejecting fine droplets. The process can help carry the earthy scent released after rain.",
+    "s": "MIT",
+    "u": "https://news.mit.edu/2015/rainfall-can-release-aerosols-0114",
+    "cat": "Small Wonders, Big Surprises",
+    "level": "medium",
+    "choices": [
+      "Air bubbles bursting inside the drop",
+      "The whole raindrop bouncing back off the ground",
+      "A thin sheet of water splashing outward at impact",
+      "Water evaporating from the newly wetted ground"
+    ],
+    "evidence": "MIT directly observed trapped bubbles and aerosol ejection; the aroma link is described as a proposed explanation."
+  },
+  {
+    "q": "Satellite images sometimes show alternating curls of cloud trailing an island. What creates these repeating vortices?",
+    "a": "Wind flowing around the island’s high terrain",
+    "d": "The obstacle sheds swirling wakes downstream, which become visible in the clouds.",
+    "s": "NOAA",
+    "u": "https://www.nesdis.noaa.gov/news/earth-orbit-von-karman-vortices",
+    "cat": "Nature’s Shapes",
+    "level": "medium",
+    "choices": [
+      "Wind flowing around the island’s high terrain",
+      "Warm currents spiraling around underwater reefs",
+      "Regular pulses from a volcanic vent",
+      "Atmospheric tides following the island’s coastline"
+    ],
+    "evidence": "NOAA identifies elevated terrain diverting prevailing wind as the origin of von Kármán cloud vortices."
+  },
+  {
+    "q": "The natural material nicknamed “fire ice” traps which fuel inside cages of water molecules?",
+    "a": "Methane",
+    "d": "As methane hydrate breaks down, it releases flammable gas. The water itself is not the fuel.",
+    "s": "U.S. Department of Energy",
+    "u": "https://www.netl.doe.gov/sites/default/files/netl-file/2017-Methane-Hydrate-Primer%5B1%5D.pdf",
+    "cat": "Bubbles That Misbehave",
+    "level": "medium",
+    "choices": [
+      "Methane",
+      "Propane",
+      "Hydrogen",
+      "Acetylene"
+    ],
+    "evidence": "DOE explains methane trapped in hydrate cages and released gas burning during dissociation."
+  },
+  {
+    "q": "What element-rich particles help turn Antarctica’s Blood Falls water red as it reaches the air?",
+    "a": "Iron",
+    "d": "Johns Hopkins researchers found tiny iron-rich spheres that oxidize after the brine emerges.",
+    "s": "Johns Hopkins University",
+    "u": "https://hub.jhu.edu/2023/06/26/blood-falls-mystery/",
+    "cat": "Earth’s Odd Corners",
+    "level": "medium",
+    "choices": [
+      "Iron",
+      "Copper",
+      "Sulfur",
+      "Calcium"
+    ],
+    "evidence": "Researchers identified iron-rich nanospheres and oxidation in Blood Falls water."
+  },
+  {
+    "q": "How can anchor ice carry material from the seafloor toward the sea surface?",
+    "a": "It grows attached to the bottom, then lifts sediment as it rises",
+    "d": "Buoyant ice can detach with sediment caught in or attached to it, transporting material away from the seabed.",
+    "s": "USGS",
+    "u": "https://www.usgs.gov/publications/anchor-ice-seabed-freezing-and-sediment-dynamics-shallow-arctic-seas",
+    "cat": "Beneath the Surface",
+    "level": "hard",
+    "choices": [
+      "It grows attached to the bottom, then lifts sediment as it rises",
+      "It forms at the surface, sinks, and scoops sediment on contact",
+      "It slides along the bottom until waves roll it upward",
+      "It freezes floating sediment and carries it back to shore"
+    ],
+    "evidence": "USGS diving investigations found anchor ice lifting coarse material into the ice canopy."
+  },
+  {
+    "q": "Which material is a leading proposed explanation for the jade tint of some Antarctic icebergs?",
+    "a": "Iron oxides",
+    "d": "Rock-derived iron compounds may shift marine ice toward green. This remains an explanation supported by measurements rather than a universal rule for every green iceberg.",
+    "s": "Journal of Geophysical Research: Oceans study",
+    "u": "https://atmos.uw.edu/~sgw/PAPERS/2019_Grenth_revisited_JGR.pdf",
+    "cat": "Stones That Fool the Eye",
+    "level": "hard",
+    "choices": [
+      "Iron oxides",
+      "Copper sulfate",
+      "Nickel carbonate",
+      "Sulfur crystals"
+    ],
+    "evidence": "The primary study proposes iron oxides over dissolved organic carbon as the main color cause."
+  },
+  {
+    "q": "In still air under microgravity, a flame can form which unusual shape?",
+    "a": "A sphere",
+    "d": "Without normal buoyant rising air, oxygen and fuel can meet around the flame more symmetrically.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/biological-physical/resources/explainers-infographics/why-nasa-is-studying-flames-in-space/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "A sphere",
+      "A thin horizontal sheet",
+      "A tall narrow cone",
+      "A stable spiral"
+    ],
+    "evidence": "NASA explains spherical microgravity flames through the absence of normal buoyant circulation."
+  },
+  {
+    "q": "Space-station combustion experiments revealed that a visible flame can disappear while what continues?",
+    "a": "Low-temperature combustion",
+    "d": "The fuel can keep reacting in a dim, comparatively cool flame after the obvious hot flame seems to go out.",
+    "s": "NASA",
+    "u": "https://ntrs.nasa.gov/api/citations/20210018723/downloads/NETL2021Final.pdf",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Low-temperature combustion",
+      "Only evaporation with no chemical reaction",
+      "Thermal decomposition without reacting with oxygen",
+      "Condensation of hot fuel vapor into liquid"
+    ],
+    "evidence": "NASA reports continued lower-temperature burning without a visible flame after hot-flame extinction."
+  },
+  {
+    "q": "In NASA’s microgravity pool-boiling experiment, bubbles at the heater tended to do what?",
+    "a": "Merge into one large bubble",
+    "d": "Without normal buoyant flow carrying bubbles away, they can remain near the heater and coalesce.",
+    "s": "NASA",
+    "u": "https://science.nasa.gov/image-detail/pool-boiling/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Merge into one large bubble",
+      "Form a steady stream moving away from the heater",
+      "Break continuously into a fine uniform foam",
+      "Remain as separate bubbles of fixed size"
+    ],
+    "evidence": "NASA’s experiment description explicitly contrasts rising terrestrial bubbles with one coalesced microgravity bubble."
+  },
+  {
+    "q": "What can make an astronaut see a flash even with closed eyes in a dark spacecraft?",
+    "a": "A high-energy particle passing through the eye",
+    "d": "Cosmic-ray particles can interact with the eye and produce brief visual sensations without light entering through the eyelids.",
+    "s": "NASA",
+    "u": "https://ntrs.nasa.gov/api/citations/19780019211/downloads/19780019211.pdf",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "A high-energy particle passing through the eye",
+      "Infrared cabin light passing through the skull",
+      "Microwaves from the spacecraft’s communications antenna",
+      "Static electricity discharging across the eyelids"
+    ],
+    "evidence": "NASA’s account reports astronaut observations and ground particle-beam experiments producing eye flashes."
+  },
+  {
+    "q": "Why do spacecraft take extra precautions while crossing the South Atlantic Anomaly?",
+    "a": "Earth’s magnetic shielding is weaker there",
+    "d": "More energetic particles can reach orbital altitudes in this region, threatening sensitive electronics.",
+    "s": "NASA",
+    "u": "https://ntrs.nasa.gov/citations/20120001877",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Earth’s magnetic shielding is weaker there",
+      "The upper atmosphere becomes unusually dense there",
+      "Micrometeoroids are concentrated along that orbital track",
+      "A gravity anomaly sharply changes spacecraft altitude"
+    ],
+    "evidence": "NASA describes the magnetic-field dip and increased radiation effects on spacecraft electronics."
+  },
+  {
+    "q": "Huge parallel ridges at Montana’s Camas Prairie were recognized as giant versions of what familiar water-made pattern?",
+    "a": "Ripple marks",
+    "d": "Powerful Ice Age flood currents shaped the sediments into ridges so large they could be mistaken for ordinary hills.",
+    "s": "National Park Service",
+    "u": "https://www.nps.gov/iceagefloods/pdf/report.pdf",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Ripple marks",
+      "Meandering river loops",
+      "Delta distributary channels",
+      "Wave-cut cliff terraces"
+    ],
+    "evidence": "NPS describes giant parallel ripple marks in lakebed sediments as evidence of rapid flood currents."
+  },
+  {
+    "q": "Evidence of extreme shock pressure links the yellow glass in Tutankhamun’s scarab to which natural event?",
+    "a": "A meteorite impact",
+    "d": "Researchers found traces of a high-pressure mineral history in Libyan desert glass, supporting impact melting rather than ordinary glassmaking.",
+    "s": "Curtin University",
+    "u": "https://www.curtin.edu.au/news/media-release/curtin-planetary-scientist-unravels-mystery-of-egyptian-desert-glass/",
+    "cat": "Stones That Fool the Eye",
+    "level": "medium",
+    "choices": [
+      "A meteorite impact",
+      "A lightning strike",
+      "A volcanic eruption",
+      "A long-burning coal seam"
+    ],
+    "evidence": "Curtin’s study found evidence for former reidite and attributes the desert glass to impact."
+  },
+  {
+    "q": "In models of the ancient Oklo natural reactor, what served as an automatic on-off regulator?",
+    "a": "Water boiling away and returning",
+    "d": "Water slowed neutrons enough to sustain fission. Heating expelled it as steam; cooling and refilling allowed another active period.",
+    "s": "Progress in Nuclear Energy research study",
+    "u": "https://www.sciencedirect.com/science/article/pii/S0149197019301817",
+    "cat": "The Unlikely Science Bench",
+    "level": "hard",
+    "choices": [
+      "Water boiling away and returning",
+      "Iron minerals repeatedly becoming magnetic",
+      "Seasonal melting of uranium metal",
+      "Daily expansion and contraction of the bedrock"
+    ],
+    "evidence": "The primary model explicitly describes cyclic groundwater filling, neutron moderation and steam expulsion."
+  },
+  {
+    "q": "In a calculation of elapsed time since Earth formed, why can its center be slightly “younger” than its surface?",
+    "a": "Gravitational time dilation",
+    "d": "Clocks deeper in a gravitational potential run more slowly. Across Earth’s history, the calculated difference accumulates to years.",
+    "s": "European Journal of Physics research paper",
+    "u": "https://arxiv.org/abs/1604.05507",
+    "cat": "Clocks That Surprise",
+    "level": "hard",
+    "choices": [
+      "Gravitational time dilation",
+      "Different rotational speeds within Earth",
+      "The core forming later than the crust",
+      "Heat changing the rate of radioactive decay"
+    ],
+    "evidence": "The primary paper calculates differential elapsed time, not a difference in geological formation date."
+  },
+  {
+    "q": "What gives some extremely fast earthquake ruptures a shock front resembling a sonic boom in rock?",
+    "a": "The rupture outruns seismic shear waves",
+    "d": "The fast-moving rupture front can generate a concentrated Mach-wave pattern, analogous to a supersonic aircraft’s shock front.",
+    "s": "California Institute of Technology",
+    "u": "https://www.caltech.edu/about/news/contrary-to-previous-belief-strike-slip-faults-can-generate-large-tsunamis",
+    "cat": "What Lies Underfoot",
+    "level": "hard",
+    "choices": [
+      "The rupture outruns seismic shear waves",
+      "The rupture follows an unusually shallow fault",
+      "The rupture repeatedly stops and restarts",
+      "The rupture moves through unusually cold rock"
+    ],
+    "evidence": "Caltech explains rupture speed above shear-wave speed and the resulting Mach front."
+  }
+]

@@ -1,0 +1,1393 @@
+{
+  "checkedOn": "2026-11-18T01:37:43.593573+00:00",
+  "method": "Read-only HTTP GET with4workers; response headers only.403/429/timeouts are unresolved, not factual errors. Checks newly added accepted URLs absent from all prior audits; excludes unaccepted research drafts.",
+  "totalDistinctUrls": 138,
+  "completed": 138,
+  "summary": {
+    "reachable": 113,
+    "unresolved": 25
+  },
+  "urls": [
+    {
+      "url": "https://americanmotorcyclist.com/wp-content/uploads/2024/01/202402-AMA2024-100years.pdf",
+      "candidateIds": [
+        "objects-0340"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://americanmotorcyclist.com/wp-content/uploads/2024/01/202402-AMA2024-100years.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://animals.sandiegozoo.org/animals/hippo",
+      "candidateIds": [
+        "nature-0352",
+        "nature-0353",
+        "nature-0354"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://animals.sandiegozoo.org/animals/hippo",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ask.ifas.ufl.edu/publication/IN274",
+      "candidateIds": [
+        "nature-0368"
+      ],
+      "status": 307,
+      "result": "unresolved",
+      "error": "HTTP Error 307: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nTemporary Redirect"
+    },
+    {
+      "url": "https://at.media.france.fr/sites/default/files/document/press_kit/Provence-%20Christmas%20in%20Provence%202014.pdf",
+      "candidateIds": [
+        "culture-0196"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://cdn.oceanservice.noaa.gov/oceanserviceprod/facts/highestpoint-infographic.pdf",
+      "candidateIds": [
+        "nature-0322"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://cdn.oceanservice.noaa.gov/oceanserviceprod/facts/highestpoint-infographic.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8062000/micro-go-round-plus-clockwork-pressure-activated-turntable",
+      "candidateIds": [
+        "objects-0338"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://collections.imm.hu/virtualis-kiallitas/love-wedding-marriage-decorative-glass-from-the-collection-of-the-museum-of-applied-arts/107555",
+      "candidateIds": [
+        "culture-0204"
+      ],
+      "status": 302,
+      "result": "unresolved",
+      "error": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nFound"
+    },
+    {
+      "url": "https://discgolf.com/disc-golf-education-development/ed-headrick-father-disc-golf/",
+      "candidateIds": [
+        "objects-0355"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://discgolf.com/disc-golf-education-development/ed-headrick-father-disc-golf/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://emuseum.colonialwilliamsburg.org/objects/107795/caddy-spoon",
+      "candidateIds": [
+        "culture-0213"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://forestryandland.gov.scot/visit/destinations/munlochy-clootie-well",
+      "candidateIds": [
+        "culture-0159"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://forestryandland.gov.scot/visit/destinations/munlochy-clootie-well",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://gpm.nasa.gov/science/anatomy-of-a-raindrop",
+      "candidateIds": [
+        "nature-0330"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://gpm.nasa.gov/science/anatomy-of-a-raindrop",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/Decisions/20.COM/7.a.10",
+      "candidateIds": [
+        "culture-0185"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/Decisions/20.COM/7.a.10",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/arabic-coffee-a-symbol-of-generosity-02111",
+      "candidateIds": [
+        "culture-0151"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/arabic-coffee-a-symbol-of-generosity-02111",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/gingerbread-craft-from-northern-croatia-00356?RL=00356&lang=en",
+      "candidateIds": [
+        "culture-0183"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/gingerbread-craft-from-northern-croatia-00356?RL=00356&lang=en",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/orteke-traditional-performing-art-in-kazakhstan-dance-puppet-and-music-01878",
+      "candidateIds": [
+        "culture-0152"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/orteke-traditional-performing-art-in-kazakhstan-dance-puppet-and-music-01878",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/decisions/13.COM/10.B.15",
+      "candidateIds": [
+        "culture-0181"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/decisions/13.COM/10.B.15",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/decisions/18.COM/8.B.22",
+      "candidateIds": [
+        "culture-0187"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/decisions/18.COM/8.B.22",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ichcourier.unesco-ichcap.org/board.es?act=view&b_list=12&bid=A102&list_no=645&mid=a10201000000",
+      "candidateIds": [
+        "culture-0153"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ichcourier.unesco-ichcap.org/board.es?act=view&b_list=12&bid=A102&list_no=645&mid=a10201000000",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://journals.biologists.com/jeb/article-pdf/224/8/jeb233718/2022012/jeb233718.pdf",
+      "candidateIds": [
+        "nature-0363"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://jp.factory.nestle.com/sites/g/files/pydnoa331/files/2019-12/20191129_kitkat_eng.pdf",
+      "candidateIds": [
+        "objects-0319"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://jp.factory.nestle.com/sites/g/files/pydnoa331/files/2019-12/20191129_kitkat_eng.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://lazoo.org/explore-your-zoo/our-animals/birds/hornbills/",
+      "candidateIds": [
+        "nature-0355"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://lazoo.org/explore-your-zoo/our-animals/birds/hornbills/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://lemur.duke.edu/discover/meet-the-lemurs/aye-aye/",
+      "candidateIds": [
+        "nature-0333"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://lemur.duke.edu/discover/meet-the-lemurs/aye-aye/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://lemur.duke.edu/discover/meet-the-lemurs/coquerels-sifaka/",
+      "candidateIds": [
+        "nature-0345"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://lemur.duke.edu/discover/meet-the-lemurs/coquerels-sifaka/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://lemur.duke.edu/oh-yeah-smell-this-or-conflict-resolution-lemur-style/",
+      "candidateIds": [
+        "nature-0331"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://lemur.duke.edu/oh-yeah-smell-this-or-conflict-resolution-lemur-style/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://lup.lub.lu.se/search/publication/223d24a5-e6c8-4ee1-b7ae-2d449e8d25ab",
+      "candidateIds": [
+        "nature-0347"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://lup.lub.lu.se/search/publication/223d24a5-e6c8-4ee1-b7ae-2d449e8d25ab",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://manoa.hawaii.edu/exploringourfluidearth/biological/fish/behavior-and-sensory-systems/weird-science-cleaners-mimics",
+      "candidateIds": [
+        "nature-0364"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://manoa.hawaii.edu/exploringourfluidearth/biological/fish/behavior-and-sensory-systems/weird-science-cleaners-mimics",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://museum.wales/blog/1210/Christmas-Food-Traditions-in-Wales/",
+      "candidateIds": [
+        "culture-0166",
+        "culture-0167"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://museum.wales/blog/1210/Christmas-Food-Traditions-in-Wales/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://news.vanderbilt.edu/2016/06/06/electric-eels-make-leaping-attacks/",
+      "candidateIds": [
+        "nature-0362"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.vanderbilt.edu/2016/06/06/electric-eels-make-leaping-attacks/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ntb.gov.np/tihar",
+      "candidateIds": [
+        "culture-0191",
+        "culture-0192"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ntb.gov.np/tihar",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ocean.si.edu/more-manatees-meet-sirenians",
+      "candidateIds": [
+        "nature-0351"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://oceansunfish.org/fulltext.pdf",
+      "candidateIds": [
+        "nature-0365"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://oceansunfish.org/fulltext.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://olympic.ca/2019/11/13/short-track-vs-long-track-speed-skating-whats-the-difference/",
+      "candidateIds": [
+        "objects-0350"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://olympic.ca/2019/11/13/short-track-vs-long-track-speed-skating-whats-the-difference/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10160996/",
+      "candidateIds": [
+        "nature-0348"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10160996/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3935893/",
+      "candidateIds": [
+        "nature-0366"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3935893/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8853551/",
+      "candidateIds": [
+        "nature-0367"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8853551/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16840701/",
+      "candidateIds": [
+        "nature-0341"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/16840701/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17210957/",
+      "candidateIds": [
+        "nature-0339"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/17210957/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28111152/",
+      "candidateIds": [
+        "nature-0340"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/28111152/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30058024/",
+      "candidateIds": [
+        "nature-0332"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/30058024/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31153919/",
+      "candidateIds": [
+        "nature-0369"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/31153919/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33791515/",
+      "candidateIds": [
+        "nature-0360"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/33791515/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34437121/",
+      "candidateIds": [
+        "nature-0337"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/34437121/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pursuit.unimelb.edu.au/articles/solving-the-mystery-of-the-four-headed-echidna-penis",
+      "candidateIds": [
+        "nature-0334"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://research-information.bris.ac.uk/en/publications/circularly-polarized-light-as-a-communication-signal-in-mantis-sh/",
+      "candidateIds": [
+        "nature-0344"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://research-information.bris.ac.uk/en/publications/circularly-polarized-light-as-a-communication-signal-in-mantis-sh/",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/baikals-giant-ice-rings-146220/",
+      "candidateIds": [
+        "nature-0321"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/earth/earth-observatory/baikals-giant-ice-rings-146220/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/eyeing-the-richat-structure/",
+      "candidateIds": [
+        "nature-0327"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/earth/earth-observatory/eyeing-the-richat-structure/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://science.nasa.gov/earth/earth-observatory/ounianga-lakes-sahara-desert-chad-41425/",
+      "candidateIds": [
+        "nature-0328"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.nasa.gov/earth/earth-observatory/ounianga-lakes-sahara-desert-chad-41425/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://siarchives.si.edu/sites/default/files/pdfs/torch/Torch%201978/SIA_000371_1978_08.pdf",
+      "candidateIds": [
+        "objects-0354"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://siarchives.si.edu/sites/default/files/pdfs/torch/Torch%201978/SIA_000371_1978_08.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://static.visitscotland.com/pdf/atozwinterscotland.pdf",
+      "candidateIds": [
+        "culture-0157"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://static.visitscotland.com/pdf/atozwinterscotland.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://teacherresources.colonialwilliamsburg.org/API/Download/v1_0/GetOriginalLimited?Identifier=CW11ABVT&SourceAction=API_VIEW_DETAILS_TRX&UsePreviewPdf=False",
+      "candidateIds": [
+        "culture-0173"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://today.ucsd.edu/story/researchers_discover_what_makes_deep_sea_dragonfish_teeth_transparent",
+      "candidateIds": [
+        "nature-0356"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://today.ucsd.edu/story/researchers_discover_what_makes_deep_sea_dragonfish_teeth_transparent",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/cooperation/",
+      "candidateIds": [
+        "nature-0343"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/cooperation/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/tongue-snatcher/",
+      "candidateIds": [
+        "nature-0342"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/tongue-snatcher/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://versaillesgreenwich.com/wp-content/uploads/bistrov.pdf",
+      "candidateIds": [
+        "culture-0197",
+        "culture-0198"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://versaillesgreenwich.com/wp-content/uploads/bistrov.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/waffles-day/?what_to_do=4257",
+      "candidateIds": [
+        "culture-0180"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://visitsweden.com/what-to-do/culture-history-and-art/swedish-traditions/waffles-day/?what_to_do=4257",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://wellcomecollection.org/guides/exhibitions/the-cult-of-beauty/captions-and-transcripts",
+      "candidateIds": [
+        "culture-0212"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://wellcomecollection.org/guides/exhibitions/the-cult-of-beauty/captions-and-transcripts",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://worldcurling.org/2026/02/olympic-curling-stone-feature/",
+      "candidateIds": [
+        "objects-0346"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://worldcurling.org/2026/02/olympic-curling-stone-feature/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.acs.org/content/dam/acsorg/events/culinary-chemistry/Slides/2016-06-30-ice-cream-slides.pdf",
+      "candidateIds": [
+        "objects-0327"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.acs.org/content/dam/acsorg/events/culinary-chemistry/Slides/2016-06-30-ice-cream-slides.pdf",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.acs.org/pressroom/presspacs/2024/december/what-brings-richness-to-sparkling-wines.html",
+      "candidateIds": [
+        "objects-0335"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.acs.org/pressroom/presspacs/2024/december/what-brings-richness-to-sparkling-wines.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.acs.org/pressroom/presspacs/2024/february/three-unexpected-foods-in-alternatives-to-traditional-plastics.html",
+      "candidateIds": [
+        "objects-0328",
+        "objects-0329",
+        "objects-0330"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.acs.org/pressroom/presspacs/2024/february/three-unexpected-foods-in-alternatives-to-traditional-plastics.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.acs.org/pressroom/presspacs/2025/march/chewing-gum-can-shed-microplastics-into-saliva-pilot-study-finds.html",
+      "candidateIds": [
+        "objects-0336"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.acs.org/pressroom/presspacs/2025/march/chewing-gum-can-shed-microplastics-into-saliva-pilot-study-finds.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.acs.org/pressroom/presspacs/2025/march/researchers-create-eco-friendly-detergent-from-wood-fiber-and-corn-protein.html",
+      "candidateIds": [
+        "objects-0331"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.acs.org/pressroom/presspacs/2025/march/researchers-create-eco-friendly-detergent-from-wood-fiber-and-corn-protein.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.acs.org/pressroom/presspacs/2025/october/a-step-toward-diagnosing-the-flu-with-your-tongue.html",
+      "candidateIds": [
+        "objects-0333"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.acs.org/pressroom/presspacs/2025/october/a-step-toward-diagnosing-the-flu-with-your-tongue.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.americanhistory.si.edu/explore/exhibitions/object-project/online/household-hits/toaster",
+      "candidateIds": [
+        "objects-0332"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.barcelonaturisme.com/files/11316-28-arxiuENG/VisitBarcelonaAgendamensual_December_18.pdf",
+      "candidateIds": [
+        "culture-0199"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.barcelonaturisme.com/files/11316-28-arxiuENG/VisitBarcelonaAgendamensual_December_18.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.barcelonaturisme.com/imgfiles/cultura/Festes-Tradicions-Nadal-cas.pdf",
+      "candidateIds": [
+        "culture-0195"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://thisisbarcelona.com/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.bom.gov.au/aviation/data/education/flying-tropics.pdf",
+      "candidateIds": [
+        "nature-0325"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bom.gov.au/aviation/data/education/flying-tropics.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.computerhistory.org/pdp-1/spacewar/?trk=article-ssr-frontend-pulse_x-social-details_comments-action_comment-text",
+      "candidateIds": [
+        "objects-0360",
+        "objects-0361"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.computerhistory.org/pdp-1/spacewar/?trk=article-ssr-frontend-pulse_x-social-details_comments-action_comment-text",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.computerhistory.org/revolution/supercomputers/10/7",
+      "candidateIds": [
+        "objects-0339"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.computerhistory.org/revolution/supercomputers/10/7",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.earthdata.nasa.gov/s3fs-public/2025-02/TotalFreqDistLightBasedon10YrsofObsfrmSpacebyLIS.pdf?VersionId=pwe71ku4YlYwY4bxVyiJbOHlHqwzM3Oa",
+      "candidateIds": [
+        "nature-0324"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.earthdata.nasa.gov/s3fs-public/2025-02/TotalFreqDistLightBasedon10YrsofObsfrmSpacebyLIS.pdf?VersionId=pwe71ku4YlYwY4bxVyiJbOHlHqwzM3Oa",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.ed.ac.uk/news/2021/bacteria-serves-tasty-solution-to-plastic-crisis",
+      "candidateIds": [
+        "objects-0334"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ed.ac.uk/news/2021/bacteria-serves-tasty-solution-to-plastic-crisis",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.english-heritage.org.uk/christmas/medieval-christmas-food/",
+      "candidateIds": [
+        "culture-0206"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.english-heritage.org.uk/christmas/medieval-christmas-food/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.english-heritage.org.uk/members-area/members-magazine/podcast-extras/the-history-of-festive-feasts/",
+      "candidateIds": [
+        "culture-0207"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.english-heritage.org.uk/members-area/members-magazine/podcast-extras/the-history-of-festive-feasts/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.english-heritage.org.uk/visit/places/eltham-palace-and-gardens/history-and-stories/mah-jongg/",
+      "candidateIds": [
+        "culture-0208"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.english-heritage.org.uk/visit/places/eltham-palace-and-gardens/history-and-stories/mah-jongg/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.english-heritage.org.uk/visit/places/stonehenge/history-and-stories/history/fergusons-gang/",
+      "candidateIds": [
+        "culture-0164"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.english-heritage.org.uk/visit/places/stonehenge/history-and-stories/history/fergusons-gang/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bull-shark/",
+      "candidateIds": [
+        "nature-0323"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bull-shark/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.fountainheadmuseum.com/fountainheadauto/2009/12/snow-devils.html",
+      "candidateIds": [
+        "objects-0337"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.fountainheadmuseum.com/fountainheadauto/2009/12/snow-devils.html",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.genenames.org/help/faq/",
+      "candidateIds": [
+        "objects-0326"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.genenames.org/help/faq/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.hrp.org.uk/kew-palace/whats-on/the-royal-kitchens/",
+      "candidateIds": [
+        "culture-0165"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ibm.com/history/thinkpad",
+      "candidateIds": [
+        "objects-0357",
+        "objects-0358",
+        "objects-0359"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ibm.com/history/thinkpad",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.itftennis.com/en/tours/grand-slam-tournaments/",
+      "candidateIds": [
+        "objects-0345"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.world.tennis/en/tours/grand-slam-tournaments/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.ittf.com/2021/09/30/distinct-difference-new-colours-effect-friday-1st-october-2021/",
+      "candidateIds": [
+        "objects-0348"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.japan.travel/en/guide/traditional-craft-experiences-and-workshops/",
+      "candidateIds": [
+        "culture-0178"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.japan.travel/en/guide/traditional-craft-experiences-and-workshops/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.japan.travel/en/sg/story/daruma-history-maebashi-hatsuichi/",
+      "candidateIds": [
+        "culture-0179"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.japan.travel/en/sg/story/daruma-history-maebashi-hatsuichi/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.japan.travel/en/sg/story/tanabata-a-wish-upon-a-star/",
+      "candidateIds": [
+        "culture-0182"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.japan.travel/en/sg/story/tanabata-a-wish-upon-a-star/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.japan.travel/en/tokyo2020/experience-tokyo-traditional-crafts-and-culture/",
+      "candidateIds": [
+        "culture-0201",
+        "culture-0202",
+        "culture-0203"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.japan.travel/en/tokyo2020/experience-tokyo-traditional-crafts-and-culture/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.korea.net/NewsFocus/HonoraryReporters/view?articleId=200941",
+      "candidateIds": [
+        "culture-0188"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.korea.net/NewsFocus/HonoraryReporters/view?articleId=200941",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.lanemotormuseum.org/collection/cars/item/citroen-2cv-bicephale-cogolin-replica-1952/",
+      "candidateIds": [
+        "objects-0341"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.lanemotormuseum.org/collection/cars/item/citroen-2cv-bicephale-cogolin-replica-1952/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.lanemotormuseum.org/collection/cars/item/inter-175a-berline-1956/",
+      "candidateIds": [
+        "objects-0344"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.lanemotormuseum.org/collection/cars/item/inter-175a-berline-1956/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.lanemotormuseum.org/collection/cars/item/messerschmitt-kr200-1957/",
+      "candidateIds": [
+        "objects-0343"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.lanemotormuseum.org/collection/cars/item/messerschmitt-kr200-1957/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.lanemotormuseum.org/collection/cars/item/ptv-1956/",
+      "candidateIds": [
+        "objects-0342"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.lanemotormuseum.org/collection/cars/item/ptv-1956/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.lego.com/en-us/aboutus/news/2025/february/the-lego-group-introduces-tires-made-with-recycled-materials?age-gate=grown_up&locale=en-us",
+      "candidateIds": [
+        "objects-0356"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.lego.com/en-us/aboutus/news/2025/february/the-lego-group-introduces-tires-made-with-recycled-materials?age-gate=grown_up&locale=en-us",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.mars.com/en-in/about/history",
+      "candidateIds": [
+        "objects-0322"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mars.com/en-in/about/history",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/195098",
+      "candidateIds": [
+        "culture-0210",
+        "culture-0211"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/893676",
+      "candidateIds": [
+        "culture-0205"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.mms.com/en-us/explore/about-us",
+      "candidateIds": [
+        "objects-0320",
+        "objects-0321"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mms.com/en-us/explore/about-us",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/clownfish",
+      "candidateIds": [
+        "nature-0335"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/clownfish",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.monticello.org/encyclopedia/cabinet/",
+      "candidateIds": [
+        "culture-0172"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.monticello.org/encyclopedia/great-clock",
+      "candidateIds": [
+        "culture-0171"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.monticello.org/jefferson-day/dinner-is-served/a-greater-eye-to-convenience",
+      "candidateIds": [
+        "culture-0174",
+        "culture-0175"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.museumofplay.org/blog/barbie-hacks-and-mods-on-swapping-voices-removing-makeup-and-fighting-prejudice/",
+      "candidateIds": [
+        "culture-0215"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.museumofplay.org/blog/barbie-hacks-and-mods-on-swapping-voices-removing-makeup-and-fighting-prejudice/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.museumofplay.org/blog/the-best-toys-ever/",
+      "candidateIds": [
+        "culture-0214"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.museumofplay.org/blog/the-best-toys-ever/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.museumofplay.org/blog/why-stop-at-potatoes/",
+      "candidateIds": [
+        "culture-0176"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.museumofplay.org/blog/why-stop-at-potatoes/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.museumofplay.org/toys/jenga/",
+      "candidateIds": [
+        "culture-0177"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.museumofplay.org/toys/jenga/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.myswitzerland.com/en-us/experiences/events/new-new-years-eve/",
+      "candidateIds": [
+        "culture-0186"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.myswitzerland.com/en-us/experiences/events/new-new-years-eve/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nationaltrust.org.uk/visit/north-east/seaton-delaval-hall/the-history-of-seaton-delaval-hall",
+      "candidateIds": [
+        "culture-0168"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nationaltrust.org.uk/visit/north-east/seaton-delaval-hall/the-history-of-seaton-delaval-hall",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/s42003-024-05951-x",
+      "candidateIds": [
+        "nature-0338"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/s42003-024-05951-x?error=cookies_not_supported&code=2cf2986f-512e-4e66-94fc-3e03f46fa654",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nestle.com/media/news/90-years-chocolate-kitkat-breaks",
+      "candidateIds": [
+        "objects-0316"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.nestle.com/media/news/baked-kitkat-japan",
+      "candidateIds": [
+        "objects-0317"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.nestle.com/sites/default/files/asset-library/documents/library/documents/corporate_social_responsibility/nestle-in-society-2012-japan.pdf",
+      "candidateIds": [
+        "objects-0318"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nestle.com/sites/default/files/asset-library/documents/library/documents/corporate_social_responsibility/nestle-in-society-2012-japan.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/pufferfish-underwater-balloon-of-death.html?pubDate=20250427",
+      "candidateIds": [
+        "nature-0336"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nhm.ac.uk/discover/pufferfish-underwater-balloon-of-death.html?pubDate=20250427",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/wildlife-photographer-of-the-year-vampire-finches.html",
+      "candidateIds": [
+        "nature-0346"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nhm.ac.uk/discover/wildlife-photographer-of-the-year-vampire-finches.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nps.gov/yose/planyourvisit/frazilice.htm?vm=r",
+      "candidateIds": [
+        "nature-0326"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nps.gov/yose/planyourvisit/frazilice.htm?vm=r",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.nutella.com/us/en/inside-nutella/our-heritage",
+      "candidateIds": [
+        "objects-0314",
+        "objects-0315"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nutella.com/us/en/inside-nutella/our-heritage",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.nyc.gov/site/wildlifenyc/animals/beavers.page",
+      "candidateIds": [
+        "nature-0350"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nyc.gov/site/wildlifenyc/animals/beavers.page",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.olympics.com/ioc/news/ioc-announces-finalists-for-climate-action-awards-2024",
+      "candidateIds": [
+        "objects-0351"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.popcorn.org/All-About-Popcorn/Corny-Facts",
+      "candidateIds": [
+        "objects-0323",
+        "objects-0324"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.popcorn.org/All-About-Popcorn/Corny-Facts",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.pringles.com/en-us/faq.html",
+      "candidateIds": [
+        "objects-0312",
+        "objects-0313"
+      ],
+      "status": 405,
+      "result": "unresolved",
+      "error": "HTTP Error 405: Method Not Allowed"
+    },
+    {
+      "url": "https://www.rct.uk/about/press-office/press-releases/celebrations-at-windsor-castle-mark-100-years-of-queen-marys-dolls",
+      "candidateIds": [
+        "culture-0163"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0960982217301562",
+      "candidateIds": [
+        "nature-0358"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S096098222300057X",
+      "candidateIds": [
+        "nature-0359"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.si.edu/object/dragon-figure-alebrije%3Anmnhanthropology_8455854",
+      "candidateIds": [
+        "culture-0189",
+        "culture-0190"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sussex.ac.uk/lasi/sussexplan/dances",
+      "candidateIds": [
+        "nature-0361"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.sussex.ac.uk/lasi/sussexplan/dances",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.thehagueinternationalcentre.nl/news/2018-10/celebrating-sinterklaas-for-beginners",
+      "candidateIds": [
+        "culture-0154",
+        "culture-0155",
+        "culture-0156"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.thehagueinternationalcentre.nl/news/2018-10/celebrating-sinterklaas-for-beginners",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.thehenryford.org/collections/explore/artifact/146626",
+      "candidateIds": [
+        "objects-0325"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.thehenryford.org/collections/explore/artifact/146626",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.vam.ac.uk/articles/flock-wallpaper",
+      "candidateIds": [
+        "culture-0209"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.vam.ac.uk/articles/flock-wallpaper",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.vam.ac.uk/articles/metalworking-techniques",
+      "candidateIds": [
+        "culture-0169",
+        "culture-0170"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.vam.ac.uk/articles/metalworking-techniques",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitfinland.com/en/articles/finlands-traditional-and-iconic-foods/",
+      "candidateIds": [
+        "culture-0194"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitfinland.com/en/articles/finlands-traditional-and-iconic-foods/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitfinland.com/en/articles/traditional-finnish-celebrations-and-parties/",
+      "candidateIds": [
+        "culture-0200",
+        "culture-0158"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitfinland.com/en/articles/traditional-finnish-celebrations-and-parties/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visiticeland.com/article/christmas-in-iceland/",
+      "candidateIds": [
+        "culture-0193"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visiticeland.com/article/christmas-in-iceland/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitportugal.com/en/content/festa-dos-tabuleiros-festival-of-the-trays",
+      "candidateIds": [
+        "culture-0161",
+        "culture-0162"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitportugal.com/en/content/festa-dos-tabuleiros-festival-of-the-trays",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.visitportugal.com/en/content/popular-saints-festivals",
+      "candidateIds": [
+        "culture-0160"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.visitportugal.com/en/content/popular-saints-festivals",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.washington.edu/news/2020/07/30/deep-sea-anglerfishes-have-evolved-a-new-type-of-immune-system/",
+      "candidateIds": [
+        "nature-0349"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.washington.edu/news/2020/07/30/deep-sea-anglerfishes-have-evolved-a-new-type-of-immune-system/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.weather.gov/safety/lightning-heat",
+      "candidateIds": [
+        "nature-0329"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.weather.gov/safety/lightning-heat",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.whoi.edu/ocean-learning-hub/ocean-facts/stoplight-loosejaw/",
+      "candidateIds": [
+        "nature-0357",
+        "nature-0370"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.whoi.edu/ocean-learning-hub/ocean-facts/stoplight-loosejaw/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.worldaquatics.com/news/3704436/taming-a-swimmers-wake-a-look-into-the-history-and-innovative-spirit-of-malmstem-ab",
+      "candidateIds": [
+        "objects-0352",
+        "objects-0353"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.worldaquatics.com/news/3704436/taming-a-swimmers-wake-a-look-into-the-history-and-innovative-spirit-of-malmstem-ab",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.worldbowls.com/wp-content/uploads/2015/11/WB-intro-to-the-game.pdf",
+      "candidateIds": [
+        "objects-0349"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.worldbowls.com/wp-content/uploads/2015/11/WB-intro-to-the-game.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.yonex.com/badminton/shuttlecocks/m-250",
+      "candidateIds": [
+        "objects-0347"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://us.yonex.com/?utm_source=yonex.com&utm_medium=referral&utm_campaign=yonex_referral",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    }
+  ]
+}

@@ -1,0 +1,893 @@
+{
+  "candidateCount": 150,
+  "uniqueCanonicalSources": 143,
+  "sourceLimit": "At most3 cards and fewer than180 derived words per canonical URL, counting q+a+d+choices+evidence",
+  "sources": {
+    "https://science.nasa.gov/mercury/facts": [
+      {
+        "index": 1,
+        "evidence": "NASA describes a brief sunrise, sunset and second sunrise at some surface locations."
+      },
+      {
+        "index": 2,
+        "evidence": "NASA attributes large cliffs to cooling and contraction of Mercury’s interior."
+      }
+    ],
+    "https://science.nasa.gov/mars/facts": [
+      {
+        "index": 3,
+        "evidence": "NASA says inward-moving Phobos may crash or break up, creating a dusty ring."
+      }
+    ],
+    "https://science.nasa.gov/earth/10-things-to-know-about-the-ionosphere": [
+      {
+        "index": 4,
+        "evidence": "NASA explains airglow from excited particles relaxing and ionized particles recombining."
+      }
+    ],
+    "https://www.nasa.gov/solar-system/planets/mars/nasa-scientists-re-create-mars-spiders-in-a-lab-for-first-time": [
+      {
+        "index": 5,
+        "evidence": "NASA describes the Kieffer model and laboratory replication; formation is a supported explanation, not fully settled."
+      }
+    ],
+    "https://www.nasa.gov/solar-system/what-sounds-captured-by-nasas-perseverance-rover-reveal-about-mars": [
+      {
+        "index": 6,
+        "evidence": "NASA reports about 250 m/s for high frequencies versus 240 m/s for low frequencies."
+      }
+    ],
+    "https://www.nasa.gov/centers-and-facilities/glenn/cook-crush-choke-testing-components-before-launching-to-venus": [
+      {
+        "index": 7,
+        "evidence": "NASA Glenn describes sulfuric-acid cloud droplets and acid rain that evaporates before reaching the ground."
+      }
+    ],
+    "https://science.nasa.gov/uranus/facts": [
+      {
+        "index": 8,
+        "evidence": "NASA identifies methane absorption of red light as the source of the blue-green color."
+      }
+    ],
+    "https://www.nasa.gov/image-article/icy-mountains-of-pluto": [
+      {
+        "index": 9,
+        "evidence": "NASA identifies water ice as the probable mountain-building bedrock."
+      }
+    ],
+    "https://www.nasa.gov/solar-system/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-pluto": [
+      {
+        "index": 10,
+        "evidence": "NASA describes convection: warm ice rises centrally and cold ice sinks at margins."
+      },
+      {
+        "index": 11,
+        "evidence": "NASA identifies methane-ice grains as the suspected dune material."
+      },
+      {
+        "index": 12,
+        "evidence": "NASA links ice loading and tidal forces to Pluto’s reorientation."
+      }
+    ],
+    "https://www.nasa.gov/missions/juno/shallow-lightning-and-mushballs-reveal-ammonia-to-nasas-juno-scientists": [
+      {
+        "index": 13,
+        "evidence": "Juno scientists propose ammonia-water hail as a mechanism carrying ammonia into deep atmospheric layers."
+      }
+    ],
+    "https://science.nasa.gov/solar-system/planets/saturn/rings-of-saturn/nasa-research-reveals-saturn-is-losing-its-rings-at-worst-case-scenario-rate": [
+      {
+        "index": 14,
+        "evidence": "NASA describes charged ring grains falling along magnetic fields under gravity."
+      }
+    ],
+    "https://spaceplace.nasa.gov/io-tides/en": [
+      {
+        "index": 15,
+        "evidence": "NASA describes large solid-ground tides on Io."
+      }
+    ],
+    "https://science.nasa.gov/moon/solar-wind": [
+      {
+        "index": 16,
+        "evidence": "NASA says solar-wind charging can levitate dust."
+      },
+      {
+        "index": 124,
+        "evidence": "NASA describes solar-wind hydrogen contributing to lunar water formation."
+      }
+    ],
+    "https://science.nasa.gov/moon/moonquakes": [
+      {
+        "index": 17,
+        "evidence": "NASA identifies deep moonquakes as tidal events caused by Earth’s gravity."
+      },
+      {
+        "index": 24,
+        "evidence": "NASA lists thermal expansion and contraction as causes of extremely shallow moonquakes."
+      }
+    ],
+    "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question58.html": [
+      {
+        "index": 18,
+        "evidence": "NASA explains the nearly fixed Earth position and small libration-driven movements."
+      }
+    ],
+    "https://science.nasa.gov/learn/basics-of-space-flight/chapter1-1": [
+      {
+        "index": 19,
+        "evidence": "NASA describes polarity exchange around the peak of the sunspot cycle."
+      }
+    ],
+    "https://science.nasa.gov/resource/ocean-worlds-triton": [
+      {
+        "index": 20,
+        "evidence": "NASA identifies active nitrogen-gas geysers on Triton."
+      }
+    ],
+    "https://www.nasa.gov/image-article/dynamic-duo-jupiters-independently-pulsating-x-ray-auroras": [
+      {
+        "index": 21,
+        "evidence": "NASA reports regular southern and erratic northern X-ray pulses."
+      }
+    ],
+    "https://www.usgs.gov/programs/earthquake-hazards/cool-earthquake-facts": [
+      {
+        "index": 22,
+        "evidence": "USGS records the Tucson pool losing water from the Michoacan earthquake."
+      }
+    ],
+    "https://www.usgs.gov/media/images/liquefaction": [
+      {
+        "index": 23,
+        "evidence": "USGS describes liquefaction producing surface sand boils."
+      }
+    ],
+    "https://www.nasa.gov/missions/iris/iris-spots-plasma-rain-on-suns-surface": [
+      {
+        "index": 25,
+        "evidence": "NASA explains coronal plasma follows paths guided by magnetic forces."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/japan-quake-may-have-shortened-earth-days-moved-axis": [
+      {
+        "index": 26,
+        "evidence": "NASA modeled mass redistribution causing a small rotational speedup; this was a theoretical estimate."
+      }
+    ],
+    "https://www.repository.cam.ac.uk/items/b4e33f09-0bcd-4dec-9f4f-6c5ecdc73da1": [
+      {
+        "index": 27,
+        "evidence": "The primary study demonstrates wake-mediated repulsion of aqueous dunes without mass exchange; wind-driven extension is only conjectured."
+      }
+    ],
+    "https://www.usgs.gov/observatories/yvo/news/hydrothermal-explosions-yellowstone-national-park": [
+      {
+        "index": 28,
+        "evidence": "USGS describes pressure-triggered steam explosions without a direct magma association."
+      }
+    ],
+    "https://www.usgs.gov/observatories/hvo/news/volcano-watch-what-fans-flames-observed-volcanic-vents": [
+      {
+        "index": 29,
+        "evidence": "USGS distinguishes methane flames around flows from other vent-flame mechanisms."
+      }
+    ],
+    "https://home.nps.gov/media/video/view.htm": [
+      {
+        "index": 30,
+        "evidence": "NPS records singing sand during sand avalanches; no claim of a universal detailed acoustic mechanism."
+      }
+    ],
+    "https://www.usgs.gov/programs/earthquake-hazards/earthquake-booms-seneca-guns-and-other-sounds": [
+      {
+        "index": 31,
+        "evidence": "USGS attributes frost quakes to shallow water freezing and fracturing surrounding material."
+      }
+    ],
+    "https://home.nps.gov/im/arcn/permafrost.htm": [
+      {
+        "index": 32,
+        "evidence": "NPS explains ice-core hill growth and collapse in Alaska."
+      }
+    ],
+    "https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull17-5/17505004447.pdf": [
+      {
+        "index": 33,
+        "evidence": "IAEA’s symposium report describes ancient chain reactions within the uranium ore body."
+      }
+    ],
+    "https://www.weather.gov/media/aly/stormbuster/Spring17SB.pdf": [
+      {
+        "index": 34,
+        "evidence": "NWS describes sharply differing layer velocities producing curling wave clouds."
+      }
+    ],
+    "https://www.weather.gov/media/owlie/CloudsOutMyWindow.pdf": [
+      {
+        "index": 35,
+        "evidence": "NOAA’s cloud guide states that sky between rainbows is darker than either side."
+      }
+    ],
+    "https://www.weather.gov/owlie/weird-weather": [
+      {
+        "index": 36,
+        "evidence": "NWS describes nearby same-spin hurricanes circling a common center."
+      },
+      {
+        "index": 37,
+        "evidence": "NWS explains compressional warming after evaporation exhausts the moisture."
+      },
+      {
+        "index": 38,
+        "evidence": "NWS describes sublimation carving penitente terrain."
+      }
+    ],
+    "https://preview.weather.gov/safety/wind-dust-storm": [
+      {
+        "index": 39,
+        "evidence": "NWS directly links haboobs to thunderstorm outflow winds."
+      }
+    ],
+    "https://www.weather.gov/cle/event_notable_2014": [
+      {
+        "index": 40,
+        "evidence": "NWS explains light pillars by reflection from plate-shaped ice crystals."
+      }
+    ],
+    "https://www.nasa.gov/universe/nasas-fermi-catches-thunderstorms-hurling-antimatter-into-space": [
+      {
+        "index": 41,
+        "evidence": "Fermi observations gave direct evidence of thunderstorm-produced antimatter particle beams."
+      }
+    ],
+    "https://www.jpl.nasa.gov/videos/whats-up-april-2021": [
+      {
+        "index": 42,
+        "evidence": "NASA identifies the rising dark band opposite sunset as Earth’s shadow."
+      }
+    ],
+    "https://www.usgs.gov/publications/yellowstones-old-faithful-geyser-shut-down-a-severe-13th-century-drought": [
+      {
+        "index": 43,
+        "evidence": "USGS radiocarbon study uses rooted trees and wood preserved on the geyser mound as evidence of quiescence."
+      }
+    ],
+    "https://science.nasa.gov/earth/earth-observatory/satellites-size-up-bubbles-of-methane-in-lake-ice-146940": [
+      {
+        "index": 44,
+        "evidence": "NASA describes methane bubble columns trapped in Arctic lake ice."
+      }
+    ],
+    "https://www.brown.edu/news/2019-01-23/icedisk": [
+      {
+        "index": 45,
+        "evidence": "Brown oceanographer Chris Horvat attributed its symmetry to rotation and rubbing against the river’s side."
+      }
+    ],
+    "https://nsidc.org/learn/parts-cryosphere/sea-ice/science-sea-ice": [
+      {
+        "index": 46,
+        "evidence": "NSIDC says snow insulates sea ice and slows winter growth."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/descent-into-a-frozen-underworld": [
+      {
+        "index": 47,
+        "evidence": "JPL’s researcher describes warm volcanic gases escaping ice caves and freezing into towers."
+      }
+    ],
+    "https://www.pmel.noaa.gov/arctic-zone/bering-sea-indicators/essays_mcnutt.html": [
+      {
+        "index": 48,
+        "evidence": "NOAA describes wind-driven polynyas as conveyor belts for ice formation."
+      }
+    ],
+    "https://www.weather.gov/media/pub/pdf/sdata/022006.pdf": [
+      {
+        "index": 49,
+        "evidence": "NWS documents an Alaska ice push driven by winds and currents; no tsunami required."
+      }
+    ],
+    "https://svs.gsfc.nasa.gov/10816": [
+      {
+        "index": 50,
+        "evidence": "NASA researchers directly observed tsunami-triggered iceberg calving far from Japan."
+      }
+    ],
+    "https://www.nasa.gov/centers-and-facilities/jpl/for-hottest-planet-a-major-meltdown-study-shows": [
+      {
+        "index": 51,
+        "evidence": "NASA describes evidence for daytime dissociation and nighttime recombination of hydrogen."
+      }
+    ],
+    "https://science.nasa.gov/exoplanets/other-stars-other-worlds/kepler-16-b-almost-a-real-life-tatooine": [
+      {
+        "index": 52,
+        "evidence": "NASA identifies Kepler-16 b as a circumbinary gas giant."
+      }
+    ],
+    "https://science.nasa.gov/missions/hubble/hubble-uncovers-heavy-metal-exoplanet-shaped-like-football": [
+      {
+        "index": 53,
+        "evidence": "NASA attributes the elongated planet shape to gravitational tidal forces."
+      }
+    ],
+    "https://science.nasa.gov/resource/blue-and-bizarre": [
+      {
+        "index": 54,
+        "evidence": "NASA describes glass rain; explanation retains atmospheric-model qualification."
+      }
+    ],
+    "https://www.nasa.gov/universe/exoplanets/spitzer-watches-wild-weather-on-a-star-skimming-planet": [
+      {
+        "index": 55,
+        "evidence": "NASA ties rapid measured heating to the planet’s close approach on its eccentric orbit."
+      }
+    ],
+    "https://science.nasa.gov/universe/exoplanets/will-the-real-first-exoplanet-please-stand-up": [
+      {
+        "index": 56,
+        "evidence": "NASA identifies pulsar planets as the earliest clearly identified extrasolar planetary bodies."
+      }
+    ],
+    "https://science.nasa.gov/missions/hubble/hubble-captures-first-ever-predicted-exploding-star": [
+      {
+        "index": 57,
+        "evidence": "NASA describes model-predicted reappearance caused by gravitationally lensed time delays."
+      }
+    ],
+    "https://www.esa.int/articles/about-us/directorates/science/gaia/gaia-reveals-how-sun-like-stars-turn-solid-after-their-demise": [
+      {
+        "index": 58,
+        "evidence": "ESA reports observational evidence of white-dwarf crystallization."
+      }
+    ],
+    "https://www.nasa.gov/universe/nasa-missions-unmask-magnetar-eruptions-in-nearby-galaxies": [
+      {
+        "index": 59,
+        "evidence": "NASA states the 2004 giant flare measurably changed Earth’s upper atmosphere."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/speeding-bullet-star-leaves-enormous-streak-across-sky": [
+      {
+        "index": 60,
+        "evidence": "GALEX directly imaged the long ultraviolet tail behind Mira."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/the-moon-is-rusting-and-researchers-want-to-know-why": [
+      {
+        "index": 61,
+        "evidence": "JPL reports the Earth-oxygen hypothesis, not a fully settled explanation of all lunar hematite."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/experiments-show-titan-lakes-may-fizz-with-nitrogen": [
+      {
+        "index": 62,
+        "evidence": "NASA laboratory simulations produced nitrogen release; magic-island connection remains a hypothesis."
+      }
+    ],
+    "https://science.nasa.gov/solar-system/asteroids/dinkinesh": [
+      {
+        "index": 63,
+        "evidence": "NASA describes Selam as two smaller touching objects."
+      }
+    ],
+    "https://science.nasa.gov/saturn/moons/iapetus": [
+      {
+        "index": 64,
+        "evidence": "NASA explains thermal segregation feedback; distinct from prior equatorial-ridge card."
+      }
+    ],
+    "https://www.nasa.gov/solar-system/how-the-sun-affects-asteroids-in-our-neighborhood": [
+      {
+        "index": 65,
+        "evidence": "NASA explains YORP-driven spin changes and possible breakup."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/new-data-confirm-2020-so-to-be-the-upper-centaur-rocket-booster-from-the-1960s": [
+      {
+        "index": 66,
+        "evidence": "JPL confirmed 2020 SO as a 1960s Centaur booster."
+      }
+    ],
+    "https://science.nasa.gov/asset/hubble/neptune-dark-spot": [
+      {
+        "index": 67,
+        "evidence": "Hubble observed the large vortex make a U-turn."
+      }
+    ],
+    "https://science.nasa.gov/solar-system/meteors-meteorites/facts": [
+      {
+        "index": 68,
+        "evidence": "NASA identifies trapped atmospheric gas as evidence of Martian origin."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/nasas-perseverance-captures-googly-eye-during-solar-eclipse": [
+      {
+        "index": 69,
+        "evidence": "Perseverance images show the potato-shaped silhouette obscuring only part of the Sun."
+      }
+    ],
+    "https://www.nasa.gov/solar-system/early-results-from-nasas-dart-mission": [
+      {
+        "index": 70,
+        "evidence": "NASA identifies ejecta recoil as a major extra momentum contribution."
+      }
+    ],
+    "https://www.esa.int/articles/about-us/directorates/science/earth-s-atmosphere-stretches-out-to-the-moon-and-beyond": [
+      {
+        "index": 71,
+        "evidence": "ESA reports hydrogen geocorona extending beyond lunar distance."
+      }
+    ],
+    "https://spdf.gsfc.nasa.gov/pub/documents/old/websites/sunearthday.nasa.gov/2007/locations/ttt_sunlight.php": [
+      {
+        "index": 72,
+        "evidence": "NASA explains many scattering steps and model-dependent transport times; phrased as energy transport, not one unchanged photon."
+      }
+    ],
+    "https://www.nasa.gov/image-article/neutron-stars-create-gold-platinum-their-wake": [
+      {
+        "index": 73,
+        "evidence": "NASA identifies gold and platinum production in merger debris."
+      }
+    ],
+    "https://science.nasa.gov/asset/hubble/artists-concept-of-extasolar-planet-gj-436b": [
+      {
+        "index": 74,
+        "evidence": "Hubble observations establish a huge escaping hydrogen cloud around GJ 436 b."
+      }
+    ],
+    "https://science.nasa.gov/feature/solar-eclipse-guide": [
+      {
+        "index": 75,
+        "evidence": "NASA explains Baily’s beads as sunlight through lunar valleys."
+      }
+    ],
+    "https://astrobiology.nasa.gov/news/salty-antarctic-pond-could-provide-clues-about-mars-water": [
+      {
+        "index": 76,
+        "evidence": "NASA attributes the pond’s resistance to freezing to its extreme salinity."
+      }
+    ],
+    "https://www.nps.gov/im/chdn/dune-dynamics.htm": [
+      {
+        "index": 77,
+        "evidence": "NPS describes closed basins, evaporation and gypsum-sand formation."
+      }
+    ],
+    "https://www.noaa.gov/jetstream/tsunamis/tsunami-generation-weather": [
+      {
+        "index": 78,
+        "evidence": "NOAA identifies atmospheric pressure disturbances from moving weather systems."
+      }
+    ],
+    "https://www.inp.cnrs.fr/sites/institut_inp/files/download-file/2021%20Une%20ann%C3%A9e%20d%27actualit%C3%A9s%20%C3%A0%20l%27Institut%20de%20physique%20du%20CNRS.pdf": [
+      {
+        "index": 79,
+        "evidence": "CNRS researchers reproduced Zen stones and identified shadow-limited sublimation."
+      }
+    ],
+    "https://www.whoi.edu/oceanus/feature/the-waves-within-the-waves": [
+      {
+        "index": 80,
+        "evidence": "WHOI explains Nansen’s dead water through internal-wave generation at a density boundary."
+      }
+    ],
+    "https://oceanservice.noaa.gov/facts/sofar.html": [
+      {
+        "index": 81,
+        "evidence": "NOAA explains up-and-down bending of low-frequency sound through ocean layers."
+      }
+    ],
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC3179101": [
+      {
+        "index": 82,
+        "evidence": "The primary study measures ultraslow gypsum growth in Naica waters and constrains growth to roughly 54–58°C."
+      }
+    ],
+    "https://pubmed.ncbi.nlm.nih.gov/20332884": [
+      {
+        "index": 83,
+        "evidence": "The primary Applied Optics paper describes and models the polar optical-ducting phenomenon."
+      }
+    ],
+    "https://science.nasa.gov/blogs/science-news/2025/07/24/nasa-noaa-satellites-show-smoke-complicates-wildfire-lightning-risk": [
+      {
+        "index": 84,
+        "evidence": "NASA describes fire-generated storm clouds and distinguishes cloud-to-cloud from ground strikes."
+      }
+    ],
+    "https://www.aoml.noaa.gov/outreach/bubbles/C_waterspouts.pdf": [
+      {
+        "index": 85,
+        "evidence": "NOAA’s waterspout fact sheet says the mist is mainly fresh water from atmospheric condensation."
+      }
+    ],
+    "https://www.antarctica.gov.au/news/2022/when-barry-met-steve-aurora-watcher-captures-rare-hot-glow-over-antarctica": [
+      {
+        "index": 86,
+        "evidence": "Australian Antarctic Program explicitly traces the informal name to the film; the scientific backronym came later."
+      }
+    ],
+    "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_chemistry_of_lightning": [
+      {
+        "index": 87,
+        "evidence": "ESA explicitly describes blue jets propagating upward from cloud tops into the stratosphere."
+      }
+    ],
+    "https://naturalhistory.si.edu/research/mineral-sciences/programs": [
+      {
+        "index": 88,
+        "evidence": "Smithsonian describes the ice conveyor, mountain barrier and ablation concentrating meteorites."
+      }
+    ],
+    "https://www.usgs.gov/publications/pseudotachylyte-increases-post-slip-strength-faults": [
+      {
+        "index": 89,
+        "evidence": "USGS research identifies solidified frictional melts formed during earthquake slip."
+      }
+    ],
+    "https://pubs.geoscienceworld.org/gsl/books/edited-volume/1586/chapter-abstract/107345979/The-anisotropy-of-itacolumite-flexibility": [
+      {
+        "index": 90,
+        "evidence": "Primary bending experiments link flexibility to open grain boundaries permitting limited quartz-grain rotation."
+      }
+    ],
+    "https://ntslf.org/tides/about-tides/tidal-river-bores": [
+      {
+        "index": 91,
+        "evidence": "The UK National Tidal and Sea Level Facility describes the bore as the onset of the flood tide."
+      }
+    ],
+    "https://pubmed.ncbi.nlm.nih.gov/29590042": [
+      {
+        "index": 92,
+        "evidence": "The Science study reports ice-VII inclusions retaining pressure inside host diamonds."
+      }
+    ],
+    "https://www.nps.gov/articles/cirques.htm": [
+      {
+        "index": 93,
+        "evidence": "NPS explains that glaciers can flow up bed hills if their ice surface still slopes downward."
+      }
+    ],
+    "https://pubs.usgs.gov/gip/dynamic/stripes.html": [
+      {
+        "index": 94,
+        "evidence": "USGS explains matching seafloor stripes as the record of magnetic reversals and spreading."
+      }
+    ],
+    "https://www.nps.gov/articles/000/grcatime-missing-time.htm": [
+      {
+        "index": 95,
+        "evidence": "NPS describes a 1.2-billion-year gap at the Great Unconformity."
+      }
+    ],
+    "https://geology.utah.gov/map-pub/survey-notes/geosights/crystal-geyser": [
+      {
+        "index": 96,
+        "evidence": "Utah Geological Survey describes the drilled well and CO2-driven eruption cycle."
+      }
+    ],
+    "https://www.nasa.gov/solar-system/nasas-lro-finds-lunar-pits-harbor-comfortable-temperatures": [
+      {
+        "index": 97,
+        "evidence": "NASA reports approximately 17°C for shaded pit locations using LRO data and modeling; not all pits are asserted identical."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/nasa-rover-detects-electric-sparks-in-mars-dust-devils-storms": [
+      {
+        "index": 98,
+        "evidence": "JPL reports confirmed electrical discharges and associated mini-sonic booms in Mars dust devils."
+      }
+    ],
+    "https://www.usgs.gov/publications/accretionary-lapilli-altered-tuffs-associated-coal-beds": [
+      {
+        "index": 99,
+        "evidence": "USGS describes spherical layered aggregates of volcanic ash promoted by moisture and turbulence."
+      }
+    ],
+    "https://sealevel.nasa.gov/resources/78/monthly-changes-in-gravity-affect-sea-level": [
+      {
+        "index": 100,
+        "evidence": "NASA’s GRACE-based visualization explains local sea-level fall from reduced ice-sheet gravitational attraction."
+      }
+    ],
+    "https://science.nasa.gov/resource/daphnis-waves": [
+      {
+        "index": 101,
+        "evidence": "NASA identifies Daphnis’s gravity as the source of the ring-edge waves."
+      }
+    ],
+    "https://www.nasa.gov/solar-system/europa-glows-radiation-does-a-bright-number-on-jupiters-moon": [
+      {
+        "index": 102,
+        "evidence": "NASA reports a laboratory prediction of nightside ice luminescence, not a directly observed glow."
+      }
+    ],
+    "https://newsroom.ucla.edu/releases/cracking-the-mysteries-of-venus": [
+      {
+        "index": 103,
+        "evidence": "UCLA identifies atmospheric angular-momentum exchange as the likely main cause of observed variations."
+      }
+    ],
+    "https://www.nasa.gov/universe/maxi-j1820070-black-hole-outburst-caught-on-video": [
+      {
+        "index": 104,
+        "evidence": "NASA explains apparent superluminal motion through viewing geometry and near-light-speed approach."
+      }
+    ],
+    "https://www.nps.gov/glac/learn/nature/waterquality.htm": [
+      {
+        "index": 105,
+        "evidence": "NPS attributes the color to glacier-ground rock flour suspended in lake water."
+      }
+    ],
+    "https://science.nasa.gov/resource/auroral-footprints": [
+      {
+        "index": 106,
+        "evidence": "NASA describes electron currents connecting moons and ultraviolet auroral footprints."
+      }
+    ],
+    "https://science.nasa.gov/missions/hubble/shock-wave-sheds-new-light-on-fading-supernova": [
+      {
+        "index": 107,
+        "evidence": "NASA identifies the neutrino burst as the first signal, preceding bright light."
+      }
+    ],
+    "https://heasarc.gsfc.nasa.gov/docs/nicer/technology/spinoffs/pulsar-pnt.html": [
+      {
+        "index": 108,
+        "evidence": "NASA’s NICER team describes the successful pulsar-based navigation demonstration."
+      }
+    ],
+    "https://journals.asm.org/doi/10.1128/AEM.03968-14": [
+      {
+        "index": 109,
+        "evidence": "The primary paper describes solar heating and a temperature rise to nearly 25°C at the bottom; no volcanic heat claim."
+      }
+    ],
+    "https://chandra.si.edu/sound/perseus.html": [
+      {
+        "index": 110,
+        "evidence": "Chandra describes actual pressure waves in hot cluster gas and pitch-shifted sonification."
+      }
+    ],
+    "https://science.nasa.gov/missions/hubble/hubble-sees-an-unexpected-population-of-young-looking-stars": [
+      {
+        "index": 111,
+        "evidence": "NASA describes stellar collisions and mass transfer as explanations for blue stragglers."
+      }
+    ],
+    "https://spaceplace.nasa.gov/barycenter/en": [
+      {
+        "index": 112,
+        "evidence": "NASA states the Sun–Jupiter barycenter is just outside the Sun’s surface."
+      }
+    ],
+    "https://archive.iaa.csic.es/en/news/james-webb-telescope-observes-rings-chariklo-high-precision-occultation-technique": [
+      {
+        "index": 113,
+        "evidence": "IAA-CSIC describes the occultation’s repeated dips as the discovery evidence for rings."
+      }
+    ],
+    "https://science.nasa.gov/dwarf-planets/haumea": [
+      {
+        "index": 114,
+        "evidence": "NASA explicitly attributes Haumea’s football-like distortion to fast spin."
+      }
+    ],
+    "https://doi.org/10.1051/0004-6361/202450629": [
+      {
+        "index": 115,
+        "evidence": "The 2024 A&A modeling paper describes hydrogen-helium separation, helium rain and thermal evolution."
+      }
+    ],
+    "https://www.jpl.nasa.gov/news/cassini-caught-in-hyperions-particle-beam": [
+      {
+        "index": 116,
+        "evidence": "JPL reports a surface-origin electron beam and strongly negative surface potential."
+      }
+    ],
+    "https://www.nasa.gov/news-release/marks-on-martian-dunes-may-reveal-tracks-of-dry-ice-sleds": [
+      {
+        "index": 117,
+        "evidence": "NASA describes dry-ice block experiments as a possible explanation for a specific gully class."
+      }
+    ],
+    "https://www.esa.int/sv/articles/about-us/directorates/science/rosetta/getting-to-know-rosetta-s-comet": [
+      {
+        "index": 118,
+        "evidence": "ESA describes escaping gas transporting dust and producing dune-like ripples and wind tails."
+      }
+    ],
+    "https://science.nasa.gov/resource/lunar-swirl-reiner-gamma": [
+      {
+        "index": 119,
+        "evidence": "NASA describes crustal magnetic anomalies shielding lunar swirl regions from solar wind."
+      }
+    ],
+    "https://meteorites.ucla.edu/faq": [
+      {
+        "index": 120,
+        "evidence": "UCLA explains brief surface melting with interiors retaining their earlier temperature."
+      }
+    ],
+    "https://www.amnh.org/exhibitions/permanent/meteorites/building-planets/iron-crystals": [
+      {
+        "index": 121,
+        "evidence": "AMNH explains growth of kamacite plates within cooling taenite and the Widmanstätten pattern."
+      }
+    ],
+    "https://www.nasa.gov/missions/mars-reconnaissance-orbiter/nasa-explores-a-winter-wonderland-on-mars": [
+      {
+        "index": 122,
+        "evidence": "NASA describes predicted cubic dry-ice snowflakes; this is a symmetry-based expectation."
+      }
+    ],
+    "https://www.nasa.gov/ames-engineering/spaceflight-division/flight-dynamics/orbit-analysis": [
+      {
+        "index": 123,
+        "evidence": "NASA Ames identifies mascons as a principal source of low-orbit instability."
+      }
+    ],
+    "https://science.nasa.gov/resource/where-the-nightlife-never-ends": [
+      {
+        "index": 125,
+        "evidence": "NASA explicitly says these rogue planets glow from formation heat."
+      }
+    ],
+    "https://www.usgs.gov/observatories/hvo/news/volcano-watch-did-you-feel-earthquake-probably-not": [
+      {
+        "index": 126,
+        "evidence": "USGS explains slow earthquakes as fault slip over days without strong shaking."
+      }
+    ],
+    "https://www.usgs.gov/publications/a-rockslide-generated-tsunami-a-greenland-fjord-rang-earth-9-days": [
+      {
+        "index": 127,
+        "evidence": "The primary study links the nine-day seismic signal to a tsunami-generated seiche."
+      }
+    ],
+    "https://www.nature.com/articles/nature05536": [
+      {
+        "index": 128,
+        "evidence": "The research paper models and compares ocean-wave excitation of Earth’s hum."
+      }
+    ],
+    "https://pmel.noaa.gov/acoustics/news-story/understanding-unique-tsunami-event-caused-tonga-volcano-eruption": [
+      {
+        "index": 129,
+        "evidence": "NOAA describes a pressure wave circling Earth three times."
+      }
+    ],
+    "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019GL086178": [
+      {
+        "index": 130,
+        "evidence": "The Thwaites study directly associates seismic events with iceberg capsizing confirmed by imagery."
+      }
+    ],
+    "https://ocean.si.edu/ecosystems/deep-sea/deep-sea": [
+      {
+        "index": 131,
+        "evidence": "Smithsonian describes dense brine lakes with visible boundaries and waves; no claim that mixing is impossible."
+      }
+    ],
+    "https://pubmed.ncbi.nlm.nih.gov/12881565": [
+      {
+        "index": 132,
+        "evidence": "The primary Science study attributes the hydrothermal activity and heat to serpentinization."
+      }
+    ],
+    "https://science.nasa.gov/earth/earth-observatory/irans-salt-glaciers-4168": [
+      {
+        "index": 133,
+        "evidence": "NASA describes salt diapirs spreading like glaciers into adjacent valleys."
+      }
+    ],
+    "https://www.transportation.gov/testimony/mitigating-impact-volcanic-ash-clouds-aviation-%E2%80%93-what-do-we-need-know": [
+      {
+        "index": 134,
+        "evidence": "FAA testimony explains melted ash depositing as a hard turbine-nozzle glaze."
+      }
+    ],
+    "https://news.mit.edu/2015/rainfall-can-release-aerosols-0114": [
+      {
+        "index": 135,
+        "evidence": "MIT directly observed trapped bubbles and aerosol ejection; the aroma link is described as a proposed explanation."
+      }
+    ],
+    "https://www.nesdis.noaa.gov/news/earth-orbit-von-karman-vortices": [
+      {
+        "index": 136,
+        "evidence": "NOAA identifies elevated terrain diverting prevailing wind as the origin of von Kármán cloud vortices."
+      }
+    ],
+    "https://www.netl.doe.gov/sites/default/files/netl-file/2017-Methane-Hydrate-Primer%5B1%5D.pdf": [
+      {
+        "index": 137,
+        "evidence": "DOE explains methane trapped in hydrate cages and released gas burning during dissociation."
+      }
+    ],
+    "https://hub.jhu.edu/2023/06/26/blood-falls-mystery": [
+      {
+        "index": 138,
+        "evidence": "Researchers identified iron-rich nanospheres and oxidation in Blood Falls water."
+      }
+    ],
+    "https://www.usgs.gov/publications/anchor-ice-seabed-freezing-and-sediment-dynamics-shallow-arctic-seas": [
+      {
+        "index": 139,
+        "evidence": "USGS diving investigations found anchor ice lifting coarse material into the ice canopy."
+      }
+    ],
+    "https://atmos.uw.edu/~sgw/PAPERS/2019_Grenth_revisited_JGR.pdf": [
+      {
+        "index": 140,
+        "evidence": "The primary study proposes iron oxides over dissolved organic carbon as the main color cause."
+      }
+    ],
+    "https://science.nasa.gov/biological-physical/resources/explainers-infographics/why-nasa-is-studying-flames-in-space": [
+      {
+        "index": 141,
+        "evidence": "NASA explains spherical microgravity flames through the absence of normal buoyant circulation."
+      }
+    ],
+    "https://ntrs.nasa.gov/api/citations/20210018723/downloads/NETL2021Final.pdf": [
+      {
+        "index": 142,
+        "evidence": "NASA reports continued lower-temperature burning without a visible flame after hot-flame extinction."
+      }
+    ],
+    "https://science.nasa.gov/image-detail/pool-boiling": [
+      {
+        "index": 143,
+        "evidence": "NASA’s experiment description explicitly contrasts rising terrestrial bubbles with one coalesced microgravity bubble."
+      }
+    ],
+    "https://ntrs.nasa.gov/api/citations/19780019211/downloads/19780019211.pdf": [
+      {
+        "index": 144,
+        "evidence": "NASA’s account reports astronaut observations and ground particle-beam experiments producing eye flashes."
+      }
+    ],
+    "https://ntrs.nasa.gov/citations/20120001877": [
+      {
+        "index": 145,
+        "evidence": "NASA describes the magnetic-field dip and increased radiation effects on spacecraft electronics."
+      }
+    ],
+    "https://www.nps.gov/iceagefloods/pdf/report.pdf": [
+      {
+        "index": 146,
+        "evidence": "NPS describes giant parallel ripple marks in lakebed sediments as evidence of rapid flood currents."
+      }
+    ],
+    "https://www.curtin.edu.au/news/media-release/curtin-planetary-scientist-unravels-mystery-of-egyptian-desert-glass": [
+      {
+        "index": 147,
+        "evidence": "Curtin’s study found evidence for former reidite and attributes the desert glass to impact."
+      }
+    ],
+    "https://www.sciencedirect.com/science/article/pii/S0149197019301817": [
+      {
+        "index": 148,
+        "evidence": "The primary model explicitly describes cyclic groundwater filling, neutron moderation and steam expulsion."
+      }
+    ],
+    "https://arxiv.org/abs/1604.05507": [
+      {
+        "index": 149,
+        "evidence": "The primary paper calculates differential elapsed time, not a difference in geological formation date."
+      }
+    ],
+    "https://www.caltech.edu/about/news/contrary-to-previous-belief-strike-slip-faults-can-generate-large-tsunamis": [
+      {
+        "index": 150,
+        "evidence": "Caltech explains rupture speed above shear-wave speed and the resulting Mach front."
+      }
+    ]
+  }
+}

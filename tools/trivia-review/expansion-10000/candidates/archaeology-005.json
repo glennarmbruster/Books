@@ -1,0 +1,495 @@
+[
+  {
+    "candidateId": "archaeology-0001",
+    "q": "While sorting old excavation scraps from Vindolanda, staff recognized a Roman mouse-shaped object. What was it made from?",
+    "a": "Leather",
+    "d": "The small imitation had markings for fur and eyes. It may have been a toy or a practical joke; its exact purpose is uncertain.",
+    "s": "Vindolanda Trust · Roman leather mouse",
+    "u": "https://www.vindolanda.com/news/roman-leather-mouse-discovered",
+    "cat": "Objects with a Past",
+    "level": "easy",
+    "choices": [
+      "Wax",
+      "Leather",
+      "Wool",
+      "Bronze"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.vindolanda.com/news/roman-leather-mouse-discovered",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Curators recognized a mouse cut from leather in stored scraps excavated in1993; toy and joke are proposed uses, not proved.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "5f9211fb5a31b2451b4b13ae0bd88ede10ec0e82701a1876a5bddecba3365439"
+    }
+  },
+  {
+    "candidateId": "archaeology-0002",
+    "q": "Which familiar bathroom fitting was found preserved in wood at the Roman fort of Vindolanda in 2014?",
+    "a": "Toilet seat",
+    "d": "The unusually preserved object is a toilet seat. Roman wooden household fittings rarely survive in such recognizable form.",
+    "s": "Vindolanda Trust · Finds of the decade",
+    "u": "https://www.vindolanda.com/blog/vindolandas-top-10-finds-of-the-decade?title=vindolandas-top-10-finds-of-the-decade",
+    "cat": "Objects with a Past",
+    "level": "easy",
+    "choices": [
+      "Washbasin",
+      "Toilet seat",
+      "Bathtub",
+      "Shower tray"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.vindolanda.com/blog/vindolandas-top-10-finds-of-the-decade?title=vindolandas-top-10-finds-of-the-decade",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Trust lists the wooden toilet seat uncovered in2014 as a remarkably rare find.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "e16cdde8c41949c8953314a96ef3df9f7b74aeed210980e7d9235cf635e1460e"
+    }
+  },
+  {
+    "candidateId": "archaeology-0003",
+    "q": "Vindolanda’s remarkably preserved Roman leather hand protection belongs to which sport?",
+    "a": "Boxing",
+    "d": "The gloves were among the site’s most unexpected finds, surviving long after ordinary leather equipment usually decays.",
+    "s": "Vindolanda Trust · Finds of the decade",
+    "u": "https://www.vindolanda.com/blog/vindolandas-top-10-finds-of-the-decade?title=vindolandas-top-10-finds-of-the-decade",
+    "cat": "Sporting Curiosities",
+    "level": "easy",
+    "choices": [
+      "Boxing",
+      "Horse racing",
+      "Archery",
+      "Wrestling"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.vindolanda.com/blog/vindolandas-top-10-finds-of-the-decade?title=vindolandas-top-10-finds-of-the-decade",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Trust identifies the preserved leather objects as boxing gloves; no unsupported exact first-ever claim used.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "df978d066a0b02b5b88e38327fea59b9e9f0233b6ab3c486b893c13b2c6c9f8e"
+    }
+  },
+  {
+    "candidateId": "archaeology-0004",
+    "q": "The anatomically suggestive ballock daggers recovered from the Mary Rose were once given what more discreet label?",
+    "a": "Kidney daggers",
+    "d": "Their handles resemble male reproductive organs. Later cataloging softened that appearance into a different anatomical name.",
+    "s": "Mary Rose Museum · Ballock dagger",
+    "u": "https://maryrose.org/artefacts/ballock-dagger/",
+    "cat": "Objects with a Past",
+    "level": "medium",
+    "choices": [
+      "Kidney daggers",
+      "Lung daggers",
+      "Heart daggers",
+      "Liver daggers"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://maryrose.org/artefacts/ballock-dagger/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum says handles resemble male reproductive organs and the objects were labelled Kidney Daggers for many years.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "4b661fe1eb286d7f23b1e5e8c5c62313e2427f8aaac68603f6dc4b80c098c36f"
+    }
+  },
+  {
+    "candidateId": "archaeology-0005",
+    "q": "The fiddle recovered from the Mary Rose was played with its neck pointing downward and its body pressed against what?",
+    "a": "Chest",
+    "d": "It was not tucked under the chin like a modern violin. Its recovered case was shaped to fit the instrument.",
+    "s": "Mary Rose Museum · Fiddle",
+    "u": "https://maryrose.org/artefacts/fiddle/",
+    "cat": "A Cabinet of Sound",
+    "level": "medium",
+    "choices": [
+      "Chest",
+      "Shoulder",
+      "Hip",
+      "Knee"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://maryrose.org/artefacts/fiddle/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum says the fiddle was pushed against the chest with neck downward; recovered inside fiddle-shaped box.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "db182faa89c3ffc648db97164c15a21c4ee1bfc0ecf841251a7a85175f3f14a0"
+    }
+  },
+  {
+    "candidateId": "archaeology-0006",
+    "q": "Charcoal and fresh leaves in one of Ötzi’s birch-bark containers suggest he carried what portable resource?",
+    "a": "Glowing embers",
+    "d": "Researchers infer that leaves wrapped the embers, helping keep a fire ready to revive hours later. The interpretation comes from the container’s blackened interior and contents.",
+    "s": "South Tyrol Museum of Archaeology · Equipment",
+    "u": "https://www.iceman.it/en/oetzi/equipment",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Medicinal steam",
+      "Fermenting grain",
+      "Liquid lamp fuel",
+      "Glowing embers"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.iceman.it/en/oetzi/equipment",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum describes blackened birch container with maple leaves and charcoal; infers wrapped embers kept for hours, not directly witnessed.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "169825f11b78ddfd09b15b60589178feee9be2e9d505f98c4d334b860150b496"
+    }
+  },
+  {
+    "candidateId": "archaeology-0007",
+    "q": "Ötzi carried a tool shaped like a pencil, but its dark core was not graphite. What formed the working tip?",
+    "a": "Antler",
+    "d": "The antler fragment sat inside a wooden handle. Experiments indicate that the tool was used to shape and resharpen flint edges.",
+    "s": "South Tyrol Museum of Archaeology · Equipment",
+    "u": "https://www.iceman.it/en/oetzi/equipment",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Antler",
+      "Charcoal",
+      "Copper",
+      "Obsidian"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.iceman.it/en/oetzi/equipment",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum identifies antler core inside lime-wood tool; experimental retouching supported shaping and sharpening flint.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "a04331af91e1549ab930636f384b5706c06fe1e33609471738ac93d6390220a8"
+    }
+  },
+  {
+    "candidateId": "archaeology-0008",
+    "q": "A 2023 study looked through six sealed ancient Egyptian metal animal coffins. The bones identified in some were likely from which animals?",
+    "a": "Lizards",
+    "d": "Neutron imaging revealed remains through the metal without opening the containers. The animals had apparently been wrapped in textile.",
+    "s": "British Museum · Egyptian lizard mummies",
+    "u": "https://www.britishmuseum.org/sites/default/files/2023-04/British_Museum_unwraps_secrets_of_ancient_Egyptian_lizard_mummies_0.pdf",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Lizards",
+      "Bats",
+      "Frogs",
+      "Shrews"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.britishmuseum.org/sites/default/files/2023-04/British_Museum_unwraps_secrets_of_ancient_Egyptian_lizard_mummies_0.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum/STFC release states neutron imaging of six coffins confirmed bones likely North African wall lizards with probable linen wrapping.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "80c566734e05e38d7f2af0823b1e354b1e7be76a6e6d1d47edc8464875beeafc"
+    }
+  },
+  {
+    "candidateId": "archaeology-0009",
+    "q": "In Manchester researchers’ examination of more than 1,000 Egyptian animal mummies, roughly a third lacked what surprising ingredient?",
+    "a": "Obvious animal material",
+    "d": "Some bundles contained entire animals and others only parts. The researchers caution that sacred contents should not automatically be judged as fraudulent fakes.",
+    "s": "British Museum symposium · Materialising divinity",
+    "u": "https://www.britishmuseum.org/sites/default/files/2024-11/Animal_mummies_from_beliefs_to_practice_abstracts.pdf",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Obvious animal material",
+      "Mineral traces",
+      "A shaped exterior",
+      "Any outer wrapping"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.britishmuseum.org/sites/default/files/2024-11/Animal_mummies_from_beliefs_to_practice_abstracts.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Price/McKnight abstract reports approximately thirds: full animals, parts, no obvious animal material; questions modern fraud interpretation in light of sacred materials.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "090a76eb56c7f4583348607c631fdadd945d927ef90413ac3187ffc2c1b61c74"
+    }
+  },
+  {
+    "candidateId": "archaeology-0010",
+    "q": "A carefully fitted wooden prosthesis worn by an ancient Egyptian priest’s daughter replaced which part of her body?",
+    "a": "Big toe",
+    "d": "Examination showed that it had been adjusted more than once to suit her foot. Its flexible construction suggests attention to practical comfort as well as appearance.",
+    "s": "University of Basel · A wooden toe",
+    "u": "https://idw-online.de/de/news?id=676657&print=1",
+    "cat": "Ancient Worlds",
+    "level": "easy",
+    "choices": [
+      "Thumb",
+      "Big toe",
+      "Heel",
+      "Index finger"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://idw-online.de/de/news?id=676657&print=1",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "University-authored2017 release reports wooden big toe about3000years old, multiple refittings, mobility and comfort-oriented workmanship.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "9ab135dce8417fa27ab603ec2b7c53449181d61fb4673b94ccce1cf0e677d3ed"
+    }
+  },
+  {
+    "candidateId": "archaeology-0011",
+    "q": "Analysis of the iron blade buried with Tutankhamun strongly supports an origin in which material source?",
+    "a": "Meteorite",
+    "d": "Its nickel and cobalt composition provides the evidence. The blade was worked into a fine dagger long before iron became common in Egypt.",
+    "s": "Comelli et al. · Tutankhamun’s dagger",
+    "u": "https://onlinelibrary.wiley.com/doi/10.1111/maps.12664",
+    "cat": "Ancient Worlds",
+    "level": "easy",
+    "choices": [
+      "Iron-rich river clay",
+      "Bog iron ore",
+      "Meteorite",
+      "Volcanic sand"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://onlinelibrary.wiley.com/doi/10.1111/maps.12664",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "2016 primary abstract gives10.8weightpercent nickel and0.58cobalt, strongly supporting meteoritic origin; article discusses fine workmanship and later common iron use.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "9eb9c1b523a455793a5daf463e300a2af2d7635b1ee4362bfd9890a7c361746b"
+    }
+  },
+  {
+    "candidateId": "archaeology-0012",
+    "q": "White lime lumps in ancient Roman concrete were once dismissed as poor mixing. A 2023 study linked them to which useful ability?",
+    "a": "Sealing cracks after water enters",
+    "d": "The lumps can supply calcium that dissolves and forms new mineral deposits in cracks. Roman-inspired test mixtures demonstrated the effect.",
+    "s": "MIT · Roman concrete durability",
+    "u": "https://news.mit.edu/2023/roman-concrete-durability-lime-casts-0106",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Sealing cracks after water enters",
+      "Preventing metal reinforcement from rusting",
+      "Resisting heat without expanding",
+      "Keeping its surface free of algae"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2023/roman-concrete-durability-lime-casts-0106",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Study and reproduction experiments support reactive calcium in lime clasts dissolving and recrystallizing to fill cracks; water flow ceased in treated test mixtures.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "b55ce362b3337f06436fb79ac247020618a6b63fba8300ebd12b2b84cd3188f1"
+    }
+  },
+  {
+    "candidateId": "archaeology-0013",
+    "q": "The famous Sutton Hoo ship had largely vanished before excavation. What preserved its recognizable shape in the ground?",
+    "a": "Imprint in the sand",
+    "d": "The oak had rotted in acidic soil. Archaeologists uncovered the outline of a boat that was no longer an intact wooden vessel.",
+    "s": "National Trust · Sutton Hoo burial ground",
+    "u": "https://www.nationaltrust.org.uk/visit/suffolk/sutton-hoo/royal-burial-ground-at-sutton-hoo",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Imprint in the sand",
+      "Continuous casing of iron plates",
+      "Layer of replacement stone",
+      "Complete shell of hardened tar"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nationaltrust.org.uk/visit/suffolk/sutton-hoo/royal-burial-ground-at-sutton-hoo",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "National Trust explains oak rotted in acidic soil over1300years, leaving its ghost imprinted in sand.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "8fe792831315e1351ba98982f5de7ab9da90fbb369cfcae3deff9ab22c4633e3"
+    }
+  },
+  {
+    "candidateId": "archaeology-0014",
+    "q": "Residue in a fourth-century Roman glass cup from Autun contained which rare perfume ingredient?",
+    "a": "Ambergris",
+    "d": "The whale-derived substance was mixed with oils and plant material. The discovery provided unusually early physical evidence of its use.",
+    "s": "Inrap · Autun cage cup study",
+    "u": "https://www.inrap.fr/sites/inrap.fr/files/atoms/files/pr_restauration_and_study_of_the_exceptional_cage_cup_from_autun_.pdf",
+    "cat": "Ancient Worlds",
+    "level": "hard",
+    "choices": [
+      "Frankincense",
+      "Myrrh",
+      "Ambergris",
+      "Sandalwood"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.inrap.fr/sites/inrap.fr/files/atoms/files/pr_restauration_and_study_of_the_exceptional_cage_cup_from_autun_.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "2021 excavator release reports oils, plants, flowers and ambergris by impregnation analysis; identifies ambergris as sperm-whale intestinal concretion.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "9c743718127a35cefa75079fa3a3d370e5ce00a9b438cf8b2cbf1e2e6f8cf5b6"
+    }
+  },
+  {
+    "candidateId": "archaeology-0015",
+    "q": "A Roman cremation urn discovered at Carmona contained human remains immersed in a liquid later identified as what drink?",
+    "a": "Wine",
+    "d": "Chemical analysis of the roughly 2,000-year-old liquid detected characteristic wine compounds. It had survived as liquid inside the sealed burial vessel.",
+    "s": "Cosano et al. · Roman wine from Baetica",
+    "u": "https://www.sciencedirect.com/science/article/pii/S2352409X24002645",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Milk",
+      "Mead",
+      "Wine",
+      "Beer"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.sciencedirect.com/science/article/pii/S2352409X24002645",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary2024 study identifies liquid in ash urn with cremated remains using mineral profile and wine polyphenols; no current oldest-record or simplified color claim.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "6c07580749be29ee130eb171e5c8d22183056fd01bae33b4fd2f0c66259148b6"
+    }
+  },
+  {
+    "candidateId": "archaeology-0016",
+    "q": "What surprised conservators when they scanned an intact Roman-period egg from Berryfields?",
+    "a": "Liquid contents had survived",
+    "d": "The egg remained intact after about 1,700years. The moving bubble showed that its interior was not simply empty or solid.",
+    "s": "Discover Bucks Museum · Roman egg",
+    "u": "https://www.discoverbucksmuseum.org/1700-year-old-roman-egg-press-release/",
+    "cat": "Ancient Worlds",
+    "level": "easy",
+    "choices": [
+      "Liquid contents had survived",
+      "The contents had become solid calcite",
+      "The shell concealed a smaller second egg",
+      "The interior was lined with soot"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.discoverbucksmuseum.org/1700-year-old-roman-egg-press-release/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Conservator’s primary account describes microCT bubble and turning egg to observe movement; museum says exact contents unknown and original yolk/albumen largely decomposed.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "b86c3451f09043a2763edf12b1a9874cd4fe19335f0b1292464433a746276706"
+    }
+  },
+  {
+    "candidateId": "archaeology-0017",
+    "q": "Ancient Mesoamerican rubber makers combined tree latex with juice from which climbing plant?",
+    "a": "Morning glory",
+    "d": "Experiments suggest that changing the mixture could tune rubber for bounce, strength or wear resistance. This technology long preceded modern industrial vulcanization.",
+    "s": "MIT · Ancient rubber recipes",
+    "u": "https://news.mit.edu/2010/mayaball-0524",
+    "cat": "Ancient Worlds",
+    "level": "medium",
+    "choices": [
+      "Morning glory",
+      "Grapevine",
+      "Passionflower",
+      "Vanilla orchid"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://news.mit.edu/2010/mayaball-0524",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Research identifies latex plus morning-glory juice; laboratory reconstructions, historical accounts and artifacts support tailoring properties by proportions. Surviving rubber too degraded to test directly.",
+      "sourceReviewer": "Codex primary researcher; exact institutional page or paper read directly or as indexed full text",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Every source-bearing fact read in the linked institutional text or paper, directly or as indexed full text. Revised weak choices and answer-revealing egg wording; retained uncertainty for inferred embers, mouse purpose and likely lizard identity. Original text and source-level word budgets checked.",
+      "duplicateNotes": "Inspected all full-q/a/d overlap neighbors and preliminary entity searches. Rejected ancient chewing-pitch genome before staging as food0104 duplicate. Ancient concrete lime reaction differs from modern bacterial repair; Autun find differs from identifying ambergris animal origin.",
+      "contentSha256": "4bfd81066d5e0e403a914fcfd318725d6c615faf1ac1b8758829d29119700ce8"
+    }
+  }
+]

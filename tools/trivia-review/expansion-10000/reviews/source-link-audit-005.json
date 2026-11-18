@@ -1,0 +1,2226 @@
+{
+  "checkedOn": "2026-11-17T22:26:17.372367+00:00",
+  "method": "Read-only HTTP GET with4workers; response headers only.403/429/timeouts are unresolved, not factual errors. Checks newly added accepted URLs absent from all prior audits; excludes unaccepted research drafts.",
+  "totalDistinctUrls": 226,
+  "completed": 226,
+  "summary": {
+    "reachable": 174,
+    "unresolved": 52
+  },
+  "urls": [
+    {
+      "url": "https://americanhistory.si.edu/collections/object/nmah_2947",
+      "candidateIds": [
+        "science-0026"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://americanindian.si.edu/collections-search/object/NMAI_278680",
+      "candidateIds": [
+        "curiosities-0008"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://amhistory.si.edu/science/chladni.htm",
+      "candidateIds": [
+        "science-0014"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://amhistory.si.edu/science/chladni.htm",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://animals.sandiegozoo.org/plants/passion-vine",
+      "candidateIds": [
+        "botany-0041"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://animals.sandiegozoo.org/plants/passion-vine",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://arboretum.harvard.edu/frequently-asked-questions-about-the-titan-arum-or-corpse-flower/",
+      "candidateIds": [
+        "botany-0072"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://art.nelson-atkins.org/objects/2373/fuddling-cup",
+      "candidateIds": [
+        "arts-0062"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://art.nelson-atkins.org/objects/2373/fuddling-cup",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://art.org/darger-timeline",
+      "candidateIds": [
+        "arts-0075"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://art.org/darger-timeline",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://artsandculture.google.com/asset/sunflower-seeds-ai-weiwei-courtesy-ai-weiwei-studio/uQFuRiasIG8a_w?hl=en",
+      "candidateIds": [
+        "arts-0036"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://artsandculture.google.com/asset/sunflower-seeds-ai-weiwei-courtesy-ai-weiwei-studio/uQFuRiasIG8a_w?hl=en",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ask.ifas.ufl.edu/publication/PP361",
+      "candidateIds": [
+        "botany-0035"
+      ],
+      "status": 307,
+      "result": "unresolved",
+      "error": "HTTP Error 307: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nTemporary Redirect"
+    },
+    {
+      "url": "https://backoffice.biblio.ugent.be/download/299362/554535",
+      "candidateIds": [
+        "science-0028"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://backoffice.biblio.ugent.be/download/299362/554535",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://bealbotanicalgarden.msu.edu/science/seed-experiment",
+      "candidateIds": [
+        "botany-0051"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bealbotanicalgarden.msu.edu/science/seed-experiment",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://bioegrad.berkeley.edu/news/bioe-grads-makes-microfluidics-from-shrinky-dinks",
+      "candidateIds": [
+        "science-0062"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bioegrad.berkeley.edu/news/bioe-grads-makes-microfluidics-from-shrinky-dinks",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://biology.ed.ac.uk/plant-sciences/news/how-the-dandelion-decides-when-to-fly",
+      "candidateIds": [
+        "botany-0008"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://biology.ed.ac.uk/plant-sciences/news/how-the-dandelion-decides-when-to-fly",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://bl.iro.bl.uk/entities/product/7fd9f662-4c10-4bea-b585-7fde17887869",
+      "candidateIds": [
+        "arts-0056"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bl.iro.bl.uk/entities/product/7fd9f662-4c10-4bea-b585-7fde17887869",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://blogs.lib.ku.edu/spencer/dancing-cheek-to-cheek-a-dos-a-dos-binding/",
+      "candidateIds": [
+        "arts-0004",
+        "arts-0022"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://blogs.lib.ku.edu/spencer/dancing-cheek-to-cheek-a-dos-a-dos-binding/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://blogs.loc.gov/international-collections/2018/02/micrography-in-the-jewish-tradition/",
+      "candidateIds": [
+        "arts-0010"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://blogs.loc.gov/international-collections/2018/02/micrography-in-the-jewish-tradition/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://blogs.loc.gov/thesignal/2011/10/information-or-artifact-digitizing-a-book-part-2/",
+      "candidateIds": [
+        "arts-0002"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://blogs.loc.gov/thesignal/2011/10/information-or-artifact-digitizing-a-book-part-2/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://bristololdvic.org.uk/archive/thunder-run",
+      "candidateIds": [
+        "arts-0055"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://bristololdvic.org.uk/archive/thunder-run",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://calteches.library.caltech.edu/668/",
+      "candidateIds": [
+        "science-0032"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://calteches.library.caltech.edu/668/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://cambridgeelectriccement.com/the-product/",
+      "candidateIds": [
+        "science-0038"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://cambridgeelectriccement.com/the-product/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://cdn.journals.aps.org/files/RevModPhys.69.645.pdf",
+      "candidateIds": [
+        "science-0069",
+        "science-0070"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://cdn.journals.aps.org/files/RevModPhys.69.645.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://cec.gmu.edu/news/2015-02/pump-bass-douse-blaze-mason-students-invention-fights-fires",
+      "candidateIds": [
+        "science-0010"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://cec.gmu.edu/news/2015-02/pump-bass-douse-blaze-mason-students-invention-fights-fires",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://chemistry.oregonstate.edu/chemistry-news-events/yinmn-blue",
+      "candidateIds": [
+        "science-0021"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://chemistry.oregonstate.edu/chemistry-news-events/yinmn-blue",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co142908/kolff-artificial-kidney-netherlands-1955-1956",
+      "candidateIds": [
+        "science-0023"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://csiropedia.csiro.au/gilding-the-gum-tree-scientists-strike-gold-in-leaves/",
+      "candidateIds": [
+        "botany-0015"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://demos.smu.ca/demos/mechanics/185-how-does-a-tippe-top-work",
+      "candidateIds": [
+        "science-0052"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://demos.smu.ca/demos/mechanics/185-how-does-a-tippe-top-work",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://digitalcollections.ohsu.edu/record/7721/files/Fogarty-Thomas_transcript.pdf",
+      "candidateIds": [
+        "science-0022"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://digitalcollections.ohsu.edu/nanna/record/7721/files/Fogarty-Thomas_transcript.pdf?withWatermark=0&withMetadata=0&registerDownload=1&version=1",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://doi.org/10.1088/0022-3727/44/2/025501",
+      "candidateIds": [
+        "science-0068"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=661b2e61-33cc-4eb4-841f-264e379945fb&ssb=75005285637&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0022-3727%2F44%2F2%2F025501&ssi=60ea9070-cnvj-4428-a9c9-4ccdc841d896&ssk=botmanager_support@radware.com&ssm=82854039853266140104354073974094&ssn=98c4786d3c222980dc754b6b2eb039a3f401d468d78e-b1c6-44bf-a680e4&sso=5ea03b55-495e275ed5fed34bf3fd000b4c8b955fb1f0fd204503d635&ssp=91495439001794981786179498077952566&ssq=43573035436796372557254367841875758603645&ssr=NzMuMjA2LjEzMS4xMTQ=&sst=Mozilla/5.0%20(source-reference%20verification)&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwYjY0N2EyNzAtYTk1Ni00OTRmLTk5YmEtODQwZDljMWVhMTM3MS0xNzk0OTU0MzY3MDM3MC0wMGU4YjJmN2NiMzUzZDAxOGVhMTAiLCJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDBkNDY4ZDc4ZS1iMWM2LTQ0YmYtYWI1NS00OTVlMjc1ZWQ1ZmUxLTE3OTQ5NTQzNjcwMzcwLTAwNTk3ZTU1MWM4NDQ2ZGRkNTIxMCJ9",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://edison.rutgers.edu/life-of-edison/essaying-edison/essay/edison-s-telegraphic-script-inspired-library-hand",
+      "candidateIds": [
+        "arts-0026"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://edison.rutgers.edu/life-of-edison/essaying-edison/essay/edison-s-telegraphic-script-inspired-library-hand",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://escholarship.org/uc/item/15r5f811",
+      "candidateIds": [
+        "science-0002"
+      ],
+      "status": 202,
+      "actualFinalUrl": "https://escholarship.org/uc/item/15r5f811",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://ethz.ch/en/news-and-events/eth-news/news/2020/05/bumblebees-speed-up-flowering.html",
+      "candidateIds": [
+        "botany-0038"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ethz.ch/en/news-and-events/eth-news/news/2020/05/bumblebees-speed-up-flowering.html",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://exhibitions.library.vanderbilt.edu/bandy-baudelaire/surrealism/",
+      "candidateIds": [
+        "arts-0024"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://exhibitions.library.vanderbilt.edu/bandy-baudelaire/surrealism/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://extension.psu.edu/what-is-growing-in-my-landscape-mulch-mushrooms-slime-molds-and-fungus",
+      "candidateIds": [
+        "botany-0036"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://extension.psu.edu/what-is-growing-in-my-landscape-mulch-mushrooms-slime-molds-and-fungus",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://files.eric.ed.gov/fulltext/ED020592.pdf",
+      "candidateIds": [
+        "science-0018"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://files.eric.ed.gov/fulltext/ED020592.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://guides.loc.gov/futurist-collections/preexisting-holdings",
+      "candidateIds": [
+        "arts-0046"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://guides.loc.gov/futurist-collections/preexisting-holdings",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://henderson.ces.ncsu.edu/news/pest-alert-cedar-apple-rust/",
+      "candidateIds": [
+        "botany-0042"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://henderson.ces.ncsu.edu/news/pest-alert-cedar-apple-rust/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/aklan-pina-handloom-weaving-01564",
+      "candidateIds": [
+        "curiosities-0009"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://ich.unesco.org/en/RL/aklan-pina-handloom-weaving-01564",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://instructional-resources.physics.uiowa.edu/4c3121-freezing-water-reduced-pressure",
+      "candidateIds": [
+        "science-0071"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://instructional-resources.physics.uiowa.edu/4c3121-freezing-water-reduced-pressure",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://iucat.iu.edu/lilly/844171",
+      "candidateIds": [
+        "arts-0025"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://iucat.iu.edu/lilly/844171",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://japanculturalexpo.ntj.jac.go.jp/en/article/sophie/202403/",
+      "candidateIds": [
+        "arts-0018"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://japanculturalexpo.ntj.jac.go.jp/en/article/sophie/202403/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://jic.ac.uk/news/how-plants-become-zombies/",
+      "candidateIds": [
+        "botany-0054"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://jic.ac.uk/news/how-plants-become-zombies/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://jic.ac.uk/news/plants-do-sums-to-get-through-the-night/",
+      "candidateIds": [
+        "botany-0047"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://jic.ac.uk/news/plants-do-sums-to-get-through-the-night/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://lightcommands.com/",
+      "candidateIds": [
+        "science-0017"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://lightcommands.com/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://live.mcachicago.org/publications/video/2015/doris-salcedos-public-works",
+      "candidateIds": [
+        "arts-0039"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://live.mcachicago.org/publications/video/2015/doris-salcedos-public-works",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://manuscripta.kb.se/ms/100500",
+      "candidateIds": [
+        "arts-0058"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'manuscripta.kb.se'. (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://metamaterials.duke.edu/news/acoustic-cloaking-device-hides-objects-sound",
+      "candidateIds": [
+        "science-0011"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://metamaterials.duke.edu/news/acoustic-cloaking-device-hides-objects-sound",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://nelson-atkins.org/grasshopper-found-embedded-van-gogh-masterpiece/",
+      "candidateIds": [
+        "arts-0040"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://nelson-atkins.org/grasshopper-found-embedded-van-gogh-masterpiece/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://nepp.nasa.gov/pages/npsl/Prohibited/tin_prohibition.cfm",
+      "candidateIds": [
+        "science-0029"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://nepp.nasa.gov/pages/npsl/Prohibited/tin_prohibition.cfm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://news.mit.edu/2018/microfluidics-lego-bricks-0131",
+      "candidateIds": [
+        "science-0061"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.mit.edu/2018/microfluidics-lego-bricks-0131",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.mit.edu/2019/blackest-black-material-cnt-0913",
+      "candidateIds": [
+        "science-0009"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.mit.edu/2019/blackest-black-material-cnt-0913",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.mit.edu/2023/mit-engineers-create-supercapacitor-ancient-materials-0731?trk=article-ssr-frontend-pulse_little-text-block",
+      "candidateIds": [
+        "science-0037"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.mit.edu/2023/mit-engineers-create-supercapacitor-ancient-materials-0731?trk=article-ssr-frontend-pulse_little-text-block",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.northwestern.edu/stories/2018/march/graphene-finds-new-application-as-non-toxic-anti-static-hair-dye",
+      "candidateIds": [
+        "science-0044"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.northwestern.edu/stories/2018/march/graphene-finds-new-application-as-non-toxic-anti-static-hair-dye",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.northwestern.edu/stories/2022/05/tiny-robotic-crab-is-smallest-ever-remote-controlled-walking-robot",
+      "candidateIds": [
+        "science-0045"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://news.northwestern.edu/stories/2022/05/tiny-robotic-crab-is-smallest-ever-remote-controlled-walking-robot",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://news.ucsc.edu/2024/04/nitrogen-fixing-organelle/",
+      "candidateIds": [
+        "botany-0053"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://nph.onlinelibrary.wiley.com/doi/10.1002/ppp3.45",
+      "candidateIds": [
+        "botany-0044"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://ocean.si.edu/conservation/get-involved/educational-uses-gyotaku-or-fish-printing",
+      "candidateIds": [
+        "arts-0007"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://ocean.si.edu/human-connections/replica-ainu-fish-skin-robe",
+      "candidateIds": [
+        "curiosities-0007"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://olafureliasson.net/artwork/the-weather-project-2003/",
+      "candidateIds": [
+        "arts-0034"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://olafureliasson.net/artwork/the-weather-project-2003/",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/nph.13272/full",
+      "candidateIds": [
+        "botany-0021"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://opg.optica.org/ol/abstract.cfm?uri=ol-24-15-1041",
+      "candidateIds": [
+        "science-0033"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://opg.optica.org/ol/abstract.cfm?uri=ol-24-15-1041",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://parliament.go.ke/sites/default/files/2021-02/Hansard%20Report%20-%20Thursday%2C%2018th%20February%202021%20%28P%29.pdf",
+      "candidateIds": [
+        "arts-0074"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://parliament.go.ke/sites/default/files/2021-02/Hansard%20Report%20-%20Thursday%2C%2018th%20February%202021%20%28P%29.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://people.csail.mit.edu/mrub/VisualMic/",
+      "candidateIds": [
+        "science-0015"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://people.csail.mit.edu/mrub/VisualMic/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://physicslabs.colorado.edu/demos/mechanics/work-and-energy/conservation-of-energy/rattleback/",
+      "candidateIds": [
+        "science-0051"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://physicslabs.colorado.edu/demos/mechanics/work-and-energy/conservation-of-energy/rattleback/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4521368/",
+      "candidateIds": [
+        "botany-0039"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4521368/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://prakashlab.stanford.edu/projects/paperfuge",
+      "candidateIds": [
+        "science-0063"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://prakashlab.stanford.edu/projects/paperfuge",
+      "result": "reachable",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms084.htm",
+      "candidateIds": [
+        "arts-0027"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms084.htm",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://pringlelab.botany.wisc.edu/documents/Ballistospore.pdf",
+      "candidateIds": [
+        "botany-0055"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'pringlelab.botany.wisc.edu'. (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://prints.rmg.co.uk/collections/historic-figures/products/combined-knife-and-fork-b3157-2?variant=57019091026302",
+      "candidateIds": [
+        "curiosities-0004"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://prints.rmg.co.uk/collections/historic-figures/products/combined-knife-and-fork-b3157-2?variant=57019091026302",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11346962/",
+      "candidateIds": [
+        "botany-0017"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/11346962/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16177778/",
+      "candidateIds": [
+        "botany-0040"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/16177778/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17916726/",
+      "candidateIds": [
+        "botany-0050"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/17916726/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19446458/",
+      "candidateIds": [
+        "botany-0012"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/19446458/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20579290/",
+      "candidateIds": [
+        "botany-0058"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/20579290/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21694708/",
+      "candidateIds": [
+        "botany-0067"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/21694708/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21707655/",
+      "candidateIds": [
+        "botany-0049"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/21707655/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22355102/",
+      "candidateIds": [
+        "botany-0052"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/22355102/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23632447/",
+      "candidateIds": [
+        "botany-0062"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/23632447/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23848618/",
+      "candidateIds": [
+        "science-0048"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/23848618/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24558156/",
+      "candidateIds": [
+        "science-0041"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/24558156/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24768053/",
+      "candidateIds": [
+        "botany-0009"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/24768053/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24985883/",
+      "candidateIds": [
+        "botany-0033"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/24985883/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25124438/",
+      "candidateIds": [
+        "botany-0027"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/25124438/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25802150/",
+      "candidateIds": [
+        "botany-0073"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/25802150/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26438874/",
+      "candidateIds": [
+        "botany-0016"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/26438874/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26763327/",
+      "candidateIds": [
+        "botany-0006"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/26763327/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26929324/",
+      "candidateIds": [
+        "botany-0004"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/26929324/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27302768/",
+      "candidateIds": [
+        "botany-0043"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/27302768/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27720617/",
+      "candidateIds": [
+        "botany-0001"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/27720617/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27775728/",
+      "candidateIds": [
+        "botany-0003"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/27775728/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28312804/",
+      "candidateIds": [
+        "botany-0057"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/28312804/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29340758/",
+      "candidateIds": [
+        "botany-0066"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/29340758/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30333579/",
+      "candidateIds": [
+        "botany-0007"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/30333579/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31601765/",
+      "candidateIds": [
+        "science-0042"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/31601765/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32740926/",
+      "candidateIds": [
+        "botany-0025"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/32740926/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33220721/",
+      "candidateIds": [
+        "botany-0064"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/33220721/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34636668/",
+      "candidateIds": [
+        "botany-0074"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/34636668/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35074876/",
+      "candidateIds": [
+        "botany-0065"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/35074876/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35901149/",
+      "candidateIds": [
+        "botany-0024"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/35901149/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36652525/",
+      "candidateIds": [
+        "botany-0018"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/36652525/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37001499/",
+      "candidateIds": [
+        "botany-0071"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/37001499/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39556875/",
+      "candidateIds": [
+        "botany-0063"
+      ],
+      "status": 203,
+      "actualFinalUrl": "https://pubmed.ncbi.nlm.nih.gov/39556875/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2025/cp/d5cp01908g",
+      "candidateIds": [
+        "science-0030"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://pure.tue.nl/ws/files/3198705/Metis238670.pdf",
+      "candidateIds": [
+        "science-0072"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://pure.tue.nl/ws/files/3198705/Metis238670.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/8162cd30-4147-4694-95e6-0e945ac36852/content",
+      "candidateIds": [
+        "arts-0047"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://scholarworks.indianapolis.iu.edu/server/api/core/bitstreams/8162cd30-4147-4694-95e6-0e945ac36852/content",
+      "result": "reachable",
+      "contentType": "application/pdf;charset=UTF-8"
+    },
+    {
+      "url": "https://science.osti.gov/bes/Highlights/2015/BES-2015-10-e",
+      "candidateIds": [
+        "science-0043"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.osti.gov/bes/Highlights/2015/BES-2015-10-e",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://science.ubc.ca/news/insects-beware-west-coast-plant-wants-eat-you",
+      "candidateIds": [
+        "botany-0048"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://science.ubc.ca/news/insects-beware-west-coast-plant-wants-eat-you",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://shop.tate.org.uk/cornelia-parker-cold-dark-matter-an-exploded-view/corpar2204.html",
+      "candidateIds": [
+        "arts-0014"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://shop.tate.org.uk/cornelia-parker-cold-dark-matter-an-exploded-view/corpar2204.html",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://shop.tate.org.uk/cornelia-parker-war-room/corpar2210.html",
+      "candidateIds": [
+        "arts-0033"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://shop.tate.org.uk/cornelia-parker-war-room/corpar2210.html",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://shop.tate.org.uk/yves-klein-saut-dans-le-vide-poster/18021.html",
+      "candidateIds": [
+        "arts-0009"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://shop.tate.org.uk/yves-klein-saut-dans-le-vide-poster/18021.html",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://sites.aph.org/news/december-2015/",
+      "candidateIds": [
+        "arts-0029"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://sites.aph.org/news/december-2015/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://smi.uq.edu.au/project/pathways-nickel-accumulation-tropical-hyperaccumulator-plant-species-new-caledonia",
+      "candidateIds": [
+        "botany-0014"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://smi.uq.edu.au/project/pathways-nickel-accumulation-tropical-hyperaccumulator-plant-species-new-caledonia",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://spademos.umn.edu/7B11.25",
+      "candidateIds": [
+        "science-0056"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://spademos.umn.edu/7B11.25",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://stories.tamu.edu/news/2024/02/13/what-are-sailors-valentines/",
+      "candidateIds": [
+        "curiosities-0003"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://stories.tamu.edu/news/2024/02/13/what-are-sailors-valentines/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://sweetgum.nybg.org/science/projects/lp/glossary-list/?ImagesOnly=yes&LimitPerPage=40&TerTerm=Contractile+roots",
+      "candidateIds": [
+        "botany-0070"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://tech.ebu.ch/docs/r/r074.pdf",
+      "candidateIds": [
+        "science-0027"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://tech.ebu.ch/docs/r/r074.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://thejewishmuseum.org/exhibitions/sarah-bernhardt-the-art-of-high-drama/",
+      "candidateIds": [
+        "arts-0053"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://thejewishmuseum.org/exhibitions/sarah-bernhardt-the-art-of-high-drama/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://tile.loc.gov/storage-services/service/mss/magbell/005/00510307/00510307.pdf",
+      "candidateIds": [
+        "science-0016"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://tile.loc.gov/storage-services/service/mss/magbell/005/00510307/00510307.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://vanderbei.princeton.edu/WebGL/slinky.pdf",
+      "candidateIds": [
+        "science-0075"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://vanderbei.princeton.edu/WebGL/slinky.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://w2.eff.org/Privacy/printers/docucolor/",
+      "candidateIds": [
+        "science-0058"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://w2.eff.org/Privacy/printers/docucolor/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240242.pdf",
+      "candidateIds": [
+        "science-0057"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K240242.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.acs.org/pressroom/reactions/library/testing--unbreakable-pykrete.html",
+      "candidateIds": [
+        "science-0008"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.acs.org/pressroom/reactions/library/testing--unbreakable-pykrete.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.ars.usda.gov/news-events/news/research-news/2020/fungus-commits-floral-fraud-to-fool-insects-into-spreading-it/",
+      "candidateIds": [
+        "botany-0030"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ars.usda.gov/news-events/news/research-news/2020/fungus-commits-floral-fraud-to-fool-insects-into-spreading-it/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.artangel.org.uk/project/house/?sb=rachel-whiteread",
+      "candidateIds": [
+        "arts-0015"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.artangel.org.uk/project/house/?sb=rachel-whiteread",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.aut.ac.nz/news/stories/younger-trees-keep-nearby-grandpa-kauri-alive",
+      "candidateIds": [
+        "botany-0029"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.bristol.ac.uk/news/2012/8179.html",
+      "candidateIds": [
+        "science-0040"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bristol.ac.uk/news/2012/8179.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.bristol.ac.uk/news/2021/september/electric-bees.html",
+      "candidateIds": [
+        "botany-0032"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.bristol.ac.uk/news/2021/september/electric-bees.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cam.ac.uk/research/news/green-method-developed-for-making-artificial-spider-silk",
+      "candidateIds": [
+        "science-0035"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cam.ac.uk/research/news/green-method-developed-for-making-artificial-spider-silk",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cam.ac.uk/research/news/how-the-kettle-got-its-whistle",
+      "candidateIds": [
+        "science-0050"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cam.ac.uk/research/news/how-the-kettle-got-its-whistle",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cam.ac.uk/research/news/petals-produce-a-blue-halo-that-helps-bees-find-flowers",
+      "candidateIds": [
+        "botany-0011"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cam.ac.uk/research/news/petals-produce-a-blue-halo-that-helps-bees-find-flowers",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.cam.ac.uk/research/news/why-buttercups-reflect-yellow-on-chins",
+      "candidateIds": [
+        "botany-0060"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.cam.ac.uk/research/news/why-buttercups-reflect-yellow-on-chins",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.colorado.edu/lab/lecture-demo-manual/g440-evaporation-and-expansion-drinking-bird",
+      "candidateIds": [
+        "science-0054"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.colorado.edu/lab/lecture-demo-manual/g440-evaporation-and-expansion-drinking-bird",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.deutsches-museum.de/en/forschung/forschungsinstitut/projekte-und-forschungsbereiche/projects/detail-page/desscode-glasfaser",
+      "candidateIds": [
+        "curiosities-0006"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.deutsches-museum.de/en/forschung/forschungsinstitut/projekte-und-forschungsbereiche/projects/detail-page/desscode-glasfaser",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.diaart.org/collection/collection/de-maria-walter-the-new-york-earth-room-1977-1980-135/on-view/html/sort-by/date%3Adesc/page/55",
+      "candidateIds": [
+        "arts-0038"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.diaart.org/collection/collection/de-maria-walter-the-vertical-earth-kilometer-1977-1977-002/object-type/sculpture/page/5/on-view/on",
+      "candidateIds": [
+        "arts-0035"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.doctorwho.tv/news-and-features/where-did-the-sound-of-the-tardis-come-from",
+      "candidateIds": [
+        "arts-0051"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.doctorwho.tv/news-and-features/where-did-the-sound-of-the-tardis-come-from",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.dombibliothek-hildesheim.de/en/bestand/highlights/codex-rotundus/",
+      "candidateIds": [
+        "arts-0057"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.dombibliothek-hildesheim.de/en/bestand/highlights/codex-rotundus/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.exair.com/products/vortex-tubes-and-spot-cooling-products/vortex-tubes/vt.html",
+      "candidateIds": [
+        "science-0065"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.exair.com/products/vortex-tubes-and-spot-cooling-products/vortex-tubes/vt.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.getty.edu/art/exhibitions/blake/explore.html",
+      "candidateIds": [
+        "arts-0020"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.getty.edu/art/exhibitions/blake/explore.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.getty.edu/research/collections/component/10002M",
+      "candidateIds": [
+        "arts-0049"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.getty.edu/research/collections/component/10002M",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.gore.com/news-events/robert-w-gore-chairman-emeritus-w-l-gore-associates-and-inventor-gore-tex-technology",
+      "candidateIds": [
+        "science-0004"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.gore.com/news-events/robert-w-gore-chairman-emeritus-w-l-gore-associates-and-inventor-gore-tex-technology",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.heritageasianart.org/the-chinese-puzzle",
+      "candidateIds": [
+        "arts-0061"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.heritageasianart.org/the-chinese-puzzle",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.instituteofmaking.org.uk/materials-library/library/silly-putty-4",
+      "candidateIds": [
+        "science-0005"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.instituteofmaking.org.uk/materials-library/library/silly-putty-4",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.kew.org/read-and-watch/ants-and-plants-a-very-natural-love-story",
+      "candidateIds": [
+        "botany-0034"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kew.org/read-and-watch/caring-for-kews-bamboos",
+      "candidateIds": [
+        "botany-0046"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kew.org/read-and-watch/deceiving-seed-dispersal",
+      "candidateIds": [
+        "botany-0005"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kew.org/read-and-watch/orchid-seeds-natures-tiny-treasures",
+      "candidateIds": [
+        "botany-0045"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kew.org/read-and-watch/plant-seed-dispersal-animal-poo",
+      "candidateIds": [
+        "botany-0069"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.kew.org/read-and-watch/strangler-figs-killers-or-bodyguards",
+      "candidateIds": [
+        "botany-0068"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.laurencesternetrust.org.uk/collection-highlights-categories/the-marbled-page/",
+      "candidateIds": [
+        "arts-0012"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.laurencesternetrust.org.uk/collection-highlights-categories/the-marbled-page/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/john-henry-pepper/",
+      "candidateIds": [
+        "arts-0054"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.lindahall.org/about/news/scientist-of-the-day/john-henry-pepper/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.loc.gov/classroom-materials/civil-war-photographs-new-technologies-and-new-uses/",
+      "candidateIds": [
+        "arts-0070"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/item/2021667585/",
+      "candidateIds": [
+        "arts-0005"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.loc.gov/static/collections/liljenquist-civil-war-photographs/articles-and-essays/ambrotypes-and-tintypes/",
+      "candidateIds": [
+        "arts-0069"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.loc.gov/static/collections/liljenquist-civil-war-photographs/articles-and-essays/ambrotypes-and-tintypes/",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.mcgill.ca/newsroom/channels/news/glass-bends-doesn%E2%80%99t-break-232659",
+      "candidateIds": [
+        "science-0039"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/193595",
+      "candidateIds": [
+        "arts-0063"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/19568",
+      "candidateIds": [
+        "arts-0060"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/203639",
+      "candidateIds": [
+        "arts-0050"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/art/collection/search/271420",
+      "candidateIds": [
+        "arts-0045"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/es/essays/arts-of-the-mission-schools-in-mexico",
+      "candidateIds": [
+        "arts-0064"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/es/essays/william-henry-fox-talbot-1800-1877-and-the-invention-of-photography",
+      "candidateIds": [
+        "arts-0023"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/essays/ethiopian-healing-scrolls",
+      "candidateIds": [
+        "arts-0001"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/ko/perspectives/paintings-uncovered",
+      "candidateIds": [
+        "arts-0041"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/zh/essays/the-printed-image-in-the-west-mezzotint",
+      "candidateIds": [
+        "arts-0006"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metmuseum.org/zh/perspectives/library-conservation-of-edible-books",
+      "candidateIds": [
+        "arts-0030",
+        "arts-0031"
+      ],
+      "status": 429,
+      "result": "unresolved",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.moma.org/audio/276?high_contrast=true",
+      "candidateIds": [
+        "arts-0032"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.moma.org/audio/4513",
+      "candidateIds": [
+        "arts-0013"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/44658",
+      "candidateIds": [
+        "arts-0043"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.moma.org/collection/works/80530",
+      "candidateIds": [
+        "arts-0008",
+        "arts-0021"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.moma.org/documents/moma_press-release_326004.pdf",
+      "candidateIds": [
+        "arts-0048"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.moma.org/documents/moma_press-release_326004.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.moma.org/explore/inside_out/2013/04/17/momas-jackson-pollock-conservation-project-insight-into-the-artists-process/",
+      "candidateIds": [
+        "arts-0042"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.moma.org/momaorg/shared/pdfs/docs/press_archives/5199/releases/MOMA_1974_0130_112.pdf",
+      "candidateIds": [
+        "arts-0073"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.moma.org/momaorg/shared/pdfs/docs/press_archives/5199/releases/MOMA_1974_0130_112.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.mrsec.harvard.edu/research/highlight_188.php",
+      "candidateIds": [
+        "science-0034"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.mrsec.harvard.edu/research/highlight_188.php",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8;"
+    },
+    {
+      "url": "https://www.nature.com/articles/18842",
+      "candidateIds": [
+        "science-0013"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/18842?error=cookies_not_supported&code=da9d9212-d1e7-44ae-b868-7db7a0396ff7",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/35009017",
+      "candidateIds": [
+        "science-0053"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/35009017?error=cookies_not_supported&code=7b5aa617-ce0d-410a-ab5e-4c97168e776b",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/35057232",
+      "candidateIds": [
+        "science-0031"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/35057232?error=cookies_not_supported&code=444ccac6-aae1-4acd-abba-e63d989caf01",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/nature07378",
+      "candidateIds": [
+        "science-0020"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/nature07378?error=cookies_not_supported&code=fa8851e1-3200-4c3a-878a-847284a6076c",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41467-021-23009-y",
+      "candidateIds": [
+        "science-0064"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/s41467-021-23009-y?error=cookies_not_supported&code=eec664f4-46a6-4e9d-b924-1acbd01bd02e",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41477-022-01129-7",
+      "candidateIds": [
+        "botany-0059"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/s41477-022-01129-7?error=cookies_not_supported&code=ced710cd-58ea-4916-a51c-a0b81066a3a5",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-019-1739-5",
+      "candidateIds": [
+        "science-0012"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/s41586-019-1739-5?error=cookies_not_supported&code=16359073-83a3-47ec-b88a-dc749face66b",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nature.com/articles/s42003-023-05044-1",
+      "candidateIds": [
+        "botany-0056"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nature.com/articles/s42003-023-05044-1?error=cookies_not_supported&code=c3c326d1-c53a-43d0-b130-a3b72bd5bba5",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nga.gov/exhibitions/drawing-silver-and-gold-leonardo-jasper-johns",
+      "candidateIds": [
+        "arts-0019"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.nga.gov/stories/videos/take-felix-gonzalez-torress-untitled-you",
+      "candidateIds": [
+        "arts-0016"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.nhm.ac.uk/discover/news/2022/june/first-carnivorous-plant-underground-pitfall-traps-discovered.html",
+      "candidateIds": [
+        "botany-0019"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nhm.ac.uk/discover/news/2022/june/first-carnivorous-plant-underground-pitfall-traps-discovered.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.nobelprize.org/uploads/2018/06/popular-physicsprize2010.pdf",
+      "candidateIds": [
+        "science-0003"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nobelprize.org/uploads/2018/06/popular-physicsprize2010.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.np.phy.cam.ac.uk/publications/pnas12-pollia.pdf",
+      "candidateIds": [
+        "botany-0002"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.np.phy.cam.ac.uk/wp-content/uploads/sites/50/2024/06/pnas12-pollia.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.npg.org.uk/support/how-your-support-has-helped/past-appeals/marc-quinn",
+      "candidateIds": [
+        "arts-0037"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.nps.gov/places/cockspur-island-lighthouse.htm",
+      "candidateIds": [
+        "curiosities-0002"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.nps.gov/places/cockspur-island-lighthouse.htm",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.ogtr.gov.au/sites/default/files/files/2021-07/the_biology_of_white_clover.pdf",
+      "candidateIds": [
+        "botany-0010"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.ojp.gov/pdffiles1/nij/225331.pdf",
+      "candidateIds": [
+        "science-0024"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ojp.gov/pdffiles1/nij/225331.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.optica.org/about/newsroom/news_releases/2024/november/scientists_discover_laser_light_can_cast_a_shadow/",
+      "candidateIds": [
+        "science-0055"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.optica.org/about/newsroom/news_releases/2024/november/scientists_discover_laser_light_can_cast_a_shadow/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ox.ac.uk/news/2024-11-26-new-study-reveals-explosive-secret-squirting-cucumber",
+      "candidateIds": [
+        "botany-0020"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.phy.cam.ac.uk/wp-content/uploads/2025/03/cavmag-14.pdf",
+      "candidateIds": [
+        "science-0049"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.phy.cam.ac.uk/wp-content/uploads/2025/03/cavmag-14.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.physics.colostate.edu/physics-demos/belousov-zhabotinsky-reaction/",
+      "candidateIds": [
+        "science-0006"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.physics.colostate.edu/physics-demos/belousov-zhabotinsky-reaction/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.physics.colostate.edu/physics-demos/levitron/",
+      "candidateIds": [
+        "science-0067"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.physics.colostate.edu/physics-demos/levitron/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.physics.purdue.edu/demos/display_page.php?item=3D-02",
+      "candidateIds": [
+        "science-0060"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.physics.purdue.edu/demos/display_page.php?item=3D-02",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.pilotpen.eu/faq/",
+      "candidateIds": [
+        "science-0046"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.pilotpen.eu/faq/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.psu.edu/news/research/story/green-chiller-technology-rolled-out-earth-day",
+      "candidateIds": [
+        "science-0066"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.psu.edu/news/research/story/green-chiller-technology-rolled-out-earth-day",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.psu.edu/news/research/story/parasitic-plants-sniff-out-hosts-according-penn-state-research",
+      "candidateIds": [
+        "botany-0026"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.psu.edu/news/research/story/parasitic-plants-sniff-out-hosts-according-penn-state-research",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.psu.edu/news/research/story/zombie-ant-brains-left-intact-fungal-parasite",
+      "candidateIds": [
+        "botany-0031"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.psu.edu/news/research/story/zombie-ant-brains-left-intact-fungal-parasite",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.purdue.edu/newsroom/archive/releases/2021/Q3/purdue-record-for-the-whitest-paint-appears-in-latest-edition-of-guinness-world-records.html",
+      "candidateIds": [
+        "science-0001"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.purdue.edu/newsroom/archive/releases/2021/Q3/purdue-record-for-the-whitest-paint-appears-in-latest-edition-of-guinness-world-records.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.rct.uk/collection/stories/women-artists/autoportrait-en-chimere",
+      "candidateIds": [
+        "arts-0066"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.rigb.org/explore-science/explore/collection/humphry-davys-miners-safety-lamp",
+      "candidateIds": [
+        "science-0059"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.rigb.org/explore-science/explore/collection/humphry-davys-miners-safety-lamp",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.royalyachtbritannia.co.uk/history/royal-residence/decommission/",
+      "candidateIds": [
+        "curiosities-0005"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.royalyachtbritannia.co.uk/history/royal-residence/decommission/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2590238522006932",
+      "candidateIds": [
+        "science-0047"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S1749461315300105",
+      "candidateIds": [
+        "botany-0075"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/david-garrick/",
+      "candidateIds": [
+        "arts-0052"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/david-garrick/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.smk.dk/en/highlight/the-reverse-of-a-framed-painting-1670/",
+      "candidateIds": [
+        "arts-0067"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.smk.dk/en/highlight/the-reverse-of-a-framed-painting-1670/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.soci.org/Chemistry-and-Industry/CnI-Data/2010/22/Dry-water-making-waves",
+      "candidateIds": [
+        "science-0074"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.soci.org/Chemistry-and-Industry/CnI-Data/2010/22/Dry-water-making-waves",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.steinway.com/news/features/victory-verticals",
+      "candidateIds": [
+        "curiosities-0001"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.steinway.com/news/features/victory-verticals",
+      "result": "reachable",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "url": "https://www.surmet.com/transparent-armor",
+      "candidateIds": [
+        "science-0007"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.surmet.com/transparent-armor",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.t.u-tokyo.ac.jp/press/foe/press/setnws_201712151126279241637212.html",
+      "candidateIds": [
+        "science-0019"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.t.u-tokyo.ac.jp/press/foe/press/setnws_201712151126279241637212.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.themorgan.org/exhibitions/online/emily-dickinson/15",
+      "candidateIds": [
+        "arts-0028"
+      ],
+      "status": 403,
+      "result": "unresolved",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.tomphillips.co.uk/works/humument",
+      "candidateIds": [
+        "arts-0011"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.tomphillips.co.uk/works/humument",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.transitions.com/en-us/why-transitions/the-technology/photochromic-tech/",
+      "candidateIds": [
+        "science-0025"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.transitions.com/en-us/why-transitions/the-technology/photochromic-tech/",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ualberta.ca/en/newtrail/research/blueskygreenmoss.html",
+      "candidateIds": [
+        "botany-0037"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ualberta.ca/en/newtrail/research/blueskygreenmoss.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ucdavis.edu/climate/news/discovery-uncovers-new-leaf-redwoods",
+      "candidateIds": [
+        "botany-0028"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ucdavis.edu/climate/news/discovery-uncovers-new-leaf-redwoods",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ucdavis.edu/news/study-finds-indigenous-mexican-corn-captures-nitrogen",
+      "candidateIds": [
+        "botany-0013"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ucdavis.edu/news/study-finds-indigenous-mexican-corn-captures-nitrogen",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ucdavis.edu/news/sunflowers-move-clock",
+      "candidateIds": [
+        "botany-0022",
+        "botany-0023"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.ucdavis.edu/news/sunflowers-move-clock",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.unesco.org/en/articles/nushu-tears-sunshine-0",
+      "candidateIds": [
+        "arts-0059",
+        "arts-0072"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.unesco.org/en/articles/nushu-tears-sunshine-0",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.unicode.org/versions/Unicode12.1.0/ch08.pdf",
+      "candidateIds": [
+        "arts-0071"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.unicode.org/versions/Unicode12.1.0/ch08.pdf",
+      "result": "reachable",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.vam.ac.uk/articles/how-is-it-made-micromosaics",
+      "candidateIds": [
+        "arts-0065"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.vam.ac.uk/articles/how-is-it-made-micromosaics",
+      "result": "reachable",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.walkerart.org/press-releases/experience-the-moving-and-influential-work-of-arte-povera-artist-jannis-kounellis-in-a-major-retrospective-at-the-walker-art-center/",
+      "candidateIds": [
+        "arts-0044"
+      ],
+      "status": null,
+      "result": "unresolved",
+      "error": "<urlopen error [SSL: TLSV1_ALERT_PROTOCOL_VERSION] tlsv1 alert protocol version (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://www.warhol.org/exhibition/altered-states/",
+      "candidateIds": [
+        "arts-0003"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.warhol.org/exhibition/altered-states/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.webexhibits.org/causesofcolor/ref/Braun-Smirnov.html",
+      "candidateIds": [
+        "science-0073"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www.webexhibits.org/causesofcolor/ref/Braun-Smirnov.html",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www2.ntj.jac.go.jp/unesco/kabuki/en/production/performance1.html",
+      "candidateIds": [
+        "arts-0017"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://www2.ntj.jac.go.jp/unesco/kabuki/en/production/performance1.html",
+      "result": "reachable",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://wyss.harvard.edu/technology/slips-slippery-liquid-infused-porous-surfaces/",
+      "candidateIds": [
+        "science-0036"
+      ],
+      "status": 200,
+      "actualFinalUrl": "https://wyss.harvard.edu/technology/slips-slippery-liquid-infused-porous-surfaces/",
+      "result": "reachable",
+      "contentType": "text/html; charset=UTF-8"
+    }
+  ]
+}

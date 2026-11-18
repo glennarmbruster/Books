@@ -1,0 +1,123 @@
+{
+  "status": "held drafts; no publication; independent editorial acceptance remains with parent",
+  "count": 150,
+  "uniqueSources": 89,
+  "levels": {
+    "hard": 42,
+    "medium": 98,
+    "easy": 10
+  },
+  "sha256": "072976383cbf0f0ab972cb89b2bf3616fe3df5b3082e6163747fad3b4f8a2c33",
+  "sourceLimits": "Maximum 3 cards and 180 derived words per canonical source, counting questions, answers, explanations, choices and evidence",
+  "comparedFiles": [
+    {
+      "path": "/tmp/trivia100k/existing.json",
+      "count": 20000
+    },
+    {
+      "path": "/tmp/trivia100k/released.json",
+      "count": 100
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/nature-001.json",
+      "count": 100
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/culture-001.json",
+      "count": 100
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/words-002.json",
+      "count": 21
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/books-002.json",
+      "count": 12
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/space-002.json",
+      "count": 13
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/weather-001.json",
+      "count": 8
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/places-001.json",
+      "count": 7
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/objects-001.json",
+      "count": 100
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/space-001.json",
+      "count": 18
+    },
+    {
+      "path": "/Users/glenn.armbruster/GitHub/Books/tools/trivia-review/expansion-10000/candidates/nature-002.json",
+      "count": 150
+    }
+  ],
+  "replacementIndices": {
+    "14": "cauliflory repeated20035",
+    "23": "flower trapping overlaps654",
+    "61": "growth already in59 explanation",
+    "63": "habitat already in62",
+    "64": "lens count weak curiosity",
+    "71": "aphid prey already10205",
+    "76": "ant defense repeated7647",
+    "81": "stem photosynthesis already16406",
+    "83": "routine name-origin identity",
+    "85": "routine queen identity",
+    "88": "second mammal-pollination fact too similar",
+    "99": "routine coat-of-arms identity",
+    "107": "routine fasting behavior",
+    "117": "weak arbitrary duration",
+    "125": "routine gait",
+    "139": "question disclosed its sound answer"
+  },
+  "retargetedSourceClaims": [
+    118,
+    119
+  ],
+  "otherRevisedIndices": [
+    28,
+    29,
+    30,
+    38,
+    50,
+    54,
+    57,
+    72,
+    77,
+    80,
+    84,
+    87,
+    88,
+    90,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    104,
+    108,
+    110,
+    120,
+    128,
+    129,
+    130,
+    131,
+    134,
+    137,
+    140,
+    141,
+    144,
+    145,
+    149,
+    150
+  ],
+  "limitations": "Similarity screening and targeted semantic searches can miss duplicates; retained nearest matches aid independent review. Difficulty is an editorial estimate, not player-tested."
+}

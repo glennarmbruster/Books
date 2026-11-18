@@ -1,0 +1,377 @@
+[
+  {
+    "q": "What sandwich filling did John Young secretly carry aboard Gemini III in 1965?",
+    "a": "Corned beef",
+    "d": "The rye-bread sandwich shed crumbs in weightlessness, so the astronauts soon tucked it away. Approved food was designed to avoid that floating mess.",
+    "s": "NASA · Contraband Corned Beef",
+    "u": "https://www.nasa.gov/missions/gemini/contraband-corned-beef-and-the-early-days-of-space-biology-the-gemini-iii-mission/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Roast turkey",
+      "Peanut butter",
+      "Tuna salad",
+      "Corned beef"
+    ],
+    "candidateId": "space-0019",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/missions/gemini/contraband-corned-beef-and-the-early-days-of-space-biology-the-gemini-iii-mission/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Young concealed a corned-beef sandwich in his suit; floating breadcrumbs ended the tasting.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "a24a9841d8a720e20706e908954b8a1ea3f3ddd7c52bc62048440d92b8ee0518"
+    }
+  },
+  {
+    "q": "What lets NASA’s LEMUR robot catch onto the tiny irregularities of rough rock walls?",
+    "a": "Fishhooks",
+    "d": "The hooks catch small surface irregularities, letting the robot climb places where ordinary wheels would fail.",
+    "s": "NASA · For Climbing Robots, the Sky’s the Limit",
+    "u": "https://www.nasa.gov/technology/robotics/for-climbing-robots-the-skys-the-limit/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "easy",
+    "choices": [
+      "Suction cups",
+      "Fishhooks",
+      "Rubber-coated pads",
+      "Adhesive tape"
+    ],
+    "candidateId": "space-0020",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/technology/robotics/for-climbing-robots-the-skys-the-limit/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "LEMUR’s sixteen fingers carry hundreds of fishhooks for gripping rocks.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "f3e4012b9594b5161f78fd11a3e9772b3bf4f5c04931b7f6fa472af0aaac8fec"
+    }
+  },
+  {
+    "q": "The RoboSimian robot’s springy wheels were made from wire also used in which musical instrument?",
+    "a": "Piano",
+    "d": "The flexible music-wire wheels helped the experimental robot negotiate uneven terrain during tests for icy-world exploration.",
+    "s": "NASA · For Climbing Robots, the Sky’s the Limit",
+    "u": "https://www.nasa.gov/technology/robotics/for-climbing-robots-the-skys-the-limit/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Timpani",
+      "Trumpet",
+      "Clarinet",
+      "Piano"
+    ],
+    "candidateId": "space-0021",
+    "review": {
+      "status": "rejected",
+      "sourceUrl": "https://www.nasa.gov/technology/robotics/for-climbing-robots-the-skys-the-limit/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "RoboSimian wheels use music wire of the kind found in a piano.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "",
+      "duplicateNotes": "",
+      "rejectionReason": "Wire is used in several instruments; this tests an arbitrary comparison in the source rather than a robust unique fact. Retain the stronger cliff-gripping and ice-drilling robot cards."
+    }
+  },
+  {
+    "q": "How does NASA’s inchworm-like Ice Worm prototype secure itself while climbing an ice wall?",
+    "a": "It drills into the ice",
+    "d": "The robot fixes one end at a time, then contracts or extends its joints to advance along the frozen surface.",
+    "s": "NASA · For Climbing Robots, the Sky’s the Limit",
+    "u": "https://www.nasa.gov/technology/robotics/for-climbing-robots-the-skys-the-limit/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "It freezes water sprayed from its feet",
+      "It drills into the ice",
+      "It presses suction cups against the ice",
+      "It melts and refreezes footholds"
+    ],
+    "candidateId": "space-0022",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/technology/robotics/for-climbing-robots-the-skys-the-limit/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Ice Worm drills one end at a time into the hard surface while scrunching and extending.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "29e3a688fa62dbf9568a555b3ed833d435a5b7bd44b9ae42c9e055f539763e17"
+    }
+  },
+  {
+    "q": "Which lizard inspired NASA’s reusable grippers that stick without leaving glue behind?",
+    "a": "Gecko",
+    "d": "Synthetic microscopic hairs imitate the animal’s feet. Close contact produces attractive molecular forces, rather than a layer of sticky glue.",
+    "s": "NASA · Gecko Grippers Moving On Up",
+    "u": "https://www.nasa.gov/missions/station/gecko-grippers-moving-on-up/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "easy",
+    "choices": [
+      "Gecko",
+      "Chameleon",
+      "Iguana",
+      "Anole"
+    ],
+    "candidateId": "space-0023",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/missions/station/gecko-grippers-moving-on-up/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "The grippers imitate gecko foot hairs and use van der Waals attraction without residue.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "ac9498183ba98aae0faa3e97b7a64b0ea27ce90166b35be180dddb2b8698f2e9"
+    }
+  },
+  {
+    "q": "Apollo 17 astronauts made a replacement lunar-rover fender from four pieces of what?",
+    "a": "Maps",
+    "d": "Duct tape joined the maps, and clamps held the improvised mudguard in place against the rover’s spray of lunar dust.",
+    "s": "NASA · Duct Tape Saves the Day!",
+    "u": "https://www.nasa.gov/image-article/duct-tape-saves-day/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Seat cushions",
+      "Maps",
+      "Food pouches",
+      "Battery covers"
+    ],
+    "candidateId": "space-0024",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/image-article/duct-tape-saves-day/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "The replacement fender was four maps joined with duct tape and attached by two clamps.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "f4483b6331992b18ae01f6948570ab368e9149dd9a5bbf79f3e19c7d5e251926"
+    }
+  },
+  {
+    "q": "What pulls waste in the right direction in a space-station toilet, where gravity cannot do the usual job?",
+    "a": "Airflow",
+    "d": "Fans draw waste into separate receptacles. Foot restraints and handholds help the user stay in position.",
+    "s": "NASA · Boldly Go!",
+    "u": "https://www.nasa.gov/humans-in-space/boldly-go-nasas-new-space-toilet-offers-more-comfort-improved-efficiency-for-deep-space-missions/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "easy",
+    "choices": [
+      "A spinning centrifuge",
+      "Airflow",
+      "A compressing piston",
+      "A continuous water jet"
+    ],
+    "candidateId": "space-0025",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/humans-in-space/boldly-go-nasas-new-space-toilet-offers-more-comfort-improved-efficiency-for-deep-space-missions/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Space toilets use airflow to pull urine and feces into receptacles.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "6fa28bd4646b8ecc560a85fee65378209cf4ec8b78767a39f3c94207270ebe13"
+    }
+  },
+  {
+    "q": "What is the usual final journey for most sealed containers of solid toilet waste from the space station?",
+    "a": "Burning up in a cargo ship",
+    "d": "Most are packed aboard departing cargo vehicles that reenter the atmosphere. A few containers return to Earth for evaluation.",
+    "s": "NASA · Boldly Go!",
+    "u": "https://www.nasa.gov/humans-in-space/boldly-go-nasas-new-space-toilet-offers-more-comfort-improved-efficiency-for-deep-space-missions/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Burning up in a cargo ship",
+      "Landing by parachute for disposal",
+      "Remaining in permanent Earth orbit",
+      "Being processed into plant compost"
+    ],
+    "candidateId": "space-0026",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/humans-in-space/boldly-go-nasas-new-space-toilet-offers-more-comfort-improved-efficiency-for-deep-space-missions/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Most fecal canisters are loaded in cargo ships that burn up on atmospheric reentry.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "35bc1b0eee88d3b3c3de1183d3a70a39e76df4c3ee0c3f1aa0b8ae0156e7f36c"
+    }
+  },
+  {
+    "q": "Which body liquid does the International Space Station process into water that can be drunk again?",
+    "a": "Urine",
+    "d": "Water recovery reduces the amount that must be launched from Earth. The liquid undergoes treatment before joining the drinking-water supply.",
+    "s": "NASA · Boldly Go!",
+    "u": "https://www.nasa.gov/humans-in-space/boldly-go-nasas-new-space-toilet-offers-more-comfort-improved-efficiency-for-deep-space-missions/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "easy",
+    "choices": [
+      "Urine",
+      "Bile",
+      "Lymph",
+      "Blood"
+    ],
+    "candidateId": "space-0027",
+    "review": {
+      "status": "rejected",
+      "sourceUrl": "https://www.nasa.gov/humans-in-space/boldly-go-nasas-new-space-toilet-offers-more-comfort-improved-efficiency-for-deep-space-missions/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Pretreated urine enters a regenerative system; astronauts drink the water after filtering and processing.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "3a8e35e7e18c98d36faf0f8976d28fd7df58faacb650c991368c46c74f77d0a3",
+      "rejectionReason": "Independent reviewer found urine automatic against bile, lymph and blood. Other recovered water streams risk multiple correct answers; omit rather than count a trivially cued card."
+    }
+  },
+  {
+    "q": "What helps a specially shaped Space Cup deliver coffee to an astronaut’s lips without a straw?",
+    "a": "Capillary action",
+    "d": "Surface tension, wetting and the container’s geometry guide liquid to the rim even in microgravity.",
+    "s": "NASA · Don Pettit’s Science of Opportunity",
+    "u": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-don-pettits-science-of-opportunity-on-space-station/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Capillary action",
+      "A miniature centrifugal pump",
+      "A motor that spins the cup",
+      "Pressure from a sealed gas cartridge"
+    ],
+    "candidateId": "space-0028",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-don-pettits-science-of-opportunity-on-space-station/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "The cup uses surface tension, wetting and shape to mimic gravity’s role in ordinary drinking.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "3bca50a39d19646b9d7c06cfbc920f9d3a5c822341389fce6a189f6e316b6649"
+    }
+  },
+  {
+    "q": "Astronaut Don Pettit made electrically charged water droplets orbit which ordinary craft tool?",
+    "a": "Knitting needle",
+    "d": "He charged the needle by rubbing it with paper. The orbiting droplets demonstrated electrostatic effects in microgravity.",
+    "s": "NASA · Don Pettit’s Science of Opportunity",
+    "u": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-don-pettits-science-of-opportunity-on-space-station/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Embroidery hoop",
+      "Crochet hook",
+      "Sewing thimble",
+      "Knitting needle"
+    ],
+    "candidateId": "space-0029",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-don-pettits-science-of-opportunity-on-space-station/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Charged water droplets orbited rubbed knitting needles in Pettit’s space-station demonstration.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "fb480c17a12b812d726fe21fe99d3300089fcf33f267799a0190485ae7b2ee99"
+    }
+  },
+  {
+    "q": "Don Pettit shook coffee, sugar and other small particles in bags in orbit to investigate an early step in what?",
+    "a": "Planet formation",
+    "d": "Particles clumped together within seconds. The tabletop experiment explored how tiny grains might start assembling larger bodies.",
+    "s": "NASA · Don Pettit’s Science of Opportunity",
+    "u": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-don-pettits-science-of-opportunity-on-space-station/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Crater formation",
+      "Solar-flare formation",
+      "Planet formation",
+      "Aurora formation"
+    ],
+    "candidateId": "space-0030",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nasa.gov/missions/station/iss-research/nasa-astronaut-don-pettits-science-of-opportunity-on-space-station/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Mixtures of salt, sugar and coffee helped examine particle aggregation in planet formation.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "738f5b813d723ae4c6fa3f942d0e1729c31c4c04a6ff45b850b0c05a1c64bfa0"
+    }
+  },
+  {
+    "q": "Which precious metal coats Webb’s mirrors in a layer only about one-thousandth the thickness of a sheet of paper?",
+    "a": "Gold",
+    "d": "The extremely thin coating improves reflection of infrared light; the underlying mirror segments are made from beryllium.",
+    "s": "NASA · Webb Telescope Overview",
+    "u": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/telescope-overview/",
+    "cat": "Deep Time and Distant Skies",
+    "level": "medium",
+    "choices": [
+      "Palladium",
+      "Platinum",
+      "Gold",
+      "Silver"
+    ],
+    "candidateId": "space-0031",
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://science.nasa.gov/mission/webb/science-overview/science-explainers/telescope-overview/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NASA gives a gold coating about100 nanometers thick, about1/1000 of a sheet of paper.",
+      "sourceReviewer": "Codex primary researcher",
+      "editorialNotes": "Primary researcher read the linked NASA source and reviewed all four alternatives. Distinct historical incidents or unusual engineering mechanisms; speculative designs are explicitly prototypes. Difficulty reviewed without forcing easy labels.",
+      "duplicateNotes": "Read all four lexical neighbors against 20,100 live questions and staged candidates, plus targeted subject searches. Tortilla/crumbs is a different historical incident; capillary cup is different from calcite rafts; waste collection, disposal and recovery are distinct processes.",
+      "comparedAgainstPublishedCount": 20100,
+      "reviewedOn": "2026-11-17",
+      "reviewer": "Codex primary editorial review",
+      "contentSha256": "b1820b9e4f600e50728ed9e2c35cf83dafef76e2ec7caee8f016ed991d01a8c9"
+    }
+  }
+]

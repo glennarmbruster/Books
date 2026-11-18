@@ -1,0 +1,727 @@
+[
+  {
+    "candidateId": "nature-0321",
+    "q": "What creates the enormous rings of thin ice sometimes seen on Lake Baikal?",
+    "a": "Warm underwater eddies",
+    "d": "Circulating water thins the ice most strongly around an eddy’s edge.",
+    "s": "NASA Earth Observatory · Baikal’s giant ice rings",
+    "u": "https://science.nasa.gov/earth/earth-observatory/baikals-giant-ice-rings-146220/",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Sediment absorbing sunlight beneath the ice",
+      "Gas bubbles trapped in circular cracks",
+      "Pressure waves from shifting lake ice",
+      "Warm underwater eddies"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/baikals-giant-ice-rings-146220/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Measurements linked ice rings to warm lens-shaped eddies beneath the lake surface.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "b3dc5186ab7d13bd33bb09fb1b68f13ae66cde07f067c1e36240780885d680d2"
+    }
+  },
+  {
+    "candidateId": "nature-0322",
+    "q": "Why can Ecuador’s Chimborazo summit be farther from Earth’s center than Everest’s?",
+    "a": "Earth bulges at the equator",
+    "d": "Everest wins above sea level; Chimborazo benefits from its position near the equatorial bulge.",
+    "s": "NOAA · Earth’s highest point",
+    "u": "https://cdn.oceanservice.noaa.gov/oceanserviceprod/facts/highestpoint-infographic.pdf",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Earth bulges at the equator",
+      "Earth’s crust is thickest beneath Ecuador",
+      "Earth’s tilt raises equatorial mountains",
+      "Earth’s center shifts toward Asia"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://cdn.oceanservice.noaa.gov/oceanserviceprod/facts/highestpoint-infographic.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NOAA compares Everest sea-level height with Chimborazo center-distance and identifies equatorial bulge.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "d70ad416fbdf904d5737e9b2a75ef782396df53059328c62a92759c7f3508996"
+    }
+  },
+  {
+    "candidateId": "nature-0323",
+    "q": "Which shark can reach freshwater Lake Nicaragua by swimming through its river connection to the sea?",
+    "a": "Bull shark",
+    "d": "The lake’s sharks are not trapped ocean relics; bull sharks can travel between fresh and salt water.",
+    "s": "Florida Museum · Bull shark",
+    "u": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bull-shark/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Great white shark",
+      "Shortfin mako shark",
+      "Blue shark",
+      "Bull shark"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/bull-shark/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Species account identifies river access to Lake Nicaragua and freshwater tolerance.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "fda09209fd0b9f5d345fb4db4351eb701473e0cd7c82e620b3037a552b8a4067"
+    }
+  },
+  {
+    "candidateId": "nature-0324",
+    "q": "The historic “lighthouse” of Catatumbo in Venezuela is produced by what natural display?",
+    "a": "Lightning",
+    "d": "Frequent nocturnal storms near Lake Maracaibo provided a conspicuous navigation landmark.",
+    "s": "NASA-hosted lightning research · Space-based lightning distribution",
+    "u": "https://www.earthdata.nasa.gov/s3fs-public/2025-02/TotalFreqDistLightBasedon10YrsofObsfrmSpacebyLIS.pdf?VersionId=pwe71ku4YlYwY4bxVyiJbOHlHqwzM3Oa",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Lightning",
+      "Volcanic glow",
+      "Auroras",
+      "Luminous ocean plankton"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.earthdata.nasa.gov/s3fs-public/2025-02/TotalFreqDistLightBasedon10YrsofObsfrmSpacebyLIS.pdf?VersionId=pwe71ku4YlYwY4bxVyiJbOHlHqwzM3Oa",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Paper describes Catatumbo nocturnal lightning as a historical navigation guide.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "d8d2da678960c7b5806f57c26bad871a152882817cabe9ae51f72411e0a2cbd6"
+    }
+  },
+  {
+    "candidateId": "nature-0325",
+    "q": "Northern Australia’s Morning Glory cloud can appear to roll across the sky. What happens at its leading and trailing edges?",
+    "a": "Droplets form at the front and evaporate behind",
+    "d": "Air rises and cools along the advancing atmospheric wave, then descends and warms behind it.",
+    "s": "Australian Bureau of Meteorology · Flying the tropics",
+    "u": "https://www.bom.gov.au/aviation/data/education/flying-tropics.pdf",
+    "cat": "Weather",
+    "level": "hard",
+    "choices": [
+      "Droplets form at the front and evaporate behind",
+      "Dust collects at the front and settles behind",
+      "Rain falls at the front and freezes behind",
+      "Ice forms at the front and falls behind"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.bom.gov.au/aviation/data/education/flying-tropics.pdf",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Morning Glory description explains leading-edge condensation and rear evaporation.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "7d796ec9d8cf4516356fd164c11d1cd61c8db4250e512c23882513f56182bf4e"
+    }
+  },
+  {
+    "candidateId": "nature-0326",
+    "q": "On freezing mornings, Yosemite Creek can flow like a giant slush drink. What feeds this frazil-ice display?",
+    "a": "Frozen waterfall mist",
+    "d": "Fine ice produced around the falls collects in the moving creek.",
+    "s": "National Park Service · Frazil ice",
+    "u": "https://www.nps.gov/yose/planyourvisit/frazilice.htm?vm=r",
+    "cat": "Weather",
+    "level": "medium",
+    "choices": [
+      "Frozen waterfall mist",
+      "Shattered sheets of river-surface ice",
+      "Refrozen snowmelt emerging from springs",
+      "Hail washed down from mountain slopes"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nps.gov/yose/planyourvisit/frazilice.htm?vm=r",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NPS describes mist freezing at waterfalls and floating down Yosemite creeks.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "d3c503506dd15085805627e530b3ede5333fdc7edc7d2d4d08c24fe82570a28c"
+    }
+  },
+  {
+    "candidateId": "nature-0327",
+    "q": "The enormous circular Eye of the Sahara was once suspected to be an impact crater. What explanation is now favored?",
+    "a": "Erosion of an uplifted rock dome",
+    "d": "Different rock layers erode at different rates, leaving the Richat Structure’s concentric pattern.",
+    "s": "NASA Earth Observatory · Eyeing the Richat Structure",
+    "u": "https://science.nasa.gov/earth/earth-observatory/eyeing-the-richat-structure/",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Salt crystallizing around a drying lake",
+      "Collapse of a limestone cavern",
+      "Erosion of an uplifted rock dome",
+      "Sediment deposited in a whirlpool"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/eyeing-the-richat-structure/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NASA describes an uplifted dome over an intrusion, subsequently exposed by differential erosion.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "6b9dcba1a1055502123d6608a48e3d6e67b4b8be06e4cbfedffdb4098a14f287"
+    }
+  },
+  {
+    "candidateId": "nature-0328",
+    "q": "What keeps Chad’s Ounianga desert lakes supplied despite extreme evaporation and very little modern rainfall?",
+    "a": "Ancient groundwater",
+    "d": "An aquifer replenished during a wetter past feeds these Saharan lakes.",
+    "s": "NASA Earth Observatory · Ounianga Lakes",
+    "u": "https://science.nasa.gov/earth/earth-observatory/ounianga-lakes-sahara-desert-chad-41425/",
+    "cat": "Earth and Sky",
+    "level": "medium",
+    "choices": [
+      "Ancient groundwater",
+      "Seasonal meltwater from distant glaciers",
+      "Daily tides from an underground sea",
+      "Condensation collected by salt crusts"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://science.nasa.gov/earth/earth-observatory/ounianga-lakes-sahara-desert-chad-41425/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Account identifies an underground aquifer charged during a wetter climate as the supply.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "ee172bc28fed87a1a2174787d52f90cb28fead05c7e1e085aa59c5487a7db263"
+    }
+  },
+  {
+    "candidateId": "nature-0329",
+    "q": "What is the silent-looking summer phenomenon commonly called “heat lightning”?",
+    "a": "Lightning from a distant storm",
+    "d": "The storm is far enough away that its thunder does not reach the observer.",
+    "s": "National Weather Service · Heat lightning",
+    "u": "https://www.weather.gov/safety/lightning-heat",
+    "cat": "Weather",
+    "level": "easy",
+    "choices": [
+      "Sunlight reflecting from high ice clouds",
+      "Lightning from a distant storm",
+      "Lightning that produces no sound",
+      "Lightning generated by hot pavement"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.weather.gov/safety/lightning-heat",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NWS explains the term as distant ordinary lightning with inaudible thunder.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "58b4b284c15b53ebd7d443e9464dce74d79386b26e70dd0787699a3a2f35eeb1"
+    }
+  },
+  {
+    "candidateId": "nature-0330",
+    "q": "A large falling raindrop looks more like which familiar food than a pointed teardrop?",
+    "a": "Hamburger bun",
+    "d": "Airflow flattens the underside; smaller drops remain more nearly spherical.",
+    "s": "NASA GPM · Anatomy of a raindrop",
+    "u": "https://gpm.nasa.gov/science/anatomy-of-a-raindrop",
+    "cat": "Weather",
+    "level": "easy",
+    "choices": [
+      "Ice-cream cone",
+      "Spaghetti strand",
+      "Croissant",
+      "Hamburger bun"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://gpm.nasa.gov/science/anatomy-of-a-raindrop",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "NASA describes larger drops as hamburger-bun shaped due to airflow.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "f5d82323b932bc557da50f8dbf3b7c8f7ca03415f938bcc70a6ed2a3f90c827d"
+    }
+  },
+  {
+    "candidateId": "nature-0331",
+    "q": "During a ring-tailed lemur “stink fight,” what does a male coat with scent and wave toward a rival?",
+    "a": "Tail",
+    "d": "He rubs it against scent glands before wafting the odor.",
+    "s": "Duke Lemur Center · Conflict resolution, lemur style",
+    "u": "https://lemur.duke.edu/oh-yeah-smell-this-or-conflict-resolution-lemur-style/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Ears",
+      "Belly fur",
+      "Tail",
+      "Hind feet"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://lemur.duke.edu/oh-yeah-smell-this-or-conflict-resolution-lemur-style/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Duke describes wrist/shoulder secretions rubbed onto tails and waved at opponents.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "cf62ad42ff316b904f051011d7f14b40afbdac9c9477bea8cc3e8c848042a5b1"
+    }
+  },
+  {
+    "candidateId": "nature-0332",
+    "q": "Wild red-fronted lemurs have been seen chewing which animals and rubbing them around their tails and bottoms?",
+    "a": "Millipedes",
+    "d": "Researchers proposed that the secretions might help control parasites; that benefit remains a hypothesis.",
+    "s": "Peckre and colleagues · Millipede use by lemurs",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/30058024/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Beetles",
+      "Ants",
+      "Caterpillars",
+      "Millipedes"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/30058024/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Study observed six lemurs chewing millipedes, anointing anogenital regions and sometimes swallowing pieces.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "1932f67bdc4dc4a3059a1ec1d2ef9d027e4f48ff6c1239d5092309f094bd4a95"
+    }
+  },
+  {
+    "candidateId": "nature-0333",
+    "q": "How does an aye-aye locate hidden insect tunnels before gnawing into wood?",
+    "a": "Tapping and listening",
+    "d": "Its acoustic inspection helps locate cavities; a slender finger then retrieves the food.",
+    "s": "Duke Lemur Center · Aye-aye",
+    "u": "https://lemur.duke.edu/discover/meet-the-lemurs/aye-aye/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Tapping and listening",
+      "Smelling through its fingertips",
+      "Sensing electrical pulses",
+      "Watching for bark color changes"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://lemur.duke.edu/discover/meet-the-lemurs/aye-aye/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Duke describes tapping to locate hollow passages, followed by gnawing and extraction.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "e5ce583a8c11d0528d712706b31924b016a9b459130703cf6e469df8ffecea74"
+    }
+  },
+  {
+    "candidateId": "nature-0334",
+    "q": "How does a male echidna use the four tips of its unusual penis?",
+    "a": "Two tips operate at a time",
+    "d": "The active pair can alternate between erections, controlled by the organ’s divided blood supply.",
+    "s": "University of Melbourne · Echidna anatomy",
+    "u": "https://pursuit.unimelb.edu.au/articles/solving-the-mystery-of-the-four-headed-echidna-penis",
+    "cat": "Animal Encounters",
+    "level": "hard",
+    "choices": [
+      "Only one ever becomes functional",
+      "Two tips operate at a time",
+      "All four operate together",
+      "Three operate while one remains closed"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pursuit.unimelb.edu.au/articles/solving-the-mystery-of-the-four-headed-echidna-penis",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Researchers describe four glans with two functional at erection, alternation and divided erectile tissues.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "13ce961de15ac6162b84058478ba580fea5d130c140738140458d8a1fe0e2890"
+    }
+  },
+  {
+    "candidateId": "nature-0335",
+    "q": "When a breeding clownfish group loses its dominant female, what can its breeding male do?",
+    "a": "Become female",
+    "d": "The largest male can change sex and take over the female’s role.",
+    "s": "Monterey Bay Aquarium · Clownfish",
+    "u": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/clownfish",
+    "cat": "Animal Encounters",
+    "level": "easy",
+    "choices": [
+      "Remain male until a new female arrives",
+      "Join another group as a breeding male",
+      "Become female",
+      "Permanently cease breeding"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/clownfish",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Aquarium explains male-to-female sex change after loss of the dominant female.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "682aa4e09f33c0ae4cac775897f63be41f1f3cf04257fdcb121cfbbefef48cf5"
+    }
+  },
+  {
+    "candidateId": "nature-0336",
+    "q": "Which fish creates intricate circular patterns in seabed sand as a courtship nest?",
+    "a": "Pufferfish",
+    "d": "Male Torquigener albomaculosus sculpt the circles using their fins.",
+    "s": "Natural History Museum · Pufferfish",
+    "u": "https://www.nhm.ac.uk/discover/pufferfish-underwater-balloon-of-death.html?pubDate=20250427",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Ray",
+      "Pufferfish",
+      "Lionfish",
+      "Triggerfish"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nhm.ac.uk/discover/pufferfish-underwater-balloon-of-death.html?pubDate=20250427",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Museum describes male white-spotted pufferfish making circular nests.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "dfb4061ccf36d42f59fb84e7ae105cf1b2e91f0453284d117e5f8b7f62cf70a6"
+    }
+  },
+  {
+    "candidateId": "nature-0337",
+    "q": "What urban food-raiding skill spread through Sydney’s sulphur-crested cockatoos by social learning?",
+    "a": "Opening household garbage bins",
+    "d": "The birds copied a technique for lifting lids, and local variations developed.",
+    "s": "Klump and colleagues · Urban parrot foraging culture",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/34437121/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Opening household garbage bins",
+      "Unscrewing drink-bottle caps",
+      "Turning vending-machine handles",
+      "Removing restaurant drain covers"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/34437121/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports spatial spread of waste-bin opening through social learning.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "bd3d5e53ecf94596854414f9f889a10a80c62c247e38788ed77695235d5b5a83"
+    }
+  },
+  {
+    "candidateId": "nature-0338",
+    "q": "As a young flatfish develops, what moves across its head to the opposite side?",
+    "a": "One eye",
+    "d": "The symmetrical larva transforms into an adult with both eyes on its upward-facing side.",
+    "s": "Communications Biology · Flatfish eye migration",
+    "u": "https://www.nature.com/articles/s42003-024-05951-x",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "One gill opening",
+      "One eye",
+      "One nostril",
+      "Its mouth"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://www.nature.com/articles/s42003-024-05951-x",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary study describes ontogenetic movement of one eye across the head during metamorphosis.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "6bff43923d3b313ca0be46b4c80707c139f7e9a56b44f3cb059848e25a0081a3"
+    }
+  },
+  {
+    "candidateId": "nature-0339",
+    "q": "Researchers fitted desert ants with tiny stilts. Which navigational calculation did altered leg length disrupt?",
+    "a": "Distance traveled",
+    "d": "Longer strides made ants overshoot the expected nest position.",
+    "s": "Wittlinger and colleagues · Desert ant odometer",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/17210957/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Angle of the setting Sun",
+      "Distance traveled",
+      "Direction of north",
+      "Identity of the home colony"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/17210957/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports larger strides and misgauged homing distance after leg elongation.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "4f509787621d85d1658474f960397fd26cd1f8fa89b1572717bb0c6495fe72d4"
+    }
+  },
+  {
+    "candidateId": "nature-0340",
+    "q": "How can a desert ant dragging food backward refresh its visual bearings?",
+    "a": "Put down the load and look forward",
+    "d": "Experiments showed brief forward peeks that helped orient the subsequent backward journey.",
+    "s": "Schwarz and colleagues · Ant navigation while moving backward",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/28111152/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Read the load’s shadow as a compass",
+      "Put down the load and look forward",
+      "Wait for a nestmate to pull it",
+      "Follow scratches left by the load"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/28111152/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Study describes forward peeking and transfer of learned direction to backward travel.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "086262051fb428ca9a31045809838553450fe8aef6be32f6c4f3e5a7c0702dc1"
+    }
+  },
+  {
+    "candidateId": "nature-0341",
+    "q": "As meerkat pups become more experienced, how do helpers change the hunting lessons supplied with their meals?",
+    "a": "Provide less-disabled live prey",
+    "d": "Helpers adjust prey preparation as pups mature, giving them increasingly demanding handling practice.",
+    "s": "Thornton and McAuliffe · Teaching in wild meerkats",
+    "u": "https://pubmed.ncbi.nlm.nih.gov/16840701/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Replace animal prey with plant foods",
+      "Offer only already-dead prey",
+      "Move all feeding into the burrow",
+      "Provide less-disabled live prey"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/16840701/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary paper reports age-dependent provisioning of dead, disabled and intact prey, accelerating pup learning.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "af38015267ef59414248c15ce2d9d4cb33eaceb33cf49e5681a991051d56517f"
+    }
+  },
+  {
+    "candidateId": "nature-0342",
+    "q": "The parasitic crustacean Cymothoa exigua can take the place of which part of its fish host?",
+    "a": "Tongue",
+    "d": "After the original tissue deteriorates, the attached parasite occupies its position in the mouth.",
+    "s": "University of Texas Marine Science Institute · Tongue Snatcher",
+    "u": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/tongue-snatcher/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Tongue",
+      "Lower jaw",
+      "Gill cover",
+      "Pectoral fin"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/tongue-snatcher/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional account describes tongue atrophy followed by parasite occupancy and continued fish feeding.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "73d194c1f1ce77d4d43e6abf08357a789a7f5fe06cf5b2fd4ecb93b1cccde697"
+    }
+  },
+  {
+    "candidateId": "nature-0343",
+    "q": "In a goby–shrimp partnership, which job does the fish perform while the shrimp maintains their shared burrow?",
+    "a": "Watch for danger",
+    "d": "The shrimp’s antenna keeps contact with its better-sighted lookout.",
+    "s": "University of Texas Marine Science Institute · Cooperation",
+    "u": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/cooperation/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Incubate the shrimp’s eggs",
+      "Clean parasites from the shrimp",
+      "Filter sand into food pellets",
+      "Watch for danger"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://utmsi.utexas.edu/science-and-the-sea/radio-program/cooperation/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Institutional account describes shrimp excavation and antenna contact with a watchful goby.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "714fe01af29a32473bffad9791668c69b3bb39e9cafe3b18ee8a6b1bf39a16eb"
+    }
+  },
+  {
+    "candidateId": "nature-0344",
+    "q": "Experiments found that some mantis shrimp use which unusual light signal to avoid an occupied burrow?",
+    "a": "Circular polarization",
+    "d": "Their body patterns can reflect this light property, which human eyes cannot normally distinguish.",
+    "s": "Gagnon and colleagues · Circular polarization in mantis shrimp",
+    "u": "https://research-information.bris.ac.uk/en/publications/circularly-polarized-light-as-a-communication-signal-in-mantis-sh/",
+    "cat": "Animal Encounters",
+    "level": "hard",
+    "choices": [
+      "Infrared heat flashes",
+      "Ultraviolet fluorescence",
+      "Circular polarization",
+      "Changes in red light brightness"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://research-information.bris.ac.uk/en/publications/circularly-polarized-light-as-a-communication-signal-in-mantis-sh/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Primary abstract reports polarized body patterns, discrimination and avoidance of occupied refuges.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "26866c61c069c76afed45a0a6dbccaa5a9dd3d23598a01f85298f05a69278c8f"
+    }
+  },
+  {
+    "candidateId": "nature-0345",
+    "q": "How does a Coquerel’s sifaka commonly cross open ground between trees?",
+    "a": "Sideways hops on two legs",
+    "d": "Its specialized tree-leaping body produces a distinctive ground-level dance.",
+    "s": "Duke Lemur Center · Coquerel’s sifaka",
+    "u": "https://lemur.duke.edu/discover/meet-the-lemurs/coquerels-sifaka/",
+    "cat": "Animal Encounters",
+    "level": "medium",
+    "choices": [
+      "Sideways hops on two legs",
+      "Alternating forelimb and hindlimb gallops",
+      "Bounding on all four limbs",
+      "Heel-first walking on two legs"
+    ],
+    "review": {
+      "status": "accepted",
+      "sourceUrl": "https://lemur.duke.edu/discover/meet-the-lemurs/coquerels-sifaka/",
+      "sourceCheckedOn": "2026-11-17",
+      "supportingFact": "Duke describes terrestrial bipedal sideways hopping.",
+      "sourceReviewer": "Codex delegated researcher; supporting institutional text or primary research read",
+      "reviewer": "Codex primary editorial review",
+      "reviewedOn": "2026-11-17",
+      "comparedAgainstPublishedCount": 20100,
+      "editorialNotes": "Parent read every question, answer, explanation, evidence note and four choices; reviewed and resolved identified ambiguity and weak distractors before acceptance.",
+      "duplicateNotes": "Full question+answer+explanation nearest-neighbor triage read alongside researcher entity/underlying-fact review against published and accepted cards. Rewording an existing fact is not new content.",
+      "contentSha256": "30633d321a5d75f4f8f8eaad74c34df81903bde584d20a39d08cd90c52788749"
+    }
+  }
+]
