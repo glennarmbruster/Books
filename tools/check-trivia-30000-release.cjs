@@ -1,0 +1,34 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
+const {execFileSync} = require('node:child_process');
+const root=path.join(__dirname,'..'),book=path.join(root,'weird-facts-trivia');
+const dir=path.join(__dirname,'trivia-review/expansion-7400');
+const plan=JSON.parse(fs.readFileSync(path.join(dir,'plan.json')));
+execFileSync(process.execPath,[path.join(__dirname,'check-trivia-30000.cjs'),'--require-ready']);
+const ctx=vm.createContext({window:{TRIVIA_CATEGORIES:[]}});
+const html=fs.readFileSync(path.join(book,'index.html'),'utf8');
+for(const [,f] of html.matchAll(/src="(data\/[^"<>]+\.js)"/g))vm.runInContext(fs.readFileSync(path.join(book,f),'utf8'),ctx);
+const all=ctx.window.TRIVIA_CATEGORIES.flatMap(b=>b.cards.map((r,i)=>({id:b.start+i,cat:b.name,r})));
+const byNumber=new Map(all.map(c=>[c.id,c]));
+const accepted=['culture.json','nature.json','objects.json','science.json'].flatMap(f=>JSON.parse(fs.readFileSync(path.join(dir,f)))).filter(c=>c.review.status==='accepted');
+const byCandidate=new Map(accepted.map(c=>[c.candidateId,c]));
+const mapping=JSON.parse(fs.readFileSync(path.join(dir,'release-mapping.json')));
+assert.equal(mapping.length,plan.targetNewQuestions);
+assert.equal(new Set(mapping.map(m=>m.candidateId)).size,mapping.length);
+for(const [i,m] of mapping.entries()){
+  assert.equal(m.question,plan.firstFutureQuestion+i);
+  const c=byCandidate.get(m.candidateId),published=byNumber.get(m.question);
+  assert.ok(c&&published,'Missing accepted or integrated card '+m.candidateId);
+  assert.equal(published.cat,c.cat);
+  assert.equal(JSON.stringify(published.r),JSON.stringify([c.q,c.a,c.d,c.s,c.u,null,true,c.level,c.choices]));
+}
+assert.equal(all.length,30000);
+const worker=fs.readFileSync(path.join(book,'sw.js'),'utf8');
+const manifest=vm.runInNewContext(worker.replace(/importScripts\([^;]+;/,'' )+';({edition,files})');
+assert.match(manifest.edition,/^trivia-\d+$/);
+assert.ok(manifest.files.includes('data/reviewed-003.js'));
+for(const file of manifest.files)assert.ok(fs.existsSync(path.resolve(book,file)),'Missing offline asset '+file);
+const shelf=fs.readFileSync(path.join(root,'index.html'),'utf8');
+assert.ok(shelf.includes('data-book="weird-facts-trivia" data-edition="'+manifest.edition+'"'));
+assert.match(shelf,/30,000 questions/);
+console.log('Verified all 7,400 integrated cards against reviewed originals, unchanged baseline, permanent numbering and offline asset manifest.');

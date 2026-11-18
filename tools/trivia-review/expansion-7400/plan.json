@@ -1,0 +1,14 @@
+{
+  "name": "WEIRD Facts & Trivia — 30,000-question edition",
+  "baseline": 22600,
+  "targetTotal": 30000,
+  "targetNewQuestions": 7400,
+  "firstFutureQuestion": 22601,
+  "lastFutureQuestion": 30000,
+  "status": "reviewed",
+  "releasePolicy": "Hold new content until the complete 7,400-question expansion passes source, editorial, duplicate and integration checks.",
+  "speedStrategy": "Group source research and incremental duplicate checks; preserve all existing question numbers and saved games.",
+  "reviewPolicy": "Do not publish unreviewed archive questions or count automated checks as individual editorial review.",
+  "baselineSha256": "ac6a90fd96db4462a8a4f631af83514649ea5ae7752335e85c0519ffd094d7ca",
+  "progressFile": "progress.json"
+}

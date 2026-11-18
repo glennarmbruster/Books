@@ -1,0 +1,21 @@
+{
+  "baseline": 22600,
+  "baselineSha256": "ac6a90fd96db4462a8a4f631af83514649ea5ae7752335e85c0519ffd094d7ca",
+  "targetTotal": 30000,
+  "requiredAdditions": 7400,
+  "staged": 7930,
+  "statusCounts": {
+    "accepted": 7400,
+    "rejected": 530
+  },
+  "accepted": 7400,
+  "remainingToAccept": 0,
+  "acceptedByFile": {
+    "culture.json": 1700,
+    "nature.json": 2908,
+    "objects.json": 971,
+    "science.json": 1821
+  },
+  "errors": [],
+  "note": "Acceptance records are editorial decisions. Structural validation and overlap scores never approve a question."
+}
