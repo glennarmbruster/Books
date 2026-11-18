@@ -67,7 +67,7 @@ window.BenchFiles = (() => {
   let db;
   function database() {
     if (!db) db = new Promise((resolve,reject)=>{
-      const req = indexedDB.open('makers-bench-workshop',1);
+      const req = indexedDB.open(document.body.dataset.desktop ? 'makers-bench-desktop-workshop:'+ new URL('.',location.href).pathname : 'makers-bench-workshop',1);
       req.onupgradeneeded=()=>req.result.createObjectStore('runs',{keyPath:'id'});
       req.onsuccess=()=>resolve(req.result); req.onerror=()=>reject(req.error);
     }).catch(err=>{db=null;throw err;});

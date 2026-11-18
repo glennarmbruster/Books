@@ -168,7 +168,7 @@ for(const [button,field] of [['use-name-font','nameFont'],['use-subtitle-font','
 const dimensionIds=['width','height','hole','thickness','relief'];
 const layoutDefaults={images:[],groupKeys:['motif','extraMotif'],order:['motif','extraMotif','name','subtitle'],linked:false,secondColor:'',positions:{},motifLines:'auto',extraMotifLines:'auto'};
 const defaults={...layoutDefaults,...letterDefaults,motifWidth:0,extraMotifWidth:0,shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
-const draftKey='makers-bench-studio-v1';
+const draftKey=document.body.dataset.desktop ? 'makers-bench-desktop-draft:'+ new URL('.',location.href).pathname : 'makers-bench-studio-v1';
 let design={...defaults}, currentName=0, exporting=false, valid=false;
 function names(d) {
   const lines=d.names.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
@@ -603,7 +603,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-9'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:document.body.dataset.edition},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

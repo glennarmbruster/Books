@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#193e37">
+  <title>The Maker’s Bench · Desktop</title>
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="desktop.css">
+</head>
+<body data-desktop="true" data-edition="makers-bench-desktop-d0d3cfb96c5b29">
+<header><div class="top">
+  <a href="../" class="books">‹ Bookshelf</a><a href="#guide" class="wordmark">The Maker’s Bench · Desktop</a>
+  <nav aria-label="Main"><a href="#guide" data-tab="guide">Field guide</a><a href="#studio" data-tab="studio">Design studio</a><a href="#workshop" data-tab="workshop">My workshop</a></nav>
+</div></header>
+<main>
+<section id="guide" class="view">
+  <div class="hero"><div class="hero-copy"><h1>The Maker’s<br><em>Bench</em></h1>
+    <p>A field guide and design studio for the things you cut, press, print, and make again.</p><a href="#studio" class="action">Open design studio <span>↗</span></a></div>
+    <img src="shelf-art/bench.jpg" alt="A luggage tag, coaster, and nameplate on a craft bench" fetchpriority="high" class="hero-image"></div>
+  <div class="guide-picker"><h2>Project guides</h2><label for="choose-guide">Choose a project</label><select id="choose-guide"></select></div>
+  <div class="reference"><div><h2>At the workbench</h2><p>Find a material check, machine workflow, or fix for a test piece.</p><label for="find-guide">Search the reference</label><input id="find-guide" type="search" placeholder="Try ghosting, vinyl, or sizing"></div><div id="lookups"></div></div>
+</section>
+<section id="project" class="view" hidden><a class="back" href="#guide">‹ Field guide</a><label class="guide-switch">Browse project guides<select id="another-guide"></select></label><div id="project-page"></div><book-pager top></book-pager></section>
+<section id="studio" class="view" hidden>
+  <div class="section-title"><div><h1>Design studio</h1><p>Choose a starting shape, then make it yours.</p></div><button type="button" id="save-open" class="secondary">Save to my workshop</button></div>
+  <div class="studio-grid"><form id="settings" class="settings" novalidate>
+    <fieldset><legend>Project</legend>
+      <label for="shape">Starting shape</label><select id="shape"></select>
+      <div class="pair unit-row"><span>Blank size</span><label class="unit-select">Units <select id="units"><option value="mm">mm</option><option value="in">inches</option></select></label></div>
+      <div class="pair"><label>Width<input id="width" type="number" step="any" required></label><label>Height<input id="height" type="number" step="any" required></label></div>
+      <label id="hole-row">Hole diameter<input id="hole" type="number" step="any" required></label>
+    </fieldset>
+    <fieldset><legend>Lettering</legend>
+      <details class="lettering-matches"><summary>UH, cruise &amp; Disney lettering</summary>
+        <label for="brand-style">Lettering collection</label><select id="brand-style" data-filter="font"></select>
+        <p id="brand-detail"></p><a id="brand-source" class="credits" target="_blank" rel="noopener">Reference ↗</a>
+        <div class="match-actions"><button type="button" id="use-name-font" class="secondary">Use for name</button>
+        <button type="button" id="use-subtitle-font" class="secondary">Use for second line</button></div>
+      </details>
+      <label for="names">Names <small>one per line for a set</small></label><textarea id="names" rows="2" maxlength="1600" placeholder="Cindy"></textarea>
+      <div class="font-controls">
+        <label for="nameFont">Name font<select id="nameFont"></select></label>
+        <label for="nameHeight">Letter height <span class="measure-unit">(mm)</span><input id="nameHeight" type="number" min="0" step="any" inputmode="decimal" placeholder="Auto" aria-describedby="size-help"></label>
+      </div>
+      <label>Second line<input id="subtitle" maxlength="80" placeholder="Optional"></label>
+      <div class="font-controls">
+        <label for="subtitleFont">Second-line font<select id="subtitleFont"></select></label>
+        <label for="subtitleHeight">Letter height <span class="measure-unit">(mm)</span><input id="subtitleHeight" type="number" min="0" step="any" inputmode="decimal" placeholder="Auto" aria-describedby="size-help"></label>
+      </div>
+      <p id="size-help">Leave a height blank to fit the lettering automatically.</p>
+      <p id="type-error" role="status" hidden></p>
+      <a class="credits" href="vendor/typeface-licenses.txt" target="_blank" rel="noopener">Font credits</a>
+    </fieldset>
+    <fieldset><legend>Artwork</legend>
+      <div id="art-picker"></div>
+      <details id="second-image"><summary>Second image</summary><div id="extra-picker"></div><label class="check"><input id="match-color" type="checkbox" checked>Match first image color</label><label id="second-color-row" hidden>Second image color<input id="second-color" type="color"></label></details>
+      <div id="more-images" hidden>
+        <label for="edit-image">Additional artwork</label><select id="edit-image" data-filter="art"></select>
+        <div id="more-picker"></div>
+        <label class="check" id="more-match-row"><input id="more-match-color" type="checkbox" checked>Match first image color</label>
+        <label id="more-color-row" hidden>Image color<input id="more-color" type="color"></label>
+        <button id="remove-image" type="button" class="secondary">Remove this image</button>
+      </div>
+      <button id="add-image" class="secondary" type="button">Add another image</button>
+      <p id="art-size-help">Enter a width to resize an image proportionally. Clear it for automatic sizing.</p>
+      <p id="art-size-error" role="status" hidden></p>
+      <label>Starting arrangement<select id="placement"><option value="above">Above the lettering</option><option value="left">Left of the lettering</option><option value="right">Right of the lettering</option></select></label>
+      <a class="credits" href="artwork-credits.txt" target="_blank" rel="noopener">Artwork credits</a>
+      <div class="swatches"><label>Lettering<input id="ink" type="color"></label><label>Artwork<input id="accent" type="color"></label><label>Blank<input id="paper" type="color"></label></div>
+    </fieldset>
+    <fieldset><legend>Output</legend>
+      <label>Machine<select id="machine"><option value="glowforge">Glowforge</option><option value="cricut">Cricut</option><option value="sublimation">Sublimation printer</option><option value="printer3d">3D printer</option></select></label>
+      <div class="pair" id="depths" hidden><label>Base thickness<input id="thickness" type="number" step="any"></label><label>Raised detail<input id="relief" type="number" step="any"></label></div>
+      <label id="mirror-row" class="check" hidden><input id="mirror" type="checkbox">Mirror the transfer file</label>
+    </fieldset>
+  </form>
+  <div class="proof"><div class="proof-head"><h2>Design preview</h2><label id="which-name" hidden>Name <select id="name-index"></select></label></div>
+    <div class="mat"><div id="drawing" tabindex="0" role="group" aria-label="Design canvas. Arrow keys move the selected object one millimeter. Hold Shift for tenths." aria-describedby="drag-tip"></div></div>
+    <div class="arrange">
+      <p id="drag-tip">Drag an object to move it, a corner to resize, or the round handle to rotate. Use the Object list to select a covered piece. The blank trims artwork at its edges and holes.</p>
+      <label>Object<select id="move-object"><option value="">Choose an object…</option></select></label>
+      <fieldset><legend>Center position (<span id="position-unit">mm</span>)</legend><label>From left<input id="move-x" type="number" step="any" disabled></label><label>From top<input id="move-y" type="number" step="any" disabled></label></fieldset>
+      <label>Rotation (degrees)<input id="object-angle" type="number" step="any" disabled></label>
+      <div class="layer-buttons"><button id="layer-front" type="button" class="secondary" disabled>Bring to front</button><button id="layer-back" type="button" class="secondary" disabled>Send to back</button></div>
+      <label class="check together"><input id="link-images" type="checkbox" disabled><span id="link-caption">Move both images together</span></label>
+      <fieldset id="group-members" hidden><legend>Images to move together</legend><div id="group-list"></div></fieldset>
+      <button id="reset-layout" type="button" class="secondary" disabled>Restore automatic layout</button>
+    </div>
+    <div class="proof-caption"><span id="size-caption"></span><a id="studio-guide" href="#project/tag">Read project guide ↗</a></div>
+    <div id="transfer-proof" hidden><h3>Transfer view</h3><div id="transfer"></div></div>
+    <div class="output"><h3 id="output-title">Glowforge file</h3><p id="output-note"></p><label id="print-type" hidden>Print file <select id="print-format"><option value="png">Full-color PNG · 300 ppi</option><option value="pdf">Print-at-size PDF</option></select></label>
+    <label id="model-type" hidden>Design file <select id="model-format"><option value="stl">STL · solid model</option><option value="3mf">3MF · solid model in millimeters</option><option value="profile">SVG · flat CAD profiles</option></select></label>
+    <div class="actions"><button id="export" class="action">Download SVG</button><button id="export-set" class="secondary" hidden>Download name set (.zip)</button></div></div>
+    <p id="studio-message" role="status"></p>
+  </div></div>
+</section>
+<section id="workshop" class="view" hidden><div class="section-title"><div><h1>My workshop</h1><p>Your saved designs, machine settings, and test pieces on this device.</p></div><div class="actions"><label class="secondary file-button">Open project file<input id="import" type="file" accept=".json,application/json"></label><a href="#studio" class="action">Open studio ↗</a></div></div><p id="workshop-message" role="status"></p><div id="records"></div></section>
+</main>
+<footer><a href="../downloads/makers-bench-desktop.zip" download>Download desktop book (.zip)</a><a href="../">‹ Bookshelf</a><span id="offline" role="status">Preparing offline copy…</span><button id="install">Install app</button></footer>
+<dialog id="dialog" aria-labelledby="dialog-title"><form id="dialog-form"><h2 id="dialog-title"></h2><div id="dialog-body"></div><p id="dialog-message" role="alert"></p><div class="actions"><button type="button" id="close-dialog" class="secondary">Cancel</button><button type="submit" id="accept" class="action">Save</button></div></form></dialog>
+<script src="book-pager.js"></script><script src="reference.js"></script>
+<script src="artwork.js"></script><script src="artwork-v6.js"></script><script src="collections.js"></script>
+<script src="projects-v6.js"></script><script src="art-holidays.js"></script><script src="projects-occasions.js"></script><script src="sports-collections.js"></script>
+<script>BenchCollections.finish();</script>
+<!-- Local export engine -->
+<script src="vendor/bench-font.js"></script><script src="vendor/typefaces.js"></script><script src="vendor/waltograph.js"></script><script src="bench-art.js"></script>
+<script src="files.js"></script><script src="arrange.js"></script><script src="desktop.js"></script><script src="app.js"></script>
+</body></html>

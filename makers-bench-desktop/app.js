@@ -1,0 +1,612 @@
+'use strict';
+const $ = id => document.getElementById(id);
+const {projects,methods,problems} = BenchGuide;
+function el(tag,text,cls) {
+  const item=document.createElement(tag);
+  if(text != null) item.textContent=text;
+  if(cls) item.className=cls;
+  return item;
+}
+function link(text,href,cls) {const a=el('a',text,cls);a.href=href;return a;}
+function picture(id) {const img=el('img');img.src='images/'+id+'.jpg';img.alt='';return img;}
+function list(items,tag) {const group=el(tag);group.append(...items.map(item=>el('li',item)));return group;}
+const normalizeSearch=value=>String(value??'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/['’]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+const categoryKeywords = new Map([
+  ['4th of July','fourth of july independence day july fourth'],
+  ['New Year’s','new year new years eve'],
+  ['Fall','autumn'], ['Soccer','futbol fútbol socker'], ['UH Team Sports','University of Houston Cougars']
+]);
+const sports = [...new Set(projects.map(p=>p.sport).filter(Boolean))].sort();
+function sportPicker(id, refresh) {
+  const label=el('label','Sport','sport-filter'), select=el('select');
+  select.id=id+'-sport';select.dataset.filter='true';
+  select.append(new Option('All sports',''),...sports.map(name=>new Option(name,name)));
+  select.onchange=refresh;label.append(select);label.hidden=true;
+  return {label,select,update(category) {
+    label.hidden=category!=='Sports';
+    if(label.hidden) select.value='';
+  }};
+}
+const projectSearch=projects.map(project=>({
+  project,terms:normalizeSearch([project.title,project.category,project.sport,categoryKeywords.get(project.category),
+    categoryKeywords.get(project.sport),project.id,project.summary,project.exampleName,project.exampleMotif,
+    ...project.steps,...project.checks].join(' '))
+}));
+function projectPicker(id,placeholder) {
+  const select=$(id),bar=el('div',null,'project-filter');
+  const search=el('input'),category=el('select'),count=el('small',null,'art-count');
+  search.type='search';search.placeholder='Try soccer, Christmas, or ornaments';
+  search.id=id+'-search';category.id=id+'-category';
+  category.dataset.filter=search.dataset.filter='project';
+  category.append(new Option('All categories',''),...[...new Set(projects.map(p=>p.category))].sort().map(c=>new Option(c,c)));
+  for(const [text,control] of [['Category',category],['Search projects',search]]) {
+    const label=el('label',text);label.htmlFor=control.id;bar.append(label,control);
+  }
+  const sport=sportPicker(id,list);
+  count.setAttribute('role','status');bar.append(sport.label,count);
+  // Place filters outside the project's own label so the controls have distinct names.
+  const anchor=select.closest('label')||select.previousElementSibling;
+  anchor.before(bar);
+  function list() {
+    const selected=select.value,tokens=normalizeSearch(search.value).split(' ').filter(Boolean);
+    sport.update(category.value);
+    const rows=projectSearch.filter(({project,terms})=>(!category.value||project.category===category.value)
+      &&(!sport.select.value||project.sport===sport.select.value)&&tokens.every(t=>terms.includes(t)));
+    const groups=new Map();
+    const fragment=document.createDocumentFragment();
+    if(placeholder) fragment.append(new Option(placeholder,''));
+    if(!placeholder&&selected&&!rows.some(({project})=>project.id===selected)) {
+      const active=projects.find(p=>p.id===selected);if(active) fragment.append(new Option(active.title+' (current)',active.id));
+    }
+    for(const {project:p} of rows) {
+      const section=category.value==='Sports'?p.sport:p.category;
+      if(!groups.has(section)) {const group=el('optgroup');group.label=section;groups.set(section,group);}
+      groups.get(section).append(new Option(p.title,p.id));
+    }
+    for(const name of [...groups.keys()].sort()) fragment.append(groups.get(name));
+    select.replaceChildren(fragment);
+    if(placeholder) select.value='';
+    else if(selected) select.value=selected;
+    count.textContent=rows.length===1?'1 project':rows.length?rows.length+' projects':'No matching projects. Try another search or category.';
+  }
+  search.oninput=list;category.onchange=list;
+  list();
+  return {category(slug) {
+    const requestedSport=slug==='baseball-softball'?'Baseball & Softball':'';
+    if(requestedSport) slug='sports';
+    sport.select.value=requestedSport;
+    const option=[...category.options].find(o=>normalizeSearch(o.value).replaceAll(' ','-')===slug);
+    if(option) {category.value=option.value;search.value='';list();}
+  },show(value) {
+    if(![...select.options].some(o=>o.value===value)) {search.value='';category.value='';list();}
+    select.value=value;
+  }};
+}
+const guidePicker=projectPicker('choose-guide','Select a project…');
+const detailPicker=projectPicker('another-guide','');
+const studioPicker=projectPicker('shape','');
+for(const id of ['choose-guide','another-guide']) $(id).onchange=e=>{
+  if(e.target.value) location.hash='project/'+e.target.value;
+};
+function references() {
+  const query=$('find-guide').value.trim().toLowerCase(), host=$('lookups');host.replaceChildren();
+  for(const [heading,rows] of [['Machine workflows',methods],['Troubleshooting',problems]]) {
+    const matches=rows.filter(item=>Object.values(item).join(' ').toLowerCase().includes(query));
+    if(matches.length) host.append(el('h3',heading));
+    for(const item of matches) {
+      const box=el('details');box.append(el('summary',item.title));
+      if(item.body) box.append(el('p',item.body),link(item.source,item.url));
+      else for(const line of [item.symptom,item.check,item.tryNext]) box.append(el('p',line));
+      host.append(box);
+    }
+  }
+  if(!host.childElementCount) host.append(el('p','No entries match. Try a machine, material, or symptom.'));
+}
+$('find-guide').oninput=references;references();
+function exampleDesign(p) {
+  const [width,height,hole]=p.size;
+  return {...defaults,shape:p.id,width,height,hole,names:p.exampleName,motif:p.exampleMotif,
+    placement:width>1.7*height?'left':'above',...p.exampleLayout};
+}
+function projectPage(p) {
+  const layout=el('div',null,'guide-layout'), intro=el('div'), steps=el('div');
+  let visual;
+  if(p.base) {
+    const d=exampleDesign(p);
+    visual=el('figure',null,'guide-proof');const image=el('div');
+    image.innerHTML=BenchArt.svg({...d,name:d.names},'print');
+    image.setAttribute('role','img');image.setAttribute('aria-label','Design example for '+p.title);
+    visual.append(image,el('figcaption',d.width+' × '+d.height+' mm'));
+  } else visual=picture(p.id);
+  intro.append(visual,el('h1',p.title),el('p',p.summary),link(p.base?'Start this example in studio ↗':'Customize in studio ↗','#studio/'+p.id,'action'));
+  steps.append(el('h2','Make a sample'),list(p.steps,'ol'),el('h2','Before making a set'),list(p.checks,'ul'));
+  layout.append(intro,steps);$('project-page').replaceChildren(layout);
+}
+const sizes=BenchArt.presets;
+const machines={glowforge:'Glowforge',cricut:'Cricut',sublimation:'Sublimation printer',printer3d:'3D printer'};
+const letterDefaults={nameFont:'atkinson',subtitleFont:'atkinson',nameHeight:0,subtitleHeight:0};
+const heightIds=['nameHeight','subtitleHeight'];
+const optionalSizes=[...heightIds,'motifWidth','extraMotifWidth'];
+const familiarNames={arimo:'Arial-compatible',tinos:'Times New Roman-compatible',cousine:'Courier New-compatible',carlito:'Calibri-compatible'};
+for(const id of ['nameFont','subtitleFont']) {
+  const groups=new Map();
+  for(const face of BenchArt.typefaces) {
+    if(!groups.has(face.category)) {
+      const group=el('optgroup');group.label=face.category;groups.set(face.category,group);
+    }
+    const alias=familiarNames[face.id];
+    groups.get(face.category).append(new Option(face.label+(alias?' ('+alias+')':''),face.id));
+  }
+  $(id).append(...groups.values());
+}
+const fontMatches=[
+  ["UH · Headlines", "league-gothic", "League Gothic is the university’s headline face.", "https://www.uh.edu/brand/brand-identity/style-guide/index"],
+  ["UH · Signs and subheads", "source-sans-3", "The UH brand guide includes Source Sans 3 for signs, headings and supporting text.", "https://www.uh.edu/brand/brand-identity/style-guide/index"],
+  ["UH · Academic serif", "crimson-pro", "UH’s web style guide specifies Crimson Pro for serif text.", "https://uh.edu/marcom/guidelines-policies/web-style/"],
+  ["UH · Formal invitations", "alex-brush", "UH reserves Alex Brush for occasional formal-event lettering.", "https://www.uh.edu/brand/brand-identity/style-guide/index"],
+  ["UH athletics-inspired · Varsity lettering", "graduate", "Graduate has squared athletic serifs. UH Athletics uses its own Houston Bold lettering.", "https://uhcougars.com/sports/2018/6/12/licensing-logos-html"],
+  ["Disney-inspired · Signature lettering","waltograph","Waltograph is Justin Callaghan’s personal-use, noncommercial interpretation of Disney signature lettering.","https://mickeyavenue.com/fonts/waltograph/"],
+  ["Disney-inspired · Vintage cartoon", "mouse-memoirs", "Mouse Memoirs gives short names the tall, springy shapes of vintage cartoon titles.", "https://fonts.google.com/specimen/Mouse+Memoirs/about"],
+  ["Disney-inspired · Storybook script", "berkshire-swash", "Berkshire Swash pairs curled capitals with thick strokes for a storybook title.", "https://thewaltdisneycompany.com/"],
+  ["Royal Caribbean-inspired · Modern capitals", "league-spartan", "League Spartan Semibold gives a ship or port name broad, geometric capitals.", "https://www.royalcaribbean.com/"],
+  ["Norwegian Cruise Line-inspired · Ship initials", "barlow-condensed", "Barlow Condensed Bold Italic gives short initials a strong slanted silhouette.", "https://www.ncl.com/"],
+  ["MSC-inspired · Serif capitals", "bodoni-moda", "Bodoni Moda has sharp serifs and contrasting strokes for short names in capitals.", "https://info.msccruises.com/rs/271-DJN-199/images/MSC_WORLD_EUROPA_techsheet_eng.pdf"],
+  ["Carnival-inspired · Display serif", "dm-serif-display", "DM Serif Display gives mixed-case names strong curves and heavy downstrokes.", "https://www.carnival-news.com/assets/latest-images/carnival-cruise-line-logos-83297"]
+];
+const facesById=new Map(BenchArt.typefaces.map(face=>[face.id,face]));
+for(const [label,id] of fontMatches) {
+  $('brand-style').append(new Option(label+' — '+facesById.get(id).label,id));
+}
+function showFontMatch() {
+  const match=fontMatches.find(([,id])=>id===$('brand-style').value);
+  $('brand-detail').textContent=match[2];$('brand-source').href=match[3];
+}
+$('brand-style').onchange=showFontMatch;showFontMatch();
+for(const [button,field] of [['use-name-font','nameFont'],['use-subtitle-font','subtitleFont']]) {
+  $(button).onclick=()=>{design[field]=$('brand-style').value;$(field).value=design[field];refresh();};
+}
+const dimensionIds=['width','height','hole','thickness','relief'];
+const layoutDefaults={images:[],groupKeys:['motif','extraMotif'],order:['motif','extraMotif','name','subtitle'],linked:false,secondColor:'',positions:{},motifLines:'auto',extraMotifLines:'auto'};
+const defaults={...layoutDefaults,...letterDefaults,motifWidth:0,extraMotifWidth:0,shape:'tag',width:90,height:50,hole:5,thickness:3,relief:1,names:'Cindy',subtitle:'',motif:'wave',extraMotif:'none',placement:'above',ink:'#193e37',accent:'#a35335',paper:'#e8ce9f',machine:'glowforge',units:'mm',mirror:false,printFormat:'png',modelFormat:'stl'};
+const draftKey=document.body.dataset.desktop ? 'makers-bench-desktop-draft:'+ new URL('.',location.href).pathname : 'makers-bench-studio-v1';
+let design={...defaults}, currentName=0, exporting=false, valid=false;
+function names(d) {
+  const lines=d.names.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+  if(lines.length>25) throw Error('Use up to 25 names in one set.');
+  return lines.length?lines:[''];
+}
+function checked(input) {
+  // Projects from the first edition have a single image above the name.
+  input={...layoutDefaults,...letterDefaults,motifWidth:0,extraMotifWidth:0,extraMotif:'none',placement:'above',...input};
+  const result={};
+  for(const k of Object.keys(defaults)) {
+    if(typeof input?.[k]!==typeof defaults[k]) throw Error('This project has incomplete design settings.');
+    result[k]=input[k];
+  }
+  if(!Object.hasOwn(machines,result.machine)||!['in','mm'].includes(result.units)||!['png','pdf'].includes(result.printFormat)||!['3mf','profile','stl'].includes(result.modelFormat)||result.names.length>1600) throw Error('This project has unrecognized settings.');
+  if(!Array.isArray(result.images)||!Array.isArray(result.groupKeys)) throw Error('Invalid image group.');
+  const keys=new Set(['motif','extraMotif',...result.images.map(image=>image?.key)]);
+  if(result.groupKeys.some(key=>!keys.has(key))) throw Error('Invalid image group.');
+  names(result).forEach(name=>BenchArt.validate({...result,name}));return result;
+}
+try {const stored=JSON.parse(localStorage.getItem(draftKey));if(stored) design=checked(stored);} catch {}
+const unitFactor=()=>design.units==='in'?25.4:1;
+function displayed(id) {return Number.isFinite(design[id])?Number((design[id]/unitFactor()).toFixed(design.units==='in'?5:3)):'';}
+const artItems=[
+  {id:'wave',label:'Wave',category:'Original motifs'}, {id:'sun',label:'Sun',category:'Original motifs'},
+  {id:'leaf',label:'Leaf',category:'Original motifs'}, {id:'mountain',label:'Mountain',category:'Original motifs'},
+  ...BenchCatalog.items
+];
+// Build one searchable entry per artwork ID, even if it belongs to several collections.
+const artSearch=new Map(),categoryNames=new Set();
+for(const item of artItems) {
+  const terms=[item.id,item.label,item.category,item.sport,item.keywords];
+  categoryNames.add(item.category);
+  for(const c of item.collections||[]) {
+    categoryNames.add(c.category);
+    terms.push(c.category,c.sport,c.label,c.keywords,categoryKeywords.get(c.category),categoryKeywords.get(c.sport));
+  }
+  artSearch.set(item.id,normalizeSearch(terms.join(' ')));
+}
+const artById=new Map(artItems.map(item=>[item.id,item]));
+const priorityCategories=['Parking & transportation','University of Houston'];
+const categories=[...categoryNames].sort((a,b)=>
+  (priorityCategories.includes(a)?priorityCategories.indexOf(a):2)-(priorityCategories.includes(b)?priorityCategories.indexOf(b):2)||a.localeCompare(b));
+function inArtCollection(item, category, sport) {
+  if(!category) return item;
+  const curated=item.collections?.find(c=>c.category===category&&(!sport||c.sport===sport));
+  return curated || (item.category===category&&(!sport||item.sport===sport)?item:null);
+}
+const featuredIds=['dachshund','fa-graduation-cap','ne-graduation-cap','diploma','uh-interlocking','parking-no-parking','parking-cone','parking-citation'];
+let editingImage='';
+const additionalImage=()=>design.images.find(image=>image.key===editingImage);
+function artworkValue(key) {
+  return key==='moreArt'?(additionalImage()?.art||'none'):design[key];
+}
+function artworkPicker(host,key,title) {
+  const heading=el('label',title);heading.htmlFor=key;
+  const find=el('input');find.type='search';find.placeholder='Try hockey, autumn, UH, or dachshund';
+  find.id=key+'-search';find.dataset.filter='true';find.setAttribute('aria-label','Search '+title.toLowerCase());
+  const category=el('select');category.id=key+'-category';category.dataset.filter='true';
+  category.setAttribute('aria-label',title+' category');
+  category.append(new Option('All categories',''),...categories.map(c=>new Option(c,c)));
+  const select=el('select');select.id=key;
+  const sport=sportPicker(key,options);
+  const controls=el('div',null,'art-filters');controls.append(category,find,sport.label);
+  const proof=el('div',null,'art-sample'), thumb=el('span'), caption=el('span');
+  thumb.setAttribute('aria-hidden','true');proof.append(thumb,caption);
+  const count=el('small',null,'art-count');count.setAttribute('role','status');
+  const widthLabel=el('label',key==='extraMotif'?'Second image width ':'Image width ');
+  const widthUnit=el('span','(mm)','measure-unit'),widthInput=el('input');
+  widthInput.id=key+'Width';widthInput.type='number';widthInput.step='any';widthInput.min='0';widthInput.placeholder='Auto';
+  widthInput.setAttribute('inputmode','decimal');widthInput.setAttribute('aria-describedby','art-size-help');
+  widthLabel.append(widthUnit,widthInput);
+  const lineLabel=el('label','Side lines'),lines=el('select');lines.id=key+'Lines';
+  lines.append(new Option('Automatic','auto'),new Option('Show side lines','on'),new Option('Hide side lines','off'));lineLabel.append(lines);
+  const uhSource=link('UH marks & brand guide ↗','https://www.uh.edu/brand/brand-identity/master-brand-logos-and-marks/interlocking-uh/','credits');
+  uhSource.target='_blank';uhSource.rel='noopener';uhSource.hidden=true;
+  host.append(heading,controls,select,count,proof,uhSource,widthLabel,lineLabel);
+  let lastSample;
+  function preview() {
+    const id=artworkValue(key), ink=(key==='moreArt'?additionalImage()?.color:key==='extraMotif'&&design.secondColor)||design.accent, sig=[id,ink,category.value,sport.select.value].join('|');
+    if(lastSample===sig) return;
+    lastSample=sig;
+    const item=artById.get(id);
+    uhSource.hidden=item?.category!=='University of Houston';
+    lineLabel.hidden=widthLabel.hidden=proof.hidden=!item;
+    if(item) {thumb.innerHTML=BenchArt.swatch(id,ink);caption.textContent=inArtCollection(item,category.value,sport.select.value)?.label||item.label;}
+  }
+  function options() {
+    const query=normalizeSearch(find.value),tokens=query.split(' ').filter(Boolean);
+    sport.update(category.value);
+    const matches=[];
+    for(const item of artItems) {
+      const entry=inArtCollection(item,category.value,sport.select.value);
+      if(entry&&tokens.every(term=>artSearch.get(item.id).includes(term))) matches.push({item,entry});
+    }
+    const current=artById.get(artworkValue(key)), fragment=document.createDocumentFragment();
+    fragment.append(new Option(key==='motif'?'No image':key==='extraMotif'?'No second image':'Choose an image…','none'));
+    if(current&&!matches.some(({item})=>item.id===current.id)) fragment.append(new Option(current.label+' (current)',current.id));
+    const groups=new Map();
+    const featured=!query&&!category.value;
+    function group(name) {
+      if(!groups.has(name)) {const node=el('optgroup');node.label=name;groups.set(name,node);}
+      return groups.get(name);
+    }
+    for(const {item,entry} of matches) {
+      const name=featured&&featuredIds.includes(item.id)?'Featured':category.value==='Sports'?(entry.sport||'Other sports'):entry.category;
+      group(name).append(new Option(entry.label,item.id));
+    }
+    if(groups.has('Featured')) {fragment.append(groups.get('Featured'));groups.delete('Featured');}
+    for(const name of [...groups.keys()].sort()) fragment.append(groups.get(name));
+    select.replaceChildren(fragment);select.value=artworkValue(key);
+    preview();
+    count.textContent=matches.length===0?'No matches. Try another search or category.':matches.length.toLocaleString()+' images';
+  }
+  find.oninput=options;category.onchange=options;
+  function clearSearch() {find.value=category.value=sport.select.value='';}
+  return {options,preview,clearSearch};
+}
+const artPickers=[artworkPicker($('art-picker'),'motif','Artwork'),artworkPicker($('extra-picker'),'extraMotif','Second artwork')];
+
+const morePicker=artworkPicker($('more-picker'),'moreArt','Artwork for this image');
+let addingImage=false, shownEditor;
+function updateImageEditor(rebuild=false) {
+  const image=additionalImage(),visible=addingImage||design.images.length>0;
+  $('more-images').hidden=!visible;
+  if(!visible) {shownEditor=undefined;return;}
+  if(!image&&!addingImage&&design.images.length) editingImage=design.images[0].key;
+  const active=additionalImage(), list=$('edit-image');
+  const items=design.images.map(img=>[img.key,objectLabel(img.key)]);
+  if(addingImage) items.push(['','New image']);
+  const signature=JSON.stringify(items);
+  if(list.dataset.items!==signature){
+    list.replaceChildren(...items.map(([key,label])=>new Option(label,key)));list.dataset.items=signature;
+  }
+  list.value=editingImage;
+  if(shownEditor!==editingImage||rebuild) morePicker.options();
+  shownEditor=editingImage;
+  $('moreArt').value=artworkValue('moreArt');
+  if(document.activeElement!==$('moreArtWidth')) $('moreArtWidth').value=active?.width?Number((active.width/unitFactor()).toFixed(5)):'';
+  $('moreArtLines').value=active?.lines||'auto';
+  $('more-match-row').hidden=!active;
+  $('more-match-color').checked=!active?.color;
+  $('more-color-row').hidden=!active?.color;
+  $('more-color').value=active?.color||design.accent;
+  $('remove-image').hidden=!active;
+  morePicker.preview();
+}
+$('edit-image').onchange=e=>{
+  editingImage=e.target.value;addingImage=!editingImage;updateImageEditor();
+  if(editingImage) arranger.select(editingImage);
+};
+$('add-image').onclick=()=>{
+  const empty=['motif','extraMotif'].find(key=>design[key]==='none');
+  if(empty) {
+    if(empty==='extraMotif') $('second-image').open=true;
+    $(empty+'-search').focus();return;
+  }
+  editingImage='';addingImage=true;morePicker.clearSearch();updateImageEditor(true);
+  $('moreArt-search').focus();
+};
+function removeImage() {
+  const key=editingImage;
+  design.images=design.images.filter(img=>img.key!==key);
+  design.order=design.order.filter(k=>k!==key);design.groupKeys=design.groupKeys.filter(k=>k!==key);
+  design.positions={...design.positions};delete design.positions[key];
+  editingImage=design.images.at(-1)?.key||'';addingImage=false;
+  updateImageEditor();refresh();
+}
+$('remove-image').onclick=removeImage;
+function chooseMoreArt(art) {
+  const existing=additionalImage();
+  if(art==='none') {if(existing) removeImage();return;}
+  if(existing) existing.art=art;
+  else {
+    const number=design.images.reduce((n,img)=>Math.max(n,Number(img.key.slice(5))),2)+1;
+    const key='image'+number;
+    design.positions=arranger.currentPositions();
+    design.positions[key]={x:.5+(number%3-1)*.08,y:.45+(number%4)*.06,size:.20};
+    design.images=[...design.images,{key,art,width:0,lines:'auto',color:''}];
+    design.order=[...design.order,key];
+    editingImage=key;addingImage=false;
+  }
+  updateImageEditor();refresh();arranger.select(editingImage);
+}
+function objectLabel(key) {
+  if(key==='name') return 'Name';
+  if(key==='subtitle') return 'Second line';
+  const index=design.images.findIndex(image=>image.key===key);
+  if(index>=0) return 'Image '+(index+3)+' · '+(artById.get(design.images[index].art)?.label||'');
+  return (key==='motif'?'First image · ':'Second image · ')+(artById.get(design[key])?.label||'');
+}
+const arranger=arrangePreview(()=>design,(positions,size,settings={})=>{
+  const image=size&&design.images.find(img=>img.key+'Width'===size.field);
+  const resized=size&&!image?{[size.field]:size.value}:{};
+  if(!Object.keys(positions).length) {
+    try {BenchArt.svg({...design,...resized,positions,name:names(design)[currentName]});} catch(error) {
+      $('studio-message').textContent='Automatic layout: '+error.message;return;
+    }
+  }
+  Object.assign(design,resized,settings,{positions});
+  if(image) image.width=size.value;
+  else if(size) $(size.field).value=size.value===0?'':displayed(size.field);
+  refresh();
+},objectLabel,key=>{
+  if(key!==editingImage&&design.images.some(img=>img.key===key)) {
+    editingImage=key;addingImage=false;updateImageEditor();
+  }
+});
+function form() {
+  studioPicker.show(design.shape);
+  for(const k of ['units','names','subtitle','motifLines','extraMotifLines','nameFont','subtitleFont','placement','ink','accent','paper','machine']) $(k).value=design[k];
+  for(const id of dimensionIds) $(id).value=displayed(id);
+  for(const id of optionalSizes) $(id).value=design[id]===0?'':displayed(id);
+  document.querySelectorAll('.measure-unit').forEach(node=>node.textContent='('+design.units+')');
+  for(const picker of artPickers) picker.options();
+  addingImage=false;if(!additionalImage()) editingImage=design.images[0]?.key||'';updateImageEditor(true);
+  if(design.extraMotif!=='none') $('second-image').open=true;
+  $('mirror').checked=design.mirror;$('print-format').value=design.printFormat;$('model-format').value=design.modelFormat;
+}
+function setShape(id) {Object.assign(design,{positions:{},linked:false,order:BenchArt.defaultOrder(design.images)});design.shape=id;[design.width,design.height,design.hole]=sizes[id];}
+const fileExt={cricut:'svg',glowforge:'svg',profile:'svg',stl:'stl','3mf':'3mf',pdf:'pdf',png:'png'};
+function format(d=design) {return d.machine==='printer3d'?d.modelFormat:d.machine==='sublimation'?d.printFormat:d.machine;}
+const outputNotes={
+ glowforge:'Assign the black art to Engrave, blue lines to Score when present, and the red outline to Cut. Ignore the outline for a precut blank.',
+ cricut:'Colored cut layers contain the lettering and motif. Check their size and placement on your blank in Design Space.',
+ png:'The transfer prints at 300 ppi. Check that your printer and this studio mirror the artwork only once.',
+ pdf:'Print at Actual size or 100%. Measure the paper proof against your blank.',
+ stl:'A single solid with a flat back and raised artwork. Import into your slicer in millimeters.',
+ '3mf':'A single solid with the size recorded in millimeters. Choose your printer and material in your slicer.',
+ profile:'An editable flat SVG with the blank outline, any strap hole, and artwork paths. Select profiles in CAD and set the extrusion depth there.'
+};
+function refresh() {
+  const fmt=format();
+  $('type-error').hidden=true;
+  $('art-size-error').hidden=true;
+  $('match-color').checked=!design.secondColor;
+  $('second-color-row').hidden=!design.secondColor;
+  $('second-color').value=design.secondColor||design.accent;
+  for(const id of optionalSizes) $(id).placeholder='Auto';
+  $('model-type').hidden=$('depths').hidden=design.machine!=='printer3d';
+  $('print-type').hidden=$('mirror-row').hidden=$('transfer-proof').hidden=design.machine!=='sublimation';
+  $('hole-row').hidden=!BenchArt.hasHole(design.shape);
+  updateImageEditor();
+  for(const picker of artPickers) picker.preview();
+  $('output-title').textContent=machines[design.machine]+' file';$('output-note').textContent=outputNotes[fmt];
+  $('export').textContent='Download '+fileExt[fmt].toUpperCase();
+  $('studio-guide').href='#project/'+design.shape;$('size-caption').textContent=displayed('width')+' × '+displayed('height')+' '+design.units;
+  try {
+    const people=names(design);currentName=Math.min(currentName,people.length-1);
+    const options=people.map((s,i)=>new Option(s||'Blank',i));$('name-index').replaceChildren(...options);$('name-index').value=currentName;
+    $('which-name').hidden=$('export-set').hidden=people.length<2;
+    const d={...design,name:people[currentName]};
+    // The export engine emits path geometry and validated colors only.
+    $('drawing').innerHTML=BenchArt.svg(d);
+    if(design.machine==='sublimation') $('transfer').innerHTML=BenchArt.svg(d,'print');
+    checked(design);
+    const preview=$('drawing').querySelector('svg');
+    for(const key of ['motif','extraMotif',...(additionalImage()?[editingImage]:[])]) {
+      const mm=preview.getAttribute('data-'+key.toLowerCase()+'-width');
+      if(mm!==null) $((key===editingImage?'moreArt':key)+'Width').placeholder='Auto · '+Number((Number(mm)/unitFactor()).toFixed(design.units==='in'?3:2));
+    }
+    for(const node of $('drawing').querySelectorAll('[data-object="name"],[data-object="subtitle"]')) {
+      const height=(node.dataset.box?Number(node.dataset.box.split(' ')[3]):node.getBBox().height)/unitFactor();
+      $(node.dataset.object+'Height').placeholder='Auto · '+Number(height.toFixed(design.units==='in'?3:2));
+    }
+    if(fmt==='cricut') BenchArt.svg(d,'cricut');
+    valid=true;$('studio-message').textContent='';
+    try {localStorage.setItem(draftKey,JSON.stringify(design));} catch {}
+  } catch(e) {
+    if(/artwork|image width/i.test(e.message)) {
+      $('art-size-error').hidden=false;$('art-size-error').textContent=e.message;
+    }
+    if(/font|letter|two lines/i.test(e.message)) {
+      $('type-error').hidden=false;$('type-error').textContent=e.message;
+    }
+    valid=false;$('studio-message').textContent=e.message;$('drawing').replaceChildren();$('transfer').replaceChildren();
+  }
+  arranger.sync();
+  for(const id of ['save-open','export','export-set']) $(id).disabled=!valid||exporting;
+}
+$('settings').onsubmit=e=>e.preventDefault();
+$('settings').oninput=e=>{
+  const id=e.target.id;
+  if(e.target.dataset.filter) return;
+  if(id==='moreArt') {chooseMoreArt(e.target.value);return;}
+  if(['moreArtWidth','moreArtLines','more-color','more-match-color'].includes(id)) {
+    const img=additionalImage();if(!img) return;
+    if(id==='moreArtWidth') img.width=e.target.validity.badInput?NaN:Number(e.target.value)*unitFactor();
+    if(id==='moreArtLines') img.lines=e.target.value;
+    if(id==='more-color') img.color=e.target.value;
+    if(id==='more-match-color') img.color=e.target.checked?'':design.accent;
+  }
+  else if(id==='shape') {setShape(e.target.value);form();}
+  else if(id==='units') {design.units=e.target.value;form();}
+  else if(optionalSizes.includes(id)) design[id]=e.target.validity.badInput?NaN:e.target.value===''?0:Number(e.target.value)*unitFactor();
+  else if(dimensionIds.includes(id)) design[id]=e.target.value===''?NaN:Number(e.target.value)*unitFactor();
+  else if(id==='placement') {design.placement=e.target.value;design.positions={};design.linked=false;}
+  else if(id==='match-color') design.secondColor=e.target.checked?'':design.accent;
+  else if(id==='second-color') design.secondColor=e.target.value;
+  else if(id==='mirror') design.mirror=e.target.checked;
+  else if(Object.hasOwn(defaults,id)) design[id]=e.target.value;
+  refresh();
+};
+$('name-index').onchange=e=>{currentName=Number(e.target.value);refresh();};
+$('model-format').onchange=e=>{design.modelFormat=e.target.value;refresh();};
+$('print-format').onchange=e=>{design.printFormat=e.target.value;refresh();};
+async function download(batch) {
+  if(exporting||!valid) return;
+  const source={...design}, fmt=format(source), all=names(source), people=batch?all:[all[currentName]];
+  exporting=true;refresh();
+  try {
+    const entries=[];
+    for(const [i,name] of people.entries()) {
+      $('studio-message').textContent='Preparing file '+(i+1)+' of '+people.length+'…';
+      const stem=BenchFiles.slug(name||source.shape)+'-'+fmt+(source.mirror&&source.machine==='sublimation'?'-mirrored':'');
+      const filename=(batch?String(i+1).padStart(2,'0')+'-':'')+stem+'.'+fileExt[fmt];
+      entries.push([filename,await BenchFiles.output({...source,name},fmt)]);
+    }
+    if(batch) BenchFiles.save(await BenchFiles.zip(entries),source.shape+'-'+fmt+'-set.zip');
+    else BenchFiles.save(entries[0][1],entries[0][0]);
+    exporting=false;refresh();$('studio-message').textContent=batch?'Name set downloaded.':'Design file downloaded.';
+  } catch(e) {exporting=false;refresh();$('studio-message').textContent=e.message;}
+}
+$('export').onclick=()=>download(false);$('export-set').onclick=()=>download(true);
+let onAccept;
+function dialog(title,accept,body,submit) {
+  $('dialog-title').textContent=title;$('dialog-body').replaceChildren(body);$('accept').textContent=accept;
+  $('dialog-message').textContent='';$('accept').disabled=false;onAccept=submit;$('dialog').showModal();
+}
+$('close-dialog').onclick=()=>$('dialog').close();
+$('dialog-form').onsubmit=async e=>{
+  e.preventDefault();$('accept').disabled=true;
+  try {await onAccept();$('dialog').close();}
+  catch(err) {$('dialog-message').textContent=err.message;}
+  finally {$('accept').disabled=false;}
+};
+const logFields={title:'Project name',material:'Material or blank',equipment:'Machine or press',settings:'Machine settings',notes:'Results and notes'};
+$('save-open').onclick=()=>{
+  const d=checked(design), body=el('div');
+  for(const [key,label] of Object.entries(logFields)) {
+    const wrap=el('label',label), input=el(['settings','notes'].includes(key)?'textarea':'input');
+    input.id='job-'+key;input.maxLength=key==='title'?120:3000;
+    if(key==='title') {input.required=true;input.value=(names(d)[0]+' '+projects.find(p=>p.id===d.shape).title).trim();}
+    if(key==='equipment') input.value=machines[d.machine];
+    wrap.append(input);body.append(wrap);
+  }
+  const wrap=el('label','Photo of the test piece (optional)'),file=el('input');file.type='file';file.accept='image/*';wrap.append(file);body.append(wrap);
+  dialog('Save to my workshop','Save project',body,async()=>{
+    const entry={id:crypto.randomUUID(),date:new Date().toISOString(),design:d,photo:await BenchFiles.photo(file.files[0])};
+    for(const key of Object.keys(logFields)) entry[key]=$('job-'+key).value.trim();
+    if(!entry.title) throw Error('Enter a project name.');
+    await BenchFiles.records(entry);location.hash='workshop';$('workshop-message').textContent='Project saved on this device.';
+  });
+};
+function button(label,fn) {const b=el('button',label,'secondary');b.type='button';b.onclick=fn;return b;}
+async function workshop() {
+  const host=$('records');
+  try {
+    const entries=(await BenchFiles.records()).sort((a,b)=>b.date.localeCompare(a.date));
+    host.replaceChildren();
+    if(!entries.length) host.append(el('p','Save a design from the studio to start your workshop log.'));
+    for(const run of entries) {
+      const card=el('article',null,'record');
+      card.append(el('h2',run.title),el('p',new Date(run.date).toLocaleDateString()+' · '+machines[run.design.machine],'muted'));
+      for(const [key,label] of Object.entries(logFields)) if(key!=='title' && run[key]) {
+        const line=el('p');line.append(el('strong',label+' · '),run[key]);card.append(line);
+      }
+      if(run.photo) {const img=el('img');img.alt='Saved test piece';img.src=run.photo;card.append(img);}
+      const actions=el('div',null,'actions');
+      actions.append(button('Open in studio',()=>{design=checked(run.design);currentName=0;form();refresh();location.hash='studio';}),
+        button('Download project file',()=>BenchFiles.save(new Blob([JSON.stringify({version:1,workshop:run})],{type:'application/json'}),BenchFiles.slug(run.title)+'.bench.json')));
+      card.append(actions);host.append(card);
+    }
+  } catch(e) {$('workshop-message').textContent='Could not open the local workshop. '+e.message;}
+}
+$('import').onchange=async e=>{
+  try {
+    const file=e.target.files[0];if(!file) return;
+    if(file.size>4*1024*1024) throw Error('Choose a Maker’s Bench project file smaller than 4 MB.');
+    const data=JSON.parse(await file.text()), entry=data.workshop;
+    if(data.version!==1||!entry||Object.keys(logFields).some(key=>typeof entry[key]!=='string'||entry[key].length>3000)||!entry.title.trim()||
+       typeof entry.date!=='string'||!Number.isFinite(Date.parse(entry.date))||typeof entry.photo!=='string'||
+       (entry.photo && !/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(entry.photo))) throw Error('Choose a saved Maker’s Bench project file.');
+    const run={id:crypto.randomUUID(),design:checked(entry.design),date:new Date(entry.date).toISOString(),photo:entry.photo};
+    for(const k of Object.keys(logFields)) run[k]=entry[k];
+    await BenchFiles.records(run);await workshop();$('workshop-message').textContent='Project imported on this device.';
+  } catch(err) {$('workshop-message').textContent='Import failed. '+err.message;}
+  finally {e.target.value='';}
+};
+function route() {
+  const [area,id]=location.hash.slice(1).split('/'), p=projects.find(project=>project.id===id);
+  const page=area==='project'&&p?'project':['studio','workshop'].includes(area)?area:'guide';
+  document.querySelectorAll('.view').forEach(section=>section.hidden=section.id!==page);
+  document.querySelectorAll('[data-tab]').forEach(a=>{
+    if(a.dataset.tab===(page==='project'?'guide':page)) a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+  });
+  if(page==='guide') {if(id) guidePicker.category(id);$('choose-guide').value='';}
+  if(page==='project') { detailPicker.show(p.id); projectPage(p);
+    document.querySelector('book-pager').setPage(projects.indexOf(p)+1,projects.length,'project',n=>location.hash='project/'+projects[n-1].id,()=>location.hash='guide');
+  }
+  if(page==='studio') {
+    if(p) {
+      if(p.base) {design={...exampleDesign(p),machine:design.machine,units:design.units};currentName=0;}
+      else setShape(p.id);
+      history.replaceState(null,'','#studio');
+    }
+    form();refresh();
+  }
+  if(page==='workshop') workshop();
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);route();
+let installPrompt;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;});
+$('install').hidden=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+window.addEventListener('appinstalled',()=>{$('install').hidden=true;installPrompt=null;});
+$('install').onclick=async()=>{
+  if(installPrompt) {await installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;return;}
+  const body=el('div');body.append(el('p','Windows PC: open this page in Edge. From the … menu choose More tools → Apps → Install this site as an app. In Chrome, use the install icon in the address bar when available.'),
+    el('p','iPad: open the page in Safari, tap Share, then Add to Home Screen.'));
+  dialog('Install The Maker’s Bench','Done',body,()=>{});
+};
+async function offline() {
+  try {
+    const reg=await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'});
+    const worker=reg.installing||reg.waiting||reg.active;
+    if(!worker) throw Error();
+    if(worker.state!=='activated') await new Promise((resolve,reject)=>{
+      const changed=()=>{if(worker.state==='activated') resolve();if(worker.state==='redundant') reject(Error());};
+      worker.addEventListener('statechange',changed);changed();
+    });
+    const ready=await new Promise(resolve=>{
+      const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
+      channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
+      worker.postMessage({type:'verify-edition',edition:document.body.dataset.edition},[channel.port2]);
+    });
+    if(!ready) throw Error();
+    $('offline').textContent='Ready offline';
+  } catch {$('offline').textContent='Offline setup incomplete. Reopen online to try again.';}
+}
+offline();

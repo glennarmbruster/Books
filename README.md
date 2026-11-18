@@ -19,3 +19,7 @@
 - [Memory Activity Book](./memory-activity-book/) — 250 numbered activities including picture matching, sequence and spatial memory, story recall, word pairs and category recall.
 
 The back-of-book Food Safety Quick Reference appendix includes refrigeration decisions, storage times, freeze-dried product examples, and cat food and treats.
+
+### Updating The Maker’s Bench
+
+Edit the shared book in `makers-bench/`. The desktop layout lives in `tools/makers-bench/`. Run `python3 tools/build-makers-bench.py` to regenerate both offline editions and `downloads/makers-bench-desktop.zip` locally. The **Build both Maker's Bench books** GitHub workflow also runs when these sources change on main. To update a separately hosted desktop copy, replace its files with the contents of the new ZIP.
