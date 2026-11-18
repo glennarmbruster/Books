@@ -1,7 +1,7 @@
 'use strict';
 const CACHE_PREFIX = 'books-field-home:' + self.registration.scope + ':';
 const EDITION = '2026.11.16-guide-order-r1';
-const READER_EDITION = EDITION + '-goobie-tools-browse';
+const READER_EDITION = EDITION + '-goobie-tools-top-nav';
 const CACHE = CACHE_PREFIX + READER_EDITION;
 const CORE = ['../book-pager.js',
   '../book-number.js',

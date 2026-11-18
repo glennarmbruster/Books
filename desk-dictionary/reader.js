@@ -206,7 +206,7 @@ async function route() {
       if(r.offset)pager.append(link('‹ Previous',{letter,offset:Math.max(0,r.offset-32)}));
       if(r.offset+r.items.length<r.total)pager.append(link('Next ›',{letter,offset:r.offset+32}));
       const range=r.total ? (r.offset+1).toLocaleString()+'–'+(r.offset+r.items.length).toLocaleString()+' of '+r.total.toLocaleString():'0 entries';
-      matches.replaceChildren(el('p',range,'context'),lists(r.items),pager);
+      matches.replaceChildren(pager.cloneNode(true),el('p',range,'context'),lists(r.items),pager);
       notice('Browsing '+letter);return;
     }
     if(!term){home();return;}
@@ -218,7 +218,7 @@ async function route() {
       if(version!==generation)return;
       if(thesaurus)showThesaurus(data);else showEntry(data);
       if(data.page){
-        const pager=el('book-pager');reader.append(pager);
+        const pager=el('book-pager');pager.setAttribute('top','');reader.append(pager);
         pager.setPage(data.page,info.count,'entry',async n=>{
           const word=await ask('wordAt',{number:n});
           if(version===generation&&word){location.hash=hash({word});window.scrollTo(0,0);}

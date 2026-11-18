@@ -603,7 +603,7 @@ async function offline() {
     const ready=await new Promise(resolve=>{
       const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},5000);
       channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data===true);};
-      worker.postMessage({type:'verify-edition',edition:'makers-bench-8'},[channel.port2]);
+      worker.postMessage({type:'verify-edition',edition:'makers-bench-9'},[channel.port2]);
     });
     if(!ready) throw Error();
     $('offline').textContent='Ready offline';

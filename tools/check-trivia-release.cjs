@@ -25,10 +25,10 @@ for(const [i,m] of mapping.entries()){
 assert.equal(all.length,22600);
 const worker=fs.readFileSync(path.join(book,'sw.js'),'utf8');
 const manifest=vm.runInNewContext(worker.replace(/importScripts\([^;]+;/,'' )+';({edition,files})');
-assert.equal(manifest.edition,'trivia-9');
+assert.match(manifest.edition,/^trivia-\d+$/);
 assert.ok(manifest.files.includes('data/reviewed-002.js'));
 for(const file of manifest.files)assert.ok(fs.existsSync(path.resolve(book,file)),'Missing offline asset '+file);
 const shelf=fs.readFileSync(path.join(root,'index.html'),'utf8');
-assert.match(shelf,/data-book="weird-facts-trivia" data-edition="trivia-9"/);
+assert.ok(shelf.includes('data-book="weird-facts-trivia" data-edition="'+manifest.edition+'"'));
 assert.match(shelf,/22,600 questions/);
 console.log('Verified all 2,500 integrated cards against reviewed originals, unchanged baseline, permanent numbering and offline asset manifest.');

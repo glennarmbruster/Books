@@ -1,4 +1,4 @@
-const edition = 'makers-bench-8';
+const edition = 'makers-bench-9';
 const files = ['../book-pager.js',
   "app.js",
   "arrange.js",

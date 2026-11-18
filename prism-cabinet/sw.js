@@ -1,5 +1,5 @@
 importScripts('./challenges.js');
-const edition = 'prism-volume-1-500-browse';
+const edition = 'prism-volume-1-500-top-nav';
 const prefix = self.registration.scope + 'prism-cabinet:';
 const cacheName = prefix + edition;
 const localURL = path => new URL(path, self.registration.scope).href;

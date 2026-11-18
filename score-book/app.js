@@ -430,7 +430,7 @@ function drawCard() {
     footer.append(button('Finish game', finishCard),button('Restart game', restartCard));
   }
   host.append(footer,button('Delete scorecard',deleteCard,'danger'));labelScores();updateTotals();
-  const pager=document.createElement('book-pager');host.append(pager);
+  const pager=document.createElement('book-pager');pager.setAttribute('top','');host.append(pager);
   pager.setPage(cardOrder.indexOf(current.id)+1,cardOrder.length,'scorecard',n=>location.hash='card='+cardOrder[n-1],()=>location.hash='');
 }
 async function route() {

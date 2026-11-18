@@ -1533,7 +1533,7 @@ function renderGuides() {
       </button>
       <book-number-jump noun="guide" max="${numberedGuideIds.length}"></book-number-jump>
     </nav>
-    <div class="reading-page">${guideDetailHTML(selected?.id)}<book-pager></book-pager></div>
+    <div class="reading-page">${guideDetailHTML(selected?.id)}<book-pager top></book-pager></div>
   </div>`;
   const available=new Set(allGuides().map(g=>g.id));
   const ids=[...numberedGuideIds.filter(id=>available.has(id)), ...[...available].filter(id=>!guideNumbers.has(id))];
