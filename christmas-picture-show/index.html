@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153f39">
+<title>Christmas Picture Show · Books</title><link rel="icon" href="../shelf-art/christmas-picture-show.jpg"><link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="wrap ribbon"><a href="../">‹ Bookshelf</a><a href="#index">Movie index</a><span id="offline" role="status">Preparing offline…</span></div></header>
+<main class="wrap">
+<section id="catalog" aria-labelledby="book-title">
+<div class="mast"><img src="../shelf-art/christmas-picture-show.jpg" alt=""><div><p class="eyebrow">Holiday word searches</p><h1 id="book-title">Christmas<br>Picture Show</h1><p>400 puzzles · 24 movies and specials</p><a class="solid" id="resume" href="#1">Start puzzle 1</a></div></div>
+<h2>Movie index</h2><book-number-jump noun="puzzle" max="400"></book-number-jump>
+<label class="search">Search movies and puzzles<input type="search" id="search" placeholder="Try Grinch or Whoville"></label>
+<p id="index-status" role="status"></p><div id="chapters"></div>
+</section>
+<section id="reader" hidden><div id="top"></div><div id="spread">
+<section id="puzzle-page" class="leaf"><div class="folio"><span id="movie"></span><span id="folio"></span></div>
+<h1 id="puzzle-title"></h1><p id="rules"></p><button id="expand" type="button" aria-pressed="false">Enlarge grid</button><div id="board" aria-label="Letter grid. Use arrow keys to move, and Enter or Space to choose each end."></div>
+<p id="feedback" role="status"></p><div id="near-bank"></div><div id="word-panel"><div id="clue-panel" hidden><h2>Fill in the scene</h2><ol id="blanks"></ol></div>
+<h2 id="bank-title">Find these words</h2><ul id="bank"></ul></div>
+<p id="decoded" hidden></p><details id="help"><summary>How to play</summary><p>Drag between the first and last letters, or tap the two ends. Words can run in any of eight directions. On a keyboard, move with the arrow keys and choose each end with Enter or Space. Your finds are saved on this device.</p></details>
+<details id="key"><summary>Answer key</summary><ol></ol></details>
+<button id="reset" type="button">Clear this puzzle</button></section>
+<aside class="leaf notes" aria-labelledby="notes-title"><div class="folio"><span>Facing page</span><span id="year"></span></div><p class="eyebrow" id="note-label"></p><h2 id="notes-title"></h2><p id="note"></p><blockquote id="quote" hidden></blockquote><p id="source"></p><div id="facing-bank"></div></aside>
+</div><book-pager top="#top"></book-pager></section>
+<details id="tools"><summary>Book tools</summary><div class="actions"><button id="export">Back up progress</button><label>Restore backup<input type="file" id="import" accept=".json,application/json"></label><button id="clear-all">Clear all puzzles</button><a href="chapter-packs.md" download>Download chapter data packs</a></div></details><p id="message" role="status"></p>
+</main>
+<dialog id="dialog" aria-labelledby="dialog-title"><form id="pin-form"><h2 id="dialog-title"></h2><p id="reason"></p><label id="pin-label">PIN<input id="pin" type="password" inputmode="numeric" pattern="[0-9]{4,8}" minlength="4" maxlength="8" required autocomplete="off"></label><label id="confirm-label">Confirm PIN<input id="confirm" type="password" inputmode="numeric" autocomplete="off"></label><p role="alert" id="pin-error"></p><div class="buttons"><button type="button" id="cancel">Cancel</button><button type="submit" class="action" id="accept">Continue</button></div></form></dialog>
+<script src="../book-pager.js"></script><script src="../book-number.js"></script><script src="puzzles.js"></script><script src="reader.js"></script><script src="progress.js"></script><script src="../table-books-offline.js"></script></body></html>
