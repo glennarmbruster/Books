@@ -75,8 +75,8 @@ function paint(status='') {
   const svg=$('board').querySelector('svg');svg.replaceChildren();
   for(const key of found) addLine(svg,...hits[key],p.grid.length,false);
   const list=$('bank');list.replaceChildren();
-  $('bank-title').hidden=concealed && found.length===0;
   const concealed=p.kind==='superfan'||p.kind==='blanks';
+  $('bank-title').hidden=concealed && found.length===0;
   $('bank-title').textContent=concealed?'Words you found':'Find these words';
   const visible=p.words.map((word,i)=>({word,i})).filter(({i})=>!concealed||Object.hasOwn(hits,i));
   for(const {word,i} of visible) {
