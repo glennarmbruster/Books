@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#143e40">
+<title>You’re Kidding, Right? · Books</title><link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="band"><a href="../">‹ Bookshelf</a><strong>You’re Kidding, Right?</strong><a href="#index">Fact index</a></div></header>
+<main>
+<section id="reader" aria-label="Fact reader">
+<div id="upper"></div>
+<article aria-labelledby="subject"><div class="folio"><span id="topic"></span><span id="number"></span></div>
+<div class="card"><h1 id="subject"></h1><p id="fact"></p></div>
+<div class="foot"><details id="sources"><summary>Where’s the proof?</summary><p id="credit"></p><a id="subject-link">Read about the subject</a> · <a id="source-link">Original archive entry</a><p id="further" hidden><a id="further-link">Additional reference</a></p><p>Adapted from Wikipedia contributors under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. The source links open online.</p></details>
+<button id="random" type="button">Surprise me ↗</button></div></article>
+<book-pager top="#upper"></book-pager>
+</section>
+<section id="index" hidden aria-labelledby="index-title"><h1 id="index-title">Fact index</h1>
+<div class="filters"><label>Search facts<input id="search" type="search" placeholder="Try shipwreck or #2500"></label>
+<label>Topic<select id="topics"><option value="">All topics</option></select></label></div>
+<p id="count" role="status"></p><ul id="results"></ul><div class="pages"><button id="earlier">Previous results</button><button id="later">Next results</button></div>
+</section></main>
+<footer><span id="offline" role="status">Preparing offline edition…</span></footer>
+<script src="facts.js"></script><script src="../book-pager.js"></script><script src="reader.js"></script><script src="../table-books-offline.js"></script>
+</body></html>
