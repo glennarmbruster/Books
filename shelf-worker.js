@@ -1,12 +1,12 @@
 const scope = self.registration.scope;
 const shelf = new URL('index.html', scope).href;
 const cacheName = 'books-shelf-v1:' + scope;
-const covers = ['casebook', 'prism', 'survival', 'dictionary', 'score', 'wordplay', 'cards', 'bench', 'sudoku', 'german', 'trivia', 'memory'].map(name => new URL('shelf-art/' + name + '.jpg', scope).href);
+const covers = ['casebook', 'prism', 'survival', 'dictionary', 'score', 'wordplay', 'cards', 'bench', 'sudoku', 'german', 'trivia', 'memory', 'curiosities', 'history', 'clue', 'dad'].map(name => new URL('shelf-art/' + name + '.jpg', scope).href);
 const assets = [shelf, ...covers, ...['shelf-order.js', 'books.webmanifest', 'last-port-casebook/icon.png', 'last-port-casebook/icon-large.png', 'field-and-home/icon-192.png', 'prism-cabinet/icon.png', 'desk-dictionary/icon.png', 'score-book/icon.png'].map(path => new URL(path, scope).href)];
 
 self.addEventListener('install', event => event.waitUntil((async () => {
   const cache = await caches.open(cacheName);
-  await cache.addAll(assets);
+  await cache.addAll(assets.map(url => new Request(url, {cache: 'reload'})));
   await self.skipWaiting();
 })()));
 
