@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#312335"><title>Dad Jokes · Books</title><link rel="stylesheet" href="../this-day-in-history/style.css"><link rel="stylesheet" href="style.css"></head>
+<body><header><div><a href="../">‹ Bookshelf</a><strong>Dad Jokes</strong></div><nav aria-label="Calendar"><a href="#index">Date index</a><button id="today">Today</button></nav></header>
+<main>
+<section id="reader" aria-label="Daily joke"><div id="upper"></div><div class="date-line"><span id="weekday"></span><time id="date"></time></div>
+<article class="joke-card"><h1 id="category"></h1><p id="setup"></p></article>
+<button id="reveal" aria-controls="punchline" aria-expanded="false">Reveal punchline</button>
+<p id="punchline" aria-live="polite"></p>
+<book-pager top="#upper"></book-pager></section>
+<section id="index" hidden><h1>Date index</h1><p>December 2026 – December 2027</p><div class="filter"><label>Month<select id="month"></select></label><label>Search dates, themes or setups<input id="search" type="search" placeholder="Try dachshund or game night"></label></div><p id="matches" role="status"></p><ul id="dates"></ul></section>
+</main><footer><span id="offline" role="status">Preparing offline edition…</span></footer>
+<script src="days.js"></script><script src="../book-pager.js"></script><script src="reader.js"></script><script src="../table-books-offline.js"></script></body></html>
