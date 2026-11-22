@@ -1,0 +1,7 @@
+:root {--ink:#1c3457;--line:#b3becf;background:#f5f3ed}
+.quiz-card {margin:1.2rem 0;padding:clamp(1.5rem,5vw,4rem);background:#1c3457;color:#fffaf0;border-top:.35rem solid #d9a951;border-radius:.3rem}
+.quiz-card h1 {margin:0 0 1.2rem;color:#f2ce88;font:650 1.15rem/1.4 system-ui,sans-serif}
+.quiz-card p {font:clamp(1.7rem,4vw,2.75rem)/1.32 Georgia,serif;max-width:34ch;text-wrap:pretty}
+#reveal {background:var(--ink);color:white;padding:.55rem 1rem;border-color:var(--ink)}
+#response {font:1.5rem/1.45 Georgia,serif;margin:.8rem 0}
+#response:empty {margin:0}

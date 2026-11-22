@@ -79,6 +79,7 @@
     a:focus-visible,button:focus-visible {outline:3px solid #a46622; outline-offset:3px}
     p {margin:0; color:#526354}
       .shelf .history-cover {background:repeating-linear-gradient(135deg,transparent 0 10px,#ffffff0b 10px 11px),linear-gradient(155deg,#527978,#243e45 65%,#132629);border-top:4px solid #c79660}
+      .shelf .clue-cover {background:radial-gradient(ellipse at 80% 15%,#4568a5,transparent 60%),#16294a;border-top:4px solid #efc16c}
   </style>
 </head>
 <body>
@@ -188,6 +189,12 @@
       <article data-book="this-day-in-history" data-edition="history-calendar-1">
         <a class="cover history-cover" href="./this-day-in-history/index.html">
           <span class="cover-kind">Daily almanac</span><h2>This Day in History</h2><small>December 2026 through December 2027</small>
+        </a>
+        <button type="button" hidden>Download offline</button><p role="status"></p>
+      </article>
+      <article data-book="daily-quiz-clue" data-edition="daily-quiz-clue-1">
+        <a class="cover clue-cover" href="./daily-quiz-clue/index.html">
+          <span class="cover-kind">Daily quiz</span><h2>The Daily Clue</h2><small>A clue a day, December 2026 through December 2027</small>
         </a>
         <button type="button" hidden>Download offline</button><p role="status"></p>
       </article>
