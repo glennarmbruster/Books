@@ -78,6 +78,7 @@
     }
     a:focus-visible,button:focus-visible {outline:3px solid #a46622; outline-offset:3px}
     p {margin:0; color:#526354}
+      .shelf .history-cover {background:repeating-linear-gradient(135deg,transparent 0 10px,#ffffff0b 10px 11px),linear-gradient(155deg,#527978,#243e45 65%,#132629);border-top:4px solid #c79660}
   </style>
 </head>
 <body>
@@ -181,6 +182,12 @@
         <a class="cover" href="./weird-facts-trivia/index.html">
           <img class="jacket-art" src="./shelf-art/trivia.jpg" alt="">
           <span class="cover-kind">Trivia game</span><h2>WEIRD Facts &amp; Trivia</h2><small>30,000 questions · New games start with 70% easy</small>
+        </a>
+        <button type="button" hidden>Download offline</button><p role="status"></p>
+      </article>
+      <article data-book="this-day-in-history" data-edition="history-calendar-1">
+        <a class="cover history-cover" href="./this-day-in-history/index.html">
+          <span class="cover-kind">Daily almanac</span><h2>This Day in History</h2><small>December 2026 through December 2027</small>
         </a>
         <button type="button" hidden>Download offline</button><p role="status"></p>
       </article>
