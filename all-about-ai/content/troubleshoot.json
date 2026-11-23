@@ -2,7 +2,7 @@
   {
     "id": "troubleshoot-loop",
     "title": "Troubleshoot M365 with AI: from symptom to verdict",
-    "summary": "A missing receipt label makes a small case you can prove from start to finish.",
+    "summary": "A receipt arrived without its label. Follow one fresh message to see whether the fix worked.",
     "firstGuide": "ask-check",
     "intro": {
       "what": "Describe what went wrong. Write a test that could prove your first guess wrong.",
@@ -63,7 +63,7 @@
       {
         "title": "Separate a proposed change from a verified fix",
         "paragraphs": [
-          "Read CC4 for the one approved practice edit. Before any real change, record the current value, who approves, a stop condition and how to restore that value. Check the exact cmdlet, environment and parameters on Microsoft Learn. Inspect the current state first. Use WhatIf only when the command supports it. A preview cannot prove how a new message travels.",
+          "Read CC4 for the one approved practice edit. Record who approved it, the old value, what would stop the test and how to put the old value back. This last step is called rollback. A cmdlet is a PowerShell command. On Microsoft Learn, check its name, options and where to run it. If it supports WhatIf, that option previews a change. A fresh receipt shows whether mail really arrived.",
           "Read RW3 and RW4 in review-window.csv. The fresh receipt is tagged and the ordinary message is plain. You can call the fix verified for these probes. If only RW3 were present, the effect on ordinary mail would be unknown. Give the next operator the evidence IDs and the rollback note."
         ],
         "sources": [
@@ -134,7 +134,7 @@
   {
     "id": "troubleshoot-trace",
     "title": "One message, two delivery results",
-    "summary": "A message trace shows where to look next. A matching bounce can explain why a particular copy failed.",
+    "summary": "A message trace is a log of where a message went. A bounce is a notice explaining why one copy came back.",
     "intro": {
       "what": "Follow one message ID to each address. The same message can reach one desk and fail at another.",
       "features": "Compare the failed row with its bounce. Then test a fresh message.",
@@ -282,10 +282,10 @@
   {
     "id": "troubleshoot-auth",
     "title": "Read a mail header before changing DNS",
-    "summary": "Test an AI’s SPF, DKIM and DMARC explanation against a stamped result and a dated DNS snapshot.",
+    "summary": "A receiver stamps incoming mail with the results of three sender checks. Read each stamp before guessing why mail failed.",
     "intro": {
-      "what": "Read the checks added by the system that received the message.",
-      "features": "Compare those checks with the saved DNS records. Mark the final mailbox state unknown if no receipt is present.",
+      "what": "SPF asks if the sending computer is allowed to send for its domain. A domain is the name after @ in an address. DKIM checks a digital signature tied to a domain.",
+      "features": "DMARC checks that a passing SPF or DKIM result lines up with the domain in the visible From address. DNS is the public directory where a receiver looks up these rules and keys.",
       "exchange": "Read the receiving server’s recorded SPF, DKIM and DMARC results.",
       "m365": "Ask for the evidence behind a claim that a message was quarantined.",
       "developer": "Distinguish a failed signature check from a recorded delivery decision.",
@@ -312,7 +312,7 @@
       {
         "title": "Read the receiver’s own copy",
         "paragraphs": [
-          "Open auth-header.txt. Find the message ID in AH2. Read each stamp in AH6. Write down SPF, DKIM and DMARC as separate checks. AH1 gives the sending IP. AH5 names the signing domain and key label. AH7 leaves the last mail state unknown."
+          "Open auth-header.txt. Read AH2 to identify the message, then AH6 to see the three results. AH1 shows the sending IP address, a number for a computer on the network. AH5 names the signing domain and the label for its key. AH7 leaves the final delivery unknown."
         ],
         "sources": [
           [
@@ -348,7 +348,7 @@
       {
         "title": "Make the helper explain the other message",
         "paragraphs": [
-          "Read DN5 as a new message. Its sender lines match and SPF passed. One aligned pass can satisfy DMARC. DN3 asks for quarantine on failure. A policy is not proof that the first message reached a folder. Ask for its receipt."
+          "DN5 is a different message. Its SPF check passed for a domain that matches From, so DMARC can pass. DN3 asks receivers to quarantine mail that fails. Quarantine means keeping suspect mail apart. A rule alone cannot tell you which folder got the first message."
         ],
         "sources": [
           [
@@ -431,7 +431,7 @@
   {
     "id": "troubleshoot-rules",
     "title": "Why an enabled mail rule never tags the notice",
-    "summary": "Trace a missing subject label from the intended rule through a narrow fix and two controls.",
+    "summary": "A mail rule can add a label to a subject line. A control is a second message that should arrive as before.",
     "intro": {
       "what": "An enabled rule can still miss a message. Check each condition against the failed notice.",
       "features": "Use the same subject at a second address. Check whether the rule stayed within its scope.",
@@ -571,7 +571,7 @@
   {
     "id": "troubleshoot-access",
     "title": "Which sign-in did the device policy block?",
-    "summary": "A tablet cannot open mail. Put the sign-in and the device report side by side before blaming an access policy.",
+    "summary": "A sign-in policy is a rule for opening an app. Match the tablet, the time and the rule before deciding why mail stayed closed.",
     "intro": {
       "what": "Start with one failed sign-in. Connect its time and device to the rule that ran.",
       "features": "Compare a rule that blocks access with one that only logs a result.",
@@ -598,7 +598,7 @@
         "title": "Find the failed attempt",
         "paragraphs": [
           "Open entra-signins.csv in the practice kit. The report in identity-case-notes.txt names EV-31. In the CSV, look for that event, the Mail resource and tab-7 at 09:04 UTC. Two rows match one sign-in. Count the event once.",
-          "Ask the helper for the policy name, the mode and the result on each row. Microsoft explains that a policy in report-only mode records a result. It does not enforce its grant controls. In this case, the policy called Managed tablet was on and its device check failed. Preview gate also shows failure, but ran in report-only mode."
+          "A policy has a name, a mode and a result. Report-only mode records what the rule would do. It cannot block this sign-in. Managed tablet was on and its device check failed. Preview gate also logged a failure, but that rule was only watching."
         ],
         "sources": [
           [
@@ -615,7 +615,7 @@
         "title": "Join on the device and the time",
         "paragraphs": [
           "Cover the lines after 09:04 UTC. Give the helper the sign-in rows and the earlier Intune rows. Ask it which device fact was available when the block happened. IC1 is the earlier state for tab-7. IC2 belongs to another tablet. IC3 comes later.",
-          "Ask what remains unknown. The old OS and the failed grant fit together in this case. A snapshot on its own cannot prove what happened at sign-in. If the device label or time is missing, ask for that evidence and leave the cause open."
+          "The tablet’s operating system (OS) is the software that runs the device. Its old version fits the failed check. A later reading cannot prove what was on that tablet earlier. If the time or device label is missing, leave the cause open."
         ],
         "sources": [
           [
@@ -732,9 +732,9 @@
   {
     "id": "troubleshoot-hybrid",
     "title": "Trace one hybrid handoff",
-    "summary": "A cloud message stalls on its way to an on-premises mailbox. Mark the direction, expected host and actual host before proposing a repair.",
+    "summary": "Cloud mail is trying to reach a mailbox on a server at the work site. Follow the message in one direction at a time.",
     "intro": {
-      "what": "A message moves from cloud mail to a server on site. Draw that path before you read the logs.",
+      "what": "A host is a computer that accepts a connection. A connector tells the mail system which host should receive the message. Draw an arrow from the sender to that host.",
       "features": "Mark the last place that saw the message. A receipt for the trip back proves only the return path.",
       "exchange": "Draw the direction of the failed mail hop and match the receiving receipt.",
       "m365": "Check the destination and UTC time before combining two service logs.",
@@ -875,7 +875,7 @@
   {
     "id": "troubleshoot-trial",
     "title": "Give four tools the same mail case",
-    "summary": "Which helper notices a useful control, spots a missing setting and asks for one safe test? Score the first replies yourself.",
+    "summary": "Can each helper spot the missing mail limit? Give them the same starting facts and score the first answers.",
     "intro": {
       "what": "Run one mail case in four tools. Give each one the same facts in a new chat.",
       "features": "Score each reply against the case. Leave the row blank if you did not run that tool.",
@@ -927,7 +927,7 @@
       {
         "title": "Score evidence before style",
         "paragraphs": [
-          "Give one point for each row. Read the reply beside the original packet. A correct guess without the named evidence misses that point. A type of fault may be likely long before its exact setting is known."
+          "Award a point when the answer names the right evidence for that check. A lucky guess earns no point. A message can suggest a size limit even when no one has read the actual setting."
         ],
         "table": {
           "columns": [

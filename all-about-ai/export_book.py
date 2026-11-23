@@ -7,6 +7,7 @@ import io
 import json
 from pathlib import Path
 import re
+from reader_checks import check_public_text, check_html
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 book = Path(__file__).resolve().parent
@@ -81,6 +82,8 @@ that same folder to refresh the top-level reader and create a fresh ZIP in
 Site/downloads. See UPDATING.md for the checks and practice commands.
 This book was built for the edition dated {reviewed:%B %d, %Y}.
 """
+check_html(html, 'portable HTML')
+check_public_text(readme, 'Read me.txt')
 archive = io.BytesIO()
 member_hashes = {}
 with ZipFile(archive, 'w') as z:

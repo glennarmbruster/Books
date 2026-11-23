@@ -337,7 +337,8 @@
         "title": "Set up the sample",
         "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Kit list: 2 red flags, 1 blue flag, 3 cones. You want a list to pack."
+        "code": "Kit list: 2 red flags, 1 blue flag, 3 cones.",
+        "caption": "Packing facts for the task"
       },
       {
         "title": "Try the task",
@@ -678,7 +679,8 @@
         "title": "Set up the sample",
         "text": "Put the sample into the source list. When two notes are named, add them one at a time. Keep their titles.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Add one note: A folder holds files. A prompt is a request. A source is material used to answer."
+        "code": "A folder holds files. A prompt is a request. A source is material used to answer.",
+        "caption": "Text for one Notebook source"
       },
       {
         "title": "Try the task",

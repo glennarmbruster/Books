@@ -33,9 +33,9 @@ def templates(page_id, title, url, tags, day):
                                exercise=dict(prompt=setup,answer=['Only the gate has a recorded check.']),sources=sources),
                           dict(title='Plan and availability',paragraphs=['{{fact.'+fact['key']+'}}'],sources=sources)])
     worked = dict(id=page_id,premise='Use the same gate and lamp case for both runs. Change only the lamp note on your second pass.',
-                  before='{{chapter.sections.0.exercise.prompt}}',
+                  caseTerm='lamp', before='{{chapter.sections.0.exercise.prompt}}',
                   **{'try':'1. Start a new practice chat.\n2. Give the chat the gate and lamp notes. Record the named item.\n3. Change the lamp note to “lamp checked.” Repeat the question. List matches in the original order.',
-                     'after':'First run: Gate. Second run: Gate, Lamp. Match both item names to the notes.',
+                     'after':'First run: Gate. Second run: Gate, Lamp. Both entries now have a completed check.',
                      'why':'A completed check needs a record saying the check happened.',
                      'rescue':'If both items appear on the first run, ask which one still has an unfinished check.',
                      'rescuePrompt':'Which item still says waiting? Quote the status for each item and count completed checks only.',

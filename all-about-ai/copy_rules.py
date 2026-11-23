@@ -2,8 +2,54 @@
 import re
 
 READER = re.compile(r'^\s*(?:paste|copy|send|open|save)\b|\bfresh chat\b|\bthis card\b|\bbelow the data\b|\bon paper\b|(?:^|[.!?]\s+)(?:paste|copy|open|save|send)\s+(?:this|these|the (?:prompt|sample|card|file))\b', re.I)
+# Look inside multiline examples as well as at their first sentence.
+COPY_DIRECTION = re.compile(
+    r"\b(?:paste (?:this|the following)|copy (?:this|the following) (?:into|to)|"
+    r"in (?:a|your) fresh chat|below the data|on paper|this card)\b|"
+    r"(?:^|[.!?]\s+|\n)\s*(?:open|launch|start) (?:a |your )?(?:new|fresh) (?:chat|session)\b|"
+    r"(?:^|[.!?]\s+|\n)\s*(?:paste|send) (?:this|the) (?:code|prompt|request|sample|text)\b", re.I)
+
+# Split at sentence and run boundaries while keeping decimals, filenames and
+# ordinary words like 'Open' in quoted filenames intact.
+RUN_LABEL = re.compile(r'(?:^|(?<=[.!?])\s+)(?:First|Second) run:\s*', re.I)
+ACTION = re.compile(
+    r"^(?:(?:now|then|next|first|finally)[:,]?\s+)?(?:please\s+)?(?:write|ask|allow|give|change|keep|"
+    r"compare|paste|open|send|save|run|use|choose|add|remove|read|record|include|hold|close|say|pick|"
+    r"update|select|mark|check|test|start|stop|try|reject|return|list|follow|wait|repeat|roll back|"
+    r"reopen|make|press|accept|leave|put|replay|play|take|expect|treat|switch|enter|hide|tap|restore|"
+    r"quote|skip|find|click|show|set|count|look|print|attach|cover|replace|have|reset|clear|answer|reply|label)\b", re.I)
+ROUTES = re.compile(r'\b(?:choose one route|either|on paper|or solve it by hand|or grade your own)\b', re.I)
+
+def sentences(text):
+    text = RUN_LABEL.sub(' ', text)
+    text = re.sub(r'^\s*\d+\.\s+', '', text, flags=re.M)
+    return [s.strip() for s in re.split(r'(?<=[.!?])\s+|[;\n]+', text) if s.strip()]
+
+def normalized(text):
+    return ' '.join(re.findall(r'[\w]+', text.casefold()))
+
+def check_case(ex, page):
+    key = ex['id']
+    before = normalized(ex['before'])
+    prompt = normalized(page.get('prompt', ''))
+    if prompt and ' '+prompt+' ' in ' '+before+' ':
+        raise ValueError('Give the worked example its own input in '+key)
+    terms = ex.get('caseTerm','').split('|')
+    for term in terms:
+        if not normalized(term) or any(' '+normalized(term)+' ' not in ' '+normalized(ex[field])+' '
+                                       for field in ('try','before')):
+            raise ValueError('Use the same concrete case term in the input and steps: '+key+' / '+term)
+    if any(ROUTES.search(v) for v in ex.values() if isinstance(v,str)):
+        raise ValueError('Keep one worked route in '+key)
+    actions = {normalized(line) for line in sentences(ex['try'])}
+    for line in sentences(ex['after']):
+        if normalized(line) in actions:
+            raise ValueError('A result repeats a step in '+key+': '+line)
+        if ACTION.search(line.lstrip('“\"‘')) or re.search(r'\b(?:you (?:should|must|need to)|(?:then|so) (?:ask|paste|click|give|write))\b', line, re.I):
+            raise ValueError('Describe the outcome without a reader instruction in '+key+': '+line)
+
 def check_payload(text, label):
-    if not isinstance(text,str) or not text.strip() or READER.search(text):
+    if not isinstance(text,str) or not text.strip() or READER.search(text) or COPY_DIRECTION.search(text):
         raise ValueError('Remove reader instructions from the copy box in '+label)
 
 def page_boxes(row):

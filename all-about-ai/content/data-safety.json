@@ -6,9 +6,9 @@
     "intro": {
       "what": "Start with the rules for the training workspace. Make the smallest copy that can answer the question.",
       "features": "Check every field before you share. Write down what you sent and why.",
-      "exchange": "Replace real mail identities with stable aliases in a retry example.",
-      "m365": "Check the approved account, task and share policy before attaching a file.",
-      "developer": "Keep only the fields needed to reproduce a bug in a public example.",
+      "exchange": "An alias is a made-up label. Call the same mailbox Box A on both mail attempts.",
+      "m365": "Check which account, tool and task your work rules allow before you attach a file.",
+      "developer": "Share just the sample fields that make the app show the bug.",
       "sources": [
         [
           "Microsoft Learn · sensitivity labels and data policies",
@@ -42,7 +42,7 @@
         ]
       },
       {
-        "title": "Build a new excerpt from the facts you need",
+        "title": "Make a small copy that answers the question",
         "paragraphs": [
           "Open share-draft.txt on your own device. Start a clean note. Keep the order, the time gap, the source labels and the result. Use Box A in both rows. Use Relay A and Relay B for the two sources. Keep the label key on your device."
         ],
@@ -60,7 +60,7 @@
       {
         "title": "Stop secret values at the source",
         "paragraphs": [
-          "A secret can let someone use an account. Leave its value out of the note, files, images and logs. If a real secret was shared, stop. Tell the owner through an approved channel. Follow the steps to revoke or replace it."
+          "A secret, such as a password, can let someone into an account. Leave its value out of notes, pictures and logs. If a real secret was shared, tell the owner using an approved channel. Follow the steps to turn off the old secret and replace it."
         ],
         "sources": [
           [
@@ -139,7 +139,7 @@
     "title": "When the pasted note tries to give orders",
     "summary": "Keep a reader’s request separate from instructions copied inside a ticket, message or document.",
     "intro": {
-      "what": "A note may contain an order as well as a fact. Read the order as part of the note.",
+      "what": "A support ticket is a note about a problem. It can quote someone asking to close it. Those words alone do not close the ticket.",
       "features": "Look for the entry made by the person who can close the case.",
       "exchange": "Treat requests quoted inside a ticket as case text while reading mail status.",
       "m365": "Separate a pasted instruction from the user's actual document task.",
@@ -155,8 +155,8 @@
       {
         "title": "Draw the boundary on the page",
         "paragraphs": [
-          "Your task in share-note.txt is a read-only summary. Cover SN5 for the first run. Underline the status on SN1, then circle the instruction-like words in SN3. SN3 is text copied from a form footer. It gives no authority to act and records no outcome.",
-          "Ask the helper for the last recorded state, a supporting line and the missing proof. Label the excerpt as data. Use a context that has no ability to change a ticket for this reading task. Quotation marks make the boundary easier to read. They cannot guarantee a model will respect it."
+          "Read share-note.txt through SN4. A read-only task lets you look at the ticket. The ticket stays as it is. Underline the state in SN1. Circle the request in SN3. It came from the bottom of a form.",
+          "Ask for the current state, the line that proves it and any fact still missing. Give the helper only a copy of the note, with no way to edit the ticket. Quote marks show which words came from the form. A helper can still misread them."
         ],
         "sources": [
           [
@@ -168,8 +168,8 @@
       {
         "title": "Check what the reply claims",
         "paragraphs": [
-          "With SN1 through SN4, expect Open and pending confirmation. If the reply says Closed, look for a dated status change or authorized state event. The note has neither in this first run. Reject the claim and record the bad inference before accepting a new summary.",
-          "Now add SN5 as a later event. Closed is supported in this second run because the analyst recorded it after confirmation. The copied footer is still only evidence of words someone put on a form. Leave the actual case system alone in both runs."
+          "Through SN4 the state is Open. If a reply says Closed, look for a dated entry from someone allowed to close the ticket. There is none yet.",
+          "Now add SN5. The analyst recorded the close after getting confirmation. That new event explains the new state. The footer still says what the form asked for."
         ],
         "sources": [
           [
@@ -187,7 +187,7 @@
       {
         "title": "Log the boundary you tested",
         "paragraphs": [
-          "In a practice log, write that the input was a scrubbed, fictional status excerpt and the output was a read-only summary. Record the source line that supported the state and whether you held back the correction until SN5 arrived. A log can describe an instruction-like footer without copying its raw contents or any identities."
+          "In your log, name the practice excerpt and the line that supports the state. Say whether you waited for SN5 before changing the summary. Leave names and the full footer out of the log. An excerpt is a short piece from a longer note."
         ],
         "sources": [
           [

@@ -10,7 +10,8 @@ import subprocess
 import sys
 from xml.etree import ElementTree
 from urllib.parse import urlsplit
-from copy_rules import check_payload, page_boxes, case_payload
+from copy_rules import check_payload, page_boxes, case_payload, check_case
+from reader_checks import validate_reader, expand_catalogs
 from edition_trust import valid_basis, valid_source, hardcoded, PRODUCT_GROUPS, FIELD, chapter_field
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
@@ -298,14 +299,8 @@ fixed_fields = {entry['text'] for key,entry in values.items()
                 if key.endswith('.id') or (key.endswith('.name') and re.search(r'\d',entry['text']))}
 def check_rendered_payload(text, label):
     # Catalog entries are resolved by the reader before the clipboard sees them.
-    def resolve(match):
-        kind, name = match.groups()
-        catalog, field = (facts, 'value') if kind == 'fact' else (values, 'text')
-        require(name in catalog, 'Unknown catalog item in '+label)
-        return catalog[name][field]
     check_payload(text, label)
-    expanded = re.sub(r'\{\{(model|fact)\.([a-z0-9.-]+)\}\}', resolve, text)
-    check_payload(expanded, label)
+    check_payload(expand_catalogs(text, facts, values), label)
 
 for group in groups:
     rows = json.loads((book/'content'/group['file']).read_text())
@@ -348,6 +343,8 @@ for ex in examples:
     if 'buildPrompt' in ex:
         require(ex['buildPrompt'] == '{{chapter.prompt}}' and page.get('comparison') and page['prompt'] == build_spec['prompt'], 'Use the original shared build prompt in '+key)
         check_payload(page['prompt'],key+' / shared build prompt')
+    resolved = {name:expand_catalogs(value,facts,values) for name,value in ex.items()}
+    check_case(resolved, {'prompt':expand_catalogs(page.get('prompt',''),facts,values)})
     steps = ex['try'].splitlines()
     require(2 <= len(steps) <= 5 and all(line.startswith(f'{n}. ') and len(line)>12 for n,line in enumerate(steps,1)), 'Number the worked steps in '+key)
     require(re.fullmatch(r'First run: .+?\. Second run: .+?\. .+',ex['after']) and len(ex['after']) >= 40, 'Show the checked result of both runs in '+key)
@@ -432,6 +429,7 @@ for path in [*assets, 'UPDATING.md', *[p.relative_to(book).as_posix() for p in (
     if Path(path).suffix in {'.json','.svg','.csv','.md','.ps1','.html','.js','.css','.txt','.eml'}:
         check_sample_text((book/path).read_text(), path)
 
+validate_reader(book, manifest, page_text, examples, figures, facts, values, case_rows)
 digest = sha256()
 for path in [*assets, '../table-books-worker.js']:
     digest.update(path.encode() + b'\0' + sha256((book / path).read_bytes()).digest())

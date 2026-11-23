@@ -483,15 +483,10 @@ function openLocation(moveFocus) {
     byId('group-name').textContent = lab ? chapter.group.title + '  /  Lab ' + chapter.number + ' of ' + chapter.group.items.length + ' · ' + chapter.level : chapter.group.title + (chapter.group.guide ? '  /  Lesson ' : '  /  Chapter ') + chapter.number;
     byId('chapter-title').textContent = chapter.title;
     byId('summary').textContent = chapter.summary;
-    const human = chapter.basis.includes('human-tested');
-    const basisDate = human ? 'Human test recorded' : chapter.basis.includes('source-read') ? 'Source review' : 'Draft record';
     const review = byId('review-date');
-    review.textContent = basisDate+' · '+dateLabel(chapter.lastVerified)+' · '+chapter.basis.join(' / ')+' ';
-    review.append(element('strong',human ? 'Human-tested' : 'Not human-verified','verify-badge'));
+    review.textContent = 'Last checked · ' + dateLabel(chapter.lastVerified);
     if (chapter.unverified?.length) {
-      const badge = element('strong','Not verified','verify-badge');
-      const details = element('span',chapter.unverified.join(' '));
-      byId('review-date').append(document.createTextNode(' '),badge,document.createTextNode(' '),details);
+      review.append(element('p', chapter.unverified.join(' ')));
     }
     const sections = chapter.group.guide ? guideBody(chapter) : lab ? labBody(chapter) : chapter.sections.map((section, sectionIndex) => {
       const block = element('section', undefined, 'section');
@@ -684,8 +679,14 @@ function fillModelFields(value, catalog, used) {
     return field.text;
   });
   if (Array.isArray(value)) return value.map(item=>fillModelFields(item, catalog, used));
-  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,fillModelFields(item,catalog,used)]));
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value)
+    .filter(([key]) => key !== 'basis' && key !== 'verificationBasis')
+    .map(([key,item])=>[key,fillModelFields(item,catalog,used)]));
   return value;
+}
+
+function searchable(key, value) {
+  return ['basis', 'verificationBasis', 'caseTerm'].includes(key) ? undefined : value;
 }
 
 async function start() {
@@ -714,7 +715,7 @@ async function start() {
   }));
   for (const group of groups) {
     for (const [i, ch] of group.items.entries()) {
-      ch.search = (group.title + ' ' + JSON.stringify(ch) + ' ' + JSON.stringify(worked.get(ch.id) || '')).toLowerCase();
+      ch.search = (group.title + ' ' + JSON.stringify(ch, searchable) + ' ' + JSON.stringify(worked.get(ch.id) || {}, searchable)).toLowerCase();
       if (group.guide) guideChapters.push(ch);
       else if (!group.track) referenceChapters.push(ch);
       ch.number = group.track ? i + 1 : group.guide ? guideChapters.length : referenceChapters.length;

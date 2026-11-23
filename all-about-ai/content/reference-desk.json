@@ -682,7 +682,7 @@
       "what": "Find the date, subject and destination of a recorded update.",
       "features": "Open the page named in a row to read the current advice.",
       "exchange": "Record which mail procedure was actually retested after a guide changed.",
-      "m365": "Distinguish a changed help page from a human review of a team workflow.",
+      "m365": "Track which team instruction changed when a help page moved.",
       "developer": "Use the dated change note to find which app-building instruction needs a recheck.",
       "sources": [
         [
@@ -697,9 +697,9 @@
     },
     "sections": [
       {
-        "title": "Review history",
+        "title": "Update history",
         "paragraphs": [
-          "Each entry tells you what changed and which page to open. A source-check notice is a reason to investigate. Only a human review changes a page’s verification date."
+          "Each entry gives a date, the change and a link to the page it affects. Follow the link to read the current steps."
         ],
         "sources": [
           [
@@ -734,7 +734,7 @@
             "date": "2026-11-22",
             "where": "reference-changes",
             "kind": "edition",
-            "what": "Added page review dates and a linked history of human reviews."
+            "what": "Added a last checked date to each page and links from the update history."
           },
           {
             "date": "2026-11-22",
