@@ -25,3 +25,46 @@ def case_payload(row, folder):
         match=re.search(r'(?:^|\n)BEGIN\r?\n([\s\S]*?)\r?\nEND(?:\r?\n|$)',text)
         if match:return match[1]
     raise ValueError('Missing practice-file copy boundary for '+row['file'])
+
+
+def validate_worked(examples):
+    """Reject repeated teaching patterns and messages whose boundaries are unclear."""
+    from collections import Counter
+    def normal(value):
+        return ' '.join(re.findall(r'[a-z0-9]+', value.casefold()))
+    whys, endings = Counter(), Counter()
+    stale = ('before looking below','match the values, labels and order shown','in the original card',
+             'show the changed row separately','cross out','paste this fictional practice card')
+    tools = {'claude-code':'Claude Code','codex':'Codex','devin':'Devin','antigravity':'Antigravity'}
+    for ex in examples:
+        key = ex['id']
+        message = ex.get('rescuePrompt','')
+        check_payload(message, key+' / follow-up')
+        joined = ' '.join(ex[k] for k in ('premise','before','try','after','why','rescue','rescuePrompt')).casefold()
+        if any(phrase in joined for phrase in stale):
+            raise ValueError('Replace old worked-example wording in '+key)
+        opened = None
+        for character in message:
+            if character == '“':
+                if opened: raise ValueError('Nested follow-up quotes in '+key)
+                opened = '”'
+            elif character == '”':
+                if opened != character: raise ValueError('Mismatched follow-up quotes in '+key)
+                opened = None
+            elif character == '"':
+                if opened == '"': opened = None
+                elif opened: raise ValueError('Nested follow-up quotes in '+key)
+                else: opened = '"'
+        if opened: raise ValueError('Unclosed follow-up quote in '+key)
+        why = normal(ex['why'])
+        whys[why] += 1
+        # A request can end in an imperative. Check that ending too.
+        sentences = re.split(r'(?<=[.!?])\s+', ex['before'].strip())
+        endings[normal(sentences[-1])] += 1
+        for track,tool in tools.items():
+            if key.startswith('lab-'+track+'-') and tool.casefold() not in ex['try'].casefold():
+                raise ValueError('Show how to use '+tool+' in '+key)
+    if max(whys.values()) > 1:
+        raise ValueError('A worked explanation is repeated')
+    if max(endings.values()) > 3:
+        raise ValueError('A worked request ending occurs more than three times')

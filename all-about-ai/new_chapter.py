@@ -34,10 +34,12 @@ def templates(page_id, title, url, tags, day):
                           dict(title='Plan and availability',paragraphs=['{{fact.'+fact['key']+'}}'],sources=sources)])
     worked = dict(id=page_id,premise='Use the same gate and lamp case for both runs. Change only the lamp note on your second pass.',
                   before='{{chapter.sections.0.exercise.prompt}}',
-                  **{'try':'1. Open a fresh practice chat, or take out a sheet of paper.\n2. Send or read the whole card. Write down your answer.\n3. Change the lamp note to “lamp checked.” Repeat the question. List matches in the original order.',
+                  **{'try':'1. Start a new practice chat.\n2. Give the chat the gate and lamp notes. Record the named item.\n3. Change the lamp note to “lamp checked.” Repeat the question. List matches in the original order.',
                      'after':'First run: Gate. Second run: Gate, Lamp. Match both item names to the notes.',
                      'why':'A completed check needs a record saying the check happened.',
-                     'rescue':'If both items appear on the first run, send “Quote the note for each item. Which note still says waiting?”'})
+                     'rescue':'If both items appear on the first run, ask which one still has an unfinished check.',
+                     'rescuePrompt':'Which item still says waiting? Quote the status for each item and count completed checks only.',
+                     'noAccount':'Read the status lines yourself and mark the completed checks.'})
     name='diagram-extension-'+page_id+'.svg'
     figure=dict(file=name,lesson=page_id,source='#'+page_id,credit='Original teaching diagram',
                 caption='Check each note before writing the result.',alt='A practice note leads to a check, then to a result.')

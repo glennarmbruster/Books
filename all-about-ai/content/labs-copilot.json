@@ -574,7 +574,7 @@
         "title": "Start with the sample",
         "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
-        "code": "Usage: m1=10, m2=20.\nMap: m1→North, m1→South, m2→East."
+        "code": "Usage in GB: m1=10, m2=20.\nMap: m1→North, m1→South, m2→East."
       },
       {
         "title": "Run the request",
@@ -903,7 +903,7 @@
       "Review a team guide with quiz cards.",
       "Build a playable quiz in chat."
     ],
-    "prompt": "Host my deck in this order. Show one question at a time and wait for my answer. Give one point for a match, ignoring case and outside spaces. Hide future answers. After three turns show the final score and offer to play again.",
+    "prompt": "Host my deck in this order. Show one question at a time and wait for my answer. Give one point for a match, ignoring case and outside spaces. Hide future answers. After three turns show the final score and offer to play again. Display the current score after each reply and display zero at the start of a replay.",
     "steps": [
       {
         "title": "Start with the sample",

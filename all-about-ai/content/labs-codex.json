@@ -782,7 +782,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Keep a copy of the good output. Add C,HOLD and try again. Next use a fresh file with just the header and run the test command from the README.",
+        "text": "Keep a copy of the good output. Add C,HOLD and try again. Next use a fresh file with just the header and run the test command from the README. Run the README report command against the header-only CSV and inspect its three zero totals. Then run the tests separately.",
         "help": "If a duplicate counts twice, compare IDs before adding up the states. Save the output after all rows pass."
       }
     ],
@@ -1334,13 +1334,13 @@
       "Check group membership exports.",
       "Spot changes to a player roster."
     ],
-    "prompt": "Build an HTML page with two text boxes and Compare. Trim spaces and ignore letter case. Treat repeated IDs as one. Show Added, Removed and Kept lists in order by ID.",
+    "prompt": "Build an HTML page with two text boxes and Compare. Trim spaces and ignore letter case. Treat repeated IDs as one. Show Added, Removed and Kept lists in order by ID. Accept one ID per line and print lowercase IDs.",
     "steps": [
       {
         "title": "Give the app its own folder",
-        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values. Enter the IDs for each day on separate lines in its box. Leave the day headings out.",
         "help": "If an old project is open, choose the new empty folder before sending the request.",
-        "code": "Yesterday: box-a, box-b. Today: BOX-B, box-c, box-c."
+        "code": "Yesterday\nbox-a\nbox-b\n\nToday\nBOX-B\nbox-c\nbox-c"
       },
       {
         "title": "Make the first version",
@@ -1436,13 +1436,13 @@
       "Review a list before adding it to a sheet.",
       "Import game pieces without half a set."
     ],
-    "prompt": "Build an offline HTML import preview. Paste ID,count rows. Show errors with row numbers. Keep the Apply button off if any row is bad or an ID repeats. Add all good rows together only after Apply.",
+    "prompt": "Build an offline HTML import preview. Paste ID,count rows. Show errors with row numbers. Keep the Apply button off if any row is bad or an ID repeats. Add all good rows together only after Apply. Seed the saved list with K0,1. Reject IDs already in the saved list as well as repeats in the new batch.",
     "steps": [
       {
         "title": "Give the app its own folder",
         "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
         "help": "If an old project is open, choose the new empty folder before sending the request.",
-        "code": "Saved ID K0. New rows K1,3 and K2,-1. Rule: counts are whole numbers of zero or more."
+        "code": "Saved row: K0,1\nImport rows:\nK1,3\nK2,-1"
       },
       {
         "title": "Make the first version",
@@ -1456,7 +1456,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Change K2 to 0 and apply once. Try to apply the same rows again.",
+        "text": "Change only K2’s count from -1 to 0. Apply K1,3 and K2,0 together. Preview those same two rows again.",
         "help": "If K1 appears after the failed test, collect all errors before writing any new row."
       }
     ],

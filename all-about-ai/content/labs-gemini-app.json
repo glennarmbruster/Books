@@ -385,28 +385,32 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Keep the chapter’s Google iPad guide open. Add an iPad-only source requirement to the proposed plan before starting the search.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Question: How do I make flashcards in Gemini Notebook on an iPad?"
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Read the plan first. Remove any task about prices. Start the search and open its cited Google guide.",
+        "text": "Run the edited plan, open its cited mobile guide and locate Flashcards and Quizzes in App.",
         "help": "If it cites a general web tutorial, ask it to find the official iPad instructions and point to the flashcard section."
       },
       {
         "title": "Check what you made",
-        "text": "The brief answers the three actions with support from the mobile guide. Pricing is outside this job.",
+        "text": "Studio creates the cards, tapping a card reveals its answer, and the finished session can repeat missed cards.",
         "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
       }
     ],
     "check": [
-      "The brief answers the three actions with support from the mobile guide. Pricing is outside this job."
+      "Studio creates the cards, tapping a card reveals its answer, and the finished session can repeat missed cards."
     ],
     "sources": [
       [
         "Google · Research",
         "https://support.google.com/gemini/answer/15719111"
+      ],
+      [
+        "Google · iPad flashcard controls",
+        "https://support.google.com/gemininotebook/answer/16296687?co=GENIE.Platform%3DiOS"
       ]
     ],
     "firstGuide": "gemini-research-begin",
@@ -891,7 +895,7 @@
       "Rehearse turn-taking for a demo.",
       "Try the dialogue for a guessing game."
     ],
-    "prompt": "Say: Let’s play. Give me the first clue only. Wait for my guess before the next clue. Reveal the object when I ask.",
+    "prompt": "The mystery object for our game is a cup. Its clues are hollow, holds water, and sits on a table. Give the first clue only. Wait for my guess or request before revealing the next clue or the object.",
     "steps": [
       {
         "title": "Open your work area",

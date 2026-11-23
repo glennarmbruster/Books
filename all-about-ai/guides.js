@@ -293,7 +293,9 @@ function workedExample(example) {
   wrap.append(flow,element('p',example.why));
   const fix=element('details',undefined,'step-help');
   fix.append(element('summary','Something look different?'),element('p',example.rescue));
+  if (example.rescuePrompt) fix.append(snippet(example.rescuePrompt,'follow-up','Follow-up message for the tool'));
   wrap.append(fix);
+  if (example.noAccount) wrap.append(element('p','No account? '+example.noAccount));
   return wrap;
 }
 

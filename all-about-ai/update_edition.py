@@ -254,7 +254,7 @@ require(len(tracks) == len(track_levels) and set(tracks) == set(track_levels) an
 require(len(writing_labs) == 20 and set(writing_labs) == set(track_levels) - {'data-safety','troubleshoot','ship-app'},
         'Expected 20 optional prompt exercises across the original tracks')
 comparison_ids = {'lab-gemini-app-14','lab-claude-code-14','lab-codex-14'}
-require(manifest.get('version') == 8 and build_spec is not None, 'Expected edition 8 with the four-tool build-off')
+require(manifest.get('version') == 9 and build_spec is not None, 'Expected edition 9 with the four-tool build-off')
 require({lab['id'] for lab in build_labs} == comparison_ids, 'Expected three shared Lab 14 builds')
 for lab in build_labs:
     require(lab['prompt'] == build_spec['prompt'] and lab['check'] == build_spec['check'],
@@ -337,6 +337,8 @@ for ex in examples:
     require(2 <= len(steps) <= 5 and all(line.startswith(f'{n}. ') and len(line)>12 for n,line in enumerate(steps,1)), 'Number the worked steps in '+key)
     require(re.fullmatch(r'First run: .+?\. Second run: .+?\. .+',ex['after']) and len(ex['after']) >= 40, 'Show the checked result of both runs in '+key)
     require(len(ex['why']) >= 20 and len(ex['rescue']) >= 35 and re.search(r'\b(?:send|ask|type|write|retry|repeat)\b',ex['rescue'],re.I), 'Give the reader a rescue message in '+key)
+from copy_rules import validate_worked
+validate_worked(examples)
 check_refs(examples)
 figures = json.loads((book / 'content/figures.json').read_text())
 check_refs(figures)

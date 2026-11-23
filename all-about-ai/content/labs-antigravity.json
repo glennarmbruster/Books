@@ -641,7 +641,7 @@
     ],
     "check": [
       "All four pairs read both 0 and -7 correctly.",
-      "The score-only file works with the new reader. The old reader gets 3 from the mixed file. The new reader rejects that file."
+      "The old reader rejects the score-only file. The new reader accepts it. For points=3 and score=4, the old reader returns 3 and the new reader rejects the disagreement. Update readers before switching writers."
     ],
     "sources": [
       [

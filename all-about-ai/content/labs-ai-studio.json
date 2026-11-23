@@ -762,7 +762,7 @@
       "Teach higher or lower with a team number game.",
       "Build a card game with a clear finish."
     ],
-    "prompt": "Make a browser app in Build. Add Higher and Lower buttons, a score and a turn count. Reveal exactly one card per guess. Award one point for a right guess. End the round after the last card. Add Play again to restore the deck. Use these practice values: Deck in order: 4, 7, 3, 9. Show the 4 first. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Add Higher and Lower buttons, a score and a turn count. Reveal exactly one card per guess. Award one point for a right guess. End the round after the last card. Add Play again to restore the deck. Use these practice values: Deck in order: 4, 7, 3, 9. Show the 4 first. Keep the game or tool rules in ordinary code so a button press does not need an AI call. How many guesses are accepted before the deck ends?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -812,7 +812,7 @@
       "Make a chance game for a training break.",
       "Test random play with fixed rolls."
     ],
-    "prompt": "Make a browser app in Build. Show a pair of dice as printed numbers, a Roll button for two random values from 1 to 6, and a Practice roll button that walks through the fixed pairs in order. Give one point per matching pair. Finish after three rolls. Add Start again. Use these practice values: Practice rolls: 2 and 2, then 2 and 5, then 6 and 6. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Show a pair of dice as printed numbers, a Roll button for two random values from 1 to 6, and a Practice roll button that walks through the fixed pairs in order. Give one point per matching pair. Finish after three rolls. Add Start again. Use these practice values: Practice rolls: 2 and 2, then 2 and 5, then 6 and 6. Keep the game or tool rules in ordinary code so a button press does not need an AI call. What happens to the finished score on roll four?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -862,7 +862,7 @@
       "Build a timer for a five-minute meeting item.",
       "Create a game timer you can test in seconds."
     ],
-    "prompt": "Make a browser app in Build. Show minutes left, Start, Pause, Tick and Reset. For this exercise time moves only on Tick. Ignore Tick while paused. Show Time is up at zero and stop there. Use these practice values: Set the practice timer to 5 minutes. One Tick removes 1 minute. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Show minutes left, Start, Pause, Tick and Reset. For this exercise time moves only on Tick. Ignore Tick while paused. Show Time is up at zero and stop there. Use these practice values: Set the practice timer to 5 minutes. One Tick removes 1 minute. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Which ticks count while the timer is paused?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -912,7 +912,7 @@
       "Count open team tasks.",
       "Add a small bounded counter to an app."
     ],
-    "prompt": "Make a browser app in Build. Show the open count in large text. Add New ticket, Close one and Restore sample. Turn Close one off when there are none. Say All clear at zero. Keep a short line showing the last action. Use these practice values: Begin with 2 open tickets. Each New ticket adds one. Each Close one removes one. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Show the open count in large text. Add New ticket, Close one and Restore sample. Turn Close one off when there are none. Say All clear at zero. Keep a short line showing the last action. Use these practice values: Begin with 2 open tickets. Each New ticket adds one. Each Close one removes one. Keep the game or tool rules in ordinary code so a button press does not need an AI call. What happens when Close is pressed at zero tickets?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -962,7 +962,7 @@
       "Make a short training quiz.",
       "Design different endings for a game."
     ],
-    "prompt": "Make a browser app in Build. Create a three-question quiz with two answer buttons per question. After a choice, show the correct number and a Next button. Count the first choice once. At the end show Review for 0 right, Keep practicing for 1 or 2, and Perfect for 3. Add Replay. Use these practice values: Questions and keys: two plus three=5, seven minus four=3, twice four=8. Include one wrong choice per question. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Create a three-question quiz with two answer buttons per question. After a choice, show the correct number and a Next button. Count the first choice once. At the end show Review for 0 right, Keep practicing for 1 or 2, and Perfect for 3. Add Replay. Use these practice values: Questions and keys: two plus three=5, seven minus four=3, twice four=8. Include one wrong choice per question. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Which ending matches each of the three final scores? Display the numeric score out of 3 beside the ending label.",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1012,7 +1012,7 @@
       "Choose one training activity for a team.",
       "Build a choice-driven activity picker."
     ],
-    "prompt": "Make a browser app in Build. Build three labeled mood buttons with their matching activity cards. Start with a prompt to choose a mood. After selection show exactly one card. Add Clear choice to return to the beginning. Use these practice values: Choices: Calm gives Draw a cloud. Curious gives Find a pattern. Bold gives Try a puzzle. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Build three labeled mood buttons with their matching activity cards. Start with a prompt to choose a mood. After selection show exactly one card. Add Clear choice to return to the beginning. Use these practice values: Choices: Calm gives Draw a cloud. Curious gives Find a pattern. Bold gives Try a puzzle. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Which activity remains visible after a repeated mood selection?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1062,7 +1062,7 @@
       "Teach a term in a team puzzle.",
       "Build a hint-and-guess game."
     ],
-    "prompt": "Make a browser app in Build. Make a word game with a guess box, Give hint, Check guess and Replay. Start at 4 possible points. Each new hint lowers the possible score by one. Ignore case and extra spaces in guesses. A correct guess ends the round. After all hints, leave one point available. Use these practice values: Target word is LANTERN. Hints in order: You carry me. I hold a light. I can hang from a hook. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Make a word game with a guess box, Give hint, Check guess and Replay. Start at 4 possible points. Each new hint lowers the possible score by one. Ignore case and extra spaces in guesses. A correct guess ends the round. After all hints, leave one point available. Use these practice values: Target word is LANTERN. Hints in order: You carry me. I hold a light. I can hang from a hook. Keep the game or tool rules in ordinary code so a button press does not need an AI call. How many points remain after the second hint?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1112,7 +1112,7 @@
       "Plan shared supplies for several days.",
       "Build a shopping list from selected recipes."
     ],
-    "prompt": "Make a browser app in Build. Make a planner with one meal selector per day, including an empty choice. Show the total needed for each ingredient. Recount from the selected meals whenever a choice changes. Add Clear board. Use these practice values: Meal cards: Soup needs 2 carrots and 1 onion. Wrap needs 1 carrot and 2 beans. Days are One, Two and Three. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Make a planner with one meal selector per day, including an empty choice. Show the total needed for each ingredient. Recount from the selected meals whenever a choice changes. Add Clear board. Use these practice values: Meal cards: Soup needs 2 carrots and 1 onion. Wrap needs 1 carrot and 2 beans. Days are One, Two and Three. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Which ingredients disappear when the last matching meal is cleared?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1162,7 +1162,7 @@
       "Check dates typed into a staff form.",
       "Build a date checker with clear feedback."
     ],
-    "prompt": "Make a browser app in Build. Build an editable date checker with plain text input and status words Valid, Check date or Missing. Use year-month-day order and real calendar rules. Show the count in each group. Add Load sample. Use these practice values: Sample rows: R1 2028-02-29, R2 2027-02-29, R3 with no date, R4 2027-12-31. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Build an editable date checker with plain text input and status words Valid, Check date or Missing. Use year-month-day order and real calendar rules. Show the count in each group. Add Load sample. Use these practice values: Sample rows: R1 2028-02-29, R2 2027-02-29, R3 with no date, R4 2027-12-31. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Which February rows are real calendar dates?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1217,7 +1217,7 @@
       "Search sample document titles.",
       "Build search for an app menu."
     ],
-    "prompt": "Make a browser app in Build. Make a search box and a list of matches. Search anywhere in the full dish name. Ignore case and spaces at the start or end. Preserve menu order. Empty input shows all four dishes. Give a helpful message for no matches. Use these practice values: Menu: Pear pie, Bean soup, Peach toast, Corn bowl. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Make a search box and a list of matches. Search anywhere in the full dish name. Ignore case and spaces at the start or end. Preserve menu order. Empty input shows all four dishes. Give a helpful message for no matches. Use these practice values: Menu: Pear pie, Bean soup, Peach toast, Corn bowl. Keep the game or tool rules in ordinary code so a button press does not need an AI call. What restores the original dish order after clearing?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1267,7 +1267,7 @@
       "Make a room sign-up screen usable by keyboard.",
       "Add a seat map to a game app."
     ],
-    "prompt": "Make a browser app in Build. Build four labeled seat buttons. Print Free, Chosen or Blocked on each. A free seat can be chosen and unchosen. Show a list of chosen seats in row order and a Confirm button enabled only for a nonempty choice. Let Tab and Enter operate the controls. Use these practice values: The map has seats A1 A2 in the top row, B1 B2 in the bottom row. A2 starts blocked. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Confirm prints the selected labels in row order. Add Clear to unchoose every seat and turn Confirm off. Leave blocked seats blocked.",
+    "prompt": "Make a browser app in Build. Build four labeled seat buttons. Print Free, Chosen or Blocked on each. A free seat can be chosen and unchosen. Show a list of chosen seats in row order and a Confirm button enabled only for a nonempty choice. Let Tab and Enter operate the controls. Use these practice values: The map has seats A1 A2 in the top row, B1 B2 in the bottom row. A2 starts blocked. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Confirm prints the selected labels in row order. Add Clear to unchoose every seat and turn Confirm off. Leave blocked seats blocked. Can I confirm one seat using only the keyboard?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1317,7 +1317,7 @@
       "Build a team notice template.",
       "Show field-by-field help in a form."
     ],
-    "prompt": "Make a browser app in Build. Build three labeled boxes for subject, time and reply contact. Require a nonblank subject, a real 24-hour time and a contact with text on both sides of @. Show a separate status for each. Add Copy notice or a selectable text preview only when all three pass. Include Clear. Use these practice values: Draft boxes: subject=Practice update, time=09:15, reply contact empty. Use help@example.test for the sample contact. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Build three labeled boxes for subject, time and reply contact. Require a nonblank subject, a real 24-hour time and a contact with text on both sides of @. Show a separate status for each. Add Copy notice or a selectable text preview only when all three pass. Include Clear. Use these practice values: Draft boxes: subject=Practice update, time=09:15, reply contact empty. Use help@example.test for the sample contact. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Which invalid field keeps the notice from becoming ready?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1367,7 +1367,7 @@
       "Combine two sample team spreadsheets.",
       "Match saved records by ID."
     ],
-    "prompt": "Make a browser app in Build. Build a two-list reader that shows each group with its owner. Match IDs, keep group order and say Unknown when the owner is missing. Show owner IDs that do not belong to any group in a separate box. Add editable practice rows and Rebuild. Use these practice values: Group list: G1=Maps, G2=Charts, G3=Notes. Owner list: G2=Blue team, G1=Red team. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Build a two-list reader that shows each group with its owner. Match IDs, keep group order and say Unknown when the owner is missing. Show owner IDs that do not belong to any group in a separate box. Add editable practice rows and Rebuild. Use these practice values: Group list: G1=Maps, G2=Charts, G3=Notes. Owner list: G2=Blue team, G1=Red team. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Where does an owner with no matching group appear?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1417,7 +1417,7 @@
       "Build an interactive practice scenario.",
       "Ship a replayable adventure with two endings."
     ],
-    "prompt": "Make a browser app in Build. Build a tiny adventure. From Lobby choose Workshop or Gate. In Workshop let the player take the key once or return. At Gate, trying to exit without a key ends with Locked out. A key earns Home free. Show a bag, room name and Restart. After an ending only Restart can change the game. Use these practice values: Rooms: Lobby, Workshop, Gate. The Workshop has one brass key. The gate has a locked and unlocked ending. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Build a tiny adventure. From Lobby choose Workshop or Gate. In Workshop let the player take the key once or return. At Gate, trying to exit without a key ends with Locked out. A key earns Home free. Show a bag, room name and Restart. After an ending only Restart can change the game. Use these practice values: Rooms: Lobby, Workshop, Gate. The Workshop has one brass key. The gate has a locked and unlocked ending. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Does replay remove the old gate key?",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -1467,7 +1467,7 @@
       "Build a meeting follow-up board with source links.",
       "Ship a review app that can prove its results."
     ],
-    "prompt": "Make a browser app in Build. Build a private app with these sources and three editable action cards. Each card has team, task, date or Pending, and its source ID. A Check button compares each field with the named source. Show reasons for errors. Allow export of approved, matching cards only. Clear approval whenever a card changes. Supply a Load sample button and a Run checks button with fixed good and bad cards. Use ordinary code for the fixed checks. Use these practice values: S1: Maps team will test on May 4. S2: Charts team will draw on May 5. S3: Notes team will review, date pending. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "prompt": "Make a browser app in Build. Build a private app with these sources and three editable action cards. Each card has team, task, date or Pending, and its source ID. A Check button compares each field with the named source. Show reasons for errors. Allow export of approved, matching cards only. Clear approval whenever a card changes. Supply a Load sample button and a Run checks button with fixed good and bad cards. Use ordinary code for the fixed checks. Use these practice values: S1: Maps team will test on May 4. S2: Charts team will draw on May 5. S3: Notes team will review, date pending. Keep the game or tool rules in ordinary code so a button press does not need an AI call. Which approved action survives an edit to another source card?",
     "steps": [
       {
         "title": "Set up the practice space",
