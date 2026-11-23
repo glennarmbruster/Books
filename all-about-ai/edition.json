@@ -188,6 +188,16 @@
       "startLabel": "Open the first practice project",
       "startUrl": "#first-project",
       "gettingStarted": "Use an empty practice folder and the game file in the first lab. Try the checks on your device. Publish only the public-safe game when you choose to host your own copy."
+    },
+    {
+      "title": "Claude: full potential",
+      "file": "claude-reference.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Gemini: full potential",
+      "file": "gemini-reference.json",
+      "reviewed": "2026-11-22"
     }
   ],
   "version": 6

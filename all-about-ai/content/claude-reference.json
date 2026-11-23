@@ -1,0 +1,660 @@
+[
+  {
+    "id": "claude-reference-chat",
+    "title": "Write and revise in chat",
+    "summary": "Use a conversation to turn rough notes into a message. Ask for a second draft in the same chat.",
+    "tags": [
+      "claude",
+      "limits",
+      "writing"
+    ],
+    "firstGuide": "claude-first-chat",
+    "intro": {
+      "what": "Use a conversation to turn rough notes into a message. Ask for a second draft in the same chat.",
+      "features": "Mail queued at 09:00. One test arrived at 09:12. Other routes have not been tested.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Get started with Claude",
+          "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A draft alone cannot tell you whether a mail repair worked. Supply a test result before asking for a verdict."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "The free plan has a session allowance. The number of messages can vary with demand."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "Mail queued at 09:00. One test arrived at 09:12. Other routes have not been tested.",
+          "Write two sentences for a handoff. Separate the one test that passed from the routes we still need to check.",
+          "Check your result. The update names the successful test and leaves other routes open."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ]
+        ]
+      }
+    ],
+    "surface": "chat"
+  },
+  {
+    "id": "claude-reference-projects",
+    "title": "Keep a reusable brief in Projects",
+    "summary": "Put a brief, reference files and project instructions together. Open another chat in that project when the same rules apply.",
+    "tags": [
+      "claude",
+      "limits",
+      "projects",
+      "long-documents"
+    ],
+    "firstGuide": "claude-projects-begin",
+    "intro": {
+      "what": "Put a brief, reference files and project instructions together. Open another chat in that project when the same rules apply.",
+      "features": "Practice handbook, revision B: only closed requests go in the weekly count. The sample has two closed and one open.",
+      "exchange": "Trace a delivery claim back to the sample report.",
+      "m365": "Find the exact line in a practice policy.",
+      "developer": "Keep the input files beside your test results.",
+      "sources": [
+        [
+          "How can I create and manage projects?",
+          "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A file left on your desk is outside the project knowledge you supplied. Add the right version before asking about a change."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Free accounts can create up to five projects. Paid plans can use retrieval when the project knowledge grows large."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "Practice handbook, revision B: only closed requests go in the weekly count. The sample has two closed and one open.",
+          "Add the handbook to a practice project. In a fresh project chat ask for the weekly count and the rule used.",
+          "Check your result. The answer gives two closed requests and points to revision B."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ]
+        ]
+      }
+    ],
+    "surface": "projects"
+  },
+  {
+    "id": "claude-reference-artifacts",
+    "title": "Build a small tool in Artifacts",
+    "summary": "Keep an editable output beside a conversation. An interactive counter is a good first artifact because you can test it in seconds.",
+    "tags": [
+      "claude",
+      "limits",
+      "artifacts",
+      "apps"
+    ],
+    "firstGuide": "claude-artifact-begin",
+    "intro": {
+      "what": "Keep an editable output beside a conversation. An interactive counter is a good first artifact because you can test it in seconds.",
+      "features": "The tally starts at zero. Count adds one. Reset returns to zero.",
+      "exchange": "Test a pretend queue counter with zero messages.",
+      "m365": "Try two rows from a fictional request list.",
+      "developer": "Run the smallest working screen before adding another feature.",
+      "sources": [
+        [
+          "What are artifacts and how do I use them?",
+          "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A working preview cannot prove that a published copy stores data or works offline. Test those promises separately."
+        ],
+        "sources": [
+          [
+            "What are artifacts and how do I use them?",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Artifacts are offered on free and paid plans. Persistent storage on web and desktop is a paid-plan feature."
+        ],
+        "sources": [
+          [
+            "What are artifacts and how do I use them?",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "The tally starts at zero. Count adds one. Reset returns to zero.",
+          "Make an interactive tally artifact with Count and Reset. Show the score as a number.",
+          "Check your result. Two Count clicks show 2. Reset shows 0."
+        ],
+        "sources": [
+          [
+            "What are artifacts and how do I use them?",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ]
+        ]
+      }
+    ],
+    "surface": "artifacts"
+  },
+  {
+    "id": "claude-reference-code",
+    "title": "Inspect a project with Claude Code",
+    "summary": "Give a coding agent a project folder. It can read code, edit files and run commands to check a change.",
+    "tags": [
+      "claude",
+      "limits",
+      "code",
+      "agents"
+    ],
+    "firstGuide": "open-claude-code",
+    "intro": {
+      "what": "Give a coding agent a project folder. It can read code, edit files and run commands to check a change.",
+      "features": "A practice counter page shows the right number but calls its reset button Clear All.",
+      "exchange": "Test a pretend queue counter with zero messages.",
+      "m365": "Try two rows from a fictional request list.",
+      "developer": "Run the smallest working screen before adding another feature.",
+      "sources": [
+        [
+          "Overview - Claude Code Docs",
+          "https://code.claude.com/docs/en/overview"
+        ],
+        [
+          "Models, usage, and limits in Claude Code",
+          "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A code change alone cannot prove that a report is correct. Compare actual output with a known small example."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Models, usage, and limits in Claude Code",
+            "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Usage and model access depend on how you signed in and what your account includes. Check the session status before a long job."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Models, usage, and limits in Claude Code",
+            "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A practice counter page shows the right number but calls its reset button Clear All.",
+          "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
+          "Check your result. Only the label changes. A score of 2 still resets to 0."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Models, usage, and limits in Claude Code",
+            "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+          ]
+        ]
+      }
+    ],
+    "surface": "code"
+  },
+  {
+    "id": "claude-reference-connectors",
+    "title": "Read one item through a connector",
+    "summary": "A connector gives Claude tools from another service. Choose the service that holds the item you need.",
+    "tags": [
+      "claude",
+      "limits",
+      "connectors",
+      "permissions"
+    ],
+    "firstGuide": "claude-cowork-begin",
+    "intro": {
+      "what": "A connector gives Claude tools from another service. Choose the service that holds the item you need.",
+      "features": "An approved training folder contains a note called Shift card. Its first line reads Window B.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Use connectors to extend Claude's capabilities",
+          "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "Connecting a service does not grant every member access to everything in it. Use a practice item the signed-in account can open."
+        ],
+        "sources": [
+          [
+            "Use connectors to extend Claude's capabilities",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Web connectors are available across plans. In Team and Enterprise, an owner must first enable connectors for members."
+        ],
+        "sources": [
+          [
+            "Use connectors to extend Claude's capabilities",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "An approved training folder contains a note called Shift card. Its first line reads Window B.",
+          "Using only the approved connector, find Shift card. Quote its first line. Say unknown if you cannot open it. Make no changes.",
+          "Check your result. The reply says Window B and identifies the note, or explains it could not read it."
+        ],
+        "sources": [
+          [
+            "Use connectors to extend Claude's capabilities",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ]
+        ]
+      }
+    ],
+    "surface": "connectors"
+  },
+  {
+    "id": "claude-reference-browser",
+    "title": "Read a browser page or use a computer",
+    "summary": "Claude in Chrome can interact with web pages. Cowork also supports computer use on supported setups. Pick the smallest surface for the job.",
+    "tags": [
+      "claude",
+      "limits",
+      "browser",
+      "computer-use"
+    ],
+    "firstGuide": "claude-chrome-begin",
+    "intro": {
+      "what": "Claude in Chrome can interact with web pages. Cowork also supports computer use on supported setups. Pick the smallest surface for the job.",
+      "features": "A practice dashboard shows 8 waiting requests and an unused Submit button.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Get started with Claude in Chrome",
+          "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+        ],
+        [
+          "Use Claude Cowork on web, desktop, and mobile",
+          "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A cloud task cannot use your local browser through a closed desktop app. A description of a button is not proof it was clicked."
+        ],
+        "sources": [
+          [
+            "Get started with Claude in Chrome",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Claude in Chrome requires a paid plan. Enterprise owners control access. Browser and computer access from web or mobile can depend on Claude Desktop."
+        ],
+        "sources": [
+          [
+            "Get started with Claude in Chrome",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A practice dashboard shows 8 waiting requests and an unused Submit button.",
+          "Read the waiting count from this practice page. Report the number and the label next to it. Do not click Submit.",
+          "Check your result. The report pairs 8 with waiting requests. The page stays in the same state."
+        ],
+        "sources": [
+          [
+            "Get started with Claude in Chrome",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      }
+    ],
+    "surface": "browser"
+  },
+  {
+    "id": "claude-reference-scheduled",
+    "title": "Repeat a small job on a schedule",
+    "summary": "Use a scheduled task for work with a repeatable input, a clear time and a useful result even when nothing changed.",
+    "tags": [
+      "claude",
+      "limits",
+      "scheduled",
+      "automation"
+    ],
+    "firstGuide": "claude-cowork-begin",
+    "intro": {
+      "what": "Use a scheduled task for work with a repeatable input, a clear time and a useful result even when nothing changed.",
+      "features": "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
+      "exchange": "Practice a reminder to check yesterday’s queue.",
+      "m365": "Schedule a draft of a weekly practice summary.",
+      "developer": "Time a reminder to retest an app after release.",
+      "sources": [
+        [
+          "Schedule recurring tasks in Claude Cowork",
+          "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+        ],
+        [
+          "Use Claude Cowork on web, desktop, and mobile",
+          "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A cloud run cannot read a local folder through a sleeping or closed desktop app. Choose inputs that will be reachable at run time."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Recurring tasks are available on paid plans. A task can run in the cloud. Local resources add a desktop dependency."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
+          "Schedule a weekly reminder for Monday morning in the time zone I confirm. Use this fixed rotation and show the next run before I leave.",
+          "Check your result. The schedule shows the intended weekday and time. The output identifies desk B."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      }
+    ],
+    "surface": "scheduled"
+  },
+  {
+    "id": "claude-reference-voice",
+    "title": "Rehearse a handoff aloud",
+    "summary": "Talk through a problem and hear the answer. Switch back to text to check details such as times or file names.",
+    "tags": [
+      "claude",
+      "limits",
+      "voice",
+      "accessibility"
+    ],
+    "firstGuide": "claude-first-chat",
+    "intro": {
+      "what": "Talk through a problem and hear the answer. Switch back to text to check details such as times or file names.",
+      "features": "The queue held fifteen items before lunch and five after lunch.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Use voice mode",
+          "https://support.claude.com/en/articles/11101966-use-voice-mode"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "Speech can be misheard. A spoken summary cannot settle whether you said fifteen or fifty. Read back the saved text."
+        ],
+        "sources": [
+          [
+            "Use voice mode",
+            "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Voice sessions use the regular allowance for the account. Push-to-talk gives you control of the microphone in a noisy room."
+        ],
+        "sources": [
+          [
+            "Use voice mode",
+            "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "The queue held fifteen items before lunch and five after lunch.",
+          "Read those counts aloud. Ask for a one-sentence handoff and a separate line with the two numbers.",
+          "Check your result. The written numbers are 15 and 5, in that order."
+        ],
+        "sources": [
+          [
+            "Use voice mode",
+            "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ]
+        ]
+      }
+    ],
+    "surface": "voice"
+  },
+  {
+    "id": "claude-reference-files",
+    "title": "Read a file or inspect an image",
+    "summary": "Attach a supported document or image and ask a question tied to one visible detail. Use a small file first.",
+    "tags": [
+      "claude",
+      "limits",
+      "files",
+      "media",
+      "images"
+    ],
+    "firstGuide": "files-and-formats",
+    "intro": {
+      "what": "Attach a supported document or image and ask a question tied to one visible detail. Use a small file first.",
+      "features": "A short practice PDF has a table showing 2 requests open and 3 closed.",
+      "exchange": "Trace a delivery claim back to the sample report.",
+      "m365": "Find the exact line in a practice policy.",
+      "developer": "Keep the input files beside your test results.",
+      "sources": [
+        [
+          "Upload files to Claude",
+          "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+        ],
+        [
+          "Can Claude produce images?",
+          "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A blurry screenshot cannot establish what a missing digit says. Ask for unknown rather than filling it in."
+        ],
+        "sources": [
+          [
+            "Upload files to Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ],
+          [
+            "Can Claude produce images?",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Chat and project uploads have different limits. The upload guide lists 20 files per chat and a smaller per-file size for project knowledge."
+        ],
+        "sources": [
+          [
+            "Upload files to Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ],
+          [
+            "Can Claude produce images?",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A short practice PDF has a table showing 2 requests open and 3 closed.",
+          "Attach the practice page. Name both row labels, give their values and calculate the total. Flag any cell you cannot read.",
+          "Check your result. The rows say open 2 and closed 3. The total is 5."
+        ],
+        "sources": [
+          [
+            "Upload files to Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ],
+          [
+            "Can Claude produce images?",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ]
+        ]
+      }
+    ],
+    "surface": "files"
+  }
+]

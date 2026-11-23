@@ -1,0 +1,635 @@
+[
+  {
+    "id": "gemini-reference-chat",
+    "title": "Start with a bounded question in chat",
+    "summary": "Ask a direct question, add facts, and refine the reply. A small example makes wrong guesses easy to spot.",
+    "tags": [
+      "gemini",
+      "limits",
+      "writing"
+    ],
+    "firstGuide": "gemini-first-chat",
+    "intro": {
+      "what": "Ask a direct question, add facts, and refine the reply. A small example makes wrong guesses easy to spot.",
+      "features": "Delivery attempt at 08:04. Retry started at 08:06. No final result was recorded.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Use Gemini Apps - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/13275745?hl=en"
+        ],
+        [
+          "Gemini Apps limits & feature availability - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/16275805?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A chat cannot confirm an event that is missing from your notes. Ask for unknown when the record ends."
+        ],
+        "sources": [
+          [
+            "Use Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ],
+          [
+            "Gemini Apps limits & feature availability - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16275805?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Usage depends on the model, features, length of the chat and the complexity of the request. Check the limits page for the account you plan to use."
+        ],
+        "sources": [
+          [
+            "Use Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ],
+          [
+            "Gemini Apps limits & feature availability - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16275805?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "Delivery attempt at 08:04. Retry started at 08:06. No final result was recorded.",
+          "Turn these notes into two lines. Label one Observed and one Unknown. Did delivery succeed?",
+          "Check your result. Observed includes the attempt and retry. Unknown covers final delivery."
+        ],
+        "sources": [
+          [
+            "Use Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ],
+          [
+            "Gemini Apps limits & feature availability - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16275805?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "chat"
+  },
+  {
+    "id": "gemini-reference-notebook",
+    "title": "Find the line behind a notebook answer",
+    "summary": "Select source material in Gemini Notebook. Ask a question and open its citation to read the passage in context.",
+    "tags": [
+      "gemini",
+      "limits",
+      "notebooks",
+      "research",
+      "long-documents"
+    ],
+    "firstGuide": "gemini-notebook",
+    "intro": {
+      "what": "Select source material in Gemini Notebook. Ask a question and open its citation to read the passage in context.",
+      "features": "Note A says the pilot begins Tuesday. Note B says the wider rollout date is undecided.",
+      "exchange": "Trace a delivery claim back to the sample report.",
+      "m365": "Find the exact line in a practice policy.",
+      "developer": "Keep the input files beside your test results.",
+      "sources": [
+        [
+          "Use chat in Gemini Notebook - Gemini Notebook Help",
+          "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "Notebook chat answers from selected sources. Missing pages cannot establish a deadline or explain a decision."
+        ],
+        "sources": [
+          [
+            "Use chat in Gemini Notebook - Gemini Notebook Help",
+            "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Google notes that the mobile app may have limits for this feature. Not verified — 2026-11-22: the source allowance for an individual workspace."
+        ],
+        "sources": [
+          [
+            "Use chat in Gemini Notebook - Gemini Notebook Help",
+            "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "Note A says the pilot begins Tuesday. Note B says the wider rollout date is undecided.",
+          "Select both notes. Ask when the pilot starts and when everyone joins. Ask for a citation for each answer.",
+          "Check your result. The pilot starts Tuesday. The rollout is undecided. Each citation opens the matching line."
+        ],
+        "sources": [
+          [
+            "Use chat in Gemini Notebook - Gemini Notebook Help",
+            "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "notebook",
+    "unverified": [
+      "The source allowance for an individual workspace."
+    ]
+  },
+  {
+    "id": "gemini-reference-canvas",
+    "title": "Edit and test a page in Canvas",
+    "summary": "Use Canvas to draft a document or build and revise an app alongside the chat. Try one interaction before adding features.",
+    "tags": [
+      "gemini",
+      "limits",
+      "canvas",
+      "apps"
+    ],
+    "firstGuide": "gemini-first-chat",
+    "intro": {
+      "what": "Use Canvas to draft a document or build and revise an app alongside the chat. Try one interaction before adding features.",
+      "features": "Make a small page that counts packed bags. It needs Add bag and Start over.",
+      "exchange": "Test a pretend queue counter with zero messages.",
+      "m365": "Try two rows from a fictional request list.",
+      "developer": "Run the smallest working screen before adding another feature.",
+      "sources": [
+        [
+          "Create docs, apps & more with Canvas - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/16047321?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A shared Canvas link does not by itself deliver a standalone offline app. Test a saved local file separately if that is your goal."
+        ],
+        "sources": [
+          [
+            "Create docs, apps & more with Canvas - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16047321?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Canvas requires sign-in. Google says adding AI to a Canvas app requires the user to be at least 18. Shared Canvas content opens in the web app."
+        ],
+        "sources": [
+          [
+            "Create docs, apps & more with Canvas - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16047321?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "Make a small page that counts packed bags. It needs Add bag and Start over.",
+          "In Canvas, build the bag counter with a number visible at all times. Try Add bag twice and Start over once.",
+          "Check your result. The page visits 0, 1, 2 and 0."
+        ],
+        "sources": [
+          [
+            "Create docs, apps & more with Canvas - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16047321?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "canvas"
+  },
+  {
+    "id": "gemini-reference-code",
+    "title": "Work on files with Antigravity",
+    "summary": "Use the Antigravity coding agent for a project with files. Give it one change, then review the patch and run the result.",
+    "tags": [
+      "gemini",
+      "limits",
+      "agents",
+      "code"
+    ],
+    "firstGuide": "open-antigravity",
+    "intro": {
+      "what": "Use the Antigravity coding agent for a project with files. Give it one change, then review the patch and run the result.",
+      "features": "An empty score list should say No plays. A list with a single zero should show 0.",
+      "exchange": "Test a pretend queue counter with zero messages.",
+      "m365": "Try two rows from a fictional request list.",
+      "developer": "Run the smallest working screen before adding another feature.",
+      "sources": [
+        [
+          "Agent Capabilities Overview",
+          "https://antigravity.google/docs/agent/"
+        ],
+        [
+          "Get started",
+          "https://antigravity.google/docs/getting-started/"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A passing example cannot cover every input. Test both an empty list and a list containing zero."
+        ],
+        "sources": [
+          [
+            "Agent Capabilities Overview",
+            "https://antigravity.google/docs/agent/"
+          ],
+          [
+            "Get started",
+            "https://antigravity.google/docs/getting-started/"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "The desktop setup guide lists supported systems, including 64-bit Windows and macOS 13 or later. Not verified — 2026-11-22: a fixed number of agent runs per account."
+        ],
+        "sources": [
+          [
+            "Agent Capabilities Overview",
+            "https://antigravity.google/docs/agent/"
+          ],
+          [
+            "Get started",
+            "https://antigravity.google/docs/getting-started/"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "An empty score list should say No plays. A list with a single zero should show 0.",
+          "Open a practice folder. Build a score summary for both inputs. Show which files changed and run both checks.",
+          "Check your result. The empty list gets a message. The real zero stays visible."
+        ],
+        "sources": [
+          [
+            "Agent Capabilities Overview",
+            "https://antigravity.google/docs/agent/"
+          ],
+          [
+            "Get started",
+            "https://antigravity.google/docs/getting-started/"
+          ]
+        ]
+      }
+    ],
+    "surface": "code",
+    "unverified": [
+      "A fixed number of agent runs per account."
+    ]
+  },
+  {
+    "id": "gemini-reference-connectors",
+    "title": "Find a note with Connected Apps",
+    "summary": "Connected Apps let Gemini use supported services. Narrow the request to one approved item and one field.",
+    "tags": [
+      "gemini",
+      "limits",
+      "connectors",
+      "permissions"
+    ],
+    "firstGuide": "gemini-first-chat",
+    "intro": {
+      "what": "Connected Apps let Gemini use supported services. Narrow the request to one approved item and one field.",
+      "features": "A practice note called Supply list has one line reading Paper rolls: 4.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Use & manage Connected Apps in Gemini - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/13695044?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A connected app cannot read a file that the active account cannot reach. Check access before treating a missing result as a missing file."
+        ],
+        "sources": [
+          [
+            "Use & manage Connected Apps in Gemini - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13695044?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Available apps vary by device, location, language and account. Work and school settings can affect which apps appear."
+        ],
+        "sources": [
+          [
+            "Use & manage Connected Apps in Gemini - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13695044?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A practice note called Supply list has one line reading Paper rolls: 4.",
+          "Use the connected service to find Supply list. Return the paper roll count and identify the note. Stop if you cannot open it.",
+          "Check your result. The result names the note and gives 4, or reports missing access."
+        ],
+        "sources": [
+          [
+            "Use & manage Connected Apps in Gemini - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13695044?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "connectors"
+  },
+  {
+    "id": "gemini-reference-browser",
+    "title": "Follow a page with Chrome auto browse",
+    "summary": "Auto browse lets Gemini take steps on web pages. A read-only lookup is a good first task to watch.",
+    "tags": [
+      "gemini",
+      "limits",
+      "browser",
+      "computer-use"
+    ],
+    "firstGuide": "gemini-first-chat",
+    "intro": {
+      "what": "Auto browse lets Gemini take steps on web pages. A read-only lookup is a good first task to watch.",
+      "features": "A practice status page shows the next check at 10:30. No forms need to be submitted.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Ask Gemini in Chrome to complete tasks for you with auto browse - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/16821166?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "Local browser work needs the desktop device and Chrome awake. Sign-in and some other steps can pause for you."
+        ],
+        "sources": [
+          [
+            "Ask Gemini in Chrome to complete tasks for you with auto browse - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16821166?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Google describes a gradual rollout. Incognito is excluded. Local Chrome auto browse is a desktop feature. Check the eligibility list for your account and region."
+        ],
+        "sources": [
+          [
+            "Ask Gemini in Chrome to complete tasks for you with auto browse - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16821166?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A practice status page shows the next check at 10:30. No forms need to be submitted.",
+          "Find the time of the next check on the open practice page. Tell me where you found it. Stop before submitting anything.",
+          "Check your result. The reply identifies the next-check label and the time 10:30."
+        ],
+        "sources": [
+          [
+            "Ask Gemini in Chrome to complete tasks for you with auto browse - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16821166?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "browser"
+  },
+  {
+    "id": "gemini-reference-scheduled",
+    "title": "Set a task and verify its next run",
+    "summary": "Give a repeat job a time, time zone and one visible output. Review its saved schedule before expecting a reminder.",
+    "tags": [
+      "gemini",
+      "limits",
+      "scheduled",
+      "automation"
+    ],
+    "firstGuide": "gemini-task-begin",
+    "intro": {
+      "what": "Give a repeat job a time, time zone and one visible output. Review its saved schedule before expecting a reminder.",
+      "features": "Every Friday at noon, remind the practice team to count returned kits.",
+      "exchange": "Practice a reminder to check yesterday’s queue.",
+      "m365": "Schedule a draft of a weekly practice summary.",
+      "developer": "Time a reminder to retest an app after release.",
+      "sources": [
+        [
+          "Manage your tasks & workflows in Gemini Apps - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/17094507?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A schedule cannot establish that an input was available at run time. Report a missed input as unknown."
+        ],
+        "sources": [
+          [
+            "Manage your tasks & workflows in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/17094507?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "The cited Gemini Tasks guide excludes work and school accounts for this surface. Personal availability and subscription requirements vary by region."
+        ],
+        "sources": [
+          [
+            "Manage your tasks & workflows in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/17094507?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "Every Friday at noon, remind the practice team to count returned kits.",
+          "Set a weekly Friday reminder for noon in the time zone I give you. Show the next occurrence and the reminder text.",
+          "Check your result. Both the next Friday and noon appear in the saved schedule."
+        ],
+        "sources": [
+          [
+            "Manage your tasks & workflows in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/17094507?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "scheduled"
+  },
+  {
+    "id": "gemini-reference-voice",
+    "title": "Talk through a task with Gemini Live",
+    "summary": "Use Gemini Live for a spoken back-and-forth. On a supported device you can share your screen to discuss what is visible.",
+    "tags": [
+      "gemini",
+      "limits",
+      "voice",
+      "media"
+    ],
+    "firstGuide": "gemini-first-chat",
+    "intro": {
+      "what": "Use Gemini Live for a spoken back-and-forth. On a supported device you can share your screen to discuss what is visible.",
+      "features": "A practice page has a yellow Review button and a blue Save button.",
+      "exchange": "Use a fictional mail handoff to test this surface.",
+      "m365": "Apply the same check to an approved practice note.",
+      "developer": "Try the example with a small local project.",
+      "sources": [
+        [
+          "Talk naturally with Gemini Live - Android phone & tablet - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/15274899?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "Locking the screen interrupts screen sharing. Sharing does not restart itself when you unlock."
+        ],
+        "sources": [
+          [
+            "Talk naturally with Gemini Live - Android phone & tablet - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/15274899?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "The cited Live guide requires sign-in and excludes the Gemini web app. Features roll out gradually across supported devices."
+        ],
+        "sources": [
+          [
+            "Talk naturally with Gemini Live - Android phone & tablet - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/15274899?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A practice page has a yellow Review button and a blue Save button.",
+          "Share only that practice screen. Ask which button is labeled Review. End sharing and check the answer on the page.",
+          "Check your result. The reply pairs Review with yellow. You can see when screen sharing stops."
+        ],
+        "sources": [
+          [
+            "Talk naturally with Gemini Live - Android phone & tablet - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/15274899?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "voice"
+  },
+  {
+    "id": "gemini-reference-files",
+    "title": "Analyze an attachment before trusting a total",
+    "summary": "Attach a supported file to ask about its rows, images or other contents. Start with a row you can verify without help.",
+    "tags": [
+      "gemini",
+      "limits",
+      "files",
+      "media",
+      "spreadsheets"
+    ],
+    "firstGuide": "files-and-formats",
+    "intro": {
+      "what": "Attach a supported file to ask about its rows, images or other contents. Start with a row you can verify without help.",
+      "features": "A practice sheet has four counts: 2, 0, blank and 3. Blank means unreported.",
+      "exchange": "Trace a delivery claim back to the sample report.",
+      "m365": "Find the exact line in a practice policy.",
+      "developer": "Keep the input files beside your test results.",
+      "sources": [
+        [
+          "Attach & analyze files in Gemini Apps - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/14903178?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Where it stops",
+        "paragraphs": [
+          "A missing row in the uploaded copy cannot be recovered from a calculated total. Check the row count against your input."
+        ],
+        "sources": [
+          [
+            "Attach & analyze files in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/14903178?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "You must sign in. Work accounts need the appropriate Workspace setting to attach Drive files. Higher upload allowances depend on the plan."
+        ],
+        "sources": [
+          [
+            "Attach & analyze files in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/14903178?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Best first example",
+        "paragraphs": [
+          "A practice sheet has four counts: 2, 0, blank and 3. Blank means unreported.",
+          "Attach the practice sheet. Report the sum of known counts, how many counts are known, and how many are blank.",
+          "Check your result. The sum is 5. Three counts are known and one is blank."
+        ],
+        "sources": [
+          [
+            "Attach & analyze files in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/14903178?hl=en"
+          ]
+        ]
+      }
+    ],
+    "surface": "files"
+  }
+]

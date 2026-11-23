@@ -2635,5 +2635,167 @@
     "after": "A passing receipt records 1.0, 2 points at zero, a locked game and a fresh 0 after Restart.",
     "why": "Version plus behavior identifies the release more reliably than either check alone.",
     "rescue": "If the wrong version appears, fix the selected source or release copy first. Retest at the same address."
+  },
+  {
+    "id": "claude-reference-chat",
+    "premise": "Use a conversation to turn rough notes into a message. Ask for a second draft in the same chat.",
+    "before": "Mail queued at 09:00. One test arrived at 09:12. Other routes have not been tested.",
+    "try": "Write two sentences for a handoff. Separate the one test that passed from the routes we still need to check.",
+    "after": "The update names the successful test and leaves other routes open.",
+    "why": "A draft alone cannot tell you whether a mail repair worked. Supply a test result before asking for a verdict.",
+    "rescue": "Remove any claim about all routes. Ask which input line supports it."
+  },
+  {
+    "id": "claude-reference-projects",
+    "premise": "Put a brief, reference files and project instructions together. Open another chat in that project when the same rules apply.",
+    "before": "Practice handbook, revision B: only closed requests go in the weekly count. The sample has two closed and one open.",
+    "try": "Add the handbook to a practice project. In a fresh project chat ask for the weekly count and the rule used.",
+    "after": "The answer gives two closed requests and points to revision B.",
+    "why": "A file left on your desk is outside the project knowledge you supplied. Add the right version before asking about a change.",
+    "rescue": "Ask which file and revision it used. Replace the stale project copy before repeating."
+  },
+  {
+    "id": "claude-reference-artifacts",
+    "premise": "Keep an editable output beside a conversation. An interactive counter is a good first artifact because you can test it in seconds.",
+    "before": "The tally starts at zero. Count adds one. Reset returns to zero.",
+    "try": "Make an interactive tally artifact with Count and Reset. Show the score as a number.",
+    "after": "Two Count clicks show 2. Reset shows 0.",
+    "why": "A working preview cannot prove that a published copy stores data or works offline. Test those promises separately.",
+    "rescue": "Ask for one fix describing the button, starting number and wrong result."
+  },
+  {
+    "id": "claude-reference-code",
+    "premise": "Give a coding agent a project folder. It can read code, edit files and run commands to check a change.",
+    "before": "A practice counter page shows the right number but calls its reset button Clear All.",
+    "try": "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
+    "after": "Only the label changes. A score of 2 still resets to 0.",
+    "why": "A code change alone cannot prove that a report is correct. Compare actual output with a known small example.",
+    "rescue": "Read the changed lines. Ask the agent to undo unrelated edits before testing again."
+  },
+  {
+    "id": "claude-reference-connectors",
+    "premise": "A connector gives Claude tools from another service. Choose the service that holds the item you need.",
+    "before": "An approved training folder contains a note called Shift card. Its first line reads Window B.",
+    "try": "Using only the approved connector, find Shift card. Quote its first line. Say unknown if you cannot open it. Make no changes.",
+    "after": "The reply says Window B and identifies the note, or explains it could not read it.",
+    "why": "Connecting a service does not grant every member access to everything in it. Use a practice item the signed-in account can open.",
+    "rescue": "Check the service account and folder permission. A guess is not a substitute for opening the note."
+  },
+  {
+    "id": "claude-reference-browser",
+    "premise": "Claude in Chrome can interact with web pages. Cowork also supports computer use on supported setups. Pick the smallest surface for the job.",
+    "before": "A practice dashboard shows 8 waiting requests and an unused Submit button.",
+    "try": "Read the waiting count from this practice page. Report the number and the label next to it. Do not click Submit.",
+    "after": "The report pairs 8 with waiting requests. The page stays in the same state.",
+    "why": "A cloud task cannot use your local browser through a closed desktop app. A description of a button is not proof it was clicked.",
+    "rescue": "Open the correct tab and check the number yourself before relying on the reply."
+  },
+  {
+    "id": "claude-reference-scheduled",
+    "premise": "Use a scheduled task for work with a repeatable input, a clear time and a useful result even when nothing changed.",
+    "before": "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
+    "try": "Schedule a weekly reminder for Monday morning in the time zone I confirm. Use this fixed rotation and show the next run before I leave.",
+    "after": "The schedule shows the intended weekday and time. The output identifies desk B.",
+    "why": "A cloud run cannot read a local folder through a sleeping or closed desktop app. Choose inputs that will be reachable at run time.",
+    "rescue": "Pause the task and correct its time zone or input. Run once before trusting the schedule."
+  },
+  {
+    "id": "claude-reference-voice",
+    "premise": "Talk through a problem and hear the answer. Switch back to text to check details such as times or file names.",
+    "before": "The queue held fifteen items before lunch and five after lunch.",
+    "try": "Read those counts aloud. Ask for a one-sentence handoff and a separate line with the two numbers.",
+    "after": "The written numbers are 15 and 5, in that order.",
+    "why": "Speech can be misheard. A spoken summary cannot settle whether you said fifteen or fifty. Read back the saved text.",
+    "rescue": "Type the numbers and ask for the handoff again if the transcript says 50."
+  },
+  {
+    "id": "claude-reference-files",
+    "premise": "Attach a supported document or image and ask a question tied to one visible detail. Use a small file first.",
+    "before": "A short practice PDF has a table showing 2 requests open and 3 closed.",
+    "try": "Attach the practice page. Name both row labels, give their values and calculate the total. Flag any cell you cannot read.",
+    "after": "The rows say open 2 and closed 3. The total is 5.",
+    "why": "A blurry screenshot cannot establish what a missing digit says. Ask for unknown rather than filling it in.",
+    "rescue": "Crop or export a clearer copy of the table and compare each cell yourself."
+  },
+  {
+    "id": "gemini-reference-chat",
+    "premise": "Ask a direct question, add facts, and refine the reply. A small example makes wrong guesses easy to spot.",
+    "before": "Delivery attempt at 08:04. Retry started at 08:06. No final result was recorded.",
+    "try": "Turn these notes into two lines. Label one Observed and one Unknown. Did delivery succeed?",
+    "after": "Observed includes the attempt and retry. Unknown covers final delivery.",
+    "why": "A chat cannot confirm an event that is missing from your notes. Ask for unknown when the record ends.",
+    "rescue": "Point out the last recorded line and ask for the claim to be narrowed."
+  },
+  {
+    "id": "gemini-reference-notebook",
+    "premise": "Select source material in Gemini Notebook. Ask a question and open its citation to read the passage in context.",
+    "before": "Note A says the pilot begins Tuesday. Note B says the wider rollout date is undecided.",
+    "try": "Select both notes. Ask when the pilot starts and when everyone joins. Ask for a citation for each answer.",
+    "after": "The pilot starts Tuesday. The rollout is undecided. Each citation opens the matching line.",
+    "why": "Notebook chat answers from selected sources. Missing pages cannot establish a deadline or explain a decision.",
+    "rescue": "Check which sources are selected. Remove an outdated copy and ask again."
+  },
+  {
+    "id": "gemini-reference-canvas",
+    "premise": "Use Canvas to draft a document or build and revise an app alongside the chat. Try one interaction before adding features.",
+    "before": "Make a small page that counts packed bags. It needs Add bag and Start over.",
+    "try": "In Canvas, build the bag counter with a number visible at all times. Try Add bag twice and Start over once.",
+    "after": "The page visits 0, 1, 2 and 0.",
+    "why": "A shared Canvas link does not by itself deliver a standalone offline app. Test a saved local file separately if that is your goal.",
+    "rescue": "Name the first wrong step and ask for that interaction to be fixed."
+  },
+  {
+    "id": "gemini-reference-code",
+    "premise": "Use the Antigravity coding agent for a project with files. Give it one change, then review the patch and run the result.",
+    "before": "An empty score list should say No plays. A list with a single zero should show 0.",
+    "try": "Open a practice folder. Build a score summary for both inputs. Show which files changed and run both checks.",
+    "after": "The empty list gets a message. The real zero stays visible.",
+    "why": "A passing example cannot cover every input. Test both an empty list and a list containing zero.",
+    "rescue": "Ask for the condition that decides a score is missing. Test it against a real zero."
+  },
+  {
+    "id": "gemini-reference-connectors",
+    "premise": "Connected Apps let Gemini use supported services. Narrow the request to one approved item and one field.",
+    "before": "A practice note called Supply list has one line reading Paper rolls: 4.",
+    "try": "Use the connected service to find Supply list. Return the paper roll count and identify the note. Stop if you cannot open it.",
+    "after": "The result names the note and gives 4, or reports missing access.",
+    "why": "A connected app cannot read a file that the active account cannot reach. Check access before treating a missing result as a missing file.",
+    "rescue": "Open the item in the source app with the same account, then retry."
+  },
+  {
+    "id": "gemini-reference-browser",
+    "premise": "Auto browse lets Gemini take steps on web pages. A read-only lookup is a good first task to watch.",
+    "before": "A practice status page shows the next check at 10:30. No forms need to be submitted.",
+    "try": "Find the time of the next check on the open practice page. Tell me where you found it. Stop before submitting anything.",
+    "after": "The reply identifies the next-check label and the time 10:30.",
+    "why": "Local browser work needs the desktop device and Chrome awake. Sign-in and some other steps can pause for you.",
+    "rescue": "Look at the page yourself and cancel the task if it starts a form."
+  },
+  {
+    "id": "gemini-reference-scheduled",
+    "premise": "Give a repeat job a time, time zone and one visible output. Review its saved schedule before expecting a reminder.",
+    "before": "Every Friday at noon, remind the practice team to count returned kits.",
+    "try": "Set a weekly Friday reminder for noon in the time zone I give you. Show the next occurrence and the reminder text.",
+    "after": "Both the next Friday and noon appear in the saved schedule.",
+    "why": "A schedule cannot establish that an input was available at run time. Report a missed input as unknown.",
+    "rescue": "Open the task, check the zone and pause or edit the wrong schedule before making another."
+  },
+  {
+    "id": "gemini-reference-voice",
+    "premise": "Use Gemini Live for a spoken back-and-forth. On a supported device you can share your screen to discuss what is visible.",
+    "before": "A practice page has a yellow Review button and a blue Save button.",
+    "try": "Share only that practice screen. Ask which button is labeled Review. End sharing and check the answer on the page.",
+    "after": "The reply pairs Review with yellow. You can see when screen sharing stops.",
+    "why": "Locking the screen interrupts screen sharing. Sharing does not restart itself when you unlock.",
+    "rescue": "If the page was hidden, share it again or switch to a typed description."
+  },
+  {
+    "id": "gemini-reference-files",
+    "premise": "Attach a supported file to ask about its rows, images or other contents. Start with a row you can verify without help.",
+    "before": "A practice sheet has four counts: 2, 0, blank and 3. Blank means unreported.",
+    "try": "Attach the practice sheet. Report the sum of known counts, how many counts are known, and how many are blank.",
+    "after": "The sum is 5. Three counts are known and one is blank.",
+    "why": "A missing row in the uploaded copy cannot be recovered from a calculated total. Check the row count against your input.",
+    "rescue": "Ask for a row-by-row readback and check that zero was included."
   }
 ]
