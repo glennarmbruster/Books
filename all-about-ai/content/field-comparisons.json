@@ -3,6 +3,43 @@
     "id": "choose-a-model",
     "title": "Which model would you try first?",
     "summary": "A file type, a tool and a budget can narrow the choice before you measure answer quality.",
+    "intro": {
+      "what": "Model selection is deciding which engine and which surrounding tools can produce a result you can verify.",
+      "features": "This comparison covers supported inputs, repository tools, source-grounded work and the cost of escalating a difficult request.",
+      "exchange": "For an exported message trace, test extraction on known events and verify dates and time zones before asking for an explanation.",
+      "m365": "For a tenant-policy summary, supply the approved document version and require page references for its exceptions.",
+      "developer": "For a new screen, give each coding environment the same branch, screenshot and acceptance checks. Count working results that survive an offline reload.",
+      "sources": [
+        [
+          "Google · choosing a model",
+          "https://aistudio.google.com/docs/choosing-a-model"
+        ],
+        [
+          "Anthropic · model comparison",
+          "https://platform.claude.com/docs/en/models/overview"
+        ],
+        [
+          "OpenAI · model catalog",
+          "https://developers.openai.com/api/docs/models"
+        ],
+        [
+          "Google · Gemini models and supported media",
+          "https://aistudio.google.com/docs/models"
+        ],
+        [
+          "Google · selecting notebook sources",
+          "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+        ],
+        [
+          "Anthropic · managing Projects",
+          "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+        ],
+        [
+          "OpenAI · data analysis",
+          "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Match a documented difference to a real job",
@@ -84,6 +121,27 @@
     "id": "compare-cost",
     "title": "Read an API price table",
     "summary": "Two models with identical posted rates can produce different bills for the same assignment.",
+    "intro": {
+      "what": "An API price table tells an app developer what a model charges for measurable usage. A workplace chat license has different billing terms.",
+      "features": "The worked example separates input from output, uses dated published rates, and shows how retries and human review affect cost per accepted result.",
+      "exchange": "Estimate the cost of summarizing a batch of sanitized transport reports using a sample with known outcomes. Include the cost of reviewing errors.",
+      "m365": "Compare the projected cost of an API-based internal assistant with the work already covered by your organization’s licenses.",
+      "developer": "For a puzzle generator, count usable, distinct puzzles. A cheap call that needs four retries can be the expensive choice.",
+      "sources": [
+        [
+          "Google AI Studio · standard rates",
+          "https://aistudio.google.com/docs/pricing"
+        ],
+        [
+          "Anthropic · standard rates",
+          "https://platform.claude.com/docs/en/about-claude/pricing"
+        ],
+        [
+          "OpenAI · standard rates",
+          "https://developers.openai.com/api/docs/pricing"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "One short request in dollars",
@@ -177,6 +235,55 @@
     "id": "media-studio",
     "title": "From a reference photo to a finished asset",
     "summary": "A portrait for printing, a cut path for a nameplate and a moving shot of the finished sign require different deliverables.",
+    "intro": {
+      "what": "Generative media tools create or edit still images, sound and moving pictures. A vector cut file, a printable image and a video each need a different output.",
+      "features": "Gemini, ChatGPT Images, Claude-generated vector code, Grok Imagine and Adobe Firefly appear here for different parts of an asset workflow. The chapter includes checks for dimensions, motion and legibility.",
+      "exchange": "Useful for illustrating a mail-routing concept. Build the factual diagram from your approved design and label synthetic images clearly.",
+      "m365": "Use a storyboard for rollout training, then record the real tenant interface with sample data so the controls match what staff see.",
+      "developer": "Create book covers, icons or a demo clip. Verify small-screen legibility, dimensions and whether the SVG has actual cut paths.",
+      "sources": [
+        [
+          "Google · generating images in Gemini",
+          "https://gemini.google/us/overview/image-generation/"
+        ],
+        [
+          "OpenAI · Images 2.6",
+          "https://openai.com/index/introducing-images-2-6/"
+        ],
+        [
+          "Anthropic · model comparison",
+          "https://platform.claude.com/docs/en/models/overview"
+        ],
+        [
+          "Adobe · generating video from reference frames",
+          "https://helpx.adobe.com/firefly/web/work-with-audio-and-video/work-with-video/generate-videos-using-images.html"
+        ],
+        [
+          "Google · video in Gemini",
+          "https://gemini.google/overview/video-generation/"
+        ],
+        [
+          "Grok Imagine · video capabilities",
+          "https://docs.x.ai/developers/model-capabilities/video/overview"
+        ],
+        [
+          "OpenAI · Sora discontinuation",
+          "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+        ],
+        [
+          "Google · music generation",
+          "https://gemini.google/overview/music-generation/"
+        ],
+        [
+          "Mistral · audio model support",
+          "https://docs.mistral.ai/studio/audio/specs-and-limits/languages"
+        ],
+        [
+          "OpenAI · voice conversations",
+          "https://help.openai.com/en/articles/8400625-voice-mode-faq"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Choose what the file must contain",
@@ -251,6 +358,27 @@
     "id": "field-test",
     "title": "Run a fair three-model trial",
     "summary": "Try this fictional parking rule in three fresh chats. You already have the answer key.",
+    "intro": {
+      "what": "A controlled model trial gives several assistants the same job and scores their answers against a known result.",
+      "features": "The exercise provides a shared brief, an answer key, a scoring method and a second run that changes one condition.",
+      "exchange": "Adapt the trial to an anonymized trace with a known routing outcome. Include a case where the available events are insufficient to reach a conclusion.",
+      "m365": "Try three policy questions, including an exception and a deliberately missing detail. Award credit for the right source as well as the answer.",
+      "developer": "Give candidate models the same defect and compare whether their changes pass a regression check. Record review time beside the pass rate.",
+      "sources": [
+        [
+          "Google · choosing a model",
+          "https://aistudio.google.com/docs/choosing-a-model"
+        ],
+        [
+          "Anthropic · model comparison",
+          "https://platform.claude.com/docs/en/models/overview"
+        ],
+        [
+          "OpenAI · model catalog",
+          "https://developers.openai.com/api/docs/models"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Give all three the same brief",

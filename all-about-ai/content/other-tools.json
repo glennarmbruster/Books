@@ -3,6 +3,27 @@
     "id": "grok",
     "title": "Grok and the trail back to a post",
     "summary": "Grok can find what an organization said on X. A post, its date, and the policy behind it are three different pieces of evidence.",
+    "intro": {
+      "what": "Grok is xAI’s assistant and model family. It is useful when the source you need is a public statement on X.",
+      "features": "Depending on the product and enabled tools, it can search public posts or the web, interpret images and return text. Grok Imagine provides separate image and video generation.",
+      "exchange": "Trace a widely shared mail-delay claim to its original post and timestamp. Confirm tenant impact in your own service-health records.",
+      "m365": "Identify who announced a feature and then look up its rollout, license and platform in Microsoft’s documentation.",
+      "developer": "Find public reactions to a feature idea or try Imagine for a cover. Inspect the original feedback and the exported artwork.",
+      "sources": [
+        [
+          "Grok API · searching X",
+          "https://docs.x.ai/developers/tools/x-search"
+        ],
+        [
+          "Grok API release notes",
+          "https://docs.x.ai/developers/release-notes"
+        ],
+        [
+          "Grok Imagine · video capabilities",
+          "https://docs.x.ai/developers/model-capabilities/video/overview"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Trace a claim to the speaker",
@@ -44,6 +65,31 @@
     "id": "perplexity",
     "title": "Perplexity and Comet",
     "summary": "Start with a question in Perplexity or bring the assistant to the pages you already have open in Comet.",
+    "intro": {
+      "what": "Perplexity is a research assistant with linked sources. Comet is its browser, which can bring an assistant into a browsing session.",
+      "features": "Search can lead back to source pages. Comet can use browsing context, and the Agent API exposes tools for developers building search into an application.",
+      "exchange": "Find the current documentation for a message-trace field, then verify its meaning against the field reference and your own export.",
+      "m365": "Compare published admin instructions across two versions. Open both sources and check the applicable license and release date.",
+      "developer": "Use the API when the app needs sourced, current answers. For an offline reference book, save reviewed material in the edition.",
+      "sources": [
+        [
+          "Perplexity · the Comet browser",
+          "https://www.perplexity.ai/comet"
+        ],
+        [
+          "Perplexity · Sonar and the Agent API",
+          "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview"
+        ],
+        [
+          "Perplexity · Comet on iOS",
+          "https://www.perplexity.ai/changelog/what-we-shipped--march-27-2026"
+        ],
+        [
+          "Perplexity · Comet privacy controls",
+          "https://www.perplexity.ai/en-GB/hub/blog/introducing-privacy-snapshot"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Audit an answer with citations",
@@ -87,22 +133,30 @@
   },
   {
     "id": "other-models",
-    "title": "Copilot, Mistral and running a model locally",
-    "summary": "Three reasons to look beyond the main assistants are access to work documents, a specialist audio workflow and control of where a model runs.",
-    "sections": [
-      {
-        "title": "Work documents and meeting records",
-        "paragraphs": [
-          "With a work or school account, Microsoft 365 Copilot can ground answers in work content such as mail, Teams and files, depending on license and existing permissions. Ordinary web grounding and work grounding draw on different evidence. If the question is about your organization’s decision, specify the meeting or approved document to search.",
-          "Try asking for a decision, the meeting date and the sentence that records it. Open the cited source. If you only have a public announcement, supply it as an attachment and ask which parts of the decision it leaves open."
+    "title": "Mistral, Gemma and running a model locally",
+    "summary": "A specialist for recorded speech and a model you can run on your own hardware solve different problems. Here is how to try each.",
+    "intro": {
+      "what": "Mistral Vibe is an assistant for work and code. Voxtral is an audio model family. Gemma is Google’s family of downloadable models that can run on compatible hardware.",
+      "features": "Vibe offers chat and coding sessions. Voxtral models support specialized speech tasks. Gemma lets a developer choose the local runtime, model size and hardware.",
+      "exchange": "A local model can summarize an approved, sanitized mail-flow example. Check the event order against the export and confirm the runtime stays local.",
+      "m365": "Test transcription of synthetic meeting audio for names and speaker changes before considering it for a documentation workflow.",
+      "developer": "Try a small local model for searchable personal notes. Put the device offline and measure startup time and memory with a real file.",
+      "sources": [
+        [
+          "Mistral · Vibe",
+          "https://mistral.ai/products/vibe/"
         ],
-        "sources": [
-          [
-            "Microsoft · grounding with a work or school account",
-            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-grounding-works-with-a-work-or-school-account"
-          ]
+        [
+          "Mistral · Voxtral language support",
+          "https://docs.mistral.ai/studio/audio/specs-and-limits/languages"
+        ],
+        [
+          "Google · Gemma 4 models and memory requirements",
+          "https://gemma.ai/models/gemma-4/"
         ]
-      },
+      ]
+    },
+    "sections": [
       {
         "title": "A specialist for voice or code",
         "paragraphs": [
@@ -139,6 +193,35 @@
     "id": "browser-tools",
     "title": "Chrome add-ins and AI browsers",
     "summary": "A chat tab, a built-in browser assistant and an extension can see different things, even if they use a related model.",
+    "intro": {
+      "what": "A browser assistant uses information from a page or tab. It can be built into the browser, as with Gemini in Chrome or Comet, or supplied by an extension such as Claude in Chrome.",
+      "features": "Depending on the tool, it can summarize the current page, compare shared tabs or interact with controls. Desktop Chrome offers site-access settings for extensions.",
+      "exchange": "Compare two public troubleshooting articles side by side. Share only the pages you intend and verify the applicability to your Exchange version.",
+      "m365": "Use it to read policy documentation. An assistant operating a signed-in admin page may be able to take real actions with that identity.",
+      "developer": "Preview a personal app in a test profile. Give the assistant a concrete layout to inspect and repeat the check on iPad.",
+      "sources": [
+        [
+          "Chrome Help · manage extension site access",
+          "https://support.google.com/chrome/answer/2664769?hl=en"
+        ],
+        [
+          "Perplexity · Comet privacy controls",
+          "https://www.perplexity.ai/en-GB/hub/blog/introducing-privacy-snapshot"
+        ],
+        [
+          "Anthropic · Claude in Chrome",
+          "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+        ],
+        [
+          "Google · Gemini in Chrome",
+          "https://gemini.google/overview/gemini-in-chrome/"
+        ],
+        [
+          "Perplexity · Comet on iOS",
+          "https://www.perplexity.ai/changelog/what-we-shipped--march-27-2026"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Identify what has access",

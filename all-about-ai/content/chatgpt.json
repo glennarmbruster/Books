@@ -3,6 +3,31 @@
     "id": "chatgpt-picker",
     "title": "ChatGPT and its model picker",
     "summary": "A quick question, a sustained research job and a change to a website can all start in ChatGPT. The place you start changes which models and tools you can use.",
+    "intro": {
+      "what": "ChatGPT is OpenAI’s assistant. Its model picker selects the model or thinking effort available for a conversation.",
+      "features": "Chat supports questions and drafting, Search and Deep Research consult sources, and data analysis works with files. ChatGPT Work produces deliverables, Codex works on software, and Images and Voice handle visual and spoken tasks.",
+      "exchange": "Compare two supplied mail-rule descriptions at higher effort. Match each claimed exception to the original text.",
+      "m365": "Start with a quick rewrite of a rollout notice. Check that dates, audience and effective time survived the rewrite.",
+      "developer": "Use chat to define a bug’s expected behavior, then give Codex that example and inspect the resulting test.",
+      "sources": [
+        [
+          "OpenAI Help · Models in ChatGPT",
+          "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"
+        ],
+        [
+          "OpenAI Help · ChatGPT Work and Codex",
+          "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+        ],
+        [
+          "OpenAI Help · Deep research in ChatGPT",
+          "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"
+        ],
+        [
+          "OpenAI · Introducing Images 2.6, November 4, 2026",
+          "https://openai.com/index/introducing-images-2-6/"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Read the label in context",
@@ -33,6 +58,23 @@
     "id": "chatgpt-api",
     "title": "Choosing an OpenAI API model",
     "summary": "Developers can choose a model directly. A small test with your own work can tell you more about cost and suitability than a general ranking.",
+    "intro": {
+      "what": "The OpenAI API lets software call a particular model directly and process the returned result.",
+      "features": "Applications select model identifiers, send inputs and use the response in their own workflow. Capability, processing time and cost vary. Test real examples to see how many outputs meet your requirements.",
+      "exchange": "Classify redacted delivery reports by suspected cause. Compare results with engineer-labeled cases and count errors that would route a ticket incorrectly.",
+      "m365": "Convert supplied adoption notes into consistent categories. Score ambiguous records separately and keep the original row attached.",
+      "developer": "Compare two models for a puzzle hint generator. Record cost and latency per usable hint and reject hints that reveal the answer.",
+      "sources": [
+        [
+          "OpenAI Developers · Model catalog",
+          "https://developers.openai.com/api/docs/models"
+        ],
+        [
+          "OpenAI Developers · API pricing",
+          "https://developers.openai.com/api/docs/pricing"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Four useful starting points",
@@ -71,6 +113,27 @@
     "id": "chatgpt-research",
     "title": "Search, research and data analysis",
     "summary": "These tools retrieve different kinds of evidence. Pick one by asking what a reader would need in order to check the answer.",
+    "intro": {
+      "what": "ChatGPT offers separate tools for looking up current information, researching across sources and calculating from a file.",
+      "features": "Search can retrieve a current reference, Deep Research can assemble a sourced report, and data analysis can run calculations on uploaded data. A public product page describes supported behavior. Your organization’s actual configuration needs its own evidence.",
+      "exchange": "Look up a mail-flow limitation in Microsoft documentation, then compare its conditions with a configuration export you are authorized to share.",
+      "m365": "Reconcile a usage report against a license export. Check unmatched accounts and the dates each file covers.",
+      "developer": "Compare two libraries for an offline app. Open the cited documentation and run a small offline test.",
+      "sources": [
+        [
+          "OpenAI Help · ChatGPT Search",
+          "https://help.openai.com/en/articles/9237897-chatgpt-search"
+        ],
+        [
+          "OpenAI Help · Deep research in ChatGPT",
+          "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"
+        ],
+        [
+          "OpenAI Help · Data analysis with ChatGPT",
+          "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "One lookup or a research brief?",
@@ -99,6 +162,27 @@
     "id": "chatgpt-codex",
     "title": "ChatGPT Work and Codex",
     "summary": "Use Work to assemble a deliverable across materials. Use Codex when repository files, executable changes and tests are central to the job.",
+    "intro": {
+      "what": "ChatGPT Work handles multi-step assignments involving documents or tools. Codex is OpenAI’s agent for working on software.",
+      "features": "Work can assemble a deliverable from permitted sources. Codex can inspect an available repository, edit files and run its tests locally or in a configured cloud environment. Access follows that environment and its permissions.",
+      "exchange": "Give Codex a mail-report script and sanitized sample output. Run its revised parser on a fixture with a missing field.",
+      "m365": "Use Work to turn approved migration notes into a handover. Verify the owner and rollback condition against the source.",
+      "developer": "Give Codex a reproducible bug in your app. Inspect the patch and exercise the same screen after the fix.",
+      "sources": [
+        [
+          "OpenAI Help · ChatGPT Work and Codex",
+          "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+        ],
+        [
+          "OpenAI Academy · Where Codex runs",
+          "https://learn.chatgpt.com/docs/environments/modes"
+        ],
+        [
+          "OpenAI Help · Using Codex with your ChatGPT plan",
+          "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Choose the working environment",
@@ -127,6 +211,31 @@
     "id": "chatgpt-media",
     "title": "Images, voice and the status of Sora",
     "summary": "A generated image, live voice exchange, transcript and video are four different outputs. Availability depends on the product you open.",
+    "intro": {
+      "what": "ChatGPT’s media features cover still images and spoken interaction. OpenAI’s discontinued Sora service also appears in older video tutorials.",
+      "features": "Images can generate and revise artwork. Voice supports spoken exchanges, and audio models can transcribe supplied recordings. For a finished visual, check the exported asset at its intended size.",
+      "exchange": "Rehearse a service-restoration briefing aloud. Compare the spoken impact, timeline and resolution with the incident record.",
+      "m365": "Practice explaining a sharing policy to a colleague. Check each claim in the rehearsal against the approved policy.",
+      "developer": "Generate two icon concepts, then inspect each at small size and against the actual app background.",
+      "sources": [
+        [
+          "OpenAI · Introducing Images 2.6, November 4, 2026",
+          "https://openai.com/index/introducing-images-2-6/"
+        ],
+        [
+          "OpenAI Help · Voice Mode FAQ",
+          "https://help.openai.com/en/articles/8400625-voice-mode-faq"
+        ],
+        [
+          "OpenAI Developers · Audio model catalog",
+          "https://developers.openai.com/api/docs/models"
+        ],
+        [
+          "OpenAI Help · Sora discontinuation and dates",
+          "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Sketch an idea, then edit what matters",

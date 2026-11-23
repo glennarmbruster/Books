@@ -61,6 +61,40 @@ function makeTable(table, title) {
   return wrap;
 }
 
+function sourceLinks(references) {
+  const details = element('details', undefined, 'sources');
+  details.append(element('summary','Sources (' + references.length + ')'));
+  const sources = element('ul');
+  for (const [name, url] of references) {
+    const li = element('li');
+    const link = element('a',name);
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    li.append(link);
+    sources.append(li);
+  }
+  details.append(sources);
+  return details;
+}
+
+function chapterIntroduction(intro) {
+  const block = element('section', undefined, 'chapter-intro');
+  block.setAttribute('aria-label', 'Chapter introduction');
+  const roles = [
+    ['Exchange engineer', intro.exchange],
+    ['Microsoft 365 engineer', intro.m365],
+    ['Personal app developer', intro.developer]
+  ];
+  block.append(element('h2', 'What is it?'), element('p', intro.what),
+    element('h2', 'What features does it have?'), element('p', intro.features),
+    element('h2', 'Where it fits in your work'));
+  const list = element('dl', undefined, 'role-list');
+  for (const [name, value] of roles) list.append(element('dt', name), element('dd', value));
+  block.append(list, sourceLinks(intro.sources));
+  return block;
+}
+
 function openLocation(moveFocus) {
   const id = location.hash.slice(1);
   const chapter = chapters.find(item => item.id === id);
@@ -80,25 +114,21 @@ function openLocation(moveFocus) {
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
       if (section.table) block.append(makeTable(section.table, section.title));
+      if (section.exercise) {
+        const practice = element('aside', undefined, 'practice');
+        practice.append(element('h3', 'Try it'), element('p', section.exercise.prompt));
+        const answer = element('details');
+        answer.append(element('summary', 'Check your reasoning'));
+        for (const step of section.exercise.answer) answer.append(element('p', step));
+        practice.append(answer);
+        block.append(practice);
+      }
       if (section.sources?.length) {
-        const details = element('details', undefined, 'sources');
-        details.append(element('summary','Sources (' + section.sources.length + ')'));
-        const sources = element('ul');
-        for (const [name, url] of section.sources) {
-          const li = element('li');
-          const link = element('a',name);
-          link.href = url;
-          link.target = '_blank';
-          link.rel = 'noopener noreferrer';
-          li.append(link);
-          sources.append(li);
-        }
-        details.append(sources);
-        block.append(details);
+        block.append(sourceLinks(section.sources));
       }
       return block;
     });
-    byId('body').replaceChildren(...sections);
+    byId('body').replaceChildren(chapterIntroduction(chapter.intro), ...sections);
     document.querySelector('book-pager').setPage(chapter.number,chapters.length,'chapter',
       number => { location.hash = chapters[number-1].id; }, () => { location.hash = 'contents'; });
     if (moveFocus) byId('chapter-title').focus({preventScroll:true});
@@ -148,7 +178,7 @@ async function start() {
   groups = await Promise.all(edition.groups.map(async group => ({...group, items:await json('./content/' + group.file)})));
   for (const group of groups) {
     for (const ch of group.items) {
-      ch.search = [group.title,ch.title,ch.summary,...ch.sections.flatMap(s => [s.title,...s.paragraphs,...(s.table?.rows.flat() || [])])].join(' ').toLowerCase();
+      ch.search = [group.title,ch.title,ch.summary,ch.intro.what,ch.intro.features,ch.intro.exchange,ch.intro.m365,ch.intro.developer,...ch.sections.flatMap(s => [s.title,...s.paragraphs,...(s.table?.rows.flat() || []), s.exercise?.prompt || '', ...(s.exercise?.answer || [])])].join(' ').toLowerCase();
       ch.number = chapters.length + 1;
       ch.group = group;
       chapters.push(ch);

@@ -45,6 +45,16 @@ table{border-collapse:collapse;width:100%;font-size:.95rem;text-align:left;line-
 th,td{padding:.65rem .8rem;vertical-align:top;border-bottom:1px solid #d4d0c1;min-width:7rem;overflow-wrap:anywhere}
 thead{background:#153e40;color:#fffaf0}
 tbody th{font-weight:650}tbody tr:nth-child(even){background:#f1eee1}
+.chapter-intro{padding:1rem 0 1.4rem;border-bottom:1px solid var(--line)}
+.chapter-intro h2{font:650 1.07rem/1.4 system-ui,sans-serif;color:var(--teal);margin:1.05rem 0 .25rem}
+.chapter-intro p{margin:0;max-width:73ch}
+.role-list{margin:.3rem 0 .9rem;display:grid;grid-template-columns:minmax(8rem,10rem) 1fr;gap:.5rem 1rem}
+.role-list dt{font-weight:650}.role-list dd{margin:0}
+@media(max-width:610px){.role-list{display:block}.role-list dt:not(:first-child){margin-top:.6rem}}
+.practice{margin:1.15rem 0;padding:.85rem 1rem;background:#efeee1;border-left:3px solid var(--teal)}
+.practice h3{margin:.1rem 0;color:#204543;font-size:1.2rem}
+.practice p{margin:.5rem 0}
+.practice summary{width:fit-content;min-height:44px;cursor:pointer;color:var(--teal);padding:.5rem 0;font-weight:650}
 .sources{font-size:.9rem;border-left:3px solid #af813e;padding-left:.75rem}
 .sources summary{cursor:pointer;padding:.4rem 0;color:var(--teal);font-weight:650}
 .sources ul{padding-left:1.2rem;margin:.15rem 0}

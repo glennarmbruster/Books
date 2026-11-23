@@ -3,6 +3,35 @@
     "id": "claude-workspace",
     "title": "Where to work in Claude",
     "summary": "A parking-rate packet illustrates the difference between an ordinary chat, a reusable project and a connection to a live source.",
+    "intro": {
+      "what": "Claude is Anthropic’s assistant and model family. Start in chat for a single question or use a Project when the same references matter across conversations.",
+      "features": "Projects organize instructions and files. Connectors bring in permitted sources, Cowork handles multistep tasks, Claude Code works in a repository, and Artifacts hold editable outputs.",
+      "exchange": "Compare two versions of a sanitized mail-flow runbook. Ask which exception changed and verify the original paragraph.",
+      "m365": "Use a Project for approved rollout notes and decisions. Ask for a decision log with dated source references.",
+      "developer": "Keep your app requirements together and ask Claude to turn one user story into a testable prototype.",
+      "sources": [
+        [
+          "How Claude Projects use shared reference material",
+          "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+        ],
+        [
+          "Claude Code interfaces and capabilities",
+          "https://code.claude.com/docs/en/overview"
+        ],
+        [
+          "Where Cowork runs and how it reaches local files",
+          "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+        ],
+        [
+          "How Claude artifacts work",
+          "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+        ],
+        [
+          "Connect Claude to other services",
+          "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Choose where the evidence will live",
@@ -65,6 +94,27 @@
     "id": "claude-models",
     "title": "Which Claude model fits the job?",
     "summary": "Four current public models, their direct API prices and a way to decide when more reasoning pays for itself.",
+    "intro": {
+      "what": "Claude’s model families offer different tradeoffs in price, speed and reasoning. A representative task with a known answer makes the choice measurable.",
+      "features": "Compare Haiku, Sonnet, Opus and Fable, the effort controls your account offers, and separate input and output pricing in the direct API.",
+      "exchange": "Try a smaller model on synthetic mail-ticket classification, then compare harder mixed-cause cases with a higher-effort run. Score both against your labels.",
+      "m365": "Have two models reconcile approval dates across mock change records. Count unsupported dates and missed exceptions.",
+      "developer": "Run identical test fixtures through two API models. Compare cost per valid result, including retries.",
+      "sources": [
+        [
+          "Compare the current Claude models",
+          "https://platform.claude.com/docs/en/models/overview"
+        ],
+        [
+          "Anthropic’s direct API pricing",
+          "https://platform.claude.com/docs/en/about-claude/pricing"
+        ],
+        [
+          "Model, effort and thinking controls in Claude",
+          "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Four models, four starting points",
@@ -188,6 +238,31 @@
     "id": "claude-code",
     "title": "Claude Code in a real repository",
     "summary": "Use a small bookshelf change to learn what a coding agent can inspect, modify and verify.",
+    "intro": {
+      "what": "Claude Code is a coding agent that reads a project, edits files and runs commands in its working environment.",
+      "features": "Plan Mode supports investigation before editing. A project’s CLAUDE.md can document test commands and conventions, and the diff shows what actually changed.",
+      "exchange": "Ask it to update a PowerShell message-trace report using saved sample output. Verify that two recipients remain two rows.",
+      "m365": "Build a Microsoft Graph inventory test with two mock pages. Check that the report follows the next-page link and includes the last object.",
+      "developer": "Ask for one scorecard feature on a branch. Review the diff and play a full game against a known total.",
+      "sources": [
+        [
+          "Claude Code interfaces and capabilities",
+          "https://code.claude.com/docs/en/overview"
+        ],
+        [
+          "Permission modes and Plan Mode",
+          "https://code.claude.com/docs/en/permission-modes"
+        ],
+        [
+          "How Claude Code reads project instructions",
+          "https://code.claude.com/docs/en/memory"
+        ],
+        [
+          "Microsoft Learn · paging Microsoft Graph results",
+          "https://learn.microsoft.com/en-us/graph/paging"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "A coding session has a working environment",
@@ -246,6 +321,27 @@
     "id": "claude-browser",
     "title": "Cowork, Chrome and connected apps",
     "summary": "Choose a tool according to where the task happens and what the assistant needs permission to do.",
+    "intro": {
+      "what": "Cowork, Claude in Chrome and connectors give Claude different ways to work with documents, webpages and external services.",
+      "features": "Cowork can assemble deliverables from available files. The desktop Chrome extension can interact with open pages, while each connector exposes its own authorized operations.",
+      "exchange": "Give Cowork a folder of fictional incident notes. Request a timeline and check the order across time zones.",
+      "m365": "Use the Chrome extension on public Microsoft documentation to compare onboarding steps. Open the cited pages to check prerequisites.",
+      "developer": "Try the extension against a local prototype with sample data. Record which control it clicked before diagnosing an apparent navigation failure.",
+      "sources": [
+        [
+          "Claude in Chrome availability and controls",
+          "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+        ],
+        [
+          "Where Cowork runs and how it reaches local files",
+          "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+        ],
+        [
+          "Connector capabilities and access",
+          "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Work with a page that is already open",
@@ -304,6 +400,27 @@
     "id": "claude-visuals",
     "title": "Seeing an image, drawing a diagram and making a film",
     "summary": "Match the visual deliverable to what Claude’s models and design tools actually produce.",
+    "intro": {
+      "what": "Claude can interpret an image and produce code that renders a visual. Its design tools let you edit and share the resulting work.",
+      "features": "Artifacts can display interactive HTML or SVG. Claude Design supports editable prototypes and exports, and Claude can prepare scripts or shot lists for a video renderer.",
+      "exchange": "Turn a sanitized mail-route sketch into an editable diagram. Check every arrow and connector label with the design owner.",
+      "m365": "Draft a Teams onboarding storyboard. Capture the actual interface separately so the training matches the deployed experience.",
+      "developer": "Prototype a score-entry screen as an Artifact. Try it in portrait and check that every player remains reachable.",
+      "sources": [
+        [
+          "Claude’s image and interactive visual capabilities",
+          "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+        ],
+        [
+          "How Claude artifacts work",
+          "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+        ],
+        [
+          "Creating and exporting with Claude Design",
+          "https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Read a photo or generate a vector drawing",

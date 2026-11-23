@@ -41,11 +41,18 @@ for group in groups:
         require(re.fullmatch(r'[a-z0-9-]+', key) and key != 'contents' and key not in ids, f'Invalid or duplicate ID {key}')
         ids.add(key)
         require(words([ch['title'], ch['summary']]) and ch['sections'], f'Incomplete chapter {key}')
+        intro = ch['intro']
+        require(words([intro[k] for k in ('what', 'features', 'exchange', 'm365', 'developer')]) and intro['sources'], f'Incomplete introduction in {key}')
+        for label, link in intro['sources']:
+            require(label and urlsplit(link).scheme == 'https' and urlsplit(link).hostname, f'Invalid introduction source in {key}')
         for section in ch['sections']:
             require(section['title'] and words(section['paragraphs']) and section['sources'], f'Incomplete section in {key}')
             for label, link in section['sources']:
                 url = urlsplit(link)
                 require(label and url.scheme == 'https' and url.hostname, f'Invalid source in {key}')
+            if 'exercise' in section:
+                exercise = section['exercise']
+                require(words([exercise['prompt']]) and words(exercise['answer']), f'Incomplete exercise in {key}')
             if 'table' in section:
                 tbl = section['table']
                 require(words(tbl['columns']) and tbl['rows'], f'Empty table in {key}')

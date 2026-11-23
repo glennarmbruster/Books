@@ -3,6 +3,31 @@
     "id": "gemini-app",
     "title": "Gemini on your iPad",
     "summary": "Choose a chat model, set its thinking time, or hand a longer assignment to Tasks.",
+    "intro": {
+      "what": "Gemini is Google’s AI assistant and model family. The iPad app is a convenient place to try a question before building a workflow.",
+      "features": "Chat, Tasks, Deep Research and Gemini Live serve different conversations. Google AI Studio lets you prototype with models, and Antigravity works on code projects. Separate tools make images, video and music.",
+      "exchange": "Give it a fictional delivery failure and ask what evidence distinguishes two possible causes. Check its reasoning against the sample.",
+      "m365": "Compare two public rollout notices. Ask which dates refer to preview and which refer to general availability.",
+      "developer": "Describe a new bookshelf feature and ask for three acceptance tests you can perform on your iPad.",
+      "sources": [
+        [
+          "Google · the Gemini app and feature directory",
+          "https://gemini.google/overview/"
+        ],
+        [
+          "Gemini Apps · dated release notes",
+          "https://gemini.google/release-notes/"
+        ],
+        [
+          "Google · AI Studio Playground and Run settings",
+          "https://aistudio.google.com/docs/ai-studio-quickstart"
+        ],
+        [
+          "Google Antigravity · agent capabilities",
+          "https://antigravity.google/docs/agent"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "What your account can select",
@@ -86,6 +111,27 @@
     "id": "gemini-api",
     "title": "Inside the Gemini model catalog",
     "summary": "Match a model ID, input type and reasoning budget to the task your application has to perform.",
+    "intro": {
+      "what": "The Gemini API lets a program choose a specific model and send it a request. The catalog describes what each model accepts and returns.",
+      "features": "Compare model IDs, supported media, reasoning settings, context limits and retirement dates when choosing what an application will call.",
+      "exchange": "Benchmark extraction of diagnostic codes from synthetic mail reports. Count exact matches and made-up codes on incomplete inputs.",
+      "m365": "Test how different models classify sample Microsoft 365 notices by affected service, including one notice that covers two services.",
+      "developer": "Choose a model for tagging trivia cards by measuring correct labels, latency and cost across the same sample.",
+      "sources": [
+        [
+          "Google AI Studio · choosing a model",
+          "https://aistudio.google.com/docs/choosing-a-model"
+        ],
+        [
+          "Google AI Studio · full model directory",
+          "https://aistudio.google.com/docs/models"
+        ],
+        [
+          "Google · migration and retirement schedule",
+          "https://aistudio.google.com/docs/deprecations"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Five general-purpose choices",
@@ -180,6 +226,27 @@
     "id": "gemini-workflow",
     "title": "Gemini in Chrome, Drive and your notebook",
     "summary": "Decide whether your evidence lives in open tabs, a connected account or a collection of selected documents.",
+    "intro": {
+      "what": "Gemini can read different collections of material depending on where you open it and which sources you share.",
+      "features": "Gemini in Chrome can use selected tabs. Connected Apps can draw on enabled Google services. Gemini Notebook lets you choose documents and inspect cited passages.",
+      "exchange": "Put two public Exchange configuration guides in a notebook. Ask which version each applies to and open the citations.",
+      "m365": "Compare a public Microsoft 365 announcement with its deployment guide in separate tabs. Trace each listed prerequisite to its source.",
+      "developer": "Collect a library’s reference and migration notes in one notebook. Ask for the documented replacement for a deprecated function.",
+      "sources": [
+        [
+          "Google · Gemini in Chrome and device availability",
+          "https://gemini.google/overview/gemini-in-chrome/"
+        ],
+        [
+          "Google Help · managing Connected Apps",
+          "https://support.google.com/gemini/answer/13695044"
+        ],
+        [
+          "Google Help · source selection and citations in Gemini Notebook",
+          "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Read the tabs you choose",
@@ -230,6 +297,27 @@
     "id": "gemini-build",
     "title": "Google AI Studio and Antigravity",
     "summary": "Use AI Studio to compare model behavior, then use a coding workspace when the job involves a real project.",
+    "intro": {
+      "what": "Google AI Studio is a model playground and app prototyping tool. Antigravity is a development environment where an agent can work on a project.",
+      "features": "AI Studio offers structured output, model settings and Build mode. Antigravity can edit files, show changes for review and exercise a running app with browser tools.",
+      "exchange": "Prototype an extractor for synthetic message headers. Test repeated headers and a missing field before trusting its output.",
+      "m365": "Use sample Microsoft 365 notices to prototype a change calendar. Verify that an unspecified rollout date stays blank.",
+      "developer": "Ask Antigravity to build a bookshelf filter on a branch. Try an empty search and an offline reload before accepting it.",
+      "sources": [
+        [
+          "Google · AI Studio Playground and Run settings",
+          "https://aistudio.google.com/docs/ai-studio-quickstart"
+        ],
+        [
+          "Google · Build mode, sharing and API keys",
+          "https://aistudio.google.com/docs/aistudio-build-mode"
+        ],
+        [
+          "Google Antigravity · app and change review",
+          "https://antigravity.google/docs/features"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Run a controlled experiment in AI Studio",
@@ -292,6 +380,31 @@
     "id": "gemini-media",
     "title": "Google’s image, video and audio tools",
     "summary": "Pick the tool by the artifact you need, from an editable picture to a spoken conversation.",
+    "intro": {
+      "what": "Google’s media tools create and edit stills, clips, speech and music. The right starting point depends on what the audience should see or hear.",
+      "features": "Nano Banana handles still images, Gemini Omni makes video, Lyria creates music, and dedicated speech models handle narration or transcription.",
+      "exchange": "Useful for training material. Narrate a fictional mail-flow walkthrough and check every spoken acronym against the script.",
+      "m365": "Create a captioned introduction for a rollout briefing. Use real, approved screenshots for instructions that depend on exact controls.",
+      "developer": "Make a portrait cover and a short trailer for a puzzle book. Check title legibility at actual shelf size.",
+      "sources": [
+        [
+          "Google · image creation in the Gemini app",
+          "https://gemini.google/us/overview/image-generation/"
+        ],
+        [
+          "Google · video creation in Gemini",
+          "https://gemini.google/overview/video-generation/"
+        ],
+        [
+          "Google · Lyria music generation in Gemini",
+          "https://gemini.google/overview/music-generation/"
+        ],
+        [
+          "Google · speech generation",
+          "https://aistudio.google.com/docs/speech-generation"
+        ]
+      ]
+    },
     "sections": [
       {
         "title": "Make and revise a still image",
