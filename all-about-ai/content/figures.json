@@ -355,7 +355,8 @@
       "lab-antigravity-01",
       "lab-gemini-app-01",
       "claude-reference-projects",
-      "reference-tags"
+      "reference-tags",
+      "claude-reference-memory"
     ]
   },
   {
@@ -469,7 +470,9 @@
     "also": [
       "lab-gemini-app-08",
       "lab-gemini-app-23",
-      "lab-gemini-app-24"
+      "lab-gemini-app-24",
+      "claude-reference-research",
+      "gemini-reference-research"
     ]
   },
   {
@@ -580,7 +583,10 @@
     "source": "#devin-playbooks",
     "credit": "All About AI · original diagram",
     "also": [
-      "lab-claude-code-07"
+      "lab-claude-code-07",
+      "claude-reference-skills",
+      "claude-reference-style",
+      "gemini-reference-gems"
     ]
   },
   {
@@ -634,7 +640,9 @@
     "source": "#gemini-app",
     "credit": "All About AI · original diagram",
     "also": [
-      "gemini-reference-chat"
+      "gemini-reference-chat",
+      "gemini-reference-personal",
+      "gemini-reference-workspace"
     ]
   },
   {
@@ -670,7 +678,8 @@
       "media-studio",
       "claude-reference-voice",
       "claude-reference-files",
-      "gemini-reference-voice"
+      "gemini-reference-voice",
+      "gemini-reference-creation"
     ]
   },
   {
@@ -745,7 +754,10 @@
     "caption": "Extra thinking buys time to work. You still check the result.",
     "alt": "A simple sort can use a fast reply. A timetable with three rules deserves a thinking pass and a check against all three rules.",
     "source": "#chatgpt-picker",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "claude-reference-thinking"
+    ]
   },
   {
     "file": "diagram-search-vs-analysis.svg",

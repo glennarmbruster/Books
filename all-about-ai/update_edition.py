@@ -193,6 +193,10 @@ for group in groups:
             require(label and urlsplit(link).scheme == 'https' and urlsplit(link).hostname, f'Invalid introduction source in {key}')
         for section in ch['sections']:
             require(section['title'] and words(section['paragraphs']) and section['sources'], f'Incomplete section in {key}')
+            if 'practicePage' in section:
+                sample = section['practicePage']
+                require(re.fullmatch(r'practice/browser/[a-z0-9-]+\.html',sample) and (book/sample).is_file(), 'Missing linked practice page in '+key)
+                if sample not in assets: assets.append(sample)
             for label, link in section['sources']:
                 url = urlsplit(link)
                 require(label and url.scheme == 'https' and url.hostname, f'Invalid source in {key}')
@@ -216,6 +220,11 @@ expected_surfaces = {'chat','artifacts','projects','code','connectors','browser'
 for vendor, alternate in [('claude',set()),('gemini',{'notebook','canvas'})]:
     pages = json.loads((book/'content'/f'{vendor}-reference.json').read_text())
     expected = (expected_surfaces - {'projects','artifacts'} | alternate) if alternate else expected_surfaces
+    expected = expected | ({'memory','skills','style','research','thinking'} if vendor=='claude' else {'gems','research','personal','workspace','creation'})
+    for page in pages:
+        require([s['title'] for s in page['sections']] == ['What it is for','Do this first','What it cannot do','Plan and availability','Gotchas','Official docs'], 'Missing surface guide section in '+page['id'])
+        links = {u for part in page['sections'] for _,u in part['sources']}
+        require(len(links)>=2 and page['summary']!=page['intro']['what'], 'Check sources or introduction in '+page['id'])
     require(len(pages) == len(expected) and {p['surface'] for p in pages} == expected and
             all(p['id'] == vendor+'-reference-'+p['surface'] and p['id'] in reference_ids for p in pages),
             'Missing full-potential surface for '+vendor)

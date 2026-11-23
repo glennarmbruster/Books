@@ -10,8 +10,8 @@
     ],
     "firstGuide": "claude-first-chat",
     "intro": {
-      "what": "Use a conversation to turn rough notes into a message. Ask for a second draft in the same chat.",
-      "features": "Write two sentences for a handoff. Separate the one test that passed from the routes we still need to check.",
+      "what": "Draft and revise one message without losing the thread.",
+      "features": "A chat keeps the turns together so you can ask for a shorter draft.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -19,12 +19,52 @@
         [
           "Get started with Claude",
           "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+        ],
+        [
+          "Usage limit best practices",
+          "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
         ]
       ]
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "A chat keeps the turns together so you can ask for a shorter draft."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open Claude and start a new chat. Paste the note below and its question together.",
+          "Mail queued at 09:00. One test arrived at 09:12. Other routes have not been tested.",
+          "Write two sentences for a handoff. Separate the one test that passed from the routes we still need to check.",
+          "Check your result. The update names the successful test and leaves other routes open.",
+          "In that same chat send “Shorten this to one sentence. Keep the successful test and the untested routes.” Check for both facts again."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "A draft alone cannot tell you whether a mail repair worked. Supply a test result before asking for a verdict."
         ],
@@ -32,6 +72,10 @@
           [
             "Get started with Claude",
             "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
@@ -44,26 +88,48 @@
           [
             "Get started with Claude",
             "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "Mail queued at 09:00. One test arrived at 09:12. Other routes have not been tested.",
-          "Write two sentences for a handoff. Separate the one test that passed from the routes we still need to check.",
-          "Check your result. The update names the successful test and leaves other routes open."
+          "Watch for a draft that turns one successful test into a claim about the whole service."
         ],
         "sources": [
           [
             "Get started with Claude",
             "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       }
     ],
     "surface": "chat",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -78,8 +144,8 @@
     ],
     "firstGuide": "claude-projects-begin",
     "intro": {
-      "what": "Put a brief, reference files and project instructions together. Open another chat in that project when the same rules apply.",
-      "features": "Add the handbook to a practice project. In a fresh project chat ask for the weekly count and the rule used.",
+      "what": "Keep a standing rule beside the notes you use each week.",
+      "features": "Project knowledge holds reference material. Project instructions tell Claude how to use it.",
       "exchange": "Trace a delivery claim back to the sample report.",
       "m365": "Find the exact line in a practice policy.",
       "developer": "Keep the input files beside your test results.",
@@ -87,12 +153,51 @@
         [
           "How can I create and manage projects?",
           "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+        ],
+        [
+          "Usage limit best practices",
+          "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
         ]
       ]
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "Project knowledge holds reference material. Project instructions tell Claude how to use it."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open Projects. Create Practice desk. Save the entire practice handbook below in a text file. On the project page use + to add that file. Start a chat in the project.",
+          "Practice handbook, revision B: only closed requests go in the weekly count. The sample has two closed and one open.",
+          "Add the handbook to a practice project. In a fresh project chat ask for the weekly count and the rule used.",
+          "Check your result. The answer gives two closed requests and points to revision B."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "A file left on your desk is outside the project knowledge you supplied. Add the right version before asking about a change."
         ],
@@ -100,6 +205,10 @@
           [
             "How can I create and manage projects?",
             "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
@@ -112,26 +221,48 @@
           [
             "How can I create and manage projects?",
             "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "Practice handbook, revision B: only closed requests go in the weekly count. The sample has two closed and one open.",
-          "Add the handbook to a practice project. In a fresh project chat ask for the weekly count and the rule used.",
-          "Check your result. The answer gives two closed requests and points to revision B."
+          "A rule left in an unrelated chat can be missing here. Ask which revision supports the answer."
         ],
         "sources": [
           [
             "How can I create and manage projects?",
             "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       }
     ],
     "surface": "projects",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -146,8 +277,8 @@
     ],
     "firstGuide": "claude-artifact-begin",
     "intro": {
-      "what": "Keep an editable output beside a conversation. An interactive counter is a good first artifact because you can test it in seconds.",
-      "features": "Make an interactive tally artifact with Count and Reset. Show the score as a number.",
+      "what": "Make a small working counter you can try beside the chat.",
+      "features": "An Artifact opens the generated work in its own pane. Ask for a change and test the preview again.",
       "exchange": "Test a pretend queue counter with zero messages.",
       "m365": "Try two rows from a fictional request list.",
       "developer": "Run the smallest working screen before adding another feature.",
@@ -155,12 +286,51 @@
         [
           "What are artifacts and how do I use them?",
           "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+        ],
+        [
+          "Usage limit best practices",
+          "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
         ]
       ]
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "An Artifact opens the generated work in its own pane. Ask for a change and test the preview again."
+        ],
+        "sources": [
+          [
+            "What are artifacts and how do I use them?",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Start a Claude chat. Ask for the counter below as an interactive Artifact. Open its preview.",
+          "The tally starts at zero. Count adds one. Reset returns to zero.",
+          "Make an interactive tally artifact with Count and Reset. Show the score as a number.",
+          "Check your result. Two Count clicks show 2. Reset shows 0."
+        ],
+        "sources": [
+          [
+            "What are artifacts and how do I use them?",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "A working preview cannot prove that a published copy stores data or works offline. Test those promises separately."
         ],
@@ -168,6 +338,10 @@
           [
             "What are artifacts and how do I use them?",
             "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
@@ -180,26 +354,48 @@
           [
             "What are artifacts and how do I use them?",
             "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "The tally starts at zero. Count adds one. Reset returns to zero.",
-          "Make an interactive tally artifact with Count and Reset. Show the score as a number.",
-          "Check your result. Two Count clicks show 2. Reset shows 0."
+          "A picture of the counter can look finished. Press the buttons to prove it works."
         ],
         "sources": [
           [
             "What are artifacts and how do I use them?",
             "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
+        ],
+        "sources": [
+          [
+            "What are artifacts and how do I use them?",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       }
     ],
     "surface": "artifacts",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -214,8 +410,8 @@
     ],
     "firstGuide": "open-claude-code",
     "intro": {
-      "what": "Give a coding agent a project folder. It can read code, edit files and run commands to check a change.",
-      "features": "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
+      "what": "Change a small part of a project and inspect the patch.",
+      "features": "Claude Code can read project files, propose edits and run checks in the working folder.",
       "exchange": "Test a pretend queue counter with zero messages.",
       "m365": "Try two rows from a fictional request list.",
       "developer": "Run the smallest working screen before adding another feature.",
@@ -232,7 +428,42 @@
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "Claude Code can read project files, propose edits and run checks in the working folder."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Models, usage, and limits in Claude Code",
+            "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Make a practice folder with an index.html containing <button>Clear All</button>. Open that folder in Claude Code. Give it the task below.",
+          "A practice counter page shows the right number but calls its reset button Clear All.",
+          "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
+          "Check your result. Only the label changes. A score of 2 still resets to 0."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Models, usage, and limits in Claude Code",
+            "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "A code change alone cannot prove that a report is correct. Compare actual output with a known small example."
         ],
@@ -264,11 +495,25 @@
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "A practice counter page shows the right number but calls its reset button Clear All.",
-          "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
-          "Check your result. Only the label changes. A score of 2 still resets to 0."
+          "Check the changed lines. Renaming the button must leave its action alone."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Models, usage, and limits in Claude Code",
+            "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
         ],
         "sources": [
           [
@@ -283,7 +528,7 @@
       }
     ],
     "surface": "code",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -298,8 +543,8 @@
     ],
     "firstGuide": "claude-cowork-begin",
     "intro": {
-      "what": "A connector gives Claude tools from another service. Choose the service that holds the item you need.",
-      "features": "Using only the approved connector, find Shift card. Quote its first line. Say unknown if you cannot open it. Make no changes.",
+      "what": "Look up a known note through an approved connection.",
+      "features": "Connectors let Claude use information or tools from another service with the access you grant.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -307,12 +552,51 @@
         [
           "Use connectors to extend Claude's capabilities",
           "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+        ],
+        [
+          "Usage limit best practices",
+          "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
         ]
       ]
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "Connectors let Claude use information or tools from another service with the access you grant."
+        ],
+        "sources": [
+          [
+            "Use connectors to extend Claude's capabilities",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "In an approved practice Drive folder, create a document named Shift card. Put only “Window B” on line one. In Claude choose Customize, Connectors, then +. Choose the approved service and Connect. Sign in with the practice account.",
+          "An approved training folder contains a note called Shift card. Its first line reads Window B.",
+          "Using only the approved connector, find Shift card. Quote its first line. Say unknown if you cannot open it. Make no changes.",
+          "Check your result. The reply says Window B and identifies the note, or explains it could not read it."
+        ],
+        "sources": [
+          [
+            "Use connectors to extend Claude's capabilities",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "Connecting a service does not grant every member access to everything in it. Use a practice item the signed-in account can open."
         ],
@@ -320,6 +604,10 @@
           [
             "Use connectors to extend Claude's capabilities",
             "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
@@ -332,26 +620,48 @@
           [
             "Use connectors to extend Claude's capabilities",
             "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "An approved training folder contains a note called Shift card. Its first line reads Window B.",
-          "Using only the approved connector, find Shift card. Quote its first line. Say unknown if you cannot open it. Make no changes.",
-          "Check your result. The reply says Window B and identifies the note, or explains it could not read it."
+          "An old note can have the same name. Compare the first line against your copy."
         ],
         "sources": [
           [
             "Use connectors to extend Claude's capabilities",
             "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
+        ],
+        "sources": [
+          [
+            "Use connectors to extend Claude's capabilities",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       }
     ],
     "surface": "connectors",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -366,8 +676,8 @@
     ],
     "firstGuide": "claude-chrome-begin",
     "intro": {
-      "what": "Claude in Chrome can interact with web pages. Cowork also supports computer use on supported setups. Pick the smallest surface for the job.",
-      "features": "Read the waiting count from this practice page. Report the number and the label next to it. Do not click Submit.",
+      "what": "Read a value from the page you are viewing.",
+      "features": "Claude in Chrome works with browser tabs. Cowork also supports tasks that need a computer.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -384,7 +694,44 @@
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "Claude in Chrome works with browser tabs. Cowork also supports tasks that need a computer."
+        ],
+        "sources": [
+          [
+            "Get started with Claude in Chrome",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open the practice desk below in Chrome. In the portable book, save and open the page. Install the Claude in Chrome extension from the official guide. Sign in and click its toolbar icon.",
+          "A practice dashboard shows 8 waiting requests and an unused Submit button.",
+          "Read the waiting count from this practice page. Report the number and the label next to it. Do not click Submit.",
+          "Check your result. The report pairs 8 with waiting requests. The page stays in the same state.",
+          "If browser help cannot inspect a downloaded file, open the same practice page from the hosted book. Offline, read the page yourself."
+        ],
+        "sources": [
+          [
+            "Get started with Claude in Chrome",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ],
+        "practicePage": "practice/browser/practice-desk.html"
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "A cloud task cannot use your local browser through a closed desktop app. A description of a button is not proof it was clicked."
         ],
@@ -416,11 +763,25 @@
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "A practice dashboard shows 8 waiting requests and an unused Submit button.",
-          "Read the waiting count from this practice page. Report the number and the label next to it. Do not click Submit.",
-          "Check your result. The report pairs 8 with waiting requests. The page stays in the same state."
+          "A request to read a number gives no reason to press Submit. Keep unrelated tabs closed."
+        ],
+        "sources": [
+          [
+            "Get started with Claude in Chrome",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
         ],
         "sources": [
           [
@@ -435,7 +796,7 @@
       }
     ],
     "surface": "browser",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -450,8 +811,8 @@
     ],
     "firstGuide": "claude-cowork-begin",
     "intro": {
-      "what": "Use a scheduled task for work with a repeatable input, a clear time and a useful result even when nothing changed.",
-      "features": "Schedule a weekly reminder for Monday morning in the time zone I confirm. Use this fixed rotation and show the next run before I leave.",
+      "what": "Run a repeating brief and inspect the saved schedule.",
+      "features": "Scheduled tasks pair instructions with a repeat time. The task list lets you inspect them.",
       "exchange": "Practice a reminder to check yesterday’s queue.",
       "m365": "Schedule a draft of a weekly practice summary.",
       "developer": "Time a reminder to retest an app after release.",
@@ -468,7 +829,42 @@
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "Scheduled tasks pair instructions with a repeat time. The task list lets you inspect them."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open Cowork’s scheduled tasks. Create a practice task with the text below. Pick a weekday and your time zone, then read back the saved time.",
+          "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
+          "Schedule a weekly reminder for Monday morning in the time zone I confirm. Use this fixed rotation and show the next run before I leave.",
+          "Check your result. The schedule shows the intended weekday and time. The output identifies desk B."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "A cloud run cannot read a local folder through a sleeping or closed desktop app. Choose inputs that will be reachable at run time."
         ],
@@ -500,11 +896,25 @@
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
-          "Schedule a weekly reminder for Monday morning in the time zone I confirm. Use this fixed rotation and show the next run before I leave.",
-          "Check your result. The schedule shows the intended weekday and time. The output identifies desk B."
+          "If the task needs a local file, check the desktop requirements before relying on a timed run."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Use Claude Cowork on web, desktop, and mobile",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
         ],
         "sources": [
           [
@@ -519,7 +929,7 @@
       }
     ],
     "surface": "scheduled",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -534,8 +944,8 @@
     ],
     "firstGuide": "claude-first-chat",
     "intro": {
-      "what": "Talk through a problem and hear the answer. Switch back to text to check details such as times or file names.",
-      "features": "Read those counts aloud. Ask for a one-sentence handoff and a separate line with the two numbers.",
+      "what": "Practice speaking a short handoff and check what was heard.",
+      "features": "Voice mode lets you talk and hear the reply. You can inspect the resulting chat.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -543,12 +953,51 @@
         [
           "Use voice mode",
           "https://support.claude.com/en/articles/11101966-use-voice-mode"
+        ],
+        [
+          "Usage limit best practices",
+          "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
         ]
       ]
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "Voice mode lets you talk and hear the reply. You can inspect the resulting chat."
+        ],
+        "sources": [
+          [
+            "Use voice mode",
+            "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open a fresh Claude chat. Choose the voice control and allow the microphone. Say the two counts below, then stop and read the transcript.",
+          "The queue held fifteen items before lunch and five after lunch.",
+          "Read those counts aloud. Ask for a one-sentence handoff and a separate line with the two numbers.",
+          "Check your result. The written numbers are 15 and 5, in that order."
+        ],
+        "sources": [
+          [
+            "Use voice mode",
+            "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "Speech can be misheard. A spoken summary cannot settle whether you said fifteen or fifty. Read back the saved text."
         ],
@@ -556,6 +1005,10 @@
           [
             "Use voice mode",
             "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
@@ -568,26 +1021,48 @@
           [
             "Use voice mode",
             "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "The queue held fifteen items before lunch and five after lunch.",
-          "Read those counts aloud. Ask for a one-sentence handoff and a separate line with the two numbers.",
-          "Check your result. The written numbers are 15 and 5, in that order."
+          "Fifteen and fifty can sound alike. Check the transcript before accepting the total."
         ],
         "sources": [
           [
             "Use voice mode",
             "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
+        ],
+        "sources": [
+          [
+            "Use voice mode",
+            "https://support.claude.com/en/articles/11101966-use-voice-mode"
+          ],
+          [
+            "Usage limit best practices",
+            "https://support.claude.com/en/articles/9797557-usage-limit-best-practices"
           ]
         ]
       }
     ],
     "surface": "voice",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {
@@ -603,8 +1078,8 @@
     ],
     "firstGuide": "files-and-formats",
     "intro": {
-      "what": "Attach a supported document or image and ask a question tied to one visible detail. Use a small file first.",
-      "features": "Attach the practice page. Name both row labels, give their values and calculate the total. Flag any cell you cannot read.",
+      "what": "Ask about a page or image you can compare by eye.",
+      "features": "A chat attachment supplies a particular file. Project knowledge can supply the same material again later.",
       "exchange": "Trace a delivery claim back to the sample report.",
       "m365": "Find the exact line in a practice policy.",
       "developer": "Keep the input files beside your test results.",
@@ -621,7 +1096,42 @@
     },
     "sections": [
       {
-        "title": "Where it stops",
+        "title": "What it is for",
+        "paragraphs": [
+          "A chat attachment supplies a particular file. Project knowledge can supply the same material again later."
+        ],
+        "sources": [
+          [
+            "Upload files to Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ],
+          [
+            "Can Claude produce images?",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Create a one-page practice file with the counts below. Choose Add files or photos in a new chat, attach the file and ask the question.",
+          "A short practice PDF has a table showing 2 requests open and 3 closed.",
+          "Attach the practice page. Name both row labels, give their values and calculate the total. Flag any cell you cannot read.",
+          "Check your result. The rows say open 2 and closed 3. The total is 5."
+        ],
+        "sources": [
+          [
+            "Upload files to Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ],
+          [
+            "Can Claude produce images?",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
         "paragraphs": [
           "A blurry screenshot cannot establish what a missing digit says. Ask for unknown rather than filling it in."
         ],
@@ -653,11 +1163,25 @@
         ]
       },
       {
-        "title": "Best first example",
+        "title": "Gotchas",
         "paragraphs": [
-          "A short practice PDF has a table showing 2 requests open and 3 closed.",
-          "Attach the practice page. Name both row labels, give their values and calculate the total. Flag any cell you cannot read.",
-          "Check your result. The rows say open 2 and closed 3. The total is 5."
+          "If the table is scanned or cropped, read the column labels yourself. Ask which cells were visible."
+        ],
+        "sources": [
+          [
+            "Upload files to Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ],
+          [
+            "Can Claude produce images?",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Open the first guide for the controls. Use the second to check access or compare the related feature."
         ],
         "sources": [
           [
@@ -672,7 +1196,650 @@
       }
     ],
     "surface": "files",
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
+  },
+  {
+    "id": "claude-reference-memory",
+    "title": "Check what carries into a new chat",
+    "summary": "Check what carries into a new chat. Try a harmless preference across two conversations.",
+    "tags": [
+      "claude",
+      "memory",
+      "limits"
+    ],
+    "intro": {
+      "what": "Try a harmless preference across two conversations.",
+      "features": "Memory can keep a preference. Chat search can find a past discussion. They have separate controls.",
+      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
+      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
+      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "sources": [
+        [
+          "Use Claude’s chat search and memory to build on previous context",
+          "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+        ],
+        [
+          "Understanding Claude's personalization features",
+          "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+        ]
+      ]
+    },
+    "surface": "memory",
+    "lastVerified": "2026-11-23",
+    "verificationBasis": "page review",
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Memory can keep a preference. Chat search can find a past discussion. They have separate controls."
+        ],
+        "sources": [
+          [
+            "Use Claude’s chat search and memory to build on previous context",
+            "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+          ],
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open Settings and find Your Claude or Memory. In a practice chat say “Remember that practice handoffs should use bullets.” Start a new chat. Ask how to format a handoff. Compare it with the saved preference."
+        ],
+        "sources": [
+          [
+            "Use Claude’s chat search and memory to build on previous context",
+            "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+          ],
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A remembered preference cannot prove that a repair worked. Ask for the actual test record."
+        ],
+        "sources": [
+          [
+            "Use Claude’s chat search and memory to build on previous context",
+            "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+          ],
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Paid plans offer chat search. Workplace owners can control memory. Check both switches in your account."
+        ],
+        "sources": [
+          [
+            "Use Claude’s chat search and memory to build on previous context",
+            "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+          ],
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "If bullets appear by chance, inspect the saved memory before crediting the feature. Remove the practice preference when done."
+        ],
+        "sources": [
+          [
+            "Use Claude’s chat search and memory to build on previous context",
+            "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+          ],
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+        ],
+        "sources": [
+          [
+            "Use Claude’s chat search and memory to build on previous context",
+            "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+          ],
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claude-reference-skills",
+    "title": "Teach a repeatable task with a skill",
+    "summary": "Teach a repeatable task with a skill. Save a small set of instructions for a job you often repeat.",
+    "tags": [
+      "claude",
+      "skills",
+      "limits"
+    ],
+    "intro": {
+      "what": "Save a small set of instructions for a job you often repeat.",
+      "features": "A skill bundles directions and optional files. Claude can load the skill when its description matches the task.",
+      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
+      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
+      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "sources": [
+        [
+          "What are skills?",
+          "https://support.claude.com/en/articles/12512176-what-are-skills"
+        ],
+        [
+          "Use skills in Claude",
+          "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+        ]
+      ]
+    },
+    "surface": "skills",
+    "lastVerified": "2026-11-23",
+    "verificationBasis": "page review",
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "A skill bundles directions and optional files. Claude can load the skill when its description matches the task."
+        ],
+        "sources": [
+          [
+            "What are skills?",
+            "https://support.claude.com/en/articles/12512176-what-are-skills"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open Customize and choose Skills. Create a practice skill for sorting repair notes. Give it the rule “List only rows labeled ready.” Save it. Try the card below."
+        ],
+        "sources": [
+          [
+            "What are skills?",
+            "https://support.claude.com/en/articles/12512176-what-are-skills"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "Instructions alone do not give access to a mail system or an outside service."
+        ],
+        "sources": [
+          [
+            "What are skills?",
+            "https://support.claude.com/en/articles/12512176-what-are-skills"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Claude documents skills across free and paid plans. Code execution must be enabled."
+        ],
+        "sources": [
+          [
+            "What are skills?",
+            "https://support.claude.com/en/articles/12512176-what-are-skills"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "If the wrong skill runs, narrow its description to this task. Repeat with one row whose label changed."
+        ],
+        "sources": [
+          [
+            "What are skills?",
+            "https://support.claude.com/en/articles/12512176-what-are-skills"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+        ],
+        "sources": [
+          [
+            "What are skills?",
+            "https://support.claude.com/en/articles/12512176-what-are-skills"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claude-reference-style",
+    "title": "Choose a voice for writing",
+    "summary": "Choose a voice for writing. Keep one writing preference or reuse a style through a skill.",
+    "tags": [
+      "claude",
+      "style",
+      "limits"
+    ],
+    "intro": {
+      "what": "Keep one writing preference or reuse a style through a skill.",
+      "features": "Account instructions set broad preferences. A skill can hold a format for a particular kind of writing.",
+      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
+      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
+      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "sources": [
+        [
+          "Understanding Claude's personalization features",
+          "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+        ],
+        [
+          "Use skills in Claude",
+          "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+        ]
+      ]
+    },
+    "surface": "style",
+    "lastVerified": "2026-11-23",
+    "verificationBasis": "page review",
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Account instructions set broad preferences. A skill can hold a format for a particular kind of writing."
+        ],
+        "sources": [
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open Settings, then Your Claude or Account. Find Instructions. Save “For practice announcements, use two short bullets.” Ask for an announcement about a closed gate and an open footpath. Inspect both points. Remove the practice instruction when done."
+        ],
+        "sources": [
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A writing style changes the wording. Check that the facts survive the rewrite."
+        ],
+        "sources": [
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "The personalization guide lists account instructions and skills. Not verified — 2026-11-23: a separate Styles menu on every account."
+        ],
+        "sources": [
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Scope a one-off format to the current prompt if it would get in the way of future chats."
+        ],
+        "sources": [
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+        ],
+        "sources": [
+          [
+            "Understanding Claude's personalization features",
+            "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features"
+          ],
+          [
+            "Use skills in Claude",
+            "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+          ]
+        ]
+      }
+    ],
+    "unverified": [
+      "Not verified — 2026-11-23: a separate Styles menu on every account."
+    ]
+  },
+  {
+    "id": "claude-reference-research",
+    "title": "Trace a research brief to its sources",
+    "summary": "Trace a research brief to its sources. Follow a claim from an answer to a page you can read.",
+    "tags": [
+      "claude",
+      "research",
+      "limits"
+    ],
+    "intro": {
+      "what": "Follow a claim from an answer to a page you can read.",
+      "features": "Research searches across sources and returns a report with links. Web search can answer a narrower question.",
+      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
+      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
+      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "sources": [
+        [
+          "Use research on Claude",
+          "https://support.claude.com/en/articles/11088861-use-research-on-claude"
+        ],
+        [
+          "When should I use web search, extended thinking, and research?",
+          "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+        ]
+      ]
+    },
+    "surface": "research",
+    "lastVerified": "2026-11-23",
+    "verificationBasis": "page review",
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Research searches across sources and returns a report with links. Web search can answer a narrower question."
+        ],
+        "sources": [
+          [
+            "Use research on Claude",
+            "https://support.claude.com/en/articles/11088861-use-research-on-claude"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Turn on web search in the tools menu. In a fresh Claude chat, open the plus menu and choose Research. Ask “Which settings affect memory in Claude? Use official help and link each claim.” Open a cited page and locate the sentence supporting one setting."
+        ],
+        "sources": [
+          [
+            "Use research on Claude",
+            "https://support.claude.com/en/articles/11088861-use-research-on-claude"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A link to a help center home page does not prove a particular setting exists."
+        ],
+        "sources": [
+          [
+            "Use research on Claude",
+            "https://support.claude.com/en/articles/11088861-use-research-on-claude"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "Claude documents Research on paid plans. Check the Research control and web search access before starting."
+        ],
+        "sources": [
+          [
+            "Use research on Claude",
+            "https://support.claude.com/en/articles/11088861-use-research-on-claude"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "A source can be about a different product. Match the page title and the account type."
+        ],
+        "sources": [
+          [
+            "Use research on Claude",
+            "https://support.claude.com/en/articles/11088861-use-research-on-claude"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+        ],
+        "sources": [
+          [
+            "Use research on Claude",
+            "https://support.claude.com/en/articles/11088861-use-research-on-claude"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claude-reference-thinking",
+    "title": "Choose how much effort to spend",
+    "summary": "Choose how much effort to spend. Test a harder question with a result you can check yourself.",
+    "tags": [
+      "claude",
+      "thinking",
+      "limits"
+    ],
+    "intro": {
+      "what": "Test a harder question with a result you can check yourself.",
+      "features": "The model menu controls effort and, on some models, a thinking switch. Extra time can help with a multi-step problem.",
+      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
+      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
+      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "sources": [
+        [
+          "Change the model, effort, and thinking settings",
+          "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+        ],
+        [
+          "When should I use web search, extended thinking, and research?",
+          "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+        ]
+      ]
+    },
+    "surface": "thinking",
+    "lastVerified": "2026-11-23",
+    "verificationBasis": "page review",
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "The model menu controls effort and, on some models, a thinking switch. Extra time can help with a multi-step problem."
+        ],
+        "sources": [
+          [
+            "Change the model, effort, and thinking settings",
+            "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open the model menu beside Send. Note the current effort. Use the score card below. If another effort is offered, repeat the unchanged card in a fresh chat and compare the arithmetic."
+        ],
+        "sources": [
+          [
+            "Change the model, effort, and thinking settings",
+            "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A longer answer can still contain an adding error. Use the signed score changes as your check."
+        ],
+        "sources": [
+          [
+            "Change the model, effort, and thinking settings",
+            "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "The model determines which effort and thinking controls appear. Some models always use thinking."
+        ],
+        "sources": [
+          [
+            "Change the model, effort, and thinking settings",
+            "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Compare the same inputs before deciding if the extra wait helped. Change an input only for the separate practice test."
+        ],
+        "sources": [
+          [
+            "Change the model, effort, and thinking settings",
+            "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+        ],
+        "sources": [
+          [
+            "Change the model, effort, and thinking settings",
+            "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+          ],
+          [
+            "When should I use web search, extended thinking, and research?",
+            "https://support.claude.com/en/articles/11095361-when-should-i-use-web-search-extended-thinking-and-research"
+          ]
+        ]
+      }
+    ]
   }
 ]

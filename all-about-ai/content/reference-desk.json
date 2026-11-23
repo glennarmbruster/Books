@@ -15,7 +15,7 @@
     ],
     "firstGuide": "which-account",
     "intro": {
-      "what": "Start with the task, the home of the data and a check you can perform.",
+      "what": "Find the job you actually have. Each table starts from one concrete example. Change your pick when the work or the evidence changes.",
       "features": "Nine job tables compare five tools. The entries are editorial suggestions, not benchmark scores.",
       "exchange": "Test a proposed mail fix against a read-only result.",
       "m365": "Start in the app that owns the approved work file.",
@@ -47,7 +47,7 @@
       {
         "title": "Writing",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Draft a short handoff from supplied notes."
         ],
         "sources": [
           [
@@ -74,28 +74,40 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
-              "Draft a handoff and shorten it in chat."
+              "Start here",
+              "The source is already in a Word document and must stay there.",
+              "You can compare the draft with the original sentences side by side."
             ],
             [
               "Gemini",
+              "Alternative",
+              "The needed source is absent or sharing it is not approved.",
               "Revise a rough note in chat."
             ],
             [
               "ChatGPT",
+              "Alternative",
+              "The task must run inside a managed work app.",
               "Ask for two rewrites and compare the meaning."
             ],
             [
               "Microsoft 365 Copilot",
+              "Alternative",
+              "You have no approved work account for the item.",
               "Draft beside the work document when the app and account support it."
             ],
             [
               "Devin",
-              "Choose for repository documentation that must match a code change."
+              "Not a good fit",
+              "Draft a short handoff from supplied notes.",
+              "This example has no repository task for a coding agent."
             ]
           ]
         }
@@ -103,7 +115,7 @@
       {
         "title": "Research with sources",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Find the rule behind a public product claim."
         ],
         "sources": [
           [
@@ -130,28 +142,40 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
+              "Alternative",
+              "You need to change the original in another app.",
               "Turn on web search and open the cited page."
             ],
             [
               "Gemini",
-              "Use Deep Research for a brief and check the linked evidence."
+              "Start here",
+              "You have a closed set of approved documents and cannot search outside it.",
+              "A research plan lets you decide which sources count before reviewing the report."
             ],
             [
               "ChatGPT",
+              "Alternative",
+              "The task must run inside a managed work app.",
               "Request a sourced Deep Research report and open its citations."
             ],
             [
               "Microsoft 365 Copilot",
+              "Alternative",
+              "You have no approved work account for the item.",
               "Use the approved work or web scope, then open the source."
             ],
             [
               "Devin",
-              "Best fit when the question is about a repository. Request file and line evidence."
+              "Not a good fit",
+              "Find the rule behind a public product claim.",
+              "This example has no repository task for a coding agent."
             ]
           ]
         }
@@ -159,7 +183,7 @@
       {
         "title": "Spreadsheets",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Edit a shared Excel workbook while keeping its formulas."
         ],
         "sources": [
           [
@@ -186,28 +210,40 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
+              "Alternative",
+              "You need to change the original in another app.",
               "Upload a supported sheet and check a known total."
             ],
             [
               "Gemini",
+              "Alternative",
+              "The needed source is absent or sharing it is not approved.",
               "Attach the sheet and ask for missing cells and a control total."
             ],
             [
               "ChatGPT",
+              "Alternative",
+              "The task must run inside a managed work app.",
               "Use data analysis on a copy. Ask how blank cells were counted."
             ],
             [
               "Microsoft 365 Copilot",
-              "Choose Excel when the workbook itself needs an edit. Check supported file settings."
+              "Start here",
+              "You are checking a one-off export without a supported workbook.",
+              "The workbook itself is where the changed formula must be checked."
             ],
             [
               "Devin",
-              "Choose when a repeatable importer or spreadsheet test belongs in code."
+              "Not a good fit",
+              "Edit a shared Excel workbook while keeping its formulas.",
+              "This example has no repository task for a coding agent."
             ]
           ]
         }
@@ -215,7 +251,7 @@
       {
         "title": "Code",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Repair a small app with a failing test in its repo."
         ],
         "sources": [
           [
@@ -242,27 +278,39 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
+              "Alternative",
+              "You need to change the original in another app.",
               "Use Claude Code for a file change with a diff."
             ],
             [
               "Gemini",
+              "Alternative",
+              "The needed source is absent or sharing it is not approved.",
               "Use Antigravity when you need an agent working in a project."
             ],
             [
               "ChatGPT",
-              "Use Codex for a repository change and runnable checks."
+              "Start here",
+              "You only need help understanding a short code snippet.",
+              "A runnable test and a visible patch let you inspect both the symptom and the fix."
             ],
             [
               "Microsoft 365 Copilot",
-              "Use M365 Copilot Chat to explain a pasted sample. GitHub Copilot is a separate product."
+              "Not a good fit",
+              "Repair a small app with a failing test in its repo.",
+              "This job gains little from moving the work into another tool."
             ],
             [
               "Devin",
+              "Alternative",
+              "The work has no code or project files.",
               "Give a scoped repository task with a failing test and review the result."
             ]
           ]
@@ -271,7 +319,7 @@
       {
         "title": "M365 admin help",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Find the approved mail runbook for a work account."
         ],
         "sources": [
           [
@@ -298,27 +346,39 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
+              "Alternative",
+              "You need to change the original in another app.",
               "Ask about a stripped-down trace. Require row evidence."
             ],
             [
               "Gemini",
+              "Alternative",
+              "The needed source is absent or sharing it is not approved.",
               "Compare two possible causes from a fictional log."
             ],
             [
               "ChatGPT",
+              "Alternative",
+              "The task must run inside a managed work app.",
               "Draft a read-only test from a supplied sample."
             ],
             [
               "Microsoft 365 Copilot",
-              "Use approved work context to find a runbook. Verify commands in Microsoft Learn."
+              "Start here",
+              "The runbook is missing or the account has no permission to read it.",
+              "The work document can give the approved steps. Current mail state still needs a read-only check."
             ],
             [
               "Devin",
+              "Alternative",
+              "The work has no code or project files.",
               "Choose for maintaining a tested reporting script in a practice repository."
             ]
           ]
@@ -327,7 +387,7 @@
       {
         "title": "Long documents",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Find evidence in a stack of supplied documents."
         ],
         "sources": [
           [
@@ -354,28 +414,40 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
+              "Alternative",
+              "You need to change the original in another app.",
               "Use Projects for recurring source files and instructions."
             ],
             [
               "Gemini",
-              "Use Notebook to cite a selected passage."
+              "Start here",
+              "The answer depends on events outside the selected source set.",
+              "Notebook citations lead back to the passage you need to inspect."
             ],
             [
               "ChatGPT",
+              "Alternative",
+              "The task must run inside a managed work app.",
               "Attach the document, ask for page evidence and verify the quotation."
             ],
             [
               "Microsoft 365 Copilot",
+              "Alternative",
+              "You have no approved work account for the item.",
               "Work in a supported app with an accessible document. Check the original paragraph."
             ],
             [
               "Devin",
-              "Choose for technical documents tied to code. Verify each path."
+              "Not a good fit",
+              "Find evidence in a stack of supplied documents.",
+              "This example has no repository task for a coding agent."
             ]
           ]
         }
@@ -383,7 +455,7 @@
       {
         "title": "Images",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Create a draft illustration and change one detail."
         ],
         "sources": [
           [
@@ -410,28 +482,40 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
+              "Alternative",
+              "You need to change the original in another app.",
               "Choose for image analysis or editable diagrams. See the image guide for output types."
             ],
             [
               "Gemini",
+              "Alternative",
+              "The needed source is absent or sharing it is not approved.",
               "Choose image generation for a draft illustration. Check labels by eye."
             ],
             [
               "ChatGPT",
-              "Use image tools to generate or edit an illustration."
+              "Start here",
+              "A verified diagram with exact labels is the goal.",
+              "You can ask for a visual edit and compare it with the original brief."
             ],
             [
               "Microsoft 365 Copilot",
+              "Alternative",
+              "You have no approved work account for the item.",
               "Use an eligible image creation experience. Check the account’s available tools."
             ],
             [
               "Devin",
-              "Choose for putting existing artwork into an app and testing its layout."
+              "Not a good fit",
+              "Create a draft illustration and change one detail.",
+              "This example has no repository task for a coding agent."
             ]
           ]
         }
@@ -439,7 +523,7 @@
       {
         "title": "Scheduled work",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Schedule repeated work on a code repository."
         ],
         "sources": [
           [
@@ -470,28 +554,40 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
-              "Use a paid recurring task for a routine brief."
+              "Not a good fit",
+              "Schedule repeated work on a code repository.",
+              "This job gains little from moving the work into another tool."
             ],
             [
               "Gemini",
+              "Alternative",
+              "The needed source is absent or sharing it is not approved.",
               "Check Tasks eligibility for the account and region before scheduling."
             ],
             [
               "ChatGPT",
+              "Alternative",
+              "The task must run inside a managed work app.",
               "Use Tasks for a recurring prompt. Check the next scheduled run."
             ],
             [
               "Microsoft 365 Copilot",
+              "Alternative",
+              "You have no approved work account for the item.",
               "Use a licensed Copilot account to schedule a repeated prompt. Check its saved time in the task list."
             ],
             [
               "Devin",
-              "Use a scheduled session for repeatable repository work."
+              "Start here",
+              "The job is a personal reminder and uses no repository.",
+              "A scheduled session can keep instructions with the code they apply to."
             ]
           ]
         }
@@ -499,7 +595,7 @@
       {
         "title": "Working inside Microsoft 365",
         "paragraphs": [
-          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+          "Revise a document inside a Microsoft 365 app."
         ],
         "sources": [
           [
@@ -526,34 +622,46 @@
         "table": {
           "columns": [
             "Tool",
-            "When to choose it"
+            "Default pick",
+            "Avoid when",
+            "Why"
           ],
           "rows": [
             [
               "Claude",
+              "Alternative",
+              "You need to change the original in another app.",
               "Check for an approved connector to the required service."
             ],
             [
               "Gemini",
+              "Alternative",
+              "The needed source is absent or sharing it is not approved.",
               "Check Connected Apps for the exact service. An uploaded copy is a separate input."
             ],
             [
               "ChatGPT",
+              "Alternative",
+              "The task must run inside a managed work app.",
               "Use a permitted attachment when the source document can be shared."
             ],
             [
               "Microsoft 365 Copilot",
-              "Start in the Microsoft 365 app that holds the item. Check account, permission and license."
+              "Start here",
+              "The document or feature is outside your permitted account.",
+              "You can inspect the source item in the app where the change belongs."
             ],
             [
               "Devin",
-              "Use a practice repo for a helper. Check the result in the M365 app separately."
+              "Not a good fit",
+              "Revise a document inside a Microsoft 365 app.",
+              "This example has no repository task for a coding agent."
             ]
           ]
         }
       }
     ],
-    "lastVerified": "2026-11-22",
+    "lastVerified": "2026-11-23",
     "verificationBasis": "page review"
   },
   {

@@ -2737,12 +2737,12 @@
   },
   {
     "id": "gemini-reference-canvas",
-    "premise": "Use this small practice case to check one part of “Edit and test a page in Canvas” before trying the full task.",
-    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nTrace the packed-bag counter after its two button presses\nAdd bag | 1\nAdd bag | 1\nRemove bag | -1\n\nThe score starts at zero. Add each signed change in order. Give the score after each change.",
-    "try": "1. Open a new Gemini conversation. You can also answer on paper with the network off.\n2. Send the whole card. On paper, read the rows and write your first answer before looking below.\n3. Start with a fresh copy of the card. Change the value on the “Remove bag” row from “-1” to “1”. Send it again, or cross out the old value on paper and write your second answer.",
-    "after": "First run: 1 → 2 → 1. Second run: 1 → 2 → 3. Match the values, labels and order shown.",
-    "why": "Following each signed move shows exactly when the running score changes.",
-    "rescue": "If your answer differs from the key, reopen the card for that run. Send: “Show each input row and its effect. Following each signed move shows exactly when the running score changes. Give the final result again.”"
+    "premise": "Keep a paper trace of the same bag counter you build in Canvas. In the second run, replace the last press with Add bag.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nTrace three presses. Start at 0. Start over clears a count of 2.\nAdd first bag | 1\nAdd next bag | 1\nStart over | -2\n\nThe score starts at zero. Add each signed change in order. Give the score after each change.",
+    "try": "1. Open a fresh chat in the tool used on this page. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. Replace the entire “Start over | -2” row with “Add another bag | 1”. Send the revised card with the same question.",
+    "after": "First run: 1 → 2 → 0. Second run: 1 → 2 → 3. Match the values, labels and order shown.",
+    "why": "Changing one input makes the effect of the calculation visible.",
+    "rescue": "If the answer stays the same after a changed input, check which rows the tool used. Send this follow-up: “Use the revised input. Show how each row contributes before giving the requested answer.”"
   },
   {
     "id": "gemini-reference-code",
@@ -2831,6 +2831,96 @@
     "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nEntry | Detail\nBuild an app | code\nRead an external note | connectors\n\nWhich tag points to the guide about an approved service connection? Use the entry labeled “Read an external note”. Give its detail and cite its label. Copy the exact detail, then put its label in square brackets.",
     "try": "1. Open a new practice chat in an approved tool. You can also answer on paper with the network off.\n2. Send the whole card. On paper, read the rows and write your first answer before looking below.\n3. Start with a fresh copy of the card. In the “Read an external note” row, replace “connectors” with “permissions”. Send it again, or cross out the old value on paper and write your second answer.",
     "after": "First run: connectors [Read an external note]. Second run: permissions [Read an external note]. Match the values, labels and order shown.",
+    "why": "A claim is easier to check when it points to the exact entry that supports it.",
+    "rescue": "A plausible detail from another row answers a different question. Send this follow-up: “Point to the requested entry. Return its current detail followed by its label in brackets.”"
+  },
+  {
+    "id": "claude-reference-memory",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Try a harmless preference across two conversations.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nEntry | Detail\nHandoff | Bullets\nStatus | Open\n\nWhich format did the practice team save? Use the entry labeled “Handoff”. Give its detail and cite its label.",
+    "try": "1. Open a fresh chat in Claude. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. In the “Handoff” row, replace “Bullets” with “Short lines”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Bullets [Handoff]. Second run: Short lines [Handoff]. Match the values, labels and order shown.",
+    "why": "A claim is easier to check when it points to the exact entry that supports it.",
+    "rescue": "A plausible detail from another row answers a different question. Send this follow-up: “Point to the requested entry. Return its current detail followed by its label in brackets.”"
+  },
+  {
+    "id": "claude-reference-skills",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Save a small set of instructions for a job you often repeat.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nDock light | ready\nSpare cart | waiting\nGate latch | ready\n\nWhich repair notes belong in the practice list? List the matching record names in the order shown. Use only rows marked “ready”.",
+    "try": "1. Open a fresh chat in Claude. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. Change the finding for Spare cart from “waiting” to “ready”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Dock light, Gate latch. Second run: Dock light, Spare cart, Gate latch. Match the values, labels and order shown.",
+    "why": "One changed finding can change which records belong in the answer.",
+    "rescue": "An extra record means the filter was too broad. Send this follow-up: “Read each finding aloud. Which records carry the requested finding, in order?”"
+  },
+  {
+    "id": "claude-reference-style",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Keep one writing preference or reuse a style through a skill.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nEntry | Detail\nFootpath | Open\nGate | Closed\n\nWhich path must stay open in the rewrite? Use the entry labeled “Footpath”. Give its detail and cite its label.",
+    "try": "1. Open a fresh chat in Claude. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. In the “Footpath” row, replace “Open” with “Closed for repairs”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Open [Footpath]. Second run: Closed for repairs [Footpath]. Match the values, labels and order shown.",
+    "why": "A claim is easier to check when it points to the exact entry that supports it.",
+    "rescue": "A plausible detail from another row answers a different question. Send this follow-up: “Point to the requested entry. Return its current detail followed by its label in brackets.”"
+  },
+  {
+    "id": "claude-reference-research",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Follow a claim from an answer to a page you can read.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nSave switch | supported\nAll accounts | open\nSearch control | supported\n\nWhich claims have a source that actually states the rule? List the matching record names in the order shown. Use only rows marked “supported”.",
+    "try": "1. Open a fresh chat in Claude. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. Change the finding for All accounts from “open” to “supported”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Save switch, Search control. Second run: Save switch, All accounts, Search control. Match the values, labels and order shown.",
+    "why": "One changed finding can change which records belong in the answer.",
+    "rescue": "An extra record means the filter was too broad. Send this follow-up: “Read each finding aloud. Which records carry the requested finding, in order?”"
+  },
+  {
+    "id": "claude-reference-thinking",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Test a harder question with a result you can check yourself.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nScore changes in order\nFirst | 4\nSecond | -2\nLast | 3\n\nThe score starts at zero. Add each signed change in order. Give the score after each change.",
+    "try": "1. Open a fresh chat in Claude. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. Change the value on the “Last” row from “3” to “1”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: 4 → 2 → 5. Second run: 4 → 2 → 3. Match the values, labels and order shown.",
+    "why": "Changing one input makes the effect of the calculation visible.",
+    "rescue": "If the answer stays the same after a changed input, check which rows the tool used. Send this follow-up: “Use the revised input. Show how each row contributes before giving the requested answer.”"
+  },
+  {
+    "id": "gemini-reference-gems",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Build a helper that formats the same kind of note each time.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nMap | packed\nFlask | waiting\nCoat | packed\n\nWhich items belong on the packed list? List the matching record names in the order shown. Use only rows marked “packed”.",
+    "try": "1. Open a fresh chat in Gemini. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. Change the finding for Flask from “waiting” to “packed”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Map, Coat. Second run: Map, Flask, Coat. Match the values, labels and order shown.",
+    "why": "One changed finding can change which records belong in the answer.",
+    "rescue": "An extra record means the filter was too broad. Send this follow-up: “Read each finding aloud. Which records carry the requested finding, in order?”"
+  },
+  {
+    "id": "gemini-reference-research",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Choose what a report should cover before letting a search run.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nNotebook help | official\nOpinion post | outside\nLimits guide | official\n\nWhich entries meet the plan's official-source rule? List the matching record names in the order shown. Use only rows marked “official”.",
+    "try": "1. Open a fresh chat in Gemini. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. Change the finding for Opinion post from “outside” to “official”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Notebook help, Limits guide. Second run: Notebook help, Opinion post, Limits guide. Match the values, labels and order shown.",
+    "why": "One changed finding can change which records belong in the answer.",
+    "rescue": "An extra record means the filter was too broad. Send this follow-up: “Read each finding aloud. Which records carry the requested finding, in order?”"
+  },
+  {
+    "id": "gemini-reference-personal",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. See which connected sources are allowed to personalize an answer.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nEntry | Detail\nReminder | Written\nTrips | Pending\n\nWhich reminder format is permitted by the practice card? Use the entry labeled “Reminder”. Give its detail and cite its label.",
+    "try": "1. Open a fresh chat in Gemini. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. In the “Reminder” row, replace “Written” with “Spoken”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Written [Reminder]. Second run: Spoken [Reminder]. Match the values, labels and order shown.",
+    "why": "A claim is easier to check when it points to the exact entry that supports it.",
+    "rescue": "A plausible detail from another row answers a different question. Send this follow-up: “Point to the requested entry. Return its current detail followed by its label in brackets.”"
+  },
+  {
+    "id": "gemini-reference-workspace",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Keep the original text and the proposed change side by side.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nEntry | Detail\nGate | Friday\nPier | Tuesday\n\nWhich day did the gate check move to? Use the entry labeled “Gate”. Give its detail and cite its label.",
+    "try": "1. Open a fresh chat in Gemini. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. In the “Gate” row, replace “Friday” with “Monday”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Friday [Gate]. Second run: Monday [Gate]. Match the values, labels and order shown.",
+    "why": "A claim is easier to check when it points to the exact entry that supports it.",
+    "rescue": "A plausible detail from another row answers a different question. Send this follow-up: “Point to the requested entry. Return its current detail followed by its label in brackets.”"
+  },
+  {
+    "id": "gemini-reference-creation",
+    "premise": "Use this fictional card to check the part of the exercise that you can repeat on paper. Build a visual draft from a short shot list.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nEntry | Detail\nRight | Bell\nLeft | Anchor\n\nWhich symbol belongs on the right of the sign? Use the entry labeled “Right”. Give its detail and cite its label.",
+    "try": "1. Open a fresh chat in Gemini. Offline, write the answers on paper.\n2. Copy the entire practice card, paste it into the chat and send it. Keep the first answer.\n3. Copy the card again. In the “Right” row, replace “Bell” with “Compass”. Send the revised card with the same question. On paper, cross out the old value and answer again.",
+    "after": "First run: Bell [Right]. Second run: Compass [Right]. Match the values, labels and order shown.",
     "why": "A claim is easier to check when it points to the exact entry that supports it.",
     "rescue": "A plausible detail from another row answers a different question. Send this follow-up: “Point to the requested entry. Return its current detail followed by its label in brackets.”"
   }

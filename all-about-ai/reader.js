@@ -480,6 +480,13 @@ function openLocation(moveFocus) {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
+      if (section.practicePage) {
+        const link = element('a',window.portableAiBook ? 'Save the practice desk page' : 'Open the practice desk page');
+        link.href = assetURL('./'+section.practicePage);
+        if (window.portableAiBook) link.download = 'practice-desk.html';
+        else { link.target = '_blank'; link.rel = 'noopener'; }
+        block.append(link);
+      }
       if (section.tagIndex) {
         const tags = new Map();
         for (const page of referenceChapters) {
