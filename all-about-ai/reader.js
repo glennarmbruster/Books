@@ -7,6 +7,7 @@ const referenceChapters = [];
 const guideChapters = [];
 let illustrations = [];
 let caseGuide = new Map();
+let productFacts = new Map();
 let worked = new Map();
 let indexMode;
 let currentTrack = 'devin';
@@ -468,9 +469,11 @@ function openLocation(moveFocus) {
     byId('group-name').textContent = lab ? chapter.group.title + '  /  Lab ' + chapter.number + ' of ' + chapter.group.items.length + ' · ' + chapter.level : chapter.group.title + (chapter.group.guide ? '  /  Lesson ' : '  /  Chapter ') + chapter.number;
     byId('chapter-title').textContent = chapter.title;
     byId('summary').textContent = chapter.summary;
-    byId('review-date').textContent = chapter.lastVerified
-      ? 'Last verified ' + dateLabel(chapter.lastVerified) + (chapter.verificationBasis === 'previous group review' ? ' · inherited group review' : '')
-      : 'Reviewed ' + dateLabel(chapter.group.reviewed);
+    const human = chapter.basis.includes('human-tested');
+    const basisDate = human ? 'Human test recorded' : chapter.basis.includes('source-read') ? 'Source review' : 'Draft record';
+    const review = byId('review-date');
+    review.textContent = basisDate+' · '+dateLabel(chapter.lastVerified)+' · '+chapter.basis.join(' / ')+' ';
+    review.append(element('strong',human ? 'Human-tested' : 'Not human-verified','verify-badge'));
     if (chapter.unverified?.length) {
       const badge = element('strong','Not verified','verify-badge');
       const details = element('span',chapter.unverified.join(' '));
@@ -480,12 +483,25 @@ function openLocation(moveFocus) {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
+      if (section.practiceCode) block.append(snippet(section.practiceCode,'starter file'));
       if (section.practicePage) {
         const link = element('a',window.portableAiBook ? 'Save the practice desk page' : 'Open the practice desk page');
         link.href = assetURL('./'+section.practicePage);
         if (window.portableAiBook) link.download = 'practice-desk.html';
         else { link.target = '_blank'; link.rel = 'noopener'; }
         block.append(link);
+      }
+      if (section.staleFacts) {
+        const today = new Date().toISOString().slice(0,10);
+        const sorted = [...productFacts.values()].sort((a,b)=>a.verifiedOn.localeCompare(b.verifiedOn)||a.key.localeCompare(b.key));
+        const due = sorted.filter(f=>f.value.includes('Not verified') || Date.parse(today)-Date.parse(f.verifiedOn)>=30*86400000);
+        for (const [heading,rows] of [['Due for review',due],['Upcoming',sorted.filter(f=>!due.includes(f))]]) {
+          const details = element('details');
+          details.append(element('summary',heading+' ('+rows.length+')'));
+          const list = element('ul');
+          for (const fact of rows) list.append(element('li',fact.verifiedOn+' · '+fact.key));
+          details.append(list); block.append(details);
+        }
       }
       if (section.tagIndex) {
         const tags = new Map();
@@ -642,7 +658,12 @@ async function json(path) {
 }
 // Resolve catalog fields before text reaches headings, search, tables or copy buttons.
 function fillModelFields(value, catalog, used) {
-  if (typeof value === 'string') return value.replace(/\{\{model\.([a-z0-9.-]+)\}\}/g, (_, key) => {
+  if (typeof value === 'string') return value.replace(/\{\{fact\.([a-z0-9.-]+)\}\}/g, (_, key) => {
+    const fact = productFacts.get(key);
+    if (!fact) throw Error('Missing product fact '+key);
+    used.add('fact:'+key);
+    return fact.value;
+  }).replace(/\{\{model\.([a-z0-9.-]+)\}\}/g, (_, key) => {
     const field = catalog.values[key];
     if (!field) throw Error('Missing catalog field ' + key);
     used.add(key);
@@ -656,7 +677,8 @@ function fillModelFields(value, catalog, used) {
 async function start() {
   const edition = await json('./edition.json');
   caseGuide = new Map((await json('./practice/exchange-inventory/case-guide.json')).map(item=>[item.file,item]));
-  const [pictures, examples, catalog] = await Promise.all([json('./content/figures.json'), json('./content/worked.json'), json('./content/models.json')]);
+  const [pictures, examples, catalog, factRows] = await Promise.all([json('./content/figures.json'), json('./content/worked.json'), json('./content/models.json'), json('./content/facts.json')]);
+  productFacts = new Map(factRows.map(row=>[row.key,row]));
   illustrations = fillModelFields(pictures, catalog, new Set());
   worked = new Map(examples.map(example=>[example.id,fillModelFields(example,catalog,new Set())]));
   groups = await Promise.all(edition.groups.map(async group => {
@@ -664,7 +686,14 @@ async function start() {
     const items = rows.map(row => {
       const used = new Set();
       const item = fillModelFields(row,catalog,used);
-      item.catalogSources = [...new Set([...used].map(key=>catalog.values[key].source))].map(url=>[new URL(url).hostname + ' · model details',url]);
+      const example = worked.get(row.id);
+      if (example) {
+        for (const [name, value] of Object.entries(example)) {
+          const ref = /^\{\{chapter\.([A-Za-z0-9_.-]+)\}\}$/.exec(value);
+          if (ref) example[name] = ref[1].split('.').reduce((node,key)=>node[key],item);
+        }
+      }
+      item.catalogSources = [...new Set([...used].map(key=>(key.startsWith('fact:') ? productFacts.get(key.slice(5)).source : catalog.values[key].source)))].map(url=>[new URL(url).hostname + ' · catalog source',url]);
       return item;
     });
     return {...group,items};

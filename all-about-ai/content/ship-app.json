@@ -94,7 +94,6 @@
       "lab-ship-app-06"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "apps",
       "shipping",
@@ -121,6 +120,9 @@
         "rollback",
         "Putting the old setting or file back."
       ]
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -211,7 +213,6 @@
       "lab-ship-app-05"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "apps",
       "shipping",
@@ -238,6 +239,9 @@
         "rollback",
         "Putting the old setting or file back."
       ]
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   }
 ]

@@ -213,7 +213,7 @@
     "file": "trace-recipients.csv",
     "prefix": "TR",
     "title": "Message trace",
-    "sample": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | desk@example.test | room@example.test | Delivered",
+    "sample": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | dispatch@example.test | dock@example.test | Delivered",
     "note": "Use the recipient and the message ID. A single message may have more than one result.",
     "sources": [
       [
@@ -273,7 +273,7 @@
     "file": "mail-case-index.txt",
     "prefix": "MX",
     "title": "Message trace",
-    "sample": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | desk@example.test | room@example.test | Delivered",
+    "sample": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | dispatch@example.test | dock@example.test | Delivered",
     "note": "Use the recipient and the message ID. A single message may have more than one result.",
     "sources": [
       [

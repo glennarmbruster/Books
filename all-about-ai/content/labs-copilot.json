@@ -44,7 +44,11 @@
         "Microsoft · work grounding and permissions",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-02",
@@ -95,7 +99,11 @@
         "Microsoft · Copilot in each Office app",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-03",
@@ -146,7 +154,11 @@
         "Microsoft · Copilot in each Office app",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-04",
@@ -197,7 +209,11 @@
         "Microsoft · work grounding and permissions",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-05",
@@ -253,7 +269,11 @@
       "goal": "Count seats and people in the same export.",
       "given": "One person has two plans. Another appears twice with the same plan.",
       "compare": "See whether your prompt distinguishes a row, a person and a person-plan pair."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-06",
@@ -304,7 +324,11 @@
         "Microsoft · Copilot in Word",
         "https://support.microsoft.com/en-us/word/copilot/start-from-exist"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-07",
@@ -355,7 +379,11 @@
         "Microsoft · Copilot in each Office app",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-08",
@@ -406,7 +434,11 @@
         "Microsoft · Copilot in each Office app",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-09",
@@ -462,7 +494,11 @@
       "goal": "Answer a queue of help requests from two printed rules.",
       "given": "One request is standard, one asks about restore and one leaves out the type.",
       "compare": "Did you ask for a rule ID and give the helper a way to handle each missing fact?"
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-10",
@@ -513,7 +549,11 @@
         "Microsoft · Copilot in each Office app",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-11",
@@ -564,7 +604,11 @@
         "Microsoft · work grounding and permissions",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-12",
@@ -615,7 +659,11 @@
         "Microsoft · Copilot in each Office app",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-13",
@@ -666,7 +714,11 @@
         "Microsoft · Copilot in Word",
         "https://support.microsoft.com/en-us/word/copilot/start-from-exist"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-14",
@@ -717,7 +769,11 @@
         "Microsoft Learn · agent knowledge sources",
         "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-15",
@@ -772,7 +828,11 @@
         "Microsoft · creating a presentation from a file",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/prepare-your-presentation-with-microsoft-365-copilot"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-16",
@@ -823,7 +883,11 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-17",
@@ -870,7 +934,11 @@
         "Microsoft · first steps in Copilot Chat",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-18",
@@ -917,7 +985,11 @@
         "Microsoft · first steps in Copilot Chat",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-19",
@@ -968,7 +1040,11 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-20",
@@ -1015,7 +1091,11 @@
         "Microsoft · first steps in Copilot Chat",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-21",
@@ -1066,7 +1146,11 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-22",
@@ -1117,7 +1201,11 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-23",
@@ -1164,7 +1252,11 @@
         "Microsoft · first steps in Copilot Chat",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-24",
@@ -1216,7 +1308,11 @@
       "goal": "Run a small bingo game with a repeated draw.",
       "given": "Board: 2, 4, 6. Pile: 4, 4, 2, 6. Then try a fresh game.",
       "compare": "Compare how each prompt handles the second 4 and which things a reset must clear."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-25",
@@ -1267,7 +1363,11 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-26",
@@ -1318,7 +1418,11 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-27",
@@ -1365,7 +1469,11 @@
         "Microsoft · first steps in Copilot Chat",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-28",
@@ -1412,7 +1520,11 @@
         "Microsoft · first steps in Copilot Chat",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-29",
@@ -1463,7 +1575,11 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-copilot-30",
@@ -1514,6 +1630,10 @@
         "Microsoft · working with Copilot in Excel",
         "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

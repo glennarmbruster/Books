@@ -43,7 +43,11 @@
         "Read more about files and folders",
         "https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "open-web",
@@ -93,7 +97,11 @@
         "iPad User Guide",
         "https://support.apple.com/guide/ipad/welcome/ipados"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "make-folder",
@@ -147,7 +155,11 @@
         "Apple’s iPad guide",
         "https://support.apple.com/guide/ipad/welcome/ipados"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "get-kit",
@@ -197,7 +209,11 @@
         "Apple’s iPad guide",
         "https://support.apple.com/guide/ipad/welcome/ipados"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "first-terminal",
@@ -247,7 +263,11 @@
         "PowerShell help",
         "https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/02-help-system"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "ask-check",
@@ -293,7 +313,11 @@
         "Mozilla on browsing and finding a source",
         "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "project-or-chat",
@@ -306,20 +330,20 @@
     "actions": [
       {
         "title": "Try one question",
-        "do": "Ask a chat to make those five words even shorter. Read the answer out loud.",
+        "do": "Ask a chat to make those four words even shorter. Read the answer out loud.",
         "see": "Meet at dock is short. You can decide whether it sounds natural.",
         "stuck": "If a time appears, ask again and tell it to keep the same facts."
       },
       {
         "title": "Gather files",
-        "do": "Write Trip at the top of a page. Under it list schedule, notice and packing list. This is the idea behind a project.",
+        "do": "On paper or in three text files, write Schedule: depart at noon. Notice: depart at ten. Packing list: bring a map.",
         "see": "All three items belong to one named place.",
         "stuck": "Give each note a clear name before you add it to a project."
       },
       {
         "title": "Give an agent a job",
-        "do": "Ask a helper to read the schedule, check the notice and suggest one fix. Say to wait for you before saving.",
-        "see": "You know what the helper may read, which file it may edit and where it must stop.",
+        "do": "Give the helper all three notes. Ask it to make the notice agree with the schedule. Request the changed line before saving.",
+        "see": "The notice now says noon. The schedule and packing list stay the same.",
         "stuck": "If it wants to rewrite everything, narrow the job to one line in the notice."
       },
       {
@@ -339,7 +363,11 @@
         "GitHub’s introduction to a shared project",
         "https://docs.github.com/en/get-started/start-your-journey/hello-world"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "read-a-change",
@@ -385,7 +413,11 @@
         "GitHub’s introduction to changes and review",
         "https://docs.github.com/en/get-started/start-your-journey/hello-world"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "which-account",
@@ -431,7 +463,11 @@
         "Microsoft’s account support",
         "https://support.microsoft.com/en-us/accounts-billing/manage/how-to-sign-in-to-a-microsoft-account"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "files-and-formats",
@@ -481,6 +517,10 @@
         "iPad User Guide",
         "https://support.apple.com/guide/ipad/welcome/ipados"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

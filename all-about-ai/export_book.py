@@ -79,7 +79,7 @@ From Site/all-about-ai, run python3 update_edition.py --check to verify the
 unpacked files directly. After you edit, run python3 update_edition.py in
 that same folder to refresh the top-level reader and create a fresh ZIP in
 Site/downloads. See UPDATING.md for the checks and practice commands.
-The illustrated content was reviewed {reviewed:%B %d, %Y}.
+This book was built for the edition dated {reviewed:%B %d, %Y}.
 """
 archive = io.BytesIO()
 member_hashes = {}

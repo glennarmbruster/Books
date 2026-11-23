@@ -44,7 +44,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-02",
@@ -91,7 +95,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-03",
@@ -138,7 +146,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-04",
@@ -189,7 +201,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-05",
@@ -241,7 +257,11 @@
       "goal": "Keep the newest label for each item without losing a good report.",
       "given": "One row repeats exactly. Another test gives two different labels for the same revision.",
       "compare": "Check that your prompt covers both an exact repeat and two conflicting rows."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-06",
@@ -288,7 +308,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-07",
@@ -339,7 +363,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-08",
@@ -387,7 +415,11 @@
         "OpenAI · non-interactive mode",
         "https://learn.chatgpt.com/docs/non-interactive-mode"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-09",
@@ -439,7 +471,11 @@
       "goal": "Make a useful report with no individual mail records.",
       "given": "The status column contains OK, an empty value and ok. The other columns hold sample addresses and text.",
       "compare": "Compare what counts as one category and what must stay out of the saved file."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-10",
@@ -486,7 +522,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-11",
@@ -533,7 +573,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-12",
@@ -580,7 +624,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-13",
@@ -627,7 +675,11 @@
         "OpenAI · Codex CLI",
         "https://learn.chatgpt.com/docs/codex/cli"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-14",
@@ -692,7 +744,11 @@
         "OpenAI · ChatGPT Chat, Work and Codex",
         "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-15",
@@ -743,7 +799,11 @@
         "OpenAI · code review",
         "https://learn.chatgpt.com/docs/code-review?surface=app"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-16",
@@ -790,7 +850,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-17",
@@ -837,7 +901,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-18",
@@ -884,7 +952,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-19",
@@ -931,7 +1003,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-20",
@@ -978,7 +1054,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-21",
@@ -1025,7 +1105,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-22",
@@ -1072,7 +1156,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-23",
@@ -1119,7 +1207,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-24",
@@ -1171,7 +1263,11 @@
       "goal": "Find openings in a partly booked hour.",
       "given": "The desk opens at 09:00. Two busy blocks meet at 09:25. Test a gap just at the minimum length.",
       "compare": "Does your request cover touching blocks and a day with no usable gap?"
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-25",
@@ -1218,7 +1314,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-26",
@@ -1265,7 +1365,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-27",
@@ -1312,7 +1416,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-28",
@@ -1359,7 +1467,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-29",
@@ -1406,7 +1518,11 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-codex-30",
@@ -1453,6 +1569,10 @@
         "OpenAI · first steps in Codex",
         "https://learn.chatgpt.com/docs/quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

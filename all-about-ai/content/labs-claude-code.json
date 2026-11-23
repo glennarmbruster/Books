@@ -43,7 +43,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-02",
@@ -89,7 +93,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-03",
@@ -131,7 +139,11 @@
         "Anthropic · project instructions",
         "https://code.claude.com/docs/en/memory"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-04",
@@ -173,7 +185,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-05",
@@ -224,7 +240,11 @@
       "goal": "Plan tests for a mailbox quota warning before editing.",
       "given": "A warning starts at 90 percent. Try 89, 90 and an absent reading.",
       "compare": "Check whether your prompt asks for a prediction and a pause before the first edit."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-06",
@@ -266,7 +286,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-07",
@@ -312,7 +336,11 @@
         "Anthropic · project instructions",
         "https://code.claude.com/docs/en/memory"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-08",
@@ -354,7 +382,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-09",
@@ -401,7 +433,11 @@
       "goal": "Show exactly who a changed guest rule affects.",
       "given": "One rule allows fewer than seven days. The next allows up to seven. Include a member as a control.",
       "compare": "Compare the boundary, the neighboring days and the unchanged group in the two prompts."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-10",
@@ -443,7 +479,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-11",
@@ -485,7 +525,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-12",
@@ -527,7 +571,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-13",
@@ -569,7 +617,11 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-14",
@@ -638,7 +690,11 @@
         "Anthropic · open Claude Code on desktop",
         "https://code.claude.com/docs/en/desktop-quickstart"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-15",
@@ -684,7 +740,11 @@
         "Anthropic · project instructions",
         "https://code.claude.com/docs/en/memory"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-16",
@@ -734,7 +794,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-17",
@@ -784,7 +848,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-18",
@@ -834,7 +902,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-19",
@@ -884,7 +956,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-20",
@@ -898,7 +974,7 @@
       "Show how close a team list is to its limit.",
       "Build an easy-to-read progress dial."
     ],
-    "prompt": "Build one index.html file with its style and JavaScript inside. Make a small size reader. Add boxes for used and limit, a Check button, a bar and a printed percentage. Warn at 90 percent and above. Call an empty value or a limit of zero Needs review. Reject negative sizes. Use these practice values: Used 25, limit 100. Other test pairs are 0 and 100, 90 and 100, 5 and 0.",
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a small size reader. Add boxes for used and limit, a Check button, a bar and a printed percentage. Warn at 90 percent and above. Call an empty value or a limit of zero Needs review. Reject negative sizes. Use these practice values: Used 25, limit 100. Other test pairs are 0 and 100, 90 and 100, 5 and 0. Print OK below 90 percent and Warning from 90 percent up when the inputs are valid.",
     "steps": [
       {
         "title": "Set up the practice space",
@@ -917,7 +993,7 @@
       },
       {
         "title": "Try a change",
-        "text": "Try 90 and 100, then 5 and 0, then erase the used field. Read the message after each.",
+        "text": "Try 90 and 100, then 5 and 0. Set the limit back to 100 before you empty Used. Check each label.",
         "help": "If the screen shows Infinity, check the limit before dividing. If zero used disappears, check for a blank string first."
       }
     ],
@@ -934,7 +1010,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-21",
@@ -984,7 +1064,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-22",
@@ -1034,7 +1118,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-23",
@@ -1084,7 +1172,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-24",
@@ -1139,7 +1231,11 @@
       "goal": "Show what changed between two lists of shared files.",
       "given": "A file can keep its ID and change title. A bad export can repeat one ID.",
       "compare": "Did you tell the helper what identifies a file and when to stop before reporting?"
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-25",
@@ -1189,7 +1285,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-26",
@@ -1239,7 +1339,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-27",
@@ -1289,7 +1393,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-28",
@@ -1339,7 +1447,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-29",
@@ -1389,7 +1501,11 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-claude-code-30",
@@ -1439,6 +1555,10 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

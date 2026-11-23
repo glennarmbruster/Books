@@ -48,24 +48,24 @@
           ],
           "rows": [
             [
-              "Free",
-              "Auto",
-              "{{model.google.hydrogen.name}}"
+              "{{fact.gemini.picker.free.plan}}",
+              "{{fact.gemini.picker.free.chat}}",
+              "{{fact.gemini.picker.free.tasks}}"
             ],
             [
-              "Google AI Plus",
-              "Auto or {{model.google.hydrogen.name}}",
-              "{{model.google.hydrogen.name}}"
+              "{{fact.gemini.picker.plus.plan}}",
+              "{{fact.gemini.picker.plus.chat}}",
+              "{{fact.gemini.picker.plus.tasks}}"
             ],
             [
-              "Google AI Pro",
-              "Auto, {{model.google.hydrogen.name}} or {{model.google.neon.name}}",
-              "{{model.google.hydrogen.name}} or {{model.google.neon.name}}"
+              "{{fact.gemini.picker.pro.plan}}",
+              "{{fact.gemini.picker.pro.chat}}",
+              "{{fact.gemini.picker.pro.tasks}}"
             ],
             [
-              "Google AI Ultra",
-              "Auto, {{model.google.hydrogen.name}}, {{model.google.neon.name}} or {{model.google.carbon.name}}",
-              "{{model.google.hydrogen.name}}, {{model.google.neon.name}} or {{model.google.carbon.name}}"
+              "{{fact.gemini.picker.ultra.plan}}",
+              "{{fact.gemini.picker.ultra.chat}}",
+              "{{fact.gemini.picker.ultra.tasks}}"
             ]
           ]
         }
@@ -110,9 +110,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "gemini"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -234,10 +236,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "gemini",
       "models"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -410,10 +414,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "gemini",
       "files"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -496,9 +502,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "gemini"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -618,11 +626,13 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "gemini",
       "images",
       "files"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   }
 ]

@@ -662,7 +662,10 @@
       }
     ],
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "reference-changes",
@@ -756,12 +759,37 @@
             "where": "which-account",
             "what": "Replaced the retired account-support address with the official sign-in guide after a 404 check.",
             "kind": "edition"
+          },
+          {
+            "date": "2026-11-23",
+            "kind": "edition",
+            "where": "reference-changes",
+            "what": "Rebuilt the worked cards and case files. Added ten surface guides, source-based facts, and separate labels for drafting, reading a source and testing a page."
           }
         ]
+      },
+      {
+        "title": "Monthly fact review",
+        "paragraphs": [
+          "Open this list before a monthly update. Unconfirmed facts and facts last checked at least 30 days ago appear first, oldest date first within each list."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Gemini Apps limits & feature availability - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16275805?hl=en"
+          ]
+        ],
+        "staleFacts": true
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted"
+    ]
   },
   {
     "id": "reference-prompts",
@@ -913,7 +941,7 @@
             "tool": "Claude",
             "page": "troubleshoot-loop",
             "title": "Test one explanation",
-            "text": "One fictional mailbox rejected a 14 MB message. A second received the same message. List two reasons. For each, name evidence that would weaken it. Give one read-only test and no change command."
+            "text": "One fictional mailbox rejected a large practice message. A second received the same message. List two reasons. For each, name evidence that would weaken it. Give one read-only test and no change command."
           }
         ]
       },
@@ -1009,7 +1037,9 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted"
+    ]
   },
   {
     "id": "reference-tags",
@@ -1057,6 +1087,8 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted"
+    ]
   }
 ]

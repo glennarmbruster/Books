@@ -1,7 +1,7 @@
 [
   {
     "id": "devin-start",
-    "title": "What is Devin Enterprise? Start here",
+    "title": "What is {{fact.devin.enterprise.name}}? Start here",
     "summary": "Give Devin a question it can answer by reading a practice file. Then decide whether an edit would help.",
     "intro": {
       "what": "Devin is a coding helper. Enterprise is a version set up for teams. A team can choose which projects it can use and who may approve changes.",
@@ -145,11 +145,13 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code",
       "files"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -366,10 +368,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -462,10 +466,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -564,10 +570,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -646,11 +654,13 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code",
       "agents"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -721,10 +731,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -811,10 +823,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -850,7 +864,7 @@
       {
         "title": "Check the starting point",
         "paragraphs": [
-          "In Slack or Teams, use an approved practice channel. Check that the app is installed and your account is linked. Ask which Devin team and project will receive the request. Start with one practice ticket and one small test. Follow the session link and check that you landed in the expected project."
+          "{{fact.devin-integrations.detail-1}}"
         ],
         "sources": [
           [
@@ -903,10 +917,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -1026,12 +1042,14 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code",
       "files",
       "permissions"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -1118,11 +1136,13 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code",
       "files"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -1213,10 +1233,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -1301,10 +1323,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -1312,7 +1336,7 @@
     "title": "Count what a Devin job cost",
     "summary": "Use job results, usage records and review time to tell a fair story.",
     "intro": {
-      "what": "Agent Compute Units, or ACUs, measure work done by Devin Enterprise. The rate your team pays comes from its own plan.",
+      "what": "Agent Compute Units, or ACUs, measure work done by {{fact.devin.enterprise.name}}. The rate your team pays comes from its own plan.",
       "features": "Usage reports show the units spent. Review records show which changes were accepted. An audit log records changes to settings and access.",
       "exchange": "Count accepted practice mail reports and the time spent checking them.",
       "m365": "Compare two batches of sample work of the same size and type.",
@@ -1395,11 +1419,13 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code",
       "limits"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -1507,10 +1533,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "devin",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   }
 ]

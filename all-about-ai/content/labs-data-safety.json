@@ -16,7 +16,7 @@
       {
         "title": "Read the boundary",
         "text": "Read SP1, SP2 and SP4 locally. Make two rows headed Approved work workspace and Personal account. Both rows concern the same small, redacted excerpt.",
-        "help": "If the tool brand is all you wrote, add account, feature and purpose to each row."
+        "help": "If the tool brand is all you wrote, add account, feature and purpose to each row. Use only the supplied fictional practice policy for this exercise."
       },
       {
         "title": "Make the decision",
@@ -69,7 +69,11 @@
         "permission",
         "A rule that says who may do what."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-data-safety-02",
@@ -142,7 +146,11 @@
         "permission",
         "A rule that says who may do what."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-data-safety-03",
@@ -215,7 +223,11 @@
         "permission",
         "A rule that says who may do what."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-data-safety-04",
@@ -292,7 +304,11 @@
         "permission",
         "A rule that says who may do what."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-data-safety-05",
@@ -365,7 +381,11 @@
         "permission",
         "A rule that says who may do what."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-data-safety-06",
@@ -452,6 +472,10 @@
         "permission",
         "A rule that says who may do what."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

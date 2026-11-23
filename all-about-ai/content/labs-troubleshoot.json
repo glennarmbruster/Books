@@ -61,7 +61,11 @@
         "bounce",
         "A notice that says a message could not reach its target."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-02",
@@ -95,7 +99,7 @@
     ],
     "check": [
       "NR1 and NR2 match TR2, and NR5 says recipient not found.",
-      "AL3 and AL4 support a stale list entry. AL6 records fresh delivery after the correction and AL7 checks an separate list."
+      "AL3 and AL4 support a stale list entry. AL6 records fresh delivery after the correction and AL7 checks a separate list."
     ],
     "sources": [
       [
@@ -131,7 +135,11 @@
         "bounce",
         "A notice that says a message could not reach its target."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-03",
@@ -207,7 +215,11 @@
         "policy",
         "A written rule that sets what is allowed."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-04",
@@ -293,7 +305,11 @@
         "policy",
         "A written rule that sets what is allowed."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-05",
@@ -366,7 +382,11 @@
         "rule",
         "A test and the action to take when the test passes."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-06",
@@ -447,7 +467,11 @@
         "rollback",
         "Putting the old setting or file back."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-07",
@@ -521,7 +545,11 @@
         "preview",
         "A look at what a proposed change would do."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-08",
@@ -586,7 +614,11 @@
         "sign-in",
         "One attempt to open an account."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-09",
@@ -656,7 +688,11 @@
         "sign-in",
         "One attempt to open an account."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-10",
@@ -732,7 +768,11 @@
         "trace",
         "A record of what happened to a message on its route."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-11",
@@ -814,7 +854,11 @@
         "rollback",
         "Putting the old setting or file back."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-12",
@@ -933,7 +977,11 @@
         "preview",
         "A look at what a proposed change would do."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-13",
@@ -1036,7 +1084,11 @@
         "preview",
         "A look at what a proposed change would do."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-14",
@@ -1128,7 +1180,11 @@
         "rule",
         "A test and the action to take when the test passes."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-15",
@@ -1213,7 +1269,11 @@
         "rollback",
         "Putting the old setting or file back."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-troubleshoot-16",
@@ -1308,6 +1368,10 @@
         "read-only",
         "You may look at the data without changing it."
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

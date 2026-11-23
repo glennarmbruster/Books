@@ -87,9 +87,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "claude"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -236,11 +238,13 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "claude",
       "limits",
       "models"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -323,10 +327,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "claude",
       "code"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -405,10 +411,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "claude",
       "files"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -491,10 +499,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "claude",
       "images"
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   }
 ]

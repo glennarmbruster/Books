@@ -1,0 +1,422 @@
+[
+  {
+    "key": "gemini.picker.free.plan",
+    "value": "Free",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.free.chat",
+    "value": "Auto",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.free.tasks",
+    "value": "{{model.google.hydrogen.name}}",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.plus.plan",
+    "value": "Google AI Plus",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.plus.chat",
+    "value": "Auto or {{model.google.hydrogen.name}}",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.plus.tasks",
+    "value": "{{model.google.hydrogen.name}}",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.pro.plan",
+    "value": "Google AI Pro",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.pro.chat",
+    "value": "Auto, {{model.google.hydrogen.name}} or {{model.google.neon.name}}",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.pro.tasks",
+    "value": "{{model.google.hydrogen.name}} or {{model.google.neon.name}}",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.ultra.plan",
+    "value": "Google AI Ultra",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.ultra.chat",
+    "value": "Auto, {{model.google.hydrogen.name}}, {{model.google.neon.name}} or {{model.google.carbon.name}}",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini.picker.ultra.tasks",
+    "value": "{{model.google.hydrogen.name}}, {{model.google.neon.name}} or {{model.google.carbon.name}}",
+    "source": "https://support.google.com/gemini/answer/18648722?co=GENIE.Platform%3DiOS&hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin.enterprise.name",
+    "value": "Devin Enterprise",
+    "source": "https://docs.devin.ai/get-started/first-run",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-integrations.detail-1",
+    "value": "In Slack or Teams, use an approved practice channel. Check that the app is installed and your account is linked. Ask which Devin team and project will receive the request. Start with one practice ticket and one small test. Follow the session link and check that you landed in the expected project.",
+    "source": "https://docs.devin.ai/integrations/slack",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-chat.availability",
+    "value": "The number of messages you can send depends on the plan and the length of the work.",
+    "source": "https://support.claude.com/en/articles/9797557-usage-limit-best-practices",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-projects.availability",
+    "value": "Free accounts can create up to five projects. Check project eligibility before starting another.",
+    "source": "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-artifacts.availability",
+    "value": "Artifacts are offered on free and paid plans. Persistent storage on web and desktop is a paid-plan feature.",
+    "source": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-code.availability",
+    "value": "Usage and model access depend on how you signed in and what your account includes. Check the session status before a long job.",
+    "source": "https://code.claude.com/docs/en/overview",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-connectors.availability",
+    "value": "Web connectors are available across plans. In Team and Enterprise, an owner must first enable connectors for members.",
+    "source": "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-browser.availability",
+    "value": "Claude in Chrome requires a paid plan. Enterprise owners control access. Browser and computer access from web or mobile can depend on Claude Desktop.",
+    "source": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-scheduled.availability",
+    "value": "Recurring tasks are available on paid plans. A task can run in the cloud. Local resources add a desktop dependency.",
+    "source": "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-voice.availability",
+    "value": "Voice sessions use the regular allowance for the account. Push-to-talk gives you control of the microphone in a noisy room.",
+    "source": "https://support.claude.com/en/articles/11101966-use-voice-mode",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-files.availability",
+    "value": "The upload guide lists PDF, JPEG and PNG. It allows up to 20 files per chat. Check the separate rules for project knowledge.",
+    "source": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-memory.availability",
+    "value": "Paid plans offer chat search. Workplace owners can control memory. Check both switches in your account.",
+    "source": "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-skills.availability",
+    "value": "Claude documents skills across free and paid plans. Code execution must be enabled.",
+    "source": "https://support.claude.com/en/articles/12512176-what-are-skills",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-style.availability",
+    "value": "The personalization guide lists account instructions and skills. Not verified — 2026-11-23: a separate Styles menu on every account.",
+    "source": "https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-research.availability",
+    "value": "Claude documents Research on paid plans. Check the Research control and web search access before starting.",
+    "source": "https://support.claude.com/en/articles/11088861-use-research-on-claude",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "claude-reference-thinking.availability",
+    "value": "The model determines which effort and thinking controls appear. Some models always use thinking.",
+    "source": "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-chat.availability",
+    "value": "Usage depends on the model, features, length of the chat and the complexity of the request. Check the limits page for the account you plan to use.",
+    "source": "https://support.google.com/gemini/answer/13275745?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-notebook.availability",
+    "value": "Not verified — 2026-11-23. The notebook chat guide explains selected sources and citations. It does not give a per-account notebook quota.",
+    "source": "https://support.google.com/gemininotebook/answer/16179559?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-canvas.availability",
+    "value": "Google requires sign-in to use Canvas. Some sharing and AI features have extra age or account rules. Check the current guide.",
+    "source": "https://support.google.com/gemini/answer/16047321?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-code.availability",
+    "value": "Antigravity’s setup guide describes personal Free, Pro and Ultra sign-in. Check the guide that matches the account you intend to use.",
+    "source": "https://antigravity.google/docs/getting-started/",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-connectors.availability",
+    "value": "Available apps vary by device, location, language and account. Work and school settings can affect which apps appear.",
+    "source": "https://support.google.com/gemini/answer/13695044?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-browser.availability",
+    "value": "Google describes a gradual rollout. Incognito is excluded. Local Chrome auto browse is a desktop feature. Check the eligibility list for your account and region.",
+    "source": "https://support.google.com/gemini/answer/16821166?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-scheduled.availability",
+    "value": "The cited Gemini Tasks guide excludes work and school accounts for this surface. Personal availability and subscription requirements vary by region.",
+    "source": "https://support.google.com/gemini/answer/17094507?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-voice.availability",
+    "value": "On an iPad, open the Gemini mobile app and sign in to use Live. Google lists the Gemini web app as unavailable for Live. Updates can reach devices at different times.",
+    "source": "https://support.google.com/gemini/answer/15274899?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-files.availability",
+    "value": "Gemini accepts documents, images, audio and video. Google lists up to 10 supported files per prompt, subject to availability.",
+    "source": "https://support.google.com/gemini/answer/14903178?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-gems.availability",
+    "value": "Google lists a transition starting in November 2026 for personal accounts and in 2027 for work and school accounts.",
+    "source": "https://support.google.com/gemini/answer/18560919?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-research.availability",
+    "value": "Google documents plan-dependent use and higher allowances on some accounts. A connected app is needed to include its private sources.",
+    "source": "https://support.google.com/gemini/answer/15719111?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-personal.availability",
+    "value": "Google describes a gradual release and excludes work, school and supervised accounts for this feature.",
+    "source": "https://support.google.com/gemini/answer/16598406?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-workspace.availability",
+    "value": "Gemini in Workspace depends on your account and the app you are using. Check the Workspace feature guide for your edition.",
+    "source": "https://support.google.com/docs/answer/13952129?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "gemini-reference-creation.availability",
+    "value": "Google documents age and account requirements for image tools. Video access depends on the offering shown for your account.",
+    "source": "https://support.google.com/gemini/answer/14286560?hl=en",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  }
+]

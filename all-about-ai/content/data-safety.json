@@ -104,7 +104,6 @@
       "lab-data-safety-04"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "privacy",
       "m365"
@@ -130,6 +129,9 @@
         "permission",
         "A rule that says who may do what."
       ]
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -205,7 +207,6 @@
       "lab-data-safety-06"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "privacy",
       "m365",
@@ -232,6 +233,9 @@
         "permission",
         "A rule that says who may do what."
       ]
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   }
 ]

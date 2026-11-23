@@ -84,7 +84,6 @@
       "lab-troubleshoot-15"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "exchange",
       "m365",
@@ -127,6 +126,9 @@
         "preview",
         "A look at what a proposed change would do."
       ]
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   },
   {
@@ -213,7 +215,7 @@
         "paragraphs": [
           "Use the recipient and the message ID. A single message may have more than one result."
         ],
-        "documentShape": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | desk@example.test | room@example.test | Delivered",
+        "documentShape": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | dispatch@example.test | dock@example.test | Delivered",
         "sources": [
           [
             "Microsoft Learn · Message trace",
@@ -245,7 +247,6 @@
       "lab-troubleshoot-02"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "exchange",
       "m365",
@@ -272,6 +273,10 @@
         "rule",
         "A test and the action to take when the test passes."
       ]
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -382,7 +387,6 @@
       "lab-troubleshoot-04"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "exchange",
       "m365",
@@ -418,6 +422,10 @@
         "policy",
         "A written rule that sets what is allowed."
       ]
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -527,7 +535,6 @@
       "lab-troubleshoot-06"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "exchange",
       "m365",
@@ -555,6 +562,10 @@
         "rollback",
         "Putting the old setting or file back."
       ]
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -680,7 +691,6 @@
       "lab-troubleshoot-12"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "exchange",
       "m365",
@@ -713,6 +723,10 @@
         "preview",
         "A look at what a proposed change would do."
       ]
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -821,7 +835,6 @@
       "lab-troubleshoot-11"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "exchange",
       "m365",
@@ -853,6 +866,10 @@
         "read-only",
         "You may look at the data without changing it."
       ]
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1019,7 +1036,6 @@
       "lab-troubleshoot-16"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review",
     "tags": [
       "exchange",
       "m365",
@@ -1043,6 +1059,9 @@
         "sign-in",
         "One attempt to open an account."
       ]
+    ],
+    "basis": [
+      "ai-drafted"
     ]
   }
 ]

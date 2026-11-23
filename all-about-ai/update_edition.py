@@ -10,12 +10,13 @@ import subprocess
 import sys
 from xml.etree import ElementTree
 from urllib.parse import urlsplit
+from edition_trust import valid_basis, valid_source, hardcoded, PRODUCT_GROUPS, FIELD, chapter_field
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 book = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--check', action='store_true', help='check without writing')
-parser.add_argument('--review', metavar='PAGE', help='record a completed human review of one reference page')
+parser.add_argument('--review', metavar='PAGE', help='record a completed hands-on human review of one page')
 parser.add_argument('--date', type=date.fromisoformat, help='review date as YYYY-MM-DD (default: today)')
 parser.add_argument('--note', help='short, shareable description of the review')
 args = parser.parse_args()
@@ -109,6 +110,14 @@ ids = set()
 assets = ['index.html', 'reader.css', 'reader.js', 'guides.js', 'guide.css', 'content/figures.json', 'content/worked.json', 'content/models.json', 'edition.json', '../book-pager.js', '../shelf-art/all-about-ai.jpg']
 kit = refresh_kit(book / 'practice' / 'exchange-inventory')
 assets.append(kit)
+assets.append('content/facts.json')
+fact_rows = json.loads((book/'content/facts.json').read_text())
+facts = {row['key']:row for row in fact_rows}
+used_facts = set()
+require(len(facts)==len(fact_rows), 'Duplicate product fact key')
+for name,row in facts.items():
+    require(re.fullmatch(r'[a-z0-9.-]+',name) and words([row['value']]) and valid_source(row['source']), 'Invalid product fact '+name)
+    require(valid_basis(row['basis']) and date.fromisoformat(row['verifiedOn']) <= edition_date and '{{fact.' not in row['value'], 'Invalid date, basis or nested product fact in '+name)
 assets.append('practice/exchange-inventory/case-guide.json')
 case_rows = json.loads((book / assets[-1]).read_text())
 case_names = {p.name for p in (book/'practice/exchange-inventory/cases').iterdir() if p.is_file() and not p.name.startswith('.')}
@@ -120,6 +129,7 @@ for row in case_rows:
 lab_count = 0
 guide_ids = set()
 reference_ids = set()
+page_text = {}
 build_labs = []
 writing_labs = []
 build_spec = None
@@ -140,6 +150,9 @@ for group in groups:
         require(re.fullmatch(r'[a-z0-9-]+', key) and key not in ('contents', 'labs', 'start') and key not in ids, f'Invalid or duplicate ID {key}')
         ids.add(key)
         require(words([ch['title'], ch['summary']]), f'Incomplete page {key}')
+        page_text[key] = ch
+        require(valid_basis(ch.get('basis')) and 'ai-drafted' in ch['basis'], 'Invalid review basis in '+key)
+        require(date.fromisoformat(ch['lastVerified']) <= date.fromisoformat(group['reviewed']), 'Invalid review date in '+key)
         if group.get('guide'):
             require(words(ch['where']) and words(ch['roles']) and len(ch['roles']) == 3, f'Check setup and roles in {key}')
             require(len(ch['actions']) >= 4 and ch['topic'], f'Incomplete guide {key}')
@@ -174,7 +187,7 @@ for group in groups:
         require(words(ch['tags']) and len(set(ch['tags'])) == len(ch['tags']) and
                 all(re.fullmatch(r'[a-z0-9-]+', tag) for tag in ch['tags']), f'Invalid reference tags in {key}')
         require(date.fromisoformat(ch['lastVerified']) <= date.fromisoformat(group['reviewed']) and
-                ch['verificationBasis'] in {'previous group review','page review'}, f'Invalid page review in {key}')
+                valid_basis(ch['basis']), f'Invalid page review in {key}')
         require('unverified' not in ch or words(ch['unverified']), f'Empty unverified details in {key}')
         if key == 'build-off':
             build_spec = ch['buildSpec']
@@ -238,7 +251,7 @@ require(len(tracks) == len(track_levels) and set(tracks) == set(track_levels) an
 require(len(writing_labs) == 20 and set(writing_labs) == set(track_levels) - {'data-safety','troubleshoot','ship-app'},
         'Expected 20 optional prompt exercises across the original tracks')
 comparison_ids = {'lab-gemini-app-14','lab-claude-code-14','lab-codex-14'}
-require(manifest.get('version') == 7 and build_spec is not None, 'Expected edition 7 with the four-tool build-off')
+require(manifest.get('version') == 8 and build_spec is not None, 'Expected edition 8 with the four-tool build-off')
 require({lab['id'] for lab in build_labs} == comparison_ids, 'Expected three shared Lab 14 builds')
 for lab in build_labs:
     require(lab['prompt'] == build_spec['prompt'] and lab['check'] == build_spec['check'],
@@ -260,6 +273,10 @@ def check_refs(value):
             return values[field]['text']
         clean = re.sub(r'\{\{model\.([a-z0-9.-]+)\}\}',take,value)
         require('{{model.' not in clean, 'Unresolved model field')
+        for field in re.findall(r'\{\{fact\.([a-z0-9.-]+)\}\}',clean):
+            require(field in facts,'Unknown product fact '+field)
+            used_facts.add(field)
+        require('{{fact.' not in re.sub(r'\{\{fact\.[a-z0-9.-]+\}\}','',clean),'Malformed product fact')
     elif isinstance(value, list):
         for item in value: check_refs(item)
     elif isinstance(value, dict):
@@ -286,6 +303,9 @@ for group in groups:
             links = item['relatedLabs']
             require(words(links) and len(links) == len(set(links)) and all(link in ids and link.startswith('lab-') for link in links), 'Unknown or repeated lab link in '+item['id'])
         require('firstGuide' not in item or item['firstGuide'] in guide_ids, 'Invalid first lesson for '+item['id'])
+    if group['file'] in PRODUCT_GROUPS:
+        for line in strings_in_content(rows):
+            require(not hardcoded(line), 'Put plan names and numeric product limits in the facts or models catalog: '+group['file']+' / '+line[:95])
     if group['file'] in model_groups:
         for line in strings_in_content(rows):
             without_refs = re.sub(r'\{\{model\.[a-z0-9.-]+\}\}', '', line)
@@ -295,6 +315,15 @@ for group in groups:
 examples = json.loads((book / 'content/worked.json').read_text())
 require(len(examples) == len(ids - guide_ids) and {ex['id'] for ex in examples} == ids - guide_ids, 'Every reference and lab needs its own worked example')
 for ex in examples:
+    page = page_text[ex['id']]
+    text_fields = set(strings_in_content(page))
+    for name in ('before','try','after','why','premise','rescue'):
+        field = ex[name]
+        ref = re.fullmatch(r'\{\{chapter\.([A-Za-z0-9_.-]+)\}\}',field)
+        if ref:
+            ex[name] = chapter_field(page,ref[1])
+        else:
+            require('{{chapter.' not in field and field not in text_fields, 'Reference the original chapter field in '+ex['id']+' / '+name)
     require(words([ex[k] for k in ('premise','before','try','after','why','rescue')]), 'Incomplete worked example '+ex['id'])
     key = ex['id']
     require(len(ex['before']) >= 100 and re.search(r'[?]|\b(?:list|read|return|count|give|match|paste|report)\b',ex['before'],re.I), 'Worked card needs data and an instruction in '+key)
@@ -305,6 +334,8 @@ for ex in examples:
 check_refs(examples)
 figures = json.loads((book / 'content/figures.json').read_text())
 check_refs(figures)
+check_refs(fact_rows)
+require(used_facts == set(facts), 'Unused product facts: '+', '.join(sorted(set(facts)-used_facts)))
 require(used == set(values), 'Unused model fields: ' + ', '.join(sorted(set(values)-used)))
 previous_diagrams = """
     tokens-context chat-project-agent vibe-coding-loop model-picker structured-json tool-calling
@@ -322,6 +353,12 @@ new_diagrams = """
     case-loop mail-checkpoint device-evidence hybrid-route-proof mail-auth-evidence sharing-gate pasted-instructions ship-release ship-secret
 """.split()
 new_svg_files = {f'diagram-{name}.svg' for name in new_diagrams}
+extension_pages = manifest['extensionPages']
+require(isinstance(extension_pages,list) and len(extension_pages)==len(set(extension_pages)) and set(extension_pages)<=reference_ids, 'Invalid scaffold page list')
+for page in extension_pages:
+    name = 'diagram-extension-'+page+'.svg'
+    require(any(f['file']==name and f['lesson']==page for f in figures),'Missing registered figure for '+page)
+    new_svg_files.add(name)
 diagrams = new_svg_files | {f'diagram-{name}.svg' for name in previous_diagrams}
 require(len(figures) == len(diagrams) + 41 and {f['file'] for f in figures if f['file'].endswith('.svg')} == diagrams,
         'Expected all named diagrams and 41 other pictures')

@@ -43,7 +43,11 @@
         "Google · Chat",
         "https://gemini.google.com/"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-02",
@@ -89,7 +93,11 @@
         "Google · Thinking",
         "https://support.google.com/gemini/answer/18648722"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-03",
@@ -135,7 +143,11 @@
         "Google · Live",
         "https://support.google.com/gemini/answer/15274899"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-04",
@@ -181,7 +193,11 @@
         "Google · Gem",
         "https://support.google.com/gemini/answer/15235603"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-05",
@@ -238,7 +254,11 @@
         "https://support.google.com/gemini/answer/16047321"
       ]
     ],
-    "sampleApp": "practice/browser/tap-game.html"
+    "sampleApp": "practice/browser/tap-game.html",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-06",
@@ -285,7 +305,11 @@
         "https://support.google.com/gemininotebook/answer/16296687"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-07",
@@ -332,7 +356,11 @@
         "https://support.google.com/gemini/answer/17094507"
       ]
     ],
-    "firstGuide": "gemini-task-begin"
+    "firstGuide": "gemini-task-begin",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-08",
@@ -384,7 +412,11 @@
       "goal": "Plan a search that will teach a reader to use flashcards on an iPad.",
       "given": "The reader needs to open the cards, flip one and practice a missed card.",
       "compare": "Check whether you named the allowed source, device and three actions."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-09",
@@ -431,7 +463,11 @@
         "https://support.google.com/gemininotebook/answer/16296687"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-10",
@@ -505,7 +541,11 @@
         "https://support.google.com/gemininotebook/answer/16758265?hl=en"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-11",
@@ -551,7 +591,11 @@
         "Google · Canvas",
         "https://support.google.com/gemini/answer/16047321"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-12",
@@ -597,7 +641,11 @@
         "Google · Gem",
         "https://support.google.com/gemini/answer/15235603"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-13",
@@ -644,7 +692,11 @@
         "https://support.google.com/gemininotebook/answer/16296687"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-14",
@@ -709,7 +761,11 @@
         "Gemini Help · build and open an app in Canvas",
         "https://support.google.com/gemini/answer/16047321"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-15",
@@ -765,7 +821,11 @@
         "https://support.google.com/gemini/answer/16047321"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-16",
@@ -811,7 +871,11 @@
         "Google · Chat",
         "https://gemini.google.com/"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-17",
@@ -857,7 +921,11 @@
         "Google · Live",
         "https://support.google.com/gemini/answer/15274899"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-18",
@@ -903,7 +971,11 @@
         "Google · Gem",
         "https://support.google.com/gemini/answer/15235603"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-19",
@@ -950,7 +1022,11 @@
         "https://support.google.com/gemini/answer/17094507"
       ]
     ],
-    "firstGuide": "gemini-task-begin"
+    "firstGuide": "gemini-task-begin",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-20",
@@ -997,7 +1073,11 @@
         "https://support.google.com/gemininotebook/answer/16296687"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-21",
@@ -1043,7 +1123,11 @@
         "Google · Canvas",
         "https://support.google.com/gemini/answer/16047321"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-22",
@@ -1089,7 +1173,11 @@
         "Google · Thinking",
         "https://support.google.com/gemini/answer/18648722"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-23",
@@ -1136,7 +1224,11 @@
         "https://support.google.com/gemini/answer/15719111"
       ]
     ],
-    "firstGuide": "gemini-research-begin"
+    "firstGuide": "gemini-research-begin",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-24",
@@ -1214,7 +1306,11 @@
       "goal": "Give sourced study-night answers even when one fact is missing.",
       "given": "There is a packing note, a time note and a rumor. An approved fare note arrives later.",
       "compare": "Check what your prompt asks the helper to do with an unchecked source and a newly added one."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-25",
@@ -1260,7 +1356,11 @@
         "Google · Canvas",
         "https://support.google.com/gemini/answer/16047321"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-26",
@@ -1307,7 +1407,11 @@
         "https://support.google.com/gemini/answer/17094507"
       ]
     ],
-    "firstGuide": "gemini-task-begin"
+    "firstGuide": "gemini-task-begin",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-27",
@@ -1378,7 +1482,11 @@
         "https://support.google.com/gemininotebook/answer/16454555?hl=en"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-28",
@@ -1435,7 +1543,11 @@
         "https://support.google.com/gemini/answer/16047321"
       ]
     ],
-    "sampleApp": "practice/browser/mailbox-tally.html"
+    "sampleApp": "practice/browser/mailbox-tally.html",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-29",
@@ -1481,7 +1593,11 @@
         "Google · Canvas",
         "https://support.google.com/gemini/answer/16047321"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-gemini-app-30",
@@ -1562,6 +1678,10 @@
         "https://support.google.com/gemini/answer/16047321"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

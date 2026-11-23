@@ -81,7 +81,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Usage depends on the model, features, length of the chat and the complexity of the request. Check the limits page for the account you plan to use."
+          "{{fact.gemini-reference-chat.availability}}"
         ],
         "sources": [
           [
@@ -129,7 +129,10 @@
     ],
     "surface": "chat",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-notebook",
@@ -223,7 +226,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "The mobile app has some differences. Google says usage depends on the task and plan. Larger Google AI plans can raise the allowance.",
+          "{{fact.gemini-reference-notebook.availability}}",
           "Not verified — 2026-11-22: the source allowance for an individual workspace."
         ],
         "sources": [
@@ -272,10 +275,13 @@
     ],
     "surface": "notebook",
     "unverified": [
-      "The source allowance for an individual workspace."
+      "{{fact.gemini-reference-notebook.availability}}"
     ],
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-canvas",
@@ -360,7 +366,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Canvas requires sign-in. Google says adding AI to a Canvas app requires the user to be at least 18. Shared Canvas content opens in the web app."
+          "{{fact.gemini-reference-canvas.availability}}"
         ],
         "sources": [
           [
@@ -408,7 +414,10 @@
     ],
     "surface": "canvas",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-code",
@@ -493,7 +502,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Personal access and rate limits depend on the Google AI plan. Workspace plans do not include the personal Antigravity plan. The desktop setup guide lists supported systems.",
+          "{{fact.gemini-reference-code.availability}}",
           "Not verified — 2026-11-22: a fixed number of agent runs per account."
         ],
         "sources": [
@@ -542,10 +551,13 @@
     ],
     "surface": "code",
     "unverified": [
-      "A fixed number of agent runs per account."
+      "Not verified — 2026-11-23. A fixed number of agent runs for an individual account."
     ],
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-connectors",
@@ -630,7 +642,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Available apps vary by device, location, language and account. Work and school settings can affect which apps appear."
+          "{{fact.gemini-reference-connectors.availability}}"
         ],
         "sources": [
           [
@@ -678,7 +690,10 @@
     ],
     "surface": "connectors",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-browser",
@@ -765,7 +780,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Google describes a gradual rollout. Incognito is excluded. Local Chrome auto browse is a desktop feature. Check the eligibility list for your account and region."
+          "{{fact.gemini-reference-browser.availability}}"
         ],
         "sources": [
           [
@@ -813,7 +828,10 @@
     ],
     "surface": "browser",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-scheduled",
@@ -897,7 +915,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "The cited Gemini Tasks guide excludes work and school accounts for this surface. Personal availability and subscription requirements vary by region."
+          "{{fact.gemini-reference-scheduled.availability}}"
         ],
         "sources": [
           [
@@ -945,7 +963,10 @@
     ],
     "surface": "scheduled",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-voice",
@@ -996,9 +1017,8 @@
         "title": "Do this first",
         "paragraphs": [
           "Draw a yellow Review button and a blue Save button on paper. Open Live in the mobile app. Show the drawing with the camera and ask the question.",
-          "A practice page has a yellow Review button and a blue Save button.",
-          "Share only that practice screen. Ask which button is labeled Review. End sharing and check the answer on the page.",
-          "Check your result. The reply pairs Review with yellow. You can see when screen sharing stops."
+          "Ask “Which color is the Review button?” Stop the camera after the reply.",
+          "Look at the paper. Review is yellow and Save is blue."
         ],
         "sources": [
           [
@@ -1030,7 +1050,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "On an iPad, open the Gemini mobile app and sign in to use Live. Google lists the Gemini web app as unavailable for Live. Updates can reach devices at different times."
+          "{{fact.gemini-reference-voice.availability}}"
         ],
         "sources": [
           [
@@ -1078,7 +1098,10 @@
     ],
     "surface": "voice",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-files",
@@ -1164,7 +1187,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "You must sign in. Work accounts need the appropriate Workspace setting to attach Drive files. Higher upload allowances depend on the plan."
+          "{{fact.gemini-reference-files.availability}}"
         ],
         "sources": [
           [
@@ -1212,7 +1235,10 @@
     ],
     "surface": "files",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "gemini-reference-gems",
@@ -1242,7 +1268,6 @@
     },
     "surface": "gems",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1295,7 +1320,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Google lists a transition starting in November 2026 for personal accounts and in 2027 for work and school accounts."
+          "{{fact.gemini-reference-gems.availability}}"
         ],
         "sources": [
           [
@@ -1340,6 +1365,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1370,7 +1399,6 @@
     },
     "surface": "research",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1423,7 +1451,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Google documents plan-dependent use and higher allowances on some accounts. A connected app is needed to include its private sources."
+          "{{fact.gemini-reference-research.availability}}"
         ],
         "sources": [
           [
@@ -1468,6 +1496,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1498,7 +1530,6 @@
     },
     "surface": "personal",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1519,7 +1550,8 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open Gemini settings and look for Personal Intelligence or connected apps. Inspect what is enabled. For a practice test, use the fictional preference card below in chat. Ask for the listed choice without connecting a real account."
+          "Open Gemini settings and look for Personal Intelligence or connected apps. Inspect what is enabled. For a practice test, use the fictional preference card below in chat. Ask for the listed choice without connecting a real account.",
+          "Look for the format named on the Reminder line. If another preference appears, ask it to name the source of that extra detail."
         ],
         "sources": [
           [
@@ -1551,7 +1583,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Google describes a gradual release and excludes work, school and supervised accounts for this feature."
+          "{{fact.gemini-reference-personal.availability}}"
         ],
         "sources": [
           [
@@ -1596,6 +1628,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1626,7 +1662,6 @@
     },
     "surface": "workspace",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1679,7 +1714,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Gemini in Workspace depends on your account and the app you are using. Check the Workspace feature guide for your edition."
+          "{{fact.gemini-reference-workspace.availability}}"
         ],
         "sources": [
           [
@@ -1724,6 +1759,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1754,7 +1793,6 @@
     },
     "surface": "creation",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1775,7 +1813,8 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Start a Gemini chat. Choose the image tool. Ask for a cream sign with a blue anchor on its left and a gold bell on its right. Inspect the layout by eye. If video is offered, request a slow pan from anchor to bell."
+          "Start a Gemini chat. Choose the image tool. Ask for a cream sign with a blue anchor on its left and a gold bell on its right. Inspect the layout by eye. If video is offered, request a slow pan from anchor to bell.",
+          "Look for the anchor on the left and the bell on the right. If they are swapped, request that one correction."
         ],
         "sources": [
           [
@@ -1807,7 +1846,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Google documents age and account requirements for image tools. Video access depends on the offering shown for your account."
+          "{{fact.gemini-reference-creation.availability}}"
         ],
         "sources": [
           [
@@ -1852,6 +1891,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   }
 ]

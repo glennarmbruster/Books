@@ -86,7 +86,11 @@
         "https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell"
       ]
     ],
-    "kit": "practice/exchange-inventory.zip"
+    "kit": "practice/exchange-inventory.zip",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-02",
@@ -137,7 +141,11 @@
         "Cognition · working with sessions",
         "https://docs.devin.ai/work-with-devin/devin-session-tools"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-03",
@@ -188,7 +196,11 @@
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-04",
@@ -243,7 +255,11 @@
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-05",
@@ -299,7 +315,11 @@
       "goal": "Fix a list that counts the same ID twice.",
       "given": "Test a blank, a space, and two spellings of A1.",
       "compare": "Check whether your prompt says how to treat spaces, case and empty input."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-06",
@@ -351,7 +371,11 @@
         "Cognition · reusable skills",
         "https://docs.devin.ai/product-guides/skills"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-07",
@@ -402,7 +426,11 @@
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-08",
@@ -453,7 +481,11 @@
         "Cognition · creating a v3 session",
         "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-09",
@@ -513,7 +545,11 @@
       "goal": "Compare approved and observed permissions.",
       "given": "Reader/reports occurs twice. Reader/app appears only in the observed list.",
       "compare": "Look for separate outputs for an extra grant, a missing grant and a duplicate."
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-10",
@@ -564,7 +600,11 @@
         "Cognition · daily consumption",
         "https://docs.devin.ai/api-reference/v3/consumption/consumption-daily-users"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-11",
@@ -615,7 +655,11 @@
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-12",
@@ -670,7 +714,11 @@
         "Cognition · reading a v3 session",
         "https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-13",
@@ -725,7 +773,11 @@
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-14",
@@ -780,7 +832,11 @@
         "Cognition · maintaining environments",
         "https://docs.devin.ai/enterprise/environment-management/best-practices"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-15",
@@ -835,7 +891,11 @@
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-16",
@@ -882,7 +942,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-17",
@@ -929,7 +993,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-18",
@@ -976,7 +1044,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-19",
@@ -1023,7 +1095,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-20",
@@ -1070,7 +1146,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-21",
@@ -1117,7 +1197,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-22",
@@ -1164,7 +1248,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-23",
@@ -1211,7 +1299,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-24",
@@ -1263,7 +1355,11 @@
       "goal": "Read every page of a list and tell the reader if the report is incomplete.",
       "given": "Page 2 has no rows but points to page 3. A later test makes page 3 point back to page 2.",
       "compare": "Did you describe how success differs from a stopped loop?"
-    }
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-25",
@@ -1310,7 +1406,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-26",
@@ -1357,7 +1457,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-27",
@@ -1404,7 +1508,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-28",
@@ -1451,7 +1559,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-29",
@@ -1498,7 +1610,11 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   },
   {
     "id": "lab-devin-30",
@@ -1545,6 +1661,10 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
   }
 ]

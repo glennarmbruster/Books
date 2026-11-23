@@ -123,6 +123,7 @@ def walk(value):
 
 
 def collect(book):
+    fact_pages = defaultdict(set)
     mapping = defaultdict(set)
     titles = {}
     catalog = json.loads((book/'content/models.json').read_text())
@@ -140,6 +141,8 @@ def collect(book):
                     cite(mapping, url, pages)
                 cite(mapping, node.get('source'), pages)
             elif isinstance(node, str):
+                for key in re.findall(r'\{\{fact\.([a-z0-9.-]+)\}\}',node):
+                    fact_pages[key].update(pages)
                 for key in re.findall(r'\{\{model\.([a-z0-9.-]+)\}\}', node):
                     model_pages[key].update(pages)
     for key, item in items.items():
@@ -149,11 +152,20 @@ def collect(book):
     for fig in json.loads((book/'content/figures.json').read_text()):
         visit(fig, [fig['lesson'], *fig.get('also', [])])
     titles['model-catalog'] = 'Model catalog'
+    titles['facts'] = 'Product facts'
+    for fact in json.loads((book/'content/facts.json').read_text()):
+        pages = fact_pages[fact['key']] or ['facts']
+        cite(mapping,fact['source'],pages)
+        visit(fact['value'],pages)
+    guide = json.loads((book/'practice/exchange-inventory/case-guide.json').read_text())
+    for item in guide:
+        pages = [key for key,p in items.items() if item['file'] in p.get('caseFiles',[])]
+        visit(item,pages or ['troubleshoot-loop'])
     for key, item in catalog['values'].items():
         cite(mapping, item['source'], model_pages[key] or ['model-catalog'])
     # Catch sources in ancillary or future content files as well.
     for path in (book/'content').glob('*.json'):
-        if path.name in {g['file'] for g in groups} | {'models.json','figures.json','worked.json'}:
+        if path.name in {g['file'] for g in groups} | {'models.json','figures.json','worked.json','facts.json'}:
             continue
         titles[path.stem] = path.stem
         visit(json.loads(path.read_text()), [path.stem])
@@ -313,18 +325,36 @@ def record(book, day, findings, titles):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--stale-only',action='store_true',help='write the monthly fact review queue without using the network')
     parser.add_argument('--work-dir', type=Path, default=BOOK.parent.parent/'_work',
                         help='snapshot and report folder outside the hosted Site')
     parser.add_argument('--record',action='store_true',help='explicitly add source notices to What changed; does not verify product facts')
     parser.add_argument('--delay',type=float,default=1.0,help='minimum seconds between requests to the same host (at least 0.5)')
     parser.add_argument('--timeout',type=float,default=15,help='network timeout in seconds (1 to 60)')
     args = parser.parse_args()
+    if args.stale_only and args.record:
+        parser.error('--record needs a live source check')
     if not 0.5 <= args.delay <= 300 or not 1 <= args.timeout <= 60:
         parser.error('Choose a delay of 0.5 to 300 seconds and a timeout of 1 to 60 seconds.')
     work = args.work_dir.resolve()
     if BOOK.parent == work or BOOK.parent in work.parents:
         parser.error('Keep the work folder outside Site.')
     work.mkdir(exist_ok=True,parents=True)
+    from edition_trust import oldest_first, stale
+    today = date.today()
+    facts = oldest_first(json.loads((BOOK/'content/facts.json').read_text()))
+    lines = ['# Monthly fact review · '+today.isoformat(),'','Review unconfirmed facts and facts aged 30 days or more. Oldest dates appear first.','']
+    due = [f for f in facts if stale(f,today)]
+    for fact in due:
+        lines.append('- '+fact['verifiedOn']+' · '+fact['key']+' · '+fact['value']+' · <'+fact['source']+'>')
+    if not due:
+        lines.append('No facts are due for review.')
+    lines.extend(['','## Upcoming checks',''])
+    lines.extend('- '+f['verifiedOn']+' · '+f['key'] for f in facts if f not in due)
+    atomic_text(work/('stale-facts-'+today.isoformat()+'.md'),'\n'.join(lines)+'\n')
+    if args.stale_only:
+        print('Wrote the monthly fact review queue.')
+        return
     snapshot = work/'source-snapshots.json'
     previous = json.loads(snapshot.read_text()) if snapshot.exists() else {}
     day = date.today().isoformat()

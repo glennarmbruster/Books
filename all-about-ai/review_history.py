@@ -36,8 +36,6 @@ def record_review(book, page_id, day, note):
     desk_path = book / 'content/reference-desk.json'
     changes = {manifest_path: manifest, desk_path: json.loads(desk_path.read_text())}
     for group in manifest['groups']:
-        if group.get('guide') or group.get('track'):
-            continue
         path = book / 'content' / group['file']
         rows = changes.get(path) or json.loads(path.read_text())
         row = next((r for r in rows if r['id'] == page_id), None)
@@ -46,7 +44,7 @@ def record_review(book, page_id, day, note):
         if day > date.today() or day < date.fromisoformat(row['lastVerified']):
             raise SystemExit('Use a review date from the previous review through today.')
         day_text = day.isoformat()
-        row.update(lastVerified=day_text, verificationBasis='page review')
+        row.update(lastVerified=day_text, basis=sorted(set(row['basis']) | {'human-tested'}))
         changes[path] = rows
         group['reviewed'] = max(group['reviewed'], day_text)
         manifest['reviewed'] = max(manifest['reviewed'], day_text)
@@ -56,7 +54,7 @@ def record_review(book, page_id, day, note):
             history.append(entry)
         apply_changes(book, changes)
         return
-    raise SystemExit('Unknown reference page ID.')
+    raise SystemExit('Unknown page ID.')
 
 
 def change_list(rows):

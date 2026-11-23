@@ -82,7 +82,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "The free plan has a session allowance. The number of messages can vary with demand."
+          "{{fact.claude-reference-chat.availability}}"
         ],
         "sources": [
           [
@@ -130,7 +130,10 @@
     ],
     "surface": "chat",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-projects",
@@ -215,7 +218,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Free accounts can create up to five projects. Paid plans can use retrieval when the project knowledge grows large."
+          "{{fact.claude-reference-projects.availability}}"
         ],
         "sources": [
           [
@@ -263,7 +266,10 @@
     ],
     "surface": "projects",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-artifacts",
@@ -348,7 +354,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Artifacts are offered on free and paid plans. Persistent storage on web and desktop is a paid-plan feature."
+          "{{fact.claude-reference-artifacts.availability}}"
         ],
         "sources": [
           [
@@ -396,7 +402,10 @@
     ],
     "surface": "artifacts",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-code",
@@ -446,7 +455,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Make a practice folder with an index.html containing <button>Clear All</button>. Open that folder in Claude Code. Give it the task below.",
+          "Make an empty practice folder. In a plain text editor, use Copy starter file below and save the text as index.html. Open it in a browser. The score starts at 2. Press Clear All to see 0. Now open the folder in Claude Code.",
           "A practice counter page shows the right number but calls its reset button Clear All.",
           "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
           "Check your result. Only the label changes. A score of 2 still resets to 0."
@@ -460,7 +469,8 @@
             "Models, usage, and limits in Claude Code",
             "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
           ]
-        ]
+        ],
+        "practiceCode": "<!doctype html>\n<html lang=\"en\"><meta charset=\"utf-8\"><title>Practice counter</title>\n<p>Score <output id=\"score\">2</output></p>\n<button type=\"button\" onclick=\"document.getElementById('score').textContent='0'\">Clear All</button></html>"
       },
       {
         "title": "What it cannot do",
@@ -481,7 +491,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Usage and model access depend on how you signed in and what your account includes. Check the session status before a long job."
+          "{{fact.claude-reference-code.availability}}"
         ],
         "sources": [
           [
@@ -529,7 +539,10 @@
     ],
     "surface": "code",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-connectors",
@@ -614,7 +627,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Web connectors are available across plans. In Team and Enterprise, an owner must first enable connectors for members."
+          "{{fact.claude-reference-connectors.availability}}"
         ],
         "sources": [
           [
@@ -662,7 +675,10 @@
     ],
     "surface": "connectors",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-browser",
@@ -749,7 +765,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Claude in Chrome requires a paid plan. Enterprise owners control access. Browser and computer access from web or mobile can depend on Claude Desktop."
+          "{{fact.claude-reference-browser.availability}}"
         ],
         "sources": [
           [
@@ -797,7 +813,10 @@
     ],
     "surface": "browser",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-scheduled",
@@ -847,10 +866,10 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open Cowork’s scheduled tasks. Create a practice task with the text below. Pick a weekday and your time zone, then read back the saved time.",
+          "Open Cowork’s scheduled tasks. Create a practice task. Paste the request below and inspect its next run.",
           "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
-          "Schedule a weekly reminder for Monday morning in the time zone I confirm. Use this fixed rotation and show the next run before I leave.",
-          "Check your result. The schedule shows the intended weekday and time. The output identifies desk B."
+          "Every Monday at 09:00 UTC, remind me “Monday duty: desk B.” Show the next run.",
+          "Check that the list shows Monday at 09:00 UTC, or its equivalent in the displayed time zone. Remove the practice task after the test."
         ],
         "sources": [
           [
@@ -882,7 +901,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Recurring tasks are available on paid plans. A task can run in the cloud. Local resources add a desktop dependency."
+          "{{fact.claude-reference-scheduled.availability}}"
         ],
         "sources": [
           [
@@ -930,7 +949,10 @@
     ],
     "surface": "scheduled",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-voice",
@@ -1015,7 +1037,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Voice sessions use the regular allowance for the account. Push-to-talk gives you control of the microphone in a noisy room."
+          "{{fact.claude-reference-voice.availability}}"
         ],
         "sources": [
           [
@@ -1063,7 +1085,10 @@
     ],
     "surface": "voice",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-files",
@@ -1149,7 +1174,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Chat and project uploads have different limits. The upload guide lists 20 files per chat and a smaller per-file size for project knowledge."
+          "{{fact.claude-reference-files.availability}}"
         ],
         "sources": [
           [
@@ -1197,7 +1222,10 @@
     ],
     "surface": "files",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review"
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
   },
   {
     "id": "claude-reference-memory",
@@ -1227,7 +1255,6 @@
     },
     "surface": "memory",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1280,7 +1307,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Paid plans offer chat search. Workplace owners can control memory. Check both switches in your account."
+          "{{fact.claude-reference-memory.availability}}"
         ],
         "sources": [
           [
@@ -1325,6 +1352,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1355,7 +1386,6 @@
     },
     "surface": "skills",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1408,7 +1438,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Claude documents skills across free and paid plans. Code execution must be enabled."
+          "{{fact.claude-reference-skills.availability}}"
         ],
         "sources": [
           [
@@ -1453,6 +1483,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1483,7 +1517,6 @@
     },
     "surface": "style",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1536,7 +1569,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "The personalization guide lists account instructions and skills. Not verified — 2026-11-23: a separate Styles menu on every account."
+          "{{fact.claude-reference-style.availability}}"
         ],
         "sources": [
           [
@@ -1583,7 +1616,11 @@
       }
     ],
     "unverified": [
-      "Not verified — 2026-11-23: a separate Styles menu on every account."
+      "{{fact.claude-reference-style.availability}}"
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1614,7 +1651,6 @@
     },
     "surface": "research",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1667,7 +1703,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Claude documents Research on paid plans. Check the Research control and web search access before starting."
+          "{{fact.claude-reference-research.availability}}"
         ],
         "sources": [
           [
@@ -1712,6 +1748,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   },
   {
@@ -1742,7 +1782,6 @@
     },
     "surface": "thinking",
     "lastVerified": "2026-11-23",
-    "verificationBasis": "page review",
     "sections": [
       {
         "title": "What it is for",
@@ -1763,7 +1802,8 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open the model menu beside Send. Note the current effort. Use the score card below. If another effort is offered, repeat the unchanged card in a fresh chat and compare the arithmetic."
+          "Open the model menu beside Send. Note the current effort. Use the score card below. If another effort is offered, repeat the unchanged card in a fresh chat and compare the arithmetic.",
+          "If your account offers only one setting, do the two paper runs below. The answer key checks the score without comparing speeds."
         ],
         "sources": [
           [
@@ -1795,7 +1835,7 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "The model determines which effort and thinking controls appear. Some models always use thinking."
+          "{{fact.claude-reference-thinking.availability}}"
         ],
         "sources": [
           [
@@ -1840,6 +1880,10 @@
           ]
         ]
       }
+    ],
+    "basis": [
+      "ai-drafted",
+      "source-read"
     ]
   }
 ]
