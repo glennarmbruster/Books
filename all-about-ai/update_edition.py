@@ -15,7 +15,18 @@ from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 book = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--check', action='store_true', help='check without writing')
+parser.add_argument('--review', metavar='PAGE', help='record a completed human review of one reference page')
+parser.add_argument('--date', type=date.fromisoformat, help='review date as YYYY-MM-DD (default: today)')
+parser.add_argument('--note', help='short, shareable description of the review')
 args = parser.parse_args()
+if args.review:
+    if args.check or not args.note or not args.note.strip():
+        parser.error('--review requires --note and cannot be combined with --check')
+    from review_history import record_review
+    record_review(book, args.review, args.date or date.today(), args.note.strip())
+    sys.exit(0)
+if args.date or args.note:
+    parser.error('--date and --note require --review')
 
 
 def require(value, message):
@@ -152,6 +163,9 @@ for group in groups:
             lab_count += 1
             continue
         reference_ids.add(key)
+        require(date.fromisoformat(ch['lastVerified']) <= date.fromisoformat(group['reviewed']) and
+                ch['verificationBasis'] in {'previous group review','page review'}, f'Invalid page review in {key}')
+        require('unverified' not in ch or words(ch['unverified']), f'Empty unverified details in {key}')
         if key == 'build-off':
             build_spec = ch['buildSpec']
             require(words([build_spec['prompt'], build_spec['followUp']]) and
@@ -187,6 +201,10 @@ for group in groups:
                 require(words(tbl['columns']) and tbl['rows'], f'Empty table in {key}')
                 require(all(words(row) and len(row) == len(tbl['columns']) for row in tbl['rows']), f'Invalid table in {key}')
 
+desk = next(ch for ch in json.loads((book/'content/reference-desk.json').read_text()) if ch['id']=='reference-changes')
+history = next(s['entries'] for s in desk['sections'] if 'entries' in s)
+require(history and all(date.fromisoformat(row['date']) <= edition_date and row['where'] in ids and
+        words([row['what']]) and row['kind'] in {'edition','review','source check'} for row in history), 'Invalid change history')
 tracks = [group['track'] for group in groups if group.get('track')]
 require(len(tracks) == len(track_levels) and set(tracks) == set(track_levels) and
         lab_count == sum(map(len, track_levels.values())), 'Unexpected lab tracks or total')

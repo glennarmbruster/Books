@@ -446,11 +446,24 @@ function openLocation(moveFocus) {
     byId('group-name').textContent = lab ? chapter.group.title + '  /  Lab ' + chapter.number + ' of ' + chapter.group.items.length + ' · ' + chapter.level : chapter.group.title + (chapter.group.guide ? '  /  Lesson ' : '  /  Chapter ') + chapter.number;
     byId('chapter-title').textContent = chapter.title;
     byId('summary').textContent = chapter.summary;
-    byId('review-date').textContent = 'Reviewed ' + dateLabel(chapter.group.reviewed);
+    byId('review-date').textContent = chapter.lastVerified
+      ? 'Last verified ' + dateLabel(chapter.lastVerified) + (chapter.verificationBasis === 'previous group review' ? ' · inherited group review' : '')
+      : 'Reviewed ' + dateLabel(chapter.group.reviewed);
     const sections = chapter.group.guide ? guideBody(chapter) : lab ? labBody(chapter) : chapter.sections.map((section, sectionIndex) => {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
+      if (section.entries) {
+        const list = element('ul', undefined, 'change-list');
+        for (const item of [...section.entries].reverse().sort((a,b)=>b.date.localeCompare(a.date))) {
+          const row = element('li');
+          const link = element('a', chapters.find(ch=>ch.id===item.where).title);
+          link.href = '#' + item.where;
+          row.append(element('strong',dateLabel(item.date) + ' · ' + item.kind), element('p',item.what), link);
+          list.append(row);
+        }
+        block.append(list);
+      }
       if (section.trialTools) block.append(diagnosticTrial(section.trialTools, section.title));
       if (section.buildPart === 'prompt') block.append(snippet(chapter.buildSpec.prompt, 'prompt'));
       if (section.buildPart === 'followUp') block.append(snippet(chapter.buildSpec.followUp, 'follow-up'));

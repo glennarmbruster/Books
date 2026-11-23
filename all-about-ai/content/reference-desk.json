@@ -548,6 +548,77 @@
           ]
         }
       }
-    ]
+    ],
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
+  },
+  {
+    "id": "reference-changes",
+    "title": "What changed",
+    "summary": "Find the date, subject and destination of a recorded update.",
+    "tags": [
+      "changes",
+      "review",
+      "dates",
+      "sources"
+    ],
+    "firstGuide": "ask-check",
+    "intro": {
+      "what": "Find the date, subject and destination of a recorded update.",
+      "features": "Open the page named in a row to read the current advice.",
+      "exchange": "Find the last review of a mail reference.",
+      "m365": "Trace a plan limit back to the review that changed it.",
+      "developer": "Check which part of a project guide moved.",
+      "sources": [
+        [
+          "How can I create and manage projects?",
+          "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+        ],
+        [
+          "Gemini Apps limits & feature availability - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/16275805?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Review history",
+        "paragraphs": [
+          "Each entry tells you what changed and which page to open. A source-check notice is a reason to investigate. Only a human review changes a page’s verification date."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Gemini Apps limits & feature availability - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/16275805?hl=en"
+          ]
+        ],
+        "entries": [
+          {
+            "date": "2026-11-22",
+            "where": "claude-reference-chat",
+            "what": "Added nine Claude surface guides.",
+            "kind": "edition"
+          },
+          {
+            "date": "2026-11-22",
+            "where": "gemini-reference-chat",
+            "what": "Added nine Gemini surface guides.",
+            "kind": "edition"
+          },
+          {
+            "date": "2026-11-22",
+            "where": "reference-job-picker",
+            "what": "Added a five-tool comparison for nine jobs.",
+            "kind": "edition"
+          }
+        ]
+      }
+    ],
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   }
 ]

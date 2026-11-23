@@ -62,7 +62,9 @@
         ]
       }
     ],
-    "surface": "chat"
+    "surface": "chat",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-projects",
@@ -128,7 +130,9 @@
         ]
       }
     ],
-    "surface": "projects"
+    "surface": "projects",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-artifacts",
@@ -194,7 +198,9 @@
         ]
       }
     ],
-    "surface": "artifacts"
+    "surface": "artifacts",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-code",
@@ -276,7 +282,9 @@
         ]
       }
     ],
-    "surface": "code"
+    "surface": "code",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-connectors",
@@ -342,7 +350,9 @@
         ]
       }
     ],
-    "surface": "connectors"
+    "surface": "connectors",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-browser",
@@ -424,7 +434,9 @@
         ]
       }
     ],
-    "surface": "browser"
+    "surface": "browser",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-scheduled",
@@ -506,7 +518,9 @@
         ]
       }
     ],
-    "surface": "scheduled"
+    "surface": "scheduled",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-voice",
@@ -572,7 +586,9 @@
         ]
       }
     ],
-    "surface": "voice"
+    "surface": "voice",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "claude-reference-files",
@@ -655,6 +671,8 @@
         ]
       }
     ],
-    "surface": "files"
+    "surface": "files",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   }
 ]

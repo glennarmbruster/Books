@@ -78,7 +78,9 @@
         ]
       }
     ],
-    "surface": "chat"
+    "surface": "chat",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-notebook",
@@ -148,7 +150,9 @@
     "surface": "notebook",
     "unverified": [
       "The source allowance for an individual workspace."
-    ]
+    ],
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-canvas",
@@ -214,7 +218,9 @@
         ]
       }
     ],
-    "surface": "canvas"
+    "surface": "canvas",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-code",
@@ -299,7 +305,9 @@
     "surface": "code",
     "unverified": [
       "A fixed number of agent runs per account."
-    ]
+    ],
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-connectors",
@@ -365,7 +373,9 @@
         ]
       }
     ],
-    "surface": "connectors"
+    "surface": "connectors",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-browser",
@@ -431,7 +441,9 @@
         ]
       }
     ],
-    "surface": "browser"
+    "surface": "browser",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-scheduled",
@@ -497,7 +509,9 @@
         ]
       }
     ],
-    "surface": "scheduled"
+    "surface": "scheduled",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-voice",
@@ -563,7 +577,9 @@
         ]
       }
     ],
-    "surface": "voice"
+    "surface": "voice",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   },
   {
     "id": "gemini-reference-files",
@@ -630,6 +646,8 @@
         ]
       }
     ],
-    "surface": "files"
+    "surface": "files",
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   }
 ]
