@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Word of the Day · Books</title><link rel="icon" href="../shelf-art/word-of-the-day.jpg">
+<link rel="stylesheet" href="../daily-calendar/style.css">
+</head><body data-kind="word" data-theme="lexicon">
+<header><div class="wrap"><a href="../">‹ Bookshelf</a><strong>Word of the Day</strong>
+<nav aria-label="Calendar"><a href="#index">Date index</a><button id="today" type="button">Today</button></nav></div></header>
+<main class="wrap">
+<section id="reader" aria-label="Word of the Day"><div id="upper"></div>
+<div class="dateline"><span id="weekday"></span><time id="date"></time></div>
+<article class="card"><p id="category"></p><h1 id="heading"></h1>
+<p id="definition"></p>
+<p class="example-label">In a sentence</p><p id="example"></p>
+</article><book-pager top="#upper"></book-pager></section>
+<section id="index" hidden><h1>Date index</h1><p>December 1, 2026 – December 31, 2027</p>
+<div class="filters"><label>Month<select id="month"><option value="">All months</option></select></label>
+<label>Search words, definitions or dates<input id="search" type="search"></label></div>
+<p id="matches" role="status"></p><ul id="entries"></ul></section>
+</main><footer class="wrap"><span id="offline" role="status">Preparing offline edition…</span></footer>
+<script src="days.js"></script><script src="../book-pager.js"></script>
+<script src="../daily-calendar/reader.js"></script>
+</body></html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adult Joke of the Day · Books</title><link rel="icon" href="../shelf-art/adult-joke-of-the-day.jpg">
+<link rel="stylesheet" href="../daily-calendar/style.css">
+</head><body data-kind="joke" data-theme="nightclub">
+<header><div class="wrap"><a href="../">‹ Bookshelf</a><strong>Adult Joke of the Day</strong>
+<nav aria-label="Calendar"><a href="#index">Date index</a><button id="today" type="button">Today</button></nav></div></header>
+<main class="wrap">
+<section id="reader" aria-label="Adult Joke of the Day"><div id="upper"></div>
+<div class="dateline"><span id="weekday"></span><time id="date"></time></div>
+<article class="card"><p id="category"></p><h1 id="heading"></h1>
+<button id="reveal" type="button" aria-controls="punchline" aria-expanded="false">Reveal punchline</button>
+<p id="punchline" aria-live="polite"></p>
+</article><book-pager top="#upper"></book-pager></section>
+<section id="index" hidden><h1>Date index</h1><p>December 1, 2026 – December 31, 2027</p>
+<div class="filters"><label>Month<select id="month"><option value="">All months</option></select></label>
+<label>Search setups, themes or dates<input id="search" type="search"></label></div>
+<p id="matches" role="status"></p><ul id="entries"></ul></section>
+</main><footer class="wrap"><span id="offline" role="status">Preparing offline edition…</span></footer>
+<script src="days.js"></script><script src="../book-pager.js"></script>
+<script src="../daily-calendar/reader.js"></script>
+</body></html>
