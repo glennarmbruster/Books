@@ -556,7 +556,7 @@ function openLocation(moveFocus) {
       }
       sections.push(links);
     }
-    if (!lab && !chapter.group.guide) sections.unshift(workedExample(worked.get(chapter.id)),chapterIntroduction(chapter.intro));
+    if (!lab && !chapter.group.guide) sections.unshift(chapterIntroduction(chapter.intro),workedExample(worked.get(chapter.id)));
     if (!chapter.group.guide) {
       sections.unshift(launchHelp(chapter));
       const figures = chapterPictures(chapter.id);

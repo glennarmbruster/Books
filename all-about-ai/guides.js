@@ -281,7 +281,13 @@ function workedExample(example) {
   const flow = element('ol',undefined,'example-flow');
   for (const [label,value] of [['Start with this',example.before],['Try this',example.try],['Look for this result',example.after]]) {
     const step = element('li');
-    step.append(element('h3',label),element('p',value));
+    step.append(element('h3',label));
+    if (label === 'Start with this') step.append(snippet(value,'practice card'));
+    else if (label === 'Try this') {
+      const instructions = element('ol');
+      for (const line of value.split(/\n(?=\d+\. )/)) instructions.append(element('li',line.replace(/^\d+\. /,'')));
+      step.append(instructions);
+    } else step.append(element('p',value));
     flow.append(step);
   }
   wrap.append(flow,element('p',example.why));
