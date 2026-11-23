@@ -1,0 +1,4 @@
+Fictional training data only. One sign-in appears on more than one CSV row because each row records one policy. Each label is shortened for reading. UTC timestamps use Z. No tenant connection is needed.
+N1 | 2026-04-08 09:04Z | Mail failed for shift@example.test on tab-7. The sign-in event was EV-31.
+N2 | 2026-04-08 09:15Z | The device owner installed the approved update on tab-7. No change to the access policies was recorded in this case.
+N3 | 2026-04-08 09:26Z | On tab-7, the test reader entered the mail app successfully after the new sign-in.

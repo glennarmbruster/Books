@@ -21,3 +21,9 @@ Look for four rows sorted by address. Two are user mailboxes and two are shared 
 ## Run a real report only when you have read access
 
 Devin lab 1 explains the optional live step on an approved work computer. It reads mailbox details and saves a report on that computer. Keep real mailbox data out of the practice project.
+
+## Work a troubleshooting case
+
+The cases folder contains fictional traces, headers, a delivery failure, DNS and rule records, sign-in and device data, and a hybrid mail route. Match a case filename to the lab you are reading. The book can also show and copy evidence directly on the lab page offline. Keep the answer key and later retests out of any blind first attempt.
+
+The data-safety labs use the same folder. Work on the draft locally and log only the permitted fields. All addresses and token markers in these exercises are invented.

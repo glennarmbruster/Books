@@ -2,6 +2,7 @@
 import argparse
 import base64
 from datetime import date
+from hashlib import sha256
 import io
 import json
 from pathlib import Path
@@ -11,6 +12,8 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 book = Path(__file__).resolve().parent
 root = book.parent
 output = root / 'downloads' / 'All-About-AI.zip'
+package_index = root / 'book-package.json'
+unpacked = package_index.is_file() or (root.name == 'Site' and (root.parent / 'Read me.txt').is_file())
 cli = argparse.ArgumentParser(description=__doc__)
 cli.add_argument('--check', action='store_true')
 args = cli.parse_args()
@@ -26,10 +29,12 @@ def data_url(path, mime):
 
 
 # The portable reader makes no fetch calls. All data and pictures live in the HTML.
-bundle = {'json': {}, 'media': {}}
+bundle = {'json': {}, 'media': {}, 'cases': {}}
 for name in files:
     source = book / name
-    if name.endswith('.json'):
+    if name.startswith('practice/exchange-inventory/cases/'):
+        bundle['cases']['./' + name] = source.read_text()
+    elif name.endswith('.json'):
         bundle['json']['./' + name] = json.loads(source.read_text())
     elif name.startswith('practice/browser/') and name.endswith('.html'):
         bundle['media']['./' + name] = data_url(source, 'text/html')
@@ -70,15 +75,22 @@ Editable copy
 The Site folder contains this book’s original chapters, lab files, pictures,
 and the shared reader files it needs. Serve Site with a local web server and
 open /all-about-ai/. The HTML in the top folder is the portable edition.
+From Site/all-about-ai, run python3 update_edition.py --check to verify the
+unpacked files directly. After you edit, run python3 update_edition.py in
+that same folder to refresh the top-level reader and create a fresh ZIP in
+Site/downloads. See UPDATING.md for the checks and practice commands.
 The illustrated content was reviewed {reviewed:%B %d, %Y}.
 """
 archive = io.BytesIO()
+member_hashes = {}
 with ZipFile(archive, 'w') as z:
     def put(name, data):
         entry = ZipInfo('All About AI/' + name, (reviewed.year, reviewed.month, reviewed.day, 0, 0, 0))
         entry.compress_type = ZIP_DEFLATED
         entry.external_attr = 0o100644 << 16
-        z.writestr(entry, data)
+        raw = data.encode('utf-8') if isinstance(data, str) else data
+        z.writestr(entry, raw)
+        member_hashes[name] = sha256(raw).hexdigest()
 
     put('Read All About AI.html', html)
     put('Read me.txt', readme)
@@ -91,19 +103,33 @@ with ZipFile(archive, 'w') as z:
     # A single-book landing page keeps the shelf link and edition updater usable.
     landing = '<!doctype html><html lang="en"><meta charset="utf-8"><title>All About AI</title><article data-book="all-about-ai" data-edition="' + edition_id + '"><h1>All About AI</h1><a href="./all-about-ai/">Open the book</a></article></html>'
     put('Site/index.html', landing)
-reader = book / 'Read All About AI.html'
-standalone = html.encode('utf-8')
-if args.check:
-    if not reader.is_file() or reader.read_bytes() != standalone:
-        raise SystemExit('Regenerate Read All About AI.html with update_edition.py')
-elif not reader.is_file() or reader.read_bytes() != standalone:
-    reader.write_bytes(standalone)
+    inventory = json.dumps({'format':1, 'files':member_hashes}, indent=2, sort_keys=True) + '\n'
+    put('Site/book-package.json', inventory)
+
+
+def generated(path, data):
+    if path.is_file() and path.read_bytes() == data:
+        return
+    if args.check:
+        raise SystemExit(f'{path.name} is missing or out of date. Run python3 update_edition.py.')
+    path.parent.mkdir(exist_ok=True)
+    path.write_bytes(data)
+
+
 data = archive.getvalue()
-if args.check:
-    if not output.is_file() or output.read_bytes() != data:
-        raise SystemExit('Regenerate the portable edition with export_book.py')
+if unpacked:
+    # The archive contains its members, never a second copy of itself.
+    package_root = root.parent
+    generated(package_root / 'Read All About AI.html', html.encode())
+    generated(package_root / 'Read me.txt', readme.encode())
+    generated(package_index, inventory.encode())
+    for name, expected in member_hashes.items():
+        path = package_root / name
+        if not path.is_file() or sha256(path.read_bytes()).hexdigest() != expected:
+            raise SystemExit(f'Unpacked file differs from the edition: {name}')
+    if not args.check or output.exists():
+        generated(output, data)
 else:
-    output.parent.mkdir(exist_ok=True)
-    if not output.is_file() or output.read_bytes() != data:
-        output.write_bytes(data)
+    generated(book / 'Read All About AI.html', html.encode())
+    generated(output, data)
 print(f'{output.name} · {len(data):,} bytes · {edition_id}')

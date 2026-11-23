@@ -146,7 +146,49 @@
       "startLabel": "Open Gemini",
       "startUrl": "https://gemini.google.com/",
       "gettingStarted": "Open Gemini in a browser or its app. Choose a new chat. For a Notebook lab, open Gemini Notebook and add the practice notes as sources. Each lab tells you which screen to use."
+    },
+    {
+      "title": "Troubleshoot M365 with AI",
+      "file": "troubleshoot.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Troubleshoot M365 with AI",
+      "track": "troubleshoot",
+      "file": "labs-troubleshoot.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open the practice kit guide",
+      "startUrl": "#get-kit",
+      "gettingStarted": "Open the case files inside each lab, or unzip the practice kit. Work from the rows on paper offline. Use an approved AI chat only with the stripped-down practice packet."
+    },
+    {
+      "title": "Data safety at work",
+      "file": "data-safety.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Data safety at work",
+      "track": "data-safety",
+      "file": "labs-data-safety.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open the account and access guide",
+      "startUrl": "#which-account",
+      "gettingStarted": "Use the fictional practice packet. Start with the policy card and decide whether the stripped-down excerpt is allowed in the selected tool. All six cases also work on paper."
+    },
+    {
+      "title": "Ship a personal app",
+      "file": "ship-app.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Ship a personal app",
+      "track": "ship-app",
+      "file": "labs-ship-app.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open the first practice project",
+      "startUrl": "#first-project",
+      "gettingStarted": "Use an empty practice folder and the game file in the first lab. Try the checks on your device. Publish only the public-safe game when you choose to host your own copy."
     }
   ],
-  "version": 5
+  "version": 6
 }

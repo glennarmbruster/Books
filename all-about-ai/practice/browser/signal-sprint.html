@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Signal Sprint</title>
+<style>
+:root{font:100%/1.45 system-ui,sans-serif;color:#182c2d;background:#faf6ea;color-scheme:light}
+*{box-sizing:border-box}
+body{max-width:38rem;margin:0 auto;padding:clamp(.75rem,3vw,1.5rem)}
+header,.totals,.actions,.test-controls{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap}
+header{justify-content:space-between;border-bottom:2px solid #145756}
+h1{font:700 clamp(1.6rem,5vw,2.3rem)/1.1 Georgia,serif;margin:.3rem 0 .7rem}
+header small{font-weight:650;color:#145756}
+.totals{justify-content:space-between;font-variant-numeric:tabular-nums}
+.signal{text-align:center;background:#173d40;color:#fff;padding:.7rem;border-radius:.5rem;margin:.65rem 0}
+.signal strong{display:block;font:700 2rem/1.25 Georgia,serif}
+button{min-height:44px;border:2px solid #145756;border-radius:.4rem;padding:.4rem 1rem;color:#123e3e;background:#fffdf7;font:650 1rem/1.4 system-ui;cursor:pointer}
+button:disabled{opacity:.55;cursor:default}
+button:focus-visible,input:focus-visible{outline:3px solid #8b571b;outline-offset:2px}
+.actions button{flex:1}
+#start{background:#145756;color:#fff}
+p{margin:.55rem 0}
+.test-controls{margin-top:.65rem}.test-controls label{display:flex;align-items:center;min-height:44px;gap:.4rem}.test-controls input{width:1.2rem;height:1.2rem}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><h1>Signal Sprint</h1><small>Signal Sprint 1.0</small></header>
+<p>Match the signal before the 15 seconds run out. Each match scores one point and changes the signal.</p>
+<div class="totals"><span>Time <strong id="seconds">15</strong> s</span><span>Score <strong id="score">0</strong></span></div>
+<div class="signal">Signal<strong id="target">Ready</strong></div>
+<div class="actions">
+ <button type="button" id="lamp" disabled>Lamp</button><button type="button" id="bell" disabled>Bell</button><button type="button" id="start">Start</button>
+</div>
+<p id="message" role="status">Press Start to play.</p>
+<div class="test-controls"><label><input type="checkbox" id="test-mode">Test mode</label><button id="advance" type="button" hidden disabled>Advance 1 second</button><button id="expire" type="button" hidden disabled>Advance 15 seconds</button></div>
+<p id="test-help" hidden>In test mode the clock moves only when you advance it. Switching modes clears the round.</p>
+<script>
+const get = id => document.getElementById(id);
+const duration = 15000;
+let points = 0, target = 'Lamp', playing = false, deadline = 0, testTime = 0, ticker;
+function now() { return get('test-mode').checked ? testTime : Date.now(); }
+function controls() {
+  for (const id of ['lamp','bell','advance','expire']) get(id).disabled = !playing;
+}
+function refresh() {
+  const remaining = Math.max(0, deadline - now());
+  get('seconds').textContent = Math.ceil(remaining / 1000);
+  if (remaining === 0) {
+    playing = false;
+    clearInterval(ticker);
+    controls();
+    get('target').textContent = 'Time’s up';
+    get('message').textContent = 'Round over. Final score ' + points + '.';
+  }
+}
+function start() {
+  clearInterval(ticker);
+  points = 0; target = 'Lamp'; testTime = 0; playing = true;
+  deadline = now() + duration;
+  get('score').textContent = points;
+  get('target').textContent = target;
+  get('start').textContent = 'Restart';
+  get('message').textContent = 'Match Lamp.';
+  controls(); refresh();
+  if (!get('test-mode').checked) ticker = setInterval(refresh, 100);
+}
+function pick(choice) {
+  if (!playing) return;
+  refresh();
+  if (!playing) return;
+  if (choice === target) {
+    points++;
+    target = target === 'Lamp' ? 'Bell' : 'Lamp';
+    get('score').textContent = points;
+    get('target').textContent = target;
+    get('message').textContent = 'Match! Score ' + points + '. Next signal: ' + target + '.';
+  } else get('message').textContent = 'No point. The signal is still ' + target + '.';
+}
+function advance(ms) {
+  if (playing && get('test-mode').checked) { testTime += ms; refresh(); }
+}
+get('start').onclick = start;
+get('lamp').onclick = () => pick('Lamp');
+get('bell').onclick = () => pick('Bell');
+get('advance').onclick = () => advance(1000);
+get('expire').onclick = () => advance(duration);
+get('test-mode').onchange = () => {
+  clearInterval(ticker); playing = false; points = 0; controls();
+  get('score').textContent = '0'; get('seconds').textContent = '15';
+  get('target').textContent = 'Ready'; get('start').textContent = 'Start';
+  get('message').textContent = 'Press Start to play.';
+  for (const id of ['advance','expire','test-help']) get(id).hidden = !get('test-mode').checked;
+};
+</script>
+</body>
+</html>

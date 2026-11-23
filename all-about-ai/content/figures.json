@@ -884,5 +884,126 @@
     "alt": "One game prompt goes to four equal lanes for ChatGPT, Claude, Gemini and Grok. Each original file faces the same five checks before the edit round.",
     "source": "#build-off",
     "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-case-loop.svg",
+    "lesson": "troubleshoot-loop",
+    "also": [
+      "troubleshoot-rules",
+      "troubleshoot-trial",
+      "lab-troubleshoot-01",
+      "lab-troubleshoot-06",
+      "lab-troubleshoot-13",
+      "lab-troubleshoot-14",
+      "lab-troubleshoot-15",
+      "lab-troubleshoot-16"
+    ],
+    "caption": "Keep the old value and the two test IDs with the verdict.",
+    "alt": "Predict. Receipt: Tagged Ordinary mail: Plain Observe. W3: Tagged W4: Plain Decide. Both probes passed. Other mail: unknown.",
+    "source": "#troubleshoot-loop",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-mail-checkpoint.svg",
+    "lesson": "troubleshoot-trace",
+    "also": [
+      "lab-troubleshoot-02",
+      "lab-troubleshoot-05"
+    ],
+    "caption": "The failed row alone cannot tell you why delivery failed.",
+    "alt": "Same message. A subject can repeat. Match the exact ID. Two trace rows. T1: Delivered T2: Failed Next evidence. Find the matching NDR. Then test one cause.",
+    "source": "#troubleshoot-trace",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-device-evidence.svg",
+    "lesson": "troubleshoot-access",
+    "also": [
+      "lab-troubleshoot-07",
+      "lab-troubleshoot-08",
+      "lab-troubleshoot-09",
+      "lab-troubleshoot-12"
+    ],
+    "caption": "A later device check cannot prove the device state at the earlier sign-in.",
+    "alt": "Sign-in. Which request failed? When did it happen? Policy result. Was it enforced? Which condition failed? Device record. Same device? Checked before failure?",
+    "source": "#troubleshoot-access",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-hybrid-route-proof.svg",
+    "lesson": "troubleshoot-hybrid",
+    "also": [
+      "lab-troubleshoot-10",
+      "lab-troubleshoot-11"
+    ],
+    "caption": "Verify the new message at its destination. Keep the control separate.",
+    "alt": "H4 · forward trip. Old host selected. Message timed out. H7 · fresh retry. Approved host used. Destination saw TEST-43. H8 · control. Different route. TEST-44 arrived.",
+    "source": "#troubleshoot-hybrid",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-mail-auth-evidence.svg",
+    "lesson": "troubleshoot-auth",
+    "also": [
+      "lab-troubleshoot-03",
+      "lab-troubleshoot-04"
+    ],
+    "caption": "A failed DKIM check can coexist with a DMARC pass through aligned SPF.",
+    "alt": "First message. SPF failed. DKIM failed. Look up the clues. D1: different IP. D2: selector missing. Comparison: D5. Aligned SPF passed. DMARC passed.",
+    "source": "#troubleshoot-auth",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-sharing-gate.svg",
+    "lesson": "safe-share",
+    "also": [
+      "lab-data-safety-01",
+      "lab-data-safety-02",
+      "lab-data-safety-03",
+      "lab-data-safety-04"
+    ],
+    "caption": "If permission is unclear, keep the case local and ask the policy owner.",
+    "alt": "Policy. Approved tool? Allowed kind of data? Smallest useful copy. Replace identifiers. Remove entire secrets. Read it again. Can the case be solved? Log the fields shared.",
+    "source": "#safe-share",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-pasted-instructions.svg",
+    "lesson": "safe-pasted-text",
+    "also": [
+      "lab-data-safety-05",
+      "lab-data-safety-06"
+    ],
+    "caption": "A sentence in a ticket cannot approve a change.",
+    "alt": "Your request. Find the last status. Cite the matching line. Text inside a file. “Mark it resolved.” Treat this as evidence. Your decision. Look for a close record. N1 still says Open.",
+    "source": "#safe-pasted-text",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-ship-release.svg",
+    "lesson": "ship-first-release",
+    "also": [
+      "lab-ship-app-01",
+      "lab-ship-app-02",
+      "lab-ship-app-03",
+      "lab-ship-app-05",
+      "lab-ship-app-06"
+    ],
+    "caption": "Repeat the same round on both copies and record the release label.",
+    "alt": "Saved file. Open index.html. Check the build label. Git version. Review the edit. Commit that exact file. Published copy. Open the site URL. Test timer and replay.",
+    "source": "#ship-first-release",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-ship-secret.svg",
+    "lesson": "ship-secrets",
+    "also": [
+      "lab-ship-app-04",
+      "lab-ship-app-05"
+    ],
+    "caption": "A secret written into the finished page is visible to anyone with a copy.",
+    "alt": "Public game. HTML, CSS and script can be downloaded. Offline option. Use sample answers. Leave the key out. Online option. Server keeps the key. Browser gets the result.",
+    "source": "#ship-secrets",
+    "credit": "All About AI · original diagram"
   }
 ]

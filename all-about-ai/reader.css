@@ -98,3 +98,11 @@ tbody th{font-weight:650}tbody tr:nth-child(even){background:#f1eee1}
 .build-cards thead th:nth-child(3){width:16%}
 .build-cards textarea{width:100%;resize:vertical}
 @media(max-width:580px){.build-cards th,.build-cards td{padding:.35rem .2rem}.build-cards table{font-size:.85rem}.build-cards select,.build-cards textarea{font-size:16px}.build-cards .table-wrap select{width:100%}}
+
+.diagnostic-sheet textarea,.diagnostic-sheet select{width:100%;min-height:44px;font:inherit}
+.diagnostic-sheet th,.diagnostic-sheet td{min-width:4rem}
+
+.write-prompt{border-top:2px solid var(--teal);margin:1.25rem 0;padding:.5rem 0}
+.write-prompt summary{color:var(--teal);font-weight:650;min-height:44px;padding:.5rem 0;cursor:pointer}
+.write-prompt label,.write-prompt textarea{display:block;width:100%}
+.write-prompt textarea{padding:.65rem;margin:.4rem 0;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--teal);border-radius:.35rem}

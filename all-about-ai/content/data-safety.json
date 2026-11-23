@@ -1,0 +1,183 @@
+[
+  {
+    "id": "safe-share",
+    "title": "What can I paste into a work AI?",
+    "summary": "Decide whether sharing is allowed. Then make a small copy that still answers the question.",
+    "intro": {
+      "what": "Redaction means removing or replacing details in a copy. First find out whether you may share even a redacted copy. The rules depend on your workplace, the tool, the account and the job.",
+      "features": "A policy card sets the boundary. Short labels keep related events together. A second read finds details left in filenames, footers or free text.",
+      "exchange": "Keep the link between a mail retry and a delivery while removing real addresses.",
+      "m365": "Check the allowed account and workspace before you share a marked document.",
+      "developer": "Use fake project settings when asking for help with a broken app.",
+      "sources": [
+        [
+          "Microsoft Learn · sensitivity labels and data policies",
+          "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+        ],
+        [
+          "Microsoft Learn · scope of enterprise data protection",
+          "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection"
+        ],
+        [
+          "Microsoft Learn · protect application secrets",
+          "https://learn.microsoft.com/en-us/azure/well-architected/security/application-secrets"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Check the permission before the paste",
+        "paragraphs": [
+          "Look up the policy your organization uses today. Find the allowed data class, tool, account, feature and purpose. Ask the owner if web search, attachments or connected apps would change the answer. Keep the material in its approved location while you find out.",
+          "Try the fictional share-policy.txt. P2 allows a redacted mail excerpt in one approved workspace. P4 leaves a personal account outside that approval. Seeing the same product name on both screens does not settle which account you are using."
+        ],
+        "sources": [
+          [
+            "Microsoft Learn · sensitivity labels and data policies",
+            "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+          ],
+          [
+            "Microsoft Learn · scope of enterprise data protection",
+            "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection"
+          ]
+        ]
+      },
+      {
+        "title": "Build a new excerpt from the facts you need",
+        "paragraphs": [
+          "Open share-draft.txt locally. Its question is whether a retry reached the same mailbox from a different source. Start a blank note. Keep elapsed minutes, two status words and the relationships between the events. Use Box A for the same mailbox on both lines. Use Relay A and Relay B for the two different sources.",
+          "A possible note reads “+0 min | Box A | Relay A | Deferred” and “+5 min | Box A | Relay B | Delivered.” The raw tenant name, ticket ID, full times, addresses and IPs add nothing to this question. Drop the unused private project word. Store any key to the labels inside the original case."
+        ],
+        "sources": [
+          [
+            "Microsoft Learn · sensitivity labels and data policies",
+            "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+          ],
+          [
+            "Microsoft Learn · protect application secrets",
+            "https://learn.microsoft.com/en-us/azure/well-architected/security/application-secrets"
+          ]
+        ]
+      },
+      {
+        "title": "Stop secret values at the source",
+        "paragraphs": [
+          "Passwords, private keys, session cookies, API keys and access tokens can grant access. Never paste their values into an AI chat, an attachment, a screenshot or a share log. For this question the entire token field can be omitted. A hash or a few visible characters would add an unnecessary trace of the secret.",
+          "Read the outgoing copy as if it were the only file you could see. Check the filename, pasted footer, image, extra tabs and metadata. In this exercise a fresh plain-text excerpt avoids those leftovers. If a real secret has already been shared, follow the organization’s incident process and contact its owner to revoke or rotate it. Keep the secret value out of the report."
+        ],
+        "sources": [
+          [
+            "Microsoft Learn · protect application secrets",
+            "https://learn.microsoft.com/en-us/azure/well-architected/security/application-secrets"
+          ]
+        ]
+      },
+      {
+        "title": "Leave a receipt for the decision",
+        "paragraphs": [
+          "Write the date, destination and account type, purpose, field categories, edits and outcome. A held request gets “nothing sent.” A sent request gets a note of the approved destination and the field types that actually went out. Follow the workplace rule for who may read the log and how long to keep it."
+        ],
+        "sources": [
+          [
+            "Microsoft Learn · sensitivity labels and data policies",
+            "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+          ],
+          [
+            "Microsoft Learn · scope of enterprise data protection",
+            "https://learn.microsoft.com/en-us/copilot/plan/enterprise-data-protection"
+          ],
+          [
+            "Microsoft Learn · protect application secrets",
+            "https://learn.microsoft.com/en-us/azure/well-architected/security/application-secrets"
+          ]
+        ],
+        "exercise": {
+          "prompt": "Your manager says to hurry, but the data class of a project nickname is unknown. The nickname is not needed. What is your next move?",
+          "answer": [
+            "Drop the nickname locally and check that the remaining fields and destination are allowed. If any part of the remaining packet or destination is unclear, hold the request for the policy owner."
+          ]
+        }
+      }
+    ],
+    "firstGuide": "which-account",
+    "relatedLabs": [
+      "lab-data-safety-01",
+      "lab-data-safety-02",
+      "lab-data-safety-03",
+      "lab-data-safety-04"
+    ]
+  },
+  {
+    "id": "safe-pasted-text",
+    "title": "When the pasted note tries to give orders",
+    "summary": "Keep a reader’s request separate from instructions copied inside a ticket, message or document.",
+    "intro": {
+      "what": "A pasted record can contain words that look like orders for the AI. Prompt injection is an attempt to steer the helper through such input. A harmless old footer can cause the same kind of mistaken answer.",
+      "features": "Mark who asked for the work. Treat the excerpt as evidence. Compare its status lines and dates before you accept a summary.",
+      "exchange": "Keep a quoted mail footer from changing the conclusion of a mail case.",
+      "m365": "Read a pasted meeting note without treating an old request as approval.",
+      "developer": "Stop a feedback summary from changing an app setting because of words in a comment.",
+      "sources": [
+        [
+          "Microsoft Learn · untrusted document content and prompt injection",
+          "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Draw the boundary on the page",
+        "paragraphs": [
+          "Your task in share-note.txt is a read-only summary. Cover N5 for the first run. Underline the status on N1, then circle the instruction-like words in N3. N3 is text copied from a form footer. It gives no authority to act and records no outcome.",
+          "Ask the helper for the last recorded state, a supporting line and the missing proof. Label the excerpt as data. Use a context that has no ability to change a ticket for this reading task. Quotation marks make the boundary easier to read. They cannot guarantee a model will respect it."
+        ],
+        "sources": [
+          [
+            "Microsoft Learn · untrusted document content and prompt injection",
+            "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection"
+          ]
+        ]
+      },
+      {
+        "title": "Check what the reply claims",
+        "paragraphs": [
+          "With N1 through N4, expect Open and pending confirmation. If the reply says Closed, look for a dated status change or authorized state event. The note has neither in this first run. Reject the claim and record the bad inference before accepting a new summary.",
+          "Now add N5 as a later event. Closed is supported in this second run because the analyst recorded it after confirmation. The copied footer is still only evidence of words someone put on a form. Leave the actual case system alone in both runs."
+        ],
+        "sources": [
+          [
+            "Microsoft Learn · untrusted document content and prompt injection",
+            "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection"
+          ]
+        ],
+        "exercise": {
+          "prompt": "Both N3 and N5 use a form of the word close. Which one can support a state change in the second summary?",
+          "answer": [
+            "N5 reports a completed event. N3 requests action inside a quoted footer. A word match alone cannot decide the state."
+          ]
+        }
+      },
+      {
+        "title": "Log the boundary you tested",
+        "paragraphs": [
+          "In a practice log, write that the input was a scrubbed, fictional status excerpt and the output was a read-only summary. Record the source line that supported the state and whether you held back the correction until N5 arrived. A log can describe an instruction-like footer without copying its raw contents or any identities."
+        ],
+        "sources": [
+          [
+            "Microsoft Learn · untrusted document content and prompt injection",
+            "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection"
+          ],
+          [
+            "Microsoft Learn · sensitivity labels and data policies",
+            "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+          ]
+        ]
+      }
+    ],
+    "firstGuide": "which-account",
+    "relatedLabs": [
+      "lab-data-safety-05",
+      "lab-data-safety-06"
+    ]
+  }
+]

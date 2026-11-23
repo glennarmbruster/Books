@@ -248,7 +248,12 @@
         "Microsoft · Copilot in each Office app",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Count seats and people in the same export.",
+      "given": "One person has two plans. Another appears twice with the same plan.",
+      "compare": "See whether your prompt distinguishes a row, a person and a person-plan pair."
+    }
   },
   {
     "id": "lab-copilot-06",
@@ -452,7 +457,12 @@
         "Microsoft Learn · agent knowledge sources",
         "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Answer a queue of help requests from two printed rules.",
+      "given": "One request is standard, one asks about restore and one leaves out the type.",
+      "compare": "Did you ask for a rule ID and give the helper a way to handle each missing fact?"
+    }
   },
   {
     "id": "lab-copilot-10",
@@ -1201,7 +1211,12 @@
         "Microsoft · first steps in Copilot Chat",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Run a small bingo game with a repeated draw.",
+      "given": "Board: 2, 4, 6. Pile: 4, 4, 2, 6. Then try a fresh game.",
+      "compare": "Compare how each prompt handles the second 4 and which things a reset must clear."
+    }
   },
   {
     "id": "lab-copilot-25",

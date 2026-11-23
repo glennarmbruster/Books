@@ -222,7 +222,12 @@
         "Antigravity · reviewing file changes",
         "https://antigravity.google/docs/review-changes/"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Show why a scoreboard put 10 ahead of 2, then fix it.",
+      "given": "The starting values are the text labels 10, 2 and 0. Add another 2 for a second test.",
+      "compare": "Does your request preserve the broken first result long enough to see it?"
+    }
   },
   {
     "id": "lab-antigravity-06",
@@ -406,7 +411,12 @@
         "Antigravity · reviewing file changes",
         "https://antigravity.google/docs/review-changes/"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Make a Rules panel that works with a keyboard.",
+      "given": "Start on Rules. Try Enter, Tab, Escape and Close without touching the screen.",
+      "compare": "Look for a check that the keyboard highlight returns to the button that opened the box."
+    }
   },
   {
     "id": "lab-antigravity-10",
@@ -1142,7 +1152,12 @@
         "Google · review changes",
         "https://antigravity.google/docs/review-changes/"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Split one bill fairly, down to the last cent.",
+      "given": "Try ten dollars for three seats, two cents for three seats and any amount for zero seats.",
+      "compare": "Does your request say who gets each extra cent and what happens with no seats?"
+    }
   },
   {
     "id": "lab-antigravity-25",

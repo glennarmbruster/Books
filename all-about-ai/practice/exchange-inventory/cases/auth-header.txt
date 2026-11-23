@@ -1,0 +1,9 @@
+Synthetic header excerpt from the receiving system's saved copy. Line folding,
+signature bytes and unrelated fields are omitted. The labels H1-H7 are case aids.
+H1 Received: from relay.example.test ([192.0.2.44]) by sink.example.test; Thu, 12 Nov 2026 10:04:00 +0000
+H2 Message-ID: <beacon-17@bulletin.example.test>
+H3 From: board@bulletin.example.test
+H4 Return-Path: <notice@bulletin.example.test>
+H5 DKIM-Signature excerpt: d=bulletin.example.test; s=board2
+H6 Authentication-Results: sink.example.test; spf=fail smtp.mailfrom=bulletin.example.test; dkim=fail header.d=bulletin.example.test; dmarc=fail header.from=bulletin.example.test
+H7 Later mailbox or quarantine outcome: not supplied.

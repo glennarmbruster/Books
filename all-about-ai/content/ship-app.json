@@ -1,0 +1,185 @@
+[
+  {
+    "id": "ship-first-release",
+    "title": "Ship the file you actually tested",
+    "summary": "Follow one tiny game from your folder to a web address. A version label and a timed test tell you which copy you opened.",
+    "intro": {
+      "what": "A release is a copy you mean other people to use. For Signal Sprint, that copy can be a single index.html file. It holds the page, the rules and the timer.",
+      "features": "Git saves checkpoints. A static host delivers saved files to a browser. A server-backed app can also run private code for each request. A game with its whole deck on the device can use the first kind.",
+      "exchange": "Use a fake mailbox tally when you practice shipping a report viewer.",
+      "m365": "Use a made-up shift board to test which release the team sees.",
+      "developer": "Share a working single-file game and retest its last second.",
+      "sources": [
+        [
+          "Git · record and inspect changes",
+          "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
+        ],
+        [
+          "GitHub Docs · what Pages hosts",
+          "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+        ],
+        [
+          "MDN · browser code and server code",
+          "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Choose how to deliver it",
+        "paragraphs": [
+          "If two people will play offline, give them the file. If several people want one web address, a static host such as GitHub Pages can serve the same HTML. A link needs the network for a fresh visit. A separate saved file can travel offline.",
+          "If the app must look up private data for each user, add a server you control and check who can use it. A static page on its own cannot keep the lookup key. Signal Sprint needs no account, live data or secret."
+        ],
+        "sources": [
+          [
+            "GitHub Docs · what Pages hosts",
+            "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+          ],
+          [
+            "MDN · browser code and server code",
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction"
+          ]
+        ]
+      },
+      {
+        "title": "Name the exact copy",
+        "paragraphs": [
+          "Save the book’s Signal Sprint example as index.html in an empty practice folder. Open it in a browser. Look for Signal Sprint 1.0 and play the round. Make a Git checkpoint as in lab 2. Write the short commit ID next to the version label.",
+          "Copy only index.html into a second empty folder to rehearse a release. Start a local server from that second folder. Open the address in a fresh browser window, inspect the label and play again. This checks the file you will give someone else."
+        ],
+        "sources": [
+          [
+            "Git · record and inspect changes",
+            "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
+          ],
+          [
+            "Git · read the saved history",
+            "https://git-scm.com/docs/git-log"
+          ],
+          [
+            "Python documentation · run a local file server",
+            "https://docs.python.org/3/library/http.server.html"
+          ]
+        ]
+      },
+      {
+        "title": "Know when it is really live",
+        "paragraphs": [
+          "For an optional public practice site, publish only the harmless game. A repository page shows stored files. The Pages site address opens the game itself. Copy the published address from Pages in repository Settings.",
+          "Retest that address in a fresh browser session. Record the label, the visible timer result and the date. If a release fails, restore a reviewed version, then repeat the test at the same address. A local pass can stand on its own; mark the public result as untested until you can visit it."
+        ],
+        "sources": [
+          [
+            "GitHub Docs · choose a publishing branch and folder",
+            "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+          ],
+          [
+            "GitHub Docs · create and visit a Pages site",
+            "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+          ],
+          [
+            "Git · reverse a recorded change",
+            "https://git-scm.com/docs/git-revert"
+          ]
+        ]
+      }
+    ],
+    "firstGuide": "make-folder",
+    "relatedLabs": [
+      "lab-ship-app-01",
+      "lab-ship-app-02",
+      "lab-ship-app-03",
+      "lab-ship-app-05",
+      "lab-ship-app-06"
+    ]
+  },
+  {
+    "id": "ship-secrets",
+    "title": "Draw a line around secrets",
+    "summary": "A player can inspect the code you send to their browser. Design the game so that file can be shared whole.",
+    "intro": {
+      "what": "A secret is a value that lets its holder use an account or service. If a game sends a key to the browser, a player can read the delivered file.",
+      "features": "You can inspect a release file, design a server-side boundary and review Git history before sharing. If a real key has been exposed, the owner must revoke or rotate it.",
+      "exchange": "A public practice viewer can count made-up rows. A real mail reader needs approved access outside the public page.",
+      "m365": "Use a sample shift list while testing. Keep shared service credentials out of team dashboards.",
+      "developer": "Keep the single-file game local to the browser. Design a private score service separately if you later need one.",
+      "sources": [
+        [
+          "MDN · inspect code delivered to the browser",
+          "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+        ],
+        [
+          "MDN · browser code and server code",
+          "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction"
+        ],
+        [
+          "GitHub Docs · remove sensitive data from a repository",
+          "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Look with the player’s eyes",
+        "paragraphs": [
+          "Open the local game file in a plain-text editor. Find the title and one answer button. The player receives those lines along with the scoring code. A private value in a hidden input, a comment or an unused variable would travel with them.",
+          "Give an AI a made-up design question. The game needs a clock and a local score. Which job needs a service key? The expected answer is neither. Ask for a reason for each field the helper wants to send away."
+        ],
+        "sources": [
+          [
+            "MDN · inspect code delivered to the browser",
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+          ],
+          [
+            "MDN · browser code and server code",
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction"
+          ]
+        ]
+      },
+      {
+        "title": "Design the private lookup separately",
+        "paragraphs": [
+          "Suppose a later scoreboard needs a paid lookup. Draw browser, your server, and the outside service. The browser sends a limited request to your server. The server checks the caller and decides whether this action is allowed. It reads the secret from protected storage and calls the service. Return only the result the player needs.",
+          "Putting the key in the browser’s storage or encoding it in the HTML still gives the player a copy. A server that forwards every request without a caller or action check can still be abused. For the practice release, keep the lookup out and ship the game with no key."
+        ],
+        "sources": [
+          [
+            "MDN · browser code and server code",
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction"
+          ],
+          [
+            "MDN · inspect code delivered to the browser",
+            "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+          ]
+        ]
+      },
+      {
+        "title": "Read history as well as today’s file",
+        "paragraphs": [
+          "A commit stores an earlier version. Deleting a key in a later edit can leave it in the earlier commit. In the labs, use only the harmless word PRACTICE_MARKER to see this without handling a real secret.",
+          "If a real key ever reached a shared file or commit, stop sharing the affected copy and tell its owner through an approved channel. Revoke or rotate the key first. Follow the repository owner’s cleanup process and check where old copies went. A clean latest file alone does not close that incident."
+        ],
+        "sources": [
+          [
+            "GitHub Docs · remove sensitive data from a repository",
+            "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository"
+          ],
+          [
+            "GitHub Docs · secret scanning",
+            "https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning"
+          ],
+          [
+            "Git · record and inspect changes",
+            "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
+          ]
+        ]
+      }
+    ],
+    "firstGuide": "make-folder",
+    "relatedLabs": [
+      "lab-ship-app-04",
+      "lab-ship-app-05"
+    ]
+  }
+]

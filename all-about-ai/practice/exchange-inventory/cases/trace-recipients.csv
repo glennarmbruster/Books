@@ -1,0 +1,5 @@
+CaseRow,ReceivedUTC,MessageId,SenderAddress,RecipientAddress,Subject,Status
+T1,2026-11-12T09:20:00Z,<parcel-41@example.test>,dispatch@example.test,dock@example.test,Dock sheet,Delivered
+T2,2026-11-12T09:20:00Z,<parcel-41@example.test>,dispatch@example.test,stores@example.test,Dock sheet,Failed
+T3,2026-11-12T09:21:00Z,<parcel-42@example.test>,dispatch@example.test,stores@example.test,Dock sheet,Failed
+T4,2026-11-12T09:22:00Z,<parcel-43@example.test>,dispatch@example.test,supply@example.test,Dock sheet,Delivered

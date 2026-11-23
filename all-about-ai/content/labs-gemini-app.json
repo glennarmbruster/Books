@@ -379,7 +379,12 @@
         "https://support.google.com/gemini/answer/15719111"
       ]
     ],
-    "firstGuide": "gemini-research-begin"
+    "firstGuide": "gemini-research-begin",
+    "writeYourOwn": {
+      "goal": "Plan a search that will teach a reader to use flashcards on an iPad.",
+      "given": "The reader needs to open the cards, flip one and practice a missed card.",
+      "compare": "Check whether you named the allowed source, device and three actions."
+    }
   },
   {
     "id": "lab-gemini-app-09",
@@ -1204,7 +1209,12 @@
         "https://support.google.com/gemininotebook/answer/16958963?hl=en"
       ]
     ],
-    "firstGuide": "gemini-notebook"
+    "firstGuide": "gemini-notebook",
+    "writeYourOwn": {
+      "goal": "Give sourced study-night answers even when one fact is missing.",
+      "given": "There is a packing note, a time note and a rumor. An approved fare note arrives later.",
+      "compare": "Check what your prompt asks the helper to do with an unchecked source and a newly added one."
+    }
   },
   {
     "id": "lab-gemini-app-25",

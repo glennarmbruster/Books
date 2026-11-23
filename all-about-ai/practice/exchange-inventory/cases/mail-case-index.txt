@@ -1,0 +1,9 @@
+Mail practice packet
+
+Every message, directory check, rule setting, outcome, IP address and time in these files is fictional. The CSVs are shortened teaching exports. CaseRow is a label added to help readers cite a row. The packet includes no tenant connection or live changes.
+
+For the parcel incident, start with trace-recipients.csv. Open ndr-recipient.txt second and alias-check.txt last. Cover the later rows until you have written your prediction.
+
+For the bulletin incident, start with auth-header.txt. Open auth-dns.txt when you want to test a possible cause. A DNS snapshot was taken one minute after the header.
+
+For the board label incident, open rule-snapshot.txt and the Before rows in rule-retest.csv. Predict the outcomes for new messages before reading the After rows. The other recipient in the last row checks that the rule still has a narrow scope.

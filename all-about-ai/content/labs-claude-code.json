@@ -219,7 +219,12 @@
         "Anthropic · Claude Code overview",
         "https://code.claude.com/docs/en/overview"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Plan tests for a mailbox quota warning before editing.",
+      "given": "A warning starts at 90 percent. Try 89, 90 and an absent reading.",
+      "compare": "Check whether your prompt asks for a prediction and a pause before the first edit."
+    }
   },
   {
     "id": "lab-claude-code-06",
@@ -391,7 +396,12 @@
         "Anthropic · common workflows",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Show exactly who a changed guest rule affects.",
+      "given": "One rule allows fewer than seven days. The next allows up to seven. Include a member as a control.",
+      "compare": "Compare the boundary, the neighboring days and the unchanged group in the two prompts."
+    }
   },
   {
     "id": "lab-claude-code-10",
@@ -1124,7 +1134,12 @@
         "Anthropic · work on a project",
         "https://code.claude.com/docs/en/common-workflows"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Show what changed between two lists of shared files.",
+      "given": "A file can keep its ID and change title. A bad export can repeat one ID.",
+      "compare": "Did you tell the helper what identifies a file and when to stop before reporting?"
+    }
   },
   {
     "id": "lab-claude-code-25",

@@ -1,0 +1,8 @@
+Synthetic case records. All times UTC. No live directory was queried.
+A1 Owner request: Parcel 41 should go to the Dock desk and the active Supply desk.
+A2 Directory check at 09:23: stores@example.test has no matching recipient.
+A3 Directory check at 09:23: supply@example.test belongs to the active Supply desk.
+A4 Mail list copy saved at 09:19: Dock desk = dock@example.test; Supply desk = stores@example.test.
+A5 Case approval at 09:25: update the Supply desk entry in this one practice list to supply@example.test. Leave all directory objects as found.
+A6 List test at 09:29: new message <parcel-44@example.test> from updated list delivered to dock@example.test and supply@example.test.
+A7 Independent test at 09:30: an unrelated practice list still addresses clock@example.test. Its new message <clock-5@example.test> was delivered only there.

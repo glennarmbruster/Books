@@ -1,0 +1,8 @@
+Synthetic exercise. These are case notes, not tenant exports.
+C1 08:00 UTC. Report: new training receipts arrive without the [RECEIPT] label.
+C2 Scope: exactly one rule, ReceiptMarker, in a pretend Exchange Online tenant. No customer mail is included.
+C3 Before: subject word "invioce" in the rule. The test receipt uses "invoice". An ordinary control message contains neither word.
+C4 Approved practice edit at 08:15 UTC: change just the stored word to "invoice". Keep the previous value "invioce" in the change note.
+C5 Retest at 08:25 UTC. A second observer recorded the two new results in review-window.csv.
+C6 Rollback: if ordinary mail gains the label, the change owner restores the saved word and repeats both probes. Escalate if either result still differs.
+C7 Scope limit: this case contains no personal mailbox view, read receipt, production change or other rule.

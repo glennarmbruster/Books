@@ -1,0 +1,932 @@
+[
+  {
+    "id": "lab-troubleshoot-01",
+    "title": "Read one trace without mixing messages",
+    "summary": "Two recipients have different outcomes. A subject search catches two extra messages.",
+    "level": "Starter",
+    "requires": "Open the practice ZIP and find the cases folder. Use trace-recipients.csv. You can mark the evidence on paper offline or give only the named practice records to an approved AI tool.",
+    "features": "Use a stable message ID to narrow the evidence.",
+    "roles": [
+      "Read each mail recipient’s outcome.",
+      "Write a small case update for a support channel.",
+      "Find which app notice was sent twice."
+    ],
+    "prompt": "For <parcel-41@example.test>, give one status per recipient with the row ID. What caused any failure? If the file cannot tell you, write unknown. Name the one record you would ask for next.",
+    "steps": [
+      {
+        "title": "Mark the scope",
+        "text": "Find parcel-41 in the MessageId column. Write down the two row labels you see.",
+        "help": "If you marked four rows, you used the subject. Read the last two digits of each message ID."
+      },
+      {
+        "title": "Try the prompt",
+        "text": "Give the helper the CSV and the prompt, or write its answer yourself offline. Look for a line each for dock and stores.",
+        "help": "If both statuses are the same, cover the other rows and read the final cell on each of the two matching rows."
+      },
+      {
+        "title": "Challenge the cause",
+        "text": "Ask which cell explains why delivery failed. You should see “unknown” and a request for the matching bounce or trace details.",
+        "help": "If the helper blames a typo or an outage, ask for the row that proves it. Do not open the bounce until you have recorded its first answer."
+      }
+    ],
+    "check": [
+      "T1 dock was Delivered. T2 stores was Failed.",
+      "Cause is unknown from these rows. T3 and T4 are different messages."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · follow a message through Exchange Online",
+        "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+      ],
+      [
+        "Microsoft Learn · Get-MessageTraceV2 in Exchange Online",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2?view=exchange-ps"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "trace-recipients.csv"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-02",
+    "title": "Pair a bounce with the failed recipient",
+    "summary": "Match a 5.1.10 NDR, then test a missing-address guess against a saved directory check.",
+    "level": "Starter",
+    "requires": "Open the practice ZIP and find the cases folder. Use trace-recipients.csv, ndr-recipient.txt and alias-check.txt. You can mark the evidence on paper offline or give only the named practice records to an approved AI tool.",
+    "features": "Release one piece of evidence at a time and keep track of what each one proves.",
+    "roles": [
+      "Explain an address lookup failure.",
+      "Separate a ticket fact from an assumption.",
+      "Check which saved address an alert job used."
+    ],
+    "prompt": "Match the NDR to exactly one trace row. Quote the two fields used for the match. Give the lookup result. Mark the reason the sender picked that address unknown until I provide the list record.",
+    "steps": [
+      {
+        "title": "Join two records",
+        "text": "Read N1 and N2. Find the trace row with the same ID and recipient. Your answer should point to T2.",
+        "help": "If you picked T3, its recipient matches but its ID ends in 42."
+      },
+      {
+        "title": "Test the guess",
+        "text": "Read N4 and N5. Then uncover A2 through A4. Look for the wrong saved address and the active address in different records.",
+        "help": "If the reply says the mailbox was deleted, ask where creation or deletion history appears. No such history is provided."
+      },
+      {
+        "title": "Write the repair verdict",
+        "text": "Read A5 through A7. Write the approved scope, the fresh delivery result and the independent list check.",
+        "help": "If your verdict mentions changes to all contacts, compare it to the single list in A5."
+      }
+    ],
+    "check": [
+      "N1 and N2 match T2, and N5 says recipient not found.",
+      "A3 and A4 support a stale list entry. A6 records fresh delivery after the correction and A7 checks an unrelated list."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · follow a message through Exchange Online",
+        "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+      ],
+      [
+        "Microsoft Learn · understand the 550 5.1.10 bounce",
+        "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "alias-check.txt",
+      "ndr-recipient.txt",
+      "trace-recipients.csv"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-03",
+    "title": "Read three results from one mail header",
+    "summary": "Turn a stamped header into a short evidence note without guessing the final delivery action.",
+    "level": "Starter",
+    "requires": "Open the practice ZIP and find the cases folder. Use auth-header.txt. You can mark the evidence on paper offline or give only the named practice records to an approved AI tool.",
+    "features": "Keep an observed result separate from your explanation for it.",
+    "roles": [
+      "Identify which authentication checks failed.",
+      "Share a short evidence note with a reviewer.",
+      "Read the receiver’s results for an app notice."
+    ],
+    "prompt": "For beacon-17, report SPF, DKIM and DMARC as three separate checks. Quote a short field from the receiver for each. Give the message ID, the receiver and the final mail outcome. Write unknown for missing evidence.",
+    "steps": [
+      {
+        "title": "Identify the copy",
+        "text": "Find the message ID at H2 and the receiving system at H1 and H6. You should see beacon-17 and sink.example.test.",
+        "help": "Use this saved receiving-side header. The visible From address alone has no check results."
+      },
+      {
+        "title": "Read the stamp",
+        "text": "Give the helper H1 through H7 and the prompt. Write down the three results from H6 in order.",
+        "help": "If you see a pass, point to the exact word after each equals sign in H6."
+      },
+      {
+        "title": "Stop at the edge",
+        "text": "Ask whether the first copy landed in quarantine. Read H7 and compare it with the answer.",
+        "help": "If you get a confident yes, request the receiving-side delivery or quarantine record for beacon-17."
+      }
+    ],
+    "check": [
+      "H6 records spf=fail, dkim=fail and dmarc=fail for this receiver.",
+      "H7 leaves final disposition unknown. No message body is needed."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · read the authentication results in mail headers",
+        "https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo"
+      ],
+      [
+        "Microsoft Learn · DMARC domain alignment and policy",
+        "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "auth-header.txt"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-04",
+    "title": "Check the DNS behind an authentication verdict",
+    "summary": "Use a dated DNS snapshot and a working comparison to test an AI explanation.",
+    "level": "Starter",
+    "requires": "Open the practice ZIP and find the cases folder. Use auth-header.txt and auth-dns.txt. You can mark the evidence on paper offline or give only the named practice records to an approved AI tool.",
+    "features": "Tie each possible cause to the source, selector and time you actually observed.",
+    "roles": [
+      "Check SPF, DKIM and DMARC evidence.",
+      "Give a reviewer a source-backed reason to keep a case open.",
+      "Compare a failed bulletin with another app send."
+    ],
+    "prompt": "Explain which lines support the SPF and DKIM failures for beacon-17. Use D5 to explain how DMARC can pass even when DKIM fails. Say which sender approval and time details are missing. Give no change commands.",
+    "steps": [
+      {
+        "title": "Check the two numbers",
+        "text": "Compare the full incoming IP in H1 with the IP listed in D1. You should find different final numbers.",
+        "help": "If the helper reports a match, read the addresses a digit at a time. Both share the same first three numbers."
+      },
+      {
+        "title": "Check the key name",
+        "text": "Combine board2 from H5 with its signing domain. Find that name in D2 and write down the DNS response and its time.",
+        "help": "If the answer says the signing key was deleted, find the change log that proves deletion. This packet has one lookup only."
+      },
+      {
+        "title": "Use the comparison message",
+        "text": "Read D5 and D3. Find the aligned SPF pass on the second message. Then read D4 and name the missing approval.",
+        "help": "If the reply insists DKIM must pass too, use the DMARC source to check how many aligned checks must pass."
+      }
+    ],
+    "check": [
+      "H1 ends in .44 and D1 lists .24. The selector from H5 is missing at the 10:05Z lookup.",
+      "On D5, SPF passes with the same domain as the visible From domain. This supports the recorded DMARC pass.",
+      "The approved sender list and an exact DNS snapshot at 10:04Z are missing."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · read the authentication results in mail headers",
+        "https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo"
+      ],
+      [
+        "Microsoft Learn · check which senders an SPF record lists",
+        "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+      ],
+      [
+        "Microsoft Learn · DKIM signing domains and selectors",
+        "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+      ],
+      [
+        "Microsoft Learn · DMARC domain alignment and policy",
+        "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "auth-dns.txt",
+      "auth-header.txt"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-05",
+    "title": "Explain a transport rule that never matches the ticket",
+    "summary": "A board notice reaches the intended desk with its original subject. Find which test failed.",
+    "level": "Intermediate",
+    "requires": "Open the practice ZIP and find the cases folder. Use rule-snapshot.txt and the Before rows in rule-retest.csv. You can mark the evidence on paper offline or give only the named practice records to an approved AI tool.",
+    "features": "Turn a rule dump into small yes-or-no checks.",
+    "roles": [
+      "Explain a mail flow rule miss.",
+      "Turn a policy requirement into testable conditions.",
+      "Test a tag filter for incoming notices."
+    ],
+    "prompt": "Read B1 and rule fields R2 through R7. Make one row per condition with expected value, observed value and yes or no. Name the first mismatch. Predict a repair limited to the approved requirement. Do not run a change.",
+    "steps": [
+      {
+        "title": "Hide the answer",
+        "text": "Cover R8 and the After rows. Read B1, then write down its recipient, subject and delivery result.",
+        "help": "If the ticket reads “mail missing,” check B1. Delivery succeeded. The subject label was missing."
+      },
+      {
+        "title": "Read each test",
+        "text": "Run the prompt or fill in two rows yourself. Put SentTo on one row and SubjectContainsWords on the other.",
+        "help": "If both look right, compare PIER with PIERX letter by letter."
+      },
+      {
+        "title": "Use one control",
+        "text": "Read B2. Predict whether the FERRY subject should be labeled under R7. Write what should stay unchanged if the PIER test is corrected.",
+        "help": "If the proposal labels every message for board, it would label B2 as well. Keep both tests in the plan."
+      }
+    ],
+    "check": [
+      "The recipient matches R4. The required word in R5 differs from the word on B1.",
+      "The intended PIER message should gain [BOARD]. The FERRY subject should stay plain."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · mail flow rule conditions",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+      ],
+      [
+        "Microsoft Learn · mail flow rule actions",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions"
+      ],
+      [
+        "Microsoft Learn · read a transport rule",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "rule-retest.csv",
+      "rule-snapshot.txt"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-06",
+    "title": "Prove a mail-rule fix with two controls",
+    "summary": "A narrow, approved practice correction should label one new message and leave two others alone.",
+    "level": "Intermediate",
+    "requires": "Open the practice ZIP and find the cases folder. Use rule-snapshot.txt and rule-retest.csv. You can mark the evidence on paper offline or give only the named practice records to an approved AI tool.",
+    "features": "Set a pass condition and rollback trigger before reading the after records.",
+    "roles": [
+      "Record a verified result for one rule.",
+      "Write a change handoff with controls and limits.",
+      "Check that changing a filter leaves other paths alone."
+    ],
+    "prompt": "Given R4 through R8 and the Before rows, predict the received subjects of three new messages: PIER crew to board, FERRY crew to board and PIER crew to office. Record the old value and rollback trigger. Wait for the After rows before deciding whether the fix passed.",
+    "steps": [
+      {
+        "title": "Write the rollback note",
+        "text": "Read R4 through R8. Save the old subject word and new word in your note. State who approved the one-field change and which failed test would call for rollback.",
+        "help": "If the note proposes turning off all mail rules, go back to the single changed word in R8."
+      },
+      {
+        "title": "Predict the new sends",
+        "text": "Using the prompt, write three expected subjects before reading V1 through V3. Exactly one should have [BOARD].",
+        "help": "If two are labeled, ask whether each message meets both R4 and the approved subject test."
+      },
+      {
+        "title": "Compare and close",
+        "text": "Uncover V1 through V3. Compare each delivery status and received subject to your three predictions. Record each new message ID and the result.",
+        "help": "If the AI closes the case using only V1, ask for one control that differs by subject and one that differs by mailbox."
+      }
+    ],
+    "check": [
+      "V1 is delivered with [BOARD] PIER crew. V2 and V3 are delivered with their original subjects.",
+      "The case supports the correction for these tests. Roll back to PIERX if the target fails or a control changes unexpectedly."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · mail flow rule conditions",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+      ],
+      [
+        "Microsoft Learn · mail flow rule actions",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions"
+      ],
+      [
+        "Microsoft Learn · test a mail flow rule",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/test-mail-flow-rules"
+      ],
+      [
+        "Microsoft Learn · follow a message through Exchange Online",
+        "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "rule-retest.csv",
+      "rule-snapshot.txt"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-07",
+    "title": "Find the decision inside one sign-in",
+    "summary": "Two policy rows say failure. Decide which policy enforced a block on the same sign-in.",
+    "level": "Intermediate",
+    "requires": "Download the practice kit and unzip it. Open its cases folder. You can do the checks on paper or in a text editor while offline. Use only the made-up extracts for any AI trial.",
+    "kit": "practice/exchange-inventory.zip",
+    "features": "Filter the supplied policy results by event ID and mode.",
+    "roles": [
+      "Find why a mail reader never reached the app.",
+      "Explain the difference between a policy finding and an enforced decision.",
+      "Group several checks under one login attempt."
+    ],
+    "prompt": "For EV-31, list the policy, mode, result and row label. Which policy enforced a failed requirement? Which one only reported? State one thing these rows cannot prove.",
+    "steps": [
+      {
+        "title": "Pin the event",
+        "text": "Read N1 in identity-case-notes.txt. In entra-signins.csv, circle EV-31. You should see S1 and S2 with the same UTC time.",
+        "help": "If you see S3, filter the Event column using the full event label."
+      },
+      {
+        "title": "Ask for the mode as well as the result",
+        "text": "Use the prompt with S1 and S2, or make a two-line answer by hand. Check that each line includes On or Report-only.",
+        "help": "If both are called blockers, open the report-only source and check what this mode enforces."
+      },
+      {
+        "title": "Try a counterexample",
+        "text": "Read S3 and S4. They share another event. Notice its success despite the same preview failure. Write whether the first two rows reveal the exact device setting that failed.",
+        "help": "If the answer names an OS version, ask for the value in S1. That detail needs a second source."
+      }
+    ],
+    "check": [
+      "S1 shows Managed tablet on with a failed device requirement.",
+      "S2 was report-only. S4 shows the same preview result on a successful event.",
+      "The OS version is unknown from S1 and S2."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · review the Conditional Access result for a sign-in",
+        "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
+      ],
+      [
+        "Microsoft Learn · interpret report-only results",
+        "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-report-only"
+      ]
+    ],
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "entra-signins.csv",
+      "identity-case-notes.txt"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-08",
+    "title": "Match an Intune report to the moment mail failed",
+    "summary": "Your newest device snapshot is the wrong one for an earlier failure.",
+    "level": "Intermediate",
+    "requires": "Download the practice kit and unzip it. Open its cases folder. You can do the checks on paper or in a text editor while offline. Use only the made-up extracts for any AI trial.",
+    "kit": "practice/exchange-inventory.zip",
+    "features": "Build a small timeline from a sign-in and one device’s compliance history.",
+    "roles": [
+      "Find the right tablet state for the failed mail sign-in.",
+      "Match a compliance observation to an access event.",
+      "Explain why showing the newest status can hide an old bug."
+    ],
+    "prompt": "At 09:04 UTC, which device record supports the failed grant in EV-31? Give the row, device, timestamp and setting. Name one tempting row you rejected and why.",
+    "steps": [
+      {
+        "title": "Draw a cutoff",
+        "text": "Read EV-31 in entra-signins.csv. Write tab-7 and 09:04 UTC at the top of a note. These are the two match keys.",
+        "help": "If another device appears, use the affected event and resource to check your starting row."
+      },
+      {
+        "title": "Read backward in time",
+        "text": "Open intune-checkins.csv. Pick the latest row for tab-7 at or before 09:04. Mark the setting, observed version and required version.",
+        "help": "If you chose I3, compare 09:22 with the cutoff. If you chose I2, compare device labels."
+      },
+      {
+        "title": "Remove one piece",
+        "text": "Give the assistant your prompt and the two extracts, or solve it by hand. Then cover I1. Ask whether any remaining row proves tab-7’s state before the failure.",
+        "help": "An unknown is the right result when the only matching older reading has been removed."
+      }
+    ],
+    "check": [
+      "I1 belongs to tab-7 at 09:01. The observed 14.2 is below the required 14.3.",
+      "I2 is another tablet. I3 is later. Without I1 the earlier observed version is unknown."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · review the Conditional Access result for a sign-in",
+        "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
+      ],
+      [
+        "Microsoft Learn · read Intune device compliance reports",
+        "https://learn.microsoft.com/en-us/intune/device-security/compliance/monitor-policy"
+      ]
+    ],
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "entra-signins.csv",
+      "intune-checkins.csv"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-09",
+    "title": "Verify a device fix without changing a policy",
+    "summary": "Decide what would count as a successful retest before revealing the outcome.",
+    "level": "Intermediate",
+    "requires": "Download the practice kit and unzip it. Open its cases folder. You can do the checks on paper or in a text editor while offline. Use only the made-up extracts for any AI trial.",
+    "kit": "practice/exchange-inventory.zip",
+    "features": "Use an after-change device report, a fresh sign-in and an app result.",
+    "roles": [
+      "Test access to the same mail resource after an approved device update.",
+      "Show why a compliant device alone does not close a sign-in ticket.",
+      "Retest a failed action on the same device."
+    ],
+    "prompt": "Write the three checks that would close the tab-7 incident. Then compare each check with the later evidence. Cite one row for each check and say which device your verdict covers.",
+    "steps": [
+      {
+        "title": "Make the prediction first",
+        "text": "Open identity-case-notes.txt and read N1 and N2. Write what the next device report, the next Mail event and the person testing should each show.",
+        "help": "A note that the update was installed tells you which change was tried. Look for separate outcome records."
+      },
+      {
+        "title": "Join the follow-up rows",
+        "text": "Read I3 in intune-checkins.csv, S5 in entra-signins.csv and N3 in the case notes. Put them in time order and match the device and resource.",
+        "help": "If you used S3, it belongs to tab-4. A success on a different tablet is only a control."
+      },
+      {
+        "title": "Narrow the verdict",
+        "text": "Check the AI answer against all three lines, or grade your own. Hide S5 and write which part would still be unknown.",
+        "help": "If the summary says the whole organization was fixed, limit it to tab-7 and the tested Mail sign-in."
+      }
+    ],
+    "check": [
+      "I3 reports compliant at 09:22, S5 shows a successful fresh Mail sign-in at 09:25, and N3 confirms entry.",
+      "Without S5, the fresh policy decision is unknown. The reader’s app result remains evidence for access."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · review the Conditional Access result for a sign-in",
+        "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
+      ],
+      [
+        "Microsoft Learn · read Intune device compliance reports",
+        "https://learn.microsoft.com/en-us/intune/device-security/compliance/monitor-policy"
+      ]
+    ],
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "entra-signins.csv",
+      "identity-case-notes.txt",
+      "intune-checkins.csv"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-10",
+    "title": "Give a hybrid case one direction",
+    "summary": "An unrelated successful test makes a broken route look healthy.",
+    "level": "Intermediate",
+    "requires": "Download the practice kit and unzip it. Open its cases folder. You can do the checks on paper or in a text editor while offline. Use only the made-up extracts for any AI trial.",
+    "kit": "practice/exchange-inventory.zip",
+    "features": "Mark each record with a direction and a test marker.",
+    "roles": [
+      "Follow a cloud-to-site mail test.",
+      "Distinguish sending a file from receiving a reply.",
+      "Draw a request and its return path separately."
+    ],
+    "prompt": "Use H1 through H5 only. For TEST-41 give the intended host, host tried and last known result. Does TEST-42 prove TEST-41 arrived? Explain with row labels.",
+    "steps": [
+      {
+        "title": "Draw the intended route",
+        "text": "Read H1 in hybrid-route.txt. Draw an arrow from cloud to on-premises and put the approved host beside its tip.",
+        "help": "If your arrow starts on-premises, look for the words “from Exchange Online” in H1."
+      },
+      {
+        "title": "Follow the marker",
+        "text": "Look up TEST-41 and write the host and result from H4. Ask the AI to compare H1, H2 and H4, or list their host names yourself.",
+        "help": "Keep the smart host and the recipient domain in separate columns. They name different things."
+      },
+      {
+        "title": "Test the tempting success",
+        "text": "Read H5. List the direction and marker for that test. Circle any line from H1 through H5 showing the original message in its destination mailbox.",
+        "help": "If a reply claims H3 proves delivery, look for the marker in its receipt. H3 reports a ready service only."
+      }
+    ],
+    "check": [
+      "H1 expects bridge.example.test. H2 and H4 point to old-bridge.example.test. H4 records a timeout.",
+      "H5 is TEST-42 in the reverse direction. No arrival for TEST-41 is shown."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · hybrid mail routing",
+        "https://learn.microsoft.com/en-us/exchange/transport-routing"
+      ],
+      [
+        "Microsoft Learn · read an Exchange Online outbound connector",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps"
+      ],
+      [
+        "Microsoft Learn · read an on-premises receive connector",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-receiveconnector?view=exchange-ps"
+      ]
+    ],
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "hybrid-route.txt"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-11",
+    "title": "Verify a hybrid repair with two receipts",
+    "summary": "Predict a route repair result, then verify it with a positive case and a control.",
+    "level": "Advanced",
+    "requires": "Download the practice kit and unzip it. Open its cases folder. You can do the checks on paper or in a text editor while offline. Use only the made-up extracts for any AI trial.",
+    "kit": "practice/exchange-inventory.zip",
+    "features": "Compare one approved change, one rerun and an unaffected route.",
+    "roles": [
+      "Check cloud mail reaches the intended site after a route repair.",
+      "Record the result of a delivery test on a second path.",
+      "Keep a control case when changing a delivery destination."
+    ],
+    "prompt": "Rank wrong destination and unavailable intended listener using H1–H5. Mark what is still unknown. Write your expected host and receipt for a retest. Then use H6–H8 to give a bounded verdict and a rollback plan.",
+    "steps": [
+      {
+        "title": "Rank the explanations",
+        "text": "Read H1 through H5 in hybrid-route.txt. H4 shows which host received the attempt. Make a two-row table of predictions and evidence.",
+        "help": "If the helper claims a certificate expired, ask which line includes a certificate result. The file gives none."
+      },
+      {
+        "title": "Write the change record before the retest",
+        "text": "Record the name RelayToShop, old host old-bridge.example.test and approved target bridge.example.test. On paper, name the owner and the condition for rollback, such as a new failure on the control route.",
+        "help": "Write a plan for the owner to restore the recorded setting under approval and rerun both probes. The prior setting was already linked to the original failure."
+      },
+      {
+        "title": "Read the owner’s evidence",
+        "text": "Open H6 through H8. Check that TEST-43 reached the approved host and appeared at the destination. Look for the separate TEST-44 receipt on paper.example.test.",
+        "help": "If only the host name changed, ask for the fresh destination marker before calling the route fixed."
+      },
+      {
+        "title": "Name the limit",
+        "text": "Write a verdict for the tested direction, recipient scope and separate control. Include the unknown reason the old setting existed.",
+        "help": "Do not turn two successful checks into a claim that every route works. Keep the evidence labels."
+      }
+    ],
+    "check": [
+      "H1, H2 and H4 support a wrong target for the observed failed attempt.",
+      "H6 records the approved correction. H7 gives both the fresh route and the mailbox receipt. H8 is the separate control.",
+      "The reason the old target was configured is unknown."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · hybrid mail routing",
+        "https://learn.microsoft.com/en-us/exchange/transport-routing"
+      ],
+      [
+        "Microsoft Learn · read an Exchange Online outbound connector",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps"
+      ]
+    ],
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "hybrid-route.txt"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-12",
+    "title": "Audit a proposed command before trusting it",
+    "summary": "A suggested change uses a real cmdlet. Check whether it belongs on that side of the route and whether it is even needed.",
+    "level": "Advanced",
+    "requires": "Download the practice kit and unzip it. Open its cases folder. You can do the checks on paper or in a text editor while offline. Use only the made-up extracts for any AI trial.",
+    "kit": "practice/exchange-inventory.zip",
+    "features": "Trace each cmdlet and parameter to Microsoft Learn. Compare a read-only result with the proposed action.",
+    "roles": [
+      "Read each hybrid connector on the side that owns it.",
+      "Check that a command fits the service where it would run.",
+      "Stop an export if it found the wrong object."
+    ],
+    "prompt": "Review two suggestions for H1–H4: read the outbound connector on premises; change the cloud connector right away. Name the right session and read-only cmdlet for each side. List the evidence, approval, preview support and rollback note needed before any change.",
+    "steps": [
+      {
+        "title": "Check the suggestions against the command cards",
+        "text": "Find Get-OutboundConnector and Get-ReceiveConnector in the sources. Point to the service and the Identity parameter on each page. The first is for Exchange Online. The second is for on-premises Exchange. Offline, use the command facts in the next two steps.",
+        "help": "A real command name may still be wrong for the chosen session. Leave permission and availability unknown until the actual practice session is checked."
+      },
+      {
+        "title": "Exchange Online PowerShell · outbound read",
+        "text": "Assume an authorized practice session is already connected. Read this block for H2. On paper, confirm the name and the smart host. If you have an approved matching training object, the block saves exactly one matching cloud connector as CSV.",
+        "help": "The names here are fictional. Without that training object, use H2 as the supplied output. The checks stop a broad or wrong result. A fresh output path prevents overwriting an old report.",
+        "code": "$ErrorActionPreference = 'Stop'\n$name = 'RelayToShop'\n$rows = @(Get-OutboundConnector -Identity $name -ErrorAction Stop)\nif ($rows.Count -ne 1 -or $rows[0].Name -ne $name) { throw 'Unexpected cloud connector.' }\n$rows | Select-Object Name,Enabled,UseMXRecord,@{Name='SmartHosts';Expression={$_.SmartHosts -join '|'}} |\n    Export-Csv -LiteralPath ./cloud-connector.csv -NoClobber -NoTypeInformation"
+      },
+      {
+        "title": "On-premises Exchange Management Shell · receive read",
+        "text": "Use this separate block in an already-connected on-premises training shell only. From H3 predict the exact identity and Enabled value. The new CSV should describe a single receiving connector.",
+        "help": "On paper, H3 supplies the identity and state. If the command is missing in a workspace, stop and record the missing access or session detail.",
+        "code": "$ErrorActionPreference = 'Stop'\n$id = 'SHOP01\\Relay intake'\n$rows = @(Get-ReceiveConnector -Identity $id -ErrorAction Stop)\nif ($rows.Count -ne 1 -or [string]$rows[0].Identity -ne $id) { throw 'Unexpected site connector.' }\n$rows | Select-Object Name,Identity,Enabled |\n    Export-Csv -LiteralPath ./site-connector.csv -NoClobber -NoTypeInformation"
+      },
+      {
+        "title": "Review a proposed change on paper",
+        "text": "Look up Set-OutboundConnector and check that SmartHosts and WhatIf are documented together. In an authorized, connected Exchange Online practice shell, this optional read-only check reports whether the installed command exposes those two parameters. Expect two True values if both are available.",
+        "help": "For an approved change, use -WhatIf only on a cmdlet that supports it. A preview cannot prove delivery. Capture the old value, owner, rollback trigger and retest first. In this exercise, the owner’s recorded action and tests are H6 through H8.",
+        "code": "$command = Get-Command -Name Set-OutboundConnector -ErrorAction Stop\n$command.Parameters.ContainsKey('SmartHosts')\n$command.Parameters.ContainsKey('WhatIf')"
+      },
+      {
+        "title": "Exchange Online PowerShell · optional approved preview",
+        "text": "For the exercise, read the following block on paper. Only an owner rehearsing this exact change with approval in a matching training session would run it. The final line includes -WhatIf and makes no configuration change. Keep the old target and the rollback condition in the change note.",
+        "help": "If the name, old host or supported parameters differ, stop. Do not remove -WhatIf. Use H6 through H8 for the fictional change and its delivery tests.",
+        "code": "$ErrorActionPreference = 'Stop'\n$name = 'RelayToShop'\n$prior = @(Get-OutboundConnector -Identity $name -ErrorAction Stop)\nif ($prior.Count -ne 1 -or $prior[0].Name -ne $name) { throw 'Unexpected connector.' }\nif (($prior[0].SmartHosts -join '|') -ne 'old-bridge.example.test') { throw 'Old value differs.' }\nSet-OutboundConnector -Identity $name -SmartHosts 'bridge.example.test' -WhatIf -ErrorAction Stop"
+      },
+      {
+        "title": "Prove a local report can stop safely",
+        "text": "With PowerShell installed, open a terminal in the kit’s cases folder. Run the supplied command below. Open the CSV. It should have labels S1 and S2. Try the command again with EV-99 and a fresh output name.",
+        "help": "If PowerShell is unavailable, filter entra-signins.csv by EV-31 on paper. Two rows match. Nothing matches EV-99. The script stops for an unknown event or an existing output path.",
+        "code": "pwsh -NoProfile -File ./Read-PolicyEvent.ps1 -EventId EV-31 -OutputPath ./policy-EV31.csv"
+      }
+    ],
+    "check": [
+      "The cloud read is Get-OutboundConnector -Identity. The on-premises read is Get-ReceiveConnector -Identity.",
+      "The Learn syntax for Set-OutboundConnector includes SmartHosts and WhatIf. A dry run does not verify the destination receipt.",
+      "The local policy report has two rows for EV-31 and leaves out the account. Unknown events fail before export."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · read an Exchange Online outbound connector",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps"
+      ],
+      [
+        "Microsoft Learn · read an on-premises receive connector",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-receiveconnector?view=exchange-ps"
+      ],
+      [
+        "Microsoft Learn · outbound connector change and WhatIf support",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-outboundconnector?view=exchange-ps"
+      ],
+      [
+        "Microsoft Learn · inspect available commands",
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-command"
+      ],
+      [
+        "Microsoft Learn · export a CSV file",
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv"
+      ]
+    ],
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "Read-PolicyEvent.ps1",
+      "entra-signins.csv"
+    ]
+  },
+  {
+    "id": "lab-troubleshoot-13",
+    "level": "Advanced",
+    "title": "Review a command before it reaches a tenant",
+    "summary": "Check a proposed command against the command page, the session and the saved starting value.",
+    "roles": [
+      "Trace one receipt from a report to a new delivery test.",
+      "Keep a sign-in guess separate from the policy result that could prove it.",
+      "Reproduce a broken label, then try a second input that should stay unchanged."
+    ],
+    "prompt": "Use C1 through C3 only. List what is known, what is missing and one read-only check. For any suggested command name the exact documentation page, environment and parameter. Leave the cause unknown until the evidence supports it.",
+    "steps": [
+      {
+        "title": "Cover the answer",
+        "text": "Open change-card.txt. Read C1 and C2. On paper, record the missing label and the single-rule scope. Predict the exact rule text you need next.",
+        "help": "If your sheet says mail was lost, check the word “arrive” in C1."
+      },
+      {
+        "title": "Check the read command",
+        "text": "Open the linked Get-TransportRule page when online. Find Identity and the environment note. Offline, use this verified example as a reading exercise. In an authorized, already connected Exchange Online training session only, it reads one named rule and saves a new CSV.",
+        "help": "Stop if the rule is absent or the session lacks that parameter. A real tenant is optional. In the case file, C3 supplies the read-only finding.",
+        "code": "$ErrorActionPreference = 'Stop'\n$read = Get-Command Get-TransportRule -ErrorAction Stop\nif (-not $read.Parameters.ContainsKey('Identity')) { throw 'Identity is unavailable.' }\n$rule = @(Get-TransportRule -Identity 'ReceiptMarker' -ErrorAction Stop)\nif ($rule.Count -ne 1) { throw 'Expected one matching rule.' }\n$rule | Select-Object Name,State,Mode,Comments | Export-Csv -LiteralPath ./rule-before.csv -NoTypeInformation -NoClobber"
+      },
+      {
+        "title": "Check a preview without making a change",
+        "text": "Compare the three parameter names below with Set-TransportRule on Microsoft Learn. The example previews a comment edit. It does not repair the subject rule. Record which part of the original symptom still needs testing.",
+        "help": "WhatIf is command-specific. A preview of comments proves nothing about delivery. In a disconnected exercise mark actual execution untested.",
+        "code": "$ErrorActionPreference = 'Stop'\n$edit = Get-Command Set-TransportRule -ErrorAction Stop\nforeach ($key in 'Identity','Comments','WhatIf') {\n    if (-not $edit.Parameters.ContainsKey($key)) { throw \"Unavailable parameter: $key\" }\n}\nSet-TransportRule -Identity 'ReceiptMarker' -Comments 'Practice review' -WhatIf -ErrorAction Stop"
+      },
+      {
+        "title": "Make the before note",
+        "text": "Read C3. Save the observed rule word, the intended word and the exact stop condition. Point to the row that supplies each claim.",
+        "help": "A fresh CSV output name keeps an old report. If your note has no old value, the rollback is incomplete."
+      }
+    ],
+    "check": [
+      "Identity belongs to the read command. Comments and WhatIf belong to the proposed edit.",
+      "C3 supplies the old word. A preview alone leaves the repair unverified."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · inspect a mail flow rule",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps"
+      ],
+      [
+        "Microsoft Learn · supported rule changes and WhatIf",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-transportrule?view=exchange-ps"
+      ],
+      [
+        "Microsoft Learn · inspect command information",
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-command?view=powershell-7.5"
+      ],
+      [
+        "Microsoft Learn · export objects to CSV",
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7.5"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "change-card.txt"
+    ],
+    "features": "Read a small evidence packet, name a test and keep a verdict you can defend.",
+    "requires": "Open the practice files below or in the kit. You can do the whole case on paper offline. An approved AI chat is optional."
+  },
+  {
+    "id": "lab-troubleshoot-14",
+    "level": "Advanced",
+    "title": "Test a fix and an unaffected message",
+    "summary": "Decide whether the after-test proves the change stayed inside its scope.",
+    "roles": [
+      "Trace one receipt from a report to a new delivery test.",
+      "Keep a sign-in guess separate from the policy result that could prove it.",
+      "Reproduce a broken label, then try a second input that should stay unchanged."
+    ],
+    "prompt": "Compare expected and observed for each probe. Show one old failure, one repaired receipt and one unaffected message. Return the row IDs and a verdict limited to this case.",
+    "steps": [
+      {
+        "title": "Predict the outcomes",
+        "text": "Open change-card.txt and stop after C4. Write Tagged for the new receipt and Plain for ordinary mail.",
+        "help": "If both should be tagged, reread the scope of the rule."
+      },
+      {
+        "title": "Compare all four rows",
+        "text": "Open review-window.csv and circle every mismatch. Then read only the After rows. A good test needs both of them.",
+        "help": "Check the Expected and Observed columns. W1 is the only mismatch."
+      },
+      {
+        "title": "Build the small report",
+        "text": "Read Test-ReceiptWindow.ps1. If PowerShell is available, extract the kit, open its cases folder and run the line below. On iPad, add a Pass column by hand. The rows should read False, True, True, True.",
+        "help": "An existing output file is protected. Pick a fresh filename. A missing or repeated probe must stop the script before export.",
+        "code": "pwsh -NoProfile -File ./Test-ReceiptWindow.ps1 -OutputPath ./retest-result.csv"
+      },
+      {
+        "title": "Remove a control on paper",
+        "text": "Cover W4. Ask whether ordinary mail was protected after the change. Reveal W4, then write the final verdict and boundary.",
+        "help": "With W4 hidden the control is unknown. With W4 visible it stayed plain for that probe."
+      }
+    ],
+    "check": [
+      "W1 failed before the correction. W3 and W4 both passed afterward.",
+      "An absent after-control leaves one part of the verdict unknown."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · read a CSV",
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/import-csv?view=powershell-7.5"
+      ],
+      [
+        "Microsoft Learn · export objects to CSV",
+        "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7.5"
+      ],
+      [
+        "Microsoft Learn · inspect a mail flow rule",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "change-card.txt",
+      "review-window.csv",
+      "Test-ReceiptWindow.ps1"
+    ],
+    "features": "Read a small evidence packet, name a test and keep a verdict you can defend.",
+    "requires": "Open the practice files below or in the kit. You can do the whole case on paper offline. An approved AI chat is optional."
+  },
+  {
+    "id": "lab-troubleshoot-15",
+    "level": "Expert",
+    "title": "Write the handoff and rollback note",
+    "summary": "A second operator must be able to repeat your decision without trusting the assistant.",
+    "roles": [
+      "Trace one receipt from a report to a new delivery test.",
+      "Keep a sign-in guess separate from the policy result that could prove it.",
+      "Reproduce a broken label, then try a second input that should stay unchanged."
+    ],
+    "prompt": "Draft a five-line handoff: symptom and time, hypothesis and evidence, approved scope, verified retest and rollback trigger. Use row IDs. Name one thing the record cannot establish.",
+    "steps": [
+      {
+        "title": "Write the before and after",
+        "text": "Open both case files. Record 08:00 and 08:15 UTC and the single field the change owner approved. A note that says only “fixed” is too broad.",
+        "help": "Start with C1, C3 and C4. Quote the old and new word exactly."
+      },
+      {
+        "title": "Test a bad after-result",
+        "text": "Imagine W4 now says Tagged. Mark the control failed and decide whether to keep the change. Write the old value and the two tests the owner would repeat.",
+        "help": "C6 gives the stop condition. A passing receipt does not erase a failed control."
+      },
+      {
+        "title": "Return to the recorded evidence",
+        "text": "Restore the real W4 on your worksheet. Write the verdict with W1, W3 and W4. Ask a second reader to find the same rows.",
+        "help": "If the conclusion covers every mailbox, narrow it to these two probes. C7 states what you cannot check."
+      }
+    ],
+    "check": [
+      "The example rollback restores “invioce” and retests both types of mail if the ordinary message is tagged.",
+      "The recorded after-test passes at 08:25 UTC. No production-wide result is recorded."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · inspect a mail flow rule",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-transportrule?view=exchange-ps"
+      ],
+      [
+        "Microsoft Learn · supported rule changes and WhatIf",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-transportrule?view=exchange-ps"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "change-card.txt",
+      "review-window.csv"
+    ],
+    "features": "Read a small evidence packet, name a test and keep a verdict you can defend.",
+    "requires": "Open the practice files below or in the kit. You can do the whole case on paper offline. An approved AI chat is optional."
+  },
+  {
+    "id": "lab-troubleshoot-16",
+    "title": "Capstone: Run one mail case in four tools",
+    "summary": "Score Claude, ChatGPT, Gemini and Microsoft 365 Copilot Chat against the same five facts. Unseal the retest only after scoring.",
+    "level": "Expert",
+    "requires": "Use the printed prompt and the answer key in the practice ZIP. Four approved chat tools and internet access are needed for live results. For an offline run, use the paper sample in the packet.",
+    "features": "Compare first replies against evidence. A result marked unavailable earns no score.",
+    "roles": [
+      "Use a passing delivery to narrow a failed mail trace.",
+      "Use the same question and evidence to review an access case.",
+      "Grade four bug reports against the same controls."
+    ],
+    "prompt": "Use only the five rows below. This case is fictional. You have no tenant access.\nState the symptom. Compare a sender-wide limit with a limit on one recipient. Cite row IDs. Say what is still unknown. Pick one read-only check to separate the two ideas. Predict what each result would mean. Give no change command.\n\nR1 | 09:02 UTC | dispatch@example.test to workroom@example.test | total message 14 MB | Failed\nR2 | 09:04 UTC | same sender to workroom@example.test | total message 1 MB | Delivered\nR3 | 09:05 UTC | same sender to stores@example.test | same 14 MB message | Delivered\nR4 | 09:02 UTC | delivery error for R1 | message exceeds the size allowed for this recipient\nR5 | undated training worksheet | planned receive limit for Workroom: 20 MB",
+    "kit": "practice/exchange-inventory.zip",
+    "steps": [
+      {
+        "title": "Freeze the test first",
+        "text": "Save the practice ZIP, unzip it and open cases/vendor-trial.txt. Read only the first five rows and the question. You should see one failed large message and two delivered messages.",
+        "help": "Find R1, R2 and R3. If you saw the later results, keep them out of the messages you send."
+      },
+      {
+        "title": "Collect first replies",
+        "text": "Start four fresh approved chats. Send Your prompt once to each. Record the tool, date, visible model or “not shown,” and the first reply. Offline, mark the four rows untested and score the paper reply instead.",
+        "help": "Use the same five rows every time. If one tool is unavailable, leave that row unscored and keep working with the others."
+      },
+      {
+        "title": "Point to the controls",
+        "text": "Underline the parts of each reply that explain R2 and R3. Check whether it calls R5 a plan. Give a point only when a reply meets the matching item in the key.",
+        "help": "A pass for small mail tests the recipient. A pass for the same large mail to Stores tests the sender. Giving both points requires both comparisons."
+      },
+      {
+        "title": "Write a useful run note",
+        "text": "Write the score, one strong piece of evidence and one miss in each finished row. An observation might say “Cited R3 but skipped the live limit check.”",
+        "help": "If your note only says “best answer,” name the specific row the tool used or missed. Mark an unavailable answer “unscored.”"
+      },
+      {
+        "title": "Test the verdict",
+        "text": "Open V1 through V4. Compare the 14 MB failure before the approved practice change with V3. Compare the larger control with V4. Write down the old limit in case the change must be rolled back.",
+        "help": "Both results matter. V3 proves the target message passed. V4 shows that the larger message still hit the limit."
+      }
+    ],
+    "check": [
+      "The packet has one identical first prompt for all four tools. Every scored answer has a saved first reply and a line of evidence.",
+      "The hand-written practice answer earns four of five. It asks for a change without first checking the actual receive limit.",
+      "Before the follow-up, the active value is unknown. The later snapshot gives 10 MB. After the practice change, V3 passes at 14 MB and V4 fails at 24 MB."
+    ],
+    "sources": [
+      [
+        "Claude Help · start a chat",
+        "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+      ],
+      [
+        "OpenAI Help · start a ChatGPT chat",
+        "https://help.openai.com/en/articles/9125172-the-chatgpt-home-page"
+      ],
+      [
+        "Google Help · use the Gemini app",
+        "https://support.google.com/gemini/answer/13275745?hl=en"
+      ],
+      [
+        "Microsoft Learn · Microsoft 365 Copilot Chat",
+        "https://learn.microsoft.com/en-us/copilot/plan/copilot-overview"
+      ],
+      [
+        "Microsoft Learn · read delivery trace results",
+        "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+      ],
+      [
+        "Microsoft Learn · Exchange Online message size limits",
+        "https://learn.microsoft.com/en-us/exchange/mail-flow-best-practices/message-size-limits-exchange-online"
+      ]
+    ],
+    "firstGuide": "get-kit",
+    "caseFiles": [
+      "vendor-trial.txt"
+    ]
+  }
+]

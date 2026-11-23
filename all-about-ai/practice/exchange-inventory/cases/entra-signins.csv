@@ -1,0 +1,7 @@
+Row,Utc,Event,Account,Device,Resource,Outcome,Policy,Mode,Grant,PolicyResult
+S1,2026-04-08T09:04:00Z,EV-31,shift@example.test,tab-7,Mail,Blocked,Managed tablet,On,Compliant device,Failure
+S2,2026-04-08T09:04:00Z,EV-31,shift@example.test,tab-7,Mail,Blocked,Preview gate,Report-only,Block,Report-only failure
+S3,2026-04-08T09:05:00Z,EV-32,shift@example.test,tab-4,Mail,Success,Managed tablet,On,Compliant device,Success
+S4,2026-04-08T09:05:00Z,EV-32,shift@example.test,tab-4,Mail,Success,Preview gate,Report-only,Block,Report-only failure
+S5,2026-04-08T09:25:00Z,EV-35,shift@example.test,tab-7,Mail,Success,Managed tablet,On,Compliant device,Success
+S6,2026-04-08T09:25:00Z,EV-35,shift@example.test,tab-7,Mail,Success,Preview gate,Report-only,Block,Report-only failure

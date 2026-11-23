@@ -1,0 +1,5 @@
+Evidence,Window,Probe,Expected,Observed
+W1,Before,ReceiptTag,Tagged,Plain
+W2,Before,OrdinaryMail,Plain,Plain
+W3,After,ReceiptTag,Tagged,Tagged
+W4,After,OrdinaryMail,Plain,Plain

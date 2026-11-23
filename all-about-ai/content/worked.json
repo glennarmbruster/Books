@@ -2284,5 +2284,356 @@
     "after": "Suppose the second tap changes Blue to 4. Mark the click-lock check Fail and record both scores. If all four other checks pass, the first-try score is 4 out of 5.",
     "why": "Two taps on one answer count as just one pick. The number on the screen lets another reader repeat your check.",
     "rescue": "If the screen changes too fast to tell, restart and repeat the double tap. Leave the check untested until you can tell what happened. Keep this first file when you try the later edit."
+  },
+  {
+    "id": "troubleshoot-loop",
+    "premise": "A test receipt arrived without its tag.",
+    "before": "C1 records delivery. Two guesses are a missing receipt and a missed rule match.",
+    "try": "Check the written word in C3, then compare the two after-probes.",
+    "after": "W3 is Tagged and W4 stays Plain. The fix passed for both probes.",
+    "why": "Fresh evidence can rule out one guess and test the side effect of another.",
+    "rescue": "Withhold the final verdict if the ordinary message was never retested."
+  },
+  {
+    "id": "lab-troubleshoot-13",
+    "premise": "An assistant proposes editing a comment to fix a subject mismatch.",
+    "before": "C3 points to a subject word. The proposed command changes Comments.",
+    "try": "Read the two Learn pages. Separate the setting each command reads or previews.",
+    "after": "The comment preview changes no live setting and does not test the subject condition.",
+    "why": "A valid command can still be the wrong answer to a case.",
+    "rescue": "Write the target setting beside the symptom and repeat the read-only check."
+  },
+  {
+    "id": "lab-troubleshoot-14",
+    "premise": "A receipt now has the correct label. Could ordinary mail have changed too?",
+    "before": "W1 was Plain where Tagged was expected. W2 was Plain as expected.",
+    "try": "Match each before-probe with its after-probe. Cover the after-control once.",
+    "after": "W3 repairs the original mismatch. W4 confirms ordinary mail stayed plain.",
+    "why": "One positive example could also come from a rule that tags everything.",
+    "rescue": "If W4 is missing, get a new scoped control result before closing."
+  },
+  {
+    "id": "lab-troubleshoot-15",
+    "premise": "A second shift needs a decision it can audit.",
+    "before": "The scope is ReceiptMarker. The old value is in C3 and the approved edit is in C4.",
+    "try": "Imagine a failed control and write the restore value before reading the final rows.",
+    "after": "The real probes passed. The restore note remains ready if the control changes.",
+    "why": "A handoff should distinguish a tested result from the plan for failure.",
+    "rescue": "If the note promises all mail is fixed, replace that claim with the two test IDs."
+  },
+  {
+    "id": "troubleshoot-trace",
+    "premise": "An analyst asks why both desks missed the same parcel. First check whether both copies actually failed.",
+    "before": "T1 and T2 share parcel-41. T1 ends in Delivered and T2 in Failed.",
+    "try": "Match the failed row to the recipient named in N2. Look at A4 to see what the sending list contained.",
+    "after": "Only the stores copy failed. The bounce shows an address lookup failure and A4 identifies the old list entry. A6 records delivery after the approved list correction.",
+    "why": "A trace, a bounce and a list snapshot answer three different questions.",
+    "rescue": "If you have only the two trace rows, stop after the two statuses. Leave the cause unknown and request the matching NDR."
+  },
+  {
+    "id": "troubleshoot-auth",
+    "premise": "A helper says two failed checks mean every bulletin was rejected. Test that claim against the comparison message.",
+    "before": "H6 shows three failures. D3 publishes a quarantine policy. D5 records a different message with an SPF pass and a DKIM failure.",
+    "try": "Check the two domain names used for SPF alignment on D5. Find the final disposition of the first message, if one is supplied.",
+    "after": "The domains match on D5, so its recorded DMARC pass is plausible. H7 gives no final outcome for the first message.",
+    "why": "A policy, an authentication result and an actual delivery record answer different questions.",
+    "rescue": "If the answer invents a rejection or quarantine, ask it to quote the final action for beacon-17. Keep the answer unknown when it cannot."
+  },
+  {
+    "id": "troubleshoot-rules",
+    "premise": "A label is missing even though the rule says Enabled. The team wants to know whether to change its scope.",
+    "before": "R4 expects board. R5 expects PIERX. B1 is for board and says PIER roster.",
+    "try": "Write yes beside the recipient match and no beside the subject match. Predict V2 and V3 before checking the after file.",
+    "after": "The subject test missed the intended word. The approved correction changes that one word. V1 is labeled and both control subjects stay plain.",
+    "why": "Separate controls catch two kinds of overreach: the wrong subject at the right mailbox and the right subject at a different mailbox.",
+    "rescue": "If an answer proposes dropping a condition, ask what that would do to V2 or V3. Keep the approved scope from R7."
+  },
+  {
+    "id": "lab-troubleshoot-01",
+    "premise": "A helper groups all four rows because their subjects match.",
+    "before": "T1 and T2 contain parcel-41. T3 and T4 have different IDs.",
+    "try": "Filter by that exact message ID, then split the two surviving rows by recipient.",
+    "after": "Dock was delivered and stores failed. No explanation of the failure appears in the CSV.",
+    "why": "A shared subject is common when a sender reuses a template.",
+    "rescue": "If the helper includes the supply address, ask which message ID appears on T4."
+  },
+  {
+    "id": "lab-troubleshoot-02",
+    "premise": "A service desk wants to restore a mailbox after seeing a bounce.",
+    "before": "The failed row is T2. N4 is 5.1.10. A2 finds no stores recipient.",
+    "try": "Check the owner’s requested desk on A1, the active address on A3 and the address the list used on A4.",
+    "after": "The supplied facts support correcting a list entry. They do not establish a deleted mailbox.",
+    "why": "A status code describes the failed lookup. It does not tell you how the sending list was maintained.",
+    "rescue": "Start again with only the NDR. List what it proves before adding the directory and list evidence."
+  },
+  {
+    "id": "lab-troubleshoot-03",
+    "premise": "A reply treats an authentication result as a mailbox outcome.",
+    "before": "H6 contains dmarc=fail. H7 says the final outcome was not supplied.",
+    "try": "Write one sentence for what the receiver checked. Write another for what remains unknown.",
+    "after": "The three checks failed. The case contains no proof of where the message ended up.",
+    "why": "A recorded check and a delivery action describe different events.",
+    "rescue": "Ask for a second record that names the same message ID and a delivery action."
+  },
+  {
+    "id": "lab-troubleshoot-04",
+    "premise": "A proposed repair adds the observed source IP immediately. First find the evidence that the sender belongs there.",
+    "before": "H1 shows .44. D1 lists .24. D4 says the approved sender list is missing.",
+    "try": "Mark what the record authorizes and what the message used. Check whether the two agree, then check D4.",
+    "after": "The mismatch is supported. Authorization for .44 is still unknown, so request the approved source list from its owner.",
+    "why": "An IP seen on a message is an observation. It is not proof of the owner’s intent.",
+    "rescue": "If the AI recommends changing DNS, ask for its evidence of ownership and the missing original lookup time."
+  },
+  {
+    "id": "lab-troubleshoot-05",
+    "premise": "The AI suspects that the mail rule is switched off.",
+    "before": "R2 says Enabled, R3 says Enforce and B1 says Delivered. B1 has no subject label.",
+    "try": "Check the mailbox condition first, then the required subject word.",
+    "after": "The mailbox condition passes. The stored word PIERX does not match PIER.",
+    "why": "Checking one condition at a time turns a broad guess into a testable cause.",
+    "rescue": "If the AI suspects rule order, ask for evidence from this one-rule practice set."
+  },
+  {
+    "id": "lab-troubleshoot-06",
+    "premise": "A helper calls the change successful after a single match. One successful message cannot reveal whether the rule tags too much mail.",
+    "before": "Before B1 had no label. The fixture owner approved changing PIERX to PIER.",
+    "try": "Read V1, then independently compare V2 against the subject condition and V3 against the recipient condition.",
+    "after": "The expected message gains the label. The two control messages stay plain. All three show Delivered.",
+    "why": "A successful repair must fix the target while keeping the intended boundary.",
+    "rescue": "If a control changes, record the specific mismatch, stop the rollout and return to the rollback note."
+  },
+  {
+    "id": "troubleshoot-access",
+    "premise": "A reader thinks the preview access policy blocked mail.",
+    "before": "One event has S1 and S2. The same preview result appears in S4, inside a successful event.",
+    "try": "Compare policy mode and event outcome. Join the blocked device to I1 by label and time.",
+    "after": "S1 records the enforced grant failure. S2 is the report-only result. I1 reports an OS below the required level.",
+    "why": "A line can describe a policy evaluation without causing the sign-in block.",
+    "rescue": "If you have S2 alone, request the enforced policy rows before deciding what blocked access."
+  },
+  {
+    "id": "troubleshoot-hybrid",
+    "premise": "A mail test left the cloud but the site has no first receipt.",
+    "before": "H1 expects bridge.example.test. H4 shows TEST-41 timed out at old-bridge.example.test.",
+    "try": "Compare both names with H2. Separate H5 by direction. Predict a receipt before reading H7.",
+    "after": "The cloud attempted the old route. After the approved correction, TEST-43 reached the expected host and mailbox. H8 checks a control.",
+    "why": "Matching one marker across the sending and receiving evidence tests the route you meant to test.",
+    "rescue": "If a receipt has another marker, leave that test open until a matching one arrives."
+  },
+  {
+    "id": "lab-troubleshoot-07",
+    "premise": "An alert lists two policies on one failed sign-in.",
+    "before": "S1 says On. S2 says Report-only. Both lines share EV-31.",
+    "try": "Count distinct event labels. Compare the mode on each failure and test the explanation against S4.",
+    "after": "One blocked sign-in. S1 is the enforced grant failure. S4 shows the preview result on an event that succeeded.",
+    "why": "A reported failure by itself cannot explain an enforced block.",
+    "rescue": "If the answer resets a password, request a row that says the password failed. No such row is in this case."
+  },
+  {
+    "id": "lab-troubleshoot-08",
+    "premise": "A reader points to the current tablet status to explain an earlier block.",
+    "before": "EV-31 is at 09:04 on tab-7. I1 is at 09:01. I3 is at 09:22.",
+    "try": "Cover rows later than the event. Match the device label on the remaining rows.",
+    "after": "I1 is the relevant prior reading. Remove it and the prior OS version is unknown.",
+    "why": "Selecting the latest record without a time cutoff leaks future facts into the diagnosis.",
+    "rescue": "Reject a better-looking result from tab-4. Ask for an earlier reading from tab-7."
+  },
+  {
+    "id": "lab-troubleshoot-09",
+    "premise": "The device owner says the update is finished. Does mail now open?",
+    "before": "N2 records the update. Keep I3, S5 and N3 covered while you write three predictions.",
+    "try": "Reveal one record for compliance, one for the next matching event and one for actual app access.",
+    "after": "Tab-7 met the device rule, passed a fresh Mail sign-in and entered the app. Every check has its own record.",
+    "why": "An installed update and an observable recovery are separate facts.",
+    "rescue": "Without the fresh sign-in record, keep the policy decision unknown and list the remaining evidence."
+  },
+  {
+    "id": "lab-troubleshoot-10",
+    "premise": "A team sees one good test in the opposite direction.",
+    "before": "TEST-41 left the cloud and timed out. TEST-42 reached a cloud mailbox from the site.",
+    "try": "Draw the two arrows and match each marker to its receiving side. Compare H1 and H4.",
+    "after": "The wrong target was tried for TEST-41. TEST-42 says nothing about its delivery.",
+    "why": "Each direction uses different evidence.",
+    "rescue": "If a receiving service is enabled, still ask for a destination receipt with the same marker."
+  },
+  {
+    "id": "lab-troubleshoot-11",
+    "premise": "Decide whether one recorded routing correction worked.",
+    "before": "H6 names the approved target change. H7 and H8 are still covered.",
+    "try": "Write down the expected new target, a destination marker and a separate route check. Then reveal H7 and H8.",
+    "after": "TEST-43 reached the expected host and mailbox. TEST-44 reached the control mailbox. Keep the verdict to the two tests.",
+    "why": "A control catches a change that fixed one path while breaking another.",
+    "rescue": "If the control fails, record its marker and ask the owner to follow the agreed rollback plan."
+  },
+  {
+    "id": "lab-troubleshoot-12",
+    "premise": "The helper offers a command before naming the session where it belongs.",
+    "before": "The review packet names a cloud outbound connector and a site receive connector.",
+    "try": "Match both read commands to their official pages. Check the documented Identity parameter. Read H2 and H3 as the offline sample outputs.",
+    "after": "The cloud read belongs in Exchange Online. The local receive read belongs in Exchange Server. The change cmdlet supports WhatIf, yet the next proof is a receipt.",
+    "why": "A valid parameter and a preview can tell you about a command. Neither proves that the next message arrived.",
+    "rescue": "If the returned identity or number of rows differs, stop before exporting. Recheck the object and the session."
+  },
+  {
+    "id": "troubleshoot-trial",
+    "premise": "A team wants to compare helpers before choosing one for mail triage.",
+    "before": "A reply notices the failed 14 MB message but says every sender must have a 10 MB limit.",
+    "try": "Find R3. Check whether the sender, message size and result fit that claim. Look for a current limit in R1 through R5.",
+    "after": "R3 shows that same sender reached Stores at 14 MB. None of the five rows shows an active limit of 10 MB.",
+    "why": "A matching control can rule out a broad claim. An old worksheet cannot prove today’s limit.",
+    "rescue": "Mark which facts the reply supported. Ask for one read-only check on the affected recipient before naming the active setting."
+  },
+  {
+    "id": "lab-troubleshoot-16",
+    "premise": "The paper reply gets the mail path nearly right. One risky leap still needs a score.",
+    "before": "R1 is the failed 14 MB message to Workroom. R2 shows small mail gets there, and R3 shows the same sender can send the large message elsewhere. The active setting is unknown. R4 hints at size, and the plan in R5 may be stale. Change the setting to 20 MB.",
+    "try": "Place one tick next to each of the five points that the reply earns. Read its last sentence before marking the safe-test point.",
+    "after": "Four ticks. The reply identifies the symptom and both controls and leaves the active value unknown. It jumps straight to a change, so it misses the fifth point.",
+    "why": "A read-only check tests the guess while protecting the current setup. Even a fix that turns out to work still needed evidence before approval.",
+    "rescue": "If you gave five points, cover V1 through V4 and read only the first reply. Which line asks to check the current value?"
+  },
+  {
+    "id": "safe-share",
+    "premise": "The AI needs to know whether the relay changed. The engineer has a long export with much more detail.",
+    "before": "The task needs an event order, two sources, the same mailbox and a final status. P2 allows those facts as aliases in the approved work workspace.",
+    "try": "Build the two-line copy from scratch. Check that each original identifier disappears while the same mailbox remains linked.",
+    "after": "The small copy still shows a retry five minutes later from a different relay. A held request to a personal account gets no excerpt.",
+    "why": "A useful excerpt keeps the relationship that answers the question. Permission still depends on the chosen destination.",
+    "rescue": "If the helper asks which tenant owns the mailbox, return to the stated question. Ask whether that identity is needed or approved before sharing any more."
+  },
+  {
+    "id": "safe-pasted-text",
+    "premise": "A team needs the state of a case. The copied form contains a sentence asking for closure.",
+    "before": "N1 says Open. N2 says confirmation is pending. N3 is a footer. N4 says no later status event has appeared.",
+    "try": "Ask for the current state and one supporting line. Then reveal N5 and repeat the question using the same rule.",
+    "after": "First answer: Open, with N1 and N4 as evidence. Later answer: Closed, with N5 as evidence. Neither summary authorizes the reader or AI to change an external record.",
+    "why": "The source of a sentence and whether it records a completed event matter more than its command-like wording.",
+    "rescue": "If both passes return Closed, remove N3 from the first input. The correct state stays Open. Compare the two answers and record the faulty inference."
+  },
+  {
+    "id": "lab-data-safety-01",
+    "premise": "The same product can appear in a work account and a personal account.",
+    "before": "P1 calls for an approved tool, account, feature and purpose. P2 covers the redacted practice excerpt.",
+    "try": "Apply P4 to the personal destination before considering any excerpt.",
+    "after": "The first stated use can proceed under the exercise policy. The second one stays on hold.",
+    "why": "Removing names does not extend an approval to another destination.",
+    "rescue": "If the account type cannot be checked, use the hold decision and ask the policy owner."
+  },
+  {
+    "id": "lab-data-safety-02",
+    "premise": "A full export is ready to attach, but the question covers only a retry.",
+    "before": "Local F1 and F2 share a mailbox and have two different IPs.",
+    "try": "Assign two relay aliases and one mailbox alias. Replace clock times with minutes since the first attempt.",
+    "after": "The excerpt can support a different source and a Delivered result at +5 minutes. The real addresses are unknown to its reader.",
+    "why": "Keeping one mailbox alias stable lets the reader join the two records.",
+    "rescue": "If you cannot answer the relay question, compare the labels locally. Do not send the alias lookup list."
+  },
+  {
+    "id": "lab-data-safety-03",
+    "premise": "A scrubbed table was pasted into an older draft with a revealing footer.",
+    "before": "F1 and F2 can be aliased, yet F3 and F4 still repeat original values.",
+    "try": "Inspect both the message body and its filename. Check again after copying to a new file.",
+    "after": "A clean retry-summary.txt preserves Box A and the two relay aliases. The original addresses and labels have zero matches.",
+    "why": "Changing the table cells cannot fix information that also appears outside the table.",
+    "rescue": "If a screenshot or attachment cannot be reviewed completely, leave it out. Make a new plain-text excerpt from the fields you need."
+  },
+  {
+    "id": "lab-data-safety-04",
+    "premise": "Someone wants the last part of a key in the share log to identify the case.",
+    "before": "The goal is to compare two retries, and P6 asks for field categories and outcome.",
+    "try": "Omit the credential field completely. Log “credential field removed” and describe the allowed data categories.",
+    "after": "The log can explain the decision without storing a value that came from the credential.",
+    "why": "A log can become a second disclosure if it repeats the source.",
+    "rescue": "If real credentials were sent before review, follow the incident process and contact their owner. Keep the secret itself out of any report."
+  },
+  {
+    "id": "lab-data-safety-05",
+    "premise": "An AI summarizes a successful retry and a footer as a closed case.",
+    "before": "N2 reports pending confirmation and N3 is a request inside quoted text.",
+    "try": "Check N1 for state, N4 for later events and then remove the footer from the practice copy.",
+    "after": "Both summaries should report Open. No external action is part of this task.",
+    "why": "Delivery success and case closure are different facts.",
+    "rescue": "If the helper tries to act, stop the attempt and finish the summary in a context with no ticket-changing tools."
+  },
+  {
+    "id": "lab-data-safety-06",
+    "premise": "A reader wants to explain a retry and verify a later closure without attaching the original export.",
+    "before": "The exercise includes P2 and P5, the local retry file and two versions of the training note.",
+    "try": "Use only alias rows and the note lines cleared for the exercise. Compare the state before and after N5, then log what was actually shared.",
+    "after": "The retry succeeded after five minutes. Open is supported before N5; Closed is supported after N5. The receipt records the decision without raw identifiers.",
+    "why": "Separate checks prevent the successful retry, a copied footer and later owner confirmation from becoming one unsupported claim.",
+    "rescue": "If you cannot verify the destination, mark nothing sent and complete the same two evidence checks locally."
+  },
+  {
+    "id": "ship-first-release",
+    "premise": "Two tabs show a game. Which one can a player actually open?",
+    "before": "The original game is in a Git folder. A second copy in release-copy shows 1.0.",
+    "try": "Serve the second folder on your computer. Open its direct address and play the timer case.",
+    "after": "The release receipt names the served 1.0 file and its result. A public deployment remains untested until you visit it.",
+    "why": "A passing test on the author’s file does not tell you which copy reached a host.",
+    "rescue": "If the labels differ, check the source folder and copy the reviewed file again."
+  },
+  {
+    "id": "ship-secrets",
+    "premise": "A suggested scoreboard asks for a private service key in the HTML.",
+    "before": "The game already has a local clock and score. Its whole file will be shared.",
+    "try": "Inspect the file as text. Write down which existing feature would need that key and where a reader could see it.",
+    "after": "Neither existing feature needs it. Ship the key-free game. A future private lookup belongs behind a server that checks access.",
+    "why": "A browser receives the code it runs. A comment or encoded string is still in that copy.",
+    "rescue": "If a real key was shared before, have the owner revoke or rotate it and follow the repository cleanup process."
+  },
+  {
+    "id": "lab-ship-app-01",
+    "premise": "Treat the game clock as a value you control.",
+    "before": "A fresh round has 15 seconds and 0 points. The test goal is two correct picks.",
+    "try": "Miss once. Match the visible target twice, then advance to the end and try another tap.",
+    "after": "The miss leaves 0. The two hits produce 2. The late tap leaves 2. Restart shows 0 with 15 seconds.",
+    "why": "A final score means little unless you also test what happens after time runs out.",
+    "rescue": "If the target changes between taps, read the displayed target before the second pick."
+  },
+  {
+    "id": "lab-ship-app-02",
+    "premise": "Save the version that actually passed the round test.",
+    "before": "One index.html sits in its own new repository. Its label is 1.0.",
+    "try": "Stage that named file, check the staged list, commit and read the short log.",
+    "after": "There is one game checkpoint and no changes in short status. The commit ID can be copied into a release note.",
+    "why": "The commit contains the staged version, which is why checking the staged file matters.",
+    "rescue": "If the staged list contains more than the game, use a clean local practice folder."
+  },
+  {
+    "id": "lab-ship-app-03",
+    "premise": "The reader wants to try a label and undo it without losing the story of the change.",
+    "before": "A clean main branch has the tested 1.0 checkpoint.",
+    "try": "Change only the label to 1.1. Review, commit and prove this edit is at HEAD before reverting it.",
+    "after": "The label returns to 1.0. The log retains the starting checkpoint, the label experiment and the revert.",
+    "why": "A revert records a new undo commit. A teammate can see why the visible label changed twice.",
+    "rescue": "If another commit arrived at the top, stop and inspect the history before selecting anything to undo."
+  },
+  {
+    "id": "lab-ship-app-04",
+    "premise": "A cleaned-up page looks safe at first glance.",
+    "before": "A scratch commit once contained PRACTICE_MARKER. The current file has no marker.",
+    "try": "Use git log -p -S PRACTICE_MARKER -- index.html to inspect the relevant history.",
+    "after": "You can see the added marker in the earlier patch and its removal in the later patch. No real secret was used.",
+    "why": "The public file and the repository history are separate places to check.",
+    "rescue": "If a real key ever appeared, replacing a file is only one part of cleanup. Ask the key owner to revoke or rotate it."
+  },
+  {
+    "id": "lab-ship-app-05",
+    "premise": "The game opens from a folder, but can it be served as a site?",
+    "before": "The release-copy folder contains only index.html with the 1.0 label.",
+    "try": "Serve that folder on loopback. Open the direct local address on the same computer and try one right answer.",
+    "after": "The game shows 1.0 and scores a point. If the optional Pages copy also passes, record that direct address separately.",
+    "why": "A static host can deliver a complete browser game without running private application code.",
+    "rescue": "If an address opens the repository listing, return to Settings and Pages for the actual published link."
+  },
+  {
+    "id": "lab-ship-app-06",
+    "premise": "One copy has the right game title and the wrong release number.",
+    "before": "The old control shows 0.9. The clean release should show 1.0.",
+    "try": "Visit the release address, confirm its label, score twice and test the final second there.",
+    "after": "A passing receipt records 1.0, 2 points at zero, a locked game and a fresh 0 after Restart.",
+    "why": "Version plus behavior identifies the release more reliably than either check alone.",
+    "rescue": "If the wrong version appears, fix the selected source or release copy first. Retest at the same address."
   }
 ]

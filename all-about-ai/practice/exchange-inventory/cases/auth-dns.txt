@@ -1,0 +1,6 @@
+Synthetic DNS and receiving-side notes gathered for beacon-17 on 2026-11-12.
+D1 At 10:05Z the sending domain's SPF TXT was: bulletin.example.test TXT "v=spf1 ip4:192.0.2.24 -all"
+D2 At 10:05Z an authoritative lookup of board2._domainkey.bulletin.example.test returned NXDOMAIN (name missing).
+D3 At 10:05Z the DMARC TXT was: _dmarc.bulletin.example.test TXT "v=DMARC1; p=quarantine; aspf=s; adkim=s"
+D4 The sending service's approved relay list for that day is not in this packet.
+D5 Comparison message <beacon-18@bulletin.example.test> at 10:10Z arrived from 192.0.2.24 with the same visible From and MAIL FROM domains as beacon-17. Its receiving system recorded spf=pass, dkim=fail, dmarc=pass.

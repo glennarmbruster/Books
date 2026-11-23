@@ -43,16 +43,26 @@ def check_sources(sources, key):
         require(label and url.scheme == 'https' and url.hostname, f'Invalid source in {key}')
 
 
+legacy = ['Starter'] * 3 + ['Intermediate'] * 4 + ['Advanced'] * 3 + ['Expert'] * 5
+second = ['Starter'] * 6 + ['Intermediate'] * 7 + ['Advanced', 'Expert']
+track_levels = {name: legacy + second for name in
+                ('antigravity','ai-studio','claude-code','codex','copilot','devin')}
+for name in ('claude-code', 'codex'):
+    track_levels[name][13] = 'Advanced'
+track_levels['gemini-app'] = second + second
+track_levels['troubleshoot'] = ['Starter']*4 + ['Intermediate']*6 + ['Advanced']*4 + ['Expert']*2
+
+
+short_track = ['Starter','Starter','Intermediate','Intermediate','Advanced','Expert']
+track_levels['data-safety'] = short_track
+track_levels['ship-app'] = short_track
+
+
 def check_lab(lab, track, number):
     key = lab['id']
     require(key == f'lab-{track}-{number:02}', f'Unexpected lab order for {key}')
     require(words([lab[k] for k in ('level', 'requires', 'features', 'prompt')]), f'Incomplete brief in {key}')
-    levels = ['Starter'] * 3 + ['Intermediate'] * 4 + ['Advanced'] * 3 + ['Expert'] * 5
-    new_block = ['Starter'] * 6 + ['Intermediate'] * 7 + ['Advanced','Expert']
-    levels = (new_block if track == 'gemini-app' else levels) + new_block
-    if track in {'claude-code', 'codex'}:
-        levels[13] = 'Advanced'
-    require(number <= len(levels) and lab['level'] == levels[number - 1], f'Unexpected level in {key}')
+    require(lab['level'] == track_levels[track][number-1], f'Unexpected level in {key}')
     require(words(lab['roles']) and len(lab['roles']) == 3, f'Check roles in {key}')
     require(len(lab['steps']) >= 3 and words(lab['check']), f'Incomplete walkthrough in {key}')
     for step in lab['steps']:
@@ -92,6 +102,7 @@ lab_count = 0
 guide_ids = set()
 reference_ids = set()
 build_labs = []
+writing_labs = []
 build_spec = None
 require(groups, 'List at least one group in edition.json.')
 for group in groups:
@@ -103,8 +114,8 @@ for group in groups:
     chapters = json.loads((book / path).read_text())
     require(chapters, f'Empty group {path}')
     if group.get('track'):
-        require(words([group['startLabel'],group['gettingStarted']]) and urlsplit(group['startUrl']).scheme == 'https', f'Check setup help in {path}')
-        require(len(chapters) == 30, f'Expected 30 labs in {path}')
+        require(words([group['startLabel'],group['gettingStarted']]) and (urlsplit(group['startUrl']).scheme == 'https' or group['startUrl'] in {'#get-kit','#first-project','#which-account'}), f'Check setup help in {path}')
+        require(group['track'] in track_levels and len(chapters) == len(track_levels[group['track']]), f'Incorrect track or lab count in {path}')
     for number, ch in enumerate(chapters, start=1):
         key = ch['id']
         require(re.fullmatch(r'[a-z0-9-]+', key) and key not in ('contents', 'labs', 'start') and key not in ids, f'Invalid or duplicate ID {key}')
@@ -120,10 +131,20 @@ for group in groups:
             continue
         if group.get('track'):
             check_lab(ch, group['track'], number)
+            if 'writeYourOwn' in ch:
+                exercise = ch['writeYourOwn']
+                require(ch['level'] in {'Intermediate','Advanced'} and
+                        words([exercise[k] for k in ('goal','given','compare')]), f'Check prompt-writing exercise in {key}')
+                writing_labs.append(group['track'])
             if ch.get('comparison'):
                 require(ch['comparison'] == 'build-off', f'Unknown comparison in {key}')
                 build_labs.append(ch)
             require('kit' not in ch or ch['kit'] == kit, f'Unknown kit in {key}')
+            for case in ch.get('caseFiles', []):
+                require(re.fullmatch(r'[a-z0-9-]+\.(?:txt|csv|json|ps1|md|eml)', case, re.I), f'Invalid case file in {key}')
+                case_path = 'practice/exchange-inventory/cases/' + case
+                require((book / case_path).is_file(), f'Missing {case_path}')
+                if case_path not in assets: assets.append(case_path)
             if 'sampleApp' in ch:
                 sample = ch['sampleApp']
                 require(re.fullmatch(r'practice/browser/[a-z0-9-]+\.html',sample) and (book/sample).is_file(), f'Unknown app in {key}')
@@ -159,16 +180,20 @@ for group in groups:
                     require(words([question['prompt'], question['why']]) and words(choices) and
                             len(set(choices)) == len(choices) >= 2 and type(question['correct']) is int and
                             0 <= question['correct'] < len(choices), f'Invalid practice choice in {key}')
+            if 'trialTools' in section:
+                require(key == 'troubleshoot-trial' and section['trialTools'] == ['Claude','ChatGPT','Gemini','Microsoft 365 Copilot Chat'], 'Check blank diagnostic trial rows')
             if 'table' in section:
                 tbl = section['table']
                 require(words(tbl['columns']) and tbl['rows'], f'Empty table in {key}')
                 require(all(words(row) and len(row) == len(tbl['columns']) for row in tbl['rows']), f'Invalid table in {key}')
 
 tracks = [group['track'] for group in groups if group.get('track')]
-expected_tracks = {'antigravity','ai-studio','claude-code','codex','copilot','devin','gemini-app'}
-require(set(tracks) == expected_tracks and len(tracks) == 7 and lab_count == 210, 'Expected seven distinct tracks of 30 labs')
+require(len(tracks) == len(track_levels) and set(tracks) == set(track_levels) and
+        lab_count == sum(map(len, track_levels.values())), 'Unexpected lab tracks or total')
+require(len(writing_labs) == 20 and set(writing_labs) == set(track_levels) - {'data-safety','troubleshoot','ship-app'},
+        'Expected 20 optional prompt exercises across the original tracks')
 comparison_ids = {'lab-gemini-app-14','lab-claude-code-14','lab-codex-14'}
-require(manifest.get('version') == 5 and build_spec is not None, 'Expected edition 5 with the four-tool build-off')
+require(manifest.get('version') == 6 and build_spec is not None, 'Expected edition 6 with the four-tool build-off')
 require({lab['id'] for lab in build_labs} == comparison_ids, 'Expected three shared Lab 14 builds')
 for lab in build_labs:
     require(lab['prompt'] == build_spec['prompt'] and lab['check'] == build_spec['check'],
@@ -209,6 +234,9 @@ fixed_fields = {entry['text'] for key,entry in values.items()
 for group in groups:
     rows = json.loads((book/'content'/group['file']).read_text())
     for item in rows:
+        if 'relatedLabs' in item:
+            links = item['relatedLabs']
+            require(words(links) and len(links) == len(set(links)) and all(link in ids and link.startswith('lab-') for link in links), 'Unknown or repeated lab link in '+item['id'])
         require('firstGuide' not in item or item['firstGuide'] in guide_ids, 'Invalid first lesson for '+item['id'])
     if group['file'] in model_groups:
         for line in strings_in_content(rows):
@@ -237,13 +265,15 @@ new_diagrams = """
     local-vs-cloud-codex media-handoff thread-to-decision denominator-trap copilot-surface-choice
     claim-to-source browser-permissions local-offline-ai blind-model-trial game-state-loop
     undo-history-stack fifo-queue atomic-file-swap csv-quote-shield four-way-buildoff
+    case-loop mail-checkpoint device-evidence hybrid-route-proof mail-auth-evidence sharing-gate pasted-instructions ship-release ship-secret
 """.split()
 new_svg_files = {f'diagram-{name}.svg' for name in new_diagrams}
 diagrams = new_svg_files | {f'diagram-{name}.svg' for name in previous_diagrams}
-require(len(figures) == 94 and {f['file'] for f in figures if f['file'].endswith('.svg')} == diagrams,
-        'Expected the 53 named diagrams and 41 other pictures')
+require(len(figures) == len(diagrams) + 41 and {f['file'] for f in figures if f['file'].endswith('.svg')} == diagrams,
+        'Expected all named diagrams and 41 other pictures')
 illustrated = {page for figure in figures for page in [figure['lesson'], *figure.get('also', [])]}
-milestones = {f'lab-{track}-{number}' for track in tracks for number in ('01', '15', '29', '30')}
+milestones = {f'lab-{track}-{n:02}' for track, levels in track_levels.items()
+              for n in {1, 15, len(levels) - 1, len(levels)} if n <= len(levels)}
 required_pages = reference_ids | milestones | {'lab-gemini-app-10','lab-gemini-app-24','lab-gemini-app-27'}
 require(required_pages <= illustrated, 'Missing figures on ' + ', '.join(sorted(required_pages - illustrated)))
 require({p.name for p in (book/'pictures').glob('*') if p.is_file() and not p.name.startswith('.')} == {f['file'] for f in figures}, 'Picture list does not match files on disk')
@@ -274,7 +304,7 @@ for fig in figures:
     assets.append(path)
 
 for path in [*assets, 'UPDATING.md', *[p.relative_to(book).as_posix() for p in (book/'practice/exchange-inventory').rglob('*') if p.is_file()]]:
-    if Path(path).suffix in {'.json','.svg','.csv','.md','.ps1','.html','.js','.css'}:
+    if Path(path).suffix in {'.json','.svg','.csv','.md','.ps1','.html','.js','.css','.txt','.eml'}:
         check_sample_text((book/path).read_text(), path)
 
 digest = sha256()

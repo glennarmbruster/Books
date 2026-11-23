@@ -91,6 +91,34 @@ function makeTable(table, title) {
   return wrap;
 }
 
+function diagnosticTrial(tools, title) {
+  const columns = ['Product', 'Mode and date', 'Points', 'Evidence and misses'];
+  const wrap = makeTable({columns, rows:tools.map(tool => [tool, '', '', ''])}, title);
+  const notice = element('p');
+  notice.setAttribute('role','status');
+  wrap.querySelectorAll('tbody tr').forEach((row,i) => {
+    for (let col = 1; col < columns.length; col++) {
+      const control = element(col === 2 ? 'select' : 'textarea');
+      control.setAttribute('aria-label', tools[i] + ' · ' + columns[col]);
+      if (col === 2) {
+        control.add(new Option('',''));
+        for (let n=0; n<=5; n++) control.add(new Option(String(n), String(n)));
+      } else control.rows = 2;
+      const key = 'all-about-ai.diagnostic.' + tools[i] + '.' + col;
+      try { control.value = localStorage.getItem(key) || ''; }
+      catch { notice.textContent = 'Keep a copy of your results before leaving.'; }
+      control.addEventListener(col === 2 ? 'change' : 'input', () => {
+        try { localStorage.setItem(key,control.value); }
+        catch { notice.textContent = 'This browser could not save the worksheet.'; }
+      });
+      row.cells[col].append(control);
+    }
+  });
+  wrap.classList.add('diagnostic-sheet');
+  wrap.append(notice);
+  return wrap;
+}
+
 function buildScorecards(table, checks) {
   const cards = element('div', undefined, 'build-cards');
   for (const tool of ['ChatGPT', 'Claude', 'Gemini', 'Grok']) {
@@ -243,6 +271,37 @@ function snippet(value, label) {
   return block;
 }
 
+function writeYourOwn(lab, example, supplied) {
+  const panel = element('details', undefined, 'write-prompt');
+  panel.append(element('summary','Optional · Now write your own'));
+  const task = lab.writeYourOwn;
+  panel.append(element('p',task.goal), element('p',task.given), element('h3','Checks your prompt should cover'));
+  const checks = element('ul');
+  for (const test of lab.check) checks.append(element('li',test));
+  const label = element('label','Write a prompt in your own words.');
+  const draft = element('textarea');
+  draft.rows = 5;
+  label.append(draft);
+  const status = element('p','Use practice facts only. Your draft is saved in this browser.');
+  status.setAttribute('role','status');
+  const key = 'all-about-ai.prompt-draft.' + lab.id;
+  try { draft.value = localStorage.getItem(key) || ''; }
+  catch { status.textContent = 'Copy your draft before leaving this page.'; }
+  draft.addEventListener('input', () => {
+    try { localStorage.setItem(key, draft.value); }
+    catch { status.textContent = 'This browser could not save the draft. Copy it before leaving.'; }
+  });
+  const compare = element('details');
+  compare.append(element('summary','Compare with the supplied prompt'), snippet(lab.prompt,'supplied prompt'),element('p',task.compare));
+  panel.append(checks,label,status,compare);
+  panel.addEventListener('toggle', () => {
+    example.hidden = panel.open;
+    supplied.hidden = panel.open;
+    if (!panel.open) compare.open = false;
+  });
+  return panel;
+}
+
 function labBody(lab) {
   const about = element('section', undefined, 'chapter-intro');
   const roleInfo = element('details', undefined, 'sources');
@@ -258,7 +317,7 @@ function labBody(lab) {
   setup.append(element('summary','How to open this tool'), element('p',lab.comparison ? lab.steps[0].text : lab.group.gettingStarted));
   const setupLink = element('a',lab.group.startLabel);
   setupLink.href = lab.group.startUrl;
-  setupLink.target = '_blank';
+  if (!lab.group.startUrl.startsWith('#')) setupLink.target = '_blank';
   setupLink.rel = 'noopener noreferrer';
   setup.append(setupLink);
   about.append(setup);
@@ -267,6 +326,29 @@ function labBody(lab) {
     link.href = assetURL('./' + lab.kit);
     link.download = lab.kit.split('/').pop();
     about.append(link);
+  }
+  for (const file of lab.caseFiles || []) {
+    const details = element('details', undefined, 'step-help');
+    details.append(element('summary', 'Open practice file · ' + file));
+    details.addEventListener('toggle', async () => {
+      if (!details.open || details.dataset.loaded) return;
+      details.dataset.loaded = 'yes';
+      const path = './practice/exchange-inventory/cases/' + file;
+      try {
+        let text = portable?.cases?.[path];
+        if (text === undefined) {
+          const response = await fetch(path);
+          if (!response.ok) throw Error('Missing practice file');
+          text = await response.text();
+        }
+        details.append(snippet(text, 'practice file'));
+      } catch {
+        delete details.dataset.loaded;
+        const message = 'Open this file in the practice kit, or close and reopen to try again.';
+        if (!details.querySelector('p')) details.append(element('p', message));
+      }
+    });
+    about.append(details);
   }
   const prompt = element('section',undefined,'section');
   prompt.append(element('h2','Your prompt'),element('p',lab.comparison ? 'In a fresh session, paste just this prompt.' : 'Prepare the sample in the walkthrough, then paste this prompt when instructed.'),snippet(lab.prompt,'prompt'));
@@ -309,7 +391,10 @@ function labBody(lab) {
   };
   label.append(checkbox,document.createTextNode('Mark lab complete on this device'));
   finish.append(element('h2','Finish the lab'),checks,label,status,sourceLinks(lab.sources));
-  const sections = [about,workedExample(worked.get(lab.id)),prompt,instructions];
+  const example = workedExample(worked.get(lab.id));
+  const sections = [about];
+  if (lab.writeYourOwn) sections.push(writeYourOwn(lab, example, prompt));
+  sections.push(example, prompt, instructions);
   if (lab.sampleApp) {
     const sample = element('section',undefined,'section');
     const title = 'Try the finished example';
@@ -366,6 +451,7 @@ function openLocation(moveFocus) {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
+      if (section.trialTools) block.append(diagnosticTrial(section.trialTools, section.title));
       if (section.buildPart === 'prompt') block.append(snippet(chapter.buildSpec.prompt, 'prompt'));
       if (section.buildPart === 'followUp') block.append(snippet(chapter.buildSpec.followUp, 'follow-up'));
       if (section.buildPart === 'scorecard') {
@@ -390,11 +476,12 @@ function openLocation(moveFocus) {
       }
       return block;
     });
-    if (chapter.buildSpec) {
+    if (chapter.buildSpec || chapter.relatedLabs) {
       const links = element('nav', undefined, 'quick-links');
       links.setAttribute('aria-label','Related hands-on labs');
-      for (const item of chapters.filter(item => item.comparison === chapter.id)) {
-        const link = element('a', item.group.title + ' · Lab ' + item.number);
+      for (const item of chapters.filter(item => item.comparison === chapter.id || chapter.relatedLabs?.includes(item.id))) {
+        const label = chapter.relatedLabs ? 'Lab ' + item.number + ' · ' + item.title : item.group.title + ' · Lab ' + item.number;
+        const link = element('a', label);
         link.href = '#' + item.id;
         links.append(link);
       }
@@ -496,7 +583,7 @@ async function start() {
     }
   }
   const labCount = chapters.length - referenceChapters.length - guideChapters.length;
-  byId('lab-count').textContent = labCount + ' guided labs · ' + groups.filter(g=>g.track).length + ' tools';
+  byId('lab-count').textContent = labCount + ' guided labs · ' + groups.filter(g=>g.track).length + ' tracks';
   byId('edition').textContent = 'Edition ' + edition.version + ' · ' + referenceChapters.length + ' chapters · ' + labCount + ' labs · ' + guideChapters.length + ' beginner lessons · Updated ' + dateLabel(edition.reviewed);
   byId('query').addEventListener('input',showContents);
   window.addEventListener('hashchange',() => openLocation(true));

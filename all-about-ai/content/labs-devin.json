@@ -294,7 +294,12 @@
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Fix a list that counts the same ID twice.",
+      "given": "Test a blank, a space, and two spellings of A1.",
+      "compare": "Check whether your prompt says how to treat spaces, case and empty input."
+    }
   },
   {
     "id": "lab-devin-06",
@@ -503,7 +508,12 @@
         "Cognition · reviewing code changes",
         "https://docs.devin.ai/work-with-devin/devin-review"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Compare approved and observed permissions.",
+      "given": "Reader/reports occurs twice. Reader/app appears only in the observed list.",
+      "compare": "Look for separate outputs for an extra grant, a missing grant and a duplicate."
+    }
   },
   {
     "id": "lab-devin-10",
@@ -1248,7 +1258,12 @@
         "Cognition · your first Devin session",
         "https://docs.devin.ai/get-started/first-run"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Read every page of a list and tell the reader if the report is incomplete.",
+      "given": "Page 2 has no rows but points to page 3. A later test makes page 3 point back to page 2.",
+      "compare": "Did you describe how success differs from a stopped loop?"
+    }
   },
   {
     "id": "lab-devin-25",

@@ -224,7 +224,12 @@
         "Gemini API · structured output",
         "https://aistudio.google.com/docs/structured-output"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Turn three launch notes into dated app records.",
+      "given": "C1 gives April 2, 2027. C2 has no date. C3 tentatively says May 9, 2027.",
+      "compare": "Check how your prompt tells the helper to show a missing date."
+    }
   },
   {
     "id": "lab-ai-studio-06",
@@ -406,7 +411,12 @@
         "Google AI Studio · model selection",
         "https://aistudio.google.com/docs/choosing-a-model"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Find out what a helper can read from a picture.",
+      "given": "One image has two labeled color panels. A second run has no image attached.",
+      "compare": "Compare what your prompt asks the helper to do when the input is absent."
+    }
   },
   {
     "id": "lab-ai-studio-10",
@@ -1092,7 +1102,12 @@
         "Google AI Studio · build an app",
         "https://aistudio.google.com/docs/aistudio-build-mode"
       ]
-    ]
+    ],
+    "writeYourOwn": {
+      "goal": "Give each typed date a clear status.",
+      "given": "Try a real leap day, an impossible date and an empty box. Count how many of each remain after one edit.",
+      "compare": "Look for tests for real calendar dates and a separate result for an empty input."
+    }
   },
   {
     "id": "lab-ai-studio-25",

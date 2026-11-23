@@ -1,0 +1,388 @@
+[
+  {
+    "id": "lab-ship-app-01",
+    "title": "Play the last second of Signal Sprint",
+    "summary": "Prove a wrong tap, a right tap and a late tap do three different things.",
+    "level": "Starter",
+    "requires": "Use the running example below. For a file you can keep, use Save example (.html) and rename the copy index.html in an empty practice folder.",
+    "features": "A manual test clock lets you test a time limit without racing your finger.",
+    "roles": [
+      "Test a timeout on a pretend mail-report screen.",
+      "Check a time limit with the same steps on two devices.",
+      "Prove which taps count in a timed game."
+    ],
+    "prompt": "Write a short test for one miss, two hits and a tap after the deadline in a 15-second signal game. Give a score and clock reading I can check. Use only the rules and results I supply.",
+    "steps": [
+      {
+        "title": "Start at a known score",
+        "text": "Open the sample. Find the build label Signal Sprint 1.0. Select Test mode, then press Start. Look for a score of 0 and 15 seconds.",
+        "help": "If the seconds fall by themselves, select Test mode and press Start."
+      },
+      {
+        "title": "Test a miss and two hits",
+        "text": "The first target is Lamp. Tap Bell. The score stays 0 and the target stays Lamp. Tap Lamp, then Bell as the target changes. The score should reach 2.",
+        "help": "A second hit must match the new target. Copy the target and total after each tap to see which action failed."
+      },
+      {
+        "title": "Cross the deadline",
+        "text": "Press Advance 1 second fourteen times. The display should read 1. Press it once more. Tap an answer after time runs out. Look for the round to end and the score to stay 2.",
+        "help": "If time ended while you were choosing, start a fresh manual round. Compare the display just before and just after zero."
+      },
+      {
+        "title": "Repeat from a clean start",
+        "text": "Press Restart. Check the score, the 15-second clock and the answer controls. Ask the AI to compare its prediction with your three observations, or compare the numbers yourself.",
+        "help": "Use a fresh round for each attempt. A late tap from the finished round must not appear in the new score."
+      }
+    ],
+    "check": [
+      "A miss changes neither score nor target. Two correct taps give 2 points and switch the target each time.",
+      "At zero the answers lock. Restart begins at 0 points and 15 seconds."
+    ],
+    "sources": [
+      [
+        "MDN · browser code and server code",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction"
+      ]
+    ],
+    "sampleApp": "practice/browser/signal-sprint.html",
+    "firstGuide": "make-folder"
+  },
+  {
+    "id": "lab-ship-app-02",
+    "title": "Save a first checkpoint with Git",
+    "summary": "Make a local history of one game file and read back the name of the saved version.",
+    "level": "Starter",
+    "requires": "Use a computer with Git installed. Download the game from ship lab 1. Make a new stand-alone folder outside any other project, with just index.html in it. Open a terminal in that folder.",
+    "features": "A commit is a named checkpoint. Git records the files you selected for that checkpoint.",
+    "roles": [
+      "Save the first tested version of a fake mail report.",
+      "Keep a checkpoint before changing a team template.",
+      "Put the single-file game under version control."
+    ],
+    "prompt": "Read this made-up status and explain what is on disk and what is in the next commit: first ?? index.html, then A  index.html. Suggest one read-only check before the commit.",
+    "steps": [
+      {
+        "title": "Start the local history",
+        "text": "Run these commands only in the empty practice project containing your game. The status should list index.html with two question marks.",
+        "help": "If you see unrelated files or an existing history, stop and open a new separate practice folder. Do not run these commands inside another repository.",
+        "code": "git init -b main\ngit status --short"
+      },
+      {
+        "title": "Use a practice identity",
+        "text": "Set the two fictional values below for this repository only. Check that the address printed is builder@example.test. Keep this practice history local. For an actual public project, review your approved author identity and GitHub commit email privacy before publishing.",
+        "help": "The --local setting is for this folder. If Git asks who you are, check these local settings in the same terminal. You do not need to enter personal contact details for this exercise.",
+        "code": "git config --local user.name \"Practice Builder\"\ngit config --local user.email \"builder@example.test\"\ngit config --local --get user.email"
+      },
+      {
+        "title": "Choose just the game",
+        "text": "Stage index.html, then inspect the staged file list. Expect only index.html in the next checkpoint. Open the file itself and look for Signal Sprint 1.0.",
+        "help": "If a second file appears in the staged list, stop here and use a clean game-only folder.",
+        "code": "git add -- index.html\ngit diff --cached --name-only\ngit status --short"
+      },
+      {
+        "title": "Record and read the checkpoint",
+        "text": "Commit the game. Write down the short ID printed by git log. Run git status --short. An empty result means there is no remaining change here.",
+        "help": "If Git says there is nothing to commit, inspect the latest log and file list before trying again. Do not invent an extra edit.",
+        "code": "git commit -m \"Save tested Signal Sprint 1.0\"\ngit log -1 --oneline\ngit status --short"
+      }
+    ],
+    "check": [
+      "Only index.html is staged for this first commit.",
+      "The latest log shows the game checkpoint. The final short status is empty."
+    ],
+    "sources": [
+      [
+        "Git · start a repository",
+        "https://git-scm.com/docs/git-init"
+      ],
+      [
+        "Git · set options for one repository",
+        "https://git-scm.com/docs/git-config"
+      ],
+      [
+        "Git · record and inspect changes",
+        "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
+      ],
+      [
+        "Git · read the saved history",
+        "https://git-scm.com/docs/git-log"
+      ],
+      [
+        "GitHub Docs · choose a private commit address",
+        "https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address"
+      ]
+    ],
+    "firstGuide": "make-folder"
+  },
+  {
+    "id": "lab-ship-app-03",
+    "title": "Try a release label and roll it back",
+    "summary": "Make a tiny visible change, inspect it and undo that one commit while keeping the history.",
+    "level": "Intermediate",
+    "requires": "Use the clean local practice repository from ship lab 2. Open a terminal and a plain-text editor in that folder.",
+    "features": "Git can show the edit before it is committed and record an undo for a chosen commit.",
+    "roles": [
+      "Try a report heading before rolling it back.",
+      "Check a change to the visible version on a training page.",
+      "Restore a known game label and test the restored file."
+    ],
+    "prompt": "Only the visible game build label should change. Explain how I can check the edit before I commit it and how to restore the earlier label while keeping both history entries.",
+    "steps": [
+      {
+        "title": "Check the starting point",
+        "text": "Run the two commands. Expect an empty status and the saved game at the tip of the history. Note the short ID.",
+        "help": "If there is an unrelated change, use a new copy of the lab before proceeding.",
+        "code": "git status --short\ngit log -1 --oneline"
+      },
+      {
+        "title": "Try a visible label edit",
+        "text": "In the editor, find the visible Signal Sprint 1.0 label in index.html. Change just the text inside the small element to Signal Sprint 1.1 and save. Run the diff and confirm the only intended change is the label. Open the game and look for 1.1.",
+        "help": "If your editor changed every line or the timer code, do not commit. Return to your saved game copy, edit only the label and inspect the diff again.",
+        "code": "git diff -- index.html"
+      },
+      {
+        "title": "Save the tiny edit",
+        "text": "Stage the file and inspect the staged edit. Commit only if it is the label change. Check the log. The newest subject must be Try the 1.1 label.",
+        "help": "If the staged diff is empty or includes other edits, stop before the commit.",
+        "code": "git add -- index.html\ngit diff --cached -- index.html\ngit commit -m \"Try the 1.1 label\"\ngit log -1 --oneline"
+      },
+      {
+        "title": "Reverse just the tested edit",
+        "text": "Confirm git status --short is empty and that Try the 1.1 label is still the newest commit. Only in that clean scratch project, run the rollback below. Check the three entries. Reopen index.html and look for 1.0.",
+        "help": "If the newest commit or status differs, inspect the history and stop. This exercise assumes HEAD is exactly the small label edit.",
+        "code": "git revert --no-edit HEAD\ngit log -3 --oneline\ngit status --short"
+      }
+    ],
+    "check": [
+      "The candidate shows 1.1 with the same game rules.",
+      "The rollback creates its own history entry. The restored game shows 1.0 and the final workspace is clean."
+    ],
+    "sources": [
+      [
+        "Git · record and inspect changes",
+        "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
+      ],
+      [
+        "Git · compare changes",
+        "https://git-scm.com/docs/git-diff"
+      ],
+      [
+        "Git · reverse a recorded change",
+        "https://git-scm.com/docs/git-revert"
+      ],
+      [
+        "Git · read the saved history",
+        "https://git-scm.com/docs/git-log"
+      ]
+    ],
+    "firstGuide": "make-folder"
+  },
+  {
+    "id": "lab-ship-app-04",
+    "title": "Catch a pretend secret before shipping",
+    "summary": "Use a harmless marker to see why both the release file and old versions need review.",
+    "level": "Intermediate",
+    "requires": "Use a second throwaway folder and a copy of the clean game. Keep it separate from your public release and never submit this practice history. Git is needed for the history check.",
+    "features": "A harmless marker can show you which copies of a value a player or a repository reader could still see.",
+    "roles": [
+      "Find a pretend private field in a sample report download.",
+      "Review a template and its history before sharing it.",
+      "Design a public game with no service key."
+    ],
+    "prompt": "A reader proposes hiding a service key in a comment in a public HTML game. Using only the word PRACTICE_MARKER, explain what a player could read, what Git could keep, and where a service call requiring a secret would belong.",
+    "steps": [
+      {
+        "title": "Plant only a harmless word",
+        "text": "In a separate fresh practice repository, repeat the local setup from lab 2 with the practice identity. Append the HTML comment below to its index.html and make a checkpoint. Search the file in the editor and find the marker.",
+        "help": "If the folder has any real keys, stop and use a new game-only copy. The marker is just text with no access or value.",
+        "code": "<!-- PRACTICE_MARKER -->"
+      },
+      {
+        "title": "Remove the word from today’s file",
+        "text": "Delete the comment from this scratch file, save it and commit the removal. Search the current file for PRACTICE_MARKER. You should get zero matches.",
+        "help": "If the word still appears, check that you opened the same index.html that you edited.",
+        "code": "git add -- index.html\ngit commit -m \"Remove the training marker\""
+      },
+      {
+        "title": "Check yesterday’s file",
+        "text": "Run the command. Open the past patch and find the line where the marker was first added and the line where it was removed. Keep this practice repository local.",
+        "help": "If there is no earlier patch, check that the version with the comment really was committed before you removed it.",
+        "code": "git log -p -S PRACTICE_MARKER -- index.html"
+      },
+      {
+        "title": "Sketch the trust boundary",
+        "text": "Draw browser, your server and outside service. Put a secret only on the server side. Mark where the server checks who is calling and which action they may take. For Signal Sprint, explain why none of this needs to be built.",
+        "help": "If the AI suggests hiding a key in HTML, look at the marker in the earlier file. For a real exposed key, report it to its owner for revocation or rotation. Never use a live key in this exercise."
+      }
+    ],
+    "check": [
+      "The current file has no marker. The earlier commit still contains it.",
+      "The public game needs no service key. Any later private service call belongs on a protected server with access checks."
+    ],
+    "sources": [
+      [
+        "Git · record and inspect changes",
+        "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository"
+      ],
+      [
+        "Git · read the saved history",
+        "https://git-scm.com/docs/git-log"
+      ],
+      [
+        "GitHub Docs · remove sensitive data from a repository",
+        "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository"
+      ],
+      [
+        "GitHub Docs · secret scanning",
+        "https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning"
+      ],
+      [
+        "MDN · inspect code delivered to the browser",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+      ],
+      [
+        "MDN · browser code and server code",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction"
+      ]
+    ],
+    "firstGuide": "make-folder"
+  },
+  {
+    "id": "lab-ship-app-05",
+    "title": "Serve the same file locally or publish it on Pages",
+    "summary": "Find out exactly which folder a web server will show. Compare a local rehearsal with an optional public release.",
+    "level": "Advanced",
+    "requires": "Use a desktop computer, your clean Signal Sprint 1.0 file and Python 3. A GitHub account and the internet are needed only for the optional public path.",
+    "features": "A static host serves the index.html in its chosen source folder. Your own computer can also serve an empty practice folder containing only that file.",
+    "roles": [
+      "Rehearse publishing a fictional mail dashboard.",
+      "Test a public-safe team schedule without sharing private files.",
+      "Publish an independent game copy and check its address."
+    ],
+    "prompt": "I have an index.html file that works on its own and needs no accounts. Explain which folder to serve, one test that tells me I reached the game, and one way to tell a repository page from the deployed site.",
+    "steps": [
+      {
+        "title": "Isolate the release file",
+        "text": "Make a new folder named release-copy outside your Git repository. Copy just your tested index.html into it. Open a terminal in release-copy and start the command below. On Windows, if needed, use py -3 in place of python3. Leave this terminal running.",
+        "help": "If port 8000 is busy, choose 8001 in both the command and the browser address. Serve only the new release folder on your own computer.",
+        "code": "python3 -m http.server 8000 --bind 127.0.0.1"
+      },
+      {
+        "title": "Open the local release address",
+        "text": "Open http://127.0.0.1:8000/index.html in a fresh browser window on that same computer. Look for Signal Sprint 1.0, start a round and score a point. This path works with the internet disconnected. Press Ctrl+C in the terminal when finished.",
+        "help": "If you see a file listing or a missing page, check that you started in release-copy and used the exact file name index.html. The loopback address refers to the device that opened it."
+      },
+      {
+        "title": "Optional public path · publish the game only",
+        "text": "Use a separate public practice repository if you choose to publish. On GitHub choose New repository. Give it a made-up project name, choose the intended owner and Public, enable Add README, then choose Create repository. Check your account’s commit privacy options. Use Add file, then Upload files. Select only the clean index.html and commit the upload to main, or merge its reviewed pull request into main.",
+        "help": "GitHub Free requires a public repository for Pages. Use public-safe files only. If public sharing is unsuitable or the option is unavailable, keep the local rehearsal and mark the public test untested."
+      },
+      {
+        "title": "Choose the folder and visit the site",
+        "text": "In repository Settings, choose Pages. Under Build and deployment, set Source to Deploy from a branch. Select main and /(root), then Save. After the site is published, use Visit site in Pages settings. Record 1.0 only if the game actually shows it.",
+        "help": "A repository file list is the code view. For a missing page check whether index.html is in the selected branch and folder. If the deployment is still in progress, wait before testing."
+      }
+    ],
+    "check": [
+      "The local release opens the game from its own folder and shows version 1.0.",
+      "For the optional live run, the Pages address opens the game directly. A local-only run is recorded as local only."
+    ],
+    "sources": [
+      [
+        "Python documentation · run a local file server",
+        "https://docs.python.org/3/library/http.server.html"
+      ],
+      [
+        "GitHub Docs · what Pages hosts",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+      ],
+      [
+        "GitHub Docs · create and visit a Pages site",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+      ],
+      [
+        "GitHub Docs · upload a file",
+        "https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository"
+      ],
+      [
+        "GitHub Docs · choose a publishing branch and folder",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+      ],
+      [
+        "GitHub Docs · troubleshoot a missing Pages site",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/troubleshooting-404-errors-for-github-pages-sites"
+      ],
+      [
+        "GitHub Docs · choose a private commit address",
+        "https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address"
+      ]
+    ],
+    "firstGuide": "make-folder"
+  },
+  {
+    "id": "lab-ship-app-06",
+    "title": "Retest a release at the address a player will use",
+    "summary": "Find an old copy by its build label and verify the last playable second on the released copy.",
+    "level": "Expert",
+    "requires": "Use the Signal Sprint example below and Python 3 for the local rehearsal. Use a new release-copy folder containing only the saved example renamed index.html. If you published this same safe game in lab 5, you can repeat the checks online.",
+    "features": "A release check ties a version label to the exact copy, clock state and score a player saw.",
+    "roles": [
+      "Record the tested version of a sample report viewer.",
+      "Distinguish a reviewed file from the copy colleagues actually open.",
+      "Confirm a timed game still locks after the release is copied."
+    ],
+    "prompt": "Make a short release receipt with expected result, observed result and verdict for these checks: visible build, two correct picks, last second, zero, locked answers and restart. Keep the local and public observations on separate lines.",
+    "steps": [
+      {
+        "title": "Make an old-copy control",
+        "text": "In a separate folder named old-copy, save a spare game file and change only the visible label to Signal Sprint 0.9. Open it and look for 0.9. Leave the clean release-copy at 1.0. Do not publish the old copy.",
+        "help": "If both show 0.9, replace release-copy/index.html with the unedited example below."
+      },
+      {
+        "title": "Test the actual address",
+        "text": "From release-copy, start a local server with the lab 5 command below. In a fresh browser session open http://127.0.0.1:8000/index.html. Record the address, Signal Sprint 1.0 and the short commit ID if you have it. For an optional live test, separately visit the published Pages address in a fresh session.",
+        "help": "If you see 0.9, check the address, source folder, published branch and last deployment. Reload in a fresh session. Claim only the address where you saw 1.0.",
+        "code": "python3 -m http.server 8000 --bind 127.0.0.1"
+      },
+      {
+        "title": "Play the boundary case",
+        "text": "Select Test mode, press Start, then choose Lamp and Bell. Press Advance 1 second fourteen times to leave one second. Press it once more to reach zero. Tap again. Record the score at one second, at zero and after the late tap.",
+        "help": "If you cannot repeat the timing, return to a fresh test-mode round and read the clock before each action."
+      },
+      {
+        "title": "Sign off or send back",
+        "text": "Restart and confirm 0 points, 15 seconds and active controls. Stop the local server with Ctrl+C. In your receipt, record any failed check, the exact file or address and the next test. For a bad public release, restore the last reviewed file in the publishing branch, wait for deployment, then repeat these checks.",
+        "help": "If only the local test ran, mark the public address untested. If a label passed but the lock failed, record both. A correct title does not repair a broken timer."
+      }
+    ],
+    "check": [
+      "The old control shows 0.9. The tested release shows 1.0.",
+      "After two correct picks, the score is 2 at one second and at zero. A late tap cannot add another point.",
+      "Restart returns to 0 and 15 seconds. A public pass is recorded only after the public copy is played."
+    ],
+    "sources": [
+      [
+        "Python documentation · run a local file server",
+        "https://docs.python.org/3/library/http.server.html"
+      ],
+      [
+        "GitHub Docs · choose a publishing branch and folder",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+      ],
+      [
+        "GitHub Docs · create and visit a Pages site",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site"
+      ],
+      [
+        "GitHub Docs · troubleshoot a missing Pages site",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/troubleshooting-404-errors-for-github-pages-sites"
+      ],
+      [
+        "Git · reverse a recorded change",
+        "https://git-scm.com/docs/git-revert"
+      ]
+    ],
+    "sampleApp": "practice/browser/signal-sprint.html",
+    "firstGuide": "make-folder"
+  }
+]
