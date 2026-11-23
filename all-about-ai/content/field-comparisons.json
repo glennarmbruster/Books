@@ -465,5 +465,290 @@
         ]
       }
     ]
+  },
+  {
+    "id": "build-off",
+    "title": "Four-Tool App Build-Off: ChatGPT, Claude, Gemini and Grok",
+    "summary": "Give four builders the same game to make. Play the first files, try one small edit and keep the scores that matter to you.",
+    "intro": {
+      "what": "A build-off is a fair tryout. Each tool gets the same request for Harbor Relay Trivia & Scoreboard, a game where two teams share one screen.",
+      "features": "You get a prompt you can copy, five checks you can repeat and a scorecard for each tool. You can fill them in on this device, even when you read offline.",
+      "exchange": "Use the same pretend mail report to check whether a double tap counts a row twice.",
+      "m365": "Give four helpers the same made-up team list. Check that each turn goes to the right team.",
+      "developer": "Build one small game four ways. Choose the one you enjoy playing and editing.",
+      "sources": [
+        [
+          "OpenAI · ChatGPT Chat, Work and Codex",
+          "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+        ],
+        [
+          "Claude Help · open and use an Artifact",
+          "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+        ],
+        [
+          "Gemini Help · build and open an app in Canvas",
+          "https://support.google.com/gemini/answer/16047321"
+        ],
+        [
+          "Grok Bot · find your finished file",
+          "https://docs.x.ai/grok-bot/files-and-results"
+        ]
+      ]
+    },
+    "buildSpec": {
+      "prompt": "Build a single-file offline web app (`index.html`) for a two-team pass-and-play game called Harbor Relay. Use a clean, bright, high-contrast theme that works on both iPad and desktop screens. Include: (1) Team Blue and Team Gold starting at 0 points, (2) a deck of 6 built-in harbor trivia questions with 3 multiple-choice buttons each, (3) +2 points for a correct answer and 0 points for a wrong answer, automatically switching turns after each answer, (4) a visible Question X of 6 counter and a short explanation after each pick, (5) locking the answer buttons after a pick and after question 6 ends the game, and (6) a Play Again button that resets both scores to 0, resets to Team Blue, and returns to Question 1.",
+      "check": [
+        "Layout & Mobile Fit: All buttons and text fit cleanly on an iPad screen without overlapping or sideways scrolling.",
+        "Scoring & Turn Switch: Correct answers add +2 to the active team only; wrong answers add 0; turns alternate Blue -> Gold after every question.",
+        "Click-Lock Guard: Tapping an answer twice on the same question cannot award +4 points or skip a turn.",
+        "Game End & Winner: After Question 6, answer buttons lock and a clear winner (or tie) banner appears.",
+        "Clean Replay: Play Again resets both scores to 0, sets Question 1 of 6, and returns the first turn to Team Blue."
+      ],
+      "followUp": "Change the Play Again button label to New Game. Keep every other word and game rule the same."
+    },
+    "sections": [
+      {
+        "title": "Set up a fair first try",
+        "paragraphs": [
+          "Make four empty folders, one per tool. Use the same device, browser, screen size and time limit for all four. Pick your time limit before you start. Record the date, mode and model label you actually see.",
+          "Start fresh and use the usual settings for each tool. Leave out templates, old files, personal instructions, screenshots and sample code. If a setting is fixed by your account, note that on its card. Keep each tool’s first reply, even if its app fails to open."
+        ],
+        "sources": [
+          [
+            "OpenAI · ChatGPT Chat, Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "Claude Help · open and use an Artifact",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Gemini Help · build and open an app in Canvas",
+            "https://support.google.com/gemini/answer/16047321"
+          ],
+          [
+            "Grok Bot · find your finished file",
+            "https://docs.x.ai/grok-bot/files-and-results"
+          ]
+        ]
+      },
+      {
+        "title": "Give all four tools this prompt",
+        "paragraphs": [
+          "Copy the whole block once per tool. Send it as the only message for the first try. Keep the scorecard and the walkthrough for yourself."
+        ],
+        "sources": [
+          [
+            "OpenAI · ChatGPT Chat, Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "Claude Help · open and use an Artifact",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Gemini Help · build and open an app in Canvas",
+            "https://support.google.com/gemini/answer/16047321"
+          ],
+          [
+            "Grok Bot · find your finished file",
+            "https://docs.x.ai/grok-bot/files-and-results"
+          ]
+        ],
+        "buildPart": "prompt"
+      },
+      {
+        "title": "Open one fresh session per tool",
+        "paragraphs": [
+          "Choose one route per tool and record it. Go to the next row only after saving the first result."
+        ],
+        "sources": [
+          [
+            "OpenAI · ChatGPT Chat, Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "Claude Help · open and use an Artifact",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Gemini Help · build and open an app in Canvas",
+            "https://support.google.com/gemini/answer/16047321"
+          ],
+          [
+            "Grok Bot · find your finished file",
+            "https://docs.x.ai/grok-bot/files-and-results"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "Where to start",
+            "Where to find the result"
+          ],
+          "rows": [
+            [
+              "ChatGPT",
+              "Open chatgpt.com and start a new chat, or choose Work and start a new task. For the Codex lab route, start a new task in an empty folder.",
+              "Open the returned file or HTML code. In Codex, check the practice folder."
+            ],
+            [
+              "Claude",
+              "Open claude.ai and start a new chat. If you use Claude Code for the lab, open an empty folder and start a fresh session.",
+              "Open the Artifact if one appears. Download or copy its HTML. In Claude Code, look in the practice folder."
+            ],
+            [
+              "Gemini",
+              "Open gemini.google.com and start a new chat. In the tools or add menu, choose Canvas before sending the prompt.",
+              "Use Preview to try the game. Open Code to copy the HTML when needed."
+            ],
+            [
+              "Grok",
+              "Open grok.com and start a new chat. If you use Grok Bot, start a fresh task in a clean workspace.",
+              "Open a file attached to the reply or check the Bot’s files. If the reply shows HTML, copy the code."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Play the originals before you open the scorecards",
+        "paragraphs": [
+          "Keep each original as index.html in its own folder. If a reply gives you HTML as text, copy only the code into a plain-text file. If you only get a plan, keep the reply and record that no game ran. Do not ask for a fix during this round.",
+          "Test the actual file in a browser with the network off. If tapping HTML in iPad Files only shows a preview, open that file in a browser or viewer that runs local HTML, or test the file on a computer. Use the same iPad screen or browser tablet view for every fit check. Note which you used.",
+          "Each game can write its own questions. Learn the answers in a practice round or check the deck in the file. Use the same right-or-wrong pattern in all four games. Count six harbor questions, three choices per question, the number at each turn and one short explanation per pick. Record any missing part in Notes.",
+          "First game: Blue answers right on all three turns. Gold misses all three. Double-tap Blue’s first right answer while the first question is still up. Blue should get just 2 and Gold should go next. Finish the game. Blue should win 6 to 0. Try tapping after the end.",
+          "Press Play Again. Check for two zeros, Team Blue and Question 1 of 6. Now answer all six correctly. Expect a 6 to 6 tie. To test a Gold win, replay with Gold right on all three turns and Blue wrong on all three.",
+          "To test sharing, copy just index.html to a second device by USB or a nearby file transfer. Open it with the internet off and play. If you can test only on one device, write that in Notes."
+        ],
+        "sources": [
+          [
+            "OpenAI · ChatGPT Chat, Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "Claude Help · open and use an Artifact",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Gemini Help · build and open an app in Canvas",
+            "https://support.google.com/gemini/answer/16047321"
+          ],
+          [
+            "Grok Bot · find your finished file",
+            "https://docs.x.ai/grok-bot/files-and-results"
+          ]
+        ]
+      },
+      {
+        "title": "Score the first try, then record your own ratings",
+        "paragraphs": [
+          "Pick a tool. For each first-try check, select Pass or Fail. Leave checks you have yet to run as Untested. If there was no runnable game, record that in Notes. Distinguish a demonstrated failure from something you could not check.",
+          "For the other three rows, use 2 for easy and complete, 1 for partly working or awkward, and 0 if you tried and could not do it. Leave an untried row blank. Score the edit row after the next step. Keep the first five points as their own score."
+        ],
+        "sources": [
+          [
+            "OpenAI · ChatGPT Chat, Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "Claude Help · open and use an Artifact",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Gemini Help · build and open an app in Canvas",
+            "https://support.google.com/gemini/answer/16047321"
+          ],
+          [
+            "Grok Bot · find your finished file",
+            "https://docs.x.ai/grok-bot/files-and-results"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Criteria",
+            "What to Look For",
+            "Points",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "First-Try Accuracy (5 pts)",
+              "One point for each shared check that the original file passes.",
+              "0–5",
+              "Which checks passed or failed?"
+            ],
+            [
+              "Visual Polish & Layout",
+              "Can you find the active team, score and next action at a glance? Does the text stay easy to read?",
+              "0–2",
+              "What helped or slowed you down?"
+            ],
+            [
+              "Ease of Making One Follow-Up Change",
+              "Did one request change only the button label and keep the game working?",
+              "0–2",
+              "What changed besides the label?"
+            ],
+            [
+              "How Easy It Is to Save & Share Offline",
+              "Can you copy the single file into a new empty folder and play all six questions with the network off?",
+              "0–2",
+              "How did you get the file out?"
+            ]
+          ]
+        },
+        "buildPart": "scorecard"
+      },
+      {
+        "title": "Try exactly one follow-up change",
+        "paragraphs": [
+          "After scoring all four originals, return to each original conversation. Save a spare copy of each file first. Send the same request below once. Save each new file in a separate folder and play it again. Look for the new label and check whether the button still resets the game. Keep the first-try scores as recorded."
+        ],
+        "sources": [
+          [
+            "OpenAI · ChatGPT Chat, Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "Claude Help · open and use an Artifact",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Gemini Help · build and open an app in Canvas",
+            "https://support.google.com/gemini/answer/16047321"
+          ],
+          [
+            "Grok Bot · find your finished file",
+            "https://docs.x.ai/grok-bot/files-and-results"
+          ]
+        ],
+        "buildPart": "followUp"
+      },
+      {
+        "title": "Pick the tool that fits your next build",
+        "paragraphs": [
+          "Choose what matters most for your own project. A reader who makes games may care most about a clear board. Someone making a mail report may care most about rules that work on the first try. A reader who changes a team app often may value quick, clean edits.",
+          "Compare the same row across your four cards. If two tools tie there, look at the next thing you care about. A tie is a useful result too. Your scores describe the files, modes and date you tested."
+        ],
+        "sources": [
+          [
+            "OpenAI · ChatGPT Chat, Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "Claude Help · open and use an Artifact",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Gemini Help · build and open an app in Canvas",
+            "https://support.google.com/gemini/answer/16047321"
+          ],
+          [
+            "Grok Bot · find your finished file",
+            "https://docs.x.ai/grok-bot/files-and-results"
+          ]
+        ]
+      }
+    ]
   }
 ]

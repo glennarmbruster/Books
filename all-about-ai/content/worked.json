@@ -523,12 +523,12 @@
   },
   {
     "id": "lab-claude-code-14",
-    "premise": "Two clocks show different local times for the same event. Sort the true times and keep both sides of a disagreement.",
-    "before": "id,time,state\nR1,2026-11-01T01:20:00-05:00,queued\nR2,2026-11-01T01:05:00-06:00,done\nR1,2026-11-01T06:20:00Z,queued\nR2,2026-11-01T07:05:00Z,failed",
-    "try": "Find the two spellings of R1's time. Compare their actual UTC times. Then compare the two states shown for R2. Change the final state from failed to done. Save, run the report again and compare its order and counts.",
-    "after": "R1 came before R2. There are two IDs. Rows 3 and 5 disagree about R2. The same two IDs remain in the same time order. There are now zero disagreements.",
-    "why": "A time zone offset says how far a clock sits from UTC. Two clock faces can look different at the very same instant.",
-    "rescue": "If R2 appears first, sort by times after converting them. If one R2 claim disappears, keep both source rows until you compare their states."
+    "premise": "Practice reading a result before scoring a tool. This made-up example could come from any builder.",
+    "before": "The first game opens at Blue 0, Gold 0. Blue gets Question 1 right. The first tap shows Blue 2, Gold 0.",
+    "try": "Tap the same choice again straight away. Look at both totals, the question number and the active team. Finish the game and check the other four rules on the page.",
+    "after": "Suppose the second tap changes Blue to 4. Mark the click-lock check Fail and record both scores. If all four other checks pass, the first-try score is 4 out of 5.",
+    "why": "Two taps on one answer count as just one pick. The number on the screen lets another reader repeat your check.",
+    "rescue": "If the screen changes too fast to tell, restart and repeat the double tap. Leave the check untested until you can tell what happened. Keep this first file when you try the later edit."
   },
   {
     "id": "lab-claude-code-15",
@@ -658,12 +658,12 @@
   },
   {
     "id": "lab-codex-14",
-    "premise": "Two searches can finish in a different order from the order you typed them.",
-    "before": "{\"old\":{\"delay_ms\":60,\"label\":\"Old result\"},\"new\":{\"delay_ms\":5,\"label\":\"New result\"}}",
-    "try": "Look at the start order and finish order as two separate lists. Underline the last item on the start list to predict the fixed screen. Swap the wait times in the sample. Rebuild the page and press Run demo again.",
-    "after": "With 60 ms for old and 5 ms for new, new finishes first. The broken view ends on Old result. The fixed view ends on New result. The fixed view still ends on New result. Its log now shows old finishing first.",
-    "why": "Put a number on each search when it starts. When a reply arrives, the latest number tells you whether that reply still belongs on screen.",
-    "rescue": "If the fix works only for short waits, look for a choice based on finish time instead of the most recent request number."
+    "premise": "Practice reading a result before scoring a tool. This made-up example could come from any builder.",
+    "before": "The first game opens at Blue 0, Gold 0. Blue gets Question 1 right. The first tap shows Blue 2, Gold 0.",
+    "try": "Tap the same choice again straight away. Look at both totals, the question number and the active team. Finish the game and check the other four rules on the page.",
+    "after": "Suppose the second tap changes Blue to 4. Mark the click-lock check Fail and record both scores. If all four other checks pass, the first-try score is 4 out of 5.",
+    "why": "Two taps on one answer count as just one pick. The number on the screen lets another reader repeat your check.",
+    "rescue": "If the screen changes too fast to tell, restart and repeat the double tap. Leave the check untested until you can tell what happened. Keep this first file when you try the later edit."
   },
   {
     "id": "lab-codex-15",
@@ -1315,12 +1315,12 @@
   },
   {
     "id": "lab-gemini-app-14",
-    "premise": "Capstone: Build a match-the-pairs game. Work through this small example before trying your own.",
-    "before": "Three pairs: sun and day, moon and night, star and sky. Each left card has exactly one partner.",
-    "try": "Choose sun and night, then sun and day. Click the matched pair again. Finish the other two pairs. Restart.",
-    "after": "A miss scores 0. A correct pair counts once. Three different matches win. Restart unlocks every card.",
-    "why": "A button can look right and still do the wrong thing. Trying the full path checks what a player will see.",
-    "rescue": "If a pair scores twice, have the app check whether it is already locked before scoring. Repeat the double click."
+    "premise": "Practice reading a result before scoring a tool. This made-up example could come from any builder.",
+    "before": "The first game opens at Blue 0, Gold 0. Blue gets Question 1 right. The first tap shows Blue 2, Gold 0.",
+    "try": "Tap the same choice again straight away. Look at both totals, the question number and the active team. Finish the game and check the other four rules on the page.",
+    "after": "Suppose the second tap changes Blue to 4. Mark the click-lock check Fail and record both scores. If all four other checks pass, the first-try score is 4 out of 5.",
+    "why": "Two taps on one answer count as just one pick. The number on the screen lets another reader repeat your check.",
+    "rescue": "If the screen changes too fast to tell, restart and repeat the double tap. Leave the check untested until you can tell what happened. Keep this first file when you try the later edit."
   },
   {
     "id": "lab-gemini-app-15",
@@ -2275,5 +2275,14 @@
     "after": "The clean run shows D added, C removed, B changed from shared to user and A the same. Every ID appears once. The duplicate case shows a row error and keeps the last good result. The restored download matches all four expected entries.",
     "why": "Two snapshots tell you which rows changed. A bad snapshot can make an entire group seem to vanish, so check both lists first.",
     "rescue": "If B and b become separate boxes, check each ID after cleaning spaces and case but before building the comparison."
+  },
+  {
+    "id": "build-off",
+    "premise": "Practice reading a result before scoring a tool. This made-up example could come from any builder.",
+    "before": "The first game opens at Blue 0, Gold 0. Blue gets Question 1 right. The first tap shows Blue 2, Gold 0.",
+    "try": "Tap the same choice again straight away. Look at both totals, the question number and the active team. Finish the game and check the other four rules on the page.",
+    "after": "Suppose the second tap changes Blue to 4. Mark the click-lock check Fail and record both scores. If all four other checks pass, the first-try score is 4 out of 5.",
+    "why": "Two taps on one answer count as just one pick. The number on the screen lets another reader repeat your check.",
+    "rescue": "If the screen changes too fast to tell, restart and repeat the double tap. Leave the check untested until you can tell what happened. Keep this first file when you try the later edit."
   }
 ]

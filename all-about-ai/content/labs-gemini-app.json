@@ -643,46 +643,65 @@
   },
   {
     "id": "lab-gemini-app-14",
-    "title": "Capstone: Build a match-the-pairs game",
-    "summary": "Choose sun and night, then sun and day. Click the matched pair again. Finish the other two pairs. Restart.",
+    "title": "Build Harbor Relay Trivia & Scoreboard",
+    "summary": "Build the game from one shared prompt. Score your first file with the same five checks as the other tools.",
     "level": "Advanced",
-    "requires": "Use the Gemini app or website online with an account that can open this feature.",
-    "features": "Canvas lets you build and try a small app.",
+    "comparison": "build-off",
+    "requires": "You need access to the tool for the build, an empty practice folder, and a browser to play the saved file. For the fit check, use an iPad or an iPad-sized browser view and record which you used.",
+    "features": "Gemini Canvas lets you see the code and try the game.",
     "roles": [
-      "Match mailbox types to uses.",
-      "Turn training notes into practice.",
-      "Ship a complete matching game."
+      "Use the same pretend mail report to check whether a double tap counts a row twice.",
+      "Give four helpers the same made-up team list. Check that each turn goes to the right team.",
+      "Build one small game four ways. Choose the one you enjoy playing and editing."
     ],
-    "prompt": "Build a two-column matching game. Let me pick one card on each side. Lock a correct pair, clear a wrong pick, count matched pairs, and add Restart.",
+    "prompt": "Build a single-file offline web app (`index.html`) for a two-team pass-and-play game called Harbor Relay. Use a clean, bright, high-contrast theme that works on both iPad and desktop screens. Include: (1) Team Blue and Team Gold starting at 0 points, (2) a deck of 6 built-in harbor trivia questions with 3 multiple-choice buttons each, (3) +2 points for a correct answer and 0 points for a wrong answer, automatically switching turns after each answer, (4) a visible Question X of 6 counter and a short explanation after each pick, (5) locking the answer buttons after a pick and after question 6 ends the game, and (6) a Play Again button that resets both scores to 0, resets to Team Blue, and returns to Question 1.",
     "steps": [
       {
-        "title": "Open your work area",
-        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
-        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+        "title": "Open Canvas",
+        "text": "Go to gemini.google.com, sign in and start a new chat. Open the tools or add menu below the message box and choose Canvas. Leave the chat empty until the next step.",
+        "help": "Canvas can show a preview and the code. If a preview is already open from another job, start a new chat."
       },
       {
-        "title": "Set up the sample",
-        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
-        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Three pairs: sun and day, moon and night, star and sky. Each left card has exactly one partner."
+        "title": "Send the shared prompt once",
+        "text": "Copy Your prompt from this page and send it by itself. Save the first reply before asking for any changes.",
+        "help": "Leave the five checks in the book. All four builders get just the words in the prompt."
       },
       {
-        "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Choose sun and night, then sun and day. Click the matched pair again. Finish the other two pairs. Restart.",
-        "help": "If a pair scores twice, have the app check whether it is already locked before scoring. Repeat the double click."
+        "title": "Keep the first file",
+        "text": "Open Canvas Preview to see the game. Switch to Code to get the HTML if there is no file to download. If you get an HTML code block, copy its contents into a plain-text file named index.html.",
+        "help": "Leave out the code fence marks. Keep the file just as it came back. If there is no usable HTML, record what you received."
       },
       {
-        "title": "Check what you made",
-        "text": "A miss scores 0. A correct pair counts once. Three different matches win. Restart unlocks every card.",
-        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+        "title": "Play the original with the network off",
+        "text": "Save index.html by itself in an empty folder. Turn off Wi-Fi or unplug the network. Open the saved file in a browser that runs local HTML. Check the starting team, both scores and each of the six question numbers. Read the short explanation after every pick.",
+        "help": "A chat preview may work online even when the file needs the internet. Test the saved file in a fresh browser window. For iPad fit, use the same browser and screen size for all four games."
+      },
+      {
+        "title": "Test both teams and the lock",
+        "text": "In one game, have Blue get all three turns right and Gold miss all three. On the first right answer, tap the same choice twice quickly. Look for Blue 2, Gold 0 and just one turn passed. Finish all six questions.",
+        "help": "Use the answers stored in the file or learn them in a practice round. Another game may ask different questions. Use the same pattern of right and wrong picks."
+      },
+      {
+        "title": "Test a win, a tie and a clean replay",
+        "text": "The first game should end Blue 6, Gold 0. Try another answer after the end. Press Play Again and check the first turn, scores and question number. Play again with six right answers. The tie should be 6 to 6.",
+        "help": "On each question count the three choices. After each pick, try tapping before moving on. A score or question that changes twice is a failed lock."
+      },
+      {
+        "title": "Record the first try before making an edit",
+        "text": "Use the five checks on this page. Give one point for each pass. Open the four-tool scorecard to record what you saw. Once you have scored the originals, use the same follow-up there for each tool.",
+        "help": "Keep a copy of the first file. If you have only tested one tool, leave the other scorecards blank."
       }
     ],
     "check": [
-      "A miss scores 0. A correct pair counts once. Three different matches win. Restart unlocks every card."
+      "Layout & Mobile Fit: All buttons and text fit cleanly on an iPad screen without overlapping or sideways scrolling.",
+      "Scoring & Turn Switch: Correct answers add +2 to the active team only; wrong answers add 0; turns alternate Blue -> Gold after every question.",
+      "Click-Lock Guard: Tapping an answer twice on the same question cannot award +4 points or skip a turn.",
+      "Game End & Winner: After Question 6, answer buttons lock and a clear winner (or tie) banner appears.",
+      "Clean Replay: Play Again resets both scores to 0, sets Question 1 of 6, and returns the first turn to Team Blue."
     ],
     "sources": [
       [
-        "Google · Canvas",
+        "Gemini Help · build and open an app in Canvas",
         "https://support.google.com/gemini/answer/16047321"
       ]
     ]

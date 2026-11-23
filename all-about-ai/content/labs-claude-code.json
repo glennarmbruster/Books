@@ -563,43 +563,70 @@
   },
   {
     "id": "lab-claude-code-14",
-    "title": "Put four time slips in order",
-    "summary": "Two clocks show different local times for the same event. Sort the true times and keep both sides of a disagreement.",
-    "level": "Expert",
-    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
-    "features": "Read time stamps with different offsets and keep the row number with each claim.",
+    "title": "Build Harbor Relay Trivia & Scoreboard",
+    "summary": "Build the game from one shared prompt. Score your first file with the same five checks as the other tools.",
+    "level": "Advanced",
+    "comparison": "build-off",
+    "requires": "You need access to the tool for the build, an empty practice folder, and a browser to play the saved file. For the fit check, use an iPad or an iPad-sized browser view and record which you used.",
+    "features": "Claude can show an app in an Artifact. Claude Code can make the file in a folder.",
     "roles": [
-      "Compare two pretend mail logs.",
-      "Line up events from two team tools.",
-      "Explain when an app error occurred."
+      "Use the same pretend mail report to check whether a double tap counts a row twice.",
+      "Give four helpers the same made-up team list. Check that each turn goes to the right team.",
+      "Build one small game four ways. Choose the one you enjoy playing and editing."
     ],
-    "prompt": "Read observations.csv. In Python put every time on the UTC clock, then sort by that actual time. Count each ID once. If the same ID reports different states, keep both claims and list their source rows in incident.md. Count the heading as row 1.",
+    "prompt": "Build a single-file offline web app (`index.html`) for a two-team pass-and-play game called Harbor Relay. Use a clean, bright, high-contrast theme that works on both iPad and desktop screens. Include: (1) Team Blue and Team Gold starting at 0 points, (2) a deck of 6 built-in harbor trivia questions with 3 multiple-choice buttons each, (3) +2 points for a correct answer and 0 points for a wrong answer, automatically switching turns after each answer, (4) a visible Question X of 6 counter and a short explanation after each pick, (5) locking the answer buttons after a pick and after question 6 ends the game, and (6) a Play Again button that resets both scores to 0, resets to Team Blue, and returns to Question 1.",
     "steps": [
       {
-        "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as observations.csv.",
-        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
-        "code": "id,time,state\nR1,2026-11-01T01:20:00-05:00,queued\nR2,2026-11-01T01:05:00-06:00,done\nR1,2026-11-01T06:20:00Z,queued\nR2,2026-11-01T07:05:00Z,failed"
+        "title": "Open Claude",
+        "text": "Go to claude.ai and start a new chat. If an Artifact opens beside the reply, that is where you can preview the game. For Claude Code, open an empty practice folder and start a new session there. Choose one route for this run.",
+        "help": "An Artifact is a thing Claude makes, such as an app. If your first reply offers only code, you can save that code as the game file."
       },
       {
-        "title": "Ask Claude to read the file",
-        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Find the two spellings of R1's time. Compare their actual UTC times. Then compare the two states shown for R2.",
-        "help": "R1 came before R2. There are two IDs. Rows 3 and 5 disagree about R2."
+        "title": "Send the shared prompt once",
+        "text": "Copy Your prompt from this page and send it by itself. Save the first reply before asking for any changes.",
+        "help": "Leave the five checks in the book. All four builders get just the words in the prompt."
       },
       {
-        "title": "Try a second case",
-        "text": "Change the final state from failed to done. Save, run the report again and compare its order and counts.",
-        "help": "If R2 appears first, sort by times after converting them. If one R2 claim disappears, keep both source rows until you compare their states."
+        "title": "Keep the first file",
+        "text": "Open the Artifact beside the chat and use its download or code view. In Claude Code, look for index.html in your practice folder. If you get an HTML code block, copy its contents into a plain-text file named index.html.",
+        "help": "Leave out the code fence marks. Keep the file just as it came back. If there is no usable HTML, record what you received."
+      },
+      {
+        "title": "Play the original with the network off",
+        "text": "Save index.html by itself in an empty folder. Turn off Wi-Fi or unplug the network. Open the saved file in a browser that runs local HTML. Check the starting team, both scores and each of the six question numbers. Read the short explanation after every pick.",
+        "help": "A chat preview may work online even when the file needs the internet. Test the saved file in a fresh browser window. For iPad fit, use the same browser and screen size for all four games."
+      },
+      {
+        "title": "Test both teams and the lock",
+        "text": "In one game, have Blue get all three turns right and Gold miss all three. On the first right answer, tap the same choice twice quickly. Look for Blue 2, Gold 0 and just one turn passed. Finish all six questions.",
+        "help": "Use the answers stored in the file or learn them in a practice round. Another game may ask different questions. Use the same pattern of right and wrong picks."
+      },
+      {
+        "title": "Test a win, a tie and a clean replay",
+        "text": "The first game should end Blue 6, Gold 0. Try another answer after the end. Press Play Again and check the first turn, scores and question number. Play again with six right answers. The tie should be 6 to 6.",
+        "help": "On each question count the three choices. After each pick, try tapping before moving on. A score or question that changes twice is a failed lock."
+      },
+      {
+        "title": "Record the first try before making an edit",
+        "text": "Use the five checks on this page. Give one point for each pass. Open the four-tool scorecard to record what you saw. Once you have scored the originals, use the same follow-up there for each tool.",
+        "help": "Keep a copy of the first file. If you have only tested one tool, leave the other scorecards blank."
       }
     ],
     "check": [
-      "R1 came before R2. There are two IDs. Rows 3 and 5 disagree about R2.",
-      "The same two IDs remain in the same time order. There are now zero disagreements."
+      "Layout & Mobile Fit: All buttons and text fit cleanly on an iPad screen without overlapping or sideways scrolling.",
+      "Scoring & Turn Switch: Correct answers add +2 to the active team only; wrong answers add 0; turns alternate Blue -> Gold after every question.",
+      "Click-Lock Guard: Tapping an answer twice on the same question cannot award +4 points or skip a turn.",
+      "Game End & Winner: After Question 6, answer buttons lock and a clear winner (or tie) banner appears.",
+      "Clean Replay: Play Again resets both scores to 0, sets Question 1 of 6, and returns the first turn to Team Blue."
     ],
     "sources": [
       [
-        "Anthropic · common workflows",
-        "https://code.claude.com/docs/en/common-workflows"
+        "Claude Help · open and use an Artifact",
+        "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+      ],
+      [
+        "Anthropic · open Claude Code on desktop",
+        "https://code.claude.com/docs/en/desktop-quickstart"
       ]
     ]
   },

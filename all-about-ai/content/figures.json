@@ -831,8 +831,7 @@
       "lab-devin-29",
       "lab-antigravity-29",
       "lab-ai-studio-29",
-      "lab-claude-code-29",
-      "lab-gemini-app-14"
+      "lab-claude-code-29"
     ]
   },
   {
@@ -871,6 +870,19 @@
     "caption": "Count the fields and check the full label. This row should have two fields.",
     "alt": "In the row m1 comma double-quote North comma West double-quote, splitting at every comma makes three pieces. A CSV reader returns m1 and North, West as two fields.",
     "source": "#lab-devin-03",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-four-way-buildoff.svg",
+    "lesson": "build-off",
+    "also": [
+      "lab-gemini-app-14",
+      "lab-claude-code-14",
+      "lab-codex-14"
+    ],
+    "caption": "Give each tool the same brief. Check the first files before giving all four the same small edit.",
+    "alt": "One game prompt goes to four equal lanes for ChatGPT, Claude, Gemini and Grok. Each original file faces the same five checks before the edit round.",
+    "source": "#build-off",
     "credit": "All About AI · original diagram"
   }
 ]

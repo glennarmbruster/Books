@@ -50,6 +50,8 @@ def check_lab(lab, track, number):
     levels = ['Starter'] * 3 + ['Intermediate'] * 4 + ['Advanced'] * 3 + ['Expert'] * 5
     new_block = ['Starter'] * 6 + ['Intermediate'] * 7 + ['Advanced','Expert']
     levels = (new_block if track == 'gemini-app' else levels) + new_block
+    if track in {'claude-code', 'codex'}:
+        levels[13] = 'Advanced'
     require(number <= len(levels) and lab['level'] == levels[number - 1], f'Unexpected level in {key}')
     require(words(lab['roles']) and len(lab['roles']) == 3, f'Check roles in {key}')
     require(len(lab['steps']) >= 3 and words(lab['check']), f'Incomplete walkthrough in {key}')
@@ -89,6 +91,8 @@ assets.append(kit)
 lab_count = 0
 guide_ids = set()
 reference_ids = set()
+build_labs = []
+build_spec = None
 require(groups, 'List at least one group in edition.json.')
 for group in groups:
     require(group['title'] and date.fromisoformat(group['reviewed']) <= edition_date, 'Check group title and review date.')
@@ -116,6 +120,9 @@ for group in groups:
             continue
         if group.get('track'):
             check_lab(ch, group['track'], number)
+            if ch.get('comparison'):
+                require(ch['comparison'] == 'build-off', f'Unknown comparison in {key}')
+                build_labs.append(ch)
             require('kit' not in ch or ch['kit'] == kit, f'Unknown kit in {key}')
             if 'sampleApp' in ch:
                 sample = ch['sampleApp']
@@ -124,6 +131,16 @@ for group in groups:
             lab_count += 1
             continue
         reference_ids.add(key)
+        if key == 'build-off':
+            build_spec = ch['buildSpec']
+            require(words([build_spec['prompt'], build_spec['followUp']]) and
+                    words(build_spec['check']) and len(set(build_spec['check'])) == len(build_spec['check']) == 5,
+                    'The build-off needs one prompt, five different checks and one follow-up')
+            require([part['buildPart'] for part in ch['sections'] if 'buildPart' in part] ==
+                    ['prompt','scorecard','followUp'], 'Check build-off section order')
+            scorecard = next(part['table'] for part in ch['sections'] if part.get('buildPart') == 'scorecard')
+            require(scorecard['columns'] == ['Criteria','What to Look For','Points','Notes'] and
+                    len(scorecard['rows']) == 4, 'Check the four-column build-off scorecard')
         require(ch['sections'], f'Incomplete chapter {key}')
         intro = ch['intro']
         require(words([intro[k] for k in ('what', 'features', 'exchange', 'm365', 'developer')]) and intro['sources'], f'Incomplete introduction in {key}')
@@ -150,7 +167,12 @@ for group in groups:
 tracks = [group['track'] for group in groups if group.get('track')]
 expected_tracks = {'antigravity','ai-studio','claude-code','codex','copilot','devin','gemini-app'}
 require(set(tracks) == expected_tracks and len(tracks) == 7 and lab_count == 210, 'Expected seven distinct tracks of 30 labs')
-require(manifest.get('version') == 4, 'Expected edition 4')
+comparison_ids = {'lab-gemini-app-14','lab-claude-code-14','lab-codex-14'}
+require(manifest.get('version') == 5 and build_spec is not None, 'Expected edition 5 with the four-tool build-off')
+require({lab['id'] for lab in build_labs} == comparison_ids, 'Expected three shared Lab 14 builds')
+for lab in build_labs:
+    require(lab['prompt'] == build_spec['prompt'] and lab['check'] == build_spec['check'],
+            'The shared prompt and all five checks must match word for word in ' + lab['id'])
 catalog = json.loads((book / 'content/models.json').read_text())
 require(date.fromisoformat(catalog['reviewed']) <= edition_date, 'Check model catalog date')
 values = catalog['values']
@@ -214,12 +236,12 @@ new_diagrams = """
     claude-surfaces plan-then-edit connector-vs-browser svg-vs-raster effort-dial search-vs-analysis
     local-vs-cloud-codex media-handoff thread-to-decision denominator-trap copilot-surface-choice
     claim-to-source browser-permissions local-offline-ai blind-model-trial game-state-loop
-    undo-history-stack fifo-queue atomic-file-swap csv-quote-shield
+    undo-history-stack fifo-queue atomic-file-swap csv-quote-shield four-way-buildoff
 """.split()
 new_svg_files = {f'diagram-{name}.svg' for name in new_diagrams}
 diagrams = new_svg_files | {f'diagram-{name}.svg' for name in previous_diagrams}
-require(len(figures) == 93 and {f['file'] for f in figures if f['file'].endswith('.svg')} == diagrams,
-        'Expected the 52 named diagrams and 41 other pictures')
+require(len(figures) == 94 and {f['file'] for f in figures if f['file'].endswith('.svg')} == diagrams,
+        'Expected the 53 named diagrams and 41 other pictures')
 illustrated = {page for figure in figures for page in [figure['lesson'], *figure.get('also', [])]}
 milestones = {f'lab-{track}-{number}' for track in tracks for number in ('01', '15', '29', '30')}
 required_pages = reference_ids | milestones | {'lab-gemini-app-10','lab-gemini-app-24','lab-gemini-app-27'}
@@ -232,6 +254,8 @@ for fig in figures:
     require(fig['lesson'] in ids and path not in assets and words([fig['credit'], fig['caption'], fig['alt']]), f'Check picture {name}')
     related = fig.get('also', [])
     require(set(related) <= ids and len(set([fig['lesson'],*related])) == len(related) + 1, f'Unknown or duplicate figure target in {name}')
+    if name == 'diagram-four-way-buildoff.svg':
+        require(fig['lesson'] == 'build-off' and comparison_ids <= set(related), 'Link the build-off diagram to the chapter and all three labs')
     if fig['source'].startswith('#'):
         require(fig['source'][1:] in ids, f'Unknown local figure source {name}')
     else:

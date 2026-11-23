@@ -621,52 +621,66 @@
   },
   {
     "id": "lab-codex-14",
-    "title": "Keep an old search from replacing a new one",
-    "summary": "Two searches can finish in a different order from the order you typed them.",
-    "level": "Expert",
-    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
-    "features": "Put a number on each search when it starts. When a reply arrives, the latest number tells you whether that reply still belongs on screen.",
+    "title": "Build Harbor Relay Trivia & Scoreboard",
+    "summary": "Build the game from one shared prompt. Score your first file with the same five checks as the other tools.",
+    "level": "Advanced",
+    "comparison": "build-off",
+    "requires": "You need access to the tool for the build, an empty practice folder, and a browser to play the saved file. For the fit check, use an iPad or an iPad-sized browser view and record which you used.",
+    "features": "ChatGPT Work can return a file. Codex can build one in a practice folder.",
     "roles": [
-      "Keep the newest mail search on screen.",
-      "Show the latest file filter.",
-      "Keep a book finder from flashing old results."
+      "Use the same pretend mail report to check whether a double tap counts a row twice.",
+      "Give four helpers the same made-up team list. Check that each turn goes to the right team.",
+      "Build one small game four ways. Choose the one you enjoy playing and editing."
     ],
-    "prompt": "Use delays.json to build index.html with Run demo. Start old, then immediately start new. Show their finish order. First show the bug where the last reply wins. Then add a check so only the newest request can change the answer.",
+    "prompt": "Build a single-file offline web app (`index.html`) for a two-team pass-and-play game called Harbor Relay. Use a clean, bright, high-contrast theme that works on both iPad and desktop screens. Include: (1) Team Blue and Team Gold starting at 0 points, (2) a deck of 6 built-in harbor trivia questions with 3 multiple-choice buttons each, (3) +2 points for a correct answer and 0 points for a wrong answer, automatically switching turns after each answer, (4) a visible Question X of 6 counter and a short explanation after each pick, (5) locking the answer buttons after a pick and after question 6 ends the game, and (6) a Play Again button that resets both scores to 0, resets to Team Blue, and returns to Question 1.",
     "steps": [
       {
-        "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as delays.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
-        "help": "Check the file name in the folder list. A file called delays.json.txt is a different file.",
-        "code": "{\"old\":{\"delay_ms\":60,\"label\":\"Old result\"},\"new\":{\"delay_ms\":5,\"label\":\"New result\"}}"
+        "title": "Open Work or Codex",
+        "text": "Open ChatGPT, choose Work and start a new task. For Codex, open an empty practice folder and start a new task there. Choose one route for this run.",
+        "help": "Check the folder or task name at the top. The new task should have no old files, messages or project instructions."
       },
       {
-        "title": "Make the first version",
-        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
-        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+        "title": "Send the shared prompt once",
+        "text": "Copy Your prompt from this page and send it by itself. Save the first reply before asking for any changes.",
+        "help": "Leave the five checks in the book. All four builders get just the words in the prompt."
       },
       {
-        "title": "Check the first result",
-        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. With 60 ms for old and 5 ms for new, new finishes first. The broken view ends on Old result. The fixed view ends on New result.",
-        "help": "Look at the start order and finish order as two separate lists. Underline the last item on the start list to predict the fixed screen."
+        "title": "Keep the first file",
+        "text": "In Work, open the returned file. In Codex, look in the practice folder for index.html. If you get an HTML code block, copy its contents into a plain-text file named index.html.",
+        "help": "Leave out the code fence marks. Keep the file just as it came back. If there is no usable HTML, record what you received."
       },
       {
-        "title": "Try the second test",
-        "text": "Swap the wait times in the sample. Rebuild the page and press Run demo again.",
-        "help": "If the fix works only for short waits, look for a choice based on finish time instead of the most recent request number."
+        "title": "Play the original with the network off",
+        "text": "Save index.html by itself in an empty folder. Turn off Wi-Fi or unplug the network. Open the saved file in a browser that runs local HTML. Check the starting team, both scores and each of the six question numbers. Read the short explanation after every pick.",
+        "help": "A chat preview may work online even when the file needs the internet. Test the saved file in a fresh browser window. For iPad fit, use the same browser and screen size for all four games."
+      },
+      {
+        "title": "Test both teams and the lock",
+        "text": "In one game, have Blue get all three turns right and Gold miss all three. On the first right answer, tap the same choice twice quickly. Look for Blue 2, Gold 0 and just one turn passed. Finish all six questions.",
+        "help": "Use the answers stored in the file or learn them in a practice round. Another game may ask different questions. Use the same pattern of right and wrong picks."
+      },
+      {
+        "title": "Test a win, a tie and a clean replay",
+        "text": "The first game should end Blue 6, Gold 0. Try another answer after the end. Press Play Again and check the first turn, scores and question number. Play again with six right answers. The tie should be 6 to 6.",
+        "help": "On each question count the three choices. After each pick, try tapping before moving on. A score or question that changes twice is a failed lock."
+      },
+      {
+        "title": "Record the first try before making an edit",
+        "text": "Use the five checks on this page. Give one point for each pass. Open the four-tool scorecard to record what you saw. Once you have scored the originals, use the same follow-up there for each tool.",
+        "help": "Keep a copy of the first file. If you have only tested one tool, leave the other scorecards blank."
       }
     ],
     "check": [
-      "With 60 ms for old and 5 ms for new, new finishes first. The broken view ends on Old result. The fixed view ends on New result.",
-      "The fixed view still ends on New result. Its log now shows old finishing first."
+      "Layout & Mobile Fit: All buttons and text fit cleanly on an iPad screen without overlapping or sideways scrolling.",
+      "Scoring & Turn Switch: Correct answers add +2 to the active team only; wrong answers add 0; turns alternate Blue -> Gold after every question.",
+      "Click-Lock Guard: Tapping an answer twice on the same question cannot award +4 points or skip a turn.",
+      "Game End & Winner: After Question 6, answer buttons lock and a clear winner (or tie) banner appears.",
+      "Clean Replay: Play Again resets both scores to 0, sets Question 1 of 6, and returns the first turn to Team Blue."
     ],
     "sources": [
       [
-        "OpenAI · Codex CLI",
-        "https://learn.chatgpt.com/docs/codex/cli"
-      ],
-      [
-        "OpenAI · code review",
-        "https://learn.chatgpt.com/docs/code-review?surface=app"
+        "OpenAI · ChatGPT Chat, Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
       ]
     ]
   },

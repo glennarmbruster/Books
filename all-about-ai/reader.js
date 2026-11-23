@@ -91,6 +91,76 @@ function makeTable(table, title) {
   return wrap;
 }
 
+function buildScorecards(table, checks) {
+  const cards = element('div', undefined, 'build-cards');
+  for (const tool of ['ChatGPT', 'Claude', 'Gemini', 'Grok']) {
+    const card = element('details');
+    card.append(element('summary', tool + ' scorecard'));
+    const notice = element('p');
+    notice.setAttribute('role', 'status');
+    function remember(control, field) {
+      const key = 'all-about-ai.harbor-relay.' + tool + '.' + field;
+      try { control.value = localStorage.getItem(key) || ''; }
+      catch { notice.textContent = 'These entries will last only while this page is open.'; }
+      control.addEventListener(control.tagName === 'SELECT' ? 'change' : 'input', () => {
+        try { localStorage.setItem(key, control.value); }
+        catch { notice.textContent = 'This browser could not save the card. Copy your results before leaving.'; }
+      });
+    }
+    function picker(values, label, field) {
+      const select = element('select');
+      select.setAttribute('aria-label', tool + ' · ' + label);
+      for (const [value, text] of values) select.add(new Option(text, value));
+      remember(select, field);
+      return select;
+    }
+    const run = element('label', 'Mode, model, date and device ');
+    const setup = element('input');
+    setup.type = 'text';
+    remember(setup, 'setup');
+    run.append(setup);
+    card.append(run);
+    const group = element('fieldset');
+    group.append(element('legend', 'First-try checks'));
+    const outcomes = checks.map((check, i) => {
+      const label = check.split(':')[0];
+      const control = picker([['','Untested'],['1','Pass'],['0','Fail']], label, 'check-' + i);
+      const row = element('label', (i + 1) + '. ' + label);
+      row.append(control);
+      group.append(row);
+      return control;
+    });
+    card.append(group);
+    const grid = makeTable(table, tool);
+    const rows = grid.querySelectorAll('tbody tr');
+    const total = element('output');
+    total.setAttribute('aria-label', tool + ' first-try points');
+    function showPoints() {
+      const tested = outcomes.filter(input => input.value !== '');
+      const passed = tested.filter(input => input.value === '1').length;
+      total.textContent = tested.length === checks.length ? passed + ' / ' + checks.length :
+        passed + ' passed · ' + (checks.length - tested.length) + ' untested';
+    }
+    rows.forEach((row, i) => {
+      const cells = row.cells;
+      const name = cells[0].textContent;
+      const points = i === 0 ? total : picker([['','Unrated'],['0','0'],['1','1'],['2','2']], name + ' points', 'rating-' + i);
+      const notes = element('textarea');
+      notes.rows = 2;
+      notes.placeholder = cells[3].textContent;
+      notes.setAttribute('aria-label', tool + ' · ' + name + ' notes');
+      remember(notes, 'notes-' + i);
+      cells[2].replaceChildren(points);
+      cells[3].replaceChildren(notes);
+    });
+    for (const select of outcomes) select.addEventListener('change', showPoints);
+    showPoints();
+    card.append(grid, notice);
+    cards.append(card);
+  }
+  return cards;
+}
+
 function sourceLinks(references) {
   const details = element('details', undefined, 'sources');
   details.append(element('summary','Sources (' + references.length + ')'));
@@ -185,7 +255,7 @@ function labBody(lab) {
   about.append(element('h2','What you’ll use'),element('p',lab.features),roleInfo,
     element('h2','Before you start'),element('p',lab.requires));
   const setup = element('details', undefined, 'sources');
-  setup.append(element('summary','How to open this tool'), element('p',lab.group.gettingStarted));
+  setup.append(element('summary','How to open this tool'), element('p',lab.comparison ? lab.steps[0].text : lab.group.gettingStarted));
   const setupLink = element('a',lab.group.startLabel);
   setupLink.href = lab.group.startUrl;
   setupLink.target = '_blank';
@@ -199,7 +269,7 @@ function labBody(lab) {
     about.append(link);
   }
   const prompt = element('section',undefined,'section');
-  prompt.append(element('h2','Your prompt'),element('p','Prepare the sample in the walkthrough, then paste this prompt when instructed.'),snippet(lab.prompt,'prompt'));
+  prompt.append(element('h2','Your prompt'),element('p',lab.comparison ? 'In a fresh session, paste just this prompt.' : 'Prepare the sample in the walkthrough, then paste this prompt when instructed.'),snippet(lab.prompt,'prompt'));
   const instructions = element('section',undefined,'section');
   const list = element('ol',undefined,'lab-steps');
   for (const step of lab.steps) {
@@ -214,9 +284,15 @@ function labBody(lab) {
   instructions.append(element('h2','Walkthrough'), stepControls(list, false), list);
   const checks = element('details',undefined,'result-check');
   checks.append(element('summary','Check your result'));
-  const answers = element('ul');
+  const answers = element(lab.comparison ? 'ol' : 'ul');
   lab.check.forEach(value => answers.append(element('li',value)));
   checks.append(answers);
+  if (lab.comparison) {
+    checks.open = true;
+    const link = element('a','Open the four-tool scorecards');
+    link.href = '#' + lab.comparison;
+    checks.append(link);
+  }
   const finish = element('section',undefined,'section');
   const label = element('label',undefined,'complete-lab');
   const checkbox = element('input');
@@ -290,7 +366,13 @@ function openLocation(moveFocus) {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
-      if (section.table) block.append(makeTable(section.table, section.title));
+      if (section.buildPart === 'prompt') block.append(snippet(chapter.buildSpec.prompt, 'prompt'));
+      if (section.buildPart === 'followUp') block.append(snippet(chapter.buildSpec.followUp, 'follow-up'));
+      if (section.buildPart === 'scorecard') {
+        const list = element('ol', undefined, 'shared-checks');
+        for (const check of chapter.buildSpec.check) list.append(element('li', check));
+        block.append(list, buildScorecards(section.table, chapter.buildSpec.check));
+      } else if (section.table) block.append(makeTable(section.table, section.title));
       if (section.exercise) {
         const practice = element('aside', undefined, 'practice');
         practice.append(element('h3', 'Try it'), element('p', section.exercise.prompt));
@@ -308,6 +390,16 @@ function openLocation(moveFocus) {
       }
       return block;
     });
+    if (chapter.buildSpec) {
+      const links = element('nav', undefined, 'quick-links');
+      links.setAttribute('aria-label','Related hands-on labs');
+      for (const item of chapters.filter(item => item.comparison === chapter.id)) {
+        const link = element('a', item.group.title + ' · Lab ' + item.number);
+        link.href = '#' + item.id;
+        links.append(link);
+      }
+      sections.push(links);
+    }
     if (!lab && !chapter.group.guide) sections.unshift(workedExample(worked.get(chapter.id)),chapterIntroduction(chapter.intro));
     if (!chapter.group.guide) {
       sections.unshift(launchHelp(chapter));
