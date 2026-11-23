@@ -1,0 +1,187 @@
+[
+  {
+    "id": "grok",
+    "title": "Grok and the trail back to a post",
+    "summary": "Grok can find what an organization said on X. A post, its date, and the policy behind it are three different pieces of evidence.",
+    "sections": [
+      {
+        "title": "Trace a claim to the speaker",
+        "paragraphs": [
+          "Suppose someone says a cruise line changed embarkation times. Ask for posts from the official account within the sailing month. Require the post link, publication date, port and sailing date. Open the link. Then compare the wording with the passenger notice. A genuine post announcing a trial in one port can still be poor evidence for a fleetwide rule.",
+          "In an application using Grok, X Search and Web Search are tools the developer can enable. X Search is a good fit for recovering the original announcement. Web Search is useful for finding the operator’s policy page. A plain model call that has neither tool gets neither source of fresh information."
+        ],
+        "sources": [
+          [
+            "Grok API · searching X",
+            "https://docs.x.ai/developers/tools/x-search"
+          ],
+          [
+            "Grok API release notes",
+            "https://docs.x.ai/developers/release-notes"
+          ]
+        ]
+      },
+      {
+        "title": "Choose an output before choosing a model",
+        "paragraphs": [
+          "Grok 4.7 accepts text and images and returns text through the API. The model has a 500,000-token context window and adjustable reasoning effort. Start with a compact request to extract the text of a sign. Increase effort for a reconciliation of conflicting notices and inspect which one has the later effective date.",
+          "Grok Imagine has separate engines for creating images and video. For a clip, supply a reference frame and describe one motion. For a spoken interface, investigate the Grok Voice family. These choices matter if the deliverable is an image file, a playable clip or a voice conversation."
+        ],
+        "sources": [
+          [
+            "Grok API release notes",
+            "https://docs.x.ai/developers/release-notes"
+          ],
+          [
+            "Grok Imagine · video capabilities",
+            "https://docs.x.ai/developers/model-capabilities/video/overview"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perplexity",
+    "title": "Perplexity and Comet",
+    "summary": "Start with a question in Perplexity or bring the assistant to the pages you already have open in Comet.",
+    "sections": [
+      {
+        "title": "Audit an answer with citations",
+        "paragraphs": [
+          "For a research question, ask Perplexity to find the original document and give its publication and effective dates. For example, ask which transit agency publishes the timetable for a particular airport station. In the cited PDF, check the direction, day of week and date. A source can mention the station without supporting the departure time in the answer.",
+          "For developers, the Agent API combines model selection with tools such as web search and URL fetching. Perplexity ended support for Sonar Chat Completions on September 27, 2026. The migration guide describes forwarding for synchronous and streaming requests and a move to background mode for asynchronous work. Older Sonar examples deserve a date check."
+        ],
+        "sources": [
+          [
+            "Perplexity · the Comet browser",
+            "https://www.perplexity.ai/comet"
+          ],
+          [
+            "Perplexity · Sonar and the Agent API",
+            "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview"
+          ]
+        ]
+      },
+      {
+        "title": "Use the browser for work across pages",
+        "paragraphs": [
+          "Comet is Perplexity’s browser, available on desktop and mobile, including iOS. Consider comparing two hotels with their cancellation policies open. Ask the assistant to extract the deadline, local time zone, deposit and fee for each reservation. Open each cited rate condition yourself before booking. An aggregator’s generic cancellation page may describe a different rate.",
+          "Decide which tabs a task needs. Comet’s privacy controls describe the information shared when its assistant needs personal browsing context. Use the device’s own controls to check permissions and feature availability. A desktop walkthrough can show controls that are arranged differently on the iPad."
+        ],
+        "sources": [
+          [
+            "Perplexity · the Comet browser",
+            "https://www.perplexity.ai/comet"
+          ],
+          [
+            "Perplexity · Comet on iOS",
+            "https://www.perplexity.ai/changelog/what-we-shipped--march-27-2026"
+          ],
+          [
+            "Perplexity · Comet privacy controls",
+            "https://www.perplexity.ai/en-GB/hub/blog/introducing-privacy-snapshot"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "other-models",
+    "title": "Copilot, Mistral and running a model locally",
+    "summary": "Three reasons to look beyond the main assistants are access to work documents, a specialist audio workflow and control of where a model runs.",
+    "sections": [
+      {
+        "title": "Work documents and meeting records",
+        "paragraphs": [
+          "With a work or school account, Microsoft 365 Copilot can ground answers in work content such as mail, Teams and files, depending on license and existing permissions. Ordinary web grounding and work grounding draw on different evidence. If the question is about your organization’s decision, specify the meeting or approved document to search.",
+          "Try asking for a decision, the meeting date and the sentence that records it. Open the cited source. If you only have a public announcement, supply it as an attachment and ask which parts of the decision it leaves open."
+        ],
+        "sources": [
+          [
+            "Microsoft · grounding with a work or school account",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-grounding-works-with-a-work-or-school-account"
+          ]
+        ]
+      },
+      {
+        "title": "A specialist for voice or code",
+        "paragraphs": [
+          "Mistral Vibe, formerly Le Chat, is the company’s assistant for work and coding. Its product page distinguishes chat from coding sessions. For recorded speech, the Voxtral family offers specialized audio capabilities. Check the model’s supported languages and direction of conversion before selecting it.",
+          "For a recorded bilingual meeting, transcribe a one-minute sample containing names, overlaps and a switch in language. Mark omissions and misattributed speakers. A fluent written summary can conceal mistakes made during transcription."
+        ],
+        "sources": [
+          [
+            "Mistral · Vibe",
+            "https://mistral.ai/products/vibe/"
+          ],
+          [
+            "Mistral · Voxtral language support",
+            "https://docs.mistral.ai/studio/audio/specs-and-limits/languages"
+          ]
+        ]
+      },
+      {
+        "title": "Run inference without a network",
+        "paragraphs": [
+          "Google’s Gemma family offers downloadable model weights. Weights are the learned numerical parameters. A compatible inference application loads those weights and runs the model on your device. Google’s Gemma 4 guide lists model sizes, input types and memory estimates. The weights, runtime, context length and working memory must all fit the hardware.",
+          "For a flight, download the model and runtime before leaving. Disable the network, relaunch, and try a fresh prompt against a locally saved document. Check whether the application quietly uses an online service for search, speech or document extraction. Downloading this field guide saves its chapters. Running a local AI requires a separate setup."
+        ],
+        "sources": [
+          [
+            "Google · Gemma 4 models and memory requirements",
+            "https://gemma.ai/models/gemma-4/"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "browser-tools",
+    "title": "Chrome add-ins and AI browsers",
+    "summary": "A chat tab, a built-in browser assistant and an extension can see different things, even if they use a related model.",
+    "sections": [
+      {
+        "title": "Identify what has access",
+        "paragraphs": [
+          "If a passenger-fare PDF is open in another tab, a plain chat only has the material you give it or that its own tools can reach. A built-in assistant may be able to use a shared tab. A desktop extension can request access to selected websites and, depending on the extension, interact with their controls. Comet provides an assistant within its own browser.",
+          "In desktop Chrome, open the extension’s details and inspect site access. Where supported, limit access to a click or specific sites. If all a task needs is one paragraph, selecting it and pasting it into a chat makes the input easy to inspect. Read what a tool plans to submit before letting it act in a signed-in account."
+        ],
+        "sources": [
+          [
+            "Chrome Help · manage extension site access",
+            "https://support.google.com/chrome/answer/2664769?hl=en"
+          ],
+          [
+            "Perplexity · Comet privacy controls",
+            "https://www.perplexity.ai/en-GB/hub/blog/introducing-privacy-snapshot"
+          ],
+          [
+            "Anthropic · Claude in Chrome",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Google · Gemini in Chrome",
+            "https://gemini.google/overview/gemini-in-chrome/"
+          ]
+        ]
+      },
+      {
+        "title": "Match the instructions to your device",
+        "paragraphs": [
+          "On a desktop, Chrome Web Store extensions can add a side panel or page controls. Chrome’s phone option to add an extension to desktop queues it for your computer. On iPad, begin with the provider’s supported app or browser and check its mobile instructions.",
+          "Quick test: open two public pages with different opening hours. Ask for one row per page and the source URL for each. A correct answer that only quotes the active tab tells you something about that setup. Repeat with the second page explicitly shared before judging the underlying model."
+        ],
+        "sources": [
+          [
+            "Chrome Help · manage extension site access",
+            "https://support.google.com/chrome/answer/2664769?hl=en"
+          ],
+          [
+            "Perplexity · Comet on iOS",
+            "https://www.perplexity.ai/changelog/what-we-shipped--march-27-2026"
+          ]
+        ]
+      }
+    ]
+  }
+]

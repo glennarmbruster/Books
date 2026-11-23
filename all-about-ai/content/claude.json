@@ -1,0 +1,365 @@
+[
+  {
+    "id": "claude-workspace",
+    "title": "Where to work in Claude",
+    "summary": "A parking-rate packet illustrates the difference between an ordinary chat, a reusable project and a connection to a live source.",
+    "sections": [
+      {
+        "title": "Choose where the evidence will live",
+        "paragraphs": [
+          "Use an ordinary chat to work through one question with a few attachments. In a Project, put recurring reference documents in project knowledge and put standing directions in project instructions. A new conversation in that project can use those materials. An insight buried in a different conversation is easy to lose. Add the decision to a shared project document when future chats need it.",
+          "The Claude app supplies this workspace. Anthropic’s API supplies models for software that you or a developer builds. A chat subscription, an API price and a particular model are three different purchasing or design decisions. A useful first question is whether you want to read an answer, reuse a collection of sources, or build the behavior into your own application."
+        ],
+        "sources": [
+          [
+            "How Claude Projects use shared reference material",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Compare the current Claude models",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "Anthropic’s direct API pricing",
+            "https://platform.claude.com/docs/en/about-claude/pricing"
+          ]
+        ]
+      },
+      {
+        "title": "Read a rate table with a checkable answer",
+        "paragraphs": [
+          "Imagine a PDF with separate weekday, weekend and event-day parking rates. Upload the packet. Ask Claude to transcribe the headings, identify the unit for each price, and cite the page and row behind each answer. Then ask what a two-hour stay costs during a Saturday event. Require it to say which rule takes priority and identify any missing information.",
+          "On a scanned table, a price and its footnote can land in different columns during extraction. Compare the answer with the printed row and footnote. If they disagree, attach a crop containing the headings and the entire row, and ask for a fresh reading. This separates a transcription error from a disagreement about the rule."
+        ],
+        "sources": [
+          [
+            "File and image support in Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Choose an attachment, a connector or web search",
+        "paragraphs": [
+          "Use an attachment when it matters exactly which edition was read. A connector gives Claude access to supported material in another service using the permissions granted there. Web search can retrieve public sources and cite them. These are different ways of gathering evidence, even when the answer appears in the same chat.",
+          "For a policy comparison, provide last year’s approved PDF and ask Claude to search for this year’s official publication. Record the two issue dates and precise clauses. If the current page quietly changed since someone downloaded it, this preserves which edition each statement describes."
+        ],
+        "sources": [
+          [
+            "Connect Claude to other services",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Web search and citations in Claude",
+            "https://support.claude.com/en/articles/10684626-enable-and-use-web-search"
+          ],
+          [
+            "File and image support in Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claude-models",
+    "title": "Which Claude model fits the job?",
+    "summary": "Four current public models, their direct API prices and a way to decide when more reasoning pays for itself.",
+    "sections": [
+      {
+        "title": "Four models, four starting points",
+        "paragraphs": [
+          "These are the current public models highlighted in Anthropic’s comparison. The jobs below are suggested trials. Keep the same input and acceptance criteria when comparing two models."
+        ],
+        "sources": [
+          [
+            "Compare the current Claude models",
+            "https://platform.claude.com/docs/en/models/overview"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Model and direct API ID",
+            "Try it on",
+            "What to check"
+          ],
+          "rows": [
+            [
+              "Haiku 5.5 · claude-haiku-5-5",
+              "Route incoming questions by subject or extract an invoice date.",
+              "Whether uncommon categories and ambiguous dates need a second pass."
+            ],
+            [
+              "Sonnet 5.5 · claude-sonnet-5-5",
+              "Draft a sourced comparison or make a well-defined change to an app.",
+              "Whether it follows the format and passes your examples on the first attempt."
+            ],
+            [
+              "Opus 5.5 · claude-opus-5-5",
+              "Trace a defect across several files or reconcile competing requirements.",
+              "Whether it preserves earlier constraints during a longer task."
+            ],
+            [
+              "Fable 5.2 · claude-fable-5-2",
+              "Try a difficult reasoning case that remains unresolved after a simpler pass.",
+              "Whether the answer withstands an independent check and justifies its higher cost."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "What the price means on one request",
+        "paragraphs": [
+          "Anthropic’s standard direct API rates are in US dollars per million tokens. Input and generated output have separate prices. The example sends 40,000 ordinary uncached input tokens and receives 2,000 billable output tokens in one request. Tool charges, special processing options and discounts are outside the example."
+        ],
+        "sources": [
+          [
+            "Anthropic’s direct API pricing",
+            "https://platform.claude.com/docs/en/about-claude/pricing"
+          ],
+          [
+            "Haiku 5.5 prompt-length pricing",
+            "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Model",
+            "Input / output per million",
+            "Example cost"
+          ],
+          "rows": [
+            [
+              "Haiku 5.5",
+              "$0.10 / $0.50 through 100,000 input tokens. Above that, $0.50 / $2.50.",
+              "$0.005"
+            ],
+            [
+              "Sonnet 5.5",
+              "$2 / $10",
+              "$0.10"
+            ],
+            [
+              "Opus 5.5",
+              "$4 / $20",
+              "$0.20"
+            ],
+            [
+              "Fable 5.2",
+              "$8 / $40",
+              "$0.40"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Context, effort and access",
+        "paragraphs": [
+          "All four list a one-million-token API context window and a maximum output of 128,000 tokens. Context is the material available to the model during a request. A long input still benefits from headings and page references. The app has its own upload and usage limits.",
+          "In the Claude app, open the model menu beside Send to see the models and effort controls available to your account. Effort changes how much reasoning the model can devote to an answer. Try increasing it on a troublesome example and score the result against a known answer. On the API, Opus 5.5 and Fable 5.2 use adaptive thinking automatically.",
+          "Fable 5.2 is available on eligible paid plans with plan-specific credit rules. Its sibling Mythos 5.2 has restricted access. Older versions may remain in the API after they leave the app’s selector. Check the retirement schedule before building a recurring job around an older ID."
+        ],
+        "sources": [
+          [
+            "Compare the current Claude models",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "Model, effort and thinking controls in Claude",
+            "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
+          ],
+          [
+            "Fable availability and credit rules",
+            "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
+          ],
+          [
+            "Fable 5.2 and restricted-access Mythos 5.2",
+            "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+          ],
+          [
+            "API model lifecycle and retirement dates",
+            "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claude-code",
+    "title": "Claude Code in a real repository",
+    "summary": "Use a small bookshelf change to learn what a coding agent can inspect, modify and verify.",
+    "sections": [
+      {
+        "title": "A coding session has a working environment",
+        "paragraphs": [
+          "Claude Code can inspect a repository, follow a feature across files, edit code and run commands such as a project’s existing tests. Its interfaces include a terminal, desktop app, supported editors and cloud sessions. Check which copy of the project the session has opened. A cloud checkout and an uncommitted change on your Mac can contain different code.",
+          "Give it an observable outcome. For example, “Add a date filter to the phrasebook index. Keep existing saved links working, and make the filter usable when the iPad is offline.” That tells the agent what to examine and gives you a way to judge the change."
+        ],
+        "sources": [
+          [
+            "Claude Code interfaces and capabilities",
+            "https://code.claude.com/docs/en/overview"
+          ]
+        ]
+      },
+      {
+        "title": "From a plan to a verified change",
+        "paragraphs": [
+          "Start in Plan Mode. Ask which file renders the index, where the dates come from, and how the existing offline cache gets refreshed. Examine the proposed files and test cases. When the plan fits, allow edits in the intended checkout and ask it to run the project’s checks.",
+          "Look at the changed files and try the feature through the book’s normal opening screen. Test a date with results, a date with no results, an old bookmarked link, and a reload with the network disconnected. Ask which checks actually ran and which still need your iPad. A passing desktop test gives a different piece of evidence from a successful offline launch on the device."
+        ],
+        "sources": [
+          [
+            "Claude Code interfaces and capabilities",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Permission modes and Plan Mode",
+            "https://code.claude.com/docs/en/permission-modes"
+          ]
+        ]
+      },
+      {
+        "title": "Carry the right instructions forward",
+        "paragraphs": [
+          "A project-level CLAUDE.md file can record persistent directions such as how to run the tests or which folder contains the bookshelf index. Keep entries short enough to review. Store an example of an accepted result alongside the tests when exact behavior matters.",
+          "The /model command in Claude Code shows the choices available for the session. Try Sonnet on a scoped change, then test Opus on a comparable change that crosses several files. Compare elapsed time, test failures and the corrections you had to request. One successful edit says little about a different codebase."
+        ],
+        "sources": [
+          [
+            "How Claude Code reads project instructions",
+            "https://code.claude.com/docs/en/memory"
+          ],
+          [
+            "Model selection and usage in Claude Code",
+            "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"
+          ],
+          [
+            "Compare the current Claude models",
+            "https://platform.claude.com/docs/en/models/overview"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claude-browser",
+    "title": "Cowork, Chrome and connected apps",
+    "summary": "Choose a tool according to where the task happens and what the assistant needs permission to do.",
+    "sections": [
+      {
+        "title": "Work with a page that is already open",
+        "paragraphs": [
+          "Claude in Chrome gives the assistant a side panel in desktop Google Chrome. It can read a page, follow links, click controls and type into fields. Anthropic lists the extension for paid plans. Enterprise administrators control availability. Installing this extension requires desktop Chrome. On an iPad, a shared page link or an uploaded document can support a reading task.",
+          "On a public museum site, open the calendar and ask Claude to find which dates include evening admission. Have it return the date, hours and source page for each match. Open one entry yourself and check the details against the calendar. Web search suits discovering a museum. Browser interaction helps when the answer sits behind a date picker."
+        ],
+        "sources": [
+          [
+            "Claude in Chrome availability and controls",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Web search and citations in Claude",
+            "https://support.claude.com/en/articles/10684626-enable-and-use-web-search"
+          ]
+        ]
+      },
+      {
+        "title": "Give Cowork an outcome and a source folder",
+        "paragraphs": [
+          "Cowork handles multi-step tasks across available files and tools. Put copies of three event schedules in a folder, connect that folder from Claude Desktop, and ask for a draft staffing summary grouped by event date. Tell it how to flag overlapping shifts and where to place the new draft. The same session can be revisited from supported web and mobile surfaces.",
+          "For cloud Cowork sessions, the task can keep running after you leave it. Access to a connected local folder depends on the desktop app remaining open and connected. Upload the needed files to the session if you want the source material available while the Mac is closed."
+        ],
+        "sources": [
+          [
+            "Where Cowork runs and how it reaches local files",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      },
+      {
+        "title": "Inspect the permission that matters",
+        "paragraphs": [
+          "A connector can expose a particular service, while the Chrome extension can interact through the signed-in browser. Decide which account, folder and actions the task needs. For a report, read access and a new draft may be enough. For a form, ask for the completed draft and inspect it before submission.",
+          "To compare this workflow with Gemini or ChatGPT, give each tool the same three schedules, the same access and the same scoring rule. Count missed conflicts and invented events. Record any time saved collecting the documents separately from the accuracy of the final report."
+        ],
+        "sources": [
+          [
+            "Connector capabilities and access",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Claude in Chrome availability and controls",
+            "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+          ],
+          [
+            "Where Cowork runs and how it reaches local files",
+            "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "claude-visuals",
+    "title": "Seeing an image, drawing a diagram and making a film",
+    "summary": "Match the visual deliverable to what Claude’s models and design tools actually produce.",
+    "sections": [
+      {
+        "title": "Read a photo or generate a vector drawing",
+        "paragraphs": [
+          "The public Claude models listed in this edition accept text and images and return text. That supports two very different jobs. Claude can inspect a supplied picture and describe visible details. It can also write SVG or HTML that a browser turns into diagrams, charts or interactive visuals. A rendered vector drawing is a useful deliverable for a cutting machine.",
+          "For a parking sign, ask for a scalable one-color drawing with editable outlines. Give the physical dimensions and ask for an SVG with a matching viewBox. Open the exported file at its intended size and inspect the paths in your cutter software. For reading a photographed sign, supply a sharp close-up and ask Claude to mark any unreadable hours or fees."
+        ],
+        "sources": [
+          [
+            "Compare the current Claude models",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "Claude’s image and interactive visual capabilities",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ],
+          [
+            "File and image support in Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ]
+        ]
+      },
+      {
+        "title": "Develop an editable artifact",
+        "paragraphs": [
+          "Artifacts give a document, visual or piece of code its own workspace beside the conversation. Claude Design supports editable designs and prototypes, with export choices including HTML, PDF and PowerPoint. Choose the output by what the next person needs to do with it.",
+          "Build a three-screen pitch for a cruise scorekeeper. Ask for the score-entry screen, a running-total screen and the saved-game list. Change one label and try the prototype in portrait orientation. PDF preserves presentation pages. An interactive handoff calls for an HTML or project export that you can open and test, including any external dependencies."
+        ],
+        "sources": [
+          [
+            "How Claude artifacts work",
+            "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them"
+          ],
+          [
+            "Creating and exporting with Claude Design",
+            "https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
+          ]
+        ]
+      },
+      {
+        "title": "Prepare a shot list for an image or video generator",
+        "paragraphs": [
+          "For a photorealistic still or a rendered video clip, use a renderer that explicitly produces that output. Claude can help upstream with the shot sequence, continuity notes, captions and a prompt for each shot. Its text output can describe a video in great detail while leaving the actual frames to the chosen renderer.",
+          "For a ten-second cruise invitation, ask for three shots with durations totaling ten seconds, a consistent time of day and the exact title text to overlay. Supply a reference image if you want Claude to describe its framing. After rendering, check continuity between shots, the legibility of the title and the actual clip length."
+        ],
+        "sources": [
+          [
+            "Compare the current Claude models",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "Claude’s image and interactive visual capabilities",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,343 @@
+[
+  {
+    "id": "choose-a-model",
+    "title": "Which model would you try first?",
+    "summary": "A file type, a tool and a budget can narrow the choice before you measure answer quality.",
+    "sections": [
+      {
+        "title": "Match a documented difference to a real job",
+        "paragraphs": [
+          "These are suggested starting points, based on documented inputs, outputs and tools. Model capacity alone cannot tell you whether a particular answer is accurate. The last column gives you a way to test the choice."
+        ],
+        "sources": [
+          [
+            "Google · choosing a model",
+            "https://aistudio.google.com/docs/choosing-a-model"
+          ],
+          [
+            "Anthropic · model comparison",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "OpenAI · model catalog",
+            "https://developers.openai.com/api/docs/models"
+          ],
+          [
+            "Google · Gemini models and supported media",
+            "https://aistudio.google.com/docs/models"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Your job",
+            "Where to start",
+            "What to check"
+          ],
+          "rows": [
+            [
+              "Find the moment a sign changes in a video",
+              "A Gemini general model that accepts video can take the clip directly. A Claude text-and-image model can inspect extracted frames.",
+              "Compare the reported time to the original. Sparse frames can miss a brief sign."
+            ],
+            [
+              "Classify thousands of short notes",
+              "Test Gemini Flash-Lite, Claude Haiku 5.5 and GPT-6 Luna on the same labeled sample.",
+              "Count missed categories and invalid labels, and divide the total bill by the number of correct results."
+            ],
+            [
+              "Reconcile a difficult pair of policies",
+              "Try Gemini 4 Neon, Claude Sonnet 5.5 and GPT-6.2 Sol first. Include Carbon, Opus or Astra if the cheaper run misses a material exception.",
+              "List the clauses each answer relies on and flag unsupported statements."
+            ],
+            [
+              "Change a working website",
+              "Try Antigravity for its editor and browser review, Claude Code for a repository and terminal workflow, or Codex for local or delegated work.",
+              "Give each tool the same starting files. Run the same acceptance check before merging."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Choose a working environment as well as a model",
+        "paragraphs": [
+          "For asking questions from one fixed collection, Gemini Notebook provides a source-selection workflow, Claude Projects can retain project knowledge, and ChatGPT’s research and data tools can work from supplied files. Choose by the evidence you need back. A cited passage and a reproducible calculation answer different questions.",
+          "For example, extracting a departmental holiday rule calls for its page and effective date. Counting how many vehicles used a garage on those holidays calls for a calculation on the transaction file. Ask for both separately and inspect both."
+        ],
+        "sources": [
+          [
+            "Google · selecting notebook sources",
+            "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ],
+          [
+            "Anthropic · managing Projects",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "OpenAI · data analysis",
+            "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compare-cost",
+    "title": "Read an API price table",
+    "summary": "Two models with identical posted rates can produce different bills for the same assignment.",
+    "sections": [
+      {
+        "title": "One short request in dollars",
+        "paragraphs": [
+          "Assume a direct standard API request with 10,000 uncached text input tokens and 2,000 billable output tokens. Multiply the input rate by 0.010 and the output rate by 0.002, then add. Rates below are US dollars per million tokens for the indicated tier, checked November 22, 2026. App subscriptions are billed separately.",
+          "The table holds token counts constant. In a real run, tokenization, billable reasoning, retries and tool charges can change the total. Some prices vary with prompt length, latency tier or date. For an application, compare the invoice with the number of accepted results."
+        ],
+        "sources": [
+          [
+            "Google AI Studio · standard rates",
+            "https://aistudio.google.com/docs/pricing"
+          ],
+          [
+            "Anthropic · standard rates",
+            "https://platform.claude.com/docs/en/about-claude/pricing"
+          ],
+          [
+            "OpenAI · standard rates",
+            "https://developers.openai.com/api/docs/pricing"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Model and date",
+            "Input / output per million",
+            "Example cost"
+          ],
+          "rows": [
+            [
+              "Gemini 4 Carbon through Nov 30, 2026",
+              "$2 / $10",
+              "$0.04"
+            ],
+            [
+              "Gemini 4 Carbon from Dec 1, scheduled",
+              "$4 / $20",
+              "$0.08"
+            ],
+            [
+              "Gemini 4 Neon",
+              "$3 / $15",
+              "$0.06"
+            ],
+            [
+              "Claude Sonnet 5.5",
+              "$2 / $10",
+              "$0.04"
+            ],
+            [
+              "Claude Opus 5.5",
+              "$4 / $20",
+              "$0.08"
+            ],
+            [
+              "GPT-6.2 Sol",
+              "$2 / $10",
+              "$0.04"
+            ],
+            [
+              "GPT-6.2 Astra",
+              "$8 / $40",
+              "$0.16"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Price the outcome you can use",
+        "paragraphs": [
+          "Suppose two hypothetical runs cost $5 and $8. The first yields 70 accepted records, the second 95. Their model-only costs per accepted record are roughly 7.1 and 8.4 cents. If someone must spend ten minutes fixing each failed record, labor can reverse the buying decision.",
+          "Keep a small set of hard examples and the accepted answers. On a model update, record the identifier, date, total cost, time and number of accepted records. This makes a future price cut or model replacement meaningful in terms of your own workload."
+        ],
+        "sources": [
+          [
+            "Google AI Studio · standard rates",
+            "https://aistudio.google.com/docs/pricing"
+          ],
+          [
+            "Anthropic · standard rates",
+            "https://platform.claude.com/docs/en/about-claude/pricing"
+          ],
+          [
+            "OpenAI · standard rates",
+            "https://developers.openai.com/api/docs/pricing"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "media-studio",
+    "title": "From a reference photo to a finished asset",
+    "summary": "A portrait for printing, a cut path for a nameplate and a moving shot of the finished sign require different deliverables.",
+    "sections": [
+      {
+        "title": "Choose what the file must contain",
+        "paragraphs": [
+          "For an engraved nameplate, ask for a closed SVG silhouette of a dachshund wearing a graduation cap. Specify a 120 × 40 mm artboard, one solid fill and no lettering. Inspect the paths in your design program and check the physical dimensions. A realistic illustration may look wonderful on screen and still have no cuttable outline.",
+          "For a printed design, an image generator can produce the painted fur and cap. Request the composition and aspect ratio, then add exact names and dates as type in a layout tool. For a 6 × 4 inch print at 300 pixels per inch, check that the final exported image has at least 1,800 × 1,200 pixels."
+        ],
+        "sources": [
+          [
+            "Google · generating images in Gemini",
+            "https://gemini.google/us/overview/image-generation/"
+          ],
+          [
+            "OpenAI · Images 2.6",
+            "https://openai.com/index/introducing-images-2-6/"
+          ],
+          [
+            "Anthropic · model comparison",
+            "https://platform.claude.com/docs/en/models/overview"
+          ]
+        ]
+      },
+      {
+        "title": "Storyboard a short clip",
+        "paragraphs": [
+          "Keep one shot simple. Start with a still of the finished nameplate on a desk. Ask for a slow push toward the brass edge with a fixed light source, one continuous shot and no lettering changes. In Adobe Firefly, a first frame anchors the opening. An optional last frame anchors the ending. Some camera controls depend on which references you provide.",
+          "Google offers video generation in Gemini. Grok Imagine has a video workflow. Claude can draft the storyboard and shot descriptions. The ChatGPT chapter gives the dated status of OpenAI’s Sora services. Judge video output frame by frame for object continuity, orientation, legibility and abrupt changes before judging style."
+        ],
+        "sources": [
+          [
+            "Adobe · generating video from reference frames",
+            "https://helpx.adobe.com/firefly/web/work-with-audio-and-video/work-with-video/generate-videos-using-images.html"
+          ],
+          [
+            "Google · video in Gemini",
+            "https://gemini.google/overview/video-generation/"
+          ],
+          [
+            "Grok Imagine · video capabilities",
+            "https://docs.x.ai/developers/model-capabilities/video/overview"
+          ],
+          [
+            "OpenAI · Sora discontinuation",
+            "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+          ]
+        ]
+      },
+      {
+        "title": "Listen for the kind of mistake that matters",
+        "paragraphs": [
+          "For narration, supply a final script and a pronunciation guide for names. For transcription, keep the original recording and compare a sample of names, numbers and interruptions with the transcript. For generated music, describe pacing, instrumentation and where a clean ending belongs.",
+          "Try narrating a 25-second harbor departure. Put the spoken line and a music cue on separate tracks. A good voice performance can still be hard to understand if the music peaks during the name of the ship. Listen to the final mix through the same iPad speaker your audience will use."
+        ],
+        "sources": [
+          [
+            "Google · music generation",
+            "https://gemini.google/overview/music-generation/"
+          ],
+          [
+            "Mistral · audio model support",
+            "https://docs.mistral.ai/studio/audio/specs-and-limits/languages"
+          ],
+          [
+            "OpenAI · voice conversations",
+            "https://help.openai.com/en/articles/8400625-voice-mode-faq"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "field-test",
+    "title": "Run a fair three-model trial",
+    "summary": "Try this fictional parking rule in three fresh chats. You already have the answer key.",
+    "sections": [
+      {
+        "title": "Give all three the same brief",
+        "paragraphs": [
+          "Copy this prompt into Gemini, Claude and ChatGPT. “A garage charges $2 per started hour, capped at $10 per visit. Entries at or after 18:00 pay a flat $4 instead. All visits below are on one day. Calculate the charge for A, 17:30–19:45, B, 18:00–18:20, and C, 09:05–15:10. Give one row per visit with the rule and calculation. Flag any missing fact.”",
+          "Use the same inputs and tool access. Record each model or mode and whether it did arithmetic with a tool. Label the responses A, B and C in a different order before scoring them. Save a separate copy of the answer key. Running the trial again in a fresh chat helps reveal answers that only succeed occasionally."
+        ],
+        "sources": [
+          [
+            "Google · choosing a model",
+            "https://aistudio.google.com/docs/choosing-a-model"
+          ],
+          [
+            "Anthropic · model comparison",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "OpenAI · model catalog",
+            "https://developers.openai.com/api/docs/models"
+          ]
+        ]
+      },
+      {
+        "title": "Score the reasoning that affects the answer",
+        "paragraphs": [
+          "Give one point per correct charge, one for applying the evening rule by entry time, and one for applying the cap correctly. Give credit for a checkable calculation even if it uses different words. Record time-to-answer separately. This exercise describes a trial you can perform. The worked answers below were calculated from the fictional rule."
+        ],
+        "sources": [
+          [
+            "Google · choosing a model",
+            "https://aistudio.google.com/docs/choosing-a-model"
+          ],
+          [
+            "Anthropic · model comparison",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "OpenAI · model catalog",
+            "https://developers.openai.com/api/docs/models"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Visit",
+            "Expected",
+            "Why"
+          ],
+          "rows": [
+            [
+              "17:30–19:45",
+              "$6",
+              "Entry precedes 18:00. Two hours and fifteen minutes count as three started hours."
+            ],
+            [
+              "18:00–18:20",
+              "$4",
+              "The start time is exactly the inclusive evening threshold."
+            ],
+            [
+              "09:05–15:10",
+              "$10",
+              "Six hours and five minutes round up to seven hours. The $14 subtotal hits the cap."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Turn a disagreement into a useful follow-up",
+        "paragraphs": [
+          "If one model says $4 for the first visit, ask it to quote the part of the rule that determines eligibility. Then change only one word, from “entries” to “exits,” and rerun the cases. A should become $4. This tests whether the model can transfer the rule to a changed situation.",
+          "For a broader trial, add an invoice to extract, a scheduling conflict and a photo to interpret. Decide in advance which mistakes deserve zero credit. Repeat after a model update under the same conditions, then choose for the tasks that actually occupy your week."
+        ],
+        "sources": [
+          [
+            "Google · choosing a model",
+            "https://aistudio.google.com/docs/choosing-a-model"
+          ],
+          [
+            "Anthropic · model comparison",
+            "https://platform.claude.com/docs/en/models/overview"
+          ],
+          [
+            "OpenAI · model catalog",
+            "https://developers.openai.com/api/docs/models"
+          ]
+        ]
+      }
+    ]
+  }
+]

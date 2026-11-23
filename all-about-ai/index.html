@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d40">
+  <title>All About AI · Books</title>
+  <link rel="stylesheet" href="./reader.css">
+  <script src="../book-pager.js" defer></script>
+  <script src="./reader.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to book</a>
+  <header class="bar"><div><a href="../index.html">← Bookshelf</a><a class="contents" href="#contents">Contents</a><span id="offline" role="status"></span></div></header>
+  <main id="main">
+    <section id="index">
+      <div class="front">
+        <img src="../shelf-art/all-about-ai.jpg" width="220" height="275" alt="Light splitting through a glass prism on an optical bench">
+        <div><span class="eyebrow">A field guide</span><h1>All About AI</h1><p>Choose a model, put its tools to work, and judge the result for yourself.</p><div class="review" id="edition"></div></div>
+      </div>
+      <section class="library" aria-labelledby="contents-title"><div class="tools"><h2 id="contents-title" tabindex="-1">Contents</h2><label class="search">Find a topic <input type="search" id="query" placeholder="Model, tool or task…" autocomplete="off"></label></div>
+        <p id="matches" aria-live="polite"></p><div id="groups"></div>
+      </section>
+    </section>
+    <article id="chapter" hidden>
+      <div id="chapter-top"></div>
+      <header class="chapter-heading"><div class="eyebrow" id="group-name"></div><h1 id="chapter-title" tabindex="-1"></h1><p id="summary"></p><div class="review" id="review-date"></div></header>
+      <div id="body"></div>
+      <book-pager top="#chapter-top"></book-pager>
+    </article>
+    <p id="problem" role="alert" hidden></p>
+    <noscript>Turn on JavaScript to browse and search this edition.</noscript>
+  </main>
+</body>
+</html>
