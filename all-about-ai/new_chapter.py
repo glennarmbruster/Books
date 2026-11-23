@@ -18,7 +18,7 @@ def load(path):
 
 def templates(page_id, title, url, tags, day):
     sources = [['Official feature guide', url]]
-    setup = ('Paste this fictional case into a fresh chat, or work it out on paper. Read the two notes and answer the question below.\n\n'
+    setup = ('Practice desk log. Each note names an item and records whether its check is complete.\n\n'
              'Gate note: latch checked.\nLamp note: lamp still waiting for a check.\n\nWhich item has a recorded check? Give the item and its note.')
     intro = dict(what='Practice looking up one claim and checking the record behind it.',
                  features='Use the source link to find the feature and compare its controls with the practice task.',

@@ -11,7 +11,8 @@
         "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "auth-dns.txt",
@@ -25,7 +26,8 @@
         "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "auth-header.txt",
@@ -39,7 +41,8 @@
         "https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "change-card.txt",
@@ -53,7 +56,8 @@
         "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "entra-signins.csv",
@@ -67,7 +71,8 @@
         "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "file"
   },
   {
     "file": "hybrid-route.txt",
@@ -81,7 +86,8 @@
         "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-outboundconnector"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "identity-case-notes.txt",
@@ -95,7 +101,8 @@
         "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "intune-checkins.csv",
@@ -109,7 +116,8 @@
         "https://learn.microsoft.com/en-us/intune/device-security/compliance/monitor-policy"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "file"
   },
   {
     "file": "ndr-recipient.txt",
@@ -123,7 +131,8 @@
         "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "review-window.csv",
@@ -137,7 +146,8 @@
         "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "file"
   },
   {
     "file": "rule-retest.csv",
@@ -151,7 +161,8 @@
         "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "file"
   },
   {
     "file": "rule-snapshot.txt",
@@ -165,7 +176,8 @@
         "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   },
   {
     "file": "share-draft.txt",
@@ -179,7 +191,8 @@
         "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
       ]
     ],
-    "heading": "Fictional policy card and related Microsoft guidance"
+    "heading": "Fictional policy card and related Microsoft guidance",
+    "copyMode": "read"
   },
   {
     "file": "share-note.txt",
@@ -193,7 +206,8 @@
         "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
       ]
     ],
-    "heading": "Fictional policy card and related Microsoft guidance"
+    "heading": "Fictional policy card and related Microsoft guidance",
+    "copyMode": "read"
   },
   {
     "file": "share-policy.txt",
@@ -207,7 +221,8 @@
         "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
       ]
     ],
-    "heading": "Fictional policy card and related Microsoft guidance"
+    "heading": "Fictional policy card and related Microsoft guidance",
+    "copyMode": "read"
   },
   {
     "file": "trace-recipients.csv",
@@ -225,7 +240,8 @@
         "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "file"
   },
   {
     "file": "vendor-trial.txt",
@@ -239,7 +255,8 @@
         "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "first-prompt"
   },
   {
     "file": "Read-PolicyEvent.ps1",
@@ -253,7 +270,8 @@
         "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "file"
   },
   {
     "file": "Test-ReceiptWindow.ps1",
@@ -267,7 +285,8 @@
         "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "file"
   },
   {
     "file": "mail-case-index.txt",
@@ -285,6 +304,7 @@
         "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2"
       ]
     ],
-    "heading": "Example from Microsoft documentation, not tenant data"
+    "heading": "Example from Microsoft documentation, not tenant data",
+    "copyMode": "read"
   }
 ]

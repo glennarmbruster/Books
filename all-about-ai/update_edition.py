@@ -10,6 +10,7 @@ import subprocess
 import sys
 from xml.etree import ElementTree
 from urllib.parse import urlsplit
+from copy_rules import check_payload, page_boxes, case_payload
 from edition_trust import valid_basis, valid_source, hardcoded, PRODUCT_GROUPS, FIELD, chapter_field
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
@@ -126,6 +127,8 @@ require(len({r['prefix'] for r in case_rows}) == len(case_rows), 'Each practice 
 for row in case_rows:
     require(re.fullmatch(r'[A-Z]{2,4}',row['prefix']) and re.search(r'\b'+row['prefix']+r'\d+\b',(book/'practice/exchange-inventory/cases'/row['file']).read_text()), 'Check label prefix in '+row['file'])
     check_sources(row['sources'],row['file'])
+    body = case_payload(row,book/'practice/exchange-inventory/cases')
+    if body is not None: check_payload(body,row['file'])
 lab_count = 0
 guide_ids = set()
 reference_ids = set()
@@ -311,6 +314,8 @@ for group in groups:
             without_refs = re.sub(r'\{\{model\.[a-z0-9.-]+\}\}', '', line)
             require(not any(term.lower() in without_refs.lower() for term in fixed_fields), 'Move the model name or API ID into the catalog in '+group['file'])
             require(not re.search(r'\$\d+(?:\.\d+)?\s+(?:in|out)\b|(?:limit(?: is| of)?|up to|maximum|window of)\s+[0-9][0-9,]*\s+(?:million\s+)?(?:input |output )?tokens\b',without_refs,re.I), 'Use a catalog field for model limits or token rates in '+group['file'])
+    for page in rows:
+        for name, body in page_boxes(page): check_payload(body,page['id']+' / '+name)
     check_refs(rows)
 examples = json.loads((book / 'content/worked.json').read_text())
 require(len(examples) == len(ids - guide_ids) and {ex['id'] for ex in examples} == ids - guide_ids, 'Every reference and lab needs its own worked example')
@@ -327,6 +332,7 @@ for ex in examples:
     require(words([ex[k] for k in ('premise','before','try','after','why','rescue')]), 'Incomplete worked example '+ex['id'])
     key = ex['id']
     require(len(ex['before']) >= 100 and re.search(r'[?]|\b(?:list|read|return|count|give|match|paste|report)\b',ex['before'],re.I), 'Worked card needs data and an instruction in '+key)
+    check_payload(ex['before'],key+' / worked input')
     steps = ex['try'].splitlines()
     require(2 <= len(steps) <= 5 and all(line.startswith(f'{n}. ') and len(line)>12 for n,line in enumerate(steps,1)), 'Number the worked steps in '+key)
     require(re.fullmatch(r'First run: .+?\. Second run: .+?\. .+',ex['after']) and len(ex['after']) >= 40, 'Show the checked result of both runs in '+key)

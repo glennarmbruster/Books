@@ -139,7 +139,8 @@
     "basis": [
       "ai-drafted"
     ],
-    "lastVerified": "2026-11-22"
+    "lastVerified": "2026-11-22",
+    "copyHelp": "First attach the trace rows and the matching delivery failure from trace-recipients.csv and ndr-recipient.txt. Keep alias-check.txt closed until the retest."
   },
   {
     "id": "lab-troubleshoot-03",

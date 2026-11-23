@@ -164,7 +164,7 @@
       "Keep shared report columns in order.",
       "Give game saves one clear shape."
     ],
-    "prompt": "Read AGENTS.md. Make findings.json for A1 open and A2 closed. Write only the two fields the rules ask for. Open the file so we can read it.",
+    "prompt": "Read AGENTS.md. Make findings.json for A1 open and A2 closed. Write only the two fields the rules ask for. Display the resulting JSON.",
     "steps": [
       {
         "title": "Set up the practice file",
@@ -1027,7 +1027,8 @@
         "title": "Give the app its own folder",
         "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
         "help": "If an old project is open, choose the new empty folder before sending the request.",
-        "code": "Start has Pier and Hill. Pier ends at a boat. Hill ends at a bell."
+        "code": "Start has Pier and Hill. Pier ends at a boat. Hill ends at a bell.",
+        "caption": "Sample rules and inputs"
       },
       {
         "title": "Make the first version",
@@ -1231,7 +1232,8 @@
         "title": "Give the app its own folder",
         "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
         "help": "If an old project is open, choose the new empty folder before sending the request.",
-        "code": "Open 09:00–10:00. Busy 09:10–09:25 and 09:25–09:40."
+        "code": "Opening hours: 09:00–10:00\nBusy: 09:10–09:25\nBusy: 09:25–09:40",
+        "caption": "Meeting calendar"
       },
       {
         "title": "Make the first version",

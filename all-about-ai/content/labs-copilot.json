@@ -123,7 +123,8 @@
         "title": "Start with the sample",
         "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
-        "code": "Build 12. A display bug affects iPad only. Fix rolls out Tuesday 14:00 UTC. Restart the app after rollout. Windows needs no action."
+        "code": "Build 12. A display bug affects iPad only. Fix rolls out Tuesday 14:00 UTC. Restart the app after rollout. Windows needs no action.",
+        "caption": "Sample rules and inputs"
       },
       {
         "title": "Run the request",
@@ -852,7 +853,8 @@
         "title": "Start with the sample",
         "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
-        "code": "Paste Team and Points as headings. Data: Blue 3, Gold 4, Blue -1."
+        "code": "Team\tPoints\nBlue\t3\nGold\t4\nBlue\t-1",
+        "caption": "Two columns for the workbook"
       },
       {
         "title": "Make the sheet",
@@ -1009,7 +1011,8 @@
         "title": "Start with the sample",
         "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
-        "code": "Start with 30 minutes. Welcome 5, demo 12, questions 8."
+        "code": "Budget (minutes): 30\nWelcome: 5\nDemo: 12\nQuestions: 8",
+        "caption": "Agenda in minutes"
       },
       {
         "title": "Make the sheet",
@@ -1442,7 +1445,8 @@
         "title": "Start with the sample",
         "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
-        "code": "Start with 10 tokens. Round 1 map 3 or clue 1. Round 2 bridge 5 or raft 2. Round 3 lantern 4 or torch 1."
+        "code": "Budget: 10\nRound 1: map 3, clue 1\nRound 2: bridge 5, raft 2\nRound 3: lantern 4, torch 1",
+        "caption": "Choices and token prices"
       },
       {
         "title": "Run the request",

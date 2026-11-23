@@ -282,7 +282,7 @@ function workedExample(example) {
   for (const [label,value] of [['Start with this',example.before],['Try this',example.try],['Look for this result',example.after]]) {
     const step = element('li');
     step.append(element('h3',label));
-    if (label === 'Start with this') step.append(snippet(value,'practice card'));
+    if (label === 'Start with this') step.append(snippet(value,'practice card',example.caption || 'Message for the tool'));
     else if (label === 'Try this') {
       const instructions = element('ol');
       for (const line of value.split(/\n(?=\d+\. )/)) instructions.append(element('li',line.replace(/^\d+\. /,'')));

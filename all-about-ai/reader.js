@@ -270,7 +270,7 @@ function isComplete(id) {
   catch { return false; }
 }
 
-function snippet(value, label) {
+function snippet(value, label, caption) {
   const block = element('div', undefined, 'lab-snippet');
   const pre = element('pre', value);
   const button = element('button', 'Copy ' + label, 'copy-lab');
@@ -288,7 +288,11 @@ function snippet(value, label) {
       button.textContent = 'Text selected · copy using your device';
     }
   };
-  block.append(pre, button);
+  const purpose = caption || ({
+    'starter file':'Starter file contents', 'practice file':'Practice file contents',
+    'example':'Sample input or code', 'follow-up':'Follow-up message for the tool'
+  }[label] || 'Message for the tool');
+  block.append(element('p',purpose,'copy-caption'), pre, button);
   return block;
 }
 
@@ -362,7 +366,17 @@ function labBody(lab) {
           if (!response.ok) throw Error('Missing practice file');
           text = await response.text();
         }
-        details.append(snippet(text, 'practice file'));
+        const guideCard = caseGuide.get(file);
+        if (guideCard?.copyMode === 'first-prompt') {
+          const match = text.match(/(?:^|\n)BEGIN\r?\n([\s\S]*?)\r?\nEND(?:\r?\n|$)/);
+          if (!match) throw Error('Missing trial prompt');
+          details.append(snippet(match[1], 'prompt', 'First trial message'));
+          const full = element('details');
+          full.append(element('summary','Read the scoring key and retest evidence'),element('pre',text.slice(match.index+match[0].length).trim()));
+          details.append(full);
+        } else if (guideCard?.copyMode === 'read') {
+          details.append(element('p','Read this case locally.'),element('pre',text));
+        } else details.append(snippet(text,'practice file'));
         const guide = caseGuide.get(file);
         if (guide) details.append(element('h3',guide.heading),element('p',guide.title),element('pre',guide.sample),element('p',guide.note),sourceLinks(guide.sources));
       } catch {
@@ -374,13 +388,13 @@ function labBody(lab) {
     about.append(details);
   }
   const prompt = element('section',undefined,'section');
-  prompt.append(element('h2','Your prompt'),element('p',lab.comparison ? 'In a fresh session, paste just this prompt.' : 'Prepare the sample in the walkthrough, then paste this prompt when instructed.'),snippet(lab.prompt,'prompt'));
+  prompt.append(element('h2','Your prompt'),element('p',lab.copyHelp || (lab.comparison ? 'In a new session, paste just this prompt.' : 'Prepare the sample in the walkthrough, then use this request.')),snippet(lab.prompt,'prompt'));
   const instructions = element('section',undefined,'section');
   const list = element('ol',undefined,'lab-steps');
   for (const step of lab.steps) {
     const item = element('li');
     item.append(element('h3',step.title),element('p',step.text));
-    if (step.code) item.append(snippet(step.code,'example'));
+    if (step.code) item.append(snippet(step.code,'example',step.caption));
     const help = element('details',undefined,'step-help');
     help.append(element('summary','Help with this step'),element('p',step.help));
     item.append(help);

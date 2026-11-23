@@ -104,11 +104,11 @@
       "Read a warning rule in a sheet.",
       "Test a game score limit."
     ],
-    "prompt": "Save the sample as quota.py. Predict the label for 79, 80 and 81. Run it with Python and show the three answers. Point to the piece of code that decides what happens at 80. Keep the original rule.",
+    "prompt": "The sample file is quota.py. Predict the label for 79, 80 and 81. Run it with Python and show the three answers. Point to the piece of code that decides what happens at 80. Keep the original rule.",
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation. Name the practice file quota.py.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "def label(percent):\n    return \"watch\" if percent >= 80 else \"normal\"\n\nfor value in (79, 80, 81):\n    print(value, label(value))"
       },
@@ -273,11 +273,11 @@
       "Fix a group list.",
       "Keep extra spaces out of a game lookup."
     ],
-    "prompt": "Save the starter as candidate.py. Create tests from the rule: ignore case and outside spaces, skip blank IDs, return each clean ID once in order. Run the broken version. Fix only the cleanup and run the tests again.",
+    "prompt": "The starter file is candidate.py. Create tests from the rule: ignore case and outside spaces, skip blank IDs, return each clean ID once in order. Run the broken version. Fix only the cleanup and run the tests again.",
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation. Name the practice file candidate.py.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "def unique(ids):\n    return sorted({v.lower() for v in ids if v})\n\nsample = [\" A1 \", \"a1\", \"\", \" \"]"
       },
@@ -395,7 +395,8 @@
         "title": "Start a practice session",
         "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
-        "code": "Start 0. Add 12. Add -5. Reload the page. Submit a blank field."
+        "code": "Opening score: 0\nFirst change: +12\nSecond change: -5\nAfter reload: blank submission",
+        "caption": "Score changes and reload test"
       },
       {
         "title": "Ask for a working result",
@@ -679,7 +680,8 @@
         "title": "Start a practice session",
         "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
-        "code": "Create T9: store S1, then throw timeout.\nLookup T9: one match S1.\nCreate call counter begins at zero."
+        "code": "Create T9: store S1, then throw timeout.\nLookup T9: one match S1.\nCreate call counter begins at zero.",
+        "caption": "Sample rules and inputs"
       },
       {
         "title": "Ask for a working result",
@@ -915,7 +917,8 @@
         "title": "Start a practice session",
         "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
-        "code": "Start 0. Count button adds 2. Reset returns to 0."
+        "code": "Start 0. Count button adds 2. Reset returns to 0.",
+        "caption": "Sample rules and inputs"
       },
       {
         "title": "Ask for a working result",
@@ -1221,7 +1224,8 @@
         "title": "Start a practice session",
         "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
-        "code": "Start at 0 for both. Blue rolls 4, Gold 3, Blue 6. Target 10."
+        "code": "Start at 0 for both. Blue rolls 4, Gold 3, Blue 6. Target 10.",
+        "caption": "Sample rules and inputs"
       },
       {
         "title": "Ask for a working result",
@@ -1379,7 +1383,8 @@
         "title": "Start a practice session",
         "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
-        "code": "Start CAT, goal DOG. Allowed: CAT, COT, COG, DOG. Try CAT → COT → COG → DOG."
+        "code": "Start CAT, goal DOG. Allowed: CAT, COT, COG, DOG. Try CAT → COT → COG → DOG.",
+        "caption": "Sample rules and inputs"
       },
       {
         "title": "Ask for a working result",

@@ -207,7 +207,7 @@
       "Sort a team's list of wait times.",
       "Sort game scores and keep tied players."
     ],
-    "prompt": "Create sort.html with a Sort button. Start with the three text values 10, 2 and 0. On click, show what JavaScript sort() returns with no extra rule. Leave this first version as it is until I test it.",
+    "prompt": "Create sort.html with a Sort button. Start with the three text values 10, 2 and 0. On click, show what JavaScript sort() returns with no extra rule. Leave this first version as it is until I test it. Provide an editable input so I can repeat the sort with different numbers.",
     "steps": [
       {
         "title": "Open the practice folder",

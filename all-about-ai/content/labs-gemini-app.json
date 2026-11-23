@@ -120,9 +120,10 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Draw three circles in a row. Label the outer circles as shown in Labels to say aloud. Describe the drawing to Gemini Live.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Draw three circles on paper. Mark the left one A and the right one C. Leave the middle one empty."
+        "code": "Left circle: A\nMiddle circle: empty\nRight circle: C",
+        "caption": "Labels to say aloud"
       },
       {
         "title": "Try the task",
@@ -222,7 +223,8 @@
         "title": "Set up the sample",
         "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Make a new page with a score of zero, a button called Score, and a Reset button."
+        "code": "Make a new page with a score of zero, a button called Score, and a Reset button.",
+        "caption": "Sample rules and inputs"
       },
       {
         "title": "Try the task",
@@ -900,7 +902,8 @@
         "title": "Set up the sample",
         "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Use a pretend object: a cup. Its clues are hollow, holds water, sits on a table."
+        "code": "Mystery object: cup\nClues: hollow, holds water, sits on a table",
+        "caption": "Object and clues for Live"
       },
       {
         "title": "Try the task",
@@ -1102,7 +1105,8 @@
         "title": "Set up the sample",
         "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Start in a cave with two doors. Blue leads to a lake. Gold leads to a library."
+        "code": "Start: cave\nBlue door: lake\nGold door: library",
+        "caption": "Story map"
       },
       {
         "title": "Try the task",
@@ -1511,7 +1515,8 @@
         "title": "Set up the sample",
         "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Paste these pretend rows: A,shared; B,room; C,shared; D,unknown."
+        "code": "A,shared\nB,room\nC,shared\nD,unknown",
+        "caption": "Mailbox rows to enter"
       },
       {
         "title": "Try the task",

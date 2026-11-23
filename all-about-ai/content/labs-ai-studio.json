@@ -110,7 +110,7 @@
       "Send file questions to the right team.",
       "Sort feedback for a small app."
     ],
-    "prompt": "Use MAIL for a bounced letter and FILES for a document that will not open. Use BOTH when both things happen. Use UNKNOWN for just please help. Label four slips in order: A mail came back, B document does not load, C please help, D mail returned and document fails. Give just the ID and tray for each.",
+    "prompt": "Use MAIL for a bounced letter and FILES for a document that will not open. Use BOTH when both things happen. Use UNKNOWN for just please help. Label four slips in order: A mail came back, B document does not load, C please help, D mail returned and document fails. Give just the ID and tray for each. Give UNKNOWN to every slip that mentions neither mail nor files.",
     "steps": [
       {
         "title": "Open a fresh chat",
