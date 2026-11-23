@@ -2797,5 +2797,14 @@
     "after": "The sum is 5. Three counts are known and one is blank.",
     "why": "A missing row in the uploaded copy cannot be recovered from a calculated total. Check the row count against your input.",
     "rescue": "Ask for a row-by-row readback and check that zero was included."
+  },
+  {
+    "id": "reference-job-picker",
+    "premise": "Pick a tool for a small job.",
+    "before": "A workbook needs a formula fixed in place. A second request asks for a script that checks the workbook every week.",
+    "try": "Compare the spreadsheet and code rows. For each, name the file you expect to change.",
+    "after": "The first job belongs with the workbook. The second has a script and tests in a project.",
+    "why": "The home of the final object helps decide which surface to open.",
+    "rescue": "If an account lacks the feature, copy a fictional sample and test another route."
   }
 ]

@@ -1,0 +1,553 @@
+[
+  {
+    "id": "reference-job-picker",
+    "title": "Which tool for which job",
+    "summary": "Start with the task, the home of the data and a check you can perform.",
+    "tags": [
+      "decision",
+      "jobs",
+      "claude",
+      "gemini",
+      "chatgpt",
+      "copilot",
+      "devin",
+      "m365"
+    ],
+    "firstGuide": "which-account",
+    "intro": {
+      "what": "Start with the task, the home of the data and a check you can perform.",
+      "features": "Nine job tables compare five tools. The entries are editorial suggestions, not benchmark scores.",
+      "exchange": "Test a proposed mail fix against a read-only result.",
+      "m365": "Start in the app that owns the approved work file.",
+      "developer": "Choose a coding workspace when the result belongs in a repository.",
+      "sources": [
+        [
+          "Get started with Claude",
+          "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+        ],
+        [
+          "Use Gemini Apps - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/13275745?hl=en"
+        ],
+        [
+          "ChatGPT capabilities overview",
+          "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+        ],
+        [
+          "How Copilot Chat works in Microsoft 365 apps",
+          "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+        ],
+        [
+          "When to Use Devin - Devin Docs",
+          "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Writing",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Use Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ],
+          [
+            "ChatGPT capabilities overview",
+            "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+          ],
+          [
+            "How Copilot Chat works in Microsoft 365 apps",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Draft a handoff and shorten it in chat."
+            ],
+            [
+              "Gemini",
+              "Revise a rough note in chat."
+            ],
+            [
+              "ChatGPT",
+              "Ask for two rewrites and compare the meaning."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Draft beside the work document when the app and account support it."
+            ],
+            [
+              "Devin",
+              "Choose for repository documentation that must match a code change."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Research with sources",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Enable and use web search",
+            "https://support.claude.com/en/articles/10684626-enable-and-use-web-search"
+          ],
+          [
+            "Use Deep Research in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/15719111?hl=en"
+          ],
+          [
+            "Deep research in ChatGPT",
+            "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"
+          ],
+          [
+            "How Copilot Chat works with and without a Microsoft Copilot license",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Turn on web search and open the cited page."
+            ],
+            [
+              "Gemini",
+              "Use Deep Research for a brief and check the linked evidence."
+            ],
+            [
+              "ChatGPT",
+              "Request a sourced Deep Research report and open its citations."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Use the approved work or web scope, then open the source."
+            ],
+            [
+              "Devin",
+              "Best fit when the question is about a repository. Request file and line evidence."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Spreadsheets",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Upload files to Claude",
+            "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+          ],
+          [
+            "Attach & analyze files in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/14903178?hl=en"
+          ],
+          [
+            "Data analysis with ChatGPT",
+            "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt"
+          ],
+          [
+            "Frequently asked questions about Copilot in Excel",
+            "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Upload a supported sheet and check a known total."
+            ],
+            [
+              "Gemini",
+              "Attach the sheet and ask for missing cells and a control total."
+            ],
+            [
+              "ChatGPT",
+              "Use data analysis on a copy. Ask how blank cells were counted."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Choose Excel when the workbook itself needs an edit. Check supported file settings."
+            ],
+            [
+              "Devin",
+              "Choose when a repeatable importer or spreadsheet test belongs in code."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Code",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Agent Capabilities Overview",
+            "https://antigravity.google/docs/agent/"
+          ],
+          [
+            "Using Codex with your ChatGPT plan",
+            "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+          ],
+          [
+            "How Copilot Chat works in Microsoft 365 apps",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Use Claude Code for a file change with a diff."
+            ],
+            [
+              "Gemini",
+              "Use Antigravity when you need an agent working in a project."
+            ],
+            [
+              "ChatGPT",
+              "Use Codex for a repository change and runnable checks."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Use M365 Copilot Chat to explain a pasted sample. GitHub Copilot is a separate product."
+            ],
+            [
+              "Devin",
+              "Give a scoped repository task with a failing test and review the result."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "M365 admin help",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Use Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ],
+          [
+            "ChatGPT capabilities overview",
+            "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+          ],
+          [
+            "How Copilot Chat works with and without a Microsoft Copilot license",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Ask about a stripped-down trace. Require row evidence."
+            ],
+            [
+              "Gemini",
+              "Compare two possible causes from a fictional log."
+            ],
+            [
+              "ChatGPT",
+              "Draft a read-only test from a supplied sample."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Use approved work context to find a runbook. Verify commands in Microsoft Learn."
+            ],
+            [
+              "Devin",
+              "Choose for maintaining a tested reporting script in a practice repository."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Long documents",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "How can I create and manage projects?",
+            "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+          ],
+          [
+            "Use chat in Gemini Notebook - Gemini Notebook Help",
+            "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ],
+          [
+            "ChatGPT capabilities overview",
+            "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+          ],
+          [
+            "How Copilot Chat works in Microsoft 365 apps",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Use Projects for recurring source files and instructions."
+            ],
+            [
+              "Gemini",
+              "Use Notebook to cite a selected passage."
+            ],
+            [
+              "ChatGPT",
+              "Attach the document, ask for page evidence and verify the quotation."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Work in a supported app with an accessible document. Check the original paragraph."
+            ],
+            [
+              "Devin",
+              "Choose for technical documents tied to code. Verify each path."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Images",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Can Claude produce images?",
+            "https://support.claude.com/en/articles/9002504-can-claude-produce-images"
+          ],
+          [
+            "Generate & edit images with Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/14286560?hl=en"
+          ],
+          [
+            "ChatGPT capabilities overview",
+            "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+          ],
+          [
+            "How Copilot Chat works with and without a Microsoft Copilot license",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Choose for image analysis or editable diagrams. See the image guide for output types."
+            ],
+            [
+              "Gemini",
+              "Choose image generation for a draft illustration. Check labels by eye."
+            ],
+            [
+              "ChatGPT",
+              "Use image tools to generate or edit an illustration."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Use an eligible image creation experience. Check the account’s available tools."
+            ],
+            [
+              "Devin",
+              "Choose for putting existing artwork into an app and testing its layout."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Scheduled work",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Manage your tasks & workflows in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/17094507?hl=en"
+          ],
+          [
+            "Scheduled tasks in ChatGPT",
+            "https://help.openai.com/en/articles/10291617-tasks-in-chatgpt"
+          ],
+          [
+            "How Copilot Chat works with and without a Microsoft Copilot license",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-with-and-without-a-microsoft-365-copilot-license"
+          ],
+          [
+            "Scheduled Sessions - Devin Docs",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Use a paid recurring task for a routine brief."
+            ],
+            [
+              "Gemini",
+              "Check Tasks eligibility for the account and region before scheduling."
+            ],
+            [
+              "ChatGPT",
+              "Use Tasks for a recurring prompt. Check the next scheduled run."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Check the schedule feature in the work account and confirm licensing first."
+            ],
+            [
+              "Devin",
+              "Use a scheduled session for repeatable repository work."
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Working inside Microsoft 365",
+        "paragraphs": [
+          "Use the table to choose a starting point. Confirm the result in the place where the work belongs."
+        ],
+        "sources": [
+          [
+            "Use connectors to extend Claude's capabilities",
+            "https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities"
+          ],
+          [
+            "Use & manage Connected Apps in Gemini - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13695044?hl=en"
+          ],
+          [
+            "ChatGPT capabilities overview",
+            "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+          ],
+          [
+            "How Copilot Chat works in Microsoft 365 apps",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ]
+        ],
+        "table": {
+          "columns": [
+            "Tool",
+            "When to choose it"
+          ],
+          "rows": [
+            [
+              "Claude",
+              "Check for an approved connector to the required service."
+            ],
+            [
+              "Gemini",
+              "Check Connected Apps for the exact service. An uploaded copy is a separate input."
+            ],
+            [
+              "ChatGPT",
+              "Use a permitted attachment when the source document can be shared."
+            ],
+            [
+              "Microsoft 365 Copilot",
+              "Start in the Microsoft 365 app that holds the item. Check account, permission and license."
+            ],
+            [
+              "Devin",
+              "Use a practice repo for a helper. Check the result in the M365 app separately."
+            ]
+          ]
+        }
+      }
+    ]
+  }
+]
