@@ -75,3 +75,5 @@ tbody th{font-weight:650}tbody tr:nth-child(even){background:#f1eee1}
 .lab-steps h3{margin:.15rem 0;font-size:1.35rem}.lab-steps p{margin:.5rem 0}.step-help summary,.result-check summary{color:var(--teal);cursor:pointer;min-height:44px;align-content:center;font-weight:650}
 .step-help[open]{border-left:3px solid #ad8746;padding-left:.7rem}.complete-lab{display:flex;align-items:center;gap:.6rem;cursor:pointer;width:fit-content;min-height:44px;font-weight:650}.complete-lab input{min-height:0;width:1.2rem;height:1.2rem;accent-color:var(--teal)}
 @media(max-width:520px){.bar>div{gap:.7rem;flex-wrap:wrap}.bar>div #offline{font-size:.72rem}.bar a{font-size:.9rem}}
+
+.app-preview{display:block;width:100%;height:24rem;border:1px solid var(--line);border-radius:.4rem;margin:.7rem 0;background:#fff9e9}

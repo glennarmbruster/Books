@@ -1,38 +1,43 @@
 [
   {
     "id": "lab-copilot-01",
-    "title": "Read a maintenance notice without filling the gaps",
-    "summary": "Build a first Copilot Chat prompt that extracts evidence and leaves missing details open.",
+    "title": "Read a notice and spot what is missing",
+    "summary": "A mail notice tells you when search will be fixed. Who owns the work?",
     "level": "Starter",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
-    "features": "Work chat and source-grounded extraction",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "A part of a service can be under repair while another part still works.",
     "roles": [
-      "Read a mail maintenance notice.",
-      "Check the scope of a service announcement.",
-      "Turn a release brief into a checklist."
+      "Read a mail repair notice.",
+      "Check a service announcement.",
+      "Describe which part of an app will change."
     ],
-    "prompt": "Using only the notice above, give me a table of affected service, start, end, time zone and owner. For each value quote the supporting words. Use “unspecified” when the notice is silent.",
+    "prompt": "Use only this notice. Make a table with service, start, end, time zone and owner. Put the source words beside each answer. Write unspecified for a fact that is missing.",
     "steps": [
       {
-        "title": "Supply one short source",
-        "text": "Start a fresh work chat and paste this entire fictional notice. Keep the identifier so you can tell which version the answer used.",
-        "help": "If chat starts to summarize immediately, send the lab prompt as your next message in the same conversation.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Notice A. Mail search maintenance, Saturday 09:00–09:30 UTC. Message delivery will continue."
       },
       {
-        "title": "Extract the fields",
-        "text": "Paste the prompt. Compare every returned value against the single sentence that supports it.",
-        "help": "The affected function is mail search. If the answer says all mail is down, ask which sentence supports that claim."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Change one fact",
-        "text": "Send a revised Notice B with the words “Owner: Taylor” appended. Request an updated table for B only.",
-        "help": "Only the owner and document reference should change. An invented owner for A means the evidence test failed."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Notice A gives a 30-minute window, 09:00 to 09:30 UTC. Its owner is unspecified.",
+        "help": "Put your finger on the start and end times in the notice. Read the sentence about delivery. Search the same notice for any owner before accepting that cell."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add “Owner: Support Desk” and call it Notice B. Ask for a fresh table.",
+        "help": "If the table says all mail stops, point to “Message delivery will continue” and ask for a correction."
       }
     ],
     "check": [
-      "A has a 30-minute UTC window and an unspecified owner.",
-      "B names Taylor. Neither notice describes a delivery outage."
+      "Notice A gives a 30-minute window, 09:00 to 09:30 UTC. Its owner is unspecified.",
+      "B names Support Desk. Both notices say delivery will continue."
     ],
     "sources": [
       [
@@ -43,38 +48,43 @@
   },
   {
     "id": "lab-copilot-02",
-    "title": "Find the last confirmed instruction in a mail thread",
-    "summary": "Use the chronology of a conversation to distinguish a requested date from a confirmed one.",
+    "title": "Separate a plan from a firm date",
+    "summary": "Three messages mention two days. One is booked and one is only an idea.",
     "level": "Starter",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Paste the mock thread directly; no email account action is needed.",
-    "features": "Outlook-style thread summaries and drafting",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Someone saying they will check a date has not yet said yes to it.",
     "roles": [
-      "Confirm a mailbox move window.",
-      "Reconstruct a rollout approval.",
-      "Draft an accurate beta invitation."
+      "Find a confirmed mail change window.",
+      "Track a meeting decision.",
+      "Keep proposed game nights off the final schedule."
     ],
-    "prompt": "Return three lines: last confirmed date, latest proposal, and person who still needs to respond. Cite the message numbers. Draft a one-sentence follow-up for the pending decision.",
+    "prompt": "List the booked date, proposed date and who owes a reply. Support each answer with a message number. Draft a short question for the approver.",
     "steps": [
       {
-        "title": "Create the thread",
-        "text": "Paste these three messages together. The message numbers stand in for the links that Outlook can supply in a real thread.",
-        "help": "Keep the sender on each line. A proposal from an organizer and confirmation from an approver are different events.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "M1 Approver: Tuesday is booked.\nM2 Organizer: Could we use Wednesday instead?\nM3 Approver: I will check."
       },
       {
-        "title": "Check the status",
-        "text": "Send the prompt and inspect the evidence. Reading M3 in isolation leaves the prior confirmed date invisible.",
-        "help": "Tuesday comes from M1. If Wednesday is shown as confirmed, ask which message explicitly accepts it."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Close the loop",
-        "text": "Append “M4 Approver: Wednesday is now booked. Cancel Tuesday.” Ask for the same three lines.",
-        "help": "Wednesday now has explicit support. The pending responder should disappear. Use the draft as text only."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Tuesday is booked in M1. Wednesday is a request in M2. The approver still owes an answer after M3.",
+        "help": "Mark booked with a check and could with a question mark. Ask whether the last message resolves the question or simply promises a reply."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add “M4 Approver: Wednesday is now booked. Cancel Tuesday.” Ask for the list again.",
+        "help": "If Wednesday appears as booked too soon, ask what word in M3 confirms it. Then read M1 again."
       }
     ],
     "check": [
-      "Before M4, Tuesday is confirmed and Wednesday is pending with the approver.",
-      "After M4, Wednesday is confirmed and Tuesday is canceled."
+      "Tuesday is booked in M1. Wednesday is a request in M2. The approver still owes an answer after M3.",
+      "Wednesday is now booked. Tuesday is canceled. M4 is the key message."
     ],
     "sources": [
       [
@@ -89,38 +99,43 @@
   },
   {
     "id": "lab-copilot-03",
-    "title": "Write a release note for two audiences",
-    "summary": "Use Word or chat to retell the same change without quietly widening its scope.",
+    "title": "Write a short note for two readers",
+    "summary": "Users need to know what to do. The help desk needs the same facts in a form it can scan.",
     "level": "Starter",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optionally paste the fixture into an unsent Word document and use its Copilot pane.",
-    "features": "Word drafting and audience adaptation",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Different readers can need different words without changing any facts.",
     "roles": [
-      "Write user-facing mail maintenance notices.",
-      "Translate technical changes into a help-desk note.",
-      "Announce one platform-specific fix."
+      "Explain a mail app update.",
+      "Prepare a help desk handout.",
+      "Write a release note for players."
     ],
-    "prompt": "Write a 35-word user notice and a three-bullet help-desk note. Preserve platforms, time zone and required action. Mark unanswered questions explicitly. Use only the release note above.",
+    "prompt": "Use the one release note. Write a 35-word notice for users and three bullets for the desk. Keep the affected device, time and action. Mark any question the note leaves open.",
     "steps": [
       {
-        "title": "Give the editor precise facts",
-        "text": "Enter the release note below into a blank document or a new chat.",
-        "help": "If Word editing is unavailable, paste the same text into ordinary Copilot Chat and request draft text.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Build 12. A display bug affects iPad only. Fix rolls out Tuesday 14:00 UTC. Restart the app after rollout. Windows needs no action."
       },
       {
-        "title": "Read both versions",
-        "text": "Send the prompt. Highlight any statement about Android, downtime or a local time zone. The source says nothing about these.",
-        "help": "Ask for a revision preserving “iPad only” if the shortened notice says that all users must restart."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Handle a missing date",
-        "text": "Replace the rollout sentence with “Rollout time pending.” Repeat the prompt and compare both versions.",
-        "help": "The old timestamp should disappear in both drafts. Look for the stale time in headings as well as body text."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Both versions say iPad, Tuesday at 14:00 UTC and restart after the update. Windows needs no action.",
+        "help": "Underline the device, time and action in the release note. Find each of those facts in the user notice and again in the desk bullets."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Replace the rollout time with “Rollout time pending.” Make both notes again.",
+        "help": "If the draft gives an Android step, point to the two devices the note names. Ask it to drop extra guesses."
       }
     ],
     "check": [
-      "Both first drafts limit the restart to iPad and preserve 14:00 UTC.",
-      "Neither revised draft invents a new rollout time."
+      "Both versions say iPad, Tuesday at 14:00 UTC and restart after the update. Windows needs no action.",
+      "Both now say the time is pending. Neither gives a new time."
     ],
     "sources": [
       [
@@ -135,38 +150,43 @@
   },
   {
     "id": "lab-copilot-04",
-    "title": "Recover a decision from a partial meeting transcript",
-    "summary": "Practice attributing decisions when the available transcript covers only part of a meeting.",
+    "title": "Read the parts of a meeting you have",
+    "summary": "A chat starts before the meeting record. Find the decision that someone actually made.",
     "level": "Intermediate",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. The supplied transcript substitutes for a licensed Teams recap.",
-    "features": "Teams transcript scope, evidence and decision logs",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "A missing line can change what you can say. Someone asking for nightly exports is not giving approval.",
     "roles": [
-      "Verify an incident handoff.",
-      "Separate a Teams decision from a chat proposal.",
-      "Identify open design decisions."
+      "Check a mail duty handoff.",
+      "Gather meeting decisions in Teams.",
+      "Turn game club notes into a task list."
     ],
-    "prompt": "Produce a decision log with evidence IDs, owner and deadline. List unresolved proposals separately. Use “unknown” for anything outside the provided record. Do not assume silence means approval.",
+    "prompt": "Make a short list of approved decisions. Add a source ID, owner and due date if known. Put ideas still waiting for a yes on another line.",
     "steps": [
       {
-        "title": "Assemble the event record",
-        "text": "Paste this combined chat and transcript. The transcript begins ten minutes after the meeting starts.",
-        "help": "Preserve the source type. A chat message before transcription began can still be evidence of what its writer proposed.",
-        "code": "09:03 chat C1 Lee: Could exports run nightly?\n09:10 transcript begins\n09:12 T1 Kim: I approve weekly exports.\n09:13 T2 Lee: I will own the export job."
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "09:03 chat C1 Recorder: Could exports run nightly?\n09:10 transcript begins\n09:12 T1 Approver: I approve weekly exports.\n09:13 T2 Recorder: I will own the export job."
       },
       {
-        "title": "Check the decision log",
-        "text": "Send the prompt. Compare the decision with T1 and the owner with T2. Note the missing deadline.",
-        "help": "If Copilot claims nightly exports were rejected by vote, ask for the vote text. This record supports approval of weekly exports."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Remove the approval",
-        "text": "Delete T1 and rerun in a new chat with the shortened record. In Teams, this resembles a gap in the available speech evidence.",
-        "help": "The remaining evidence supports a proposal and an owner, while the approved frequency is unknown."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Weekly exports were approved in T1. The Recorder takes the job in T2. No due date appears.",
+        "help": "Put T1 beside the decision and T2 beside the owner. Cover T1 with paper. Ask which claim has now lost its support."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Remove T1. Start a fresh chat with just the remaining lines and repeat the request.",
+        "help": "If the answer calls nightly a decision, ask which line says yes to it."
       }
     ],
     "check": [
-      "Initial approval is weekly, assigned to Lee, with no date.",
-      "Without T1, no approved frequency can be established."
+      "Weekly exports were approved in T1. The Recorder takes the job in T2. No due date appears.",
+      "The owner is still visible. There is no longer proof of an approved schedule."
     ],
     "sources": [
       [
@@ -181,38 +201,43 @@
   },
   {
     "id": "lab-copilot-05",
-    "title": "Reconcile license assignments without counting people twice",
-    "summary": "Use Excel or Copilot Chat to distinguish assignment rows from the people represented in them.",
+    "title": "Count seats without counting a person twice",
+    "summary": "One sample account has two plans. A row can also be a repeat.",
     "level": "Intermediate",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optional Excel workbook for a formula or PivotTable.",
-    "features": "Excel tables, distinct counts and reconciliation",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Counting tickets and counting guests are different jobs. One guest can hold two tickets.",
     "roles": [
-      "Count distinct mail users in a report.",
-      "Measure unique license coverage.",
-      "Reconcile subscriptions in a small app."
+      "Count distinct mailbox owners.",
+      "Check practice license assignments.",
+      "Count players and rounds separately."
     ],
-    "prompt": "From the supplied CSV, report assignment rows, distinct person-and-plan pairs, and distinct people. Explain your duplicate rule. Return the person list behind the last total.",
+    "prompt": "Count rows, different person-and-plan pairs and different people. List the pairs and people you counted. Keep rows with a missing user separate when counting people.",
     "steps": [
       {
-        "title": "Supply four assignments",
-        "text": "Paste the CSV into chat or enter it in three Excel columns. Ask how the row ID differs from a person ID.",
-        "help": "Keep A and B for the first person. Those are two plans owned by the same person.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Row,Person,Plan\n1,u1,A\n2,u1,B\n3,u2,A\n4,u2,A"
       },
       {
-        "title": "Reconcile three totals",
-        "text": "Send the prompt. In Excel ask to see the source range and distinct list. In chat ask for the intermediate pairs as a table.",
-        "help": "The unique pairs are u1/A, u1/B and u2/A. Seeing only two pairs usually means the method dropped Plan."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Introduce an incomplete row",
-        "text": "Append “5,,B”. Ask it to count the new row, flag the missing person, and exclude unidentified people and pairs from distinct totals.",
-        "help": "If the count of people rises to three, inspect the distinct list for a blank entry and restate the exclusion."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Four rows give three pairs and two people, u1 and u2.",
+        "help": "Write out u1+A, u1+B and u2+A. Mark the second u2+A as already seen. Compare that list with the four raw rows."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add a fifth row with an empty person field and plan B. Ask for the same counts and a list of rows to check.",
+        "help": "If u2 appears twice in the people count, cross its second appearance off a paper list."
       }
     ],
     "check": [
-      "Four rows, three unique pairs, two people before the change.",
-      "After the change there are five rows, one exception and still two identifiable people."
+      "Four rows give three pairs and two people, u1 and u2.",
+      "Five rows remain. One needs a person. The known totals stay at three pairs and two people."
     ],
     "sources": [
       [
@@ -227,38 +252,43 @@
   },
   {
     "id": "lab-copilot-06",
-    "title": "Build a slide whose headline survives the math",
-    "summary": "Make a one-slide pilot report with a traceable denominator for each percentage.",
+    "title": "Write a slide title the numbers support",
+    "summary": "A poll went to twelve sites. Nine replied and six said yes. Which share can you claim?",
     "level": "Intermediate",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. PowerPoint with Copilot can render the slide. Ordinary chat can provide the slide text and speaker notes.",
-    "features": "Word-to-PowerPoint drafting and data verification",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "The bottom number of a fraction tells you which group your sentence is about.",
     "roles": [
-      "Summarize a mailbox pilot.",
-      "Brief a steering group on adoption.",
-      "Share a beta survey with testers."
+      "Report how many mail tests passed.",
+      "Explain a pilot poll.",
+      "Share player feedback fairly."
     ],
-    "prompt": "Produce a one-slide draft with a headline, two labeled fractions, and a speaker note about nonresponse. Cite the source label Pilot A. Count support among respondents and among all invited locations separately.",
+    "prompt": "Draft one slide. Give it a short title, both fractions and a speaker note about the missing replies. Label the source Pilot A.",
     "steps": [
       {
-        "title": "Create the approved brief",
-        "text": "Paste the three counts, or save them in a Word brief and reference it from PowerPoint.",
-        "help": "Start with a single file if the presentation feature cannot find your brief. The chat fallback needs only the pasted counts.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Pilot A. Invited: 12 sites. Responded: 9. Respondents supporting extension: 6."
       },
       {
-        "title": "Build and check",
-        "text": "Send the prompt. Check that the slide distinguishes recorded support among all invited sites from support among respondents.",
-        "help": "Six of nine is about 66.7%. Six of twelve is 50%. The three silent sites have unknown views."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Challenge the title",
-        "text": "Ask whether “Two thirds of all pilot sites support extension” is justified and request a replacement title.",
-        "help": "A suitable replacement identifies the respondent group or states the count directly. Speaker notes alone cannot repair a misleading headline."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Six of nine who replied said yes. Six of twelve invited sites are known to support the idea.",
+        "help": "Draw twelve dots. Circle the nine replies and color six of those dots. Compare six of the circled dots with six of all twelve."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Ask whether “Two thirds of all pilot sites said yes” fits the data. Give the slide a better title.",
+        "help": "If a missing reply counts as no, label it unknown instead. Keep the count of actual replies at nine."
       }
     ],
     "check": [
-      "The two denominators are labeled 9 and 12.",
-      "The headline treats no response as unknown."
+      "Six of nine who replied said yes. Six of twelve invited sites are known to support the idea.",
+      "A correct title can say “Six of nine replies support the plan.” The other three replies are missing."
     ],
     "sources": [
       [
@@ -273,38 +303,43 @@
   },
   {
     "id": "lab-copilot-07",
-    "title": "Check a mail queue against an explicit threshold",
-    "summary": "Ask Copilot to classify observations using precise boundary and missing-data rules.",
+    "title": "Sort wait times into four boxes",
+    "summary": "Build a rule for a mail queue and try the values right at its edges.",
     "level": "Intermediate",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Excel users can put the sample into a small practice table.",
-    "features": "Conditional formulas, missing values and boundary tests",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "The time 15 belongs in exactly one box. A missing reading stays missing.",
     "roles": [
-      "Classify queue-age samples.",
-      "Triage aged service requests.",
-      "Flag slow background jobs."
+      "Flag mail delays.",
+      "Check age limits on a queue sheet.",
+      "Sort game tasks by wait time."
     ],
-    "prompt": "Classify each observation: below 15 minutes is normal; 15 through 29 inclusive is watch; 30 or above is investigate. Blank or negative is invalid. Give counts, row IDs and a formula or pseudocode implementing the rule.",
+    "prompt": "Below 15 minutes is normal. From 15 through 29 is watch. At 30 and above use investigate. Blank or negative values are invalid. Give each row its label and count each label. Show the rule in words or a formula.",
     "steps": [
       {
-        "title": "Set up a test at each boundary",
-        "text": "Paste these minute values into two columns. Preserve the empty field for E.",
-        "help": "If a spreadsheet converts a blank to zero, check emptiness before applying the numeric comparisons.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "ID,Minutes\nA,14\nB,15\nC,29\nD,30\nE,\nF,-1"
       },
       {
-        "title": "Check each comparison",
-        "text": "Send the prompt. Inspect which side of the 15 and 30 boundaries includes equality. Chat can produce the same truth table when workbook editing is unavailable.",
-        "help": "Read the formula from left to right. An invalid negative must be handled before “below 15.”"
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Change exactly one input",
-        "text": "Replace A’s 14 with 15 and predict the counts before asking for a fresh table.",
-        "help": "Only A moves category. Watch rises by one and normal falls by one. Invalid and investigate counts stay put."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A is normal, B and C are watch, D is investigate, E and F are invalid.",
+        "help": "Draw four boxes for the four labels. Place 14 and 15 using the exact edge rule. Put the blank in its own box before doing any math."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change A from 14 to 15 and recalculate.",
+        "help": "If the empty row becomes normal, put the blank check ahead of the number checks."
       }
     ],
     "check": [
-      "Initial normal 1, watch 2, investigate 1, invalid 2.",
-      "Revised normal 0 and watch 3."
+      "A is normal, B and C are watch, D is investigate, E and F are invalid.",
+      "Normal drops to 0 and watch rises to 3. Investigate stays 1 and invalid stays 2."
     ],
     "sources": [
       [
@@ -319,38 +354,43 @@
   },
   {
     "id": "lab-copilot-08",
-    "title": "Resolve a migration policy conflict by effective date",
-    "summary": "Reconcile two versions of a policy and keep special cases attached to the edition that established them.",
+    "title": "Pick the rule that was in force",
+    "summary": "A new rule starts on a certain date. Check the date before checking group size.",
     "level": "Advanced",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
-    "features": "Multi-document grounding, exceptions and effective dates",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Rules work like a dated bus pass. You need the version valid on the day of the trip.",
     "roles": [
-      "Evaluate a mailbox move policy.",
-      "Track changes in a rollout playbook.",
-      "Version an app eligibility rule."
+      "Check which mail move rule applied.",
+      "Explain a change in a group policy.",
+      "Make old and new game rules work by date."
     ],
-    "prompt": "For each case A–D, return allowed, held or unknown; identify the governing edition and quote its relevant condition. Newer rules apply on and after their effective date. Identify unresolved inputs.",
+    "prompt": "Apply V1 before V2 starts. Use V2 starting on its own date. For A through D give held, allowed or unknown. Quote the rule used. Hold groups over the size limit. An unknown flag under V2 means the answer is unknown.",
     "steps": [
       {
-        "title": "Provide both policy excerpts",
-        "text": "Paste these fictional excerpts and cases into one chat. The dates here are unambiguous UTC calendar dates.",
-        "help": "If Copilot prefers the most recent edition for every case, ask it to decide which date applies before reading the eligibility rule.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "V1 effective Jan 1: groups up to 20 may move.\nV2 effective Feb 1: groups up to 30 may move unless flagged; flagged groups are held.\nA Jan 31 size 25; B Feb 1 size 30 clear; C Feb 2 size 12 flagged; D Feb 3 size 12 flag unknown."
       },
       {
-        "title": "Resolve the four cases",
-        "text": "Run the prompt. Treat a group exceeding the numerical limit as held for this exercise. Require the edition next to the verdict.",
-        "help": "D cannot be resolved without the flag value. If the tool assumes clear, ask it to name its evidence."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Move only the effective date",
-        "text": "Change V2 to Feb 2. Re-run B and C. Compare the two decisions with their original results.",
-        "help": "B now falls under V1 and switches to held. C remains held under V2 because it is flagged."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A is held, B allowed, C held and D unknown.",
+        "help": "Make a tiny calendar with January 31, February 1 and February 2. Write the rule edition over each day and then read its flag rule."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Move the V2 start to February 2. Ask again about B and C.",
+        "help": "If B stays allowed, compare its February 1 date with the new February 2 start."
       }
     ],
     "check": [
-      "A held, B allowed, C held, D unknown.",
-      "Changing the effective date changes B but leaves C held."
+      "A is held, B allowed, C held and D unknown.",
+      "B now uses V1 and is held. C still uses V2 and is held because of its flag."
     ],
     "sources": [
       [
@@ -365,38 +405,43 @@
   },
   {
     "id": "lab-copilot-09",
-    "title": "Design a source-bound handbook assistant",
-    "summary": "Prototype a reusable question-answering agent and test how it behaves when a policy is silent.",
+    "title": "Build a helper that quotes its rulebook",
+    "summary": "Two archive rules fit on a card. Ask a helper to stay within them.",
     "level": "Advanced",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Agent Builder is optional and subject to your organization’s settings. Use chat for the same behavior test.",
-    "features": "Agent Builder instructions, sources and evaluation",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Looking up a rule is different from inventing one that sounds fair.",
     "roles": [
-      "Answer recurring mailbox change questions.",
-      "Prototype an internal policy assistant.",
-      "Design a help assistant for an app."
+      "Answer a sample archive question.",
+      "Build a handbook question helper.",
+      "Make a rules helper for a game."
     ],
-    "prompt": "Use only the two supplied policy clauses. Answer with a clause ID and the exact applicable limit, or say “not covered.” Ask one clarifying question when the item type is missing. Evaluate the three sample questions separately.",
+    "prompt": "Use only P1 and P2. Answer three questions. Give the rule number with each answer. Say not covered if neither rule answers. Ask for the request type when it is missing.",
     "steps": [
       {
-        "title": "Set the boundary",
-        "text": "Paste the clauses and questions. In Agent Builder use the prompt as instructions and a scratch document containing just the clauses as knowledge. Keep the trial private.",
-        "help": "If you lack builder access, put the instructions and clauses in one ordinary chat. This tests responses, not deployment.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "P1 Standard archive request: 5 business days.\nP2 Urgent archive request: 1 business day.\nQ1 Standard archive time? Q2 Restore time? Q3 Archive time?"
       },
       {
-        "title": "Check the answers",
-        "text": "Run all three questions. Open each referenced clause and match its scope to the question.",
-        "help": "Q2 concerns restore. A confident “5 days” incorrectly carries an archive promise into a different service."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Revise a source and retest",
-        "text": "Change P2 to 2 business days in the scratch source. Start a fresh test and ask for the urgent archive time.",
-        "help": "If it returns 1, confirm that the agent or chat received the revised source and repeat with a new conversation."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Q1 takes 5 business days under P1. Q2 is not covered. Q3 needs the request type.",
+        "help": "Look up Q1 in P1. Search P1 and P2 for restore before answering Q2. For Q3, ask which archive rule you should use."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change the urgent rule to 2 business days. Ask how long an urgent request now takes.",
+        "help": "If the helper gives a restore time, ask which of the two clauses mentions restore."
       }
     ],
     "check": [
-      "Q1 gives 5 business days from P1, Q2 is not covered, Q3 asks which request type.",
-      "Revised urgent requests take 2 business days according to P2."
+      "Q1 takes 5 business days under P1. Q2 is not covered. Q3 needs the request type.",
+      "The answer is 2 business days and cites P2."
     ],
     "sources": [
       [
@@ -411,38 +456,43 @@
   },
   {
     "id": "lab-copilot-10",
-    "title": "Calculate a rate across unequal migration batches",
-    "summary": "Audit a success-rate dashboard and explain why averaging individual batch percentages can mislead.",
+    "title": "Find one rate for two different-sized groups",
+    "summary": "A big batch and a small one had different results. Work out the rate for all items together.",
     "level": "Advanced",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optional Excel practice workbook.",
-    "features": "Weighted rates, recalculation and reviewer notes",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "One batch has four times as many items. Giving the two percentages equal weight answers a different question.",
     "roles": [
-      "Reconcile mail move completion.",
-      "Measure adoption without weighting each group equally.",
-      "Track verification rates across app releases."
+      "Count mailbox moves.",
+      "Summarize a rollout.",
+      "Count game wins across unequal sets of rounds."
     ],
-    "prompt": "Report completed / attempted per batch, weighted overall completion, and the simple mean of the defined batch rates. Explain the difference in plain language. Treat a zero-attempt batch as undefined for its own rate.",
+    "prompt": "For each batch divide completed by attempted. Add completed items from all batches and divide by all attempts. Also show the simple average of the separate batch rates. Skip a batch with no attempts in that average.",
     "steps": [
       {
-        "title": "Create a small migration report",
-        "text": "Paste the data or build an Excel table. Ask for an overall formula using the sums of both columns.",
-        "help": "Exclude the all-zero row from the mean of defined rates. It still contributes zero to each overall total.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Batch,Attempted,Completed\nWest,80,72\nEast,20,10\nIdle,0,0"
       },
       {
-        "title": "Audit both interpretations",
-        "text": "Send the prompt. Use a calculator or manual arithmetic to confirm both results. Ask to see numerator and denominator.",
-        "help": "West is 90% and East is 50%. Their simple mean is 70%, while 82 of 100 attempts completed."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Model an error in the export",
-        "text": "Change East completed to 22 with the original 20 attempts. Ask for validation before publishing any overall figure.",
-        "help": "For this fixture completions cannot exceed attempts. A helpful report names East, holds the aggregate and asks for corrected data."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. 72/80 is 90%. 10/20 is 50%. Together 82/100 is 82%. The simple average of 90% and 50% is 70%.",
+        "help": "Add the finished items first, then the attempted items. Divide once. For the other result, write each batch percentage and average those two values."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change the small batch to 22 completed out of 20. Ask whether a new final rate is valid.",
+        "help": "If the total says 70%, ask for the total number finished and total number attempted before dividing."
       }
     ],
     "check": [
-      "Initial weighted rate 82%; mean batch rate 70%.",
-      "The impossible 22-of-20 row is identified before a final rate is reported."
+      "72/80 is 90%. 10/20 is 50%. Together 82/100 is 82%. The simple average of 90% and 50% is 70%.",
+      "The 22/20 row must be fixed. Hold the new rate until the count makes sense."
     ],
     "sources": [
       [
@@ -457,38 +507,43 @@
   },
   {
     "id": "lab-copilot-11",
-    "title": "Audit a join that silently doubles your report",
-    "summary": "Expose a many-to-many join before presenting Exchange or Microsoft 365 usage totals.",
+    "title": "Find out why a total grew",
+    "summary": "A lookup list puts one mailbox in two departments. Catch the extra copy before you report usage.",
     "level": "Expert",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Excel is optional; pasted rows support the same paper audit.",
-    "features": "Relational reasoning, join validation and exception tables",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Sticking two labels on the same box does not double what is inside.",
     "roles": [
-      "Reconcile mailbox usage by department.",
-      "Combine usage and assignment exports.",
-      "Join player activity to customer records."
+      "Check a mailbox size report.",
+      "Compare team totals with the source sheet.",
+      "Catch two labels on one collectible."
     ],
-    "prompt": "Treat each usage row as one mailbox. Count duplicate keys in the department map before joining. Report the trusted usage total, ambiguous mailboxes and their usage, and the total a naive join would produce. Never allocate ambiguous usage twice.",
+    "prompt": "Add usage before looking up departments. List mailboxes with more than one department. Show the total if every match were copied into the report. Keep the amount in doubt separate.",
     "steps": [
       {
-        "title": "Create two tiny exports",
-        "text": "Supply both labeled tables below. Units are GB for every row. Department mappings may be ambiguous.",
-        "help": "Ask for the keys in each table first. Usage contains two unique mailbox IDs and the mapping contains three rows.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Usage: m1=10, m2=20.\nMap: m1→North, m1→South, m2→East."
       },
       {
-        "title": "Inspect the inflated result",
-        "text": "Run the prompt. Request a row-by-row preview of a naive inner join and the sums before and after.",
-        "help": "The duplicated m1 contributes 10 extra GB. The 30 GB source total is the independent control."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Clear the exception",
-        "text": "Remove the m1→South row. Rerun and ask which regional totals are now trustworthy.",
-        "help": "You should now see North 10 and East 20. If the total changes from 30, the assignment procedure has lost or duplicated a mailbox."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The source has 30 GB. Copying every match gives 40 GB. The disputed 10 GB belongs to m1.",
+        "help": "Write m1 on two output slips and m2 on one to see how a blind lookup gives 40. Then return to the two original usage rows to find 30."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Remove the m1 to South link and repeat the checks.",
+        "help": "If the total reaches 40, list every copy of m1 with its 10 GB beside it."
       }
     ],
     "check": [
-      "Before correction, naive total 40 GB; source total 30 GB; 10 GB ambiguous.",
-      "After correction, all 30 GB have one department."
+      "The source has 30 GB. Copying every match gives 40 GB. The disputed 10 GB belongs to m1.",
+      "All 30 GB now have one clear department. The result matches the source total."
     ],
     "sources": [
       [
@@ -503,38 +558,43 @@
   },
   {
     "id": "lab-copilot-12",
-    "title": "Reconstruct an incident across midnight",
-    "summary": "Reconcile three clocks and avoid converting a sequence of events into a claim about the cause.",
+    "title": "Put events on one clock",
+    "summary": "A delay starts before midnight on one clock. Compare times after putting them all in UTC.",
     "level": "Expert",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
-    "features": "Timeline normalization, evidence attribution and missing offsets",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Two clocks may show different hours at the same moment. Convert them before comparing them.",
     "roles": [
-      "Reconstruct a mail delay.",
-      "Align service desk and application records.",
-      "Compare client and server logs."
+      "Read a mail delay timeline.",
+      "Put meeting and service records in order.",
+      "Compare scores entered on different clocks."
     ],
-    "prompt": "Normalize each known timestamp to UTC. Make an ordered timeline with the evidence IDs, calculate the first-observed-to-recovery interval, and list unplaceable events separately. Describe what the evidence establishes about cause.",
+    "prompt": "Convert dates with known offsets to UTC on one timeline. Label each line with its ID. Work out the minutes from the first delay to recovery. Put unclear times aside. Say what the lines prove about the cause.",
     "steps": [
       {
-        "title": "Enter records with their offsets",
-        "text": "Paste the fictional evidence exactly as shown. The dates use January and the offsets are numeric.",
-        "help": "Use the supplied offsets for arithmetic. Inferring a time zone for a line that has none changes the evidence.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "A Jan 5 23:55 -0600: delay observed.\nB Jan 6 06:02 +0000: queue peaked.\nC Jan 6 01:10 -0500: recovery observed.\nD 00:59 offset/date unknown: configuration note."
       },
       {
-        "title": "Check the day boundary",
-        "text": "Run the prompt. Verify A’s UTC date advances to Jan 6. Calculate the duration manually from the normalized times.",
-        "help": "A is 05:55Z, B is 06:02Z, C is 06:10Z. D cannot yet be positioned."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Add time but not causality",
-        "text": "Give D the date Jan 6 and offset -0500, then rerun. Ask what proof would be needed to attribute the delay to D.",
-        "help": "D is now 05:59Z, four minutes after A. Its position alone does not establish that the note caused the incident."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A is 05:55 UTC on January 6. C is 06:10 UTC. The gap is 15 minutes. D has no date or offset.",
+        "help": "Move A forward six hours and C forward five hours. Put both converted times on January 6 before counting the minutes."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add January 6 and -0500 to D. Ask for the ordered timeline once more.",
+        "help": "If A falls a day early, add the six hours and carry the date past midnight."
       }
     ],
     "check": [
-      "The observed interval is 15 minutes across A and C.",
-      "D becomes placeable after clarification; cause remains unproven."
+      "A is 05:55 UTC on January 6. C is 06:10 UTC. The gap is 15 minutes. D has no date or offset.",
+      "D now fits at 05:59 UTC. Its position alone cannot prove it caused the delay."
     ],
     "sources": [
       [
@@ -549,38 +609,43 @@
   },
   {
     "id": "lab-copilot-13",
-    "title": "Stress-test a readiness gate with stale evidence",
-    "summary": "Turn a rollout checklist into a reproducible decision with failing and expiring prerequisites.",
+    "title": "Decide if a release is ready",
+    "summary": "A backup expires after an hour. One test is still waiting. Try the rule on both sides of the time limit.",
     "level": "Expert",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
-    "features": "Document-grounded decision rules and cutoff tests",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "A fresh backup cannot make a missing test pass. Each check must stand on its own.",
     "roles": [
-      "Verify pilot-move prerequisites.",
-      "Review a deployment sign-off packet.",
-      "Evaluate an app release candidate."
+      "Review a mail change plan.",
+      "Decide when a shared app may roll out.",
+      "Test a game release checklist."
     ],
-    "prompt": "Evaluate the gate at each supplied time. Report a row for every prerequisite, the exact evidence ID and its age when relevant. Overall result is GO only if all prerequisites pass. Mark missing inputs explicitly.",
+    "prompt": "For each time, check all three rules. Cite R1, B1 or T1 beside each result. “Within 60 minutes” includes minute 60. Give GO only if every rule passes.",
     "steps": [
       {
-        "title": "Enter the fictional release gate",
-        "text": "Paste the policy and evidence. Treat “within 60 minutes” as inclusive.",
-        "help": "Require an explicit decision for rollback, backup and test status. Missing one row can make an unsupported GO sound plausible.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Rule: approved rollback; successful backup within 60 min; all smoke tests pass.\nR1 rollback approved. B1 backup successful 09:00 UTC. T1 two passed, one pending.\nTimes: 10:00 and 10:01 UTC, same day."
       },
       {
-        "title": "Evaluate twice",
-        "text": "Send the prompt. Compare gate status at the boundary and one minute later.",
-        "help": "At 10:00 the backup is fresh and tests are pending. At 10:01 the backup is also stale. Both evaluations hold."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Change the test record",
-        "text": "Replace T1 with “three passed.” Evaluate both times again. In plain chat the verdict is a worksheet answer, with no release action.",
-        "help": "The result should change at 10:00 only. If both pass, ask for the elapsed minutes since B1."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. At 10:00 the backup is still good but a test is pending. At 10:01 the backup is also too old. Both verdicts are HOLD.",
+        "help": "Make three check boxes for approval, backup and tests. At each clock time, fill each box independently before deciding the result."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change T1 to three passed and ask for each verdict again.",
+        "help": "If both times say GO, subtract the backup time from each clock time before checking the hour limit."
       }
     ],
     "check": [
-      "Initial verdict HOLD at both times.",
-      "With every test passing, GO at 10:00 and HOLD at 10:01."
+      "At 10:00 the backup is still good but a test is pending. At 10:01 the backup is also too old. Both verdicts are HOLD.",
+      "10:00 becomes GO. At 10:01 it is still HOLD."
     ],
     "sources": [
       [
@@ -595,38 +660,43 @@
   },
   {
     "id": "lab-copilot-14",
-    "title": "Simulate a request agent that receives the same form twice",
-    "summary": "Specify how to handle a repeat request before any connector is allowed to act.",
+    "title": "Handle a form that arrives twice",
+    "summary": "A request can arrive twice when a button is tapped again. Keep one copy of the same job.",
     "level": "Expert",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optional private Copilot Studio design canvas. All actions in this lab use a paper ledger.",
-    "features": "Workflow design, duplicate suppression and conflict handling",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Matching text does not mean matching requests. The receipt number tells you which request is which.",
     "roles": [
-      "Design mailbox request intake.",
-      "Review an agent-driven service desk flow.",
-      "Protect a personal app order form from double submission."
+      "Deduplicate a sample mail request.",
+      "Design a practice intake sheet.",
+      "Prevent a double tap from adding two orders."
     ],
-    "prompt": "Simulate a ledger keyed by request ID. New ID creates one draft row; same ID and same payload returns the existing row; same ID and changed payload flags a conflict without overwriting. Show every input decision and the final ledger. Perform no external actions.",
+    "prompt": "Make a pretend list keyed by request ID. New ID means create. Same ID and text means reuse. Same ID with changed text means flag a conflict. Show the decision for each step and leave the first text in place.",
     "steps": [
       {
-        "title": "Prepare simulated inputs",
-        "text": "Paste the ordered requests. If using Studio, sketch the lookup and decision steps on paper or in a private scratch design. Do not connect a live system.",
-        "help": "The ID identifies a request. The name in the payload is not a reliable duplicate key.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "R1 | project alpha\nR1 | project alpha\nR2 | project beta\nR1 | project gamma"
       },
       {
-        "title": "Run the paper simulation",
-        "text": "Send the prompt and examine each outcome in sequence. Ask for the ledger contents immediately before input four.",
-        "help": "Two drafts exist then. Input four must flag a conflict without turning alpha into gamma."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Test independence",
-        "text": "Append “R3 | project alpha.” Predict whether it is new. Explain what a real destination would need for two simultaneous submissions.",
-        "help": "R3 is a distinct request. A real implementation needs an atomic unique-key decision or equivalent destination guarantee. A chat simulation tests the rule only."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The four requests give create, reuse, create, conflict. R1 still holds project alpha.",
+        "help": "Keep a little ledger with ID and text. Before each event, find its ID in the ledger and decide whether the row is new, equal or different."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add R3 with project alpha. Count the rows again.",
+        "help": "If the second R1 made a new row, look up its ID before adding anything."
       }
     ],
     "check": [
-      "First four outcomes are create, reuse, create, conflict.",
-      "After R3 there are three rows; the original R1 payload remains alpha."
+      "The four requests give create, reuse, create, conflict. R1 still holds project alpha.",
+      "R3 creates its own row. There are now three rows, one for each different ID."
     ],
     "sources": [
       [
@@ -641,38 +711,43 @@
   },
   {
     "id": "lab-copilot-15",
-    "title": "Deliver a rollout brief that passes an independent audit",
-    "summary": "Combine mail evidence, metrics and an approval rule into a decision memo and a single defensible slide.",
+    "title": "Prepare a rollout brief and prove each claim",
+    "summary": "The report must reach 95% and someone must actually approve. A wish or a promise is not a yes.",
     "level": "Expert",
-    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Word, Excel and PowerPoint can hold the outputs; ordinary Copilot Chat can produce all three as plain text.",
-    "features": "Cross-app synthesis, evidence checks and revision control",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Two locks need two keys. A good score opens one lock and approval opens the other.",
     "roles": [
-      "Report a migration pilot with a defensible release decision.",
-      "Prepare an evidence-bound change advisory packet.",
-      "Publish a measurable beta exit recommendation."
+      "Show proof before a mail move.",
+      "Prepare an honest change brief.",
+      "Decide whether a release meets a goal."
     ],
-    "prompt": "Prepare a one-paragraph decision brief, a slide title and a verification table. Use IDs for every decision and metric. The gate requires at least 95% completed and explicit owner approval. Label unmet requirements and unsupported claims.",
+    "prompt": "Make a short decision note, one slide title and a check table. Give a source ID for each count and approval. Use the same decision in all three pieces.",
     "steps": [
       {
-        "title": "Assemble the packet",
-        "text": "Paste each source separately, preserving its identifier. Ask for the two criteria before calculating anything.",
-        "help": "A proposed approval and an explicit approval have different evidentiary value. The gate requires both its criteria.",
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "G1 gate: >=95% complete AND owner approval.\nR1 North 48/50. R2 South 47/50.\nM1 owner: I can review tomorrow.\nM2 participant: We should move ahead."
       },
       {
-        "title": "Challenge the headline",
-        "text": "Run the prompt. Check the totals and inspect which sentence establishes approval. If you use a slide, check its headline without reading the notes.",
-        "help": "95/100 meets the numerical gate. Neither message approves. A defensible title says the metric is met and approval is pending."
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
       },
       {
-        "title": "Retest two independent changes",
-        "text": "First add “M3 owner: I approve release.” Then revise R2 to 46/50 and ask for the updated decision. Preserve both versions as evidence.",
-        "help": "The first change unlocks GO at 95%. The second lowers the rate to 94%, so the gate returns to HOLD even with approval."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. 48 plus 47 gives 95 of 100. M1 promises a review. M2 is a suggestion. The verdict is HOLD.",
+        "help": "First add 48 and 47. Next read the owner’s exact words. Put the number check and the approval check on separate lines in all three outputs."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add M3 with explicit owner approval. Then change R2 to 46/50 and ask again.",
+        "help": "If a slide says ready with 94 complete, recompute its count and match the slide title with the check table."
       }
     ],
     "check": [
-      "Original HOLD; adding explicit approval yields GO.",
-      "A 94/100 revision restores HOLD. All artifacts express the same decision."
+      "48 plus 47 gives 95 of 100. M1 promises a review. M2 is a suggestion. The verdict is HOLD.",
+      "M3 makes the original result GO. With 94 of 100 done the decision returns to HOLD."
     ],
     "sources": [
       [
@@ -686,6 +761,743 @@
       [
         "Microsoft · creating a presentation from a file",
         "https://support.microsoft.com/en-us/microsoft-365-copilot/prepare-your-presentation-with-microsoft-365-copilot"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-16",
+    "title": "Build a round tally in Excel",
+    "summary": "Turn three rows into a score table that updates whenever a player adds points.",
+    "level": "Starter",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "A sum-by-team formula only adds numbers on rows carrying the team’s label.",
+    "roles": [
+      "Total test items by mailbox type.",
+      "Build a live team tally.",
+      "Keep score for a game."
+    ],
+    "prompt": "Give me a small Excel tally with one input row per round and a total per team. Use a sum-by-team formula such as SUMIF. Tell me the heading names, cell to click and exact formula to enter. Keep the input numbers visible.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Paste Team and Points as headings. Data: Blue 3, Gold 4, Blue -1."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Blue totals 2 points. Gold totals 4. Reading the rows by hand gives the same numbers.",
+        "help": "After entering the three rounds, add only Blue’s rows by hand. Change one cell inside the table and see whether the total moves by the same amount."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add Gold,0 and Blue,5 within the table. Check both totals.",
+        "help": "If Blue stays at 2, check that the added row is inside the Excel table or formula range."
+      }
+    ],
+    "check": [
+      "Blue totals 2 points. Gold totals 4. Reading the rows by hand gives the same numbers.",
+      "Gold stays at 4. Blue rises to 7. Both new rounds are visible."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-17",
+    "title": "Make a three-question quiz host",
+    "summary": "Have Copilot host a game one question at a time, using answers that you can prove.",
+    "level": "Starter",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "A host must know the answer but keep it out of the question. Check its score after every turn.",
+    "roles": [
+      "Practice mail vocabulary with a small deck.",
+      "Review a team guide with quiz cards.",
+      "Build a playable quiz in chat."
+    ],
+    "prompt": "Host my deck in this order. Show one question at a time and wait for my answer. Give one point for a match, ignoring case and outside spaces. Hide future answers. After three turns show the final score and offer to play again.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Deck: How many sides on a square? 4. Which is colder, ice or steam? ice. What is 3 plus 5? 8."
+      },
+      {
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Answer 4 first. The score is 1 and only the second question is shown.",
+        "help": "Keep three answer slips face down. Reply once per turn, then cross out each slip after the host grades it. Check the final points yourself."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Reply steam, then 8. Start a fresh round after seeing the result.",
+        "help": "If it reveals the deck, start a new chat with the host directions and tell it to wait after each question."
+      }
+    ],
+    "check": [
+      "Answer 4 first. The score is 1 and only the second question is shown.",
+      "The final score is 2 of 3. A fresh round starts at 0 and asks about the square."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-18",
+    "title": "Make a mailbox label printer",
+    "summary": "Three pretend boxes need short, consistent labels you can copy into a guide.",
+    "level": "Starter",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Putting the type in the label helps someone pick the right item without guessing from its name.",
+    "roles": [
+      "Label a practice mailbox list.",
+      "Prepare names for a shared reference table.",
+      "Label game pieces by type."
+    ],
+    "prompt": "Create a table with ID, display label and type. Make each label “[type] short name”. Read from my three rows. Preserve the ID and spell out the type. Give me the table as plain text I can paste into a document.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "A: shared, Help Desk. B: user, Practice Seat. C: room, Meeting Room."
+      },
+      {
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A reads [shared] Help Desk. B reads [user] Practice Seat.",
+        "help": "Hold the source row and the output label side by side. Read the type inside brackets, then the name outside them. Change only C to test the format."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change C’s name to Training Room. Regenerate the labels and compare them line by line.",
+        "help": "If all labels become capital letters, ask it to keep the original short names exactly as supplied."
+      }
+    ],
+    "check": [
+      "A reads [shared] Help Desk. B reads [user] Practice Seat.",
+      "Only C’s label changes. It now reads [room] Training Room."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-19",
+    "title": "Build a meeting countdown sheet",
+    "summary": "Show how much time remains as a meeting moves through its agenda.",
+    "level": "Starter",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "Subtract each activity from the time still in the pot. A negative amount tells you how far past the end you went.",
+    "roles": [
+      "Plan a practice mail check window.",
+      "Run a meeting agenda.",
+      "Time a set of game rounds."
+    ],
+    "prompt": "Give me a small Excel sheet with one row per item and minutes left after each. Tell me the column headings and starting formula, then how to copy it down. Highlight a negative result with the word Over.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Start with 30 minutes. Welcome 5, demo 12, questions 8."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. After the three items the times left are 25, 13 and 5.",
+        "help": "Start at 30 and cross off 5, 12 and 8 minutes in order. Check each running value before trying the longer final item."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change questions from 8 to 15 minutes. Check the last row again.",
+        "help": "If every row starts from 30, point the formula at the row just above it before subtracting."
+      }
+    ],
+    "check": [
+      "After the three items the times left are 25, 13 and 5.",
+      "The last row now shows -2 and Over. Earlier rows still show 25 and 13."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-20",
+    "title": "Make a mail sorting game",
+    "summary": "Let the player sort made-up messages into a folder based on two short rules.",
+    "level": "Starter",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "Rules that look only at tags are easy to test. A word in the subject should not change the tag rule.",
+    "roles": [
+      "Practice folder rules with fake mail.",
+      "Teach a team how to sort requests.",
+      "Build a rule-based card game."
+    ],
+    "prompt": "Host the three-card sorting game in order. Show a card and wait for a folder name. Give one point for each right folder. Explain each miss using the rule. Show the final score and a replay choice.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Rules: [help] goes to Help; [bill] goes to Bills; any other tag goes to Review. Cards: [help] printer, [bill] paper, [other] hello."
+      },
+      {
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Reply Help to the printer card. One point. Reply Help to the paper card. The score stays 1 and the explanation points to [bill].",
+        "help": "Write the three folder names at the top of a sheet. Place the subject cards below their tags. Compare the host’s grading with your piles."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Reply Review to hello. Ask to play again.",
+        "help": "If the host says hello belongs in Help, ask it to name the card’s tag and apply the third rule."
+      }
+    ],
+    "check": [
+      "Reply Help to the printer card. One point. Reply Help to the paper card. The score stays 1 and the explanation points to [bill].",
+      "The round ends at 2 of 3. The next game shows the first card and a zero score."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-21",
+    "title": "Turn signups into a seat counter",
+    "summary": "Build a sheet that tells you when a session fills up.",
+    "level": "Starter",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "The capacity is a fixed number. Every yes uses one place, even if four places were promised by mistake.",
+    "roles": [
+      "Count seats in mail training.",
+      "Check signups for a practice session.",
+      "Reserve places at a game table."
+    ],
+    "prompt": "Give me an Excel seat counter using a yes/no response column. Count yes rows, subtract from capacity and show a Full label at zero. Explain how to set it up in a fresh sheet. Include the formulas.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Capacity 3. Input rows: Desk A yes, Desk B no, Desk C yes."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Two seats are taken and one is open. A no does not use a seat.",
+        "help": "Draw three empty seats. Place a token for each yes and none for no. The fourth yes goes beside the seats to show the extra booking."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change Desk B to yes, then try adding Desk D yes.",
+        "help": "If no uses a seat, check that the counting formula looks for the word yes, not every filled cell."
+      }
+    ],
+    "check": [
+      "Two seats are taken and one is open. A no does not use a seat.",
+      "Three yes rows show Full. A fourth flags Over by 1 rather than advertising a negative open seat."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-22",
+    "title": "Make an inbox age board",
+    "summary": "Create a small Excel tool that tells you which items need a look today.",
+    "level": "Intermediate",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "One clock cell changes all ages at once. A future start date is worth checking before you trust it.",
+    "roles": [
+      "Find old mail requests.",
+      "Track the age of tasks.",
+      "Show how long a challenge has been open."
+    ],
+    "prompt": "Build an Excel table with opened day, age and label. Put today in one fixed cell. Subtract the opened day. Use Watch for age 3 or more, Fresh for 0–2, Check date for a future day. Explain the cell formulas.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Sample today is day 12. Items opened on days 7, 10, 12 and 13. Watch starts at age 3."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The four rows read 5 Watch, 2 Fresh, 0 Fresh and Check date.",
+        "help": "Subtract the opened day from day 12. For a result below zero, check the date. Only then apply Watch to ages of three or more."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change today from 12 to 13. Keep the four opened days in place.",
+        "help": "If only the first row works, keep the reference to the today cell fixed when filling the formula down."
+      }
+    ],
+    "check": [
+      "The four rows read 5 Watch, 2 Fresh, 0 Fresh and Check date.",
+      "The rows now read 6 Watch, 3 Watch, 1 Fresh and 0 Fresh."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-23",
+    "title": "Build a branching help desk in chat",
+    "summary": "Make a helper that asks one question at a time and can admit when it has run out of rules.",
+    "level": "Intermediate",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "A little decision tree can guide the next step without guessing the cause of a problem.",
+    "roles": [
+      "Guide a first mail check.",
+      "Create a small help assistant.",
+      "Build a choice-based guide."
+    ],
+    "prompt": "Act as a help desk using only my rule card. Ask one question at a time. Stop at a suggested check. Give the rule path and wait for Start over. Avoid changing accounts or sending messages.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Rule card: cannot find a message → ask “Is search working?” If yes, check folder; if no, check search status. Cannot send → check Outbox. Anything else → human review."
+      },
+      {
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Say cannot find a message, then no. The helper recommends checking search status and shows that path.",
+        "help": "Trace the cannot-find path with a pencil. At the question, follow the no branch and stop at its action. Try another path in a fresh turn."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Start over with cannot send. Start over again with “picture is crooked.”",
+        "help": "If the helper adds steps about passwords, ask it to read back only the supplied paths and retry."
+      }
+    ],
+    "check": [
+      "Say cannot find a message, then no. The helper recommends checking search status and shows that path.",
+      "The send case points to Outbox. The picture case ends in human review."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-24",
+    "title": "Make a bingo caller with repeat protection",
+    "summary": "Play a small number game with a fixed draw order that includes a repeat.",
+    "level": "Intermediate",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "The pile counts every draw. The board counts each number only once. Those are different totals.",
+    "roles": [
+      "Count different mail IDs.",
+      "Deduplicate repeated survey choices.",
+      "Build a bingo caller."
+    ],
+    "prompt": "Be the bingo caller. On each Draw, reveal one pile item and show marked board numbers. A repeat does not mark a second square. When all three are marked say Bingo. Add New game to clear marks and reset the pile.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Board 2, 4, 6. Draw pile 4, 4, 2, 6. Start with nothing marked."
+      },
+      {
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. After the first two Draws only 4 is marked. The second 4 is labeled a repeat.",
+        "help": "Write 2, 4 and 6 on paper. Cross out each only once when the host calls it. Record draws on a separate line to see the repeat."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Draw twice more. Ask for New game, then draw once.",
+        "help": "If the repeat earns another square, have the caller keep an explicit set of the board numbers it already marked."
+      }
+    ],
+    "check": [
+      "After the first two Draws only 4 is marked. The second 4 is labeled a repeat.",
+      "The fourth draw wins with 2, 4, 6. The reset game has just 4 marked after its first draw."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-25",
+    "title": "Build a calendar conflict checker",
+    "summary": "Make an Excel view that catches real overlaps while allowing back-to-back bookings.",
+    "level": "Intermediate",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "A room matters as much as the clock. A booking that ends when another starts frees the room in time.",
+    "roles": [
+      "Avoid overlapping sample maintenance slots.",
+      "Check meeting room bookings.",
+      "Schedule game tables."
+    ],
+    "prompt": "Create an Excel table that lists pairs of overlapping slots in the same room. Use the test start1 < end2 AND start2 < end1. List each pair once. Explain the columns and how to enter the formula for the three test pairs.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Room A: slot 1 starts at minute 10 and ends at 25. Slot 2 runs 25–40. Slot 3 runs 20–27."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Slots 1 and 2 can touch with no clash. Pairs 1/3 and 2/3 clash.",
+        "help": "Draw three strips for the time slots. Two strips touch and two pairs share actual time. Then put the third strip on a separate row for room B."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Move slot 3 to room B and recalculate the pair list.",
+        "help": "If 1/2 is flagged, check whether a less-than sign changed to less-than-or-equal."
+      }
+    ],
+    "check": [
+      "Slots 1 and 2 can touch with no clash. Pairs 1/3 and 2/3 clash.",
+      "There are no room conflicts after the move. The times did not change."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-26",
+    "title": "Build a practice permission chart",
+    "summary": "A team needs to know who can read a file and who can edit it. Group names alone do not answer that.",
+    "level": "Intermediate",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "A membership list tells you which groups to ask. A grant tells you what each group can actually do.",
+    "roles": [
+      "Explain sample shared mailbox access.",
+      "Review access in a practice file library.",
+      "Choose who can edit a game level."
+    ],
+    "prompt": "In Excel or a two-table chat worksheet, show members and group grants separately. Return each desk’s strongest right on Kit. Show which group proves the result. If a member has no matching grant, say None.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Desk A belongs to Readers and Editors. Desk B belongs to Readers. Readers can view Kit. Editors can edit Kit. Edit includes view."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Desk A can edit through Editors. Desk B can view through Readers.",
+        "help": "Put a pencil mark beside each group Desk A belongs to. Follow each group to its rights on Kit and circle the strongest right you find."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Remove A from Editors. Add Desk C without a group. Rebuild the chart.",
+        "help": "If C gets view, ask for the row that connects C to Readers. There should be none."
+      }
+    ],
+    "check": [
+      "Desk A can edit through Editors. Desk B can view through Readers.",
+      "A and B can view Kit. C has None. No desk can edit after the change."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-27",
+    "title": "Make a three-round budget game",
+    "summary": "Try to keep a tiny project within its budget. Each choice changes the remaining amount.",
+    "level": "Intermediate",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "A bad choice should leave a player exactly where they were, able to choose again.",
+    "roles": [
+      "Budget sample mail checks.",
+      "Plan a small team exercise.",
+      "Play a branching budget game."
+    ],
+    "prompt": "Host one round at a time. Show both choices and the tokens left. Reject a choice costing more than the balance and stay on that round. End with a list of purchases, tokens left and a Replay choice.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Start with 10 tokens. Round 1 map 3 or clue 1. Round 2 bridge 5 or raft 2. Round 3 lantern 4 or torch 1."
+      },
+      {
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Choose map, then bridge. The balance runs 10, 7, 2.",
+        "help": "Keep a running balance after each accepted choice. At 2 tokens you cannot buy the 4-token lantern. Check whether the host offers a new choice."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Try lantern. After it is declined, choose torch instead.",
+        "help": "If a rejected purchase advances the round, require both a valid choice and enough tokens before moving on."
+      }
+    ],
+    "check": [
+      "Choose map, then bridge. The balance runs 10, 7, 2.",
+      "The finished list is map, bridge, torch. One token remains. The declined lantern cost nothing."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-28",
+    "title": "Build a shared-item checkout sheet",
+    "summary": "One item should have only one borrower at a time. Let people trace the result to a line.",
+    "level": "Intermediate",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
+    "features": "The state after one line is the starting state for the next. A rejected line leaves that state alone.",
+    "roles": [
+      "Track a pretend mailbox review handoff.",
+      "Track borrowed meeting kit.",
+      "Build a piece checkout system."
+    ],
+    "prompt": "Help me build a small checkout worksheet. Process rows in order. A take needs an available item. A return needs the current holder. Show accepted or rejected beside each event and the holder afterward.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Events: 1 take A desk1; 2 take A desk2; 3 return A desk1; 4 take A desk2."
+      },
+      {
+        "title": "Run the request",
+        "text": "Send the lab request in the chat holding the sample. Look at its first answer before sending the follow-up.",
+        "help": "If a new fact appears, ask which part of your short sample supports it. A guess needs a new check."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The decisions are accepted, rejected, accepted, accepted. Desk2 holds A at the end.",
+        "help": "Write Available beside item A. Erase and replace its holder only when a row is accepted. Row 2 should leave the name written by row 1."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add row 5 return A desk1, then row 6 return A desk2.",
+        "help": "If row 2 takes A, have the worksheet look at the holder after row 1 before applying the next event."
+      }
+    ],
+    "check": [
+      "The decisions are accepted, rejected, accepted, accepted. Desk2 holds A at the end.",
+      "Row 5 is rejected and preserves desk2. Row 6 makes A available."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-29",
+    "title": "Capstone: make an interactive score workbook",
+    "summary": "Build a playable two-team race. Keep the score sheet ready for the next game.",
+    "level": "Advanced",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "Separating setup, input and the board lets you check the math without losing the game record.",
+    "roles": [
+      "Track per-team mail drill scores.",
+      "Build a repeatable tracking workbook.",
+      "Play a full score-to-target game."
+    ],
+    "prompt": "Design an Excel workbook with Setup, Rounds and Board sheets. Give exact cells and formulas. Keep a running total per team, show who first reaches target, and flag later entries as after the finish. Add a clean restart using a new game ID. Test a zero, a blank and a changed target.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Target 8. Rounds: Blue 5, Gold 3, Blue -2, Gold 5. Zero is a legal turn. Blank means no turn."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. At target 8, Gold wins on round 4. Blue has 3 and Gold has 8.",
+        "help": "Play each score in order. Circle the first row whose team total reaches the target. Changing the target changes which row you circle."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change the target to 5. Then start a new game ID, enter Blue 0 and a blank score.",
+        "help": "If clearing a new game wipes old rows, filter by game ID. Keep each game’s inputs in the same history table."
+      }
+    ],
+    "check": [
+      "At target 8, Gold wins on round 4. Blue has 3 and Gold has 8.",
+      "At 5, Blue first wins on round 1. The new game counts one round and keeps both totals at zero. The prior game’s rows remain."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-30",
+    "title": "Capstone: build a mail report review hub",
+    "summary": "A support group wants one workbook that can explain its summary and catch bad input.",
+    "level": "Expert",
+    "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
+    "features": "A reader needs the reason a report is held as well as the totals. Keep checks linked to row IDs so a person can find the source.",
+    "roles": [
+      "Review a fake mailbox report.",
+      "Build a small report workbook with checks.",
+      "Create a results sheet players can audit."
+    ],
+    "prompt": "Guide me through a workbook with Raw, Checks and Summary sheets. Give exact headings, cells and formulas. Show repeated IDs, missing counts, excluded rows and a known sum. Keep zero distinct from missing. Flag the summary as Hold while included rows have errors. Produce a short read-only handoff note.",
+    "steps": [
+      {
+        "title": "Start with the sample",
+        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
+        "code": "Sample columns ID,Type,Count. A,shared,2; B,user,0; C,room,4; D,user,blank. Count only user and shared rows."
+      },
+      {
+        "title": "Make the sheet",
+        "text": "Paste the lab request into chat. Open a blank workbook. Follow the returned cell instructions. Type each heading, then enter the rows and formulas underneath.",
+        "help": "Click a result cell and look in the formula bar. A formula starts with =. If a whole table lands in one column, paste the values into separate cells."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Three rows belong. Known sum is 2. D is missing, C is excluded and the heading says Hold.",
+        "help": "Add 2 and 0. Write D on a separate missing list. Check that the room’s 4 stays out of the included sum before fixing the missing count."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Give D a count of 5. Check the heading. Add a second A and check the heading again.",
+        "help": "If a missing count passes because its cell looks like zero, check whether the original input cell is blank before doing math."
+      }
+    ],
+    "check": [
+      "Three rows belong. Known sum is 2. D is missing, C is excluded and the heading says Hold.",
+      "The clean result is Ready and the known sum is 7. The repeat changes the heading to Hold and points to A."
+    ],
+    "sources": [
+      [
+        "Microsoft · first steps in Copilot Chat",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · working with Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
       ]
     ]
   }

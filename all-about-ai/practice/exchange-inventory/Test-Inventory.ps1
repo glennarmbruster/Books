@@ -32,9 +32,9 @@ try {
     $rows = @(Import-Csv -LiteralPath $out)
     Confirm ($rows.Count -eq 4) 'Expected exactly four rows.'
     Confirm (($rows[0].PSObject.Properties.Name -join ',') -ceq 'DisplayName,PrimarySmtpAddress,RecipientTypeDetails') 'Unexpected columns.'
-    Confirm (($rows.PrimarySmtpAddress -join ',') -ceq 'accounts@example.test,avery@example.test,bookings@example.test,zoe@example.test') 'Filter or sort mismatch.'
+    Confirm (($rows.PrimarySmtpAddress -join ',') -ceq 'accounts@example.test,box-a@example.test,box-b@example.test,box-c@example.test') 'Filter or sort mismatch.'
     Confirm (($rows.RecipientTypeDetails -join ',') -ceq 'SharedMailbox,UserMailbox,SharedMailbox,UserMailbox') 'Mailbox type mismatch.'
-    Confirm ($rows[1].DisplayName -ceq 'Lane, Avery' -and $rows[3].DisplayName -ceq 'Zoë Chen') 'CSV quoting or Unicode mismatch.'
+    Confirm ($rows[1].DisplayName -ceq 'Team, Blue' -and $rows[3].DisplayName -ceq 'Café Desk') 'CSV quoting or Unicode mismatch.'
     'PASS 1 - fixture rows, types, sort, columns and names'
 
     $header = Get-Content -LiteralPath $fixture -TotalCount 1
@@ -48,7 +48,7 @@ try {
 
     $bad = Join-Path $temp 'invalid.csv'
     $badOut = Join-Path $temp 'invalid-output.csv'
-    foreach ($invalid in @('Duplicate,AVERY@example.test,UserMailbox','Missing,,SharedMailbox')) {
+    foreach ($invalid in @('Duplicate,BOX-A@example.test,UserMailbox','Missing,,SharedMailbox')) {
         $source = @(Get-Content -LiteralPath $fixture) + $invalid
         $source | Set-Content -LiteralPath $bad
         Confirm-Failure { & $Script -InputCsv $bad -OutputCsv $badOut } 'Expected invalid input to stop the report.'

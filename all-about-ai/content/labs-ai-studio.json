@@ -1,37 +1,37 @@
 [
   {
     "id": "lab-ai-studio-01",
-    "title": "Extract exactly what a notice says",
-    "summary": "Try one text prompt in Playground and distinguish an explicit fact from a missing one.",
+    "title": "Read a travel note without guessing",
+    "summary": "A note names a pier and a day. Find the two facts it gives and spot the one it leaves out.",
     "level": "Starter",
-    "requires": "A browser, network access and a Google account with AI Studio. No API key is needed for this Playground exercise when your account provides access.",
-    "features": "Playground, a text model and Run.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Send a note through Playground and match the answer against the note.",
     "roles": [
-      "Extract a status code from a sample notice.",
-      "Find a rollout date in an announcement.",
-      "Read departure details from a booking."
+      "Find a mail notice with a missing time.",
+      "Read a date from a team notice.",
+      "Show which trip details still need filling in."
     ],
-    "prompt": "Read only this notice: “Harbor shuttle boards at Pier 4 on March 8. Bring the blue ticket.” Return three lines labeled Pier, Date, Time. Use unknown for missing information. Do not invent a year.",
+    "prompt": "Read just this note: Harbor shuttle boards at Pier 4 on March 8. Bring the blue ticket. Return three lines called Pier, Date and Time. Write unknown if the note leaves a fact out. Use the date exactly as given.",
     "steps": [
       {
-        "title": "Open a fresh prompt",
-        "text": "Open Google AI Studio Playground and create a new chat. Choose an available text-capable model and record its displayed name.",
-        "help": "When you see app-generation controls and a live preview, you are in Build. Switch to Playground for this exercise."
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat.",
+        "help": "The Playground has a message box and a Run button. The Build view shows an app preview instead."
       },
       {
-        "title": "Run the notice",
-        "text": "Paste the prompt and select Run. Compare each returned value with the words in the notice.",
-        "help": "A plausible departure time is still unsupported. Ask for the exact phrase that establishes the time."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Find each answer in the note with your finger. Read the date carefully.",
+        "help": "The three answers are Pier 4, March 8 and unknown. No year appears."
       },
       {
-        "title": "Change one fact",
-        "text": "Open a fresh chat using the same model and append “Boarding begins at 09:15.” inside the notice. Run the prompt again.",
-        "help": "A fresh chat helps confirm that the changed source, rather than an earlier answer, supplied the time."
+        "title": "Try a second case",
+        "text": "In a new chat, add Boarding begins at 09:15 to the note. Keep the same question and run again.",
+        "help": "If a time or year appears in the first answer, ask the helper to show the exact words that prove it."
       }
     ],
     "check": [
-      "First run gives Pier 4, March 8 and unknown.",
-      "Second run gives 09:15. Neither run adds a year."
+      "The three answers are Pier 4, March 8 and unknown. No year appears.",
+      "Only Time changes. It now says 09:15. The date still has no year."
     ],
     "sources": [
       [
@@ -46,38 +46,38 @@
   },
   {
     "id": "lab-ai-studio-02",
-    "title": "Keep response rules across turns",
-    "summary": "Use a system instruction to set a reporting convention and see how a follow-up affects the next answer.",
+    "title": "Keep the same rule for three turns",
+    "summary": "Write one standing rule for a stack of topic cards. Each answer should use only its own card.",
     "level": "Starter",
-    "requires": "An online AI Studio Playground chat with System Instructions available.",
-    "features": "System instructions and multi-turn prompts.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Use System Instructions, a rule box that stays in place for a chat.",
     "roles": [
-      "Use consistent columns for sample incidents.",
-      "Normalize status summaries in a report.",
-      "Keep trivia hints in a fixed format."
+      "Keep each mail request paired with its owner.",
+      "Read meeting cards one at a time.",
+      "Give each quiz card its own topic."
     ],
-    "prompt": "Card H2. Topic: Ferries. No owner is assigned. Return the two requested fields.",
+    "prompt": "Card H2. Topic: Ferries. No owner is assigned. Give me the two fields my standing rule asks for.",
     "steps": [
       {
-        "title": "Set the standing instruction",
-        "text": "In Playground, add the exact system instruction below. Start the conversation with the supplied prompt.",
-        "help": "Look for System Instructions above or alongside the prompt editor. Keep this rule separate from the data in the user message.",
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Open System instructions. Put the short rule below in that box.",
+        "help": "A system instruction is a rule for each turn in this chat. The separate chat box is for a single card or question.",
         "code": "Return only Topic | Owner. Copy the stated topic and owner exactly. Use UNASSIGNED when the card has no named owner."
       },
       {
-        "title": "Supply a new card",
-        "text": "In the same conversation send “Card K4. Topic: Trains. Owner: Mei.” Inspect the returned row.",
-        "help": "If the response includes the prior card, remind it to report only the current input card and note the deviation."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Read the first reply. In the same chat send Card K4. Topic: Trains. Owner: Team One. Keep each answer on its own row.",
+        "help": "The first row is Ferries | UNASSIGNED. The second is Trains | Team One."
       },
       {
-        "title": "Test the missing value again",
-        "text": "Send “Card R9. Topic: Maps.” Check whether the previous owner leaked into the new answer.",
-        "help": "If Mei reappears, revise the system instruction to make ownership local to each card, then retest all three."
+        "title": "Try a second case",
+        "text": "Send Card R9. Topic: Maps. Look at its owner box before reading earlier rows.",
+        "help": "If Maps gets Team One, add that each card starts with empty fields. Run all three cards again in order."
       }
     ],
     "check": [
-      "Expected rows are Ferries | UNASSIGNED, Trains | Mei and Maps | UNASSIGNED.",
-      "A new card never inherits the previous card’s owner."
+      "The first row is Ferries | UNASSIGNED. The second is Trains | Team One.",
+      "The last row is Maps | UNASSIGNED. Team One belongs only to Trains."
     ],
     "sources": [
       [
@@ -92,37 +92,37 @@
   },
   {
     "id": "lab-ai-studio-03",
-    "title": "Teach a classifier by example",
-    "summary": "Give the model examples of how your queue is organized, then test an ambiguous request.",
+    "title": "Sort four help slips into trays",
+    "summary": "Teach the helper when to choose one tray, two trays or the tray marked unknown.",
     "level": "Starter",
-    "requires": "AI Studio Playground online with an available text model.",
-    "features": "Few-shot examples, a limited label set and independent test runs.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Give Playground labeled examples, then test it with fresh slips.",
     "roles": [
-      "Route mock Exchange issues to a queue.",
-      "Triage workload-specific service requests.",
-      "Sort reader feedback for a small app."
+      "Sort mail help slips.",
+      "Send file questions to the right team.",
+      "Sort feedback for a small app."
     ],
-    "prompt": "Choose a queue from MAIL, FILES, BOTH or UNKNOWN. Examples: “letter bounced” → MAIL; “document will not open” → FILES; “letter bounced and document will not open” → BOTH; “please help” → UNKNOWN. Classify these in order: A “mail came back”; B “document does not load”; C “please help”; D “mail returned and document fails”. Return ID and label only.",
+    "prompt": "Use MAIL for a bounced letter and FILES for a document that will not open. Use BOTH when both things happen. Use UNKNOWN for just please help. Label four slips in order: A mail came back, B document does not load, C please help, D mail returned and document fails. Give just the ID and tray for each.",
     "steps": [
       {
-        "title": "Run the examples",
-        "text": "Paste the complete prompt in a new Playground chat and inspect the four output rows.",
-        "help": "If the response invents another queue, add a system instruction listing the only allowed labels."
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat.",
+        "help": "The Playground has a message box and a Run button. The Build view shows an app preview instead."
       },
       {
-        "title": "Check semantic coverage",
-        "text": "Change only A to “the cafeteria is closed” and rerun in a fresh chat with the same examples.",
-        "help": "An unrelated sentence belongs to UNKNOWN even though it describes a real problem."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Cover the reply with your hand. Predict the four trays yourself, then compare them one by one.",
+        "help": "A is MAIL, B is FILES, C is UNKNOWN and D is BOTH."
       },
       {
-        "title": "Record an improvement",
-        "text": "If any row fails, add one labeled example for that failure class and rerun both prompts. Keep the test sentences out of the example list.",
-        "help": "Copying the test answer into the teaching examples conceals whether the model learned the distinction."
+        "title": "Try a second case",
+        "text": "Replace slip A with the cafeteria is closed. Start a fresh chat with the same examples. Try the whole set again.",
+        "help": "If D gets just one tray, add a new teaching example with two problems and the label BOTH. Test with the original slips again."
       }
     ],
     "check": [
-      "Original labels are MAIL, FILES, UNKNOWN, BOTH.",
-      "Replacing A with the cafeteria sentence changes only A to UNKNOWN."
+      "A is MAIL, B is FILES, C is UNKNOWN and D is BOTH.",
+      "Only A changes. It now goes in UNKNOWN."
     ],
     "sources": [
       [
@@ -137,37 +137,37 @@
   },
   {
     "id": "lab-ai-studio-04",
-    "title": "Make a claim point back to evidence",
-    "summary": "Require a source ID and a short supporting passage for every reported decision.",
+    "title": "Match a claim to the right notice",
+    "summary": "A draft and an approved notice give different days. Find the date a reader can actually use.",
     "level": "Intermediate",
-    "requires": "AI Studio Playground online. Use only the three supplied synthetic notices.",
-    "features": "Document-grounded prompting, evidence extraction and conflict handling.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Ask Playground to quote a named source for an answer.",
     "roles": [
-      "Resolve which mock maintenance date is current.",
-      "Compare two notices about a pilot.",
-      "Build a sourced answer in a reference app."
+      "Find the mail notice that supports a deadline.",
+      "Check a date against the approved plan.",
+      "Show a source under an app's answer."
     ],
-    "prompt": "Sources: M1 “Draft: Pier 2 opens June 3.” M2 “Approved: Pier 2 opens June 8.” M3 “Approved: Pier 4 opens June 9.” Report the approved opening of Pier 2 and whether a closing date is documented. For each conclusion give source ID and supporting text, or say no supporting source.",
+    "prompt": "Read just these three slips. M1 says Draft: Pier 2 opens June 3. M2 says Approved: Pier 2 opens June 8. M3 says Approved: Pier 4 opens June 9. When is Pier 2 approved to open? When does it close? Give the slip ID and its words for each answer, or say no source gives it.",
     "steps": [
       {
-        "title": "Isolate the material",
-        "text": "Use a new Playground chat with web grounding off. Paste the prompt. A lookup outside this exercise would introduce a different source collection.",
-        "help": "If an answer cites a website, verify the grounding setting and ask for the supplied IDs only."
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Leave web search off for this test.",
+        "help": "The Playground has a message box and a Run button. The Build view shows an app preview instead."
       },
       {
-        "title": "Check entailment",
-        "text": "Match the sentence quoted for the opening date to its pier number and approval status. Inspect the closing-date response separately.",
-        "help": "June 9 has a valid source but applies to another pier. A citation alone is insufficient."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Look at the pier number and the word Approved on each slip. Match both clues before accepting a date.",
+        "help": "M2 supports June 8. None of the slips gives a closing date."
       },
       {
-        "title": "Remove the authority",
-        "text": "Run a fresh version without M2. Compare the wording of the opening-date conclusion.",
-        "help": "The draft still supports a proposed June 3 date. It cannot support an approved opening for Pier 2."
+        "title": "Try a second case",
+        "text": "Remove M2 and ask again in a fresh chat. Check whether an approved date for Pier 2 still exists.",
+        "help": "If June 9 appears, ask the helper to quote its pier number. If June 3 appears, ask whether its slip was approved."
       }
     ],
     "check": [
-      "Approved opening is June 8 with M2. No source states a closing date.",
-      "Without M2, the approved Pier 2 date is unknown."
+      "M2 supports June 8. None of the slips gives a closing date.",
+      "The approved opening date for Pier 2 is now unknown."
     ],
     "sources": [
       [
@@ -182,38 +182,38 @@
   },
   {
     "id": "lab-ai-studio-05",
-    "title": "Enforce a JSON shape for missing values",
-    "summary": "Turn loosely worded cards into machine-readable records with an explicit null for an absent date.",
+    "title": "Give an app a clean date box",
+    "summary": "Turn three launch cards into records an app can read. Leave a missing date empty on purpose.",
     "level": "Intermediate",
-    "requires": "Online AI Studio with a model supporting structured output.",
-    "features": "Run settings, a JSON schema and semantic validation.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Use structured output, a set of named boxes a program can read.",
     "roles": [
-      "Extract typed fields from synthetic delivery reports.",
-      "Normalize a set of rollout notices.",
-      "Convert a clue description to a puzzle record."
+      "Read dates from sample mail notices.",
+      "Bring form dates into a staff list.",
+      "Save planned launch dates in an app."
     ],
-    "prompt": "Return one record per input, in order. C1: “Launch 2027-04-02.” C2: “Date to be announced.” C3: “Tentative 2027-05-09.” A tentative date belongs in the date field. Use null only when no date is stated.",
+    "prompt": "Read three cards. C1 says Launch 2027-04-02. C2 says Date to be announced. C3 says Tentative 2027-05-09. Return the ID and stated date for each in order. Keep the tentative date. Write null when there is no date. Null is the computer's empty marker.",
     "steps": [
       {
-        "title": "Set structured output",
-        "text": "In Playground Run settings enable structured output. Enter the schema below or create equivalent fields using the schema editor.",
-        "help": "If a schema option is disabled, select a supported model. All objects need both fields even when the date is null.",
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. In Run settings turn on structured output. Paste the shape below, or use the editor to add the same fields.",
+        "help": "Choose a model that offers structured output. The two field names are id and date.",
         "code": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"date\":{\"type\":[\"string\",\"null\"]}},\"required\":[\"id\",\"date\"]}}"
       },
       {
-        "title": "Run the extraction",
-        "text": "Paste the three-card prompt and Run. Read the literal JSON values as well as the IDs.",
-        "help": "The string “null” and JSON null are different values. A parser should yield a missing value for C2."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Compare each record with its card. Look closely at the middle date field. It should hold the empty marker, without quotes.",
+        "help": "The dates are 2027-04-02, null and 2027-05-09, in order."
       },
       {
-        "title": "Test meaning separately",
-        "text": "Change the C3 date to 2027-05-10 in a fresh run with the same schema and compare the two arrays.",
-        "help": "A valid schema establishes the output structure. Compare C3 to the source to catch a well-formed but incorrect date."
+        "title": "Try a second case",
+        "text": "Use the same shape in a fresh run. Change only C3 to 2027-05-10. Compare all three records.",
+        "help": "If C2 contains a made-up date, ask for an empty date when the card gives none. Check the field in the actual result."
       }
     ],
     "check": [
-      "Three objects appear in order, with dates 2027-04-02, null and 2027-05-09.",
-      "Changing C3 updates only that date."
+      "The dates are 2027-04-02, null and 2027-05-09, in order.",
+      "Only C3 changes to May 10. C2 stays empty."
     ],
     "sources": [
       [
@@ -228,37 +228,37 @@
   },
   {
     "id": "lab-ai-studio-06",
-    "title": "Inspect the calculation behind a total",
-    "summary": "Use code execution to make a reconciliation independently checkable.",
+    "title": "Check the math on a score sheet",
+    "summary": "Read the math the helper ran. Check a zero round, a missing round and a negative score.",
     "level": "Intermediate",
-    "requires": "Online AI Studio Playground and a model that offers Code execution in Run settings.",
-    "features": "Model-generated code, execution output and arithmetic inspection.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Use Code execution to show and run the math behind an answer.",
     "roles": [
-      "Check grouped counts in a mock trace file.",
-      "Reconcile a usage export.",
-      "Audit positive and negative game rounds."
+      "Count zero-error checks in a mail report.",
+      "Check a total in a shared table.",
+      "Add positive and negative game scores."
     ],
-    "prompt": "Use code execution on this CSV: player,points / Ava,12 / Bo,-3 / Ava,0 / Bo,8 / Ava,blank. Slashes separate rows. Ignore the literal blank as missing. Count real zero as a scored round. Show total and scored rounds per player and grand total.",
+    "prompt": "Use code execution to total this sample table. Heading: player,points. Rows: Red,12 then Blue,-3 then Red,0 then Blue,8 then Red,blank. Skip the word blank. Count a real 0 as a played round. Show points and played rounds per team and points for everyone together.",
     "steps": [
       {
-        "title": "Enable execution",
-        "text": "Select a supporting model and turn on Code execution before running the prompt. Open the code and its output in the response.",
-        "help": "A prose calculation alone is a different exercise. If the tool is unavailable, try another eligible model before comparing results."
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. In Run settings choose a model with Code execution and turn it on.",
+        "help": "Open the code and its result after the run. If the switch is missing, choose a model that offers it."
       },
       {
-        "title": "Inspect the filter",
-        "text": "Find the line that handles missing data. Verify that it distinguishes zero from an absent score.",
-        "help": "A truthiness check on the numeric value can silently exclude zero from the round count."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Open the code and its printed result. Add each team's points on paper before comparing.",
+        "help": "Red has 12 in two rounds. Blue has 5 in two rounds. The grand total is 17."
       },
       {
-        "title": "Change a value",
-        "text": "Replace Bo,8 with Bo,-8 and run again. Examine both the printed result and the final answer.",
-        "help": "Bo’s new total is negative. If only the narrative changes, ask to see fresh tool output for the edited fixture."
+        "title": "Try a second case",
+        "text": "Replace Blue,8 with Blue,-8 and run again. Count the played rounds a second time.",
+        "help": "If Red has one round, mark a zero as played. If Red has three, make sure the word blank is skipped."
       }
     ],
     "check": [
-      "Original gives Ava 12 across 2 rounds, Bo 5 across 2 and grand total 17.",
-      "Modified gives Bo −11 and grand total 1."
+      "Red has 12 in two rounds. Blue has 5 in two rounds. The grand total is 17.",
+      "Blue now has -11. The grand total is 1. Each team still has two played rounds."
     ],
     "sources": [
       [
@@ -273,37 +273,37 @@
   },
   {
     "id": "lab-ai-studio-07",
-    "title": "Compare two models against an answer key",
-    "summary": "Run a small blind test and separate correct decisions from plausible explanations.",
+    "title": "Judge two models with the same scorecard",
+    "summary": "Give two helpers the same parking puzzle. Score the math before picking a favorite answer.",
     "level": "Intermediate",
-    "requires": "Online AI Studio Playground with two available text models, or two supported effort settings.",
-    "features": "Model selector, fresh chats and repeatable evaluation.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Try two model choices and grade them with one answer key.",
     "roles": [
-      "Compare classification of report outcomes.",
-      "Compare service-window decision quality.",
-      "Select a model for game-rule questions."
+      "Check two explanations of a mail rule.",
+      "Compare helpers on one staff task.",
+      "Pick a helper for a game's rules page."
     ],
-    "prompt": "A facility charges $2 per started hour, capped at $8. Entries at or after 18:00 pay $3 flat. All visits occur on one day. A: 17:30–19:45; B: 18:00–18:20; C: 09:00–15:00. Give each fee and the rule that applies. Treat the entry time as the eligibility time.",
+    "prompt": "A pretend lot charges 2 dollars per started hour up to 8 dollars. Entries at or after 18:00 cost 3 dollars flat. All visits end the same day. A stays 17:30–19:45, B stays 18:00–18:20 and C stays 09:00–15:00. Give each fee and say which clock time picks the rule.",
     "steps": [
       {
-        "title": "Run two independent chats",
-        "text": "Use the same prompt in fresh Playground chats. Change only the model or effort and label the answers X and Y before scoring.",
-        "help": "Record the selected model and effort privately so you can identify results after scoring."
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat.",
+        "help": "The Playground has a message box and a Run button. The Build view shows an app preview instead."
       },
       {
-        "title": "Score visible criteria",
-        "text": "Award one point for each correct fee and one for identifying entry time as the eligibility test. Compare total scores.",
-        "help": "A model that gets A right by using the wrong rule will lose the rule point."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Run it in two fresh chats with different models or thinking levels. Give one point per correct fee and one for using the entry time. Record scores out of four.",
+        "help": "A costs 6 dollars, B costs 3 and C costs 8. Entry time picks the rule."
       },
       {
-        "title": "Use a holdout",
-        "text": "Move A’s entry to 18:01, keep its exit unchanged and run both versions again. Record latency separately from accuracy.",
-        "help": "This switches A to the evening rate. A faster incorrect answer still fails that case."
+        "title": "Try a second case",
+        "text": "Move A's entry to 18:01. Keep the same exit. Try the change with both models and record how long each takes.",
+        "help": "If a helper charges A the evening price in the first round, ask which time on the ticket it used."
       }
     ],
     "check": [
-      "A costs $6, B $3, C $8. The cutoff applies to entry.",
-      "Holdout A costs $3. The tiny trial demonstrates this prompt only."
+      "A costs 6 dollars, B costs 3 and C costs 8. Entry time picks the rule.",
+      "A now costs 3 dollars. The other fees stay the same. A tie is a possible result."
     ],
     "sources": [
       [
@@ -318,38 +318,38 @@
   },
   {
     "id": "lab-ai-studio-08",
-    "title": "Separate a function request from its result",
-    "summary": "Teach the model to request a lookup and supply a mock result before it can state an answer.",
+    "title": "Ask the catalog before naming a shelf",
+    "summary": "A question is sent to a pretend book catalog. Watch the request go out and the shelf number come back.",
     "level": "Advanced",
-    "requires": "Online AI Studio with function calling available. Use a text model that supports this tool.",
-    "features": "Function declaration, tool arguments and manual simulation.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Use Function calling to let the model ask for a pretend lookup.",
     "roles": [
-      "Prototype a read-only mailbox-status lookup.",
-      "Model a service-status lookup.",
-      "Connect a catalog assistant to a local index."
+      "Look up a test mailbox by its ID.",
+      "Find the owner of a sample team file.",
+      "Ask a game library where a title belongs."
     ],
-    "prompt": "What shelf contains book BK17? Use lookup_book for catalog facts. Wait for the tool result before giving a shelf number.",
+    "prompt": "What shelf contains book BK17? Ask lookup_book for this fact. Wait for its reply before giving a shelf number.",
     "steps": [
       {
-        "title": "Define the mock tool",
-        "text": "Enable Function calling in Playground and enter the declaration below. Use the individual function declaration editor when the interface offers it.",
-        "help": "If the editor wants a list of functions, wrap this single declaration in square brackets. There is no external service to connect.",
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Turn on Function calling in Run settings. Add the tool description below. For two tools, use one description per tool if the editor asks.",
+        "help": "A tool description tells the model what it may ask for. You supply the pretend reply. If there is no reply control, act out both turns on paper.",
         "code": "{\"name\":\"lookup_book\",\"description\":\"Look up an exact book ID\",\"parameters\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"]}}"
       },
       {
-        "title": "Observe the request",
-        "text": "Run the prompt and inspect the generated function name and arguments. Supply the mock response {\"found\":true,\"shelf\":\"H-04\"} using the tool-response control if offered.",
-        "help": "If the UI exposes calls only, keep the call as evidence and simulate the response in a clearly labeled follow-up. Record which workflow you used."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Look for a call to lookup_book with id BK17. Use the tool reply box, if offered, to return {\"found\":true,\"shelf\":\"H-04\"}. Then read the answer.",
+        "help": "First comes a request for BK17. Only after the tool reply does the answer give H-04."
       },
       {
-        "title": "Test a miss",
-        "text": "In a fresh run request BK99. Reply to its lookup with {\"found\":false}. Check the final wording.",
-        "help": "If a shelf appears before the reply, restate the instruction to wait for tool evidence and run the case again."
+        "title": "Try a second case",
+        "text": "In a fresh run ask for BK99. Return {\"found\":false} to that lookup. Check what the helper says.",
+        "help": "If your screen cannot enter a tool reply, write the request and reply as two lines on paper. A practice dialogue is not proof a real tool ran."
       }
     ],
     "check": [
-      "First tool request names lookup_book with id BK17. After the mock result the answer is H-04.",
-      "BK99 produces an unknown or missing result with no invented shelf."
+      "First comes a request for BK17. Only after the tool reply does the answer give H-04.",
+      "The shelf is unknown. No invented shelf number appears."
     ],
     "sources": [
       [
@@ -364,38 +364,38 @@
   },
   {
     "id": "lab-ai-studio-09",
-    "title": "Compare visual input with a text-only control",
-    "summary": "Test a multimodal extraction using a drawing you can make offline and inspect yourself.",
+    "title": "Test what the model can actually see",
+    "summary": "Use a picture with two colored labels. Run the same question again without the picture.",
     "level": "Advanced",
-    "requires": "Online AI Studio Playground with an image-capable model and a browser screenshot tool.",
-    "features": "Image attachment, multimodal interpretation and evidence controls.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Attach a picture, then compare the reply with a run that has no picture.",
     "roles": [
-      "Read fields from a sample monitoring screenshot.",
-      "Extract labels from a mock topology slide.",
-      "Turn a handmade puzzle diagram into data."
+      "Read the labels on a pretend report picture.",
+      "Compare a slide with its written description.",
+      "Check an image description in a game."
     ],
-    "prompt": "Read the attached layout. Return the label and fill color of the left and right panels in visual order. If the layout is absent, say image required. Use only what is visible.",
+    "prompt": "Look at the attached picture. In left-to-right order, give each panel's letter and color. When the picture is missing, say image required. Use only what you see.",
     "steps": [
       {
-        "title": "Create a reference image",
-        "text": "Save the HTML below in a scratch file, open it locally, and take a screenshot of the two panels.",
-        "help": "Use a screenshot in PNG or JPEG format. Both letters and both colored boxes should fit within the captured area.",
+        "title": "Make a picture to test",
+        "text": "Save the sample as panels.html in a plain text editor. Open it in a browser. Take a screenshot of just the two panels.",
+        "help": "On Mac press Shift, Command and 4. On Windows press Windows, Shift and S. Mark the two panels and save the image.",
         "code": "<div style=\"display:flex;font:48px sans-serif;color:white\"><b style=\"padding:32px;background:#0647a8\">Q</b><b style=\"padding:32px;background:#ae2b20\">Z</b></div>"
       },
       {
-        "title": "Attach and inspect",
-        "text": "Add the screenshot to a fresh Playground prompt. Run the supplied instruction and compare positions with the image.",
-        "help": "If the labels are reversed, check whether the screenshot was mirrored before changing the prompt."
+        "title": "Run the prompt",
+        "text": "In a fresh AI Studio Playground chat, attach that screenshot. Paste the lab prompt and choose Run. Compare its answer with the local picture. Check position as well as color and letter.",
+        "help": "The left panel is blue Q. The right panel is red Z."
       },
       {
-        "title": "Remove the evidence",
-        "text": "In a new chat paste the same prompt without the attachment and run it.",
-        "help": "Reusing the previous conversation retains the picture in its context and invalidates the negative control."
+        "title": "Try a second case",
+        "text": "Open a fresh chat. Use the same words, this time without the screenshot. Run the question again.",
+        "help": "If colored labels appear without the picture, check the new chat for attachments and earlier messages."
       }
     ],
     "check": [
-      "Left is Q on blue and right is Z on red.",
-      "Without the image the response requests an image or reports insufficient evidence."
+      "The left panel is blue Q. The right panel is red Z.",
+      "The reply asks for an image or says it cannot see the panels."
     ],
     "sources": [
       [
@@ -410,37 +410,37 @@
   },
   {
     "id": "lab-ai-studio-10",
-    "title": "Prototype an editable result in Build mode",
-    "summary": "Create a working review screen where a person can correct an extraction before export.",
+    "title": "Make a date editor with an export button",
+    "summary": "Build a small real form. Let a reader fix dates and export the two cards once both are ready.",
     "level": "Advanced",
-    "requires": "Online Google AI Studio Build mode in a browser. Use mock records only.",
-    "features": "Build chat, app preview and iterative edits.",
+    "requires": "Open Google AI Studio on a computer. Go to Build to make a practice app.",
+    "features": "Use Build and its live preview to test a small form.",
     "roles": [
-      "Review sample report categories before exporting.",
-      "Correct rollout dates before sharing a digest.",
-      "Edit imported puzzle answers."
+      "Check dates before exporting a mail report.",
+      "Fix missing dates on a practice list.",
+      "Make a working data-entry page."
     ],
-    "prompt": "Build a small browser app entirely from local sample data. Display two editable cards: N1, Harbor, 2027-06-03; N2, Rail, missing date. Mark cards with missing date “Needs review.” Show an Export JSON button enabled only when all dates are valid YYYY-MM-DD calendar dates. In preview, display the exported JSON as readable text.",
+    "prompt": "Build a page with two editable cards. N1 is Harbor dated 2027-06-03. N2 is Rail with an empty date. Mark missing dates Needs review. Add Export JSON. It may export only real calendar dates in year-month-day order. Show the finished records in the preview. Use local sample data.",
     "steps": [
       {
-        "title": "Create the app",
-        "text": "Open Build mode, submit the brief and wait for the preview. Read both cards before editing.",
-        "help": "If the builder introduces a login or remote database, ask it to use the two in-memory examples only."
+        "title": "Open the app builder",
+        "text": "In AI Studio choose Build. Start a new app. When the preview appears, you can try the buttons yourself.",
+        "help": "If you see only a text answer, return to Build and open the preview."
       },
       {
-        "title": "Test the invalid state",
-        "text": "Leave N2 blank, then try 2027-02-30. The export must remain unavailable or report a validation error.",
-        "help": "If an HTML date input blocks the invalid date itself, observe that it cannot become an accepted value and continue with a real date."
+        "title": "Build the first version",
+        "text": "Send the lab prompt in the Build chat. Open the preview. Leave N2 blank. Try to export. Next try February 30, 2027. Watch the button or the error message.",
+        "help": "Neither a blank nor February 30 can be exported."
       },
       {
-        "title": "Complete and regress",
-        "text": "Enter 2027-06-04 for N2, export and inspect both JSON records. Clear N1 and try again.",
-        "help": "If the old success persists after clearing a date, ask Build chat to recompute readiness on every edit and retry."
+        "title": "Try a second case",
+        "text": "Set N2 to 2027-06-04. Export and count the records. Clear N1 and try to export again.",
+        "help": "If February 30 turns into a March date, ask for the date the user typed to be compared with the date the code checked."
       }
     ],
     "check": [
-      "A missing or impossible date cannot be exported.",
-      "With both valid dates, N1 and N2 export once each; clearing N1 prevents another export."
+      "Neither a blank nor February 30 can be exported.",
+      "Both full cards export once. Clearing N1 blocks the next export."
     ],
     "sources": [
       [
@@ -451,38 +451,38 @@
   },
   {
     "id": "lab-ai-studio-11",
-    "title": "Resolve an as-of date with competing authorities",
-    "summary": "Build a prompt that resolves version history and exposes conflicts it cannot settle.",
+    "title": "Find the rule that applied that day",
+    "summary": "A rule can be approved today and start later. Work out which rule was in force on each day.",
     "level": "Expert",
-    "requires": "Online AI Studio Playground with system instructions and text input.",
-    "features": "Source ordering, effective-date logic and held-out evaluation.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Put the date rules in System Instructions and the sample slips in the message box.",
     "roles": [
-      "Determine which mail routing policy an example references.",
-      "Reconstruct the rollout guidance current on a date.",
-      "Recover rules for a past game edition."
+      "Find the mail rule in effect on a sample date.",
+      "Read an approved team policy by date.",
+      "Apply a game's rules for the right season."
     ],
-    "prompt": "Using only the supplied records, report the rule effective on each requested date, citing its ID. P1 approved effective July 1: cap 4. P2 draft effective July 8: cap 9. P3 approved effective July 12: cap 6. Queries in 2027: June 30, July 10, July 12. All records refer to 2027.",
+    "prompt": "Use these made-up records for 2027. P1 is approved and starts July 1 with cap 4. P2 is a draft for July 8 with cap 9. P3 is approved and starts July 12 with cap 6. Give the cap on June 30, July 10 and July 12. Include the ID of the rule you used.",
     "steps": [
       {
-        "title": "Set the decision rule",
-        "text": "Put the rule below in System Instructions and paste the three-date prompt in the user field. Keep web grounding off.",
-        "help": "If sources are treated as instructions, state that the supplied records are input and the selection rule remains fixed.",
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Open System instructions. Put the short rule below in that box. Leave web search off for this test.",
+        "help": "A system instruction is a rule for each turn in this chat. The separate chat box is for a single card or question.",
         "code": "Consider only approved records effective on or before the query date. Use the latest effective date. If two eligible records tie on that date and disagree, return CONFLICT with both IDs. With no eligible record, return UNKNOWN."
       },
       {
-        "title": "Inspect each row",
-        "text": "Run and check the effective date and approval status separately for each selected record.",
-        "help": "A choice of P2 indicates that approval status was ignored even if its date fits correctly."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Check approval first. Cross off any rule that starts after the day in the question. Pick the latest one still on the list.",
+        "help": "The answers are UNKNOWN, 4 from P1, and 6 from P3."
       },
       {
-        "title": "Create a conflicting tie",
-        "text": "Use a fresh chat with the same system instruction and add P4 approved effective July 12: cap 5. Rerun all dates.",
-        "help": "If the model picks the last-mentioned record, reverse the order of P3 and P4. Both orders should produce the same conflict."
+        "title": "Try a second case",
+        "text": "Add P4, approved for July 12 with cap 5. Run the same three days again using the rule in the box above.",
+        "help": "If 9 appears, check P2's draft label. If one July 12 rule wins after P4 arrives, check for a tie on the start date."
       }
     ],
     "check": [
-      "Base answers are UNKNOWN, 4/P1 and 6/P3.",
-      "After P4, July 12 is CONFLICT with P3 and P4. Earlier dates are unchanged."
+      "The answers are UNKNOWN, 4 from P1, and 6 from P3.",
+      "July 12 is CONFLICT with P3 and P4. Neither earlier answer changes."
     ],
     "sources": [
       [
@@ -497,38 +497,38 @@
   },
   {
     "id": "lab-ai-studio-12",
-    "title": "Test a two-call tool handoff",
-    "summary": "Simulate a directory and a schedule service. Require the correct identifier to cross the boundary and prevent a lookup after a miss.",
+    "title": "Pass one tool's answer to the next",
+    "summary": "Find a boat's ID, then use that ID to look up its next stop. Try both a match and a missing boat.",
     "level": "Expert",
-    "requires": "Online AI Studio Playground with a model supporting function calling. The exercise uses mock responses.",
-    "features": "Multiple declared functions and a verified sequence of tool arguments.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Watch the ID from one pretend lookup become the input for the next lookup.",
     "roles": [
-      "Resolve a mock alias before looking up its trace.",
-      "Resolve a site key before asking for its report.",
-      "Look up a ship by nickname before checking its route."
+      "Use a test mail ID to find its report.",
+      "Use a file ID to find a sample owner.",
+      "Use a game ID to look up its rules."
     ],
-    "prompt": "What is the next stop for the vessel named Wren? Resolve the nickname to an ID using find_vessel, then use get_route with the returned ID. If the directory has no match, say unknown and stop. Never invent an ID.",
+    "prompt": "Where does the boat called Wren go next? First use find_vessel to look up its ID. Then use get_route with the ID it returns. If the boat is missing, say unknown and stop there.",
     "steps": [
       {
-        "title": "Declare two tools",
-        "text": "In the function editor define find_vessel with required string nickname and get_route with required string vessel_id, using its declaration form or the JSON below.",
-        "help": "Enable function calling for a compatible model. If the editor accepts one declaration at a time, enter the two objects individually.",
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Turn on Function calling in Run settings. Add the tool description below. For two tools, use one description per tool if the editor asks.",
+        "help": "A tool description tells the model what it may ask for. You supply the pretend reply. If there is no reply control, act out both turns on paper.",
         "code": "[{\"name\":\"find_vessel\",\"description\":\"Resolve a nickname\",\"parameters\":{\"type\":\"object\",\"properties\":{\"nickname\":{\"type\":\"string\"}},\"required\":[\"nickname\"]}},{\"name\":\"get_route\",\"description\":\"Fetch a route by exact vessel ID\",\"parameters\":{\"type\":\"object\",\"properties\":{\"vessel_id\":{\"type\":\"string\"}},\"required\":[\"vessel_id\"]}}]"
       },
       {
-        "title": "Feed results in sequence",
-        "text": "Run the prompt. Return {\"found\":true,\"id\":\"V42\"} to the first call and {\"next_stop\":\"Cove\"} to the second. Watch the arguments.",
-        "help": "Where Playground only displays proposed calls, simulate each result in a labeled follow-up. Do not count that as an executed integration."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. When the first tool asks about Wren, reply {\"found\":true,\"id\":\"V42\"}. Check the next call uses V42. Reply {\"next_stop\":\"Cove\"}.",
+        "help": "The requests are find_vessel for Wren and get_route for V42. The final answer is Cove."
       },
       {
-        "title": "Cut off the chain",
-        "text": "Repeat in a new chat for Sparrow, with a first response of {\"found\":false}. Inspect every proposed call.",
-        "help": "A correct-looking final “unknown” still fails the test if the model attempted a downstream lookup with an invented ID."
+        "title": "Try a second case",
+        "text": "Try Sparrow in a fresh chat. Answer the first lookup with {\"found\":false}. Watch for any more requests.",
+        "help": "If your screen cannot send tool replies, act out each call on paper. If a route is guessed, ask where the boat ID came from."
       }
     ],
     "check": [
-      "Wren triggers find_vessel(Wren), then get_route(V42), then the answer Cove.",
-      "A missing Sparrow has no route lookup."
+      "The requests are find_vessel for Wren and get_route for V42. The final answer is Cove.",
+      "There is no second lookup for Sparrow. Its next stop is unknown."
     ],
     "sources": [
       [
@@ -543,37 +543,37 @@
   },
   {
     "id": "lab-ai-studio-13",
-    "title": "Measure the effect of a prompt change",
-    "summary": "Use a hand-scored reference set to separate improved wording from an actual gain in classification quality.",
+    "title": "Score a prompt on new examples",
+    "summary": "Try two ways to explain a color rule. Check whether the better explanation also works on numbers it has never seen.",
     "level": "Expert",
-    "requires": "Online AI Studio Playground with a fixed model and a sheet of paper for scoring.",
-    "features": "System instruction variants, a locked test set and held-out edge cases.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Try two short instructions on one set of cases and a fresh set.",
     "roles": [
-      "Score a triage threshold for synthetic queue warnings.",
-      "Test migration-priority labels around a cutoff.",
-      "Evaluate puzzle difficulty tags against a fixed rubric."
+      "Test a mail warning color rule.",
+      "Check a report's status labels.",
+      "Test a game's difficulty labels."
     ],
-    "prompt": "Assign RED if count is at least 10, AMBER for 5 through 9, GREEN for 0 through 4, and UNKNOWN for missing, negative or non-integer values. Return IDs and labels only. Inputs: A=0, B=4, C=5, D=9, E=10, F=missing, G=-1, H=4.5.",
+    "prompt": "Use RED for a whole number of 10 or more, AMBER for 5 to 9 and GREEN for 0 to 4. Use UNKNOWN for missing, negative or non-whole numbers. Give just ID and label. Try A=0, B=4, C=5, D=9, E=10, F=missing, G=-1, H=4.5.",
     "steps": [
       {
-        "title": "Run a baseline",
-        "text": "Use an empty Playground chat with the supplied prompt. Copy the model name and output exactly before examining the answer key.",
-        "help": "If the interface automatically chooses the model, choose one fixed named model when available so a model switch cannot confound the rerun."
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat.",
+        "help": "The Playground has a message box and a Run button. The Build view shows an app preview instead."
       },
       {
-        "title": "Change one instruction",
-        "text": "In another fresh chat keep inputs and model fixed. Add “Validate presence, integer type and sign before comparing thresholds” to System Instructions. Score both runs.",
-        "help": "Record correct answers out of eight and count wrong UNKNOWN cases separately. Two perfect scores show a tie on this set."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Score one point per right label. In a new chat with the same model add this rule: First check that the number exists and is whole and at least zero. Score it again.",
+        "help": "A through H should give GREEN, GREEN, AMBER, AMBER, RED, UNKNOWN, UNKNOWN, UNKNOWN."
       },
       {
-        "title": "Guard against memorization",
-        "text": "Try a new four-case batch I=7, J=11, K=2 and L=1.25 with the same rules. Repeat each variant.",
-        "help": "If results differ between identical runs, record the range of scores. One lucky answer does not settle which prompt transfers better."
+        "title": "Try a second case",
+        "text": "Try both wordings in fresh chats on I=7, J=11, K=2, L=1.25. Record each score even if they tie.",
+        "help": "If 4.5 becomes GREEN, ask for a whole-number check before the color rule. Keep the four new cases out of the teaching examples."
       }
     ],
     "check": [
-      "Expected A–H are GREEN, GREEN, AMBER, AMBER, RED, UNKNOWN, UNKNOWN, UNKNOWN.",
-      "Holdout scores against AMBER, RED, GREEN, UNKNOWN. Report the observed scores, including ties."
+      "A through H should give GREEN, GREEN, AMBER, AMBER, RED, UNKNOWN, UNKNOWN, UNKNOWN.",
+      "The new answer key is AMBER, RED, GREEN, UNKNOWN. A good score on the first eight alone cannot settle the comparison."
     ],
     "sources": [
       [
@@ -588,37 +588,37 @@
   },
   {
     "id": "lab-ai-studio-14",
-    "title": "Budget a fallback model using observed outcomes",
-    "summary": "Calculate cost per accepted result for two synthetic model configurations and a selective retry policy.",
+    "title": "Price each useful answer",
+    "summary": "Count what the practice helpers cost, including tries you pay for twice. All prices here are made up for a math game.",
     "level": "Expert",
-    "requires": "Online AI Studio, an available code-execution-capable model and the supplied fictional prices.",
-    "features": "Code execution, outcome scoring and cost sensitivity.",
+    "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
+    "features": "Use Code execution to add the cost of each paid practice try.",
     "roles": [
-      "Price retries for a batch of mock trace labels.",
-      "Estimate cost per usable change summary.",
-      "Compare game-content generation budgets."
+      "Price a practice mail help task.",
+      "Compare two sample document-review plans.",
+      "Budget the cost of a game's hint button."
     ],
-    "prompt": "Use code execution. Eight case IDs A–H each cost 2 cents with Quick or 8 cents with Deep. Quick is correct for A,B,C,D,E. Deep is correct for A,B,C,D,E,F,G. A visible validation rule flags E,F,G,H. Routing policy: run Quick on every case, replace its answer with Deep on flagged cases only. Give total cents, accepted count and cost per accepted answer for each approach.",
+    "prompt": "Turn on code execution. For A through H, Quick costs 2 cents per case and gets A–E right. Deep costs 8 cents per case and gets A–G right. Test Quick alone, Deep alone, and Quick on all followed by Deep on E,F,G,H. On those four keep Deep's answer. Report total cents, correct answers and cents per correct answer.",
     "steps": [
       {
-        "title": "Set up a transparent run",
-        "text": "Enable Code execution, enter the prompt, and open the generated code plus execution result. Treat the prices as fixed fictional inputs.",
-        "help": "If the model counts only paid successes, inspect the cost expression. Every attempted call costs money here."
+        "title": "Open a fresh chat",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. In Run settings choose a model with Code execution and turn it on.",
+        "help": "Open the code and its result after the run. If the switch is missing, choose a model that offers it."
       },
       {
-        "title": "Check the routing",
-        "text": "Trace E and H by hand. Both are billed twice. Replacing E retains a correct answer; H still fails.",
-        "help": "If the result claims eight accepted, ask it to print the final selected model and correctness for each ID."
+        "title": "Run the prompt",
+        "text": "Paste the lab prompt. Select Run. Write eight letters on paper. Mark each paid try and circle each final correct answer. Compare your totals with the printed math.",
+        "help": "Quick costs 16 cents for 5 right, or 3.2 each. Deep costs 64 for 7, or about 9.14 each. Both stages cost 48 for 7, or about 6.86 each."
       },
       {
-        "title": "Tighten the flag",
-        "text": "Remove G from the flag set and rerun from a fresh prompt. Compare saved spend with the lost accepted answer.",
-        "help": "A routing rule can miss a fixable error. Compare accepted count alongside cents per accepted result."
+        "title": "Try a second case",
+        "text": "Take G off the list of second tries. Run the math again. Check which answer is now lost.",
+        "help": "If the second route costs only 32 cents, add the 16 cents spent on the first eight tries."
       }
     ],
     "check": [
-      "Quick: 16 cents, 5 accepted, 3.2 cents each. Deep: 64 cents, 7 accepted, about 9.14 each.",
-      "Original route: 48 cents, 7 accepted, about 6.86 each. Removing G gives 40 cents and 6 accepted, about 6.67 each."
+      "Quick costs 16 cents for 5 right, or 3.2 each. Deep costs 64 for 7, or about 9.14 each. Both stages cost 48 for 7, or about 6.86 each.",
+      "The cost is 40 cents for 6 right, or about 6.67 each. G now has Quick's wrong answer."
     ],
     "sources": [
       [
@@ -633,37 +633,37 @@
   },
   {
     "id": "lab-ai-studio-15",
-    "title": "Build and audit an evidence-backed extraction app",
-    "summary": "Connect a model-generated draft to a human review screen and deterministic checks that reject unsupported evidence.",
+    "title": "Make a form that proves where its answers came from",
+    "summary": "Build a page that lets you approve a draft only when the date, bay and quoted words all match the source.",
     "level": "Expert",
-    "requires": "Online AI Studio Build mode with access to a Gemini text model. Keep the prototype private and use the synthetic notices below.",
-    "features": "Build preview, model-backed extraction, validation, fixtures and manual approval.",
+    "requires": "Open Google AI Studio on a computer. Go to Build to make a practice app.",
+    "features": "Use app Build mode, a live preview and fixed sample checks.",
     "roles": [
-      "Prototype a triage brief with traceable source lines.",
-      "Prepare a review queue for rollout notices.",
-      "Create a sourced fact-card editor for a book."
+      "Prove which notice gave a mail deadline.",
+      "Approve dates read from training documents.",
+      "Build a form that shows its evidence."
     ],
-    "prompt": "Build a private prototype in Build mode. Load sample source lines L1 “Bay 7 opens 2027-08-04.” and L2 “Bay 9 opening date pending.” Use Gemini to propose a record per bay with bay, date or null, source ID and an exact supporting quote. Show source and proposal side by side. Validate quote membership and date evidence in code before enabling human approval. Include a “Run fixture checks” button using fixed draft responses, so validation can be tested without a model call. Display pass/fail per case.",
+    "prompt": "In Build, make a private practice app. L1 reads Bay 7 opens 2027-08-04. L2 reads Bay 9 opening date pending. Ask Gemini to suggest a bay, date or null, line ID and exact quote for each. Show the source beside the row. In ordinary code, check bay, date and quote before allowing approval. Add Run fixture checks to test saved examples without an AI call.",
     "steps": [
       {
-        "title": "Inspect the two paths",
-        "text": "Run the prompt. In the preview, generate a draft once. Inspect the generated files to find the model request and the separate validation function.",
-        "help": "If the prototype only echoes hard-coded responses, ask for a live generation button distinct from the repeatable fixture checks. Keep the platform-managed key on the server."
+        "title": "Open the app builder",
+        "text": "In AI Studio choose Build. Start a new app. When the preview appears, you can try the buttons yourself.",
+        "help": "If you see only a text answer, return to Build and open the preview."
       },
       {
-        "title": "Challenge unsupported claims",
-        "text": "Ask Build chat to add fixtures for a correct Bay 7 row, Bay 9 with null, Bay 9 assigned 2027-08-04 from L1, and a Bay 7 row with an invented quote.",
-        "help": "Checking only whether a date occurs somewhere in the document will incorrectly accept the crossed-bay case. Require the cited line to support both bay and date."
+        "title": "Build the first version",
+        "text": "Send the lab prompt in the Build chat. Open the preview. Try four checks: the true Bay 7 row, Bay 9 with no date, Bay 9 claiming L1's date, and Bay 7 quoting words that never appear. Press the test button.",
+        "help": "The two true rows pass. The crossed bay and invented quote fail."
       },
       {
-        "title": "Rehearse review and export",
-        "text": "Run fixture checks, generate and edit a proposal, approve a valid row, then change its date. Check that validation reruns and the prior approval clears.",
-        "help": "If model access fails, exercise the validator with fixed drafts and record live generation as unverified. Test data and a model result are separate evidence."
+        "title": "Try a second case",
+        "text": "Approve a valid row. Change its date. Check the row and approval again. Also try to approve a row that fails.",
+        "help": "If the crossed row passes, add a check that the bay in the quote matches the bay on the card. Run all four saved checks again."
       }
     ],
     "check": [
-      "Correct Bay 7 and pending Bay 9 pass. The crossed-bay and invented-quote fixtures fail.",
-      "The app prevents approval of an invalid edit and clears a previous approval when that row changes."
+      "The two true rows pass. The crossed bay and invented quote fail.",
+      "A changed row needs a fresh review. A row that fails its checks cannot be approved."
     ],
     "sources": [
       [
@@ -677,6 +677,696 @@
       [
         "Google AI Studio · Playground and run settings",
         "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-16",
+    "title": "Play the higher-or-lower card game",
+    "summary": "Guess whether the next card is higher or lower. A fixed deck lets you check the score by hand.",
+    "level": "Starter",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Check a trend in fake mail counts.",
+      "Teach higher or lower with a team number game.",
+      "Build a card game with a clear finish."
+    ],
+    "prompt": "Make a browser app in Build. Add Higher and Lower buttons, a score and a turn count. Reveal exactly one card per guess. Award one point for a right guess. End the round after the last card. Add Play again to restore the deck. Use these practice values: Deck in order: 4, 7, 3, 9. Show the 4 first. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Play the first round",
+        "text": "Guess Higher, Lower, Higher. Note the card and score after each press.",
+        "help": "The revealed cards are 7, 3, 9. The score reaches 3 out of 3. Guesses stop."
+      },
+      {
+        "title": "Try a change",
+        "text": "Play again and choose Lower first. Finish the other two guesses correctly.",
+        "help": "If you can score twice from one card, move to the next card after every guess and close the buttons at the end."
+      }
+    ],
+    "check": [
+      "The revealed cards are 7, 3, 9. The score reaches 3 out of 3. Guesses stop.",
+      "The first new guess earns 0. The second game ends at 2 out of 3."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-17",
+    "title": "Roll two picture dice",
+    "summary": "A player earns a point each time two dice show the same number. Give the game a practice roll so you can prove the rule.",
+    "level": "Starter",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Test a pretend rule with chosen examples.",
+      "Make a chance game for a training break.",
+      "Test random play with fixed rolls."
+    ],
+    "prompt": "Make a browser app in Build. Show a pair of dice as printed numbers, a Roll button for two random values from 1 to 6, and a Practice roll button that walks through the fixed pairs in order. Give one point per matching pair. Finish after three rolls. Add Start again. Use these practice values: Practice rolls: 2 and 2, then 2 and 5, then 6 and 6. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Play the first round",
+        "text": "Use Practice roll three times. Read the numbers each time and tally matches on paper.",
+        "help": "The scores after each try are 1, 1 and 2. Two matching pairs win two points."
+      },
+      {
+        "title": "Try a change",
+        "text": "Try a fourth roll. Start again and use Roll for three turns. Inspect the values and the finish message.",
+        "help": "If a seven appears, ask the code for whole values from one through six and test the end points using a fixed pair."
+      }
+    ],
+    "check": [
+      "The scores after each try are 1, 1 and 2. Two matching pairs win two points.",
+      "The fourth roll cannot change the finished game. A new game starts at zero. Each random die stays between 1 and 6."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-18",
+    "title": "Build a countdown card for a reader",
+    "summary": "Move a timer forward by hand. A reader can learn the controls without waiting five real minutes.",
+    "level": "Starter",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Practice the timing of a mail check.",
+      "Build a timer for a five-minute meeting item.",
+      "Create a game timer you can test in seconds."
+    ],
+    "prompt": "Make a browser app in Build. Show minutes left, Start, Pause, Tick and Reset. For this exercise time moves only on Tick. Ignore Tick while paused. Show Time is up at zero and stop there. Use these practice values: Set the practice timer to 5 minutes. One Tick removes 1 minute. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Press Tick before Start. Then Start and press Tick twice. Read the number and press Pause.",
+        "help": "Before Start the timer stays at 5. After the two ticks it reads 3."
+      },
+      {
+        "title": "Try a change",
+        "text": "Tick while paused. Resume with Start and tick until zero. Try one more tick, then Reset.",
+        "help": "If Pause still spends a minute, have Tick check whether the timer is running before changing the count."
+      }
+    ],
+    "check": [
+      "Before Start the timer stays at 5. After the two ticks it reads 3.",
+      "The paused tick makes no change. After three more counted ticks the timer stops at 0. Reset returns to 5."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-19",
+    "title": "Make a tiny help-ticket counter",
+    "summary": "Build two buttons for a stack of pretend tickets. Stop the count from falling below zero.",
+    "level": "Starter",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Count practice mail help tickets.",
+      "Count open team tasks.",
+      "Add a small bounded counter to an app."
+    ],
+    "prompt": "Make a browser app in Build. Show the open count in large text. Add New ticket, Close one and Restore sample. Turn Close one off when there are none. Say All clear at zero. Keep a short line showing the last action. Use these practice values: Begin with 2 open tickets. Each New ticket adds one. Each Close one removes one. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Click Close one twice. Read the count and try to close another ticket.",
+        "help": "The count ends at 0 with All clear. A third close cannot make -1."
+      },
+      {
+        "title": "Try a change",
+        "text": "Click New ticket twice, then Close one. Restore the sample.",
+        "help": "If the last action says Closed for a blocked click, update both the count and that message only after an allowed action."
+      }
+    ],
+    "check": [
+      "The count ends at 0 with All clear. A third close cannot make -1.",
+      "The count reaches 1 before reset. Restore sample brings back 2 open tickets."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-20",
+    "title": "Give a quiz three endings",
+    "summary": "A three-question quiz can give helpful feedback even when every answer is wrong.",
+    "level": "Starter",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Build a quiz on a fake mail rule.",
+      "Make a short training quiz.",
+      "Design different endings for a game."
+    ],
+    "prompt": "Make a browser app in Build. Create a three-question quiz with two answer buttons per question. After a choice, show the correct number and a Next button. Count the first choice once. At the end show Review for 0 right, Keep practicing for 1 or 2, and Perfect for 3. Add Replay. Use these practice values: Questions and keys: two plus three=5, seven minus four=3, twice four=8. Include one wrong choice per question. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Choose the right answer on all three. On each question try to press the answer twice before going on.",
+        "help": "Only the first selection counts. The final screen says Perfect and 3 out of 3."
+      },
+      {
+        "title": "Try a change",
+        "text": "Replay once with all wrong answers. Replay again with only the middle answer correct.",
+        "help": "If all scores say Perfect, inspect the rule for each possible count and run the three routes again."
+      }
+    ],
+    "check": [
+      "Only the first selection counts. The final screen says Perfect and 3 out of 3.",
+      "The two screens say Review at 0 out of 3 and Keep practicing at 1 out of 3."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-21",
+    "title": "Make a card picker for three moods",
+    "summary": "Use a choice to show the right card. Two readers can choose different moods without typing a prompt.",
+    "level": "Starter",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Show a help card for one mail task.",
+      "Choose one training activity for a team.",
+      "Build a choice-driven activity picker."
+    ],
+    "prompt": "Make a browser app in Build. Build three labeled mood buttons with their matching activity cards. Start with a prompt to choose a mood. After selection show exactly one card. Add Clear choice to return to the beginning. Use these practice values: Choices: Calm gives Draw a cloud. Curious gives Find a pattern. Bold gives Try a puzzle. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Choose Curious and then Bold. Read each card and count how many cards are showing.",
+        "help": "Curious shows Find a pattern. Bold replaces it with Try a puzzle. Only one card is on screen."
+      },
+      {
+        "title": "Try a change",
+        "text": "Clear the choice. Pick Calm twice. Count the cards and read the instruction.",
+        "help": "If old cards pile up, ask the app to replace the displayed card whenever the choice changes."
+      }
+    ],
+    "check": [
+      "Curious shows Find a pattern. Bold replaces it with Try a puzzle. Only one card is on screen.",
+      "Clear hides all activity cards. Choosing Calm twice still shows just one Draw a cloud card."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-22",
+    "title": "Build a clue ladder",
+    "summary": "A mystery card can reveal one hint at a time. Solve it early to keep more points.",
+    "level": "Intermediate",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Practice finding a mail field from clues.",
+      "Teach a term in a team puzzle.",
+      "Build a hint-and-guess game."
+    ],
+    "prompt": "Make a browser app in Build. Make a word game with a guess box, Give hint, Check guess and Replay. Start at 4 possible points. Each new hint lowers the possible score by one. Ignore case and extra spaces in guesses. A correct guess ends the round. After all hints, leave one point available. Use these practice values: Target word is LANTERN. Hints in order: You carry me. I hold a light. I can hang from a hook. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Give two hints. Type lantern with a space at each end. Check the guess.",
+        "help": "Two different hints appear. The round ends with 2 points. More hints or checks cannot add points."
+      },
+      {
+        "title": "Try a change",
+        "text": "Replay. Try lamp, then use every hint and finish with LANTERN.",
+        "help": "If a guess with spaces fails, trim the outer spaces and compare both words in the same case."
+      }
+    ],
+    "check": [
+      "Two different hints appear. The round ends with 2 points. More hints or checks cannot add points.",
+      "Lamp keeps the game going. The last correct guess earns 1 point. The three hints appear in order."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-23",
+    "title": "Make a day-by-day meal board",
+    "summary": "Plan three meals and add up the ingredients. Use a second serving to test whether the list really changes.",
+    "level": "Intermediate",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Add the counts from selected mail folders.",
+      "Plan shared supplies for several days.",
+      "Build a shopping list from selected recipes."
+    ],
+    "prompt": "Make a browser app in Build. Make a planner with one meal selector per day, including an empty choice. Show the total needed for each ingredient. Recount from the selected meals whenever a choice changes. Add Clear board. Use these practice values: Meal cards: Soup needs 2 carrots and 1 onion. Wrap needs 1 carrot and 2 beans. Days are One, Two and Three. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Choose Soup, Wrap, Soup on the three days. Check the shopping list.",
+        "help": "You need 5 carrots, 2 onions and 2 beans."
+      },
+      {
+        "title": "Try a change",
+        "text": "Clear Day Three, then switch Day Two from Wrap to Soup. Read the new totals and clear the whole board.",
+        "help": "If beans remain after both wraps are gone, rebuild the totals from the current three choices."
+      }
+    ],
+    "check": [
+      "You need 5 carrots, 2 onions and 2 beans.",
+      "After both changes the list has 4 carrots, 2 onions and no beans. Clear gives an empty list."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-24",
+    "title": "Mark dates that still need attention",
+    "summary": "Pick out missing dates, impossible dates and real leap days. A colored label needs words as well as color.",
+    "level": "Intermediate",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Find dates to review before a practice mail export.",
+      "Check dates typed into a staff form.",
+      "Build a date checker with clear feedback."
+    ],
+    "prompt": "Make a browser app in Build. Build an editable date checker with plain text input and status words Valid, Check date or Missing. Use year-month-day order and real calendar rules. Show the count in each group. Add Load sample. Use these practice values: Sample rows: R1 2028-02-29, R2 2027-02-29, R3 with no date, R4 2027-12-31. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Load the four rows. Compare the two February dates and sort them into groups on paper.",
+        "help": "R1 and R4 are Valid. R2 says Check date. R3 says Missing. Counts are 2, 1 and 1."
+      },
+      {
+        "title": "Try a change",
+        "text": "Change R2 to 2027-02-28 and fill R3 with 2027-04-31. Count the groups again.",
+        "help": "If April 31 passes, compare the entered day with the number of days in that month. Test both February rows again."
+      }
+    ],
+    "check": [
+      "R1 and R4 are Valid. R2 says Check date. R3 says Missing. Counts are 2, 1 and 1.",
+      "Three rows are Valid. One says Check date. None say Missing."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-25",
+    "title": "Find words on a pocket menu",
+    "summary": "A reader types part of a word and gets matching dishes. Changing the input should refresh the same list.",
+    "level": "Intermediate",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Find a folder name in a test mail list.",
+      "Search sample document titles.",
+      "Build search for an app menu."
+    ],
+    "prompt": "Make a browser app in Build. Make a search box and a list of matches. Search anywhere in the full dish name. Ignore case and spaces at the start or end. Preserve menu order. Empty input shows all four dishes. Give a helpful message for no matches. Use these practice values: Menu: Pear pie, Bean soup, Peach toast, Corn bowl. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Type PE with a space on either side. Count the dishes and check their order.",
+        "help": "Pear pie and Peach toast appear in that order. Bean soup and Corn bowl are hidden."
+      },
+      {
+        "title": "Try a change",
+        "text": "Try bowl, then stone, then clear the box.",
+        "help": "If clearing the box still leaves an empty menu, keep an untouched copy of the original list and search that on each change."
+      }
+    ],
+    "check": [
+      "Pear pie and Peach toast appear in that order. Bean soup and Corn bowl are hidden.",
+      "The results are Corn bowl, a no-match message, then all four dishes."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-26",
+    "title": "Check a room map by touch or keyboard",
+    "summary": "Pick a seat on a simple map and hear or read its label. A blocked seat should never count as a booking.",
+    "level": "Intermediate",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Choose sample mail folders from a small grid.",
+      "Make a room sign-up screen usable by keyboard.",
+      "Add a seat map to a game app."
+    ],
+    "prompt": "Make a browser app in Build. Build four labeled seat buttons. Print Free, Chosen or Blocked on each. A free seat can be chosen and unchosen. Show a list of chosen seats in row order and a Confirm button enabled only for a nonempty choice. Let Tab and Enter operate the controls. Use these practice values: The map has seats A1 A2 in the top row, B1 B2 in the bottom row. A2 starts blocked. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Choose B2 then A1. Try A2. Read the chosen list and use Confirm.",
+        "help": "The list says A1, B2. A2 stays Blocked. The confirmation lists the same two seats."
+      },
+      {
+        "title": "Try a change",
+        "text": "Clear the selection, then use only Tab and Enter to choose B1. Confirm again.",
+        "help": "If a keyboard press does nothing, use real buttons with text labels. Try moving and selecting again with the mouse set aside."
+      }
+    ],
+    "check": [
+      "The list says A1, B2. A2 stays Blocked. The confirmation lists the same two seats.",
+      "After clearing, Confirm is off. The keyboard booking lists just B1."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-27",
+    "title": "Create a mail notice checker",
+    "summary": "A short list tells you which pieces of a fake notice are still missing before you export it.",
+    "level": "Intermediate",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Check a sample mail announcement before copying it.",
+      "Build a team notice template.",
+      "Show field-by-field help in a form."
+    ],
+    "prompt": "Make a browser app in Build. Build three labeled boxes for subject, time and reply contact. Require a nonblank subject, a real 24-hour time and a contact with text on both sides of @. Show a separate status for each. Add Copy notice or a selectable text preview only when all three pass. Include Clear. Use these practice values: Draft boxes: subject=Practice update, time=09:15, reply contact empty. Use help@example.test for the sample contact. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Load the draft. Fill the blank contact. Look at each status and the ready-to-copy notice.",
+        "help": "At first only contact needs attention. Once filled, the notice includes Practice update, 09:15 and help@example.test."
+      },
+      {
+        "title": "Try a change",
+        "text": "Set the time to 24:00. Fix it to 00:00. Then change the subject to spaces only.",
+        "help": "If an old ready notice remains after a bad edit, hide or update it every time one input changes."
+      }
+    ],
+    "check": [
+      "At first only contact needs attention. Once filled, the notice includes Practice update, 09:15 and help@example.test.",
+      "24:00 fails and 00:00 passes. A subject made of spaces prevents a fresh ready notice."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-28",
+    "title": "Join two tiny lists by their IDs",
+    "summary": "A short code ties a group row to an owner row. Find out which rows have no match.",
+    "level": "Intermediate",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Join fake mail groups to an ownership list.",
+      "Combine two sample team spreadsheets.",
+      "Match saved records by ID."
+    ],
+    "prompt": "Make a browser app in Build. Build a two-list reader that shows each group with its owner. Match IDs, keep group order and say Unknown when the owner is missing. Show owner IDs that do not belong to any group in a separate box. Add editable practice rows and Rebuild. Use these practice values: Group list: G1=Maps, G2=Charts, G3=Notes. Owner list: G2=Blue team, G1=Red team. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Rebuild the two lists. Check that the first group gets the second owner record.",
+        "help": "Maps gets Red team, Charts gets Blue team, Notes gets Unknown. There are zero unmatched owner IDs."
+      },
+      {
+        "title": "Try a change",
+        "text": "Add owner G9=Gold team. Add owner G3=Green team. Rebuild and look at both panels.",
+        "help": "If Maps shows Blue team, match by G1 rather than pairing the first row with the first row."
+      }
+    ],
+    "check": [
+      "Maps gets Red team, Charts gets Blue team, Notes gets Unknown. There are zero unmatched owner IDs.",
+      "Notes now gets Green team. G9 appears only in the unmatched box. There are still three group rows."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-29",
+    "title": "Capstone · Make a branching puzzle adventure",
+    "summary": "Build a short story a reader can win, lose and replay. The bag must remember a key between rooms.",
+    "level": "Advanced",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Teach a mail check as a choose-your-next-step story.",
+      "Build an interactive practice scenario.",
+      "Ship a replayable adventure with two endings."
+    ],
+    "prompt": "Make a browser app in Build. Build a tiny adventure. From Lobby choose Workshop or Gate. In Workshop let the player take the key once or return. At Gate, trying to exit without a key ends with Locked out. A key earns Home free. Show a bag, room name and Restart. After an ending only Restart can change the game. Use these practice values: Rooms: Lobby, Workshop, Gate. The Workshop has one brass key. The gate has a locked and unlocked ending. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Go straight to Gate and try to exit. Restart, visit Workshop, take the key twice, return to Lobby, then go to Gate and exit.",
+        "help": "The first route ends Locked out. The second ends Home free. The bag showed just one key."
+      },
+      {
+        "title": "Try a change",
+        "text": "Restart after the win. Inspect the bag and try the short losing route again.",
+        "help": "If restart leaves the door open, reset the room, the bag and the ending together. Repeat both routes."
+      }
+    ],
+    "check": [
+      "The first route ends Locked out. The second ends Home free. The bag showed just one key.",
+      "The new bag is empty and the losing route still works. A past win never unlocks a new game."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-30",
+    "title": "Capstone · Turn meeting slips into a checked action board",
+    "summary": "A team has three pretend meeting slips. Build a usable board where every task points back to its exact source.",
+    "level": "Expert",
+    "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+    "features": "Use Build chat to make the app. Try each control in the preview.",
+    "roles": [
+      "Check action dates from fake mail notices.",
+      "Build a meeting follow-up board with source links.",
+      "Ship a review app that can prove its results."
+    ],
+    "prompt": "Make a browser app in Build. Build a private app with these sources and three editable action cards. Each card has team, task, date or Pending, and its source ID. A Check button compares each field with the named source. Show reasons for errors. Allow export of approved, matching cards only. Clear approval whenever a card changes. Supply a Load sample button and a Run checks button with fixed good and bad cards. Use ordinary code for the fixed checks. Use these practice values: S1: Maps team will test on May 4. S2: Charts team will draw on May 5. S3: Notes team will review, date pending. Keep the game or tool rules in ordinary code so a button press does not need an AI call.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
+        "help": "Choose Build if you see only the Playground chat. Look for a live app preview beside your request."
+      },
+      {
+        "title": "Build the app",
+        "text": "Put the prompt into Build. Wait for the preview, then open it.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Load the sample. Approve S1 and S3. Export and read the two rows. Change S1's date to May 5. Run the check and try exporting again.",
+        "help": "The first export has the Maps test on May 4 and the Notes review with Pending. The changed card loses approval. Only the unchanged, approved S3 can export."
+      },
+      {
+        "title": "Try a change",
+        "text": "Give the Charts task the wrong source ID S1. Run checks with that error, a made-up date on S3, and all three original cards.",
+        "help": "If any May 5 date passes on S1, compare the date with that one source. Scanning every slip for May 5 is too broad."
+      }
+    ],
+    "check": [
+      "The first export has the Maps test on May 4 and the Notes review with Pending. The changed card loses approval. Only the unchanged, approved S3 can export.",
+      "Both wrong examples fail for named reasons. All three original cards pass. Restoring the sample resets approvals."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · build an app",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
       ]
     ]
   }

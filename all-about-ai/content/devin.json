@@ -2,13 +2,13 @@
   {
     "id": "devin-start",
     "title": "What is Devin Enterprise? Start here",
-    "summary": "Imagine asking a colleague to fix an incorrect total. You would give them the project, show one wrong result and ask to see the fix. That is a useful way to approach your first Devin session.",
+    "summary": "Give Devin a question it can answer by reading a practice file. Then decide whether an edit would help.",
     "intro": {
-      "what": "Devin Enterprise is an AI coworker for software projects. Give it an assignment in a repository, the folder where a team tracks its code and changes.",
-      "features": "Ask explains code, DeepWiki organizes project documentation, and Agent edits and tests files in a cloud session. Review examines proposed changes. Skills save instructions for repeated jobs.",
-      "exchange": "Have it explain a mailbox-report script. Access to that script gives it no authority in Exchange Online.",
-      "m365": "Let it trace a Teams inventory script against sample records. Check how it handles missing owners.",
-      "developer": "Give it one reproducible app bug and inspect the proposed fix before accepting it.",
+      "what": "Devin is a coding helper. Enterprise is a version set up for teams. A team can choose which projects it can use and who may approve changes.",
+      "features": "Ask reads and explains. Agent can change practice files and run tests. A session keeps the request, the steps and the result together.",
+      "exchange": "Find the file that decides how a sample mail report shows a zero.",
+      "m365": "Trace the date shown in a sample task list back to its source file.",
+      "developer": "Find which file draws the score before asking Devin to change it.",
       "sources": [
         [
           "Your first Devin session",
@@ -30,11 +30,9 @@
     },
     "sections": [
       {
-        "title": "What you give Devin, and what comes back",
+        "title": "Give it one job",
         "paragraphs": [
-          "Devin is Cognition’s software engineering agent. You can ask it a question about a project, or give it a job that involves reading files, changing them and running the software. In a cloud session, it gets a working computer with tools such as a shell and a browser. You can follow its progress, answer a question and look at what it changed.",
-          "Suppose a report shows a blank amount when a customer owes zero. A chat assistant can suggest a possible cause from your description. Devin can inspect the reporting project, locate the formatter, exercise it with a zero, and propose a change for the team to review. You supply the business decision that matters here: zero is a known balance, whereas a missing amount is unknown.",
-          "“Enterprise” describes how the organization provides and governs Devin. Which teams, projects, agents and connected services you see depends on the deployment and your access. An ordinary user can begin with an assigned project. Repository connections, organization-wide settings and budgets have owners who administer them."
+          "Open the link your team uses to sign in to Devin. Choose your practice project and start Ask. Try “Which file shows the total? Point to the line.” Open the file it names. If all you need is the answer, you are done. Switch to Agent when you want a change you can test."
         ],
         "sources": [
           [
@@ -52,9 +50,9 @@
         ]
       },
       {
-        "title": "Six words that appear in the first ten minutes",
+        "title": "Learn six words as you use them",
         "paragraphs": [
-          "Follow one change from left to right. A repository holds the files. A session investigates them in an environment. A branch holds the proposed edits. A pull request shows those edits for review. Automated checks run against the change."
+          "Imagine a game with one broken button. Follow it from its project folder to a proposed fix."
         ],
         "sources": [
           [
@@ -72,42 +70,41 @@
         ],
         "table": {
           "columns": [
-            "Term",
-            "What it means when you use Devin"
+            "Word on screen",
+            "What it means here"
           ],
           "rows": [
             [
               "Repository or repo",
-              "The project’s files and change history. Select the project that owns the behavior."
+              "The project files plus a history of their edits. Pick the folder for the game."
             ],
             [
               "Session",
-              "One conversation and work history. Open it again to see messages, evidence and progress."
+              "The record of this one job. Open it again to read the steps."
             ],
             [
               "Environment",
-              "The machine, dependencies and configuration that let Devin actually run the project."
+              "The computer and tools that run the game."
             ],
             [
               "Branch",
-              "A separate line of work where a change can be inspected before it joins the shared version."
+              "A separate line of work where you can try a fix."
             ],
             [
               "Pull request or PR",
-              "A proposal to bring a branch into another branch. Opening it gives reviewers a place to inspect and discuss it."
+              "A request to review an edit before adding it to the shared copy."
             ],
             [
               "CI checks",
-              "Automated commands run by the project’s continuous integration system. Check which tests ran and on which revision."
+              "Tests the project runs by itself. Check that they ran on the newest edit."
             ]
           ]
         }
       },
       {
-        "title": "How a cloud session differs from the Devin CLI",
+        "title": "Choose the computer for the job",
         "paragraphs": [
-          "You can read and direct a cloud session through the browser while its machine does the work. The Devin CLI is a coding agent in a terminal on your computer. With its /handoff command, the cloud session can receive the branch, conversation context and uncommitted edits. Review your working changes before handing off. If you only want to learn your team’s repository, the web app’s Ask mode is enough to begin.",
-          "The agent picker in the cloud app controls the worker for a session. Cognition describes Lite for narrow tasks, Normal for everyday work, and Ultra for the most demanding work at a higher cost. Fusion pairs a lead model with a second model for parts of the task. SWE-2 appears as a research preview where enabled. The picker reflects what your administrators allow. For a first trial, keep the same brief and evaluate the returned change before spending more on another agent."
+          "A cloud session runs on a computer Devin provides. You watch from a browser. The CLI is the tool in a terminal on your own computer. Some setups let you move a CLI job to the cloud with /handoff. Check which files made the trip. In the agent picker, try a small job on the default worker before choosing a bigger one."
         ],
         "sources": [
           [
@@ -121,10 +118,9 @@
         ]
       },
       {
-        "title": "Choose a first job you can judge yourself",
+        "title": "Pick a change you can judge",
         "paragraphs": [
-          "A question such as “Where does the report format currency?” is a good first use of Ask. An assignment such as “Show a known zero as $0.00 in this one report” is a good first Agent task once someone owns the rule. “Fix our billing” needs a conversation about scope before it can be a useful assignment.",
-          "To try the product, sign in to your organization’s Devin workspace using the invitation or company sign-in it provides. In the web app, open a new session and look for the repository picker. If your training project is absent, ask its owner which Devin organization and repository to select. Many readers can finish the next walkthrough without changing an administrator setting."
+          "Start with “Show 0 when a score is zero. Keep a missing score blank.” Give it three rows: blank, zero and five. Ask it to show all three after the edit. A team owner can help you find the training project when it is missing from the list."
         ],
         "sources": [
           [
@@ -141,9 +137,9 @@
           ]
         ],
         "exercise": {
-          "prompt": "A stakeholder says, “Make the monthly report better.” What would you ask before starting an Agent session?",
+          "prompt": "Someone asks for a better report. What would make that request clear?",
           "answer": [
-            "Ask which reader has a problem, for one example of the current output, and what that output should become. “Show an explicit zero on the balance line for account A” gives you something you can test. If the stakeholder only wants to understand the current report, start a read-only investigation in Ask."
+            "Ask who reads it, what they see now and what they should see. “The zero row should show 0” gives a check you can run."
           ]
         }
       }
@@ -151,14 +147,14 @@
   },
   {
     "id": "devin-first-session",
-    "title": "Your first session, from sign-in to a reviewed change",
-    "summary": "Walk through a small help-page update using ordinary language. The project and rule in this example are fictional. You can use the exercise offline or follow it in an approved practice repository.",
+    "title": "Run your first Devin session",
+    "summary": "Follow one small edit from a question about a help page to a preview you can read.",
     "intro": {
-      "what": "A session is one assignment and the record of how Devin worked on it. Start with a small change whose correct result you already know.",
-      "features": "Choose a project, ask about the existing behavior, send the change to Agent, and inspect the edited files and test result.",
-      "exchange": "Correct an outdated example address in a mail-flow guide. Read the surrounding instructions before accepting the edit.",
-      "m365": "Clarify a SharePoint onboarding step using an approved reference and verify the wording against it.",
-      "developer": "Change one confusing label, open the affected screen and try the new wording yourself.",
+      "what": "A session is a workspace for one job. You can ask where a rule lives, give permission to edit it and inspect the result in one place.",
+      "features": "Devin can link to a file, propose an edit and report a test. A draft pull request lets another person check its work.",
+      "exchange": "Clarify one line about a pretend mailbox report. Keep its example address fake.",
+      "m365": "Fix one line in a sample meeting guide. Open its old link after the change.",
+      "developer": "Update a game’s rule and check the player’s Help button still opens it.",
       "sources": [
         [
           "Starting a session",
@@ -172,11 +168,9 @@
     },
     "sections": [
       {
-        "title": "1. Open one project and ask a read-only question",
+        "title": "Read before editing",
         "paragraphs": [
-          "In the Devin web app, confirm the organization shown in the workspace. Start a new session, choose Ask, and select your practice repository. Ask mode can search an indexed repository and cite its code. For an unfamiliar project, your first success is finding one real file you can open.",
-          "Send this prompt: “Find the user-facing help page that explains how readers renew a loan. Give me the file path, the relevant passage, and the command this project uses to preview or check its documentation. If there is no such page, tell me what you searched.” In a different training project substitute a help topic it actually contains.",
-          "Open the cited file. Compare its contents with the answer and check that it is the source page people edit. A generated page may be overwritten the next time documentation is built. If the page is missing, choose another known page or ask the owner where it lives."
+          "Sign in, pick the training project and start Ask. Try “Find the page that explains renewing a loan. Give its file name and heading.” Open the file. Check that people edit this page directly. A page built from another file may be replaced the next time the project runs."
         ],
         "sources": [
           [
@@ -198,11 +192,9 @@
         ]
       },
       {
-        "title": "2. Describe the change and send it to Agent",
+        "title": "Give Agent the whole rule",
         "paragraphs": [
-          "Use this fictional rule for practice: a loan can be renewed once if nobody is waiting. Ask for a plan that changes the existing help paragraph, preserves its heading and URL, and covers both a renewal with no queue and a renewal with someone waiting. Ask which file will change and what check can show the result.",
-          "Read the plan. If it proposes changing application logic, reply: “This is a documentation exercise. Edit only the reader-facing help.” Once the target is clear, use the Ask conversation’s control to construct a Devin prompt, then select Send to Devin. You can also start Agent directly with the same brief. Confirm the repo and the available agent in the picker. A narrowly scoped wording change is a reasonable trial for Lite or Normal.",
-          "Ask for a draft pull request, the changed passage, and the result of the project’s documentation check. Leave merging to the practice repo’s owner. Copy the session link so you can return to the same work."
+          "Ask for a plan to add this rule: “You may renew once if nobody is waiting.” Keep the heading and page address. When the plan looks right, ask Agent to edit the practice copy, check the help build and open a draft pull request. Save the link to the session."
         ],
         "sources": [
           [
@@ -216,10 +208,9 @@
         ]
       },
       {
-        "title": "3. Follow the work and decide what is ready",
+        "title": "Read the result as a borrower",
         "paragraphs": [
-          "Read the session timeline to see whether Devin found the page, edited it, and ran the promised check. If a check could not run, ask for the command, the relevant error and what remains unverified. If Devin asks which policy is authoritative, supply the fictional rule above and ask it to continue in the same session.",
-          "Open the pull request and read Files changed. Check the actual new wording, the number of files touched and the checks tab. Did the published help build? Does the page still open at the same address? If the draft is wrong, send one concrete correction to the session and recheck the latest revision. A draft PR alone leaves the shared project unchanged."
+          "Open Files changed in the request. Read the sentence and compare it word for word with the rule. Open the page at its old address. A build test can pass even if the sentence dropped a condition."
         ],
         "sources": [
           [
@@ -236,9 +227,9 @@
           ]
         ],
         "exercise": {
-          "prompt": "The diff keeps the original URL. The documentation build passes. The new sentence says, “You can renew once.” Would you approve this practice change?",
+          "prompt": "The new page says “You can renew once.” Does it pass?",
           "answer": [
-            "Ask for a revision. The sentence omits the queue condition. A sufficient statement is “You can renew once if no one is waiting for the item.” Open the updated preview, verify the original URL, and confirm the same change actually reached the current pull request. The successful build only established that the page compiled."
+            "It leaves out the waiting list. Ask for “You may renew once if nobody is waiting.” Open the latest preview and check its full sentence."
           ]
         }
       }
@@ -246,14 +237,14 @@
   },
   {
     "id": "devin-environment",
-    "title": "Build an environment you can reproduce",
-    "summary": "A test that passes only on yesterday’s machine tells you little about tomorrow’s pull request. Learn which parts of a Devin Cloud session survive, then prove that a fresh one can run the project.",
+    "title": "Set up a work computer Devin can use again",
+    "summary": "Prove that a fresh copy can run one small test from the start.",
     "intro": {
-      "what": "An environment is the working machine and software Devin needs for your project. A blueprint describes setup. A snapshot is the saved starting state for a session.",
-      "features": "Build the environment once, launch a fresh session and repeat a known test. Its error message tells you where setup failed.",
-      "exchange": "Pin the PowerShell modules used by a reporting script and run its tests with sample mailbox objects.",
-      "m365": "Make a new session parse a sample Graph response, including an empty result, without signing into a tenant.",
-      "developer": "Use this when your app works on your laptop but fails after a fresh checkout.",
+      "what": "A blueprint is a recipe for setting up Devin’s work computer. A build follows the recipe and saves a snapshot. A new session can start from a copy of that snapshot.",
+      "features": "Setup can install the tools, fetch project packages and run a check. A log shows where each part worked or failed.",
+      "exchange": "Run a fake mailbox report on two fresh work computers and compare the files.",
+      "m365": "Set up the test tools a sample workbook exporter needs.",
+      "developer": "Make a small game run without installing a missing tool by hand each time.",
       "sources": [
         [
           "Building and selecting snapshots",
@@ -267,10 +258,9 @@
     },
     "sections": [
       {
-        "title": "Follow the configuration into a new session",
+        "title": "Put each step in the right recipe",
         "paragraphs": [
-          "A blueprint is the recipe. A build runs it and produces a snapshot, a bootable image. A new Cloud session begins with a fresh copy. Installing a missing tool by hand can rescue the current task, but the next session will still need the tool unless the setup is captured. Start a handoff by recording the repository, revision, platform and snapshot used. This gives the next engineer a way to reproduce the conditions.",
-          "Assign setup to the narrowest useful scope. A shared company tool can live in the enterprise blueprint. A team-specific runtime can live at organization level. The dependency installation and test commands for a single service belong with its repository. Organization and enterprise steps begin in the home directory. A command that expects the repository’s lockfile can consequently fail if it lands at the wrong level."
+          "A tool shared by every team can belong in a shared blueprint. Put the test command for just one project with that project. Check the folder where each step starts. A command looking for a game file will fail if it starts in the wrong folder. Build the snapshot and open a fresh session."
         ],
         "sources": [
           [
@@ -284,10 +274,9 @@
         ]
       },
       {
-        "title": "Distinguish a build step from a hint",
+        "title": "Tell a hint from a test",
         "paragraphs": [
-          "Use initialize for a runtime or system tool that belongs in the image. Use maintenance for the project’s dependency refresh. Build-time maintenance runs when the snapshot is assembled. When a new session pulls newer source, Devin receives the maintenance instructions and may rerun them. An engineer investigating a mismatch should compare the checked-out lockfile with the dependencies available in that session.",
-          "Blueprint knowledge entries can give Devin the actual lint, test and build commands. Those entries supply instructions. To enforce a check before an image ships, an organization or enterprise blueprint supports post-build. For example, run the smallest compatibility test between two included services after both are installed. A failing exit status at this stage fails the build."
+          "Initialize installs basic tools. Maintenance refreshes the packages the project needs. A hint that says “Run the score test” helps Devin find the command. A post-build check actually runs a test. Look at its result when you need proof that the setup works."
         ],
         "sources": [
           [
@@ -301,9 +290,9 @@
         ]
       },
       {
-        "title": "Triage the first failure",
+        "title": "Read the first failure",
         "paragraphs": [
-          "Use an unmodified checkout for a smoke test. Have Devin identify the commit, print the runtime version, and run one known passing test. Save the exact output and failing step. Run the same check from a second fresh session after a blueprint repair. An old session with a hand-installed dependency can give a misleading pass."
+          "Try a known passing test before you ask Devin to edit any files. Save the version, folder and first error. After a repair, open a second new session and try again."
         ],
         "sources": [
           [
@@ -317,25 +306,25 @@
         ],
         "table": {
           "columns": [
-            "Observation",
-            "First comparison",
-            "Next move"
+            "What you see",
+            "Check first",
+            "Try next"
           ],
           "rows": [
             [
               "Build says Partial",
-              "Read the failing repository’s log and see which repositories actually cloned.",
-              "Repair the affected setup and rebuild. A different repository passing its tests establishes little about this one."
+              "Find the project that failed to download.",
+              "Repair its setup and rebuild."
             ],
             [
-              "Fresh session fails before a test starts",
-              "Compare runtime, working directory, lockfile and install log with a known passing run.",
-              "Re-run the project’s documented maintenance for a dependency change. Fix the blueprint if every fresh session needs the same manual step."
+              "Test never starts",
+              "Check the folder, tool version and install log.",
+              "Fix the recipe if every new session needs the same missing tool."
             ],
             [
-              "Several teams fail after the same shared change",
-              "Compare the last good shared blueprint with the latest failed build.",
-              "Have the environment owner restore a known-good configuration and validate the correction in a pilot. Record when any temporary pin should end."
+              "Several projects fail",
+              "Find the shared recipe change.",
+              "Have the owner try the last working setup on one sample."
             ]
           ]
         }
@@ -344,14 +333,14 @@
   },
   {
     "id": "devin-sessions",
-    "title": "Plan with Ask and steer an Agent session",
-    "summary": "A duplicated payment event is a good delegation test. The engineering work fits in a pull request, while the business rule still needs a human decision.",
+    "title": "Guide an agent through one small change",
+    "summary": "Use a repeated event to learn where to step in and what to check.",
     "intro": {
-      "what": "Ask is a way to investigate code before deciding what to change. Agent can take a concrete plan, edit the project and run checks.",
-      "features": "You can read the plan, set the expected result, follow progress, and answer a question when Devin reaches a decision only you can make.",
-      "exchange": "Trace why a script counts shared mailboxes twice. Give Agent a sample with one duplicate and the expected count.",
-      "m365": "Review how a report handles a second page of Graph results. Supply a two-page example to test the fix.",
-      "developer": "Delegate a repeatable bug and settle ambiguous behavior before the agent writes more code.",
+      "what": "Ask mode reads project files and helps make a plan. Agent mode can carry out an approved plan in a working copy.",
+      "features": "Progress shows the steps taken. Side Chat can help you ask about the current session while work is still under way.",
+      "exchange": "Count two pretend mail alerts with different IDs even if they have the same text.",
+      "m365": "Process a repeated sample calendar update once.",
+      "developer": "Keep a game from adding the same saved turn twice.",
       "sources": [
         [
           "Ask and plan a handoff",
@@ -365,10 +354,9 @@
     },
     "sections": [
       {
-        "title": "Trace the behavior before authorizing a change",
+        "title": "Find where the total changes",
         "paragraphs": [
-          "The Cloud starting page offers Ask and Agent. Ask explores indexed repositories, cites code and helps plan the work. Agent can edit the checkout, run commands and open a pull request. Planning lives inside Ask. If your organization has several repositories, select the event producer and consumer that matter to the question. Ask how fresh the evidence is and open the cited files on your target revision.",
-          "Try this in Ask. “Trace one payment event from the import endpoint to the statement total. Name the event identifier, the write that changes the balance and the nearest tests. What currently happens if delivery is repeated? Cite a file and function for each answer.” A missing consumer repository or an uncited claim about a downstream service is a specific follow-up. An implementation based on a guess can easily remove a legitimate payment."
+          "Ask “Where is a new event added to the total? Which field names the event? Show me the file and its test.” Open the answer. An event ID is a label for one event. A second delivery can carry the same label. Ask for the rule that explains what a repeat means."
         ],
         "sources": [
           [
@@ -386,10 +374,9 @@
         ]
       },
       {
-        "title": "Write a brief Devin can finish",
+        "title": "Write down what should happen",
         "paragraphs": [
-          "Review the proposed plan before starting Agent from the Ask conversation. Supply a small synthetic input with an answer you can calculate yourself. Two distinct events, A7 and B8, each add $40. A retry of A7 brings the total to $80. A new event C9 for the same amount brings it to $120. This catches a tempting fix that deduplicates by amount.",
-          "Ask the agent to demonstrate the original failure, add the regression case, make the smallest change consistent with the repository’s existing transaction handling, and report the branch, test command and result. If two deliveries share an ID but disagree on amount, have Devin surface that example for a product decision. Keep the answer to that policy question out of the implementation until the owner decides."
+          "Use A7 for three points, B8 for three points, then A7 again for three points. Expect six points. Ask Agent to show the problem on the old code, fix it and run the check again. Two different IDs should count even when their values match. If one ID comes back with a different value, ask the owner which rule applies."
         ],
         "sources": [
           [
@@ -403,10 +390,9 @@
         ]
       },
       {
-        "title": "Intervene at the point where reasoning diverged",
+        "title": "Steer it when a step goes wrong",
         "paragraphs": [
-          "Open Progress to see the sequence of commands, edits and browser activity. A Side Chat can examine the session so far while work continues. Ask there, “Which assertion first showed the second delivery changed the balance?” To redirect the execution, send the decision in the main session. A question confined to Side Chat does not change the work underway.",
-          "If the agent repeatedly installs packages, inspect the first failed command and its directory. If it is rewriting the entire importer, point back to the acceptance cases and ask which changed file each case requires. If it has found a genuine policy ambiguity, answer once with an example and ask it to rerun the relevant cases. After completion, compare the transcript with Session Insights to find the single clarification that would have saved the most time."
+          "Open Progress and find the first time the actual total differs from six. Ask Side Chat which line made it change. If Devin starts rewriting unrelated files, point back to the three sample events. Ask for the smallest edit that passes the check. Record the file, version and test result."
         ],
         "sources": [
           [
@@ -423,14 +409,14 @@
   },
   {
     "id": "devin-review",
-    "title": "Review a Devin change from failure to handoff",
-    "summary": "A reviewer should be able to trace a reported defect through the failing case, the code change and the results on the exact revision proposed for merge.",
+    "title": "Check what a Devin fix proves",
+    "summary": "Read the change, test a repeat and decide what is ready to share.",
     "intro": {
-      "what": "A pull request is a proposed change to a project. Devin Review examines that change and flags issues for the person deciding whether to accept it.",
-      "features": "Read each finding alongside the edited lines, rerun the relevant test and ask for a recording when screen behavior matters.",
-      "exchange": "Check a mailbox-export fix against a sample with two recipients sharing the same display name. Both records should survive.",
-      "m365": "Review a Teams owner report with an ownerless team. Confirm that team still appears in the output.",
-      "developer": "Use a recording to inspect a phone-layout fix and test the exact revision you intend to release.",
+      "what": "A code review is a check of a proposed edit. A test gives you one piece of evidence about how the edit behaves.",
+      "features": "Devin can show changed lines, report test results and, on supported projects, record a short run of the app.",
+      "exchange": "Verify that a repeated sample alert counts once in a mail report.",
+      "m365": "Compare a changed exporter with the file a spreadsheet can actually open.",
+      "developer": "Play a turn twice and see whether the game adds the same points twice.",
       "sources": [
         [
           "Devin Review",
@@ -444,10 +430,9 @@
     },
     "sections": [
       {
-        "title": "Build an evidence packet",
+        "title": "Ask for a before-and-after test",
         "paragraphs": [
-          "For the duplicate-event example, request the failing assertion on the starting code, the passing assertion after the edit, and the result of the repository’s normal checks. Record each revision and the command used. Read the assertion. A test that only checks for a successful HTTP response can pass while a customer is still charged twice.",
-          "Inspect the first attempt as well as the retry. Does the code preserve two legitimate events for the same amount? Does the repeat leave exactly one stored event for that ID? If the component can receive concurrent deliveries under its documented contract, use the project’s concurrency test facilities to exercise that condition. A sequential replay alone gives evidence about sequential behavior."
+          "Ask for the old result, the new result and the command that produced each. Give two different events the same value and then repeat the first event. Check both the total and the stored rows. If the real app can receive two copies at the same moment, ask for that case too."
         ],
         "sources": [
           [
@@ -461,10 +446,9 @@
         ]
       },
       {
-        "title": "Turn automated findings into a review decision",
+        "title": "Review the version that will ship",
         "paragraphs": [
-          "On a supported, connected GitHub or GitLab repository, /devin review in a pull or merge request requests an analysis. This requires the applicable integration and permissions. Open the linked review. Guide view groups related edits. Begin at the changed write path, follow it to the transaction boundary and then read the regression test. Use the findings as specific questions you can resolve against the code.",
-          "Suppose a finding says two deliveries could both pass an existence check. Trace where the first durable write occurs and whether the database enforces uniqueness at that boundary. Ask for a targeted test or a reference to an existing guarantee. A clean automated review does not answer a question about an untested business rule. A new push also changes the evidence. Check the latest reviewed commit and the CI run for the current head before recording your decision."
+          "On connected GitHub or GitLab projects, a reviewer can ask for /devin review on a proposed change. Read each finding and check the lines it points to. If two requests can arrive together, check where the store rejects a second copy. When a new edit arrives, compare the latest version with the version the tests actually ran."
         ],
         "sources": [
           [
@@ -474,10 +458,9 @@
         ]
       },
       {
-        "title": "Capture what a person can observe",
+        "title": "Watch the result in the app",
         "paragraphs": [
-          "For a user-visible change, ask Devin to run the normal application flow and send a short recording. Sessions that create a code-changing PR can offer Test the app. Specify the observable outcome. “Import the approved three-delivery fixture, open the statement, show the two retained rows and the $80 total.” For a backend-only change, the integration test and stored rows may provide stronger evidence.",
-          "Close the handoff with the commit reviewed, the files carrying the behavior, the cases that passed, and the cases that still need a decision. Include the recording or test output where another person can find it. If a later edit changes the transaction path, re-run the affected cases and link the new result. This lets the next reviewer distinguish evidence for the current change from evidence for an earlier attempt."
+          "Ask for a short recording of one turn and a repeat, or try Test the app where it is available. Check that the score stays put on the repeat. Leave a review note with the version, the test and any case still open. If the edit changes again, repeat the checks that depend on that line."
         ],
         "sources": [
           [
@@ -494,14 +477,14 @@
   },
   {
     "id": "devin-playbooks",
-    "title": "Turn a reliable playbook into a reusable skill",
-    "summary": "Teach Devin the part of a task that repeats. Keep ticket-specific facts in the request and give the shared procedure an acceptance test of its own.",
+    "title": "Teach Devin a repeatable task",
+    "summary": "Turn a routine check into a short recipe someone else can run.",
     "intro": {
-      "what": "A skill is a saved set of instructions Devin can reuse. A good candidate is work you do repeatedly and can teach someone else to check.",
-      "features": "Skills can hold procedures and supporting files. This chapter also explains how earlier playbooks fit into the current workflow.",
-      "exchange": "Save the steps for comparing two sample mail-routing reports. Try a pair with identical values in a different order.",
-      "m365": "Teach a skill to summarize a change in a Microsoft 365 configuration export and flag missing fields.",
-      "developer": "Write one when the same release chore returns. A one-time wording change usually takes less time to request directly.",
+      "what": "A skill is a saved set of instructions for a job. Older accounts may show Playbooks or Knowledge while Devin moves them to Skills.",
+      "features": "Skills can live under Customize or with project files. You can name a skill in a session and check what it actually did.",
+      "exchange": "Save a recipe for checking a sample mailbox inventory.",
+      "m365": "Reuse a set of checks on each practice meeting-notes export.",
+      "developer": "Teach a helper how to test a game save and reload.",
       "sources": [
         [
           "Creating and invoking skills",
@@ -515,10 +498,9 @@
     },
     "sections": [
       {
-        "title": "Find the right home for instructions",
+        "title": "Pick a home for the recipe",
         "paragraphs": [
-          "Older Devin accounts can contain Knowledge items for guidance and Playbooks for repeatable tasks. Cognition says legacy Knowledge is deprecated and is moving into Skills in Plugins. Playbooks are also moving to Skills, account by account. New accounts started with Skills from October 24, 2026. On migrated accounts the old Playbooks list is read-only, and existing macros and playbook IDs continue to invoke the migrated skill.",
-          "For new reusable instructions, look under Customize → Skills. A skill can be personal, shared with an organization, or shared enterprise-wide when your permissions allow it. For a procedure that changes with the code, put SKILL.md in .agents/skills/<name>/ in the repository and review changes alongside the implementation. Keep short environment-specific commands in blueprint knowledge. Its lint and test entries serve a different purpose from the retiring Knowledge library."
+          "Look under Customize, then Skills. In migrated accounts, old playbooks can be read there or called through their old names. Team and personal skills have different sharing rules. For a skill tied to the game code, keep SKILL.md in .agents/skills/<name>/ in the project. Review the skill whenever its test or file names change."
         ],
         "sources": [
           [
@@ -540,10 +522,9 @@
         ]
       },
       {
-        "title": "Write a procedure another engineer could run",
+        "title": "Write the checks in order",
         "paragraphs": [
-          "Consider a skill named verify-import-retries. Its description says when to use it and names the expected deliverable, a pull-request comment containing test evidence for a supported event importer. Its required inputs are the importer name, the target revision and the documented event-ID contract. These vary per run. The skill can direct Devin to ask the owner when the contract is missing.",
-          "Write the procedure in execution order. Locate the existing integration fixture. Add two distinct event IDs with equal amounts. Redeliver the first ID. Capture the rows written and the displayed total after each delivery. Run the same case through the application’s normal import entry point. Include the fixture, command, expected total, actual total and revision in the handoff. Use synthetic identifiers so the example travels with the repository."
+          "Call your practice skill verify-import-retries. State what it needs: the importer, the file version and the rule for a repeated ID. Have it find the sample file, send two different IDs, then repeat the first. Ask for the rows, totals and test command. Tell it to stop and ask when the repeat rule is missing."
         ],
         "sources": [
           [
@@ -557,10 +538,9 @@
         ]
       },
       {
-        "title": "Test the instructions themselves",
+        "title": "Test the recipe twice",
         "paragraphs": [
-          "Invoke the skill by name with @skills:verify-import-retries. Try two independent fresh sessions. In the first, provide the event contract and the known fixture. The handoff should show both distinct IDs counting once and the retry counting zero additional times. In the second, omit the contract. A question identifying the missing contract is the expected outcome for that exercise.",
-          "Review what each session actually loaded and did. A skill name in the opening prompt shows intent. An invocation in the session and the recorded checks show use. When both runs miss the same step, revise that step and repeat. When one finds an undocumented command that only works on its current machine, fix the environment and verify the procedure again in a fresh session."
+          "Call @skills:verify-import-retries in a fresh session with the whole rule. Check that both IDs count and the repeat adds nothing. In another fresh session, leave the rule out. A question about the missing rule is the correct result. If only an old work computer succeeds, check the setup recipe too."
         ],
         "sources": [
           [
@@ -581,14 +561,14 @@
   },
   {
     "id": "devin-integrations",
-    "title": "From a ticket or chat thread to one tracked session",
-    "summary": "A small integration pilot should make it easy to answer three questions. What requested the work, where is Devin working, and how will the result get back to the requester?",
+    "title": "Send one ticket to the right Devin session",
+    "summary": "Use a ticket ID to keep updates with the job they belong to.",
     "intro": {
-      "what": "An integration connects Devin to somewhere your team already works, such as a ticket queue or chat. A request there can start a tracked coding session.",
-      "features": "Supported connections include Jira, Teams and Slack. Exactly what assigns a task depends on the installed integration and its settings.",
-      "exchange": "Turn an approved reporting-script ticket into one session, then verify the proposed change is linked back to the ticket.",
-      "m365": "Use a test Teams thread to follow an assignment. Check which participants can actually give the session instructions.",
-      "developer": "For occasional personal fixes, starting directly in Devin saves the setup of a ticket integration.",
+      "what": "A connection links a tool such as Teams or a ticket board with Devin. A ticket is a short note that tracks one piece of work.",
+      "features": "A new ticket can start a session. A later comment can update the same session. Some tools can show the result back on the ticket.",
+      "exchange": "Put follow-up details about a sample mail issue on its existing ticket.",
+      "m365": "Route a practice Teams request to the team that owns it.",
+      "developer": "Add a correction to a game bug report without opening another job.",
       "sources": [
         [
           "Jira integration options",
@@ -610,11 +590,9 @@
     },
     "sections": [
       {
-        "title": "Choose an entry point your organization has connected",
+        "title": "Check the starting point",
         "paragraphs": [
-          "In Slack, each user links a profile after the workspace integration is installed. Mentioning Devin in a channel can start work and produce updates in the thread. On Enterprise deployments with several Devin organizations, channel mapping or the configured routing determines where the work starts. Check the resulting session’s organization and repository.",
-          "For Microsoft Teams, Cognition documents enterprise tenant setup, installation into the relevant team or chat, and a personal account link for each user. A one-to-one chat also needs the personal app installation. If a teammate can launch from a channel and you cannot, first compare personal linking and where the app is installed.",
-          "For either tool, turn a long discussion into a ticket with a named owner and acceptance test. Send the ticket and the public or synthetic reproduction to the session. Later comments can revise the brief, so record the exact decision that superseded the original request."
+          "In Slack or Teams, use an approved practice channel. Check that the app is installed and your account is linked. Ask which Devin team and project will receive the request. Start with one practice ticket and one small test. Follow the session link and check that you landed in the expected project."
         ],
         "sources": [
           [
@@ -628,10 +606,9 @@
         ]
       },
       {
-        "title": "Predict what an assignment will do",
+        "title": "See what a ticket board does",
         "paragraphs": [
-          "For Jira Cloud, Cognition documents a Devin for Jira app using the Rovo agent, and an alternative OAuth connection with a Jira service user. The former can report on the work item’s agent card. The latter uses comments and remote links. Inspect which integration your team uses before copying a colleague’s label-based recipe. Certain label and field filters require the administrator-account connection.",
-          "In Linear, assignment uses the integration’s default skill. A synced skill label can choose a specific workflow. An explicit mention with instructions can start work without applying a skill. Test one event on a practice ticket, inspect the linked session and record the route that actually ran."
+          "Jira can use a Devin app with an agent card, or a linked service account with comments and links. Linear can run a default skill on assignment and choose one from a skill label. Read the setup your team actually uses. On one sample ticket, record which event started what work."
         ],
         "sources": [
           [
@@ -645,10 +622,9 @@
         ]
       },
       {
-        "title": "Distinguish a new request from another event about it",
+        "title": "Keep updates with the same ticket",
         "paragraphs": [
-          "A Devin automation can combine an event, filters, an optional preflight check and an action. Actions include creating a session or sending a message to an existing one. Suppose a label starts work on ticket DEMO-17 and a second rule reacts to a comment. Decide which event should create work. A comment with missing details should reach the session already attached to the ticket.",
-          "For a custom intake service, store the ticket and session ID together, and keep a record of processed event IDs. Before a retry starts work, reconcile that record against the provider’s result. This is a design for your integration. Installing an event trigger alone does not establish those guarantees."
+          "Suppose the new-ticket event starts work for DEMO-17. Store its session ID next to the ticket ID. When the same event comes again, check the record. If a new comment adds a step, send that detail to the recorded session. If the first reply was lost, look for the first session before starting another."
         ],
         "sources": [
           [
@@ -661,9 +637,9 @@
           ]
         ],
         "exercise": {
-          "prompt": "Two test events arrive for DEMO-17. One is a redelivery of the creation event. The other is a new comment containing a corrected example. How many sessions should this pilot create?",
+          "prompt": "A ticket creation notice arrives twice. A later comment corrects the date. How many sessions should you have?",
           "answer": [
-            "One. Ignore the recorded redelivery and attach the new information to the linked session. If the first submission timed out before you recorded its result, investigate that submission before creating another session."
+            "One. The repeat names an existing job. The corrected date belongs in that job."
           ]
         }
       }
@@ -671,14 +647,14 @@
   },
   {
     "id": "devin-access",
-    "title": "Who can use which repository?",
-    "summary": "Trace one request from a person or service user through a Devin organization to source control. The access rules depend on which sharing features your enterprise has enabled.",
+    "title": "Check who can read or change a project",
+    "summary": "Trace a permission from the person who signed in to the file the job needs.",
     "intro": {
-      "what": "Access means who can open a project and what they can do there. A person, an automated service account and a source-control connection each have their own permissions.",
-      "features": "Enterprise roles, organization membership, repository grants and optional sharing controls work together. A successful personal sign-in proves only one part.",
-      "exchange": "Trace which account can read mailbox-automation code. Exchange administrator rights are a separate permission.",
-      "m365": "Compare what a scheduled bot and a human can see in a SharePoint scripts repository using a harmless test file.",
-      "developer": "For a solo app, grant the integration just the project it needs and check its visible repository list.",
+      "what": "A permission says what someone may do. Devin, the project host and the team can each control a different part of the path.",
+      "features": "The sign-in method, team role, project grant and review rules each answer a different access question.",
+      "exchange": "Let a reader see a sample mail project while a reviewer approves changes.",
+      "m365": "Check whether a practice account can open just the needed team file.",
+      "developer": "Give a helper access to one game project and test it with a harmless file.",
       "sources": [
         [
           "Organizations and repositories",
@@ -696,10 +672,9 @@
     },
     "sections": [
       {
-        "title": "Map the four identities involved",
+        "title": "Follow four permission checks",
         "paragraphs": [
-          "Suppose a team called Catalog wants Devin to update a customer-facing handbook. Under the standard organization model, an enterprise administrator connects the source-control provider, then grants the Catalog organization access to the handbook repository. An organization grant can cover one repository or a larger provider group. All members in that Devin organization share its repository grants. A person’s own GitHub checkout only establishes what that person can reach directly.",
-          "List the people and systems involved before diagnosing an access problem. The person signing into Devin, the automation starting the session, the organization receiving the work, and the identity connecting to the Git provider can each have a different scope."
+          "Take one sample handbook file. A person can be allowed to start Devin and still lack access to that particular file. Walk the path in this table."
         ],
         "sources": [
           [
@@ -717,39 +692,38 @@
         ],
         "table": {
           "columns": [
-            "Question",
-            "Where to look",
-            "Example decision"
+            "Ask",
+            "Look at",
+            "Sample check"
           ],
           "rows": [
             [
               "Who starts the job?",
-              "Human account or API service user",
-              "A scheduled handbook job gets a service user with an appropriate role."
+              "Person or service account",
+              "Use the training account for a scheduled test."
             ],
             [
-              "Which Devin actions can it take?",
-              "Effective enterprise and organization roles",
-              "A session creator can have narrower powers than an organization administrator."
+              "What may it do in Devin?",
+              "Team and account roles",
+              "See whether it may start a session."
             ],
             [
-              "Which source is available?",
-              "Provider installation and organization repository grants",
-              "Grant Catalog the handbook repository individually when that is its only assignment."
+              "Which files can the job reach?",
+              "Project grant and host connection",
+              "Try to read one sample page."
             ],
             [
-              "Who decides if the change lands?",
-              "Repository review and branch rules",
-              "Retain the maintainer as the approver for handbook changes."
+              "Who may add the edit?",
+              "Branch and review rules",
+              "Have the project owner review it."
             ]
           ]
         }
       },
       {
-        "title": "Explain an unexpected permission",
+        "title": "Find where a role came from",
         "paragraphs": [
-          "Single sign-on establishes the user’s identity. Identity-provider groups can assign organization access and roles. Direct membership and group-derived roles add together. If someone can still administer an organization after leaving one group, inspect their direct assignment and all remaining groups before changing the role definition for everyone.",
-          "SCIM lets the identity provider push user and group changes. Login-based group synchronization updates at reauthentication. Cognition recommends turning off just-in-time provisioning when SCIM manages group membership to avoid competing updates. To test an offboarding change, record when the provider delivered the change, confirm the resulting Devin membership, and verify with a test identity. An integration’s independent service account warrants its own lifecycle review."
+          "A role can come directly from the account or from a group. A person can still have it after leaving one group. Check both sources. Some team setups push changes from an account directory using SCIM. Others refresh groups at sign-in. Record when the change happened, then check it with a practice account after the update."
         ],
         "sources": [
           [
@@ -771,10 +745,9 @@
         ]
       },
       {
-        "title": "Account for the new Access and Sharing rollout",
+        "title": "Check the team’s sharing setup",
         "paragraphs": [
-          "Cognition’s November 20, 2026 release described Access and Sharing as a gradual, opt-in rollout with the changes off by default. Ask which behavior is enabled before using a colleague’s screenshot as evidence. When enabled, the mismatch report compares Devin grants with GitHub or GitLab access. Optional repo sync adds repositories from the person’s provider account to their picker. It preserves repositories already granted by the organization.",
-          "Try an access matrix with a test repository and two humans with different provider access. Inspect the picker and the mismatch report for each identity, then inspect sharing on the resulting session. In the rollout, service users and shared bots use explicit grants and do not inherit human repo sync. A person finding the handbook in their picker therefore does not establish that a scheduled bot can run the same task."
+          "In teams with Access and Sharing enabled, a mismatch report can compare Devin’s grants with access at the code host. A sync option can add projects already available to a person. A shared bot still needs its own grant. Try the same harmless file with a practice person and an approved test bot. Record the two results separately."
         ],
         "sources": [
           [
@@ -791,14 +764,14 @@
   },
   {
     "id": "devin-deployment",
-    "title": "Where Devin runs and what a session can reach",
-    "summary": "Execution, network routing, authorization and credentials are independent pieces of a successful job. A private package installation illustrates how to diagnose each one.",
+    "title": "Where Devin runs a job",
+    "summary": "Find which computer needs the file before you try to fix its connection.",
     "intro": {
-      "what": "Deployment describes where Devin runs commands and how that machine connects to other services. A laptop’s working connection says little about a remote session.",
-      "features": "Enterprise Cloud, dedicated environments and customer-run Outposts have different responsibilities. Security profiles and scoped secrets govern individual jobs.",
-      "exchange": "Test an approved internal PowerShell package feed by looking up a harmless package version from the actual session.",
-      "m365": "Map where a sample-backed Graph integration test runs before requesting access to any live Microsoft 365 service.",
-      "developer": "A hosted session suits many personal apps. Operating your own workers pays off when you need particular hardware or private connectivity.",
+      "what": "A deployment is the setup that runs Devin. A job may run in Devin’s cloud, in a cloud area set aside for one customer or on a computer the customer runs.",
+      "features": "A profile sets rules for the network and tools a session can use. The rules for making a snapshot can differ from the rules for a running session.",
+      "exchange": "Find where a read-only mail report runs before checking for its sample input.",
+      "m365": "Check which practice data an approved work computer may reach.",
+      "developer": "Test the package your game needs on the same kind of computer that will run it.",
       "sources": [
         [
           "Enterprise deployment options",
@@ -816,10 +789,9 @@
     },
     "sections": [
       {
-        "title": "Draw the path from the agent to the machine",
+        "title": "Draw the path",
         "paragraphs": [
-          "In Enterprise Cloud, Cognition hosts the agent and an isolated machine for each session in its multitenant cloud. In Customer Dedicated Deployment, Cognition hosts the execution environment in a customer-isolated single-tenant VPC. Private connectivity can link that environment to internal resources. With Devin Outposts, commands, file edits and repository access run on machines the customer operates. The agent loop, including inference and planning, still runs in Devin’s cloud.",
-          "For a failing build, ask where the package manager executed and who owns that machine’s egress policy. A successful download on a developer laptop answers a different question. For dedicated deployments using Devin Connect, the gateway can connect over an outbound tunnel or AWS PrivateLink. An allowed gateway route, a permitted session destination and a valid registry credential serve three separate purposes."
+          "Write down where the plan is made, where commands run and where the needed file lives. Enterprise Cloud runs the job in a hosted session. A dedicated setup uses a separate private cloud area. With Outposts, file edits and commands run on the customer’s worker. Planning still takes place in Devin’s cloud. A working download on your laptop tests a different path."
         ],
         "sources": [
           [
@@ -837,10 +809,9 @@
         ]
       },
       {
-        "title": "Predict the effective profile",
+        "title": "Find the rule that applies",
         "paragraphs": [
-          "A profile can limit network destinations, MCP servers, Git access and a GitHub CLI token. With a recommended default a more specific binding can change the selection. A mandatory profile sets a floor. If the enterprise requires read-only Git, a more permissive organization profile still leaves the session unable to push. A read-only investigation can deliver its findings as a session result.",
-          "There are two important exceptions to a simple “same controls everywhere” model. Snapshot builds have a separate default and only the profile’s network policy applies to the build itself. On an Outposts worker, the operator enforces the effective network policy from spec.network_policy on the customer’s machines. Devin applies its cloud-side controls separately. Record the worker type, whether the failure occurred during build or session execution, and which profile was effective at boot or wake."
+          "A profile can limit allowed network sites, tools and Git actions. A required read-only rule still applies if a team asks to allow writes. Snapshot builds use a separate default and apply network policy during the build. An Outposts operator enforces the worker’s network rules. Record the phase, machine and profile when a test fails."
         ],
         "sources": [
           [
@@ -854,10 +825,9 @@
         ]
       },
       {
-        "title": "Triage a failed package fetch",
+        "title": "Read the first useful error",
         "paragraphs": [
-          "Suppose an internal package installed during snapshot creation yesterday and fails in a fresh session today. Start with the failing phase, package version, host and sanitized error. For a connection timeout, check the session’s allowed destinations and the network path. For an authentication rejection, verify the expected secret is available to that repository and that its upstream account still has read permission. For a version lookup failure following successful access, compare the lockfile and the available registry version.",
-          "A repository-scoped secret is available to that repository’s blueprint steps and to Devin working in the repository. A personal secret is limited to its owner’s sessions. A session-specific secret suits a single job. Validate access by reading harmless package metadata and recording the result without printing credential values. Providing the correct identity at the appropriate scope makes the fix reproducible for the next operator."
+          "A timeout can mean the worker cannot reach the package site. An access error can mean the account cannot read it. “Version missing” can mean the requested version does not exist there. Ask the owner to check the exact package and version. Test by reading harmless package details. Keep any sign-in secret out of the test output."
         ],
         "sources": [
           [
@@ -878,14 +848,14 @@
   },
   {
     "id": "devin-api",
-    "title": "Operate a reliable v3 session dispatcher",
-    "summary": "A duplicate ticket event, a slow response or a sleeping session can cost real work. Give the integration an explicit identity, a durable record and a way to recover.",
+    "title": "Start and track a session from an app",
+    "summary": "Design a small job tracker that can recover when a reply goes missing.",
     "intro": {
-      "what": "An API lets one program ask another program to do work. Devin’s v3 API can start and track a session from a ticket or an internal tool.",
-      "features": "The caller has an identity and permissions. Save the returned session ID to follow progress, handle questions and recover after a lost response.",
-      "exchange": "Dispatch a documentation-check ticket once and confirm a repeated ticket event reuses the recorded session.",
-      "m365": "Have a scheduled job request a review of a sample inventory export and record which identity started it.",
-      "developer": "Start manually for a handful of jobs. Build a dispatcher when repeat volume justifies handling failures and duplicates.",
+      "what": "Devin’s API lets a program start and track a job. A session ID is like a claim ticket. Save it so you can find the same job again.",
+      "features": "The API has separate calls to create a session, read its progress and send another message. Your account needs permission for each action.",
+      "exchange": "Track one practice mail report by ID and record its output.",
+      "m365": "Attach a sample job’s session link to its task.",
+      "developer": "Keep a retry from starting the same paid build twice.",
       "sources": [
         [
           "API identities",
@@ -903,10 +873,9 @@
     },
     "sections": [
       {
-        "title": "Create a job you can find again",
+        "title": "Save the claim ticket",
         "paragraphs": [
-          "Use https://api.devin.ai as the base URL, an Authorization header with the Bearer token and an application/json request body. For a recurring integration, use a service user assigned to the intended organization. A personal access token uses its owner’s memberships and permissions. The service user needs UseDevinSessions in the target organization to create a session.",
-          "POST /v3/organizations/{org_id}/sessions accepts a required prompt. For a rehearsal, choose the authorized training repository and send a prompt asking for a read-only inventory of outdated examples, with a file path and supporting line per finding. Give the request a distinctive title and a tag such as handbook-417. Save the returned session_id and url alongside the ticket before acknowledging the event. A shared automation using create_as_user_id requires a separate impersonation permission and changes whose usage the job counts toward."
+          "For a real integration, the service account needs UseDevinSessions for the target team. Keep its secret with the service that calls the API. The base is https://api.devin.ai. Send a prompt with POST /v3/organizations/{org_id}/sessions. For practice, ask for a list of files only. Give the job a tag. Store its returned session_id and URL next to your ticket."
         ],
         "sources": [
           [
@@ -924,10 +893,9 @@
         ]
       },
       {
-        "title": "Distinguish agent state from delivery state",
+        "title": "Read the progress",
         "paragraphs": [
-          "GET /v3/organizations/{org_id}/sessions/{devin_id} returns status, status_detail, pull requests and structured output when available. Use the returned devin-prefixed ID. A caller in the organization can read a session it created or has a session.view grant for. ViewOrgSessions allows broader reading. The list endpoint requires ViewOrgSessions even when a creator can retrieve its own known session by ID.",
-          "A running session can be waiting_for_user, waiting_for_approval or finished. Route a question to the ticket owner, route an approval to an authorized reviewer, and inspect any finished result against the requested evidence. A status of suspended with user_usage_limit_exceeded calls for a budget check. Sending a message with POST /v3/organizations/{org_id}/sessions/{devin_id}/messages requires ManageOrgSessions and automatically resumes a suspended session. Poll with GET when observing. An automatic “still working?” message can wake a job."
+          "Read the known ID with GET /v3/organizations/{org_id}/sessions/{devin_id}. A question goes to the ticket owner. An approval goes to an allowed reviewer. Check the actual file when the job finishes. A known session can have narrower read access than the full team list. To check on a job, use a read call. A message can wake a sleeping job and use more of its budget."
         ],
         "sources": [
           [
@@ -945,10 +913,9 @@
         ]
       },
       {
-        "title": "Recover from a lost response",
+        "title": "Handle a missing reply",
         "paragraphs": [
-          "Example integration design: give the ticket and requested revision a unique key in your own job table. Atomically reserve it before sending the create request. A second delivery of the same event should read the existing row. Save whether the request was sent and persist its response ID. A tag helps an operator correlate records, but multiple sessions can have the same tag.",
-          "If the connection drops after the POST, mark the result uncertain. Have an authorized reader reconcile recent sessions by the job tag, creation window and initiating identity. Attach the matching ID and resume observation. Escalate ambiguous matches for inspection before launching more paid work. Test with a simulated lost response and a duplicate ticket event. The acceptance criterion is one real session associated with the ticket and one reviewed result."
+          "Give each ticket and version one record in your job table. Save that record before sending the request. Have the table enforce one record per ticket and version, even when two requests arrive together. If the reply is lost, mark the result unknown. Compare tag, start time and account against existing sessions. Link the match and keep watching it. If two jobs match, ask the owner which one to keep."
         ],
         "sources": [
           [
@@ -969,14 +936,14 @@
   },
   {
     "id": "devin-fleet",
-    "title": "Coordinate a change across many repositories",
-    "summary": "For a twelve-repository migration, the expensive mistake is discovering after the twelfth pull request that the first one implemented the wrong contract.",
+    "title": "Coordinate several projects",
+    "summary": "Try a change on two different projects before you send it to the whole group.",
     "intro": {
-      "what": "A fleet of sessions divides a change across several repositories. One project serves as the pilot so you can test the shared design before repeating it.",
-      "features": "Managed sessions can split independent jobs. Workflows coordinate stages, and stacked pull requests help when one proposed change depends on another.",
-      "exchange": "Migrate one mailbox-reporting script to a shared output format. Compare its old and new totals before expanding.",
-      "m365": "Pilot a new Graph helper on one inventory project and verify that it handles pagination before other teams adopt it.",
-      "developer": "A single small app rarely needs a fleet. Use separate sessions when independently testable projects can genuinely progress together.",
+      "what": "A group of Devin sessions can work on separate projects. They still need a shared rule when their work must agree.",
+      "features": "One coordinator can hand off jobs, collect tests and decide when the next group is ready. Dynamic Workflows can put those stages in a script.",
+      "exchange": "Try a new sample mail-report date format on two reports first.",
+      "m365": "Check that several practice exporters agree about a missing meeting date.",
+      "developer": "Give one helper the game rules and another the score display. Agree on the score format first.",
       "sources": [
         [
           "Coordinating sessions",
@@ -994,10 +961,9 @@
     },
     "sections": [
       {
-        "title": "Separate the shared decision from independent work",
+        "title": "Set the shared rule first",
         "paragraphs": [
-          "Imagine twelve reports must adopt a new date format. One shared formatter defines the output, and six reports import it. First make a compatibility decision with the formatter owner. Record the locale, sample dates and behavior for missing dates. Then have one owner implement and test that contract. Only after the contract is available should the six dependent reports adopt it.",
-          "For independent modules, a coordinator can delegate to managed Devins in separate machines, collect results and inspect use. Give each child a distinct write scope and an expected output. Give the shared test fixture to one owner. If two child sessions independently change the same fixture, the two green branches can still conflict when combined."
+          "Suppose twelve reports need the same date style and six use one shared date tool. Ask the owner what an empty date should show. Write a tiny sample with one real date and one blank. Give one person or session the shared tool. Give other sessions separate files. Two good edits to the same file may still clash."
         ],
         "sources": [
           [
@@ -1011,10 +977,9 @@
         ]
       },
       {
-        "title": "Use an explicit workflow when the stages matter",
+        "title": "Pass the work to the next stage",
         "paragraphs": [
-          "Dynamic Workflows coordinate sessions through a Python script and record agent calls. Enterprise admins must enable this feature. In a pilot, have the first stage inventory each report and return its repository, base commit, date-formatting location and a sample output. Only confirmed candidates should go to an edit stage. Ask for the resulting branch, changed files, test command and outstanding exceptions.",
-          "Each child normally has its own machine. A later stage needs a pushed branch or other explicit handoff to inspect an earlier change. A workflow can resume and replay completed agent results. Before rerunning a step that creates an external ticket or PR, check the previous result and live state. Resuming computation and avoiding a duplicate external action are separate responsibilities."
+          "A team with Dynamic Workflows enabled can run the stages in order. First collect each report’s file name, version and sample output. Then edit only reports that need it. Each worker has its own computer. Pass a saved branch or file to the next worker. Before repeating a step that opens a ticket or request, check whether it already opened one."
         ],
         "sources": [
           [
@@ -1028,10 +993,9 @@
         ]
       },
       {
-        "title": "Pilot and expand only after the evidence holds",
+        "title": "Grow the test slowly",
         "paragraphs": [
-          "Pilot two different repository types, for example a shared-library consumer and a standalone exporter. Review both outputs against the same fixture and open one file in the application that uses it. If both pass, work in bounded waves that your reviewers can handle. If the same defect appears in two branches, pause new assignments, correct the shared brief and identify every open PR produced with it.",
-          "Closely related changes inside one GitHub.com repository can sometimes be reviewed as stacked pull requests. With this feature, an upper layer depends on the layer beneath it. Cognition documents account-dependent availability and GitHub.com support. Across independent repositories, explicitly track dependencies and release order. A stack in one repository cannot coordinate twelve releases."
+          "Pick one report that uses the shared tool and one that stands alone. Open their outputs in the app that reads them. If both pass, start a small group the reviewers can handle. Within a project, stacked pull requests depend on the one below. Across projects, write down the order in which changes must land."
         ],
         "sources": [
           [
@@ -1044,9 +1008,9 @@
           ]
         ],
         "exercise": {
-          "prompt": "Eight PRs are green. Two format an empty date as January 1, 1970. The central fixture never included an empty date. Which action saves the most rework?",
+          "prompt": "Two of eight reports turn a blank date into January 1, 1970. The early tests all passed. What now?",
           "answer": [
-            "Pause the next wave. Establish the expected representation with the owner, add it to the common fixture, and run it against all eight PRs. Check which versions have already shipped. Resume when the corrected fixture passes in representative consumers and the remaining reviewers understand the change."
+            "Pause the next group. Add the blank case to the shared test. Check all eight reports and any copies already in use before starting more work."
           ]
         }
       }
@@ -1054,14 +1018,14 @@
   },
   {
     "id": "devin-metrics",
-    "title": "Read consumption, delivery metrics and audit events",
-    "summary": "A busy team can open more pull requests while finishing fewer useful changes. Use consumption records, review outcomes and configuration history to answer different questions.",
+    "title": "Count what a Devin job cost",
+    "summary": "Use job results, usage records and review time to tell a fair story.",
     "intro": {
-      "what": "Metrics show how much work Devin consumed and what the team delivered. Audit events record actions, such as someone changing a setting.",
-      "features": "Enterprise usage is measured in Agent Compute Units. Session Insights, budgets and pull-request counts help explain cost, progress and a job that stopped early.",
-      "exchange": "Compare compute used per accepted reporting-script fix and include the time your team spent reviewing it.",
-      "m365": "Investigate a stopped automation by checking the individual and organization limits before rerunning it.",
-      "developer": "For a personal app, track whether a change actually shipped and how long you spent correcting it. Enterprise-wide reporting is usually unnecessary.",
+      "what": "Agent Compute Units, or ACUs, measure work done by Devin Enterprise. The rate your team pays comes from its own plan.",
+      "features": "Usage reports show the units spent. Review records show which changes were accepted. An audit log records changes to settings and access.",
+      "exchange": "Count accepted practice mail reports and the time spent checking them.",
+      "m365": "Compare two batches of sample work of the same size and type.",
+      "developer": "Measure how much work it took to deliver a tested game fix.",
       "sources": [
         [
           "Enterprise billing and budgets",
@@ -1079,10 +1043,9 @@
     },
     "sections": [
       {
-        "title": "Explain a usage-limit stop",
+        "title": "Find which limit stopped the job",
         "paragraphs": [
-          "Devin Enterprise measures usage in Agent Compute Units (ACUs) at the rate in the customer’s order form. Self-serve plans use included quota and on-demand credits. ACUs reflect work performed, including actions and some machine time. A sleeping session accrues no usage. An awake session waiting for a response or test can still incur a small machine cost.",
-          "Start with the session’s stop detail, the affected organization, the relevant member and the billing window. A shared budget can block new work across its organizations even if an individual has headroom. Individual limits can still block a member when the shared pool has room. Compare Session Insights with the organization’s Consumption Analytics and the enterprise budget tree. The owner can then decide whether to re-scope the work, adjust a limit or wait for the reset."
+          "Read the stop reason. Check the member, the team and the dates the budget covers. One member may have used a limit even when the team has units left. A sleeping session uses no units. An awake session waiting for a test may still use a little. Compare Session Insights with the team’s usage and budget views."
         ],
         "sources": [
           [
@@ -1100,10 +1063,9 @@
         ]
       },
       {
-        "title": "Calculate the cost of an accepted change",
+        "title": "Divide by accepted changes",
         "paragraphs": [
-          "For a fictional weekly cohort, ten handbook tickets consumed 72 ACUs. Six changes passed acceptance and merged, two remained open, and two closed without acceptance. The cohort used 12 ACUs per accepted change at the cutoff. Multiplying 12 by the contract’s ACU rate estimates compute cost per accepted change. Record reviewer time separately. Compare equivalent ticket types and allow both cohorts the same time to finish review.",
-          "Use consumption for spend, pull request metrics for counts, and ticket or CI evidence for acceptance. Count distinct accepted tickets if one task generated several PRs. In the PR endpoint, prs_created_count includes authored PRs across states. Merged and currently open are different measures, and taken-over PRs have separate fields. For most enterprises, per-user consumption excludes Devin Review usage, so summing individuals can understate the enterprise total. Use the enterprise daily consumption report when reconciling Review."
+          "Suppose ten sample tickets use 72 ACUs. Six changes pass review. Two remain open and two close without a fix. Divide 72 by 6 to get 12 units per accepted change so far. Multiply by the team’s price per unit for a money estimate. Record review time too. One ticket with two pull requests still gives one accepted ticket. Include review usage when you check the team total."
         ],
         "sources": [
           [
@@ -1121,10 +1083,9 @@
         ]
       },
       {
-        "title": "Trace a configuration change",
+        "title": "Separate a clue from proof",
         "paragraphs": [
-          "If usage rises after an organization change, determine when, where and for which product it rose using consumption data. Then look for configuration or membership events around that interval. The enterprise audit-log endpoint requires ViewAccountAuditLogs. Its time filters use UTC Unix seconds, and a filtered interval with both boundaries can span up to 100 days. Follow pagination when investigating a high-volume window.",
-          "Suppose a budget changed on Wednesday and a large job finished Thursday. Record the audit event, its actor and timestamp, then match the job’s organization, session ID and measured consumption. The audit event establishes who changed a setting. Evidence linking that new capacity to specific sessions supports your explanation of the increase. Keep the measured usage separate from the interpretation."
+          "An audit log can show that a budget changed on Wednesday. The usage report can show which jobs used units on Thursday. Match the team, times and session IDs before claiming that one caused the other. A reader needs ViewAccountAuditLogs. The API time is in UTC seconds. For a long list, follow its next-page links and keep the dates in the same time zone."
         ],
         "sources": [
           [
@@ -1145,14 +1106,14 @@
   },
   {
     "id": "devin-lab",
-    "title": "Devin Enterprise practicum",
-    "summary": "Work the three cases before opening the answer keys. The evidence and numbers are fictional. You can complete all three on the iPad without access to a company system.",
+    "title": "Put three Devin skills together",
+    "summary": "Check a repeated fee, a blocked test and the results from a small trial.",
     "intro": {
-      "what": "This practicum gives you three fictional jobs to solve on paper or on your iPad. You can try them without a Devin account or company access.",
-      "features": "Practice writing a clear assignment, diagnosing a setup failure and deciding whether the pilot earned a wider rollout. Compare your reasoning with the answer keys.",
-      "exchange": "Replace the first exercise with a mailbox-report defect. Describe sample input, expected rows and the evidence you would accept.",
-      "m365": "Use a failed inventory test to distinguish missing test data from a missing permission.",
-      "developer": "Use the final exercise to decide whether another batch of fixes is worth your review time.",
+      "what": "This is a paper-and-pencil way to practice being the reviewer. You can do all three cases without connecting to a service.",
+      "features": "Write a clear brief, point out missing test evidence and use numbers to decide what to try next.",
+      "exchange": "Review a pretend report that counted one mail alert twice.",
+      "m365": "Check what a blocked export test can actually prove.",
+      "developer": "Use a tiny pilot before adding a change to every game screen.",
       "sources": [
         [
           "Choosing work for Devin",
@@ -1170,9 +1131,9 @@
     },
     "sections": [
       {
-        "title": "Case 1 · Write an assignment another engineer could verify",
+        "title": "Case 1. Catch a repeated fee",
         "paragraphs": [
-          "A fictional library receives replacement notices. A delivered notice has an event identifier and a fee in cents. The input fixture contains event A for 350 cents, event B for 200 cents, and a second delivery of A for 350 cents. The current daily fee report shows $9.00. Someone asks Devin to “fix the report.”"
+          "A pretend library gets event A for 350 cents, event B for 200 cents, then A again for 350 cents. The old report shows $9.00. The rule says each ID counts once."
         ],
         "sources": [
           [
@@ -1185,17 +1146,17 @@
           ]
         ],
         "exercise": {
-          "prompt": "Draft a session brief with the business rule, an expected total, a regression case, the evidence to return, and a condition that needs an owner’s decision.",
+          "prompt": "What do you ask Devin to prove?",
           "answer": [
-            "For this exercise, apply each distinct event identifier once. The expected total is 550 cents, or $5.50. Have the agent first reproduce $9.00 on the baseline. Ask for a regression test showing that a second delivery of A leaves the amount unchanged and that two different identifiers for the same amount are both counted.",
-            "Request the focused diff, before-and-after test results and a run of the existing report tests. Conflicting amounts for one identifier require a policy decision. Document that case and ask the owner before altering its behavior."
+            "Ask for the old $9.00 and the fixed $5.50. Repeat A again. The fixed total should stay $5.50. Two different IDs for equal fees must both count.",
+            "Ask for the edited lines and the test run. If A comes back with a different fee, ask the owner to decide the rule."
           ]
         }
       },
       {
-        "title": "Case 2 · Diagnose a session that never reached the test",
+        "title": "Case 2. Read the failed test",
         "paragraphs": [
-          "A project asks Devin to verify a report export. In the session, the unit checks pass. The integration check ends at startup because it cannot locate a test database. The PR summary says all report scenarios have been verified. On a teammate’s laptop the same integration test passes."
+          "A test of one function passed. The test that opens the full export could not start because its practice database was missing. The request says every export check passed."
         ],
         "sources": [
           [
@@ -1212,17 +1173,17 @@
           ]
         ],
         "exercise": {
-          "prompt": "What would you tell the reviewer? In what order would you investigate, and what result would change your verdict?",
+          "prompt": "What would you tell the reviewer?",
           "answer": [
-            "Mark the integration check unverified. Record the exact command, revision, environment and first startup error. Compare the project’s documented fixture setup with the session environment. Determine whether the fixture was built, started and visible to the test runner.",
-            "Re-run the baseline in a clean practice environment and then run the same command against the proposed change. Require a check that reaches the export and inspects the resulting file. If the runner still cannot start, document the blocked check separately. A local success on a different revision cannot establish which behavior the PR changed."
+            "The small check passed. The full export still needs testing. Record the file version, command and first error.",
+            "Set up the sample database on a clean work computer. Run the old and edited versions there. Open the output file and check its contents."
           ]
         }
       },
       {
-        "title": "Case 3 · Decide whether to expand a pilot",
+        "title": "Case 3. Decide if you are ready to grow",
         "paragraphs": [
-          "The first wave contains ten tickets. Six produced accepted changes, two PRs need rework, one session was blocked on setup, and one ticket was a duplicate. The whole wave consumed 48 Agent Compute Units (ACUs). The six accepted changes took a total of 90 minutes of human review."
+          "Ten practice tickets use 48 units. Six fixes are accepted. Two need more work, one is blocked and one is a repeat. The six accepted fixes took 90 minutes to review."
         ],
         "sources": [
           [
@@ -1239,10 +1200,10 @@
           ]
         ],
         "exercise": {
-          "prompt": "Calculate accepted changes per assigned ticket, ACUs per accepted change and review minutes per accepted change. Which results would you bring to the next rollout decision?",
+          "prompt": "Find the acceptance rate, cost in units and review time.",
           "answer": [
-            "Using all ten assignments as the denominator, the acceptance rate so far is 6/10, or 60%. The wave spent 48/6 = 8 ACUs per accepted change. The six accepted changes took 90/6 = 15 review minutes each on average. The 90 minutes exclude time spent on the four other assignments, so this figure understates total human effort per acceptance.",
-            "Report the date and the six accepted PRs. Keep the two open reworks visible. Fix duplicate intake and reproduce the setup issue before expanding the batch. On the next wave, track review time for every assignment and compare like tasks over the same observation window. A change in the team’s ACU contract price affects dollars, while these measured ACUs remain the original usage."
+            "Six out of ten is 60%. Divide 48 by 6 for 8 units per accepted fix. Divide 90 by 6 for 15 minutes of review per accepted fix.",
+            "The 90 minutes cover only the six accepted fixes. Track time on every job next time. Fix the repeat and the blocked setup before you grow the trial."
           ]
         }
       }

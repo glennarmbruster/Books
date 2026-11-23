@@ -6,6 +6,9 @@ import io
 import json
 from pathlib import Path
 import re
+import subprocess
+import sys
+from xml.etree import ElementTree
 from urllib.parse import urlsplit
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
@@ -24,6 +27,15 @@ def words(values):
     return isinstance(values, list) and values and all(isinstance(v, str) and v.strip() for v in values)
 
 
+def check_sample_text(value, path):
+    """Reject personal contact details or device paths accidentally pasted into book files."""
+    for match in re.finditer(r'[A-Za-z0-9._%+-]+@([A-Za-z0-9.-]+\.[A-Za-z]{2,})', value):
+        host = match[1].lower()
+        require(host.endswith(('.test', '.invalid')) or host in {'example.org','example.net','example.com'}, f'Use a made-up email address in {path}')
+    require(not re.search(r'(?:/Users/|C:\\Users\\|/home/)[A-Za-z0-9._-]+', value, re.I), f'Remove the personal home folder in {path}')
+    require(not re.search(r'(?<![\w.-])(?:\+1[-. ]?)?\(\d{3}\)[-. ]*\d{3}[-. ]\d{4}\b', value), f'Remove the personal phone number in {path}')
+
+
 def check_sources(sources, key):
     require(sources, f'Missing sources in {key}')
     for label, link in sources:
@@ -36,6 +48,8 @@ def check_lab(lab, track, number):
     require(key == f'lab-{track}-{number:02}', f'Unexpected lab order for {key}')
     require(words([lab[k] for k in ('level', 'requires', 'features', 'prompt')]), f'Incomplete brief in {key}')
     levels = ['Starter'] * 3 + ['Intermediate'] * 4 + ['Advanced'] * 3 + ['Expert'] * 5
+    new_block = ['Starter'] * 6 + ['Intermediate'] * 7 + ['Advanced','Expert']
+    levels = (new_block if track == 'gemini-app' else levels) + new_block
     require(number <= len(levels) and lab['level'] == levels[number - 1], f'Unexpected level in {key}')
     require(words(lab['roles']) and len(lab['roles']) == 3, f'Check roles in {key}')
     require(len(lab['steps']) >= 3 and words(lab['check']), f'Incomplete walkthrough in {key}')
@@ -69,7 +83,7 @@ manifest = json.loads((book / 'edition.json').read_text())
 edition_date = date.fromisoformat(manifest['reviewed'])
 groups = manifest['groups']
 ids = set()
-assets = ['index.html', 'reader.css', 'reader.js', 'guides.js', 'guide.css', 'content/figures.json', 'content/worked.json', 'edition.json', '../book-pager.js', '../shelf-art/all-about-ai.jpg']
+assets = ['index.html', 'reader.css', 'reader.js', 'guides.js', 'guide.css', 'content/figures.json', 'content/worked.json', 'content/models.json', 'edition.json', '../book-pager.js', '../shelf-art/all-about-ai.jpg']
 kit = refresh_kit(book / 'practice' / 'exchange-inventory')
 assets.append(kit)
 lab_count = 0
@@ -85,7 +99,7 @@ for group in groups:
     require(chapters, f'Empty group {path}')
     if group.get('track'):
         require(words([group['startLabel'],group['gettingStarted']]) and urlsplit(group['startUrl']).scheme == 'https', f'Check setup help in {path}')
-        require(len(chapters) == 15, f'Expected 15 labs in {path}')
+        require(len(chapters) == 30, f'Expected 30 labs in {path}')
     for number, ch in enumerate(chapters, start=1):
         key = ch['id']
         require(re.fullmatch(r'[a-z0-9-]+', key) and key not in ('contents', 'labs', 'start') and key not in ids, f'Invalid or duplicate ID {key}')
@@ -102,6 +116,10 @@ for group in groups:
         if group.get('track'):
             check_lab(ch, group['track'], number)
             require('kit' not in ch or ch['kit'] == kit, f'Unknown kit in {key}')
+            if 'sampleApp' in ch:
+                sample = ch['sampleApp']
+                require(re.fullmatch(r'practice/browser/[a-z0-9-]+\.html',sample) and (book/sample).is_file(), f'Unknown app in {key}')
+                if sample not in assets: assets.append(sample)
             lab_count += 1
             continue
         require(ch['sections'], f'Incomplete chapter {key}')
@@ -122,19 +140,86 @@ for group in groups:
                 require(words(tbl['columns']) and tbl['rows'], f'Empty table in {key}')
                 require(all(words(row) and len(row) == len(tbl['columns']) for row in tbl['rows']), f'Invalid table in {key}')
 
+tracks = [group['track'] for group in groups if group.get('track')]
+expected_tracks = {'antigravity','ai-studio','claude-code','codex','copilot','devin','gemini-app'}
+require(set(tracks) == expected_tracks and len(tracks) == 7 and lab_count == 210, 'Expected seven distinct tracks of 30 labs')
+require(manifest.get('version') == 3, 'Expected edition 3')
+catalog = json.loads((book / 'content/models.json').read_text())
+require(date.fromisoformat(catalog['reviewed']) <= edition_date, 'Check model catalog date')
+values = catalog['values']
+require(values, 'Empty model catalog')
+for field, entry in values.items():
+    require(re.fullmatch(r'[a-z0-9.-]+',field) and words([entry['text']]), f'Invalid model field {field}')
+    check_sources([[field,entry['source']]],field)
+used = set()
+def check_refs(value):
+    if isinstance(value, str):
+        def take(match):
+            field = match[1]
+            require(field in values, f'Unknown model field {field}')
+            used.add(field)
+            return values[field]['text']
+        clean = re.sub(r'\{\{model\.([a-z0-9.-]+)\}\}',take,value)
+        require('{{model.' not in clean, 'Unresolved model field')
+    elif isinstance(value, list):
+        for item in value: check_refs(item)
+    elif isinstance(value, dict):
+        for item in value.values(): check_refs(item)
+def strings_in_content(value):
+    if isinstance(value, str):
+        if not value.startswith('https://'): yield value
+    elif isinstance(value, list):
+        for item in value: yield from strings_in_content(item)
+    elif isinstance(value, dict):
+        for key,item in value.items():
+            if key not in {'id','sources'}: yield from strings_in_content(item)
+
+model_groups = {'gemini.json','claude.json','chatgpt.json','other-tools.json','field-comparisons.json'}
+fixed_fields = {entry['text'] for key,entry in values.items()
+                if key.endswith('.id') or (key.endswith('.name') and re.search(r'\d',entry['text']))}
+for group in groups:
+    rows = json.loads((book/'content'/group['file']).read_text())
+    for item in rows:
+        require('firstGuide' not in item or item['firstGuide'] in guide_ids, 'Invalid first lesson for '+item['id'])
+    if group['file'] in model_groups:
+        for line in strings_in_content(rows):
+            without_refs = re.sub(r'\{\{model\.[a-z0-9.-]+\}\}', '', line)
+            require(not any(term.lower() in without_refs.lower() for term in fixed_fields), 'Move the model name or API ID into the catalog in '+group['file'])
+            require(not re.search(r'\$\d+(?:\.\d+)?\s+(?:in|out)\b|(?:limit(?: is| of)?|up to|maximum|window of)\s+[0-9][0-9,]*\s+(?:million\s+)?(?:input |output )?tokens\b',without_refs,re.I), 'Use a catalog field for model limits or token rates in '+group['file'])
+    check_refs(rows)
 examples = json.loads((book / 'content/worked.json').read_text())
 require(len(examples) == len(ids - guide_ids) and {ex['id'] for ex in examples} == ids - guide_ids, 'Every reference and lab needs its own worked example')
 for ex in examples:
     require(words([ex[k] for k in ('premise','before','try','after','why','rescue')]), 'Incomplete worked example '+ex['id'])
+check_refs(examples)
+require(used == set(values), 'Unused model fields: ' + ', '.join(sorted(set(values)-used)))
 figures = json.loads((book / 'content/figures.json').read_text())
+diagrams = {f'diagram-{name}.svg' for name in ('tokens-context','chat-project-agent','vibe-coding-loop','model-picker','structured-json','tool-calling','offline-pwa','cost-per-win','diff-review','notebook-grounding','deep-research','m365-grounding','exchange-pipeline','git-branch-pr','pagination-loop','zero-vs-blank')}
+require({fig['file'] for fig in figures if fig['file'].endswith('.svg')} == diagrams, 'Check the 16 required diagrams')
+require({p.name for p in (book/'pictures').glob('*') if p.is_file() and not p.name.startswith('.')} == {f['file'] for f in figures}, 'Picture list does not match files on disk')
 for fig in figures:
     name = fig['file']
-    require(re.fullmatch(r'[a-z0-9-]+\.webp', name), f'Invalid picture name {name}')
+    require(re.fullmatch(r'[a-z0-9-]+\.(webp|svg)', name), f'Invalid picture name {name}')
     path = 'pictures/' + name
-    require(fig['lesson'] in guide_ids and path not in assets and words([fig['credit'], fig['caption'], fig['alt']]), f'Check picture {name}')
-    check_sources([[fig['credit'], fig['source']]],name)
-    require((book / path).read_bytes()[8:12] == b'WEBP', f'Invalid WebP {name}')
+    require(fig['lesson'] in ids and path not in assets and words([fig['credit'], fig['caption'], fig['alt']]), f'Check picture {name}')
+    related = fig.get('also', [])
+    require(set(related) <= ids and len(set([fig['lesson'],*related])) == len(related) + 1, f'Unknown or duplicate figure target in {name}')
+    if fig['source'].startswith('#'):
+        require(fig['source'][1:] in ids, f'Unknown local figure source {name}')
+    else:
+        check_sources([[fig['credit'], fig['source']]],name)
+    if name in diagrams:
+        svg = ElementTree.parse(book / path).getroot()
+        ns = '{http://www.w3.org/2000/svg}'
+        require(svg.tag == ns+'svg' and svg.get('viewBox') and svg.findtext(ns+'title') and svg.findtext(ns+'desc'), f'Diagram needs a title and description: {name}')
+        require(all(el.tag in {ns+t for t in ('svg','title','desc','defs','marker','rect','text','path')} for el in svg.iter()), f'Unexpected SVG element {name}')
+    else:
+        require((book / path).read_bytes()[8:12] == b'WEBP', f'Invalid WebP {name}')
     assets.append(path)
+
+for path in [*assets, 'UPDATING.md', *[p.relative_to(book).as_posix() for p in (book/'practice/exchange-inventory').rglob('*') if p.is_file()]]:
+    if Path(path).suffix in {'.json','.svg','.csv','.md','.ps1','.html','.js','.css'}:
+        check_sample_text((book/path).read_text(), path)
 
 digest = sha256()
 for path in [*assets, '../table-books-worker.js']:
@@ -150,3 +235,5 @@ for path, expected in [(book / 'sw.js', worker), (shelf_path, shelf)]:
         require(not args.check, f'Run update_edition.py to refresh {path.name}')
         path.write_text(expected)
 print(f'{len(ids)-lab_count-len(guide_ids)} reference chapters, {lab_count} labs, {len(guide_ids)} beginner lessons, {len(figures)} pictures. {edition}')
+
+subprocess.run([sys.executable, str(book / 'export_book.py'), *(['--check'] if args.check else [])], check=True)

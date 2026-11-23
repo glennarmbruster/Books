@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Three taps</title>
+<style>
+body{max-width:30rem;margin:1rem auto;padding:1rem;background:#fff9e9;color:#173c45;font:18px/1.5 system-ui}
+h1{margin:0;font:2rem Georgia,serif}button{padding:.6rem 1rem;margin:.2rem;border:2px solid #245456;border-radius:.4rem;background:#e1efde;color:#143a40;font:inherit;cursor:pointer}button:disabled{opacity:.65}
+</style>
+</head>
+<body>
+<h1>Three taps</h1>
+<p>Tap Score three times to win.</p>
+<p id="result" role="status">Score: 0</p>
+<button id="point">Score</button><button id="reset">Reset</button>
+<script>
+let score = 0;
+const point = document.querySelector('#point');
+const result = document.querySelector('#result');
+
+function showScore() {
+  const won = score === 3;
+  result.textContent = 'Score: ' + score + (won ? ' · You won!' : '');
+  point.disabled = won;
+}
+
+point.onclick = () => {
+  score += 1;
+  showScore();
+};
+document.querySelector('#reset').onclick = () => {
+  score = 0;
+  showScore();
+};
+</script>
+</body>
+</html>

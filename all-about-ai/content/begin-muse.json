@@ -1,43 +1,42 @@
 [
   {
     "id": "open-muse",
-    "title": "Open Muse and send your first message",
-    "summary": "Muse is Meta’s personal AI agent. Start with one small request that needs only the words you type.",
+    "title": "Open Muse and sort a tiny list",
+    "summary": "Find Meta’s helper. Give it a job you can check before you ask it for bigger things.",
     "topic": "Meta Muse",
     "where": [
-      "On an iPad, enter muse.ai in Safari, or get Muse from Meta in the App Store. The US listing rates it 18+ and requires iPadOS 18 or later.",
-      "On Windows use muse.ai. Meta also offers a Mac app, an iPhone app and an Android app. Sign in with a Meta account in a supported country. Free usage has a limit that refreshes."
+      "Use muse.ai in a browser or the official Muse app from Meta. On iPad, check the App Store age and device rules with an adult. You can do the sorting exercise on paper."
     ],
     "actions": [
       {
-        "title": "Find the right service",
-        "do": "Type muse.ai into the address bar. Select the entry to try Muse, or open the official app.",
-        "see": "You reach Meta sign-in or your Muse conversation.",
-        "stuck": "Check the app publisher and local availability. The US and Australia have launched. Your local store and Muse sign-in show access where you live."
+        "title": "Find Muse",
+        "do": "Enter muse.ai in the address box. Open the page from Meta. Use its app link if you want the app.",
+        "see": "The page or app says Muse and identifies Meta.",
+        "stuck": "If a search shows another app called Muse, return to the official link."
       },
       {
-        "title": "Open Chat",
-        "do": "Sign in with your eligible Meta account and follow the setup screens. Open Chat.",
-        "see": "A message box appears at the bottom of the chat.",
-        "stuck": "Skip optional connections. Sorting words that you type requires no mailbox access."
+        "title": "Open the message box",
+        "do": "Sign in with an account that can use Muse. Open Chat. Look near the bottom for Message.",
+        "see": "There is a place to type and a button to send.",
+        "stuck": "If you cannot sign in, write the next request on paper and do it yourself."
       },
       {
-        "title": "Send a tiny request",
-        "do": "Send “Put these stops in alphabetical order: Berlin, Aachen, Dresden.”",
-        "see": "The reply should read Aachen, Berlin, Dresden.",
-        "stuck": "If you see suggested tasks, return to Chat and look for the message box."
+        "title": "Sort three words",
+        "do": "Ask: Put these in ABC order. Blue, Gold, Aqua. Compare the first letter of each word.",
+        "see": "Aqua comes first, Blue second and Gold last.",
+        "stuck": "If it leaves a word out, count the words in your request and its reply."
       },
       {
-        "title": "Make one correction",
-        "do": "Send “Add Bremen and sort again.”",
-        "see": "Aachen, Berlin, Bremen, Dresden appear in that order.",
-        "stuck": "If a stop is missing, paste all four names together and ask for the count."
+        "title": "Change the list",
+        "do": "Ask it to add Green and sort again. Compare Gold with Green one letter at a time.",
+        "see": "The four words are Aqua, Blue, Gold, Green.",
+        "stuck": "The second letter breaks the tie between the two G words."
       }
     ],
     "roles": [
-      "Practice on fictional mailbox names.",
-      "Sort sample project names.",
-      "Sketch a tiny alphabetical app index."
+      "Sort three fake mail labels.",
+      "Put headings for a meeting in ABC order.",
+      "Check list sorting in a game."
     ],
     "sources": [
       [
@@ -64,42 +63,42 @@
   },
   {
     "id": "muse-first-plan",
-    "title": "Give Muse a small planning job",
-    "summary": "Practice asking a follow-up while keeping a personal project together in one conversation.",
+    "title": "Plan a trip backward from the start time",
+    "summary": "Can you reach a ferry before boarding closes? Check Muse’s plan with a clock.",
     "topic": "Meta Muse",
     "where": [
-      "Open muse.ai or the Muse app and choose Chat. A side chat is a separate thread for a particular subject."
+      "Open Chat in Muse. A side chat is a place to keep just one task and its replies together."
     ],
     "actions": [
       {
-        "title": "Start a side chat",
-        "do": "Open the menu at the upper left of Chat, then choose the pencil for a new side chat.",
-        "see": "A fresh conversation opens.",
-        "stuck": "Use the main Chat if the side-chat button has moved. The exercise only needs a conversation."
+        "title": "Name a side chat",
+        "do": "Open the chat menu. Use its pencil or new-chat control to start a side chat for Ferry plan.",
+        "see": "Your new chat has its own place in the list.",
+        "stuck": "If you opened the main chat, open the menu again and look for side chats."
       },
       {
-        "title": "Give it three fixed facts",
-        "do": "Send “My ferry leaves at 10:30. Boarding closes 20 minutes earlier. Walking to the dock takes 15 minutes. Calculate my latest walking departure.”",
-        "see": "Latest boarding is 10:10. Latest walking departure is 09:55.",
-        "stuck": "If it suggests a cushion, ask for the exact clock times first."
+        "title": "Set three times",
+        "do": "Type: The ferry leaves at 10:30. Boarding closes 20 minutes before that. The walk takes 15 minutes. When must I leave?",
+        "see": "Boarding closes at 10:10. Leaving at 9:55 gets you there then.",
+        "stuck": "Count back on a clock. Take off 20 minutes, then 15."
       },
       {
-        "title": "Change one assumption",
-        "do": "Send “Allow a 10-minute cushion before boarding closes. Keep the ferry and walking time.”",
-        "see": "Your walking departure moves to 09:45.",
-        "stuck": "If the sailing moves, remind Muse that its time is fixed."
+        "title": "Add a cushion",
+        "do": "Ask to reach the pier 10 minutes before boarding closes. Keep the sailing time and walk length the same.",
+        "see": "Arrive at 10:00. Leave at 9:45.",
+        "stuck": "If the sailing time changes, repeat the three original facts and name only the new cushion."
       },
       {
-        "title": "Keep the result together",
-        "do": "Request three lines labeled Leave, Arrive and Boarding closes. Reopen this thread from the chat list.",
-        "see": "The three times are 09:45, 10:00 and 10:10.",
-        "stuck": "Look for the most recent exchange. Side chats organize topics; Muse can still draw on other chats."
+        "title": "Find your plan again",
+        "do": "Ask for three lines labeled Leave, Arrive and Boarding closes. Close and reopen the side chat.",
+        "see": "The times still read 9:45, 10:00 and 10:10.",
+        "stuck": "If you find an older plan, look for the follow-up that added ten minutes."
       }
     ],
     "roles": [
-      "Calculate a sample maintenance notice deadline.",
-      "Rehearse event setup timing.",
-      "Create test times for a countdown app."
+      "Plan when to start a report.",
+      "Work back from a meeting time.",
+      "Check the countdown in a timer app."
     ],
     "sources": [
       [
@@ -114,42 +113,42 @@
   },
   {
     "id": "muse-connections",
-    "title": "See what Muse can read or change",
-    "summary": "A connector is a link to another service. Learn to read its permission screen before choosing what to share.",
+    "title": "See what a helper can read or change",
+    "summary": "Connecting another app is like handing over a key. Read what the key opens.",
     "topic": "Meta Muse",
     "where": [
-      "Open Muse, then Settings. You can inspect the connector list and try a sample calendar task without signing in to another service."
+      "Open Muse Settings. This practice uses a made-up event. You can leave your calendar disconnected."
     ],
     "actions": [
       {
-        "title": "Find the list",
-        "do": "Select Connectors. Choose an available calendar connector and read the next screen. Stop before authorizing access.",
-        "see": "The screen names the service and describes the requested connection.",
-        "stuck": "If the calendar is absent, inspect another connector or open the official connector guide."
+        "title": "Look at the choices",
+        "do": "Open Connectors. Pick a calendar option to read its description. Stop before connecting any account.",
+        "see": "The screen tells you which service Muse is asking to use.",
+        "stuck": "If you reach a sign-in screen, go back. You can practice with the sample below."
       },
       {
-        "title": "Tell reading from writing",
-        "do": "Look for a permission to view events and one that would let an app create or change them.",
-        "see": "Viewing permits reading a date. Creating could add an event to a calendar.",
-        "stuck": "If access is bundled, leave the connection unopened and use the sample below."
+        "title": "Compare two jobs",
+        "do": "Imagine two jobs: list tomorrow’s events and add a new event. Which one needs permission to change a calendar?",
+        "see": "Listing needs permission to read. Adding needs permission to write.",
+        "stuck": "Read the verbs on the screen. Look for view, create or change."
       },
       {
-        "title": "Try the task by hand",
-        "do": "Return to Chat and send “Sample rehearsal June 8, 13:00–13:30. Draft a reminder 10 minutes before it starts. Show only the text.”",
-        "see": "The draft proposes 12:50 on June 8.",
-        "stuck": "Ask for the exact minute. A draft does not establish that a calendar entry exists."
+        "title": "Draft with a note",
+        "do": "In Chat type: Practice starts June 8 at 1 p.m. and ends at 1:30. Draft a reminder. Show the words here.",
+        "see": "The reminder uses the two times. It takes no live calendar to write it.",
+        "stuck": "If Muse offers to create an event, ask it to show you just the text."
       },
       {
-        "title": "Locate approval controls",
-        "do": "Open Settings and select Permissions. Inspect the choices for connectors.",
-        "see": "When Muse requests approval, See task details explains what it proposes.",
-        "stuck": "Decline any unexpected request and return to your draft."
+        "title": "Find the controls",
+        "do": "Return to Settings and open Permissions. Look for where you could review access or an action before it happens.",
+        "see": "You know where to look before giving a real tool a job.",
+        "stuck": "If your account shows other choices, read its description before choosing one."
       }
     ],
     "roles": [
-      "Draft a reminder using sample mail text.",
-      "Compare calendar reading with calendar editing.",
-      "Design a clear permission request for an app."
+      "Use sample mail rows to practice reading.",
+      "Look at an invite before adding it to a calendar.",
+      "Plan access for an app that only reads scores."
     ],
     "sources": [
       [
@@ -168,42 +167,42 @@
   },
   {
     "id": "muse-upcoming",
-    "title": "Schedule a one-time reminder and check delivery",
-    "summary": "A scheduled task lets Muse return to a request later. Check its schedule and its eventual message separately.",
+    "title": "Set one reminder and find it again",
+    "summary": "Make a short reminder you can test without waiting all day.",
     "topic": "Meta Muse",
     "where": [
-      "Open Chat in Muse. Choose a time about ten minutes ahead on your clock."
+      "Open Muse Chat. Pick a time about ten minutes ahead. Use your device’s time zone."
     ],
     "actions": [
       {
-        "title": "Ask for one reminder",
-        "do": "Send “Remind me once today at [your time and time zone] to check the packing list.” Fill in the brackets first.",
-        "see": "Muse should repeat your reminder and time.",
-        "stuck": "If the day or zone is wrong, correct it now."
+        "title": "Name one reminder",
+        "do": "Ask: Remind me once today at my chosen time to check the packing list. Replace the time in that sentence with your actual time.",
+        "see": "Muse should show a reminder with the words packing list.",
+        "stuck": "If you meant once, check that it does not say every day."
       },
       {
-        "title": "Check the schedule",
-        "do": "Tap your assistant icon at the top, select Upcoming and open the reminder.",
-        "see": "Its time, date and one-time setting match your request.",
-        "stuck": "If it is missing, ask which reminders are scheduled. A sentence promising to remind you is only the first check."
+        "title": "Read the schedule",
+        "do": "Tap the assistant icon. Choose Upcoming and open your reminder. Read the date, time and repeat setting.",
+        "see": "They match your request.",
+        "stuck": "If the hour is off, check the time zone and fix the practice reminder."
       },
       {
-        "title": "Check after the set time",
-        "do": "Return to Muse a little after the due time. Look for the message in Chat.",
-        "see": "A delivered message confirms it ran. A device notification may also appear if enabled.",
-        "stuck": "If there was no alert, check the chat first, then the scheduled time and device notification settings."
+        "title": "Watch for the result",
+        "do": "After the time has passed, open the chat again. Look for the reminder there.",
+        "see": "The message mentions the packing list.",
+        "stuck": "If there was no device alert, look in the chat before making a second reminder."
       },
       {
-        "title": "Check for accidental repeats",
-        "do": "Ask which future reminders remain for the packing list. If it repeats, cancel that one item and verify Upcoming.",
-        "see": "There should be no future recurring practice reminder.",
-        "stuck": "Match the label and time before canceling."
+        "title": "Check what is left",
+        "do": "Look in Upcoming once more. If your practice item is set to repeat, open it and cancel just that item.",
+        "see": "A one-time reminder has no next run after delivery.",
+        "stuck": "Use the item’s name and time to avoid changing a different reminder."
       }
     ],
     "roles": [
-      "Rehearse a reminder to check a sample report.",
-      "Follow up on a practice checklist.",
-      "Observe the difference between scheduled and delivered."
+      "Remind yourself to check a sample report.",
+      "Practice a one-time meeting reminder.",
+      "Test a reminder feature in your own app."
     ],
     "sources": [
       [
@@ -218,42 +217,42 @@
   },
   {
     "id": "muse-library",
-    "title": "Make a packing-list file and find it again",
-    "summary": "Muse calls a file it creates an artifact. Make one, revise it, and check the saved copy.",
+    "title": "Find and fix a file Muse made",
+    "summary": "A chat reply can describe a file. Open the file itself to see what was saved.",
     "topic": "Meta Muse",
     "where": [
-      "Open Muse Chat. The Library tab holds files and finished work. You can do this exercise with three words you supply."
+      "Open Muse Chat. You will give it three made-up packing items. Library is where Muse keeps finished files."
     ],
     "actions": [
       {
-        "title": "Request a file",
-        "do": "Send “Create a plain-text file named Dock List with three lines: passport, cabin key, charger.”",
-        "see": "A finished file appears in the conversation.",
-        "stuck": "If the answer is a text bubble, request a plain-text file saved to Library."
+        "title": "Ask for a file",
+        "do": "Ask for a plain-text file called Game Kit with one item per line: cards, pencils, timer.",
+        "see": "Look for a file card you can open.",
+        "stuck": "If all you get is a message, ask Muse to create the actual text file."
       },
       {
         "title": "Open the saved copy",
-        "do": "Open Library and select the file with Dock List in its name.",
-        "see": "You should see all three items.",
-        "stuck": "You can also open the file from the original chat message."
+        "do": "Choose Library. Find Game Kit and open it. Count its lines.",
+        "see": "There are three items. Timer is last.",
+        "stuck": "If you see several versions, check the file name and the newest result."
       },
       {
-        "title": "Give one edit",
-        "do": "Send “In that same Dock List file, replace charger with USB cable. Keep the other two items.”",
-        "see": "The updated file should still have three lines.",
-        "stuck": "If two files exist, open the file attached to the latest edit reply and check its name."
+        "title": "Change one item",
+        "do": "Ask to replace timer with clock in Game Kit. Keep the other two lines in order.",
+        "see": "Only the last line should change.",
+        "stuck": "If it makes a second file, find out which one holds your new list."
       },
       {
-        "title": "Verify the contents",
-        "do": "Close the file, reopen it from Library and read its three lines.",
-        "see": "Passport, cabin key and USB cable appear. Charger is gone.",
-        "stuck": "If the old word remains, quote it and ask which file was edited."
+        "title": "Test the saved file",
+        "do": "Close the preview. Open the newest Game Kit from Library and read it again.",
+        "see": "It says cards, pencils, clock. That proves the edit was saved.",
+        "stuck": "If it still says timer, point Muse to the exact file you checked."
       }
     ],
     "roles": [
-      "Create a short maintenance checklist.",
-      "Revise a meeting-prep list.",
-      "Draft sample text for a packing app."
+      "Save a sample mail checklist.",
+      "Update a shared supply list for practice.",
+      "Find the file your app created."
     ],
     "sources": [
       [
@@ -272,42 +271,42 @@
   },
   {
     "id": "muse-picture",
-    "title": "Create a picture and request one precise edit",
-    "summary": "Try Muse’s built-in image skill on a design you can inspect at a glance.",
+    "title": "Change one thing in a picture",
+    "summary": "Give Muse a simple picture request. See whether it keeps the rest when you ask for one edit.",
     "topic": "Meta Muse",
     "where": [
-      "Open a Muse conversation. Image creation is a built-in skill. Your remaining allowance can affect whether your request runs."
+      "Open Muse Chat. You can draw the same comparison on paper if your account cannot make images."
     ],
     "actions": [
       {
-        "title": "Describe the picture",
-        "do": "Send “Make a square image of one red mug on a plain cream table. Draw one blue star on the mug. No words.”",
-        "see": "You receive an image you can open.",
-        "stuck": "If you only see a description, ask for an actual generated image file."
+        "title": "Ask for a simple picture",
+        "do": "Type: Make a square picture of one red mug with one blue star on a cream table.",
+        "see": "You have four things to check: shape, mug count, color and star.",
+        "stuck": "If you see two mugs, request one mug before changing anything else."
       },
       {
-        "title": "Count the details",
-        "do": "Open the picture and count the mugs and stars. Check the frame shape.",
-        "see": "One mug, one blue star and a square frame are your tests.",
-        "stuck": "Correct one detail at a time. Keep the original handy for comparison."
+        "title": "Inspect it",
+        "do": "Open the picture. Check the star and the edge of the frame first. Then check the mug.",
+        "see": "The frame is square and the mug has just one blue star.",
+        "stuck": "Write your four checks on paper if one is easy to miss."
       },
       {
-        "title": "Edit one feature",
-        "do": "Send “Keep the composition. Change only the mug color to green.”",
-        "see": "The mug changes while the star, table and frame stay alike.",
-        "stuck": "If the scene changes completely, refer to the earlier image or attach it again."
+        "title": "Ask for one edit",
+        "do": "Say: Change only the mug from red to green. Keep the star, table and frame the same.",
+        "see": "The new mug is green. The star stays blue.",
+        "stuck": "If the star changes too, use the earlier version and name both colors again."
       },
       {
-        "title": "Choose a version",
-        "do": "Open the newer picture, look at it at a small size and check Library for saved work.",
-        "see": "You can judge which version remains recognizable as a small icon.",
-        "stuck": "If you reach a usage limit, keep the prompt and retry after the allowance refreshes."
+        "title": "Compare the copies",
+        "do": "Open both versions and look at them at a small size. Pick the one that meets the request.",
+        "see": "You can explain your choice using visible details.",
+        "stuck": "If they look alike in the chat list, open each picture before choosing."
       }
     ],
     "roles": [
-      "Sketch an illustration for a training note.",
-      "Draft artwork for an Office how-to.",
-      "Try an icon concept for a personal app."
+      "Make simple art for a mail help note.",
+      "Illustrate one picture in a training guide.",
+      "Try two versions of an app icon."
     ],
     "sources": [
       [

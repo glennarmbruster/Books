@@ -1,14 +1,14 @@
 [
   {
     "id": "copilot-at-work",
-    "title": "Find your starting point in Microsoft 365 Copilot",
-    "summary": "Two people can ask Copilot the same question and get different answers because their licenses, open files, and permissions give it different evidence.",
+    "title": "Open Microsoft 365 Copilot and check what it can read",
+    "summary": "Start with one pretend note so you can tell where each answer came from.",
     "intro": {
-      "what": "Microsoft 365 Copilot is Microsoft’s work assistant across chat and supported Office apps.",
-      "features": "Outlook and Teams help with conversations, Word and PowerPoint with drafts, and Excel with calculations. Eligible accounts can use Work IQ to find permitted work material. Agent Builder and Copilot Studio support reusable assistants.",
-      "exchange": "Ask for the approved outage wording from a supplied runbook. Open the cited section before using it in a mail incident.",
-      "m365": "Find a rollout decision across accessible meeting notes and files. Confirm its approver and date in the original record.",
-      "developer": "Turn an attached feature brief into acceptance criteria. Compare each criterion with the original before coding.",
+      "what": "Microsoft 365 Copilot is a helper for work apps. Your account, license and permissions determine which tools and files you can use.",
+      "features": "Copilot Chat can work from a prompt or an uploaded file. Some accounts also have Work IQ, which can draw on work content the signed-in person may read.",
+      "exchange": "Give it a fake mail notice and ask when the planned change starts.",
+      "m365": "Ask for the line in a sample meeting note that names the task owner.",
+      "developer": "Write a short help tip from a pretend feature list and check every claim.",
       "sources": [
         [
           "Microsoft · grounding and the Work IQ control",
@@ -26,10 +26,9 @@
     },
     "sections": [
       {
-        "title": "Find out what it can read",
+        "title": "Find the source",
         "paragraphs": [
-          "Sign in with your work account and open Microsoft 365 Copilot Chat. Many eligible business accounts include chat, web grounding and file uploads. A Microsoft 365 Copilot add-on extends work grounding across eligible email, meetings, messages and documents. In Outlook, even accounts without the add-on can have limited inbox and calendar context. Start by identifying the app, account and sources available in your session.",
-          "Where your licensed chat offers Work IQ, turning it on lets Copilot draw on work content you can already access. Turning it off removes that work grounding from the chat. A file you attach is still a source you have supplied. Your administrator can also control features such as web access. Try a document you can open yourself, ask for its effective date and supporting sentence, and open the citation to verify the edition."
+          "Sign in to Microsoft 365 Copilot Chat with the account you mean to use. Create a pretend note: “The early shift moves to 8 a.m. on May 6.” Give Copilot just this note. Ask which shift changes, what time it starts and who owns the change. Open its source. The note gives no owner. With Work IQ enabled, you can also ask about work files you already have permission to read."
         ],
         "sources": [
           [
@@ -47,10 +46,9 @@
         ]
       },
       {
-        "title": "Choose effort after choosing the evidence",
+        "title": "Try more thinking where it helps",
         "paragraphs": [
-          "Microsoft documents Auto, Quick response and Think deeper in Copilot Chat. Auto routes the request. Try Quick response for editing a short paragraph and Think deeper for reconciling exceptions across two policies. Your account may offer a different selection. If the approved policy is missing from the evidence, changing the model cannot supply that document.",
-          "For a first exercise, attach a fictional shift-change notice. Ask, “Using this notice only, give the effective date, the affected shifts, and who owns the change. Quote the supporting sentence for each. Write ‘unspecified’ wherever the notice is silent.” Then give Copilot a draft with a conflicting date and ask it to identify the conflict. A useful answer exposes both dates and lets you resolve which document has authority."
+          "Where available, the chat menu offers Auto, Quick response and Think deeper. Try Quick response to make the note shorter. Add an older draft that says May 5 and ask it to compare both. Check which note was approved before deciding which date belongs in a reminder. A longer answer still needs a source for its date."
         ],
         "sources": [
           [
@@ -67,14 +65,14 @@
   },
   {
     "id": "copilot-mail-meetings",
-    "title": "Turn mail and meetings into decisions",
-    "summary": "An email thread and a meeting recap often combine proposals, decisions, and assignments. Copilot can help you disentangle them before you act.",
+    "title": "Find what was really decided",
+    "summary": "Separate an offer, a request and a firm promise in a mail thread or a meeting.",
     "intro": {
-      "what": "Copilot in Outlook and Teams helps reconstruct what a group discussed, decided and assigned.",
-      "features": "Outlook can summarize a thread and link to contributing messages. Teams can answer meeting questions from available speech, chat and transcripts. The meeting settings govern which spoken portions you can revisit.",
-      "exchange": "Extract a proposed maintenance window from an email chain. Open the final reply to see whether the requester actually accepted it.",
-      "m365": "Reconcile pilot decisions across meeting chat and the available transcript. Mark each missing owner for follow-up.",
-      "developer": "Turn a feature-planning call into an issue list. Check the recording or transcript before attributing a promise.",
+      "what": "Copilot in Outlook can sum up a thread of messages. Copilot in Teams can help you follow a meeting when the settings allow it.",
+      "features": "Mail summaries can link back to messages. A meeting summary may use a saved transcript or meeting chat. Check the material each one could read.",
+      "exchange": "Find the last confirmed time in a fake mail thread.",
+      "m365": "Make a list of meeting decisions, owners and unknown dates from a pretend transcript.",
+      "developer": "Turn a player’s feature request into a draft note. Keep requested changes separate from promised fixes.",
       "sources": [
         [
           "Microsoft · summarizing an email thread in Outlook",
@@ -88,10 +86,9 @@
     },
     "sections": [
       {
-        "title": "Reconstruct the last decision in Outlook",
+        "title": "Read the last real answer in Outlook",
         "paragraphs": [
-          "Open a single conversation and select its Copilot summary if available. Outlook can include numbered references back to the original messages. Read the latest substantive reply and follow the reference for each commitment. A proposal repeated in three quoted replies can sound like a decision even when nobody accepted it.",
-          "Try a thread where a vendor offers Tuesday delivery, your team requests Wednesday, and the vendor replies that it will check. Ask for the latest confirmed date, each open request and its owner. The right conclusion is that Wednesday remains unconfirmed. A useful draft asks the vendor to confirm Wednesday. Check the actual recipients, attachments and promised dates before sending."
+          "Open a practice thread or paste these three lines into Copilot Chat. “We can deliver Tuesday.” “Can you do Wednesday?” “We will check.” Ask what time is confirmed and what still needs a reply. Wednesday is a request. Read the last line yourself. A useful draft asks for confirmation. Review names, dates and recipients before sending a real message."
         ],
         "sources": [
           [
@@ -105,10 +102,10 @@
         ]
       },
       {
-        "title": "Know which part of a Teams meeting is available",
+        "title": "Check which meeting words are saved",
         "paragraphs": [
-          "The organizer’s setting and meeting policy affect what Copilot can use. In “Only during the meeting,” live speech can support questions without a saved transcript. For later questions about what people said, start transcription when permitted. If transcription begins halfway through, the earlier speech is missing from that transcript. Chat messages are a separate source. In “During and after the meeting,” transcription is required.",
-          "Ask for a decision log with an owner, due date and supporting passage for each row. If the discussion says “perhaps Friday,” record Friday as tentative. If an owner was never assigned, leave the owner open. Share the verified log through your normal process. An absent transcript cannot substantiate a spoken decision, and a named attendee is not necessarily the person who accepted the work."
+          "In Teams, the organizer and the meeting rules affect what Copilot can use. A during-meeting setting can use speech without saving a transcript for later. For a past decision, see whether a transcript or a written chat exists.",
+          "Try the source line “Maybe Friday. We need to ask the reviewer.” Ask for the decision, owner and due date. Friday is only a suggestion. The line gives no firm owner. Check each claimed decision against the saved words."
         ],
         "sources": [
           [
@@ -125,14 +122,14 @@
   },
   {
     "id": "copilot-documents",
-    "title": "Build a slide deck you can defend",
-    "summary": "Use an approved Word brief as the source for a presentation, then check whether the same claims survive the change of format.",
+    "title": "Turn a checked note into four slides",
+    "summary": "Build a short slide deck where every title matches the numbers.",
     "intro": {
-      "what": "Copilot in Word and PowerPoint helps turn source material into a brief and then a presentation.",
-      "features": "Word can help rewrite a supplied document for a chosen audience. PowerPoint can draft slides and notes from the resulting file. Check headings and figures after each change of format.",
-      "exchange": "Draft a post-incident brief from a supplied timeline. Check time zones and distinguish the first report from the start of impact.",
-      "m365": "Turn a migration pilot report into a decision deck. Confirm that percentages refer to the same population on every slide.",
-      "developer": "Build a demo deck from release notes. Remove any feature a viewer cannot try in the released build.",
+      "what": "Copilot can help write a note in Word and use an approved file to draft a presentation in PowerPoint.",
+      "features": "You can ask for sections in a brief, use that brief as a slide source and edit a chart label so readers know who was counted.",
+      "exchange": "Turn a pretend mail pilot into a summary and show how many mailboxes were tested.",
+      "m365": "Move a checked project decision from Word to four slides.",
+      "developer": "Use sample play-test feedback to explain what players liked and how many answered.",
       "sources": [
         [
           "Microsoft · working from an existing document in Word",
@@ -146,10 +143,9 @@
     },
     "sections": [
       {
-        "title": "Make the brief do the hard work",
+        "title": "Write the note in Word",
         "paragraphs": [
-          "Imagine a pilot with 12 trial locations. Nine sent usable responses. Six of those nine recommend continuing. In Word, ask for a one-page decision brief with headings for “Decision requested,” “Evidence” and “Open questions.” Specify that every fraction keeps its denominator and that the brief distinguish trial participation from preference.",
-          "A sound brief says that nine of twelve locations responded and six of nine respondents recommend continuing. “Two thirds of trial locations support continuation” changes the population. Inspect both sentences against the supplied counts and save the verified brief before asking Copilot to build slides."
+          "Use this practice data: 12 teams were invited. Nine replied. Six of those nine would continue. Ask for three headings: Invitation, Replies and Decision. Read the counts. Six of nine who replied favored continuing. Six out of all twelve is half. Missing replies give no vote either way. Save the corrected note."
         ],
         "sources": [
           [
@@ -163,10 +159,9 @@
         ]
       },
       {
-        "title": "Build from the verified file",
+        "title": "Make and check the slides",
         "paragraphs": [
-          "In a supported PowerPoint experience, open a presentation, choose Copilot and reference the approved Word file by name. Request four slides covering the decision, participation, recommendation and remaining evidence. Ask for the source count next to every percentage. Review titles and speaker notes as closely as the slide bodies.",
-          "Read the deck without looking at the brief. If a title says “Most locations favor expansion,” compare it with 6 out of 12 and revise it. For a chart showing preferences among respondents, label its base as nine respondents. A deck can display every number correctly and still lead its audience to the wrong conclusion through its headline."
+          "Open PowerPoint, choose Copilot where available and give it your approved Word file. Request a title slide, a participation slide, a results slide and a next-step slide. A chart about replies needs a label saying “9 replies.” If it says most invited teams voted yes, revise it. Exactly half of those invited gave a yes response."
         ],
         "sources": [
           [
@@ -183,14 +178,14 @@
   },
   {
     "id": "copilot-excel",
-    "title": "Audit an Excel answer from the cells up",
-    "summary": "A four-row packing report makes a useful test of whether a workbook edit preserved the meaning of your numbers.",
+    "title": "Check the numbers in Excel",
+    "summary": "Change one cell and see whether the result changes with it.",
     "intro": {
-      "what": "Copilot in Excel helps you ask questions about workbook data and, where available, edit the workbook itself.",
-      "features": "It can propose formulas or work through a report. A clean input table, defined units and an expected result give you a way to catch arithmetic or interpretation errors.",
-      "exchange": "Summarize mailbox sizes from a supplied inventory. Convert all rows to the same unit and hand-check the largest mailbox.",
-      "m365": "Count unique assigned users in a license export. Check what happens to your count when one user has two licenses.",
-      "developer": "Analyze play-test results from a CSV. Change one known value and confirm the summary updates by the expected amount.",
+      "what": "Excel stores related values in rows and columns. Copilot can suggest formulas or help you work with a table in a supported workbook.",
+      "features": "A formula tells the sheet how to calculate. You can inspect the cells it uses and try one change to see if the answer updates.",
+      "exchange": "Count good rows in a fake mailbox list. Check the total against the individual counts.",
+      "m365": "Build a practice Excel table that updates when a rejected count changes.",
+      "developer": "Test a game’s score totals by changing one turn, including a zero.",
       "sources": [
         [
           "Microsoft · editing, supported settings and recovery in Excel",
@@ -204,10 +199,9 @@
     },
     "sections": [
       {
-        "title": "Give Excel a checkable table",
+        "title": "Make a small table",
         "paragraphs": [
-          "In a practice workbook, create a table named Shipments with the three columns below. Enter the counts as numbers. Keep a copy of the original. Microsoft lists supported workbook formats and storage requirements, and documents that direct Copilot editing needs automatic calculation. Some accounts have conversational help while others also have workbook-editing capabilities.",
-          "Ask for an Accepted column equal to Packed minus Rejected, followed by total packed, total rejected and the overall acceptance rate. Request the formulas and the row counts used. If your account only offers chat assistance, use the formulas it proposes in the practice copy and inspect the results."
+          "Make a new practice workbook. Enter these rows as numbers. Turn the range into a table named Shipments. Ask for an Accepted column equal to Packed minus Rejected. If your account gives instructions in chat, enter the formula there in your practice sheet."
         ],
         "sources": [
           [
@@ -254,10 +248,10 @@
         }
       },
       {
-        "title": "Check the denominator and change one input",
+        "title": "Change one cell",
         "paragraphs": [
-          "Accepted should read 114, 54, 12 and 0. Totals are 200 packed, 20 rejected and 180 accepted. The overall acceptance rate is 180 ÷ 200 = 90%. An unweighted average of the three nonempty batch rates gives about 81.7%. That figure gives a 20-unit batch the same influence as a 120-unit batch.",
-          "A checkable overall formula is =SUM(Shipments[Accepted])/SUM(Shipments[Packed]). For an all-zero input set, specify the desired display, such as “No units packed.” Now change B’s rejected count from 6 to 9. A working report recalculates to 177 accepted out of 200, or 88.5%. If only the prose summary changes, inspect whether the report contains formulas or fixed values."
+          "Accepted should show 114, 54, 12 and 0. Together, 180 out of 200 were accepted, or 90%. The formula is =SUM(Shipments[Accepted])/SUM(Shipments[Packed]). For a table with no packed units, choose a clear result such as “No units packed.”",
+          "Change B’s rejected number from 6 to 9. Now you should have 177 out of 200, or 88.5%. If the total stays at 180, click the total cell. Is it a fixed number or a formula that reads the updated rows?"
         ],
         "sources": [
           [
@@ -270,14 +264,14 @@
   },
   {
     "id": "copilot-agents",
-    "title": "Choose among GitHub Copilot, Agent Builder and Copilot Studio",
-    "summary": "Use the result you need to choose between coding help, a reusable knowledge assistant and a workflow that takes action.",
+    "title": "Choose a coding helper or a handbook helper",
+    "summary": "Pick the tool by the job the next person needs done.",
     "intro": {
-      "what": "GitHub Copilot, Microsoft 365 Agent Builder and Copilot Studio serve different kinds of repeatable work.",
-      "features": "GitHub Copilot can change code and prepare a pull request. Agent Builder packages instructions with knowledge sources. Copilot Studio adds connectors and workflow actions where configured.",
-      "exchange": "Build a read-only assistant for a mail operations manual. Ask about an exception the manual omits and check that it flags the gap.",
-      "m365": "Prototype a service-request workflow in Copilot Studio. Submit the same test request twice and check how many tickets reach the destination.",
-      "developer": "Delegate a CSV quoting bug to GitHub Copilot. Review the diff and round-trip a field containing a comma.",
+      "what": "GitHub Copilot helps with code. Agent Builder makes a helper for repeated questions. Copilot Studio can connect a helper to tools and actions.",
+      "features": "A coding helper can propose an edit. A handbook helper can answer from a given file. A service action can make a real record after someone asks for it.",
+      "exchange": "Make a question helper for a pretend mail handbook before trying a reporting action.",
+      "m365": "Use a sample meeting policy as the only source for a small office helper.",
+      "developer": "Ask a coding helper to test a game export that contains a comma in a name.",
       "sources": [
         [
           "GitHub · choosing an agent and working environment",
@@ -291,10 +285,9 @@
     },
     "sections": [
       {
-        "title": "Choose where the code change should happen",
+        "title": "Fix a file with GitHub Copilot",
         "paragraphs": [
-          "GitHub Copilot is the developer product. In a supported editor, ask it to explain a function or make a change you can watch in your local workspace. For asynchronous work on GitHub, a cloud agent can inspect a repository, work on a branch and prepare a pull request. You can also request Copilot code review on a proposed change. Check your GitHub plan and organization settings separately from your Microsoft 365 license.",
-          "Try a narrow issue for a CSV exporter. Specify that a location containing a comma stays in one field after export and reimport. Supply “North Lot, Level 2” as a test value and ask for the regression test and a pull request. Inspect the diff and independent test result. Code review feedback can identify concerns, while the round-trip check establishes whether this particular requirement works."
+          "Open a practice project in a supported editor or give its connected coding agent a task. Ask it to export and reimport one field named “Deck A, Row 2.” A comma usually starts the next box in a CSV file. The field here must stay in one box. Open the exported file again and check that it gives the exact original words."
         ],
         "sources": [
           [
@@ -312,10 +305,9 @@
         ]
       },
       {
-        "title": "Turn a repeated office question into an agent",
+        "title": "Answer a question or create a ticket",
         "paragraphs": [
-          "For recurring handbook questions, Agent Builder in Microsoft 365 Copilot can package standing instructions with supported knowledge sources. Define a small reading task first. For example, ask the agent for the policy version, section and relevant passage every time someone asks about equipment reimbursement. Test a covered expense, an ambiguous exception and a question the handbook never addresses.",
-          "If the workflow must create a service request in an external system, evaluate Copilot Studio for connectors, actions and deployment controls. Test in an appropriate environment with a sample ticket. Verify who executes the action, which data reaches the destination, and what happens if the user submits twice. Keep the policy answer and the actual ticket number as separate outputs so a drafted request can never masquerade as a filed one."
+          "In Agent Builder, give a helper one pretend handbook. Ask “Who reviews a missing badge request?” Check its cited line. If the next job is to file a request, explore Copilot Studio in an approved practice area. Make one test request and check its ticket number in the destination. Send the same practice request again. Decide what a repeat should do before using the helper with real work."
         ],
         "sources": [
           [

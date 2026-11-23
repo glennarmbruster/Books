@@ -137,6 +137,16 @@
       "startLabel": "Open Microsoft 365 Copilot Chat",
       "startUrl": "https://m365.cloud.microsoft/chat",
       "gettingStarted": "Sign in with your work or school account and start a fresh Microsoft 365 Copilot Chat. Paste just the synthetic inputs the step specifies. For exercises in Word, Excel or PowerPoint, use the supported work app or the chat alternative given in the lab."
+    },
+    {
+      "title": "Gemini App & Gemini Notebook",
+      "track": "gemini-app",
+      "file": "labs-gemini-app.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open Gemini",
+      "startUrl": "https://gemini.google.com/",
+      "gettingStarted": "Open Gemini in a browser or its app. Choose a new chat. For a Notebook lab, open Gemini Notebook and add the practice notes as sources. Each lab tells you which screen to use."
     }
-  ]
+  ],
+  "version": 3
 }

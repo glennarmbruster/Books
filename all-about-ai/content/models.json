@@ -1,0 +1,313 @@
+{
+  "reviewed": "2026-11-22",
+  "values": {
+    "google.lite.name": {
+      "text": "Gemini 3.5 Flash-Lite",
+      "source": "https://aistudio.google.com/docs/models/gemini-3.5-flash-lite"
+    },
+    "google.lite.id": {
+      "text": "gemini-3.5-flash-lite",
+      "source": "https://aistudio.google.com/docs/models/gemini-3.5-flash-lite"
+    },
+    "google.hydrogen.name": {
+      "text": "Gemini 4 Hydrogen",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-hydrogen"
+    },
+    "google.hydrogen.id": {
+      "text": "gemini-4-hydrogen",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-hydrogen"
+    },
+    "google.neon.name": {
+      "text": "Gemini 4 Neon",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-neon"
+    },
+    "google.neon.id": {
+      "text": "gemini-4-neon",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-neon"
+    },
+    "google.carbon.name": {
+      "text": "Gemini 4 Carbon",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-carbon"
+    },
+    "google.carbon.id": {
+      "text": "gemini-4-carbon",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-carbon"
+    },
+    "google.argon.name": {
+      "text": "Gemini 4 Argon",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-argon"
+    },
+    "google.argon.id": {
+      "text": "gemini-4-argon",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-argon"
+    },
+    "google.context": {
+      "text": "1,048,576 tokens",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-carbon"
+    },
+    "google.max-out": {
+      "text": "65,536 tokens",
+      "source": "https://aistudio.google.com/docs/models/gemini-4-carbon"
+    },
+    "google.redirect-date": {
+      "text": "December 1, 2026",
+      "source": "https://aistudio.google.com/docs/deprecations"
+    },
+    "google.old-pro.id": {
+      "text": "gemini-2.5-pro",
+      "source": "https://aistudio.google.com/docs/deprecations"
+    },
+    "google.old-flash.id": {
+      "text": "gemini-2.5-flash",
+      "source": "https://aistudio.google.com/docs/deprecations"
+    },
+    "google.new-flash.id": {
+      "text": "gemini-3.8-flash",
+      "source": "https://aistudio.google.com/docs/deprecations"
+    },
+    "google.older-flash.name": {
+      "text": "Gemini 3.6 Flash",
+      "source": "https://aistudio.google.com/docs/models"
+    },
+    "google.pro-preview.name": {
+      "text": "Gemini 3.1 Pro Preview",
+      "source": "https://aistudio.google.com/docs/models"
+    },
+    "google.carbon.rate-start": {
+      "text": "December 1, 2026",
+      "source": "https://aistudio.google.com/docs/pricing"
+    },
+    "google.carbon.rate-now": {
+      "text": "$2 in / $10 out",
+      "source": "https://aistudio.google.com/docs/pricing"
+    },
+    "google.carbon.rate-next": {
+      "text": "$4 in / $20 out",
+      "source": "https://aistudio.google.com/docs/pricing"
+    },
+    "google.neon.rate": {
+      "text": "$3 in / $15 out",
+      "source": "https://aistudio.google.com/docs/pricing"
+    },
+    "google.banana.name": {
+      "text": "Nano Banana 2.1",
+      "source": "https://aistudio.google.com/docs/image-generation"
+    },
+    "google.banana-lite.name": {
+      "text": "Nano Banana 2 Lite",
+      "source": "https://aistudio.google.com/docs/image-generation"
+    },
+    "google.banana-pro.name": {
+      "text": "Nano Banana Pro",
+      "source": "https://aistudio.google.com/docs/image-generation"
+    },
+    "google.banana-older.name": {
+      "text": "Nano Banana 2",
+      "source": "https://aistudio.google.com/docs/image-generation"
+    },
+    "google.video.name": {
+      "text": "Gemini Omni 1.2 Flash",
+      "source": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+    },
+    "google.veo.name": {
+      "text": "Veo",
+      "source": "https://gemini.google/overview/video-generation/"
+    },
+    "google.genie.name": {
+      "text": "Genie 4",
+      "source": "https://aistudio.google.com/docs/changelog"
+    },
+    "google.lyria.name": {
+      "text": "Lyria 3.5",
+      "source": "https://gemini.google/overview/music-generation/"
+    },
+    "google.tts.name": {
+      "text": "Gemini 3.8 Flash TTS",
+      "source": "https://aistudio.google.com/docs/speech-generation"
+    },
+    "google.transcribe.name": {
+      "text": "Gemini 3.5 Transcribe",
+      "source": "https://aistudio.google.com/docs/transcribe"
+    },
+    "claude.haiku.name": {
+      "text": "Claude Haiku 5.5",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.haiku.id": {
+      "text": "claude-haiku-5-5",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.haiku.rate": {
+      "text": "$0.10 in / $0.50 out",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "claude.sonnet.name": {
+      "text": "Claude Sonnet 5.5",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.sonnet.id": {
+      "text": "claude-sonnet-5-5",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.sonnet.rate": {
+      "text": "$2 in / $10 out",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "claude.opus.name": {
+      "text": "Claude Opus 5.5",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.opus.id": {
+      "text": "claude-opus-5-5",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.opus.rate": {
+      "text": "$4 in / $20 out",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "claude.fable.name": {
+      "text": "Claude Fable 5.2",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.fable.id": {
+      "text": "claude-fable-5-2",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.fable.rate": {
+      "text": "$8 in / $40 out",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "claude.haiku.threshold": {
+      "text": "100,000 input tokens",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "claude.haiku.long-rate": {
+      "text": "$0.50 in / $2.50 out",
+      "source": "https://platform.claude.com/docs/en/about-claude/pricing"
+    },
+    "claude.context": {
+      "text": "1 million tokens",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.max-out": {
+      "text": "128,000 tokens",
+      "source": "https://platform.claude.com/docs/en/models/overview"
+    },
+    "claude.mythos.name": {
+      "text": "Claude Mythos 5.2",
+      "source": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    },
+    "openai.chat.general": {
+      "text": "GPT-6 Sol",
+      "source": "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"
+    },
+    "openai.chat.pro": {
+      "text": "GPT-6 Astra",
+      "source": "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"
+    },
+    "openai.chat.free": {
+      "text": "GPT-5.6 Luna",
+      "source": "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"
+    },
+    "openai.astra.name": {
+      "text": "GPT-6.2 Astra",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
+    },
+    "openai.astra.id": {
+      "text": "gpt-6.2-astra",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
+    },
+    "openai.sol.name": {
+      "text": "GPT-6.2 Sol",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+    },
+    "openai.sol.id": {
+      "text": "gpt-6.2-sol",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+    },
+    "openai.terra.name": {
+      "text": "GPT-6.1 Terra",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+    },
+    "openai.terra.id": {
+      "text": "gpt-6.1-terra",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+    },
+    "openai.luna.name": {
+      "text": "GPT-6 Luna",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+    },
+    "openai.luna.id": {
+      "text": "gpt-6-luna",
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+    },
+    "openai.astra.rate": {
+      "text": "$8 in / $40 out",
+      "source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "openai.sol.rate": {
+      "text": "$2 in / $10 out",
+      "source": "https://developers.openai.com/api/docs/pricing"
+    },
+    "openai.images.name": {
+      "text": "Images 2.6",
+      "source": "https://openai.com/index/introducing-images-2-6/"
+    },
+    "openai.flare.name": {
+      "text": "Flare",
+      "source": "https://openai.com/index/introducing-images-2-6/"
+    },
+    "openai.sunburst.name": {
+      "text": "Sunburst",
+      "source": "https://openai.com/index/introducing-images-2-6/"
+    },
+    "openai.voice.name": {
+      "text": "GPT-Live-1.1",
+      "source": "https://developers.openai.com/api/docs/changelog"
+    },
+    "openai.sora.name": {
+      "text": "Sora",
+      "source": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+    },
+    "openai.sora.app-end": {
+      "text": "April 26, 2026",
+      "source": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+    },
+    "openai.sora.api-end": {
+      "text": "September 24, 2026",
+      "source": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+    },
+    "xai.grok.name": {
+      "text": "Grok 4.7",
+      "source": "https://docs.x.ai/developers/models/grok-4.7"
+    },
+    "xai.grok.context": {
+      "text": "500,000 tokens",
+      "source": "https://docs.x.ai/developers/models/grok-4.7"
+    },
+    "xai.imagine.name": {
+      "text": "Grok Imagine",
+      "source": "https://docs.x.ai/developers/model-capabilities/video/overview"
+    },
+    "xai.voice.name": {
+      "text": "Grok Voice",
+      "source": "https://docs.x.ai/developers/release-notes"
+    },
+    "perplexity.sonar.name": {
+      "text": "Sonar Chat Completions",
+      "source": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview"
+    },
+    "perplexity.sonar.end": {
+      "text": "September 27, 2026",
+      "source": "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview"
+    },
+    "mistral.voxtral.name": {
+      "text": "Voxtral",
+      "source": "https://docs.mistral.ai/studio/audio/specs-and-limits/languages"
+    },
+    "google.gemma.name": {
+      "text": "Gemma 4",
+      "source": "https://gemma.ai/models/gemma-4/"
+    }
+  }
+}

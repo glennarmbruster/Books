@@ -1,37 +1,37 @@
 [
   {
     "id": "lab-antigravity-01",
-    "title": "Inspect a two-file project",
-    "summary": "Create a two-file project, ask Antigravity how the files relate, and verify its answer against the text.",
+    "title": "Follow a clue from one file to another",
+    "summary": "Two notes sit in one folder. Find which one holds the book title and which one points the way.",
     "level": "Starter",
-    "requires": "Antigravity desktop app online and an empty practice folder.",
-    "features": "Project folders, chat and file references.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder.",
+    "features": "Use the project file list and ask the helper to read two files.",
     "roles": [
-      "Trace a mail runbook reference.",
-      "Find the file that owns a rollout date.",
-      "Locate a book’s displayed title."
+      "Follow a note to a mail report.",
+      "Find the file that holds a meeting date.",
+      "Find the title shown on a home screen."
     ],
-    "prompt": "Create title.txt containing Harbor Notes and route.txt containing Open title.txt first. Then read both and report which file stores the title, which points to it and whether a date is present. Keep spelling and capitalization. Need no additional files.",
+    "prompt": "Make title.txt say Harbor Notes. Make route.txt say Open title.txt first. Read both. Tell me where the title lives, which file points there, and whether either gives a date. Keep just these two files.",
     "steps": [
       {
-        "title": "Open an empty project",
-        "text": "Create a folder named lab-inspect and add it to a new project in Antigravity.",
-        "help": "The project should show only that folder. If another project is selected, switch before sending the prompt."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Run the prompt",
-        "text": "Use the project conversation and open the two resulting files from the changes view.",
-        "help": "Expect two plain text files. Click each filename if the conversation only shows a summary."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Open each file from the list of edits. Read its one line out loud.",
+        "help": "title.txt says Harbor Notes. The other note points to title.txt."
       },
       {
-        "title": "Check its reading",
-        "text": "Ask “Which exact line supplies the date?” Open the cited file yourself.",
-        "help": "Both files are one line long. A claim about a date should be withdrawn when you ask the agent to quote it."
+        "title": "Try a second case",
+        "text": "Ask the helper which line gives the date. Look in both files for that line.",
+        "help": "If a date turns up, ask the helper to quote it. Reopen the two files and compare."
       }
     ],
     "check": [
-      "title.txt contains Harbor Notes. route.txt is a pointer.",
-      "There is no date in either source."
+      "title.txt says Harbor Notes. The other note points to title.txt.",
+      "Neither file gives a date. A good answer says it is missing."
     ],
     "sources": [
       [
@@ -46,37 +46,37 @@
   },
   {
     "id": "lab-antigravity-02",
-    "title": "Review a small edit in context",
-    "summary": "Correct one catalog title while preserving an intentional near match.",
+    "title": "Fix one title and keep its neighbors",
+    "summary": "Change a spelling mistake on one line of a list. The other lines need to stay in place.",
     "level": "Starter",
-    "requires": "Antigravity desktop app online and a scratch project.",
-    "features": "Agent edits and the file-change review.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder.",
+    "features": "Read the old and new lines in the change view.",
     "roles": [
-      "Fix a spelling error in one template.",
-      "Correct one workload label in a guide.",
-      "Change one title in a book catalog."
+      "Fix a label on one mail rule.",
+      "Correct one folder name on a list.",
+      "Fix one game title in a menu."
     ],
-    "prompt": "Create catalog.txt with three lines: Dock Notes / Dock Notse / Dock Notes Archive (one item per line). Wait for me before editing it further.",
+    "prompt": "Create catalog.txt with these three lines in order: Dock Notes, Dock Notse, Dock Notes Archive. Use a separate line for each. Stop so I can check the file.",
     "steps": [
       {
-        "title": "Establish the original",
-        "text": "Run the prompt in an empty project. Open catalog.txt and check all three lines.",
-        "help": "Expect the typo on line two only. If the slashes were copied, ask for one entry per line."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Request one correction",
-        "text": "In the same conversation say “Change the second line to Dock Notes. Preserve the original order and every other line.”",
-        "help": "If the agent suggests deduplicating the catalog, remind it that repeated titles are intentional."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Read and count all three lines. Ask the helper to fix the spelling on line two only.",
+        "help": "Before the edit, the second line says Dock Notse. After it, the second line says Dock Notes."
       },
       {
-        "title": "Inspect the result",
-        "text": "In the changes view open catalog.txt and compare the complete file with the three-line baseline.",
-        "help": "A new file may show all lines as additions. Read the full contents to check the edit in that case."
+        "title": "Try a second case",
+        "text": "Open the changed file. Count how many lines now say exactly Dock Notes. Check the last line too.",
+        "help": "If one line disappears, ask for the original order and both copies. Check the whole list again."
       }
     ],
     "check": [
-      "Final lines are Dock Notes, Dock Notes and Dock Notes Archive, in order.",
-      "The archive remains separate and duplicate entries survive."
+      "Before the edit, the second line says Dock Notse. After it, the second line says Dock Notes.",
+      "There are two copies of Dock Notes. Line three still says Dock Notes Archive."
     ],
     "sources": [
       [
@@ -91,37 +91,37 @@
   },
   {
     "id": "lab-antigravity-03",
-    "title": "Build a clickable first page",
-    "summary": "Turn three sentences into a local page with one small interaction.",
+    "title": "Build a quiz card you can turn over",
+    "summary": "Make a tiny page with a question on one side and a hidden answer you can reveal.",
     "level": "Starter",
-    "requires": "Antigravity desktop app online, a scratch folder and a web browser.",
-    "features": "File creation, local preview and visual verification.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder.",
+    "features": "Make an HTML file and open it in a browser.",
     "roles": [
-      "Mock an incident detail panel.",
-      "Sketch an expandable policy note.",
-      "Prototype a hint button on a puzzle."
+      "Hide or show details for a mailbox.",
+      "Reveal the answer on a training slide.",
+      "Make a playable quiz card."
     ],
-    "prompt": "Create a self-contained index.html with heading Harbor Quiz, question Which boat leaves first?, and a button Show answer. Initially hide the answer Dawn Ferry. Clicking reveals it and changes the button to Hide answer. Clicking again hides it. Use plain HTML and JavaScript.",
+    "prompt": "Build index.html. Show Harbor Quiz and the question Which boat leaves first? Add a Show answer button. Hide Dawn Ferry at first. The button reveals it and changes to Hide answer. A second click hides it again. Put the page and its script in this one file.",
     "steps": [
       {
-        "title": "Create the page",
-        "text": "Send the prompt in an empty Antigravity project and open the resulting HTML from its folder in a browser.",
-        "help": "If you see markup, open the file with a browser rather than a text editor."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Exercise both states",
-        "text": "Read the initial screen, click the button twice and note the label and answer after each click.",
-        "help": "The heading alone cannot prove the interaction works. Watch for the answer disappearing on the second click."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Open index.html in your browser. Read the question before touching the button.",
+        "help": "At first the question is visible and Dawn Ferry is hidden."
       },
       {
-        "title": "Give concrete feedback",
-        "text": "In Antigravity report the first mismatch, or request a walkthrough of the two observed states. Reload the page.",
-        "help": "If the answer stays visible after reloading, ask the agent to recheck how it sets the initial state."
+        "title": "Try a second case",
+        "text": "Click twice. Watch both the answer and the button. Refresh the page.",
+        "help": "If the words change on the button but the answer stays put, ask the helper to change both on each click."
       }
     ],
     "check": [
-      "Initial and reloaded page hide Dawn Ferry.",
-      "First click reveals Dawn Ferry and second click hides it again."
+      "At first the question is visible and Dawn Ferry is hidden.",
+      "One click reveals Dawn Ferry. The next hides it. Refresh starts with the answer hidden."
     ],
     "sources": [
       [
@@ -136,37 +136,37 @@
   },
   {
     "id": "lab-antigravity-04",
-    "title": "Normalize an untidy export",
-    "summary": "Write a reproducible transformation and test what happens to invalid rows.",
+    "title": "Count a real zero in a messy table",
+    "summary": "One row has zero minutes. Another has no time at all. Find out why only one belongs in the count.",
     "level": "Intermediate",
-    "requires": "Antigravity desktop app online, Python 3 and an empty project.",
-    "features": "Project files, terminal execution and output inspection.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Read a table saved as text, then run a short Python script.",
     "roles": [
-      "Normalize synthetic delivery statuses.",
-      "Summarize mocked license assignments.",
-      "Clean scores imported from a CSV file."
+      "Count mailboxes that had zero errors.",
+      "Add times from a meeting log.",
+      "Keep a zero-point round on a scorecard."
     ],
-    "prompt": "Create input.csv from ID,minutes / A,15 / B,0 / C, / D,oops (slashes separate lines). Write summarize.py using Python’s standard library. Zero is valid. Skip blank or nonnumeric values, recording their IDs. Print valid count, total and rejected IDs. Run it.",
+    "prompt": "Make input.csv with the heading ID,minutes and rows A,15 then B,0 then C, then D,oops. Write summarize.py in Python 3. Count rows with numbers, including zero. Add their minutes. List the IDs of skipped rows. Use the tools built into Python and run the file.",
     "steps": [
       {
-        "title": "Check the fixture",
-        "text": "Run the request, then open input.csv in the project. Confirm C has an empty field and D has a literal word.",
-        "help": "Fix the input first if either row was “cleaned” during setup. They are intentional test cases."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Inspect the run",
-        "text": "Open the terminal output or ask the agent to rerun python3 summarize.py from the project directory.",
-        "help": "If the command cannot locate input.csv, confirm both files are in the same folder and note the current directory."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Open input.csv. Find B and C. Ask the helper to run python3 summarize.py and show the printed result.",
+        "help": "A and B count. Their total is 15. The skipped IDs are C and D."
       },
       {
-        "title": "Perturb one row",
-        "text": "Change only C to C,6 and rerun the same command. Compare the outputs.",
-        "help": "A stored summary that never changes indicates the program hard-coded the fixture instead of reading the file."
+        "title": "Try a second case",
+        "text": "Change C, to C,6 and save. Run the same file again.",
+        "help": "If only A counts at first, ask the helper to check for an empty cell before turning the text into a number."
       }
     ],
     "check": [
-      "First run has 2 valid, total 15, rejected C and D.",
-      "After the edit there are 3 valid, total 21, rejected D only."
+      "A and B count. Their total is 15. The skipped IDs are C and D.",
+      "Three rows now count. Total minutes are 21. Only D is skipped."
     ],
     "sources": [
       [
@@ -181,37 +181,37 @@
   },
   {
     "id": "lab-antigravity-05",
-    "title": "Fix a numeric sorting defect",
-    "summary": "Use an observable failure to guide one edit, then repeat the same interaction.",
+    "title": "Sort scores as numbers",
+    "summary": "A computer can put 10 ahead of 2 when it sorts words. Teach a scoreboard to sort numbers instead.",
     "level": "Intermediate",
-    "requires": "Antigravity desktop app online, an empty project and browser. Built-in browser support depends on account and version.",
-    "features": "Local app inspection, browser interaction and diff review.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder.",
+    "features": "Read a sorting rule in JavaScript and try the result in a browser.",
     "roles": [
-      "Sort mailbox sizes numerically.",
-      "Order site storage figures.",
-      "Sort a high-score list."
+      "Sort mailbox sizes from small to large.",
+      "Sort a team's list of wait times.",
+      "Sort game scores and keep tied players."
     ],
-    "prompt": "Create sort.html with a Sort button and an initially unsorted list of strings 10, 2, 0. On click use unmodified JavaScript array sort() to display the result. This intentionally buggy fixture will be fixed in a second step.",
+    "prompt": "Create sort.html with a Sort button. Start with the three text values 10, 2 and 0. On click, show what JavaScript sort() returns with no extra rule. Leave this first version as it is until I test it.",
     "steps": [
       {
-        "title": "Observe the old behavior",
-        "text": "Produce the page. Open it in a browser and click Sort. Record the displayed sequence.",
-        "help": "If automated browsing is unavailable, open the file yourself. The fixture should show 0, 10, 2 after the click."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Trace and patch",
-        "text": "Tell Antigravity “Sort as numbers and retain duplicate entries. Show the changed line and rerun the original example.”",
-        "help": "If it edits just the displayed sample, ask it to identify the comparison used by the sort operation."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Open sort.html. Click Sort. Read the three numbers from left to right.",
+        "help": "The first version gives 0, 10, 2. It has sorted by the first written digit."
       },
       {
-        "title": "Check a second input",
-        "text": "Replace the fixture list with 10, 2, 2, 0 and reload before clicking Sort.",
-        "help": "If the old list persists, check the file path in the address bar and match it to the edited project."
+        "title": "Try a second case",
+        "text": "Ask for a number sort that keeps repeats. Test the three numbers again. Then put in 10, 2, 2, 0 and try Sort.",
+        "help": "If the second 2 vanishes, ask for a sorted list that keeps every entry. Count the four items."
       }
     ],
     "check": [
-      "The original fixed result is 0, 2, 10.",
-      "The duplicate case gives 0, 2, 2, 10."
+      "The first version gives 0, 10, 2. It has sorted by the first written digit.",
+      "The fixed results are 0, 2, 10 and then 0, 2, 2, 10."
     ],
     "sources": [
       [
@@ -226,37 +226,37 @@
   },
   {
     "id": "lab-antigravity-06",
-    "title": "Read a saved file from two app versions",
-    "summary": "Add compatibility and an explicit error path for an unknown format.",
+    "title": "Open an old score and a new score",
+    "summary": "Teach one reader where two versions of a game save their points.",
     "level": "Intermediate",
-    "requires": "Antigravity desktop app online, Python 3 and a new project.",
-    "features": "A plan, a file-format reader and fixture tests.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Use Python tests to check two kinds of saved game file.",
     "roles": [
-      "Read two versions of a synthetic trace export.",
-      "Handle an inventory report rename.",
-      "Load scores saved before an app upgrade."
+      "Open a report saved by an older mail tool.",
+      "Read two versions of a shared form.",
+      "Open scores saved before a game update."
     ],
-    "prompt": "Plan a standard-library Python reader for three JSON fixtures: {\"version\":1,\"points\":7}, {\"version\":2,\"score\":0}, {\"version\":3,\"score\":99}. Version 1 uses points, version 2 uses score. Unknown versions raise ValueError. Preserve a true zero. Show cases before writing files.",
+    "prompt": "Plan a Python reader for these three records: {\"version\":1,\"points\":7}, {\"version\":2,\"score\":0}, {\"version\":3,\"score\":99}. The first version uses points. The second uses score. Raise ValueError for an unknown version. Show the planned tests before writing files.",
     "steps": [
       {
-        "title": "Review the plan",
-        "text": "Send the prompt in an empty project. Check which field is selected for each version and which case fails.",
-        "help": "If the plan tries to guess the newest structure, point to the explicit contract for version 3."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Implement the checks",
-        "text": "Reply “Create reader.py and test_reader.py with unittest; run python3 -m unittest -v.” Examine the test names and assertions.",
-        "help": "A test that only checks whether a number was returned could miss an accidental zero fallback."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Read the plan. Ask for reader.py and test_reader.py. Ask the helper to run python3 -m unittest -v. Find a passing test for each known version.",
+        "help": "The old record gives 7. The newer record gives 0."
       },
       {
-        "title": "Try a missing field",
-        "text": "Ask the agent to add a version 2 record with no score and reject it clearly. Run the suite again.",
-        "help": "Read the missing-field assertion and the original zero assertion side by side to verify both still mean different things."
+        "title": "Try a second case",
+        "text": "Add one test for version 2 with no score field. Keep the test for version 3 and run the checks again.",
+        "help": "If zero fails, check whether the score field exists. If a new version passes, check the version number before reading its fields."
       }
     ],
     "check": [
-      "Known versions return 7 and 0.",
-      "Version 3 and version 2 missing score are rejected."
+      "The old record gives 7. The newer record gives 0.",
+      "The unknown version and the version with a missing score both give a clear error."
     ],
     "sources": [
       [
@@ -271,37 +271,37 @@
   },
   {
     "id": "lab-antigravity-07",
-    "title": "Preserve an overnight service window",
-    "summary": "Translate a boundary rule into tests before implementing a time predicate.",
+    "title": "Keep a help desk open past midnight",
+    "summary": "Build a clock rule for a desk that opens at ten at night and closes at two in the morning.",
     "level": "Intermediate",
-    "requires": "Antigravity desktop app online with Python 3 in a scratch folder.",
-    "features": "Planning, terminal tests and inspecting changes.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Use a table of clock times to test a Python rule.",
     "roles": [
-      "Test hours for a mail-processing window.",
-      "Check a rollout window across midnight.",
-      "Implement overnight booking hours."
+      "Display when a mail help desk is open.",
+      "Show coverage hours on a staff page.",
+      "Make a game shop that opens overnight."
     ],
-    "prompt": "Design an is_open(hour, minute) function for a service open from 22:00 inclusive until 02:00 exclusive each day. Inputs use 24-hour local time. Invalid hour or minute raises ValueError. Draft a boundary table before coding.",
+    "prompt": "Plan is_open(hour, minute) in Python. The desk opens at 22:00 and closes at 02:00. Count the opening minute. Treat the closing minute as closed. Times use a 24-hour clock. Raise ValueError for a bad hour or minute. Show a test table first.",
     "steps": [
       {
-        "title": "Inspect the table",
-        "text": "Ask Antigravity for adjacent minutes on either side of each boundary and noon.",
-        "help": "If the table only lists late evening, ask for the early-morning half and the midnight transition."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Build from the examples",
-        "text": "Request a Python module with table-driven unittest coverage and a terminal run. Compare the implementation with the table.",
-        "help": "Using an ordinary same-day interval usually loses midnight. A failed 00:00 case narrows the mistake."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Ask for the code and tests. Read the table at 21:59, 22:00, 00:00, 01:59, 02:00 and noon. Run the tests.",
+        "help": "In order the answers are closed, open, open, open, closed and closed."
       },
       {
-        "title": "Challenge validation",
-        "text": "Add 24:00 and 01:60 as invalid inputs and rerun the suite.",
-        "help": "If either wraps to another time, ask the agent where input validation happens before the time comparison."
+        "title": "Try a second case",
+        "text": "Try the made-up times 24:00 and 01:60. Look for an error for each one.",
+        "help": "If midnight shows closed, check both pieces of the shift. Check the minute just before and exactly at closing."
       }
     ],
     "check": [
-      "21:59 false, 22:00 true, 00:00 true, 01:59 true, 02:00 false and noon false.",
-      "24:00 and 01:60 each raise ValueError."
+      "In order the answers are closed, open, open, open, closed and closed.",
+      "Both bad times raise ValueError. They never show up as ordinary closed hours."
     ],
     "sources": [
       [
@@ -316,37 +316,37 @@
   },
   {
     "id": "lab-antigravity-08",
-    "title": "Prove a paged report is complete",
-    "summary": "Test a Graph-shaped inventory locally, including an empty middle page.",
+    "title": "Follow a report past an empty page",
+    "summary": "A report can have an empty page with an arrow to more rows. Follow the arrows and catch a loop.",
     "level": "Advanced",
-    "requires": "Antigravity desktop app online, Python 3 and a new local practice project.",
-    "features": "Terminal test execution and reviewing an API adapter.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Use fake pages and a list of page visits to check a report.",
     "roles": [
-      "Page through a synthetic mailbox inventory.",
-      "Verify a Graph report reaches the last collection page.",
-      "Load paged results in a hobby catalog."
+      "Read all pages of a mail report.",
+      "Collect every page of a shared list.",
+      "Load another page of game results."
     ],
-    "prompt": "Implement a Python collector with a fake fetch function. Page one returns {\"value\":[\"A\"],\"@odata.nextLink\":\"p2\"}, p2 returns {\"value\":[],\"@odata.nextLink\":\"p3\"}, p3 returns {\"value\":[\"C\"]}. Log requests, follow supplied links, and reject a repeated link with a clear error. No network calls.",
+    "prompt": "Build a Python test with pretend pages. Start at p1. Its value list is [\"A\"] and its @odata.nextLink is p2. Page p2 has [] and links to p3. Page p3 has [\"C\"] and no link. Record every page you ask for. Stop with an error if a link repeats. Keep the test on this computer.",
     "steps": [
       {
-        "title": "Agree on termination",
-        "text": "Open a clean project and discuss what ends enumeration before asking for code and unittest fixtures.",
-        "help": "The absence of the next link is the normal stopping signal. Zero items alone do not end this fixture."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Verify normal traversal",
-        "text": "Run the tests and inspect both the list of fetched pages and the returned data.",
-        "help": "If C is missing, inspect whether an empty value array stops the loop early."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Run the test. Compare the page log with the list of letters collected.",
+        "help": "It visits p1, p2 and p3 in order. The result is A, C."
       },
       {
-        "title": "Introduce a cycle",
-        "text": "Have p3 link to p2 and rerun the collector. Read the test output and count fetches.",
-        "help": "A timeout is an unhelpful pass criterion. Ask the test to assert a cycle error before a second request to p2."
+        "title": "Try a second case",
+        "text": "Have p3 point back to p2. Run again and read the last line in the log.",
+        "help": "If C is gone, ask the helper to stop when there is no next link. An empty list alone is not the end."
       }
     ],
     "check": [
-      "Normal output is A, C and the fetch log is p1, p2, p3.",
-      "The cycle variant raises an error without fetching p2 twice."
+      "It visits p1, p2 and p3 in order. The result is A, C.",
+      "The reader reports a loop before asking for p2 a second time."
     ],
     "sources": [
       [
@@ -365,37 +365,37 @@
   },
   {
     "id": "lab-antigravity-09",
-    "title": "Check a dialog with only a keyboard",
-    "summary": "Create a test a screenshot alone cannot pass. Follow keyboard focus across opening and closing a modal.",
+    "title": "Open and close the rules with a keyboard",
+    "summary": "Let someone read the rules and return to the game using only keys.",
     "level": "Advanced",
-    "requires": "Antigravity desktop app online, an empty project and a desktop browser with a keyboard.",
-    "features": "Browser verification, focus behavior and review of an interactive page.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder.",
+    "features": "Move through a rules box with the Tab, Enter and Escape keys.",
     "roles": [
-      "Prototype a keyboard-friendly trace detail view.",
-      "Review an admin form’s focus behavior.",
-      "Make puzzle help usable by keyboard."
+      "Read mail-report hints with the keyboard.",
+      "Open help in a staff form.",
+      "Add accessible rules to a game."
     ],
-    "prompt": "Build dialog.html with a button named Rules and a modal containing a heading, “Two players take turns,” and a Close button. Open with Enter, place focus on Close, close with Escape or Close, and return focus to Rules. Keep the background unavailable during the modal.",
+    "prompt": "Build dialog.html. Add a Rules button. Enter opens a box with a heading, the words Two players take turns, and a Close button. Move the keyboard highlight to Close. Keep it inside the box until Escape or Close shuts it. Return the highlight to Rules.",
     "steps": [
       {
-        "title": "Inspect the initial state",
-        "text": "Send the prompt and open the page locally. Press Tab until Rules is focused, then Enter.",
-        "help": "If the browser moves focus through its own toolbar first, click the page background and start again with Tab."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Trace keyboard focus",
-        "text": "Look for a visible focus indicator on Close. Press Tab and Shift+Tab while the dialog is open.",
-        "help": "Background controls should remain unreachable. If visual focus is unclear, inspect document.activeElement in the browser console."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Open the page. Press Tab until Rules is highlighted. Press Enter. Use Tab and Shift with Tab to see where the highlight goes.",
+        "help": "The box opens. You can read its rule. The keyboard highlight reaches Close and stays in the open box."
       },
       {
-        "title": "Close both ways",
-        "text": "Press Escape, check the focused control, reopen, and activate Close with the keyboard. Report any mismatch to Antigravity and retest.",
-        "help": "Keep the exact key sequence with the bug report so the agent can reproduce the failing path."
+        "title": "Try a second case",
+        "text": "Press Escape. Check the highlight. Open Rules again. This time activate Close with the keyboard.",
+        "help": "If the highlight disappears, ask the helper to remember the opening button and focus it when the box closes."
       }
     ],
     "check": [
-      "Both closing routes return focus to Rules.",
-      "The dialog text and Close control are unavailable in the closed state."
+      "The box opens. You can read its rule. The keyboard highlight reaches Close and stays in the open box.",
+      "Both ways put the highlight back on Rules. While the box is closed, you cannot tab to its Close button."
     ],
     "sources": [
       [
@@ -410,37 +410,37 @@
   },
   {
     "id": "lab-antigravity-10",
-    "title": "Test an offline book update",
-    "summary": "Build a tiny two-edition reading page and distinguish an installed revision from a stale cached one.",
+    "title": "Update a book that works offline",
+    "summary": "Save two tiny book files in the browser. Make sure the newer edition takes the place of the old one.",
     "level": "Advanced",
-    "requires": "Antigravity desktop app online with a localhost web server and browser developer tools.",
-    "features": "Terminal, service-worker code review and browser network inspection.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder.",
+    "features": "Use a local web server and a browser helper that saves pages for offline reading.",
     "roles": [
-      "Cache an approved field reference.",
-      "Distribute a portable onboarding guide.",
-      "Verify an iPad book after a revision."
+      "Pack a read-only mail checklist for a trip.",
+      "Save a training page for an offline class.",
+      "Update an iPad book without losing its offline pages."
     ],
-    "prompt": "Create index.html, chapter.txt (edition A), and sw.js for a small read-only book on localhost. Precache the document and chapter, expose “Ready offline” only once this page is controlled, and remove older book caches when activating a new edition. Create a terminal command to serve the folder.",
+    "prompt": "Build a little book on localhost with index.html, chapter.txt saying edition A, and sw.js. This last file is a browser helper. Have it save the page and chapter for offline use. Show Ready offline once it can serve this page. Remove only this book’s old saved copies when a new edition takes over. Give me a command to serve the folder.",
     "steps": [
       {
-        "title": "Install the first copy",
-        "text": "Open the localhost URL online. Wait for Ready offline, then reload offline in the browser’s network controls.",
-        "help": "If it fails on the first visit, re-enable the network, wait for activation and reload for control. A file URL cannot install this worker."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Prepare the revision",
-        "text": "Go online. Ask Antigravity to change the chapter to edition B and update the worker’s cache name. Inspect both edits.",
-        "help": "If only the text file changed, the installed cache can still contain edition A."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Run the given command. Open its local address. Wait for Ready offline. Take the browser offline and reload this same page.",
+        "help": "Edition A still opens. The page can read its chapter without a network connection."
       },
       {
-        "title": "Prove the update",
-        "text": "Close the old reader tabs so a waiting worker can activate. Reopen online, verify edition B, then perform an ordinary offline reload.",
-        "help": "A hard reload can bypass the cache. Use a normal reload and inspect the worker state if the old edition persists."
+        "title": "Try a second case",
+        "text": "Go online. Ask the helper to change the chapter to edition B and the name of its saved copy. Close old book tabs, reopen online and wait. Go offline again and reload.",
+        "help": "If A returns, close all old book tabs. Open online, wait for the new helper to take over, then test offline again."
       }
     ],
     "check": [
-      "Edition A opens offline after installation.",
-      "After update the offline reader displays B and the old book-specific cache is gone."
+      "Edition A still opens. The page can read its chapter without a network connection.",
+      "The reader now shows B offline. In the browser storage view the old copy of this book is gone."
     ],
     "sources": [
       [
@@ -459,37 +459,37 @@
   },
   {
     "id": "lab-antigravity-11",
-    "title": "Make a replay-safe event ledger",
-    "summary": "Guarantee the recorded balance through retries and concurrent writers sharing one database.",
+    "title": "Count each score slip once",
+    "summary": "Two slips may have the same number of points. Use the slip ID to tell a real second score from a repeat.",
     "level": "Expert",
-    "requires": "Antigravity desktop app online and Python 3 with SQLite. Use a disposable local database.",
-    "features": "Implementation planning, concurrency tests and review of the transaction boundary.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Use a local database and two separate writers to check repeated scores.",
     "roles": [
-      "Deduplicate synthetic notification deliveries.",
-      "Test replayed service-change events.",
-      "Protect a score history from double taps."
+      "Count each mail event once.",
+      "Avoid double counting forms sent twice.",
+      "Keep a score slip from adding points twice."
     ],
-    "prompt": "Build a Python/SQLite event ledger. An event ID identifies one immutable signed amount. Apply A,+40 and B,+40, then retry A,+40. A repeat ID with a different amount is an error. Use a database-enforced uniqueness rule. Test with two independent connections delivering C,+10 simultaneously. Use only a temporary database.",
+    "prompt": "Use Python and a temporary SQLite database. Store each score ID just once. Enter A,+40 and B,+40. Send A,+40 again. Reject a repeat ID with a changed amount. Also send C,+10 from two separate connections at the same time. Have the database enforce the one-ID rule.",
     "steps": [
       {
-        "title": "Pin down the contract",
-        "text": "Ask for a plan and expected totals before implementation. Check how the design distinguishes different IDs with the same amount.",
-        "help": "Reject a proposal to deduplicate on amount. A and B are separate legitimate contributions."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Inspect the transaction",
-        "text": "Have the agent implement and run the cases. Open the diff at the durable write and inspect how duplicates and conflicts are handled.",
-        "help": "A Python set shared by two test calls cannot establish behavior across database connections. Require the test to open two actual connections."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Ask to see the stored rows after the repeat and again after both copies of C arrive. Run the tests on a fresh database.",
+        "help": "The repeat leaves A and B, total 80. After C there are three rows and the total is 90."
       },
       {
-        "title": "Repeat under contention",
-        "text": "Run the concurrent case several times on new databases. Submit A,+41 and read the stored rows afterward.",
-        "help": "A run blocked by a database lock is a recorded failure to handle contention. Ask the agent to preserve its output and address the transaction behavior."
+        "title": "Try a second case",
+        "text": "Repeat the two-connection test on fresh data. Then try A,+41 against the finished database.",
+        "help": "If the total reaches 100, ask for a rule in the database that blocks a second row with the same ID. Test both connections again."
       }
     ],
     "check": [
-      "The replay leaves two rows and total 80. Two deliveries of C leave three rows and total 90.",
-      "A,+41 produces an explicit conflict, preserving A,+40 and total 90."
+      "The repeat leaves A and B, total 80. After C there are three rows and the total is 90.",
+      "The tool flags the change. A still has 40 points and the total stays 90."
     ],
     "sources": [
       [
@@ -508,37 +508,37 @@
   },
   {
     "id": "lab-antigravity-12",
-    "title": "Verify staged configuration precedence",
-    "summary": "Implement a layered configuration reader and force it to disclose which layer supplied each effective setting.",
+    "title": "Find which setting wins",
+    "summary": "Stack three sets of settings. The top set can turn an option off or choose zero as a limit.",
     "level": "Expert",
-    "requires": "Antigravity desktop app online and Python 3 in an empty project.",
-    "features": "Agent planning, terminal tests and inspecting configuration provenance.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Read three groups of choices and show which group set each value.",
     "roles": [
-      "Explain a mail policy override.",
-      "Review a site-specific rollout setting.",
-      "Resolve book defaults and personal preferences."
+      "Explain where a mail warning limit came from.",
+      "Check which team setting took effect.",
+      "Let a player turn reminders off."
     ],
-    "prompt": "Write a standard-library configuration resolver. Defaults are reminders=true, limit=10. Site overrides set limit=5. User overrides set reminders=false and limit=0. Later layers win when a key exists. A supplied null is an error. Return each value and the layer that supplied it. Reject unknown settings.",
+    "prompt": "In Python, start with reminders=true and limit=10. The site sets limit=5. The user sets reminders=false and limit=0. Use the last set that actually names a setting. Show its value and where it came from. Reject a named value of null and unknown setting names. Keep the input lists unchanged.",
     "steps": [
       {
-        "title": "Review the merge rule",
-        "text": "Start in a scratch project. Ask the agent to show expected outcomes for absent, false, zero and null before writing the resolver.",
-        "help": "A map that uses truthiness to detect presence will silently drop both legitimate overrides. Point out which rows should reveal this."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Exercise each source",
-        "text": "Run the implemented tests. Remove limit from the user input, then remove it from the site input and run each variation.",
-        "help": "If the result stays zero, check whether the fixture object is being reused or mutated between cases."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Run the first example. Remove limit from the user settings and run again. Then remove the site limit too.",
+        "help": "At first the user gives false and 0. Removing the user limit gives 5 from the site. Removing both gives 10 from the defaults."
       },
       {
-        "title": "Prove failure is atomic",
-        "text": "Pass a user override containing reminders=false and typo_lim=7. Inspect the result and original dictionaries after rejection.",
-        "help": "Ask for an assertion that the original objects are unchanged so one failed evaluation cannot contaminate the next one."
+        "title": "Try a second case",
+        "text": "Try reminders=false with a misspelled setting called typo_lim. In another test, set limit to null. Look at the original lists after each run.",
+        "help": "If 0 becomes 5, ask whether the key is present, instead of asking whether its value is positive."
       }
     ],
     "check": [
-      "Original resolves false and 0 from user. Removing user limit gives 5 from site; removing both yields 10 from defaults.",
-      "An explicit null or unknown key causes an error with no mutation of input layers."
+      "At first the user gives false and 0. Removing the user limit gives 5 from the site. Removing both gives 10 from the defaults.",
+      "Both bad inputs raise an error. The original settings still match what you put in."
     ],
     "sources": [
       [
@@ -553,37 +553,37 @@
   },
   {
     "id": "lab-antigravity-13",
-    "title": "Migrate a contract while two clients coexist",
-    "summary": "Use an independent reader and writer to reveal exactly when a format switch breaks an older client.",
+    "title": "Teach two app versions to share a score",
+    "summary": "Find a way to save points that both an old game and a new game can read.",
     "level": "Expert",
-    "requires": "Antigravity desktop app online, Python 3 and a disposable project.",
-    "features": "Multi-file navigation, a compatibility matrix and command-line verification.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Make two readers try the same files, like testing two keys on one lock.",
     "roles": [
-      "Stage a mailbox report format rename.",
-      "Coordinate consumption of a new inventory export.",
-      "Keep old saved-game readers working."
+      "Change a mail report while older readers still use it.",
+      "Update a shared form in small steps.",
+      "Keep old saved games working."
     ],
-    "prompt": "Build two Python readers and two writers for a score record. Reader V1 looks only for points. Reader V2 accepts score or points, but rejects conflicting values when both exist. Writer Legacy emits only points. Writer Dual emits points and score with the same value. Test score zero and negative seven in every pairing.",
+    "prompt": "In Python make an old reader that looks for points. Make a new reader that accepts points or score and rejects different values when both appear. Build an old writer that saves only points. Build a second writer that saves both fields with the same value. Test both readers with both writers for 0 and -7.",
     "steps": [
       {
-        "title": "Create a compatibility matrix",
-        "text": "In Antigravity ask for a table with writer versions down the side and reader versions across the top. Then request independently callable functions.",
-        "help": "All four combinations should work before testing the proposed change. A reader that imports writer internals weakens the compatibility check."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Introduce a future writer",
-        "text": "Add Writer New that emits only score. Run the same readers on its output and record the expected V1 failure.",
-        "help": "A migration plan is incomplete if the table simply drops the legacy reader. Keep its failing case visible."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Draw two reader columns and two writer rows. Mark each box after the helper runs its tests.",
+        "help": "All four pairs read both 0 and -7 correctly."
       },
       {
-        "title": "Handle a bad dual record",
-        "text": "Feed both readers a hand-written record with points=3 and score=4. Read their different outcomes, then request a rollout sequence.",
-        "help": "For old clients, points is the only recognized field. The new reader has enough information to detect a disagreement and should raise a clear error."
+        "title": "Try a second case",
+        "text": "Add a writer that saves only score. Try both readers. Then give them a record with points=3 and score=4. Ask which readers should be updated first.",
+        "help": "If both readers pass everything, inspect the test that uses only score. The old reader must notice its missing points field."
       }
     ],
     "check": [
-      "The original four pairings reproduce 0 and −7. The new writer works only with V2.",
-      "V1 reads 3 from the conflicting record. V2 rejects it. Deploy V2 readers before retiring the dual writer."
+      "All four pairs read both 0 and -7 correctly.",
+      "The score-only file works with the new reader. The old reader gets 3 from the mixed file. The new reader rejects that file."
     ],
     "sources": [
       [
@@ -602,37 +602,37 @@
   },
   {
     "id": "lab-antigravity-14",
-    "title": "Verify an outage calculation across midnight",
-    "summary": "Distinguish event duration from unique unavailable minutes when intervals overlap or touch.",
+    "title": "Count overlapping outage minutes once",
+    "summary": "Two teams report the same outage. Combine their time blocks without counting the overlap twice.",
     "level": "Expert",
-    "requires": "Antigravity desktop app online and Python 3 with UTC timestamp support.",
-    "features": "Repository tests, an independent calculation and diagnostic evidence.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Put overlapping time blocks on the same clock and measure their combined length.",
     "roles": [
-      "Compute overlapping mail gateway outages.",
-      "Summarize service-health windows.",
-      "Measure actual unavailability of a personal app."
+      "Measure combined mail downtime.",
+      "Read service windows on a team calendar.",
+      "Count time spent playing without overlap."
     ],
-    "prompt": "Write a Python union-duration calculator. Intervals are UTC, start-inclusive and end-exclusive. Fixtures on Jan 1–2, 2027: A 23:50–00:10; B 00:05–00:20; C 00:20–00:25; D 00:08–00:09 (B,C,D start Jan 2). Count unique minutes, reject end before start and allow zero-length intervals.",
+    "prompt": "Use Python and UTC times on January 1–2, 2027. A runs from Jan 1 23:50 to Jan 2 00:10. On Jan 2, B runs 00:05–00:20, C runs 00:20–00:25, and D runs 00:08–00:09. Count each minute of downtime once. End times mark when service is back. Accept an interval of zero minutes. Reject an end earlier than its start.",
     "steps": [
       {
-        "title": "Establish an independent answer",
-        "text": "Draw the timeline before opening the plan. Ask Antigravity to write both a merged-interval implementation and a minute-set reference for these whole-minute synthetic fixtures.",
-        "help": "Naively summing individual intervals gives 41 minutes. The four intervals form one continuous span."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Exercise invariants",
-        "text": "Request tests for shuffled input, a duplicate of A, a zero-length D replacement and a separate Jan 2 01:00–01:02 interval.",
-        "help": "If order changes the answer, inspect whether the implementation merges sorted or original intervals."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Draw the four lines on a time strip. Ask the helper for the total. Shuffle the input, repeat A, and try D with the same start and end.",
+        "help": "The combined stretch is 35 minutes. Shuffle, repeats and an empty stretch add zero minutes."
       },
       {
-        "title": "Review failure behavior",
-        "text": "Feed an interval whose explicit UTC end precedes its start. Have the agent show exactly which interval is rejected and rerun the suite.",
-        "help": "A negative interval must not be interpreted as a midnight crossing after the full dates have already been supplied."
+        "title": "Try a second case",
+        "text": "Add Jan 2 01:00 to 01:02. Then feed the tool one interval with the end earlier than its start.",
+        "help": "If the total is too large, merge overlapping blocks before adding their lengths. Check that C starts just when B ends."
       }
     ],
     "check": [
-      "Original union is 35 minutes; adding the separate interval yields 37.",
-      "Duplicates, shuffle and a zero-length nested interval do not inflate the total; reversed timestamps fail."
+      "The combined stretch is 35 minutes. Shuffle, repeats and an empty stretch add zero minutes.",
+      "The separated two minutes raise the total to 37. The reversed interval gets a clear error."
     ],
     "sources": [
       [
@@ -647,37 +647,37 @@
   },
   {
     "id": "lab-antigravity-15",
-    "title": "Release a tested, recoverable importer",
-    "summary": "Rehearse failure halfway through a file import and verify that retrying produces the same durable state as a clean run.",
+    "title": "Restart an import where it stopped",
+    "summary": "Pretend the power goes out while scores are being saved. Make the next run pick up at the right place.",
     "level": "Expert",
-    "requires": "Antigravity desktop app online with Python 3 and SQLite. Start a new disposable project.",
-    "features": "Project plans, controlled fault injection, terminal execution and a release walkthrough.",
+    "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Stop and restart a Python job using a saved place marker.",
     "roles": [
-      "Resume a synthetic mailbox-report import.",
-      "Recover a batch of site inventory rows.",
-      "Safely restore a saved-game backup."
+      "Restart a practice mail-report import.",
+      "Resume reading a file of test survey rows.",
+      "Restore a score list after a broken import."
     ],
-    "prompt": "Implement a local Python importer for three records: R1 +8, R2 -3, R3 +5. Use a transaction per row to persist its ID, amount and checkpoint atomically in temporary SQLite. Add a test-only switch that interrupts immediately after the second commit. Resume from the checkpoint, then replay the entire input. A conflicting duplicate must fail clearly.",
+    "prompt": "Build a local Python importer with temporary SQLite. Input is R1,+8 then R2,-3 then R3,+5. Save each row and its place marker together so both are kept or neither is. Add a practice switch to stop just after saving row two. Resume, then run the whole file again. Reject repeats with a changed amount.",
     "steps": [
       {
-        "title": "Define durable observations",
-        "text": "Review the plan in Antigravity. Ask for a clean-run reference and a table of database state after interruption, resume and replay.",
-        "help": "An in-memory counter cannot prove recoverability. Require a newly started process to read the same database for the resume."
+        "title": "Open the practice folder",
+        "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
+        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
       },
       {
-        "title": "Inspect the transaction and test",
-        "text": "Have the agent implement, run the importer with the fault switch, then use a new process to resume. Compare rows, total and checkpoint to the clean run.",
-        "help": "If the checkpoint advances independently of the amount write, interrupting between those operations could lose a row. Inspect their transaction together."
+        "title": "Ask the helper",
+        "text": "Paste the lab prompt into the project chat. Read the proposed steps. Stop after row two. Open a new process and start the importer again. Compare its rows with one clean run through the file.",
+        "help": "After the stop there are two rows, total 5, marker 2. After resuming there are three rows, total 10, marker 3."
       },
       {
-        "title": "Produce a release handoff",
-        "text": "Ask for a walkthrough with commands and observed outputs. Retry with a fresh input file that presents R2,-9 from the beginning, against the populated database.",
-        "help": "The modified row must be inspected during a full replay. A resume that skips already checkpointed rows would never exercise the conflict."
+        "title": "Try a second case",
+        "text": "Read the whole file again. Then send a new file beginning with R2,-9 to the database that already holds all three rows.",
+        "help": "If the last row is lost, check when the bookmark is saved. If a duplicate changes the total, compare both the ID and its stored value."
       }
     ],
     "check": [
-      "After interruption: R1 and R2, total 5, checkpoint 2. After resume: three rows, total 10, checkpoint 3.",
-      "Full replay gives the same durable rows. Conflicting R2 is rejected and its stored amount stays −3."
+      "After the stop there are two rows, total 5, marker 2. After resuming there are three rows, total 10, marker 3.",
+      "The full repeat adds nothing. The changed R2 raises an error and its stored amount remains -3."
     ],
     "sources": [
       [
@@ -691,6 +691,756 @@
       [
         "Antigravity · reviewing a walkthrough",
         "https://antigravity.google/docs/walkthrough/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-16",
+    "title": "Race the lantern to ten",
+    "summary": "Two players race to light ten lanterns. Test the finish line and play a second round.",
+    "level": "Starter",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Count two kinds of mail checks separately.",
+      "Show who takes the next turn in a meeting game.",
+      "Build a two-player race."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a two-player race. Show whose turn it is and both scores. Each move lights the chosen number of lanterns. The first player to reach or pass ten wins. Freeze moves at the finish. Add New race. Use these practice values: Start both players on 0. Moves are +1 or +2. The goal is 10.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-16 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Play the first round",
+        "text": "Choose +2 for both players in turn. Keep going until the first player reaches ten. Try another move after the win.",
+        "help": "The first player wins on move nine with scores 10 and 8. Another move cannot raise either score."
+      },
+      {
+        "title": "Try a change",
+        "text": "Choose New race. Choose +1 for the first move. Read both scores and whose turn comes next.",
+        "help": "If a move after the win still counts, have the game check for a winner before accepting a move."
+      }
+    ],
+    "check": [
+      "The first player wins on move nine with scores 10 and 8. Another move cannot raise either score.",
+      "The new scores are 1 and 0. It is the second player's turn. The old winner message has cleared."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-17",
+    "title": "Match four picture cards",
+    "summary": "Flip pairs on a small memory board. Catch a mismatch and prove a matched pair stays open.",
+    "level": "Starter",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Pair two pieces of a sample mail report.",
+      "Build a matching game for training terms.",
+      "Make a memory game you can replay."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a memory game with four keyboard-friendly card buttons. Reveal two at a time. Keep a matching pair face up. On a mismatch show Try again and a Turn back button. Count pairs. Add New board and a win message. Use these practice values: Use four fixed positions: Moon, Bell, Bell, Moon. All cards start face down.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-17 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Play the first round",
+        "text": "Flip positions one and two. Read the words. Select Turn back. Then flip one and four.",
+        "help": "The first pair closes again. Both Moon cards stay open after the match. One pair has been found."
+      },
+      {
+        "title": "Try a change",
+        "text": "Click a Moon again. Match positions two and three. Start a new board.",
+        "help": "If double-clicking one card makes a match, ask for two different card positions before checking the words."
+      }
+    ],
+    "check": [
+      "The first pair closes again. Both Moon cards stay open after the match. One pair has been found.",
+      "The repeat click adds nothing. Both matches win the game. New board hides all four cards and sets pairs to zero."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-18",
+    "title": "Build a packing list you can finish",
+    "summary": "Check off the items for a pretend walk. A counter lets you see what still belongs in your bag.",
+    "level": "Starter",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Check off the steps in a mail review.",
+      "Track completed items on a meeting list.",
+      "Pack gear in a small checklist app."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Show one labeled checkbox per item, a packed count, and a Clear checks button. Say Ready when all three are checked. Only count each item once. Use these practice values: Items in order: hat, bottle, map. All start unchecked.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-18 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Check hat and map. Look at the counter, uncheck hat and read it again.",
+        "help": "The count moves from 2 of 3 to 1 of 3. Only map stays checked."
+      },
+      {
+        "title": "Try a change",
+        "text": "Check the other two items. Select Clear checks after the Ready message appears.",
+        "help": "If unchecking raises the number, ask for a count of the boxes currently checked after every click."
+      }
+    ],
+    "check": [
+      "The count moves from 2 of 3 to 1 of 3. Only map stays checked.",
+      "The count reaches 3 of 3, then returns to 0 of 3. All three item labels remain on the list."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-19",
+    "title": "Turn a mailbox count into a picture",
+    "summary": "Make bars you can compare by eye. Keep the printed numbers so the shortest bar still makes sense.",
+    "level": "Starter",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Compare the sizes of practice mail folders.",
+      "Display counts from a small team list.",
+      "Build a chart you can change."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Show a labeled bar and a printed count for each folder. Add a number box for each count. Update the bars and total when a valid whole count changes. A negative or missing count shows a correction message. Use these practice values: Use practice folders Inbox=6, Drafts=2, Archive=0.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-19 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Read all three labels. Compare the lengths of the first two bars. Look at Archive.",
+        "help": "The total is 8. Inbox is three times as long as Drafts. Archive shows 0 next to its label."
+      },
+      {
+        "title": "Try a change",
+        "text": "Change Drafts to 4. Then clear that field. Fill it with 0 and read the total.",
+        "help": "If zero removes the whole Archive row, keep the text label and number even when the bar has no length."
+      }
+    ],
+    "check": [
+      "The total is 8. Inbox is three times as long as Drafts. Archive shows 0 next to its label.",
+      "The totals are 10, then a request for the missing count, then 6. The empty box never pretends to be a real zero."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-20",
+    "title": "Make a three-stop route card",
+    "summary": "Use two buttons to move through a short route. A reader should always know where they are.",
+    "level": "Starter",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Read a three-part mail checklist.",
+      "Step through a staff guide.",
+      "Add page turns to a small book."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a route reader with the stop name, its number out of three, Previous and Next. Stop at the first and last card. Add First stop to return home. Use these practice values: Stops are Dock, Bridge, Gate in that order.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-20 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Start the page. Try Previous. Press Next twice. Read the last stop and try Next again.",
+        "help": "Dock says 1 of 3 with Previous off. Gate says 3 of 3 with Next off."
+      },
+      {
+        "title": "Try a change",
+        "text": "Press Previous once, then First stop. Check the selected stop both times.",
+        "help": "If you reach a blank stop, have the code check the first and last positions before moving."
+      }
+    ],
+    "check": [
+      "Dock says 1 of 3 with Previous off. Gate says 3 of 3 with Next off.",
+      "Bridge is 2 of 3. First stop returns to Dock, with Previous off again."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-21",
+    "title": "Build a type-size tester",
+    "summary": "Let a reader make a sample sentence bigger without letting it grow off the screen.",
+    "level": "Starter",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Make a mail report easier to read.",
+      "Set readable text in a training page.",
+      "Add a size control to an app."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Show one sample sentence, its current size, Smaller, Larger and Reset. Each press changes the text by two pixels within the allowed sizes. Use large labeled buttons. Use these practice values: Start at 18 pixels. The allowed sizes are 14, 16, 18, 20, 22 and 24.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-21 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Press Larger three times, then try it once more. Compare the printed number and the actual sentence.",
+        "help": "The size stops at 24. A fourth press does not grow the sentence."
+      },
+      {
+        "title": "Try a change",
+        "text": "Press Reset. Press Smaller until it stops. Reset once more.",
+        "help": "If the number changes but the sentence does not, ask the page to set the sample text size from that same number."
+      }
+    ],
+    "check": [
+      "The size stops at 24. A fourth press does not grow the sentence.",
+      "Reset gives 18 each time. Smaller stops at 14. Everything fits in a narrow browser window."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-22",
+    "title": "Build a letter trail game",
+    "summary": "Walk from tile to tile to spell a word. A jump across the board should never count.",
+    "level": "Intermediate",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Trace neighboring stages in a mail job.",
+      "Teach a team process with a path puzzle.",
+      "Build a letter search game."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a letter trail game. Show a typed trail and clickable tiles. Allow moves to unused tiles sharing a side with the last tile. Keep a Clear trail button. Award a win only for the full word, then allow another round. Use these practice values: Use a two-row grid. Top row C A T. Bottom row R P N. The target is CAT.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-22 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Click C then T. Watch whether T enters the trail. Now add A and T in order.",
+        "help": "The jump from C to T is refused. C, A, T spells CAT and wins."
+      },
+      {
+        "title": "Try a change",
+        "text": "Start over. Try C,A,C. Then clear the trail and make the winning path again.",
+        "help": "If a diagonal tile works, check row and column changes. One should move by one while the other stays the same."
+      }
+    ],
+    "check": [
+      "The jump from C to T is refused. C, A, T spells CAT and wins.",
+      "The used C cannot be added twice. Clear removes the selection. A new correct path still wins."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-23",
+    "title": "Choose practice mail by its flags",
+    "summary": "Turn on two filters and check that only the matching rows stay on the page.",
+    "level": "Intermediate",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Narrow a sample inbox by flags.",
+      "Filter rows of a team task list.",
+      "Add filters to a collection."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Use the four fake rows in a mail filter. Add Unread only and Flagged only checkboxes. Keep input order. Show the visible count and IDs. Both checked means both rules must match. Add Reset filters. Use these practice values: A: unread, flagged. B: read, flagged. C: unread, plain. D: read, plain.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-23 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Select Unread only. Now select Flagged only too. Read which IDs are still on the page.",
+        "help": "Unread shows A and C. Both boxes show just A, with count 1."
+      },
+      {
+        "title": "Try a change",
+        "text": "Turn off Unread only while keeping Flagged only on. Then select Reset filters.",
+        "help": "If C appears with both boxes checked, test the two flags on the same row before showing it."
+      }
+    ],
+    "check": [
+      "Unread shows A and C. Both boxes show just A, with count 1.",
+      "Flagged alone shows A and B. Reset shows A, B, C and D, with count 4."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-24",
+    "title": "Split a snack bill to the last cent",
+    "summary": "Share a small bill without losing a penny when division gives a remainder.",
+    "level": "Intermediate",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Split a practice mail service fee.",
+      "Share the cost of team supplies.",
+      "Build a fair bill splitter."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a bill splitter with boxes for a dollar amount and number of seats. Work in whole cents. Give any extra cents to the first seats in order. List every share and their sum. Handle zero money and reject zero seats. Use these practice values: Try 10.00 dollars for 3 people. Use seats 1, 2 and 3.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-24 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Enter 10.00 and 3, then press Split. Add the three printed shares yourself.",
+        "help": "Seats 1, 2 and 3 owe 3.34, 3.33 and 3.33. Their sum is 10.00."
+      },
+      {
+        "title": "Try a change",
+        "text": "Try 0.02 for 3 seats and then 0.00 for 2 seats. Finally try zero seats.",
+        "help": "If all three seats owe 3.33 for 10.00, count the pennies left over after the equal shares."
+      }
+    ],
+    "check": [
+      "Seats 1, 2 and 3 owe 3.34, 3.33 and 3.33. Their sum is 10.00.",
+      "The shares are 0.01, 0.01, 0.00. Both zero-dollar shares are 0.00. Zero seats gives a helpful error."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-25",
+    "title": "Fit events onto one room calendar",
+    "summary": "Put colored blocks on a day's time line. Let a meeting begin the minute the earlier meeting ends.",
+    "level": "Intermediate",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Plan a practice window for mail checks.",
+      "Spot room-booking conflicts.",
+      "Build a day planner."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a small room calendar. Show the booked times and a form for a start and end. Reject a request that overlaps. Accept one that touches an end. List each accepted block and give the reason for a refusal. Add Restore sample. Use these practice values: Room A has a booking from 09:00 to 09:30. New requests use whole minutes on this same day.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-25 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Ask for 09:15–09:45. Then try 09:30–10:00. Count the blocks after each request.",
+        "help": "The first request overlaps, so the count stays one. The second fits and makes two blocks."
+      },
+      {
+        "title": "Try a change",
+        "text": "Try 10:00–10:00 and 10:15–10:00. Restore the sample and try 08:30–09:00.",
+        "help": "If touching events clash, check whether there is at least one minute inside both bookings."
+      }
+    ],
+    "check": [
+      "The first request overlaps, so the count stays one. The second fits and makes two blocks.",
+      "Both bad lengths are refused. After reset the earlier meeting fits beside the original one."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-26",
+    "title": "Make a score sheet that can undo",
+    "summary": "Enter a score for either team. Take back the last turn without losing earlier turns.",
+    "level": "Intermediate",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Undo the last edit to a practice counter.",
+      "Track the history of values in a form.",
+      "Build a scorecard with undo."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a two-team score sheet. Each entry saves its team and signed points. Show a turn list and both running totals. Undo removes just the last entry. Disable Undo on an empty sheet. Add New game. Use these practice values: Start Red and Blue at 0. Enter Red +7, Blue +4, then Red -2.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-26 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Enter the three sample turns in order. Undo the last one, then undo the one before it.",
+        "help": "The first totals are Red 5 and Blue 4. Undo gives 7 and 4, then 7 and 0."
+      },
+      {
+        "title": "Try a change",
+        "text": "Enter Blue -3 after the undos. Select New game. Try Undo again.",
+        "help": "If Undo removes points from the wrong team, save a team label with each turn instead of reading the currently selected team."
+      }
+    ],
+    "check": [
+      "The first totals are Red 5 and Blue 4. Undo gives 7 and 4, then 7 and 0.",
+      "Blue shows -3 before reset. New game shows two zeros and no turns. Undo is off."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-27",
+    "title": "Fit toy seats around a table",
+    "summary": "Assign seat cards in order. Show exactly which card goes on the waiting list when the table fills up.",
+    "level": "Intermediate",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Model a small mail review queue.",
+      "Manage sign-ups for a made-up workshop.",
+      "Build a game lobby with two seats."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a seat tool with Add card, Release seat and Reset. Seat each new card in the first free seat or put it at the end of a waiting list. Reject a repeated card. Releasing a seat moves the oldest waiting card there. Use these practice values: The table has two seats. The first three card IDs are A1, B2 and C3.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-27 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Add A1, B2, C3, then C3 again. Look at both seats and the waiting list.",
+        "help": "A1 and B2 are seated. C3 appears once on the waiting list."
+      },
+      {
+        "title": "Try a change",
+        "text": "Release A1. Add D4. Then release B2. Read the seat labels and waiting list.",
+        "help": "If D4 jumps ahead, take from the front of the waiting list whenever a seat opens."
+      }
+    ],
+    "check": [
+      "A1 and B2 are seated. C3 appears once on the waiting list.",
+      "C3 takes the first seat. D4 waits, then takes the second seat. The waiting list ends empty."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-28",
+    "title": "Export a sample folder report",
+    "summary": "Use a table preview to catch rows that would disappear or change when you save a report.",
+    "level": "Intermediate",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Export and check a fake mail folder report.",
+      "Verify a shared table after a download.",
+      "Build a file export you can test."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a read-only input table and a preview of a CSV file, a table saved as text. Include real counts of zero. Leave missing counts empty. Add Download CSV. Add a button that opens a file picker and shows the rows from the downloaded CSV for comparison. Use these practice values: Rows are Queue=5, Archive=0, and Review with an empty count. The heading is folder,count.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-28 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Preview the three rows. Download the file and open it with a text editor. Check the comma at the end of the last row.",
+        "help": "The data lines are Queue,5 then Archive,0 then Review, with nothing after its comma."
+      },
+      {
+        "title": "Try a change",
+        "text": "Use the file picker to read the saved CSV into the page. Count rows and inspect both the zero and the empty cell.",
+        "help": "If Review comes back with 0, test for an empty cell before turning its contents into a number."
+      }
+    ],
+    "check": [
+      "The data lines are Queue,5 then Archive,0 then Review, with nothing after its comma.",
+      "The restored preview has three rows. Archive is still 0. Review still has an empty count."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-29",
+    "title": "Capstone · Build a working pairs tournament",
+    "summary": "Run two full memory rounds and compare the scores. Both players should get the same board and rules.",
+    "level": "Advanced",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Compare two rounds of practice mail checks.",
+      "Run a two-person training activity.",
+      "Ship a complete two-player memory game."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a two-player pass-and-play memory tournament. One player finishes the whole board before the next player starts fresh. Use a Take next turn button between players. Count tries per player. Show both totals, the lower score winner, or Tie. Include New tournament. Prevent opening the same card twice in a try. Use these practice values: Each player gets four fixed cards in order Sun, Key, Key, Sun. One revealed pair counts as one try.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-29 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "For player one, choose 1+2 (miss), 1+4 (match), 2+3 (match). Advance to player two. Choose 1+4 and 2+3.",
+        "help": "The first player used three tries. The second used two. The second player wins."
+      },
+      {
+        "title": "Try a change",
+        "text": "Start again. Have each player match both pairs in two tries. Look for the result, and check the reset board once more.",
+        "help": "If the second player inherits open cards, reset the board between players while keeping the completed first score."
+      }
+    ],
+    "check": [
+      "The first player used three tries. The second used two. The second player wins.",
+      "The second tournament ends in a tie at two tries each. No card stays open from the previous tournament."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-30",
+    "title": "Capstone · Ship a sample mail-review desk",
+    "summary": "Build the whole path from a local file to a checked report. A reviewer should be able to see why a row needs attention.",
+    "level": "Expert",
+    "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use the project chat to build the page. Open the changed file to see how it works.",
+    "roles": [
+      "Build a safe practice report with no live mail access.",
+      "Show the reason each team row needs review.",
+      "Ship an app with input, export and built-in checks."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a local practice desk. Load the sample or pasted CSV. Show each mailbox and percent used. Warn at 90 percent and above. A missing used value or a zero limit needs review. Keep rejected rows visible. Add counts for all three labels and a Download report button. Include a Run checks button that independently compares the four known labels with their expected values. Use these practice values: CSV heading box,used,limit. Rows: A,90,100 then B,0,100 then C,,100 then D,5,0.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named antigravity-30 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Load the four rows. Inspect the labels, totals and four checks. Download the report and inspect all rows in a text editor.",
+        "help": "A is Warning, B is OK, C and D are Review. Counts are 1 Warning, 1 OK, 2 Review. The file contains four rows."
+      },
+      {
+        "title": "Try a change",
+        "text": "Change A to 89 and fill C with 50. Run on the changed input. Finally press Load sample and rerun the built-in checks.",
+        "help": "If B or D is missing, keep a row for every input. Test for a bad limit before dividing, and test a real zero separately from an empty value."
+      }
+    ],
+    "check": [
+      "A is Warning, B is OK, C and D are Review. Counts are 1 Warning, 1 OK, 2 Review. The file contains four rows.",
+      "The changed counts are 0 Warning, 3 OK, 1 Review. Reloading the sample restores the original counts and four passing checks."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity projects",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Google · review changes",
+        "https://antigravity.google/docs/review-changes/"
       ]
     ]
   }

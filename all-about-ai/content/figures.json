@@ -18,10 +18,10 @@
   {
     "file": "begin-project-plan.webp",
     "lesson": "antigravity-plan",
-    "caption": "The plan opens alongside the conversation so you can read it before continuing.",
-    "alt": "A request in Antigravity chat on the left with an implementation plan in the right pane.",
+    "caption": "Antigravity practice view. Does the plan stay inside the score game?",
+    "alt": "Review a plan. Task. Fix the score display.. Plan. 1. Read score.js.  2. Test a score of zero.  3. Show the edit.. Your decision. Does the plan stay inside the score game?",
     "source": "https://antigravity.google/docs/implementation-plan/",
-    "credit": "Google"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-review.webp",
@@ -42,26 +42,26 @@
   {
     "file": "begin-studio-home.webp",
     "lesson": "open-ai-studio",
-    "caption": "Google’s illustrated home screen offers starting points for trying models and building applications.",
-    "alt": "Google AI Studio home, with navigation on the left and starter cards in the center.",
+    "caption": "Google AI Studio practice view. Use Playground for a word list. Use Build for a score button.",
+    "alt": "Pick a starting place. Playground. Try one prompt and compare the reply.. Build. Make an app with a preview.. Your first test. Use Playground for a word list. Use Build for a score button.",
     "source": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-studio-updates-more-control/",
-    "credit": "Google"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-studio-system.webp",
     "lesson": "ai-studio-instructions",
-    "caption": "System instructions have their own editor. The example shows a saved set of instructions.",
-    "alt": "AI Studio System instructions panel over the prompt workspace.",
+    "caption": "Google AI Studio practice view. Count the lines. Look for three different items.",
+    "alt": "Give the helper a rule. Instructions. Answer with three short lines.. Request. Name three things to pack for a game.. Expected check. Count the lines. Look for three different items.",
     "source": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-studio-updates-more-control/",
-    "credit": "Google"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-studio-build2.webp",
     "lesson": "ai-studio-build",
-    "caption": "In this Google Codelab layout the highlighted box is where you describe the app.",
-    "alt": "The app builder’s home page has a highlighted description field and suggested apps below.",
+    "caption": "Google AI Studio practice view. Open the preview and tap the button three times.",
+    "alt": "Build a game. Build. Start a new app.. Describe the app. Add one point when I tap Score. Show a win at three.. Next. Open the preview and tap the button three times.",
     "source": "https://codelabs.developers.google.com/vibe-code-with-gemini-in-aistudio",
-    "credit": "Google"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-studio-build3.webp",
@@ -82,10 +82,10 @@
   {
     "file": "begin-claude-demo.webp",
     "lesson": "claude-code-terminal",
-    "caption": "Anthropic’s terminal demo shows a conversation and status text in a text-only window.",
-    "alt": "A frame from the original Claude Code terminal demonstration with a greeting request and a working indicator.",
+    "caption": "Claude Code practice view. A tap adds one point. Source: rules.txt.",
+    "alt": "Terminal. Current folder. practice/score-game. Your request. Read the score rule. Tell me how a turn works.. Result. A tap adds one point. Source: rules.txt.",
     "source": "https://github.com/anthropics/claude-code",
-    "credit": "Anthropic"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-dispatch-intro.webp",
@@ -138,26 +138,26 @@
   {
     "file": "begin-devin-ask.webp",
     "lesson": "open-devin",
-    "caption": "Cognition’s Ask example shows a question, an architecture diagram and citations to the source files.",
-    "alt": "Devin Ask selected in the sidebar with a question and file references in the response.",
+    "caption": "Devin Ask practice view. Open title.txt and compare the first line.",
+    "alt": "Trace an answer. Question. Which file holds the title?. Answer. The title comes from title.txt.. Check it. Open title.txt and compare the first line.",
     "source": "https://docs.devin.ai/get-started/first-run",
-    "credit": "Cognition"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-devin-repos.webp",
     "lesson": "devin-first-repo",
-    "caption": "The repository selector lets you check which projects your question will use.",
-    "alt": "A list of repositories in the Devin composer with two repositories checked.",
+    "caption": "Devin practice view. The question will use the report project.",
+    "alt": "Choose a project. Practice projects. mail-report   ·   score-game   ·   team-notes. Selected. mail-report. Check the source. The question will use the report project.",
     "source": "https://docs.devin.ai/get-started/first-run",
-    "credit": "Cognition"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-devin-shell.webp",
     "lesson": "devin-follow-session",
-    "caption": "Select Shell to inspect commands and their output alongside the session conversation.",
-    "alt": "A Devin session shows the conversation and a Shell pane with individual commands.",
+    "caption": "Devin practice view. PASS · zero is shown as 0.",
+    "alt": "Follow the session. Session. Check the score report.. Shell. python check_score.py. Test output. PASS · zero is shown as 0.",
     "source": "https://docs.devin.ai/work-with-devin/devin-session-tools",
-    "credit": "Cognition"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-oai-codex-menu.webp",
@@ -178,10 +178,10 @@
   {
     "file": "begin-oai-dot.webp",
     "lesson": "open-dots",
-    "caption": "OpenAI’s walkthrough follows the same dot conversation across desktop and mobile.",
-    "alt": "Desktop and mobile examples of the dot Alfred discussing options as a constraint changes.",
+    "caption": "OpenAI dots practice view. Open the same dot and find the task again.",
+    "alt": "Pick up a task. Desktop task. Compare two game rules. Use only my note.. Follow-up. Keep each answer under ten words.. On another device. Open the same dot and find the task again.",
     "source": "https://learn.chatgpt.com/docs/dots",
-    "credit": "OpenAI"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "begin-oai-cloud-location.webp",
@@ -202,66 +202,66 @@
   {
     "file": "muse-planning-reply.webp",
     "lesson": "muse-first-plan",
-    "caption": "Muse shows a trip plan inside the conversation. Open the card to inspect what it made.",
-    "alt": "Meta demo showing a December Japan trip card and a follow-up message in a Muse conversation.",
+    "caption": "Meta Muse practice view. Open the card and check that the break is in the middle.",
+    "alt": "Open a plan card. Your request. Plan a game night with two rounds and a break.. Plan card. Round 1 · break · round 2. What to check. Open the card and check that the break is in the middle.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-    "credit": "Meta"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "muse-permission-screen.webp",
     "lesson": "muse-connections",
-    "caption": "Look at the recipient and subject before choosing Allow or Deny. This is Meta’s fictional example.",
-    "alt": "Muse asks permission to send a draft email and displays Allow and Deny buttons.",
+    "caption": "Meta Muse practice view. Check the address and words before choosing Allow or Deny.",
+    "alt": "Check a proposed action. Draft message. Game starts at 6. Bring a deck.. Destination. club@example.test. Your decision. Check the address and words before choosing Allow or Deny.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-    "credit": "Meta"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "muse-file-card.webp",
     "lesson": "muse-library",
-    "caption": "A file card can appear inside Chat. Meta’s example shows a finished PDF.",
-    "alt": "Muse chat shows a field trip permission slip PDF with a preview and file label.",
+    "caption": "Meta Muse practice view. Look for cards, pencils and a score pad.",
+    "alt": "Find the result. Task. Make a packing checklist.. File card. Game kit.pdf. Open and check. Look for cards, pencils and a score pad.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-    "credit": "Meta"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "copilot-work-home.webp",
     "lesson": "open-copilot",
-    "caption": "Microsoft’s desktop Home example shows the message field, work context control and account navigation.",
-    "alt": "Copilot Home screen with New, Search, Library and a central Message Copilot box.",
+    "caption": "Microsoft 365 Copilot practice view. Use the notes that belong to this exercise.",
+    "alt": "Start in a work space. Account. Practice workspace. Request. Make a checklist from these three sample notes.. Check. Use the notes that belong to this exercise.",
     "source": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat",
-    "credit": "Microsoft"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "copilot-outlook-summary.webp",
     "lesson": "open-copilot-outlook",
-    "caption": "On Outlook for Mac the summary sits above the original message. The small numbers lead back to emails.",
-    "alt": "Summary by Copilot with three numbered citations above a conversation in Outlook for Mac.",
+    "caption": "Copilot in Outlook practice view. The time moved to 5. Open message 2 to check.",
+    "alt": "Trace a summary. Message 1. Practice starts at 4.. Message 2. Update: practice starts at 5.. Summary. The time moved to 5. Open message 2 to check.",
     "source": "https://support.microsoft.com/en-us/outlook/copilot-pages/summarize-an-email-thread-with-copilot-in-outlook",
-    "credit": "Microsoft"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "copilot-teams-recap.webp",
     "lesson": "open-copilot-teams",
-    "caption": "Microsoft’s example marks the Recap tab and the meeting Copilot panel on the right.",
-    "alt": "Teams meeting recap with meeting notes, speaker timeline and Copilot panel.",
+    "caption": "Copilot in Teams practice view. Look for support in the note before assigning anyone.",
+    "alt": "Read a meeting recap. Meeting note. Bring the game board. Snacks still need an owner.. Recap. Board confirmed. Snack owner unknown.. Check. Look for support in the note before assigning anyone.",
     "source": "https://support.microsoft.com/en-us/teams/copilot/catch-up-on-meetings-with-microsoft-365-copilot-in-teams",
-    "credit": "Microsoft"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "comet-assistant-sidebar.webp",
     "lesson": "open-comet",
-    "caption": "Perplexity’s desktop example shows the assistant beside the page. Mobile controls can look different.",
-    "alt": "Comet browser start page with an Assistant panel outlined on the right.",
+    "caption": "Perplexity Comet practice view. 3 × 2 = 6. The two-point rule is on the page.",
+    "alt": "Read beside the page. Sample page. A team earns 2 points per star.. Assistant panel. How many points for three stars?. Check the source. 3 × 2 = 6. The two-point rule is on the page.",
     "source": "https://r2cdn.perplexity.ai/pdf/pplx-at-work.pdf#page=10",
-    "credit": "Perplexity"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "claude-duet-brief.webp",
     "lesson": "open-claude-duet",
-    "caption": "In Anthropic’s public Duet walkthrough, a morning notification tells Maya that two items need her attention. A notification is the start of a review.",
-    "alt": "Anthropic’s phone example shows a Duet notification, with tabs for chat, tasks and making things.",
+    "caption": "Claude Duet practice view. Check that the schedule also says 5.",
+    "alt": "Read a morning brief. Message. Two practice items need review.. First item. The new notice moves the game to 5.. Before you approve. Check that the schedule also says 5.",
     "source": "https://claude.com/product/claude-duet",
-    "credit": "Anthropic · public product walkthrough"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "firefly-fill-selection.webp",
@@ -282,41 +282,41 @@
   {
     "file": "excel-copilot-table-reply.webp",
     "lesson": "open-copilot-excel",
-    "caption": "Compare the count in the Copilot reply with the Level column on the sheet. Four of the ten sample employees have Mid in that column.",
-    "alt": "Excel shows the employee table at left. Copilot groups the ten rows into four Mid, three Junior, and three Lead.",
+    "caption": "Copilot in Excel practice view. Four rows in the sheet. The two counts add to four.",
+    "alt": "Count and check. Sheet · Type column. Shared  /  Room  /  Shared  /  Room. Reply. 2 shared, 2 room. Verify. Four rows in the sheet. The two counts add to four.",
     "source": "https://support.microsoft.com/en-us/excel/get-direct-answers-to-your-data-analysis-questions",
-    "credit": "Microsoft"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "grok-bot-ipad-thread.webp",
     "lesson": "open-grok-bot",
-    "caption": "The iPad example shows several bots in the left column. The Chief of staff conversation on the right includes two versions of a board deck.",
-    "alt": "Grok Bot’s iPad demonstration shows the bot list, a selected conversation, and two board-deck file cards.",
+    "caption": "Grok Bot practice view. Give Blue two points. Check that Red stays at zero.",
+    "alt": "Read a bot thread. Task list. Check a rule · Draft a scoreboard. Scoreboard thread. First draft ready for a test.. Follow-up. Give Blue two points. Check that Red stays at zero.",
     "source": "https://apps.apple.com/us/app/grok-bot/id6794501026?platform=ipad",
-    "credit": "X Corp."
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "vibe-work-ipad.webp",
     "lesson": "open-vibe",
-    "caption": "Find Work at the top of Mistral’s example. Tap the “Ask Vibe anything” field below the suggestions to start your own task.",
-    "alt": "Mistral’s iPad illustration shows Work selected, three suggested tasks, and the message field underneath.",
+    "caption": "Mistral Vibe practice view. A list you can check against the three file names.",
+    "alt": "Start a work task. Work. Choose a new practice task.. Request. Sort three sample files by title.. Expected result. A list you can check against the three file names.",
     "source": "https://apps.apple.com/us/app/vibe-by-mistral-ex-le-chat/id6740410176?platform=ipad",
-    "credit": "Mistral AI"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "muse-tracking-follow-up.webp",
     "lesson": "muse-upcoming",
-    "caption": "See what a follow-up looks like in chat. In Meta’s example, Muse reports that the tickets it was watching have gone on sale and offers two showtimes.",
-    "alt": "Muse on iPad asks whether the user wants the 4:30 or 7:30 showing for a tracked movie. A seat-selection card appears after the reply.",
+    "caption": "Meta Muse practice view. Review the two options before taking another step.",
+    "alt": "Inspect a follow-up. Task. Watch a practice event for a new time.. Update. Two times are available: 4 or 7.. Your choice. Review the two options before taking another step.",
     "source": "https://apps.apple.com/us/app/muse-from-meta/id6760173601?platform=ipad",
-    "credit": "Meta"
+    "credit": "All About AI · sample screen based on the product guide"
   },
   {
     "file": "practice-before.webp",
     "lesson": "project-or-chat",
     "caption": "Two files belong to one project. Read the schedule before trusting the time in the notice.",
     "alt": "The practice desk shows schedule.txt beside notice.txt. The notice contains a 9:50 a.m. meeting time.",
-    "source": "https://glennarmbruster.github.io/Books/all-about-ai/#first-project",
+    "source": "#first-project",
     "credit": "All About AI · Practice desk"
   },
   {
@@ -324,7 +324,193 @@
     "lesson": "read-a-change",
     "caption": "After the correction, the edited notice says 9:15. Open the schedule to check the two times agree.",
     "alt": "The practice desk shows the updated notice and a message confirming the fix to the meeting time.",
-    "source": "https://glennarmbruster.github.io/Books/all-about-ai/#first-project",
+    "source": "#first-project",
     "credit": "All About AI · Practice desk"
+  },
+  {
+    "file": "diagram-tokens-context.svg",
+    "lesson": "chatgpt-api",
+    "caption": "A model reads pieces of text called tokens. Its context window has room for only so many pieces at once.",
+    "alt": "A model reads pieces of text called tokens. Its context window has room for only so many pieces at once.",
+    "source": "#chatgpt-api",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "gemini-api",
+      "claude-models"
+    ]
+  },
+  {
+    "file": "diagram-chat-project-agent.svg",
+    "lesson": "project-or-chat",
+    "caption": "Ask a chat for a word meaning, keep trip notes together in a project, or ask an agent to fix a file.",
+    "alt": "Ask a chat for a word meaning, keep trip notes together in a project, or ask an agent to fix a file.",
+    "source": "#project-or-chat",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "open-antigravity",
+      "open-devin"
+    ]
+  },
+  {
+    "file": "diagram-vibe-coding-loop.svg",
+    "lesson": "ai-studio-build",
+    "caption": "Describe a small job, build it, try it in a browser, and fix what went wrong. Run the same test again.",
+    "alt": "Describe a small job, build it, try it in a browser, and fix what went wrong. Run the same test again.",
+    "source": "#ai-studio-build",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-05",
+      "lab-gemini-app-29"
+    ]
+  },
+  {
+    "file": "diagram-model-picker.svg",
+    "lesson": "choose-a-model",
+    "caption": "Try a fast choice for a small job. Try a thinking choice when several rules interact. Check either answer.",
+    "alt": "Try a fast choice for a small job. Try a thinking choice when several rules interact. Check either answer.",
+    "source": "#choose-a-model",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-02",
+      "lab-gemini-app-22"
+    ]
+  },
+  {
+    "file": "diagram-structured-json.svg",
+    "lesson": "gemini-api",
+    "caption": "The same three facts become named fields. The app can now read the score as a number.",
+    "alt": "The same three facts become named fields. The app can now read the score as a number.",
+    "source": "#gemini-api",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-ai-studio-01"
+    ]
+  },
+  {
+    "file": "diagram-tool-calling.svg",
+    "lesson": "chatgpt-api",
+    "caption": "The model asks a tool for a value. If the lookup fails, report that the score is unknown.",
+    "alt": "The model asks a tool for a value. If the lookup fails, report that the score is unknown.",
+    "source": "#chatgpt-api",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-ai-studio-12"
+    ]
+  },
+  {
+    "file": "diagram-offline-pwa.svg",
+    "lesson": "first-project",
+    "caption": "A web app can save its files before a trip. Test by switching off the network and opening it again.",
+    "alt": "A web app can save its files before a trip. Test by switching off the network and opening it again.",
+    "source": "#first-project",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-claude-code-30"
+    ]
+  },
+  {
+    "file": "diagram-cost-per-win.svg",
+    "lesson": "compare-cost",
+    "caption": "These made-up points show why a cheap try can cost more after retries. Count only results that pass.",
+    "alt": "These made-up points show why a cheap try can cost more after retries. Count only results that pass.",
+    "source": "#compare-cost",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "field-test"
+    ]
+  },
+  {
+    "file": "diagram-diff-review.svg",
+    "lesson": "read-a-change",
+    "caption": "The minus line will go away. The plus line will take its place. Check both against the schedule.",
+    "alt": "The minus line will go away. The plus line will take its place. Check both against the schedule.",
+    "source": "#read-a-change",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "codex-review",
+      "antigravity-review"
+    ]
+  },
+  {
+    "file": "diagram-notebook-grounding.svg",
+    "lesson": "gemini-notebook",
+    "caption": "Select the schedule and open the citation. If no selected note gives a price, leave the price unknown.",
+    "alt": "Select the schedule and open the citation. If no selected note gives a price, leave the price unknown.",
+    "source": "#gemini-notebook",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-06",
+      "lab-gemini-app-10",
+      "lab-gemini-app-30"
+    ]
+  },
+  {
+    "file": "diagram-deep-research.svg",
+    "lesson": "gemini-research-begin",
+    "caption": "Read the research plan before it starts. Check sources before trusting the finished brief.",
+    "alt": "Read the research plan before it starts. Check sources before trusting the finished brief.",
+    "source": "#gemini-research-begin",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-08",
+      "lab-gemini-app-23"
+    ]
+  },
+  {
+    "file": "diagram-m365-grounding.svg",
+    "lesson": "copilot-at-work",
+    "caption": "Copilot uses information available to your account and the current app. Ask for evidence for each claim.",
+    "alt": "Copilot uses information available to your account and the current app. Ask for evidence for each claim.",
+    "source": "#copilot-at-work",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "open-copilot",
+      "copilot-documents"
+    ]
+  },
+  {
+    "file": "diagram-exchange-pipeline.svg",
+    "lesson": "lab-devin-01",
+    "caption": "Read a made-up table, run the report on that table, and compare its rows with the expected answer.",
+    "alt": "Read a made-up table, run the report on that table, and compare its rows with the expected answer.",
+    "source": "#lab-devin-01",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-28"
+    ]
+  },
+  {
+    "file": "diagram-git-branch-pr.svg",
+    "lesson": "devin-first-repo",
+    "caption": "A branch gives you a separate copy to edit. A pull request asks someone to check it before it joins main.",
+    "alt": "A branch gives you a separate copy to edit. A pull request asks someone to check it before it joins main.",
+    "source": "#devin-first-repo",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "devin-review-first"
+    ]
+  },
+  {
+    "file": "diagram-pagination-loop.svg",
+    "lesson": "lab-antigravity-08",
+    "caption": "Follow the next link even on an empty page. End at a missing link, or stop with a warning when a link repeats.",
+    "alt": "Follow the next link even on an empty page. End at a missing link, or stop with a warning when a link repeats.",
+    "source": "#lab-antigravity-08",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "devin-api"
+    ]
+  },
+  {
+    "file": "diagram-zero-vs-blank.svg",
+    "lesson": "devin-start",
+    "caption": "Zero is a real score. A blank value records a missing answer. Only count a turn with a real score.",
+    "alt": "Zero is a real score. A blank value records a missing answer. Only count a turn with a real score.",
+    "source": "#devin-start",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-16",
+      "lab-gemini-app-29"
+    ]
   }
 ]

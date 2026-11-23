@@ -31,6 +31,10 @@ for name in files:
     source = book / name
     if name.endswith('.json'):
         bundle['json']['./' + name] = json.loads(source.read_text())
+    elif name.startswith('practice/browser/') and name.endswith('.html'):
+        bundle['media']['./' + name] = data_url(source, 'text/html')
+    elif name.endswith('.svg'):
+        bundle['media']['./' + name] = data_url(source, 'image/svg+xml')
     elif name.endswith('.webp'):
         bundle['media']['./' + name] = data_url(source, 'image/webp')
     elif name.endswith('.zip'):
@@ -42,6 +46,7 @@ html = html.replace('src="../shelf-art/all-about-ai.jpg"', 'src="' + data_url(ro
 html = re.sub(r'<link rel="stylesheet" href="\./([^"]+)">', lambda m: '<style>\n' + (book / m[1]).read_text() + '\n</style>', html)
 scripts = re.findall(r'<script src="([^"]+)" defer></script>', html)
 html = re.sub(r'<script src="[^"]+" defer></script>', '', html)
+html = re.sub(r'(?m)^[ \t]+$', '', html)
 payload = json.dumps(bundle, ensure_ascii=True, separators=(',', ':')).replace('<', r'\u003c')
 scripts_text = '<script>window.portableAiBook=' + payload + ';</script>\n'
 for script in scripts:
@@ -58,7 +63,7 @@ Working inside one of the vendor tools and opening a source link require interne
 Read on an iPad
 For the full interactive reader, open the published edition in Safari while
 online. Wait for “Ready offline”, then open it again in airplane mode.
-https://glennarmbruster.github.io/Books/all-about-ai/
+Choose All About AI on your usual Bookshelf.
 Files or another ZIP preview app may show a static preview of downloaded HTML.
 
 Editable copy
@@ -86,11 +91,19 @@ with ZipFile(archive, 'w') as z:
     # A single-book landing page keeps the shelf link and edition updater usable.
     landing = '<!doctype html><html lang="en"><meta charset="utf-8"><title>All About AI</title><article data-book="all-about-ai" data-edition="' + edition_id + '"><h1>All About AI</h1><a href="./all-about-ai/">Open the book</a></article></html>'
     put('Site/index.html', landing)
+reader = book / 'Read All About AI.html'
+standalone = html.encode('utf-8')
+if args.check:
+    if not reader.is_file() or reader.read_bytes() != standalone:
+        raise SystemExit('Regenerate Read All About AI.html with update_edition.py')
+elif not reader.is_file() or reader.read_bytes() != standalone:
+    reader.write_bytes(standalone)
 data = archive.getvalue()
 if args.check:
     if not output.is_file() or output.read_bytes() != data:
         raise SystemExit('Regenerate the portable edition with export_book.py')
 else:
     output.parent.mkdir(exist_ok=True)
-    output.write_bytes(data)
+    if not output.is_file() or output.read_bytes() != data:
+        output.write_bytes(data)
 print(f'{output.name} · {len(data):,} bytes · {edition_id}')

@@ -112,9 +112,9 @@ function chapterIntroduction(intro) {
   const block = element('section', undefined, 'chapter-intro');
   block.setAttribute('aria-label', 'Chapter introduction');
   const roles = [
-    ['Exchange engineer', intro.exchange],
-    ['Microsoft 365 engineer', intro.m365],
-    ['Personal app developer', intro.developer]
+    ['Exchange', intro.exchange],
+    ['Microsoft 365', intro.m365],
+    ['Personal App', intro.developer]
   ];
   block.append(element('h2', 'What is it?'), element('p', intro.what),
     element('h2', 'What features does it have?'), element('p', intro.features),
@@ -157,7 +157,7 @@ function labBody(lab) {
   const roleInfo = element('details', undefined, 'sources');
   roleInfo.append(element('summary', 'Applications for your work'));
   const roles = element('dl', undefined, 'role-list');
-  ['Exchange engineer', 'Microsoft 365 engineer', 'Personal app developer'].forEach((role,i) => {
+  ['Exchange', 'Microsoft 365', 'Personal App'].forEach((role,i) => {
     roles.append(element('dt',role),element('dd',lab.roles[i]));
   });
   roleInfo.append(roles);
@@ -212,7 +212,31 @@ function labBody(lab) {
   };
   label.append(checkbox,document.createTextNode('Mark lab complete on this device'));
   finish.append(element('h2','Finish the lab'),checks,label,status,sourceLinks(lab.sources));
-  return [about,workedExample(worked.get(lab.id)),prompt,instructions,finish];
+  const sections = [about,workedExample(worked.get(lab.id)),prompt,instructions];
+  if (lab.sampleApp) {
+    const sample = element('section',undefined,'section');
+    const title = 'Try the finished example';
+    const frame = element('iframe');
+    frame.title = title + ' · ' + lab.title;
+    frame.setAttribute('sandbox','allow-scripts');
+    frame.className = 'app-preview';
+    const fileUrl = assetURL('./' + lab.sampleApp);
+    // Read through the book's own offline cache before opening the isolated example.
+    // A frame with an opaque origin cannot fetch its initial page while offline.
+    fetch(fileUrl).then(response => {
+      if (!response.ok) throw Error('Missing practice page');
+      return response.text();
+    }).then(html => { frame.srcdoc = html; }).catch(() => {
+      frame.replaceWith(element('p','The example could not open. Save it below, or reopen the book online to finish its download.'));
+    });
+    const link = element('a','Save example (.html)','lab-action');
+    link.href = fileUrl;
+    link.download = lab.sampleApp.split('/').pop();
+    sample.append(element('h2',title),frame,link);
+    sections.push(sample);
+  }
+  sections.push(finish);
+  return sections;
 }
 
 function openLocation(moveFocus) {
@@ -261,7 +285,12 @@ function openLocation(moveFocus) {
       return block;
     });
     if (!lab && !chapter.group.guide) sections.unshift(workedExample(worked.get(chapter.id)),chapterIntroduction(chapter.intro));
-    if (!chapter.group.guide) sections.unshift(launchHelp(chapter));
+    if (!chapter.group.guide) {
+      sections.unshift(launchHelp(chapter));
+      const figures = chapterPictures(chapter.id);
+      sections.splice(2,0,...figures.map(picture));
+    }
+    if (chapter.catalogSources.length) sections.push(sourceLinks(chapter.catalogSources));
     const terms = glossary(chapter.search);
     if (terms) sections.unshift(terms);
     byId('body').replaceChildren(...sections);
@@ -312,12 +341,34 @@ async function json(path) {
   if (!res.ok) throw Error('Missing book content');
   return res.json();
 }
+// Resolve catalog fields before text reaches headings, search, tables or copy buttons.
+function fillModelFields(value, catalog, used) {
+  if (typeof value === 'string') return value.replace(/\{\{model\.([a-z0-9.-]+)\}\}/g, (_, key) => {
+    const field = catalog.values[key];
+    if (!field) throw Error('Missing catalog field ' + key);
+    used.add(key);
+    return field.text;
+  });
+  if (Array.isArray(value)) return value.map(item=>fillModelFields(item, catalog, used));
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,fillModelFields(item,catalog,used)]));
+  return value;
+}
+
 async function start() {
   const edition = await json('./edition.json');
-  const [pictures, examples] = await Promise.all([json('./content/figures.json'), json('./content/worked.json')]);
+  const [pictures, examples, catalog] = await Promise.all([json('./content/figures.json'), json('./content/worked.json'), json('./content/models.json')]);
   illustrations = pictures;
-  worked = new Map(examples.map(example=>[example.id,example]));
-  groups = await Promise.all(edition.groups.map(async group => ({...group, items:await json('./content/' + group.file)})));
+  worked = new Map(examples.map(example=>[example.id,fillModelFields(example,catalog,new Set())]));
+  groups = await Promise.all(edition.groups.map(async group => {
+    const rows = await json('./content/' + group.file);
+    const items = rows.map(row => {
+      const used = new Set();
+      const item = fillModelFields(row,catalog,used);
+      item.catalogSources = [...new Set([...used].map(key=>catalog.values[key].source))].map(url=>[new URL(url).hostname + ' · model details',url]);
+      return item;
+    });
+    return {...group,items};
+  }));
   for (const group of groups) {
     for (const [i, ch] of group.items.entries()) {
       ch.search = (group.title + ' ' + JSON.stringify(ch) + ' ' + JSON.stringify(worked.get(ch.id) || '')).toLowerCase();
@@ -330,7 +381,7 @@ async function start() {
   }
   const labCount = chapters.length - referenceChapters.length - guideChapters.length;
   byId('lab-count').textContent = labCount + ' guided labs · ' + groups.filter(g=>g.track).length + ' tools';
-  byId('edition').textContent = referenceChapters.length + ' chapters · ' + labCount + ' labs · ' + guideChapters.length + ' beginner lessons · Updated ' + dateLabel(edition.reviewed);
+  byId('edition').textContent = 'Edition ' + edition.version + ' · ' + referenceChapters.length + ' chapters · ' + labCount + ' labs · ' + guideChapters.length + ' beginner lessons · Updated ' + dateLabel(edition.reviewed);
   byId('query').addEventListener('input',showContents);
   window.addEventListener('hashchange',() => openLocation(true));
   openLocation(false);

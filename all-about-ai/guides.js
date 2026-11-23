@@ -85,7 +85,7 @@ function picture(figure) {
   caption.append(element('span',figure.caption));
   const credit = element('a',figure.credit);
   credit.href = figure.source;
-  credit.target = '_blank';
+  if (!figure.source.startsWith('#')) credit.target = '_blank';
   credit.rel = 'noopener noreferrer';
   caption.append(credit);
   const enlarge = actionButton('',()=>{
@@ -104,6 +104,10 @@ function picture(figure) {
   enlarge.append(photo,element('span','Enlarge picture'));
   view.append(enlarge,caption);
   return view;
+}
+
+function chapterPictures(id) {
+  return illustrations.filter(f=>f.lesson === id || f.also?.includes(id));
 }
 
 function guideBody(chapter) {
@@ -139,18 +143,18 @@ function guideBody(chapter) {
   const sections = [block];
   if (chapter.id === 'first-project') sections.push(practiceDesk());
   sections.push(walkthrough);
-  for (const figure of illustrations.filter(f=>f.lesson === chapter.id)) sections.push(picture(figure));
+  for (const figure of chapterPictures(chapter.id)) sections.push(picture(figure));
   const work = element('details',undefined,'sources');
   work.append(element('summary','Try it in your own work'));
   const roles = element('dl',undefined,'role-list');
-  ['Exchange engineering','Microsoft 365','Personal apps'].forEach((role,i)=>roles.append(element('dt',role),element('dd',chapter.roles[i])));
+  ['Exchange','Microsoft 365','Personal App'].forEach((role,i)=>roles.append(element('dt',role),element('dd',chapter.roles[i])));
   work.append(roles);
   sections.push(work,sourceLinks(chapter.sources));
   return sections;
 }
 
 function launchHelp(chapter) {
-  const id = chapter.group.track ? 'open-' + chapter.group.track : entryGuides[chapter.id];
+  const id = chapter.firstGuide || (chapter.group.track === 'gemini-app' ? 'gemini-first-chat' : chapter.group.track ? 'open-' + chapter.group.track : entryGuides[chapter.id]);
   const guide = guideChapters.find(c=>c.id === id) || guideChapters[0];
   const strip = element('aside',undefined,'launch-help');
   strip.append(element('strong','First time here? '));
@@ -227,6 +231,7 @@ function glossary(text) {
 }
 
 const entryGuides = {
+  'meta-muse':'open-muse',
   'gemini-app':'gemini-first-chat','gemini-api':'open-ai-studio','gemini-workflow':'gemini-research-begin','gemini-build':'open-antigravity','gemini-media':'gemini-first-chat',
   'claude-workspace':'claude-projects-begin','claude-models':'claude-first-chat','claude-code':'open-claude-code','claude-browser':'claude-chrome-begin','claude-visuals':'claude-artifact-begin',
   'chatgpt-picker':'open-work','chatgpt-api':'project-or-chat','chatgpt-codex':'open-codex','chatgpt-media':'open-work','chatgpt-research':'open-work-project',
@@ -287,7 +292,7 @@ function workedExample(example) {
 
 function drawGallery() {
   const wrap = byId('thumbs');
-  for (const ch of guideChapters) {
+  for (const ch of chapters) {
     for (const figure of illustrations.filter(f=>f.lesson === ch.id)) {
       const link = element('a',undefined,'thumb');
       link.href = '#' + ch.id;

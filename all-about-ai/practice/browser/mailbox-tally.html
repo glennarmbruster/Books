@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Practice mailbox tally</title>
+<style>
+body{max-width:32rem;margin:1rem auto;padding:1rem;background:#fff9e9;color:#173c45;font:17px/1.45 system-ui}h1{margin:0;font:1.7rem Georgia,serif}label,textarea{display:block}textarea{width:95%;font:inherit}button{min-height:44px;padding:.4rem .9rem;margin:.5rem 0;background:#e1efde;color:#173c45;border:2px solid #245456;border-radius:.4rem;font:inherit}
+</style>
+</head>
+<body>
+<h1>Practice mailbox tally</h1>
+<label for="rows">One pretend box per line. Use label,type.</label>
+<textarea id="rows" rows="4">A,shared
+B,room
+C,shared
+D,unknown</textarea>
+<button id="count">Count</button>
+<p id="total" role="status">Press Count to see the groups.</p>
+<script>
+document.querySelector('#count').onclick = () => {
+  let shared = 0;
+  let rooms = 0;
+  const unknown = [];
+  const lines = document.querySelector('#rows').value.split(/\r?\n/);
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    const fields = line.split(',').map(part => part.trim());
+    const kind = fields.length === 2 ? fields[1].toLowerCase() : '';
+    if (fields[0] && kind === 'shared') shared += 1;
+    else if (fields[0] && kind === 'room') rooms += 1;
+    else unknown.push(fields[0] || '(no label)');
+  }
+  let text = 'Shared: ' + shared + ' · Room: ' + rooms + ' · Unknown: ' + unknown.length;
+  if (unknown.length) text += ' (' + unknown.join(', ') + ')';
+  document.querySelector('#total').textContent = text;
+};
+</script>
+</body>
+</html>

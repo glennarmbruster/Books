@@ -1,14 +1,14 @@
 [
   {
     "id": "gemini-app",
-    "title": "Gemini on your iPad",
-    "summary": "Choose a chat model, set its thinking time, or hand a longer assignment to Tasks.",
+    "title": "Your first choice in Gemini",
+    "summary": "Use the same tiny puzzle to see when extra thinking helps.",
     "intro": {
-      "what": "Gemini is Google’s AI assistant and model family. The iPad app is a convenient place to try a question before building a workflow.",
-      "features": "Chat, Tasks, Deep Research and Gemini Live serve different conversations. Google AI Studio lets you prototype with models, and Antigravity works on code projects. Separate tools make images, video and music.",
-      "exchange": "Give it a fictional delivery failure and ask what evidence distinguishes two possible causes. Check its reasoning against the sample.",
-      "m365": "Compare two public rollout notices. Ask which dates refer to preview and which refer to general availability.",
-      "developer": "Describe a new bookshelf feature and ask for three acceptance tests you can perform on your iPad.",
+      "what": "Gemini is an app you can talk or type to. A model is the part that makes the answer. Think of the app as a radio and the model as the station you choose.",
+      "features": "Chat answers a message. Tasks can work on a longer job. Deep Research can look for sources and build a report.",
+      "exchange": "Ask it to sort two pretend messages into “delivery problem” and “password question.” Check each label.",
+      "m365": "Turn a four-line meeting note into a checklist. Make sure the time stays the same.",
+      "developer": "Ask it to write the rules for a guessing game. Try a winning guess and a losing guess.",
       "sources": [
         [
           "Google · the Gemini app and feature directory",
@@ -30,10 +30,9 @@
     },
     "sections": [
       {
-        "title": "What your account can select",
+        "title": "Find the model menu",
         "paragraphs": [
-          "On an iPad, open Gemini and tap the model name at the bottom of the chat box. In Auto, Gemini chooses between Hydrogen and a lighter model and sets the thinking level. To request Neon or Carbon specifically, select the name where your plan offers it.",
-          "These are Google’s published personal-account choices on November 22, 2026. A school or employer can license a different set. Region, rollout and remaining usage also affect what appears."
+          "Open Gemini on your iPad. Tap the model name near the message box. Auto lets the app choose. What you see depends on your account and its limits. These are the choices Google lists for personal accounts."
         ],
         "sources": [
           [
@@ -43,39 +42,38 @@
         ],
         "table": {
           "columns": [
-            "Personal account",
-            "Chat picker",
-            "Tasks picker"
+            "Plan",
+            "Chat choices",
+            "Tasks choices"
           ],
           "rows": [
             [
               "Free",
               "Auto",
-              "Hydrogen"
+              "{{model.google.hydrogen.name}}"
             ],
             [
               "Google AI Plus",
-              "Auto, Hydrogen",
-              "Hydrogen"
+              "Auto or {{model.google.hydrogen.name}}",
+              "{{model.google.hydrogen.name}}"
             ],
             [
               "Google AI Pro",
-              "Auto, Hydrogen, Neon",
-              "Hydrogen, Neon"
+              "Auto, {{model.google.hydrogen.name}} or {{model.google.neon.name}}",
+              "{{model.google.hydrogen.name}} or {{model.google.neon.name}}"
             ],
             [
               "Google AI Ultra",
-              "Auto, Hydrogen, Neon, Carbon",
-              "Hydrogen, Neon, Carbon"
+              "Auto, {{model.google.hydrogen.name}}, {{model.google.neon.name}} or {{model.google.carbon.name}}",
+              "{{model.google.hydrogen.name}}, {{model.google.neon.name}} or {{model.google.carbon.name}}"
             ]
           ]
         }
       },
       {
-        "title": "Spend thinking time where it counts",
+        "title": "Try two thinking levels",
         "paragraphs": [
-          "For a rewrite with a clear target, Hydrogen at Low is a sensible starting point. For a comparison with exceptions and overlapping conditions, try Neon at Medium or High. Reserve a Carbon trial for a problem you can actually check, such as reconciling a long set of requirements against a draft implementation.",
-          "In the app, manual model selection starts at Low. Higher thinking levels consume more usage. For a fair comparison, give each model the same input in a fresh chat. For example, supply two versions of a parking policy and ask for a table of changed hours, exemptions and exact supporting passages. Count missed exceptions and check each quotation against the documents."
+          "Type “The bus leaves at 9. The walk takes 10 minutes. What is the latest time I can start walking?” You can check the answer on a clock. Now add “I want to arrive five minutes early.” Check both answers. Try a higher thinking level if your first answer misses a rule. More thinking can use more of your account allowance."
         ],
         "sources": [
           [
@@ -86,13 +84,18 @@
             "Google AI Studio · choosing a model",
             "https://aistudio.google.com/docs/choosing-a-model"
           ]
-        ]
+        ],
+        "exercise": {
+          "prompt": "What answers should the two versions give?",
+          "answer": [
+            "8:50 for the first walk. Leave at 8:45 to arrive five minutes early."
+          ]
+        }
       },
       {
-        "title": "Chat, Tasks or Deep Research?",
+        "title": "Pick chat, Tasks or Deep Research",
         "paragraphs": [
-          "Chat suits a back-and-forth over a draft. Tasks can continue a multistep assignment in the background. Google’s November 17 release began rolling out free Tasks in the United States, India, Canada, Australia, Japan and Korea. A sample task is a draft itinerary with separate train and walking times.",
-          "Choose Deep Research for a question that requires gathering evidence. Start with “Compare wheelchair-accessible station transfers on these two routes using the rail operators’ own information. Show which transfers are still unconfirmed.” Read the proposed plan, narrow its scope if needed, and open the operator page behind each consequential claim."
+          "Use chat to fix a sentence. Use Tasks for a job you want to check on later. Try Deep Research when you need several sources. Example: “Find two public guides to growing beans indoors. Show where each says how much light beans need.” Read the plan first. Open both guides before you share the result."
         ],
         "sources": [
           [
@@ -109,14 +112,14 @@
   },
   {
     "id": "gemini-api",
-    "title": "Inside the Gemini model catalog",
-    "summary": "Match a model ID, input type and reasoning budget to the task your application has to perform.",
+    "title": "Choose a model for your own app",
+    "summary": "Find the exact model name an app must send, then test it on a case you can solve.",
     "intro": {
-      "what": "The Gemini API lets a program choose a specific model and send it a request. The catalog describes what each model accepts and returns.",
-      "features": "Compare model IDs, supported media, reasoning settings, context limits and retirement dates when choosing what an application will call.",
-      "exchange": "Benchmark extraction of diagnostic codes from synthetic mail reports. Count exact matches and made-up codes on incomplete inputs.",
-      "m365": "Test how different models classify sample Microsoft 365 notices by affected service, including one notice that covers two services.",
-      "developer": "Choose a model for tagging trivia cards by measuring correct labels, latency and cost across the same sample.",
+      "what": "An API lets one app ask another app for help. Your program sends a request with a model ID. An ID is the exact label the service expects.",
+      "features": "Google lists models for reading, writing, pictures and more. Each listing tells you what goes in, what comes out and how much fits.",
+      "exchange": "Give a model a made-up mail warning. Check whether it keeps the error number.",
+      "m365": "Ask for the date on a sample meeting flyer. Leave the date blank on one test.",
+      "developer": "Build a screen that reads a flyer and lets you fix any wrong fields.",
       "sources": [
         [
           "Google AI Studio · choosing a model",
@@ -134,10 +137,9 @@
     },
     "sections": [
       {
-        "title": "Five general-purpose choices",
+        "title": "Read the ID and pick a first test",
         "paragraphs": [
-          "An API model ID selects the engine a program calls. These are first candidates to test. The job examples are editorial suggestions. The consumer picker on the previous page and the developer catalog have different lineups.",
-          "The API offers Hydrogen and Flash-Lite on free and paid tiers. Neon and Carbon require a paid API tier. Google lists Argon separately as a stable model. Its October 13 release predates Carbon, Hydrogen and Neon, which reached general availability November 10, 12 and 18 respectively."
+          "Use the exact ID from the second column when your program calls Google. Use these jobs to try the choices. Compare the results with answers you know."
         ],
         "sources": [
           [
@@ -155,38 +157,43 @@
         ],
         "table": {
           "columns": [
-            "Model ID",
-            "What to test first"
+            "Model",
+            "API ID",
+            "Try this"
           ],
           "rows": [
             [
-              "gemini-3.5-flash-lite",
-              "High-volume classification. Tag 2,000 trivia cards by category against known labels."
+              "{{model.google.lite.name}}",
+              "{{model.google.lite.id}}",
+              "Sort a pile of short notes by topic."
             ],
             [
-              "gemini-4-hydrogen",
-              "Responsive everyday work. Extract a schedule from a scanned flyer, then ask a follow-up."
+              "{{model.google.hydrogen.name}}",
+              "{{model.google.hydrogen.id}}",
+              "Read the time from a flyer and answer a second question."
             ],
             [
-              "gemini-4-neon",
-              "Complex interactive work. Trace a calculation across several files while a developer waits."
+              "{{model.google.neon.name}}",
+              "{{model.google.neon.id}}",
+              "Follow a rule with several exceptions."
             ],
             [
-              "gemini-4-carbon",
-              "Longer verification jobs. Give it a failing feature, the expected behavior and test cases."
+              "{{model.google.carbon.name}}",
+              "{{model.google.carbon.id}}",
+              "Find which step made a score change twice."
             ],
             [
-              "gemini-4-argon",
-              "An additional coding, math and reasoning option. Benchmark existing Argon workloads before switching."
+              "{{model.google.argon.name}}",
+              "{{model.google.argon.id}}",
+              "Try a hard math or code problem on an older app."
             ]
           ]
         }
       },
       {
-        "title": "What fits and what comes back",
+        "title": "Leave space for the answer",
         "paragraphs": [
-          "Gemini 4 general models accept documents, pictures, sound, video and text, and produce text. A video input can yield a written shot list. To generate a new clip, use a video-generation model. Likewise, analysis of a book cover and illustration of a book cover are different jobs.",
-          "Google lists a combined input-and-output window of 1,048,576 tokens for the Gemini 4 models. Ordinary synchronous output tops out at 65,536 tokens. Longer generation uses a separate long-decode configuration and still needs space alongside the input. Leave room for the answer and ask for page or time references. Capacity alone does not establish that every detail was found."
+          "A token is a small piece of text. The context window is like one desk with room for the question, your files and the reply. For {{model.google.carbon.name}}, that shared space fits {{model.google.context}}. The usual reply limit is {{model.google.max-out}}. Very long replies use a special setting. A whole video can go in and a written list of scenes can come out. Use a video maker when you need a new movie."
         ],
         "sources": [
           [
@@ -204,10 +211,10 @@
         ]
       },
       {
-        "title": "Keep older applications reproducible",
+        "title": "Watch for a model change",
         "paragraphs": [
-          "The wider directory also includes models such as 3.8 Flash and 3.6 Flash, and entries explicitly marked preview, such as 3.1 Pro Preview. Read the endpoint’s own lifecycle page when inheriting a project. A date or generation number alone says little about its present availability.",
-          "One concrete migration was pending at this edition’s review. Google scheduled requests using gemini-2.5-pro to route to 3.8 Flash on December 1, 2026, and gemini-2.5-flash to 3.5 Flash-Lite on the same day. Replacement pricing applies. Keep a short test set, record the requested ID and date, then compare the replacement’s answers, timing and cost before a switchover."
+          "Some older choices include {{model.google.older-flash.name}} and {{model.google.pro-preview.name}}. A preview can change. Save a few sample questions with correct answers. Run them before and after a switch.",
+          "Google scheduled two changes for {{model.google.redirect-date}}. Requests to {{model.google.old-pro.id}} will go to {{model.google.new-flash.id}}. Requests to {{model.google.old-flash.id}} will go to {{model.google.lite.id}}. Check the new price and compare the answers before you let your app use the change."
         ],
         "sources": [
           [
@@ -224,14 +231,14 @@
   },
   {
     "id": "gemini-workflow",
-    "title": "Gemini in Chrome, Drive and your notebook",
-    "summary": "Decide whether your evidence lives in open tabs, a connected account or a collection of selected documents.",
+    "title": "Give Gemini the right page or file",
+    "summary": "A chat can use what you share. Learn how to point to the right source and check its answer.",
     "intro": {
-      "what": "Gemini can read different collections of material depending on where you open it and which sources you share.",
-      "features": "Gemini in Chrome can use selected tabs. Connected Apps can draw on enabled Google services. Gemini Notebook lets you choose documents and inspect cited passages.",
-      "exchange": "Put two public Exchange configuration guides in a notebook. Ask which version each applies to and open the citations.",
-      "m365": "Compare a public Microsoft 365 announcement with its deployment guide in separate tabs. Trace each listed prerequisite to its source.",
-      "developer": "Collect a library’s reference and migration notes in one notebook. Ask for the documented replacement for a deprecated function.",
+      "what": "Gemini can read a shared browser page, work with a linked app or answer from files you select in Gemini Notebook.",
+      "features": "Chrome can share a tab. Connected Apps can use an account you allow. A notebook lets you pick sources and open links to the words behind an answer.",
+      "exchange": "Put two sample mail rules in a notebook. Ask which one catches a blank subject.",
+      "m365": "Find which of two meeting notes gives the updated time. Check its date.",
+      "developer": "Put the rules and help page for a game in one notebook. Find a rule the help page forgot.",
       "sources": [
         [
           "Google · Gemini in Chrome and device availability",
@@ -249,10 +256,9 @@
     },
     "sections": [
       {
-        "title": "Read the tabs you choose",
+        "title": "Read two tabs in Chrome",
         "paragraphs": [
-          "On a supported desktop, Gemini in Chrome lives in the browser toolbar and can use shared tab content. Try opening two manufacturers’ specification sheets. Ask for the maximum material thickness, the units and the exact sentence behind each number. Compare the result to the same rows in the original sheets. “Maximum material height” and “cutting thickness” can describe different things.",
-          "Opening the Gemini website gives you a chat. Browser integration gives the assistant page context you choose to share. Chrome on iOS has its own rollout and controls. Use the current device help if the toolbar differs on your iPad."
+          "On a supported computer, open two public product pages. Open Gemini in Chrome and share those tabs. Ask “How thick a sheet can each cutter cut? Give the unit and the line where you found it.” Read those lines yourself. A machine might hold a board that is thicker than it can cut. On iPad, use the mobile help for the controls you see."
         ],
         "sources": [
           [
@@ -262,10 +268,9 @@
         ]
       },
       {
-        "title": "Let Gemini look in the right account",
+        "title": "Look in a linked app",
         "paragraphs": [
-          "Connected Apps can make Gmail messages and calendar information available to Gemini, subject to your permissions. You can name a connected app in a prompt. Try “Find my latest rail confirmation in Gmail. Extract the station name, departure time and booking date. Include the email reference.” Check that it found the revised confirmation before using the details.",
-          "The personal-account controls let you connect and disconnect services individually. Google says that switching off Gemini History disables Connected Apps on the web and iOS. An organizational account has its own rules, so two people on the same device can see different choices."
+          "A linked app gives Gemini a way to look things up with your permission. Try this with sample mail in an account you can use. Ask it to find the newest practice meeting note and show its time. Open the message. Check whether a later note moved the meeting. You can turn off a connection in the account settings."
         ],
         "sources": [
           [
@@ -275,10 +280,9 @@
         ]
       },
       {
-        "title": "Study a source collection",
+        "title": "Study a small set of sources",
         "paragraphs": [
-          "Gemini Notebook lets you select which uploaded sources a chat should use and follow citations back to the supporting passage. For certification review, load the current handbook and practice notes. Select the handbook alone to ask which competencies are expressly listed. Then include the notes and ask which topics have no examples yet.",
-          "Click a citation and read the surrounding text. A sentence mentioning a topic can still fall short of supporting the proposed answer. For research that needs new material from the open web, switch to Deep Research and inspect its research plan."
+          "Add two notes to Gemini Notebook. In the first write “Bring a hat.” In the second write “Meet at 9.” Select only the first note. Ask when to meet. The selected note gives no time. Now select both. Ask again. Follow the answer’s source link to “Meet at 9.” Check what happens when you take that note away."
         ],
         "sources": [
           [
@@ -295,14 +299,14 @@
   },
   {
     "id": "gemini-build",
-    "title": "Google AI Studio and Antigravity",
-    "summary": "Use AI Studio to compare model behavior, then use a coding workspace when the job involves a real project.",
+    "title": "Build a first app with Google’s tools",
+    "summary": "Try a rule in AI Studio. Then make a small app and test it as a player.",
     "intro": {
-      "what": "Google AI Studio is a model playground and app prototyping tool. Antigravity is a development environment where an agent can work on a project.",
-      "features": "AI Studio offers structured output, model settings and Build mode. Antigravity can edit files, show changes for review and exercise a running app with browser tools.",
-      "exchange": "Prototype an extractor for synthetic message headers. Test repeated headers and a missing field before trusting its output.",
-      "m365": "Use sample Microsoft 365 notices to prototype a change calendar. Verify that an unspecified rollout date stays blank.",
-      "developer": "Ask Antigravity to build a bookshelf filter on a branch. Try an empty search and an offline reload before accepting it.",
+      "what": "AI Studio is a place to try ideas with Google models. Antigravity is a coding tool that can open a project folder and work on its files.",
+      "features": "Playground lets you test a prompt. Build can make a working preview. Antigravity lets you read the plan, try the app and inspect the edits.",
+      "exchange": "Test whether a mail helper shows a blank date when a message gives no date.",
+      "m365": "Build a small meeting list that keeps two times if a flyer lists two sessions.",
+      "developer": "Build a word game with a Guess button. Check a win, a miss and a blank guess.",
       "sources": [
         [
           "Google · AI Studio Playground and Run settings",
@@ -320,10 +324,9 @@
     },
     "sections": [
       {
-        "title": "Run a controlled experiment in AI Studio",
+        "title": "Test one rule first",
         "paragraphs": [
-          "Open Playground, choose a model and prepare three small inputs with answers you know. For an event extractor, use one flyer with two showtimes, one with an ambiguous date and one with no date. Give the instruction “Return title, local date and times. Use null for a missing date. Preserve every printed showtime.”",
-          "Run the same three inputs with Flash-Lite and Hydrogen. Compare the returned dates and the number of showtimes. If the output will feed another program, specify structured output in Run settings and validate the result against the expected fields. A valid structure can still hold the wrong date. When the experiment meets your checks, Get code shows how to reproduce the call."
+          "Open Playground in AI Studio. Type “Read this flyer. Give the title, date and every showtime. Use null when there is no date.” Try “Puppet show. Times 2 and 4.” You should get both times and a missing date. Compare {{model.google.lite.name}} and {{model.google.hydrogen.name}} on the same flyer. Structured output can put each piece in a named box that your app can read. Still check what each box holds."
         ],
         "sources": [
           [
@@ -337,10 +340,9 @@
         ]
       },
       {
-        "title": "From a prompt to an app",
+        "title": "Make the first screen",
         "paragraphs": [
-          "Build mode can create an application from a description or import a GitHub project. A useful first prototype is a review screen that shows the extracted event beside the uploaded flyer and lets a person correct it. Specify what should happen when the date is missing and try that case in the preview.",
-          "For a web app that makes paid model calls, AI Studio keeps its API key in the server-side environment. Shared app usage can count against the builder’s quota. A public, offline bookshelf can instead contain the finished entries as local files. A live Gemini request from the reader would require a connection and a separately hosted service to protect the key."
+          "Open Build in AI Studio. Ask for a flyer checker with two panels. The left side should keep the original flyer. The right side should show the date and times, with a way to fix them. Paste the same flyer and try a correction. If your app uses a paid API key, keep that secret on its server. A browser sends its own files to anyone who opens the page."
         ],
         "sources": [
           [
@@ -354,10 +356,9 @@
         ]
       },
       {
-        "title": "Work on a repository with Google Antigravity",
+        "title": "Check a real project",
         "paragraphs": [
-          "Antigravity is Google’s agent development environment. Its desktop app has a change-review pane. The browser tool can exercise a running app, inspect errors and capture screenshots. There are also IDE and command-line surfaces, with browser support depending on the version, account and workspace.",
-          "For a bookshelf change, start on a working branch. Ask “Add a search box for chapter titles. Keep Previous and Next working on iPad, including after clearing the search.” Have the agent open the local preview and demonstrate a match, no matches, and an empty query. In the review pane, read which files changed and try the controls yourself before publishing."
+          "Open a practice folder in Antigravity. Ask for a search box for book titles. Ask to see a plan first. Try one title that exists and one that does not. Clear the box. The full shelf should return. Open the list of changed files and check each one before you save the change to the shared project."
         ],
         "sources": [
           [
@@ -378,14 +379,14 @@
   },
   {
     "id": "gemini-media",
-    "title": "Google’s image, video and audio tools",
-    "summary": "Pick the tool by the artifact you need, from an editable picture to a spoken conversation.",
+    "title": "Make a picture, a clip or a sound",
+    "summary": "Start by naming the file you want to have at the end.",
     "intro": {
-      "what": "Google’s media tools create and edit stills, clips, speech and music. The right starting point depends on what the audience should see or hear.",
-      "features": "Nano Banana handles still images, Gemini Omni makes video, Lyria creates music, and dedicated speech models handle narration or transcription.",
-      "exchange": "Useful for training material. Narrate a fictional mail-flow walkthrough and check every spoken acronym against the script.",
-      "m365": "Create a captioned introduction for a rollout briefing. Use real, approved screenshots for instructions that depend on exact controls.",
-      "developer": "Make a portrait cover and a short trailer for a puzzle book. Check title legibility at actual shelf size.",
+      "what": "Google offers different tools for different kinds of media. One can draw a picture. Another can listen to speech and write down the words.",
+      "features": "You can edit a still picture, make a short clip, create music or read a script aloud. The app and the API may offer different choices.",
+      "exchange": "Read a picture of a made-up error box. Check that its last digit was copied correctly.",
+      "m365": "Make a short spoken version of a sample meeting note. Listen for the time and date.",
+      "developer": "Draw a game icon. Shrink it to button size and see if you can still tell what it is.",
       "sources": [
         [
           "Google · image creation in the Gemini app",
@@ -396,7 +397,7 @@
           "https://gemini.google/overview/video-generation/"
         ],
         [
-          "Google · Lyria music generation in Gemini",
+          "Google · Model details",
           "https://gemini.google/overview/music-generation/"
         ],
         [
@@ -407,10 +408,10 @@
     },
     "sections": [
       {
-        "title": "Make and revise a still image",
+        "title": "Draw a cover and change one detail",
         "paragraphs": [
-          "The Gemini app offers Nano Banana image creation and editing. Google’s US page lists Nano Banana 2.1 for eligible Google AI plans. In the API, Nano Banana 2.1 is the general starting point for iterative image work. Nano Banana 2 Lite prioritizes speed and cost, while Nano Banana Pro targets demanding layouts, text and visual consistency. The earlier Nano Banana 2 is also listed.",
-          "For a book cover, give the subject, framing, orientation and empty space needed for lettering. Example: “Portrait-format studio photograph of a brass key on midnight-blue felt, soft light from the left, upper third empty.” Then ask for just one change, such as a darker background. Add the final title as editable text when exact spelling and typography matter."
+          "Ask for a gold key on dark blue cloth. Leave space at the top for a title. Next ask for a darker cloth. Check that the key still has the same shape. Add your final title in a text editor so you can fix the spelling.",
+          "Image choices include {{model.google.banana.name}} for edits, {{model.google.banana-lite.name}} for quick tries and {{model.google.banana-pro.name}} for hard layouts. Google also lists {{model.google.banana-older.name}}. Look for the choices your account offers."
         ],
         "sources": [
           [
@@ -418,16 +419,15 @@
             "https://gemini.google/us/overview/image-generation/"
           ],
           [
-            "Google · Nano Banana API family and exact model IDs",
+            "Google · Image tools and examples",
             "https://aistudio.google.com/docs/image-generation"
           ]
         ]
       },
       {
-        "title": "Make a clip or an interactive world",
+        "title": "Turn the cover into a moving shot",
         "paragraphs": [
-          "Gemini Omni makes and edits video from prompts and reference media. Google’s consumer page describes Omni replacing Veo in the Gemini app and lists subscription, age and regional conditions. The separate November 5 API announcement confirms Omni 1.2 Flash with clips up to 15 seconds and edits across turns. App access and API clip lengths can differ.",
-          "Try supplying a still of your book on a desk. Specify one slow camera move and a stationary book. On the second pass request a lighting change. Watch the title, cover corners and background from first frame to last to see what drifted. For a world a viewer can steer live, Google launched the separate Genie 4 API model on November 19."
+          "Use the book cover as the first picture. Ask for a still book while the camera moves slowly closer. Google’s app moved from {{model.google.veo.name}} to its newer video tool. The API offers {{model.google.video.name}} for short clips. Play the full clip. Does the title stay the same? Does the book keep all four corners? For a world the viewer can steer, Google also offers {{model.google.genie.name}}."
         ],
         "sources": [
           [
@@ -435,7 +435,7 @@
             "https://gemini.google/overview/video-generation/"
           ],
           [
-            "Google · Gemini Omni 1.2 Flash release, November 5",
+            "Google · Model details",
             "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
           ],
           [
@@ -445,13 +445,13 @@
         ]
       },
       {
-        "title": "Match an audio tool to what goes in and out",
+        "title": "Choose the right kind of sound",
         "paragraphs": [
-          "“Make audio” can mean four different jobs. Decide what you start with and what the listener needs. For a two-person recording, verify proper names and speaker changes against the original. For synthetic narration, listen for acronyms and pauses at headings."
+          "Listen for the one detail that matters. If the script says “gate fifteen,” play the sound back and check that it does not say “gate fifty.”"
         ],
         "sources": [
           [
-            "Google · Lyria music generation in Gemini",
+            "Google · Model details",
             "https://gemini.google/overview/music-generation/"
           ],
           [
@@ -469,25 +469,25 @@
         ],
         "table": {
           "columns": [
-            "Need",
-            "First Google tool to try"
+            "What you want",
+            "What to try"
           ],
           "rows": [
             [
-              "Turn a brief into music",
-              "Lyria 3.5 in Gemini. Specify mood, arrangement and whether you want vocals or an instrumental."
+              "Music for a title screen",
+              "{{model.google.lyria.name}}. Ask for four calm bars with a clear ending."
             ],
             [
-              "Read a finished script aloud",
-              "Gemini 3.8 Flash TTS. Supply your script and describe the intended delivery."
+              "A script read aloud",
+              "{{model.google.tts.name}}. Supply the exact words."
             ],
             [
-              "Turn a recording into searchable text",
-              "Gemini 3.5 Transcribe. Use timestamp and speaker information to locate a passage."
+              "Words from a recording",
+              "{{model.google.transcribe.name}}. Check the numbers against the sound."
             ],
             [
-              "Have a spoken exchange",
-              "Gemini Live in the app, or the Live API for your own application. The user can interrupt and ask a follow-up."
+              "A spoken back-and-forth",
+              "Gemini Live in the app or the Live API in your own app."
             ]
           ]
         }

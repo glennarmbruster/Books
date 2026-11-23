@@ -1,42 +1,42 @@
 [
   {
     "id": "open-comet",
-    "title": "Open Comet and ask about the page you see",
-    "summary": "Comet is Perplexity’s web browser. Its assistant can help you read an open page.",
+    "title": "Ask Comet about the page beside it",
+    "summary": "Comet is a browser with a helper at the side. Check whether the helper read the tab you meant.",
     "topic": "Perplexity",
     "where": [
-      "On Windows or Mac, visit perplexity.ai/comet for the official download. On an iPad, use the iOS App Store link from that page. Comet is also available on Android."
+      "On a computer visit perplexity.ai/comet. On iPad follow the official app link. Use a page with public practice text."
     ],
     "actions": [
       {
-        "title": "Open the browser",
-        "do": "Install Comet and open it. You can practice without importing bookmarks or making it the default browser.",
-        "see": "You reach a browser window with an address field.",
-        "stuck": "A tab at perplexity.ai in Safari is Perplexity Search. This exercise uses the separate Comet app."
+        "title": "Open Comet",
+        "do": "Install the official browser for your device and open it. You can leave your bookmarks where they are.",
+        "see": "You see a browser window with an address box.",
+        "stuck": "If you opened a regular Perplexity search page in Safari, switch to the Comet app."
       },
       {
-        "title": "Visit one public page",
-        "do": "Enter example.com in the address field. Read its heading.",
-        "see": "The heading is “Example Domain.”",
-        "stuck": "If a search results page opens, enter https://example.com as a complete address."
+        "title": "Choose a page",
+        "do": "Enter example.com. Read the heading at the top.",
+        "see": "The page says Example Domain.",
+        "stuck": "If you only see search results, put https://example.com in the address box."
       },
       {
-        "title": "Ask about that page",
-        "do": "Open the Assistant in Comet. Ask “What is the heading of my current page? Give the address you used.”",
-        "see": "Its answer should identify Example Domain at example.com.",
-        "stuck": "On desktop look for the assistant beside the page. On mobile open its assistant control. Share the current tab if prompted."
+        "title": "Ask the side helper",
+        "do": "Open Assistant and ask for the current page heading and its web address. Read the result beside the page.",
+        "see": "The heading matches, and the address is example.com.",
+        "stuck": "If it describes another site, select the tab with the practice page again."
       },
       {
-        "title": "Check the context",
-        "do": "Open example.org in a new tab and ask the same question.",
-        "see": "The heading is similar but the address should now end in .org.",
-        "stuck": "If it still quotes .com, explicitly select the second tab or start the assistant from that tab."
+        "title": "Change tabs",
+        "do": "Open example.org. Ask for the heading and address again. Look closely at the end of the address.",
+        "see": "The two headings match. The second address ends in .org.",
+        "stuck": "A matching heading alone cannot prove which tab the helper read."
       }
     ],
     "roles": [
-      "Read a public Exchange help page.",
-      "Check which admin guide a summary cites.",
-      "Compare documentation in two tabs."
+      "Read a public mail help page.",
+      "Check a fact in a public Teams guide.",
+      "Compare help pages for two app features."
     ],
     "sources": [
       [
@@ -55,42 +55,42 @@
   },
   {
     "id": "open-perplexity",
-    "title": "Ask Perplexity Search and inspect its source",
-    "summary": "Perplexity Search writes answers with links to its sources. Learn to check the sentence behind one answer.",
+    "title": "Follow a search answer back to its source",
+    "summary": "Perplexity puts links beside its answers. Check one small fact before you use it.",
     "topic": "Perplexity",
     "where": [
-      "Open perplexity.ai in a browser. Standard Search is enough. You can use it in Safari or an existing desktop browser."
+      "Open perplexity.ai in Safari or another browser. Use a regular search. This practice uses a public space mission."
     ],
     "actions": [
       {
-        "title": "Find the question field",
-        "do": "Open the Perplexity homepage and start a fresh question. Choose a normal search if the screen offers several tools.",
-        "see": "A box accepts words and a send control runs the search.",
-        "stuck": "Return to the home or new search screen if you see an old conversation."
+        "title": "Ask one question",
+        "do": "Ask: When did Apollo 11 launch? Link to the space agency’s own mission page.",
+        "see": "Look for a date with a source link beside it.",
+        "stuck": "If the answer lists many missions, narrow the question to Apollo 11."
       },
       {
-        "title": "Ask a narrow question",
-        "do": "Send “Which agency launched Apollo 11? Give the launch date and link to NASA’s Apollo 11 mission page.”",
-        "see": "Look for NASA and July 16, 1969 with an attached source.",
-        "stuck": "If it answers only with a moon landing date, ask specifically for the launch date."
+        "title": "Open the evidence",
+        "do": "Tap the link beside the date. Read the publisher name and find the launch date on that page.",
+        "see": "The mission launched on July 16, 1969.",
+        "stuck": "If you landed on a general home page, look for the mission page and its launch section."
       },
       {
-        "title": "Open the citation",
-        "do": "Select the source next to the claim. Check the publisher and find the date on the mission page.",
-        "see": "A NASA page should support July 16 as the launch date.",
-        "stuck": "If the link goes to a fan page or a generic homepage, ask for the mission page and open the replacement citation."
+        "title": "Ask a second question",
+        "do": "Ask when the lunar module landed on the Moon. Write the launch and landing dates on separate lines.",
+        "see": "The landing took place on July 20, 1969. It is a different event.",
+        "stuck": "If the answer gives the date of a Moon walk, ask specifically for the landing."
       },
       {
-        "title": "Test a second fact",
-        "do": "Ask “Which date was the Moon landing? Keep it separate from launch.”",
-        "see": "The landing date is July 20, 1969.",
-        "stuck": "Look at the event label as well as the date. Different events in one mission have different dates."
+        "title": "Check your two lines",
+        "do": "Reopen the source. Label the two dates Launch and Landing. Count the calendar days between them.",
+        "see": "The dates are four days apart. Each label points to the right event.",
+        "stuck": "If the dates are reversed, check which event came first."
       }
     ],
     "roles": [
-      "Check a public support statement at its source.",
-      "Find the original rollout notice behind a summary.",
-      "Verify which library release a claim describes."
+      "Check a fact in a public mail guide.",
+      "Find the original release note for a work tool.",
+      "Check the answer key for a space quiz."
     ],
     "sources": [
       [
@@ -113,42 +113,42 @@
   },
   {
     "id": "open-grok-bot",
-    "title": "Give Grok Bot a first file-making job",
-    "summary": "Grok Bot is an agent that can work on files on its cloud computer. Give it a task with an answer you can open.",
+    "title": "Give Grok Bot a file you can check",
+    "summary": "Make a two-row table. Then see whether the file matches the reply.",
     "topic": "Grok Bot",
     "where": [
-      "On a computer visit x.ai/bot and use its official download. The getting-started guide covers macOS, Windows and Linux and links its mobile options. Use an eligible account or seat shown at sign-in."
+      "Visit x.ai/bot on a computer for the official app. Use an account with Bot access. You can write the same table on paper."
     ],
     "actions": [
       {
-        "title": "Sign in to the Bot app",
-        "do": "Open the installed app, choose Sign in and finish the account step in the browser. Return to Grok Bot.",
-        "see": "The Bot workspace opens when your account has access.",
-        "stuck": "If you see an access screen, read its account-linking options. A working ordinary Grok chat does not establish Bot access."
+        "title": "Open the app",
+        "do": "Install the version for your device. Choose Sign in. When the browser finishes, return to the Bot app.",
+        "see": "You can see a list of bots or a control to add one.",
+        "stuck": "Check that you opened the Bot app if you only see a normal chat."
       },
       {
-        "title": "Create a practice Bot",
-        "do": "Choose New Bot or the plus at the top of the sidebar. Give the Bot the name List Maker.",
-        "see": "Your new Bot has a place to send messages.",
-        "stuck": "On a team, select Create a Bot from the plus menu if offered."
+        "title": "Choose a job",
+        "do": "Use New Bot or the plus sign in the side menu. Call it List Helper. Use a fresh practice folder if asked.",
+        "see": "You have one place for the table job.",
+        "stuck": "If you cannot add a bot with your account, use a practice chat to try the table request."
       },
       {
-        "title": "Give it a local file job",
-        "do": "Send “Create a small CSV file called fruit.csv with columns Name,Count and two rows: Pear,2 and Plum,3. Return the file here.”",
-        "see": "Look for a CSV attachment in its reply.",
-        "stuck": "If it only prints a table, ask for a downloadable CSV file in the conversation. It needs no account connection for these values."
+        "title": "Make a small CSV",
+        "do": "Ask for fruit.csv. Give it columns Fruit and Count. Use plum 2 and pear 3. Ask for a file with no extra rows.",
+        "see": "A CSV is plain text. Commas separate the two columns.",
+        "stuck": "If the reply just prints the rows, ask for the file as well."
       },
       {
-        "title": "Read the result",
-        "do": "Open the returned file. Check the header, rows and total.",
-        "see": "There are two fruit records and five pieces of fruit.",
-        "stuck": "If the preview is unclear, download the file and open it in a text editor or spreadsheet."
+        "title": "Read the saved file",
+        "do": "Open fruit.csv and read both counts. Add them yourself. Compare with the helper’s total if it gave one.",
+        "see": "Two rows, two kinds of fruit, five pieces in all.",
+        "stuck": "If the total is added as a third fruit, ask it to keep the total in the message instead."
       }
     ],
     "roles": [
-      "Rehearse making a report from synthetic data.",
-      "Generate a two-row inventory sample.",
-      "Make a CSV fixture for an importer."
+      "Count rows in a fake mail table.",
+      "Create a small supply sheet.",
+      "Check a file your app saves."
     ],
     "sources": [
       [
@@ -167,42 +167,42 @@
   },
   {
     "id": "open-vibe",
-    "title": "Open Mistral Vibe and make a short checklist",
-    "summary": "Vibe is Mistral’s assistant for work and code. Try the work view with a task that needs no connected apps.",
+    "title": "Have Mistral Vibe draft a checklist",
+    "summary": "Turn two short notes into two boxes you could tick.",
     "topic": "Mistral Vibe",
     "where": [
-      "Open chat.mistral.ai in a browser and sign in. If an older guide calls it Le Chat, Mistral now uses Vibe."
+      "Open chat.mistral.ai. Sign in if your account supports it. Older guides may call the app Le Chat."
     ],
     "actions": [
       {
-        "title": "Find the work area",
-        "do": "Choose Work from the sidebar mode selector if you see modes. On accounts with a combined Chat and Work view, use the main writing box.",
-        "see": "You can enter a work request.",
-        "stuck": "If you are in Code and it asks for a repository, switch to Work for this checklist."
+        "title": "Open a new task",
+        "do": "Pick Work in the side menu if it appears. Otherwise start a fresh chat for the sample.",
+        "see": "You see a blank place to type.",
+        "stuck": "If you are in an older thread, open a new one so its list cannot get mixed in."
       },
       {
-        "title": "Provide a tiny job",
-        "do": "Send “From these facts make a two-item packing checklist: carry the cabin key and charge the phone.”",
-        "see": "The answer contains two actions.",
-        "stuck": "If it adds travel tips, ask it to use only the two actions you provided."
+        "title": "Give two facts",
+        "do": "Type: Carry the game box. Charge the phone. Make a checklist using only those two jobs.",
+        "see": "The reply includes both jobs.",
+        "stuck": "If it adds travel supplies, repeat only the two sentences and ask for two items."
       },
       {
-        "title": "Ask for a clearer format",
-        "do": "Send “Put one unchecked box before each item and keep each line to five words.”",
-        "see": "Each action has its own short checklist line.",
-        "stuck": "If the boxes are not clickable, text symbols like ☐ are enough for this exercise."
+        "title": "Set the shape",
+        "do": "Ask for one empty box at the start of each line. Use five words or fewer in each line.",
+        "see": "There are two short lines, each with a box.",
+        "stuck": "If the second line is long, count its words and ask for a shorter version."
       },
       {
-        "title": "Check a small revision",
-        "do": "Send “Replace phone with tablet and leave the first item alone.”",
-        "see": "You should see a cabin key item and a tablet item.",
-        "stuck": "If the entire checklist changes, quote the first line you want kept."
+        "title": "Make one edit",
+        "do": "Ask to replace phone with tablet. Keep the first job exactly the same.",
+        "see": "The game box is still first. The second line now says tablet.",
+        "stuck": "Compare the first line with the earlier version before keeping the edit."
       }
     ],
     "roles": [
-      "Draft a synthetic two-step mail checklist.",
-      "Prepare short instructions for a training group.",
-      "Test how text fits on a checklist screen."
+      "Turn a mail check into a short list.",
+      "Make a workshop setup list.",
+      "Draft short labels for a checklist app."
     ],
     "sources": [
       [
@@ -225,42 +225,42 @@
   },
   {
     "id": "open-firefly",
-    "title": "Turn one photo into a short clip in Firefly",
-    "summary": "Adobe Firefly can make a video using a picture as its first frame. Inspect the result for unwanted changes.",
+    "title": "Make a short video from a still picture",
+    "summary": "Does a mug keep its shape as the camera moves? Make one small clip and find out.",
     "topic": "Adobe Firefly",
     "where": [
-      "Open firefly.adobe.com on a computer and sign in. Use a simple photo you took, such as a mug on a table. Video access and the credits charged depend on the model and plan."
+      "Use firefly.adobe.com on a computer. Start with a photo of a mug on a plain table. Check your available video credits before you generate."
     ],
     "actions": [
       {
-        "title": "Open the video tool",
-        "do": "Find Video, then Generate video. Open the controls for a starting frame.",
-        "see": "You should see a prompt field and an option for a first image.",
-        "stuck": "If you only see image generation, return to the video area. A photo preview alone does not make a clip."
+        "title": "Find the video tool",
+        "do": "Choose Video, then Generate video. Find the control for the first frame, which is the opening picture.",
+        "see": "There is a place to add a start image.",
+        "stuck": "If the screen asks for an image prompt only, switch from Image to Video."
       },
       {
-        "title": "Supply the starting picture",
-        "do": "Under Frame or Frames, add your photo as the first frame. Keep the last frame empty for this exercise.",
-        "see": "The photo appears as the starting picture.",
-        "stuck": "If it looks cut off, inspect the shape of the video frame and choose a closer match."
+        "title": "Set the first frame",
+        "do": "Add the mug photo under Frames. Leave the final frame empty for this test.",
+        "see": "A small copy of the mug appears as the first frame.",
+        "stuck": "Remove a wrong photo before you generate the clip."
       },
       {
-        "title": "Describe one motion",
-        "do": "Enter “Slowly move the camera closer to the mug. Keep the mug still and the room unchanged.” Check the displayed generation cost before selecting Generate.",
-        "see": "With video access and sufficient credits, a playable clip appears.",
-        "stuck": "If generation is unavailable, keep the source and prompt as a storyboard. A storyboard is a plan, not a rendered video."
+        "title": "Ask for one motion",
+        "do": "Type: Move slowly closer to the mug. Keep it still on the table. Generate one short clip if your plan allows it.",
+        "see": "A preview appears when the clip is ready.",
+        "stuck": "If video is unavailable, draw a wide view and a close view on paper and compare the mug."
       },
       {
-        "title": "Play and inspect",
-        "do": "Play the result twice. Compare the opening to the photo, then watch the handle and background near the end.",
-        "see": "The intended motion is a camera move; extra handles or a shifting object are visible errors.",
-        "stuck": "If the motion is too busy, reduce the description to one slow camera move and retry only if you intend to use more credits."
+        "title": "Watch twice",
+        "do": "First watch the camera move. Play it again and watch the handle. Does it stay attached on the same side?",
+        "see": "A usable clip moves closer without changing the mug’s shape.",
+        "stuck": "If the handle bends, try less motion and a simpler background."
       }
     ],
     "roles": [
-      "Storyboard a short training illustration.",
-      "Mock up a visual intro for a how-to.",
-      "Create a short preview clip for an app screen."
+      "Show one step in a mail help clip.",
+      "Make a training slide with a short clip.",
+      "Test motion for an app preview."
     ],
     "sources": [
       [
@@ -275,43 +275,42 @@
   },
   {
     "id": "firefly-fill",
-    "title": "Change just one part of a picture",
-    "summary": "Put a tiny orange sailboat next to a mug. First show Firefly exactly where the new object belongs.",
+    "title": "Put a toy boat beside a mug",
+    "summary": "Tell Firefly exactly which small patch of a photo it may change.",
     "topic": "Adobe Firefly",
     "where": [
-      "Use Firefly on a computer with your Adobe account. A plain photo you took of a mug on a table works well. Leave an empty patch of table beside it.",
-      "If you are using the mobile app, choose Generative fill, then upload the photo. The controls shown in the picture come from Adobe’s demonstration."
+      "Open Adobe Firefly with a photo of a mug on an empty table. On mobile, choose Generative fill and upload the photo."
     ],
     "actions": [
       {
-        "title": "Open the picture",
-        "do": "In Firefly choose Image, then Edit image. Upload your photo and choose Fill in the editing tools. On a phone use the brush tool inside Generative fill.",
-        "see": "The full photo appears with a brush control. You can see the mug and the empty tabletop.",
-        "stuck": "If you see a blank text-to-image box, switch to Edit and choose your existing picture."
+        "title": "Open the photo",
+        "do": "On the web choose Image, then Edit image. Pick your photo. Choose Fill in the edit tools.",
+        "see": "The mug and table are visible with a brush control.",
+        "stuck": "If you see only a text box, open the image editor first."
       },
       {
-        "title": "Paint the space",
-        "do": "Brush a patch on the table beside the mug. Imagine where the little boat’s base would sit. Stop before your brush touches the mug.",
-        "see": "A colored overlay shows the area you have selected. This colored paint is a guide for the tool.",
-        "stuck": "If you paint over the mug, choose Select less or the subtract control and brush that part of the selection away."
+        "title": "Mark the patch",
+        "do": "Brush over a small patch beside the mug. Leave the mug and handle outside your mark.",
+        "see": "A colored patch shows the space you chose.",
+        "stuck": "Use Select less or subtract if the mark touches the mug."
       },
       {
-        "title": "Describe one object",
-        "do": "Type “a small orange toy sailboat standing on the table.” Select Fill or Generate. Wait for the result before deciding whether to use it.",
-        "see": "The boat should sit inside the marked area. Look at both its size and its contact with the table.",
-        "stuck": "If the boat floats above the table, change the selected area to include the surface below the boat and try again."
+        "title": "Add the boat",
+        "do": "Type: a small orange toy sailboat sitting on the table. Choose Fill or Generate. Look at one result.",
+        "see": "The boat should sit on the tabletop inside the patch.",
+        "stuck": "If it floats, move the patch down to include the table below the boat."
       },
       {
-        "title": "Compare the whole photo",
-        "do": "Look at the mug’s handle, its shadow and the edge of the table. Pick a variation only after checking all three. Save a new copy.",
-        "see": "You have an original and an edited picture. You can point out the one change you intended.",
-        "stuck": "If the mug has changed shape, return to the original and use a narrower selection. Preserve the original for comparison."
+        "title": "Check what stayed",
+        "do": "Compare both photos. Look at the handle, the table edge and the shadow. Save the edited picture as a new copy.",
+        "see": "You can point to the added boat. The original picture is still yours.",
+        "stuck": "If the mug changed, start from the first photo with a smaller patch."
       }
     ],
     "roles": [
-      "Use a made-up picture when illustrating a help note.",
-      "Practice image editing on a training slide you own.",
-      "Add a prop to a book-cover prototype before choosing final artwork."
+      "Polish a made-up picture for a mail guide.",
+      "Add a prop in a practice training slide.",
+      "Try a new object on a game cover."
     ],
     "sources": [
       [

@@ -1,14 +1,14 @@
 [
   {
     "id": "claude-workspace",
-    "title": "Where to work in Claude",
-    "summary": "A parking-rate packet illustrates the difference between an ordinary chat, a reusable project and a connection to a live source.",
+    "title": "Open the right kind of space in Claude",
+    "summary": "Read a rate card once, then keep it handy for a second visit.",
     "intro": {
-      "what": "Claude is Anthropic’s assistant and model family. Start in chat for a single question or use a Project when the same references matter across conversations.",
-      "features": "Projects organize instructions and files. Connectors bring in permitted sources, Cowork handles multistep tasks, Claude Code works in a repository, and Artifacts hold editable outputs.",
-      "exchange": "Compare two versions of a sanitized mail-flow runbook. Ask which exception changed and verify the original paragraph.",
-      "m365": "Use a Project for approved rollout notes and decisions. Ask for a decision log with dated source references.",
-      "developer": "Keep your app requirements together and ask Claude to turn one user story into a testable prototype.",
+      "what": "Claude is a helper you can talk to. For one question, open a chat. A Project keeps related chats and files together for use over time.",
+      "features": "You can add a file, save project instructions, link a service or search the web. Choose where the facts should come from.",
+      "exchange": "Keep a sample mail rule in a Project. Ask whether a blank subject matches the rule.",
+      "m365": "Put a practice agenda and its follow-up in one Project. Find what changed.",
+      "developer": "Save the rules of a dice game with its code. Check that a new turn uses the right rules.",
       "sources": [
         [
           "How Claude Projects use shared reference material",
@@ -34,10 +34,9 @@
     },
     "sections": [
       {
-        "title": "Choose where the evidence will live",
+        "title": "Start with a small file",
         "paragraphs": [
-          "Use an ordinary chat to work through one question with a few attachments. In a Project, put recurring reference documents in project knowledge and put standing directions in project instructions. A new conversation in that project can use those materials. An insight buried in a different conversation is easy to lose. Add the decision to a shared project document when future chats need it.",
-          "The Claude app supplies this workspace. Anthropic’s API supplies models for software that you or a developer builds. A chat subscription, an API price and a particular model are three different purchasing or design decisions. A useful first question is whether you want to read an answer, reuse a collection of sources, or build the behavior into your own application."
+          "Make a text file with two lines: “Weekday rate: $2 an hour. Weekend rate: $3 an hour.” Attach it to a new chat. Ask for the cost of two hours on Saturday. If you want to ask more questions tomorrow, create a Project and add the file there. Put “Show the rule you used” in the project instructions."
         ],
         "sources": [
           [
@@ -55,10 +54,9 @@
         ]
       },
       {
-        "title": "Read a rate table with a checkable answer",
+        "title": "Check the row Claude read",
         "paragraphs": [
-          "Imagine a PDF with separate weekday, weekend and event-day parking rates. Upload the packet. Ask Claude to transcribe the headings, identify the unit for each price, and cite the page and row behind each answer. Then ask what a two-hour stay costs during a Saturday event. Require it to say which rule takes priority and identify any missing information.",
-          "On a scanned table, a price and its footnote can land in different columns during extraction. Compare the answer with the printed row and footnote. If they disagree, attach a crop containing the headings and the entire row, and ask for a fresh reading. This separates a transcription error from a disagreement about the rule."
+          "The answer should be $6. Saturday uses the weekend row. Two hours times $3 is $6. Now add “Event day: $8 for the whole visit, including weekends.” Say that this Saturday is an event day and ask again. Open the file yourself. If it still says $6, ask it to read the whole event-day line."
         ],
         "sources": [
           [
@@ -68,10 +66,9 @@
         ]
       },
       {
-        "title": "Choose an attachment, a connector or web search",
+        "title": "Decide what Claude may read",
         "paragraphs": [
-          "Use an attachment when it matters exactly which edition was read. A connector gives Claude access to supported material in another service using the permissions granted there. Web search can retrieve public sources and cite them. These are different ways of gathering evidence, even when the answer appears in the same chat.",
-          "For a policy comparison, provide last year’s approved PDF and ask Claude to search for this year’s official publication. Record the two issue dates and precise clauses. If the current page quietly changed since someone downloaded it, this preserves which edition each statement describes."
+          "Attach a file to use the exact copy in front of you. A connector links an app you have given Claude permission to read. Search can find public pages. Suppose a new rate card replaces an old one. Ask for the date on both cards. Read the dates and rates yourself before picking the rule to use."
         ],
         "sources": [
           [
@@ -92,14 +89,14 @@
   },
   {
     "id": "claude-models",
-    "title": "Which Claude model fits the job?",
-    "summary": "Four current public models, their direct API prices and a way to decide when more reasoning pays for itself.",
+    "title": "Pick a Claude model with a fair test",
+    "summary": "Give two models the same short job. Check the answer and the cost.",
     "intro": {
-      "what": "Claude’s model families offer different tradeoffs in price, speed and reasoning. A representative task with a known answer makes the choice measurable.",
-      "features": "Compare Haiku, Sonnet, Opus and Fable, the effort controls your account offers, and separate input and output pricing in the direct API.",
-      "exchange": "Try a smaller model on synthetic mail-ticket classification, then compare harder mixed-cause cases with a higher-effort run. Score both against your labels.",
-      "m365": "Have two models reconcile approval dates across mock change records. Count unsupported dates and missed exceptions.",
-      "developer": "Run identical test fixtures through two API models. Compare cost per valid result, including retries.",
+      "what": "A model is the part of Claude that reads your request and writes back. The menu in a chat can offer a different list from the API used by an app.",
+      "features": "Some models give fast answers to simple jobs. Others spend more time on hard ones. The API lists a price for what you send and a price for what comes back.",
+      "exchange": "Have each model sort three pretend mail warnings. Count the wrong labels.",
+      "m365": "Try the same two meeting notes with each model. Check who owns each task using role labels.",
+      "developer": "Ask two models to fix one scoring bug. Try the same three turns with both fixes.",
       "sources": [
         [
           "Compare the current Claude models",
@@ -117,9 +114,9 @@
     },
     "sections": [
       {
-        "title": "Four models, four starting points",
+        "title": "Pick two to try",
         "paragraphs": [
-          "These are the current public models highlighted in Anthropic’s comparison. The jobs below are suggested trials. Keep the same input and acceptance criteria when comparing two models."
+          "Make an answer card before you start. It might say “Date missing. Two events. One time overlap.” Give each model the same notes. See which items it catches. These are direct API IDs."
         ],
         "sources": [
           [
@@ -129,38 +126,38 @@
         ],
         "table": {
           "columns": [
-            "Model and direct API ID",
-            "Try it on",
-            "What to check"
+            "Model",
+            "Exact ID",
+            "A good first test"
           ],
           "rows": [
             [
-              "Haiku 5.5 · claude-haiku-5-5",
-              "Route incoming questions by subject or extract an invoice date.",
-              "Whether uncommon categories and ambiguous dates need a second pass."
+              "{{model.claude.haiku.name}}",
+              "{{model.claude.haiku.id}}",
+              "Sort many short notes into groups."
             ],
             [
-              "Sonnet 5.5 · claude-sonnet-5-5",
-              "Draft a sourced comparison or make a well-defined change to an app.",
-              "Whether it follows the format and passes your examples on the first attempt."
+              "{{model.claude.sonnet.name}}",
+              "{{model.claude.sonnet.id}}",
+              "Make one clear edit to a small app."
             ],
             [
-              "Opus 5.5 · claude-opus-5-5",
-              "Trace a defect across several files or reconcile competing requirements.",
-              "Whether it preserves earlier constraints during a longer task."
+              "{{model.claude.opus.name}}",
+              "{{model.claude.opus.id}}",
+              "Trace a mistake through a few files."
             ],
             [
-              "Fable 5.2 · claude-fable-5-2",
-              "Try a difficult reasoning case that remains unresolved after a simpler pass.",
-              "Whether the answer withstands an independent check and justifies its higher cost."
+              "{{model.claude.fable.name}}",
+              "{{model.claude.fable.id}}",
+              "Try a hard case that other choices keep missing."
             ]
           ]
         }
       },
       {
-        "title": "What the price means on one request",
+        "title": "Read the two prices",
         "paragraphs": [
-          "Anthropic’s standard direct API rates are in US dollars per million tokens. Input and generated output have separate prices. The example sends 40,000 ordinary uncached input tokens and receives 2,000 billable output tokens in one request. Tool charges, special processing options and discounts are outside the example."
+          "Input is what you send. Output is what the model writes. A token is a piece of text. These base prices are in US dollars per million tokens. Read across a row for one model. Longer requests and extra tools can cost more."
         ],
         "sources": [
           [
@@ -168,46 +165,46 @@
             "https://platform.claude.com/docs/en/about-claude/pricing"
           ],
           [
-            "Haiku 5.5 prompt-length pricing",
+            "Anthropic · Model details",
             "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
           ]
         ],
         "table": {
           "columns": [
             "Model",
-            "Input / output per million",
-            "Example cost"
+            "Price for input and output"
           ],
           "rows": [
             [
-              "Haiku 5.5",
-              "$0.10 / $0.50 through 100,000 input tokens. Above that, $0.50 / $2.50.",
-              "$0.005"
+              "{{model.claude.haiku.name}}",
+              "{{model.claude.haiku.rate}}"
             ],
             [
-              "Sonnet 5.5",
-              "$2 / $10",
-              "$0.10"
+              "{{model.claude.sonnet.name}}",
+              "{{model.claude.sonnet.rate}}"
             ],
             [
-              "Opus 5.5",
-              "$4 / $20",
-              "$0.20"
+              "{{model.claude.opus.name}}",
+              "{{model.claude.opus.rate}}"
             ],
             [
-              "Fable 5.2",
-              "$8 / $40",
-              "$0.40"
+              "{{model.claude.fable.name}}",
+              "{{model.claude.fable.rate}}"
             ]
+          ]
+        },
+        "exercise": {
+          "prompt": "Which row changes when a request gets long?",
+          "answer": [
+            "The first row applies through {{model.claude.haiku.threshold}}. Above that its rates are {{model.claude.haiku.long-rate}}. Check the price page when you plan a large job."
           ]
         }
       },
       {
-        "title": "Context, effort and access",
+        "title": "Make room for your answer",
         "paragraphs": [
-          "All four list a one-million-token API context window and a maximum output of 128,000 tokens. Context is the material available to the model during a request. A long input still benefits from headings and page references. The app has its own upload and usage limits.",
-          "In the Claude app, open the model menu beside Send to see the models and effort controls available to your account. Effort changes how much reasoning the model can devote to an answer. Try increasing it on a troublesome example and score the result against a known answer. On the API, Opus 5.5 and Fable 5.2 use adaptive thinking automatically.",
-          "Fable 5.2 is available on eligible paid plans with plan-specific credit rules. Its sibling Mythos 5.2 has restricted access. Older versions may remain in the API after they leave the app’s selector. Check the retirement schedule before building a recurring job around an older ID."
+          "These models have a context window of {{model.claude.context}} and an output limit of {{model.claude.max-out}}. Think of a context window as a desk that must hold both the notes and the answer. Break a thick packet into named parts. Ask for the page behind each answer.",
+          "In chat, open the model menu to see the effort choices on your account. Try a higher effort on a question that went wrong. Check whether it now gives the right rule. A related model, {{model.claude.mythos.name}}, has restricted access."
         ],
         "sources": [
           [
@@ -219,11 +216,11 @@
             "https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings"
           ],
           [
-            "Fable availability and credit rules",
+            "Anthropic · Model details",
             "https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan"
           ],
           [
-            "Fable 5.2 and restricted-access Mythos 5.2",
+            "Anthropic · Model access guide",
             "https://www.anthropic.com/claude-fable-and-mythos-5-2"
           ],
           [
@@ -236,14 +233,14 @@
   },
   {
     "id": "claude-code",
-    "title": "Claude Code in a real repository",
-    "summary": "Use a small bookshelf change to learn what a coding agent can inspect, modify and verify.",
+    "title": "Edit a tiny app with Claude Code",
+    "summary": "Build a date filter and check that the old buttons still work.",
     "intro": {
-      "what": "Claude Code is a coding agent that reads a project, edits files and runs commands in its working environment.",
-      "features": "Plan Mode supports investigation before editing. A project’s CLAUDE.md can document test commands and conventions, and the diff shows what actually changed.",
-      "exchange": "Ask it to update a PowerShell message-trace report using saved sample output. Verify that two recipients remain two rows.",
-      "m365": "Build a Microsoft Graph inventory test with two mock pages. Check that the report follows the next-page link and includes the last object.",
-      "developer": "Ask for one scorecard feature on a branch. Review the diff and play a full game against a known total.",
+      "what": "Claude Code helps with files in a coding project. It can read a file, suggest an edit and run a test.",
+      "features": "You can use it in a desktop app or a terminal, a window where you type commands. It can show a plan and a list of what changed.",
+      "exchange": "Add a date filter to a pretend mail report. Keep every row when the filter is clear.",
+      "m365": "Find which file supplies the due date in a sample task list. Change that file in a practice copy.",
+      "developer": "Add a date picker to a tiny book index. Make sure old links still open their pages.",
       "sources": [
         [
           "Claude Code interfaces and capabilities",
@@ -265,10 +262,9 @@
     },
     "sections": [
       {
-        "title": "A coding session has a working environment",
+        "title": "Choose the folder first",
         "paragraphs": [
-          "Claude Code can inspect a repository, follow a feature across files, edit code and run commands such as a project’s existing tests. Its interfaces include a terminal, desktop app, supported editors and cloud sessions. Check which copy of the project the session has opened. A cloud checkout and an uncommitted change on your Mac can contain different code.",
-          "Give it an observable outcome. For example, “Add a date filter to the phrasebook index. Keep existing saved links working, and make the filter usable when the iPad is offline.” That tells the agent what to examine and gives you a way to judge the change."
+          "Open Claude Code on your computer. Choose the practice folder that holds your book or app. Ask “List the files you see. Which file draws the index?” Look for a file name you recognize. A copy in the cloud may be missing edits that you have only saved on your computer."
         ],
         "sources": [
           [
@@ -278,10 +274,9 @@
         ]
       },
       {
-        "title": "From a plan to a verified change",
+        "title": "Ask for a plan, then check the edit",
         "paragraphs": [
-          "Start in Plan Mode. Ask which file renders the index, where the dates come from, and how the existing offline cache gets refreshed. Examine the proposed files and test cases. When the plan fits, allow edits in the intended checkout and ask it to run the project’s checks.",
-          "Look at the changed files and try the feature through the book’s normal opening screen. Test a date with results, a date with no results, an old bookmarked link, and a reload with the network disconnected. Ask which checks actually ran and which still need your iPad. A passing desktop test gives a different piece of evidence from a successful offline launch on the device."
+          "Switch to Plan Mode. Ask for a date filter and a way to clear it. Tell Claude to keep old page links working. Read the plan and allow the file edit when it fits. Open the app. Pick a day with an entry, then one with no entries. Clear the date. Check the full list. Open one of your old links."
         ],
         "sources": [
           [
@@ -295,10 +290,9 @@
         ]
       },
       {
-        "title": "Carry the right instructions forward",
+        "title": "Leave a note for the next session",
         "paragraphs": [
-          "A project-level CLAUDE.md file can record persistent directions such as how to run the tests or which folder contains the bookshelf index. Keep entries short enough to review. Store an example of an accepted result alongside the tests when exact behavior matters.",
-          "The /model command in Claude Code shows the choices available for the session. Try Sonnet on a scoped change, then test Opus on a comparable change that crosses several files. Compare elapsed time, test failures and the corrections you had to request. One successful edit says little about a different codebase."
+          "A text file named CLAUDE.md can tell Claude how to run your tests. Write “Open the index. Pick a date. Clear the date. Check the full list.” Keep it beside the project files. The /model command shows model choices. Try {{model.claude.sonnet.name}} on a small edit. Try {{model.claude.opus.name}} when one fix touches several files. Count the extra fixes each one needs."
         ],
         "sources": [
           [
@@ -319,14 +313,14 @@
   },
   {
     "id": "claude-browser",
-    "title": "Cowork, Chrome and connected apps",
-    "summary": "Choose a tool according to where the task happens and what the assistant needs permission to do.",
+    "title": "Use Cowork, Chrome and linked apps",
+    "summary": "Try reading a page, then let a helper draft a file you can review.",
     "intro": {
-      "what": "Cowork, Claude in Chrome and connectors give Claude different ways to work with documents, webpages and external services.",
-      "features": "Cowork can assemble deliverables from available files. The desktop Chrome extension can interact with open pages, while each connector exposes its own authorized operations.",
-      "exchange": "Give Cowork a folder of fictional incident notes. Request a timeline and check the order across time zones.",
-      "m365": "Use the Chrome extension on public Microsoft documentation to compare onboarding steps. Open the cited pages to check prerequisites.",
-      "developer": "Try the extension against a local prototype with sample data. Record which control it clicked before diagnosing an apparent navigation failure.",
+      "what": "Claude in Chrome sits beside a web page. Cowork can work through a job with tools and files. A connector lets Claude use a service you choose.",
+      "features": "You can ask the browser helper to read a page, give Cowork a practice folder or ask for a draft before anything is sent.",
+      "exchange": "Give Cowork three pretend mail notices. Ask it which ones describe the same issue.",
+      "m365": "Use a practice folder with two meeting plans and list any time clashes.",
+      "developer": "Open your draft help page beside Claude and find the line that tells a player how to win.",
       "sources": [
         [
           "Claude in Chrome availability and controls",
@@ -344,10 +338,9 @@
     },
     "sections": [
       {
-        "title": "Work with a page that is already open",
+        "title": "Use a browser tab for a reading job",
         "paragraphs": [
-          "Claude in Chrome gives the assistant a side panel in desktop Google Chrome. It can read a page, follow links, click controls and type into fields. Anthropic lists the extension for paid plans. Enterprise administrators control availability. Installing this extension requires desktop Chrome. On an iPad, a shared page link or an uploaded document can support a reading task.",
-          "On a public museum site, open the calendar and ask Claude to find which dates include evening admission. Have it return the date, hours and source page for each match. Open one entry yourself and check the details against the calendar. Web search suits discovering a museum. Browser interaction helps when the answer sits behind a date picker."
+          "In desktop Chrome, open the Claude side panel beside a public event calendar. Ask “Which events run after six? Give the time and the event link.” Pick one result and click its link yourself. Check that the evening time is for that event. On iPad, you can paste the page text into a chat."
         ],
         "sources": [
           [
@@ -361,10 +354,9 @@
         ]
       },
       {
-        "title": "Give Cowork an outcome and a source folder",
+        "title": "Give Cowork a folder and a finish line",
         "paragraphs": [
-          "Cowork handles multi-step tasks across available files and tools. Put copies of three event schedules in a folder, connect that folder from Claude Desktop, and ask for a draft staffing summary grouped by event date. Tell it how to flag overlapping shifts and where to place the new draft. The same session can be revisited from supported web and mobile surfaces.",
-          "For cloud Cowork sessions, the task can keep running after you leave it. Access to a connected local folder depends on the desktop app remaining open and connected. Upload the needed files to the session if you want the source material available while the Mac is closed."
+          "Put two sample notes in a practice folder. One says “Set up at 10.” The other says “Check the door at 10.” Give Cowork that folder. Ask for a fresh file that lists the clash. Open the new file and check that both tasks appear. A cloud task can keep running when you leave. To read a desktop folder, the desktop app needs to stay connected."
         ],
         "sources": [
           [
@@ -374,10 +366,9 @@
         ]
       },
       {
-        "title": "Inspect the permission that matters",
+        "title": "Check the permission screen",
         "paragraphs": [
-          "A connector can expose a particular service, while the Chrome extension can interact through the signed-in browser. Decide which account, folder and actions the task needs. For a report, read access and a new draft may be enough. For a form, ask for the completed draft and inspect it before submission.",
-          "To compare this workflow with Gemini or ChatGPT, give each tool the same three schedules, the same access and the same scoring rule. Count missed conflicts and invented events. Record any time saved collecting the documents separately from the accuracy of the final report."
+          "A request to read an event list needs access to that list. A request to send a message changes what other people see. Practice by asking for a draft only. Read the words, the recipient and the date. If the tool asks to send it, stop at the review screen. You already have the draft you asked for."
         ],
         "sources": [
           [
@@ -398,14 +389,14 @@
   },
   {
     "id": "claude-visuals",
-    "title": "Seeing an image, drawing a diagram and making a film",
-    "summary": "Match the visual deliverable to what Claude’s models and design tools actually produce.",
+    "title": "Read a picture and make a drawing with Claude",
+    "summary": "Try a sign, a score screen and a plan for a short movie.",
     "intro": {
-      "what": "Claude can interpret an image and produce code that renders a visual. Its design tools let you edit and share the resulting work.",
-      "features": "Artifacts can display interactive HTML or SVG. Claude Design supports editable prototypes and exports, and Claude can prepare scripts or shot lists for a video renderer.",
-      "exchange": "Turn a sanitized mail-route sketch into an editable diagram. Check every arrow and connector label with the design owner.",
-      "m365": "Draft a Teams onboarding storyboard. Capture the actual interface separately so the training matches the deployed experience.",
-      "developer": "Prototype a score-entry screen as an Artifact. Try it in portrait and check that every player remains reachable.",
+      "what": "Claude can read an image and describe it. It can write drawing instructions called SVG. A browser draws the lines and shapes from those instructions.",
+      "features": "An Artifact opens a piece of work beside the chat. Claude Design helps make pages you can edit. Claude can also plan the shots for a video.",
+      "exchange": "Ask it to read a picture of a made-up mail error. Mark any number you cannot see.",
+      "m365": "Draw the three steps for joining a practice meeting. Check the order on the picture.",
+      "developer": "Draw a large Start button for a game. Test its size on the screen you will use.",
       "sources": [
         [
           "Claude’s image and interactive visual capabilities",
@@ -423,10 +414,9 @@
     },
     "sections": [
       {
-        "title": "Read a photo or generate a vector drawing",
+        "title": "Read a sign, then draw one",
         "paragraphs": [
-          "The public Claude models listed in this edition accept text and images and return text. That supports two very different jobs. Claude can inspect a supplied picture and describe visible details. It can also write SVG or HTML that a browser turns into diagrams, charts or interactive visuals. A rendered vector drawing is a useful deliverable for a cutting machine.",
-          "For a parking sign, ask for a scalable one-color drawing with editable outlines. Give the physical dimensions and ask for an SVG with a matching viewBox. Open the exported file at its intended size and inspect the paths in your cutter software. For reading a photographed sign, supply a sharp close-up and ask Claude to mark any unreadable hours or fees."
+          "Start with a clear picture of a sign. Ask for its words and hours. Cover the last digit in a time and try again. A good answer should say which digit is hard to read. Now ask for an SVG sign with a simple arrow and no words. Open the drawing. Zoom in to see if the edge stays sharp."
         ],
         "sources": [
           [
@@ -444,10 +434,9 @@
         ]
       },
       {
-        "title": "Develop an editable artifact",
+        "title": "Try an Artifact",
         "paragraphs": [
-          "Artifacts give a document, visual or piece of code its own workspace beside the conversation. Claude Design supports editable designs and prototypes, with export choices including HTML, PDF and PowerPoint. Choose the output by what the next person needs to do with it.",
-          "Build a three-screen pitch for a cruise scorekeeper. Ask for the score-entry screen, a running-total screen and the saved-game list. Change one label and try the prototype in portrait orientation. PDF preserves presentation pages. An interactive handoff calls for an HTML or project export that you can open and test, including any external dependencies."
+          "Ask for a score screen with two players, a box for each score and an Add turn button. Open the Artifact beside the chat. Enter 3 and 2. Press the button. Ask for a bigger label if the totals are hard to read. Export a working page if another person needs to use its buttons. A PDF can show what the screen looks like."
         ],
         "sources": [
           [
@@ -461,10 +450,9 @@
         ]
       },
       {
-        "title": "Prepare a shot list for an image or video generator",
+        "title": "Plan a movie shot",
         "paragraphs": [
-          "For a photorealistic still or a rendered video clip, use a renderer that explicitly produces that output. Claude can help upstream with the shot sequence, continuity notes, captions and a prompt for each shot. Its text output can describe a video in great detail while leaving the actual frames to the chosen renderer.",
-          "For a ten-second cruise invitation, ask for three shots with durations totaling ten seconds, a consistent time of day and the exact title text to overlay. Supply a reference image if you want Claude to describe its framing. After rendering, check continuity between shots, the legibility of the title and the actual clip length."
+          "Ask for three shots of a game being set up. Give them lengths of two, three and five seconds. Check that ten seconds is enough for the action. Use a tool that makes video to draw the moving frames. Watch the cut between shots. Does the same token stay on the board? Use the plan to tell the video tool exactly what to fix."
         ],
         "sources": [
           [

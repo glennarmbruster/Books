@@ -1,14 +1,14 @@
 [
   {
     "id": "chatgpt-picker",
-    "title": "ChatGPT and its model picker",
-    "summary": "A quick question, a sustained research job and a change to a website can all start in ChatGPT. The place you start changes which models and tools you can use.",
+    "title": "Choose a mode in ChatGPT",
+    "summary": "Find the control beside the message box and try one question at two effort levels.",
     "intro": {
-      "what": "ChatGPT is OpenAI’s assistant. Its model picker selects the model or thinking effort available for a conversation.",
-      "features": "Chat supports questions and drafting, Search and Deep Research consult sources, and data analysis works with files. ChatGPT Work produces deliverables, Codex works on software, and Images and Voice handle visual and spoken tasks.",
-      "exchange": "Compare two supplied mail-rule descriptions at higher effort. Match each claimed exception to the original text.",
-      "m365": "Start with a quick rewrite of a rollout notice. Check that dates, audience and effective time survived the rewrite.",
-      "developer": "Use chat to define a bug’s expected behavior, then give Codex that example and inspect the resulting test.",
+      "what": "ChatGPT is an app for talking to an AI helper. The model makes an answer. The effort setting tells it how much time to spend working through a problem.",
+      "features": "Chat can draft text. Search can find a page. Deep research can study several sources. Work can make a document. Codex can edit an app.",
+      "exchange": "Ask it to explain a pretend mail rule. Try an exception and check it against the rule.",
+      "m365": "Turn a sample meeting note into a short reminder. Check the day and time.",
+      "developer": "Describe when your game should end. Ask for a test that proves the ending works.",
       "sources": [
         [
           "OpenAI Help · Models in ChatGPT",
@@ -23,47 +23,60 @@
           "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"
         ],
         [
-          "OpenAI · Introducing Images 2.6, November 4, 2026",
+          "OpenAI · Image tools and examples",
           "https://openai.com/index/introducing-images-2-6/"
         ]
       ]
     },
     "sections": [
       {
-        "title": "Read the label in context",
+        "title": "Read the menu you have",
         "paragraphs": [
-          "In regular ChatGPT, look at the mode beside the message box. On eligible paid plans the GPT-6 menu offers Instant, Medium, High and Extra High using GPT-6 Sol. These settings change the reasoning effort. A separate Pro choice uses GPT-6 Astra where available. Free and Go accounts have GPT-5.6 Luna Instant and Think. Workspace settings and rollouts can change the choices you see.",
-          "Work and Codex have their own model selections. The November 17 release introduced GPT-6.2 Astra and Sol for those surfaces and the API. Seeing GPT-6 in the ordinary chat picker and GPT-6.2 in Codex is consistent with the product documentation. An API model identifier in an announcement tells you little about your personal chat menu."
+          "Open ChatGPT and look beside the message box. On eligible plans, Instant, Medium, High and Extra High use {{model.openai.chat.general}}. Pro uses {{model.openai.chat.pro}} where available. Free and Go have Instant and Think with {{model.openai.chat.free}}. Accounts and features can change. Work and Codex have their own menus, with choices such as {{model.openai.sol.name}} and {{model.openai.astra.name}}."
         ],
         "sources": [
-          ["OpenAI Help · Models in ChatGPT", "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"],
-          ["OpenAI Help · ChatGPT Work and Codex", "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"],
-          ["OpenAI · Model release notes, November 17, 2026", "https://help.openai.com/en/articles/9624314-model-release-notes"]
+          [
+            "OpenAI Help · Models in ChatGPT",
+            "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"
+          ],
+          [
+            "OpenAI Help · ChatGPT Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "OpenAI · Model release notes",
+            "https://help.openai.com/en/articles/9624314-model-release-notes"
+          ]
         ]
       },
       {
-        "title": "Spend reasoning time where it pays off",
+        "title": "Test an easy rule and a tricky one",
         "paragraphs": [
-          "Consider a trip itinerary. Instant is a reasonable first try for extracting the names of cities from your own notes. Try Medium or High for fitting the visits around booked trains, opening hours and a rest day. Ask for a table of constraints and the appointment each one affects. That gives you something concrete to check.",
-          "Try Extra High or Pro when an error would cause extensive rework or when a lighter mode repeatedly misses a constraint. A longer reasoning setting does not provide fresh train times. Use Search for the timetable and check the operator’s date before treating it as a constraint."
+          "Try “Pick the red card from red, blue, gold.” Then try “Keep the red cards, except those with a star.” Give three cards: red star, red dot, blue dot. The second answer should contain only the red dot. If the quick mode misses the exception, try a higher effort. Search for a source when you need a fresh fact."
         ],
         "sources": [
-          ["OpenAI Help · Reasoning settings and availability", "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"],
-          ["OpenAI Help · ChatGPT Search", "https://help.openai.com/en/articles/9237897-chatgpt-search"]
+          [
+            "OpenAI Help · Reasoning settings and availability",
+            "https://help.openai.com/en/articles/20001354-gpt-6-and-other-models-in-chatgpt"
+          ],
+          [
+            "OpenAI Help · ChatGPT Search",
+            "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          ]
         ]
       }
     ]
   },
   {
     "id": "chatgpt-api",
-    "title": "Choosing an OpenAI API model",
-    "summary": "Developers can choose a model directly. A small test with your own work can tell you more about cost and suitability than a general ranking.",
+    "title": "Pick an OpenAI model for an app",
+    "summary": "Give each model a test you can mark with an answer key.",
     "intro": {
-      "what": "The OpenAI API lets software call a particular model directly and process the returned result.",
-      "features": "Applications select model identifiers, send inputs and use the response in their own workflow. Capability, processing time and cost vary. Test real examples to see how many outputs meet your requirements.",
-      "exchange": "Classify redacted delivery reports by suspected cause. Compare results with engineer-labeled cases and count errors that would route a ticket incorrectly.",
-      "m365": "Convert supplied adoption notes into consistent categories. Score ambiguous records separately and keep the original row attached.",
-      "developer": "Compare two models for a puzzle hint generator. Record cost and latency per usable hint and reject hints that reveal the answer.",
+      "what": "OpenAI’s API is a way for your app to send a request and get an answer back. The exact model ID tells the service which model to use.",
+      "features": "The model list names tools for words, pictures and code. A price table tells you the cost of sending in text and getting text back.",
+      "exchange": "Use pretend mail and ask for one of three labels. Count the labels that match your answer key.",
+      "m365": "Test whether a helper finds both dates on a made-up project notice.",
+      "developer": "Try the same broken score button with two models. Run the same test on each fix.",
       "sources": [
         [
           "OpenAI Developers · Model catalog",
@@ -77,48 +90,88 @@
     },
     "sections": [
       {
-        "title": "Four useful starting points",
+        "title": "Choose one that fits the job",
         "paragraphs": [
-          "These are API identifiers from the model catalog reviewed on November 22, 2026. The examples translate the capabilities OpenAI documents into trial tasks. They are editorial suggestions, not comparative benchmark results."
+          "Make a little test with a result you can see. For a picture, pick a screen with a large Help button. For math, use a score you can add by hand. The exact IDs below are for apps."
+        ],
+        "sources": [
+          [
+            "OpenAI Developers · Model catalog",
+            "https://developers.openai.com/api/docs/models"
+          ],
+          [
+            "OpenAI Developers · Model selection",
+            "https://developers.openai.com/api/docs/guides/model-selection"
+          ]
         ],
         "table": {
-          "columns": ["Model", "What distinguishes it", "A task to try"],
+          "columns": [
+            "Model",
+            "API ID",
+            "First thing to try"
+          ],
           "rows": [
-            ["gpt-6.2-astra", "Highest-capability option in the 6.2 pair for demanding reasoning and code", "Review a change spanning several files and explain interactions across them."],
-            ["gpt-6.2-sol", "General-purpose reasoning and coding with lower published token prices than Astra", "Turn a project brief into a working first version, then run its checks."],
-            ["gpt-6.1-terra", "Visual understanding and computer-use tasks", "Interpret an unfamiliar settings screen and locate the requested control."],
-            ["gpt-6-luna", "Low-cost option for well-specified, repeatable work", "Extract merchant, currency and total from a collection of short, clearly formatted entries."]
+            [
+              "{{model.openai.sol.name}}",
+              "{{model.openai.sol.id}}",
+              "Build a small feature and test the first version."
+            ],
+            [
+              "{{model.openai.astra.name}}",
+              "{{model.openai.astra.id}}",
+              "Find why a change in one file breaks a button in another."
+            ],
+            [
+              "{{model.openai.terra.name}}",
+              "{{model.openai.terra.id}}",
+              "Read a settings screen and point out the named control."
+            ],
+            [
+              "{{model.openai.luna.name}}",
+              "{{model.openai.luna.id}}",
+              "Read a short list and pull out one field per row."
+            ]
           ]
-        },
-        "sources": [
-          ["OpenAI Developers · Model catalog", "https://developers.openai.com/api/docs/models"],
-          ["OpenAI Developers · Model selection", "https://developers.openai.com/api/docs/guides/model-selection"]
-        ]
+        }
       },
       {
-        "title": "Compare cost per usable result",
+        "title": "Count the answers you can use",
         "paragraphs": [
-          "At the published standard text-token rates reviewed for this edition, one million input tokens plus 100,000 billable output tokens works out to $3 with Sol or $12 with Astra. The example assumes uncached input and excludes tools, storage and discounts. Tokens measure pieces of text. The billable output count can include reasoning tokens.",
-          "Give both models the same ten representative cases and a scoring key. Include a messy input and one case with missing information. Record correct answers, manual repairs, elapsed time and actual cost. If the cheaper model needs costly corrections for a particular class of input, reserve the larger model for that class. Chat subscriptions and API usage have separate billing arrangements."
+          "Start with ten short sample notes. Write the right label for each one before you run the test. Check the count, the cost and how long you spent fixing wrong labels. In a paid app, text going in and text coming back can have different prices. Include retries and tool fees when you compare bills."
         ],
         "sources": [
-          ["OpenAI Developers · API pricing", "https://developers.openai.com/api/docs/pricing"],
-          ["OpenAI Developers · Model selection and evaluation", "https://developers.openai.com/api/docs/guides/model-selection"],
-          ["OpenAI Help · Codex sign-in and billing choices", "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"]
-        ]
+          [
+            "OpenAI Developers · API pricing",
+            "https://developers.openai.com/api/docs/pricing"
+          ],
+          [
+            "OpenAI Developers · Model selection and evaluation",
+            "https://developers.openai.com/api/docs/guides/model-selection"
+          ],
+          [
+            "OpenAI Help · Codex sign-in and billing choices",
+            "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+          ]
+        ],
+        "exercise": {
+          "prompt": "One run costs $1 and gives eight good answers. Another costs $1 and gives ten. Which costs less per good answer?",
+          "answer": [
+            "The first costs 12.5 cents per good answer. The second costs 10 cents. These are made-up bills to practice the math."
+          ]
+        }
       }
     ]
   },
   {
     "id": "chatgpt-research",
-    "title": "Search, research and data analysis",
-    "summary": "These tools retrieve different kinds of evidence. Pick one by asking what a reader would need in order to check the answer.",
+    "title": "Check a source and check a sum",
+    "summary": "Pick the kind of proof your question needs.",
     "intro": {
-      "what": "ChatGPT offers separate tools for looking up current information, researching across sources and calculating from a file.",
-      "features": "Search can retrieve a current reference, Deep Research can assemble a sourced report, and data analysis can run calculations on uploaded data. A public product page describes supported behavior. Your organization’s actual configuration needs its own evidence.",
-      "exchange": "Look up a mail-flow limitation in Microsoft documentation, then compare its conditions with a configuration export you are authorized to share.",
-      "m365": "Reconcile a usage report against a license export. Check unmatched accounts and the dates each file covers.",
-      "developer": "Compare two libraries for an offline app. Open the cited documentation and run a small offline test.",
+      "what": "Search can look for a web page. Deep research can study several sources. Data analysis can use code to count rows or do math with a file.",
+      "features": "You can follow source links, review a research plan or check the numbers behind a chart.",
+      "exchange": "Count two types of pretend mail errors and compare the counts with the sample rows.",
+      "m365": "Ask for the original rule behind a date in a draft notice. Open the cited page.",
+      "developer": "Give a score app a table with one blank. Check how it counts completed turns.",
       "sources": [
         [
           "OpenAI Help · ChatGPT Search",
@@ -136,38 +189,45 @@
     },
     "sections": [
       {
-        "title": "One lookup or a research brief?",
+        "title": "Follow the link to the fact",
         "paragraphs": [
-          "Use Search for a narrow question such as which station a railway operator lists for an airport transfer. Open the citation, find the route, and check the timetable dates. A link to the operator’s homepage alone would leave the question unresolved.",
-          "Use deep research when you need a synthesis across sources. For a three-city German holiday, give it your travel dates, hotel locations and latest acceptable arrival time. Let it read official transit and accessibility sites, look over its proposed plan, and request one row per transfer with journey time, operating days, a citation and any uncertainty. Deep research can use selected websites, uploaded files and supported connected apps when you grant access."
+          "Use Search for one question, such as when a museum opens on Saturdays. Open the link and look for Saturday on the page. For a bigger job, ask deep research to compare two museums. Ask for opening hours, the date checked and the exact page for each. Read the plan. After the report arrives, pick one row and check it yourself."
         ],
         "sources": [
-          ["OpenAI Help · ChatGPT Search", "https://help.openai.com/en/articles/9237897-chatgpt-search"],
-          ["OpenAI Help · Deep research in ChatGPT", "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"]
+          [
+            "OpenAI Help · ChatGPT Search",
+            "https://help.openai.com/en/articles/9237897-chatgpt-search"
+          ],
+          [
+            "OpenAI Help · Deep research in ChatGPT",
+            "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"
+          ]
         ]
       },
       {
-        "title": "Inspect the arithmetic",
+        "title": "Count the spaces before you draw the chart",
         "paragraphs": [
-          "Data analysis can use Python to inspect an uploaded spreadsheet, calculate totals and create charts. Give it column definitions, units, a rule for blanks and the original file. A screenshot of a wide table may hide rows or round the values you want to audit.",
-          "For parking occupancy, imagine two garages observed at the same moment. One has 90 of 100 spaces occupied, the other has 1 of 10. The system-wide rate is 91 out of 110, or 82.7%. Averaging the two garage percentages instead gives 50%, which answers a different question. Ask for the numerator, denominator and any excluded records beside each chart. Inspect the calculation before using the result."
+          "One lot has 90 cars in 100 spaces. A second lot has 1 car in 10 spaces. Ask ChatGPT for the share of spaces in use in both lots together. Ask it to show the numbers it added. There are 91 cars and 110 spaces. That gives about 82.7%. The simple average of 90% and 10% treats a small lot as if it had as many spaces as the large one."
         ],
         "sources": [
-          ["OpenAI Help · Data analysis with ChatGPT", "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt"]
+          [
+            "OpenAI Help · Data analysis with ChatGPT",
+            "https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt"
+          ]
         ]
       }
     ]
   },
   {
     "id": "chatgpt-codex",
-    "title": "ChatGPT Work and Codex",
-    "summary": "Use Work to assemble a deliverable across materials. Use Codex when repository files, executable changes and tests are central to the job.",
+    "title": "Choose ChatGPT Work or Codex",
+    "summary": "Build a Next button and prove that it keeps your place.",
     "intro": {
-      "what": "ChatGPT Work handles multi-step assignments involving documents or tools. Codex is OpenAI’s agent for working on software.",
-      "features": "Work can assemble a deliverable from permitted sources. Codex can inspect an available repository, edit files and run its tests locally or in a configured cloud environment. Access follows that environment and its permissions.",
-      "exchange": "Give Codex a mail-report script and sanitized sample output. Run its revised parser on a fixture with a missing field.",
-      "m365": "Use Work to turn approved migration notes into a handover. Verify the owner and rollback condition against the source.",
-      "developer": "Give Codex a reproducible bug in your app. Inspect the patch and exercise the same screen after the fix.",
+      "what": "Work helps make finished items such as a checklist or a slide deck. Codex can make a change in the files that run an app.",
+      "features": "Codex can work on your computer or in the cloud. It can show the lines it changed and run tests. Work can use the notes and tools you give it.",
+      "exchange": "Use Work to draft a report from made-up mailbox rows. Use Codex to change the report script.",
+      "m365": "Turn a short mock agenda into a handout. Check that each decision appears once.",
+      "developer": "Test a Next button on the first, middle and last pages of a small puzzle book.",
       "sources": [
         [
           "OpenAI Help · ChatGPT Work and Codex",
@@ -185,41 +245,48 @@
     },
     "sections": [
       {
-        "title": "Choose the working environment",
+        "title": "Pick where the files live",
         "paragraphs": [
-          "A conversation makes sense while you are deciding what a book should cover. In Work, supply the approved sources and ask for the finished manuscript. Connected tools, plan, workspace settings and permissions influence which materials it can read and which actions it can take.",
-          "For a code change, Codex can work with a local checkout or a configured cloud environment. Local work is a natural fit for files already on your computer. A cloud task is useful when you want to delegate work against a connected repository. A file saved only on your Mac needs to be supplied to the remote environment before it can use it."
+          "If you want a handout, give Work your sample notes and describe the finished page. If you want a working button, open the app folder in Codex. “Local” means the files on this computer. “Cloud” means another computer reached over the internet. Check that your chosen place contains the latest practice file."
         ],
         "sources": [
-          ["OpenAI Help · ChatGPT Work and Codex", "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"],
-          ["OpenAI Academy · Where Codex runs", "https://learn.chatgpt.com/docs/environments/modes"]
+          [
+            "OpenAI Help · ChatGPT Work and Codex",
+            "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+          ],
+          [
+            "OpenAI Academy · Where Codex runs",
+            "https://learn.chatgpt.com/docs/environments/modes"
+          ]
         ]
       },
       {
-        "title": "A bookshelf change you can verify",
+        "title": "Try the button like a reader",
         "paragraphs": [
-          "Suppose you want a Next button above every puzzle. Tell Codex which book already gets it right. Specify what should happen on the first and last pages, whether navigation should retain a partially solved puzzle, and which screens matter. Ask it to use the existing bookshelf controls and show the changed pages.",
-          "Review the changes, then open a middle puzzle, mark an answer, advance, return and verify that your mark survives. Repeat with a narrow screen and with the device offline after the book has been saved. The same assignment makes a practical comparison for Claude Code and Google Antigravity. Give each the same starting files and acceptance checks."
+          "Ask Codex for Previous and Next above a puzzle. Tell it to keep a player’s marks. Open the middle puzzle, mark a word and press Next. Press Previous. The mark should still be there. Open the last page and check that Next cannot take you past the end. If the book should work offline, save it first and repeat the test with the network off."
         ],
         "sources": [
-          ["OpenAI Help · Using Codex with your ChatGPT plan", "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"]
+          [
+            "OpenAI Help · Using Codex with your ChatGPT plan",
+            "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+          ]
         ]
       }
     ]
   },
   {
     "id": "chatgpt-media",
-    "title": "Images, voice and the status of Sora",
-    "summary": "A generated image, live voice exchange, transcript and video are four different outputs. Availability depends on the product you open.",
+    "title": "Make a picture, try voice and plan a video",
+    "summary": "Create a nameplate for Coach Alex and check the result at the size it will be used.",
     "intro": {
-      "what": "ChatGPT’s media features cover still images and spoken interaction. OpenAI’s discontinued Sora service also appears in older video tutorials.",
-      "features": "Images can generate and revise artwork. Voice supports spoken exchanges, and audio models can transcribe supplied recordings. For a finished visual, check the exported asset at its intended size.",
-      "exchange": "Rehearse a service-restoration briefing aloud. Compare the spoken impact, timeline and resolution with the incident record.",
-      "m365": "Practice explaining a sharing policy to a colleague. Check each claim in the rehearsal against the approved policy.",
-      "developer": "Generate two icon concepts, then inspect each at small size and against the actual app background.",
+      "what": "ChatGPT can make images, edit a picture and talk with you. A transcript is a written copy of spoken words.",
+      "features": "You can make a still picture, practice a spoken exchange or have the AI draft a shot list. Each job gives you a different kind of result.",
+      "exchange": "Turn a pretend mail alert into a spoken notice. Check that its code sounds right.",
+      "m365": "Draft a picture for a practice slide. Keep enough room for the title.",
+      "developer": "Design a badge for Coach Alex. Check that the name is easy to read on a small screen.",
       "sources": [
         [
-          "OpenAI · Introducing Images 2.6, November 4, 2026",
+          "OpenAI · Image tools and examples",
           "https://openai.com/index/introducing-images-2-6/"
         ],
         [
@@ -231,44 +298,63 @@
           "https://developers.openai.com/api/docs/models"
         ],
         [
-          "OpenAI Help · Sora discontinuation and dates",
+          "OpenAI · Change and retirement guide",
           "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
         ]
       ]
     },
     "sections": [
       {
-        "title": "Sketch an idea, then edit what matters",
+        "title": "Draw the badge for Coach Alex",
         "paragraphs": [
-          "OpenAI introduced Images 2.6 on November 4, 2026. In ChatGPT you can create an image or edit one you supply. For a graduation nameplate, request a single dachshund in profile wearing a tilted cap, viewed straight on with broad shapes. On the next turn, ask it to preserve the dog’s outline while changing the angle of the cap. Checking what changed between edits is a useful measure of control.",
-          "The API offers Flare for fast drafts and Sunburst for higher-detail work. OpenAI also documents animated GIF creation in ChatGPT and SVG generation in the API. If the destination is a laser cutter, inspect the paths, units, outlines and physical dimensions in your design software before cutting."
+          "Open the image tool. Ask for a simple whistle inside a bold circle with space underneath. Keep the words out of the first drawing. Add “Coach Alex” as editable text when you put the badge on a nameplate. Check both words before printing.",
+          "ChatGPT’s image tool uses {{model.openai.images.name}}. The API offers {{model.openai.flare.name}} for fast drafts and {{model.openai.sunburst.name}} for fine detail. A cutting machine may need SVG lines. Open the file in your design app and check its size and outlines."
         ],
         "sources": [
-          ["OpenAI · Introducing Images 2.6, November 4, 2026", "https://openai.com/index/introducing-images-2-6/"],
-          ["OpenAI Developers · Changes to image models and outputs", "https://developers.openai.com/api/docs/changelog"]
+          [
+            "OpenAI · Image tools and examples",
+            "https://openai.com/index/introducing-images-2-6/"
+          ],
+          [
+            "OpenAI Developers · Changes to image models and outputs",
+            "https://developers.openai.com/api/docs/changelog"
+          ]
         ]
       },
       {
-        "title": "Practice a conversation or capture a transcript",
+        "title": "Ask for speech or for written words",
         "paragraphs": [
-          "Use voice conversation to rehearse German at a hotel desk. Ask for one question at a time, answer aloud, then request a written correction after the exchange. For minutes from an existing audio recording, the desired output is a transcript. Preserve the original recording and check names and numbers against it.",
-          "The API catalog distinguishes live speech-to-speech models from transcription models. GPT-Live-1.1 is aimed at natural two-way speech. The November 19 update calls out pronunciation and multilingual voice. The catalog also lists realtime options for tool-using applications. An API model name alone does not identify which voice engine a particular ChatGPT account uses."
+          "In voice mode, practice asking when a desk opens. Ask for one question at a time and answer aloud. If you already have a sound file, ask for a transcript instead. Check a number by listening to the original. For apps, {{model.openai.voice.name}} is one model for back-and-forth speech. A chat account may show different voice choices."
         ],
         "sources": [
-          ["OpenAI Help · Voice Mode FAQ", "https://help.openai.com/en/articles/8400625-voice-mode-faq"],
-          ["OpenAI Developers · Audio model catalog", "https://developers.openai.com/api/docs/models"],
-          ["OpenAI Developers · November 19, 2026 update", "https://developers.openai.com/api/docs/changelog"]
+          [
+            "OpenAI Help · Voice Mode FAQ",
+            "https://help.openai.com/en/articles/8400625-voice-mode-faq"
+          ],
+          [
+            "OpenAI Developers · Audio model catalog",
+            "https://developers.openai.com/api/docs/models"
+          ],
+          [
+            "OpenAI Developers · update",
+            "https://developers.openai.com/api/docs/changelog"
+          ]
         ]
       },
       {
-        "title": "Video after Sora",
+        "title": "Make a shot list for a movie",
         "paragraphs": [
-          "OpenAI’s discontinuation notice gives two dates. The Sora app and website ended on April 26, 2026. The Sora API ended on September 24, 2026. Tutorials that send you to either service predate those closures.",
-          "ChatGPT can still help prepare a shot list, a voiceover and still keyframes. For a 12-second bookshelf trailer, specify three four-second shots and a visual detail that must carry across all three. Take that brief to a currently available video generator covered in the media comparison, then inspect motion, continuity and audio in the rendered clip."
+          "The {{model.openai.sora.name}} app and website closed on {{model.openai.sora.app-end}}. Its API closed on {{model.openai.sora.api-end}}. You can still plan a clip in ChatGPT. Ask for three four-second shots of the badge being made. Give that plan to a video tool you can use. Play the final clip and count the shots. Check that the badge keeps its shape."
         ],
         "sources": [
-          ["OpenAI Help · Sora discontinuation and dates", "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"],
-          ["OpenAI · Images 2.6 for still assets", "https://openai.com/index/introducing-images-2-6/"]
+          [
+            "OpenAI · Change and retirement guide",
+            "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
+          ],
+          [
+            "OpenAI · Image tools and examples",
+            "https://openai.com/index/introducing-images-2-6/"
+          ]
         ]
       }
     ]

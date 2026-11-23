@@ -1,42 +1,42 @@
 [
   {
     "id": "claude-first-chat",
-    "title": "Open Claude and check a first answer",
-    "summary": "Start with an ordinary conversation before trying Claude’s specialized workspaces. One short example shows what you supplied and what the assistant inferred.",
+    "title": "Ask Claude to use just the facts you give it",
+    "summary": "Two pretend boats have a pier. One does not. See how Claude deals with a fact that is missing.",
     "topic": "Claude",
     "where": [
-      "On Mac or Windows, type claude.ai into a browser. On iPad use the official Claude by Anthropic app or open claude.ai in Safari."
+      "On Mac or PC open claude.ai in a browser. On iPad open that address in Safari or use Claude by Anthropic. Use an eligible account. You can answer the boat questions on paper, too."
     ],
     "actions": [
       {
-        "title": "Open Claude",
-        "do": "In a browser open claude.ai. For the iPad app, look for Claude by Anthropic in the App Store and open the publisher’s listing.",
-        "see": "You reach Claude’s account or conversation screen.",
-        "stuck": "If you see a third-party subscription screen, check the website address or publisher name before continuing."
+        "title": "Open the tool",
+        "do": "Type claude.ai in the browser address box. For the iPad app, search the App Store for Claude by Anthropic and open the publisher's listing.",
+        "see": "Claude opens or asks you to sign in.",
+        "stuck": "If a search brings up another app, check the address or app publisher before signing in."
       },
       {
-        "title": "Start a conversation",
-        "do": "Sign in and start a new conversation. Choose your personal practice account when you have a choice of workspaces.",
-        "see": "A message box is ready for text.",
-        "stuck": "If an older conversation opens, choose a new chat so the example has no earlier context."
+        "title": "Start with a blank chat",
+        "do": "Sign in and start a new conversation. If an account menu offers several spaces, choose one meant for practice.",
+        "see": "The message box is ready without an old question above it.",
+        "stuck": "If someone else's work is already on screen, return to the sidebar and start a fresh chat."
       },
       {
-        "title": "Supply the information",
-        "do": "Type “Blue Ferry boards at Pier 2. Red Ferry boards at Pier 5. Which pier serves Red Ferry? Which pier serves Gold Ferry? Use unknown for missing information.” Send it.",
-        "see": "Red Ferry boards at Pier 5. Gold Ferry’s pier is unknown.",
-        "stuck": "If a pier is invented for Gold Ferry, ask Claude to quote the supporting sentence."
+        "title": "Give it two clues",
+        "do": "Send “Blue Ferry boards at Pier 2. Red Ferry boards at Pier 5. Which pier is for Red Ferry? Which is for Gold Ferry? Say unknown if the note leaves it out.”",
+        "see": "Red uses Pier 5. There is no pier listed for Gold.",
+        "stuck": "If a pier appears for Gold, ask Claude to quote the line that names it. Check the original two clues yourself."
       },
       {
-        "title": "Continue the same chat",
-        "do": "Send “Correction: Red Ferry now boards at Pier 4. Give the updated answer for both boats.”",
-        "see": "Red Ferry changes to Pier 4 and Gold Ferry stays unknown.",
-        "stuck": "If the response changes both boats, restate which single fact the correction replaced."
+        "title": "Correct a clue",
+        "do": "In the same chat, send “Red Ferry now boards at Pier 4. Give the updated answer for Red and Gold.”",
+        "see": "Red changes to Pier 4. Gold is still unknown.",
+        "stuck": "If Blue changes too, point out which boat the correction named and ask for a fresh reading."
       }
     ],
     "roles": [
-      "Explain a fictional ticket without a mailbox connection.",
-      "Draft plain-language wording from supplied notes.",
-      "Try a question for a future game."
+      "Explain a fake mail ticket from its text.",
+      "Make a note easier for a team to read.",
+      "Try a question for a new puzzle game."
     ],
     "sources": [
       [
@@ -55,42 +55,42 @@
   },
   {
     "id": "open-claude-code",
-    "title": "Open Claude Code without using a terminal",
-    "summary": "The Code tab in Claude Desktop connects a conversation to a folder on your computer. You can create and inspect your first file using ordinary buttons.",
+    "title": "Open Claude Code and make your first file",
+    "summary": "Choose a practice folder on your computer. Then find the file Claude creates in that folder.",
     "topic": "Claude Code",
     "where": [
-      "Mac or Windows with Claude Desktop from Anthropic and a plan that includes Claude Code. Claude’s iPad app cannot select a folder on your Mac or PC through this local desktop route."
+      "Use Claude Desktop on a Mac or Windows PC with a plan that includes Claude Code. This local route opens a folder on that computer. An iPad cannot pick the computer's folder for you."
     ],
     "actions": [
       {
-        "title": "Install Claude Desktop",
-        "do": "Go to claude.com/download and choose the installer for your computer. Open it, launch Claude from Applications on Mac or Start on Windows, and sign in.",
-        "see": "Claude opens with its sidebar.",
-        "stuck": "If you see a website tab in Safari or Edge, open the installed Claude application."
+        "title": "Get the desktop app",
+        "do": "Visit claude.com/download and choose the download for your computer. Open the installer. Start Claude from Applications on Mac or Start on Windows and sign in.",
+        "see": "The Claude desktop window opens under your account.",
+        "stuck": "If a browser chat opened instead, switch back to the installed Claude app."
       },
       {
-        "title": "Find Code",
-        "do": "Select Code near the top of the sidebar. If only icons appear, hover over them to reveal their labels.",
-        "see": "A Code session offers options for choosing where it will work.",
-        "stuck": "An upgrade or organization notice can mean the current account lacks Code entitlement. Check the account before reinstalling."
+        "title": "Choose Code",
+        "do": "Look near the top of the left sidebar and select Code. If you see pictures with no words, pause the pointer over each one to show its name.",
+        "see": "You see a place to give Claude Code a job in a project.",
+        "stuck": "If Code is missing, check your plan and account. The ordinary chat can still explain what a file is."
       },
       {
-        "title": "Choose the practice folder",
-        "do": "Create AI Code Practice in Documents using Finder or File Explorer. Under the Code prompt select the Local environment and the adjacent folder control, then Open folder and select AI Code Practice.",
-        "see": "The selected folder name should appear before you send anything.",
-        "stuck": "If you have the earlier layout, follow the folder picker shown on the new local session screen."
+        "title": "Pick one folder",
+        "do": "In Documents, make a folder called AI Code Practice using Finder or File Explorer. Under the Code message box choose Local, then the folder control and Open folder. Select AI Code Practice.",
+        "see": "The project shows the folder you just made.",
+        "stuck": "If the folder control names Documents, open it and pick AI Code Practice inside it."
       },
       {
-        "title": "Create the first file",
-        "do": "Type “Create hello.txt with exactly one line: First book test.” Send. If Manual mode proposes that edit, inspect and approve it.",
-        "see": "Open hello.txt in your actual practice folder to see First book test.",
-        "stuck": "If the app reports completion but you cannot find the file, verify that the selected environment was Local and inspect the path in the reply."
+        "title": "Make and check a file",
+        "do": "Send “Create hello.txt. Its only line should be First book test.” If Manual mode asks about this edit, check its file name and approve it. Open hello.txt from the practice folder.",
+        "see": "The file on your own computer contains exactly First book test.",
+        "stuck": "If you see only text in the chat, ask Claude to save the file. Check that this session points to your local folder."
       }
     ],
     "roles": [
-      "Practice on a separate mock report.",
-      "Prepare a simple script README.",
-      "Create a first file in a personal app."
+      "Keep a fake mail report in a practice folder.",
+      "Write a short guide to a team script.",
+      "Make the first real file for a small app."
     ],
     "sources": [
       [
@@ -105,43 +105,43 @@
   },
   {
     "id": "claude-code-terminal",
-    "title": "Try Claude Code in a terminal",
-    "summary": "A terminal is a window where you type commands and press Enter. This optional route runs the same kind of coding conversation using text.",
+    "title": "Start Claude Code in a typing window",
+    "summary": "A terminal lets you type a command and press Enter. Start Claude inside one small folder you can find again.",
     "topic": "Claude Code",
     "where": [
-      "Mac Terminal or Windows PowerShell, online, with a plan or eligible account for Claude Code. The desktop Code tab works without this separate command-line installation.",
-      "Create an empty folder called AI-Code-Lab in your home folder first. On iPad use the desktop lesson on a computer for this local exercise."
+      "Use Terminal on Mac or PowerShell on Windows with an eligible Claude Code account. This route uses a computer and internet. The separate desktop Code tab is another way to work.",
+      "First make AI-Code-Lab inside your home folder using Finder or File Explorer. Read along on iPad while the computer runs the commands."
     ],
     "actions": [
       {
-        "title": "Open the command window",
-        "do": "On a Mac press Command and Space, type Terminal and open it. On Windows open Start, type PowerShell and open the ordinary app.",
-        "see": "A line ending in a prompt waits for you to type.",
-        "stuck": "If you see an editor document, go back to the applications list and open Terminal or PowerShell itself."
+        "title": "Find the typing window",
+        "do": "On Mac press Command and Space, type Terminal and press Return. On Windows open Start, type PowerShell and open the regular app.",
+        "see": "A window with a place to type appears. The cursor waits for your command.",
+        "stuck": "If you see web results, open the app from your computer's search rather than searching in a browser."
       },
       {
-        "title": "Install the official command",
-        "do": "On Mac the native installation command is curl -fsSL https://claude.ai/install.sh | bash. On Windows with WinGet use winget install Anthropic.ClaudeCode. Use the linked setup page to confirm the current installer before running it.",
-        "see": "The installation completes and returns control to the terminal.",
-        "stuck": "If WinGet is unavailable or the organization manages installations, use the official setup page’s supported alternative or the graphical Code tab."
+        "title": "Install the command",
+        "do": "Use Anthropic's setup link below to check its current instructions. On Mac the install command is curl -fsSL https://claude.ai/install.sh | bash. In Windows PowerShell with WinGet, use winget install Anthropic.ClaudeCode. Press Enter after the command for your computer.",
+        "see": "The installer finishes and the typing prompt returns.",
+        "stuck": "If WinGet is missing, follow the Windows choices in the official setup guide. Keep the Mac command for a Mac."
       },
       {
-        "title": "Enter your practice folder",
-        "do": "Open a new terminal window. On Mac type cd ~/AI-Code-Lab and press Enter. On Windows PowerShell type cd ~/AI-Code-Lab and press Enter. Then type claude --version.",
-        "see": "The directory change succeeds, and the version command prints a version number.",
-        "stuck": "If the folder cannot be found, check where you actually created it. If claude is unrecognized after restarting the terminal, use the official installation troubleshooting page."
+        "title": "Move into the folder",
+        "do": "Open a fresh terminal window. On either system enter cd ",
+        "see": "/AI-Code-Lab and press Enter. Then enter claude --version and press Enter. The first command changes the folder. The second checks the install.",
+        "stuck": "A version number appears. Your next commands will run in the practice folder."
       },
       {
-        "title": "Start the conversation",
-        "do": "Type claude and press Enter. Complete the prompted sign-in, then enter “Create greeting.txt containing Hello from my terminal.” Confirm the proposed edit if asked.",
-        "see": "greeting.txt appears in the practice folder. Open it with your ordinary text editor.",
-        "stuck": "A prompt asking whether you trust the folder should show your empty AI-Code-Lab folder; check that path before continuing."
+        "title": "Start Claude",
+        "do": "Type claude and press Enter. Finish sign-in if needed. Send “Create greeting.txt containing Hello from my terminal.” Review the file edit if asked, then open the file in the folder.",
+        "see": "greeting.txt has the line you asked for. You reached the same kind of result as the desktop lesson.",
+        "stuck": "If you cannot find it, ask which folder Claude is using. Compare that folder with the one in Finder or File Explorer."
       }
     ],
     "roles": [
-      "Practise a script in a disposable directory.",
-      "Explore a local reporting project.",
-      "Open personal app files from the command line."
+      "Try a reporting command in a safe mail sample folder.",
+      "Open a local project of team practice files.",
+      "Give a personal app folder to Claude Code."
     ],
     "sources": [
       [
@@ -160,42 +160,42 @@
   },
   {
     "id": "claude-projects-begin",
-    "title": "Create a Project that remembers a reference",
-    "summary": "A Project gives related chats shared reference material and instructions. Give it a fictional ferry schedule and test it from a second chat.",
+    "title": "Keep two chats in one Claude Project",
+    "summary": "Put a ferry schedule in a Project and give it a standing rule. Check whether a second chat uses both.",
     "topic": "Claude Projects",
     "where": [
-      "In a Mac or PC browser, visit claude.ai/projects. On iPad, Safari can open the same address. Anthropic lists Projects on free and paid plans, with a five-project limit on Free."
+      "Open claude.ai/projects in a browser on Mac, PC or iPad. Anthropic lists Projects on free and paid accounts. Free accounts have a limit of five projects."
     ],
     "actions": [
       {
-        "title": "Create a Project",
-        "do": "Open Projects in the Claude sidebar and choose + New Project. Call it Ferry Practice. If offered a visibility setting, choose private for the exercise.",
-        "see": "The Project page opens. Its name identifies it in your account.",
-        "stuck": "If a required organization tag is requested, use an authorized practice space or your personal account."
+        "title": "Give the project a name",
+        "do": "Open Projects from the sidebar. Choose + New Project and name it Ferry Practice. If the screen asks who can see it, choose private for this exercise.",
+        "see": "The new project has its own page and title.",
+        "stuck": "If you reached the free plan limit, use a suitable existing practice project with space for this made-up schedule."
       },
       {
-        "title": "Add the facts",
-        "do": "On the Project page use the plus sign in the knowledge area to add text or upload a small text file. Enter “Cove Ferry departs at 08:10. Lake Ferry departs at 09:00.”",
-        "see": "The source appears among the Project’s reference materials.",
-        "stuck": "Putting the facts only in the project name or description does not supply them as knowledge."
+        "title": "Add the schedule",
+        "do": "Use the plus in the project knowledge area. Add text or upload a small file saying “Cove Ferry departs at 08:10. Lake Ferry departs at 09:00.”",
+        "see": "You can open the schedule inside the project and see both times.",
+        "stuck": "If the file appears only in one chat, return to the Project page and add it to the project's own knowledge."
       },
       {
-        "title": "Set the answer style",
-        "do": "Choose Set project instructions. Enter “Use the schedule for ferry times. Use unknown for boats absent from the schedule.” Save the instructions.",
-        "see": "A chat in this Project can consult both the reference and the standing rule.",
-        "stuck": "If you cannot find instructions on a narrow screen, open the Project’s main page in landscape."
+        "title": "Set a rule",
+        "do": "Choose Set project instructions. Write “Use the schedule for ferry times. For an unlisted boat, say unknown.” Save the rule.",
+        "see": "The instruction stays with the project. A new chat in the project can use it.",
+        "stuck": "If the rule was sent as a message, also put it in Set project instructions."
       },
       {
-        "title": "Verify a second chat",
-        "do": "In the Project ask for Cove Ferry’s time. Start another chat inside that same Project and ask for Bay Ferry’s time.",
-        "see": "The first answer is 08:10 and the second is unknown.",
-        "stuck": "If the second chat cannot find the material, check the Project name and whether the source was added to Project knowledge."
+        "title": "Try two chats",
+        "do": "Ask for Cove Ferry's time. Start a second chat inside Ferry Practice and ask for Bay Ferry's time.",
+        "see": "The first answer is 08:10. The second should say unknown because Bay has no entry.",
+        "stuck": "If the second chat cannot see the schedule, look at its project name before asking again."
       }
     ],
     "roles": [
-      "Collect approved Exchange reference notes.",
-      "Keep a stable practice rollout checklist.",
-      "Maintain a rulebook for a game app."
+      "Study public mail help notes in one place.",
+      "Keep a team practice checklist with its rules.",
+      "Keep a game rulebook beside its design chats."
     ],
     "sources": [
       [
@@ -206,42 +206,42 @@
   },
   {
     "id": "claude-artifact-begin",
-    "title": "Open and revise an editable Artifact",
-    "summary": "An Artifact is a reusable item Claude creates beside your conversation. A small checklist makes it easy to see the difference between an answer and a usable object.",
+    "title": "Make a checklist you can click",
+    "summary": "An Artifact is something Claude makes that you can open and use. Build one with three boxes, then add a fourth.",
     "topic": "Claude Artifacts",
     "where": [
-      "Use Claude in a desktop browser or the app while online. On iPad an Artifact may open in its own view. Availability varies by template and organization settings."
+      "Use Claude in a browser or its app while online. On iPad an Artifact may open on a screen of its own. Choices can vary with the template and account settings."
     ],
     "actions": [
       {
-        "title": "Start in Claude",
-        "do": "Open claude.ai and start a new conversation. Check whether the sidebar also offers Artifacts.",
-        "see": "You can request an Artifact directly in a conversation or pick a supported template.",
-        "stuck": "If the capability is unavailable, check Settings → Capabilities for Create and edit files, or ask the organization owner about access."
+        "title": "Open a new chat",
+        "do": "Open Claude and start a fresh conversation. Look for Artifacts in the sidebar, or use the ordinary message box for this task.",
+        "see": "You have a place to ask for a small working object.",
+        "stuck": "If you only see an older Artifact, go back to a new chat before building this sample."
       },
       {
-        "title": "Describe the object",
-        "do": "Type “Create an editable checklist Artifact titled Departure. Include three checkboxes: Wallet, Ticket, Charger. Let me tick and untick each.”",
-        "see": "Claude creates an item that opens beside the conversation or in a separate Artifact view.",
-        "stuck": "If you receive plain instructions for making a checklist, ask explicitly for a working interactive Artifact."
+        "title": "Describe the checklist",
+        "do": "Send “Create an editable checklist Artifact titled Departure. Give it three clickable boxes called Wallet, Ticket and Charger. Let me check and clear each one.”",
+        "see": "A named checklist appears in an Artifact view or beside the chat.",
+        "stuck": "If you get an ordinary list of bullet points, ask for a working Artifact with real checkboxes."
       },
       {
-        "title": "Try the controls",
-        "do": "In the Artifact select Ticket, then clear it again. Leave Wallet selected.",
-        "see": "Only the boxes you select should change.",
-        "stuck": "If tapping highlights prose, return to the interactive preview rather than viewing code or a text description."
+        "title": "Click two boxes",
+        "do": "Check Ticket, clear Ticket and then check Wallet. Read the state of each box.",
+        "see": "Only Wallet ends up checked. Ticket and Charger are clear.",
+        "stuck": "If tapping selects text, make sure you opened the working preview instead of reading its code."
       },
       {
-        "title": "Make a revision",
-        "do": "In the same conversation ask “Add Glasses as the last checklist item.” Reopen the updated Artifact.",
-        "see": "The revised checklist has four items and Glasses is last.",
-        "stuck": "If the Artifact displays an error, use Try fixing with Claude when that control appears and repeat the click test."
+        "title": "Add a new item",
+        "do": "In the same chat, ask to add Glasses as the last item. Open the changed version and count its boxes.",
+        "see": "The checklist now has four boxes. Glasses is last and can be checked.",
+        "stuck": "If you only see three, look for the latest version of the Artifact and try again."
       }
     ],
     "roles": [
-      "Make a mock change-review checklist.",
-      "Turn onboarding steps into a usable form.",
-      "Prototype a trip-packing app."
+      "Build a checklist for a fake mail change.",
+      "Make a usable form from a team checklist.",
+      "Try out a travel packing app."
     ],
     "sources": [
       [
@@ -252,42 +252,42 @@
   },
   {
     "id": "claude-cowork-begin",
-    "title": "Assign one short job to Cowork",
-    "summary": "Cowork can complete a multistep task and produce a finished document. Start with pasted notes, which work without connecting any outside service.",
+    "title": "Turn three lines of notes into a handoff",
+    "summary": "Cowork can gather supplied notes into a document. Make the finished page easy for a second reader to check.",
     "topic": "Claude Cowork",
     "where": [
-      "Anthropic lists Cowork on paid plans. Web and mobile access can depend on plan and administrator settings. Use claude.ai in a browser or Claude Desktop on Windows or Mac."
+      "Anthropic lists Cowork on paid plans. Web and mobile options depend on the plan and on any rules set by the account owner. Use claude.ai or Claude Desktop on a Mac or PC."
     ],
     "actions": [
       {
-        "title": "Find the task workspace",
-        "do": "Open Claude Home. If your message box has a Chat/Cowork selector, choose Cowork. If your account has the unified layout, start from the ordinary message box.",
-        "see": "You can describe a job with a finished output.",
-        "stuck": "An absent Cowork toggle by itself does not establish that access is missing; check the unified-layout explanation in the source."
+        "title": "Find Cowork",
+        "do": "Open Claude Home. If the message box has a Chat/Cowork switch, choose Cowork. In the newer layout the same work can start in the usual message box.",
+        "see": "You can give the helper a job and return to that job later.",
+        "stuck": "If the choice is missing, check your account's access. An ordinary chat can still help you practice putting the notes in order."
       },
       {
-        "title": "Specify the job",
-        "do": "Enter “Turn these supplied notes into a short handoff document: Dock test passed Monday. Sign check is waiting for Lee. Group completed and pending items. Use only the notes.”",
-        "see": "Claude should prepare a document containing the two statuses.",
-        "stuck": "If it asks where the source files live, tell it the complete source is in your message."
+        "title": "Give it the facts",
+        "do": "Send “Make a short handoff document from these notes. Dock test passed Monday. Sign check is waiting for the Blue team. Group finished and waiting items. Use only these notes.”",
+        "see": "The helper prepares a document from the small set of facts you supplied.",
+        "stuck": "If asked to connect mail or files, paste the two notes again. They already contain everything this job needs."
       },
       {
-        "title": "Inspect the document",
-        "do": "Open the returned result. Look for exactly one completed item and one pending item.",
-        "see": "Dock test belongs under completed; sign check belongs under pending with Lee named.",
-        "stuck": "If Lee is listed as owner of both, ask which sentence supports ownership of the dock test."
+        "title": "Check the document",
+        "do": "Open the result. Find the finished check, the waiting check and the team linked to it. Look for an invented due date.",
+        "see": "Dock test belongs under finished. Sign check belongs under waiting, with Blue team. The notes give no deadline.",
+        "stuck": "If a made-up time appears, point back to the two source sentences and ask for a correction."
       },
       {
-        "title": "Revisit the session",
-        "do": "Find the task again in Claude’s sidebar on the same account. Ask it to add an Unknowns section for the missing due date.",
-        "see": "The output identifies the missing date without inventing one.",
-        "stuck": "If the task is absent on another device, check account and organization, then reopen the original session."
+        "title": "Find it again",
+        "do": "Return to this same job from Claude's sidebar. Ask for an Unknowns section that lists the missing due date. Open the changed document.",
+        "see": "The new section makes the missing date easy to see. The two original facts still match.",
+        "stuck": "If you opened a different job, look for the dock-test title or the message with the two practice notes."
       }
     ],
     "roles": [
-      "Convert mock incident notes into a handoff.",
-      "Summarize sample rollout actions.",
-      "Organize a personal app’s release notes."
+      "Turn sample mail check results into a handoff.",
+      "List finished and waiting work for a team.",
+      "Put a small app's release tasks in order."
     ],
     "sources": [
       [
@@ -302,43 +302,43 @@
   },
   {
     "id": "claude-dispatch-begin",
-    "title": "Understand Dispatch and use the route your account offers",
-    "summary": "Dispatch lets eligible existing users message a desktop agent from a phone. New users can try a cloud Cowork session across devices instead.",
+    "title": "Read the same task on a second device",
+    "summary": "Leave a tiny handoff on one device and find it on another. Pick the route your account actually offers.",
     "topic": "Claude Dispatch",
     "where": [
-      "Existing Dispatch beta users need the supported Claude Desktop app open on an awake computer and the Claude mobile app online. Anthropic lists limited eligibility on some Pro, Max and Ultra plans and says new users cannot enroll.",
-      "With eligible cloud Cowork access, the same practice task can start on a computer and be reopened from the mobile app or web. This route does not require Dispatch pairing."
+      "Dispatch is a limited test for some existing Pro, Max and Ultra users. New users cannot enroll. For Dispatch the supported desktop app must stay open on an awake computer, and the phone app needs internet.",
+      "Eligible cloud Cowork users can start the practice job there and reopen the same job on mobile or the web without Dispatch pairing."
     ],
     "actions": [
       {
-        "title": "Identify the available route",
-        "do": "Open Cowork on your desktop or phone. If the left side panel lists Dispatch, choose it. Otherwise start a cloud Cowork task on Claude Home.",
-        "see": "Existing beta users see their continuing Dispatch thread or its setup card. Cloud users see a Cowork session.",
-        "stuck": "If Cowork is restricted by your plan, read the worked example or use regular chat to practise the wording."
+        "title": "Pick a route",
+        "do": "Open Cowork on your desktop or phone. Choose Dispatch if the left panel offers it. Otherwise start a cloud Cowork task on Claude Home if your account has access.",
+        "see": "You can name the route you will use: Dispatch or a cloud Cowork task.",
+        "stuck": "If neither appears, do the two-line exercise on paper. Reading a note on two devices requires an eligible account."
       },
       {
-        "title": "Set up a small test",
-        "do": "Existing eligible users can choose Get started and review the file-access and keep-awake options before Finish setup. Cloud users can paste the entire sample into the new task.",
-        "see": "The exercise can proceed without a connection to business email or files.",
-        "stuck": "If your phone cannot reach Dispatch, check that the desktop app is still open, your computer is awake and both devices are online."
+        "title": "Set up the handoff",
+        "do": "Existing Dispatch users can choose Get started. Read the file access and keep-awake options and choose Finish setup when ready. Cloud users can put the sample directly into their new task.",
+        "see": "The task has a place for your message. The cloud route does not ask you to pair the phone for Dispatch.",
+        "stuck": "If you cannot find Finish setup, check which route you chose. It belongs to the Dispatch setup."
       },
       {
-        "title": "Send a checkable task",
-        "do": "Type “Make a two-line handoff from these notes: Green test passed. Blue test is pending. Put pending first.”",
-        "see": "The resulting handoff says Blue test is pending first and Green test passed second.",
-        "stuck": "If you are using cloud Cowork, reopen that particular task rather than searching for a Dispatch thread."
+        "title": "Send two test results",
+        "do": "Send “Green test passed. Blue test is pending. Write a two-line handoff and put pending first.” Read the result before switching devices.",
+        "see": "The Blue line comes first and says pending. The Green line says passed.",
+        "stuck": "If both are marked complete, ask the helper to copy the two status words from your note."
       },
       {
-        "title": "Read it on the other device",
-        "do": "With the same account, open the Dispatch thread or the same Cowork session on your second device. Ask “Which test is still pending?”",
-        "see": "The answer is Blue. You have demonstrated which thread actually carried the information.",
-        "stuck": "If the answer lacks context, compare the title and account on both devices and return to the original conversation."
+        "title": "Pick it up",
+        "do": "On the second device, use the same account. Open the Dispatch thread or the same Cowork task and ask which test is still pending.",
+        "see": "It identifies Blue. You have found the same practice task again.",
+        "stuck": "If the handoff is missing, check the account and job name. For Dispatch, also check that the desktop is still awake and online."
       }
     ],
     "roles": [
-      "Follow a fictional test handoff.",
-      "Review a sample rollout memo remotely.",
-      "Pick up a personal app task from a phone."
+      "Read the status of a pretend mail check.",
+      "Pick up a team training note on a second screen.",
+      "Continue work on a personal app away from the desk."
     ],
     "sources": [
       [
@@ -353,43 +353,43 @@
   },
   {
     "id": "open-claude-duet",
-    "title": "Meet Claude Duet and try a handoff",
-    "summary": "If you were looking for “Claude dots,” the two names to know are Claude Duet from Anthropic and dots from OpenAI. Here is how to try Duet’s style of help with a draft you can check.",
+    "title": "Meet Claude Duet and test a draft",
+    "summary": "Claude Duet comes from Anthropic. A dot belongs to OpenAI. Try a small Duet-style task and check the result before anything gets sent.",
     "topic": "Claude Duet",
     "where": [
-      "Start with Anthropic’s Duet product page. Use its public example while you wait for access. The US research preview requires an eligible personal plan and an invitation. Follow the current eligibility page for your account.",
-      "Invited readers can follow the email on an iPhone or Android phone. Readers on iPad can use this worked example without signing up."
+      "Use the public Duet example if you have no invitation. The US research preview needs an eligible personal plan and an invitation. Check the current access page when you try it.",
+      "Invited readers can follow the invitation on an iPhone or Android phone. On iPad, you can use the practice text here without signing up."
     ],
     "actions": [
       {
-        "title": "Find the invitation route",
-        "do": "Open the Duet product page using the button below. Look for Join the waitlist. Read the account and phone requirements. If you already have an invitation, open it on the phone linked to the invited account.",
-        "see": "The public page has an example phone conversation. Eligible readers can follow the sign-up or invitation steps.",
-        "stuck": "A workplace Claude account can show different options. You can finish the next three steps on paper using the example here."
+        "title": "Find the official page",
+        "do": "Open the Duet product link from the lesson. Look for Join the waitlist. Read which accounts and phones may join. If invited, open the invitation on the phone linked to your account.",
+        "see": "You can see a public sample of a Duet conversation. Eligible readers also get the signup or invitation steps.",
+        "stuck": "If there is no invitation, keep reading. You can do the next steps using a pencil and the sample note."
       },
       {
-        "title": "Give Duet a small job",
-        "do": "Try this message in Duet, or write a response yourself. “Club note: Our planning call moved from 2 to 3 on Monday. Draft a two-sentence reminder. Show it to me first.”",
-        "see": "A useful draft gives Monday and the new time of 3. It leaves the location out because the note never supplied one.",
-        "stuck": "If a room or time zone appears, ask which words in your note support it. Have Duet remove details it cannot verify."
+        "title": "Ask for a draft",
+        "do": "Give Duet this note or write a reply yourself: “Our club call moved from 2 to 3 on Monday. Draft a two-sentence reminder. Show it to me first.”",
+        "see": "The draft says Monday and the new time of 3. It does not invent a room, an address or a time zone.",
+        "stuck": "If the draft adds a time zone, ask which part of the source gave it. Have the helper remove any guess."
       },
       {
-        "title": "Read what it plans to do",
-        "do": "Compare a draft with a request to send it. Find the intended recipient and the exact message. In this practice task you only wanted a draft, so leave the send action unapproved.",
-        "see": "You can keep the words and finish the exercise without contacting anyone. An approval screen gives you a chance to catch the wrong recipient.",
-        "stuck": "If the preview asks for account connections, use the sample note alone. A real email or calendar is unnecessary for writing this draft."
+        "title": "Read before sending",
+        "do": "Find the exact text and intended reader if the tool asks to send. Your practice request was only for a draft. Stop after reading the words.",
+        "see": "You can complete the practice without contacting anyone. The draft is a thing you can check.",
+        "stuck": "If it asks for connections, keep using the sample note. A personal inbox or calendar is unnecessary here."
       },
       {
-        "title": "Distinguish the two personal agents",
-        "do": "Say the pairs out loud: Claude Duet belongs to Anthropic. A dot lives in OpenAI’s ChatGPT. In the illustrated index, find OpenAI dots and compare how its first project begins.",
-        "see": "You can find the right vendor’s instructions next time you hear one of the two names.",
-        "stuck": "For a Claude tool that works on files with you, look up the separate Cowork lesson. For a persistent personal helper, return to Duet."
+        "title": "Remember both names",
+        "do": "In the picture index, look up OpenAI dots. Compare where that lesson starts with the Claude Duet product page.",
+        "see": "You can point to two different products and name the company behind each one.",
+        "stuck": "For a Claude tool that works with files, try the separate Cowork lesson. Come back to Duet for the personal helper."
       }
     ],
     "roles": [
-      "Draft a reminder about a pretend mailbox report and check that its date survives.",
-      "Use a sample meeting change to rehearse reviewing a message before sending it.",
-      "Draft a release note and review the promised change before sharing it."
+      "Draft a reminder for a made-up mail report.",
+      "Check a practice meeting change before sending it.",
+      "Write and review a short update about an app."
     ],
     "sources": [
       [
@@ -404,43 +404,43 @@
   },
   {
     "id": "claude-chrome-begin",
-    "title": "Open Claude beside a page in Chrome",
-    "summary": "A browser extension adds a tool to your browser. Use this one to read a public page while keeping the evidence in sight.",
+    "title": "Read a public page with Claude beside it",
+    "summary": "An extension adds a tool to Chrome. Open one public help page and compare Claude's answer with the words on that page.",
     "topic": "Claude in Chrome",
     "where": [
-      "Use desktop Google Chrome with an eligible Claude plan. The Chrome extension is a desktop tool. On iPad, follow the example in this lesson.",
-      "Use a public page, such as the Claude help page linked here, to practice."
+      "Use desktop Google Chrome with an eligible Claude plan. The extension runs on a computer. Readers on iPad can follow the example in the book.",
+      "Choose a public help page for this try. Anthropic's getting-started page linked here works."
     ],
     "actions": [
       {
-        "title": "Find the official extension",
-        "do": "Open Anthropic’s getting-started page below. Follow its Chrome Web Store link. Confirm the extension is Claude from Anthropic and select Add to Chrome if this is your own computer or an approved work browser.",
-        "see": "Chrome displays the permissions the extension requests. You can read them before deciding whether to install.",
-        "stuck": "If you see a different publisher or you are using another browser, return to Anthropic’s page and check its instructions."
+        "title": "Find the extension",
+        "do": "Open Anthropic’s getting-started page below. Follow its Chrome Web Store link. Check that Claude comes from Anthropic. On your own or approved computer select Add to Chrome if you want it.",
+        "see": "Chrome shows the access the extension asks for. You can read it before deciding to install.",
+        "stuck": "If you see a different publisher, go back to Anthropic's link. Check local rules before installing on a work computer."
       },
       {
-        "title": "Put Claude where you can find it",
-        "do": "After installation, sign in. On the Chrome toolbar select the puzzle-piece Extensions icon and pin Claude. Click its icon to open the side panel.",
-        "see": "The webpage stays on one side and Claude opens beside it. On a narrow window the page may shrink.",
-        "stuck": "If the toolbar looks crowded, reopen the Extensions menu. On a managed computer the administrator may control installation."
+        "title": "Open the side panel",
+        "do": "Sign in if needed. On Chrome's toolbar, open the puzzle-piece Extensions menu and pin Claude. Select the Claude icon.",
+        "see": "Claude opens alongside the page. Both the article and the side panel are in the window.",
+        "stuck": "If you cannot see its icon, return to Extensions and find Claude in the list."
       },
       {
-        "title": "Ask about the visible page",
-        "do": "With the public help article open, ask “Which desktop browser does this extension support? Point to the section that says so. Only read this page.”",
-        "see": "You can check the reply by finding Google Chrome in the installation instructions on the page.",
-        "stuck": "If the assistant describes another tab, return to the help article and name its title in your request."
+        "title": "Ask about this page",
+        "do": "Keep the public getting-started article open. Ask “Which desktop browser does this extension support? Find the section with the answer. Only read this page.”",
+        "see": "You can compare the reply with the part of the article that names Google Chrome.",
+        "stuck": "If the reply describes another tab, switch back to the article and give Claude its title."
       },
       {
-        "title": "Finish the read-only job",
-        "do": "Find the line yourself with Command and F on Mac or Ctrl and F on Windows. Type Chrome. Read the sentence around the match and close the side panel.",
-        "see": "You verified what the assistant read. Your practice ended without asking it to click links or fill a form.",
-        "stuck": "If the page has many matches, search for a longer phrase from the answer or use the article’s headings."
+        "title": "Find the line yourself",
+        "do": "Press Command and F on Mac or Ctrl and F on Windows. Search for Chrome. Read the sentence around the word. Then close the Claude panel.",
+        "see": "You have checked the original page and finished the task without asking the extension to fill forms or follow links.",
+        "stuck": "If the search finds too many matches, search for a longer phrase from the reply or look under the setup heading."
       }
     ],
     "roles": [
-      "Read a public Exchange help article beside its summary.",
-      "Locate a documented requirement while the work app is closed.",
-      "Check that a public help page says what your app’s onboarding text promises."
+      "Read a public mail guide and check its summary.",
+      "Find a requirement in a public team app guide.",
+      "Check whether your app help matches its instructions."
     ],
     "sources": [
       [

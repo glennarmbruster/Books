@@ -1,38 +1,38 @@
 [
   {
     "id": "lab-claude-code-01",
-    "title": "Read a mail-routing rule",
-    "summary": "Use Claude Code as a guide to unfamiliar code before asking it to change anything.",
+    "title": "Read a size rule before changing it",
+    "summary": "A small program sorts mail by size. Predict what happens to a message right on the dividing line.",
     "level": "Starter",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
-    "features": "Read-only source explanation and boundary tracing",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder.",
+    "features": "Read a tiny Python function and try values on both sides of a cutoff.",
     "roles": [
-      "Read mail-flow logic",
-      "Interpret provisioning rules",
-      "Understand an unfamiliar conditional"
+      "Read a mail size rule.",
+      "Explain the cutoff in a request form.",
+      "Check the edge of a game's scoring rule."
     ],
-    "prompt": "Read route.py. Explain the function to someone new to Python. Give the returned value for 0, 24, 25 and 26. Quote the comparison that decides the boundary. Leave the file unchanged.",
+    "prompt": "Read route.py. Explain each line in plain words. For sizes 0, 24, 25 and 26 MB, show which word the function gives back. Quote the sign that decides where 25 goes. Leave the file as it is.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as route.py. Keep the filename and the sample values exactly as shown.",
-        "help": "You should see four lines in total, including the function definition. Keep the equals sign in the comparison.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as route.py.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "def route(size_mb):\n    if size_mb >= 25:\n        return \"large\"\n    return \"normal\"\n"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "The explanation should mention the unit, MB, and the exact >= operator. If Claude describes a deployed mail policy, ask it to stick to this fictional function."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Find the line with >=. Say it as greater than or equal to. Compare the answers for 24 and 25.",
+        "help": "The four answers are normal, normal, large and large."
       },
       {
-        "title": "Check the boundary",
-        "text": "Ask where a 25 MB item goes, then change only the comparison in the editor to > and repeat the question.",
-        "help": "The second reading should move 25 to normal. If the answer repeats the first result, ask Claude to reread the saved file."
+        "title": "Try a second case",
+        "text": "Change only >= to > in the file. Save it and ask Claude to read the same four sizes again.",
+        "help": "If the answers all stay the same, check the saved file. Ask Claude to quote the sign it sees now."
       }
     ],
     "check": [
-      "Original values give normal, normal, large, large.",
-      "With > only the third case changes."
+      "The four answers are normal, normal, large and large.",
+      "Now 25 is normal. Each other answer stays the same."
     ],
     "sources": [
       [
@@ -47,38 +47,38 @@
   },
   {
     "id": "lab-claude-code-02",
-    "title": "Turn an inventory into a handoff note",
-    "summary": "Produce a concise note from a tiny file and retain uncertainty in the source.",
+    "title": "Turn four rows into a handoff note",
+    "summary": "Read a tiny file of teams. Tell the next reader which rows still need someone to look after them.",
     "level": "Starter",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
-    "features": "Reading a local CSV and writing Markdown",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder.",
+    "features": "Read a text table and write a short note someone else can use.",
     "roles": [
-      "Summarize mailbox inventories",
-      "Hand off group-ownership exceptions",
-      "Write a release handoff"
+      "List mail groups with no owner.",
+      "Find missing owners in a shared list.",
+      "Show which game tasks still need an owner."
     ],
-    "prompt": "Read owners.csv and create handoff.md. Report the total, how many rows have owners, and the names with missing owners. Treat a blank as unknown. Preserve the display names exactly.",
+    "prompt": "Read owners.csv. Create handoff.md with the row count, the number with an owner, and every row with a blank owner. Keep the row names as written. Call a blank unknown.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as owners.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "There are four data rows. The commas at the ends of Facilities and Front Desk encode empty fields.",
-        "code": "name,owner\nShipping,Ari\nFacilities,\nDesign Lab,Kim\nFront Desk,\n"
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as owners.csv.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
+        "code": "name,owner\nShipping,Team A\nFacilities,\nDesign Lab,Team B\nFront Desk,\n"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Open handoff.md and find the two counts. If Claude invents owners, ask it to trace every name to a line of the CSV."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Count the rows on paper. Cross off each row that already has a team listed in its owner box.",
+        "help": "There are four rows. Two have owners. Facilities and Front Desk are unknown."
       },
       {
-        "title": "Check the boundary",
-        "text": "Fill the Facilities owner with Lee, save, and ask Claude to rebuild the same note.",
-        "help": "The total stays four. If Facilities still appears in the exception list, make sure Claude reopened the saved CSV."
+        "title": "Try a second case",
+        "text": "Put Lead C in the Facilities owner box. Save the table and ask Claude to build the note again.",
+        "help": "If all four are called owned, check the owner column. The first column names the item, even when its owner is blank."
       }
     ],
     "check": [
-      "First run lists 2 owned out of 4, with Facilities and Front Desk unknown.",
-      "After the edit, only Front Desk is unknown and 3 rows have owners."
+      "There are four rows. Two have owners. Facilities and Front Desk are unknown.",
+      "Three rows now have an owner. Only Front Desk is unknown."
     ],
     "sources": [
       [
@@ -93,38 +93,38 @@
   },
   {
     "id": "lab-claude-code-03",
-    "title": "Keep a project convention across sessions",
-    "summary": "Teach Claude one project-specific convention, start a fresh session and inspect whether the convention survived.",
+    "title": "Keep a writing rule with a project",
+    "summary": "Give a project its own short rule card. See whether a new chat in the same folder follows it.",
     "level": "Starter",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
-    "features": "Project-level CLAUDE.md instructions",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder.",
+    "features": "Keep a project rule in CLAUDE.md so later chats can follow it.",
     "roles": [
-      "Standardize mail runbooks",
-      "Consistent collaboration guides",
-      "Maintain release-note style"
+      "Keep mail change notes in a steady format.",
+      "Use familiar headings for a team handoff.",
+      "Write clear notes for each app update."
     ],
-    "prompt": "Read CLAUDE.md and write release.md for these facts: version 1.2 fixes a duplicate reminder and has been checked on two devices. Follow the project convention.",
+    "prompt": "Read CLAUDE.md. Write release.md about version 1.2. It fixes a repeated reminder. The fix was checked on two devices. Follow the writing rules in this folder.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as CLAUDE.md. Keep the filename and the sample values exactly as shown.",
-        "help": "The filename is uppercase CLAUDE.md at the project root. Rich-text documents or hidden .txt suffixes will prevent discovery.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as CLAUDE.md.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "For every release note, use exactly these two Markdown headings in order:\n## Change\n## Verification\nUse one plain sentence under each heading."
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "The release note should have exactly two headings. If a generic template appears, ask Claude which project instruction file it loaded."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Read the two headings in release.md. Confirm that each has one sentence using just the supplied facts.",
+        "help": "The headings are Change and Verification, in that order. The check mentions two devices."
       },
       {
-        "title": "Check the boundary",
-        "text": "Start a new Claude Code session in the same folder. Ask for release-next.md about a corrected date label, verified on one device, without repeating the convention.",
-        "help": "The new file should retain both headings in order. If it does not, compare the folder shown in each session."
+        "title": "Try a second case",
+        "text": "Start a fresh Claude Code session in the same folder. Ask for release-next.md about a fixed date label tested on one device. Leave the heading rule out of this second request.",
+        "help": "If the second note repeats the reminder fix, ask Claude to use only today's two facts. Check it reopened the same folder."
       }
     ],
     "check": [
-      "Both documents have Change then Verification.",
-      "The second note mentions one device and contains no facts copied from version 1.2."
+      "The headings are Change and Verification, in that order. The check mentions two devices.",
+      "The second note has the same two headings. It says one device and describes the date label."
     ],
     "sources": [
       [
@@ -135,38 +135,38 @@
   },
   {
     "id": "lab-claude-code-04",
-    "title": "Make address comparison predictable",
-    "summary": "Use a table of examples to drive a small function that compares addresses.",
+    "title": "Clean a list of test addresses",
+    "summary": "Strip extra spaces and keep one copy of each address in its original order.",
     "level": "Intermediate",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Implementing a function from fixtures and running regression checks",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Compare an input list with an answer key using Python tests.",
     "roles": [
-      "Deduplicate alias lists",
-      "Normalize sample owner addresses",
-      "Clean a contact list"
+      "Tidy addresses in a mail export.",
+      "Clean a pretend contact list.",
+      "Remove repeated entries from a game list."
     ],
-    "prompt": "Read cases.tsv. Implement unique_addresses(values) in addresses.py for these rules: trim outer whitespace, lowercase, omit blank entries, preserve first-seen order. Write and run unit tests for every example and an empty list. Use Python’s standard library.",
+    "prompt": "Read cases.tsv. In addresses.py write unique_addresses(values). Trim spaces at the ends. Use lowercase. Skip blank entries. Keep each address the first time it appears. Add tests for both examples and an empty list. Run them with Python's built-in tools.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as cases.tsv. Keep the filename and the sample values exactly as shown.",
-        "help": "Keep spaces around the first and last values. If your editor removes them, type them back inside the sample field.",
-        "code": "input separated by |\texpected separated by |\n A@Example.org |a@example.org|B@EXAMPLE.ORG\ta@example.org|b@example.org\n | Z@example.org | \tz@example.org\n"
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as cases.tsv.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
+        "code": "input separated by |\texpected separated by |\n A@Example.test |a@example.test|B@EXAMPLE.TEST\ta@example.test|b@example.test\n | Z@example.test | \tz@example.test\n"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Claude should show a test run with no failures. If it sorts the results, ask for a reverse-alphabetical input that reveals the difference."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Compare the input and expected columns in the file. Ask Claude to point out the repeated address in the first row.",
+        "help": "The first row keeps a@example.test then b@example.test. The blank pieces in the second row drop out."
       },
       {
-        "title": "Check the boundary",
-        "text": "Ask Claude to print the result for [\" Z@X \",\"a@x\",\"z@x\",\" \"], then rerun the tests.",
-        "help": "The first value stays first after normalization. If the result starts with a@x, check whether the implementation sorts a set."
+        "title": "Try a second case",
+        "text": "Try the list [\" Z@X \",\"a@x\",\"z@x\",\" \"]. Then try an empty list. Print the two results.",
+        "help": "If a@x moves to the front, ask the code to keep the first-seen order and remove the extra sort."
       }
     ],
     "check": [
-      "The check prints [\"z@x\", \"a@x\"].",
-      "An empty input produces an empty list."
+      "The first row keeps a@example.test then b@example.test. The blank pieces in the second row drop out.",
+      "The results are [\"z@x\",\"a@x\"] and []."
     ],
     "sources": [
       [
@@ -177,38 +177,38 @@
   },
   {
     "id": "lab-claude-code-05",
-    "title": "Plan a mail report before editing it",
-    "summary": "Separate an investigation from implementation so you can correct the policy before it reaches code.",
+    "title": "Plan three checks for a mail warning",
+    "summary": "Decide what the rule should do before writing a single line of the program.",
     "level": "Intermediate",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Plan mode and handoff to an editable session",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Use Plan mode to inspect a rule before making any edits.",
     "roles": [
-      "Define mailbox thresholds",
-      "Scope lifecycle reports",
-      "Agree on feature behavior"
+      "Test a mail quota warning.",
+      "Plan checks for a list of form limits.",
+      "Set a fair cutoff for a score warning."
     ],
-    "prompt": "In Plan mode, read thresholds.txt and propose three test cases for an integer percentage, including the exact boundary and a missing value. Show expected results. Wait for my decision before editing.",
+    "prompt": "In Plan mode, read thresholds.txt. Show three cases for a whole-number percentage. Include one just below the warning line, one exactly on it and one missing value. Tell me the answer for each. Wait before editing.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as thresholds.txt. Keep the filename and the sample values exactly as shown.",
-        "help": "Use the Plan mode control in Claude Code before sending the prompt. The three rules must be visible in the same file.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as thresholds.txt.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "Mailbox quota warning begins at 90 percent inclusive.\nBelow 90 is OK.\nA missing percentage must be UNKNOWN.\n"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "You should receive a plan with no new files. If 90 is categorized OK, correct the plan while still in Plan mode."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Read the proposed answers for 89, 90 and None. Here None means the source supplied no percentage.",
+        "help": "The plan says 89 is OK, 90 is WARNING and a missing value is UNKNOWN. It comes before file edits."
       },
       {
-        "title": "Check the boundary",
-        "text": "Switch to a mode that permits edits. Ask Claude to implement classify(value) in quota.py and run its three tests with 89, 90 and None.",
-        "help": "If no file appears, confirm you left Plan mode. If None errors, require the missing-value case to be handled before comparing numeric values."
+        "title": "Try a second case",
+        "text": "Allow edits to the practice folder. Ask Claude to write classify(value) in quota.py and run those three tests.",
+        "help": "If None shows OK, ask the code to check for a missing value before comparing numbers."
       }
     ],
     "check": [
-      "Plan precedes writes.",
-      "89 gives OK, 90 gives WARNING, None gives UNKNOWN."
+      "The plan says 89 is OK, 90 is WARNING and a missing value is UNKNOWN. It comes before file edits.",
+      "The finished program gives OK, WARNING and UNKNOWN in order."
     ],
     "sources": [
       [
@@ -223,38 +223,38 @@
   },
   {
     "id": "lab-claude-code-06",
-    "title": "Find where an owner disappears",
-    "summary": "Reproduce a filtering mistake and compare old and new results using a small, fictional tenant export.",
+    "title": "Keep rows with no owner",
+    "summary": "A short report hides a group when its owner is missing. Read the output before and after the fix.",
     "level": "Intermediate",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Targeted debugging with a before-and-after run",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Read a loop, find the row it skips and rerun the fixed file.",
     "roles": [
-      "Retain unowned shared mailboxes",
-      "Report groups missing owners",
-      "Show incomplete records in an app"
+      "Keep mail groups with blank owners.",
+      "Show unassigned work on a team board.",
+      "Show every game table, even an empty one."
     ],
-    "prompt": "Run groups.py and preserve its original output in your reply. Fix the report so every group appears exactly once and missing owners print UNASSIGNED. Keep input order. Run it again and show the changed lines.",
+    "prompt": "Run groups.py and show its first output. Fix the loop so it lists every group once in the original order. Print UNASSIGNED when the owner field is blank. Run it again and show the changed lines.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as groups.py. Keep the filename and the sample values exactly as shown.",
-        "help": "Save the sample and check that its print line is inside the if block. The mistake is visible when you compare outputs.",
-        "code": "groups = [(\"Ops\",\"Kai\"), (\"HR\",\"\"), (\"Docs\",\"Lou\")]\nfor name, owner in groups:\n    if owner:\n        print(name, owner)\n"
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as groups.py.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
+        "code": "groups = [(\"Ops\",\"Lead A\"), (\"HR\",\"\"), (\"Docs\",\"Lead B\")]\nfor name, owner in groups:\n    if owner:\n        print(name, owner)\n"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "The original output should contain two lines. If you see three immediately, ask Claude to show the original sample above and explain the difference."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Compare the first output with the three rows in the file. Find the group that was left off the page.",
+        "help": "The first version skips HR. The fixed output includes Ops Lead A, HR UNASSIGNED and Docs Lead B."
       },
       {
-        "title": "Check the boundary",
-        "text": "Append (\"Lab\",\"\") to the list, run the revised file again and count the output rows.",
-        "help": "Both missing owners should use the same label. If one row vanishes, look for a remaining conditional that filters blank owners."
+        "title": "Try a second case",
+        "text": "Add (\"Lab\",\"\") to the list and run the script again. Count the printed rows.",
+        "help": "If a group disappears, look for a line that prints only when the owner has text. Move printing outside that check."
       }
     ],
     "check": [
-      "Original report omits HR.",
-      "Final report prints Ops Kai, HR UNASSIGNED, Docs Lou, Lab UNASSIGNED in order."
+      "The first version skips HR. The fixed output includes Ops Lead A, HR UNASSIGNED and Docs Lead B.",
+      "The final report has four rows. Lab UNASSIGNED comes last."
     ],
     "sources": [
       [
@@ -265,38 +265,38 @@
   },
   {
     "id": "lab-claude-code-07",
-    "title": "Create a skill for release notes",
-    "summary": "Package a small repeatable writing task so you can call it again on another change.",
+    "title": "Give Claude a reusable note recipe",
+    "summary": "Turn a repeated writing job into a skill. A skill is a small set of directions the tool can reuse.",
     "level": "Intermediate",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
-    "features": "Project skills and slash invocation",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder.",
+    "features": "Create a skill, a named recipe Claude can run again.",
     "roles": [
-      "Document script releases",
-      "Prepare M365 deployment notes",
-      "Record app updates"
+      "Make a recipe for mail report notes.",
+      "Keep team change notes consistent.",
+      "Reuse a recipe for app release notes."
     ],
-    "prompt": "Read changes.txt. Create .claude/skills/note/SKILL.md with name note and a clear description. Its instructions should read changes.txt, write note.md using exactly the headings Change and Evidence, and copy only supported facts. Tell me how to invoke it.",
+    "prompt": "Read changes.txt. Create .claude/skills/note/SKILL.md with the skill name note and a short description. Have it read changes.txt and write note.md with just Change and Evidence as headings. Use only facts in the input file. Show how to run the skill.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as changes.txt. Keep the filename and the sample values exactly as shown.",
-        "help": "Keep the literal Change and Evidence labels. These are the only source facts for this exercise.",
-        "code": "Change: export now keeps empty departments.\nEvidence: 4 fixture rows passed.\n"
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as changes.txt.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
+        "code": "Change: export now keeps empty departments.\nEvidence: 4 sample rows passed.\n"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Open SKILL.md and check that valid YAML frontmatter names the skill note. If Claude writes the release note only, ask for the project skill file explicitly."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Open the skill file in the folder. Read its directions and check that they name the input and output files.",
+        "help": "The recipe is in .claude/skills/note/SKILL.md. The source says four sample rows passed."
       },
       {
-        "title": "Check the boundary",
-        "text": "Start a new session in this folder and enter /note. Change the evidence to 6 fixture rows passed, save and invoke /note again.",
-        "help": "The second note should replace four with six. If the slash command is missing, check the folder and SKILL.md spelling, then reopen the session."
+        "title": "Try a second case",
+        "text": "Start a new session here and enter /note. Change the source evidence to say 6 sample rows passed. Save it and run /note again.",
+        "help": "If the slash command is missing, check the folder, file name and skill name. Start a fresh session in that folder."
       }
     ],
     "check": [
-      "The skill file exists under the project’s .claude/skills/note folder.",
-      "The second note has two headings and cites six fixture rows."
+      "The recipe is in .claude/skills/note/SKILL.md. The source says four sample rows passed.",
+      "The second note still has two headings. It now says six rows passed."
     ],
     "sources": [
       [
@@ -311,38 +311,38 @@
   },
   {
     "id": "lab-claude-code-08",
-    "title": "Build a preview of membership changes",
-    "summary": "Produce a deterministic preview using two local exports. This exercise ends at a written plan.",
+    "title": "Preview changes to a team list",
+    "summary": "Compare a current list with a wanted list. Show who would be added, kept or removed without changing a real group.",
     "level": "Advanced",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Set comparison, normalization and reproducible output",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Compare the items in two lists using a script on your own computer.",
     "roles": [
-      "Compare distribution-list snapshots",
-      "Preview M365 group membership",
-      "Compare app invite lists"
+      "Preview a test mail group change.",
+      "Review a team list before editing it.",
+      "Compare old and new player lists."
     ],
-    "prompt": "Read members.json. Write preview.py to print JSON with add, remove and keep arrays. Trim and lowercase identifiers, drop empty values and sort each array. Use only the local file and standard library. Run the preview and add a test where current equals desired.",
+    "prompt": "Read members.json. Write preview.py. Print three lists called add, remove and keep. Trim spaces, use lowercase, skip blanks, merge repeats and sort each list. Use only this practice file and Python's built-in tools. Test a case where both lists match.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as members.json. Keep the filename and the sample values exactly as shown.",
-        "help": "Both lists intentionally contain entries that collapse after normalization. Open the JSON as text to confirm the spelling.",
-        "code": "{\"current\":[\" Ari \",\"BO\",\"bo\",\"Cy\"],\"desired\":[\"ari\",\"Dee\",\"\", \"DEE\"]}"
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as members.json.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
+        "code": "{\"current\":[\" Sand \",\"BLUE\",\"blue\",\"Gray\"],\"desired\":[\"sand\",\"Gold\",\"\",\"GOLD\"]}"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Output should contain three arrays and no duplicate identifiers. If the script suggests updating a remote directory, restate that its sole output is JSON."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Run the preview. Draw two circles on paper for current and wanted. Write an item in the middle if it is in both.",
+        "help": "Add gold. Remove blue and gray. Keep sand."
       },
       {
-        "title": "Check the boundary",
-        "text": "Make desired an exact copy of current and ask Claude to rerun its script and explain the result.",
-        "help": "Both change arrays should be empty. If anything remains, ask it to normalize both sides before building the sets."
+        "title": "Try a second case",
+        "text": "Replace desired with an exact copy of current. Run the same command and read all three lists.",
+        "help": "If BLUE and blue get split, ask the code to clean both input lists before comparing them."
       }
     ],
     "check": [
-      "First run adds dee, removes bo and cy, keeps ari.",
-      "Second run keeps ari, bo and cy, with zero changes."
+      "Add gold. Remove blue and gray. Keep sand.",
+      "Keep blue, gray and sand. The add and remove lists are both empty."
     ],
     "sources": [
       [
@@ -353,38 +353,38 @@
   },
   {
     "id": "lab-claude-code-09",
-    "title": "Compare two versions of a sharing policy",
-    "summary": "Find what changed in the policy and write tests for the changed boundary.",
+    "title": "Compare two seven-day rules",
+    "summary": "Two rules disagree on a single day. Find that day and show which readers it affects.",
     "level": "Advanced",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Comparing documents, extracting decision rules and testing a boundary",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Build a test table to compare an old rule with a new one.",
     "roles": [
-      "Check distribution policy revisions",
-      "Validate sharing-policy changes",
-      "Review app permission rules"
+      "Compare old and new mail review rules.",
+      "Explain a change to a guest sharing rule.",
+      "Compare versions of an app's time limit."
     ],
-    "prompt": "Read policies.txt and explain the one behavior that changed. Implement decide(version, kind, days) using Python and the written policy. Build a test table at days 6, 7, 8 for guests and at day 8 for members, with a result for each edition.",
+    "prompt": "Read policies.txt. In Python write decide(version, kind, days). Try both rules for a guest at 6, 7 and 8 days, and a member at 8 days. Show every answer in a table. Explain where the versions differ.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as policies.txt. Keep the filename and the sample values exactly as shown.",
-        "help": "Preserve the different comparison operators. You should be able to point to a single character that changes a guest result.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as policies.txt.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "V1: members ALLOW. Guests ALLOW when days < 7; otherwise REVIEW.\nV2: members ALLOW. Guests ALLOW when days <= 7; otherwise REVIEW.\nOnly member and guest are in scope."
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Review the proposed table before the tests. If a member depends on days, point to the first sentence of each edition."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Circle the < and <= signs in the source. Use the table to find the guest row where one rule includes day seven.",
+        "help": "A day-seven guest changes from REVIEW to ALLOW. A day-six guest is allowed by both."
       },
       {
-        "title": "Check the boundary",
-        "text": "Ask Claude to show the number of differing edition results across the four cases, with the one changed row.",
-        "help": "Exactly one pair differs. More differences usually mean a member was treated as a guest or an inequality was reversed."
+        "title": "Try a second case",
+        "text": "Ask Claude to count every changed row in the four test cases. Look at the two rows for day eight yourself.",
+        "help": "If all guests are allowed on day eight, read the guest and member branches separately. Use the row labels when you compare."
       }
     ],
     "check": [
-      "Day 7 guest changes REVIEW to ALLOW.",
-      "Day 8 guest remains REVIEW, and day 8 member remains ALLOW."
+      "A day-seven guest changes from REVIEW to ALLOW. A day-six guest is allowed by both.",
+      "There is one change. At day eight both versions review guests and allow members."
     ],
     "sources": [
       [
@@ -395,38 +395,38 @@
   },
   {
     "id": "lab-claude-code-10",
-    "title": "Test pagination without contacting a tenant",
-    "summary": "Build a report that follows a chain of saved pages and detects a broken chain before publishing a result.",
+    "title": "Read a three-page report without going online",
+    "summary": "A pretend directory has three pages, including an empty middle page. Collect every item and catch a broken link.",
     "level": "Advanced",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Fixture-driven integration tests and failure diagnosis",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Pretend to turn report pages using a local file and a Python script.",
     "roles": [
-      "Read multi-page report exports",
-      "Understand Graph pagination",
-      "Follow paginated app data"
+      "Read every page in a test mail list.",
+      "Gather all rows of a long staff list.",
+      "Load game results past an empty page."
     ],
-    "prompt": "Build paged.py from pages.json. Start at one, follow next until null, deduplicate items in first-seen order, and detect a missing page or repeated page. Print the final JSON list on success. On error, print a clear reason and return a nonzero exit code without printing a partial list. Test both failures with temporary fixtures.",
+    "prompt": "Read pages.json. Write paged.py. Start at one. Follow next until its value is null. Keep one copy of each item, in the order first seen. If a page is missing or repeats, print a reason and exit with an error. Print the finished list only on success. Test both errors using copies of the sample.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as pages.json. Keep the filename and the sample values exactly as shown.",
-        "help": "Keep page two even though it is empty. Its next value is necessary to reach the last page.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as pages.json.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "{\"one\":{\"items\":[\"M1\",\"M2\"],\"next\":\"two\"},\"two\":{\"items\":[],\"next\":\"three\"},\"three\":{\"items\":[\"M2\",\"M3\"],\"next\":null}}"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Ask Claude to run its script against the supplied sample. If it stops after M2, examine how it decides that pagination has finished."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Open the middle page in the file. It has no items but it does name a next page. Run the reader on the unchanged sample.",
+        "help": "It prints [\"M1\",\"M2\",\"M3\"]. M2 appears only once."
       },
       {
-        "title": "Check the boundary",
-        "text": "Change the last next from null to \"one\" and rerun. Change it again to \"absent\" and rerun.",
-        "help": "The first failure identifies a cycle, the second a missing page. A repeating run needs a set of visited page identifiers."
+        "title": "Try a second case",
+        "text": "Replace the last null with \"one\" and run it. Replace that with \"absent\" and run it again.",
+        "help": "If it stops after M2, look at the rule for ending the loop. Only a missing next link marked null ends the normal run."
       }
     ],
     "check": [
-      "Success prints [\"M1\",\"M2\",\"M3\"].",
-      "Both malformed chains return failure and neither emits a partial success list."
+      "It prints [\"M1\",\"M2\",\"M3\"]. M2 appears only once.",
+      "The first change reports a loop. The second reports a missing page. Neither prints a partial result as a success."
     ],
     "sources": [
       [
@@ -437,38 +437,38 @@
   },
   {
     "id": "lab-claude-code-11",
-    "title": "Trace a flaky quota test to its date boundary",
-    "summary": "Turn a calendar-dependent result into an explicit test with minute-level evidence.",
+    "title": "Check the exact second a deadline ends",
+    "summary": "Freeze the clock for a test. Find out which items expire at midnight and which expire one second later.",
     "level": "Expert",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Regression isolation, precise timestamps and injected reference time",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Pass a chosen clock time to a test and check exact seconds.",
     "roles": [
-      "Track retention boundaries",
-      "Validate aging reports",
-      "Test expiry displays"
+      "Check a practice mail deadline.",
+      "Test when a temporary file link expires.",
+      "Turn a game round off at the right time."
     ],
-    "prompt": "Read expiry.csv. Write Python tests and a classifier accepting an as_of UTC timestamp. An item is expired at as_of >= its deadline. Use timezone-aware timestamps, show the three results at 2027-01-01T00:00:00Z and verify the exact boundary one second later. No dependence on today’s date.",
+    "prompt": "Read expiry.csv. Write a Python rule that takes a check time in UTC. An item expires when that time reaches or passes its deadline. Test all three rows at 2027-01-01T00:00:00Z and exactly one second later. Use these fixed times on every run.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as expiry.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "The middle deadline equals the reference timestamp exactly. Verify both year values if your editor changes date formatting.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as expiry.csv.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "id,deadline\nA,2026-12-31T23:59:59Z\nB,2027-01-01T00:00:00Z\nC,2027-01-01T00:00:01Z"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Look for a reference-time parameter in the classifier and fixed inputs in the tests. If results vary by day, search for a call to the current clock."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Look for Z at the end of each time. It marks the same clock for every row. Compare each deadline with the first test time.",
+        "help": "At midnight A and B have expired. C remains active for one more second."
       },
       {
-        "title": "Check the boundary",
-        "text": "Ask Claude to run the same tests twice and give result counts for the reference second and the following second.",
-        "help": "If B remains active at midnight, inspect the equality check. If C never expires, check that seconds were retained during parsing."
+        "title": "Try a second case",
+        "text": "Run the same two checks twice. Ask Claude to show how many items have expired at each check time.",
+        "help": "If the answer changes with today's date, pass the fixed time into the rule. Replace any call that reads the current clock inside the test."
       }
     ],
     "check": [
-      "At midnight A and B expire while C is active.",
-      "At 00:00:01Z all three expire."
+      "At midnight A and B have expired. C remains active for one more second.",
+      "Two expire at midnight and all three at 00:00:01Z, every time you run the test."
     ],
     "sources": [
       [
@@ -479,38 +479,38 @@
   },
   {
     "id": "lab-claude-code-12",
-    "title": "Repair an importer after a partial run",
-    "summary": "Model a failure halfway through an import. Make the next run complete the work exactly once.",
+    "title": "Restart a stopped score import",
+    "summary": "Save rows one at a time. Reopen the saved file after a forced stop and make sure repeats add no points.",
     "level": "Expert",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3 including sqlite3.",
-    "features": "Restart behavior, durable state and failure injection",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Save practice rows in a local database, stop the work and run it again.",
     "roles": [
-      "Resume message-index exports",
-      "Resume list-item imports",
-      "Recover a broken data import"
+      "Resume a mail count after an interruption.",
+      "Avoid duplicate rows in a shared export.",
+      "Restore the same score exactly once."
     ],
-    "prompt": "Build a local importer using events.csv and a Python sqlite3 database. Use the event ID as the unique key. Commit each processed row. Support a test argument that stops after two input rows. Retry the same input, then run it again. Show stored IDs and their total; preserve the first value on duplicate IDs.",
+    "prompt": "Read events.csv. Build a Python importer with sqlite3. Use a local practice database. Save each new ID once and keep its first amount. Add a test option that stops after two input rows. Start again with the same file, then try the whole file again. Print the stored IDs and their total.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as events.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "The duplicate E1 is intentional. Start with a new empty practice database so earlier tests cannot change the totals.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as events.csv.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "id,amount\nE1,4\nE2,8\nE1,4\nE3,5"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Ask for the row count immediately after the injected stop. If it is zero, the transaction was never committed before interruption."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Stop after two rows. Read the saved list. Restart with the same file. Compare that result with a fresh run on an empty database.",
+        "help": "The stop leaves E1 and E2, total 12. Restart adds E3 and the total is 17."
       },
       {
-        "title": "Check the boundary",
-        "text": "After a successful retry append E2,99 and rerun. Ask for the stored amount for E2 and the sum.",
-        "help": "E2 must retain its original value. If it changes to 99, inspect whether insertion replaces existing rows."
+        "title": "Try a second case",
+        "text": "Append E2,99 to the input. Run it again with the saved database. Ask for the stored value of E2.",
+        "help": "If the total grows on each run, check that the database stores the ID as a unique key. Run twice on the same file to prove it."
       }
     ],
     "check": [
-      "After the stop there are two IDs totaling 12.",
-      "After retry and duplicate delivery, E1, E2 and E3 total 17 and E2 remains 8."
+      "The stop leaves E1 and E2, total 12. Restart adds E3 and the total is 17.",
+      "E2 is still 8. The three IDs still total 17."
     ],
     "sources": [
       [
@@ -521,38 +521,38 @@
   },
   {
     "id": "lab-claude-code-13",
-    "title": "Stage a schema migration and reversal",
-    "summary": "Migrate a local data file while preserving records that are hard to reconstruct later.",
+    "title": "Change a file and change it back",
+    "summary": "Save a new version of a small address book. Prove you can turn the new file back into the original data.",
     "level": "Expert",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Explicit invariants, forward migration and round-trip comparison",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Turn one JSON file into another and check that a return trip restores the data.",
     "roles": [
-      "Evolve mail-report schemas",
-      "Manage inventory schema revisions",
-      "Upgrade saved app data"
+      "Try a new format for a mail list.",
+      "Check that a shared directory can be restored.",
+      "Move saved app data into a new file format."
     ],
-    "prompt": "Create forward.py and reverse.py for people.json. Forward creates people-v2.json with address split into local and domain at the last @; null remains represented explicitly. Preserve id, note and order. Reverse creates roundtrip.json. Compare the two parsed structures and fail if anything differs. Leave the original untouched.",
+    "prompt": "Read people.json. Write forward.py to create people-v2.json. Split an address at its last @ into local and domain. Keep null empty. Keep each ID, note and row order. Write reverse.py to create roundtrip.json. Compare both files as JSON data. Stop with an error if any value changed. Keep the original file.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as people.json. Keep the filename and the sample values exactly as shown.",
-        "help": "Save the fixture as JSON, not a JavaScript assignment. One address deliberately has two @ characters to specify the splitting rule.",
-        "code": "[{\"id\":1,\"address\":\"a@example.org\",\"note\":\"A, B\"},{\"id\":2,\"address\":null,\"note\":\"\"},{\"id\":3,\"address\":\"b@c@example.org\",\"note\":\"x\"}]"
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as people.json.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
+        "code": "[{\"id\":1,\"address\":\"a@example.test\",\"note\":\"A, B\"},{\"id\":2,\"address\":null,\"note\":\"\"},{\"id\":3,\"address\":\"b@c@example.test\",\"note\":\"x\"}]"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Open the third migrated record. Its local value must be b@c. If Claude validates email syntax and drops the row, reiterate the specified transformation."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Run the two scripts. Open the row containing two @ signs. Find which one split the address. Look at the row that has a blank note.",
+        "help": "The new file has three rows in the original order. The missing address is still null."
       },
       {
-        "title": "Check the boundary",
-        "text": "Inspect both directions, rerun them, then compare roundtrip.json with the original by parsing JSON.",
-        "help": "Whitespace differences are fine. If null becomes the string \"null\" or disappears, revise the representation and rerun the comparison."
+        "title": "Try a second case",
+        "text": "Run both steps again. Compare the data in roundtrip.json with the untouched original, including the comma in a note.",
+        "help": "If an address changes, split at the last @. Keep null as its own value rather than writing the word null as a string."
       }
     ],
     "check": [
-      "Three records remain in their original order.",
-      "The parsed round trip is identical, including empty note, null address and punctuation."
+      "The new file has three rows in the original order. The missing address is still null.",
+      "Every ID, address, note and position matches. Different spacing around the JSON text does not change a value."
     ],
     "sources": [
       [
@@ -563,38 +563,38 @@
   },
   {
     "id": "lab-claude-code-14",
-    "title": "Find the earliest trustworthy incident evidence",
-    "summary": "Reconstruct an ordering while explicitly preserving uncertainty and contradictions in inputs.",
+    "title": "Put four time slips in order",
+    "summary": "Two clocks show different local times for the same event. Sort the true times and keep both sides of a disagreement.",
     "level": "Expert",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Timeline reconstruction, stable deduplication and evidence citations",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Read time stamps with different offsets and keep the row number with each claim.",
     "roles": [
-      "Reconcile mail-flow observations",
-      "Compare service-desk events",
-      "Investigate a repeated app event"
+      "Compare two pretend mail logs.",
+      "Line up events from two team tools.",
+      "Explain when an app error occurred."
     ],
-    "prompt": "Read observations.csv. Write a local Python reconciler and incident.md. Sort by UTC instant, normalize offsets, count distinct event IDs, and flag contradictory values for the same ID. Cite original row numbers including the header as row 1. Preserve both claims when they conflict.",
+    "prompt": "Read observations.csv. In Python put every time on the UTC clock, then sort by that actual time. Count each ID once. If the same ID reports different states, keep both claims and list their source rows in incident.md. Count the heading as row 1.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as observations.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "Preserve both negative offsets. Clock time alone is misleading across the offset change.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as observations.csv.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "id,time,state\nR1,2026-11-01T01:20:00-05:00,queued\nR2,2026-11-01T01:05:00-06:00,done\nR1,2026-11-01T06:20:00Z,queued\nR2,2026-11-01T07:05:00Z,failed"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Look for 06:20Z and 07:05Z in the report. If 01:05 appears before 01:20, request conversion before sorting."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Find the two spellings of R1's time. Compare their actual UTC times. Then compare the two states shown for R2.",
+        "help": "R1 came before R2. There are two IDs. Rows 3 and 5 disagree about R2."
       },
       {
-        "title": "Check the boundary",
-        "text": "Change the last state to done and rebuild. Compare distinct IDs, conflicts and order with the original report.",
-        "help": "The conflict count should drop while the number of unique IDs stays constant. If records vanish, inspect deduplication before conflict detection."
+        "title": "Try a second case",
+        "text": "Change the final state from failed to done. Save, run the report again and compare its order and counts.",
+        "help": "If R2 appears first, sort by times after converting them. If one R2 claim disappears, keep both source rows until you compare their states."
       }
     ],
     "check": [
-      "R1 precedes R2. Two distinct IDs appear.",
-      "First report flags rows 3 and 5 for R2; revised report has zero conflicts."
+      "R1 came before R2. There are two IDs. Rows 3 and 5 disagree about R2.",
+      "The same two IDs remain in the same time order. There are now zero disagreements."
     ],
     "sources": [
       [
@@ -605,38 +605,38 @@
   },
   {
     "id": "lab-claude-code-15",
-    "title": "Hand off a release with independent evidence",
-    "summary": "Work from a contract, a prior version and a candidate version. Accept or reject before implementing a repair.",
+    "title": "Test a fee rule before giving it to someone else",
+    "summary": "The first two items are free. Catch the new code charging for the second item and give a friend a way to check the fix.",
     "level": "Expert",
-    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Plan, independent checks and a verification handoff",
+    "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
+    "features": "Run the broken code and the repaired code against the same known prices.",
     "roles": [
-      "Review report-format releases",
-      "Gate a provisioning helper",
-      "Decide whether to publish an update"
+      "Check a mail-report threshold before sharing it.",
+      "Hand a tested calculator to a team.",
+      "Release an app with a repeatable price test."
     ],
-    "prompt": "Read release.txt. Write tests independent of the candidate, record before/after results in evidence.md, then repair the candidate in fee.py. Give the reviewer a single local command to repeat every check. Preserve the documented boundary and two-decimal output. Include a case outside the supplied examples.",
+    "prompt": "Read release.txt. Put the candidate fee rule in fee.py. Write tests using the printed price rule as your answer key. Record what happens before and after fixing the code in evidence.md. Use whole counts of zero or more. Print prices to two decimal places. Give one command that repeats the checks.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as release.txt. Keep the filename and the sample values exactly as shown.",
-        "help": "Copy both formulas exactly. The candidate is deliberately wrong and the contract is the agreed reference.",
+        "title": "Save the sample file",
+        "text": "In a new practice folder, use a plain text editor to save the sample below as release.txt.",
+        "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "Contract: first two items free. Each additional item costs 1.25 dollars. Whole nonnegative counts only. Use fixed two-decimal amounts. Reject negatives.\nPrevious formula: max(0,n-2)*1.25\nCandidate formula: max(0,n-1)*1.25"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Require evidence from a test of the uncorrected candidate. If all results pass immediately, ask to run the original candidate expression against two items."
+        "title": "Ask Claude to read the file",
+        "text": "Open this folder in Claude Code on your computer. Paste the lab prompt. Run the tests on the candidate before changing it. Try two items. Save what the wrong rule charges. Then repair it and run the tests again.",
+        "help": "The first program fails at two items. The fixed rule charges 0.00 for zero or two items, and 1.25 for three."
       },
       {
-        "title": "Check the boundary",
-        "text": "Run the command documented in evidence.md. Ask for outputs at -1, 0, 2, 3 and the added case of 6 items.",
-        "help": "For 0 or 2 the visible output is 0.00. If 6 produces 6.25, inspect how many free items the candidate subtracts."
+        "title": "Try a second case",
+        "text": "Run the command from evidence.md yourself. Try six items and then -1. Read the price or error each time.",
+        "help": "If the bad code passes all tests, add the exact last free item to the test table. Check the expected price before running it."
       }
     ],
     "check": [
-      "Candidate originally fails at 2; repaired version yields 0.00 for 0 and 2, 1.25 for 3, 5.00 for 6.",
-      "Negative count is rejected and the reviewer command passes."
+      "The first program fails at two items. The fixed rule charges 0.00 for zero or two items, and 1.25 for three.",
+      "Six costs 5.00. A negative count is rejected. A new reader can repeat the same checks."
     ],
     "sources": [
       [
@@ -646,6 +646,756 @@
       [
         "Anthropic · project instructions",
         "https://code.claude.com/docs/en/memory"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-16",
+    "title": "Play three rounds of rock, paper, scissors",
+    "summary": "Play against a pretend opponent. Its first three moves are fixed so you can check a win, a tie and a loss.",
+    "level": "Starter",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Check three outcomes of a sample mail rule.",
+      "Create a quick game for a training break.",
+      "Build a full three-round game."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make Rock, Paper and Scissors buttons. Show both moves and the result after each turn. Stop after three rounds. Show the score out of three and a Replay button. Rock beats Scissors, Scissors beats Paper, Paper beats Rock. Use these practice values: The computer plays Rock, Paper, Scissors in that order. Win earns 1, tie and loss earn 0.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-16 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Play the first round",
+        "text": "Pick Paper for all three rounds. Read both moves each time and write down the result.",
+        "help": "The results are win, tie and loss in order. Final score is 1 of 3."
+      },
+      {
+        "title": "Try a change",
+        "text": "Press Replay. Pick Paper, Scissors, Rock. Try one more press after round three.",
+        "help": "If Paper loses to Rock, check the pair from the player's point of view. Test all three winning pairs."
+      }
+    ],
+    "check": [
+      "The results are win, tie and loss in order. Final score is 1 of 3.",
+      "The score resets before the game. Three wins give 3 of 3. The extra press cannot change the result."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-17",
+    "title": "Catch the odd word",
+    "summary": "Find the item that does not belong with the others. Give the answer a reason as well as a point.",
+    "level": "Starter",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Teach which sample field belongs in a mail report.",
+      "Make a training quiz with explanations.",
+      "Build a word game with replay."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Show three word buttons per round. Accept one guess, explain the correct answer and show Next. End after three rounds. Keep score and add Replay. Use these practice values: Round 1: spoon, fork, mitten (mitten is clothing). Round 2: bus, apple, tram (apple is fruit). Round 3: drum, flute, map (map is a guide).",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-17 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Play the first round",
+        "text": "Choose mitten, apple and drum. Try to change the last guess after the explanation appears.",
+        "help": "The first two are right. The third answer is map. Final score stays at 2 of 3."
+      },
+      {
+        "title": "Try a change",
+        "text": "Replay and choose all three correct words. Read the last explanation before closing the game.",
+        "help": "If the last explanation mentions clothing, look up the reason on the current round's card."
+      }
+    ],
+    "check": [
+      "The first two are right. The third answer is map. Final score stays at 2 of 3.",
+      "The second score is 3 of 3. Each round gives its own reason."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-18",
+    "title": "Save three favorite colors",
+    "summary": "Let a reader save a palette. Reopening the same page should bring back the chosen colors.",
+    "level": "Starter",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Pick readable colors for a practice mail report.",
+      "Save display choices for a team dashboard.",
+      "Remember an app palette between visits."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make three color pickers with visible color codes, a Save palette button and Restore defaults. Save the three codes in this browser's storage. Try to read saved codes on open. If saving is blocked, show a message and let the page still work. Use these practice values: Three starting color boxes: #112233, #445566, #778899. Use #ff9900 for the second-color test.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-18 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Change only the second color to #ff9900. Save and reload the same page in the same browser.",
+        "help": "The second code stays #ff9900. The first and third still match the starting values."
+      },
+      {
+        "title": "Try a change",
+        "text": "Restore defaults. Save them and reload again.",
+        "help": "If the file page cannot save on your browser, have Claude give a local serving command. Open that address and repeat both reload tests."
+      }
+    ],
+    "check": [
+      "The second code stays #ff9900. The first and third still match the starting values.",
+      "All three original codes return and survive the reload. The message tells whether saving worked."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-19",
+    "title": "Build a one-button lunch poll",
+    "summary": "Give each practice ballot one vote. See how a tie looks before declaring a winner.",
+    "level": "Starter",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Count answers to a pretend mail survey.",
+      "Compare votes in a sample team poll.",
+      "Build a poll with a fair tie rule."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a poll with a ballot ID box, three choices and Vote. One ID may vote once. Show all three totals and announce a tie when the highest positive totals match. Show No votes at the start. Add Reset poll. Use these practice values: Choices are Soup, Wrap and Salad. Practice ballot IDs are T1, T2 and T3.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-19 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Vote T1 for Soup, T2 for Wrap, then try T1 for Salad. Read the totals.",
+        "help": "Soup 1, Wrap 1, Salad 0. The highest counts tie. The repeated T1 is refused."
+      },
+      {
+        "title": "Try a change",
+        "text": "Give T3 to Wrap. Reset the poll and submit one ballot again.",
+        "help": "If a repeated ID changes the poll, check the ID list before adding to a choice's total."
+      }
+    ],
+    "check": [
+      "Soup 1, Wrap 1, Salad 0. The highest counts tie. The repeated T1 is refused.",
+      "Wrap leads with 2 before reset. All totals clear, and the new poll accepts the reused practice ID."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-20",
+    "title": "Make a mailbox size dial",
+    "summary": "Show how full a pretend mailbox is. Include a message for a missing size or an impossible limit.",
+    "level": "Starter",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Check practice mailbox usage.",
+      "Show how close a team list is to its limit.",
+      "Build an easy-to-read progress dial."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a small size reader. Add boxes for used and limit, a Check button, a bar and a printed percentage. Warn at 90 percent and above. Call an empty value or a limit of zero Needs review. Reject negative sizes. Use these practice values: Used 25, limit 100. Other test pairs are 0 and 100, 90 and 100, 5 and 0.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-20 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Try 25 and 100, then 0 and 100. Look at the printed percent and warning label.",
+        "help": "The pairs give 25 percent OK and 0 percent OK. Zero is a valid size."
+      },
+      {
+        "title": "Try a change",
+        "text": "Try 90 and 100, then 5 and 0, then erase the used field. Read the message after each.",
+        "help": "If the screen shows Infinity, check the limit before dividing. If zero used disappears, check for a blank string first."
+      }
+    ],
+    "check": [
+      "The pairs give 25 percent OK and 0 percent OK. Zero is a valid size.",
+      "Ninety percent gives Warning. The zero limit and the empty used value both give Needs review."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-21",
+    "title": "Make an all-done button that means it",
+    "summary": "Let a reader complete three steps before finishing a task. Undoing one check should reopen the task.",
+    "level": "Starter",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Finish a practice mail checklist.",
+      "Mark a training task complete.",
+      "Keep completion in step with a form."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Show three labeled boxes and a Finish button. Allow Finish only when all are checked. Show Finished once pressed. If a checkbox changes after finishing, clear the finish state. Add Start again. Use these practice values: Steps: Read sample, Check total, Save note.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-21 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Check the first two steps. Try Finish. Then check the third and finish.",
+        "help": "Finish is off for two checks. With all three checked it marks the task Finished."
+      },
+      {
+        "title": "Try a change",
+        "text": "Uncheck Check total. Inspect the status. Recheck it, finish, then press Start again.",
+        "help": "If two boxes enable Finish, count the current checked boxes against all three required steps."
+      }
+    ],
+    "check": [
+      "Finish is off for two checks. With all three checked it marks the task Finished.",
+      "Undoing a check clears Finished. Start again clears all boxes and disables Finish."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-22",
+    "title": "Build a sliding tile game",
+    "summary": "Move nearby number tiles into one empty space. Work a one-move puzzle and try a trick move.",
+    "level": "Intermediate",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Show moves allowed between stages of a mail job.",
+      "Build a training exercise with valid step order.",
+      "Make a sliding puzzle with a win state."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make four large grid buttons. A tile can move only if it shares a side with the empty square. Count legal moves. On the solved board announce a win and freeze moves. Reset returns to the starting layout. Use these practice values: Use a two-by-two board. Start [1,2,empty,3]. The goal is [1,2,3,empty].",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-22 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "At the start click tile 2 diagonally across from empty. Then click tile 3. Read the board and move count.",
+        "help": "The diagonal click changes nothing. Tile 3 slides left. The solved board shows one move."
+      },
+      {
+        "title": "Try a change",
+        "text": "Reset. Click tile 1, then tile 1 again to bring it back. Finish with tile 3.",
+        "help": "If tile 2 moves on the first click, compare the row and column distances. Their sum should be one."
+      }
+    ],
+    "check": [
+      "The diagonal click changes nothing. Tile 3 slides left. The solved board shows one move.",
+      "This route also solves the board. It takes three legal moves."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-23",
+    "title": "Build a rate chart with an honest scale",
+    "summary": "Compare two toy plans. Find the point where the cheaper plan changes as use grows.",
+    "level": "Intermediate",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Compare fake per-mailbox report costs.",
+      "Estimate two ways to handle a team task.",
+      "Build a tool for comparing two plans."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a chart and a number box for whole uses. Print both totals beside their bars and mark the cheaper plan or Tie. Both bars must use the same scale. Reject negative or fractional use counts. Use these practice values: Plan A costs 2 coins for each use. Plan B costs 5 coins plus 1 coin per use. Try 0, 4, 5 and 6 uses.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-23 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Set uses to 4, then 5, then 6. Compare the labels and the bars.",
+        "help": "At 4, A costs 8 and B costs 9. At 5 they tie at 10. At 6, B costs 11 and A costs 12."
+      },
+      {
+        "title": "Try a change",
+        "text": "Try 0 and then -1. Look at both the result and the error area.",
+        "help": "If both bars look full at 4, give them a shared maximum. Check the printed numbers even when the picture looks right."
+      }
+    ],
+    "check": [
+      "At 4, A costs 8 and B costs 9. At 5 they tie at 10. At 6, B costs 11 and A costs 12.",
+      "Zero uses gives 0 for A and 5 for B. A negative count gives an error and no fresh winner."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-24",
+    "title": "Build a shared-file change viewer",
+    "summary": "Show which titles were added, removed or changed between two small lists.",
+    "level": "Intermediate",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Compare two sample mail folder lists.",
+      "Review changes to a file catalog.",
+      "Show what changed after an app update."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build two editable lists and a Compare button. Match by ID. Show added, removed, renamed and same in separate groups. Show old and new titles for renames. Reject duplicate IDs in either list. Use these practice values: Old rows: S1=Map, S2=Guide. New rows: S1=Map, S2=Field Guide, S3=Rules.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-24 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Compare the samples. Check every group against the three IDs.",
+        "help": "S1 is the same, S2 is renamed from Guide to Field Guide, S3 is added. None are removed."
+      },
+      {
+        "title": "Try a change",
+        "text": "Delete S1 from the new list and compare. Then add a second S2 in the new list and compare again.",
+        "help": "If S2 looks removed and added, match IDs before comparing titles. Do not use the title as the matching key."
+      }
+    ],
+    "check": [
+      "S1 is the same, S2 is renamed from Guide to Field Guide, S3 is added. None are removed.",
+      "S1 becomes removed. The repeated S2 gets a clear error before a new comparison is shown."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-25",
+    "title": "Make a puzzle clock without real waiting",
+    "summary": "Run two timed puzzle rounds. A manual clock makes pause, resume and scoring easy to test.",
+    "level": "Intermediate",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Simulate a timed mail check safely.",
+      "Build a timed training activity.",
+      "Ship a two-round timed game."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a two-round clock game with Start, Tick, Pause, Solve and Replay. While running, Tick uses one tick and Solve finishes the round with points. Running out of ticks ends that round with zero. Next round resets ticks. After two rounds show the final score. Freeze actions while paused or finished. Use these practice values: Round one lasts 3 ticks. Solve button earns 2 points. Round two also lasts 3 ticks.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-25 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Start, Tick, Pause, then try Solve. Resume and Solve once. Start the next round and Tick three times.",
+        "help": "The paused Solve earns nothing. Round one earns 2. Round two times out at 0. Final score is 2."
+      },
+      {
+        "title": "Try a change",
+        "text": "Replay and solve both rounds before time runs out. Try Solve again after the final screen.",
+        "help": "If the paused Solve earns points, give both Tick and Solve the same running-state check."
+      }
+    ],
+    "check": [
+      "The paused Solve earns nothing. Round one earns 2. Round two times out at 0. Final score is 2.",
+      "Replay starts fresh. Two quick solves earn 4. A later click cannot add to 4."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-26",
+    "title": "Find a daily peak from pretend counts",
+    "summary": "Add rows that happened on the same day, then find the busiest day. A tie needs room on the page too.",
+    "level": "Intermediate",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Find the busiest day in a fake mail log.",
+      "Report the peak day in a training signup list.",
+      "Build a simple daily chart."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a report that accepts pasted CSV, a table written as text. Add whole nonnegative counts within each date. Print day totals in date order. Name every date tied for the biggest total. Skip bad count rows and show their line numbers, counting the heading as line one. Use these practice values: Table date,count: 2027-01-01,3 then 2027-01-02,5 then 2027-01-01,2 then 2027-01-03,0.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-26 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Load the four data rows. Read each day total and the peak list.",
+        "help": "The totals are 5, 5 and 0. January 1 and 2 share the peak."
+      },
+      {
+        "title": "Try a change",
+        "text": "Change the last count from 0 to 7. Add another line with the same date and a blank count. Run again.",
+        "help": "If only one date shows in the original tie, collect all days whose total matches the high score."
+      }
+    ],
+    "check": [
+      "The totals are 5, 5 and 0. January 1 and 2 share the peak.",
+      "January 3 alone leads with 7. The blank on line 6 is listed for review. It does not replace the stored 7."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-27",
+    "title": "Build a practice mailbox finder",
+    "summary": "A search can find the right box even if text carries extra spaces. Check what happens when two rows share a label.",
+    "level": "Intermediate",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Find a fake mailbox by label.",
+      "Search a directory with repeated team names.",
+      "Connect a search list to a detail view."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make an editable search with a results list. Match part of the label regardless of case and outer spaces. Add Active only. Display IDs with labels so repeated names stay separate. Select a result to reveal its status. Clear the selection when that result is filtered away. Use these practice values: Test boxes: Q1 Support active, Q2 Support paused, Q3 Stores active.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-27 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Search for SUP with extra spaces. Select Q2. Turn on Active only and look at the detail area.",
+        "help": "First Q1 and Q2 appear. Active only leaves Q1 and clears the old Q2 details."
+      },
+      {
+        "title": "Try a change",
+        "text": "Clear the search while keeping Active only checked. Search stone. Turn the filter off and clear the search.",
+        "help": "If Q2 details linger after filtering, test whether its ID is still visible before drawing the detail panel."
+      }
+    ],
+    "check": [
+      "First Q1 and Q2 appear. Active only leaves Q1 and clears the old Q2 details.",
+      "The active list shows Q1 and Q3. Stone has no matches. The last clear shows all three rows."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-28",
+    "title": "Check totals before saving a round",
+    "summary": "Let readers edit a round and see the new total. Cancel should take them back to the saved version.",
+    "level": "Intermediate",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Preview an edit to a fake mail count.",
+      "Check draft and saved form values.",
+      "Add Save and Cancel to a scorecard."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a two-row editor. Keep a saved score and a draft box for each row. Show separate draft and saved totals. Save valid whole scores including zero and negatives. Cancel restores the saved values. A blank draft blocks saving. Add Restore sample. Use these practice values: Saved rounds: R1=4 and R2=7. Start total is 11. Use -2 for the R2 edit.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-28 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Edit R2 to -2. Compare both totals before saving. Cancel once. Repeat the edit and Save.",
+        "help": "Before saving the draft is 2 and the saved total is 11. Cancel restores 11. Saving the second edit changes the saved total to 2."
+      },
+      {
+        "title": "Try a change",
+        "text": "Clear R1, try Save, then enter 0 and save. Restore the sample.",
+        "help": "If typing immediately changes the saved total, keep separate copies of the draft and saved rows until Save succeeds."
+      }
+    ],
+    "check": [
+      "Before saving the draft is 2 and the saved total is 11. Cancel restores 11. Saving the second edit changes the saved total to 2.",
+      "A blank blocks the save. With R1 zero and R2 -2 the saved total becomes -2. Reset brings back 11."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-29",
+    "title": "Capstone · Make a fair two-team quiz night",
+    "summary": "Run a four-question quiz from the first turn through the final score. Give each team exactly two chances.",
+    "level": "Advanced",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Build a mail-practice knowledge quiz.",
+      "Host a quick team training contest.",
+      "Ship a two-team game with clear scoring."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a two-team quiz host. Show the team up next, question number, answer buttons, feedback and a Next button. Lock a question after the first answer. Award one point for right answers. Show both final scores and Winner or Tie. Replay returns to question one. Use these practice values: Keys in order: sun, moon, red, blue. Ask four matching questions, each with a correct and a wrong button. Team order is Gold, Green, Gold, Green.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-29 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Get questions one and four right and the other two wrong. Try pressing an answer after it has been locked.",
+        "help": "Gold and Green each score 1. The final screen says Tie. Another answer on a locked question earns nothing."
+      },
+      {
+        "title": "Try a change",
+        "text": "Replay. Answer questions one and three right and the others wrong. Try advancing past the fourth question.",
+        "help": "If Gold gets credit for Green's answer, record the answer and score before moving to the next team's turn."
+      }
+    ],
+    "check": [
+      "Gold and Green each score 1. The final screen says Tie. Another answer on a locked question earns nothing.",
+      "Gold wins 2 to 0. The page stays on the result until Replay. The new game started with both teams at zero."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-30",
+    "title": "Capstone · Build an offline shift handoff",
+    "summary": "Read a fake mailbox list, mark rows reviewed, then save and restore the handoff. A classmate should be able to check the whole trip.",
+    "level": "Expert",
+    "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+    "features": "Use Claude Code to write a local page. Try the page in your browser.",
+    "roles": [
+      "Build a read-only review desk for fake mail data.",
+      "Hand off a checked team list offline.",
+      "Ship a portable app with backup and restore."
+    ],
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a local handoff app in one HTML file. Show all rows and queue counts. Say Missing for a blank and print 0 for zero. Allow a reader to mark rows reviewed. Show reviewed count and known queue total. Add Export JSON and Import JSON from a chosen local file. Validate version, row IDs, counts and review flags before replacing any saved rows. Add Restore sample. Include a button to run saved example checks. No server or account is needed to run the finished page. Use these practice values: Rows: M1 Queue=4, M2 Queue=0, M3 Queue empty. Checked status starts false for each.",
+    "steps": [
+      {
+        "title": "Set up the practice space",
+        "text": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
+        "help": "The selected folder should be empty. In Finder or File Explorer, make a folder named claude-code-30 if you need one."
+      },
+      {
+        "title": "Build the app",
+        "text": "Paste the prompt into the project chat. After it writes index.html, open that file in a browser.",
+        "help": "Look for the controls named in the prompt. If a control is missing, name it in the same chat and ask the helper to add it."
+      },
+      {
+        "title": "Try the sample",
+        "text": "Mark M1 and M2 reviewed. Export the file, restore the sample, then import the export. Check each row and both totals.",
+        "help": "The restored handoff says 2 of 3 reviewed and 4 known items. M2 keeps 0, M3 says Missing. The review flags survive the trip."
+      },
+      {
+        "title": "Try a change",
+        "text": "Try a file with version 99, then one with M1 listed twice. Reopen the HTML while the network is off, load the good export again and run its checks.",
+        "help": "If a failed import wipes the list, read the new file into a temporary list. Replace the old list only after every row passes."
+      }
+    ],
+    "check": [
+      "The restored handoff says 2 of 3 reviewed and 4 known items. M2 keeps 0, M3 says Missing. The review flags survive the trip.",
+      "Both bad files give errors and leave the current handoff untouched. Offline, the good export still restores the same three rows and both totals."
+    ],
+    "sources": [
+      [
+        "Anthropic · start Claude Code",
+        "https://code.claude.com/docs/en/desktop-quickstart"
+      ],
+      [
+        "Anthropic · work on a project",
+        "https://code.claude.com/docs/en/common-workflows"
       ]
     ]
   }

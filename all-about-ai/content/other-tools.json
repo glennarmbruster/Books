@@ -1,14 +1,14 @@
 [
   {
     "id": "grok",
-    "title": "Grok and the trail back to a post",
-    "summary": "Grok can find what an organization said on X. A post, its date, and the policy behind it are three different pieces of evidence.",
+    "title": "Follow a claim back to its source with Grok",
+    "summary": "Check whether an announcement says what someone thinks it says.",
     "intro": {
-      "what": "Grok is xAI’s assistant and model family. It is useful when the source you need is a public statement on X.",
-      "features": "Depending on the product and enabled tools, it can search public posts or the web, interpret images and return text. Grok Imagine provides separate image and video generation.",
-      "exchange": "Trace a widely shared mail-delay claim to its original post and timestamp. Confirm tenant impact in your own service-health records.",
-      "m365": "Identify who announced a feature and then look up its rollout, license and platform in Microsoft’s documentation.",
-      "developer": "Find public reactions to a feature idea or try Imagine for a cover. Inspect the original feedback and the exported artwork.",
+      "what": "Grok is a helper that can answer questions. Some versions can search the web or X for public posts. Grok Bot is a separate way to give a helper a task.",
+      "features": "You can look for an original post, read a public policy or try a tool made for pictures, video or speech.",
+      "exchange": "Look up a public mail service notice. Compare the time in the post with the service’s own update.",
+      "m365": "Find the original announcement behind a public feature summary. Check its date.",
+      "developer": "Find the page that explains a tool your app uses. Save the link with your notes.",
       "sources": [
         [
           "Grok API · searching X",
@@ -26,10 +26,9 @@
     },
     "sections": [
       {
-        "title": "Trace a claim to the speaker",
+        "title": "Find out how far the claim goes",
         "paragraphs": [
-          "Suppose someone says a cruise line changed embarkation times. Ask for posts from the official account within the sailing month. Require the post link, publication date, port and sailing date. Open the link. Then compare the wording with the passenger notice. A genuine post announcing a trial in one port can still be poor evidence for a fleetwide rule.",
-          "In an application using Grok, X Search and Web Search are tools the developer can enable. X Search is a good fit for recovering the original announcement. Web Search is useful for finding the operator’s policy page. A plain model call that has neither tool gets neither source of fresh information."
+          "Imagine a post says a ferry now leaves at noon. Open Grok and ask it to find the operator’s original post. Ask for the date, route and sailing day. Open the link. One noon sailing on Saturday does not tell you when Monday’s ferry leaves. Check the official timetable too. An app you build needs search enabled to get fresh posts."
         ],
         "sources": [
           [
@@ -43,10 +42,9 @@
         ]
       },
       {
-        "title": "Choose an output before choosing a model",
+        "title": "Choose the kind of answer you need",
         "paragraphs": [
-          "Grok 4.7 accepts text and images and returns text through the API. The model has a 500,000-token context window and adjustable reasoning effort. Start with a compact request to extract the text of a sign. Increase effort for a reconciliation of conflicting notices and inspect which one has the later effective date.",
-          "Grok Imagine has separate engines for creating images and video. For a clip, supply a reference frame and describe one motion. For a spoken interface, investigate the Grok Voice family. These choices matter if the deliverable is an image file, a playable clip or a voice conversation."
+          "The API model {{model.xai.grok.name}} accepts pictures and text and writes back in text. Its context window fits {{model.xai.grok.context}}. Try a picture of a short sign. Ask which word is hard to read. To make a clip or a new picture, look for {{model.xai.imagine.name}}. To build spoken chat, look for {{model.xai.voice.name}}. Use the Grok Bot quickstart to practice handing off a small job."
         ],
         "sources": [
           [
@@ -63,21 +61,21 @@
   },
   {
     "id": "perplexity",
-    "title": "Perplexity and Comet",
-    "summary": "Start with a question in Perplexity or bring the assistant to the pages you already have open in Comet.",
+    "title": "Search with Perplexity and read with Comet",
+    "summary": "Ask for a source. Open it and check the sentence behind the answer.",
     "intro": {
-      "what": "Perplexity is a research assistant with linked sources. Comet is its browser, which can bring an assistant into a browsing session.",
-      "features": "Search can lead back to source pages. Comet can use browsing context, and the Agent API exposes tools for developers building search into an application.",
-      "exchange": "Find the current documentation for a message-trace field, then verify its meaning against the field reference and your own export.",
-      "m365": "Compare published admin instructions across two versions. Open both sources and check the applicable license and release date.",
-      "developer": "Use the API when the app needs sourced, current answers. For an offline reference book, save reviewed material in the edition.",
+      "what": "Perplexity helps you look up an answer. Comet is a browser with a helper beside the pages you open.",
+      "features": "Search can give you source links. Comet can help you read or compare tabs. Its permissions control what the assistant may see.",
+      "exchange": "Find the public help page for a mail command. Read its example before using it in a report.",
+      "m365": "Check a public release note for the date a feature starts. Distinguish it from the date of the post.",
+      "developer": "Compare two tools for making game sounds. Check the terms for saving a sound file.",
       "sources": [
         [
           "Perplexity · the Comet browser",
           "https://www.perplexity.ai/comet"
         ],
         [
-          "Perplexity · Sonar and the Agent API",
+          "Perplexity · Change and retirement guide",
           "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview"
         ],
         [
@@ -92,10 +90,9 @@
     },
     "sections": [
       {
-        "title": "Audit an answer with citations",
+        "title": "Check one answer",
         "paragraphs": [
-          "For a research question, ask Perplexity to find the original document and give its publication and effective dates. For example, ask which transit agency publishes the timetable for a particular airport station. In the cited PDF, check the direction, day of week and date. A source can mention the station without supporting the departure time in the answer.",
-          "For developers, the Agent API combines model selection with tools such as web search and URL fetching. Perplexity ended support for Sonar Chat Completions on September 27, 2026. The migration guide describes forwarding for synchronous and streaming requests and a move to background mode for asynchronous work. Older Sonar examples deserve a date check."
+          "Ask Perplexity for the Saturday hours of a public museum of your choice. Open its source. Does the page actually list Saturday? Does it give hours for the date you picked? If it only links to the museum’s home page, ask for the calendar entry. For an older app, {{model.perplexity.sonar.name}} ended on {{model.perplexity.sonar.end}}. The developer guide explains the move to the Agent API."
         ],
         "sources": [
           [
@@ -103,16 +100,15 @@
             "https://www.perplexity.ai/comet"
           ],
           [
-            "Perplexity · Sonar and the Agent API",
+            "Perplexity · Change and retirement guide",
             "https://docs.perplexity.ai/docs/agent-api/migrate-from-sonar/overview"
           ]
         ]
       },
       {
-        "title": "Use the browser for work across pages",
+        "title": "Compare two pages in Comet",
         "paragraphs": [
-          "Comet is Perplexity’s browser, available on desktop and mobile, including iOS. Consider comparing two hotels with their cancellation policies open. Ask the assistant to extract the deadline, local time zone, deposit and fee for each reservation. Open each cited rate condition yourself before booking. An aggregator’s generic cancellation page may describe a different rate.",
-          "Decide which tabs a task needs. Comet’s privacy controls describe the information shared when its assistant needs personal browsing context. Use the device’s own controls to check permissions and feature availability. A desktop walkthrough can show controls that are arranged differently on the iPad."
+          "Open two public sample booking pages. Ask Comet which deadline each gives for changing a booking. Request the date, time, time zone and source line. Read both pages. A general help page may describe a different ticket. Check which tabs you shared in Comet’s controls. Its iPad controls may sit in a different place from the desktop controls."
         ],
         "sources": [
           [
@@ -132,36 +128,87 @@
     ]
   },
   {
-    "id": "other-models",
-    "title": "Mistral, Gemma and running a model locally",
-    "summary": "A specialist for recorded speech and a model you can run on your own hardware solve different problems. Here is how to try each.",
+    "id": "meta-muse",
     "intro": {
-      "what": "Mistral Vibe is an assistant for work and code. Voxtral is an audio model family. Gemma is Google’s family of downloadable models that can run on compatible hardware.",
-      "features": "Vibe offers chat and coding sessions. Voxtral models support specialized speech tasks. Gemma lets a developer choose the local runtime, model size and hardware.",
-      "exchange": "A local model can summarize an approved, sanitized mail-flow example. Check the event order against the export and confirm the runtime stays local.",
-      "m365": "Test transcription of synthetic meeting audio for names and speaker changes before considering it for a documentation workflow.",
-      "developer": "Try a small local model for searchable personal notes. Put the device offline and measure startup time and memory with a real file.",
+      "what": "Muse is Meta’s personal AI helper. You can give it a goal, leave it to work and then review the result.",
+      "features": "It can draft a plan, make a file, set up a later task or work with an app you connect. Its Library holds finished files.",
+      "exchange": "Draft a checklist for reviewing a pretend mailbox report. Tick off each check as you try it.",
+      "m365": "Make a plan from a pretend meeting note. Check each date against the note.",
+      "developer": "Use Muse to draft the rules for a card game. Play a round on paper to spot missing rules.",
+      "sources": [
+        [
+          "Meta · meet Muse",
+          "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+        ],
+        [
+          "Meta · get started",
+          "https://www.meta.com/help/superintelligence/1331373868832401/"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Give it a tiny job",
+        "paragraphs": [
+          "Open the Muse quickstart in this book. You can follow the example on paper if you cannot use the service. Give it this made-up note: “Game night. Bring cards and a pencil. Set up at six.” Ask for a short checklist. Does it include both items? Did it keep six as the setup time? Ask it to fix one missing detail."
+        ],
+        "sources": [
+          [
+            "Meta · get started",
+            "https://www.meta.com/help/superintelligence/1331373868832401/"
+          ]
+        ]
+      },
+      {
+        "title": "Check the result before sharing it",
+        "paragraphs": [
+          "If Muse made a file, open Library and find its title. Open the file and read the actual words. A message saying “done” tells you to look for the result. It still needs a check. Later, try the illustrated lessons on reminders, linked apps and approvals. You can practice the checklist above without linking an inbox."
+        ],
+        "sources": [
+          [
+            "Meta · linked apps",
+            "https://www.meta.com/help/superintelligence/1687253048996149/"
+          ],
+          [
+            "Meta · meet Muse",
+            "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+          ]
+        ]
+      }
+    ],
+    "title": "Meet Meta Muse",
+    "summary": "Give a personal helper one small job and inspect what comes back."
+  },
+  {
+    "id": "other-models",
+    "title": "Try a speech tool or run a model offline",
+    "summary": "Learn the difference between downloading this book and downloading an AI that can answer new questions.",
+    "intro": {
+      "what": "Mistral Vibe can help with writing and code. A speech model works with sound. A local model runs on the computer you have in front of you.",
+      "features": "You can test a minute of audio, try a coding chat or download a model and a compatible app to use it.",
+      "exchange": "Use a local model on a small pretend mail report. Compare one answer with a row.",
+      "m365": "Try a short sample recording. Check which speaker gave the meeting time.",
+      "developer": "Use a small local model to sort five game items into groups. Test it again with the network off.",
       "sources": [
         [
           "Mistral · Vibe",
           "https://mistral.ai/products/vibe/"
         ],
         [
-          "Mistral · Voxtral language support",
+          "docs.mistral.ai · Model details",
           "https://docs.mistral.ai/studio/audio/specs-and-limits/languages"
         ],
         [
-          "Google · Gemma 4 models and memory requirements",
+          "Google · Model details",
           "https://gemma.ai/models/gemma-4/"
         ]
       ]
     },
     "sections": [
       {
-        "title": "A specialist for voice or code",
+        "title": "Listen to one minute first",
         "paragraphs": [
-          "Mistral Vibe, formerly Le Chat, is the company’s assistant for work and coding. Its product page distinguishes chat from coding sessions. For recorded speech, the Voxtral family offers specialized audio capabilities. Check the model’s supported languages and direction of conversion before selecting it.",
-          "For a recorded bilingual meeting, transcribe a one-minute sample containing names, overlaps and a switch in language. Mark omissions and misattributed speakers. A fluent written summary can conceal mistakes made during transcription."
+          "Mistral Vibe offers chat and coding sessions. The {{model.mistral.voxtral.name}} family includes tools for speech. Look up the languages and tasks the model supports. Make a pretend recording with two voices, a pause and a number. Ask for a transcript. Play back the number. Check which person said it. A smooth summary can hide a wrong word."
         ],
         "sources": [
           [
@@ -169,20 +216,19 @@
             "https://mistral.ai/products/vibe/"
           ],
           [
-            "Mistral · Voxtral language support",
+            "docs.mistral.ai · Model details",
             "https://docs.mistral.ai/studio/audio/specs-and-limits/languages"
           ]
         ]
       },
       {
-        "title": "Run inference without a network",
+        "title": "Make a real offline test",
         "paragraphs": [
-          "Google’s Gemma family offers downloadable model weights. Weights are the learned numerical parameters. A compatible inference application loads those weights and runs the model on your device. Google’s Gemma 4 guide lists model sizes, input types and memory estimates. The weights, runtime, context length and working memory must all fit the hardware.",
-          "For a flight, download the model and runtime before leaving. Disable the network, relaunch, and try a fresh prompt against a locally saved document. Check whether the application quietly uses an online service for search, speech or document extraction. Downloading this field guide saves its chapters. Running a local AI requires a separate setup."
+          "Google offers downloadable models such as {{model.google.gemma.name}}. A model download holds the numbers an AI learned. You also need an app that can load that exact format. Check the memory it needs before downloading. Open the app once while online. Turn the network off, restart the app and ask a new question about a file saved on the device. A saved answer alone does not prove that a new question works."
         ],
         "sources": [
           [
-            "Google · Gemma 4 models and memory requirements",
+            "Google · Model details",
             "https://gemma.ai/models/gemma-4/"
           ]
         ]
@@ -191,14 +237,14 @@
   },
   {
     "id": "browser-tools",
-    "title": "Chrome add-ins and AI browsers",
-    "summary": "A chat tab, a built-in browser assistant and an extension can see different things, even if they use a related model.",
+    "title": "What can a browser helper see?",
+    "summary": "Use two small pages to learn which tabs you have shared.",
     "intro": {
-      "what": "A browser assistant uses information from a page or tab. It can be built into the browser, as with Gemini in Chrome or Comet, or supplied by an extension such as Claude in Chrome.",
-      "features": "Depending on the tool, it can summarize the current page, compare shared tabs or interact with controls. Desktop Chrome offers site-access settings for extensions.",
-      "exchange": "Compare two public troubleshooting articles side by side. Share only the pages you intend and verify the applicability to your Exchange version.",
-      "m365": "Use it to read policy documentation. An assistant operating a signed-in admin page may be able to take real actions with that identity.",
-      "developer": "Preview a personal app in a test profile. Give the assistant a concrete layout to inspect and repeat the check on iPad.",
+      "what": "A browser is an app such as Chrome or Safari that opens websites. An extension is a tool added to a browser. Some browsers include their own AI helper.",
+      "features": "A helper can read a page you share or work inside a browser. Its access depends on the app, its settings and the device.",
+      "exchange": "Compare two public mail help pages. Check which page the helper actually quoted.",
+      "m365": "Ask a helper to explain one paragraph from a public meeting guide. Share that paragraph.",
+      "developer": "Open your app’s help page and test whether the helper can find the button named on it.",
       "sources": [
         [
           "Chrome Help · manage extension site access",
@@ -224,10 +270,9 @@
     },
     "sections": [
       {
-        "title": "Identify what has access",
+        "title": "Share just what the job needs",
         "paragraphs": [
-          "If a passenger-fare PDF is open in another tab, a plain chat only has the material you give it or that its own tools can reach. A built-in assistant may be able to use a shared tab. A desktop extension can request access to selected websites and, depending on the extension, interact with their controls. Comet provides an assistant within its own browser.",
-          "In desktop Chrome, open the extension’s details and inspect site access. Where supported, limit access to a click or specific sites. If all a task needs is one paragraph, selecting it and pasting it into a chat makes the input easy to inspect. Read what a tool plans to submit before letting it act in a signed-in account."
+          "If you need help with one sentence, copy it into chat. For a job across two tabs, open the browser helper and check which tabs it can read. In Chrome, go to Extensions and open the tool’s details. See whether you can limit access to selected sites or to one click. Read a draft before letting a helper press a button that sends it."
         ],
         "sources": [
           [
@@ -249,10 +294,9 @@
         ]
       },
       {
-        "title": "Match the instructions to your device",
+        "title": "Try a two-page test",
         "paragraphs": [
-          "On a desktop, Chrome Web Store extensions can add a side panel or page controls. Chrome’s phone option to add an extension to desktop queues it for your computer. On iPad, begin with the provider’s supported app or browser and check its mobile instructions.",
-          "Quick test: open two public pages with different opening hours. Ask for one row per page and the source URL for each. A correct answer that only quotes the active tab tells you something about that setup. Repeat with the second page explicitly shared before judging the underlying model."
+          "On a computer, open two public pages with different hours. Share one page and ask for both sets of hours. Check which page the answer actually cites. Share the second page and ask again. On iPad, use a supported app or browser. Choosing “Add to desktop” on a phone can queue the extension for your computer."
         ],
         "sources": [
           [

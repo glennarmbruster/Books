@@ -1,21 +1,23 @@
-# Devin Lab 1 · Read-only Exchange Online mailbox inventory
+# Make a practice mailbox report
 
-Use PowerShell 7 on a workstation. The rehearsal uses synthetic mailboxes on the reserved example.test domain. It needs no Exchange module, credentials or connection. The iPad book has the full guided lab.
+Use a computer with PowerShell 7. All the mailboxes in this kit are made up. The practice run reads the CSV file on your computer. It needs no sign-in.
 
-## Starter repository
+## Give Devin the exercise
 
-Put mailboxes.csv and Test-Inventory.ps1 in the root of a practice repository available to Devin. Ask Devin to create Get-MailboxInventory.ps1 beside them. Keep Reference/ on your own workstation as the answer key. Run the following in PowerShell from the extracted folder.
+Put mailboxes.csv and Test-Inventory.ps1 in a fresh practice project that Devin can open. Ask it to create Get-MailboxInventory.ps1 beside them. The Reference folder holds a finished answer you can use to compare. Read your new script before running it. Open PowerShell in the folder with the sample CSV and run this test.
 
     ./Test-Inventory.ps1 -Script ./Get-MailboxInventory.ps1
 
-## Run the included answer
+## Try the finished answer
+
+Use a new report file name each time. These commands make a report, show it, and test the script.
 
     ./Reference/Get-MailboxInventory.ps1 -InputCsv ./mailboxes.csv -OutputCsv ./report.csv
     Import-Csv ./report.csv | Format-Table -AutoSize
     ./Test-Inventory.ps1 -Script ./Reference/Get-MailboxInventory.ps1
 
-Use a fresh output filename for each attempt. Expect four rows in address order, two user and two shared mailboxes, followed by five PASS lines from the tests. The last test shadows Get-EXOMailbox with a local function. Review an AI-written candidate before executing it. The fixture harness expects the exact Get-EXOMailbox dependency and parameter names given in the lab.
+Look for four rows sorted by address. Two are user mailboxes and two are shared mailboxes. The test prints five PASS lines. Its last check stands in for the Exchange service, so you can test a broken connection without reaching a real one.
 
-## Optional connected report
+## Run a real report only when you have read access
 
-The book includes a separate procedure for an authorized workstation and a restricted account with permission to read the intended mailboxes. The live path uses one Get-EXOMailbox query and writes the CSV on that workstation. Keep the live CSV outside the practice repository.
+Devin lab 1 explains the optional live step on an approved work computer. It reads mailbox details and saves a report on that computer. Keep real mailbox data out of the practice project.

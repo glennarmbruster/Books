@@ -1,43 +1,43 @@
 [
   {
     "id": "open-antigravity",
-    "title": "Install Google Antigravity and say hello",
-    "summary": "Start with Google’s desktop app. You can have a first conversation before choosing a folder or writing code.",
+    "title": "Open Antigravity for the first time",
+    "summary": "Install the app on a computer. Ask it a question with an answer you can check.",
     "topic": "Google Antigravity",
     "where": [
-      "Windows 10 (64-bit) or Windows 11, or macOS 13 or later on Apple Silicon or 64-bit Intel, with internet and a Google account. An iPad can display the guide while you follow along on the computer.",
-      "Use the Google Antigravity App installer. Google also offers an IDE, a separate editor, and a CLI for typed commands."
+      "Use a Google account and the internet. Google lists 64-bit Windows 10, Windows 11, or macOS 13 or newer on a supported Intel or Apple Silicon Mac. Read along on iPad and use the computer for this lesson.",
+      "On the download page pick Antigravity App. Google also offers a code editor called an IDE and a version that takes typed commands called a CLI."
     ],
     "actions": [
       {
-        "title": "Choose the desktop app",
-        "do": "Open antigravity.google/download on the computer and select the Antigravity App for your operating system.",
-        "see": "The download should be offered by Google on its Antigravity site.",
-        "stuck": "If the instructions begin with a command to paste, switch from CLI to the App download."
+        "title": "Find the app",
+        "do": "In a browser, enter antigravity.google/download in the address box. Choose Antigravity App. Pick the download for your computer.",
+        "see": "Your browser offers to save a file from Google.",
+        "stuck": "If you see a command to type, look for the App choice on the download page."
       },
       {
-        "title": "Open the installer",
-        "do": "On Windows open the downloaded installer from Downloads. On Mac open the downloaded disk image and follow its instruction to place the app in Applications.",
-        "see": "Google Antigravity becomes available from Start or Applications.",
-        "stuck": "Choose the matching Windows architecture or Mac processor build if the installer reports incompatibility."
+        "title": "Install it",
+        "do": "Open Downloads. On Windows, open the installer and follow its steps. On Mac, open the downloaded disk image. Drag the app to Applications if the window asks you to.",
+        "see": "The app appears in Start on Windows or Applications on Mac.",
+        "stuck": "If the installer says your device is unsupported, compare its download label with your computer’s system details."
       },
       {
         "title": "Sign in",
-        "do": "Launch Antigravity and complete its Google sign-in in the browser. Return to the app.",
-        "see": "Some accounts see a work-role question; the Software Engineering option gives a useful layout for these lessons.",
-        "stuck": "Use Skip if the onboarding version offers it and you are unsure which role fits."
+        "do": "Open Antigravity. Follow its Google sign-in screen. After signing in, return to the app window.",
+        "see": "The Home screen offers a box for your first message.",
+        "stuck": "If you are still looking at a browser tab, switch back to the Antigravity app."
       },
       {
-        "title": "Ask one small question",
-        "do": "At Home, type “What is 7 plus 5? Answer with just the number.” Send it.",
-        "see": "The reply should contain 12. This exercise uses no files.",
-        "stuck": "If the app asks you for a project before showing chat, choose a new empty folder using the next lesson."
+        "title": "Check a first answer",
+        "do": "At Home, type “What is 7 plus 5? Reply with one number.” Send the message. Add the numbers yourself.",
+        "see": "The answer should be 12. You just tested the app with a question you can check.",
+        "stuck": "If it asks you to choose a folder, return to Home. The next lesson shows how to add one."
       }
     ],
     "roles": [
-      "Explain an unfamiliar mail term.",
-      "Ask what a rollout is.",
-      "Explore a simple app idea."
+      "Ask what a word in a mail report means.",
+      "Explain a word in a team notice.",
+      "Talk through a first app idea."
     ],
     "sources": [
       [
@@ -52,42 +52,42 @@
   },
   {
     "id": "antigravity-project",
-    "title": "Give the agent one practice folder",
-    "summary": "A project tells Antigravity which folders belong to a task. A plain folder on your computer is enough for this exercise.",
+    "title": "Give an agent one folder to work in",
+    "summary": "Make a folder, create one file in it and open the actual file yourself.",
     "topic": "Google Antigravity",
     "where": [
-      "Windows or Mac, Antigravity App and an empty folder named AI Practice. No GitHub account is required for a local folder."
+      "Use Antigravity App on Mac or Windows. A folder on your own computer is enough. You can do this exercise without a GitHub account."
     ],
     "actions": [
       {
-        "title": "Make the folder",
-        "do": "Open File Explorer on Windows or Finder on Mac. In Documents use New Folder and name it AI Practice.",
-        "see": "The folder opens and has no documents in it yet.",
-        "stuck": "If you already started with a folder from another lesson, make a fresh folder with a slightly different name."
+        "title": "Make a home for the file",
+        "do": "Open Finder on Mac or File Explorer on Windows. In Documents, make a new folder called AI Practice. Open the folder and check that it is empty.",
+        "see": "The top of the window says AI Practice. The folder has no files yet.",
+        "stuck": "If Documents already has that name, use AI Practice Two for this lesson."
       },
       {
-        "title": "Create a project",
-        "do": "In Antigravity click the folder-with-plus New Project icon in the left sidebar, choose Add Folder and select AI Practice. Click Create.",
-        "see": "The conversation can now refer to this project and its selected folder.",
-        "stuck": "A composer labeled No Project is still at Home. Select the project from the sidebar."
+        "title": "Pick the folder",
+        "do": "In Antigravity's left side bar, choose New Project. Its icon is a folder with a plus. Choose Add Folder, select your practice folder and choose Create.",
+        "see": "The project shows the name of the folder you picked.",
+        "stuck": "If it shows Documents, go back and pick just the folder inside it."
       },
       {
-        "title": "Give the first file instruction",
-        "do": "Type “Create a plain text file named welcome.txt in this folder. Its only line should be Welcome aboard.” Press Enter.",
-        "see": "In the engineering layout, choose Local mode if the app asks where to run.",
-        "stuck": "If a worktree is offered, use Local for this plain-folder exercise. A worktree is a separate Git checkout."
+        "title": "Ask for one line",
+        "do": "In the project chat, type “Make welcome.txt in this folder. Put only Welcome aboard on the first line.” Send it.",
+        "see": "The helper reports that it wrote a file called welcome.txt.",
+        "stuck": "If the reply only shows a sample on screen, ask it to save the sample as a file in this project."
       },
       {
-        "title": "Open the result yourself",
-        "do": "Return to the AI Practice folder in Finder or File Explorer and open welcome.txt.",
-        "see": "It contains Welcome aboard. You can now point to the result outside the conversation.",
-        "stuck": "If the file is missing, ask Antigravity which folder and filename it used, then compare with your project."
+        "title": "Open the file",
+        "do": "Go back to the folder in Finder or File Explorer. Open welcome.txt and read the words there.",
+        "see": "The file itself says Welcome aboard. That is stronger evidence than a chat saying Done.",
+        "stuck": "If the folder is empty, check the project folder name and let the app finish the saved edit."
       }
     ],
     "roles": [
-      "Practice on a sample runbook file.",
-      "Draft a mock rollout note.",
-      "Create a text file for a sample book."
+      "Keep a fake mail report in its own folder.",
+      "Draft a pretend notice for a team.",
+      "Create the first file in a book app."
     ],
     "sources": [
       [
@@ -102,42 +102,42 @@
   },
   {
     "id": "antigravity-plan",
-    "title": "Read a plan before requesting edits",
-    "summary": "A plan is a proposed sequence of work. Read and revise it before asking the agent to carry it out.",
+    "title": "Read a plan before a helper builds a page",
+    "summary": "Plan a packing list, add a missing item and try the page that the helper makes.",
     "topic": "Google Antigravity",
     "where": [
-      "Antigravity desktop app on Windows or Mac, online, with an empty practice project open."
+      "On Mac or Windows, open Antigravity App. Stay online and choose an empty practice project."
     ],
     "actions": [
       {
-        "title": "Request the plan",
-        "do": "In the project conversation type “/plan Make a one-page packing list with checkboxes for Passport and Charger. Show me the plan before editing files.”",
-        "see": "A planning reply can include an Implementation Plan card.",
-        "stuck": "If the command menu pops up, select Plan and enter the rest as your description."
+        "title": "Ask for a plan",
+        "do": "In the project chat, type “/plan Make one page with checkboxes for Passport and Charger. Show the plan before changing files.” Send your message.",
+        "see": "A plan card appears. It describes the page the helper wants to make.",
+        "stuck": "If it writes a whole page right away, start a fresh practice chat. Choose the plan option and ask it to wait."
       },
       {
-        "title": "Read the proposal",
-        "do": "Select the plan card to open it in the side panel. Find the proposed file and two labels.",
-        "see": "The plan describes what the agent intends to build.",
-        "stuck": "If it only discusses broad goals, ask for the filename, visible labels and a test you can perform."
+        "title": "Read the plan card",
+        "do": "Open the plan card. Look for a page file and the names of both checkboxes. Imagine how you will test it.",
+        "see": "You can point to Passport and Charger in the proposed work.",
+        "stuck": "If an item is missing, name it in a comment or in the project chat."
       },
       {
-        "title": "Change one requirement",
-        "do": "Ask for a third checkbox called Earplugs before starting. Use a comment on the plan or the main conversation.",
-        "see": "The revised plan includes three items.",
-        "stuck": "If it begins implementing early, tell it to pause edits and restate the three agreed labels."
+        "title": "Add one item",
+        "do": "Ask for Earplugs as a third checkbox. Ask to see the new plan before any file edit begins.",
+        "see": "The plan now lists three separate items.",
+        "stuck": "If the plan has a note about Earplugs but the list still has only two items, ask to update the list itself."
       },
       {
-        "title": "Carry it out",
-        "do": "Choose Proceed when offered, or tell the conversation to implement the revised plan. Open the resulting HTML file in your browser.",
-        "see": "You can check each of the three labeled boxes independently.",
-        "stuck": "If you see the source as text, use your browser’s Open File command on the .html file."
+        "title": "Build and play with it",
+        "do": "Choose Proceed if shown, or ask the helper to carry out the plan. Open its HTML page in your browser. Check Charger and then clear it.",
+        "see": "Three boxes appear. Charger changes twice while the other two keep their state.",
+        "stuck": "If the page shows plain text squares, ask for real clickable checkboxes. Open the changed page and try again."
       }
     ],
     "roles": [
-      "Plan a read-only report.",
-      "Scope a guide revision.",
-      "Plan a small form before building it."
+      "Plan a report that only reads mail data.",
+      "Plan a small change to a staff guide.",
+      "List the parts of a form before building it."
     ],
     "sources": [
       [
@@ -152,42 +152,42 @@
   },
   {
     "id": "antigravity-review",
-    "title": "Find the exact line Antigravity changed",
-    "summary": "A diff is a before-and-after view of a file. Use it to check a correction before moving on.",
+    "title": "Find the line a helper changed",
+    "summary": "Read two versions of a sign. Check the one line you asked the helper to change.",
     "topic": "Google Antigravity",
     "where": [
-      "Antigravity App online in a practice project on Windows or Mac. The Agent Edits view can show changes made in a conversation."
+      "Use the Antigravity App on a computer. Open a practice project. The Agent Edits view is where you can inspect one conversation’s changes."
     ],
     "actions": [
       {
-        "title": "Create the original",
-        "do": "Ask the project agent to create a file called sign.txt with two lines, Harbor Notes and Dock 3. Open the file and confirm the original.",
-        "see": "You have a visible baseline on your computer.",
-        "stuck": "If it put both items on one line, ask it to fix that before the next instruction."
+        "title": "Make the sign",
+        "do": "In the project chat, ask for sign.txt with Harbor Notes on the first line and Dock 3 on the next. Open it and read both lines.",
+        "see": "You have a two-line file and you know what it said before the edit.",
+        "stuck": "If the words share one line, ask for a line break after Notes."
       },
       {
-        "title": "Request a single change",
-        "do": "Send “Change Dock 3 to Dock 4 in sign.txt. Leave the title alone.”",
-        "see": "The agent reports the file it edited.",
-        "stuck": "If it creates a copy, ask it to revise the original sign.txt in your selected project."
+        "title": "Change one thing",
+        "do": "Send “Change Dock 3 to Dock 4 in sign.txt. Keep the title exactly the same.” Wait for the edit.",
+        "see": "The helper names sign.txt as the file it changed.",
+        "stuck": "If it changed other files, pause and open the change list before asking for more work."
       },
       {
-        "title": "Open Review",
-        "do": "In the conversation’s Overview panel click Review. If the panel is hidden, use Toggle Overview Panel at the top right. Select Agent Edits and sign.txt.",
-        "see": "The file and its changes appear beside the conversation.",
-        "stuck": "A file created during this conversation may appear entirely new. Use the most recent turn’s changes or compare its final lines with your baseline."
+        "title": "Open the change view",
+        "do": "In the conversation's Overview panel, choose Review. Choose Agent Edits, then sign.txt. Use Toggle Overview Panel at the top right if the panel is hidden.",
+        "see": "You can compare the old Dock 3 line with the new Dock 4 line.",
+        "stuck": "If earlier edits are listed too, open the entry for this file and check the line text before commenting."
       },
       {
-        "title": "Leave precise feedback",
-        "do": "Select the relevant line for a review comment if available, or type “Change Dock 4 to Dock 5 on the second line.” Check sign.txt again.",
-        "see": "The final lines are Harbor Notes and Dock 5.",
-        "stuck": "If you see an earlier version in a text editor, reload the file from disk."
+        "title": "Check a second edit",
+        "do": "Comment on that line, or type “Change Dock 4 to Dock 5 on line two.” Open sign.txt again.",
+        "see": "The title still says Harbor Notes. Line two now says Dock 5.",
+        "stuck": "If the chat says the edit is done but you still see 4, reopen the saved file in the practice folder."
       }
     ],
     "roles": [
-      "Inspect a runbook correction.",
-      "Review a revised deployment date.",
-      "Check a title edit in a book."
+      "Check a correction in a mail guide.",
+      "Read an edited date in a team notice.",
+      "Check one title change in a book app."
     ],
     "sources": [
       [
@@ -202,43 +202,43 @@
   },
   {
     "id": "open-ai-studio",
-    "title": "Open Google AI Studio and run a first prompt",
-    "summary": "AI Studio is Google’s online workbench for trying models. Playground is where you type and run an experiment.",
+    "title": "Open Google AI Studio and run a tiny test",
+    "summary": "Find the Playground, send a question and change one number to see what happens.",
     "topic": "Google AI Studio",
     "where": [
-      "Use a browser on a Mac or Windows PC. On iPad try Safari and rotate to landscape for more room; a desktop is easier for the settings panel.",
-      "AI Studio documents access for users 18 and older in supported regions. Your organization may restrict it."
+      "Use a browser on a Mac or PC. On iPad, turn Safari sideways for extra room. Use an internet connection.",
+      "Google limits AI Studio to eligible accounts, regions and adults 18 and older. Work or school rules may also limit it. A younger reader can solve the samples on paper or watch an eligible adult."
     ],
     "actions": [
       {
-        "title": "Open the website",
-        "do": "Type aistudio.google.com into the address bar, then use your eligible Google account to sign in.",
-        "see": "A Google AI Studio home page or Playground opens.",
-        "stuck": "If you see a general Gemini chat, check that the address starts with aistudio.google.com."
+        "title": "Go to the address",
+        "do": "In the browser address box, type aistudio.google.com and press Enter or Go. Use the Google account that has access.",
+        "see": "You see AI Studio or its account screen.",
+        "stuck": "If you see search results, type the full address again. A message about age or access means your account cannot use this tool."
       },
       {
-        "title": "Find Playground",
-        "do": "Open Playground from the navigation if a blank chat prompt has not already opened. Choose an available text model.",
-        "see": "You should see a text box and a Run control.",
-        "stuck": "A work window showing app source and a preview belongs to Build. Open Playground for this lesson."
+        "title": "Open Playground",
+        "do": "Choose Playground in the menu, unless it is already open. Choose a model that can answer text. A model is the part that makes the answer.",
+        "see": "There is a box for your question and a Run control.",
+        "stuck": "If you see an app and a preview, look for Playground in the main menu."
       },
       {
-        "title": "Send a prompt",
-        "do": "Type “A card costs 4 dollars. I buy two. Reply with the total in dollars.” Click Run.",
-        "see": "The answer is 8 dollars.",
-        "stuck": "If Studio says the selected model requires billing, choose an available model that your account already supports."
+        "title": "Try two cards",
+        "do": "Enter “One card costs 4 dollars. I buy two. Give the total in dollars.” Choose Run. Add 4 and 4 yourself.",
+        "see": "The answer should be 8 dollars.",
+        "stuck": "If the answer includes sales tax, tell it to use only the price and number of cards given."
       },
       {
-        "title": "Run a changed example",
-        "do": "Open a fresh Playground prompt and ask the same question with three cards.",
-        "see": "The result changes to 12 dollars. You have repeated the experiment with one input changed.",
-        "stuck": "If it still says 8, reread the submitted message and confirm the quantity actually changed."
+        "title": "Try three cards",
+        "do": "Start a fresh Playground chat. Change two cards to three and choose Run again.",
+        "see": "The answer changes to 12 dollars. The price per card stays 4 dollars.",
+        "stuck": "If 8 comes back, read your new message. Check that it says three before running it again."
       }
     ],
     "roles": [
-      "Test wording for a sample support response.",
-      "Try extracting a date from an invented notice.",
-      "Try a puzzle-scoring instruction."
+      "Try a short reply to a fake mail question.",
+      "Read a date from a made-up team notice.",
+      "Check a score rule for a puzzle."
     ],
     "sources": [
       [
@@ -257,42 +257,42 @@
   },
   {
     "id": "ai-studio-instructions",
-    "title": "Give a Playground chat a standing rule",
-    "summary": "System Instructions hold the rule for the conversation. The user message supplies an example for that rule to process.",
+    "title": "Give a chat one rule to follow",
+    "summary": "Set a rule once. See if the helper follows it when the next ticket has no color written on it.",
     "topic": "Google AI Studio",
     "where": [
-      "Google AI Studio Playground in an online desktop browser. The same controls can be easier to find in iPad landscape."
+      "Use AI Studio Playground in a browser with an eligible account. The settings are easier to see in a wide window. On iPad, try turning the screen sideways."
     ],
     "actions": [
       {
-        "title": "Open the controls",
-        "do": "In a new Playground chat click Run settings, the tuning-controls icon at the top right. Find System Instructions.",
-        "see": "The instruction editor is separate from the ordinary text box.",
-        "stuck": "If you only see a build preview, switch to Playground and start a text prompt."
+        "title": "Find the rule box",
+        "do": "Start a new Playground chat. Open Run settings at the top right. Find System Instructions. This box holds rules for the chat.",
+        "see": "You can see the rule box and a separate box for ordinary messages.",
+        "stuck": "If settings are hidden, widen the window or reopen the controls at the top right."
       },
       {
-        "title": "Set a rule",
-        "do": "In System Instructions enter “Answer with the color word only. If no color is stated, answer UNKNOWN.”",
-        "see": "The rule stays available while this prompt is open.",
-        "stuck": "If you accidentally sent it as a chat message, copy it into System Instructions and start the example again."
+        "title": "Write one rule",
+        "do": "In System Instructions, put “Answer with the color word only. If the card gives no color, answer UNKNOWN.” Leave this rule there.",
+        "see": "The rule remains in place as you move to the normal message box.",
+        "stuck": "If it appears inside the conversation as a question, move it to System Instructions."
       },
       {
-        "title": "Try a positive input",
-        "do": "In the ordinary text box type “The ticket is blue.” Click Run.",
-        "see": "The intended result is blue, with no sentence around it.",
-        "stuck": "If the answer adds an explanation, ask it to follow the output rule and check which field contains that rule."
+        "title": "Try a clear case",
+        "do": "In the ordinary box, write “The ticket is blue.” Choose Run. Compare the reply with the rule above.",
+        "see": "A correct reply is just blue.",
+        "stuck": "If it gives a whole sentence, check that you saved the rule in the chat you are using."
       },
       {
-        "title": "Try a missing input",
-        "do": "In the same chat send “The next ticket has no printed color.”",
-        "see": "The expected result is UNKNOWN. The earlier blue ticket supplies no color for this new one.",
-        "stuck": "If the previous color carries over, add “Treat each ticket independently” to the instruction and retest both tickets."
+        "title": "Try a missing color",
+        "do": "In that same chat, send “This new ticket has no printed color.” Look first for a color on this ticket alone.",
+        "see": "The answer should be UNKNOWN. Blue belonged to the earlier ticket.",
+        "stuck": "If the helper remembers blue, add “Use only the ticket in this turn” to the rule and test both tickets again."
       }
     ],
     "roles": [
-      "Standardize a sample triage label.",
-      "Normalize a rollout status field.",
-      "Set the rules for a word-game answer."
+      "Give each mail slip the same kind of label.",
+      "Use the same labels for each team form.",
+      "Make a word game give one-word answers."
     ],
     "sources": [
       [
@@ -303,42 +303,42 @@
   },
   {
     "id": "ai-studio-build",
-    "title": "Build a two-button score counter in a browser",
-    "summary": "Build turns a description into an app you can try in a preview. This practice app only needs a number and two buttons.",
+    "title": "Make a working score counter in Build",
+    "summary": "Describe a small app, use its real buttons and ask for a change you can test.",
     "topic": "Google AI Studio",
     "where": [
-      "Open aistudio.google.com/apps on Mac or Windows while online. The wider desktop view is helpful for seeing chat and preview together."
+      "Open aistudio.google.com/apps on a computer with eligible AI Studio access. Stay online to build the page. A wide window leaves space for the chat and the app preview."
     ],
     "actions": [
       {
-        "title": "Open Build",
-        "do": "Visit Google AI Studio and open Build, or go directly to aistudio.google.com/apps. Start a new app from a prompt.",
-        "see": "A box invites you to describe what to build.",
-        "stuck": "If you have Run settings for a chat and no app preview, choose Build in the navigation."
+        "title": "Find Build",
+        "do": "Go to AI Studio and choose Build, or open aistudio.google.com/apps. Choose to start a new app from a prompt.",
+        "see": "You see a place to describe the app you want to make.",
+        "stuck": "If your screen shows Playground, return to the main menu and open Build."
       },
       {
-        "title": "Describe the counter",
-        "do": "Enter “Make a browser score counter. Start at zero. Add one adds 1; Reset returns to zero. Show the number in large type. No account or database.” Submit the prompt.",
-        "see": "The builder prepares files and displays an interactive preview.",
-        "stuck": "Give it time to finish. If the preview reports an error, copy the visible error into the build conversation and ask for a repair."
+        "title": "Describe the buttons",
+        "do": "Send “Make a score counter for a browser. Start at zero. Add one increases the score by 1. Reset returns it to 0. Use big numbers. Let it work without a login.”",
+        "see": "The preview shows a score of 0 and both buttons.",
+        "stuck": "If the builder gives only a description, ask it to make and show the working page."
       },
       {
-        "title": "Use the preview",
-        "do": "Click Add one twice and Reset once in the running app.",
-        "see": "The values progress from 0 to 1 to 2, then back to 0.",
-        "stuck": "If clicking only selects an element for editing, switch back to interacting with the live preview."
+        "title": "Try the preview",
+        "do": "Click Add one two times and look at the score after each click. Click Reset.",
+        "see": "The numbers go 1, 2, then 0. You have tested both buttons on the running page.",
+        "stuck": "If the number freezes, tell Build which button you pressed and the number it should show."
       },
       {
-        "title": "Revise and retest",
-        "do": "Ask the builder to add a Subtract one button that can reach negative scores. At zero, click it once.",
-        "see": "The counter shows −1, and Reset returns it to 0.",
-        "stuck": "A floor of zero indicates that the requested negative-score behavior still needs correcting."
+        "title": "Ask for a change",
+        "do": "Ask for a Subtract one button that allows negative scores. From zero, press it once. Try Reset again.",
+        "see": "The new button gives -1. Reset still gives 0.",
+        "stuck": "If it stops at zero, tell the builder that a penalty can put the score below zero. Retest the three buttons."
       }
     ],
     "roles": [
-      "Prototype a mock incident counter.",
-      "Try an inventory review form.",
-      "Build a scoreboard for a card game."
+      "Build a fake mail-ticket counter.",
+      "Try a count field for a shared list.",
+      "Make a score button for a card game."
     ],
     "sources": [
       [
@@ -353,42 +353,42 @@
   },
   {
     "id": "gemini-first-chat",
-    "title": "Start with Gemini on an iPad, Mac or PC",
-    "summary": "A chat is a conversation in which you type a question and can refer back to its answer. Try one with numbers you can check.",
+    "title": "Open Gemini and ask a second question",
+    "summary": "A chat can use facts from the turn before. Check its memory with a small packing problem.",
     "topic": "Gemini",
     "where": [
-      "On iPad use the Google Gemini app published by Google, or visit gemini.google.com in Safari. On Windows or Mac the website is enough."
+      "On iPad use Google Gemini from Google in the App Store, or open gemini.google.com in Safari. The website also works on Mac and PC. Use an account that may access Gemini."
     ],
     "actions": [
       {
-        "title": "Open the right product",
-        "do": "On iPad, open the App Store and search for Google Gemini. Check the publisher, then choose Get or Open. On a computer visit gemini.google.com.",
-        "see": "The Gemini home screen has a box for a question.",
-        "stuck": "If you want to skip installing an app, use the official website instead."
+        "title": "Open Gemini",
+        "do": "On iPad, search the App Store for Google Gemini. Choose Google's listing and tap Get or Open. In a browser, enter gemini.google.com.",
+        "see": "Gemini opens or asks you to sign in.",
+        "stuck": "If a search turns up several apps with similar names, check who publishes the app."
       },
       {
-        "title": "Choose the account",
-        "do": "Sign in if prompted and start a new chat. Check the account shown under the profile picture.",
-        "see": "An empty chat opens without earlier messages.",
-        "stuck": "If the screen shows workspace policies or features you did not expect, check whether you selected a work or personal account."
+        "title": "Check the account",
+        "do": "Sign in if asked. Open the profile picture and check the account. Return to the main screen and start a new chat.",
+        "see": "A blank place to enter your question is ready.",
+        "stuck": "If the account is managed by a school or a workplace, the features on it may differ. Use an account approved for the exercise."
       },
       {
-        "title": "Try a small fact pattern",
-        "do": "Enter “I packed two red shirts and one blue shirt. How many shirts did I pack? Use only these facts.” Send the message.",
-        "see": "The expected answer is three shirts.",
-        "stuck": "If dictation changed the words, read your submitted message and type a correction."
+        "title": "Give it the facts",
+        "do": "Send “I packed two red shirts and one blue shirt. How many shirts is that? Use only these facts.” Count the shirts before you read the reply.",
+        "see": "The answer is three shirts.",
+        "stuck": "If it gives an outfit list, ask again for just the total number of shirts."
       },
       {
-        "title": "Ask a follow-up",
-        "do": "In the same chat type “I remove one red shirt. How many red and blue shirts remain?”",
-        "see": "One red and one blue shirt remain. The second question relied on the first.",
-        "stuck": "If you opened a new chat, re-enter the original quantities so it has the starting facts."
+        "title": "Change one fact",
+        "do": "Stay in this chat. Send “I take out one red shirt. How many red and blue shirts remain?”",
+        "see": "One red and one blue remain. Together that makes two.",
+        "stuck": "If you started a new chat by mistake, paste the original shirt counts again before asking about the change."
       }
     ],
     "roles": [
-      "Practise summarizing a fictional support note.",
-      "Rewrite a mock change announcement.",
-      "Outline a feature on your iPad."
+      "Summarize a pretend mail support note.",
+      "Rewrite one sentence from a team notice.",
+      "Plan a simple feature on an iPad."
     ],
     "sources": [
       [
@@ -403,43 +403,43 @@
   },
   {
     "id": "gemini-task-begin",
-    "title": "Find Tasks, formerly Gemini Spark",
-    "summary": "A task can carry out several steps and produce a file. The first exercise uses a made-up schedule so no connected accounts are needed.",
+    "title": "Give Gemini one small task to finish",
+    "summary": "Let Gemini make a three-line plan. Check the times in the finished work before you use it.",
     "topic": "Gemini Tasks",
     "where": [
-      "Use the Gemini mobile app or gemini.google.com while online. Access depends on age, account, region and rollout.",
-      "Look for Task above the message box. Older guides may call the same capability Spark."
+      "Use Gemini on the web or in its mobile app while online. Age, region, account and rollout can affect access.",
+      "Look for Task above the message box. Older guides call this feature Spark. You can try the math in an ordinary chat if your account has no Task choice."
     ],
     "actions": [
       {
         "title": "Choose Task",
-        "do": "Open a new Gemini thread and select Task above the text box. Look at its model menu and leave the default selection.",
-        "see": "The composer is set for a task.",
-        "stuck": "If Task is missing, consult the linked eligibility page. You can practise the schedule prompt in Chat, but a chat answer cannot demonstrate background task progress."
+        "do": "Start a new Gemini chat. Select Task above the text box. Look at the model menu. Leave the current choice in place.",
+        "see": "The message area shows you are starting a task.",
+        "stuck": "If the option is missing, use an ordinary chat to try the sample. The separate progress view requires Task access."
       },
       {
-        "title": "Give a bounded job",
-        "do": "Enter “Using only this information, make a one-page text packing schedule. Dock opens 08:00. Ferry boards 09:15. Leave home 30 minutes before the dock opens. Put events in order.” Submit.",
-        "see": "A new task thread appears with progress or an initial reply.",
-        "stuck": "If Gemini offers to search email or a calendar, clarify that every required fact is in the request."
+        "title": "Set one job",
+        "do": "Send “Make a one-page schedule from these facts. The dock opens at 08:00. Boarding starts at 09:15. Leave 30 minutes before the dock opens. Put all three in time order.”",
+        "see": "Gemini starts work with enough facts to figure out the departure time.",
+        "stuck": "If it asks which dock or day, say this is a pretend schedule and the three given times are all you need."
       },
       {
-        "title": "Inspect progress",
-        "do": "Open the task thread from Menu and tap its progress chip or Task progress at the top.",
-        "see": "You can see the work or status associated with this thread.",
-        "stuck": "If it has finished already, open the result in the same thread and inspect its time ordering."
+        "title": "Peek at progress",
+        "do": "Open the task from Menu. Tap its progress chip or choose Task progress at the top.",
+        "see": "You can see progress or that the task has finished.",
+        "stuck": "If you see a different conversation, return to Menu and find the one with the dock schedule."
       },
       {
-        "title": "Read the result",
-        "do": "Open the text or file it produced. Compare all three times against the request.",
-        "see": "Leave at 07:30, arrive for the dock opening at 08:00, and board at 09:15.",
-        "stuck": "If the departure time is 08:45, ask which time the thirty minutes was subtracted from."
+        "title": "Read what it made",
+        "do": "Open the finished text or file. Count back half an hour from 08:00. Check the order of all three lines.",
+        "see": "Leave at 07:30, dock opens at 08:00 and board at 09:15.",
+        "stuck": "If it says 08:45, show which event the half hour belongs to. Ask it to count back from dock opening."
       }
     ],
     "roles": [
-      "Draft a mock maintenance timeline.",
-      "Plan a fictional rollout schedule.",
-      "Prepare an itinerary for a personal travel app."
+      "Draft a pretend mail-check schedule.",
+      "Put steps for a team change in time order.",
+      "Plan the stops for a travel app."
     ],
     "sources": [
       [
@@ -454,42 +454,42 @@
   },
   {
     "id": "gemini-research-begin",
-    "title": "Open Deep Research and inspect one citation",
-    "summary": "Deep Research prepares a plan and then gathers sources. You control the question and can check the evidence behind an answer.",
+    "title": "Follow a research answer back to its sources",
+    "summary": "Ask Gemini to compare two public pages. Then open each one and decide whether the answer matches it.",
     "topic": "Gemini",
     "where": [
-      "Use Gemini online on a Mac, PC or iPad with Deep Research available to your account. Public sources are sufficient."
+      "Use Gemini online on an iPad, Mac or PC with Deep Research available to your account. This exercise uses public help pages."
     ],
     "actions": [
       {
-        "title": "Select the research tool",
-        "do": "Open a new Gemini chat. On iPad tap Add files or the tools menu beside the text box, then choose Deep Research.",
-        "see": "Deep Research is selected for the next request.",
-        "stuck": "On a computer look in the tools menu. If the option is unavailable, check your plan and usage rather than waiting for ordinary chat to become research."
+        "title": "Choose Deep Research",
+        "do": "Start a new chat. Open the tools menu beside the message box. On iPad, look under Add files or tools. Choose Deep Research.",
+        "see": "Gemini offers to plan a research task.",
+        "stuck": "If your account lacks the tool, practice opening two public sources and comparing them yourself."
       },
       {
-        "title": "Request one comparison",
-        "do": "Enter “Using only official public sources, compare how NASA and ESA describe the Hubble Space Telescope. Give one shared fact and a source from each agency.” Submit.",
-        "see": "Gemini shows a proposed plan for a report.",
-        "stuck": "If it plans a general history, use Edit plan and narrow it to one fact both agencies support."
+        "title": "Ask a narrow question",
+        "do": "Ask “Use the official desktop and iPad help pages for Gemini Notebook. Give me one way to add a source that works on both. Link one page for each device.” Before starting, read the plan.",
+        "see": "The plan calls for two help pages and one shared task. The result will have a clear test.",
+        "stuck": "If the plan wanders into model prices or reviews, ask it to compare only the steps for adding a source."
       },
       {
-        "title": "Begin the work",
-        "do": "Choose Start research and return to the thread when the report is ready. Select Open to read it.",
-        "see": "The report presents an answer with sources.",
-        "stuck": "If the thread is still displaying a plan, confirm that you selected Start research after editing it."
+        "title": "Start the search",
+        "do": "Choose Start research. When Gemini reports that the work is ready, return to the conversation and choose Open.",
+        "see": "The finished report has a claim and links you can follow.",
+        "stuck": "If there is only a plan, use Start research. A plan describes work that has yet to happen."
       },
       {
-        "title": "Follow the evidence",
-        "do": "Open one citation from each agency and find the sentence that supports your chosen shared fact.",
-        "see": "You can point to the fact on both original pages.",
-        "stuck": "If one page merely mentions Hubble, ask for a citation supporting the exact claim and verify the replacement."
+        "title": "Check the links",
+        "do": "Open the two cited help pages. On each page find the part that explains how to add a source. Could you use the proposed method on both devices?",
+        "see": "You can point to the steps on both pages, or say which page does not support the method the report picked.",
+        "stuck": "If a link goes to a general home page, request a direct help page for that device. Read the steps yourself."
       }
     ],
     "roles": [
-      "Compare public mail-flow guidance.",
-      "Research a documented feature rollout.",
-      "Find sources for a trivia book."
+      "Compare two public guides to a mail feature.",
+      "Check the source of a team software claim.",
+      "Find evidence for a science quiz."
     ],
     "sources": [
       [
@@ -504,42 +504,42 @@
   },
   {
     "id": "gemini-notebook",
-    "title": "Build a notebook from two short notes",
-    "summary": "Give Gemini Notebook, formerly NotebookLM, two sources. Find out which one it used to answer a question.",
+    "title": "Make a notebook from two short notes",
+    "summary": "Give Gemini Notebook two sources. Open a source yourself to check where an answer came from. This tool was once called NotebookLM.",
     "topic": "Gemini Notebook",
     "where": [
-      "On iPad, open the Gemini Notebook app if available. On desktop, open the Google notebook experience. Use an eligible account and a fresh notebook."
+      "Use an eligible account. Open Gemini Notebook on your computer or its app on iPad if available. Make a fresh notebook so you know exactly which sources it has."
     ],
     "actions": [
       {
-        "title": "Create the notebook",
-        "do": "Open the notebook list. Choose Create new or New notebook. Name it Ferry Day. A notebook is a place to gather material you want the helper to read together.",
-        "see": "The new notebook has a name and an area for its sources. Each source is a separate item.",
-        "stuck": "If Gemini opens in an ordinary chat, switch to the notebook area or open the standalone Gemini Notebook service."
+        "title": "Make a notebook",
+        "do": "Open the notebook list. Select Create new or New notebook. Name it Ferry Day. Think of it as a small binder for this trip.",
+        "see": "The notebook has a name and an area where sources will go.",
+        "stuck": "If you see a regular Gemini chat, open the notebook area or the separate Gemini Notebook app."
       },
       {
-        "title": "Add two sources",
-        "do": "Add these as two separate pasted notes or plain-text files. Call one Schedule and give it “Meet at Pier 6 at 9:15.” Call the other Packing and give it “Bring a hat and a notebook.”",
-        "see": "The source list has two entries. Open each one and check its text before asking anything.",
-        "stuck": "If pasted text is unavailable on your device, save two small text files and use the upload option."
+        "title": "Put in two notes",
+        "do": "Add two sources as pasted text or files. Name the first Schedule and give it “Meet at Pier 6 at 9:15.” Name the second Packing and give it “Bring a hat and a notebook.”",
+        "see": "Two separate entries show up. Open each one and check its words.",
+        "stuck": "If paste is unavailable, save each note as a short text file and use the upload control."
       },
       {
-        "title": "Follow the evidence",
-        "do": "Ask “Which pier, and what should I bring? Show the source for each answer.” Open a citation or source reference beside the answer.",
-        "see": "The pier comes from Schedule. The hat and notebook come from Packing. You can see why two sources were useful.",
-        "stuck": "If the reply mixes them up, ask one question about the pier and another about the packing list."
+        "title": "Follow the source",
+        "do": "Ask “Which pier should I use? What should I bring? Show the source for each answer.” Open the little source link beside each answer.",
+        "see": "Pier 6 comes from Schedule. The hat and notebook come from Packing.",
+        "stuck": "If it points to the wrong note, ask one question at a time. Read the linked words before trusting the answer."
       },
       {
-        "title": "Find a limit",
-        "do": "Ask “What does the ticket cost?” Look through both sources for a price. Say what you would need to add to answer that question.",
-        "see": "Neither note includes a price. A fare notice would make a useful third source.",
-        "stuck": "If an amount appears anyway, ask for the exact passage that gives it. Keep the price unknown until the passage actually exists."
+        "title": "Ask a missing question",
+        "do": "Ask “How much does the ticket cost?” Read the two notes yourself and check whether either gives a fare.",
+        "see": "The price is unknown from these sources. A fare notice could fill in the missing fact.",
+        "stuck": "If the reply gives an amount, ask to see the price in the original note. Treat it as unknown unless you can find those words."
       }
     ],
     "roles": [
-      "Compare two public reference notes when learning a reporting command.",
-      "Keep a sample meeting agenda and its notes as separate sources.",
-      "Ground your app’s help text in the actual feature list."
+      "Keep two public mail guides together and compare them.",
+      "Study a practice agenda beside its meeting notes.",
+      "Write app help from its actual list of features."
     ],
     "sources": [
       [

@@ -1,0 +1,1436 @@
+[
+  {
+    "id": "lab-gemini-app-01",
+    "title": "Make your first packing list",
+    "summary": "Count the lines. Put a tick beside each item in the note as you read the answer.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Chat lets you ask a question and follow up.",
+    "roles": [
+      "List mailbox types once.",
+      "Clean a list of meeting supplies.",
+      "Build a packing list."
+    ],
+    "prompt": "Using only my note, give me one line per different item. Keep the order of the first mention.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini and choose a new chat.",
+        "help": "Use a new chat if an old answer is getting in the way."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "A note reads: hat, pencil, hat, cup."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Count the lines. Put a tick beside each item in the note as you read the answer.",
+        "help": "If hat appears twice, ask for each different item just once."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Three lines in order: hat, pencil, cup.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Three lines in order: hat, pencil, cup."
+    ],
+    "sources": [
+      [
+        "Google · Chat",
+        "https://gemini.google.com/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-02",
+    "title": "Pick a thinking level for a tiny puzzle",
+    "summary": "Try the same request in a fresh chat at another available level. Check both lists with three paper slips.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "The thinking control lets some models spend more time on a question.",
+    "roles": [
+      "Order report steps.",
+      "Check a meeting schedule.",
+      "Set the turns for a game."
+    ],
+    "prompt": "Put the turns in order. After the list, check each of the two rules in one short sentence.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a fresh Gemini chat. Tap the model name. Choose a thinking level if your account offers it.",
+        "help": "If the picker is locked, use the available model. You can still test the answer against each rule."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Blue goes after Red. Gold goes before Red. There are three turns."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Try the same request in a fresh chat at another available level. Check both lists with three paper slips.",
+        "help": "If Blue comes first, underline the word after. Ask the tool to test that rule against its own list."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Gold, Red, Blue satisfies both rules. Only passing answers count.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Gold, Red, Blue satisfies both rules. Only passing answers count."
+    ],
+    "sources": [
+      [
+        "Google · Thinking",
+        "https://support.google.com/gemini/answer/18648722"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-03",
+    "title": "Give directions by voice",
+    "summary": "Listen to the letters it repeats. Change your question to ask which circle holds C.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Gemini Live takes spoken turns.",
+    "roles": [
+      "Practice reading three report labels.",
+      "Rehearse clear meeting directions.",
+      "Try spoken clues for a puzzle."
+    ],
+    "prompt": "Say: I have A on the left and C on the right. Which empty circle should get B? Repeat my labels first.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini on a supported phone or tablet and tap Live. Allow the microphone when you want to speak.",
+        "help": "If Live is unavailable, take turns typing the same words. The spoken part needs a supported device."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Draw three circles on paper. Mark the left one A and the right one C. Leave the middle one empty."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Listen to the letters it repeats. Change your question to ask which circle holds C.",
+        "help": "If it heard D, say the letters one by one. You can type the same words in Chat."
+      },
+      {
+        "title": "Check what you made",
+        "text": "B belongs in the middle. C is on the right.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "B belongs in the middle. C is on the right."
+    ],
+    "sources": [
+      [
+        "Google · Live",
+        "https://support.google.com/gemini/answer/15274899"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-04",
+    "title": "Make a helper that gives one hint",
+    "summary": "Ask for a hint, then type Reveal. Check the two replies separately.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Gems remember rules you write.",
+    "roles": [
+      "Explain one mail term at a time.",
+      "Coach someone through a checklist.",
+      "Make a riddle helper."
+    ],
+    "prompt": "Give just one small hint. Never give the answer until I say Reveal. When I say Reveal, say the answer and why it fits.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Use Gemini on the web. Open Gems, choose to make a Gem, give it a short name, add your rules and save.",
+        "help": "If you cannot save a Gem, paste its rules at the top of a new chat and run the same test there."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Keep the rule and example below handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Practice riddle: I have keys but no locks. The intended answer is a piano."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Ask for a hint, then type Reveal. Check the two replies separately.",
+        "help": "If the first reply spoils it, edit the instructions and start a fresh test conversation with the Gem."
+      },
+      {
+        "title": "Check what you made",
+        "text": "The hint leaves piano out. The second reply says piano and links the keys to music.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "The hint leaves piano out. The second reply says piano and links the keys to music."
+    ],
+    "sources": [
+      [
+        "Google · Gem",
+        "https://support.google.com/gemini/answer/15235603"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-05",
+    "title": "Build a playable tap counter",
+    "summary": "Open Preview. Tap Score twice, then once more. Try Reset.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Canvas lets you build and try a small app.",
+    "roles": [
+      "Count completed report checks.",
+      "Count finished meeting tasks.",
+      "Make a one-button game."
+    ],
+    "prompt": "Build a small tap game in Canvas. Add one point per tap. At three points show You won. Reset returns to zero and clears the message.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
+        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Make a new page with a score of zero, a button called Score, and a Reset button."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Open Preview. Tap Score twice, then once more. Try Reset.",
+        "help": "If Reset leaves the win message behind, ask to clear the message and score together. Play again."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Scores run 0, 1, 2, 3. The win appears only at 3. Reset gives 0.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      },
+      {
+        "title": "Make a copy that runs on your computer",
+        "text": "Open the example below and try its buttons. Choose Save example. In a plain-text editor, open that HTML file and save a copy with a new name ending in .html. Open the copy in a browser.",
+        "help": "On Windows choose All files when saving. On Mac choose Format → Make Plain Text in TextEdit. If the page shows code, check that the file ends with .html rather than .txt."
+      },
+      {
+        "title": "Change one thing you can see",
+        "text": "In your copy, change the win check from 3 to 4. Change the title and instructions to say four. Save, reload and play to four.",
+        "help": "The check is score === 3. Change the 3 there to 4, then change the words Three taps and three times. The Score button must still work after tap three."
+      }
+    ],
+    "check": [
+      "Scores run 0, 1, 2, 3. The win appears only at 3. Reset gives 0."
+    ],
+    "sources": [
+      [
+        "Google · Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ],
+    "sampleApp": "practice/browser/tap-game.html"
+  },
+  {
+    "id": "lab-gemini-app-06",
+    "title": "Open your first source citation",
+    "summary": "Tap the little source mark beside the answer. Find the time in the note itself.",
+    "level": "Starter",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Find the row behind a mail claim.",
+      "Trace a decision to a meeting note.",
+      "Check a game rule in its rulebook."
+    ],
+    "prompt": "Using the selected Schedule, what time does practice start? Point to the line you used.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Add a source called Schedule with the text: Practice starts at 2. Bring a pencil."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Tap the little source mark beside the answer. Find the time in the note itself.",
+        "help": "If it says 2 p.m., look for p.m. in the note. Ask for the exact wording since the note leaves that part open."
+      },
+      {
+        "title": "Check what you made",
+        "text": "The answer is 2. The line about the pencil supplies no time.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "The answer is 2. The line about the pencil supplies no time."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-07",
+    "title": "Hand off a packing job and check the result",
+    "summary": "Open the task thread. Count the lines and add the quantities by hand.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Tasks can work through a job and return a result.",
+    "roles": [
+      "Plan three mail checks.",
+      "Prepare the supply list for a session.",
+      "Make a checklist for game pieces."
+    ],
+    "prompt": "Make a checklist with three lines. Include the quantity on each line. Show it here for review.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini. Choose Task mode and start a fresh task. Use the task thread to see its work.",
+        "help": "If Tasks is unavailable, try the same request in Chat. You can check the draft there."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Kit list: 2 red flags, 1 blue flag, 3 cones. You want a list to pack."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Open the task thread. Count the lines and add the quantities by hand.",
+        "help": "If it makes six lines, ask for one line for each kind of item, with its count beside it."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Three lines list red flags 2, blue flag 1 and cones 3. Total items packed would be 6.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Three lines list red flags 2, blue flag 1 and cones 3. Total items packed would be 6."
+    ],
+    "sources": [
+      [
+        "Google · Tasks",
+        "https://support.google.com/gemini/answer/17094507"
+      ]
+    ],
+    "firstGuide": "gemini-task-begin"
+  },
+  {
+    "id": "lab-gemini-app-08",
+    "title": "Edit a research plan before the search",
+    "summary": "Read the plan first. Remove any task about prices. Start the search and open its cited Google guide.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Deep Research builds a plan and gathers sources.",
+    "roles": [
+      "Research a report option.",
+      "Write a short how-to with sources.",
+      "Make help for a practice deck."
+    ],
+    "prompt": "Make a Deep Research plan using Google’s own help pages. Cover where to tap, how to flip a card, and what to do with a missed card.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini and choose Deep Research from the tools menu. Enter the question, then inspect the plan before starting.",
+        "help": "If Deep Research is unavailable, open the two official help topics yourself and write down the supporting lines."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Question: How do I make flashcards in Gemini Notebook on an iPad?"
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Read the plan first. Remove any task about prices. Start the search and open its cited Google guide.",
+        "help": "If it cites a general web tutorial, ask it to find the official iPad instructions and point to the flashcard section."
+      },
+      {
+        "title": "Check what you made",
+        "text": "The brief answers the three actions with support from the mobile guide. Pricing is outside this job.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "The brief answers the three actions with support from the mobile guide. Pricing is outside this job."
+    ],
+    "sources": [
+      [
+        "Google · Research",
+        "https://support.google.com/gemini/answer/15719111"
+      ]
+    ],
+    "firstGuide": "gemini-research-begin"
+  },
+  {
+    "id": "lab-gemini-app-09",
+    "title": "Use two sources without mixing them up",
+    "summary": "Open both citations. Multiply the score for one star by the number drawn.",
+    "level": "Intermediate",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Join a mailbox count with its rule.",
+      "Match a meeting total to its notes.",
+      "Score a card round."
+    ],
+    "prompt": "How many points did Blue earn? Show which source gives the rule and which gives the count.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Add note Rules: A star earns 2 points. Add note Round: The blue team drew 3 stars."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Open both citations. Multiply the score for one star by the number drawn.",
+        "help": "If only one note is cited, ask where the other number came from. Check that both notes are selected."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Rules gives 2. Round gives 3. Blue earned 6 points.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Rules gives 2. Round gives 3. Blue earned 6 points."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-10",
+    "title": "Tell an old rule from a new rule",
+    "summary": "Choose only Old and ask again in a fresh question. Then select only New and repeat.",
+    "level": "Intermediate",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Compare two dated mail rules.",
+      "Check which meeting note is newer.",
+      "Update a game’s win condition."
+    ],
+    "prompt": "List both limits with dates and citations. Use the newer note to tell us when to stop.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Old, May 1: play to 8. New, May 4: play to 12. Add them as separate named notes."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Choose only Old and ask again in a fresh question. Then select only New and repeat.",
+        "help": "If the notes blend together, open each source, check its title, then ask for a two-row comparison."
+      },
+      {
+        "title": "Check what you made",
+        "text": "With both, the newer limit is 12. With Old alone you can only support 8.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "With both, the newer limit is 12. With Old alone you can only support 8."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-11",
+    "title": "Make a word guessing game",
+    "summary": "Try a blank, then desk, then space-lamp-space. Click Guess once after the win.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Canvas lets you build and try a small app.",
+    "roles": [
+      "Test a mail search box.",
+      "Make a quick meeting game.",
+      "Build and play a word puzzle."
+    ],
+    "prompt": "Build a guessing game. Add Guess and New round. Ignore outer spaces and letter case. Show guesses used and stop counting after a win.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
+        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Secret word LAMP. The player types a guess. A blank guess should never count."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Try a blank, then desk, then space-lamp-space. Click Guess once after the win.",
+        "help": "If typing lamp fails, ask the app to trim the spaces and compare both words in the same case."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Blank leaves 0. Desk gives 1. The last word wins in 2. Extra clicks leave 2.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Blank leaves 0. Desk gives 1. The last word wins in 2. Extra clicks leave 2."
+    ],
+    "sources": [
+      [
+        "Google · Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-12",
+    "title": "Teach a helper to read a mailbox list",
+    "summary": "Test the Gem with the three rows. Then remove the type from Box C and run it again.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Gems remember rules you write.",
+    "roles": [
+      "Check a fake mail inventory.",
+      "Review a list with missing roles.",
+      "Make a helper that checks game cards."
+    ],
+    "prompt": "Always use the list I give you. Count shared boxes. List their labels. If a box type is missing, mark it unknown.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Use Gemini on the web. Open Gems, choose to make a Gem, give it a short name, add your rules and save.",
+        "help": "If you cannot save a Gem, paste its rules at the top of a new chat and run the same test there."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Keep the rule and example below handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Pretend rows: Box A, shared. Box B, room. Box C, shared."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Test the Gem with the three rows. Then remove the type from Box C and run it again.",
+        "help": "If a blank becomes shared, add a rule to the Gem that a missing type cannot be guessed."
+      },
+      {
+        "title": "Check what you made",
+        "text": "First result: 2, A and C. Second: 1 shared, A. C is unknown.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "First result: 2, A and C. Second: 1 shared, A. C is unknown."
+    ],
+    "sources": [
+      [
+        "Google · Gem",
+        "https://support.google.com/gemini/answer/15235603"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-13",
+    "title": "Make a three-card study deck",
+    "summary": "Open the flashcards in Studio. Say a meaning aloud before flipping each card. Mark one card missed and review it again.",
+    "level": "Intermediate",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Learn terms in a mail report.",
+      "Study three work app labels.",
+      "Build a small study deck."
+    ],
+    "prompt": "Make flashcards about folder, prompt and source. Put the word on one side and a short meaning on the other.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Add one note: A folder holds files. A prompt is a request. A source is material used to answer."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Open the flashcards in Studio. Say a meaning aloud before flipping each card. Mark one card missed and review it again.",
+        "help": "If a card asks about a new word, compare it to the note. Request a deck limited to the three listed words."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Each of the three words has a meaning supported by the note. You can explain your missed one after review.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Each of the three words has a meaning supported by the note. You can explain your missed one after review."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-14",
+    "title": "Capstone: Build a match-the-pairs game",
+    "summary": "Choose sun and night, then sun and day. Click the matched pair again. Finish the other two pairs. Restart.",
+    "level": "Advanced",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Canvas lets you build and try a small app.",
+    "roles": [
+      "Match mailbox types to uses.",
+      "Turn training notes into practice.",
+      "Ship a complete matching game."
+    ],
+    "prompt": "Build a two-column matching game. Let me pick one card on each side. Lock a correct pair, clear a wrong pick, count matched pairs, and add Restart.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
+        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Three pairs: sun and day, moon and night, star and sky. Each left card has exactly one partner."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Choose sun and night, then sun and day. Click the matched pair again. Finish the other two pairs. Restart.",
+        "help": "If a pair scores twice, have the app check whether it is already locked before scoring. Repeat the double click."
+      },
+      {
+        "title": "Check what you made",
+        "text": "A miss scores 0. A correct pair counts once. Three different matches win. Restart unlocks every card.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "A miss scores 0. A correct pair counts once. Three different matches win. Restart unlocks every card."
+    ],
+    "sources": [
+      [
+        "Google · Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-15",
+    "title": "Capstone: Build a quiz from a checked rulebook",
+    "summary": "Check the evidence in Notebook. Use Canvas to build a quiz from your three verified questions. Ask for a score and Play again. Answer all three correctly, then miss one on a new game.",
+    "level": "Expert",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Make training from a mail guide.",
+      "Make a quiz from meeting rules.",
+      "Build a replayable quiz with a checked key."
+    ],
+    "prompt": "Use both selected notes to write three quiz questions. Give the answer, its source and the exact supporting line for each. Leave missing facts out.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Score note: red earns 3, blue earns 2. Turn note: two rounds, one card per round."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Check the evidence in Notebook. Use Canvas to build a quiz from your three verified questions. Ask for a score and Play again. Answer all three correctly, then miss one on a new game.",
+        "help": "If the quiz adds a prize for winning, point to the notes. Remove that extra rule from the game and test again."
+      },
+      {
+        "title": "Carry the checked notes into Canvas",
+        "text": "Open Gemini in a second tab. Start a new chat and choose Canvas in its tools menu. Copy your checked answers into that chat. For each answer, include the source note’s title and its exact line. Ask for a working app, then open Preview.",
+        "help": "The notebook and the app are two different places. If Preview asks where its facts came from, paste just the checked notes again. A source title without its words gives the app too little to use."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Each answer traces to a note. Two red cards earn 6. The first game scores 3 of 3. Missing one in the second scores 2 of 3.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Each answer traces to a note. Two red cards earn 6. The first game scores 3 of 3. Missing one in the second scores 2 of 3."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ],
+      [
+        "Google · build and preview an app in Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-16",
+    "title": "Turn mixed notes into a neat table",
+    "summary": "Read each row and circle only the teams that have played, including the team with zero.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Chat lets you ask a question and follow up.",
+    "roles": [
+      "Separate missing mail counts from zero.",
+      "Summarize a team’s progress.",
+      "Set up a score table."
+    ],
+    "prompt": "Make a table with Team and Score. Write a dash for a missing score. Keep a real zero.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini and choose a new chat.",
+        "help": "Use a new chat if an old answer is getting in the way."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Three notes: Red has 4. Green has 0. Blue has no score yet."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Read each row and circle only the teams that have played, including the team with zero.",
+        "help": "If Blue gets zero, ask which line says Blue has played. Put back the dash."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Red 4, Green 0, Blue dash. Two scores are known.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Red 4, Green 0, Blue dash. Two scores are known."
+    ],
+    "sources": [
+      [
+        "Google · Chat",
+        "https://gemini.google.com/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-17",
+    "title": "Play a mystery-object game by voice",
+    "summary": "After the first clue say Next clue. Then say Reveal. Check the written conversation if you missed a word.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Gemini Live takes spoken turns.",
+    "roles": [
+      "Practice saying mail terms clearly.",
+      "Rehearse turn-taking for a demo.",
+      "Try the dialogue for a guessing game."
+    ],
+    "prompt": "Say: Let’s play. Give me the first clue only. Wait for my guess before the next clue. Reveal the object when I ask.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini on a supported phone or tablet and tap Live. Allow the microphone when you want to speak.",
+        "help": "If Live is unavailable, take turns typing the same words. The spoken part needs a supported device."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Use a pretend object: a cup. Its clues are hollow, holds water, sits on a table."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. After the first clue say Next clue. Then say Reveal. Check the written conversation if you missed a word.",
+        "help": "If all clues arrive together, interrupt with a request for one clue per turn. Use typed Chat if Live is unavailable."
+      },
+      {
+        "title": "Check what you made",
+        "text": "One clue comes first. The second turn adds one more. The reveal names the cup.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "One clue comes first. The second turn adds one more. The reveal names the cup."
+    ],
+    "sources": [
+      [
+        "Google · Live",
+        "https://support.google.com/gemini/answer/15274899"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-18",
+    "title": "Create a three-line release note helper",
+    "summary": "Give the Gem the example. Then request a note for an update that has no test result yet.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Gems remember rules you write.",
+    "roles": [
+      "Explain a fixed mail report.",
+      "Write a short update for a team.",
+      "Tell players what changed in a game."
+    ],
+    "prompt": "For each change, return exactly three labeled lines: Before, Now, Check. Only use facts I give you.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Use Gemini on the web. Open Gems, choose to make a Gem, give it a short name, add your rules and save.",
+        "help": "If you cannot save a Gem, paste its rules at the top of a new chat and run the same test there."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Keep the rule and example below handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "A score button used to add two points. It now adds one. The test used three taps."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Give the Gem the example. Then request a note for an update that has no test result yet.",
+        "help": "If it claims all tests passed, edit the Gem to ask for the missing check. Start with a fresh change."
+      },
+      {
+        "title": "Check what you made",
+        "text": "The first note says three taps now give 3. A missing test is listed as unknown.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "The first note says three taps now give 3. A missing test is listed as unknown."
+    ],
+    "sources": [
+      [
+        "Google · Gem",
+        "https://support.google.com/gemini/answer/15235603"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-19",
+    "title": "Review a task before it shares anything",
+    "summary": "Inspect the task’s plan and output. Read the guest line. Finish with the draft on screen.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Tasks can work through a job and return a result.",
+    "roles": [
+      "Draft a mail notice for review.",
+      "Prepare an invite without sending it.",
+      "Preview a game reminder."
+    ],
+    "prompt": "Draft an invite using the three facts. Show me the draft only. Leave the guest line empty.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini. Choose Task mode and start a fresh task. Use the task thread to see its work.",
+        "help": "If Tasks is unavailable, try the same request in Chat. You can check the draft there."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Draft event: game night, 6 p.m., Room A. No guest list is provided."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Inspect the task’s plan and output. Read the guest line. Finish with the draft on screen.",
+        "help": "If a send action is proposed, leave it unapproved and ask for plain text in the task thread."
+      },
+      {
+        "title": "Check what you made",
+        "text": "The draft has a title, time and room. It has no made-up guests and nothing was sent.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "The draft has a title, time and room. It has no made-up guests and nothing was sent."
+    ],
+    "sources": [
+      [
+        "Google · Tasks",
+        "https://support.google.com/gemini/answer/17094507"
+      ]
+    ],
+    "firstGuide": "gemini-task-begin"
+  },
+  {
+    "id": "lab-gemini-app-20",
+    "title": "Build a glossary from one source",
+    "summary": "Open the source for each meaning. Mark which words were in the note and which lines are invented examples.",
+    "level": "Starter",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Read mail words in context.",
+      "Make a small team glossary.",
+      "Teach the words used in a card game."
+    ],
+    "prompt": "Make a three-row glossary using only my source. Add one short example for each term and label it Example.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Add a note: deck means a stack of cards; draw means take the top card; discard means put a card aside."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Open the source for each meaning. Mark which words were in the note and which lines are invented examples.",
+        "help": "If draw becomes making a picture, select only the card note and ask what draw means in this game."
+      },
+      {
+        "title": "Check what you made",
+        "text": "All three definitions match the note. The examples are clearly marked as practice.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "All three definitions match the note. The examples are clearly marked as practice."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-21",
+    "title": "Make a two-choice story",
+    "summary": "Choose Blue and go back. Choose Gold and go back. Count all the available endings.",
+    "level": "Starter",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Canvas lets you build and try a small app.",
+    "roles": [
+      "Sketch choices in a mail help tool.",
+      "Build a two-path guide for a team.",
+      "Make a playable story from scratch."
+    ],
+    "prompt": "Build a tiny story app. Give me two labeled door buttons, one ending for each, and Back to start.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
+        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Start in a cave with two doors. Blue leads to a lake. Gold leads to a library."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Choose Blue and go back. Choose Gold and go back. Count all the available endings.",
+        "help": "If both doors open the same ending, ask for separate click actions. Try each path from the start."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Blue always reaches the lake. Gold always reaches the library. Both return to the start.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Blue always reaches the lake. Gold always reaches the library. Both return to the start."
+    ],
+    "sources": [
+      [
+        "Google · Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-22",
+    "title": "Check a schedule with two rules",
+    "summary": "Write the slots on paper. Try the proposed swap yourself. If your account offers thinking levels, compare Low and High in separate chats.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "The thinking control lets some models spend more time on a question.",
+    "roles": [
+      "Check the order of a report run.",
+      "Plan the steps in a small meeting.",
+      "Check that a game’s restart follows its finish."
+    ],
+    "prompt": "Find the schedule and test both rules. Then explain whether swapping the first two slots still works.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a fresh Gemini chat. Tap the model name. Choose a thinking level if your account offers it.",
+        "help": "If the picker is locked, use the available model. You can still test the answer against each rule."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "There are three time slots: 1, 2, 3. Setup must come before Play. Cleanup must be last."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Write the slots on paper. Try the proposed swap yourself. If your account offers thinking levels, compare Low and High in separate chats.",
+        "help": "If the answer just says it works, ask it to point to the numbers for Setup and Play after the swap."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Setup, Play, Cleanup works. Swapping the first two breaks the first rule.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Setup, Play, Cleanup works. Swapping the first two breaks the first rule."
+    ],
+    "sources": [
+      [
+        "Google · Thinking",
+        "https://support.google.com/gemini/answer/18648722"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-23",
+    "title": "Build a two-source fact sheet",
+    "summary": "Before starting, check that the plan asks for both distinct products. Open each final link and look for its action.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Deep Research builds a plan and gathers sources.",
+    "roles": [
+      "Compare two mail help notes.",
+      "Write a sourced guide to two apps.",
+      "Verify help links inside a game."
+    ],
+    "prompt": "Plan a two-row fact sheet. For each task, find the official mobile help page and give one action I can verify. Include the source link.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini and choose Deep Research from the tools menu. Enter the question, then inspect the plan before starting.",
+        "help": "If Deep Research is unavailable, open the two official help topics yourself and write down the supporting lines."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Compare two official Google topics: turning on Gemini Live and making a Notebook flashcard."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Before starting, check that the plan asks for both distinct products. Open each final link and look for its action.",
+        "help": "If the links just open the same homepage, ask for the specific help articles and inspect their headings."
+      },
+      {
+        "title": "Check what you made",
+        "text": "The Live row points to Live controls. The flashcard row points to Notebook Studio. Neither row borrows the other app’s menus.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "The Live row points to Live controls. The flashcard row points to Notebook Studio. Neither row borrows the other app’s menus."
+    ],
+    "sources": [
+      [
+        "Google · Research",
+        "https://support.google.com/gemini/answer/15719111"
+      ]
+    ],
+    "firstGuide": "gemini-research-begin"
+  },
+  {
+    "id": "lab-gemini-app-24",
+    "title": "Check a missing detail in a study guide",
+    "summary": "Find support for each answer. Now add Fare: tickets cost 2 game coins. Repeat only the price question.",
+    "level": "Intermediate",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Leave missing mail fields unknown.",
+      "Keep a guide honest when facts change.",
+      "Teach an app to handle missing data."
+    ],
+    "prompt": "Make three study questions: what to bring, when doors open, and what a ticket costs. Only answer from the two sources.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Add Packing: bring a badge. Add Times: doors open at 4. No note gives a ticket price."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Find support for each answer. Now add Fare: tickets cost 2 game coins. Repeat only the price question.",
+        "help": "If the old answer sticks, check that Fare is selected. Ask for its exact sentence in a new question."
+      },
+      {
+        "title": "Check what you made",
+        "text": "First answers are badge, 4, unknown. After the new note the price is 2 game coins, supported by Fare.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "First answers are badge, 4, unknown. After the new note the price is 2 game coins, supported by Fare."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-25",
+    "title": "Build a live wait-list tool",
+    "summary": "Add A, B and C. Serve twice. Add D. Clear. Try to serve once more.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Canvas lets you build and try a small app.",
+    "roles": [
+      "Model a queue of report requests.",
+      "Track turns in a workshop.",
+      "Make a line-up tool."
+    ],
+    "prompt": "Build a queue with Add ticket, Serve next and Clear. Show the waiting list and last ticket served. Disable Serve when empty.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
+        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "A pretend queue starts empty. Visitors take tickets A, B and C in order."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Add A, B and C. Serve twice. Add D. Clear. Try to serve once more.",
+        "help": "If D is served before C, ask it to remove only the oldest waiting ticket. Replay from empty."
+      },
+      {
+        "title": "Check what you made",
+        "text": "A and then B are served. C and D wait in order. Clear leaves an empty list with no ticket to serve.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "A and then B are served. C and D wait in order. Clear leaves an empty list with no ticket to serve."
+    ],
+    "sources": [
+      [
+        "Google · Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-26",
+    "title": "Turn a task result into a usable run sheet",
+    "summary": "Open the finished file or table. Change game time to 5 in a follow-up task. Compare the start of cleanup in both versions.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Tasks can work through a job and return a result.",
+    "roles": [
+      "Budget time for a sample mail export.",
+      "Build a meeting run sheet.",
+      "Plan a timed round."
+    ],
+    "prompt": "Make a run sheet with Start, End and Task. Each task starts when the previous one ends.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini. Choose Task mode and start a fresh task. Use the task thread to see its work.",
+        "help": "If Tasks is unavailable, try the same request in Chat. You can check the draft there."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Practice event: setup 3 minutes, game 7 minutes, cleanup 2 minutes. Start at minute 0."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Open the finished file or table. Change game time to 5 in a follow-up task. Compare the start of cleanup in both versions.",
+        "help": "If the last end time stays 12, ask it to compute every time again from the changed duration."
+      },
+      {
+        "title": "Check what you made",
+        "text": "First cleanup starts at minute 10 and ends at 12. The changed version starts at 8 and ends at 10.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "First cleanup starts at minute 10 and ends at 12. The changed version starts at 8 and ends at 10."
+    ],
+    "sources": [
+      [
+        "Google · Tasks",
+        "https://support.google.com/gemini/answer/17094507"
+      ]
+    ],
+    "firstGuide": "gemini-task-begin"
+  },
+  {
+    "id": "lab-gemini-app-27",
+    "title": "Use an audio overview as a study check",
+    "summary": "Play it in Studio. Pause when it explains each type. Open the notes and check both claims. On supported mobile, try Download to listen later.",
+    "level": "Intermediate",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Practice explaining mailbox types.",
+      "Make an audio study break.",
+      "Test narration for a learning app."
+    ],
+    "prompt": "Make a short Audio Overview based on the two notes. Focus on how the two mailbox types differ.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Add note A: a shared mailbox serves a team. Add note B: a room mailbox represents a meeting space."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Play it in Studio. Pause when it explains each type. Open the notes and check both claims. On supported mobile, try Download to listen later.",
+        "help": "If the audio adds a rule about costs, mark it unverified. Ask the notebook for the source line before using it."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Both definitions trace to their own note. You can identify which type fits a team and which fits a room.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Both definitions trace to their own note. You can identify which type fits a team and which fits a room."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  },
+  {
+    "id": "lab-gemini-app-28",
+    "title": "Build a read-only mailbox tally",
+    "summary": "Press Count. Change C to room and press Count again. Inspect the original pasted text after each run.",
+    "level": "Intermediate",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Canvas lets you build and try a small app.",
+    "roles": [
+      "Test a mailbox tally with fake rows.",
+      "Group a small equipment list.",
+      "Build an interactive count tool."
+    ],
+    "prompt": "Build a page that reads pasted rows and shows counts by type. Use no account or external connection. Show a separate list for unknown types.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
+        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Paste these pretend rows: A,shared; B,room; C,shared; D,unknown."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Press Count. Change C to room and press Count again. Inspect the original pasted text after each run.",
+        "help": "If unknown disappears, add an Unknown group. Add another unknown row and watch only that group grow."
+      },
+      {
+        "title": "Check what you made",
+        "text": "First: shared 2, room 1, unknown 1. Next: shared 1, room 2, unknown 1. The input stays as typed.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      },
+      {
+        "title": "Make a copy that runs on your computer",
+        "text": "Open the example below and try its buttons. Choose Save example. In a plain-text editor, open that HTML file and save a copy with a new name ending in .html. Open the copy in a browser.",
+        "help": "On Windows choose All files when saving. On Mac choose Format → Make Plain Text in TextEdit. If the page shows code, check that the file ends with .html rather than .txt."
+      },
+      {
+        "title": "Change one thing you can see",
+        "text": "In your copy, change C,shared to C,room. Save the file, reload and press Count. The answer should read Shared 1, Room 2, Unknown 1.",
+        "help": "Change the sample row inside the textarea. Keep the counting rules the same. Make sure you reload your edited copy."
+      }
+    ],
+    "check": [
+      "First: shared 2, room 1, unknown 1. Next: shared 1, room 2, unknown 1. The input stays as typed."
+    ],
+    "sources": [
+      [
+        "Google · Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ],
+    "sampleApp": "practice/browser/mailbox-tally.html"
+  },
+  {
+    "id": "lab-gemini-app-29",
+    "title": "Capstone: Ship a two-player score keeper",
+    "summary": "Give Blue +5, Red −5, Blue +5. Try a score after the win. Undo, then start a new game.",
+    "level": "Advanced",
+    "requires": "Use the Gemini app or website online with an account that can open this feature.",
+    "features": "Canvas lets you build and try a small app.",
+    "roles": [
+      "Track the effect of one report change.",
+      "Build a score keeper for a workshop.",
+      "Finish and play a game with undo."
+    ],
+    "prompt": "Build a two-team score app with four score buttons, a winner message, undo last turn and new game. Block score taps after a win; undo may reopen play.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open a new Gemini chat. Use the tools or add menu to pick Canvas. After it builds, choose Preview to play.",
+        "help": "If the editor shows code, open Preview. On a small screen try the desktop web view."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Read this sample. It tells you what the finished page will do. Include it with your build request.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Each team starts at 0. Any turn may give +5 or −5. The first team at 10 wins."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Give Blue +5, Red −5, Blue +5. Try a score after the win. Undo, then start a new game.",
+        "help": "If undo changes Red instead, keep a list of moves in order. Undo only the last recorded move, then retest."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Blue wins 10 to −5. Extra taps do nothing. Undo restores Blue 5 and play resumes. New game sets both to 0.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Blue wins 10 to −5. Extra taps do nothing. Undo restores Blue 5 and play resumes. New game sets both to 0."
+    ],
+    "sources": [
+      [
+        "Google · Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ]
+  },
+  {
+    "id": "lab-gemini-app-30",
+    "title": "Capstone: Make a source-checked help desk",
+    "summary": "Open every citation. Turn the verified sheet into a Canvas app with buttons Type, Count, and Edit allowed. Add a question about cost. Have another reader try every button.",
+    "level": "Expert",
+    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
+    "features": "Gemini Notebook answers questions about sources you choose.",
+    "roles": [
+      "Build a safe help desk for mail facts.",
+      "Turn team reference notes into a checked guide.",
+      "Build a small question-and-answer app."
+    ],
+    "prompt": "Build an answer sheet with each claim linked to its source. Answer what A is, how many shared boxes exist, and whether edits are allowed. Mark unsupported claims unknown.",
+    "steps": [
+      {
+        "title": "Open your work area",
+        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
+        "help": "Open the source list. Check only the notes you want this question to use."
+      },
+      {
+        "title": "Set up the sample",
+        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
+        "code": "Note Types: shared boxes serve a team; room boxes book a space. Note Rows: A shared, B room, C shared. Note Limit: read only; never change a box."
+      },
+      {
+        "title": "Try the task",
+        "text": "Use Your prompt with the sample above. Open every citation. Turn the verified sheet into a Canvas app with buttons Type, Count, and Edit allowed. Add a question about cost. Have another reader try every button.",
+        "help": "If the app invents a cost or offers to change a mailbox, remove that action. Keep this a read-only demo and repeat all four tests."
+      },
+      {
+        "title": "Carry the checked notes into Canvas",
+        "text": "Open Gemini in a second tab. Start a new chat and choose Canvas in its tools menu. Copy your checked answers into that chat. For each answer, include the source note’s title and its exact line. Ask for a working app, then open Preview.",
+        "help": "The notebook and the app are two different places. If Preview asks where its facts came from, paste just the checked notes again. A source title without its words gives the app too little to use."
+      },
+      {
+        "title": "Check what you made",
+        "text": "Type A says shared. Count gives 2. Editing is disallowed. Cost is unknown. Every known answer names its source note.",
+        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+      }
+    ],
+    "check": [
+      "Type A says shared. Count gives 2. Editing is disallowed. Cost is unknown. Every known answer names its source note."
+    ],
+    "sources": [
+      [
+        "Google · Gemini Notebook",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ],
+      [
+        "Google · build and preview an app in Canvas",
+        "https://support.google.com/gemini/answer/16047321"
+      ]
+    ],
+    "firstGuide": "gemini-notebook"
+  }
+]

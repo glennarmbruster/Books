@@ -1,14 +1,14 @@
 [
   {
     "id": "choose-a-model",
-    "title": "Which model would you try first?",
-    "summary": "A file type, a tool and a budget can narrow the choice before you measure answer quality.",
+    "title": "Which model should you try first?",
+    "summary": "Choose a tool that can read your input and give you the kind of result you need.",
     "intro": {
-      "what": "Model selection is deciding which engine and which surrounding tools can produce a result you can verify.",
-      "features": "This comparison covers supported inputs, repository tools, source-grounded work and the cost of escalating a difficult request.",
-      "exchange": "For an exported message trace, test extraction on known events and verify dates and time zones before asking for an explanation.",
-      "m365": "For a tenant-policy summary, supply the approved document version and require page references for its exceptions.",
-      "developer": "For a new screen, give each coding environment the same branch, screenshot and acceptance checks. Count working results that survive an offline reload.",
+      "what": "One AI can read a movie. Another can study still pictures. Some tools can edit the files in your app. Start with the job you want done.",
+      "features": "A short trial lets you check speed, cost and results. Keep the same files and rules when you compare tools.",
+      "exchange": "Test two helpers on the same fake mail errors. Count the labels each gets right.",
+      "m365": "Use the same meeting note to check whether each tool keeps the one firm deadline.",
+      "developer": "Ask two coding helpers to add the same button. Press the button in both apps.",
       "sources": [
         [
           "Google · choosing a model",
@@ -42,9 +42,9 @@
     },
     "sections": [
       {
-        "title": "Match a documented difference to a real job",
+        "title": "Pick a test with an answer key",
         "paragraphs": [
-          "These are suggested starting points, based on documented inputs, outputs and tools. Model capacity alone cannot tell you whether a particular answer is accurate. The last column gives you a way to test the choice."
+          "Choose a task you can check in a minute. Pick one easy example and one with a catch. These are starting points for your own test."
         ],
         "sources": [
           [
@@ -66,39 +66,38 @@
         ],
         "table": {
           "columns": [
-            "Your job",
-            "Where to start",
-            "What to check"
+            "Job",
+            "Try first",
+            "How to check"
           ],
           "rows": [
             [
-              "Find the moment a sign changes in a video",
-              "A Gemini general model that accepts video can take the clip directly. A Claude text-and-image model can inspect extracted frames.",
-              "Compare the reported time to the original. Sparse frames can miss a brief sign."
+              "Find the frame where a sign changes",
+              "A video-reading Google model can take a clip. Claude can inspect still frames you pick.",
+              "Play that part of the clip. A still frame can miss a quick change."
             ],
             [
-              "Classify thousands of short notes",
-              "Test Gemini Flash-Lite, Claude Haiku 5.5 and GPT-6 Luna on the same labeled sample.",
-              "Count missed categories and invalid labels, and divide the total bill by the number of correct results."
+              "Sort short notes",
+              "Try {{model.google.lite.name}}, {{model.claude.haiku.name}} or {{model.openai.luna.name}}.",
+              "Mix in a blank note. Count correct labels."
             ],
             [
-              "Reconcile a difficult pair of policies",
-              "Try Gemini 4 Neon, Claude Sonnet 5.5 and GPT-6.2 Sol first. Include Carbon, Opus or Astra if the cheaper run misses a material exception.",
-              "List the clauses each answer relies on and flag unsupported statements."
+              "Compare two rules",
+              "Try {{model.google.neon.name}}, {{model.claude.sonnet.name}} or {{model.openai.sol.name}}. For a missed exception, try {{model.google.carbon.name}}, {{model.claude.opus.name}} or {{model.openai.astra.name}}.",
+              "Point to the exact line that gives each exception."
             ],
             [
-              "Change a working website",
-              "Try Antigravity for its editor and browser review, Claude Code for a repository and terminal workflow, or Codex for local or delegated work.",
-              "Give each tool the same starting files. Run the same acceptance check before merging."
+              "Fix a website",
+              "Try Antigravity, Claude Code or Codex on the same practice folder.",
+              "Start on the home page and try both a good input and a blank one."
             ]
           ]
         }
       },
       {
-        "title": "Choose a working environment as well as a model",
+        "title": "Match the proof to the question",
         "paragraphs": [
-          "For asking questions from one fixed collection, Gemini Notebook provides a source-selection workflow, Claude Projects can retain project knowledge, and ChatGPT’s research and data tools can work from supplied files. Choose by the evidence you need back. A cited passage and a reproducible calculation answer different questions.",
-          "For example, extracting a departmental holiday rule calls for its page and effective date. Counting how many vehicles used a garage on those holidays calls for a calculation on the transaction file. Ask for both separately and inspect both."
+          "For a rule, you need the exact words and the date. Gemini Notebook can use selected sources. Claude Projects can keep a set of files. ChatGPT can work with files you provide. For a count, you need the rows and the math. “When does the rule start?” calls for a sentence. “How many visits came after that date?” calls for a count you can repeat."
         ],
         "sources": [
           [
@@ -119,14 +118,14 @@
   },
   {
     "id": "compare-cost",
-    "title": "Read an API price table",
-    "summary": "Two models with identical posted rates can produce different bills for the same assignment.",
+    "title": "Read the price of an AI answer",
+    "summary": "Learn what a price row means before you compare two bills.",
     "intro": {
-      "what": "An API price table tells an app developer what a model charges for measurable usage. A workplace chat license has different billing terms.",
-      "features": "The worked example separates input from output, uses dated published rates, and shows how retries and human review affect cost per accepted result.",
-      "exchange": "Estimate the cost of summarizing a batch of sanitized transport reports using a sample with known outcomes. Include the cost of reviewing errors.",
-      "m365": "Compare the projected cost of an API-based internal assistant with the work already covered by your organization’s licenses.",
-      "developer": "For a puzzle generator, count usable, distinct puzzles. A cheap call that needs four retries can be the expensive choice.",
+      "what": "An API price tells you what an app pays to send or receive an amount of text. A token is one piece of that text.",
+      "features": "The table gives sample standard rates. A request can also use thinking tokens or paid tools. A chat subscription has its own rules.",
+      "exchange": "Try one batch of fake mail notes and count how many were sorted correctly.",
+      "m365": "Price the reports your team could actually use after reading them.",
+      "developer": "Count what it costs a game helper to give ten hints that match the rules.",
       "sources": [
         [
           "Google AI Studio · standard rates",
@@ -144,10 +143,9 @@
     },
     "sections": [
       {
-        "title": "One short request in dollars",
+        "title": "Read a price row",
         "paragraphs": [
-          "Assume a direct standard API request with 10,000 uncached text input tokens and 2,000 billable output tokens. Multiply the input rate by 0.010 and the output rate by 0.002, then add. Rates below are US dollars per million tokens for the indicated tier, checked November 22, 2026. App subscriptions are billed separately.",
-          "The table holds token counts constant. In a real run, tokenization, billable reasoning, retries and tool charges can change the total. Some prices vary with prompt length, latency tier or date. For an application, compare the invoice with the number of accepted results."
+          "These base rates are US dollars per million tokens of ordinary text sent in or written back. The two numbers can be different. For 10,000 input tokens, take one hundredth of the input rate. For 2,000 output tokens, take two thousandths of the output rate. Add those two costs. Check discounts, tool fees and the length of your input on the vendor’s price page."
         ],
         "sources": [
           [
@@ -165,54 +163,53 @@
         ],
         "table": {
           "columns": [
-            "Model and date",
-            "Input / output per million",
-            "Example cost"
+            "Model",
+            "Price per million tokens",
+            "When it applies"
           ],
           "rows": [
             [
-              "Gemini 4 Carbon through Nov 30, 2026",
-              "$2 / $10",
-              "$0.04"
+              "{{model.google.carbon.name}}",
+              "{{model.google.carbon.rate-now}}",
+              "Before {{model.google.carbon.rate-start}}"
             ],
             [
-              "Gemini 4 Carbon from Dec 1, scheduled",
-              "$4 / $20",
-              "$0.08"
+              "{{model.google.carbon.name}}",
+              "{{model.google.carbon.rate-next}}",
+              "Scheduled from {{model.google.carbon.rate-start}}"
             ],
             [
-              "Gemini 4 Neon",
-              "$3 / $15",
-              "$0.06"
+              "{{model.google.neon.name}}",
+              "{{model.google.neon.rate}}",
+              "Base rate"
             ],
             [
-              "Claude Sonnet 5.5",
-              "$2 / $10",
-              "$0.04"
+              "{{model.claude.sonnet.name}}",
+              "{{model.claude.sonnet.rate}}",
+              "Base rate"
             ],
             [
-              "Claude Opus 5.5",
-              "$4 / $20",
-              "$0.08"
+              "{{model.claude.opus.name}}",
+              "{{model.claude.opus.rate}}",
+              "Base rate"
             ],
             [
-              "GPT-6.2 Sol",
-              "$2 / $10",
-              "$0.04"
+              "{{model.openai.sol.name}}",
+              "{{model.openai.sol.rate}}",
+              "Base rate"
             ],
             [
-              "GPT-6.2 Astra",
-              "$8 / $40",
-              "$0.16"
+              "{{model.openai.astra.name}}",
+              "{{model.openai.astra.rate}}",
+              "Base rate"
             ]
           ]
         }
       },
       {
-        "title": "Price the outcome you can use",
+        "title": "Count the wins",
         "paragraphs": [
-          "Suppose two hypothetical runs cost $5 and $8. The first yields 70 accepted records, the second 95. Their model-only costs per accepted record are roughly 7.1 and 8.4 cents. If someone must spend ten minutes fixing each failed record, labor can reverse the buying decision.",
-          "Keep a small set of hard examples and the accepted answers. On a model update, record the identifier, date, total cost, time and number of accepted records. This makes a future price cut or model replacement meaningful in terms of your own workload."
+          "Try this pretend game. Model A spends 6 cents to give three useful hints. Model B spends 8 cents to give eight useful hints. Divide each bill by the number of hints that helped. A costs 2 cents per useful hint. B costs 1 cent. Add the cost of bad guesses and repeat tries to find out what the whole job costs."
         ],
         "sources": [
           [
@@ -227,27 +224,33 @@
             "OpenAI · standard rates",
             "https://developers.openai.com/api/docs/pricing"
           ]
-        ]
+        ],
+        "exercise": {
+          "prompt": "A new run costs 12 cents and gives four useful clues. How much did one useful clue cost?",
+          "answer": [
+            "12 divided by 4 is 3 cents. Keep a tally of useful clues so you can do the same check on your own runs."
+          ]
+        }
       }
     ]
   },
   {
     "id": "media-studio",
-    "title": "From a reference photo to a finished asset",
-    "summary": "A portrait for printing, a cut path for a nameplate and a moving shot of the finished sign require different deliverables.",
+    "title": "Make a picture you can actually use",
+    "summary": "Choose a print, a cut line or a movie, then test the file for that job.",
     "intro": {
-      "what": "Generative media tools create or edit still images, sound and moving pictures. A vector cut file, a printable image and a video each need a different output.",
-      "features": "Gemini, ChatGPT Images, Claude-generated vector code, Grok Imagine and Adobe Firefly appear here for different parts of an asset workflow. The chapter includes checks for dimensions, motion and legibility.",
-      "exchange": "Useful for illustrating a mail-routing concept. Build the factual diagram from your approved design and label synthetic images clearly.",
-      "m365": "Use a storyboard for rollout training, then record the real tenant interface with sample data so the controls match what staff see.",
-      "developer": "Create book covers, icons or a demo clip. Verify small-screen legibility, dimensions and whether the SVG has actual cut paths.",
+      "what": "A media tool can make a picture, a sound or a clip. The app that uses the result needs a file it can read.",
+      "features": "An SVG stores drawing shapes. A photo stores dots of color. A movie needs a series of pictures that play in order.",
+      "exchange": "Make a simple diagram of a pretend mail flow. Check that the arrows point the right way.",
+      "m365": "Make a picture for a sample training slide. Check the caption at normal size.",
+      "developer": "Make an icon for a game. Test it as a small button before making more artwork.",
       "sources": [
         [
           "Google · generating images in Gemini",
           "https://gemini.google/us/overview/image-generation/"
         ],
         [
-          "OpenAI · Images 2.6",
+          "OpenAI · Image tools and examples",
           "https://openai.com/index/introducing-images-2-6/"
         ],
         [
@@ -267,7 +270,7 @@
           "https://docs.x.ai/developers/model-capabilities/video/overview"
         ],
         [
-          "OpenAI · Sora discontinuation",
+          "OpenAI · Change and retirement guide",
           "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
         ],
         [
@@ -286,10 +289,9 @@
     },
     "sections": [
       {
-        "title": "Choose what the file must contain",
+        "title": "Choose a shape or a photo",
         "paragraphs": [
-          "For an engraved nameplate, ask for a closed SVG silhouette of a dachshund wearing a graduation cap. Specify a 120 × 40 mm artboard, one solid fill and no lettering. Inspect the paths in your design program and check the physical dimensions. A realistic illustration may look wonderful on screen and still have no cuttable outline.",
-          "For a printed design, an image generator can produce the painted fur and cap. Request the composition and aspect ratio, then add exact names and dates as type in a layout tool. For a 6 × 4 inch print at 300 pixels per inch, check that the final exported image has at least 1,800 × 1,200 pixels."
+          "For a cutout, ask for a single closed outline of a whistle with no words. Open the SVG and check its size. For a print, ask for a photo-style whistle with space for text. For a six-inch by four-inch print at 300 dots per inch, you need 1,800 by 1,200 pixels. Add any exact lettering in a tool where you can edit it."
         ],
         "sources": [
           [
@@ -297,7 +299,7 @@
             "https://gemini.google/us/overview/image-generation/"
           ],
           [
-            "OpenAI · Images 2.6",
+            "OpenAI · Image tools and examples",
             "https://openai.com/index/introducing-images-2-6/"
           ],
           [
@@ -307,10 +309,9 @@
         ]
       },
       {
-        "title": "Storyboard a short clip",
+        "title": "Plan one moving shot",
         "paragraphs": [
-          "Keep one shot simple. Start with a still of the finished nameplate on a desk. Ask for a slow push toward the brass edge with a fixed light source, one continuous shot and no lettering changes. In Adobe Firefly, a first frame anchors the opening. An optional last frame anchors the ending. Some camera controls depend on which references you provide.",
-          "Google offers video generation in Gemini. Grok Imagine has a video workflow. Claude can draft the storyboard and shot descriptions. The ChatGPT chapter gives the dated status of OpenAI’s Sora services. Judge video output frame by frame for object continuity, orientation, legibility and abrupt changes before judging style."
+          "Use a picture of a game token as your starting frame. Ask for one slow camera move while the token stays still. Firefly can use a first frame and, where supported, a last frame. Google and {{model.xai.imagine.name}} have video tools too. Watch the start, middle and end. If the token changes color halfway through, revise that part of the prompt."
         ],
         "sources": [
           [
@@ -326,16 +327,15 @@
             "https://docs.x.ai/developers/model-capabilities/video/overview"
           ],
           [
-            "OpenAI · Sora discontinuation",
+            "OpenAI · Change and retirement guide",
             "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
           ]
         ]
       },
       {
-        "title": "Listen for the kind of mistake that matters",
+        "title": "Listen through the real speaker",
         "paragraphs": [
-          "For narration, supply a final script and a pronunciation guide for names. For transcription, keep the original recording and compare a sample of names, numbers and interruptions with the transcript. For generated music, describe pacing, instrumentation and where a clean ending belongs.",
-          "Try narrating a 25-second harbor departure. Put the spoken line and a music cue on separate tracks. A good voice performance can still be hard to understand if the music peaks during the name of the ship. Listen to the final mix through the same iPad speaker your audience will use."
+          "For narration, give the tool the exact script. For a transcript, give it a recording and check the words. For music, describe the mood and the ending. Try playing a spoken game hint over a short music clip. Listen on your iPad. If a drum hides the score, turn the music down and listen again."
         ],
         "sources": [
           [
@@ -356,14 +356,14 @@
   },
   {
     "id": "field-test",
-    "title": "Run a fair three-model trial",
-    "summary": "Try this fictional parking rule in three fresh chats. You already have the answer key.",
+    "title": "Try the same puzzle with three helpers",
+    "summary": "A made-up parking rule gives you an answer key for a fair test.",
     "intro": {
-      "what": "A controlled model trial gives several assistants the same job and scores their answers against a known result.",
-      "features": "The exercise provides a shared brief, an answer key, a scoring method and a second run that changes one condition.",
-      "exchange": "Adapt the trial to an anonymized trace with a known routing outcome. Include a case where the available events are insufficient to reach a conclusion.",
-      "m365": "Try three policy questions, including an exception and a deliberately missing detail. Award credit for the right source as well as the answer.",
-      "developer": "Give candidate models the same defect and compare whether their changes pass a regression check. Record review time beside the pass rate.",
+      "what": "A fair test gives every helper the same words and the same facts. You decide how to score the answers before you see them.",
+      "features": "You can repeat a run, change one rule and count what each helper gets right. That is one way to tell whether a change helped.",
+      "exchange": "Give three helpers the same pretend inbox rule. Keep the answer key on paper.",
+      "m365": "Use the same meeting invite to test which helper finds a missing end time.",
+      "developer": "Change one game rule. See whether all three helpers update the score in the right way.",
       "sources": [
         [
           "Google · choosing a model",
@@ -381,10 +381,9 @@
     },
     "sections": [
       {
-        "title": "Give all three the same brief",
+        "title": "Use the same question",
         "paragraphs": [
-          "Copy this prompt into Gemini, Claude and ChatGPT. “A garage charges $2 per started hour, capped at $10 per visit. Entries at or after 18:00 pay a flat $4 instead. All visits below are on one day. Calculate the charge for A, 17:30–19:45, B, 18:00–18:20, and C, 09:05–15:10. Give one row per visit with the rule and calculation. Flag any missing fact.”",
-          "Use the same inputs and tool access. Record each model or mode and whether it did arithmetic with a tool. Label the responses A, B and C in a different order before scoring them. Save a separate copy of the answer key. Running the trial again in a fresh chat helps reveal answers that only succeed occasionally."
+          "Start fresh chats in Gemini, Claude and ChatGPT. Give each this rule: “Charge $2 for each started hour, up to $10 per visit. A visit that starts at 6 p.m. or later costs $4 for the whole visit.” Ask about three visits on one day. A runs from 5:30 p.m. to 7:45 p.m. B runs from 6 p.m. to 6:20 p.m. C runs from 9:05 a.m. to 3:10 p.m. Ask for the charge and the rule used."
         ],
         "sources": [
           [
@@ -402,9 +401,9 @@
         ]
       },
       {
-        "title": "Score the reasoning that affects the answer",
+        "title": "Score what you can check",
         "paragraphs": [
-          "Give one point per correct charge, one for applying the evening rule by entry time, and one for applying the cap correctly. Give credit for a checkable calculation even if it uses different words. Record time-to-answer separately. This exercise describes a trial you can perform. The worked answers below were calculated from the fictional rule."
+          "Give a point for each correct charge. Give one more point if the answer uses the start time for the evening rule. Give one more if it spots the daily limit. A total of five points is possible. Record the time the answer took in a separate box."
         ],
         "sources": [
           [
@@ -423,33 +422,32 @@
         "table": {
           "columns": [
             "Visit",
-            "Expected",
-            "Why"
+            "Correct charge",
+            "How to check"
           ],
           "rows": [
             [
-              "17:30–19:45",
+              "A",
               "$6",
-              "Entry precedes 18:00. Two hours and fifteen minutes count as three started hours."
+              "It starts before 6 p.m. Two hours and 15 minutes use three started hours."
             ],
             [
-              "18:00–18:20",
+              "B",
               "$4",
-              "The start time is exactly the inclusive evening threshold."
+              "It starts right at 6 p.m., so the evening rule applies."
             ],
             [
-              "09:05–15:10",
+              "C",
               "$10",
-              "Six hours and five minutes round up to seven hours. The $14 subtotal hits the cap."
+              "Six hours and five minutes use seven started hours. The $14 total stops at the $10 limit."
             ]
           ]
         }
       },
       {
-        "title": "Turn a disagreement into a useful follow-up",
+        "title": "Change just one word",
         "paragraphs": [
-          "If one model says $4 for the first visit, ask it to quote the part of the rule that determines eligibility. Then change only one word, from “entries” to “exits,” and rerun the cases. A should become $4. This tests whether the model can transfer the rule to a changed situation.",
-          "For a broader trial, add an invoice to extract, a scheduling conflict and a photo to interpret. Decide in advance which mistakes deserve zero credit. Repeat after a model update under the same conditions, then choose for the tasks that actually occupy your week."
+          "Change “starts” to “ends” in the evening rule. Ask again. A now costs $4 because it ends after 6 p.m. If a helper keeps its old answer, ask it to show the part of the new rule it used. The changed rule tells you more than simply asking the same question again."
         ],
         "sources": [
           [

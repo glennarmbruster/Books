@@ -1,38 +1,43 @@
 [
   {
     "id": "lab-codex-01",
-    "title": "Find a stuck message in a local trace",
-    "summary": "Start with a diagnostic question that has a visible answer in a four-line file.",
+    "title": "Find the last line about each message",
+    "summary": "Mail A and mail B joined the same queue. Find out which one reached the end.",
     "level": "Starter",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor.",
-    "features": "Read-only project inspection and evidence references",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A log is like a diary. Read its entries in order. A missing delivery line means we do not yet know what happened next.",
     "roles": [
-      "Inspect message lifecycle records",
-      "Trace sample job events",
-      "Explain an incomplete app operation"
+      "Follow a message through a queue.",
+      "Check when a sample file job ended.",
+      "Show the last move in a game."
     ],
-    "prompt": "Read trace.log and build a two-row Markdown table in your reply. For each ID, list the final observed state and the line number supporting it. Leave the source file as supplied.",
+    "prompt": "Read trace.log. For each letter, tell me its last state and the line that proves it. Leave the file as it is.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as trace.log. Keep the filename and the sample values exactly as shown.",
-        "help": "There are four lines and no header. Line numbers start at one. Use this practice folder as the Codex project.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as trace.log. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called trace.log.txt is a different file.",
         "code": "A queued\nB queued\nA retrying\nA delivered"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "The answer should include separate rows for A and B. If it calls B failed, ask for the line that proves that claim."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Append B delivered as line 5, save and ask Codex to update only the row whose final observed state changed.",
-        "help": "If B remains queued, make sure the file was saved and ask Codex to reread the local file."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A was delivered on line 4. B was queued on line 2.",
+        "help": "Number the four lines on paper. Circle the last A and the last B. Compare those two circles with the line numbers in the reply."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add B delivered on line 5 and save. Ask Codex to read the file again.",
+        "help": "If B is marked failed, ask to see the exact line that says failed."
       }
     ],
     "check": [
-      "Initially A is delivered on line 4 and B is queued on line 2.",
-      "After the edit, B is delivered on line 5."
+      "A was delivered on line 4. B was queued on line 2.",
+      "B is now delivered on line 5. A still points to line 4."
     ],
     "sources": [
       [
@@ -43,38 +48,43 @@
   },
   {
     "id": "lab-codex-02",
-    "title": "Build a tiny two-page browser guide",
-    "summary": "Make a local mini-app and verify its behavior by clicking through both pages.",
+    "title": "Build a guide with two pages",
+    "summary": "Make a little book that flips between two things to check.",
     "level": "Starter",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A desktop browser.",
-    "features": "Creating a static HTML file and checking navigation",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "The count tells the reader where they are. A button at the last page should never open a made-up third page.",
     "roles": [
-      "Publish a two-step runbook",
-      "Create a quick support guide",
-      "Prototype an app flow"
+      "Make a mail check card.",
+      "Step through a file-sharing guide.",
+      "Build a tiny storybook."
     ],
-    "prompt": "Use pages.txt to build index.html. Show one page title at a time, with Previous and Next buttons and a page count. Disable Previous on the first page and Next on the last. Put everything in the single HTML file and use no remote assets.",
+    "prompt": "Use pages.txt to build one index.html file. Show one title and a count. Add Previous and Next. Turn off each button at its end of the book. Keep every part in this file.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as pages.txt. Keep the filename and the sample values exactly as shown.",
-        "help": "Save both titles on separate lines. A blank line at the end should not generate an extra page.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as pages.txt. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called pages.txt.txt is a different file.",
         "code": "Check queue\nVerify delivery"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Open index.html by double-clicking it. If both titles show together, ask Codex to render only the selected page."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Click Next, then Previous. Try activating the unavailable button on each end and watch both the title and the count.",
-        "help": "If a third blank page appears, direct Codex to ignore trailing blank lines when reading the input titles."
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. The browser starts on Check queue, 1 of 2. Previous is off.",
+        "help": "Open index.html in your browser. Check the title and the count together. Set a finger on Next and see how far you can go from page 1."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Click Next, try Next again, then click Previous.",
+        "help": "If code appears as text, check that the file ends in .html and open it in a browser."
       }
     ],
     "check": [
-      "Initial state is Check queue, 1 of 2, Previous disabled.",
-      "Next displays Verify delivery, 2 of 2, Next disabled. Back restores the initial state."
+      "The browser starts on Check queue, 1 of 2. Previous is off.",
+      "Page 2 says Verify delivery, 2 of 2. Next is off. Previous takes you back to page 1."
     ],
     "sources": [
       [
@@ -85,38 +95,43 @@
   },
   {
     "id": "lab-codex-03",
-    "title": "Calculate a signed ledger total",
-    "summary": "Give Codex a deliberately mixed set of positive, negative and zero values, then independently check the arithmetic.",
+    "title": "Add points, even when a score is zero",
+    "summary": "Count how many rounds each team played and how many points each kept.",
     "level": "Starter",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Local file processing with reproducible numeric output",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A zero is a score someone entered. A minus takes points away. Neither one erases a round.",
     "roles": [
-      "Reconcile quota adjustments",
-      "Check license adjustments",
-      "Build a game score ledger"
+      "Count mailbox rows with zero new items.",
+      "Sum signed changes in a practice sheet.",
+      "Make a game scorekeeper."
     ],
-    "prompt": "Read ledger.csv and create totals.py using only Python’s standard library. Print one row per player with round count and signed total. Retain zero scores as rounds and keep players in first-seen order. Run the script locally.",
+    "prompt": "Read ledger.csv. Write totals.py with Python’s built-in tools. Print each team in the order it first appears. Count its rounds and add its points. Count zero as a round. Run the file.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as ledger.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "Keep the minus sign in row 4 and the zero in row 5. The header is not a played round.",
-        "code": "player,points\nAri,80\nBea,35\nAri,-75\nBea,0\nAri,10"
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as ledger.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called ledger.csv.txt is a different file.",
+        "code": "player,points\nBlue,80\nGold,35\nBlue,-75\nGold,0\nBlue,10"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Check the output for both players. If Bea has one round, ask Codex whether it discarded a numeric zero while filtering blanks."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Append Bea,-40 and rerun. Compare her new count and total with a hand calculation.",
-        "help": "The sign can change across zero. If Bea becomes 75, inspect any absolute-value conversion in the parser."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Blue played 3 rounds for 15 points. Gold played 2 rounds for 35 points.",
+        "help": "Make two piles on paper, one per team. Blue has 80 - 75 + 10. Gold has 35 + 0. Count the slips as well as the points."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add Gold,-40 on a new line. Save the file and run python3 totals.py again.",
+        "help": "If Gold has only one round at the start, look for a rule that skips a zero."
       }
     ],
     "check": [
-      "Initially Ari has 3 rounds and 15 points; Bea has 2 rounds and 35 points.",
-      "With the appended row Bea has 3 rounds and -5 points."
+      "Blue played 3 rounds for 15 points. Gold played 2 rounds for 35 points.",
+      "Gold now has 3 rounds and -5 points. Blue stays at 15."
     ],
     "sources": [
       [
@@ -127,38 +142,43 @@
   },
   {
     "id": "lab-codex-04",
-    "title": "Set durable rules for a project",
-    "summary": "Put a small data format contract in AGENTS.md and verify it in a new chat about the same project.",
+    "title": "Give a project a rule card",
+    "summary": "Leave rules in the project so a fresh chat knows how to write a findings file.",
     "level": "Intermediate",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor.",
-    "features": "Project instructions and contract verification",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A project rule card works like the rules inside a game box. A new player can use them without the last player there.",
     "roles": [
-      "Standardize audit notes",
-      "Set inventory handoff rules",
-      "Keep app release notes consistent"
+      "Set labels for sample mail findings.",
+      "Keep shared report columns in order.",
+      "Give game saves one clear shape."
     ],
-    "prompt": "Read the project instructions and create findings.json from these facts: ID A1 has status open and ID A2 has status closed. Follow the contract exactly. Show the parsed output.",
+    "prompt": "Read AGENTS.md. Make findings.json for A1 open and A2 closed. Write only the two fields the rules ask for. Open the file so we can read it.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as AGENTS.md. Keep the filename and the sample values exactly as shown.",
-        "help": "Save this exact filename in the project root. Open a new Codex session in that folder after saving it so project instructions are discovered.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as AGENTS.md. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called AGENTS.md.txt is a different file.",
         "code": "Every findings file is a JSON array. Each item has exactly two keys: id and status. The status is uppercase. Sort items by id ascending. Omit commentary inside JSON."
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Check the data as parsed JSON. If Codex includes a prose explanation inside the file, point to the contract and ask for a valid array."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Start a fresh chat in the same folder. Ask for second-findings.json from Z9 closed and B2 open, without repeating the format rules.",
-        "help": "If the second file differs in structure, inspect the project directory of the second chat and verify AGENTS.md is present there."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The first file lists A1 OPEN and A2 CLOSED. Each row has just id and status.",
+        "help": "Open both JSON files in a text editor. Count the fields in each row. Lower and uppercase letters matter in this rule."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Start a fresh Codex chat in this same folder. Ask for second-findings.json using Z9 closed and B2 open. Leave out the rules this time.",
+        "help": "If the second file has extra fields, check that the fresh task opened the folder holding AGENTS.md."
       }
     ],
     "check": [
-      "First file contains A1 OPEN and A2 CLOSED.",
-      "Second file has B2 OPEN before Z9 CLOSED and exactly two keys per record."
+      "The first file lists A1 OPEN and A2 CLOSED. Each row has just id and status.",
+      "B2 OPEN comes before Z9 CLOSED. The same two fields appear."
     ],
     "sources": [
       [
@@ -173,38 +193,43 @@
   },
   {
     "id": "lab-codex-05",
-    "title": "Keep the right row when exports overlap",
-    "summary": "Merge two reporting periods by a stable identity and an explicit selection rule.",
+    "title": "Keep the newest row for each item",
+    "summary": "Two exports can list the same entry. Pick the newest one and catch ties that disagree.",
     "level": "Intermediate",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Building a deterministic importer and conflict check",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Numbers on the rows work like edition numbers on a book. Two different texts labeled with the same edition need a person to check them.",
     "roles": [
-      "Join mailbox snapshots",
-      "Merge periodic inventory reports",
-      "Import offline exports"
+      "Choose the latest sample mailbox row.",
+      "Combine two export sheets.",
+      "Load the newest saved game."
     ],
-    "prompt": "Read versions.csv. Create merge.py that selects the highest integer revision per ID and writes merged.csv sorted by ID. Identical duplicates are harmless. If the same ID and revision have different labels, fail before replacing any existing merged.csv. Test both success and failure.",
+    "prompt": "Use versions.csv to make merge.py. For each ID, keep the row with the largest whole revision number. Sort by ID and write merged.csv. Equal copies count once. Stop if two labels differ for the same ID and revision. Keep the last good output.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as versions.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "The final row duplicates the earlier y record. Row order is deliberately different from revision order.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as versions.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called versions.csv.txt is a different file.",
         "code": "id,rev,label\nx,2,New\ny,1,First\nx,1,Old\ny,1,First"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Inspect merged.csv after the first run. If Old wins because it came later, ask for numeric revision comparison."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Append x,2,Conflict. Save the preceding output text, rerun, and compare the resulting merged.csv byte for byte with your saved copy.",
-        "help": "The process should report the conflict and preserve the successful output. If it truncates the file, validate all inputs before opening the destination."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. merged.csv has x,2,New and y,1,First below the header.",
+        "help": "Sort the x rows by their revision numbers. Cross off the older one. The two equal y rows can share one spot."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Save a copy of merged.csv. Add x,2,Conflict to the input and run the tool again. Compare both output files.",
+        "help": "If the tie silently picks the last row, ask for a check before the tool writes its output."
       }
     ],
     "check": [
-      "Successful output contains x,2,New and y,1,First.",
-      "Conflicting revision fails and leaves the last successful file intact."
+      "merged.csv has x,2,New and y,1,First below the header.",
+      "The tool reports the tie. The last good merged.csv still matches its copy."
     ],
     "sources": [
       [
@@ -215,38 +240,43 @@
   },
   {
     "id": "lab-codex-06",
-    "title": "Make a search field that handles empty input",
-    "summary": "Build a small searchable index and exercise it from a desktop browser.",
+    "title": "Build a search box that can be cleared",
+    "summary": "A reader wants to find mail topics even if they type capitals or stray spaces.",
     "level": "Intermediate",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A desktop browser.",
-    "features": "Local browser prototype and edge-case testing",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "An empty search asks to see everything. A real word with no match asks for an empty list.",
     "roles": [
-      "Search troubleshooting guides",
-      "Filter a catalog of sites",
-      "Build a bookshelf index"
+      "Find a mailbox report by its title.",
+      "Search a list of work guides.",
+      "Filter books on a shelf."
     ],
-    "prompt": "Generate a self-contained index.html from titles.txt. Show a search field and the matching titles in original order. Match case-insensitive substrings after trimming the query. Show the count and an explicit empty-state message. No external libraries.",
+    "prompt": "Build index.html using titles.txt. Give it a search field, a count and a list in the same order. Match any part of a title. Ignore capital letters and spaces at the ends of the search. Show a message for no matches. Use one offline file.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as titles.txt. Keep the filename and the sample values exactly as shown.",
-        "help": "Keep one title per line. The first and third titles both contain “mail” but in different positions.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as titles.txt. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called titles.txt.txt is a different file.",
         "code": "Mailbox Review\nGroup Audit\nMail Flow\nArchive Plan"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Open the generated file and type mail. If no titles appear, compare the case conversion applied to input and titles."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Try the query “ MAIL ” with surrounding spaces, then “xyz”, then erase the query. Observe the count each time.",
-        "help": "A zero-result query should visibly report the empty state. If the blank query keeps old results, check for an early return before rerendering."
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Searching for MAIL with spaces on either side finds Mailbox Review and Mail Flow. The count is 2.",
+        "help": "Type MAIL with one space on either side in the web page. Read the displayed titles, then compare the number beside the box."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Try xyz. Then erase the whole search, including spaces.",
+        "help": "If only Mail Flow appears, ask for matches anywhere inside a title. Mailbox counts too."
       }
     ],
     "check": [
-      "MAIL with outer spaces finds Mailbox Review and Mail Flow.",
-      "xyz finds 0; clearing the input restores all 4."
+      "Searching for MAIL with spaces on either side finds Mailbox Review and Mail Flow. The count is 2.",
+      "The screen shows 0 matches for xyz. The empty field brings back all four titles."
     ],
     "sources": [
       [
@@ -257,38 +287,43 @@
   },
   {
     "id": "lab-codex-07",
-    "title": "Review an uncommitted change before accepting it",
-    "summary": "Use Git history to distinguish a newly introduced error from the baseline and ask Codex to review the difference.",
+    "title": "Find the one number a change breaks",
+    "summary": "A limit of five should still let someone in when the count is exactly five.",
     "level": "Intermediate",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Git and Python 3.",
-    "features": "Diff-based code review and regression testing",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "The little equal sign includes the number on the fence. Tests far away from five would miss this mistake.",
     "roles": [
-      "Review date and quota gates",
-      "Catch incorrect rollout boundaries",
-      "Review a small app patch"
+      "Check a mail size limit.",
+      "Check a seat limit in a practice sheet.",
+      "Review a game entry fee rule."
     ],
-    "prompt": "Review the uncommitted change in cap.py. Explain its user-visible effect and identify the smallest input that changes the answer for a nonnegative integer. Leave the edit in place for inspection.",
+    "prompt": "Compare the saved version of cap.py with the change that has not been saved to Git. Tell me which whole count first gives a different result. Show the old and new rule. Keep the file as it is.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as cap.py. Keep the filename and the sample values exactly as shown.",
-        "help": "In a terminal in this new practice folder run git init, then git add cap.py, then git -c user.name=Lab -c user.email=lab@example.invalid commit -m baseline. Change <= to < in the saved file.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as cap.py. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called cap.py.txt is a different file.",
         "code": "def allowed(count):\n    return count <= 5"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Confirm git diff shows one changed operator. Ask Codex to review that change; if available, use its review of uncommitted changes. A clean diff means the edit was not saved."
+        "title": "Make one change to review",
+        "text": "Start a practice Git repository here if needed. Ask Codex to save cap.py as a commit. Change <= to < and save the file without committing it. Then send the lab request.",
+        "help": "Open the changes view. There should be one changed comparison in cap.py. The saved checkpoint is the version Codex will compare it with."
       },
       {
-        "title": "Check the boundary",
-        "text": "Ask Codex to run the current function with 4, 5 and 6, compare against the committed baseline, and propose the one-character correction.",
-        "help": "If it discusses negative numbers, point back to the explicitly nonnegative domain. Compare the two outputs for 5."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The saved rule allows 5. The changed rule stops it. Four still passes and six still fails.",
+        "help": "Write three columns marked 4, 5 and 6. Under each, write what <= 5 means. Try the same columns for < 5."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Ask for the smallest repair. Run the function with 4, 5 and 6 before the repair and again after it.",
+        "help": "If no change appears, save the original <= file in Git first. Then change only <= to < in your working file."
       }
     ],
     "check": [
-      "Only count 5 changes from allowed to denied.",
-      "The repaired comparison restores True, True, False for 4, 5 and 6."
+      "The saved rule allows 5. The changed rule stops it. Four still passes and six still fails.",
+      "The repaired answers, in order, are True, True and False."
     ],
     "sources": [
       [
@@ -303,39 +338,44 @@
   },
   {
     "id": "lab-codex-08",
-    "title": "Make a repeatable Codex command with structured output",
-    "summary": "Collect a machine-readable answer directly from a noninteractive Codex run and check the facts inside it.",
+    "title": "Make the same small report twice",
+    "summary": "A program needs exact fields each time so it can open both answers.",
     "level": "Advanced",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A signed-in Codex CLI on this computer.",
-    "features": "CLI exec, output schema and captured final response",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Think of the field rules as three labeled cups. Each state goes into its cup. An empty cup has a count of zero.",
     "roles": [
-      "Classify queue samples",
-      "Produce a reliable review summary",
-      "Feed structured data to an app"
+      "Count mail results in a fixed order.",
+      "Feed a ready-to-read table to a report.",
+      "Give a score panel the fields it expects."
     ],
-    "prompt": "Count states in this sample: sent, held, sent, unknown. Return JSON satisfying the schema. Count each label exactly, including unknown.",
+    "prompt": "Count the states sent, held, sent, unknown. Use the field rules in counts.schema.json. Give a number for every field, even when it is zero.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as counts.schema.json. Keep the filename and the sample values exactly as shown.",
-        "help": "Save the schema with ordinary straight quotation marks. In your lab terminal run codex exec --help and locate --output-schema and -o.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as counts.schema.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called counts.schema.json.txt is a different file.",
         "code": "{\"type\":\"object\",\"properties\":{\"sent\":{\"type\":\"integer\"},\"held\":{\"type\":\"integer\"},\"unknown\":{\"type\":\"integer\"}},\"required\":[\"sent\",\"held\",\"unknown\"],\"additionalProperties\":false}"
       },
       {
-        "title": "Run the assignment",
-        "text": "In a terminal opened in the practice folder, run the command below. It sends the lab prompt to Codex, applies your schema to the final response and saves the result.",
-        "help": "The answer should land in result.json. If the command reports an unknown option, inspect codex exec --help and compare the spelling with the installed CLI.",
+        "title": "Save the first answer",
+        "text": "Open the terminal in the practice folder. Run this command in the signed-in Codex CLI. The -o option names the file to write.",
+        "help": "If the command cannot be found, open the command-line setup guide in Sources. Check that the schema file is in this folder.",
         "code": "codex exec --skip-git-repo-check --output-schema counts.schema.json -o result.json \"Count states in this sample: sent, held, sent, unknown. Return JSON satisfying the schema. Count each label exactly, including unknown.\""
       },
       {
-        "title": "Check the boundary",
-        "text": "Open result.json and inspect the keys and values. Repeat the command using “held, held” as the entire sample and save to second.json.",
-        "help": "If the console includes progress lines, inspect the file named by -o. Validate counts separately from whether the JSON has the right shape."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. result.json contains sent 2, held 1 and unknown 1.",
+        "help": "Circle sent twice and held once in the first request. Compare each count with the value next to the same name in result.json."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Run the command again. Replace the list inside the quoted request with held, held. Use second.json as the output name.",
+        "help": "If the terminal cannot find codex, finish its command-line setup first. If the shape is wrong, check the file after the -o option."
       }
     ],
     "check": [
-      "First run gives sent 2, held 1, unknown 1.",
-      "Second run gives sent 0, held 2, unknown 0; no extra keys appear."
+      "result.json contains sent 2, held 1 and unknown 1.",
+      "The second file contains sent 0, held 2 and unknown 0, with no extra fields."
     ],
     "sources": [
       [
@@ -346,38 +386,43 @@
   },
   {
     "id": "lab-codex-09",
-    "title": "Publish a useful summary without exposing addresses",
-    "summary": "Build aggregate results for an audience that only needs category counts. Inspect the final artifact for accidental identifiers.",
+    "title": "Share totals without sharing mail rows",
+    "summary": "A person needs counts. The example addresses and message text can stay in the input file.",
     "level": "Advanced",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Reporting with field minimization and artifact inspection",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "You can count envelopes without copying the address on each one. Check the file people will receive.",
     "roles": [
-      "Summarize fictional mailbox exceptions",
-      "Share aggregate guest-account status",
-      "Publish private-by-design usage stats"
+      "Share mail status counts.",
+      "Make a small team summary.",
+      "Show game totals without player details."
     ],
-    "prompt": "Read audit.csv and create summarize.py. Produce only summary.json with counts by lowercase status and a total. Treat a blank status as unknown. Never include an address, raw row or message field in the generated summary. Run the program and inspect the actual output file.",
+    "prompt": "Read audit.csv. Write summarize.py. Make summary.json with lowercase status counts and a total. Treat a blank status as unknown. Save only counts. Run the program and open the saved report.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as audit.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "These are fictional addresses. The status column alone is sufficient for the report.",
-        "code": "email,status,message\none@example.invalid,OK,reviewed\ntwo@example.invalid,,pending\nthree@example.invalid,ok,reviewed"
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as audit.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called audit.csv.txt is a different file.",
+        "code": "email,status,message\none@example.test,OK,reviewed\ntwo@example.test,,pending\nthree@example.test,ok,reviewed"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Open the generated JSON and check its allowed keys. If any message or identifier appears, require selecting only the needed column before grouping."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Append four@example.invalid,OK,contact-me and rerun. Ask Codex to check the artifact text for @, contact-me and example.invalid.",
-        "help": "A count increase should not expose the added detail. If the check scans the entire practice folder, narrow it to summary.json."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The first counts are ok 2, unknown 1 and total 3.",
+        "help": "Open the report as plain text. Search it for the @ sign and a word from a sample message before you share the counts."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add four@example.test,OK,contact-me to audit.csv. Run the script again. Search summary.json for @, contact-me and example.test.",
+        "help": "If you see an address in the output, find the step that copies whole rows. Keep just the count fields."
       }
     ],
     "check": [
-      "Initially ok is 2, unknown is 1 and total is 3.",
-      "After the edit ok is 3, total is 4; no searched identifiers occur in summary.json."
+      "The first counts are ok 2, unknown 1 and total 3.",
+      "The new counts are ok 3, unknown 1 and total 4. None of the three search terms appears."
     ],
     "sources": [
       [
@@ -388,38 +433,43 @@
   },
   {
     "id": "lab-codex-10",
-    "title": "Handle a throttled read in a local simulator",
-    "summary": "Practice recovery from a service response without sending any network requests or waiting in real time.",
+    "title": "Practice waiting when a service is busy",
+    "summary": "Pretend that a service asks you to wait twice. Count your tries without contacting a real service.",
     "level": "Advanced",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Mock responses, retry budgets and recorded delays",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A shop may ask you to come back later. When you have used your last try, waiting again cannot help.",
     "roles": [
-      "Test resilience of a mail-report reader",
-      "Handle simulated Graph throttling",
-      "Improve a mobile data loader"
+      "Read a sample of busy mail replies.",
+      "Test a report that waits its turn.",
+      "Keep a game from retrying forever."
     ],
-    "prompt": "Build simulator.py using replies.json. For a 429 record retry_after as a planned delay, then consume the next response. For 200 return items. Stop after three total attempts or an unrecognized status. Do all work in memory; print attempts, planned delays and outcome. Test exhaustion.",
+    "prompt": "Build simulator.py. Read replies.json in order. A 429 means busy. Record its wait time only if you can try again. A 200 gives the items. Stop at three tries or an unknown code. Print tries, planned waits and the result. Skip real waits.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as replies.json. Keep the filename and the sample values exactly as shown.",
-        "help": "The values 2 and 4 are simulated seconds. Do not add an actual HTTP client or connect a service.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as replies.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called replies.json.txt is a different file.",
         "code": "[{\"status\":429,\"retry_after\":2},{\"status\":429,\"retry_after\":4},{\"status\":200,\"items\":[\"G1\"]}]"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Confirm the simulator prints its results immediately. If it sleeps, ask for an injected delay recorder that appends numbers to a list."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Replace the final response with {\"status\":429,\"retry_after\":8}. Run again. Define a delay only when another attempt remains.",
-        "help": "If an 8 is recorded after the last attempt, the retry budget is checked too late. The failure should identify exhaustion."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. You get G1 on try 3. The planned waits are 2 and 4.",
+        "help": "Write a row for each attempt. Put a wait between tries one and two and between two and three. There is no space for a wait after the third."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change the final reply to {\"status\":429,\"retry_after\":8}. Run the same program.",
+        "help": "If 8 appears in the second list, move the wait step behind the check for a try still left."
       }
     ],
     "check": [
-      "Success returns G1 in 3 attempts with delays [2,4].",
-      "Three throttles also yield 3 attempts and delays [2,4], then exhaustion."
+      "You get G1 on try 3. The planned waits are 2 and 4.",
+      "The tool stops after three tries. It still lists only 2 and 4 for waits, since there is no fourth try."
     ],
     "sources": [
       [
@@ -430,38 +480,43 @@
   },
   {
     "id": "lab-codex-11",
-    "title": "Upgrade old offline backups safely",
-    "summary": "Design an importer that accepts yesterday’s backup and today’s format while refusing unsupported future versions.",
+    "title": "Open an old save without damaging a good one",
+    "summary": "An old game called its points score. A newer save calls the same value points.",
     "level": "Expert",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Version-aware import, preservation of user data and validation",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A new label can still describe the same number. A version the tool has never seen is different: it has no instructions for reading it.",
     "roles": [
-      "Restore a report profile",
-      "Upgrade an inventory export",
-      "Protect offline game saves"
+      "Read an older sample mail export.",
+      "Open a previous report layout.",
+      "Keep old scores working after an update."
     ],
-    "prompt": "Read backups.json. Build a Python importer: v1 maps score to points; v2 keeps points; both preserve name and signed integers. For newer versions fail before updating current.json. Set initial current.json to {\"name\":\"Keep\",\"points\":42}. Demonstrate v1, v2, and the unsupported version in separate tests.",
+    "prompt": "Read backups.json. Write an importer that maps v1 score to points and uses v2 points as written. Keep the team label and signed whole number. Start current.json with Keep at 42. An unknown version must leave the last good file alone.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as backups.json. Keep the filename and the sample values exactly as shown.",
-        "help": "The second user has a real score of zero. It must not be replaced by a default.",
-        "code": "[{\"v\":1,\"name\":\"Kai\",\"score\":-5},{\"v\":2,\"name\":\"Jo\",\"points\":0},{\"v\":3,\"name\":\"Future\",\"points\":10}]"
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as backups.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called backups.json.txt is a different file.",
+        "code": "[{\"v\":1,\"name\":\"Blue\",\"score\":-5},{\"v\":2,\"name\":\"Gold\",\"points\":0},{\"v\":3,\"name\":\"Future\",\"points\":10}]"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Check the before and after state in each test independently. If either a zero score or negative score disappears, look for normalization treating it as invalid."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Run v2 successfully, then attempt v3 on the same current.json. Compare the saved file’s bytes before and after v3.",
-        "help": "If the invalid version clears the file, move validation before opening the destination for writing."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Version 1 restores Blue at -5 points. Version 2 restores Gold at 0.",
+        "help": "Open the output after each save. Mark whether its points field is present, then read its value. Zero passes both checks."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Load v2 successfully. Copy current.json to a second file. Try loading v3 and compare the files.",
+        "help": "If zero becomes a default, check whether the field exists. A number can be zero and still be present."
       }
     ],
     "check": [
-      "v1 restores Kai with -5 points; v2 restores Jo with zero.",
-      "v3 reports failure and the previously successful save remains byte-identical."
+      "Version 1 restores Blue at -5 points. Version 2 restores Gold at 0.",
+      "The tool reports an unknown version. Every byte of the saved Gold result is unchanged."
     ],
     "sources": [
       [
@@ -472,38 +527,43 @@
   },
   {
     "id": "lab-codex-12",
-    "title": "Calculate effective access from a sample graph",
-    "summary": "Follow inherited group membership through a small, cyclic permission map using only the supplied fixture.",
+    "title": "Follow a chain of group permissions",
+    "summary": "Members can get permission through a group inside another group. Draw the path so you can see why each permission appears.",
     "level": "Expert",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Graph traversal, cycle detection and explainable evidence paths",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Think of checking rooms in a maze. Once a room is checked, another door into it cannot add a new room by itself.",
     "roles": [
-      "Review role-group assignments",
-      "Understand nested group grants",
-      "Audit permissions in a small app"
+      "Explain a sample mailbox permission.",
+      "Map access through practice groups.",
+      "Check which game levels a team may open."
     ],
-    "prompt": "Create access.py for grants.json. Each edge points from a principal to a group or permission. For a starting name, return sorted distinct reachable permission names beginning permit:, plus one path proving each grant. Ignore cycles. Test Ari and Jo; do not call a directory service.",
+    "prompt": "Read grants.json. Write access.py. Starting at one member, follow the arrows and list each reachable permit: label once, sorted. Show one path to each label. Mark groups already visited so a loop ends. Work only with the sample file.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as grants.json. Keep the filename and the sample values exactly as shown.",
-        "help": "Editors and Readers deliberately point to each other. The graph describes a fictional app’s rules rather than any provider’s directory semantics.",
-        "code": "{\"Ari\":[\"Editors\",\"Readers\"],\"Editors\":[\"Readers\",\"permit:write\"],\"Readers\":[\"Editors\",\"permit:read\"],\"Jo\":[]}"
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as grants.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called grants.json.txt is a different file.",
+        "code": "{\"Blue\":[\"Editors\",\"Readers\"],\"Editors\":[\"Readers\",\"permit:write\"],\"Readers\":[\"Editors\",\"permit:read\"],\"Gold\":[]}"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Ask Codex to show the visited-node rule. If a test hangs, interrupt that local test and mark groups visited before expanding their outgoing edges."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Add permit:read directly to Ari as another edge. Rerun and compare the number of unique grants and the validity of each displayed path.",
-        "help": "Multiple paths to a permission still count as one grant. Each adjacent pair in the displayed proof must exist in the file."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Blue reaches permit:read and permit:write once each. Gold reaches neither.",
+        "help": "Draw arrows from Blue to both groups. Cross off a group as soon as you enter it. List only the permit labels you reach."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add permit:read directly to Blue as another arrow. Run access.py again for both teams.",
+        "help": "If the program keeps running, make sure it records a visit before following the next arrow."
       }
     ],
     "check": [
-      "Ari reaches permit:read and permit:write exactly once each; Jo reaches neither.",
-      "The redundant direct grant changes no effective permission."
+      "Blue reaches permit:read and permit:write once each. Gold reaches neither.",
+      "Blue still has two different permissions. Every path printed can be traced through the input."
     ],
     "sources": [
       [
@@ -514,38 +574,43 @@
   },
   {
     "id": "lab-codex-13",
-    "title": "Measure peak overlap with simultaneous boundaries",
-    "summary": "Compute how many jobs are active at once and deliberately test the instant one job ends as another begins.",
+    "title": "Find the busiest minute",
+    "summary": "Several jobs can run together. Work out the largest number running at once.",
     "level": "Expert",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "Time-interval analysis, independent oracle and edge cases",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "When one job stops at minute 3, its spot is free for a job starting at 3. It cannot take both spots.",
     "roles": [
-      "Estimate mail processing overlap",
-      "Review batch-job concurrency",
-      "Plan capacity for a small service"
+      "Find busy mail check periods.",
+      "Plan shared report jobs.",
+      "Measure overlap between game events."
     ],
-    "prompt": "Build peak.py for jobs.csv. Treat intervals as [start,end) in integer minutes. Print peak concurrency and the earliest minute reaching it. Ignore zero-length intervals. Implement an independent minute-by-minute checker and compare it with your primary algorithm for this fixture and an all-empty fixture.",
+    "prompt": "Build peak.py from jobs.csv. A job runs at its start minute and stops before its end minute. Skip jobs with equal start and end. Print the busiest count and its first minute. Check it with a second method that counts one minute at a time.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as jobs.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "An end minute is excluded. Job D starts and ends at 3, contributing no active minutes.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as jobs.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called jobs.csv.txt is a different file.",
         "code": "id,start,end\nA,0,3\nB,2,4\nC,3,5\nD,3,3"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "You should see both methods report the same result. If a peak of three occurs at 3, check whether the algorithm processed the ending job too late."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Change A to cover [0,2) and rerun. Then set every end equal to its start. Define an empty result as peak zero and no earliest minute.",
-        "help": "A second method must genuinely count active intervals for each minute. Reusing the first method twice cannot reveal its ordering bug."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Two jobs first run together at minute 2.",
+        "help": "Draw five one-minute boxes in a row. Shade a job on each minute it uses. Count the marks in each column."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change A to start 0 and end 2. Run again. Then give every job the same end as its own start.",
+        "help": "If three jobs appear at minute 3, look for an end minute that was counted as part of the job."
       }
     ],
     "check": [
-      "Original peak is 2 first reached at minute 2.",
-      "With A shortened peak is 2 first reached at 3. All-empty input yields 0 and no minute."
+      "Two jobs first run together at minute 2.",
+      "The peak is still 2, now first seen at minute 3. With no running time, the count is 0 and there is no busiest minute."
     ],
     "sources": [
       [
@@ -556,38 +621,43 @@
   },
   {
     "id": "lab-codex-14",
-    "title": "Stop stale search results overwriting a fresh query",
-    "summary": "Make a browser timing bug reproducible by controlling two completion delays in a local app.",
+    "title": "Keep an old search from replacing a new one",
+    "summary": "Two searches can finish in a different order from the order you typed them.",
     "level": "Expert",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A desktop browser.",
-    "features": "Controlled reproduction, UI behavior and stale-response tests",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Put a number on each search when it starts. When a reply arrives, the latest number tells you whether that reply still belongs on screen.",
     "roles": [
-      "Avoid stale search results in support tools",
-      "Build reliable directory search screens",
-      "Fix racing autocomplete responses"
+      "Keep the newest mail search on screen.",
+      "Show the latest file filter.",
+      "Keep a book finder from flashing old results."
     ],
-    "prompt": "Use delays.json to create a standalone index.html with a Run demo button. On click, start the query old then new immediately, and simulate their completion using the listed delays. First demonstrate the bug where the last completed response overwrites the display. Fix it so only the most recently started query can update the result. Keep a visible completion log.",
+    "prompt": "Use delays.json to build index.html with Run demo. Start old, then immediately start new. Show their finish order. First show the bug where the last reply wins. Then add a check so only the newest request can change the answer.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as delays.json. Keep the filename and the sample values exactly as shown.",
-        "help": "The names describe when queries started. Old deliberately finishes later in this file.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as delays.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called delays.json.txt is a different file.",
         "code": "{\"old\":{\"delay_ms\":60,\"label\":\"Old result\"},\"new\":{\"delay_ms\":5,\"label\":\"New result\"}}"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Open index.html and click Run demo. Ask for a “before” capture or a switch that reproduces the bug, and check the completion log records both callbacks."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "With the fix active, run again, then swap the two delays in the fixture and ask Codex to rebuild the standalone page. Test both orders.",
-        "help": "If only one callback is logged, a result may have been hidden by skipping the request entirely. Require both completions to remain visible in the log."
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. With 60 ms for old and 5 ms for new, new finishes first. The broken view ends on Old result. The fixed view ends on New result.",
+        "help": "Look at the start order and finish order as two separate lists. Underline the last item on the start list to predict the fixed screen."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Swap the wait times in the sample. Rebuild the page and press Run demo again.",
+        "help": "If the fix works only for short waits, look for a choice based on finish time instead of the most recent request number."
       }
     ],
     "check": [
-      "Original delays complete new then old. The faulty display ends Old result; the fixed display ends New result.",
-      "After swapping delays, the fixed display still ends New result."
+      "With 60 ms for old and 5 ms for new, new finishes first. The broken view ends on Old result. The fixed view ends on New result.",
+      "The fixed view still ends on New result. Its log now shows old finishing first."
     ],
     "sources": [
       [
@@ -602,38 +672,43 @@
   },
   {
     "id": "lab-codex-15",
-    "title": "Ship a self-checking report kit",
-    "summary": "Create a small deliverable someone else can run in a clean folder, then challenge its successful and failed behavior independently.",
+    "title": "Hand over a report with its own test",
+    "summary": "Build a report someone else can run and check from a short set of directions.",
     "level": "Expert",
-    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
-    "features": "End-to-end CLI implementation, contract tests, handoff and independent verification",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A clear handover lets another person prove the tool works without borrowing your chat history.",
     "roles": [
-      "Ship a mailbox health summary",
-      "Hand off an inventory reporting tool",
-      "Release a dependable app utility"
+      "Hand over a small mail report.",
+      "Share an inventory checker with a team.",
+      "Ship a game summary tool with tests."
     ],
-    "prompt": "Build report.py, test_report.py and README.md from inventory.csv. Accept an input and output path. Unique IDs count once, identical duplicate rows are allowed, status must be OK or HOLD, and conflicting duplicates fail before replacing an existing report. Write JSON summary with ok, hold and total, plus a documented test command and example invocation. Use Python standard library only.",
+    "prompt": "Use inventory.csv. Build report.py, test_report.py and README.md using built-in Python tools. Accept input and output paths. Count each ID once if its rows agree. Allow OK and HOLD. Stop before replacing the report if rows for one ID disagree. Include commands for the report and its tests.",
     "steps": [
       {
-        "title": "Prepare the sample",
-        "text": "In the new practice folder, use a text editor to save the following as inventory.csv. Keep the filename and the sample values exactly as shown.",
-        "help": "Run this exercise in its own new folder. The repeated B is identical and should not inflate the total.",
+        "title": "Set up the practice file",
+        "text": "In the new folder, save the sample below as inventory.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "help": "Check the file name in the folder list. A file called inventory.csv.txt is a different file.",
         "code": "id,status\nA,OK\nB,HOLD\nB,HOLD\nC,OK"
       },
       {
-        "title": "Run the assignment",
-        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
-        "help": "Review the README as if you had received only these files. Run its documented example yourself and open the JSON. For missing arguments expect a helpful usage error."
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
       },
       {
-        "title": "Check the boundary",
-        "text": "Append C,HOLD and rerun against the existing output. Then test a file containing only the header. Ask Codex to demonstrate both results using the README commands.",
-        "help": "A conflicting duplicate must not erase a previous good output. If the empty file case fails, distinguish a valid header-only CSV from a missing header."
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The good report says ok 2, hold 1 and total 3.",
+        "help": "Open README.md from the new folder. Follow its instructions as if you had never seen the chat. Compare the printed counts to the source rows."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Keep a copy of the good output. Add C,HOLD and try again. Next use a fresh file with just the header and run the test command from the README.",
+        "help": "If a duplicate counts twice, compare IDs before adding up the states. Save the output after all rows pass."
       }
     ],
     "check": [
-      "Good output is ok 2, hold 1, total 3. Conflict gives a nonzero exit and preserves that output.",
-      "A valid header-only input gives all three counts zero. The stand-alone test command passes."
+      "The good report says ok 2, hold 1 and total 3.",
+      "The conflict fails and keeps the good file. A header alone gives 0, 0, 0. All tests pass."
     ],
     "sources": [
       [
@@ -643,6 +718,711 @@
       [
         "OpenAI · code review",
         "https://learn.chatgpt.com/docs/code-review?surface=app"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-16",
+    "title": "Build a number hunt",
+    "summary": "Give a player a secret number and a useful hint after each guess.",
+    "level": "Starter",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A known secret makes the first round easy to check. Random play can come after that.",
+    "roles": [
+      "Check a mailbox size against a limit.",
+      "Practice numeric input rules.",
+      "Play a guessing game."
+    ],
+    "prompt": "Make index.html with a guess box, a Guess button and Play again. For this test the secret is 7. Later let Play again pick a whole number from 1 to 10. Count valid guesses; reject blanks and out-of-range values.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Secret 7. Guesses 3, 9, 7."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. 3 gives Higher, 9 gives Lower and 7 gives Found in 3 guesses.",
+        "help": "Open the browser game. Enter 3 and then 9. Read the two clues before entering 7. Write a tally mark each time a real guess goes in."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Try a blank during a fresh round, then make one valid guess.",
+        "help": "If an empty box uses a turn, check the text before turning it into a number."
+      }
+    ],
+    "check": [
+      "3 gives Higher, 9 gives Lower and 7 gives Found in 3 guesses.",
+      "The blank shows a hint and leaves the turn count at zero. The valid guess uses turn one."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-17",
+    "title": "Make a flip-card deck",
+    "summary": "A card should hide its answer until the player turns it over.",
+    "level": "Starter",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A card has two facts: which card this is and which side faces up.",
+    "roles": [
+      "Learn short mail terms.",
+      "Practice common file labels.",
+      "Build a deck for family game night."
+    ],
+    "prompt": "Build one HTML page with a question, Show answer, Next and Start over. Use these three cards in order. Going to the next card always hides the answer.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Pier → Dock; Port → Harbor; Stern → Back."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Pier shows first. Show answer reveals Dock. Next shows Port and hides Harbor.",
+        "help": "Flip the first card and say its answer out loud. Click Next and check whether the new card gives its answer away too soon."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Flip the third card. Tap Start over and look for the first answer.",
+        "help": "If Harbor shows as soon as you move, reset the face-up flag when the card number changes."
+      }
+    ],
+    "check": [
+      "Pier shows first. Show answer reveals Dock. Next shows Port and hides Harbor.",
+      "The deck returns to Pier with Dock hidden. The reader can play again."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-18",
+    "title": "Build a folder-size meter",
+    "summary": "Turn two small counts into a clear bar with a labeled amount.",
+    "level": "Starter",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A percentage tells how much of the whole is used. With no whole to divide by, the number has no meaning.",
+    "roles": [
+      "Read a sample mailbox quota.",
+      "Show a team folder’s share.",
+      "Display a fuel meter in a game."
+    ],
+    "prompt": "Build an HTML meter with editable Used and Limit boxes. Show a filled bar and a text percentage. With a zero limit show No limit given. Round percentages to whole numbers.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Used 6 blocks; limit 8 blocks."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Six of eight fills three quarters of the bar. The label reads 75%.",
+        "help": "Divide six blocks into a group of eight slots. On paper that leaves two empty slots. Compare your drawing with the bar."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Set Used to 0 with Limit 8. Then set Limit to 0.",
+        "help": "If zero usage gives an error, check the limit separately from the used count."
+      }
+    ],
+    "check": [
+      "Six of eight fills three quarters of the bar. The label reads 75%.",
+      "The first case reads 0%. The second asks for a limit and displays no percentage."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-19",
+    "title": "Build a checklist that remembers",
+    "summary": "Pack three items and leave the page. See what the page remembers.",
+    "level": "Starter",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Packing is a set of yes-or-no choices. Saving one value per item lets you unpack just one item.",
+    "roles": [
+      "Track checks made on a sample queue.",
+      "Remember steps in a file review.",
+      "Pack for a pretend trip."
+    ],
+    "prompt": "Build index.html with three labeled checkboxes and a packed count. Save choices on this device. Add Clear all. Use words as well as check marks.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Badge, Hat, Water. Check Hat only."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. After tapping Hat, the page reads 1 of 3. On reload Hat stays checked.",
+        "help": "Check Hat and read the count. Reload using the same address. The box next to Hat should still contain a check."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Check Water, reload, then press Clear all.",
+        "help": "If every box changes together, give each item its own key and label."
+      }
+    ],
+    "check": [
+      "After tapping Hat, the page reads 1 of 3. On reload Hat stays checked.",
+      "The saved count first reads 2 of 3. Clear all returns to 0 of 3."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-20",
+    "title": "Make a three-stop story",
+    "summary": "Let a reader choose which path to take through a short story.",
+    "level": "Starter",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "The page remembers each choice for one trip. Starting over needs a fresh trail.",
+    "roles": [
+      "Guide someone through a mail check.",
+      "Design a help question with two paths.",
+      "Build a small choice game."
+    ],
+    "prompt": "Build a one-page story with two choice buttons at Start. Each ending has a Restart button. Show the path the reader took. Keep it on the device.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Start has Pier and Hill. Pier ends at a boat. Hill ends at a bell."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Choosing Pier shows the boat and Start → Pier. Restart shows both paths.",
+        "help": "Write Start on two lines. Add Pier to the first line and Hill to the second. Run the game twice to compare its trails with yours."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Pick Hill after the restart. Look at the new path and ending.",
+        "help": "If an old choice remains, clear the path list when Restart is pressed."
+      }
+    ],
+    "check": [
+      "Choosing Pier shows the boat and Start → Pier. Restart shows both paths.",
+      "The end shows a bell and Start → Hill. Pier is absent from this run."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-21",
+    "title": "Make mail status easy to scan",
+    "summary": "Build buttons that filter a little list by mail state.",
+    "level": "Starter",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A filter changes which rows you see. It keeps the original rows ready for the next filter.",
+    "roles": [
+      "Read a sample mail queue.",
+      "Filter a practice task list.",
+      "Build a filter bar for game pieces."
+    ],
+    "prompt": "Build one offline HTML file. Add All, Queued and Sent buttons. List matching IDs in the given order, count them and keep the state written out beside each ID.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Q1 queued; Q2 sent; Q3 queued."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Queued lists Q1 and Q3, count 2. Sent lists Q2, count 1.",
+        "help": "Put Q1 and Q3 on a slip marked queued. Put Q2 on a slip marked sent. Each button should show exactly one of your piles."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Switch back to All, then repeat Queued twice.",
+        "help": "If each tap adds a second copy, clear the view before drawing the matches."
+      }
+    ],
+    "check": [
+      "Queued lists Q1 and Q3, count 2. Sent lists Q2, count 1.",
+      "All lists all three. Two taps on Queued still list only Q1 and Q3 once each."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-22",
+    "title": "Build a sliding tile puzzle",
+    "summary": "Use a two-by-two board to learn which moves are legal.",
+    "level": "Intermediate",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Two cells touch only if they share a side. Check row and column before swapping them.",
+    "roles": [
+      "Test a queue move rule.",
+      "Check a form’s allowed moves.",
+      "Play a small sliding puzzle."
+    ],
+    "prompt": "Build index.html with four square buttons. Only a tile beside the empty square may move. Count valid moves. Add Reset and show a win message at the goal.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Top row 1,2. Bottom row empty,3. Goal 1,2 / 3,empty."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Tapping 2 diagonally does nothing. Tapping 3 moves it left and wins in one move.",
+        "help": "Place four squares on paper with one left open. Try the two moves with a coin on each filled square before trying them on screen."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Press Reset. Tap 1, then tap 1 again to put it back.",
+        "help": "If a diagonal works, look for a rule that compares only the cell numbers."
+      }
+    ],
+    "check": [
+      "Tapping 2 diagonally does nothing. Tapping 3 moves it left and wins in one move.",
+      "The original board is back. The count is 2 and the game has not declared a win."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-23",
+    "title": "Build a wait-time chart",
+    "summary": "A chart should show missing readings differently from zero minutes.",
+    "level": "Intermediate",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A blank says nobody measured. A zero says someone measured and found no wait.",
+    "roles": [
+      "Chart a practice mail wait.",
+      "Show task age in a dashboard.",
+      "Graph time between turns."
+    ],
+    "prompt": "Make one HTML page with labeled bars and a text table. Show missing for a blank reading. Show each value even if it has no bar. The longest real reading sets the scale.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "A=0 min; B=8 min; C=blank; D=4 min."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. B has the longest bar. D is half as long. A reads 0. C reads missing.",
+        "help": "Sketch bars for 8 and 4 on graph paper. Give A the number 0 and C a question mark. Compare all four labels with the tool."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Set B to 0. Refresh the chart and inspect D and C.",
+        "help": "If C turns into zero, keep blank text separate before converting numbers."
+      }
+    ],
+    "check": [
+      "B has the longest bar. D is half as long. A reads 0. C reads missing.",
+      "D now sets the full scale at 4. C is still missing."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-24",
+    "title": "Make a meeting-slot finder",
+    "summary": "Find the free gaps in a short practice calendar.",
+    "level": "Intermediate",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Draw each booking as shaded squares on a strip. Free runs can occur at either end of the strip.",
+    "roles": [
+      "Place sample maintenance windows.",
+      "Find time between pretend meetings.",
+      "Spot a free game slot."
+    ],
+    "prompt": "Build an offline HTML tool. Enter opening hours, busy blocks and a minimum gap. Combine touching busy blocks. Show free gaps at least as long as the chosen number of minutes.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Open 09:00–10:00. Busy 09:10–09:25 and 09:25–09:40."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. At minimum 10 the gaps are 09:00–09:10 and 09:40–10:00.",
+        "help": "Draw the full hour as a strip and color both busy blocks. Measure the gaps at the left and right ends before changing the limit."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Increase the minimum to 15 and add a booking from 09:45 to 09:50.",
+        "help": "If an empty gap appears at 09:25, check that two blocks which touch become one busy period."
+      }
+    ],
+    "check": [
+      "At minimum 10 the gaps are 09:00–09:10 and 09:40–10:00.",
+      "Neither end gap reaches 15. Show No free slot."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-25",
+    "title": "Build a receipt splitter",
+    "summary": "Share a total in whole cents so the pieces add back up.",
+    "level": "Intermediate",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Three equal rounded shares can lose a cent. Hand the remaining cents out one at a time.",
+    "roles": [
+      "Split a sample mailbox storage allowance.",
+      "Allocate whole seats in a plan.",
+      "Share points among game teams."
+    ],
+    "prompt": "Build one HTML tool with total cents and seat count. Use whole cents. Divide evenly, handing leftover cents to the first seats in order. Print each share and the sum. Reject a seat count of zero.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Ten cents to split among three seats in seat order."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. The first seat gets 4 cents. The other seats get 3 each. The sum is 10.",
+        "help": "Deal ten coins to three seats in order. Each seat gets three, and the extra coin returns to seat one. Check the displayed sum."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Try zero cents and three seats. Then try ten cents and zero seats.",
+        "help": "If the shares are all 3, compare their sum with the starting ten cents."
+      }
+    ],
+    "check": [
+      "The first seat gets 4 cents. The other seats get 3 each. The sum is 10.",
+      "The first test gives three zero shares. The second asks for at least one seat."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-26",
+    "title": "Build a mail list comparison",
+    "summary": "Compare yesterday’s practice list with today’s. Report who joined and who left.",
+    "level": "Intermediate",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Crossing out matches on two lists leaves only the new and missing items.",
+    "roles": [
+      "Compare sample mailbox lists.",
+      "Check group membership exports.",
+      "Spot changes to a player roster."
+    ],
+    "prompt": "Build an HTML page with two text boxes and Compare. Trim spaces and ignore letter case. Treat repeated IDs as one. Show Added, Removed and Kept lists in order by ID.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Yesterday: box-a, box-b. Today: BOX-B, box-c, box-c."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Added box-c, removed box-a, kept box-b. Each occurs once.",
+        "help": "Write yesterday on the left and today on the right. Match the two versions of box-b. Compare the items left over on each side."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Copy today’s list into both boxes and compare again.",
+        "help": "If BOX-B looks new, use a cleaned copy for matching before listing the results."
+      }
+    ],
+    "check": [
+      "Added box-c, removed box-a, kept box-b. Each occurs once.",
+      "Added and Removed are empty. Kept contains box-b and box-c."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-27",
+    "title": "Make a three-card memory game",
+    "summary": "A six-card board can be checked because you know every pair.",
+    "level": "Intermediate",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A turn begins on the first card and ends on the second. A card cannot be its own pair.",
+    "roles": [
+      "Match terms with sample mail states.",
+      "Pair a tool with its job.",
+      "Make a replayable memory game."
+    ],
+    "prompt": "Build a browser game with this test deck. Two matching cards stay face up. Two different ones stay visible until Continue turns them down. Count each pair attempt. Add Restart. Ignore a second tap on the same card.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Fixed deck: sun, moon, star, sun, moon, star. Number slots 1–6."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. Tap 1 then 2. The mismatch counts as one try. Continue hides both. Tap 1 then 4: sun stays up.",
+        "help": "Number the deck positions. A mismatch uses the first try, then the three known pairs use three more. Keep a paper tally beside the board."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Match 2 with 5 and 3 with 6. Then press Restart.",
+        "help": "If you can tap a third card before Continue, pause the board while a mismatch is showing."
+      }
+    ],
+    "check": [
+      "Tap 1 then 2. The mismatch counts as one try. Continue hides both. Tap 1 then 4: sun stays up.",
+      "The win message says 4 tries. Restart hides all six and sets tries to 0."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-28",
+    "title": "Preflight a CSV import",
+    "summary": "Catch bad rows before an app adds anything to a saved list.",
+    "level": "Intermediate",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Seeing a preview is like checking a shopping basket before paying. It should not change the saved list.",
+    "roles": [
+      "Check pretend mailbox import rows.",
+      "Review a list before adding it to a sheet.",
+      "Import game pieces without half a set."
+    ],
+    "prompt": "Build an offline HTML import preview. Paste ID,count rows. Show errors with row numbers. Keep the Apply button off if any row is bad or an ID repeats. Add all good rows together only after Apply.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Saved ID K0. New rows K1,3 and K2,-1. Rule: counts are whole numbers of zero or more."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. The negative count flags row 2 of the data. The saved list still contains only K0.",
+        "help": "Look at the preview before pressing Apply. Point to the exact bad data row. Open the saved list to check that its old member is still there."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change K2 to 0 and apply once. Try to apply the same rows again.",
+        "help": "If K1 appears after the failed test, collect all errors before writing any new row."
+      }
+    ],
+    "check": [
+      "The negative count flags row 2 of the data. The saved list still contains only K0.",
+      "The first apply adds K1 and K2. The next preview flags those saved IDs and leaves three total."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-29",
+    "title": "Capstone: build an offline word hunt",
+    "summary": "Build a whole playable word game, then close the network and finish the round.",
+    "level": "Advanced",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "Use a fixed board to prove every clue exists. Save the app files and the player’s progress separately.",
+    "roles": [
+      "Practice making mail help available offline.",
+      "Build a traveling reference tool.",
+      "Ship a full offline word game."
+    ],
+    "prompt": "Build a word hunt with a board, target list, saved progress, Restart and help. A player taps two ends of a straight line. Count each target once. Serve the app locally with a small service worker that saves its files for offline use. Show me how to open it, wait for the cache and test a reload offline.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Fixed board rows CAT, ORE, DOG. Targets CAT, DOG, COD. Straight paths forward or backward."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Start the local server using the command the tool gives you. Open its localhost link in a browser. Play the sample round. Tap the ends of CAT and then the ends of CAT in reverse. Only one target is checked. COD is in column one.",
+        "help": "Trace CAT across the first row, DOG across the last row and COD down the first column. Keep one target for the offline part of the test."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Find DOG, go offline after the app says ready, reload, then select COD from top to bottom. Restart.",
+        "help": "If the page fails offline, check that you first served it at localhost or HTTPS and loaded every file online."
+      }
+    ],
+    "check": [
+      "Tap the ends of CAT and then the ends of CAT in reverse. Only one target is checked. COD is in column one.",
+      "The win message shows all 3. Restart clears the checks and leaves the same playable board while offline."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-30",
+    "title": "Capstone: build a mailbox report wall",
+    "summary": "Make a small offline dashboard that can explain every total to a reader.",
+    "level": "Expert",
+    "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
+    "features": "A report can have a real zero and still have missing data on another row. Separate those cases before adding anything.",
+    "roles": [
+      "Check mail totals without touching Exchange.",
+      "Hand a tested dashboard to a team.",
+      "Ship an app that can explain its numbers."
+    ],
+    "prompt": "Build a local HTML report app with CSV input, a preview, type filters and a downloadable summary. Show included boxes, known item sum, missing-count rows and excluded rooms. Flag repeated IDs and never replace a good report with a bad import. Include a test file and buttons or commands to run the checks.",
+    "steps": [
+      {
+        "title": "Give the app its own folder",
+        "text": "Open a new practice folder in Codex. Paste these sample inputs into the task along with the lab request. Ask it to build the first test around these values.",
+        "help": "If an old project is open, choose the new empty folder before sending the request.",
+        "code": "Box A shared 4; B user 0; C room 3; D shared blank. Group by type. Only user and shared boxes belong."
+      },
+      {
+        "title": "Make the first version",
+        "text": "Paste the lab request into the task and send it. Read the proposed change. Open the named output file or inspect the answer.",
+        "help": "If you receive only a plan, ask Codex to carry it out in this practice folder and show how to run the result."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open index.html in a browser, or use the local preview link if the app needs a server. Try the sample. The included count is 3. Known items sum to 4. One count is missing and one room is excluded. The user filter shows B with 0.",
+        "help": "Make separate notes for included boxes, known item sum and missing counts. B increases the first total by one and the second by zero."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Save the good summary. Add a second A with count 9 and try to import. Then fix D to 2 in a clean copy and import it.",
+        "help": "If the duplicate silently wins, ask for a whole-file ID check before the preview can become the current report."
+      }
+    ],
+    "check": [
+      "The included count is 3. Known items sum to 4. One count is missing and one room is excluded. The user filter shows B with 0.",
+      "The duplicate is rejected and the good summary stays. Fixing D gives 6 known items and no missing count."
+    ],
+    "sources": [
+      [
+        "OpenAI · first steps in Codex",
+        "https://learn.chatgpt.com/docs/quickstart"
       ]
     ]
   }
