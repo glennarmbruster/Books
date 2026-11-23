@@ -163,6 +163,8 @@ for group in groups:
             lab_count += 1
             continue
         reference_ids.add(key)
+        require(words(ch['tags']) and len(set(ch['tags'])) == len(ch['tags']) and
+                all(re.fullmatch(r'[a-z0-9-]+', tag) for tag in ch['tags']), f'Invalid reference tags in {key}')
         require(date.fromisoformat(ch['lastVerified']) <= date.fromisoformat(group['reviewed']) and
                 ch['verificationBasis'] in {'previous group review','page review'}, f'Invalid page review in {key}')
         require('unverified' not in ch or words(ch['unverified']), f'Empty unverified details in {key}')

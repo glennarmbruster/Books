@@ -453,6 +453,30 @@ function openLocation(moveFocus) {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
+      if (section.tagIndex) {
+        const tags = new Map();
+        for (const page of referenceChapters) {
+          for (const tag of page.tags) {
+            if (!tags.has(tag)) tags.set(tag,[]);
+            tags.get(tag).push(page);
+          }
+        }
+        for (const tag of [...tags.keys()].sort()) {
+          const pages = tags.get(tag);
+          const group = element('details',undefined,'tag-list');
+          group.append(element('summary',tag + ' (' + pages.length + ')'));
+          const list = element('ul');
+          for (const page of pages) {
+            const link = element('a',page.title);
+            link.href = '#' + page.id;
+            const row = element('li');
+            row.append(link);
+            list.append(row);
+          }
+          group.append(list);
+          block.append(group);
+        }
+      }
       for (const prompt of section.prompts || []) {
         const card = element('article',undefined,'prompt-card');
         const target = chapters.find(ch=>ch.id===prompt.page);

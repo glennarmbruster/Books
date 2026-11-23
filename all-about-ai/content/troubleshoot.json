@@ -84,7 +84,12 @@
       "lab-troubleshoot-15"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "exchange",
+      "m365",
+      "troubleshooting"
+    ]
   },
   {
     "id": "troubleshoot-trace",
@@ -172,7 +177,12 @@
       "lab-troubleshoot-02"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "exchange",
+      "m365",
+      "troubleshooting"
+    ]
   },
   {
     "id": "troubleshoot-auth",
@@ -272,7 +282,13 @@
       "lab-troubleshoot-04"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "exchange",
+      "m365",
+      "troubleshooting",
+      "mail"
+    ]
   },
   {
     "id": "troubleshoot-rules",
@@ -368,7 +384,13 @@
       "lab-troubleshoot-06"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "exchange",
+      "m365",
+      "troubleshooting",
+      "mail"
+    ]
   },
   {
     "id": "troubleshoot-access",
@@ -480,7 +502,14 @@
       "lab-troubleshoot-12"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "exchange",
+      "m365",
+      "troubleshooting",
+      "permissions",
+      "mail"
+    ]
   },
   {
     "id": "troubleshoot-hybrid",
@@ -578,7 +607,13 @@
       "lab-troubleshoot-11"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "exchange",
+      "m365",
+      "troubleshooting",
+      "mail"
+    ]
   },
   {
     "id": "troubleshoot-trial",
@@ -744,6 +779,12 @@
       "lab-troubleshoot-16"
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "exchange",
+      "m365",
+      "troubleshooting",
+      "mail"
+    ]
   }
 ]

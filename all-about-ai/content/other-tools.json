@@ -59,7 +59,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "tools"
+    ]
   },
   {
     "id": "perplexity",
@@ -129,7 +132,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "tools"
+    ]
   },
   {
     "id": "meta-muse",
@@ -183,7 +189,10 @@
     "title": "Meet Meta Muse",
     "summary": "Give a personal helper one small job and inspect what comes back.",
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "tools"
+    ]
   },
   {
     "id": "other-models",
@@ -241,7 +250,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "tools",
+      "offline",
+      "models"
+    ]
   },
   {
     "id": "browser-tools",
@@ -319,6 +333,9 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "tools"
+    ]
   }
 ]

@@ -868,5 +868,53 @@
     ],
     "lastVerified": "2026-11-22",
     "verificationBasis": "page review"
+  },
+  {
+    "id": "reference-tags",
+    "title": "Tag index",
+    "summary": "Browse reference pages by tool, job or feature.",
+    "tags": [
+      "index",
+      "lookup"
+    ],
+    "firstGuide": "ask-check",
+    "intro": {
+      "what": "Browse reference pages by tool, job or feature.",
+      "features": "One page can belong to several topics. The counts come from this copy of the book.",
+      "exchange": "Open Exchange for diagnosis and reporting.",
+      "m365": "Look under M365 or connectors for account boundaries.",
+      "developer": "Use code, apps or offline to find a build reference.",
+      "sources": [
+        [
+          "Get started with Claude",
+          "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+        ],
+        [
+          "Use Gemini Apps - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/13275745?hl=en"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Browse by tag",
+        "paragraphs": [
+          "Open a tag to see its pages. Titles take you straight to the reference, even with the network off."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Use Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ]
+        ],
+        "tagIndex": true
+      }
+    ],
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   }
 ]

@@ -63,7 +63,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "copilot",
+      "m365"
+    ]
   },
   {
     "id": "copilot-mail-meetings",
@@ -122,7 +126,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "copilot",
+      "m365",
+      "mail"
+    ]
   },
   {
     "id": "copilot-documents",
@@ -180,7 +189,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "copilot",
+      "m365"
+    ]
   },
   {
     "id": "copilot-excel",
@@ -268,7 +281,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "copilot",
+      "m365",
+      "spreadsheets"
+    ]
   },
   {
     "id": "copilot-agents",
@@ -330,6 +348,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "copilot",
+      "m365",
+      "code"
+    ]
   }
 ]

@@ -116,7 +116,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "decision",
+      "models"
+    ]
   },
   {
     "id": "compare-cost",
@@ -236,7 +240,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "decision",
+      "limits"
+    ]
   },
   {
     "id": "media-studio",
@@ -358,7 +366,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "decision",
+      "images",
+      "files"
+    ]
   },
   {
     "id": "field-test",
@@ -472,7 +485,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "decision"
+    ]
   },
   {
     "id": "build-off",
@@ -759,6 +775,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "decision",
+      "files"
+    ]
   }
 ]

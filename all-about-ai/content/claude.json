@@ -87,7 +87,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "claude"
+    ]
   },
   {
     "id": "claude-models",
@@ -233,7 +236,12 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "claude",
+      "limits",
+      "models"
+    ]
   },
   {
     "id": "claude-code",
@@ -315,7 +323,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "claude",
+      "code"
+    ]
   },
   {
     "id": "claude-browser",
@@ -393,7 +405,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "claude",
+      "files"
+    ]
   },
   {
     "id": "claude-visuals",
@@ -475,6 +491,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "claude",
+      "images"
+    ]
   }
 ]

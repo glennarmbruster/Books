@@ -110,7 +110,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "gemini"
+    ]
   },
   {
     "id": "gemini-api",
@@ -231,7 +234,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "gemini",
+      "models"
+    ]
   },
   {
     "id": "gemini-workflow",
@@ -403,7 +410,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "gemini",
+      "files"
+    ]
   },
   {
     "id": "gemini-build",
@@ -485,7 +496,10 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "gemini"
+    ]
   },
   {
     "id": "gemini-media",
@@ -604,6 +618,11 @@
       }
     ],
     "lastVerified": "2026-11-22",
-    "verificationBasis": "previous group review"
+    "verificationBasis": "previous group review",
+    "tags": [
+      "gemini",
+      "images",
+      "files"
+    ]
   }
 ]

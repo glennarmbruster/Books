@@ -2824,5 +2824,14 @@
     "after": "The reply should identify two filled cells, one missing cell and a total of 5.",
     "why": "Known inputs make a quick independent check possible.",
     "rescue": "Reduce the example to one zero and one blank before trying a larger sheet."
+  },
+  {
+    "id": "reference-tags",
+    "premise": "Find a topic when you cannot remember its title.",
+    "before": "You want to know which service can read an approved note.",
+    "try": "Open the connectors tag and pick the matching product.",
+    "after": "You land on an account-specific guide with a worked lookup.",
+    "why": "Tags point to existing pages, so a bookmark keeps its original destination.",
+    "rescue": "Search for the name of the service or the word permissions."
   }
 ]
