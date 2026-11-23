@@ -11,7 +11,7 @@
     "firstGuide": "claude-first-chat",
     "intro": {
       "what": "Use a conversation to turn rough notes into a message. Ask for a second draft in the same chat.",
-      "features": "Mail queued at 09:00. One test arrived at 09:12. Other routes have not been tested.",
+      "features": "Write two sentences for a handoff. Separate the one test that passed from the routes we still need to check.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -79,7 +79,7 @@
     "firstGuide": "claude-projects-begin",
     "intro": {
       "what": "Put a brief, reference files and project instructions together. Open another chat in that project when the same rules apply.",
-      "features": "Practice handbook, revision B: only closed requests go in the weekly count. The sample has two closed and one open.",
+      "features": "Add the handbook to a practice project. In a fresh project chat ask for the weekly count and the rule used.",
       "exchange": "Trace a delivery claim back to the sample report.",
       "m365": "Find the exact line in a practice policy.",
       "developer": "Keep the input files beside your test results.",
@@ -147,7 +147,7 @@
     "firstGuide": "claude-artifact-begin",
     "intro": {
       "what": "Keep an editable output beside a conversation. An interactive counter is a good first artifact because you can test it in seconds.",
-      "features": "The tally starts at zero. Count adds one. Reset returns to zero.",
+      "features": "Make an interactive tally artifact with Count and Reset. Show the score as a number.",
       "exchange": "Test a pretend queue counter with zero messages.",
       "m365": "Try two rows from a fictional request list.",
       "developer": "Run the smallest working screen before adding another feature.",
@@ -215,7 +215,7 @@
     "firstGuide": "open-claude-code",
     "intro": {
       "what": "Give a coding agent a project folder. It can read code, edit files and run commands to check a change.",
-      "features": "A practice counter page shows the right number but calls its reset button Clear All.",
+      "features": "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
       "exchange": "Test a pretend queue counter with zero messages.",
       "m365": "Try two rows from a fictional request list.",
       "developer": "Run the smallest working screen before adding another feature.",
@@ -299,7 +299,7 @@
     "firstGuide": "claude-cowork-begin",
     "intro": {
       "what": "A connector gives Claude tools from another service. Choose the service that holds the item you need.",
-      "features": "An approved training folder contains a note called Shift card. Its first line reads Window B.",
+      "features": "Using only the approved connector, find Shift card. Quote its first line. Say unknown if you cannot open it. Make no changes.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -367,7 +367,7 @@
     "firstGuide": "claude-chrome-begin",
     "intro": {
       "what": "Claude in Chrome can interact with web pages. Cowork also supports computer use on supported setups. Pick the smallest surface for the job.",
-      "features": "A practice dashboard shows 8 waiting requests and an unused Submit button.",
+      "features": "Read the waiting count from this practice page. Report the number and the label next to it. Do not click Submit.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -451,7 +451,7 @@
     "firstGuide": "claude-cowork-begin",
     "intro": {
       "what": "Use a scheduled task for work with a repeatable input, a clear time and a useful result even when nothing changed.",
-      "features": "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
+      "features": "Schedule a weekly reminder for Monday morning in the time zone I confirm. Use this fixed rotation and show the next run before I leave.",
       "exchange": "Practice a reminder to check yesterday’s queue.",
       "m365": "Schedule a draft of a weekly practice summary.",
       "developer": "Time a reminder to retest an app after release.",
@@ -535,7 +535,7 @@
     "firstGuide": "claude-first-chat",
     "intro": {
       "what": "Talk through a problem and hear the answer. Switch back to text to check details such as times or file names.",
-      "features": "The queue held fifteen items before lunch and five after lunch.",
+      "features": "Read those counts aloud. Ask for a one-sentence handoff and a separate line with the two numbers.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -604,7 +604,7 @@
     "firstGuide": "files-and-formats",
     "intro": {
       "what": "Attach a supported document or image and ask a question tied to one visible detail. Use a small file first.",
-      "features": "A short practice PDF has a table showing 2 requests open and 3 closed.",
+      "features": "Attach the practice page. Name both row labels, give their values and calculate the total. Flag any cell you cannot read.",
       "exchange": "Trace a delivery claim back to the sample report.",
       "m365": "Find the exact line in a practice policy.",
       "developer": "Keep the input files beside your test results.",

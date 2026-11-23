@@ -87,7 +87,8 @@ function picture(figure) {
   credit.href = figure.source;
   if (!figure.source.startsWith('#')) credit.target = '_blank';
   credit.rel = 'noopener noreferrer';
-  caption.append(credit);
+  if (figure.source.startsWith('#')) caption.append(credit);
+  else caption.append(element('span',figure.credit),externalLink('Check source',figure.source,'Check source · ' + figure.credit));
   const enlarge = actionButton('',()=>{
     const dialog = element('dialog',undefined,'image-view');
     const close = actionButton('Close picture',()=>dialog.close());

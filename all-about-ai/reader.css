@@ -111,3 +111,7 @@ tbody th{font-weight:650}tbody tr:nth-child(even){background:#f1eee1}
 .tag-list, .prompt-card { padding-block: .65rem; border-bottom: 1px solid var(--line, #aaa); }
 .change-list li { margin-block: .8rem; }
 .change-list p { margin: .2rem 0; }
+
+.online-reference { display: none; }
+html[data-online="true"] .online-reference { display: inline-block; margin-inline: .4rem; text-decoration: underline; }
+.verify-badge { padding: .15rem .5rem; border-radius: .3rem; background: #ffdfa0; color: #422b0b; }

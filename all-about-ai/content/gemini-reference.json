@@ -11,7 +11,7 @@
     "firstGuide": "gemini-first-chat",
     "intro": {
       "what": "Ask a direct question, add facts, and refine the reply. A small example makes wrong guesses easy to spot.",
-      "features": "Delivery attempt at 08:04. Retry started at 08:06. No final result was recorded.",
+      "features": "Turn these notes into two lines. Label one Observed and one Unknown. Did delivery succeed?",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -96,7 +96,7 @@
     "firstGuide": "gemini-notebook",
     "intro": {
       "what": "Select source material in Gemini Notebook. Ask a question and open its citation to read the passage in context.",
-      "features": "Note A says the pilot begins Tuesday. Note B says the wider rollout date is undecided.",
+      "features": "Select both notes. Ask when the pilot starts and when everyone joins. Ask for a citation for each answer.",
       "exchange": "Trace a delivery claim back to the sample report.",
       "m365": "Find the exact line in a practice policy.",
       "developer": "Keep the input files beside your test results.",
@@ -167,7 +167,7 @@
     "firstGuide": "gemini-first-chat",
     "intro": {
       "what": "Use Canvas to draft a document or build and revise an app alongside the chat. Try one interaction before adding features.",
-      "features": "Make a small page that counts packed bags. It needs Add bag and Start over.",
+      "features": "In Canvas, build the bag counter with a number visible at all times. Try Add bag twice and Start over once.",
       "exchange": "Test a pretend queue counter with zero messages.",
       "m365": "Try two rows from a fictional request list.",
       "developer": "Run the smallest working screen before adding another feature.",
@@ -235,7 +235,7 @@
     "firstGuide": "open-antigravity",
     "intro": {
       "what": "Use the Antigravity coding agent for a project with files. Give it one change, then review the patch and run the result.",
-      "features": "An empty score list should say No plays. A list with a single zero should show 0.",
+      "features": "Open a practice folder. Build a score summary for both inputs. Show which files changed and run both checks.",
       "exchange": "Test a pretend queue counter with zero messages.",
       "m365": "Try two rows from a fictional request list.",
       "developer": "Run the smallest working screen before adding another feature.",
@@ -322,7 +322,7 @@
     "firstGuide": "gemini-first-chat",
     "intro": {
       "what": "Connected Apps let Gemini use supported services. Narrow the request to one approved item and one field.",
-      "features": "A practice note called Supply list has one line reading Paper rolls: 4.",
+      "features": "Use the connected service to find Supply list. Return the paper roll count and identify the note. Stop if you cannot open it.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -390,7 +390,7 @@
     "firstGuide": "gemini-first-chat",
     "intro": {
       "what": "Auto browse lets Gemini take steps on web pages. A read-only lookup is a good first task to watch.",
-      "features": "A practice status page shows the next check at 10:30. No forms need to be submitted.",
+      "features": "Find the time of the next check on the open practice page. Tell me where you found it. Stop before submitting anything.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -458,7 +458,7 @@
     "firstGuide": "gemini-task-begin",
     "intro": {
       "what": "Give a repeat job a time, time zone and one visible output. Review its saved schedule before expecting a reminder.",
-      "features": "Every Friday at noon, remind the practice team to count returned kits.",
+      "features": "Set a weekly Friday reminder for noon in the time zone I give you. Show the next occurrence and the reminder text.",
       "exchange": "Practice a reminder to check yesterday’s queue.",
       "m365": "Schedule a draft of a weekly practice summary.",
       "developer": "Time a reminder to retest an app after release.",
@@ -526,7 +526,7 @@
     "firstGuide": "gemini-first-chat",
     "intro": {
       "what": "Use Gemini Live for a spoken back-and-forth. On a supported device you can share your screen to discuss what is visible.",
-      "features": "A practice page has a yellow Review button and a blue Save button.",
+      "features": "Share only that practice screen. Ask which button is labeled Review. End sharing and check the answer on the page.",
       "exchange": "Use a fictional mail handoff to test this surface.",
       "m365": "Apply the same check to an approved practice note.",
       "developer": "Try the example with a small local project.",
@@ -595,7 +595,7 @@
     "firstGuide": "files-and-formats",
     "intro": {
       "what": "Attach a supported file to ask about its rows, images or other contents. Start with a row you can verify without help.",
-      "features": "A practice sheet has four counts: 2, 0, blank and 3. Blank means unreported.",
+      "features": "Attach the practice sheet. Report the sum of known counts, how many counts are known, and how many are blank.",
       "exchange": "Trace a delivery claim back to the sample report.",
       "m365": "Find the exact line in a practice policy.",
       "developer": "Keep the input files beside your test results.",

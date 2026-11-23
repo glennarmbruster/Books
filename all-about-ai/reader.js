@@ -189,20 +189,39 @@ function buildScorecards(table, checks) {
   return cards;
 }
 
-function sourceLinks(references) {
+function externalLink(label, url, description) {
+  const link = element('a',label,'online-reference');
+  link.href = url;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  if (description) link.setAttribute('aria-label',description);
+  return link;
+}
+
+function updateConnection() {
+  document.documentElement.dataset.online = String(navigator.onLine === true);
+}
+updateConnection();
+window.addEventListener('online',updateConnection);
+window.addEventListener('offline',updateConnection);
+
+function sourceLinks(references, topic) {
   const details = element('details', undefined, 'sources');
   details.append(element('summary','Sources (' + references.length + ')'));
   const sources = element('ul');
   for (const [name, url] of references) {
     const li = element('li');
-    const link = element('a',name);
-    link.href = url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    li.append(link);
+    li.append(element('span',name),document.createTextNode(' '),
+      externalLink('Check source',url,'Check source · ' + name));
     sources.append(li);
   }
   details.append(sources);
+  if (references.length) {
+    const first = new URL(references[0][1]);
+    const search = new URL('https://www.google.com/search');
+    search.searchParams.set('q','site:' + first.hostname + ' ' + (topic || references[0][0]));
+    details.append(externalLink('Search official docs',search.href,'Search official docs · ' + first.hostname));
+  }
   return details;
 }
 
@@ -449,6 +468,11 @@ function openLocation(moveFocus) {
     byId('review-date').textContent = chapter.lastVerified
       ? 'Last verified ' + dateLabel(chapter.lastVerified) + (chapter.verificationBasis === 'previous group review' ? ' · inherited group review' : '')
       : 'Reviewed ' + dateLabel(chapter.group.reviewed);
+    if (chapter.unverified?.length) {
+      const badge = element('strong','Not verified','verify-badge');
+      const details = element('span',chapter.unverified.join(' '));
+      byId('review-date').append(document.createTextNode(' '),badge,document.createTextNode(' '),details);
+    }
     const sections = chapter.group.guide ? guideBody(chapter) : lab ? labBody(chapter) : chapter.sections.map((section, sectionIndex) => {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
@@ -517,7 +541,7 @@ function openLocation(moveFocus) {
         block.append(practice);
       }
       if (section.sources?.length) {
-        block.append(sourceLinks(section.sources));
+        block.append(sourceLinks(section.sources,chapter.title + " " + section.title));
       }
       return block;
     });
@@ -537,6 +561,14 @@ function openLocation(moveFocus) {
       sections.unshift(launchHelp(chapter));
       const figures = chapterPictures(chapter.id);
       sections.splice(2,0,...figures.map(picture));
+    }
+    if (chapter.surface || chapter.group.file === 'reference-desk.json') {
+      const quickSections = sections.filter(node=>node.classList.contains('section') && node.querySelector('h2') && !node.classList.contains('worked'));
+      // Use the authored section titles to keep the worked example and role notes after the lookup.
+      const titles = new Set(chapter.sections.map(part=>part.title));
+      const front = quickSections.filter(node=>titles.has(node.querySelector('h2').textContent));
+      const rest = sections.filter(node=>!front.includes(node));
+      sections.splice(0,sections.length,...front,...rest);
     }
     if (chapter.catalogSources.length) sections.push(sourceLinks(chapter.catalogSources));
     const terms = glossary(chapter.search);
