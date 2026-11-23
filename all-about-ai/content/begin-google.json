@@ -1,0 +1,559 @@
+[
+  {
+    "id": "open-antigravity",
+    "title": "Install Google Antigravity and say hello",
+    "summary": "Start with Google’s desktop app. You can have a first conversation before choosing a folder or writing code.",
+    "topic": "Google Antigravity",
+    "where": [
+      "Windows 10 (64-bit) or Windows 11, or macOS 13 or later on Apple Silicon or 64-bit Intel, with internet and a Google account. An iPad can display the guide while you follow along on the computer.",
+      "Use the Google Antigravity App installer. Google also offers an IDE, a separate editor, and a CLI for typed commands."
+    ],
+    "actions": [
+      {
+        "title": "Choose the desktop app",
+        "do": "Open antigravity.google/download on the computer and select the Antigravity App for your operating system.",
+        "see": "The download should be offered by Google on its Antigravity site.",
+        "stuck": "If the instructions begin with a command to paste, switch from CLI to the App download."
+      },
+      {
+        "title": "Open the installer",
+        "do": "On Windows open the downloaded installer from Downloads. On Mac open the downloaded disk image and follow its instruction to place the app in Applications.",
+        "see": "Google Antigravity becomes available from Start or Applications.",
+        "stuck": "Choose the matching Windows architecture or Mac processor build if the installer reports incompatibility."
+      },
+      {
+        "title": "Sign in",
+        "do": "Launch Antigravity and complete its Google sign-in in the browser. Return to the app.",
+        "see": "Some accounts see a work-role question; the Software Engineering option gives a useful layout for these lessons.",
+        "stuck": "Use Skip if the onboarding version offers it and you are unsure which role fits."
+      },
+      {
+        "title": "Ask one small question",
+        "do": "At Home, type “What is 7 plus 5? Answer with just the number.” Send it.",
+        "see": "The reply should contain 12. This exercise uses no files.",
+        "stuck": "If the app asks you for a project before showing chat, choose a new empty folder using the next lesson."
+      }
+    ],
+    "roles": [
+      "Explain an unfamiliar mail term.",
+      "Ask what a rollout is.",
+      "Explore a simple app idea."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity downloads",
+        "https://antigravity.google/download"
+      ],
+      [
+        "Google · Antigravity desktop quickstart",
+        "https://antigravity.google/docs/getting-started/"
+      ]
+    ]
+  },
+  {
+    "id": "antigravity-project",
+    "title": "Give the agent one practice folder",
+    "summary": "A project tells Antigravity which folders belong to a task. A plain folder on your computer is enough for this exercise.",
+    "topic": "Google Antigravity",
+    "where": [
+      "Windows or Mac, Antigravity App and an empty folder named AI Practice. No GitHub account is required for a local folder."
+    ],
+    "actions": [
+      {
+        "title": "Make the folder",
+        "do": "Open File Explorer on Windows or Finder on Mac. In Documents use New Folder and name it AI Practice.",
+        "see": "The folder opens and has no documents in it yet.",
+        "stuck": "If you already started with a folder from another lesson, make a fresh folder with a slightly different name."
+      },
+      {
+        "title": "Create a project",
+        "do": "In Antigravity click the folder-with-plus New Project icon in the left sidebar, choose Add Folder and select AI Practice. Click Create.",
+        "see": "The conversation can now refer to this project and its selected folder.",
+        "stuck": "A composer labeled No Project is still at Home. Select the project from the sidebar."
+      },
+      {
+        "title": "Give the first file instruction",
+        "do": "Type “Create a plain text file named welcome.txt in this folder. Its only line should be Welcome aboard.” Press Enter.",
+        "see": "In the engineering layout, choose Local mode if the app asks where to run.",
+        "stuck": "If a worktree is offered, use Local for this plain-folder exercise. A worktree is a separate Git checkout."
+      },
+      {
+        "title": "Open the result yourself",
+        "do": "Return to the AI Practice folder in Finder or File Explorer and open welcome.txt.",
+        "see": "It contains Welcome aboard. You can now point to the result outside the conversation.",
+        "stuck": "If the file is missing, ask Antigravity which folder and filename it used, then compare with your project."
+      }
+    ],
+    "roles": [
+      "Practice on a sample runbook file.",
+      "Draft a mock rollout note.",
+      "Create a text file for a sample book."
+    ],
+    "sources": [
+      [
+        "Google · Antigravity desktop quickstart",
+        "https://antigravity.google/docs/getting-started/"
+      ],
+      [
+        "Google · how Antigravity projects work",
+        "https://antigravity.google/docs/projects/"
+      ]
+    ]
+  },
+  {
+    "id": "antigravity-plan",
+    "title": "Read a plan before requesting edits",
+    "summary": "A plan is a proposed sequence of work. Read and revise it before asking the agent to carry it out.",
+    "topic": "Google Antigravity",
+    "where": [
+      "Antigravity desktop app on Windows or Mac, online, with an empty practice project open."
+    ],
+    "actions": [
+      {
+        "title": "Request the plan",
+        "do": "In the project conversation type “/plan Make a one-page packing list with checkboxes for Passport and Charger. Show me the plan before editing files.”",
+        "see": "A planning reply can include an Implementation Plan card.",
+        "stuck": "If the command menu pops up, select Plan and enter the rest as your description."
+      },
+      {
+        "title": "Read the proposal",
+        "do": "Select the plan card to open it in the side panel. Find the proposed file and two labels.",
+        "see": "The plan describes what the agent intends to build.",
+        "stuck": "If it only discusses broad goals, ask for the filename, visible labels and a test you can perform."
+      },
+      {
+        "title": "Change one requirement",
+        "do": "Ask for a third checkbox called Earplugs before starting. Use a comment on the plan or the main conversation.",
+        "see": "The revised plan includes three items.",
+        "stuck": "If it begins implementing early, tell it to pause edits and restate the three agreed labels."
+      },
+      {
+        "title": "Carry it out",
+        "do": "Choose Proceed when offered, or tell the conversation to implement the revised plan. Open the resulting HTML file in your browser.",
+        "see": "You can check each of the three labeled boxes independently.",
+        "stuck": "If you see the source as text, use your browser’s Open File command on the .html file."
+      }
+    ],
+    "roles": [
+      "Plan a read-only report.",
+      "Scope a guide revision.",
+      "Plan a small form before building it."
+    ],
+    "sources": [
+      [
+        "Google · reviewing an implementation plan",
+        "https://antigravity.google/docs/implementation-plan/"
+      ],
+      [
+        "Google · Antigravity desktop quickstart",
+        "https://antigravity.google/docs/getting-started/"
+      ]
+    ]
+  },
+  {
+    "id": "antigravity-review",
+    "title": "Find the exact line Antigravity changed",
+    "summary": "A diff is a before-and-after view of a file. Use it to check a correction before moving on.",
+    "topic": "Google Antigravity",
+    "where": [
+      "Antigravity App online in a practice project on Windows or Mac. The Agent Edits view can show changes made in a conversation."
+    ],
+    "actions": [
+      {
+        "title": "Create the original",
+        "do": "Ask the project agent to create a file called sign.txt with two lines, Harbor Notes and Dock 3. Open the file and confirm the original.",
+        "see": "You have a visible baseline on your computer.",
+        "stuck": "If it put both items on one line, ask it to fix that before the next instruction."
+      },
+      {
+        "title": "Request a single change",
+        "do": "Send “Change Dock 3 to Dock 4 in sign.txt. Leave the title alone.”",
+        "see": "The agent reports the file it edited.",
+        "stuck": "If it creates a copy, ask it to revise the original sign.txt in your selected project."
+      },
+      {
+        "title": "Open Review",
+        "do": "In the conversation’s Overview panel click Review. If the panel is hidden, use Toggle Overview Panel at the top right. Select Agent Edits and sign.txt.",
+        "see": "The file and its changes appear beside the conversation.",
+        "stuck": "A file created during this conversation may appear entirely new. Use the most recent turn’s changes or compare its final lines with your baseline."
+      },
+      {
+        "title": "Leave precise feedback",
+        "do": "Select the relevant line for a review comment if available, or type “Change Dock 4 to Dock 5 on the second line.” Check sign.txt again.",
+        "see": "The final lines are Harbor Notes and Dock 5.",
+        "stuck": "If you see an earlier version in a text editor, reload the file from disk."
+      }
+    ],
+    "roles": [
+      "Inspect a runbook correction.",
+      "Review a revised deployment date.",
+      "Check a title edit in a book."
+    ],
+    "sources": [
+      [
+        "Google · using the Review pane",
+        "https://antigravity.google/docs/review-changes/"
+      ],
+      [
+        "Google · how Antigravity projects work",
+        "https://antigravity.google/docs/projects/"
+      ]
+    ]
+  },
+  {
+    "id": "open-ai-studio",
+    "title": "Open Google AI Studio and run a first prompt",
+    "summary": "AI Studio is Google’s online workbench for trying models. Playground is where you type and run an experiment.",
+    "topic": "Google AI Studio",
+    "where": [
+      "Use a browser on a Mac or Windows PC. On iPad try Safari and rotate to landscape for more room; a desktop is easier for the settings panel.",
+      "AI Studio documents access for users 18 and older in supported regions. Your organization may restrict it."
+    ],
+    "actions": [
+      {
+        "title": "Open the website",
+        "do": "Type aistudio.google.com into the address bar, then use your eligible Google account to sign in.",
+        "see": "A Google AI Studio home page or Playground opens.",
+        "stuck": "If you see a general Gemini chat, check that the address starts with aistudio.google.com."
+      },
+      {
+        "title": "Find Playground",
+        "do": "Open Playground from the navigation if a blank chat prompt has not already opened. Choose an available text model.",
+        "see": "You should see a text box and a Run control.",
+        "stuck": "A work window showing app source and a preview belongs to Build. Open Playground for this lesson."
+      },
+      {
+        "title": "Send a prompt",
+        "do": "Type “A card costs 4 dollars. I buy two. Reply with the total in dollars.” Click Run.",
+        "see": "The answer is 8 dollars.",
+        "stuck": "If Studio says the selected model requires billing, choose an available model that your account already supports."
+      },
+      {
+        "title": "Run a changed example",
+        "do": "Open a fresh Playground prompt and ask the same question with three cards.",
+        "see": "The result changes to 12 dollars. You have repeated the experiment with one input changed.",
+        "stuck": "If it still says 8, reread the submitted message and confirm the quantity actually changed."
+      }
+    ],
+    "roles": [
+      "Test wording for a sample support response.",
+      "Try extracting a date from an invented notice.",
+      "Try a puzzle-scoring instruction."
+    ],
+    "sources": [
+      [
+        "Google · open AI Studio",
+        "https://aistudio.google.com/"
+      ],
+      [
+        "Google · AI Studio quickstart",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google · supported regions and age requirements",
+        "https://aistudio.google.com/docs/available-regions"
+      ]
+    ]
+  },
+  {
+    "id": "ai-studio-instructions",
+    "title": "Give a Playground chat a standing rule",
+    "summary": "System Instructions hold the rule for the conversation. The user message supplies an example for that rule to process.",
+    "topic": "Google AI Studio",
+    "where": [
+      "Google AI Studio Playground in an online desktop browser. The same controls can be easier to find in iPad landscape."
+    ],
+    "actions": [
+      {
+        "title": "Open the controls",
+        "do": "In a new Playground chat click Run settings, the tuning-controls icon at the top right. Find System Instructions.",
+        "see": "The instruction editor is separate from the ordinary text box.",
+        "stuck": "If you only see a build preview, switch to Playground and start a text prompt."
+      },
+      {
+        "title": "Set a rule",
+        "do": "In System Instructions enter “Answer with the color word only. If no color is stated, answer UNKNOWN.”",
+        "see": "The rule stays available while this prompt is open.",
+        "stuck": "If you accidentally sent it as a chat message, copy it into System Instructions and start the example again."
+      },
+      {
+        "title": "Try a positive input",
+        "do": "In the ordinary text box type “The ticket is blue.” Click Run.",
+        "see": "The intended result is blue, with no sentence around it.",
+        "stuck": "If the answer adds an explanation, ask it to follow the output rule and check which field contains that rule."
+      },
+      {
+        "title": "Try a missing input",
+        "do": "In the same chat send “The next ticket has no printed color.”",
+        "see": "The expected result is UNKNOWN. The earlier blue ticket supplies no color for this new one.",
+        "stuck": "If the previous color carries over, add “Treat each ticket independently” to the instruction and retest both tickets."
+      }
+    ],
+    "roles": [
+      "Standardize a sample triage label.",
+      "Normalize a rollout status field.",
+      "Set the rules for a word-game answer."
+    ],
+    "sources": [
+      [
+        "Google · AI Studio quickstart",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ]
+    ]
+  },
+  {
+    "id": "ai-studio-build",
+    "title": "Build a two-button score counter in a browser",
+    "summary": "Build turns a description into an app you can try in a preview. This practice app only needs a number and two buttons.",
+    "topic": "Google AI Studio",
+    "where": [
+      "Open aistudio.google.com/apps on Mac or Windows while online. The wider desktop view is helpful for seeing chat and preview together."
+    ],
+    "actions": [
+      {
+        "title": "Open Build",
+        "do": "Visit Google AI Studio and open Build, or go directly to aistudio.google.com/apps. Start a new app from a prompt.",
+        "see": "A box invites you to describe what to build.",
+        "stuck": "If you have Run settings for a chat and no app preview, choose Build in the navigation."
+      },
+      {
+        "title": "Describe the counter",
+        "do": "Enter “Make a browser score counter. Start at zero. Add one adds 1; Reset returns to zero. Show the number in large type. No account or database.” Submit the prompt.",
+        "see": "The builder prepares files and displays an interactive preview.",
+        "stuck": "Give it time to finish. If the preview reports an error, copy the visible error into the build conversation and ask for a repair."
+      },
+      {
+        "title": "Use the preview",
+        "do": "Click Add one twice and Reset once in the running app.",
+        "see": "The values progress from 0 to 1 to 2, then back to 0.",
+        "stuck": "If clicking only selects an element for editing, switch back to interacting with the live preview."
+      },
+      {
+        "title": "Revise and retest",
+        "do": "Ask the builder to add a Subtract one button that can reach negative scores. At zero, click it once.",
+        "see": "The counter shows −1, and Reset returns it to 0.",
+        "stuck": "A floor of zero indicates that the requested negative-score behavior still needs correcting."
+      }
+    ],
+    "roles": [
+      "Prototype a mock incident counter.",
+      "Try an inventory review form.",
+      "Build a scoreboard for a card game."
+    ],
+    "sources": [
+      [
+        "Google · Build mode",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ],
+      [
+        "Google · open AI Studio",
+        "https://aistudio.google.com/"
+      ]
+    ]
+  },
+  {
+    "id": "gemini-first-chat",
+    "title": "Start with Gemini on an iPad, Mac or PC",
+    "summary": "A chat is a conversation in which you type a question and can refer back to its answer. Try one with numbers you can check.",
+    "topic": "Gemini",
+    "where": [
+      "On iPad use the Google Gemini app published by Google, or visit gemini.google.com in Safari. On Windows or Mac the website is enough."
+    ],
+    "actions": [
+      {
+        "title": "Open the right product",
+        "do": "On iPad, open the App Store and search for Google Gemini. Check the publisher, then choose Get or Open. On a computer visit gemini.google.com.",
+        "see": "The Gemini home screen has a box for a question.",
+        "stuck": "If you want to skip installing an app, use the official website instead."
+      },
+      {
+        "title": "Choose the account",
+        "do": "Sign in if prompted and start a new chat. Check the account shown under the profile picture.",
+        "see": "An empty chat opens without earlier messages.",
+        "stuck": "If the screen shows workspace policies or features you did not expect, check whether you selected a work or personal account."
+      },
+      {
+        "title": "Try a small fact pattern",
+        "do": "Enter “I packed two red shirts and one blue shirt. How many shirts did I pack? Use only these facts.” Send the message.",
+        "see": "The expected answer is three shirts.",
+        "stuck": "If dictation changed the words, read your submitted message and type a correction."
+      },
+      {
+        "title": "Ask a follow-up",
+        "do": "In the same chat type “I remove one red shirt. How many red and blue shirts remain?”",
+        "see": "One red and one blue shirt remain. The second question relied on the first.",
+        "stuck": "If you opened a new chat, re-enter the original quantities so it has the starting facts."
+      }
+    ],
+    "roles": [
+      "Practise summarizing a fictional support note.",
+      "Rewrite a mock change announcement.",
+      "Outline a feature on your iPad."
+    ],
+    "sources": [
+      [
+        "Google · open Gemini",
+        "https://gemini.google.com/"
+      ],
+      [
+        "Apple · Google Gemini by Google",
+        "https://apps.apple.com/us/app/google-gemini/id6477489729"
+      ]
+    ]
+  },
+  {
+    "id": "gemini-task-begin",
+    "title": "Find Tasks, formerly Gemini Spark",
+    "summary": "A task can carry out several steps and produce a file. The first exercise uses a made-up schedule so no connected accounts are needed.",
+    "topic": "Gemini Tasks",
+    "where": [
+      "Use the Gemini mobile app or gemini.google.com while online. Access depends on age, account, region and rollout.",
+      "Look for Task above the message box. Older guides may call the same capability Spark."
+    ],
+    "actions": [
+      {
+        "title": "Choose Task",
+        "do": "Open a new Gemini thread and select Task above the text box. Look at its model menu and leave the default selection.",
+        "see": "The composer is set for a task.",
+        "stuck": "If Task is missing, consult the linked eligibility page. You can practise the schedule prompt in Chat, but a chat answer cannot demonstrate background task progress."
+      },
+      {
+        "title": "Give a bounded job",
+        "do": "Enter “Using only this information, make a one-page text packing schedule. Dock opens 08:00. Ferry boards 09:15. Leave home 30 minutes before the dock opens. Put events in order.” Submit.",
+        "see": "A new task thread appears with progress or an initial reply.",
+        "stuck": "If Gemini offers to search email or a calendar, clarify that every required fact is in the request."
+      },
+      {
+        "title": "Inspect progress",
+        "do": "Open the task thread from Menu and tap its progress chip or Task progress at the top.",
+        "see": "You can see the work or status associated with this thread.",
+        "stuck": "If it has finished already, open the result in the same thread and inspect its time ordering."
+      },
+      {
+        "title": "Read the result",
+        "do": "Open the text or file it produced. Compare all three times against the request.",
+        "see": "Leave at 07:30, arrive for the dock opening at 08:00, and board at 09:15.",
+        "stuck": "If the departure time is 08:45, ask which time the thirty minutes was subtracted from."
+      }
+    ],
+    "roles": [
+      "Draft a mock maintenance timeline.",
+      "Plan a fictional rollout schedule.",
+      "Prepare an itinerary for a personal travel app."
+    ],
+    "sources": [
+      [
+        "Google · create tasks on iPhone and iPad",
+        "https://support.google.com/gemini/answer/17094507?co=GENIE.Platform%3DiOS&hl=en"
+      ],
+      [
+        "Google · Tasks in Gemini, formerly Spark",
+        "https://support.google.com/gemini/answer/13594961?hl=en"
+      ]
+    ]
+  },
+  {
+    "id": "gemini-research-begin",
+    "title": "Open Deep Research and inspect one citation",
+    "summary": "Deep Research prepares a plan and then gathers sources. You control the question and can check the evidence behind an answer.",
+    "topic": "Gemini",
+    "where": [
+      "Use Gemini online on a Mac, PC or iPad with Deep Research available to your account. Public sources are sufficient."
+    ],
+    "actions": [
+      {
+        "title": "Select the research tool",
+        "do": "Open a new Gemini chat. On iPad tap Add files or the tools menu beside the text box, then choose Deep Research.",
+        "see": "Deep Research is selected for the next request.",
+        "stuck": "On a computer look in the tools menu. If the option is unavailable, check your plan and usage rather than waiting for ordinary chat to become research."
+      },
+      {
+        "title": "Request one comparison",
+        "do": "Enter “Using only official public sources, compare how NASA and ESA describe the Hubble Space Telescope. Give one shared fact and a source from each agency.” Submit.",
+        "see": "Gemini shows a proposed plan for a report.",
+        "stuck": "If it plans a general history, use Edit plan and narrow it to one fact both agencies support."
+      },
+      {
+        "title": "Begin the work",
+        "do": "Choose Start research and return to the thread when the report is ready. Select Open to read it.",
+        "see": "The report presents an answer with sources.",
+        "stuck": "If the thread is still displaying a plan, confirm that you selected Start research after editing it."
+      },
+      {
+        "title": "Follow the evidence",
+        "do": "Open one citation from each agency and find the sentence that supports your chosen shared fact.",
+        "see": "You can point to the fact on both original pages.",
+        "stuck": "If one page merely mentions Hubble, ask for a citation supporting the exact claim and verify the replacement."
+      }
+    ],
+    "roles": [
+      "Compare public mail-flow guidance.",
+      "Research a documented feature rollout.",
+      "Find sources for a trivia book."
+    ],
+    "sources": [
+      [
+        "Google · Deep Research on iPhone and iPad",
+        "https://support.google.com/gemini/answer/15719111?co=GENIE.Platform%3DiOS&hl=en"
+      ],
+      [
+        "Google · open Gemini",
+        "https://gemini.google.com/"
+      ]
+    ]
+  },
+  {
+    "id": "gemini-notebook",
+    "title": "Build a notebook from two short notes",
+    "summary": "Give Gemini Notebook, formerly NotebookLM, two sources. Find out which one it used to answer a question.",
+    "topic": "Gemini Notebook",
+    "where": [
+      "On iPad, open the Gemini Notebook app if available. On desktop, open the Google notebook experience. Use an eligible account and a fresh notebook."
+    ],
+    "actions": [
+      {
+        "title": "Create the notebook",
+        "do": "Open the notebook list. Choose Create new or New notebook. Name it Ferry Day. A notebook is a place to gather material you want the helper to read together.",
+        "see": "The new notebook has a name and an area for its sources. Each source is a separate item.",
+        "stuck": "If Gemini opens in an ordinary chat, switch to the notebook area or open the standalone Gemini Notebook service."
+      },
+      {
+        "title": "Add two sources",
+        "do": "Add these as two separate pasted notes or plain-text files. Call one Schedule and give it “Meet at Pier 6 at 9:15.” Call the other Packing and give it “Bring a hat and a notebook.”",
+        "see": "The source list has two entries. Open each one and check its text before asking anything.",
+        "stuck": "If pasted text is unavailable on your device, save two small text files and use the upload option."
+      },
+      {
+        "title": "Follow the evidence",
+        "do": "Ask “Which pier, and what should I bring? Show the source for each answer.” Open a citation or source reference beside the answer.",
+        "see": "The pier comes from Schedule. The hat and notebook come from Packing. You can see why two sources were useful.",
+        "stuck": "If the reply mixes them up, ask one question about the pier and another about the packing list."
+      },
+      {
+        "title": "Find a limit",
+        "do": "Ask “What does the ticket cost?” Look through both sources for a price. Say what you would need to add to answer that question.",
+        "see": "Neither note includes a price. A fare notice would make a useful third source.",
+        "stuck": "If an amount appears anyway, ask for the exact passage that gives it. Keep the price unknown until the passage actually exists."
+      }
+    ],
+    "roles": [
+      "Compare two public reference notes when learning a reporting command.",
+      "Keep a sample meeting agenda and its notes as separate sources.",
+      "Ground your app’s help text in the actual feature list."
+    ],
+    "sources": [
+      [
+        "Google · make a notebook",
+        "https://support.google.com/gemininotebook/answer/16206563"
+      ],
+      [
+        "Google · notebook on iPad",
+        "https://support.google.com/gemininotebook/answer/16296687"
+      ],
+      [
+        "Google · the NotebookLM name change",
+        "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/"
+      ]
+    ]
+  }
+]

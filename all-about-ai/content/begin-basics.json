@@ -1,0 +1,493 @@
+[
+  {
+    "id": "first-project",
+    "title": "Your first project, right here in the book",
+    "summary": "Two ferry notes disagree about the time. In three minutes you can check the source and fix a draft, just as you would with an AI helper.",
+    "topic": "First steps",
+    "where": [
+      "On iPad, Mac or Windows, use the green Practice desk on this page. Tap or click a file name to read it. Everything you need is already in the book.",
+      "A project keeps one job and its materials together. Harbor Notes is yours for this exercise. Its two practice files reset when you leave this lesson."
+    ],
+    "actions": [
+      {
+        "title": "Read the schedule",
+        "do": "Tap schedule.txt. Say the pier number and meeting time out loud, or write them on paper. This is your source, the note you will trust for this exercise.",
+        "see": "Your source says Pier 6 at 9:15 a.m. The last line asks you to bring a hat.",
+        "stuck": "If you tapped a different file first, tap schedule.txt again. The selected file name appears above its text."
+      },
+      {
+        "title": "Spot the mismatch",
+        "do": "Open notice.txt. Compare the time with the schedule. A draft is a message you can still change before sharing it.",
+        "see": "The draft has the right pier and packing tip, but 9:50 would send someone to the pier 35 minutes late.",
+        "stuck": "Read just the digits after the colon in each note. Fifteen and fifty look surprisingly similar."
+      },
+      {
+        "title": "Choose the edit",
+        "do": "Under the two file buttons, choose the meeting time the source supports. This is a review decision, the same kind a real agent may ask you to make.",
+        "see": "The notice now says 9:15 a.m. The desk tells you which detail you changed.",
+        "stuck": "If you choose the later time, the desk gives you a hint. Pick another answer and try again."
+      },
+      {
+        "title": "Prove the fix",
+        "do": "Open each note once more. Check three things separately: pier, time and packing tip. Start practice again if you want someone else to have a turn.",
+        "see": "The time matches in both files. The other two facts survived your edit. That is a small, complete test.",
+        "stuck": "If the notice still says 9:50, return to the choices and apply the change. Selecting a file only opens it."
+      }
+    ],
+    "roles": [
+      "Compare a mailbox report with one known sample row before trusting the count.",
+      "Compare a draft meeting notice with its approved agenda before sending it.",
+      "Compare an app’s saved score with the score you entered."
+    ],
+    "sources": [
+      [
+        "Read more about files and folders",
+        "https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows"
+      ]
+    ]
+  },
+  {
+    "id": "open-web",
+    "title": "Open a tool in a web browser",
+    "summary": "Learn where to type a web address, how to keep this book open and how to find your way back.",
+    "topic": "First steps",
+    "where": [
+      "Use Safari on iPad or Mac, or Edge or Chrome on Windows. A browser is the app that shows websites.",
+      "You can practice opening two tabs with this book. You need a connection when you first open a vendor’s website."
+    ],
+    "actions": [
+      {
+        "title": "Find the browser",
+        "do": "On iPad, swipe down in the middle of the Home Screen and type Safari. On a Mac, press Command and Space together and type Safari. On Windows, press the Windows key and type Edge. Select the matching app.",
+        "see": "A window with a long address field appears. Its position can vary with the device.",
+        "stuck": "If you see files instead of websites, return to the Home Screen, Dock or Start menu and open the named app."
+      },
+      {
+        "title": "Keep a place in the book",
+        "do": "Open a new tab. On Mac use Command and T, on Windows use Ctrl and T, and on iPad tap the tabs control and the plus button. Leave the book in its first tab.",
+        "see": "You now have a fresh place to open the tool. The earlier tab still holds the book.",
+        "stuck": "If you replaced the book by mistake, the browser’s Back arrow will often return to it."
+      },
+      {
+        "title": "Type an address",
+        "do": "Tap the long address field, type gemini.google.com and press Enter or Go. A dot is part of the address. You can practice with the address even if you plan to stop before signing in.",
+        "see": "The browser shows the Gemini site or an account screen. The address bar tells you where you landed.",
+        "stuck": "If you see a page of search results, tap the address field and enter https://gemini.google.com/ in full."
+      },
+      {
+        "title": "Switch back",
+        "do": "Select the tab with All About AI in its title. On an iPad with a hidden tab strip, open the tab overview and tap the small picture of the book.",
+        "see": "Your lesson is still here. You can now alternate between its steps and a vendor’s tool.",
+        "stuck": "If the book opened from a Home Screen shortcut, switch apps to return to it instead of searching for a tab."
+      }
+    ],
+    "roles": [
+      "Keep the Exchange documentation open beside the chat that explained a command.",
+      "Keep the Microsoft help page open beside the work app you are learning.",
+      "Use one tab for an app preview and another for instructions."
+    ],
+    "sources": [
+      [
+        "Mozilla’s introduction to browsing",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+      ],
+      [
+        "iPad User Guide",
+        "https://support.apple.com/guide/ipad/welcome/ipados"
+      ]
+    ]
+  },
+  {
+    "id": "make-folder",
+    "title": "Make a practice folder you can find tomorrow",
+    "summary": "Give one small project its own home. You will make a folder called Harbor Notes and open it again.",
+    "topic": "First steps",
+    "where": [
+      "Use the file app on your device. Its name is Finder on Mac, File Explorer on Windows and Files on iPad.",
+      "If you are reading on an iPad but doing a desktop lab, make the folder on the computer that will run the tool."
+    ],
+    "actions": [
+      {
+        "title": "Open the file app",
+        "do": "On Mac, click the blue face in the Dock. On Windows, hold the Windows key and tap E. On iPad, search the Home Screen for Files and tap the folder icon.",
+        "see": "A window shows a list of places and files. Look for Documents or On My iPad.",
+        "stuck": "If Files shows only recent items, tap Browse until you can choose a location."
+      },
+      {
+        "title": "Choose one place",
+        "do": "On Mac or Windows, open Documents. On iPad, open On My iPad or a personal location you control. Look at the place name before making anything.",
+        "see": "You can say where the new folder will live, for example Documents on this computer.",
+        "stuck": "If it shows a workplace or shared team name, go back and pick a personal practice location."
+      },
+      {
+        "title": "Make the folder",
+        "do": "On Mac choose File, then New Folder. On Windows choose New, then Folder. On iPad open the More menu and choose New Folder. Name it Harbor Notes and confirm the name.",
+        "see": "One folder called Harbor Notes appears. An empty folder is a successful result.",
+        "stuck": "If you see Harbor Notes twice, use the one you just created. If New Folder is missing, switch to a location where you can save files."
+      },
+      {
+        "title": "Leave and find it again",
+        "do": "Open the folder. Go up one level, then return to Harbor Notes using its name. When a coding tool later asks you to open a project, choose this folder.",
+        "see": "You can reach the same empty workspace twice without a search. You know exactly which folder you will share.",
+        "stuck": "If a tool starts in Downloads, use the side list to reach Documents, then choose Harbor Notes. Selecting Documents would give it a larger area."
+      }
+    ],
+    "roles": [
+      "Keep a synthetic mailbox list and its report in one exercise folder.",
+      "Group a sample agenda and its summary so you can check them together.",
+      "Keep a tiny website’s page and its pictures in one place."
+    ],
+    "sources": [
+      [
+        "Apple’s Mac guide",
+        "https://support.apple.com/guide/mac-help/welcome/mac"
+      ],
+      [
+        "Windows File Explorer",
+        "https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows"
+      ],
+      [
+        "Apple’s iPad guide",
+        "https://support.apple.com/guide/ipad/welcome/ipados"
+      ]
+    ]
+  },
+  {
+    "id": "get-kit",
+    "title": "Download a lab kit and find the usable files",
+    "summary": "A ZIP is a bundle. Practice taking the files out of the bundle before opening a lab.",
+    "topic": "First steps",
+    "where": [
+      "Open the first Devin lab from Hands-on labs. Find Download the practice kit (.zip). The kit is a small collection of pretend mailbox records and a way to check a report.",
+      "You can inspect the files on iPad. A lab that runs PowerShell needs a computer with PowerShell."
+    ],
+    "actions": [
+      {
+        "title": "Save the bundle",
+        "do": "Press the download button in the Devin lab. If the browser asks where to save, pick Downloads. If it offers a preview, choose the option to save the file.",
+        "see": "Look for exchange-inventory.zip. The file name might appear without the final .zip if your device hides extensions.",
+        "stuck": "Open your browser’s recent downloads list and use its folder or magnifying-glass button to locate the file."
+      },
+      {
+        "title": "Unpack it",
+        "do": "On Windows, right-click the ZIP and choose Extract All, then Extract. On Mac, double-click the ZIP in Finder. On iPad, tap the ZIP once in Files.",
+        "see": "A regular folder appears beside the bundle. Some browsers already unpack the bundle on download.",
+        "stuck": "If you just see a list inside the ZIP, go back to Downloads and locate the regular folder. On Windows, use Extract All before continuing."
+      },
+      {
+        "title": "Identify the input",
+        "do": "Open the unpacked folder, then any inner exchange-inventory folder. Find mailboxes.csv and README.md. The CSV is the sample table. README contains directions.",
+        "see": "You can point to the sample table and to the instructions as two separate files.",
+        "stuck": "If only the folder name is visible, open it one more level. You may be standing just outside the kit."
+      },
+      {
+        "title": "Read before running",
+        "do": "Open README.md with a text viewer. Find the name of the test script. Leave the sample CSV unchanged so later tests have their original input.",
+        "see": "You can identify Test-Inventory.ps1. In a later lesson the test checks the report; downloading a script does not run it.",
+        "stuck": "If double-clicking asks which program to use, choose a text editor for the README. You can also preview plain text from the file app."
+      }
+    ],
+    "roles": [
+      "Use the sample mailbox list to practice a report anywhere.",
+      "Keep training files separate from real tenant exports.",
+      "Package a small app with a README so someone else can try it."
+    ],
+    "sources": [
+      [
+        "Windows File Explorer",
+        "https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows"
+      ],
+      [
+        "Apple’s iPad guide",
+        "https://support.apple.com/guide/ipad/welcome/ipados"
+      ]
+    ]
+  },
+  {
+    "id": "first-terminal",
+    "title": "Open a terminal and ask where you are",
+    "summary": "A terminal can be less mysterious once you see it answer one harmless question. No coding experience needed.",
+    "topic": "First steps",
+    "where": [
+      "Use a Mac or Windows computer. Read along on iPad or use the Practice desk there.",
+      "A command is one typed instruction. A terminal is the window where you type it. A prompt here means the spot waiting for your typing."
+    ],
+    "actions": [
+      {
+        "title": "Open the window",
+        "do": "On Mac, press Command and Space, type Terminal and press Return. On Windows, open Start, type PowerShell and choose Windows PowerShell or PowerShell. A regular window is enough.",
+        "see": "A blinking cursor appears after some text. The text might include a folder, your computer’s name, a dollar sign or a greater-than sign.",
+        "stuck": "If a browser search opened, close that tab and find the app from your computer’s own app search."
+      },
+      {
+        "title": "Ask your location",
+        "do": "On Mac type pwd and press Return. In PowerShell type Get-Location and press Enter. Copy only the command, with no quotes around it.",
+        "see": "A line names the current folder. Your own name or a different starting folder is normal.",
+        "stuck": "If nothing happens after typing, press Enter. If it says the command is unknown, check you used the command for your window."
+      },
+      {
+        "title": "List what is there",
+        "do": "On Mac type ls. In PowerShell type Get-ChildItem. Press Enter. These commands list names in the current folder.",
+        "see": "A list appears, or a new prompt appears immediately when the folder is empty. Nothing has been edited.",
+        "stuck": "If the list scrolls, read the last few lines. A long list is not an error."
+      },
+      {
+        "title": "Know when it is finished",
+        "do": "Look for the prompt again. Close the terminal window after the exercise. In a future lab, check your location before typing a file name.",
+        "see": "You have run two read-only commands. You can explain which one finds a folder’s name and which one lists its contents.",
+        "stuck": "If you accidentally started typing another command, press Control and C to cancel the unfinished line, then wait for the prompt."
+      }
+    ],
+    "roles": [
+      "Check which directory will receive a report before exporting it.",
+      "Locate a test file before copying a command from a lab.",
+      "List what your app folder contains before opening it in a coding tool."
+    ],
+    "sources": [
+      [
+        "Terminal User Guide for Mac",
+        "https://support.apple.com/guide/terminal/welcome/mac"
+      ],
+      [
+        "PowerShell help",
+        "https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/02-help-system"
+      ]
+    ]
+  },
+  {
+    "id": "ask-check",
+    "title": "Ask a useful question and catch an invented answer",
+    "summary": "Use a tiny ferry timetable to tell the difference between a supported answer and a plausible guess.",
+    "topic": "First steps",
+    "where": [
+      "Use a chat you already have, or work with pencil and paper here. The whole sample is “Harbor ferry. Saturday. Pier 6. Meet at 9:15 a.m. Bring a hat.”"
+    ],
+    "actions": [
+      {
+        "title": "Give it a source",
+        "do": "Copy the sample, then ask “Using only this note, where and when do we meet?” If doing this on paper, underline the words you used.",
+        "see": "A checkable answer contains Pier 6 and 9:15 a.m. The note supports each one.",
+        "stuck": "If the answer adds a city or ferry company, ask it to point to the exact words in the sample."
+      },
+      {
+        "title": "Ask about a missing detail",
+        "do": "Now ask “How much does the ticket cost? Say unknown if the note does not say.” Compare its answer with the original text.",
+        "see": "The price is unknown. A confident dollar amount still has no support here.",
+        "stuck": "If the helper guesses a price, reply “Show the sentence with the price.” Read the source again yourself."
+      },
+      {
+        "title": "Change one fact",
+        "do": "Change only the sample time to 10:30 a.m. Begin a fresh chat or cover your old paper answer. Ask the first question again.",
+        "see": "The pier stays the same and the time changes. That shows whether the answer follows the material in front of it.",
+        "stuck": "If 9:15 reappears, check that you pasted the new note. Try a fresh conversation to avoid mixing versions."
+      },
+      {
+        "title": "Give yourself a test",
+        "do": "Ask for one sentence a friend could use. Before sharing it, find the support for every part of that sentence. Cross out anything the note never said.",
+        "see": "You can explain why every detail belongs there. This same test works on a long report.",
+        "stuck": "If a whole sentence is hard to judge, check its pieces. Place, day, time and price can each be checked on their own."
+      }
+    ],
+    "roles": [
+      "Test a mailbox summary against the actual row it claims to describe.",
+      "Ask a meeting summary which note supports an assigned deadline.",
+      "Change one item in a scorecard and check that only the expected total changes."
+    ],
+    "sources": [
+      [
+        "Mozilla on browsing and finding a source",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
+      ]
+    ]
+  },
+  {
+    "id": "project-or-chat",
+    "title": "Choose a chat, a project or an agent",
+    "summary": "Pick the smallest tool that can finish the job. Three different requests about the same ferry make the choice easier.",
+    "topic": "First steps",
+    "where": [
+      "Work through these examples on paper or inside the book. A chat answers messages, a project gathers related work, and an agent can carry out a task with tools."
+    ],
+    "actions": [
+      {
+        "title": "Use a chat for one question",
+        "do": "Suppose all you need is a clearer version of “Assemble at the dock.” Ask for one sentence a child would understand. Read it out loud.",
+        "see": "“Meet at the dock” does the job. You only needed a short answer.",
+        "stuck": "If the reply invents a time, repeat the instruction and ask it to keep the meaning exactly the same."
+      },
+      {
+        "title": "Use a project for things that belong together",
+        "do": "Suppose the ferry trip now has a schedule, a notice and a packing list. Write Harbor Notes as a heading and list all three under it. Imagine returning tomorrow.",
+        "see": "The project name tells you where to find the three pieces. You can add new chats or files there if your tool supports them.",
+        "stuck": "If each note is in a separate chat, make a little list of their names before moving or copying anything."
+      },
+      {
+        "title": "Use an agent for a task with a result",
+        "do": "Give a pretend helper this job: “Read the schedule, compare the notice, then propose one corrected line. Show me before applying it.” Name the file it may change.",
+        "see": "You have a clear stopping point. The helper should show a proposed edit to the notice and leave the schedule alone.",
+        "stuck": "If its plan says to rewrite all the files, narrow the request to notice.txt and ask to see a new plan."
+      },
+      {
+        "title": "Choose for yourself",
+        "do": "Which would you use to ask what pier means? Which would hold notes across a week? Which could compare and update one file? Answer before reading the next sentence.",
+        "see": "One quick question fits a chat. A week’s collection fits a project. A controlled file edit fits an agent, with your review.",
+        "stuck": "If two tools could do the job, choose the one you understand and can check most easily."
+      }
+    ],
+    "roles": [
+      "Use chat for a definition, a project for report files and a reviewed agent for editing a report script.",
+      "Keep related draft notices in a project, then use a single chat to simplify one notice.",
+      "Ask an agent to fix one button and show the result before changing another."
+    ],
+    "sources": [
+      [
+        "GitHub’s introduction to a shared project",
+        "https://docs.github.com/en/get-started/start-your-journey/hello-world"
+      ]
+    ]
+  },
+  {
+    "id": "read-a-change",
+    "title": "Read a proposed change before you accept it",
+    "summary": "Practice reading a before-and-after view. The smallest edit can change what a reader does.",
+    "topic": "First steps",
+    "where": [
+      "Use the two imaginary lines in the steps below. You can also open the first practice project and compare its two files.",
+      "A diff shows what will change. A minus often marks an old line and a plus marks its proposed replacement."
+    ],
+    "actions": [
+      {
+        "title": "Find the one changed detail",
+        "do": "Read the old line “Meet at Pier 6 at 9:50.” Read the proposed line “Meet at Pier 6 at 9:15.” Say which part changed without reading the whole sentence out loud.",
+        "see": "The minutes changed from 50 to 15. The pier stayed the same.",
+        "stuck": "If color is hard to see, use the minus and plus signs or compare words in the same positions."
+      },
+      {
+        "title": "Look for an extra edit",
+        "do": "Now imagine the proposed line says “Meet at Pier 8 at 9:15.” Find the second change. The schedule still says Pier 6.",
+        "see": "The edit fixes the minutes but quietly moves people to a different pier.",
+        "stuck": "Cover the times with your finger and compare what remains. A correct change in one place does not prove the rest is right."
+      },
+      {
+        "title": "Ask for a smaller proposal",
+        "do": "Write a response: “Keep Pier 6. Change only the minutes in the notice. Show me the new line before saving.”",
+        "see": "You have given the helper the exact limit and a point at which to stop.",
+        "stuck": "If the tool already applied a draft change, inspect its change view before saving or merging it into shared work."
+      },
+      {
+        "title": "Verify the result",
+        "do": "Compare the revised notice with the schedule. Ask someone reading just the notice to say where and when to meet.",
+        "see": "A fresh reader can say “Pier 6 at 9:15.” Checking the final file verifies what people will actually read.",
+        "stuck": "If the time still says 9:50, you may be looking at the original line or a preview. Open the edited practice file again."
+      }
+    ],
+    "roles": [
+      "Read the proposed mailbox filter one line at a time before saving it.",
+      "Check that a rewritten notice changes the date but keeps its intended audience.",
+      "Review a score calculation and the surrounding lines before merging the change."
+    ],
+    "sources": [
+      [
+        "GitHub’s introduction to changes and review",
+        "https://docs.github.com/en/get-started/start-your-journey/hello-world"
+      ]
+    ]
+  },
+  {
+    "id": "which-account",
+    "title": "Know which account you are using",
+    "summary": "Learn to tell a personal workspace from a work workspace before you bring in a file.",
+    "topic": "First steps",
+    "where": [
+      "Use any vendor app you already have permission to open. The steps also work by imagining two named workspaces: My practice and Work team.",
+      "A workspace is the part of an app where a person or group keeps work. A sign-in proves who you are."
+    ],
+    "actions": [
+      {
+        "title": "Find the account menu",
+        "do": "Look for your profile picture, initials or account name, often near a corner of the window. Open the menu once and read its labels.",
+        "see": "You may see a personal email, an organization name or a list of workspaces. Note which one is active.",
+        "stuck": "If an app has no profile button on the current screen, open its main menu and look for Account or Settings."
+      },
+      {
+        "title": "Choose a practice home",
+        "do": "Choose the workspace you intended for the exercise. Use a made-up note such as “Our practice ferry leaves at ten.” Leave real workplace files where they are.",
+        "see": "You know who owns the space where the practice note would go.",
+        "stuck": "If both accounts use your name, look for the email domain or team name. Ask your work administrator if the label is unclear."
+      },
+      {
+        "title": "Notice permission requests",
+        "do": "Imagine a calendar helper asks for access. Read the words that say whether it can read events, make events or both. Decide which ability a task called “list meetings” actually needs.",
+        "see": "You can finish listing meetings with read access when the tool offers it. You can stop before connecting a service if you only want to explore.",
+        "stuck": "If the screen lists several permissions at once, read them one line at a time. The Back or Cancel button lets you return to the practice lesson."
+      },
+      {
+        "title": "Recognize a feature limit",
+        "do": "If a tool shows “ask your admin” or a plan choice, write down the feature and the account you are in. Use the offline Practice desk to finish the concept while you check access.",
+        "see": "You can tell a missing permission from a typing mistake. No surprise purchase is needed for this lesson.",
+        "stuck": "If you selected the wrong account, return to the workspace picker. A personal subscription and a workplace license can show different tools."
+      }
+    ],
+    "roles": [
+      "Learn a reporting workflow with fake rows, then check which work account owns the real mailbox data.",
+      "Confirm the organization name before opening meeting files.",
+      "Keep personal app experiments in their own workspace."
+    ],
+    "sources": [
+      [
+        "Microsoft’s account support",
+        "https://support.microsoft.com/account-billing"
+      ]
+    ]
+  },
+  {
+    "id": "files-and-formats",
+    "title": "Tell a text file, a picture and a table apart",
+    "summary": "Pick the file a tool needs by looking at its name and its contents.",
+    "topic": "First steps",
+    "where": [
+      "Use a sample name list on paper: notice.txt, banner.png, guests.csv and notes.zip. You may also inspect the files from the Devin practice kit."
+    ],
+    "actions": [
+      {
+        "title": "Start with the ending",
+        "do": "Read each name after its last dot. The ending gives a clue about the kind of file. Say which file you would open to read a plain note.",
+        "see": "notice.txt is a good first choice. A .txt file usually stores plain text.",
+        "stuck": "If a file on your device has no visible ending, its information panel or Details view may show its kind."
+      },
+      {
+        "title": "Look inside a small table",
+        "do": "Read these two lines: “Name,Pier” and “Mira,6”. Imagine each comma starts the next box. Point to Mira’s pier.",
+        "see": "There are two columns. The headings are Name and Pier. Mira’s row puts 6 under Pier.",
+        "stuck": "If a spreadsheet opens each line in one cell, try its CSV import option and choose comma as the separator."
+      },
+      {
+        "title": "Choose a picture",
+        "do": "Suppose a guide asks for a screenshot. Of the four names, pick the one most likely to be an image. Open a preview so you can check what it shows.",
+        "see": "A file called banner.png is a likely image. The preview tells you whether it actually shows the screen you need.",
+        "stuck": "Changing a name from .txt to .png does not turn words into a picture. Save or export the intended kind of file from the original app."
+      },
+      {
+        "title": "Choose the input",
+        "do": "A helper asks for a guest list. Select guests.csv. If the list arrived in notes.zip, unpack the bundle and look for the CSV inside.",
+        "see": "You can hand the helper one useful file instead of an entire bundle of unrelated material.",
+        "stuck": "If you picked the wrong file in an upload window, cancel the selection and choose again before sending the message."
+      }
+    ],
+    "roles": [
+      "Supply the mailbox CSV when a report expects rows and columns.",
+      "Use a screenshot to explain a menu and a table to explain attendance.",
+      "Choose a picture file for an app icon and a text file for its instructions."
+    ],
+    "sources": [
+      [
+        "Windows File Explorer",
+        "https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows"
+      ],
+      [
+        "iPad User Guide",
+        "https://support.apple.com/guide/ipad/welcome/ipados"
+      ]
+    ]
+  }
+]

@@ -7,19 +7,24 @@
   <title>All About AI · Books</title>
   <link rel="stylesheet" href="./reader.css">
   <script src="../book-pager.js" defer></script>
+  <link rel="stylesheet" href="./guide.css">
+  <script src="./guides.js" defer></script>
   <script src="./reader.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to book</a>
-  <header class="bar"><div><a href="../index.html">← Bookshelf</a><a class="contents" href="#contents">Contents</a><a href="#labs">Labs</a><span id="offline" role="status"></span></div></header>
+  <header class="bar"><div><a href="../index.html">← Bookshelf</a><a class="contents" href="#contents">Contents</a><a href="#start">Start here</a><a href="#labs">Labs</a><a href="#pictures">Pictures</a><span id="offline" role="status"></span></div></header>
   <main id="main">
     <section id="index">
       <div class="front">
         <img src="../shelf-art/all-about-ai.jpg" width="220" height="275" alt="Light splitting through a glass prism on an optical bench">
-        <div><span class="eyebrow">A field guide</span><h1>All About AI</h1><p>A practical guide to AI for Exchange engineering, Microsoft 365 and building your own apps.</p><div class="review" id="edition"></div></div>
+        <div><span class="eyebrow">A field guide</span><h1>All About AI</h1><p>Open your first AI tool, try a small project, then put it to work in Exchange, Microsoft 365 or an app of your own.</p><div class="review" id="edition"></div><a class="book-download" href="https://glennarmbruster.github.io/Books/downloads/All-About-AI.zip" download>Download this book (.zip)</a></div>
       </div>
+      <section id="guide-door" class="guide-door"><div><h2>New to these tools?</h2><p>Try a project right here in the book, or pick the tool you want to open.</p></div><a class="lab-action primary" href="#first-project">Try the practice project →</a><nav class="quick-links" aria-label="First-time walkthroughs"><a href="#open-antigravity">Antigravity</a><a href="#open-ai-studio">AI Studio</a><a href="#open-claude-code">Claude Code</a><a href="#open-codex">Codex</a><a href="#open-muse">Muse</a><a href="#open-claude-duet">Claude Duet</a><a href="#open-dots">OpenAI dots</a><a href="#start">All illustrated lessons →</a></nav></section>
       <section class="lab-door" id="lab-door"><div><h2>Hands-on labs</h2><p id="lab-count"></p></div><a class="lab-action" href="#labs">Browse the labs →</a></section>
-      <section class="library" aria-labelledby="contents-title"><div class="tools"><h2 id="contents-title" tabindex="-1">Contents</h2><label class="search">Find a topic <input type="search" id="query" placeholder="Model, tool or task…" autocomplete="off"></label></div>
+      <section id="gallery" class="library" hidden><h2 tabindex="-1" id="gallery-title">Picture index</h2><p>Choose a picture to open its lesson. Inside the lesson, tap the picture to enlarge it.</p><div id="thumbs"></div></section>
+      <section id="catalog" class="library" aria-labelledby="contents-title"><div class="tools"><h2 id="contents-title" tabindex="-1">Contents</h2><label class="search">Find a topic <input type="search" id="query" placeholder="Model, tool or task…" autocomplete="off"></label></div>
+        <p id="guide-note" hidden>Begin with <a href="#first-project">your first practice project</a>, or choose any tool below. Each lesson tells you what to do, what you should see and how to get unstuck.</p>
         <p id="lab-note" hidden>Read the guides and open the practice kit offline. To work in a hosted AI tool, connect to the internet and use an account with access.</p>
         <p id="matches" aria-live="polite"></p><div id="groups"></div>
       </section>

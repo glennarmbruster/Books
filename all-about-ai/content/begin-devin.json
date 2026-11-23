@@ -1,0 +1,211 @@
+[
+  {
+    "id": "open-devin",
+    "title": "Open Devin Cloud and ask about a project",
+    "summary": "Devin is a coding assistant that works with source repositories. A repository is the versioned home of a project’s files. Ask mode helps you read it before you authorize edits.",
+    "topic": "Devin",
+    "where": [
+      "On Mac or Windows open app.devin.ai in your desktop browser and sign in. At work choose the invited Enterprise workspace and access method.",
+      "On iPad you can try the web app, but use a desktop for the side-by-side code and session tools in these exercises. An approved connected and indexed practice repository is needed for Ask."
+    ],
+    "actions": [
+      {
+        "title": "Check your workspace",
+        "do": "Open app.devin.ai and sign in using the account invited to your Devin organization. Check the organization name in the workspace.",
+        "see": "You see the Devin workspace and the option to begin a session.",
+        "stuck": "If you land in a personal or empty workspace, check the organization switcher or your invitation."
+      },
+      {
+        "title": "Choose Ask",
+        "do": "Open a new session and select Ask. Leave Agent for a later editing exercise.",
+        "see": "The interface offers a question about an existing codebase.",
+        "stuck": "If the composer labels differ, follow the Ask entry or open Ask from an indexed project in DeepWiki."
+      },
+      {
+        "title": "Select one repository",
+        "do": "Use the repository selector to pick an approved training project that has a README. Note the repository name.",
+        "see": "The selected project appears as the source of your question.",
+        "stuck": "If no repository appears, the appropriate administrator may need to connect, grant and index one. A Devin login alone does not provide access."
+      },
+      {
+        "title": "Ask for evidence",
+        "do": "Type “What is the first heading in README.md? Link the file you used. Make no changes.” Open the cited file and compare the result.",
+        "see": "The heading and file in the answer match the repository you selected.",
+        "stuck": "If the answer cites a different project or branch, correct the selection and repeat."
+      }
+    ],
+    "roles": [
+      "Read a reporting script without touching a mail tenant.",
+      "Explore an approved automation repository.",
+      "Find your way around an unfamiliar app project."
+    ],
+    "sources": [
+      [
+        "Cognition · your first session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · Ask Devin",
+        "https://docs.devin.ai/work-with-devin/ask-devin"
+      ],
+      [
+        "Cognition · indexing a repository",
+        "https://docs.devin.ai/onboard-devin/index-repo"
+      ]
+    ]
+  },
+  {
+    "id": "devin-first-repo",
+    "title": "Choose a safe practice repository for Devin",
+    "summary": "A repository you can open on GitHub may still need to be connected, granted and indexed in Devin. Use a small identifiable file to check the setup.",
+    "topic": "Devin",
+    "where": [
+      "Use a desktop browser and an approved connected practice repository. For a personal account, you may create a private practice repository at github.com/new if your Devin plan and integration permit it."
+    ],
+    "actions": [
+      {
+        "title": "Choose your practice source",
+        "do": "Open the approved repository on its Git provider. If creating your own on GitHub, use New repository, name it ai-reading-practice, choose Private, add a README and create it.",
+        "see": "The repository has a visible name, default branch and README.md.",
+        "stuck": "Without permission to create personal repositories, use an existing approved training repository."
+      },
+      {
+        "title": "Record a known fact",
+        "do": "Open README.md. Copy the first heading and a short phrase from the next paragraph. If the README has just a title, use the title and the filename.",
+        "see": "You now have an answer key to check the assistant against.",
+        "stuck": "If the repository has no README, pick another existing plain-text file and use that path in the next steps."
+      },
+      {
+        "title": "Find it in Devin",
+        "do": "Return to app.devin.ai. In Ask mode open the repository selector and search for the exact name. If it is being indexed, wait until the index is ready.",
+        "see": "The selected repository matches the one on your provider.",
+        "stuck": "If the search is empty, check organization grants and indexing with the owner. Do not connect additional workplace repositories just to complete the exercise."
+      },
+      {
+        "title": "Verify the selected source",
+        "do": "Ask for the heading and phrase in the chosen file. Follow a citation back to the source.",
+        "see": "You can confirm both the repository identity and the wording.",
+        "stuck": "If a known recent edit is absent, compare the branch and indexed revision before assuming the answer is current."
+      }
+    ],
+    "roles": [
+      "Check the source for a sample mail runbook.",
+      "Find the intended training repository before running an agent.",
+      "Confirm the Git project used by a cloud assistant."
+    ],
+    "sources": [
+      [
+        "GitHub · creating a repository",
+        "https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository"
+      ],
+      [
+        "Cognition · your first session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · indexing a repository",
+        "https://docs.devin.ai/onboard-devin/index-repo"
+      ]
+    ]
+  },
+  {
+    "id": "devin-follow-session",
+    "title": "Follow a Devin session while it works",
+    "summary": "Agent can edit a project and run commands. Follow one small change from the initial assignment to the evidence it returns.",
+    "topic": "Devin",
+    "where": [
+      "Use app.devin.ai on a computer. You need an authorized disposable practice repository where Devin can create a change. An iPad may display the session, with less room for the detailed tools."
+    ],
+    "actions": [
+      {
+        "title": "Set a tiny scope",
+        "do": "Select the training repository in a new Agent session and enter “Create PRACTICE.md containing only # Practice and a second line Ready for review. Verify its contents and show the diff. Leave it for my review.”",
+        "see": "A session starts with this specific assignment.",
+        "stuck": "If you are still in Ask, review the suggested plan and choose to hand it to Agent or switch modes."
+      },
+      {
+        "title": "Find the progress view",
+        "do": "Open the running session and inspect the progress timeline. Read the step for creating PRACTICE.md.",
+        "see": "The activity names the file or command involved.",
+        "stuck": "If the session is waiting for a decision, read its question and confirm only the requested training change."
+      },
+      {
+        "title": "Inspect the file and its check",
+        "do": "Open the IDE or file view and locate PRACTICE.md. Use the Shell or progress evidence to see how Devin checked the content.",
+        "see": "The file has two lines and no unrelated project file is changed.",
+        "stuck": "If the output reports success without showing the file, ask “Show the exact contents and list the changed files.”"
+      },
+      {
+        "title": "Keep the result reviewable",
+        "do": "Read the diff or proposed pull request and leave it open for review. Ask for a correction in the same session if the lines differ.",
+        "see": "You have an inspectable change and can trace how it was checked.",
+        "stuck": "If a pull request is unavailable due to permissions, use the session’s displayed diff as the practice outcome."
+      }
+    ],
+    "roles": [
+      "Verify a small fictional runbook change.",
+      "Inspect a proposed documentation patch.",
+      "Follow an agent’s first file edit."
+    ],
+    "sources": [
+      [
+        "Cognition · your first session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · session tools",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ]
+    ]
+  },
+  {
+    "id": "devin-review-first",
+    "title": "Read a Devin Review finding",
+    "summary": "A pull request proposes changes before they join the main project. Review a finding by tracing it to the changed lines and the expected behavior.",
+    "topic": "Devin",
+    "where": [
+      "On desktop open app.devin.ai/review and sign in. Use an approved training pull request visible to Devin. This exercise needs review access."
+    ],
+    "actions": [
+      {
+        "title": "Open a pull request",
+        "do": "In Review, choose one training pull request. Read its title, requested behavior and current status.",
+        "see": "You see a review detail pane or a full review page.",
+        "stuck": "If the list is empty, use the original PR link or ask the training owner for a reviewed example available in this workspace."
+      },
+      {
+        "title": "Read the change first",
+        "do": "Open the changed files. Choose a small file and write one sentence describing what changed.",
+        "see": "Your description names an observable difference.",
+        "stuck": "When a large change is hard to interpret, choose a documentation line or a comparison operator you can explain."
+      },
+      {
+        "title": "Trace a finding",
+        "do": "Select one finding, if present. Read the cited line and ask what input or situation would cause the reported problem.",
+        "see": "The finding points to an inspectable location and a prediction.",
+        "stuck": "A clean review may contain no findings. Use one expectation from the pull request and trace it to the same file yourself."
+      },
+      {
+        "title": "Make a review note",
+        "do": "Write a private note with the file, the prediction and the evidence that would confirm it. Observe any linked test result. Leave approval and merge decisions with the repository owner.",
+        "see": "You have a specific check for a human reviewer.",
+        "stuck": "If the finding refers to an older revision, compare the latest change before treating it as unresolved."
+      }
+    ],
+    "roles": [
+      "Review a proposed report-filter adjustment.",
+      "Check a Teams inventory script change.",
+      "Read a finding before adopting a change."
+    ],
+    "sources": [
+      [
+        "Cognition · Devin Review",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · session tools",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ]
+    ]
+  }
+]

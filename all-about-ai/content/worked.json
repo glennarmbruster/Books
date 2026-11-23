@@ -1,0 +1,1181 @@
+[
+  {
+    "id": "lab-antigravity-01",
+    "premise": "You have just inherited a folder for a little travel guide. One file holds the title and another gives directions. You want to see whether Antigravity can tell them apart.",
+    "before": "title.txt has one line, Harbor Notes. route.txt has one line, Open title.txt first. Neither includes a publication date.",
+    "try": "In the Antigravity desktop app, open an empty practice folder and send the lab prompt. When the agent says it created the files, open each one from the folder. Then ask, “Which file contains the printed title? Quote its whole line. Where did you find the publication date?”",
+    "after": "The title is Harbor Notes in title.txt. The words in route.txt direct the reader to that file. The agent should report that the publication date is missing.",
+    "why": "A file can mention a piece of information without actually containing it. Checking one line in each file gives you independent evidence for the answer.",
+    "rescue": "If it supplies today’s date, ask it to show the date as characters in one of the two files. Reopen both files. A creation timestamp belongs to the computer and does not establish the guide’s publication date."
+  },
+  {
+    "id": "lab-antigravity-02",
+    "premise": "A duplicate title in your catalog is intentional. The job is to fix a spelling error on the second line without losing a listing.",
+    "before": "Copy these three lines into the lab fixture in this order: Dock Notes, Dock Notse, Dock Notes Archive. The sample should contain three lines even though the first two will ultimately match.",
+    "try": "Open the practice project, run the initial file-creation prompt, and double-click catalog.txt to verify its starting contents. Then send “Replace only Notse on line two with Notes. Show the final file with line numbers.” Read it again in Antigravity’s Review view.",
+    "after": "Line 1 reads Dock Notes, line 2 reads Dock Notes, and line 3 reads Dock Notes Archive. The file still has three entries. No title has moved.",
+    "why": "The edit is a spelling correction. A sorting or cleanup step could make the file look tidier while silently changing which records you have.",
+    "rescue": "If two lines remain, the duplicate was removed. Ask the agent to restore line two from the original fixture and make just the spelling correction. Count the lines before judging the spelling."
+  },
+  {
+    "id": "lab-antigravity-03",
+    "premise": "Imagine you are making a quiz to share on a cruise. Your reader should have time to guess before seeing which ferry goes first.",
+    "before": "The requested heading is Harbor Quiz. The question is Which boat leaves first? The answer is Dawn Ferry. The first button label is Show answer.",
+    "try": "In a new Antigravity project run the lab prompt and locate index.html. Open that file with your web browser. Write down what the button says before clicking. Click once, click again, and then reload the page using the ordinary reload button.",
+    "after": "Before the first click, and again after reload, the question is visible and Dawn Ferry is hidden. One click reveals Dawn Ferry and the button says Hide answer. The second click hides it and restores Show answer.",
+    "why": "An interactive page has a starting state and a rule for moving between states. Seeing the right words somewhere in the source file alone cannot tell you whether a reader experiences that behavior.",
+    "rescue": "If the answer is shown at the start, tell the agent exactly when it appeared. Ask it to hide the answer during page initialization, then reload before trying the button again."
+  },
+  {
+    "id": "lab-antigravity-04",
+    "premise": "You are adding up minutes from a shift log. A zero-minute job counts as a real entry, but a blank field and a word in a numeric column need attention.",
+    "before": "input.csv: ID,minutes\nA,15\nB,0\nC,\nD,oops",
+    "try": "Send the lab prompt in Antigravity and compare its input.csv with the sample, one line at a time. Ask it to run python3 summarize.py and show the actual terminal output. Next change only C, to C,6. Save the file and ask it to run the very same command.",
+    "after": "In the first run, A and B count as two valid jobs totaling 15 minutes. The rejected IDs are C and D. In the second, three jobs contribute 21 minutes and the only rejected ID is D.",
+    "why": "You can check the sum on paper. The separate count is equally valuable because a program that silently drops B still gets the original sum right.",
+    "rescue": "If the first run says one valid job, point to B,0 and ask the agent to test for a blank value before converting the field to a number. Rerun both examples to check the fix."
+  },
+  {
+    "id": "lab-antigravity-05",
+    "premise": "A leaderboard puts ten ahead of two. You will show the original bug first, then check that the correction also preserves tied scores.",
+    "before": "The practice page begins with the values “10”, “2” and “0”. They arrive as pieces of text, which makes the original sorting behavior visible.",
+    "try": "Have Antigravity create sort.html using the intentionally flawed prompt. Open it in your browser, click Sort and write down the order. Now ask the agent to change the comparison to numeric order. Reload the file, click again and finally repeat with a second 2 in the input.",
+    "after": "The initial sort produces 0, 10, 2. After the change it produces 0, 2, 10. With the additional tied score, the output is 0, 2, 2, 10.",
+    "why": "Sorting text puts the character 1 ahead of the character 2. A numerical comparison instead evaluates ten against two. Neither operation should discard a player who happens to have the same score as another.",
+    "rescue": "If the first demonstration is already correct, the agent may have fixed the fixture too early. Ask it to show the initial unmodified sort() call, reproduce the wrong order, then apply the corrected comparison."
+  },
+  {
+    "id": "lab-antigravity-06",
+    "premise": "A saved score from last year uses one name for its score field. A newer save uses another. Your reader should open both without quietly turning missing data into a zero.",
+    "before": "Old save: {\"version\":1,\"points\":7}. Current save: {\"version\":2,\"score\":0}. Future save: {\"version\":3,\"score\":99}. Also prepare {\"version\":2} as a deliberately incomplete file.",
+    "try": "Ask Antigravity to create the reader and tests from the lab in an empty folder. Have it show the expected answer for each of the four examples before running python3 -m unittest -v. Read the names and outcomes of the individual tests.",
+    "after": "Version 1 gives 7. Version 2 with a score gives 0. The reader reports clear errors for version 3 and for the version 2 file whose score is missing.",
+    "why": "The version number tells the reader how to interpret the fields. A real zero tells you what happened in the game. An absent field tells you the record cannot answer that question.",
+    "rescue": "If the incomplete file also returns zero, point out the identical answers for two different situations. Ask for an explicit field-presence check, then rerun both zero and missing-field tests."
+  },
+  {
+    "id": "lab-antigravity-07",
+    "premise": "A night service opens late and closes early the next day. You need an on-screen Open or Closed answer at either side of midnight.",
+    "before": "The local interval starts at 22:00 inclusive and ends at 02:00 exclusive. Your first six checks are 21:59, 22:00, 00:00, 01:59, 02:00 and noon.",
+    "try": "Write the answers you expect on paper. In Antigravity run the lab prompt and ask it to show its own boundary table. Compare it before requesting the implementation. Once its test suite runs, add the two invalid clock readings 24:00 and 01:60.",
+    "after": "The six answers in order are Closed, Open, Open, Open, Closed and Closed. Each invalid reading gives an error. It should never turn 01:60 into an apparently valid open time.",
+    "why": "Draw the night as two blocks on a clock. The service is open during the late-evening block and the early-morning block. The closing minute itself is already outside the service window.",
+    "rescue": "If midnight comes back Closed, ask whether the program is requiring the time to be after 22:00 and before 02:00 simultaneously. Have it test membership in either open block, then rerun all the boundary cases."
+  },
+  {
+    "id": "lab-antigravity-08",
+    "premise": "You are collecting a list that arrives in envelopes. The middle envelope has no names but includes directions to the next envelope. Stopping there would lose the last name.",
+    "before": "Page p1 contains A and points to p2. Page p2 has no items and points to p3. Page p3 contains C and has no next-page link. These are local practice records.",
+    "try": "Run the Antigravity lab prompt in a fresh folder. Ask it to print the fake fetch log as well as the collected items. Then ask it to add a next link from p3 back to p2 and rerun that variant with cycle detection enabled.",
+    "after": "The normal log is p1, p2, p3, and the collected items are A and C. In the looping case the program reports a repeated link before requesting p2 a second time.",
+    "why": "The link is the instruction to continue. The contents of a single page tell you how many items it contributed, which is a separate question.",
+    "rescue": "If the output contains only A, inspect the condition that ends the loop. Ask the agent to finish normally only when the link is absent and to report a repeated link as a distinct error."
+  },
+  {
+    "id": "lab-antigravity-09",
+    "premise": "Someone playing your game has set the mouse aside. They need to open the rules, close them, and resume from the same place using a keyboard.",
+    "before": "The page has a Rules button. Its dialog contains the sentence “Two players take turns” and a Close button. Before opening, the dialog and Close control are hidden.",
+    "try": "Have Antigravity create dialog.html and open it locally. Press Tab until Rules has focus and press Enter. Observe the focused control, then press Escape. Reopen Rules, and this time activate Close with the keyboard. Repeat with Tab and Shift+Tab while the dialog is open.",
+    "after": "Opening reveals the sentence and places focus on Close. Keyboard navigation stays within the open dialog. Both Escape and Close hide it and return focus to Rules so the next keystroke starts in the expected place.",
+    "why": "Focus is where the next keystroke goes. A dialog can look right in a screenshot even when a person using the keyboard is stranded behind it.",
+    "rescue": "If Escape closes the dialog but the next Tab jumps to the browser toolbar, ask the agent to remember the opening button and restore focus there on close. Repeat both closing routes."
+  },
+  {
+    "id": "lab-antigravity-10",
+    "premise": "You downloaded a book before traveling, then its publisher corrected a line. Prove that the new edition will be the one you actually read on the plane.",
+    "before": "The first chapter.txt says edition A. The revision will say edition B. index.html, chapter.txt and the service worker sw.js all belong to one small local practice book.",
+    "try": "Ask Antigravity to start its local web server and open the localhost address. Wait for Ready offline, simulate offline in your browser’s network controls, and reload normally. Restore the network. Request edition B and a new cache name. Close old book tabs, reopen online, then repeat the offline reload.",
+    "after": "Your first offline reading shows edition A. After connecting and installing the revision, the second offline reading shows B. Inspect the app’s cache list to confirm the obsolete book-specific cache was removed.",
+    "why": "A browser can keep a complete older book and continue reading it perfectly. Testing an offline reload twice establishes both that storage worked and that the downloaded files changed.",
+    "rescue": "If B appears online but A reappears offline, compare the saved cache name in sw.js and the one actually installed. Close tabs still running the old worker, reopen online and wait for the updated reader before retrying."
+  },
+  {
+    "id": "lab-antigravity-11",
+    "premise": "Two cashiers enter payments of the same amount, and the system sometimes delivers a receipt twice. Your ledger must retain two genuine payments but apply any one receipt only once.",
+    "before": "Event A adds 40 and B adds 40. A arrives a second time with the same 40. Two independent connections then try to deliver C for 10 simultaneously. Finally a conflicting copy of A claims 41.",
+    "try": "In a disposable Antigravity project run the lab prompt. Ask to see the stored IDs and total after the replay and the concurrent pair. Have the test open two actual SQLite connections to one temporary database. Submit the conflicting A only after recording the expected good state.",
+    "after": "Repeated A leaves rows A and B, totaling 80. Two deliveries of C leave three rows totaling 90. A with amount 41 returns a conflict, and its stored value stays 40.",
+    "why": "The event ID identifies a single payment. The database must uphold that identity even when two writers act before either learns what the other is doing.",
+    "rescue": "If the concurrency test uses one shared in-memory set to discard duplicates, ask the agent to demonstrate two independent database connections and the database’s uniqueness rule. Rerun the case on a fresh database."
+  },
+  {
+    "id": "lab-antigravity-12",
+    "premise": "A program combines a company default, a site preference and a user preference. Its report should tell you both which value won and who supplied it.",
+    "before": "Defaults: reminders=true, limit=10. Site: limit=5. User: reminders=false, limit=0. Later layers take precedence when the key is present.",
+    "try": "Run the lab prompt in Antigravity and inspect the printed value and source for each setting. Remove just the user’s limit and rerun. Remove the site’s limit as well and rerun. Finally try an explicit null and a misspelled key in separate test cases.",
+    "after": "Initially reminders is false from user and limit is 0 from user. The first removal makes the limit 5 from site. The second makes it 10 from defaults. Null and unknown keys produce errors without changing the original settings.",
+    "why": "A user can deliberately choose zero or turn something off. Only absence means “look at the next layer.” The recorded source makes this easy to verify when the effective number looks surprising.",
+    "rescue": "If zero becomes five, look for a fallback triggered by a false-like value. Ask the agent to check whether the key exists separately from reading its value, and repeat all three runs."
+  },
+  {
+    "id": "lab-antigravity-13",
+    "premise": "You need to upgrade a saved-game format without breaking someone who still uses the old app. A little compatibility chart exposes the moment that matters.",
+    "before": "Old readers understand points. New readers understand score or points and reject different values if both appear. The legacy writer emits points; the transition writer emits both keys with the same value.",
+    "try": "In Antigravity ask to create independent readers and writers and fill a two-by-two chart. Test zero and negative seven in all four cells. Add a writer that emits only score. Then hand both readers the troublesome record {\"points\":3,\"score\":4}.",
+    "after": "All four original pairings return 0 and −7 correctly. The score-only writer works with the new reader but fails with the old one. For the troublesome record, the old reader gives 3 and the new reader reports a conflict.",
+    "why": "The transition writer allows old and new apps to coexist. A score-only writer can safely become the sole writer once the readers that still require points are no longer in use.",
+    "rescue": "If all six pairings pass, inspect the old reader. If the agent taught it about score during the test, restore the original reader and test the new writer against that unchanged client."
+  },
+  {
+    "id": "lab-antigravity-14",
+    "premise": "Four messages describe an outage. Some refer to the same minutes. You want to report how long the service was unavailable, even though the incident crossed midnight.",
+    "before": "Use UTC on January 1–2, 2027. A runs 23:50–00:10. B runs 00:05–00:20, C runs 00:20–00:25 and D runs 00:08–00:09 on January 2.",
+    "try": "Mark one continuous band from 23:50 to 00:25 on paper. Ask Antigravity to run its interval calculator on the four records and compare it with a second calculation that marks each affected whole minute just once. Shuffle the records, duplicate A and add a separate 01:00–01:02 interval.",
+    "after": "The four original records cover 35 unique minutes. Their individual durations total 41 because some overlap. Shuffling or duplicating A leaves the union at 35. The separate two-minute outage changes it to 37.",
+    "why": "The customer experiences a minute of downtime once, no matter how many incident reports mention it. Touching intervals join without giving their shared boundary an extra minute.",
+    "rescue": "If the result is 41, ask for the merged intervals before the final sum. If the program accepts an explicitly earlier ending date, require it to report the reversed interval and rerun the original midnight case."
+  },
+  {
+    "id": "lab-antigravity-15",
+    "premise": "A laptop loses power during a score import. On restart the importer should pick up exactly where it left off, even if the entire file is delivered again later.",
+    "before": "Use a temporary SQLite database and three records in order: R1 adds 8, R2 subtracts 3, R3 adds 5. Ask the importer to stop immediately after committing record two.",
+    "try": "Have Antigravity run the clean case first. Run the interrupted case in a new database and ask it to print the rows, total and last saved position. Start a new process on that database and resume. Finally replay the entire input from the beginning and try a replay with R2 changed to −9.",
+    "after": "At interruption there are two rows, total 5, checkpoint 2. After resume there are three rows, total 10, checkpoint 3. Full replay keeps those values. The conflicting R2 produces an error and leaves its original −3 stored.",
+    "why": "Saving the record and the progress marker together lets the new process tell exactly what was completed. The marker alone cannot establish that the corresponding score was written.",
+    "rescue": "If the conflicting replay passes silently, ask which records were actually read. A regular resume can skip the first two. Explicitly request a full replay from the beginning against the already-populated database."
+  },
+  {
+    "id": "lab-ai-studio-01",
+    "premise": "A passenger asks when the harbor shuttle boards. You have the short printed notice in front of you, and you want to avoid passing on a time that nobody announced.",
+    "before": "“Harbor shuttle boards at Pier 4 on March 8. Bring the blue ticket.” There is a pier, a date and a ticket color. The sentence supplies neither a clock time nor a year.",
+    "try": "In AI Studio choose Playground and start a new prompt. Paste the lab’s extraction request with the notice. Click Run and read all three labeled lines. For a second run, add “Boarding begins at 09:15” inside the notice and keep the request otherwise identical.",
+    "after": "The first answer identifies Pier 4, March 8 and an unknown time. The second keeps the same pier and date but now reports 09:15. A year should remain absent in both.",
+    "why": "The model’s job is to move facts from the source into named fields. The exercise rewards leaving a gap when the source leaves one.",
+    "rescue": "If it fills in the current year, ask “Which words in the notice give you that year?” Rewrite the instruction to copy the date exactly as printed and rerun in a fresh chat."
+  },
+  {
+    "id": "lab-ai-studio-02",
+    "premise": "A volunteer sorts topic cards. Every card needs an owner column, including cards that have no named owner. You want one response convention for the whole pile.",
+    "before": "Card H2 says Topic: Ferries and names nobody. K4 says Topic: Trains and names Mei. R9 says Topic: Maps and names nobody.",
+    "try": "In Playground’s Run settings paste the standing rule from the lab into System Instructions. In the message box send H2, then K4, then R9 as three successive turns of the same conversation. Write down the two values returned for each card.",
+    "after": "The three responses are Ferries | UNASSIGNED, Trains | Mei, and Maps | UNASSIGNED. Each card gets one row. The third row should never inherit Mei simply because her name appeared in the previous turn.",
+    "why": "The standing rule persists through the conversation. The facts inside a given card belong to that card alone. By switching from missing to present and back, you exercise both behaviors.",
+    "rescue": "If Maps is assigned to Mei, add “Evaluate each card independently; only an owner printed on that card qualifies.” Start a fresh chat with the revised rule and replay all three cards in the same order."
+  },
+  {
+    "id": "lab-ai-studio-03",
+    "premise": "Four short messages enter a help desk. You want the model to route them to a limited set of queues and avoid assigning a technical category to an unrelated request.",
+    "before": "The test messages are A “mail came back”, B “document does not load”, C “please help”, and D “mail returned and document fails”. The only allowed labels are MAIL, FILES, BOTH and UNKNOWN.",
+    "try": "Open a fresh Playground chat and paste the complete lab prompt, including its four examples. Run it. Cover the response and label each test yourself, then compare by ID. In a fresh prompt replace A with “the cafeteria is closed”. Keep the examples and all other inputs unchanged.",
+    "after": "Originally A is MAIL, B FILES, C UNKNOWN and D BOTH. After the substitution only A should change, becoming UNKNOWN. There are still four answers.",
+    "why": "The examples teach meanings as well as spelling. “Mail came back” differs from “letter bounced” on the surface but describes the same problem. An unrelated complaint supplies no evidence for either queue.",
+    "rescue": "If D gets only MAIL, add a separate teaching example containing one file problem and one mail problem labeled BOTH. Leave D unchanged as a genuine test and rerun."
+  },
+  {
+    "id": "lab-ai-studio-04",
+    "premise": "Two pier notices disagree about an opening. One is a draft. Your reader needs the approved date and a way to verify it in the original words.",
+    "before": "M1: “Draft: Pier 2 opens June 3.” M2: “Approved: Pier 2 opens June 8.” M3: “Approved: Pier 4 opens June 9.” None of them mentions a closing date.",
+    "try": "Start a new Playground chat with web grounding off. Send the three notices and the lab question. For each answer, read the cited line and underline the pier, action and approval status. Next open a fresh chat and repeat without M2.",
+    "after": "With all three sources, the approved Pier 2 opening is June 8 from M2; the closing date has no supporting source. Without M2 there is still a proposed June 3 date, but the approved opening is unknown.",
+    "why": "A real quote from the wrong pier is still the wrong evidence. All parts of the claim have to be supported by the same relevant source.",
+    "rescue": "If it chooses June 9, ask it to quote the pier number in M3 beside the requested pier number. Then require the two numbers to match before a source can support the claim."
+  },
+  {
+    "id": "lab-ai-studio-05",
+    "premise": "Your app imports launch notices and expects dates in a predictable shape. It should distinguish an absent date from a date that happens to be marked tentative.",
+    "before": "C1 says “Launch 2027-04-02.” C2 says “Date to be announced.” C3 says “Tentative 2027-05-09.” The output needs an id and a date on all three records.",
+    "try": "In Playground select a model that supports structured output. Put the lab’s schema in the tool’s schema editor and the notice text in the user message. Run and inspect each record. Now change only the final notice to the tentative date 2027-05-10 and repeat with the same schema.",
+    "after": "The date values in order are \"2027-04-02\", null and \"2027-05-09\". In the second run only the third becomes \"2027-05-10\". C2’s null has no quotation marks.",
+    "why": "JSON is a way programs exchange data. The word null has a defined meaning for an empty value. The letters inside \"null\" form an ordinary text string, which a program might mistake for a real date.",
+    "rescue": "If C2 contains \"TBA\" or the field disappears, check that the schema requires date and allows a null value. Rerun and verify both the shape and the actual calendar values."
+  },
+  {
+    "id": "lab-ai-studio-06",
+    "premise": "You are preparing the final score for two players. One player honestly scored zero in a round; a different round was never recorded.",
+    "before": "Player,points\nAva,12\nBo,-3\nAva,0\nBo,8\nAva,blank",
+    "try": "In AI Studio Playground choose an eligible model and enable Code execution. Send the prompt and inspect the code and its printed result. Check the totals with a pencil. In a fresh run replace only Bo’s 8 with −8 and ask for the actual execution output again.",
+    "after": "Ava has 12 points from two scored rounds. Bo has 5 from two scored rounds, giving a grand total of 17. After changing 8 to −8, Bo has −11 and the grand total is 1. Round counts stay the same.",
+    "why": "Adding zero has no effect on a total, but playing a zero-point round has an effect on the count. Replacing plus eight with minus eight changes the grand total by sixteen.",
+    "rescue": "If Ava is listed with just one round, ask to see the filter that selects numeric scores. It should discard missing text while retaining numeric zero. Rerun before accepting the summary."
+  },
+  {
+    "id": "lab-ai-studio-07",
+    "premise": "You are comparing two models on a parking question with an evening rate. Give both models the same information and score them against an answer you already know.",
+    "before": "Vehicles entering before 18:00 cost $2 for each started hour, capped at $8. Entry from 18:00 onward costs $3 flat. A stays 17:30–19:45, B stays 18:00–18:20, and C stays 09:00–15:00.",
+    "try": "In separate fresh Playground chats, run the same lab prompt with different models or reasoning settings. Label the answers X and Y before looking up their identities. Check all three fees and whether the explanation uses entry time. Move A’s entry to 18:01 for a follow-up trial.",
+    "after": "A originally pays $6 for three started hours. B pays $3 at the exact threshold. C pays the $8 cap. The changed A pays $3 because its entry is now after the threshold.",
+    "why": "Scoring the explanation catches an answer that happens to land on the right number for the wrong reason. Timing how long each run took gives you a different measure.",
+    "rescue": "If A originally costs $3, ask which timestamp qualifies the vehicle for the evening rate. Point to the word “entries” and rerun the original and changed A together."
+  },
+  {
+    "id": "lab-ai-studio-08",
+    "premise": "A library assistant can ask for a book’s location, but the shelf number belongs to the catalog. You play the catalog so you can see where the information came from.",
+    "before": "The reader asks for book BK17. Your practice catalog will return {\"found\":true,\"shelf\":\"H-04\"}. For a second book, BK99, it will return {\"found\":false}.",
+    "try": "Enable function calling in Playground and enter the lab’s lookup_book declaration. Submit the BK17 question. Read the requested function name and its id before supplying the mock reply. If your version only displays proposed calls, send a clearly labeled simulated tool result in a follow-up. Repeat in a fresh run for BK99.",
+    "after": "The first request is to lookup_book with the identifier BK17. H-04 is a supported answer only after you return that shelf. A failed lookup for BK99 leaves its shelf unknown.",
+    "why": "The proposed function call is like a completed request slip. Until the catalog replies, the assistant has no observation of the shelf.",
+    "rescue": "If a shelf appears before the tool responds, start a fresh prompt that explicitly says “Stop after requesting the lookup. Wait for my mock catalog reply.” Record whether the interface actually executed a tool or you simulated it."
+  },
+  {
+    "id": "lab-ai-studio-09",
+    "premise": "You are testing whether a model can read a simple picture. You also want to know what it does when the picture has accidentally been left off a message.",
+    "before": "Your picture contains two panels. The blue panel on the left has a white Q. The red panel on the right has a white Z. The lab includes the HTML for creating the picture.",
+    "try": "Save the supplied HTML in a practice file, open it in your browser and capture a screenshot containing both panels. Attach the screenshot to a fresh Playground prompt using an image-capable model. Ask for each side’s label and fill color. Open an entirely new chat and send the same question with no attachment.",
+    "after": "The attached result says left Q on blue, right Z on red. The unillustrated prompt says it needs an image or lacks the visual evidence. The color of the letters is incidental here.",
+    "why": "This comparison changes exactly one thing: the presence of the picture. A fresh conversation prevents the first image from acting as an unseen clue in the second run.",
+    "rescue": "If left and right appear reversed, inspect the screenshot that you actually attached. If the no-image run still knows Q and Z, check that you started a new chat and that the prompt itself never names the letters."
+  },
+  {
+    "id": "lab-ai-studio-10",
+    "premise": "An app drafts dates from two harbor notices. A person needs to finish checking any missing date before the records can be exported.",
+    "before": "In the starting form, N1 is Harbor dated 2027-06-03. N2 is Rail and its date is missing. A valid date must be a real day on the calendar.",
+    "try": "In AI Studio Build, send the complete lab brief and wait for a working preview. Try Export JSON while Rail is blank. Try February 30 if the date control permits typing it. Next enter June 4, 2027 for Rail and export. Finally clear Harbor’s date and test the button once more.",
+    "after": "Initially Rail needs review and export is blocked. February 30 cannot be accepted. With June 4 entered, readable output contains N1/2027-06-03 and N2/2027-06-04 exactly once each. Clearing Harbor blocks a new export.",
+    "why": "Validating twice matters. A form can correctly disable its button when it first opens, then forget to update that decision after someone edits a field.",
+    "rescue": "If export remains enabled after you erase Harbor’s date, show the builder exactly that sequence. Ask it to calculate readiness from the current field values on every edit and repeat the final two actions."
+  },
+  {
+    "id": "lab-ai-studio-11",
+    "premise": "A colleague asks which rule applied on July 10. A later rule is correct today and an earlier draft mentions a different number. Neither automatically answers the historical question.",
+    "before": "For 2027, P1 is approved from July 1 with cap 4, P2 is a draft from July 8 with cap 9, and P3 is approved from July 12 with cap 6. Ask about June 30, July 10 and July 12.",
+    "try": "Paste the lab’s selection rule into System Instructions. Run the records and compare each answer with the dates and approval states on paper. Add P4, approved July 12 with cap 5, and repeat in a fresh prompt. Reverse P3 and P4 once to check whether their order changes the conclusion.",
+    "after": "First run: June 30 UNKNOWN, July 10 cap 4/P1, July 12 cap 6/P3. After P4, July 12 is CONFLICT with P3 and P4. Earlier answers stay unchanged in either record order.",
+    "why": "Approval determines which records count. The effective date determines when they count. Two equally authoritative conflicting records require a decision the supplied evidence cannot make.",
+    "rescue": "If P4 wins simply because it appears last, add “Input order has no authority; report a conflict for a tied approved date with different values.” Repeat the reversed-order case."
+  },
+  {
+    "id": "lab-ai-studio-12",
+    "premise": "A passenger knows a vessel by nickname. Your model must consult a directory, then use the real vessel ID to ask a separate route service for the next stop.",
+    "before": "Ask about Wren. The mock directory returns {\"found\":true,\"id\":\"V42\"}. The mock route service returns {\"next_stop\":\"Cove\"}. In a negative case, the directory reports {\"found\":false} for Sparrow.",
+    "try": "In Playground enter the two function declarations from the lab. Run the Wren question. Return the first mock result only after find_vessel requests Wren. Check the second call’s argument before replying with the route. In a new chat request Sparrow and supply only its directory miss.",
+    "after": "Wren leads to find_vessel(Wren), get_route(V42), and an answer of Cove. For Sparrow, the activity stops immediately after the failed directory lookup. There is no valid route argument to send.",
+    "why": "V42 is the connecting piece of evidence. The model had no reason to know it until your directory supplied it. A lucky final stop cannot excuse a made-up intermediate ID.",
+    "rescue": "If it asks get_route for “Wren”, remind it that the route service accepts only vessel_id from the directory response. If the tool UI cannot execute calls, label each mock reply explicitly and record the exercise as a simulation."
+  },
+  {
+    "id": "lab-ai-studio-13",
+    "premise": "You have two versions of a label-making instruction. Instead of choosing the nicer-sounding one, count how many decisions each version gets right on the same inputs.",
+    "before": "The reference values are A=0, B=4, C=5, D=9, E=10, F=missing, G=−1, H=4.5. Only whole, nonnegative counts qualify for a color. The lab supplies the color thresholds.",
+    "try": "Run the given prompt in a fresh Playground chat and save all eight labels. Start a second chat with the same model and inputs but add the lab’s validation-first system instruction. Score both without changing the answer key. Then try the new cases I=7, J=11, K=2, L=1.25.",
+    "after": "For A through H, the key is GREEN, GREEN, AMBER, AMBER, RED, UNKNOWN, UNKNOWN, UNKNOWN. For I through L it is AMBER, RED, GREEN, UNKNOWN. Report the score each version actually earns; a tie is a genuine result.",
+    "why": "The original examples show how well the instruction handles the cases you designed. The holdout batch checks whether an improvement carries over to fresh values.",
+    "rescue": "If 4.5 is called AMBER or GREEN, ask which step first verified that the input was a whole count. Re-run both versions and record any change; avoid silently correcting their answers before scoring."
+  },
+  {
+    "id": "lab-ai-studio-14",
+    "premise": "A cheap model answers first and a more expensive one rechecks certain cases. A smaller bill can still mean fewer usable answers, so you will calculate both numbers.",
+    "before": "Eight cases are A–H. Quick costs 2¢ per attempt and gets A–E right. Deep costs 8¢ per attempt and gets A–G right. The recheck rule flags E, F, G and H.",
+    "try": "In Playground enable Code execution and send the lab prompt. Ask to print a row for each case showing which calls were paid for and which answer was kept. Check E and H by hand. Remove G from the flagged set and recompute without changing either model’s known outcomes.",
+    "after": "Quick alone costs 16¢ for five accepted answers, or 3.2¢ each. Deep alone costs 64¢ for seven, about 9.14¢ each. The original route costs 48¢ for seven, about 6.86¢ each. Without G it costs 40¢ for six, about 6.67¢ each.",
+    "why": "Each flagged case incurs both bills, even when the extra call does no good. Removing G looks slightly cheaper per accepted answer, but loses one usable answer.",
+    "rescue": "If the original route costs 32¢, the calculation counted only four Deep calls. Add the eight Quick calls that had to run before the validation rule selected cases."
+  },
+  {
+    "id": "lab-ai-studio-15",
+    "premise": "A volunteer wants to publish opening dates for two bays. The review app should show where each date came from and revoke approval if anyone changes the record.",
+    "before": "Original sources: L1 “Bay 7 opens 2027-08-04.” L2 “Bay 9 opening date pending.” Correct rows are Bay 7 with August 4 and Bay 9 with a null date. A copied Bay 7 date attached to Bay 9 is a deliberate error.",
+    "try": "Open AI Studio Build and give it the complete lab brief. In the preview run the fixed fixture checks first. Generate a new draft separately, inspect the supporting line next to each field and approve a valid row. Now edit Bay 7’s date to August 5 and inspect its approval state.",
+    "after": "The correct dated and pending rows pass. The crossed-bay record and the record with an invented quote fail. August 5 lacks supporting evidence, so the modified row loses approval and cannot be approved in that state.",
+    "why": "The validator can repeat the same checks regardless of how the model phrases a draft. Approval attaches to the reviewed values, which explains why an edit needs another check.",
+    "rescue": "If a wrong bay passes because its date appears somewhere in the document, ask the builder to verify bay, date and exact quote together on the cited line. Rerun all four fixed examples before trying another live draft."
+  },
+  {
+    "id": "lab-copilot-01",
+    "premise": "You are covering the help desk on a Saturday. Someone wants a quick status update and the name of the person in charge. You have a maintenance notice, so find how far that evidence takes you.",
+    "before": "Notice A. Mail search maintenance, Saturday 09:00–09:30 UTC. Message delivery will continue.",
+    "try": "In a fresh Copilot chat paste the notice. Ask for five rows: function, start, end, time zone and owner. Request the words from the notice that support each value. Then paste the same message as Notice B with “Owner: Taylor” added. Ask for the changed field only.",
+    "after": "The first table says mail search, 09:00, 09:30, UTC and unspecified. The window is 30 minutes. In the second answer only the owner changes to Taylor. Delivery remains available in both notices.",
+    "why": "A mail system has several jobs. Losing search access and losing the ability to receive a message would affect people differently. The notice identifies only one affected function.",
+    "rescue": "If the answer gives the service desk as owner, ask “Which words in Notice A name the service desk?” When it cannot quote any, mark the field unspecified."
+  },
+  {
+    "id": "lab-copilot-02",
+    "premise": "A contractor offers a delivery day, and a colleague suggests another. You need to reply to the contractor without turning the suggestion into a booking. Think of each message as a separate piece of evidence.",
+    "before": "M1 Approver: Tuesday is booked. M2 Organizer: Could we use Wednesday instead? M3 Approver: I will check.",
+    "try": "Paste the three messages into Copilot. Ask for the last confirmed date, the proposed change and who owes the next response. Have it cite M1, M2 or M3 for each answer. Add a final message, “M4 Approver: Wednesday is now booked. Cancel Tuesday.” Ask the same questions again.",
+    "after": "In the first view Tuesday is booked, Wednesday is proposed, and the approver is checking. After M4, Wednesday is booked, Tuesday is canceled, and this date question no longer needs a response.",
+    "why": "A message can be newer than the confirmed decision without replacing it. The author’s words must actually accept the proposed change.",
+    "rescue": "If its first draft says “Thanks for confirming Wednesday,” change the request to “Draft one sentence asking whether Wednesday is now confirmed.” Read the draft before treating it as correspondence."
+  },
+  {
+    "id": "lab-copilot-03",
+    "premise": "You have to explain a software fix to users and give the help desk a short note for handling questions. Both audiences should get identical instructions even though the two drafts sound different.",
+    "before": "Build 12. A display bug affects iPad only. Fix rolls out Tuesday 14:00 UTC. Restart the app after rollout. Windows needs no action.",
+    "try": "Paste the release note into Copilot Chat or the Copilot pane in Word. Request a 35-word user notice and three help-desk bullets. Read each draft once for time, once for platform and once for action. Replace the time sentence in the source with “Rollout time pending” and regenerate both drafts.",
+    "after": "The first pair says affected iPad users restart after Tuesday 14:00 UTC and Windows users take no action. The revised drafts still give the iPad action but say that timing is pending. No 14:00 promise survives.",
+    "why": "Writing less can remove the small words that carry the most meaning. Dropping “only” can send every user looking for an update.",
+    "rescue": "If the help-desk version says all tablets are affected, request a revision quoting the platform from the source. Check the revised heading as well as the sentences underneath."
+  },
+  {
+    "id": "lab-copilot-04",
+    "premise": "You joined a meeting late. A Teams chat captures one suggestion and the available transcript captures a later decision. Your job is to record what actually happened without giving a job or deadline to the wrong person.",
+    "before": "C1 09:03 Lee: Could exports run nightly? Transcript starts 09:10. T1 09:12 Kim: I approve weekly exports. T2 09:13 Lee: I will own the export job.",
+    "try": "Paste the sample into work Copilot Chat. Ask for a row with decision, owner, deadline and evidence IDs, followed by open proposals. Make a second chat containing C1 and T2 only. Ask whether the shortened source establishes an approved frequency.",
+    "after": "The full record supports weekly exports from T1 and Lee as owner from T2. No deadline appears. With T1 removed, the nightly proposal is visible, Lee still owns the job, and the approved schedule is unknown.",
+    "why": "Someone accepting a job does not automatically accept every detail ever suggested for it. Separate the decision about frequency from the decision about ownership.",
+    "rescue": "If nightly becomes approved in the second run, ask for the speaker and exact words of approval. The question mark in C1 is a clue that it was a proposal."
+  },
+  {
+    "id": "lab-copilot-05",
+    "premise": "A license sheet looks like a list of people until you notice that one person holds two plans and another assignment appears twice. You need the totals for rows, assignments and people. Each answers a different question.",
+    "before": "Row,Person,Plan\n1,u1,A\n2,u1,B\n3,u2,A\n4,u2,A",
+    "try": "Paste the four rows and ask Copilot to list each distinct person-and-plan pair. Then ask it to make a second list of people alone. Finally append “5,,B”; tell it to count the physical row, flag its missing person, and exclude that row from identifiable assignments.",
+    "after": "Initially there are four data rows, three distinct pairs (u1/A, u1/B, u2/A), and two people (u1, u2). The fifth row adds one physical row and one exception, while the identifiable pairs and people stay the same.",
+    "why": "Counting rows is like counting tickets. One person can carry several tickets, and a copy of a ticket does not mean another person arrived.",
+    "rescue": "If it reports three people after the last change, request the actual names on its list. Remove the blank entry from the distinct-person total while keeping its exception visible."
+  },
+  {
+    "id": "lab-copilot-06",
+    "premise": "You are preparing one slide about a pilot. The sponsor wants to know both how participating respondents felt and how much support is confirmed across the whole invitation list. A good slide makes both groups visible.",
+    "before": "Pilot A: invited 12 sites; 9 replied; 6 respondents supported extension. No answers are available for the other 3 sites.",
+    "try": "Put the counts in Copilot Chat or a Word brief you can reference in PowerPoint. Ask it to draft a headline, two labeled fractions and a speaker note. Divide 6 by 9 for the first audience and 6 by 12 for the second. Read the proposed headline aloud without looking at the notes.",
+    "after": "Six of nine respondents supported extension, about 66.7%. Six of twelve invited sites gave recorded support, or 50%. A defensible headline is “Six sites endorsed the extension; three did not respond.”",
+    "why": "A percentage always needs a group underneath it. The same six supporters form two thirds of the responding group and half of the invited group.",
+    "rescue": "If the headline says two thirds of all sites supported continuation, ask it to show the denominator implied by “all.” Replace the headline itself; a footnote alone leaves the first impression wrong."
+  },
+  {
+    "id": "lab-copilot-07",
+    "premise": "You want the help desk to notice a queue just as it reaches the warning level. The test sheet deliberately includes numbers on both sides of the threshold and two bad entries, so you can see how the rule treats each.",
+    "before": "Normal below 15 minutes; watch 15–29; investigate 30 and above; blank or negative invalid. A=14, B=15, C=29, D=30, E=blank, F=-1.",
+    "try": "Give Copilot the rules and observations together. Ask for a row per letter and a total per status. Cover the answer and classify B and D yourself. Then change only A from 14 to 15 and ask for the revised counts.",
+    "after": "At first A is normal, B and C are watch, D is investigate, and E and F are invalid. Counts are 1, 2, 1, 2. After the edit they are 0, 3, 1, 2.",
+    "why": "Equality matters at a threshold. The rule deliberately includes 15 in watch and 30 in investigate. An empty observation provides no usable wait time.",
+    "rescue": "If F is classified as normal, ask to see the order of the rules. Check for missing or negative values before testing “below 15.” Rerun F and A to verify the correction."
+  },
+  {
+    "id": "lab-copilot-08",
+    "premise": "Two versions of a move policy are on your desk. If you use the newest one automatically, a January request gets judged by a February rule. Make the assistant determine which rule was in force on the request date.",
+    "before": "V1 from Jan 1 allows up to 20. V2 from Feb 1 allows up to 30; flagged groups held. A Jan 31 size 25; B Feb 1 size 30 clear; C Feb 2 size 12 flagged; D Feb 3 size 12 flag unknown.",
+    "try": "Paste the four cases into Copilot and request a table of case, governing version, evidence and decision. Specify that groups above the active size limit are held. Next change only the V2 effective date to Feb 2 and rerun cases B and C.",
+    "after": "Initially A is held, B allowed, C held and D unknown. Moving the effective date makes B subject to V1, so B is held. C still falls under V2 and remains held.",
+    "why": "First choose the rule by date. Then apply its size limit and exceptions. A missing flag leaves a real gap when that flag can change the verdict.",
+    "rescue": "If D gets allowed, ask “What would happen with the same size if its flag were true?” Since one possible answer is hold, ask it to request the missing flag."
+  },
+  {
+    "id": "lab-copilot-09",
+    "premise": "A help desk repeatedly answers questions about archive requests. Before asking people to rely on a handbook assistant, test it on a covered question, an unanswered question, and an incomplete question. Ordinary Copilot Chat works for this trial.",
+    "before": "P1 Standard archive request: 5 business days. P2 Urgent archive request: 1 business day. Questions: Standard archive time? Restore time? Archive time?",
+    "try": "Paste the two policy lines followed by the three questions. Tell Copilot to quote a clause for supported answers, say “not covered” when neither clause applies, and ask one question when the request type is missing. Edit P2 to 2 business days, start a fresh test and ask for the urgent time.",
+    "after": "The first question gets 5 business days under P1. Restore is not covered. “Archive time?” needs a question about standard versus urgent. The revised source gives an urgent time of 2 business days.",
+    "why": "Two services can have similar names and different promises. A careful assistant recognizes when a question uses a word the handbook never defines.",
+    "rescue": "If it promises restoration in five days, ask it to highlight the word “restore” in P1. When it cannot, change that answer to “not covered.”"
+  },
+  {
+    "id": "lab-copilot-10",
+    "premise": "An executive asks how many attempted moves finished successfully. Two batches are different sizes. A simple average of the displayed percentages gives the small batch as much say as the large one, which answers a different question.",
+    "before": "West attempted 80 and completed 72. East attempted 20 and completed 10. Idle attempted 0 and completed 0.",
+    "try": "Give Copilot the three batches. Ask for the numerator and denominator of each rate and the overall totals. Calculate the combined rate by adding the completed counts, then dividing by all attempts. Ask separately for the simple average of the two defined batch percentages. Finally change East to 22 completed out of 20.",
+    "after": "West is 90% and East is 50%. The unweighted mean is 70%. Combined completion is 82 of 100, or 82%. Idle has no defined batch rate. The changed East record is invalid and should hold the summary for correction.",
+    "why": "Imagine picking one attempted move at random. It is four times as likely to come from West as from East, so their percentages should not have equal influence in the combined result.",
+    "rescue": "If Idle is shown as 0%, ask what completion rate zero attempts can demonstrate. Keep it out of the per-batch average."
+  },
+  {
+    "id": "lab-copilot-11",
+    "premise": "A mailbox storage report shows 30 GB before departments are added and 40 GB afterward. You have not received any new storage data. Trace which mailbox the department lookup counted twice.",
+    "before": "Usage: m1=10 GB, m2=20 GB. Department map: m1→North, m1→South, m2→East.",
+    "try": "Paste both lists into a fresh Copilot chat. Ask it to pair every usage row with every matching department and show the resulting rows before summing. Then ask for an exceptions table for IDs with multiple departments. Remove the South mapping and run the same calculation again.",
+    "after": "The naive rows are North 10, South 10 and East 20. Their 40 GB sum includes the same 10 GB twice. The source total is 30 GB, with 10 GB initially ambiguous. After correction North has 10 and East has 20.",
+    "why": "A lookup can return more than one answer. Matching m1 to two departments creates two report rows without creating another mailbox. The source total provides an independent check.",
+    "rescue": "If the report splits m1 into five GB per department, ask where that allocation rule came from. Keep the 10 GB as an exception until the mapping is settled."
+  },
+  {
+    "id": "lab-copilot-12",
+    "premise": "Several log entries look like they happened on different days. Before telling an incident team which event came first, put every observation onto the same clock and set aside anything without enough time information.",
+    "before": "A Jan 5 23:55 -0600 delay; B Jan 6 06:02 +0000 peak; C Jan 6 01:10 -0500 recovery; D 00:59 configuration note, date and offset unknown.",
+    "try": "Paste these records into Copilot and request an ordered UTC table that retains the letters. For A, add six hours yourself and check the resulting date. Ask for elapsed time from A to C. Add Jan 6 and -0500 to D, rerun, and ask what that timing proves about the cause.",
+    "after": "The known events are A at 05:55Z, B at 06:02Z and C at 06:10Z on Jan 6. Fifteen minutes elapsed from first observation to recovery. D, initially unplaceable, later fits at 05:59Z, four minutes after A.",
+    "why": "A UTC offset tells you how far the local clock differs from the reference clock. Item order can be verified from time alone. A causal explanation needs additional evidence.",
+    "rescue": "If it places D before A initially, ask which date and offset it assumed. Move D into an unknown-time row until both are supplied."
+  },
+  {
+    "id": "lab-copilot-13",
+    "premise": "The release checklist needs three independent items. One has a time limit and another is still pending. Evaluate the same packet one minute apart so you can see exactly when an otherwise good backup becomes too old.",
+    "before": "Gate requires approved rollback, successful backup no more than 60 minutes old, and every smoke test passed. R1 approved rollback. B1 successful backup 09:00 UTC. T1 two passed, one pending.",
+    "try": "Ask Copilot for three evidence rows at 10:00 and again at 10:01 the same day. Have it calculate backup age and give an overall verdict only after filling in all three rows. Change T1 to “three passed” and repeat both checks.",
+    "after": "Initially both times hold because testing is incomplete. At 10:00 the backup is exactly 60 minutes old and qualifies. At 10:01 its age is 61 minutes. With all tests passed, only 10:00 gives GO; 10:01 still gives HOLD.",
+    "why": "Think of the gate as three switches wired together. Turning the testing switch on helps only while every other switch also passes.",
+    "rescue": "If it allows the 10:01 release, ask for the subtraction “10:01 minus 09:00” in minutes and compare 61 with the stated limit."
+  },
+  {
+    "id": "lab-copilot-14",
+    "premise": "A user clicks Submit twice. Your practice agent should show which ticket it would file and which submission it would reuse. Run this entirely on a paper ledger inside chat so you can inspect each decision.",
+    "before": "R1 | project alpha; R1 | project alpha; R2 | project beta; R1 | project gamma. The first field is the request ID.",
+    "try": "Give Copilot an empty ledger and the requests in this exact order. Ask it to create a row for a new ID, return the existing row for an identical repeat, and flag changed content under an existing ID. Request a snapshot after the third event, then append R3 | project alpha.",
+    "after": "The first four outcomes are create, reuse, create and conflict. After event three the ledger has R1=alpha and R2=beta. The conflict preserves R1=alpha. R3 adds a third row, even though its text matches alpha.",
+    "why": "The ID identifies the request; its description describes it. The same description can belong to two genuine requests. A repeat delivery can also carry a conflicting description.",
+    "rescue": "If R1 changes to gamma, ask the assistant to replay only event four against the saved snapshot and display the conflict separately from the stored row."
+  },
+  {
+    "id": "lab-copilot-15",
+    "premise": "A sponsor wants to release a rollout because the completion chart looks good. Your job is to check whether the owner also approved. Build the decision memo and slide from the same evidence so they cannot quietly contradict each other.",
+    "before": "G1: at least 95% completed AND owner approval. R1 North 48/50. R2 South 47/50. M1 owner: I can review tomorrow. M2 participant: We should move ahead.",
+    "try": "Paste the packet and ask Copilot for a one-paragraph memo, a headline and one evidence row per requirement. Add M3 “owner: I approve release” and request the new verdict. Finally edit R2 to 46/50 and run it once more.",
+    "after": "At first 95 of 100 completed, but approval is pending, so HOLD. M3 gives GO with the same 95%. The revised South count lowers the total to 94%, bringing back HOLD even with the owner’s approval.",
+    "why": "A decision requiring two conditions can fail for two different reasons. Keeping each condition visible explains why the verdict changes while some evidence remains valid.",
+    "rescue": "If the first headline says “Ready to release,” ask for the owner’s exact approval words. Revise the headline itself to identify the pending sign-off."
+  },
+  {
+    "id": "lab-claude-code-01",
+    "premise": "Imagine two mail routes, one for everyday items and one for large items. The team disagrees about an item exactly 25 MB in size. You can answer that by reading one comparison in a tiny local file.",
+    "before": "In route.py: def route(size_mb): return \"large\" if size_mb >= 25 else \"normal\". The four example sizes are 0, 24, 25 and 26 MB.",
+    "try": "Open Claude Code in a practice folder and save the given function in route.py. Ask it to read the file and predict the four labels without editing it. Write down what you think happens to 25. In your editor change >= to >, save the file, and ask Claude to read it again.",
+    "after": "Originally you get normal, normal, large, large. After that one-character change the labels are normal, normal, normal, large. Only the exactly-25 case switches.",
+    "why": "The equals part lets an item sitting precisely on the cutoff into the large group. Removing it leaves only items beyond the cutoff in that group.",
+    "rescue": "If the second answer still says large at 25, reopen the saved file, inspect its comparison, and ask Claude to quote the current line before it predicts again."
+  },
+  {
+    "id": "lab-claude-code-02",
+    "premise": "A new teammate needs to know which shared resources still lack owners. A blank cell is a useful exception to report. Let Claude Code turn a four-row inventory into a short, checkable handoff.",
+    "before": "owners.csv contains name,owner on the first line, then Shipping,Ari; Facilities,; Design Lab,Kim; Front Desk,. Put each pair on its own line.",
+    "try": "Open your practice folder in Claude Code and ask it to read owners.csv and create handoff.md. Request total resources, number with owners and the exact names missing owners. Open the new note yourself. Now fill the Facilities owner with Lee, save the CSV and have Claude rebuild the same note.",
+    "after": "The first handoff says four resources, two owned, with Facilities and Front Desk unassigned. After the update it still says four resources, three owned, and only Front Desk missing an owner.",
+    "why": "The resource name is present even when its owner is blank. Dropping that entire row would make the summary look cleaner while hiding the very work the teammate needs to do.",
+    "rescue": "If it lists “Front” and “Desk” separately, ask it to parse by comma and preserve spaces within a name. Recheck the total against the four data lines."
+  },
+  {
+    "id": "lab-claude-code-03",
+    "premise": "A release-note style should survive a fresh conversation. Store the formatting rule in the project so you can give the next session new facts without teaching the heading order again.",
+    "before": "CLAUDE.md says: use exactly “## Change” then “## Verification,” each with one plain sentence. Release 1.2 fixes a duplicate reminder and was checked on two devices.",
+    "try": "In the practice folder, create CLAUDE.md with that rule. Ask Claude Code to write release.md for version 1.2. Inspect the headings and facts. Start a fresh Claude Code session in that same folder. Request release-next.md for a corrected date label checked on one device, without restating the style.",
+    "after": "Both files contain the two required headings in the same order. The first note mentions the duplicate reminder and two devices. The second mentions the date label and one device, with no reference to the old reminder problem.",
+    "why": "The project file carries the writing convention. The facts come from the current assignment. Separating those lets the form stay stable while the content changes.",
+    "rescue": "If the new note has a Summary heading, check the folder and exact name CLAUDE.md in both sessions. Then ask Claude to reread it and regenerate only release-next.md."
+  },
+  {
+    "id": "lab-claude-code-04",
+    "premise": "An address list contains accidental spaces, upper-case letters and repeat entries. People expect the original order to survive cleanup. That last requirement matters even when the final number of addresses is correct.",
+    "before": "A practice list is [\" Z@X \", \"a@x\", \"z@x\", \" \"]. The rule trims outer spaces, lowercases letters, skips blanks and keeps only the first appearance.",
+    "try": "Prepare cases.tsv from the lab fixture. Ask Claude Code to create unique_addresses(values) in addresses.py and run the sample tests. Then give it the four-value practice list from this example. Ask it to show each original string beside its cleaned value before displaying the final list.",
+    "after": "The cleaned sequence is z@x, a@x, z@x, then an empty string. The final output is [\"z@x\",\"a@x\"]. An empty input list gives []. Neither answer should contain a blank address.",
+    "why": "Keep the first item as it arrives. Checking whether you have already seen an address helps drop later copies; sorting the final items would throw away the arrival order.",
+    "rescue": "If the output starts with a@x, request removal of any final sorting step. Rerun this order-sensitive case and both TSV checks."
+  },
+  {
+    "id": "lab-claude-code-05",
+    "premise": "You are about to change a mailbox warning rule. First agree what the rule means and how to test it; otherwise a passing test might only confirm that the code and its author made the same assumption.",
+    "before": "thresholds.txt: A mailbox warns at 90 percent inclusive. Below 90 is OK. A missing percentage is UNKNOWN. The practice inputs are 89, 90 and None.",
+    "try": "Save thresholds.txt in a practice folder. In Claude Code’s Plan mode, request the three inputs, expected outputs and reasoning without writing any files. Compare 90 with the word “inclusive.” When the plan matches, switch to a mode that permits edits and ask for classify(value) in quota.py plus its three tests.",
+    "after": "Planning produces a test table before the implementation changes. Once implemented and run, 89 returns OK, 90 returns WARNING, and None returns UNKNOWN. The missing-value test completes without a crash.",
+    "why": "A missing reading has no numerical size. It deserves its own question before asking whether it crossed a threshold. Defining that case first prevents a surprise during implementation.",
+    "rescue": "If Claude describes code but quota.py never appears, check whether the session is still in Plan mode. If None crashes, ask it to handle missing input before making a numerical comparison."
+  },
+  {
+    "id": "lab-claude-code-06",
+    "premise": "An inventory report lists only groups whose owner field has text. The missing line makes it look as though an entire group disappeared. Reproduce the fault before asking for a fix so you can tell exactly what changed.",
+    "before": "groups.py holds [(\"Ops\",\"Kai\"),(\"HR\",\"\"),(\"Docs\",\"Lou\")]. A loop prints name and owner only inside the condition if owner.",
+    "try": "Run the original file in your scratch folder and keep the printed output. Ask Claude Code to show every group once, preserve its input order and label each blank owner UNASSIGNED. Have it run again. Append (\"Lab\",\"\") to the input and ask for a third run.",
+    "after": "Originally only Ops Kai and Docs Lou print. After the final edit the four lines read Ops Kai, HR UNASSIGNED, Docs Lou and Lab UNASSIGNED. The two missing owner fields are now visible.",
+    "why": "The conditional used to control whether the whole row appeared. The desired report always prints the row; only the displayed owner label depends on whether there is a value.",
+    "rescue": "If Lab fails to appear, ask Claude to show the loop with its indentation intact. Move the print operation outside any condition that filters blank owners, then rerun all four rows."
+  },
+  {
+    "id": "lab-claude-code-07",
+    "premise": "You write the same type of release note every week. A project skill lets you call a saved recipe by name; its instructions should read the latest facts each time rather than repeating last week’s evidence.",
+    "before": "changes.txt initially contains “Change: export now keeps empty departments.” and “Evidence: 4 fixture rows passed.” A fixture row is one made-up example used for testing.",
+    "try": "Ask Claude Code to create .claude/skills/note/SKILL.md in the practice project. Give the skill the name note and directions to read changes.txt, write note.md, and use exactly the headings Change and Evidence. Open a new session in that folder. Enter /note, inspect the result, change 4 to 6 in changes.txt, save and invoke /note again.",
+    "after": "The second note keeps the two headings, describes the same export change, and reports six fixture rows passed. Open note.md itself to check it was rewritten.",
+    "why": "The recipe lives in one file. The ingredients live in another. A useful recipe deliberately reads its ingredients each time it runs.",
+    "rescue": "If /note never appears, inspect the full folder path, the capitalization of SKILL.md and the skill name. Reopen the session in the project containing that file."
+  },
+  {
+    "id": "lab-claude-code-08",
+    "premise": "You have a current group list and a desired group list. You want a preview of what would change before anyone changes access. The job uses a local JSON file and prints a proposal you can check by hand.",
+    "before": "members.json contains {\"current\":[\" Ari \",\"BO\",\"bo\",\"Cy\"],\"desired\":[\"ari\",\"Dee\",\"\",\"DEE\"]}. Treat letter case and outer spaces as insignificant and skip blanks.",
+    "try": "Save the JSON in the practice folder. Ask Claude Code to produce preview.py and print three sorted arrays called add, remove and keep. Compare the two cleaned lists yourself. For a second run, copy the entire current array into desired so both input lists are identical.",
+    "after": "The first preview adds dee, removes bo and cy, and keeps ari. In the second preview add and remove are empty and keep contains ari, bo and cy. Neither run changes any real membership.",
+    "why": "The clean current list has three distinct names; “BO” and “bo” describe the same one. Comparing the raw spellings would create changes that do not exist under the stated rule.",
+    "rescue": "If ari appears under both add and remove, inspect how each side was cleaned. Ask Claude to print the normalized lists before calculating their differences."
+  },
+  {
+    "id": "lab-claude-code-09",
+    "premise": "A single word in a guest-sharing policy changed. Instead of guessing its impact from the version number, turn the two rules into a small table and identify precisely who sees different behavior.",
+    "before": "V1 allows members. Guests are allowed when days < 7, otherwise reviewed. V2 still allows members. Guests are allowed when days <= 7, otherwise reviewed.",
+    "try": "Save both rules as policies.txt. Ask Claude Code to implement decide(version, kind, days) in your practice folder, then print V1 and V2 side by side for guests and members on days 7 and 8. Compare rows before looking at its prose explanation. Count the rows with changed outcomes.",
+    "after": "A guest on day 7 changes from REVIEW to ALLOW. A guest on day 8 remains REVIEW. A member is ALLOW on both days under both editions. Exactly one of the four comparisons differs.",
+    "why": "Adding equality extends the guest exception by one day. Members take a different branch of the rule, so the guest cutoff should never change their result.",
+    "rescue": "If members on day 8 are under review, ask Claude to evaluate the member rule before examining the guest cutoff. Then rerun all four comparisons."
+  },
+  {
+    "id": "lab-claude-code-10",
+    "premise": "A service returns a list in pages. An empty middle page still has directions to another page. If your report stops just because it saw no items, it will quietly lose the final record. Rehearse this entirely with local files.",
+    "before": "pages.json describes one: items M1,M2 → two; two: no items → three; three: items M2,M3 → null (end).",
+    "try": "Use the lab’s JSON fixture. Ask Claude Code to make paged.py start at one, follow each next value and preserve only the first occurrence of each item. Request the sequence of page names it visited. Then make three point back to one, run again, and finally point three to an absent page.",
+    "after": "The good chain visits one, two, three and returns [\"M1\",\"M2\",\"M3\"]. M2 appears once. The loop produces a repeated-page error; the broken link produces a missing-page error. Neither malformed chain should report a partial list as a successful result.",
+    "why": "The next pointer tells the reader whether the journey continues. An empty page describes only the contents of that stop.",
+    "rescue": "If M3 disappears, find the condition that stops the loop. It should stop on the end marker, while still checking for missing or previously visited pages."
+  },
+  {
+    "id": "lab-claude-code-11",
+    "premise": "A test sometimes passes and sometimes fails because it asks the computer what time it is right now. Freeze the reference time so the same input always gives the same answer, including the exact instant a deadline arrives.",
+    "before": "expiry.csv: A deadline 2026-12-31 23:59:59Z; B deadline 2027-01-01 00:00:00Z; C deadline 2027-01-01 00:00:01Z. Z means UTC.",
+    "try": "Enter the three rows from the lab fixture. Ask Claude Code for a classifier that accepts an explicit as_of time and expires an item when that time is equal to or later than its deadline. Run at midnight Jan 1 UTC twice, then at one second past midnight. Ask for IDs as well as counts.",
+    "after": "At midnight A and B have expired, and C is still active. Both midnight runs agree. At 00:00:01Z all three have expired.",
+    "why": "An appointment can be over exactly when its deadline arrives. The choice to include equality is deliberate, and the one-second cases expose code that rounds time to whole minutes.",
+    "rescue": "If B stays active, inspect whether the comparison uses > rather than >=. If C expires early, check that the parser and test data preserve the seconds field."
+  },
+  {
+    "id": "lab-claude-code-12",
+    "premise": "A program imports events into a small local database. Suppose it stops halfway through. You need to resume without counting old events again or letting a duplicate overwrite an amount the system already accepted.",
+    "before": "events.csv contains E1,4; E2,8; E1,4; E3,5 under the headers id,amount. Use a disposable SQLite database in the practice folder.",
+    "try": "Ask Claude Code to build the importer with one saved transaction per input row and event ID as the unique key. Trigger its practice stop after two rows. Inspect the database, then rerun the original input twice against the same database. Append E2,99 to the CSV and run one more time.",
+    "after": "Immediately after the stop, E1 and E2 total 12. After retry the three IDs E1, E2 and E3 total 17. The final conflicting repeat leaves E2 at 8 and the total at 17.",
+    "why": "The ID is the receipt showing the event already arrived. An interruption after two saved rows should not erase those receipts or make them new events on retry.",
+    "rescue": "If the total rises to 108 after the conflict, ask whether an existing E2 was replaced with 99. Implement the stated first-value rule, reset the scratch database and replay the full sequence."
+  },
+  {
+    "id": "lab-claude-code-13",
+    "premise": "You are changing the shape of an address field so a new tool can read its two parts. A successful conversion should let you travel there and back without losing any original value, including a deliberately missing address.",
+    "before": "Three people have addresses a@example.org, null and b@c@example.org. Their notes are “A, B”, an empty string and “x”. Keep their IDs 1, 2 and 3 in order.",
+    "try": "Start from the exact people.json in the lab. Ask Claude Code to write forward.py, splitting each address at its last @ into a local part and a domain, and reverse.py, rebuilding roundtrip.json. Request a comparison of the parsed original and rebuilt records. Leave people.json untouched.",
+    "after": "The third address splits into b@c and example.org and comes back as b@c@example.org. The second address stays a JSON null, its note remains an empty string, and all three records return in the original order.",
+    "why": "Looking at the printed files can be misleading. Indentation can change harmlessly, while turning an absent address into the four letters “null” would change its meaning.",
+    "rescue": "If round-trip equality fails, print the first differing ID, field, value and value type. Fix the transformation for that case and rerun both directions."
+  },
+  {
+    "id": "lab-claude-code-14",
+    "premise": "Two systems recorded the same incident with different clock offsets. Some rows report the same event twice; two disagree about its state. Build a timeline that keeps the contradiction visible instead of selecting a winner by accident.",
+    "before": "R1 at 01:20 -05:00 queued; R2 at 01:05 -06:00 done; R1 at 06:20Z queued; R2 at 07:05Z failed. All dates are November 1, 2026.",
+    "try": "Save observations.csv exactly as in the lab, including its header. Ask Claude Code to convert all times to UTC, sort by instant, group by event ID, and list source row numbers for conflicting states. Change the last state from failed to done and rebuild incident.md.",
+    "after": "The two R1 records agree at 06:20Z. R2 comes later at 07:05Z and initially conflicts on source rows 3 and 5 when the header is row 1. After the edit there are still two distinct IDs and zero state conflicts.",
+    "why": "The smallest local clock reading is not necessarily the earliest event. Normalizing the clocks first and checking all observations for each ID answers two separate questions.",
+    "rescue": "If the first report shows no conflict, ask whether it discarded repeat IDs before comparing their states. Preserve both source rows until the comparison is complete."
+  },
+  {
+    "id": "lab-claude-code-15",
+    "premise": "A candidate pricing change looks reasonable at a glance. A reviewer needs evidence that it implements the promised two free items and charges consistently once the free allowance is exhausted. Work with a local copy and write the expected amounts before running the candidate.",
+    "before": "Contract: first two items free; each further item costs $1.25; counts are nonnegative whole numbers. Candidate subtracts one free item: max(0,n-1)*1.25.",
+    "try": "Put the contract in release.txt and ask Claude Code to write independent expected values for -1, 0, 2, 3 and 6. Run the candidate in fee.py and record the initial failure in evidence.md. Only then request the fix. Use the reviewer command in evidence.md to rerun from the scratch folder.",
+    "after": "The original candidate incorrectly charges $1.25 at two items. After repair, negative input is rejected, 0 and 2 display 0.00, 3 displays 1.25, and 6 displays 5.00. The documented reviewer command reproduces these results.",
+    "why": "Two of six items are free, leaving four billable items. Four times $1.25 is $5.00. This arithmetic gives the reviewer an answer independent of the code.",
+    "rescue": "If six still displays 6.25, inspect whether the program subtracts just one free item. Change the implementation and retain the independent expected amounts when running the tests again."
+  },
+  {
+    "id": "lab-codex-01",
+    "premise": "You are leaving a shift and someone asks whether both practice messages were delivered. The file records several moments in each message’s journey. Your job is to report the last thing actually observed for each message.",
+    "before": "trace.log has four lines in order: A queued, B queued, A retrying, A delivered. It has no header, so “A queued” counts as line 1.",
+    "try": "Open the project folder in Codex, paste the lab prompt and ask it to show the final row for each ID with its line number. Then append B delivered to the file as line 5, save and ask for just the changed row.",
+    "after": "Before your edit the evidence is A delivered on line 4 and B queued on line 2. Afterward, B becomes delivered on line 5. The evidence for A stays on line 4.",
+    "why": "A later line updates only the ID printed on that line. A queue entry alone cannot tell you whether the delivery eventually failed.",
+    "rescue": "If the answer calls B stuck or failed, ask “Show me the line that records failure.” Have Codex use the observed word queued until a later line supports a newer state."
+  },
+  {
+    "id": "lab-codex-02",
+    "premise": "You want a two-screen handoff on a laptop. Someone should be able to open it, move forward once, then return to the start without accidentally landing on an empty page.",
+    "before": "Create pages.txt with Check queue on the first line and Verify delivery on the second. The normal newline at the end of the file is fine.",
+    "try": "Ask Codex to create the single index.html described in the lab. Double-click that file in Finder or File Explorer. Before clicking, read the title, the counter and the Previous button. Click Next once, try the same button again, then click Previous.",
+    "after": "The first screen shows Check queue and 1 of 2, with Previous disabled. The second shows Verify delivery and 2 of 2, with Next disabled. Previous returns to Check queue and 1 of 2.",
+    "why": "The counter makes a hidden error visible. An apparently harmless extra blank line in a text file can become a third page if the program treats it as a title.",
+    "rescue": "If you see 1 of 3, ask Codex to ignore trailing blank titles, rebuild the same HTML file and reload it. Repeat all three clicks on the saved page."
+  },
+  {
+    "id": "lab-codex-03",
+    "premise": "Two players have finished a few practice rounds. One lost points and another played a zero-point round. You need to preserve both facts when preparing the scoreboard.",
+    "before": "The ledger contains Ari 80, Bea 35, Ari -75, Bea 0, and Ari 10, in that order. After the first check you will add Bea -40.",
+    "try": "Save the rows in ledger.csv with the lab’s player,points header. Ask Codex to build and run totals.py. Read each player’s round count as well as the points. Append Bea,-40, save and ask Codex to run exactly the same script again.",
+    "after": "Ari has three rounds and 15 points because 80 − 75 + 10 = 15. Bea begins with two rounds and 35 points. Her third round changes the total to −5. Ari’s line stays first.",
+    "why": "A zero contributes nothing to points but still represents a round. A negative entry subtracts from what the player already has. Counting rows and adding points answer different questions.",
+    "rescue": "If Bea shows one round on the first run, ask to see where the script skips entries. Keep numeric zero as a valid score and rerun the original five rows."
+  },
+  {
+    "id": "lab-codex-04",
+    "premise": "A teammate needs every findings file to have the same shape. You want the convention to apply even when you start a new conversation with no reminder in the message.",
+    "before": "AGENTS.md says a findings file is an array of objects with only id and status, uppercase statuses, sorted by ascending ID. Your first two facts are A1 open and A2 closed.",
+    "try": "Open the folder containing AGENTS.md in Codex. Paste the lab prompt and open the generated findings.json. Start a fresh project chat, staying in this folder, and request second-findings.json for Z9 closed and B2 open. Give only the facts.",
+    "after": "The first file contains A1 OPEN and A2 CLOSED. The second contains B2 OPEN before Z9 CLOSED, even though Z9 appeared first in the request. Each object has exactly two keys.",
+    "why": "The project instructions live on disk and can be picked up by a fresh chat. Using a second pair of facts tests whether the rule travels without copying the old content.",
+    "rescue": "If the second file has lowercase statuses, check the active directory and exact filename AGENTS.md. Reopen the project from that folder and repeat with the same second pair."
+  },
+  {
+    "id": "lab-codex-05",
+    "premise": "Two exports overlap because an earlier snapshot arrived late. A human reader can see that revision 2 replaces revision 1, even though the row for revision 1 appears later. Your importer needs the same judgment.",
+    "before": "versions.csv contains x,2,New; y,1,First; x,1,Old; y,1,First, with one record per line below the header. The y entries are exact repeats.",
+    "try": "Run the lab prompt, let Codex create merge.py, and open merged.csv. Save a copy of this successful output. Append x,2,Conflict to the input, save and rerun. Compare the current output with your saved copy.",
+    "after": "The successful merge contains x,2,New and y,1,First in ID order. The later run reports conflicting labels for x at revision 2, and the previously saved output is byte-for-byte identical.",
+    "why": "A higher revision chooses the newer record. Two different labels claiming the same ID and revision leave no reliable winner. The previous successful report remains useful while someone investigates.",
+    "rescue": "If an empty merged.csv replaces your good one after the conflict, ask Codex when it opens the destination. Have it validate the entire input first, recreate the valid report and repeat the failure test."
+  },
+  {
+    "id": "lab-codex-06",
+    "premise": "Imagine searching a mini index on a small screen. A reader types a few letters, sees no match, then clears the field. The list should always explain what happened.",
+    "before": "titles.txt contains four lines: Mailbox Review, Group Audit, Mail Flow, Archive Plan. The first and third titles both contain mail.",
+    "try": "Ask Codex to build the single HTML file, open it in your browser and write down the initial count. Search for mail, then put a space on each side and switch the letters to uppercase. Replace the query with xyz and finally clear the field.",
+    "after": "Both mail searches return Mailbox Review followed by Mail Flow, with a count of 2. The xyz search shows 0 and an explicit empty message. Clearing the query restores all four titles in the original order.",
+    "why": "A good search cleans the reader’s query before matching it. Clearing a query is another input change, so the page needs to redraw the complete list.",
+    "rescue": "If four entries never come back, ask Codex what happens when the cleaned query is an empty string. Request a test for clearing the field after a zero-result search, then reload the updated page."
+  },
+  {
+    "id": "lab-codex-07",
+    "premise": "A change looks tiny during code review. Someone replaced a comparison operator. Your job is to show whether a real user could get a different result at the exact limit.",
+    "before": "The committed cap.py says return count <= 5. A saved but uncommitted edit changes the line to return count < 5. All inputs in this exercise are nonnegative whole numbers.",
+    "try": "Create the Git baseline and edit as directed in the lab. Ask Codex to inspect the uncommitted diff without changing it. Give it 4, 5 and 6 as sample inputs and request the old and new results side by side.",
+    "after": "For 4, both versions return True. For 5, the committed rule returns True and the edited rule returns False. For 6, both return False. Restoring the equals sign gives True, True, False again.",
+    "why": "Both expressions allow counts below five and reject counts above it. The equals sign controls the single value exactly on the boundary. That value is the simplest way to demonstrate the change.",
+    "rescue": "If Codex finds no difference, run git diff in this practice folder. Save the edited file and confirm you committed the <= version before comparing the two."
+  },
+  {
+    "id": "lab-codex-08",
+    "premise": "You want the answer from one Codex run to be readable by another program. You will compare the shape of the saved answer against the task’s actual counts.",
+    "before": "The first sample is sent, held, sent, unknown. counts.schema.json declares three required integer fields called sent, held and unknown, and disallows additional fields.",
+    "try": "In the practice folder run the complete codex exec command from the lab, including --output-schema counts.schema.json and -o result.json. Open result.json itself. Repeat the command with only held, held as the sample and direct the output to second.json.",
+    "after": "The first answer has sent 2, held 1 and unknown 1. The second has sent 0, held 2 and unknown 0. The field order can differ. Both files contain exactly the three named fields and ordinary integers.",
+    "why": "A schema enforces an answer’s structure. It cannot guarantee that four actual events were counted correctly. Adding the three values checks that the first total equals four and the second equals two.",
+    "rescue": "If you see progress text alongside the JSON, check the file written by -o rather than copying the whole terminal transcript. If the counts differ, ask for the four input labels in order and recount."
+  },
+  {
+    "id": "lab-codex-09",
+    "premise": "A manager wants counts to share outside the team. The source includes addresses and individual notes, but neither belongs in the final report. You will inspect the saved file as a reader would receive it.",
+    "before": "The three fictional records have statuses OK, blank and ok. Every row has an example.invalid address and a message. Blank status means unknown.",
+    "try": "Ask Codex to run summarize.py and open summary.json. Count ok and unknown yourself. Add the lab’s fourth record with status OK and message contact-me, rerun, then search only summary.json for @, contact-me and example.invalid.",
+    "after": "The first summary reports ok 2, unknown 1, total 3. The second reports ok 3, unknown 1, total 4. None of the three search strings appears in the summary.",
+    "why": "Uppercase and lowercase describe the same status. Counting by that field discards information the audience does not need. Inspecting the output verifies what actually went into the deliverable.",
+    "rescue": "If the search finds addresses in audit.csv, narrow it to summary.json. If an address appears inside the summary, ask Codex to construct the output from counts alone and rerun the search."
+  },
+  {
+    "id": "lab-codex-10",
+    "premise": "An imaginary service is temporarily busy. You need to see whether a reader retries the right number of times without contacting a real system or waiting for a clock.",
+    "before": "The pretend responses are 429 with retry_after 2, 429 with retry_after 4, and 200 with item G1. The limit is three total attempts, including the first.",
+    "try": "Ask Codex to create the in-memory simulator and print one entry for each attempt. Review the planned delays. Then change only the third response to 429 with retry_after 8 and run the same program again.",
+    "after": "First run: the third attempt returns G1 and the delay list is [2, 4]. Second run: there are still three attempts, the reported outcome is exhausted, and the delays still read [2, 4]. No network or real sleep is needed.",
+    "why": "The delays sit between attempts. After the last allowed request, waiting eight more seconds cannot make progress, because a fourth attempt is outside the budget.",
+    "rescue": "If you see [2, 4, 8], ask Codex to check whether another attempt remains before recording a delay. Then verify both the successful and the exhausted case again."
+  },
+  {
+    "id": "lab-codex-11",
+    "premise": "A player brings an older backup over to a new app. You want last year’s saved score to survive the upgrade and an unknown future format to leave the current score alone.",
+    "before": "The supplied examples are Kai with version 1 score -5, Jo with version 2 points 0, and Future with version 3 points 10. The initial current.json has Keep with 42 points.",
+    "try": "Ask Codex to build the importer and run each supplied case independently. Then run Jo successfully, save the exact contents of current.json, and attempt the version 3 import against the same file. Compare the before and after contents.",
+    "after": "Kai restores with points -5 under the new field name. Jo restores with points 0. The third version reports failure. After Jo and then Future, current.json still contains Jo with zero, byte-for-byte as it was before the failed attempt.",
+    "why": "The version field tells the importer which promise the data follows. Zero and negative scores are legitimate. A newer unknown version has no agreed translation, so a previous good save is the most reliable result.",
+    "rescue": "If Kai becomes zero, inspect the v1 mapping from score to points. If Jo disappears, ask Codex to check for field presence instead of treating zero as a missing value."
+  },
+  {
+    "id": "lab-codex-12",
+    "premise": "A fictional group directory has two groups that refer back to one another. You want to know which permissions a person can reach without counting them twice or walking forever.",
+    "before": "Ari belongs to Editors and Readers. Editors leads to Readers and permit:write. Readers leads back to Editors and to permit:read. Jo has no outgoing links.",
+    "try": "Run the lab prompt against grants.json and inspect each permission’s reported path. Verify that every step in that path is an edge printed in the file. Add a direct Ari → permit:read link, save and run again.",
+    "after": "Ari reaches permit:read and permit:write once each in sorted order. Jo reaches neither. A new direct route to read may shorten its proof, but the number of unique permissions stays two.",
+    "why": "A path explains how a grant is reachable. Multiple paths can lead to the same permission. Marking a group visited before following its links keeps the Editors ↔ Readers cycle finite.",
+    "rescue": "If the program hangs, interrupt the local test, ask Codex where it marks a group as visited, and request a test that fails quickly on a cycle. Recheck both Ari and Jo afterward."
+  },
+  {
+    "id": "lab-codex-13",
+    "premise": "Two jobs touch the same minute on a schedule. A capacity estimate depends on whether the one finishing at that minute still occupies a slot. Count manually before trusting the script.",
+    "before": "A runs from minute 0 up to 3, B from 2 up to 4, C from 3 up to 5, and D from 3 up to 3. Start minutes count; end minutes do not.",
+    "try": "Ask Codex to build the two independent calculators. Make a row by hand for minutes 0 through 5. Compare the counts, then shorten A to end at 2 and rerun. Finally make every interval empty by setting each end equal to its start.",
+    "after": "Original counts are 1, 1, 2, 2, 1, 0. Peak is 2, first reached at minute 2. Shortening A moves the first peak to minute 3. All-empty input has peak zero and no first minute.",
+    "why": "At minute 3, A has already released its slot, C begins and B continues. D occupies no minute at all. Counting end and start together could invent a third active job.",
+    "rescue": "If the peak is 3, ask Codex to show the active IDs at minute 3. The correct list there is B and C."
+  },
+  {
+    "id": "lab-codex-14",
+    "premise": "A user changes a search before the first search finishes. The older answer arrives last and pushes the newer answer off screen. You can reproduce this by choosing the completion times yourself.",
+    "before": "The old query starts first and returns Old result after 60 milliseconds. The new query starts immediately afterward and returns New result after 5 milliseconds.",
+    "try": "Ask Codex to build the standalone page and demonstrate the original problem. Click Run demo. Observe the order in the completion log and the label on the screen. Apply the fix, repeat, and then swap both delay values and rebuild.",
+    "after": "With the original delays, new completes, then old. The faulty display ends with Old result. After the fix it ends with New result. With the delays reversed, the log order changes but the final fixed display still says New result.",
+    "why": "The user cares about the request they started most recently. The network or timer decides when work finishes, which is a different ordering. A request marker lets the page tell them apart.",
+    "rescue": "If the log shows only one completion, ask Codex to log both callbacks before deciding whether either may update the display. Test both delay orders again."
+  },
+  {
+    "id": "lab-codex-15",
+    "premise": "A colleague should be able to unpack a small reporting kit and reproduce its result without looking up the chat that created it. Treat the README as the handoff.",
+    "before": "inventory.csv contains A OK, B HOLD twice, and C OK. The repeated B rows are identical. A conflicting second state for the same ID should block an update.",
+    "try": "Ask Codex for the three requested files. Follow only the example command in README.md and open the resulting JSON. Save a copy of it. Append C,HOLD and rerun into the same destination. Finally test a separate input containing just the header id,status.",
+    "after": "The good result is ok 2, hold 1, total 3. The conflict causes a nonzero exit and keeps the prior output byte-for-byte intact. Header-only input gives ok 0, hold 0, total 0. The README’s independent test command succeeds.",
+    "why": "You counted unique IDs, while still requiring all claims about one ID to agree. A report with no records can be valid. A contradictory report cannot be trusted just because it has data.",
+    "rescue": "If the output has total 4, ask Codex to show which two lines refer to B. If the conflicting run replaces the file, require validation before writing the destination."
+  },
+  {
+    "id": "lab-devin-01",
+    "premise": "Your teammate needs a list of people’s mailboxes and shared mailboxes. You can learn whether a script builds that list correctly using the six invented records in the practice kit. No company sign-in is needed for this example.",
+    "before": "The CSV includes Bookings, North room, “Lane, Avery”, Loaner tablet, Zoë Chen and Accounts. North room is a RoomMailbox. Loaner tablet is an EquipmentMailbox. The other four records are user or shared mailboxes.",
+    "try": "Unzip the kit and open the folder in PowerShell 7. Run the lab’s fixture command with a new output path. Open report.csv through Import-Csv. Read the type and primary address down the rows, then run the supplied acceptance checks against the script you are evaluating.",
+    "after": "There are four addresses in order: accounts@example.test, avery@example.test, bookings@example.test and zoe@example.test. The room and tablet are absent. “Lane, Avery” stays one field and the ë in Zoë survives. The reference passes five checks; reversing its sort in the disposable copy makes a check fail.",
+    "why": "A controlled mistake helps prove the tests can detect a bad result. The sample run and simulated live command establish different facts from a real tenant report.",
+    "rescue": "If there are six rows, inspect the recipient-type filter. If there are five comma-separated pieces in a row, open it with Import-Csv before concluding a quoted display name broke the file."
+  },
+  {
+    "id": "lab-devin-02",
+    "premise": "Someone asks whether a mailbox that is precisely 80 percent full should be flagged. You can answer from a five-line practice function by predicting an example on either side of the boundary.",
+    "before": "quota.py returns watch when percent >= 80 and normal otherwise. The supplied loop tries 79, 80 and 81. The exercise also asks what happens with the unusual value −1.",
+    "try": "Before starting a run, write your three predictions on a scrap of paper. Give Devin the lab’s prompt, ask it to run python3 quota.py and place the printed result beside each prediction. Then ask it to call the unchanged function with −1 in a scratch check.",
+    "after": "The three lines are 79 normal, 80 watch and 81 watch. The separate check returns normal for −1. You have described that odd result without altering the rule or claiming it is a valid percentage policy.",
+    "why": "A number must be equal to or larger than 80 to pass the comparison. The code has no separate rule for negative inputs. You can identify a missing requirement without silently inventing one.",
+    "rescue": "If the answer says only 81 is watch, ask it to point to the equals sign and show the real output for 80 before suggesting an edit."
+  },
+  {
+    "id": "lab-devin-03",
+    "premise": "A facilities label contains a comma. A simple importer mistakes that punctuation for another column and shifts the remaining data. Reproducing the problem on one line makes the repair easy to verify.",
+    "before": "The three CSV lines are the header id,name; the first record m1,\"North, West\"; and the second record m2,East. The starter program splits every line wherever it sees a comma.",
+    "try": "Ask Devin to save the two starter files and run the original parser before changing it. Record the list of field counts. Then ask it to switch to Python’s CSV reader and run the same file. Add m3,\"\" as a final row and inspect its parsed fields.",
+    "after": "The original counts are [2, 3, 2]. After the fix they are [2, 2, 2]. The m1 name is the single string North, West. The added m3 has two fields and its second field is the empty string.",
+    "why": "The outer quote marks tell a CSV reader that the comma belongs to the name. Splitting raw text at every comma cannot make that distinction.",
+    "rescue": "If the fields now count correctly but North, West became North West, ask for the exact parsed string. Preserve the comma in the data and let the standard CSV reader interpret the quotes."
+  },
+  {
+    "id": "lab-devin-04",
+    "premise": "Your teammate can run a report from its own folder. It fails when another person starts the same command from one directory higher. Make the handoff work in both places.",
+    "before": "Inside cleanlab, rows.csv contains the header site,count and two rows, West,3 and East,5. report.py belongs beside the CSV. The expected total is 3 + 5 = 8.",
+    "try": "Have Devin build the lab script and run python3 report.py inside cleanlab. From its parent folder run python3 cleanlab/report.py. Copy only the files listed in the handoff into a fresh scratch folder and try the command there. Finally rename the CSV temporarily in the scratch copy and repeat.",
+    "after": "Each run with the two supplied files prints 8, regardless of the folder the terminal started in. With the input missing, the process exits unsuccessfully and identifies the missing dependency.",
+    "why": "A relative filename often starts at the current working directory. Locating rows.csv beside the script makes the report portable without making the user navigate to a special place.",
+    "rescue": "If only the parent-directory run fails, ask Devin to show both its working directory and the path it tried for rows.csv. Resolve the input relative to report.py, then repeat both commands."
+  },
+  {
+    "id": "lab-devin-05",
+    "premise": "A patch promises to remove duplicate IDs. The output looks plausible until you notice that spaces can disguise an ID and even make an empty-looking entry survive.",
+    "before": "The original function lowercases each input and filters on its original truth value. The first list is [\" A1 \", \"a1\", \"\", \" \"]. The requirement ignores case and outside spaces, drops blank IDs and sorts the distinct results.",
+    "try": "Ask Devin to run the candidate unchanged. Request a representation that shows the quote marks around each output item so that spaces become visible. Write the expected single item first. Review the minimal correction, then try the second sample and the empty list.",
+    "after": "The original returns three distinct strings comprising one space, a1 padded on both sides, and unpadded a1. The repaired first case returns [\"a1\"]. For [\" B2\",\"b2 \",\"C3\",\"c3\"] it returns [\"b2\",\"c3\"]. An empty list gives [].",
+    "why": "Filtering before stripping whitespace allows a string containing a single space through the gate. Normalizing first makes both comparisons and the emptiness check mean what the requirement says.",
+    "rescue": "If a test passes because it checks only the number of items, require exact ordered strings instead. Use the visible representation on the candidate and the repaired function."
+  },
+  {
+    "id": "lab-devin-06",
+    "premise": "Two people repeat a weekly review of a CSV column. They agree an empty count is an exception, but disagree about whether a genuine zero counts as a reviewed row. Capture the agreed procedure once.",
+    "before": "The first input has a = 3, b = 0 and c blank. The second has x = −2, y = 8 and z = 1. Valid counts are nonnegative whole numbers.",
+    "try": "Ask Devin to write training/REVIEW.md and apply it to the first sample. Open the document and locate its rule for zero. Give only that procedure and the second input to a fresh session, then compare the two outputs with your hand totals.",
+    "after": "First input: 2 valid rows, sum 3, exception c. Second input: 2 valid rows, sum 9, exception x. Both reports identify the rows needing review without inventing a count for either exception.",
+    "why": "Zero and blank have different meanings. Zero is an observed count. A blank gives you no number. A negative count also violates the exercise’s rule even though a program can parse it as an integer.",
+    "rescue": "If b disappears, ask which line in the procedure rejects zero and rewrite it to accept zero explicitly. Re-run both samples, so fixing one case does not accidentally admit x."
+  },
+  {
+    "id": "lab-devin-07",
+    "premise": "You are playing a score game in a browser and want to close or refresh the page without losing the total. Test actual browser behavior instead of accepting a promise about saving.",
+    "before": "A fresh practice page begins at 0. The sequence is add 12, add −5, reload the same URL, then submit a blank field.",
+    "try": "Ask Devin to serve the page from one local address. Open that address, enter 12 and press Add. Enter −5 and press Add again. Refresh the same tab and take note of the displayed number. Clear the field, press Add once more and look for visible feedback.",
+    "after": "The observed scores are 0, 12, 7 and still 7 after reload. Submitting the empty field leaves 7 on screen and displays feedback. Reopening the same URL in the same browser should show the saved total.",
+    "why": "A score can be correct on the screen and still be lost on reload. The reload is a direct test of persistence. A negative entry is a legitimate change; an empty entry has no number to add.",
+    "rescue": "If reload gives zero, first check the same browser, host and port were used. Then have Devin inspect the value written to localStorage and the startup code that reads it."
+  },
+  {
+    "id": "lab-devin-08",
+    "premise": "A support system sometimes sends the same ticket event twice. Another notification might even have a different delivery ID while describing exactly the same work. Decide when one simulated task is enough.",
+    "before": "The first four events are d1/T21/r1, that exact event again, d2/T21/r1, and d3/T21/r2. Only the final event asks for a new revision of T21.",
+    "try": "Ask Devin to process the first three rows and inspect the local SQLite ledger. End that process. Run the complete four-row file using the same database. Add d4/T22/r1 and run it again. Ask for both the per-event decision and the final issue/revision pairs.",
+    "after": "After the first three events there is one task for T21/r1. With the fourth, there are two tasks, T21/r1 and T21/r2. The added event creates the third, T22/r1. Replay does not increase any of these totals.",
+    "why": "A delivery identifies a message in transit. The issue and revision identify the requested work. Two delivery IDs can therefore belong to the same assignment.",
+    "rescue": "If restarting creates a duplicate, check that the second process opens the same database. Then verify (issue, revision) is stored and protected as a unique pair."
+  },
+  {
+    "id": "lab-devin-09",
+    "premise": "Someone says that access looks right because the observed list and the approved list mention the same repositories. You want to see whether the right role is paired with each repository.",
+    "before": "Approved pairs are Reader/reports and Maintainer/app. Observed pairs are Reader/reports, Reader/reports again, and Reader/app. The repeated observation is worth noting even though it represents the same grant.",
+    "try": "Write the two approved pairs on separate lines. Have Devin compare the local lists in both directions and report duplicated observations separately. Then replace the second Reader/reports with Maintainer/app, remove Reader/app, and rerun the comparison.",
+    "after": "Initially Reader/app is unexpected, Maintainer/app is missing and Reader/reports has one duplicate observation. After correcting the fixture, the two approved pairs each appear once, so all three finding groups are empty.",
+    "why": "A missing grant and an unexpected grant are different instructions for a human owner. Comparing repository names alone hides the role mismatch. Comparing sets alone can hide the duplicate source record.",
+    "rescue": "If Devin reports only Reader/app, ask it to calculate approved minus observed as a separate list. If it counts a duplicate as a second permission, require a distinct data-quality note."
+  },
+  {
+    "id": "lab-devin-10",
+    "premise": "A group wants to know the compute spent on each accepted change. Several sessions may work on the same pull request, and unsuccessful attempts still consume the budget.",
+    "before": "The four rows are s1: 4 units, P1 accepted; s2: 2 units, P1 accepted; s3: 3 units, P2 unaccepted; s4: 1 unit with no PR, unaccepted. These are fictional units.",
+    "try": "Ask Devin to print three pieces of evidence: the full sum of units, the set of distinct accepted PR IDs, and the division used for the final number. Then switch every accepted marker to no, save the sample and rerun.",
+    "after": "All four rows consume 4 + 2 + 3 + 1 = 10 units. The accepted set contains only P1, so the rate is 10 units per accepted PR. With all markers set to no, usage remains 10 and the rate is undefined.",
+    "why": "Two successful session rows can describe one delivered change. Costs include the follow-up and the attempts that never produced an accepted PR. Division by zero cannot express a cost per result.",
+    "rescue": "If the first rate is 5, ask to see the two PR names counted in the denominator. Dedupe P1 before dividing. If the second rate is zero, label the missing denominator explicitly."
+  },
+  {
+    "id": "lab-devin-11",
+    "premise": "A local clock time repeats when the offset changes. You are asked whether two events labeled 1:15 occurred together, and whether an event on the closing boundary belongs in a report.",
+    "before": "A is 01:15 at offset −04:00. B is 01:15 at −05:00. C is 06:30 UTC. D is 01:20 with no offset. The window on November 1, 2026 runs from 05:15 UTC inclusive to 06:30 UTC exclusive.",
+    "try": "Ask Devin to convert each usable timestamp to UTC, show the included IDs and set aside rows whose offset cannot be established. Compare the written times and UTC times for A and B. Then move only the start to 05:15:01 UTC and rerun.",
+    "after": "A is at 05:15 UTC and B at 06:15 UTC, an hour apart. Both enter the original window. C is excluded at the exact end. D is flagged. In the revised window only B remains.",
+    "why": "A timezone offset tells you which instant a clock reading represents. Guessing D’s offset could change its membership in the report. The two window endpoints deliberately follow different inclusion rules.",
+    "rescue": "If A and B collapse into one event, ask for the raw offset alongside each UTC value. If C appears, test the less-than comparison for the end boundary."
+  },
+  {
+    "id": "lab-devin-12",
+    "premise": "Your automation sent a request and lost the reply. The worker may already exist. Starting another one immediately could pay for the same work twice. Rehearse the decision with a local simulator.",
+    "before": "The fake service stores a single session S1 with request tag T9, then throws a timeout. The client initially has no session ID and its creation counter starts at zero.",
+    "try": "Have Devin run the simulated create once. Stop the client after it saves the uncertain result locally. In a new process, look up T9, print the matches and decide what to attach. Repeat the lookup exercise with the fake service returning both S1 and S2 for T9.",
+    "after": "One match attaches the existing S1 and the create counter stays at 1. Two matches produce an explicit ambiguous outcome, with both identifiers available for inspection and no new creation. The client never turns a timeout into an assumption of failure.",
+    "why": "A lost response describes what the caller observed. It says nothing conclusive about whether the other side saved the work. A durable record lets a restarted client continue investigating the same request.",
+    "rescue": "If the counter reaches 2, ask Devin to print every point that calls create. Route the uncertain case through lookup and require an explicit human decision when multiple sessions match."
+  },
+  {
+    "id": "lab-devin-13",
+    "premise": "Two project teams want to rename a data field. A producer writes the data and a consumer reads it. They can update on different days, so the reader must handle the period when both versions are in circulation.",
+    "before": "Legacy input is {\"count\":2}. New input is {\"total\":2}. A transition record contains both keys with value 2. A conflict has count 2 and total 3.",
+    "try": "Ask Devin to run each example against the transitional reader in the consumer folder. Write down the result for each. Simulate rolling the producer back to count after it had emitted total, leaving that reader in place. Check the rollback and the conflict separately.",
+    "after": "The old, new and agreeing two-key records all yield 2. The disagreeing record fails with a clear explanation. Restoring the old writer still yields 2. Updating the compatible reader before the writer lets both formats coexist during the switch.",
+    "why": "When both keys disagree, automatically preferring either one would hide a real data problem. Compatibility during rollback matters just as much as compatibility during the planned change.",
+    "rescue": "If the reader silently returns 3 on the conflict, ask it to check whether both keys are present and equal before choosing a value. Rerun all four inputs."
+  },
+  {
+    "id": "lab-devin-14",
+    "premise": "Your current regional report is known to be good. A new run arrives without one region, and another run stops halfway through saving. Neither event should replace the copy people are already reading.",
+    "before": "The existing current.json contains {\"total\":7}. The manifest requires North and South exactly once. An incomplete delivery supplies only North=4; a complete delivery supplies North=4 and South=5.",
+    "try": "Record the original file’s checksum. Ask Devin to run the incomplete delivery. Next, use complete input but inject an interruption just before replacing current.json. Check the visible file after each run. Then allow the complete write, and finally try duplicate North with South missing.",
+    "after": "Both the incomplete and interrupted runs leave the original bytes and checksum intact at total 7. The successful delivery replaces it with total 9. The later invalid delivery leaves that successful file unchanged.",
+    "why": "Validating the inputs answers whether a complete report exists. Writing to a separate temporary location prevents an unfinished save from damaging the last complete version. A checksum detects changes that a glance at the number could miss.",
+    "rescue": "If the visible report becomes empty or shows only North, ask Devin to identify the first write to current.json. Keep the final path untouched until both validation and the temporary write succeed."
+  },
+  {
+    "id": "lab-devin-15",
+    "premise": "An operational owner has two regions to migrate. A high percentage sounds encouraging, but the handoff requires complete evidence for each region and a separate approval before the plan can pass.",
+    "before": "The manifest lists North and South. Evidence R1 reports North 48 of 50 complete. R2 reports South 47 of 50. Approval A1 says review pending. The minimum rate is 95 percent.",
+    "try": "Ask Devin for the status of each gate and the evidence ID that supports it. Change only A1 to approved and rerun. Then test two independent bad inputs: remove South, and restore it with 51 completions out of 50 attempts. Follow the documented command from a clean scratch folder.",
+    "after": "The complete original sample is 95/100, exactly 95 percent. It holds because A1 is pending. With A1 approved the same counts pass. A missing South or an impossible 51/50 blocks the report despite approval.",
+    "why": "The gates answer separate questions about coverage, plausible measurements, performance and authorization. Averaging partial evidence or treating approval as a substitute for valid measurements gives a misleading green result.",
+    "rescue": "If pending passes, ask Devin to show the condition that consumes A1. If 51/50 passes, validate each region’s completed count against its attempted count before computing the overall rate."
+  },
+  {
+    "id": "gemini-app",
+    "premise": "Two people want to catch the last ferry after a concert. You know the times already. Use the ordinary Gemini chat on the iPad to see whether allowing time for boarding changes the answer.",
+    "before": "Concert ends 8:15 p.m. Walk takes 12 minutes. Ferry departures are 8:30 and 9:00. Boarding closes 5 minutes before each departure. All times are tonight at the same harbor.",
+    "try": "Open a new Gemini chat. Keep the default model for this first attempt. Paste those four facts and ask, “Which is the earliest ferry we can board? Give our arrival time and the boarding deadline for each ferry.” Check the times yourself before changing anything.",
+    "after": "You reach the pier at 8:27. The first boat closes at 8:25, two minutes before you arrive. The second closes at 8:55, so you can take the 9:00 boat.",
+    "why": "A short conversation works because you supplied every fact needed. An online research project would become useful if you had to discover the real walking route or the operator’s boarding rule.",
+    "rescue": "If it picks 8:30, ask it to put arrival and both boarding deadlines on one time line. If you try a different available thinking level, use the original prompt in a fresh chat to compare its first answer."
+  },
+  {
+    "id": "gemini-api",
+    "premise": "Your recipe app has three little notes to file. You want to find a Gemini model that labels them reliably before asking a developer to send a whole cookbook through the service.",
+    "before": "A | Oven at 180 °C. B | Add 200 g tomatoes. C | Grandma used the blue bowl. Allowed labels are TEMPERATURE, INGREDIENT and OTHER.",
+    "try": "In Google AI Studio’s Playground, choose an available text model from the catalog. Paste the three notes and the allowed labels. Ask for one line per letter, in order, with exactly one label per line. Save the answer and the exact model ID. Repeat in a fresh prompt with another available text model, keeping the wording identical.",
+    "after": "Your answer key is A TEMPERATURE, B INGREDIENT, C OTHER. Count correct labels and extra lines. Then change C to “Add 200 g blue potatoes.” A useful classifier changes C to INGREDIENT although the color is still present.",
+    "why": "An API model ID identifies the engine a future program requests. A small test with known answers gives the developer something to repeat when the catalog changes.",
+    "rescue": "If you get a paragraph or an invented label such as EQUIPMENT, supply an example output line, “A TEMPERATURE,” and repeat the revised prompt with both candidates."
+  },
+  {
+    "id": "gemini-workflow",
+    "premise": "You have two versions of a fictional museum’s timetable. You want a notebook that lets you see exactly which version supports the departure time you tell your family.",
+    "before": "Make two short plain-text files. Draft.txt reads “June draft. Museum shuttle leaves East Gate at 9:10.” Final.txt reads “July final. Museum shuttle leaves West Gate at 9:25. Saturdays only.”",
+    "try": "In Google’s notebook tool, create a notebook and add both files as sources. Select only Final.txt. Ask, “Which gate, time and days are listed for the shuttle? Show the supporting passage.” Open the citation. Then select both files and ask which two details changed between June and July.",
+    "after": "With the final document selected you should see West Gate, 9:25 and Saturdays only. With both available, the gate moved from East to West and the departure shifted 15 minutes later. The June draft gives no service days.",
+    "why": "Choosing a source is like handing someone the edition you want them to read. A notebook is useful when you want to return to those same documents later.",
+    "rescue": "If it claims the June shuttle ran daily, open the June citation and ask it to quote a service day. Mark the June service days “unspecified” when it cannot supply one."
+  },
+  {
+    "id": "gemini-build",
+    "premise": "You want a tiny list of movie screenings on your bookshelf. First find out whether Gemini reads the announcement correctly. Then ask a coding workspace to show the result the way a reader would see it.",
+    "before": "Two pretend flyers read “Lighthouse Night — Friday Oct 9 — 6:00 pm and 8:00 pm” and “Garden Matinee — date to be announced — 2:00 pm.” Supply no year.",
+    "try": "Open Playground in AI Studio. Paste the flyers and request the title, printed date and every showtime. Ask for an empty date value when none is stated. After checking both records, open an empty practice folder in Antigravity. Give it those approved records and request a local page with two screening cards and a friendly missing-date label.",
+    "after": "The first card says Friday Oct 9 and lists both evening showtimes. The second says “Date to be announced” and lists 2:00 pm. Open the local preview to check both, including the second evening time.",
+    "why": "The first trial measures how well the model reads. The preview tests what the app does with what was read. An extraction error and an invisible label need different repairs.",
+    "rescue": "If the data contains both evening times but the page shows only one, give Antigravity that exact comparison and ask it to fix how the card displays its list."
+  },
+  {
+    "id": "gemini-media",
+    "premise": "You are making a picture and a spoken announcement for a make-believe harbor festival. Give each job to the corresponding media tool and check the two results as a visitor would experience them.",
+    "before": "Picture brief: portrait poster, one yellow paper boat on dark blue water, empty space above it. Spoken script: “Harbor Night begins at seven. Meet us at Pier Four.”",
+    "try": "In Gemini’s image tool, describe the poster and request an image with no lettering. Inspect the picture. Ask for a single revision: move the boat into the lower half while keeping it yellow. For the spoken version, use a text-to-speech tool from the chapter, enter the script, and request a calm announcer’s voice with a pause between sentences.",
+    "after": "The revised still should show one yellow boat with space for a title. Play the audio and listen for “seven” and “Pier Four,” then check that there is time to hear the second sentence clearly.",
+    "why": "Checking the visual and the voice separately helps you hear a wrong number even if you love the illustration. Text-to-speech reads a script; a music generator serves a different purpose.",
+    "rescue": "If the image adds a second boat, return to the previous image and request only the position change. If the voice says “Pier Forty,” supply “Pier four” on its own line and replay."
+  },
+  {
+    "id": "claude-workspace",
+    "premise": "A community hall publishes different prices for markets and ordinary weekends. You want to answer today’s question and have the same rate sheet handy for the next person who asks.",
+    "before": "Make Rates.txt containing “Row 1. Ordinary Saturday: $3 per hour. Row 2. Market Saturday: $8 per visit; replaces Row 1. Row 3. June 12 is a market Saturday.” Treat these as invented house rules.",
+    "try": "Open a Claude Project, add Rates.txt to its knowledge, and put “Quote the numbered rows you use” in project instructions. In a new conversation there, ask what a two-hour visit costs on June 12. Start a second conversation in the same project and ask the price for two hours on an ordinary Saturday.",
+    "after": "June 12 costs $8 for the visit. Rows 2 and 3 establish the event and its price. The ordinary Saturday costs $6, calculated from Row 1. In both answers you can open the short source and check every number.",
+    "why": "The project keeps the rate sheet available between conversations and the standing instruction tells Claude what evidence you expect each time.",
+    "rescue": "If it charges $14 for June 12, ask it to reread “replaces Row 1” and identify which single rate applies before multiplying anything."
+  },
+  {
+    "id": "claude-models",
+    "premise": "You volunteer at a community theater and want to sort incoming notes quickly. A simple example tells you whether your first Claude model is sufficient and gives a harder model a fair chance to show a difference.",
+    "before": "Use three notes. A says “My email receipt never arrived.” B says “The seat arm is loose.” C says “My receipt arrived. The seat arm is loose.” Use exactly one label per note, RECEIPT or REPAIR. Label the unresolved problem.",
+    "try": "In Claude, select a model available to you, start a fresh chat, and paste the notes and rules. Ask for a three-row list and a few words of evidence for each label. Try the identical prompt with a second available model in a fresh chat. Record model names, results and any follow-up each needed.",
+    "after": "A is RECEIPT. B and C are REPAIR. C mentions a receipt, but explicitly says it arrived. An answer that labels C RECEIPT missed the important word.",
+    "why": "This tiny example checks a real distinction in the job. If both pass, use harder examples before paying for more reasoning on thousands of notes.",
+    "rescue": "If neither passes C, amend the instruction to “Cross out resolved issues first,” and test both again. Keep the original results alongside the revised ones."
+  },
+  {
+    "id": "claude-code",
+    "premise": "Your practice bookshelf has a working search box, but typing a title in lowercase hides a book printed with capitals. You want Claude Code to repair it and show how you can tell.",
+    "before": "Create a practice folder containing index.html with this one line: <input id=\"q\"><p id=\"book\">Harbor Atlas</p><script>q.oninput=()=>book.hidden=!book.textContent.includes(q.value)</script>. Open this file in your browser. Enter Harbor, then harbor, and observe the difference.",
+    "try": "Open the same folder in Claude Code and switch to Plan Mode. Say, “Explain why lowercase search hides Harbor Atlas. Propose the smallest change. Preserve an empty search showing the book.” Check that the plan names index.html, allow the edit, then reopen or reload your local page.",
+    "after": "Test four inputs yourself. Harbor, harbor and ATLAS should each show Harbor Atlas. Harborview should hide it. Clear the box and the title should reappear. Look at the change to see that it compares the query and the title in the same letter case.",
+    "why": "A real browser check is useful even when the code looks right. It also catches a session that edited a different copy of your practice file.",
+    "rescue": "If Harbor still works and harbor fails, ask Claude Code for the full path it edited. Open that exact file, reload and repeat the four checks."
+  },
+  {
+    "id": "claude-browser",
+    "premise": "Two volunteer shift sheets live on your computer. You would like Cowork to produce a short handover identifying any double-booking, and you want to keep the original sheets for comparison.",
+    "before": "In a new practice folder save Gate.txt with “Saturday, Gate: Ari 10:00–11:30, Bo 11:30–12:00.” Save Desk.txt with “Saturday, Desk: Ari 11:00–12:00, Bo 12:00–12:30.”",
+    "try": "Open Cowork in Claude Desktop, choose this folder, and ask it to read both files and write Handover.txt in the same folder. Specify “Two shifts overlap only when the same person is scheduled at both places for a positive number of minutes. Give the overlap interval and length for each conflict.”",
+    "after": "Open the new file. Ari overlaps from 11:00 to 11:30, thirty minutes. Bo finishes Gate at noon just as Desk starts and has no overlap. Open both original sheets and confirm that their shift times are intact.",
+    "why": "Cowork can create a new document from the local sheets you selected. A browser side panel would be useful for a shift calendar already open on a website.",
+    "rescue": "If it marks Bo as double-booked, ask it to subtract the later starting time from the earlier finishing time. For Bo that gives zero minutes; have it revise Handover.txt."
+  },
+  {
+    "id": "claude-visuals",
+    "premise": "You need an editable shelf label that points a visitor toward the returns box. An SVG drawing lets you resize the sign and change its shapes after Claude has drawn it.",
+    "before": "Your brief is a 90 mm by 30 mm plate with one dark right-pointing arrow and one short dark vertical bar on its left. Leave a blank margin around both shapes.",
+    "try": "In a new Claude conversation, ask for this as an SVG Artifact. Specify width 90mm, height 30mm, a viewBox of 0 0 90 30 and one closed path for the arrow. Inspect the preview. Ask for one revision, “Move the bar two millimeters right and keep the arrow fixed.” Download or copy the SVG and open it in your drawing program.",
+    "after": "The arrow should still point right. Select the bar to check that it can be moved by itself. Inspect document properties for 90 by 30 mm and zoom in to confirm the diagonal stays smooth.",
+    "why": "A drawing program can select and move an SVG shape. A screenshot of the same sign might look identical but would give you one flat picture.",
+    "rescue": "If the downloaded sign imports as a single picture, check the filename and export the SVG source instead of saving a screenshot. If the objects are grouped, ungroup them and retry the selection."
+  },
+  {
+    "id": "grok",
+    "premise": "A neighbor says a ferry operator has made all Friday trips free. You want to decide what you can tell another passenger and which original announcement to look for.",
+    "before": "Imagine three saved snippets. Official operator, posted May 4: “Trial: foot passengers ride free on the May 8 East Pier departure at 9 am.” Repost, May 5: “Fridays are free!” Fare sheet, revised May 6: “Other departures retain normal fares.”",
+    "try": "Start a Grok chat and paste those snippets as a fictional practice packet. Ask, “Who actually announced a change? Give the post date, travel date, port, passenger type and departure time. What does this establish about the 11 am sailing?” For a real notice, use X Search to find the original post and web search for the operator’s fare sheet.",
+    "after": "Your answer should cite the operator’s May 4 statement for one 9 am sailing on May 8. The ordinary fare applies at 11 am under the supplied fare sheet. The repost contributes no new rule.",
+    "why": "Publication date and travel date answer different questions. A later repost can be both more popular and less precise than the announcement.",
+    "rescue": "If Grok presents a link for this fictional operator, ask it to quote only the supplied snippets and mark external sources “not supplied.” For a real claim, open the original link before using it."
+  },
+  {
+    "id": "perplexity",
+    "premise": "You are comparing cancellation terms for a pretend weekend booking. A page calling a rate “flexible” sounds reassuring, but you need the deadline and fee that actually apply to your chosen rate.",
+    "before": "Pretend offer A reads “Harbor House, flexible: cancel before 18:00 hotel local time on June 8; later cancellations cost $80.” Offer B reads “Garden Annex, advance purchase: $45 deposit, nonrefundable from booking.” Arrival is June 10.",
+    "try": "In Perplexity, paste the two offers and ask for one row per named rate showing deadline, time zone and amount lost if canceled on June 9. Ask it to quote the exact supporting phrase in each row. When doing this with real reservations, open each rate’s terms in Comet and compare its wording to the assistant’s evidence.",
+    "after": "Harbor House would cost $80 to cancel on June 9. Garden Annex would lose the $45 deposit. Its terms give no clock deadline; they say the deposit becomes nonrefundable at booking.",
+    "why": "A citation earns its place by supporting the specific rate. A hotel homepage might describe several different offers.",
+    "rescue": "If the result claims both charge one night, ask for the exact clause that says “one night.” The supplied text supports only the stated dollar amounts."
+  },
+  {
+    "id": "other-models",
+    "premise": "You want a reading helper for a train ride through an area with poor reception. Before relying on it, build a tiny offline test whose answer your computer could never have memorized.",
+    "before": "Write a note on your computer: “Practice cabin Juniper uses the blue latch. Practice cabin Rowan uses the silver latch. The orange latch is a spare.” Add a fresh made-up trip code, such as LARK-734.",
+    "try": "While connected, install a compatible local inference application and download a Gemma model that fits the machine, as described in this chapter. Choose that downloaded model. Disconnect the computer from the network, quit and reopen the application, start a new conversation and paste your note. Ask for Rowan’s latch color and the trip code exactly as typed.",
+    "after": "Look for “silver” and “LARK-734.” Change Rowan to Cedar in the note and ask which color belongs to Rowan. The answer should now say that Rowan is absent from this version.",
+    "why": "A new code in a fresh conversation shows that the answer used your supplied text. Reopening while offline also checks that the model files are actually present.",
+    "rescue": "If the app asks to connect, inspect its selected model. Reconnect briefly, finish downloading the local model and repeat the whole offline check with a different trip code."
+  },
+  {
+    "id": "browser-tools",
+    "premise": "You are comparing two branches of a pretend bakery. You want to discover exactly which information the assistant can read from the browser before you trust the comparison.",
+    "before": "For a simple stand-in, open two separate scratch documents in browser tabs. North reads “North Bakery: Sunday, 9–12; pickup only.” South reads “South Bakery: Sunday, 10–2; seating available.” Use documents you created for this exercise.",
+    "try": "On a supported desktop browser, open its assistant side panel and give it access to the North tab only. Ask for Sunday hours and seating at both branches, with a supporting phrase for each. Now explicitly share South as well, or paste its paragraph if your browser supports only the active tab. Repeat the same request.",
+    "after": "On the first pass it can establish only North’s 9–12 pickup service from the supplied page. After the second share, it can add South’s 10–2 hours and seating. At 12:30 only South is open.",
+    "why": "Changing the pages you share changes the available evidence without changing models. The same experiment on an iPad may use a different sharing control.",
+    "rescue": "If it invents South’s hours on the first pass, ask it to quote the South sentence. Withhold credit until you can see that supporting text in the shared material."
+  },
+  {
+    "id": "choose-a-model",
+    "premise": "You have a short video of a pretend shuttle board, and you want a time stamp for the moment the gate number changes. Decide which model to try by asking what evidence it can actually inspect.",
+    "before": "Film a four-second practice clip. Show a handwritten GATE A card for the first two seconds and GATE B for the last two. Play the clip on your device and write down when the change really happened.",
+    "try": "Give the clip to an available model that supports video and ask, “What text was displayed before and after the change? About when did it change?” For a model that reads still images, give it one screenshot near the start and another near the end, with their times. Ask what timing those two pictures alone can establish.",
+    "after": "The video answer should identify A followed by B and give a time close to what you saw on playback. The stills establish only that the change happened between their time stamps. They cannot pinpoint the exact transition.",
+    "why": "Choosing a model begins with the material you can send and the precision the job needs. Compare each answer against the original video.",
+    "rescue": "If a still-image answer says exactly 2.0 seconds, ask which picture shows the change itself. If neither does, replace the exact number with the observed interval."
+  },
+  {
+    "id": "compare-cost",
+    "premise": "Two pretend services can convert hand-written recipe headings into typed text. One charges less each time. You want to find the cost of a heading you can actually keep.",
+    "before": "Use these fictional rates per million tokens. A costs $2 input and $6 output. B costs $3 input and $8 output. Each run uses 100,000 input tokens and 10,000 output tokens across 100 headings. A yields 50 usable headings; B yields 90.",
+    "try": "On paper or in a calculator, divide each token count by one million first. Multiply the input and output amounts by their respective rates and add. Divide each run total by its count of usable headings. Multiply dollars by 100 to express the last answer in cents.",
+    "after": "A costs $0.20 plus $0.06, totaling $0.26. That is 0.52 cents per accepted heading. B costs $0.30 plus $0.08, totaling $0.38, or about 0.42 cents per accepted heading. B spends more in total yet delivers a usable heading for less.",
+    "why": "This measure helps you price a job where spelling errors force a second pass. Repairs or human checking can be counted separately if you have those costs.",
+    "rescue": "If B appears to cost 42 cents per heading, show the intermediate $0.38 ÷ 90 = $0.00422. Conversion from dollars to cents happens once."
+  },
+  {
+    "id": "media-studio",
+    "premise": "You are making two versions of a luggage tag for a pretend travel club. One will be printed in full color; the other will be cut from a single piece of card.",
+    "before": "Design brief: a lighthouse against a blue sunset, landscape orientation. Print version is 4 by 2 inches at 300 pixels per inch. Cut version is a single closed lighthouse outline on a 100 by 50 mm artboard.",
+    "try": "Ask a picture generator for the landscape artwork, then open its export in a picture editor and inspect the pixel dimensions. Separately ask a vector-capable tool for an SVG silhouette. Import it into your design program at actual size, select its path and inspect the cut preview.",
+    "after": "The print export needs at least 1,200 by 600 pixels in the intended proportions. The cutting preview should trace one closed lighthouse perimeter. The blue sunset can enrich the print and disappear entirely from the cut version.",
+    "why": "A printer reproduces colors at points on paper. A cutter travels along a path, so visual resemblance alone cannot tell you whether the machine will cut the intended outline.",
+    "rescue": "If the cutter outlines a rectangle, open the SVG in a vector editor and inspect for an embedded picture. Replace it with a closed vector silhouette, then rerun the preview."
+  },
+  {
+    "id": "field-test",
+    "premise": "Three assistants are competing to explain a neighborhood bicycle locker fee. You can score their answers without knowing which assistant wrote them because you have a small answer key.",
+    "before": "Fictional rule: $3 per started hour, capped at $9 per visit. Entries at or after 17:00 cost a flat $2 instead. Visits are A 16:50–17:10, B 17:00–17:10 and C 10:00–14:10, all on the same day.",
+    "try": "In fresh Gemini, Claude and ChatGPT conversations, paste that text and ask for a row per visit with the charge and calculation. Record the model and mode, then hide the tool names when you compare the answers. Give one point per charge, one for using entry time and one for explaining the cap.",
+    "after": "A costs $3 for one started hour. B costs $2 because the exact boundary qualifies. C spans four hours and ten minutes, so five started hours would be $15 before the $9 cap. The maximum score is five points.",
+    "why": "A short rule tests three separate decisions. Seeing the calculation distinguishes a correct explanation from a lucky number.",
+    "rescue": "If everyone gets five points, change only “entries” to “exits” and repeat in fresh chats. A should change to $2; B and C stay the same. Keep both score sheets."
+  },
+  {
+    "id": "devin-start",
+    "premise": "Imagine a volunteer treasurer opening a sample report. A donation of zero appears as a dash. Before changing it, the treasurer wants to know whether a dash means zero or “no information.” That narrow question makes a good first job for Devin.",
+    "before": "The fictional practice project has a report row for Jo with 0 cents and another for Ari with no amount recorded. The requested rule is that a known zero displays $0.00 and a missing amount displays a dash.",
+    "try": "Choose the practice repository in Ask. Ask which file converts the stored amount into display text and follow its citation. Give Agent the two example rows and ask for a proposed change plus one check for each. Open the change before deciding whether to accept it.",
+    "after": "The result shows Jo as $0.00 and Ari as a dash. A reviewer can find the edited file, read the two checks and see the proposed change in its branch.",
+    "why": "The two rows let you recognize success without knowing how to write the format function. Ask helps locate the relevant code. Agent can change and exercise it.",
+    "rescue": "If both rows become $0.00, show Devin Ari’s missing value and ask for a test that keeps missing and zero separate."
+  },
+  {
+    "id": "devin-first-session",
+    "premise": "A lending library receives calls about renewing a book. One help paragraph still promises unlimited renewals. The librarian has supplied the current rule and wants only that paragraph corrected.",
+    "before": "The practice page is headed Renew a loan. The rule says a borrower may renew once when nobody is waiting. A waiting patron blocks the renewal. The existing page address and heading should stay intact.",
+    "try": "Start in Ask and select the training repository. Request the path and heading of the existing page. Once you verify the citation, ask for a plan preserving the address and heading. Send the approved plan to Agent with both example situations. Read the proposed changes and compare the page address.",
+    "after": "The paragraph now describes one renewal with no waiting patron and no renewal when a patron is waiting. The old page address and Renew a loan heading still work. The change is ready for a librarian to review.",
+    "why": "A written rule provides the authority. Two examples expose ambiguity that a smooth-sounding paragraph could otherwise conceal.",
+    "rescue": "If Devin rewrites adjacent borrowing rules, point to the original paragraph and request a smaller change. Ask to see the updated diff before marking it ready."
+  },
+  {
+    "id": "devin-environment",
+    "premise": "Two people try to reproduce a report on different days. The first says everything passed. The second cannot run the test at all. A clean session helps distinguish a lasting setup from a one-off repair.",
+    "before": "A training project includes sample.csv and a test that expects three rows. Session A initially cannot find the project’s required test runner. After someone installs it by hand, the test passes only in A.",
+    "try": "Record the repository revision and the missing-runner message. Have the environment owner record the required tool in the appropriate blueprint setup step and rebuild the snapshot. Start session B from the rebuilt snapshot. Ask it to show its runtime version and run the same test on the same revision without hand installing anything.",
+    "after": "Session B finds the runner and reports the expected three rows. A second fresh session using the same snapshot reproduces the check. If a build says Partial, inspect which project actually finished before using it as evidence.",
+    "why": "The blueprint contains a recipe, and a snapshot captures the completed build. A human instruction mentioning a tool does not install it for a new machine.",
+    "rescue": "If B still fails, verify which snapshot it started from, then inspect the rebuild log for the required installation step."
+  },
+  {
+    "id": "devin-sessions",
+    "premise": "A payment-notice importer adds an amount each time it sees a delivery. A small retry arrives twice. You want Devin to understand which event is genuinely new before it writes a fix.",
+    "before": "The three deliveries are A7 for $40, B8 for $40 and A7 again for $40. The first two are independent transactions even though their amounts match. The final one is a retry.",
+    "try": "Ask Devin to trace where the running total changes and cite the line. State that identity comes from the event ID. Hand the plan to Agent and request totals after each delivery. If it proposes treating every $40 amount as identical, correct that assumption in the main session before the edit.",
+    "after": "The expected totals are $40, $80 and $80. A new ID C9 with another $40 increases the balance to $120. The two same-value events demonstrate that the fix preserves legitimate transactions.",
+    "why": "The important distinction is between a business event and the delivery carrying it. A Side Chat can help you understand existing evidence. A correction that should change the work belongs in the active session.",
+    "rescue": "If the balance ends at $40, inspect whether the deduplication key is the amount. Ask for a new test with two IDs sharing the same amount."
+  },
+  {
+    "id": "devin-review",
+    "premise": "A developer proposes a fix for a duplicated import and writes “tests green.” You have to decide whether the evidence supports the behavior a reader can actually see.",
+    "before": "Three fictional deliveries represent $12 for ticket M, $8 for ticket N and another $12 for M. The earlier app showed $32; the accepted rule gives $20 for the two distinct tickets.",
+    "try": "Ask for the failing result on the original revision and the passing result on the proposed revision, using the same three inputs. Open the PR review and find where the duplicate check occurs. Ask for a recording that imports the three deliveries on the candidate revision and opens the total.",
+    "after": "A reproducing test fails at $32 on the original code. The revised test and app display $20. The reviewer can follow the changed line, precise test command, revision and observed result without relying on the summary sentence.",
+    "why": "A normal test suite can pass while omitting this particular duplicate. A before-and-after check links the repair to the defect. A recording checks that the UI reads the corrected result.",
+    "rescue": "If the recording shows $20 but the revision is unnamed, ask for evidence from the exact revision in the PR."
+  },
+  {
+    "id": "devin-playbooks",
+    "premise": "A second engineer wants to run your invoice-import review next week. They need a portable set of instructions that works when the example identifiers and amounts change.",
+    "before": "The training procedure takes a sample input, an expected total and a command that runs the importer. A two-delivery sample repeats event X for $9. Expected total is $9. A different sample has two unique $9 events and should total $18.",
+    "try": "Describe the procedure in a reusable skill, or the existing Playbook area if your account still uses it. Require the reviewer to record inputs, command, revision, observed total and comparison. Invoke it once on the duplicate sample and again on the distinct sample in a new session.",
+    "after": "The first review records $9 and passes. The second records $18 and passes. Both include evidence tied to the current sample. Neither reuses the first ticket’s result or command output as proof for the next ticket.",
+    "why": "Reusable instructions describe what to do. The specific numbers, filenames and reference totals belong to each assignment. Testing the instructions with different inputs reveals hard-coded assumptions.",
+    "rescue": "If the second report repeats $9, inspect the skill for that literal amount and replace it with a required expected-total input."
+  },
+  {
+    "id": "devin-integrations",
+    "premise": "An issue tracker and a chat channel both announce a documentation typo. A teammate leaves a clarification in the thread later. You want one tracked assignment with the clarification attached.",
+    "before": "Suppose ticket DEMO-17 requests changing Tuesday to Thursday on a practice page. A ticket label starts a Devin session. Ten minutes later a chat reply says “Thursday applies only to group B.” Both refer to the same ticket revision.",
+    "try": "In the training integration, note the ticket URL and the session link created by the label. Before acting on the chat reply, compare its ticket reference and revision with that assignment. Route the clarification to the existing session where the connected integration permits it. Inspect the resulting diff.",
+    "after": "One session remains associated with DEMO-17. Its proposed change says Thursday for group B while keeping the other group’s original day. The ticket or handoff note points to that one reviewable result.",
+    "why": "A new notification is only evidence that someone spoke again. It may add context to existing work. Which events create sessions depends on the integration and automation settings.",
+    "rescue": "If two sessions appear, check which trigger created each. Choose the authoritative one, attach the clarification there, and have the owner resolve the duplicate."
+  },
+  {
+    "id": "devin-access",
+    "premise": "A person can find the handbook repository in Devin, but a scheduled handbook-checking bot cannot. Both use the same organization name, so the difference is easy to misdiagnose.",
+    "before": "In a fictional training organization, Mei is a member and can read the handbook at its Git provider. The scheduled service user can start Devin sessions. Its explicitly assigned repositories do not include the handbook.",
+    "try": "List Mei’s identity, the service-user identity, the Devin organization and the Git connection on separate lines. Ask the administrator which access and sharing features are enabled. Compare the handbook’s approved grants for the person and the service user. Use a harmless request to read one heading under each authorized identity.",
+    "after": "Mei’s successful lookup shows what Mei can reach. The bot lookup remains unavailable until the appropriate explicit grant is in place. After an authorized grant, ask the bot for the same heading and verify it against the source.",
+    "why": "With newer sharing features enabled, personal provider sync can affect a human picker. Shared bots and service users still need their own applicable resources. Older organization grants also need checking.",
+    "rescue": "If someone proposes a broad administrator role, first identify the missing repository grant. Ask the owner for the precise approved scope."
+  },
+  {
+    "id": "devin-deployment",
+    "premise": "A sample application imports a formatting package from an internal practice registry. A developer’s laptop can read it, but a newly started Devin session times out. Which check belongs first?",
+    "before": "The library version is 2.1. The laptop fetched it yesterday. The current failure is a connection timeout reported by the package manager in a session on a customer-operated Outposts worker. No authentication response has been received.",
+    "try": "Write down the machine, execution phase, destination and sanitized error. Ask the worker owner to compare the session’s intended network policy with the policy enforced on that worker. Once the approved path works, fetch only harmless package metadata and verify that version 2.1 exists using an appropriately scoped credential if required.",
+    "after": "A successful metadata query identifies version 2.1 from the affected worker. If the network starts working but the registry now rejects authentication, record that new failure separately and check which repository secret the session receives.",
+    "why": "A laptop, snapshot build and running session can have different paths to a registry. Outposts operators enforce machine-level network access on their own infrastructure.",
+    "rescue": "If the proposed remedy is a new token before the host responds at all, show the timeout and establish the approved network route first."
+  },
+  {
+    "id": "devin-api",
+    "premise": "A dispatcher accepts a ticket event and starts a Devin session. A lost reply makes it unclear whether the session was created. You can rehearse the recovery on paper without sending an API request.",
+    "before": "Ticket HAND-18 revision 2 has a unique local job record. The create request carried the tag hand-18-r2. In a fictional trace the service saved session S18, but the caller received a timeout before recording the returned ID.",
+    "try": "Mark the job uncertain in the local ledger. Have an authorized reader reconcile recent sessions by tag, initiating identity and time window. If precisely S18 matches, record its ID and use Get Session for progress. Compare status_detail with the next human action before sending anything further.",
+    "after": "The ledger now links HAND-18 revision 2 to the existing S18. If its detail is waiting_for_user, route the question to the ticket owner. A read-only status poll leaves the job under observation. Two plausible matches require inspection.",
+    "why": "Creating work, observing it and answering a question are separate operations. Sending a message can wake a suspended session, so it is a poor substitute for a status read.",
+    "rescue": "If the recovery creates S19, trace which branch interpreted a timeout as proof of failure and replace that branch with reconciliation."
+  },
+  {
+    "id": "devin-fleet",
+    "premise": "Twelve fictional reports must switch their date headings to a common format. Some share a formatter; others build dates themselves. Repeating one prompt twelve times could spread one wrong assumption everywhere.",
+    "before": "The agreed rule displays July 4, 2027 as 2027-07-04, and a missing date as a dash. Report A imports the shared formatter. Report B builds its own CSV. The other ten are waiting.",
+    "try": "Ask Devin to inventory which project owns each format choice and identify the shared dependency. Pilot A and B against the same two-row fixture. Open the resulting files in their normal reading application. Record the base revisions and results before planning the next wave.",
+    "after": "Both pilot files should display 2027-07-04 and a dash. If B shows a blank instead, the decision is to repair and retest B, keeping the remaining ten on hold. When both pass, independent groups can move in bounded waves.",
+    "why": "Testing different project types exposes incompatible assumptions early. If a shared library changes, each dependent report still needs verification in its own consuming application.",
+    "rescue": "If twelve pull requests are offered immediately, ask which two artifacts establish compatibility. Pause expansion until those concrete results exist."
+  },
+  {
+    "id": "devin-metrics",
+    "premise": "A team wants to compare two weeks of handbook work. A simple count of pull requests makes the busy week look impressive. You need a metric that also accounts for usable results and expense.",
+    "before": "Ten fictional tickets consumed 72 Enterprise ACUs in a defined week. Six changes met acceptance and merged; two remained open; two closed without acceptance. One accepted ticket required two pull requests.",
+    "try": "Write down the cohort and review cutoff. Sum all 72 ACUs, count distinct accepted tickets and divide. Then separately list the unfinished work and any reviewer time. For a spending anomaly, consult consumption records for the affected product and organization, then audit history for relevant settings changes.",
+    "after": "Cost is 72 ÷ 6 = 12 ACUs per accepted ticket at this cutoff. A second pull request for one accepted ticket does not create a seventh accepted outcome. Dollar conversion uses the rate in the actual order form.",
+    "why": "Consumption measures work, ticket acceptance measures delivery and audit logs describe recorded actions. A budget-setting change may explain available capacity but cannot by itself identify which session spent it.",
+    "rescue": "If someone divides by ten, ask them to show the acceptance evidence for each ticket in the denominator."
+  },
+  {
+    "id": "devin-lab",
+    "premise": "You are the reviewer for a fictional library pilot. A candidate fix, an incomplete environment check and a proposal for the next wave all arrive together. Tackle them as three decisions.",
+    "before": "The sample delivers notice A for 350 cents, B for 200, and A again for 350. A unit check passed but a database-dependent check never started. The pilot used 48 ACUs and delivered six accepted changes.",
+    "try": "Write the expected notice total first. Ask for a test using the repeated A, then inspect the recorded database startup failure before evaluating any claim about end-to-end behavior. Calculate 48 divided by the number of accepted changes. State which additional evidence you need before expanding the pilot.",
+    "after": "The expected notice total is 550 cents, with A counted once. The unit result stands on its own; the integration path remains unverified. The pilot used 8 ACUs per accepted change, with any reviewer effort considered separately.",
+    "why": "Correct arithmetic, reliable setup and delivery economics answer different questions. A single green test or attractive average cannot settle all three.",
+    "rescue": "If a summary says “all scenarios verified,” ask for the exact integration result. Record it as blocked, repair the test environment and repeat the missing check."
+  },
+  {
+    "id": "chatgpt-picker",
+    "premise": "You have ten minutes before leaving for a station and a folder of fictional itinerary notes. One task is a quick extraction. The second involves fitting three commitments into a morning. Choose the amount of reasoning deliberately.",
+    "before": "The notes say the museum opens at 09:00 and takes 40 minutes, the station is 20 minutes from the museum, and the train leaves at 10:10. The traveler wants to be at the station ten minutes early.",
+    "try": "Use the ordinary ChatGPT picker to choose a quick option available to you. Ask for just the three times or durations. Then ask a stronger reasoning setting, if available, to produce a timeline with arrival margin. Supply the identical notes and tell it to flag unstated assumptions.",
+    "after": "One feasible schedule starts the museum at 09:00, leaves at 09:40 and reaches the station at 10:00. That meets the ten-minute margin exactly and leaves no slack for delays.",
+    "why": "The first task copies known values. The second checks constraints against one another. Neither answer verifies a real train schedule. Use a current primary timetable if the trip is real.",
+    "rescue": "If the model says “plenty of time,” ask it to compute departure time minus arrival time minus the required margin. The result is zero."
+  },
+  {
+    "id": "chatgpt-api",
+    "premise": "You are deciding which API model to put behind an inventory helper. A published token price is useful, but the real question is how much a result you can use costs. You can do the arithmetic without an API account.",
+    "before": "Use the chapter’s dated standard-price example with one million input tokens and 100,000 billable output tokens. The illustrative totals are $3 for GPT-6.2 Sol and $12 for GPT-6.2 Astra. Assume a fictional evaluation accepts 100 Sol results and 120 Astra results.",
+    "try": "Write each model’s cost over its own accepted count. Calculate both rates. Then name one quality issue that the count might miss, such as omitting an account ID. Describe a test that would reject that error before rerunning the comparison.",
+    "after": "The assumed figures give $0.03 per accepted Sol result and $0.10 per accepted Astra result. They measure this invented workload under the quoted rates. They say nothing by themselves about another task or a ChatGPT subscription.",
+    "why": "Higher acceptance can justify a higher price when the alternative creates expensive rework. An accepted-output count only measures the standard you use to accept outputs.",
+    "rescue": "If someone divides both costs by 120, restore the separate accepted counts. For a live decision, refresh prices and use actual billed tokens and reviewer results."
+  },
+  {
+    "id": "chatgpt-research",
+    "premise": "You want to answer two questions about a fictional shuttle trial. One concerns which timetable applied. The other is an arithmetic question about the trips you recorded. Choose evidence to match the question.",
+    "before": "Your sample file has three rows, Route A 12 riders, Route A 8, and Route B 0. An undated blog post says the stop moved; the operator’s dated timetable would be the relevant source for that separate claim.",
+    "try": "For a real route, use Search to locate the operator’s dated publication and open the cited passage before accepting the move. For this practice arithmetic, paste or upload the three rows to data analysis. Ask for counts per route, total and number of observed trips, explicitly treating zero as an observation.",
+    "after": "The practice table gives A 20 riders on two trips, B zero riders on one trip, and 20 riders across three recorded trips. Without a verified operator publication, the sample supplies no evidence that the stop moved.",
+    "why": "A search result can point you toward the right document. It cannot verify arithmetic inside a local file it never saw. Conversely, the passenger counts cannot establish operating policy.",
+    "rescue": "If B disappears, ask for the number of input rows retained and clarify that only blank values are missing."
+  },
+  {
+    "id": "chatgpt-codex",
+    "premise": "You want a brief for a new bookshelf feature and a working implementation. The brief is a document. The implementation belongs in a specific project folder. Keeping those deliverables distinct makes each easier to check.",
+    "before": "For practice, the shelf has two pages named Index and Puzzle. The request is a top Next control on Index and a top Previous control on Puzzle. The existing bottom controls should still work.",
+    "try": "Use ChatGPT Work to turn these requirements into a one-paragraph brief and three acceptance checks. Open a disposable local project in Codex, provide the brief and identify the actual two files. Ask for the smallest edit that implements it and show the changed lines. Exercise both directions in the browser.",
+    "after": "The brief describes the destination of each control. On screen, Next from Index opens Puzzle, Previous from Puzzle opens Index, and the bottom controls still reach the same destinations. The diff shows the actual files behind the change.",
+    "why": "Giving Work a requirement can yield an excellent plan without editing a local project. Codex needs the correct local folder or a connected cloud repository to produce inspectable changes.",
+    "rescue": "If you receive HTML in the chat but the site looks unchanged, verify the active folder and open the saved files from that folder."
+  },
+  {
+    "id": "chatgpt-media",
+    "premise": "You want a graduation nameplate to show a family dog in a cap. You also want to rehearse a short greeting and might later turn the moment into a video. Treat those as three different deliverables.",
+    "before": "The still-image brief calls for one dachshund in side profile, a cap tilted left and open space for the words “Doc Cindy.” The greeting is “Herzlichen Glückwunsch.” No video footage or audio has been supplied.",
+    "try": "Use image generation to request the still with empty text space. Inspect the result, then request a targeted revision if the cap tilts the wrong way. In voice conversation, practice the greeting and ask for a slower repetition. For video, use this chapter’s dated service status when selecting an available renderer.",
+    "after": "You can judge the still by the dog’s shape, cap direction and blank area. You can listen to and repeat the spoken greeting. Neither output is a finished video. Old Sora instructions predate the service’s 2026 discontinuation.",
+    "why": "An image model draws pixels, a voice conversation supports a spoken exchange, and a video renderer produces timed frames. A nameplate also needs correctly sized lettering before fabrication.",
+    "rescue": "If the image misspells the name, request blank space and place the exact lettering separately in the design program."
+  },
+  {
+    "id": "copilot-at-work",
+    "premise": "A colleague asks when a fictional pilot ends. A public announcement mentions June, but the team later approved a different date. You want to understand which material Microsoft 365 Copilot actually used.",
+    "before": "Your practice handout says “Pilot closes July 12. Approval recorded May 28.” A second practice note, headed Announcement draft, says “Proposed close June 30.” Only the first document records approval.",
+    "try": "Open Microsoft 365 Copilot Chat in the intended work account. Attach the two harmless notes or paste their text. Ask for the approved closing date, its source and the date of the decision. If Work IQ and work-wide search are available, inspect which additional sources were used before accepting the answer.",
+    "after": "The supplied evidence supports July 12, approved May 28. June 30 belongs to the proposal. The reply should identify which source supports each statement and say when evidence is insufficient.",
+    "why": "A stronger reasoning setting cannot recover a missing document. An attachment supplies a specific file. Broader organizational grounding depends on the license, account permissions, settings and app surface.",
+    "rescue": "If Copilot selects June 30, ask it to compare the words “proposed” and “approved,” then quote the matching line from each provided note."
+  },
+  {
+    "id": "copilot-mail-meetings",
+    "premise": "A three-message conversation contains a suggestion, a correction and a final decision. Before sending a handoff, you want the last authorized decision and any remaining action.",
+    "before": "In a fictional thread, Maya proposes Monday at 08:00. Lee replies that the room is unavailable. Maya then writes “Approved for Tuesday at 09:00. Lee, confirm the room.” The practice meeting has no saved transcript.",
+    "try": "If Outlook Copilot is available, use the summary on a training thread or paste these messages into an approved practice chat. Request the decision, decision maker, open action and evidence for each. Open the cited message or compare the quoted text. Ask separately what can be established about the meeting itself.",
+    "after": "The approved time is Tuesday 09:00, Maya made the decision, and Lee still needs to confirm the room. The email does not prove Lee already booked it. With no saved transcript, do not attribute spoken quotes to the later meeting.",
+    "why": "A proposal, a decision and a completed action are distinct events. Meeting policies and transcription settings affect what Copilot can use after a meeting ends.",
+    "rescue": "If the summary marks the room confirmed, ask for the sentence reporting completion. “Confirm the room” is an assignment."
+  },
+  {
+    "id": "copilot-documents",
+    "premise": "Your team needs four slides on a pilot. The executive summary should make clear whether six positive responses represent half the trial sites or two thirds of the respondents. Both denominators tell a different story.",
+    "before": "Twelve locations were invited. Nine submitted usable responses. Six of those nine recommend continuing. No recommendation was recorded for the remaining three nonrespondents.",
+    "try": "In Word, ask Copilot to draft a one-page brief from those three facts. Require separate statements for participation and recommendation. Check the denominators yourself and save the corrected brief. In a supported PowerPoint experience, reference that file and request four slides covering the decision, participation, recommendations and next step.",
+    "after": "Nine of twelve sites responded, or 75%. Six of nine respondents recommend continuing, approximately 67%. Six of all twelve invited sites is 50%. The deck labels the group behind each percentage and leaves nonrespondents’ opinions unknown.",
+    "why": "A slide compresses information. If the Word brief leaves its denominator ambiguous, the visual can amplify the error. Fixing the validated source makes later revisions easier.",
+    "rescue": "If a slide says “67% of sites support rollout,” ask for the numerator and denominator, then change “sites” to “responding sites” and verify the slide again."
+  },
+  {
+    "id": "copilot-excel",
+    "premise": "Four shipment batches differ greatly in size. Someone suggests averaging four percentages to judge overall acceptance. The cells show how to calculate the measure a warehouse manager actually needs.",
+    "before": "Enter four rows in the Shipments table: A packed 120 and rejected 6; B 60 and 6; C 20 and 8; D 0 and 0. A valid zero-size batch has no individual acceptance percentage.",
+    "try": "Ask Excel Copilot to add Accepted as Packed minus Rejected and report the overall rate from column totals. Inspect the cells and formula. As a check, change C’s rejected count from 8 to 6 and inspect which row and totals change.",
+    "after": "Initially Accepted is 114, 54, 12, 0. Packed totals 200, accepted totals 180, so the overall rate is 90%. After the correction C has 14 accepted and the overall rate becomes 182/200 = 91%. D still contributes no units.",
+    "why": "The overall question is about individual packed items. The combined totals automatically give larger batches their appropriate weight. An unweighted average treats small and large batches alike.",
+    "rescue": "If a zero-sized batch triggers a division error, handle that row separately while keeping the overall denominator equal to the sum of packed items."
+  },
+  {
+    "id": "copilot-agents",
+    "premise": "Two coworkers say “build an agent,” but one wants answers from a handbook and the other wants a bug fixed in a repository. Decide which surface fits each request before granting access or starting work.",
+    "before": "The fictional handbook says “Use Form Blue for returns over $50.” A separate practice checkout contains a function using amount >= 50. You have a $50 return and a $51 return to distinguish the two rules.",
+    "try": "Use Agent Builder, where available, for a reading assistant grounded in that practice handbook. Ask it about both amounts and request its source. Separately open the code in GitHub Copilot Chat and ask for an explanation of the >= expression. Ask what one change would align the code with the text.",
+    "after": "The handbook explicitly requires Form Blue at $51; it does not impose that requirement at exactly $50. The current code triggers at both amounts. A proposed change from >= to > aligns this particular code condition with the wording.",
+    "why": "A source-grounded office assistant helps people consult an approved document. A coding assistant can inspect the implementation. More elaborate process integrations can warrant Copilot Studio and separate design decisions.",
+    "rescue": "If the handbook assistant invents a form for $50, require the exact supporting passage and mark the below-threshold procedure unspecified."
+  }
+]

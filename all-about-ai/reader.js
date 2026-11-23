@@ -1,7 +1,12 @@
+const portable = window.portableAiBook;
+const assetURL = path => portable?.media[path] || path;
 const byId = id => document.getElementById(id);
 const chapters = [];
 let groups = [];
 const referenceChapters = [];
+const guideChapters = [];
+let illustrations = [];
+let worked = new Map();
 let indexMode;
 let currentTrack = 'devin';
 const dateLabel = iso => new Intl.DateTimeFormat('en-US', {dateStyle:'long', timeZone:'UTC'}).format(new Date(iso + 'T12:00:00Z'));
@@ -17,14 +22,18 @@ function showContents() {
   const query = byId('query').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const result = document.createDocumentFragment();
   const labsOnly = location.hash === '#labs';
-  byId('contents-title').textContent = labsOnly ? 'Hands-on labs' : 'Contents';
+  const guidesOnly = location.hash === '#start';
+  byId('contents-title').textContent = labsOnly ? 'Hands-on labs' : guidesOnly ? 'Illustrated lessons' : 'Contents';
+  byId('guide-door').hidden = labsOnly || guidesOnly;
+  byId('guide-note').hidden = !guidesOnly;
   byId('lab-note').hidden = !labsOnly;
-  byId('lab-door').hidden = labsOnly;
-  document.querySelector('.front').hidden = labsOnly;
+  byId('lab-door').hidden = labsOnly || guidesOnly;
+  document.querySelector('.front').hidden = labsOnly || guidesOnly;
   let count = 0;
   for (const group of groups) {
     if (labsOnly && !group.track) continue;
-    if (!labsOnly && group.track && !query.length) continue;
+    if (guidesOnly && !group.guide) continue;
+    if (!labsOnly && !guidesOnly && (group.track || group.guide) && !query.length) continue;
     const found = group.items.filter(ch => query.every(term => ch.search.includes(term)));
     if (!found.length) continue;
     const block = element(group.track ? 'details' : 'section', undefined, group.track ? 'group track' : 'group');
@@ -164,7 +173,7 @@ function labBody(lab) {
   about.append(setup);
   if (lab.kit) {
     const link = element('a','Download the practice kit (.zip)','lab-action');
-    link.href = './' + lab.kit;
+    link.href = assetURL('./' + lab.kit);
     link.download = lab.kit.split('/').pop();
     about.append(link);
   }
@@ -181,7 +190,7 @@ function labBody(lab) {
     item.append(help);
     list.append(item);
   }
-  instructions.append(element('h2','Walkthrough'),list);
+  instructions.append(element('h2','Walkthrough'), stepControls(list, false), list);
   const checks = element('details',undefined,'result-check');
   checks.append(element('summary','Check your result'));
   const answers = element('ul');
@@ -203,7 +212,7 @@ function labBody(lab) {
   };
   label.append(checkbox,document.createTextNode('Mark lab complete on this device'));
   finish.append(element('h2','Finish the lab'),checks,label,status,sourceLinks(lab.sources));
-  return [about,prompt,instructions,finish];
+  return [about,workedExample(worked.get(lab.id)),prompt,instructions,finish];
 }
 
 function openLocation(moveFocus) {
@@ -213,19 +222,26 @@ function openLocation(moveFocus) {
   byId('chapter').hidden = !chapter;
   document.title = chapter ? chapter.title + ' · All About AI' : 'All About AI · Books';
   if (!chapter) {
-    const mode = id === 'labs' ? 'labs' : 'contents';
+    const mode = ['start','labs','pictures'].includes(id) ? id : 'contents';
     if (indexMode !== mode) byId('query').value = '';
     indexMode = mode;
     showContents();
-    if (moveFocus) byId('contents-title').focus({preventScroll:true});
+    const gallery = mode === 'pictures';
+    byId('catalog').hidden = gallery;
+    byId('gallery').hidden = !gallery;
+    if (gallery) {
+      for (const selector of ['.front','#guide-door','#lab-door']) document.querySelector(selector).hidden = true;
+      if (!byId('thumbs').childElementCount) drawGallery();
+    }
+    if (moveFocus) byId(gallery ? 'gallery-title' : 'contents-title').focus({preventScroll:true});
   } else {
     const lab = Boolean(chapter.group.track);
     if (lab) currentTrack = chapter.group.track;
-    byId('group-name').textContent = lab ? chapter.group.title + '  /  Lab ' + chapter.number + ' of ' + chapter.group.items.length + ' · ' + chapter.level : chapter.group.title + '  /  Chapter ' + chapter.number;
+    byId('group-name').textContent = lab ? chapter.group.title + '  /  Lab ' + chapter.number + ' of ' + chapter.group.items.length + ' · ' + chapter.level : chapter.group.title + (chapter.group.guide ? '  /  Lesson ' : '  /  Chapter ') + chapter.number;
     byId('chapter-title').textContent = chapter.title;
     byId('summary').textContent = chapter.summary;
     byId('review-date').textContent = 'Reviewed ' + dateLabel(chapter.group.reviewed);
-    const sections = lab ? labBody(chapter) : chapter.sections.map(section => {
+    const sections = chapter.group.guide ? guideBody(chapter) : lab ? labBody(chapter) : chapter.sections.map(section => {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
@@ -244,11 +260,14 @@ function openLocation(moveFocus) {
       }
       return block;
     });
-    if (!lab) sections.unshift(chapterIntroduction(chapter.intro));
+    if (!lab && !chapter.group.guide) sections.unshift(workedExample(worked.get(chapter.id)),chapterIntroduction(chapter.intro));
+    if (!chapter.group.guide) sections.unshift(launchHelp(chapter));
+    const terms = glossary(chapter.search);
+    if (terms) sections.unshift(terms);
     byId('body').replaceChildren(...sections);
-    const pages = lab ? chapter.group.items : referenceChapters;
-    document.querySelector('book-pager').setPage(chapter.number,pages.length,lab ? 'lab' : 'chapter',
-      number => { location.hash = pages[number-1].id; }, () => { location.hash = lab ? 'labs' : 'contents'; });
+    const pages = lab ? chapter.group.items : chapter.group.guide ? guideChapters : referenceChapters;
+    document.querySelector('book-pager').setPage(chapter.number,pages.length,lab ? 'lab' : chapter.group.guide ? 'lesson' : 'chapter',
+      number => { location.hash = pages[number-1].id; }, () => { location.hash = lab ? 'labs' : chapter.group.guide ? 'start' : 'contents'; });
     if (moveFocus) byId('chapter-title').focus({preventScroll:true});
   }
   window.scrollTo(0,0);
@@ -256,6 +275,7 @@ function openLocation(moveFocus) {
 
 async function prepareOffline() {
   const status = byId('offline');
+  if (portable) { status.textContent = 'Offline book'; return; }
   if (!('serviceWorker' in navigator)) {
     status.textContent = 'Offline download unavailable';
     return;
@@ -287,25 +307,30 @@ async function prepareOffline() {
 }
 
 async function json(path) {
+  if (portable) return portable.json[path];
   const res = await fetch(path);
   if (!res.ok) throw Error('Missing book content');
   return res.json();
 }
 async function start() {
   const edition = await json('./edition.json');
+  const [pictures, examples] = await Promise.all([json('./content/figures.json'), json('./content/worked.json')]);
+  illustrations = pictures;
+  worked = new Map(examples.map(example=>[example.id,example]));
   groups = await Promise.all(edition.groups.map(async group => ({...group, items:await json('./content/' + group.file)})));
   for (const group of groups) {
     for (const [i, ch] of group.items.entries()) {
-      ch.search = (group.title + ' ' + JSON.stringify(ch)).toLowerCase();
-      if (!group.track) referenceChapters.push(ch);
-      ch.number = group.track ? i + 1 : referenceChapters.length;
+      ch.search = (group.title + ' ' + JSON.stringify(ch) + ' ' + JSON.stringify(worked.get(ch.id) || '')).toLowerCase();
+      if (group.guide) guideChapters.push(ch);
+      else if (!group.track) referenceChapters.push(ch);
+      ch.number = group.track ? i + 1 : group.guide ? guideChapters.length : referenceChapters.length;
       ch.group = group;
       chapters.push(ch);
     }
   }
-  const labCount = chapters.length - referenceChapters.length;
+  const labCount = chapters.length - referenceChapters.length - guideChapters.length;
   byId('lab-count').textContent = labCount + ' guided labs · ' + groups.filter(g=>g.track).length + ' tools';
-  byId('edition').textContent = referenceChapters.length + ' chapters · ' + labCount + ' labs · Updated ' + dateLabel(edition.reviewed);
+  byId('edition').textContent = referenceChapters.length + ' chapters · ' + labCount + ' labs · ' + guideChapters.length + ' beginner lessons · Updated ' + dateLabel(edition.reviewed);
   byId('query').addEventListener('input',showContents);
   window.addEventListener('hashchange',() => openLocation(true));
   openLocation(false);

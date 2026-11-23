@@ -1,0 +1,330 @@
+[
+  {
+    "file": "begin-welcome.webp",
+    "lesson": "open-antigravity",
+    "caption": "One first-launch layout asks about your work before opening the app.",
+    "alt": "Antigravity welcome screen offers role choices and a Continue button.",
+    "source": "https://antigravity.google/docs/getting-started/",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-starter.webp",
+    "lesson": "antigravity-project",
+    "caption": "The label above this example prompt says No Project. Choose your practice project before asking for a file.",
+    "alt": "Antigravity Home composer with starter suggestions and No Project above the text field.",
+    "source": "https://antigravity.google/docs/getting-started/",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-project-plan.webp",
+    "lesson": "antigravity-plan",
+    "caption": "The plan opens alongside the conversation so you can read it before continuing.",
+    "alt": "A request in Antigravity chat on the left with an implementation plan in the right pane.",
+    "source": "https://antigravity.google/docs/implementation-plan/",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-review.webp",
+    "lesson": "antigravity-review",
+    "caption": "Select a changed file in Review to see what the agent added or removed.",
+    "alt": "Antigravity Review shows a file list and highlighted changes in bookmarks.js.",
+    "source": "https://antigravity.google/docs/review-changes/",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-line-comment.webp",
+    "lesson": "antigravity-review",
+    "caption": "A comment on a selected line gives the agent a precise place to revise.",
+    "alt": "An inline review comment explains the expected behavior and offers an Edit Comment control.",
+    "source": "https://antigravity.google/docs/review-changes/",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-studio-home.webp",
+    "lesson": "open-ai-studio",
+    "caption": "Google’s illustrated home screen offers starting points for trying models and building applications.",
+    "alt": "Google AI Studio home, with navigation on the left and starter cards in the center.",
+    "source": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-studio-updates-more-control/",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-studio-system.webp",
+    "lesson": "ai-studio-instructions",
+    "caption": "System instructions have their own editor. The example shows a saved set of instructions.",
+    "alt": "AI Studio System instructions panel over the prompt workspace.",
+    "source": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-studio-updates-more-control/",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-studio-build2.webp",
+    "lesson": "ai-studio-build",
+    "caption": "In this Google Codelab layout the highlighted box is where you describe the app.",
+    "alt": "The app builder’s home page has a highlighted description field and suggested apps below.",
+    "source": "https://codelabs.developers.google.com/vibe-code-with-gemini-in-aistudio",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-studio-build3.webp",
+    "lesson": "ai-studio-build",
+    "caption": "The builder’s conversation sits beside a running preview. The Codelab uses a game.",
+    "alt": "Google AI Studio shows the build conversation on the left and a playable game preview on the right.",
+    "source": "https://codelabs.developers.google.com/vibe-code-with-gemini-in-aistudio",
+    "credit": "Google"
+  },
+  {
+    "file": "begin-claude-project.webp",
+    "lesson": "claude-projects-begin",
+    "caption": "A conversation’s menu can move an existing chat into a project.",
+    "alt": "An arrow points to Add to project in the conversation menu.",
+    "source": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+    "credit": "Anthropic"
+  },
+  {
+    "file": "begin-claude-demo.webp",
+    "lesson": "claude-code-terminal",
+    "caption": "Anthropic’s terminal demo shows a conversation and status text in a text-only window.",
+    "alt": "A frame from the original Claude Code terminal demonstration with a greeting request and a working indicator.",
+    "source": "https://github.com/anthropics/claude-code",
+    "credit": "Anthropic"
+  },
+  {
+    "file": "begin-dispatch-intro.webp",
+    "lesson": "claude-dispatch-begin",
+    "caption": "Eligible existing users may see this setup card in Cowork.",
+    "alt": "Coworking on the go introduction with examples and a Get started button.",
+    "source": "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork",
+    "credit": "Anthropic"
+  },
+  {
+    "file": "begin-dispatch-setup.webp",
+    "lesson": "claude-dispatch-begin",
+    "caption": "Review the device choices before choosing Finish setup.",
+    "alt": "Dispatch setup card showing file access and keep-awake controls above Finish setup.",
+    "source": "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork",
+    "credit": "Anthropic"
+  },
+  {
+    "file": "begin-oai-new-project.webp",
+    "lesson": "open-work-project",
+    "caption": "New project appears above existing projects in the sidebar.",
+    "alt": "ChatGPT sidebar with New project and three existing project names.",
+    "source": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+    "credit": "OpenAI"
+  },
+  {
+    "file": "begin-oai-project-settings.webp",
+    "lesson": "work-project-files",
+    "caption": "Open the menu beside Share to find the settings for this particular project.",
+    "alt": "Fitness goals project header with its menu open on Project settings.",
+    "source": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
+    "credit": "OpenAI"
+  },
+  {
+    "file": "begin-copilot-signin.webp",
+    "lesson": "open-github-copilot",
+    "caption": "The Copilot status menu has a sign-in button when the editor is signed out.",
+    "alt": "Screenshot of the Copilot status menu in VS Code, showing Sign in to use Copilot.",
+    "source": "https://code.visualstudio.com/docs/setup/copilot",
+    "credit": "Microsoft"
+  },
+  {
+    "file": "begin-copilot-suggestion.webp",
+    "lesson": "github-copilot-inline",
+    "caption": "Dimmed code is a suggestion awaiting a decision.",
+    "alt": "A JavaScript function in VS Code with a dim suggested completion beneath the first line.",
+    "source": "https://code.visualstudio.com/docs/editing/ai-powered-suggestions",
+    "credit": "Microsoft"
+  },
+  {
+    "file": "begin-devin-ask.webp",
+    "lesson": "open-devin",
+    "caption": "Cognition’s Ask example shows a question, an architecture diagram and citations to the source files.",
+    "alt": "Devin Ask selected in the sidebar with a question and file references in the response.",
+    "source": "https://docs.devin.ai/get-started/first-run",
+    "credit": "Cognition"
+  },
+  {
+    "file": "begin-devin-repos.webp",
+    "lesson": "devin-first-repo",
+    "caption": "The repository selector lets you check which projects your question will use.",
+    "alt": "A list of repositories in the Devin composer with two repositories checked.",
+    "source": "https://docs.devin.ai/get-started/first-run",
+    "credit": "Cognition"
+  },
+  {
+    "file": "begin-devin-shell.webp",
+    "lesson": "devin-follow-session",
+    "caption": "Select Shell to inspect commands and their output alongside the session conversation.",
+    "alt": "A Devin session shows the conversation and a Shell pane with individual commands.",
+    "source": "https://docs.devin.ai/work-with-devin/devin-session-tools",
+    "credit": "Cognition"
+  },
+  {
+    "file": "begin-oai-codex-menu.webp",
+    "lesson": "open-codex",
+    "caption": "OpenAI’s desktop walkthrough illustrates the Codex workspace and its Add menu for files and folders.",
+    "alt": "A Codex desktop example showing the sidebar and open Add menu with Files and folders.",
+    "source": "https://developers.openai.com/codex/app/features/",
+    "credit": "OpenAI"
+  },
+  {
+    "file": "begin-oai-codex-review.webp",
+    "lesson": "codex-review",
+    "caption": "In OpenAI’s review example, the finding sits beside the changed code it refers to.",
+    "alt": "An example diff with a review comment attached to a line.",
+    "source": "https://learn.chatgpt.com/docs/code-review?surface=app",
+    "credit": "OpenAI"
+  },
+  {
+    "file": "begin-oai-dot.webp",
+    "lesson": "open-dots",
+    "caption": "OpenAI’s walkthrough follows the same dot conversation across desktop and mobile.",
+    "alt": "Desktop and mobile examples of the dot Alfred discussing options as a constraint changes.",
+    "source": "https://learn.chatgpt.com/docs/dots",
+    "credit": "OpenAI"
+  },
+  {
+    "file": "begin-oai-cloud-location.webp",
+    "lesson": "codex-cloud",
+    "caption": "OpenAI’s desktop example shows the Work in menu with This computer and Cloud.",
+    "alt": "The desktop composer with its location menu open, including This computer and Cloud.",
+    "source": "https://learn.chatgpt.com/docs/environments/modes",
+    "credit": "OpenAI"
+  },
+  {
+    "file": "muse-chat-screen.webp",
+    "lesson": "open-muse",
+    "caption": "Meta’s phone demonstration shows the message box and the chat bubble at the bottom.",
+    "alt": "Muse phone chat with menu button at top left, assistant icon at top center, and message field at bottom.",
+    "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+    "credit": "Meta"
+  },
+  {
+    "file": "muse-planning-reply.webp",
+    "lesson": "muse-first-plan",
+    "caption": "Muse shows a trip plan inside the conversation. Open the card to inspect what it made.",
+    "alt": "Meta demo showing a December Japan trip card and a follow-up message in a Muse conversation.",
+    "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+    "credit": "Meta"
+  },
+  {
+    "file": "muse-permission-screen.webp",
+    "lesson": "muse-connections",
+    "caption": "Look at the recipient and subject before choosing Allow or Deny. This is Meta’s fictional example.",
+    "alt": "Muse asks permission to send a draft email and displays Allow and Deny buttons.",
+    "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+    "credit": "Meta"
+  },
+  {
+    "file": "muse-file-card.webp",
+    "lesson": "muse-library",
+    "caption": "A file card can appear inside Chat. Meta’s example shows a finished PDF.",
+    "alt": "Muse chat shows a field trip permission slip PDF with a preview and file label.",
+    "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+    "credit": "Meta"
+  },
+  {
+    "file": "copilot-work-home.webp",
+    "lesson": "open-copilot",
+    "caption": "Microsoft’s desktop Home example shows the message field, work context control and account navigation.",
+    "alt": "Copilot Home screen with New, Search, Library and a central Message Copilot box.",
+    "source": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat",
+    "credit": "Microsoft"
+  },
+  {
+    "file": "copilot-outlook-summary.webp",
+    "lesson": "open-copilot-outlook",
+    "caption": "On Outlook for Mac the summary sits above the original message. The small numbers lead back to emails.",
+    "alt": "Summary by Copilot with three numbered citations above a conversation in Outlook for Mac.",
+    "source": "https://support.microsoft.com/en-us/outlook/copilot-pages/summarize-an-email-thread-with-copilot-in-outlook",
+    "credit": "Microsoft"
+  },
+  {
+    "file": "copilot-teams-recap.webp",
+    "lesson": "open-copilot-teams",
+    "caption": "Microsoft’s example marks the Recap tab and the meeting Copilot panel on the right.",
+    "alt": "Teams meeting recap with meeting notes, speaker timeline and Copilot panel.",
+    "source": "https://support.microsoft.com/en-us/teams/copilot/catch-up-on-meetings-with-microsoft-365-copilot-in-teams",
+    "credit": "Microsoft"
+  },
+  {
+    "file": "comet-assistant-sidebar.webp",
+    "lesson": "open-comet",
+    "caption": "Perplexity’s desktop example shows the assistant beside the page. Mobile controls can look different.",
+    "alt": "Comet browser start page with an Assistant panel outlined on the right.",
+    "source": "https://r2cdn.perplexity.ai/pdf/pplx-at-work.pdf#page=10",
+    "credit": "Perplexity"
+  },
+  {
+    "file": "claude-duet-brief.webp",
+    "lesson": "open-claude-duet",
+    "caption": "In Anthropic’s public Duet walkthrough, a morning notification tells Maya that two items need her attention. A notification is the start of a review.",
+    "alt": "Anthropic’s phone example shows a Duet notification, with tabs for chat, tasks and making things.",
+    "source": "https://claude.com/product/claude-duet",
+    "credit": "Anthropic · public product walkthrough"
+  },
+  {
+    "file": "firefly-fill-selection.webp",
+    "lesson": "firefly-fill",
+    "caption": "Adobe’s pink brush marks show the part of the room Generative Fill can change. The prompt field sits below the picture.",
+    "alt": "Room in the Firefly editor with a pink selection over the wall and rug and a prompt field below.",
+    "source": "https://helpx.adobe.com/firefly/web/work-with-images/edit-images/generative-fill.html",
+    "credit": "Adobe"
+  },
+  {
+    "file": "firefly-video-first-frame.webp",
+    "lesson": "open-firefly",
+    "caption": "The small picture under Frames sets the start of the video. Adobe’s example uses a lake reflected in the mountains.",
+    "alt": "Firefly’s Frames panel beside a landscape preview. The first-frame thumbnail is highlighted.",
+    "source": "https://helpx.adobe.com/firefly/web/work-with-audio-and-video/work-with-video/generate-videos-using-images.html",
+    "credit": "Adobe"
+  },
+  {
+    "file": "excel-copilot-table-reply.webp",
+    "lesson": "open-copilot-excel",
+    "caption": "Compare the count in the Copilot reply with the Level column on the sheet. Four of the ten sample employees have Mid in that column.",
+    "alt": "Excel shows the employee table at left. Copilot groups the ten rows into four Mid, three Junior, and three Lead.",
+    "source": "https://support.microsoft.com/en-us/excel/get-direct-answers-to-your-data-analysis-questions",
+    "credit": "Microsoft"
+  },
+  {
+    "file": "grok-bot-ipad-thread.webp",
+    "lesson": "open-grok-bot",
+    "caption": "The iPad example shows several bots in the left column. The Chief of staff conversation on the right includes two versions of a board deck.",
+    "alt": "Grok Bot’s iPad demonstration shows the bot list, a selected conversation, and two board-deck file cards.",
+    "source": "https://apps.apple.com/us/app/grok-bot/id6794501026?platform=ipad",
+    "credit": "X Corp."
+  },
+  {
+    "file": "vibe-work-ipad.webp",
+    "lesson": "open-vibe",
+    "caption": "Find Work at the top of Mistral’s example. Tap the “Ask Vibe anything” field below the suggestions to start your own task.",
+    "alt": "Mistral’s iPad illustration shows Work selected, three suggested tasks, and the message field underneath.",
+    "source": "https://apps.apple.com/us/app/vibe-by-mistral-ex-le-chat/id6740410176?platform=ipad",
+    "credit": "Mistral AI"
+  },
+  {
+    "file": "muse-tracking-follow-up.webp",
+    "lesson": "muse-upcoming",
+    "caption": "See what a follow-up looks like in chat. In Meta’s example, Muse reports that the tickets it was watching have gone on sale and offers two showtimes.",
+    "alt": "Muse on iPad asks whether the user wants the 4:30 or 7:30 showing for a tracked movie. A seat-selection card appears after the reply.",
+    "source": "https://apps.apple.com/us/app/muse-from-meta/id6760173601?platform=ipad",
+    "credit": "Meta"
+  },
+  {
+    "file": "practice-before.webp",
+    "lesson": "project-or-chat",
+    "caption": "Two files belong to one project. Read the schedule before trusting the time in the notice.",
+    "alt": "The practice desk shows schedule.txt beside notice.txt. The notice contains a 9:50 a.m. meeting time.",
+    "source": "https://glennarmbruster.github.io/Books/all-about-ai/#first-project",
+    "credit": "All About AI · Practice desk"
+  },
+  {
+    "file": "practice-after.webp",
+    "lesson": "read-a-change",
+    "caption": "After the correction, the edited notice says 9:15. Open the schedule to check the two times agree.",
+    "alt": "The practice desk shows the updated notice and a message confirming the fix to the meeting time.",
+    "source": "https://glennarmbruster.github.io/Books/all-about-ai/#first-project",
+    "credit": "All About AI · Practice desk"
+  }
+]

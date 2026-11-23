@@ -69,10 +69,11 @@ manifest = json.loads((book / 'edition.json').read_text())
 edition_date = date.fromisoformat(manifest['reviewed'])
 groups = manifest['groups']
 ids = set()
-assets = ['index.html', 'reader.css', 'reader.js', 'edition.json', '../book-pager.js', '../shelf-art/all-about-ai.jpg']
+assets = ['index.html', 'reader.css', 'reader.js', 'guides.js', 'guide.css', 'content/figures.json', 'content/worked.json', 'edition.json', '../book-pager.js', '../shelf-art/all-about-ai.jpg']
 kit = refresh_kit(book / 'practice' / 'exchange-inventory')
 assets.append(kit)
 lab_count = 0
+guide_ids = set()
 require(groups, 'List at least one group in edition.json.')
 for group in groups:
     require(group['title'] and date.fromisoformat(group['reviewed']) <= edition_date, 'Check group title and review date.')
@@ -87,9 +88,17 @@ for group in groups:
         require(len(chapters) == 15, f'Expected 15 labs in {path}')
     for number, ch in enumerate(chapters, start=1):
         key = ch['id']
-        require(re.fullmatch(r'[a-z0-9-]+', key) and key not in ('contents', 'labs') and key not in ids, f'Invalid or duplicate ID {key}')
+        require(re.fullmatch(r'[a-z0-9-]+', key) and key not in ('contents', 'labs', 'start') and key not in ids, f'Invalid or duplicate ID {key}')
         ids.add(key)
         require(words([ch['title'], ch['summary']]), f'Incomplete page {key}')
+        if group.get('guide'):
+            require(words(ch['where']) and words(ch['roles']) and len(ch['roles']) == 3, f'Check setup and roles in {key}')
+            require(len(ch['actions']) >= 4 and ch['topic'], f'Incomplete guide {key}')
+            for step in ch['actions']:
+                require(words([step[k] for k in ('title','do','see','stuck')]), f'Missing walkthrough in {key}')
+            check_sources(ch['sources'],key)
+            guide_ids.add(key)
+            continue
         if group.get('track'):
             check_lab(ch, group['track'], number)
             require('kit' not in ch or ch['kit'] == kit, f'Unknown kit in {key}')
@@ -113,6 +122,20 @@ for group in groups:
                 require(words(tbl['columns']) and tbl['rows'], f'Empty table in {key}')
                 require(all(words(row) and len(row) == len(tbl['columns']) for row in tbl['rows']), f'Invalid table in {key}')
 
+examples = json.loads((book / 'content/worked.json').read_text())
+require(len(examples) == len(ids - guide_ids) and {ex['id'] for ex in examples} == ids - guide_ids, 'Every reference and lab needs its own worked example')
+for ex in examples:
+    require(words([ex[k] for k in ('premise','before','try','after','why','rescue')]), 'Incomplete worked example '+ex['id'])
+figures = json.loads((book / 'content/figures.json').read_text())
+for fig in figures:
+    name = fig['file']
+    require(re.fullmatch(r'[a-z0-9-]+\.webp', name), f'Invalid picture name {name}')
+    path = 'pictures/' + name
+    require(fig['lesson'] in guide_ids and path not in assets and words([fig['credit'], fig['caption'], fig['alt']]), f'Check picture {name}')
+    check_sources([[fig['credit'], fig['source']]],name)
+    require((book / path).read_bytes()[8:12] == b'WEBP', f'Invalid WebP {name}')
+    assets.append(path)
+
 digest = sha256()
 for path in [*assets, '../table-books-worker.js']:
     digest.update(path.encode() + b'\0' + sha256((book / path).read_bytes()).digest())
@@ -126,4 +149,4 @@ for path, expected in [(book / 'sw.js', worker), (shelf_path, shelf)]:
     if not path.exists() or path.read_text() != expected:
         require(not args.check, f'Run update_edition.py to refresh {path.name}')
         path.write_text(expected)
-print(f'{len(ids)-lab_count} reference chapters, {lab_count} labs. {edition}')
+print(f'{len(ids)-lab_count-len(guide_ids)} reference chapters, {lab_count} labs, {len(guide_ids)} beginner lessons, {len(figures)} pictures. {edition}')

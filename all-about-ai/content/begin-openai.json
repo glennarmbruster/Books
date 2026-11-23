@@ -1,0 +1,517 @@
+[
+  {
+    "id": "open-codex",
+    "title": "Open Codex and give it a practice folder",
+    "summary": "Start with an empty local folder. Its name and contents give you a simple way to verify where Codex is working.",
+    "topic": "Codex",
+    "where": [
+      "Mac or Windows computer with the signed-in ChatGPT desktop app. Use chatgpt.com/download to obtain it.",
+      "On iPad, read along or use an available cloud or Remote task. The desktop folder picker lives on the computer."
+    ],
+    "actions": [
+      {
+        "title": "Create the folder",
+        "do": "In Finder on Mac, open Documents and choose File → New Folder. On Windows, open Documents in File Explorer and choose New → Folder. Name it AI-Practice.",
+        "see": "AI-Practice appears inside Documents.",
+        "stuck": "If a folder with that name already exists, use AI-Practice-2 and follow the same steps."
+      },
+      {
+        "title": "Switch to Codex",
+        "do": "Open ChatGPT on the computer, sign in and select Codex from the app’s product menu.",
+        "see": "You see the Codex workspace with a sidebar and a place to start a task.",
+        "stuck": "If you see a regular chat with the Chat or Work toggle, reopen the product menu. A browser tab and the desktop app have different controls."
+      },
+      {
+        "title": "Attach the folder",
+        "do": "Use + beside Projects, choose Local, then Next. Name the project Practice. Under Source folders, add AI-Practice and choose Create project. A version offering Open folder directly can open the same folder.",
+        "see": "The local project lists your practice folder as a source.",
+        "stuck": "In the file picker, open Documents, select AI-Practice itself, then choose Open or Select Folder. Avoid choosing all of Documents."
+      },
+      {
+        "title": "Verify the location",
+        "do": "Start a chat in Practice. Type “Show the name of the folder you can read and list the files in it. Make no changes.”",
+        "see": "The response identifies AI-Practice and no user-created files.",
+        "stuck": "If it lists unrelated documents, stop there and reopen the project with the narrower folder."
+      }
+    ],
+    "roles": [
+      "Use a local folder for fictional mail-report examples.",
+      "Use a folder containing sanitized scripts or sample exports.",
+      "Make a practice app in its own folder."
+    ],
+    "sources": [
+      [
+        "OpenAI · ChatGPT Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+      ],
+      [
+        "OpenAI · practice opening a folder",
+        "https://learn.chatgpt.com/training/codex-lab/index.html?step=project"
+      ],
+      [
+        "OpenAI · projects and chats",
+        "https://learn.chatgpt.com/docs/projects?surface=app"
+      ],
+      [
+        "OpenAI · desktop features",
+        "https://developers.openai.com/codex/app/features/"
+      ]
+    ]
+  },
+  {
+    "id": "codex-first-edit",
+    "title": "Make and find your first Codex file",
+    "summary": "A successful first task produces something you can open outside the conversation.",
+    "topic": "Codex",
+    "where": [
+      "Use the ChatGPT desktop app on Mac or Windows. Sign in, select Codex, then open a small practice folder as your local project."
+    ],
+    "actions": [
+      {
+        "title": "Name the output",
+        "do": "In the project, start a chat and type “Create status.txt in this folder with exactly two lines: Queue checked and Ready to review.”",
+        "see": "Codex describes or performs a small local edit.",
+        "stuck": "If it only shows possible text, ask it to write the file to the open local project."
+      },
+      {
+        "title": "Check the file yourself",
+        "do": "Open the same folder in Finder or File Explorer. Double-click status.txt to view it in a text editor.",
+        "see": "The file contains two lines, in the requested order.",
+        "stuck": "If double-click opens the wrong program, use Open With → TextEdit on Mac or Notepad on Windows."
+      },
+      {
+        "title": "Request a small revision",
+        "do": "Return to the same Codex chat. Type “Change only the second line to Reviewed by owner.”",
+        "see": "The revised result mentions status.txt.",
+        "stuck": "If two files now appear, explicitly give the original filename and ask which file was edited."
+      },
+      {
+        "title": "Compare with disk",
+        "do": "Reopen status.txt or reload the editor. Read both lines.",
+        "see": "Queue checked remains first and Reviewed by owner appears second.",
+        "stuck": "If the editor still shows the old version, close its tab without saving the stale text and reopen the file from the folder."
+      }
+    ],
+    "roles": [
+      "Make a sample runbook note.",
+      "Draft a short change handoff.",
+      "Edit an instruction shown in an app."
+    ],
+    "sources": [
+      [
+        "OpenAI · ChatGPT Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+      ],
+      [
+        "OpenAI · practice opening a folder",
+        "https://learn.chatgpt.com/training/codex-lab/index.html?step=project"
+      ]
+    ]
+  },
+  {
+    "id": "codex-review",
+    "title": "Read a changed line before accepting it",
+    "summary": "A diff shows how a file changed. Use a small Git example to read one removed line and one added line.",
+    "topic": "Codex",
+    "where": [
+      "Open Codex in the ChatGPT desktop app on Mac or Windows. Use an approved practice Git repository with a committed README.md.",
+      "To make one locally without Git commands, open GitHub Desktop, choose File → New repository, name it ai-review-practice and select Initialize this repository with a README. Open that repository folder in Codex."
+    ],
+    "actions": [
+      {
+        "title": "Read the baseline",
+        "do": "Open README.md in Finder or File Explorer and note its first heading. Keep that heading somewhere you can compare.",
+        "see": "You can identify exactly one line to change.",
+        "stuck": "If the folder lacks a README, use the initialized practice repository described above."
+      },
+      {
+        "title": "Request the edit",
+        "do": "In a chat in that folder, type “Change only the first heading of README.md to # Practice Guide. Leave all other lines alone.”",
+        "see": "Codex reports an edit to README.md.",
+        "stuck": "If you started in ChatGPT Work, switch to Codex and confirm the repository folder."
+      },
+      {
+        "title": "Inspect the difference",
+        "do": "Open the task’s changed-files or review pane and select README.md. Use Last turn if earlier changes are also shown.",
+        "see": "The old heading is removed and # Practice Guide is added.",
+        "stuck": "If no difference appears, check that the original heading was different and that you are viewing the current local project."
+      },
+      {
+        "title": "Make a review decision",
+        "do": "If any unrelated line changed, request a revision identifying that line. Open README.md again and compare it to the diff.",
+        "see": "You can explain the entire edit without publishing it.",
+        "stuck": "If the view shows a review comment on top of the code, read the comment and then inspect the underlying lines."
+      }
+    ],
+    "roles": [
+      "Check a changed mail-script threshold.",
+      "Review which line of a settings guide changed.",
+      "Inspect one small UI edit before committing it."
+    ],
+    "sources": [
+      [
+        "OpenAI · viewing changes and code reviews",
+        "https://learn.chatgpt.com/docs/code-review?surface=app"
+      ],
+      [
+        "OpenAI · ChatGPT Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+      ]
+    ]
+  },
+  {
+    "id": "codex-cloud",
+    "title": "Find a cloud task from your iPad",
+    "summary": "A cloud task runs on an OpenAI-managed computer with a connected repository. Your computer’s Documents folder is a separate place.",
+    "topic": "Codex",
+    "where": [
+      "Use chatgpt.com/codex on desktop, or the Codex cloud area of the signed-in ChatGPT mobile app if available. You need an eligible account and a connected practice repository."
+    ],
+    "actions": [
+      {
+        "title": "Find the cloud workspace",
+        "do": "Sign in to the intended account. On desktop open chatgpt.com/codex. On mobile open the available Codex cloud task area.",
+        "see": "You can select or see a cloud environment.",
+        "stuck": "If only local or Remote chats appear, use the desktop web entry to check the account’s cloud access."
+      },
+      {
+        "title": "Choose the project",
+        "do": "Open the environment selector and choose the practice repository you are allowed to read. Check its name and branch.",
+        "see": "The task shows its cloud repository context.",
+        "stuck": "If the repository is absent, check the connected GitHub account and environment setup with its owner. A local folder selection does not upload it."
+      },
+      {
+        "title": "Try a reading task",
+        "do": "Enter “Read README.md. Return its first heading and the path you used. Leave the repository unchanged.” Start the task.",
+        "see": "The task has its own progress view and should eventually produce a heading and path.",
+        "stuck": "If README.md is missing, ask the task to list the root and select an existing document."
+      },
+      {
+        "title": "Follow it on another device",
+        "do": "Sign in on iPad with the same account and workspace and open the same cloud task. Compare the reported heading to the repository on GitHub.",
+        "see": "The cloud result remains available without the desktop computer running the job.",
+        "stuck": "If the task is absent, compare workspaces and check whether the original task ran locally."
+      }
+    ],
+    "roles": [
+      "Read documentation in an approved sample repository.",
+      "Review a source-controlled onboarding guide on a tablet.",
+      "Check an app’s README while away from the desktop."
+    ],
+    "sources": [
+      [
+        "OpenAI · ChatGPT Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+      ],
+      [
+        "OpenAI · Codex access",
+        "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+      ],
+      [
+        "OpenAI · local and cloud environments",
+        "https://learn.chatgpt.com/docs/environments/modes"
+      ]
+    ]
+  },
+  {
+    "id": "open-work",
+    "title": "Start a Work task that produces a deliverable",
+    "summary": "Work can prepare a finished output from instructions and source material. Try a short handoff without attaching anything.",
+    "topic": "ChatGPT Work & Projects",
+    "where": [
+      "Sign in at chatgpt.com, in the ChatGPT desktop app for Mac or Windows, or in the ChatGPT app on iPad. Work availability depends on the account."
+    ],
+    "actions": [
+      {
+        "title": "Choose Work",
+        "do": "On desktop select ChatGPT in the product menu, then Work. On web choose Work. On current mobile layouts start a chat, tap the message box, then the model name and choose Work.",
+        "see": "The new conversation shows Work as its mode.",
+        "stuck": "If mobile uses the classic layout, open the Chat or Work dropdown. Check your plan or workspace if the option is absent."
+      },
+      {
+        "title": "Give it the material",
+        "do": "Type “Write a four-line handoff. Facts: Friday, two fixtures checked, one still open, Dana owns the open item. Include owner and remaining work.”",
+        "see": "Work produces a short handoff you can check line by line.",
+        "stuck": "If it asks for a file, say the four supplied facts are the complete source."
+      },
+      {
+        "title": "Correct one fact",
+        "do": "Reply “Replace Friday with Thursday. Keep the counts and owner.”",
+        "see": "The document says Thursday with two checked and one open.",
+        "stuck": "If it adds a deadline, point out that the source has no due date."
+      },
+      {
+        "title": "Find the result later",
+        "do": "Return to Recents in ChatGPT and reopen the Work conversation. Check the revised result.",
+        "see": "You can continue the handoff in its original context.",
+        "stuck": "If Recents is filtered to Chat, select Work or clear the filter. Codex has its own history."
+      }
+    ],
+    "roles": [
+      "Prepare a shift handoff from supplied counts.",
+      "Summarize a fictional rollout status.",
+      "Write a handoff for an app tester."
+    ],
+    "sources": [
+      [
+        "OpenAI · ChatGPT Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+      ]
+    ]
+  },
+  {
+    "id": "open-work-project",
+    "title": "Create a ChatGPT project for ongoing work",
+    "summary": "A project keeps related chats, sources and instructions together. This exercise needs no local folder access.",
+    "topic": "ChatGPT Work & Projects",
+    "where": [
+      "Use ChatGPT on the web, desktop or iPad, signed into the same account you plan to use later. Open the sidebar."
+    ],
+    "actions": [
+      {
+        "title": "Create the project",
+        "do": "Choose New project in the sidebar or the add control beside Projects. Enter Practice Handoffs and confirm.",
+        "see": "A new project appears by name in the sidebar.",
+        "stuck": "On a narrow screen open the sidebar first. If the control is absent in a managed account, check whether project creation is enabled."
+      },
+      {
+        "title": "Set the project instruction",
+        "do": "Open the project menu, then Project settings. Enter “When making a handoff, use the headings Decision and Next step.” Save.",
+        "see": "The instruction is associated with Practice Handoffs.",
+        "stuck": "If you opened general account settings, close them and use the menu next to this project’s name."
+      },
+      {
+        "title": "Start a project conversation",
+        "do": "Start a new chat from inside Practice Handoffs. Choose Work if offered. Ask for a handoff from “Decision: extend the trial. Next step: Lee tests on Tuesday.”",
+        "see": "The result uses the two requested headings and the supplied facts.",
+        "stuck": "Check the project name above or beside the chat if the instructions appear to be missing."
+      },
+      {
+        "title": "Test continuity",
+        "do": "Return to the project and start a second chat. Ask for a handoff about a completed checklist and an owner who still needs to sign it.",
+        "see": "The second chat uses the same headings without you repeating the instruction.",
+        "stuck": "If only the first chat follows the pattern, confirm that you saved a project instruction instead of sending it as an ordinary message."
+      }
+    ],
+    "roles": [
+      "Keep related report-writing chats together.",
+      "Keep a rollout’s approved source notes together.",
+      "Keep an app’s design and testing conversations together."
+    ],
+    "sources": [
+      [
+        "OpenAI · Projects in ChatGPT",
+        "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+      ],
+      [
+        "OpenAI · projects and chats",
+        "https://learn.chatgpt.com/docs/projects?surface=app"
+      ],
+      [
+        "OpenAI · ChatGPT Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+      ]
+    ]
+  },
+  {
+    "id": "work-project-files",
+    "title": "Attach a source and verify what Work read",
+    "summary": "A source stored in a ChatGPT project can support more than one conversation. Use a tiny file with a known answer.",
+    "topic": "ChatGPT Work & Projects",
+    "where": [
+      "Use the Practice Handoffs project or create a new ChatGPT project. On iPad use a plain-text file already saved in Files."
+    ],
+    "actions": [
+      {
+        "title": "Prepare a small file",
+        "do": "In TextEdit on Mac choose Format → Make Plain Text, or open Notepad on Windows. Save counts.txt containing two lines: Ready 8 and Waiting 3. On iPad you can use an existing plain-text editor and Save to Files.",
+        "see": "You have a file named counts.txt in a known location.",
+        "stuck": "If no text editor is available, use the project’s paste-text source option where shown and enter the same two lines."
+      },
+      {
+        "title": "Add it to the project",
+        "do": "Open project Sources, choose Add source or the file upload control, and pick counts.txt. On iPad use Browse in the file chooser to find it.",
+        "see": "The project’s source list now includes counts.txt or the pasted text source.",
+        "stuck": "If the file appears only as an attachment in one chat, go back to the project’s Sources area."
+      },
+      {
+        "title": "Ask Work to use that source",
+        "do": "Start a project Work chat and request “Use the project counts. Give the two values and their total, and identify the source.”",
+        "see": "The expected total is 11.",
+        "stuck": "If the answer says it cannot find counts, check the current project and whether the upload finished."
+      },
+      {
+        "title": "Check the evidence",
+        "do": "Open the original source and compare the result. Ask how the total would change if Waiting rose by 2, without changing the saved source.",
+        "see": "The hypothetical total is 13 and the original text still says Waiting 3.",
+        "stuck": "If the response changes Ready as well, ask it to explicitly show 8 + (3 + 2)."
+      }
+    ],
+    "roles": [
+      "Use a sanitized message queue count.",
+      "Use a mock rollout count.",
+      "Use sample play-test results."
+    ],
+    "sources": [
+      [
+        "OpenAI · Projects in ChatGPT",
+        "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+      ],
+      [
+        "OpenAI · projects and chats",
+        "https://learn.chatgpt.com/docs/projects?surface=app"
+      ],
+      [
+        "OpenAI · ChatGPT Work and Codex",
+        "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex"
+      ]
+    ]
+  },
+  {
+    "id": "open-dots",
+    "title": "Meet your OpenAI dot",
+    "summary": "A dot is OpenAI’s persistent ChatGPT agent. It has a cloud computer and can continue work between conversations. Start with a small request that needs no connected apps.",
+    "topic": "OpenAI Dots",
+    "where": [
+      "Use a desktop browser, ChatGPT desktop app, or the current ChatGPT iOS app on iPad. Mobile web is unsupported. Access depends on plan, rollout, region and workspace settings."
+    ],
+    "actions": [
+      {
+        "title": "Find Dots",
+        "do": "Sign in to ChatGPT. Open Dots from the sidebar or use the Dot tab in the mobile app. Choose the option to create a dot if you do not already have one.",
+        "see": "Eligible accounts show onboarding or an existing dot conversation.",
+        "stuck": "If it is missing, confirm the correct account and workspace and check the current availability section in OpenAI’s guide."
+      },
+      {
+        "title": "Identify your dot",
+        "do": "Follow onboarding and choose a name if prompted. Open the dot’s profile to see its identity. Leave optional app and computer connections off for this exercise.",
+        "see": "The named dot has its own conversation.",
+        "stuck": "If your profile already shows a dot, open that one. There is no need to reset it."
+      },
+      {
+        "title": "Give one complete assignment",
+        "do": "Send “Use only these facts: room A holds 8, B holds 12, C holds 16. Recommend the smallest room for 11 people and explain your arithmetic.”",
+        "see": "It should recommend B because 8 is too few and 12 is enough.",
+        "stuck": "If it offers to search calendars, reply that these three capacities are all it needs."
+      },
+      {
+        "title": "Return to the same dot",
+        "do": "Reopen its conversation and add “Two more people are coming. Which room now?”",
+        "see": "The total becomes 13 and the smallest fitting room is C.",
+        "stuck": "If it treats two as the total, point it to the earlier group of 11 in this conversation."
+      }
+    ],
+    "roles": [
+      "Rehearse a capacity check with fabricated counts.",
+      "Track a changing planning constraint.",
+      "Keep decisions about one app feature in a continuing assignment."
+    ],
+    "sources": [
+      [
+        "OpenAI · getting started with your dot",
+        "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
+      ],
+      [
+        "OpenAI · meet dots",
+        "https://learn.chatgpt.com/docs/dots"
+      ]
+    ]
+  },
+  {
+    "id": "dot-follow-up",
+    "title": "Give a dot a short assignment and inspect its activity",
+    "summary": "Practice finding an assignment and correcting it before trying recurring work.",
+    "topic": "OpenAI Dots",
+    "where": [
+      "Open your existing dot in ChatGPT on desktop or iPad. The desktop profile is the clearest place to inspect activity."
+    ],
+    "actions": [
+      {
+        "title": "Write a clear stopping point",
+        "do": "Send “Draft a three-item packing check for one laptop, one charger and one adapter. Stop after posting the draft here.”",
+        "see": "You should see a short checklist in your conversation.",
+        "stuck": "If it asks to connect files, explain that the three items in your message are the entire source."
+      },
+      {
+        "title": "Inspect what happened",
+        "do": "Select your dot’s name or avatar to open its profile. Inspect the relevant task or activity where available, then return to the conversation.",
+        "see": "You can distinguish the requested checklist from other dot work.",
+        "stuck": "For a simple reply, there may be no separate long-running task. The conversation itself preserves the response."
+      },
+      {
+        "title": "Give feedback",
+        "do": "Say “This trip uses USB-C outlets. Remove the adapter and show the updated list.”",
+        "see": "The new list contains only laptop and charger.",
+        "stuck": "If a third item remains, ask which supplied fact requires it."
+      },
+      {
+        "title": "Inspect ongoing work",
+        "do": "Open Scheduled in ChatGPT or the dot’s profile. This one-time exercise should not have created a recurring schedule. Identify the control used to manage an existing scheduled task without changing it.",
+        "see": "You can tell an ordinary follow-up apart from an actual scheduled assignment.",
+        "stuck": "If your dot already has other schedules, inspect their names and leave them as they were."
+      }
+    ],
+    "roles": [
+      "Inspect whether a draft report was a one-time assignment.",
+      "Distinguish a task update from a recurring job.",
+      "Track small changes to a project brief."
+    ],
+    "sources": [
+      [
+        "OpenAI · getting started with your dot",
+        "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
+      ],
+      [
+        "OpenAI · meet dots",
+        "https://learn.chatgpt.com/docs/dots"
+      ]
+    ]
+  },
+  {
+    "id": "chatgpt-space-begin",
+    "title": "Turn a chat into a page in ChatGPT Space",
+    "summary": "Make a checklist you can reopen and edit. The page holds the finished words while the conversation holds your requests.",
+    "topic": "ChatGPT Space",
+    "where": [
+      "Use the ChatGPT website or desktop app with a supported account. Space is for adults with eligible access. A younger reader can do the paper version with an adult.",
+      "On paper, draw a line down a sheet. Label the left side Requests and the right side Packing list."
+    ],
+    "actions": [
+      {
+        "title": "Gather the material",
+        "do": "In a new Work conversation, type “Packing list for our pretend ferry walk: hat, water, notebook.” On paper, put those words on the Requests side.",
+        "see": "The starting material has three items. You can count them before a page is created.",
+        "stuck": "If your tool opens an old conversation, start a fresh one so earlier items cannot slip in."
+      },
+      {
+        "title": "Create a page",
+        "do": "Ask “Make a page named Ferry Packing List. Give each item its own line.” Open the resulting page. On paper, copy the three items to the right-hand side under the title.",
+        "see": "You now have a named page with three lines. You can edit it directly or ask for a change.",
+        "stuck": "If Space is missing from the sidebar, check your account and access or use the paper version."
+      },
+      {
+        "title": "Make a narrow edit",
+        "do": "Ask to replace “water” with “water bottle” and keep the other two items. Compare the revised page with the left side of your paper or the original message.",
+        "see": "The middle item is more precise. Hat and notebook still appear exactly once.",
+        "stuck": "If new items show up, ask to restore the original three lines and change only the middle one."
+      },
+      {
+        "title": "Find the result later",
+        "do": "Return to Space in the sidebar and reopen the page by its name. Check the wording there. On paper, fold away the Requests side and read the list.",
+        "see": "Someone can use the finished list without rereading the whole conversation.",
+        "stuck": "If you find a chat instead of the page, open the named page in Space or follow the page link inside the chat."
+      }
+    ],
+    "roles": [
+      "Keep a reviewed checklist alongside a report exercise.",
+      "Turn pretend meeting decisions into an editable page.",
+      "Keep a short feature checklist in a place you can return to."
+    ],
+    "sources": [
+      [
+        "OpenAI · getting started with Space",
+        "https://help.openai.com/en/articles/20001549-getting-started-with-space-in-chatgpt"
+      ]
+    ]
+  }
+]

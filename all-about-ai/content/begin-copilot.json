@@ -1,0 +1,369 @@
+[
+  {
+    "id": "open-github-copilot",
+    "title": "Open GitHub Copilot in Visual Studio Code",
+    "summary": "GitHub Copilot is the coding assistant inside the editor. This exercise connects the desktop editor to your GitHub account and explains a tiny practice file.",
+    "topic": "GitHub Copilot",
+    "where": [
+      "On Mac or Windows obtain Visual Studio Code at code.visualstudio.com and sign in with the GitHub account authorized for Copilot.",
+      "These exact status-bar and folder-picker steps use desktop VS Code. An iPad browser does not supply the same local desktop editor."
+    ],
+    "actions": [
+      {
+        "title": "Open a practice folder",
+        "do": "Create AI-Editor-Practice in Documents using Finder or File Explorer. In VS Code choose File → Open Folder and select that folder.",
+        "see": "Explorer in the left sidebar shows AI-Editor-Practice.",
+        "stuck": "If you opened an individual file, repeat Open Folder so the editor knows the project boundary."
+      },
+      {
+        "title": "Sign in to Copilot",
+        "do": "Hover over the Copilot status icon and select Use AI Features or Sign in to use Copilot. Follow the browser sign-in and return to VS Code.",
+        "see": "The editor shows an active Copilot account or offers an eligible plan.",
+        "stuck": "For a managed subscription, confirm which GitHub account holds the seat. A Microsoft 365 Copilot license is a different product."
+      },
+      {
+        "title": "Make a sample",
+        "do": "Choose File → New Text File. Type “Queue target: 15 minutes.” Save it inside the folder as service.txt.",
+        "see": "service.txt appears in Explorer and the sentence is visible in the editor.",
+        "stuck": "If the file opens as Untitled, use Save As and select the practice folder explicitly."
+      },
+      {
+        "title": "Ask about the active file",
+        "do": "Open the Chat view and ask “Read service.txt. What is the target and unit? Please leave the file unchanged.” Add the file as context if prompted.",
+        "see": "The answer gives 15 minutes.",
+        "stuck": "If it cannot see service.txt, open it or attach it through the chat’s context picker and ask again."
+      }
+    ],
+    "roles": [
+      "Read a small mail-operations script or note.",
+      "Explain an inventory helper from the editor.",
+      "Learn what code in an app does."
+    ],
+    "sources": [
+      [
+        "Microsoft · set up GitHub Copilot in VS Code",
+        "https://code.visualstudio.com/docs/setup/copilot"
+      ],
+      [
+        "Microsoft · chat sessions",
+        "https://code.visualstudio.com/docs/agents/run/sessions/manage-sessions"
+      ]
+    ]
+  },
+  {
+    "id": "github-copilot-inline",
+    "title": "Try one inline suggestion in VS Code",
+    "summary": "Inline suggestions appear as dim text while you type. You control what becomes part of the file.",
+    "topic": "GitHub Copilot",
+    "where": [
+      "Open desktop VS Code on Mac or Windows with GitHub Copilot enabled. A text file saved with a .js extension is enough for this exercise."
+    ],
+    "actions": [
+      {
+        "title": "Start a JavaScript file",
+        "do": "In a practice folder create double.js. Type the comment “// Return twice a numeric value” and press Enter.",
+        "see": "The file tab ends in .js and the comment is visible.",
+        "stuck": "If the tab says Plain Text at the bottom, save with the .js extension or set the language to JavaScript."
+      },
+      {
+        "title": "Trigger a suggestion",
+        "do": "Type “function doubleValue(n) {” and press Enter. Pause briefly and look for dim suggested code.",
+        "see": "A completion may propose a return statement. Its exact spelling can vary.",
+        "stuck": "If nothing appears, check the Copilot status menu and use the editor’s trigger-inline-suggestion command."
+      },
+      {
+        "title": "Decide what to insert",
+        "do": "If the suggestion computes twice n, press Tab to accept it. Use Escape to dismiss an unsuitable suggestion, then type return n * 2; yourself. Add the closing brace if needed.",
+        "see": "Accepted text becomes regular editor text.",
+        "stuck": "If Tab merely indents, there was no active completion. Trigger another suggestion or finish typing the line."
+      },
+      {
+        "title": "Check the logic",
+        "do": "Open Chat and ask “Read double.js and explain the results for 3, 0 and -2.” Compare each prediction to the expression in the file.",
+        "see": "The expected values are 6, 0 and -4.",
+        "stuck": "If the values differ, inspect what was actually inserted. Highlighted or dim text may still be a suggestion."
+      }
+    ],
+    "roles": [
+      "Complete small reporting helpers.",
+      "Complete transformations in a local sample script.",
+      "Try a single function without turning a whole task over to an agent."
+    ],
+    "sources": [
+      [
+        "Microsoft · inline suggestions",
+        "https://code.visualstudio.com/docs/editing/ai-powered-suggestions"
+      ],
+      [
+        "Microsoft · set up GitHub Copilot in VS Code",
+        "https://code.visualstudio.com/docs/setup/copilot"
+      ]
+    ]
+  },
+  {
+    "id": "github-copilot-first-chat",
+    "title": "Use Copilot Chat to explain a boundary",
+    "summary": "Ask a question with an answer you can verify, then change one character and see whether the explanation follows the code.",
+    "topic": "GitHub Copilot",
+    "where": [
+      "Use the desktop VS Code Chat view while signed into GitHub Copilot. Open a practice folder with permission to create files."
+    ],
+    "actions": [
+      {
+        "title": "Create a rule",
+        "do": "Save a new file named rule.js in your folder with the single line “const isReady = count => count >= 3;”. Type the line without quotation marks.",
+        "see": "You can see the greater-than-or-equal sign and the number 3.",
+        "stuck": "If the file shows special quotation marks, remove them. They are not part of this sample."
+      },
+      {
+        "title": "Supply the source",
+        "do": "Open Chat. Attach rule.js with the context control or use the open file as context. Type “Read rule.js and explain the threshold. Give results for 2, 3 and 4. Make no edits.”",
+        "see": "The answer gives false, true and true.",
+        "stuck": "If the answer says “more than 3,” ask which operator appears in the actual file."
+      },
+      {
+        "title": "Make one edit yourself",
+        "do": "Change >= to >, save the file and leave it open. Ask for the same three results from the saved revision.",
+        "see": "Only the middle result changes, to false.",
+        "stuck": "If all three are identical to the earlier answer, reattach the saved file or start a fresh chat with it."
+      },
+      {
+        "title": "Explain the difference",
+        "do": "Ask which single input distinguishes the two rules and why. Compare the response with both versions you typed.",
+        "see": "A count of exactly 3 separates the rules.",
+        "stuck": "If the response introduces a real workplace policy, remind it that the entire rule is the one-line exercise."
+      }
+    ],
+    "roles": [
+      "Review a quota threshold in an Exchange script.",
+      "Understand a group-size filter.",
+      "Check an app’s boundary rule."
+    ],
+    "sources": [
+      [
+        "Microsoft · chat sessions",
+        "https://code.visualstudio.com/docs/agents/run/sessions/manage-sessions"
+      ],
+      [
+        "Microsoft · set up GitHub Copilot in VS Code",
+        "https://code.visualstudio.com/docs/setup/copilot"
+      ]
+    ]
+  },
+  {
+    "id": "open-copilot",
+    "title": "Open the work version of Copilot",
+    "summary": "Use your work account to turn a short sample notice into a question and answer.",
+    "topic": "Microsoft 365 Copilot",
+    "where": [
+      "On Mac, PC or iPad, open m365.cloud.microsoft/chat in a browser. Choose your work or school account. The Microsoft 365 Copilot mobile app also offers work chat when available."
+    ],
+    "actions": [
+      {
+        "title": "Choose your account",
+        "do": "Open the site and select Sign in if asked. Choose the account your organization gave you.",
+        "see": "A work Copilot home or Chat opens. Some accounts have a newer Home layout.",
+        "stuck": "Check the account picture. If it shows your personal account, switch accounts or use a separate browser profile."
+      },
+      {
+        "title": "Find the writing box",
+        "do": "Choose Chat or New if needed. Click the box where you can type a message.",
+        "see": "A text cursor appears.",
+        "stuck": "If sign-in succeeds but chat is unavailable, check your work license or ask the account administrator."
+      },
+      {
+        "title": "Send a first question",
+        "do": "Enter “Sample notice: shared mailbox search resumes at 14:00 UTC. Delivery continues. Which feature is affected?”",
+        "see": "The answer identifies search. The notice says delivery continues.",
+        "stuck": "If it starts searching the web, ask it to use only the sample notice."
+      },
+      {
+        "title": "Check a missing fact",
+        "do": "Ask “What is the name of the person handling the change?”",
+        "see": "The source gives no name.",
+        "stuck": "Ask it to quote the source for any name. Work grounding and account permissions determine which outside evidence a real work chat can use."
+      }
+    ],
+    "roles": [
+      "Read a supplied mail notice.",
+      "Check a rollout message for missing facts.",
+      "Turn a feature description into test questions."
+    ],
+    "sources": [
+      [
+        "Microsoft · start Copilot Chat at work",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ],
+      [
+        "Microsoft · open work Copilot",
+        "https://m365.cloud.microsoft/chat"
+      ],
+      [
+        "Microsoft · the Copilot mobile app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-the-microsoft-365-copilot-mobile-app"
+      ],
+      [
+        "Microsoft · Copilot across Office apps",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "open-copilot-outlook",
+    "title": "Find a summary in Outlook",
+    "summary": "Copilot can summarize an email conversation and point you back to the contributing messages.",
+    "topic": "Microsoft 365 Copilot",
+    "where": [
+      "Open Outlook on your Mac, PC or mobile device and choose a work mailbox with Copilot access. For an all-fictional exercise, open work Copilot Chat instead and paste the sample thread below."
+    ],
+    "actions": [
+      {
+        "title": "Locate the summary button",
+        "do": "Open an existing non-sensitive conversation you can read. Look above the messages for Summary by Copilot or Summarize.",
+        "see": "The control appears on supported Outlook versions and accounts.",
+        "stuck": "If it is missing, use Copilot Chat for the sample task. That practices the reading skill without demonstrating the Outlook button."
+      },
+      {
+        "title": "Inspect one source",
+        "do": "For the Outlook route select the summary. Follow one numbered reference if the summary includes any.",
+        "see": "The reference points to an underlying email.",
+        "stuck": "If there are no references, expand the original messages and check the latest substantive reply manually."
+      },
+      {
+        "title": "Try a sample in chat",
+        "do": "Paste “M1 Kim: Tuesday confirmed. M2 Sam: Could we use Wednesday? M3 Kim: I will check. State the confirmed and requested days.”",
+        "see": "Tuesday is confirmed. Wednesday is requested.",
+        "stuck": "If it says Wednesday is booked, ask for the exact words that accept it."
+      },
+      {
+        "title": "Draft one line",
+        "do": "Ask “Write a reply asking for the decision. Show only the draft.”",
+        "see": "A suitable draft asks whether Wednesday is confirmed.",
+        "stuck": "Read the draft as if you were the recipient. A new assertion of approval would undo the original check."
+      }
+    ],
+    "roles": [
+      "Follow a maintenance approval back to its email.",
+      "Resolve the status of a rollout request.",
+      "Separate a user suggestion from an accepted change."
+    ],
+    "sources": [
+      [
+        "Microsoft · Outlook thread summaries",
+        "https://support.microsoft.com/en-us/outlook/copilot-pages/summarize-an-email-thread-with-copilot-in-outlook"
+      ],
+      [
+        "Microsoft · Copilot across Office apps",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ],
+      [
+        "Microsoft · start Copilot Chat at work",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "open-copilot-teams",
+    "title": "Read a meeting recap in Teams",
+    "summary": "A recap brings together available meeting evidence. Learn where to check whether a decision appears in the record.",
+    "topic": "Microsoft 365 Copilot",
+    "where": [
+      "In Teams, open a past meeting you already have permission to view. To practice without a real meeting, use m365.cloud.microsoft/chat and the two sample lines below."
+    ],
+    "actions": [
+      {
+        "title": "Find the recap",
+        "do": "Open the meeting chat and look for Recap. Open it and look for Copilot where your account permits it.",
+        "see": "A supported meeting may show notes, a transcript and a Copilot panel.",
+        "stuck": "If that panel is missing, use the sample below. A missing transcript limits later questions about spoken words."
+      },
+      {
+        "title": "Read before trusting",
+        "do": "If a transcript is available, inspect a sentence with its speaker and time.",
+        "see": "You can separate text from the meeting chat from words captured during the meeting.",
+        "stuck": "A transcript started late covers only the captured portion. Treat earlier discussion as unknown unless another source records it."
+      },
+      {
+        "title": "Run a small exercise",
+        "do": "In Chat paste “10:01 Jo: I propose Friday. 10:05 Pat: Monday approved. List the proposed day and approved day with evidence.”",
+        "see": "The two days are Friday and Monday.",
+        "stuck": "If the tool combines the days, ask for one row per sentence."
+      },
+      {
+        "title": "Check the owner",
+        "do": "Ask “Who agreed to do the work?”",
+        "see": "The excerpt identifies an approver but names no person who accepted the assignment.",
+        "stuck": "If it assigns the job to Pat, request the words in which Pat accepted the work."
+      }
+    ],
+    "roles": [
+      "Check spoken incident handoffs.",
+      "Track a rollout decision to its evidence.",
+      "Write issues from a design discussion."
+    ],
+    "sources": [
+      [
+        "Microsoft · Copilot in Teams meetings",
+        "https://support.microsoft.com/en-us/teams/copilot/catch-up-on-meetings-with-microsoft-365-copilot-in-teams"
+      ],
+      [
+        "Microsoft · start Copilot Chat at work",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  },
+  {
+    "id": "open-copilot-excel",
+    "title": "Ask Excel to check a small table",
+    "summary": "Give Copilot numbers that you can add yourself before you try a larger workbook.",
+    "topic": "Microsoft 365 Copilot",
+    "where": [
+      "Open Excel with an eligible account and make a practice workbook. Use the Copilot control if shown. For chat-only access, put the same rows into work Copilot Chat."
+    ],
+    "actions": [
+      {
+        "title": "Enter the data",
+        "do": "In A1 type Team and in B1 type Count. Add North and 4 in row 2, then South and 7 in row 3.",
+        "see": "The sheet has one header and two data rows.",
+        "stuck": "If you are in chat, type “Team, Count / North, 4 / South, 7.”"
+      },
+      {
+        "title": "Ask for an explicit formula",
+        "do": "Select the data, open Copilot and ask “What formula adds these two counts? Which cells does it use?”",
+        "see": "A suitable answer uses =SUM(B2:B3).",
+        "stuck": "If the workbook controls are unavailable, type the suggested formula into B4 yourself."
+      },
+      {
+        "title": "Read the cell",
+        "do": "Check B4 or the answer against 4 + 7.",
+        "see": "The total is 11.",
+        "stuck": "If the result is 4 or 7, check whether both numeric cells are in the formula range."
+      },
+      {
+        "title": "Change one row",
+        "do": "Replace 7 with 9. Recheck the total. For the chat fallback send the revised values again.",
+        "see": "In a working sheet the calculated total becomes 13.",
+        "stuck": "A plain chat shows a new answer only after you give it the new data. If the sheet still says 11, inspect the B4 formula."
+      }
+    ],
+    "roles": [
+      "Check a supplied mailbox count.",
+      "Validate a small adoption report.",
+      "Test a simple scoreboard calculation."
+    ],
+    "sources": [
+      [
+        "Microsoft · Copilot in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ],
+      [
+        "Microsoft · Copilot across Office apps",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ],
+      [
+        "Microsoft · start Copilot Chat at work",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat"
+      ]
+    ]
+  }
+]

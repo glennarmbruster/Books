@@ -1,0 +1,327 @@
+[
+  {
+    "id": "open-comet",
+    "title": "Open Comet and ask about the page you see",
+    "summary": "Comet is Perplexity’s web browser. Its assistant can help you read an open page.",
+    "topic": "Perplexity",
+    "where": [
+      "On Windows or Mac, visit perplexity.ai/comet for the official download. On an iPad, use the iOS App Store link from that page. Comet is also available on Android."
+    ],
+    "actions": [
+      {
+        "title": "Open the browser",
+        "do": "Install Comet and open it. You can practice without importing bookmarks or making it the default browser.",
+        "see": "You reach a browser window with an address field.",
+        "stuck": "A tab at perplexity.ai in Safari is Perplexity Search. This exercise uses the separate Comet app."
+      },
+      {
+        "title": "Visit one public page",
+        "do": "Enter example.com in the address field. Read its heading.",
+        "see": "The heading is “Example Domain.”",
+        "stuck": "If a search results page opens, enter https://example.com as a complete address."
+      },
+      {
+        "title": "Ask about that page",
+        "do": "Open the Assistant in Comet. Ask “What is the heading of my current page? Give the address you used.”",
+        "see": "Its answer should identify Example Domain at example.com.",
+        "stuck": "On desktop look for the assistant beside the page. On mobile open its assistant control. Share the current tab if prompted."
+      },
+      {
+        "title": "Check the context",
+        "do": "Open example.org in a new tab and ask the same question.",
+        "see": "The heading is similar but the address should now end in .org.",
+        "stuck": "If it still quotes .com, explicitly select the second tab or start the assistant from that tab."
+      }
+    ],
+    "roles": [
+      "Read a public Exchange help page.",
+      "Check which admin guide a summary cites.",
+      "Compare documentation in two tabs."
+    ],
+    "sources": [
+      [
+        "Perplexity · get Comet",
+        "https://www.perplexity.ai/comet"
+      ],
+      [
+        "Perplexity · Comet on iOS",
+        "https://www.perplexity.ai/changelog/what-we-shipped--march-27-2026"
+      ],
+      [
+        "Perplexity · its illustrated Comet guide",
+        "https://r2cdn.perplexity.ai/pdf/pplx-at-work.pdf"
+      ]
+    ]
+  },
+  {
+    "id": "open-perplexity",
+    "title": "Ask Perplexity Search and inspect its source",
+    "summary": "Perplexity Search writes answers with links to its sources. Learn to check the sentence behind one answer.",
+    "topic": "Perplexity",
+    "where": [
+      "Open perplexity.ai in a browser. Standard Search is enough. You can use it in Safari or an existing desktop browser."
+    ],
+    "actions": [
+      {
+        "title": "Find the question field",
+        "do": "Open the Perplexity homepage and start a fresh question. Choose a normal search if the screen offers several tools.",
+        "see": "A box accepts words and a send control runs the search.",
+        "stuck": "Return to the home or new search screen if you see an old conversation."
+      },
+      {
+        "title": "Ask a narrow question",
+        "do": "Send “Which agency launched Apollo 11? Give the launch date and link to NASA’s Apollo 11 mission page.”",
+        "see": "Look for NASA and July 16, 1969 with an attached source.",
+        "stuck": "If it answers only with a moon landing date, ask specifically for the launch date."
+      },
+      {
+        "title": "Open the citation",
+        "do": "Select the source next to the claim. Check the publisher and find the date on the mission page.",
+        "see": "A NASA page should support July 16 as the launch date.",
+        "stuck": "If the link goes to a fan page or a generic homepage, ask for the mission page and open the replacement citation."
+      },
+      {
+        "title": "Test a second fact",
+        "do": "Ask “Which date was the Moon landing? Keep it separate from launch.”",
+        "see": "The landing date is July 20, 1969.",
+        "stuck": "Look at the event label as well as the date. Different events in one mission have different dates."
+      }
+    ],
+    "roles": [
+      "Check a public support statement at its source.",
+      "Find the original rollout notice behind a summary.",
+      "Verify which library release a claim describes."
+    ],
+    "sources": [
+      [
+        "Perplexity · open Search",
+        "https://www.perplexity.ai/"
+      ],
+      [
+        "Perplexity · its illustrated Comet guide",
+        "https://r2cdn.perplexity.ai/pdf/pplx-at-work.pdf"
+      ],
+      [
+        "Perplexity · first question and citations",
+        "https://www.perplexity.ai/en-GB/hub/getting-started"
+      ],
+      [
+        "NASA · Apollo 11",
+        "https://www.nasa.gov/mission/apollo-11/"
+      ]
+    ]
+  },
+  {
+    "id": "open-grok-bot",
+    "title": "Give Grok Bot a first file-making job",
+    "summary": "Grok Bot is an agent that can work on files on its cloud computer. Give it a task with an answer you can open.",
+    "topic": "Grok Bot",
+    "where": [
+      "On a computer visit x.ai/bot and use its official download. The getting-started guide covers macOS, Windows and Linux and links its mobile options. Use an eligible account or seat shown at sign-in."
+    ],
+    "actions": [
+      {
+        "title": "Sign in to the Bot app",
+        "do": "Open the installed app, choose Sign in and finish the account step in the browser. Return to Grok Bot.",
+        "see": "The Bot workspace opens when your account has access.",
+        "stuck": "If you see an access screen, read its account-linking options. A working ordinary Grok chat does not establish Bot access."
+      },
+      {
+        "title": "Create a practice Bot",
+        "do": "Choose New Bot or the plus at the top of the sidebar. Give the Bot the name List Maker.",
+        "see": "Your new Bot has a place to send messages.",
+        "stuck": "On a team, select Create a Bot from the plus menu if offered."
+      },
+      {
+        "title": "Give it a local file job",
+        "do": "Send “Create a small CSV file called fruit.csv with columns Name,Count and two rows: Pear,2 and Plum,3. Return the file here.”",
+        "see": "Look for a CSV attachment in its reply.",
+        "stuck": "If it only prints a table, ask for a downloadable CSV file in the conversation. It needs no account connection for these values."
+      },
+      {
+        "title": "Read the result",
+        "do": "Open the returned file. Check the header, rows and total.",
+        "see": "There are two fruit records and five pieces of fruit.",
+        "stuck": "If the preview is unclear, download the file and open it in a text editor or spreadsheet."
+      }
+    ],
+    "roles": [
+      "Rehearse making a report from synthetic data.",
+      "Generate a two-row inventory sample.",
+      "Make a CSV fixture for an importer."
+    ],
+    "sources": [
+      [
+        "xAI · get Grok Bot",
+        "https://x.ai/bot"
+      ],
+      [
+        "xAI · sign in and make a Bot",
+        "https://docs.x.ai/grok-bot/get-started"
+      ],
+      [
+        "xAI · files and results",
+        "https://docs.x.ai/grok-bot/files-and-results"
+      ]
+    ]
+  },
+  {
+    "id": "open-vibe",
+    "title": "Open Mistral Vibe and make a short checklist",
+    "summary": "Vibe is Mistral’s assistant for work and code. Try the work view with a task that needs no connected apps.",
+    "topic": "Mistral Vibe",
+    "where": [
+      "Open chat.mistral.ai in a browser and sign in. If an older guide calls it Le Chat, Mistral now uses Vibe."
+    ],
+    "actions": [
+      {
+        "title": "Find the work area",
+        "do": "Choose Work from the sidebar mode selector if you see modes. On accounts with a combined Chat and Work view, use the main writing box.",
+        "see": "You can enter a work request.",
+        "stuck": "If you are in Code and it asks for a repository, switch to Work for this checklist."
+      },
+      {
+        "title": "Provide a tiny job",
+        "do": "Send “From these facts make a two-item packing checklist: carry the cabin key and charge the phone.”",
+        "see": "The answer contains two actions.",
+        "stuck": "If it adds travel tips, ask it to use only the two actions you provided."
+      },
+      {
+        "title": "Ask for a clearer format",
+        "do": "Send “Put one unchecked box before each item and keep each line to five words.”",
+        "see": "Each action has its own short checklist line.",
+        "stuck": "If the boxes are not clickable, text symbols like ☐ are enough for this exercise."
+      },
+      {
+        "title": "Check a small revision",
+        "do": "Send “Replace phone with tablet and leave the first item alone.”",
+        "see": "You should see a cabin key item and a tablet item.",
+        "stuck": "If the entire checklist changes, quote the first line you want kept."
+      }
+    ],
+    "roles": [
+      "Draft a synthetic two-step mail checklist.",
+      "Prepare short instructions for a training group.",
+      "Test how text fits on a checklist screen."
+    ],
+    "sources": [
+      [
+        "Mistral · open Vibe",
+        "https://chat.mistral.ai/"
+      ],
+      [
+        "Mistral · your first Work task",
+        "https://docs.mistral.ai/getting-started/quickstarts/vibe-work/first-task"
+      ],
+      [
+        "Mistral · current Vibe surface",
+        "https://docs.mistral.ai/vibe"
+      ],
+      [
+        "Mistral · Le Chat is now Vibe",
+        "https://help.mistral.ai/en/articles/682992-le-chat-is-now-vibe"
+      ]
+    ]
+  },
+  {
+    "id": "open-firefly",
+    "title": "Turn one photo into a short clip in Firefly",
+    "summary": "Adobe Firefly can make a video using a picture as its first frame. Inspect the result for unwanted changes.",
+    "topic": "Adobe Firefly",
+    "where": [
+      "Open firefly.adobe.com on a computer and sign in. Use a simple photo you took, such as a mug on a table. Video access and the credits charged depend on the model and plan."
+    ],
+    "actions": [
+      {
+        "title": "Open the video tool",
+        "do": "Find Video, then Generate video. Open the controls for a starting frame.",
+        "see": "You should see a prompt field and an option for a first image.",
+        "stuck": "If you only see image generation, return to the video area. A photo preview alone does not make a clip."
+      },
+      {
+        "title": "Supply the starting picture",
+        "do": "Under Frame or Frames, add your photo as the first frame. Keep the last frame empty for this exercise.",
+        "see": "The photo appears as the starting picture.",
+        "stuck": "If it looks cut off, inspect the shape of the video frame and choose a closer match."
+      },
+      {
+        "title": "Describe one motion",
+        "do": "Enter “Slowly move the camera closer to the mug. Keep the mug still and the room unchanged.” Check the displayed generation cost before selecting Generate.",
+        "see": "With video access and sufficient credits, a playable clip appears.",
+        "stuck": "If generation is unavailable, keep the source and prompt as a storyboard. A storyboard is a plan, not a rendered video."
+      },
+      {
+        "title": "Play and inspect",
+        "do": "Play the result twice. Compare the opening to the photo, then watch the handle and background near the end.",
+        "see": "The intended motion is a camera move; extra handles or a shifting object are visible errors.",
+        "stuck": "If the motion is too busy, reduce the description to one slow camera move and retry only if you intend to use more credits."
+      }
+    ],
+    "roles": [
+      "Storyboard a short training illustration.",
+      "Mock up a visual intro for a how-to.",
+      "Create a short preview clip for an app screen."
+    ],
+    "sources": [
+      [
+        "Adobe · open Firefly",
+        "https://firefly.adobe.com/"
+      ],
+      [
+        "Adobe · creating video from images",
+        "https://helpx.adobe.com/firefly/web/work-with-audio-and-video/work-with-video/generate-videos-using-images.html"
+      ]
+    ]
+  },
+  {
+    "id": "firefly-fill",
+    "title": "Change just one part of a picture",
+    "summary": "Put a tiny orange sailboat next to a mug. First show Firefly exactly where the new object belongs.",
+    "topic": "Adobe Firefly",
+    "where": [
+      "Use Firefly on a computer with your Adobe account. A plain photo you took of a mug on a table works well. Leave an empty patch of table beside it.",
+      "If you are using the mobile app, choose Generative fill, then upload the photo. The controls shown in the picture come from Adobe’s demonstration."
+    ],
+    "actions": [
+      {
+        "title": "Open the picture",
+        "do": "In Firefly choose Image, then Edit image. Upload your photo and choose Fill in the editing tools. On a phone use the brush tool inside Generative fill.",
+        "see": "The full photo appears with a brush control. You can see the mug and the empty tabletop.",
+        "stuck": "If you see a blank text-to-image box, switch to Edit and choose your existing picture."
+      },
+      {
+        "title": "Paint the space",
+        "do": "Brush a patch on the table beside the mug. Imagine where the little boat’s base would sit. Stop before your brush touches the mug.",
+        "see": "A colored overlay shows the area you have selected. This colored paint is a guide for the tool.",
+        "stuck": "If you paint over the mug, choose Select less or the subtract control and brush that part of the selection away."
+      },
+      {
+        "title": "Describe one object",
+        "do": "Type “a small orange toy sailboat standing on the table.” Select Fill or Generate. Wait for the result before deciding whether to use it.",
+        "see": "The boat should sit inside the marked area. Look at both its size and its contact with the table.",
+        "stuck": "If the boat floats above the table, change the selected area to include the surface below the boat and try again."
+      },
+      {
+        "title": "Compare the whole photo",
+        "do": "Look at the mug’s handle, its shadow and the edge of the table. Pick a variation only after checking all three. Save a new copy.",
+        "see": "You have an original and an edited picture. You can point out the one change you intended.",
+        "stuck": "If the mug has changed shape, return to the original and use a narrower selection. Preserve the original for comparison."
+      }
+    ],
+    "roles": [
+      "Use a made-up picture when illustrating a help note.",
+      "Practice image editing on a training slide you own.",
+      "Add a prop to a book-cover prototype before choosing final artwork."
+    ],
+    "sources": [
+      [
+        "Adobe · Generative Fill on the web",
+        "https://helpx.adobe.com/firefly/web/work-with-images/edit-images/generative-fill.html"
+      ],
+      [
+        "Adobe · mobile steps",
+        "https://helpx.adobe.com/firefly/mobile/edit-images/transform-images-using-generative-fill/add-or-replace-objects.html"
+      ]
+    ]
+  }
+]
