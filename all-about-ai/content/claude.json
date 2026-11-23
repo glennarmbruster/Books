@@ -6,9 +6,9 @@
     "intro": {
       "what": "Claude is a helper you can talk to. For one question, open a chat. A Project keeps related chats and files together for use over time.",
       "features": "You can add a file, save project instructions, link a service or search the web. Choose where the facts should come from.",
-      "exchange": "Keep a sample mail rule in a Project. Ask whether a blank subject matches the rule.",
-      "m365": "Put a practice agenda and its follow-up in one Project. Find what changed.",
-      "developer": "Save the rules of a dice game with its code. Check that a new turn uses the right rules.",
+      "exchange": "Keep the fictional mail-handling rules in a Project for the next shift.",
+      "m365": "Start related document drafts from one saved project brief.",
+      "developer": "Use an Artifact when you want someone to try an interactive control.",
       "sources": [
         [
           "How Claude Projects use shared reference material",
@@ -101,9 +101,9 @@
     "intro": {
       "what": "A model is the part of Claude that reads your request and writes back. The menu in a chat can offer a different list from the API used by an app.",
       "features": "Some models give fast answers to simple jobs. Others spend more time on hard ones. The API lists a price for what you send and a price for what comes back.",
-      "exchange": "Have each model sort three pretend mail warnings. Count the wrong labels.",
-      "m365": "Try the same two meeting notes with each model. Check who owns each task using role labels.",
-      "developer": "Ask two models to fix one scoring bug. Try the same three turns with both fixes.",
+      "exchange": "Compare how two models handle a missing delivery date.",
+      "m365": "Give both models the same scheduling conflict and score their answers.",
+      "developer": "Pick a model by the boundary tests it passes on your app rules.",
       "sources": [
         [
           "Compare the current Claude models",
@@ -203,7 +203,7 @@
         "exercise": {
           "prompt": "Which row changes when a request gets long?",
           "answer": [
-            "The first row applies through {{model.claude.haiku.threshold}}. Above that its rates are {{model.claude.haiku.long-rate}}. Check the price page when you plan a large job."
+            "The first row applies through {{model.claude.haiku.threshold}}. After that threshold its rates are {{model.claude.haiku.long-rate}}. Check the price page when you plan a large job."
           ]
         }
       },
@@ -254,9 +254,9 @@
     "intro": {
       "what": "Claude Code helps with files in a coding project. It can read a file, suggest an edit and run a test.",
       "features": "You can use it in a desktop app or a terminal, a window where you type commands. It can show a plan and a list of what changed.",
-      "exchange": "Add a date filter to a pretend mail report. Keep every row when the filter is clear.",
-      "m365": "Find which file supplies the due date in a sample task list. Change that file in a practice copy.",
-      "developer": "Add a date picker to a tiny book index. Make sure old links still open their pages.",
+      "exchange": "Change a label on a local mailbox lookup and inspect the changed line.",
+      "m365": "Review an edit to a report formatter before sharing its output.",
+      "developer": "Run the edited page and try both the new button and the old reset action.",
       "sources": [
         [
           "Claude Code interfaces and capabilities",
@@ -342,9 +342,9 @@
     "intro": {
       "what": "Claude in Chrome sits beside a web page. Cowork can work through a job with tools and files. A connector lets Claude use a service you choose.",
       "features": "You can ask the browser helper to read a page, give Cowork a practice folder or ask for a draft before anything is sent.",
-      "exchange": "Give Cowork three pretend mail notices. Ask it which ones describe the same issue.",
-      "m365": "Use a practice folder with two meeting plans and list any time clashes.",
-      "developer": "Open your draft help page beside Claude and find the line that tells a player how to win.",
+      "exchange": "Read the count on a practice queue page without submitting the form.",
+      "m365": "Look up one approved note and check its document title.",
+      "developer": "Compare the state of a browser control before and after one permitted click.",
       "sources": [
         [
           "Claude in Chrome availability and controls",
@@ -426,9 +426,9 @@
     "intro": {
       "what": "Claude can read an image and describe it. It can write drawing instructions called SVG. A browser draws the lines and shapes from those instructions.",
       "features": "An Artifact opens a piece of work beside the chat. Claude Design helps make pages you can edit. Claude can also plan the shots for a video.",
-      "exchange": "Ask it to read a picture of a made-up mail error. Mark any number you cannot see.",
-      "m365": "Draw the three steps for joining a practice meeting. Check the order on the picture.",
-      "developer": "Draw a large Start button for a game. Test its size on the screen you will use.",
+      "exchange": "Read the legend in a mock mail-volume chart and check its colors.",
+      "m365": "Check whether a diagram actually shows the two teams named in a brief.",
+      "developer": "Ask for a drawing whose three visible shapes you can count yourself.",
       "sources": [
         [
           "Claude’s image and interactive visual capabilities",

@@ -4,7 +4,7 @@
     "title": "Read one trace without mixing messages",
     "summary": "Two recipients have different outcomes. A subject search catches two extra messages.",
     "level": "Starter",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Find the result for one recipient. Follow the message ID and the address together.",
     "roles": [
       "Read each mail recipient’s outcome.",
@@ -72,7 +72,7 @@
     "title": "Pair a bounce with the failed recipient",
     "summary": "Match a 5.1.10 NDR, then test a missing-address guess against a saved directory check.",
     "level": "Starter",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Match the bounce to the failed address. Test the old and new list entries.",
     "roles": [
       "Explain an address lookup failure.",
@@ -147,7 +147,7 @@
     "title": "Read three results from one mail header",
     "summary": "Turn a stamped header into a short evidence note without guessing the final delivery action.",
     "level": "Starter",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Read the checks stamped on one message. Keep its final delivery state separate.",
     "roles": [
       "Identify which authentication checks failed.",
@@ -198,7 +198,7 @@
       ],
       [
         "header",
-        "The lines a mail system adds above the message body."
+        "The lines a mail system adds before the message body."
       ],
       [
         "SPF",
@@ -227,7 +227,7 @@
     "title": "Check the DNS behind an authentication verdict",
     "summary": "Use a dated DNS snapshot and a working comparison to test an AI explanation.",
     "level": "Starter",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Compare the sending address with the saved DNS record. Use the second message as a check.",
     "roles": [
       "Check SPF, DKIM and DMARC evidence.",
@@ -288,7 +288,7 @@
       ],
       [
         "header",
-        "The lines a mail system adds above the message body."
+        "The lines a mail system adds before the message body."
       ],
       [
         "SPF",
@@ -317,7 +317,7 @@
     "title": "Explain a transport rule that never matches the ticket",
     "summary": "A board notice reaches the intended desk with its original subject. Find which test failed.",
     "level": "Intermediate",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Find the first test the mail rule failed. Read the subject and address before naming the cause.",
     "roles": [
       "Explain a mail flow rule miss.",
@@ -394,7 +394,7 @@
     "title": "Prove a mail-rule fix with two controls",
     "summary": "A narrow, approved practice correction should label one new message and leave two others alone.",
     "level": "Intermediate",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Predict which subjects should gain a tag. Test the real notice and the two control messages.",
     "roles": [
       "Record a verified result for one rule.",
@@ -479,7 +479,7 @@
     "title": "Find the decision inside one sign-in",
     "summary": "Two policy rows say failure. Decide which policy enforced a block on the same sign-in.",
     "level": "Intermediate",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
     "features": "Find the sign-in rule that blocked the device. A rule in preview mode only logs what it would do.",
     "roles": [
@@ -557,7 +557,7 @@
     "title": "Match an Intune report to the moment mail failed",
     "summary": "Your newest device snapshot is the wrong one for an earlier failure.",
     "level": "Intermediate",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
     "features": "Match the device report to the failed sign-in. Read the time on both records.",
     "roles": [
@@ -584,7 +584,7 @@
       }
     ],
     "check": [
-      "IC1 belongs to tab-7 at 09:01. The observed 14.2 is below the required 14.3.",
+      "IC1 belongs to tab-7 at 09:01. The observed 14.2 is older than the required 14.3.",
       "IC2 is another tablet. IC3 is later. Without IC1 the earlier observed version is unknown."
     ],
     "sources": [
@@ -626,7 +626,7 @@
     "title": "Verify a device fix without changing a policy",
     "summary": "Decide what would count as a successful retest before revealing the outcome.",
     "level": "Intermediate",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
     "features": "Check the repaired tablet and a healthy one. A later success needs its own sign-in record.",
     "roles": [
@@ -700,7 +700,7 @@
     "title": "Give a hybrid case one direction",
     "summary": "An separate successful test makes a broken route look healthy.",
     "level": "Intermediate",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
     "features": "Draw the path from the cloud to the local site. Mark where the trace stops.",
     "roles": [
@@ -780,7 +780,7 @@
     "title": "Verify a hybrid repair with two receipts",
     "summary": "Predict a route repair result, then verify it with a positive case and a control.",
     "level": "Advanced",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
     "features": "Check the changed route in both directions. Each path needs a fresh receipt.",
     "roles": [
@@ -866,7 +866,7 @@
     "title": "Audit a proposed command before trusting it",
     "summary": "Read a command before you trust it. Check the shell, the fields and the result.",
     "level": "Advanced",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
     "features": "Match each read command to the place where it runs. A preview alone cannot prove that mail arrived.",
     "roles": [
@@ -895,7 +895,7 @@
       },
       {
         "title": "Review a proposed change on paper",
-        "text": "Find SmartHosts and WhatIf on the Set-OutboundConnector page. Use the command below only to read the installed command details.",
+        "text": "Find SmartHosts and WhatIf on the Set-OutboundConnector page. Use the command only to read the installed command details.",
         "help": "A preview needs a command that supports WhatIf.",
         "code": "$command = Get-Command -Name Set-OutboundConnector -ErrorAction Stop\n$command.Parameters.ContainsKey('SmartHosts')\n$command.Parameters.ContainsKey('WhatIf')"
       },
@@ -907,7 +907,7 @@
       },
       {
         "title": "Prove a local report can stop safely",
-        "text": "In the kit’s cases folder, run the sample file command below. The report must contain ES1 and ES2. Try EV-99 with a fresh output name.",
+        "text": "In the kit’s cases folder, run the sample file command. The report must contain ES1 and ES2. Try EV-99 with a fresh output name.",
         "help": "Without PowerShell, filter the rows by EV-31 on paper.",
         "code": "pwsh -NoProfile -File ./Read-PolicyEvent.ps1 -EventId EV-31 -OutputPath ./policy-EV31.csv"
       }
@@ -1003,7 +1003,7 @@
       },
       {
         "title": "Check the read command",
-        "text": "Read the Get-TransportRule guide. Find Identity. The block below reads one rule in the right practice shell.",
+        "text": "Read the Get-TransportRule guide. Find Identity. The PowerShell example reads one rule in the right practice shell.",
         "help": "Stop if that rule or field is missing.",
         "code": "$ErrorActionPreference = 'Stop'\n$read = Get-Command Get-TransportRule -ErrorAction Stop\nif (-not $read.Parameters.ContainsKey('Identity')) { throw 'Identity is unavailable.' }\n$rule = @(Get-TransportRule -Identity 'ReceiptMarker' -ErrorAction Stop)\nif ($rule.Count -ne 1) { throw 'Expected one matching rule.' }\n$rule | Select-Object Name,State,Mode,Comments | Export-Csv -LiteralPath ./rule-before.csv -NoTypeInformation -NoClobber"
       },
@@ -1047,7 +1047,7 @@
       "change-card.txt"
     ],
     "features": "Read the rule before you plan an edit. Check the field that tests the subject.",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "wordHelp": [
       [
         "evidence",
@@ -1115,7 +1115,7 @@
       },
       {
         "title": "Build the small report",
-        "text": "Read Test-ReceiptWindow.ps1. If PowerShell is available, extract the kit, open its cases folder and run the line below. On iPad, add a Pass column by hand. The rows should read False, True, True, True.",
+        "text": "Read Test-ReceiptWindow.ps1. If PowerShell is available, extract the kit, open its cases folder and run the line. On iPad, add a Pass column by hand. The rows should read False, True, True, True.",
         "help": "An existing output file is protected. Pick a fresh filename. A missing or repeated probe must stop the script before export.",
         "code": "pwsh -NoProfile -File ./Test-ReceiptWindow.ps1 -OutputPath ./retest-result.csv"
       },
@@ -1151,7 +1151,7 @@
       "Test-ReceiptWindow.ps1"
     ],
     "features": "Compare the receipt test with ordinary mail. The ordinary message should stay plain.",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "wordHelp": [
       [
         "evidence",
@@ -1236,7 +1236,7 @@
       "review-window.csv"
     ],
     "features": "Write down the old rule and the fresh results. Give the next shift a way to put the old rule back.",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "wordHelp": [
       [
         "evidence",
@@ -1281,14 +1281,14 @@
     "title": "Capstone: Run one mail case in four tools",
     "summary": "Score Claude, ChatGPT, Gemini and Microsoft 365 Copilot Chat against the same five facts. Unseal the retest only after scoring.",
     "level": "Expert",
-    "requires": "Open the practice files listed below. Use a blank sheet for your answers. Keep the original files as they are.",
+    "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Give each tool the same practice message. Score only the proof in its first reply.",
     "roles": [
       "Use a passing delivery to narrow a failed mail trace.",
       "Use the same question and evidence to review an access case.",
       "Grade four bug reports against the same controls."
     ],
-    "prompt": "Use only the five rows below. This case is fictional. You have no tenant access.\nState the symptom. Compare a sender-wide limit with a limit on one recipient. Cite row IDs. Say what is still unknown. Pick one read-only check to separate the two ideas. Predict what each result would mean. Give no change command.\n\nVT1 | 09:02 UTC | dispatch@example.test to workroom@example.test | total message 14 MB | Failed\nVT2 | 09:04 UTC | same sender to workroom@example.test | total message 1 MB | Delivered\nVT3 | 09:05 UTC | same sender to stores@example.test | same 14 MB message | Delivered\nVT4 | 09:02 UTC | delivery error for VT1 | message exceeds the size allowed for this recipient\nVT5 | undated training worksheet | planned receive limit for Workroom: 20 MB",
+    "prompt": "Use only the five rows. This case is fictional. You have no tenant access.\nState the symptom. Compare a sender-wide limit with a limit on one recipient. Cite row IDs. Say what is still unknown. Pick one read-only check to separate the two ideas. Predict what each result would mean. Give no change command.\n\nVT1 | 09:02 UTC | dispatch@example.test to workroom@example.test | total message 14 MB | Failed\nVT2 | 09:04 UTC | same sender to workroom@example.test | total message 1 MB | Delivered\nVT3 | 09:05 UTC | same sender to stores@example.test | same 14 MB message | Delivered\nVT4 | 09:02 UTC | delivery error for VT1 | message exceeds the size allowed for this recipient\nVT5 | undated training worksheet | planned receive limit for Workroom: 20 MB",
     "kit": "practice/exchange-inventory.zip",
     "steps": [
       {

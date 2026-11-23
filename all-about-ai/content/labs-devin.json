@@ -15,7 +15,7 @@
     "steps": [
       {
         "title": "Unzip the sample kit",
-        "text": "Tap Download the practice kit. Unzip it. Find the folder holding mailboxes.csv. Open PowerShell 7 there and run the three lines below. Predict which four of the six rows will be included.",
+        "text": "Tap Download the practice kit. Unzip it. Find the folder holding mailboxes.csv. Open PowerShell 7 there and run the three lines. Predict which four of the six rows will be included.",
         "help": "Get-Location shows the current folder. If the CSV is missing, look inside the unpacked folder. The room and device rows stay out.",
         "code": "Get-Location\n$PSVersionTable.PSVersion\nImport-Csv ./mailboxes.csv | Format-Table -AutoSize"
       },
@@ -26,7 +26,7 @@
       },
       {
         "title": "Move from a plan to a script",
-        "text": "Read the plan. Check which mailbox types it will read and what it will do if a read fails. Use Send to Devin or start an Agent session in the same project. Give it the request below.",
+        "text": "Read the plan. Check which mailbox types it will read and what it will do if a read fails. Use Send to Devin or start an Agent session in the same project. Give it the request.",
         "help": "Look at the changed files. You expect one report script. If there are extra mail commands, ask what they do before running the file.",
         "code": "Write Get-MailboxInventory.ps1 from the plan. Run the tests if PowerShell 7 is available. Make a draft pull request so I can review the change. Show the changed file, test command, results and any part you could not test."
       },
@@ -38,19 +38,19 @@
       },
       {
         "title": "Run the five checks",
-        "text": "Run the test file below in the same PowerShell window. Read each result. It checks which rows appear, the header with no rows, bad addresses, an existing output and a pretend live read.",
+        "text": "Run the test file in the same PowerShell window. Read each result. It checks which rows appear, the header with no rows, bad addresses, an existing output and a pretend live read.",
         "help": "Five PASS lines mean the script met the practice checks. The test uses a stand-in for Exchange, so it can run without a mail connection.",
         "code": "./Test-Inventory.ps1 -Script $reportScript"
       },
       {
         "title": "Prove the test can catch a mistake",
-        "text": "Run the block below. It makes a temporary copy of the answer, reverses the sort there and tests that copy. Then it removes the temporary file and checks the original again.",
+        "text": "Run the block. It makes a temporary copy of the answer, reverses the sort there and tests that copy. Then it removes the temporary file and checks the original again.",
         "help": "Look for a failed order check on the temporary copy. The untouched answer should still pass. This shows the test can catch a real difference.",
         "code": "$copy = Join-Path ([IO.Path]::GetTempPath()) (\"inventory-{0}.ps1\" -f [guid]::NewGuid())\n(Get-Content ./Reference/Get-MailboxInventory.ps1 -Raw).Replace('Sort-Object PrimarySmtpAddress |', 'Sort-Object PrimarySmtpAddress -Descending |') | Set-Content -LiteralPath $copy\ntry { ./Test-Inventory.ps1 -Script $copy } catch { $_.Exception.Message } finally { Remove-Item -LiteralPath $copy }\n./Test-Inventory.ps1 -Script ./Reference/Get-MailboxInventory.ps1"
       },
       {
         "title": "Optional: run an approved live read",
-        "text": "The local exercise is complete. For a live check, use only a work computer and account approved for this read. Open a fresh PowerShell 7 window with the approved Exchange module. Inspect the script first. Sign in on that computer only, then use the commands below.",
+        "text": "The local exercise is complete. For a live check, use only a work computer and account approved for this read. Open a fresh PowerShell 7 window with the approved Exchange module. Inspect the script first. Sign in on that computer only, then use the commands.",
         "help": "The live script reads mailboxes your account may see. It writes a local CSV to a fresh path. Keep that file on the approved device. Never paste it into the agent or add it to the practice project.",
         "code": "Import-Module ExchangeOnlineManagement\n$upn = Read-Host 'Your authorized Exchange Online sign-in'\nConnect-ExchangeOnline -UserPrincipalName $upn -ShowBanner:$false\ntry {\n    $out = Join-Path ([IO.Path]::GetTempPath()) (\"mailbox-inventory-{0}.csv\" -f [guid]::NewGuid())\n    ./Reference/Get-MailboxInventory.ps1 -Live -OutputCsv $out\n    Import-Csv -LiteralPath $out | Group-Object RecipientTypeDetails | Select-Object Name, Count\n    $out\n} finally {\n    Disconnect-ExchangeOnline -Confirm:$false\n}"
       },
@@ -95,7 +95,7 @@
   {
     "id": "lab-devin-02",
     "title": "Test both sides of a mail limit",
-    "summary": "A mailbox gets a watch label at 80%. Try the number just below it, the number itself and the one above.",
+    "summary": "A mailbox gets a watch label at 80%. Try 79, 80 and 81.",
     "level": "Starter",
     "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
     "features": "Checking both sides of a fence shows which side the fence post belongs on.",
@@ -108,7 +108,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation. Name the practice file quota.py.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation. Name the practice file quota.py.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "def label(percent):\n    return \"watch\" if percent >= 80 else \"normal\"\n\nfor value in (79, 80, 81):\n    print(value, label(value))"
       },
@@ -120,7 +120,7 @@
       {
         "title": "Check the first result",
         "text": "Compare the result with this hand check. 79 is normal. Both 80 and 81 are watch.",
-        "help": "Look at the little equals sign. Put 79, 80 and 81 on a number line and mark everything at or above 80 as watch."
+        "help": "Look at the little equals sign. Put 79, 80 and 81 on a number line and mark everything at least 80 as watch."
       },
       {
         "title": "Try the second test",
@@ -163,7 +163,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "sample.csv:\nid,name\nm1,\"North, West\"\nm2,East\nparser.py starter: print([len(line.rstrip().split(\",\")) for line in open(\"sample.csv\")])"
       },
@@ -218,7 +218,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "site,count\nWest,3\nEast,5"
       },
@@ -229,8 +229,8 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. From inside cleanlab, python3 report.py prints 8. From one folder above, python3 cleanlab/report.py also prints 8.",
-        "help": "Run the report from the folder above cleanlab. Read the input path if it fails. Check which folder really contains rows.csv."
+        "text": "Compare the result with this hand check. From inside cleanlab, python3 report.py prints 8. From its parent folder, python3 cleanlab/report.py also prints 8.",
+        "help": "Run the report from the parent folder of cleanlab. Read the input path if it fails. Check which folder really contains rows.csv."
       },
       {
         "title": "Try the second test",
@@ -239,7 +239,7 @@
       }
     ],
     "check": [
-      "From inside cleanlab, python3 report.py prints 8. From one folder above, python3 cleanlab/report.py also prints 8.",
+      "From inside cleanlab, python3 report.py prints 8. From its parent folder, python3 cleanlab/report.py also prints 8.",
       "Both complete copies print 8. The copy missing its input stops with an error."
     ],
     "sources": [
@@ -277,7 +277,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation. Name the practice file candidate.py.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation. Name the practice file candidate.py.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "def unique(ids):\n    return sorted({v.lower() for v in ids if v})\n\nsample = [\" A1 \", \"a1\", \"\", \" \"]"
       },
@@ -333,11 +333,11 @@
       "Share a simple review recipe.",
       "Hand over a game score validator."
     ],
-    "prompt": "Make training/REVIEW.md. It should explain how to read ID and Count, keep zero and other whole numbers above zero, and flag other values. Report valid row count, sum and the IDs that need a look.",
+    "prompt": "Make training/REVIEW.md. It should explain how to read ID and Count, keep zero and other whole numbers greater than zero, and flag other values. Report valid row count, sum and the IDs that need a look.",
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "ID,Count\na,3\nb,0\nc,"
       },
@@ -393,7 +393,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Opening score: 0\nFirst change: +12\nSecond change: -5\nAfter reload: blank submission",
         "caption": "Score changes and reload test"
@@ -449,7 +449,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "delivery,issue,revision\nd1,T21,r1\nd1,T21,r1\nd2,T21,r1\nd3,T21,r2"
       },
@@ -504,7 +504,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Approved: Reader/reports, Maintainer/app.\nObserved: Reader/reports, Reader/reports, Reader/app."
       },
@@ -568,7 +568,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "session,units,pr,accepted\ns1,4,P1,yes\ns2,2,P1,yes\ns3,3,P2,no\ns4,1,,no"
       },
@@ -623,7 +623,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "A 2026-11-01T01:15:00-04:00\nB 2026-11-01T01:15:00-05:00\nC 2026-11-01T06:30:00+00:00\nD 2026-11-01T01:20:00\nWindow 05:15Z through 06:30Z on Nov 1."
       },
@@ -678,7 +678,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Create T9: store S1, then throw timeout.\nLookup T9: one match S1.\nCreate call counter begins at zero.",
         "caption": "Sample rules and inputs"
@@ -738,7 +738,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "legacy {\"count\":2}\nnew {\"total\":2}\ntransition {\"count\":2,\"total\":2}\nconflict {\"count\":2,\"total\":3}"
       },
@@ -797,7 +797,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "current.json contains {\"total\":7}\nmanifest: North,South\npartial input: North=4\ngood input: North=4,South=5"
       },
@@ -856,7 +856,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Manifest North,South. R1 North 48/50. R2 South 47/50. A1 owner: review pending."
       },
@@ -915,7 +915,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Start 0. Count button adds 2. Reset returns to 0.",
         "caption": "Sample rules and inputs"
@@ -967,7 +967,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "T1 hat; T2 blue bag; T3 mug."
       },
@@ -1018,7 +1018,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Subjects: Trip; two spaces; Plan update. Minimum length 5 after trimming."
       },
@@ -1069,7 +1069,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Choices: map, key, bell. Correct set: map and bell."
       },
@@ -1116,11 +1116,11 @@
       "Set a size limit for a form response.",
       "Add short notes to a game."
     ],
-    "prompt": "Make an HTML note card with a text field and a count of characters left. Enable Save up to the limit and disable it above the limit or for a blank note. Show the saved note in a separate area.",
+    "prompt": "Make an HTML note card with a text field and a count of characters left. Enable Save up to the limit and disable it when the length exceeds the limit or for a blank note. Show the saved note in a separate area.",
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Limit 12. Sample “Meet at pier” has 12 characters including spaces."
       },
@@ -1171,7 +1171,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Fixed test deck bell, key, rope, flag."
       },
@@ -1222,7 +1222,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Start at 0 for both. Blue rolls 4, Gold 3, Blue 6. Target 10.",
         "caption": "Sample rules and inputs"
@@ -1274,7 +1274,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Juice 2 tokens, toast 3, fruit 1. Order juice, toast, juice."
       },
@@ -1296,7 +1296,7 @@
     ],
     "check": [
       "The first three choices total 7. Undo removes only the last juice and leaves 5.",
-      "The order reaches zero without going below it. Fruit starts a fresh order totaling 1."
+      "The order reaches zero without turning negative. Fruit starts a fresh order totaling 1."
     ],
     "sources": [
       [
@@ -1325,7 +1325,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Page 1 items A,B next 2. Page 2 empty next 3. Page 3 item C next none."
       },
@@ -1381,7 +1381,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Start CAT, goal DOG. Allowed: CAT, COT, COG, DOG. Try CAT → COT → COG → DOG.",
         "caption": "Sample rules and inputs"
@@ -1433,7 +1433,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Read input has no earlier task. Make report needs Read input. Review needs Make report."
       },
@@ -1484,7 +1484,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "A.txt has blue. B.txt has blue. C.txt has gold. All three words have four letters."
       },
@@ -1535,7 +1535,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Blue 7, Gold 7, Green 4. Put equal scores at the same rank; next rank skips the tied slot."
       },
@@ -1547,7 +1547,7 @@
       {
         "title": "Check the first result",
         "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The ranks are Blue 1, Gold 1, Green 3. Both top teams are marked joint leaders.",
-        "help": "Write down the number of teams strictly above each team, then add one for its rank. Two teams with nobody above them both get rank one."
+        "help": "Write down the number of teams with more points than each team, then add one for its rank. Two teams tied for the highest score both get rank one."
       },
       {
         "title": "Try the second test",
@@ -1586,7 +1586,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Fixed 2×3 grid slots 1–6 contain coin, blank, coin, gem, blank, coin. Coin=1, gem=3. Turns alternate Blue then Gold."
       },
@@ -1637,7 +1637,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample below. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Before A=user, B=shared, C=user. After A=user, B=user, D=shared. IDs are pretend and match without case."
       },

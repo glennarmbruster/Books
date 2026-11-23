@@ -4,7 +4,7 @@ Run `python3 update_edition.py` in this folder after an edit. It checks the cont
 
 ## Validate the book you downloaded
 
-Unzip the book. Open a terminal in **All About AI/Site/all-about-ai** and run `python3 update_edition.py --check` before editing. It checks the portable HTML one level above Site and matches the unpacked files to the package inventory. No local downloads directory is needed. If you edit this copy, run `python3 update_edition.py` in the same folder. It refreshes the top-level HTML, inventory and practice kit, and writes a new ZIP under Site/downloads. In the full bookshelf checkout the command still checks both the book-folder HTML and the required downloads ZIP.
+Unzip the book. Open a terminal in **All About AI/Site/all-about-ai** and run `python3 update_edition.py --check` before editing. It checks the portable HTML in the folder containing Site and matches the unpacked files to the package inventory. No local downloads directory is needed. If you edit this copy, run `python3 update_edition.py` in the same folder. It refreshes the top-level HTML, inventory and practice kit, and writes a new ZIP under Site/downloads. In the full bookshelf checkout the command still checks both the book-folder HTML and the required downloads ZIP.
 
 ## Update a model once
 
@@ -30,7 +30,7 @@ Use fictional roles, made-up notes and reserved example addresses. Review text i
 
 ## Check the offline files
 
-Run the included Exchange exercise on practice data with the command below from this folder.
+Run the included Exchange exercise on practice data with the provided command from this folder.
 
     pwsh -NoProfile -File practice/exchange-inventory/Test-Inventory.ps1 -Script practice/exchange-inventory/Reference/Get-MailboxInventory.ps1
 

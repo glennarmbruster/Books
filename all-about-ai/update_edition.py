@@ -340,6 +340,17 @@ for ex in examples:
 from copy_rules import validate_worked
 validate_worked(examples)
 check_refs(examples)
+from collections import Counter
+role_lines = Counter(' '.join(ch['intro'][role].lower().split()) for ch in page_text.values()
+                     if 'intro' in ch for role in ('exchange','m365','developer'))
+require(all(count <= 2 for count in role_lines.values()), 'Give reference introductions distinct role examples')
+layout_words = re.compile(r'\b(?:below|above|(?:next|previous) section)\b',re.I)
+for key, page in page_text.items():
+    for field in strings_in_content(page):
+        require(not layout_words.search(field), 'Replace screen-relative wording in '+key)
+for ex in examples:
+    for field in ex.values():
+        require(not layout_words.search(field), 'Replace screen-relative wording in worked example '+ex['id'])
 figures = json.loads((book / 'content/figures.json').read_text())
 check_refs(figures)
 check_refs(fact_rows)

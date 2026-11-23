@@ -15,7 +15,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as route.py.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as route.py.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "def route(size_mb):\n    if size_mb >= 25:\n        return \"large\"\n    return \"normal\"\n"
       },
@@ -65,7 +65,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as owners.csv.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as owners.csv.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "name,owner\nShipping,Team A\nFacilities,\nDesign Lab,Team B\nFront Desk,\n"
       },
@@ -115,7 +115,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as CLAUDE.md.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as CLAUDE.md.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "For every release note, use exactly these two Markdown headings in order:\n## Change\n## Verification\nUse one plain sentence under each heading."
       },
@@ -161,7 +161,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as cases.tsv.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as cases.tsv.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "input separated by |\texpected separated by |\n A@Example.test |a@example.test|B@EXAMPLE.TEST\ta@example.test|b@example.test\n | Z@example.test | \tz@example.test\n"
       },
@@ -203,13 +203,13 @@
       "Plan checks for a list of form limits.",
       "Set a fair cutoff for a score warning."
     ],
-    "prompt": "In Plan mode, read thresholds.txt. Show three cases for a whole-number percentage. Include one just below the warning line, one exactly on it and one missing value. Tell me the answer for each. Wait before editing.",
+    "prompt": "In Plan mode, read thresholds.txt. Show three cases for a whole-number percentage. Include one one unit short of the warning threshold, one exactly on it and one missing value. Tell me the answer for each. Wait before editing.",
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as thresholds.txt.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as thresholds.txt.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
-        "code": "Mailbox quota warning begins at 90 percent inclusive.\nBelow 90 is OK.\nA missing percentage must be UNKNOWN.\n"
+        "code": "Mailbox quota warning begins at 90 percent inclusive.\nLess than 90 is OK.\nA missing percentage must be UNKNOWN.\n"
       },
       {
         "title": "Ask Claude to read the file",
@@ -262,7 +262,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as groups.py.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as groups.py.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "groups = [(\"Ops\",\"Lead A\"), (\"HR\",\"\"), (\"Docs\",\"Lead B\")]\nfor name, owner in groups:\n    if owner:\n        print(name, owner)\n"
       },
@@ -308,7 +308,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as changes.txt.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as changes.txt.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "Change: export now keeps empty departments.\nEvidence: 4 sample rows passed.\n"
       },
@@ -358,7 +358,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as members.json.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as members.json.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "{\"current\":[\" Sand \",\"BLUE\",\"blue\",\"Gray\"],\"desired\":[\"sand\",\"Gold\",\"\",\"GOLD\"]}"
       },
@@ -404,7 +404,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as policies.txt.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as policies.txt.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "V1: members ALLOW. Guests ALLOW when days < 7; otherwise REVIEW.\nV2: members ALLOW. Guests ALLOW when days <= 7; otherwise REVIEW.\nOnly member and guest are in scope."
       },
@@ -455,7 +455,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as pages.json.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as pages.json.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "{\"one\":{\"items\":[\"M1\",\"M2\"],\"next\":\"two\"},\"two\":{\"items\":[],\"next\":\"three\"},\"three\":{\"items\":[\"M2\",\"M3\"],\"next\":null}}"
       },
@@ -501,7 +501,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as expiry.csv.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as expiry.csv.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "id,deadline\nA,2026-12-31T23:59:59Z\nB,2027-01-01T00:00:00Z\nC,2027-01-01T00:00:01Z"
       },
@@ -547,7 +547,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as events.csv.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as events.csv.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "id,amount\nE1,4\nE2,8\nE1,4\nE3,5"
       },
@@ -593,7 +593,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as people.json.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as people.json.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "[{\"id\":1,\"address\":\"a@example.test\",\"note\":\"A, B\"},{\"id\":2,\"address\":null,\"note\":\"\"},{\"id\":3,\"address\":\"b@c@example.test\",\"note\":\"x\"}]"
       },
@@ -712,7 +712,7 @@
     "steps": [
       {
         "title": "Save the sample file",
-        "text": "In a new practice folder, use a plain text editor to save the sample below as release.txt.",
+        "text": "In a new practice folder, use a plain text editor to save the sample as release.txt.",
         "help": "Check the file name and ending. Save the file before asking Claude to read it.",
         "code": "Contract: first two items free. Each additional item costs 1.25 dollars. Whole nonnegative counts only. Use fixed two-decimal amounts. Reject negatives.\nPrevious formula: max(0,n-2)*1.25\nCandidate formula: max(0,n-1)*1.25"
       },
@@ -974,7 +974,7 @@
       "Show how close a team list is to its limit.",
       "Build an easy-to-read progress dial."
     ],
-    "prompt": "Build one index.html file with its style and JavaScript inside. Make a small size reader. Add boxes for used and limit, a Check button, a bar and a printed percentage. Warn at 90 percent and above. Call an empty value or a limit of zero Needs review. Reject negative sizes. Use these practice values: Used 25, limit 100. Other test pairs are 0 and 100, 90 and 100, 5 and 0. Print OK below 90 percent and Warning from 90 percent up when the inputs are valid.",
+    "prompt": "Build one index.html file with its style and JavaScript inside. Make a small size reader. Add boxes for used and limit, a Check button, a bar and a printed percentage. Warn at 90 percent or higher. Call an empty value or a limit of zero Needs review. Reject negative sizes. Use these practice values: Used 25, limit 100. Other test pairs are 0 and 100, 90 and 100, 5 and 0. Print OK when usage is less than 90 percent and Warning from 90 percent up when the inputs are valid.",
     "steps": [
       {
         "title": "Set up the practice space",

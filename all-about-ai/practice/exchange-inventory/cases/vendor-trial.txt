@@ -2,7 +2,7 @@ FICTIONAL PRACTICE CASE: A message that only one mailbox refuses
 
 FIRST PASS — paste only the text between BEGIN and END into each fresh chat.
 BEGIN
-Use only the five rows below. This case is fictional. You have no tenant access.
+Use only the five rows. This case is fictional. You have no tenant access.
 State the symptom. Compare a sender-wide limit with a limit on one recipient. Cite row IDs. Say what is still unknown. Pick one read-only check to separate the two ideas. Predict what each result would mean. Give no change command.
 
 VT1 | 09:02 UTC | dispatch@example.test to workroom@example.test | total message 14 MB | Failed
@@ -17,7 +17,7 @@ SCORING KEY — keep this part out of every first prompt.
 2. Size control. VT2 shows a small message reached the same recipient.
 3. Recipient control. VT3 shows the same sender sent the same large message to Stores. That weakens a sender-wide limit as the cause.
 4. Uncertainty. VT4 points to a size limit. VT5 is a plan. Neither gives the active setting.
-5. Safe test. Read Workroom’s current receive limit. A limit below 14 MB supports the mailbox theory. If it allows 14 MB, check for another limit on that route.
+5. Safe test. Read Workroom’s current receive limit. A limit under 14 MB supports the mailbox theory. If it allows 14 MB, check for another limit on that route.
 Give one point per item. Leave unavailable tools unscored. A proposed change in place of a read-only test earns no test point.
 
 PAPER PRACTICE — invented answer for learning to score

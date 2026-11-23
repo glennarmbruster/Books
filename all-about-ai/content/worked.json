@@ -1009,7 +1009,7 @@
     "why": "A model that invents a time breaks the app even if the JSON parses.",
     "rescue": "If the word null is in quotes, ask for a typed value.",
     "rescuePrompt": "Return parseable JSON. A missing time must use the JSON null value without quotation marks.",
-    "try": "1. Open the model playground in Google AI Studio. Pick a model available to your account and start a prompt.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Append “Begins at noon” to the flyer and run the same prompt again. Inspect the raw JSON."
+    "try": "1. Open the model playground in Google AI Studio. Record the API model ID shown for the selected model and start a prompt.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Append “Begins at noon” to the flyer and run the same prompt again. Inspect the raw JSON."
   },
   {
     "id": "gemini-workflow",
@@ -1031,7 +1031,7 @@
     "why": "Running the same preview with a shorter flyer catches stale showtimes left on screen.",
     "rescue": "If the old list remains, ask for a fresh render.",
     "rescuePrompt": "Clear the previous list each time Read is pressed. Populate it only from the current flyer.",
-    "try": "1. Open Build in AI Studio and start a new practice app.\n2. Give the tool the practice request and keep its first result for comparison.\n3. In the preview replace the flyer with Lantern Night, date pending. Press Read again."
+    "try": "1. Open Build in AI Studio and start a new practice app.\n2. Give Build the request and open the preview. Enter Lantern Night at 14:00 and 16:30. Press Read and check both showtimes.\n3. In the preview replace the flyer with Lantern Night, date pending. Press Read again."
   },
   {
     "id": "gemini-media",
@@ -1207,7 +1207,7 @@
     "why": "Picking a read-only question for Ask avoids launching an edit just to locate a filename.",
     "rescue": "If a lookup produces a patch, ask for a narrower task.",
     "rescuePrompt": "Report where the input is documented. Leave the repository as you found it.",
-    "try": "1. In a practice repository add report.py reads fixture.csv to README, commit it, and push to the practice branch. Select that repository in Devin Ask once its index includes the line.\n2. Give Ask the request. Check its answer against README without making edits.\n3. In Devin Agent select the same branch. Ask for a plan to add the separate line Test command: python3 report.py to README. Inspect the diff."
+    "try": "1. In a practice repository add report.py reads fixture.csv to README, commit it, and push to the practice branch. Select that repository in Devin Ask once its index includes the line.\n2. Give Ask the request. Check its answer against README without making edits.\n3. In Devin Agent select the same branch. Ask for a plan to add the separate line Test command: python3 report.py to README. Approve the one-line plan and ask Agent to apply it. Inspect the diff."
   },
   {
     "id": "devin-first-session",
@@ -1268,12 +1268,12 @@
     "id": "devin-integrations",
     "premise": "{{chapter.summary}}",
     "caption": "Practice request",
-    "before": "Write a local handler for issue D7 revision one. Two deliveries carry the same issue and revision but different delivery IDs. How many jobs should the handler record?",
-    "after": "First run: one job for D7 revision one. Second run: Append a delivery for D7 revision two. Run the handler again and inspect the saved job list. Two distinct jobs, one for each revision.",
+    "before": "Build a local simulation. Ticket D7 revision one is delivered twice, with a different delivery ID each time. Keep one session per ticket and apply each revision once. Which session records should exist?",
+    "after": "First run: one session S1 for D7, with revision one recorded once. Second run: S1 contains revisions one and two once each. The session count stays at one.",
     "why": "A delivery ID can change on a retry even though the requested work is identical.",
-    "rescue": "If two retries spawn two jobs, ask which pair identifies the work.",
-    "rescuePrompt": "Use issue and revision as the job identity. Show the saved identities after replay.",
-    "try": "1. In a scratch Devin session simulate ticket delivery with two local event records. Read the plan and keep the work in the practice repo.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Append a delivery for D7 revision two. Run the handler again and inspect the saved job list."
+    "rescue": "If revision two creates another session for D7, ask for the ticket-to-session lookup.",
+    "rescuePrompt": "Look up the session by ticket ID. Within that session apply each unseen revision once even when delivery IDs differ.",
+    "try": "1. Start a Devin Agent session on a practice branch. Ask for a plan for the local simulation and review its diff.\n2. Run the two deliveries using session S1 for D7. Inspect the session list and applied revisions.\n3. Append D7 revision two twice. Run both deliveries and inspect S1 again."
   },
   {
     "id": "devin-access",
@@ -1614,7 +1614,7 @@
     "why": "A team switch should happen once even when a finger lands twice on the same answer.",
     "rescue": "The first quick double tap awards four points. Ask for a correction.",
     "rescuePrompt": "Trace two taps on the same question. Identify the first accepted answer and the guard that should block the second tap.",
-    "try": "1. Go to gemini.google.com, sign in and start a new chat. Open the tools or add menu in this lab the message box and choose Canvas. Leave the chat empty until the next step.\n2. Send the shared request by itself. Keep the original index.html. Open that file offline.\n3. Play six questions. Blue answers correctly on each turn and Gold misses. Double-tap the first correct choice.\n4. Press Play Again. Check the opening state, then answer all six correctly."
+    "try": "1. Go to gemini.google.com, sign in and start a new chat. Open the tools or add menu in the message composer and choose Canvas. Leave the chat empty until the next step.\n2. Send the shared request by itself. Keep the original index.html. Open that file offline.\n3. Play six questions. Blue answers correctly on each turn and Gold misses. Double-tap the first correct choice.\n4. Press Play Again. Check the opening state, then answer all six correctly."
   },
   {
     "id": "lab-gemini-app-15",
@@ -2170,7 +2170,7 @@
     "id": "lab-claude-code-20",
     "premise": "{{chapter.summary}}",
     "caption": "Request for Claude Code",
-    "before": "Practice task: Make a mailbox size dial.\nReport the result for this exercise using its supplied inputs.\n\nBuild one index.html file with its style and JavaScript inside. Make a small size reader. Add boxes for used and limit, a Check button, a bar and a printed percentage. Warn at 90 percent and above. Call an empty value or a limit of zero Needs review. Reject negative sizes. Use these practice values: Used 25, limit 100. Other test pairs are 0 and 100, 90 and 100, 5 and 0. Print OK below 90 percent and Warning from 90 percent up when the inputs are valid.",
+    "before": "Practice task: Make a mailbox size dial.\nReport the result for this exercise using its supplied inputs.\n\nBuild one index.html file with its style and JavaScript inside. Make a small size reader. Add boxes for used and limit, a Check button, a bar and a printed percentage. Warn at 90 percent or higher. Call an empty value or a limit of zero Needs review. Reject negative sizes. Use these practice values: Used 25, limit 100. Other test pairs are 0 and 100, 90 and 100, 5 and 0. Print OK when usage is less than 90 percent and Warning from 90 percent up when the inputs are valid.",
     "after": "First run: The pairs give 25 percent OK and 0 percent OK. Zero is a valid size. Second run: Ninety percent gives Warning. The zero limit and the empty used value both give Needs review.",
     "why": "A real zero size can describe an empty mailbox, while a zero limit cannot define a percentage.",
     "rescue": "If the screen shows Infinity, ask for a targeted follow-up.",
@@ -2699,7 +2699,7 @@
     "premise": "{{chapter.summary}}",
     "caption": "Request for Devin",
     "before": "{{chapter.prompt}}",
-    "after": "First run: The first three choices total 7. Undo removes only the last juice and leaves 5. Second run: The order reaches zero without going below it. Fruit starts a fresh order totaling 1. 2 + 3 + 2 = 7. Removing the last 2 leaves 5.",
+    "after": "First run: The first three choices total 7. Undo removes only the last juice and leaves 5. Second run: The order reaches zero without turning negative. Fruit starts a fresh order totaling 1. 2 + 3 + 2 = 7. Removing the last 2 leaves 5.",
     "why": "Undoing the last juice should leave the earlier juice on the order.",
     "rescue": "If both juices disappear, ask for a targeted follow-up.",
     "rescuePrompt": "Remove the last list entry instead of all entries with its name.",
@@ -2786,12 +2786,12 @@
     "id": "build-off",
     "premise": "{{chapter.summary}}",
     "caption": "Practice request",
-    "before": "Compare these recorded game observations with the shared Click-Lock Guard: Blue picked correctly, score rose to 2, and a second tap on the same answer left it at 2. Which checklist point does this observation test?",
+    "before": "Blue answers question 1 correctly. The display shows Blue 2, Gold 0 and Gold next. A second tap on the locked answer keeps those scores, the same question and Gold next. Does this pass the shared Click-Lock Guard?",
     "after": "First run: the recorded build earns the click-lock point. Second run: Replay the same test on each actual build. For a failing control, change the observation to “second tap raised Blue to 4”. Score that guard again. The altered observation earns zero for that guard.",
     "why": "Scoring one behavior at a time keeps visual polish out of the rule-accuracy score.",
     "rescue": "If a good-looking screen earns an untested point, ask for the observed state change.",
-    "rescuePrompt": "Score only the click-lock criterion using the score immediately before and after the second tap.",
-    "try": "1. Build all four originals with the exact shared prompt in Give all four tools this prompt. Save each output separately and open it offline.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Replay the same test on each actual build. For a failing control, change the observation to “second tap raised Blue to 4”. Score that guard again."
+    "rescuePrompt": "Check both observations after the extra tap: did the score change and did the game skip a question or turn?",
+    "try": "1. Build all four originals with the exact shared prompt in Give all four tools this prompt. Save each output separately and open it offline.\n2. Use the recorded example in a separate scoring chat. Keep the four original builder sessions for the shared comparison.\n3. Replay the same test on each actual build. For a failing control, change the observation to “second tap raised Blue to 4”. Score that guard again."
   },
   {
     "id": "troubleshoot-loop",
@@ -2802,7 +2802,8 @@
     "why": "A ticket can document a plausible fix long before it contains evidence of success.",
     "rescue": "If the draft announces recovery early, ask for the post-change result.",
     "rescuePrompt": "Separate the proposed edit from the fresh target and control observations.",
-    "try": "1. Use the practice case on paper or in an approved chat. Read the receipt and control records in the request.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Add “Fresh receipt tagged; fresh ordinary message plain.” Reassess only this receipt rule."
+    "try": "1. Start a new approved chat for the practice case. Read the receipt and control records in the request.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Add “Fresh receipt tagged; fresh ordinary message plain.” Reassess only this receipt rule.",
+    "noAccount": "Follow the same case records locally and record the evidence for each conclusion."
   },
   {
     "id": "lab-troubleshoot-13",
@@ -2961,11 +2962,11 @@
     "premise": "{{chapter.summary}}",
     "caption": "Practice request",
     "before": "Approved cloud-to-site host: bridge.example.test. Actual cloud handoff: old-bridge.example.test, timeout. A separate site-to-cloud test succeeded. Did this prove delivery in the requested direction? Identify the next read-only comparison.",
-    "after": "First run: cloud-to-site unproven; compare the outbound smart host with the approved target. Second run: Replace the timeout with “cloud handed off to bridge.example.test; matching site mailbox receipt recorded.” Re-evaluate that direction only. Cloud-to-site supported by the correct target and the matching site receipt.",
+    "after": "First run: cloud-to-site delivery is unproven. Second run: cloud-to-site delivery has a receipt at the approved host. The separate site-to-cloud result never established outbound delivery.",
     "why": "A successful trip in the reverse direction cannot prove the failed forward handoff reached its mailbox.",
     "rescue": "If the reverse test closes the ticket, ask for the receiving-side receipt.",
     "rescuePrompt": "Follow only the cloud-to-site test from its actual target to its matching mailbox receipt.",
-    "try": "1. In an approved practice chat, read the cloud-to-site arrow in hybrid-route.txt. Keep the direction in the prompt.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Replace the timeout with “cloud handed off to bridge.example.test; matching site mailbox receipt recorded.” Re-evaluate that direction only."
+    "try": "1. Start a new approved chat. Use the complete fictional handoff in the practice request.\n2. Record the observed direction, attempted host and missing receipt.\n3. Replace the whole Actual cloud handoff sentence with: Actual cloud handoff: bridge.example.test, matching site mailbox receipt recorded. Keep the reverse-direction sentence and repeat the question."
   },
   {
     "id": "lab-troubleshoot-07",
@@ -2984,7 +2985,7 @@
     "premise": "{{chapter.summary}}",
     "caption": "Request for the practice case",
     "before": "{{chapter.prompt}}",
-    "after": "First run: IC1 belongs to tab-7 at 09:01. The observed 14.2 is below the required 14.3. Second run: IC2 is another tablet. IC3 is later. Without IC1 the earlier observed version is unknown.",
+    "after": "First run: IC1 belongs to tab-7 at 09:01. The observed 14.2 is older than the required 14.3. Second run: IC2 is another tablet. IC3 is later. Without IC1 the earlier observed version is unknown.",
     "why": "A later compliant record cannot establish device health at the minute the earlier sign-in failed.",
     "rescue": "A later reading is sometimes reported as proof of earlier device health. Ask for a closer check.",
     "rescuePrompt": "Match both device and observation time. Mark the earlier state unknown if its matching reading was removed.",
@@ -3252,7 +3253,7 @@
     "after": "First run: one message arrived at 09:12 and the other routes are untested. Second run: two routes have a passing test. The remaining routes still lack a test.",
     "why": "Revising a handoff in the same conversation should keep both the new evidence and its limits.",
     "rescue": "A claim that mail is fixed everywhere goes past the evidence. Ask for a narrower update.",
-    "rescuePrompt": "Name only the routes that have a passing test. Mark every other route untested.",
+    "rescuePrompt": "Count the passing route tests. Describe other routes as untested and leave their individual names unspecified.",
     "try": "1. Start a new chat in Claude.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Tell Claude that a second route has now passed. Ask what is still unknown."
   },
   {
@@ -3293,11 +3294,11 @@
     "premise": "{{chapter.summary}}",
     "caption": "Practice request",
     "before": "Locate Shift card through the approved connector. What does the first line say? Identify the document you actually read. If it cannot be opened, report missing access.",
-    "after": "First run: Shift card says Window B, or the connector reports missing access. Second run: after the source update becomes visible, Shift card says Window C. A stale Window B is detectable.",
+    "after": "First run: a successful read returns Window B from Shift card. Second run: a successful new read returns Window C from the same document. Missing access leaves the test blocked.",
     "why": "Editing the document itself distinguishes a fresh read from a remembered line of chat.",
     "rescue": "If the reply guesses a window without opening the item, ask for a traceable result.",
     "rescuePrompt": "Identify the Shift card document you opened. Quote the first line, or report that access failed.",
-    "try": "1. Create a document named Shift card in an approved practice Drive folder. Give it one line reading Window B. Connect the approved service in Claude and start a new chat.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Change the line in the source document to Window C. Start a new Claude chat and ask it to read Shift card again."
+    "try": "1. Create a document named Shift card in an approved practice Drive folder. Give it one line reading Window B. Connect the approved service in Claude and start a new chat.\n2. Send only the lookup request. Keep Window B in the Drive document. If the connector cannot open it, record Blocked and leave the second run pending.\n3. Change the line in the source document to Window C. Start a new Claude chat and ask it to read Shift card again."
   },
   {
     "id": "claude-reference-browser",
@@ -3381,11 +3382,11 @@
     "premise": "{{chapter.summary}}",
     "caption": "Practice request",
     "before": "Build a local score summary in the practice folder. An empty list displays No plays. A list containing one score of zero displays the number 0. Add a test for each case.",
-    "after": "First run: an empty list shows No plays and a one-entry list containing zero shows 0. Second run: the one-entry list containing 3 shows 3. The empty test still shows No plays.",
+    "after": "First run: the empty list shows No plays and the one-score list containing zero shows 0. Second run: the new list containing 3 shows 3. The original empty and zero tests both still pass.",
     "why": "A check for an empty list has to count entries, since a perfectly good entry can equal zero.",
     "rescue": "If zero disappears, ask the agent to test list length.",
     "rescuePrompt": "Distinguish an empty list from one containing zero. Keep both tests and show the changed lines.",
-    "try": "1. Open an empty practice folder as a project in Antigravity. In the agent panel ask to see the plan before edits.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Inspect the diff and run both tests. Then change the real score to 3 and rerun the summary."
+    "try": "1. Open an empty practice folder as a project in Antigravity. In the agent panel ask to see the plan before edits.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Inspect the diff and run both tests. Add a separate input containing 3, and rerun the empty, zero and three-score cases."
   },
   {
     "id": "gemini-reference-connectors",
@@ -3407,7 +3408,7 @@
     "why": "The two tasks have different action limits even though they use the same practice page.",
     "rescue": "If the browser plan includes Submit, stop it and ask for the smaller action.",
     "rescuePrompt": "Expand only Show next check. Read its time and stop without submitting the form.",
-    "try": "1. In Chrome open the chapter’s practice desk with Show next check folded. Select Ask Gemini and review any proposed browser action.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Close the panel yourself. Ask Gemini for the visible waiting count without opening it again."
+    "try": "1. On desktop Chrome choose Open the practice desk page, or Save the practice desk page in the portable book and open it. Start with Show next check folded.\n2. Choose Ask Gemini and submit the practice request. Review the proposed action, permit only the requested expansion and read the time.\n3. Fold the panel again. Ask for the visible waiting count without expanding it or submitting the form."
   },
   {
     "id": "gemini-reference-scheduled",
@@ -3429,7 +3430,7 @@
     "why": "Covering a button tests the current camera view instead of memory of the first drawing.",
     "rescue": "If both labels are reported as visible, ask for a fresh look.",
     "rescuePrompt": "Describe only the uncovered label in the current camera view and give its color.",
-    "try": "1. Draw a yellow Review button and a blue Save button. In the Gemini mobile app open Live and point its camera at the drawing.\n2. Give the tool the practice request and keep its first result for comparison.\n3. Cover the Review button, leave Save visible and ask what label and color remain. Stop the camera after the reply."
+    "try": "1. Draw a yellow Review button and a blue Save button. In the Gemini mobile app open Live and point its camera at the drawing.\n2. While sharing the camera view, speak the practice request. Compare its answer with your drawing.\n3. Cover the Review button, leave Save visible and ask what label and color remain. Stop the camera after the reply."
   },
   {
     "id": "gemini-reference-files",

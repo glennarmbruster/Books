@@ -20,13 +20,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "A note reads: hat, pencil, hat, cup."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Count the lines. Put a tick beside each item in the note as you read the answer.",
+        "text": "Use Your prompt with the supplied sample. Count the lines. Put a tick beside each item in the note as you read the answer.",
         "help": "If hat appears twice, ask for each different item just once."
       },
       {
@@ -70,13 +70,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Blue goes after Red. Gold goes before Red. There are three turns."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Try the same request in a fresh chat at another available level. Check both lists with three paper slips.",
+        "text": "Use Your prompt with the supplied sample. Try the same request in a fresh chat at another available level. Check both lists with three paper slips.",
         "help": "If Blue comes first, underline the word after. Ask the tool to test that rule against its own list."
       },
       {
@@ -127,7 +127,7 @@
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Listen to the letters it repeats. Change your question to ask which circle holds C.",
+        "text": "Use Your prompt with the supplied sample. Listen to the letters it repeats. Change your question to ask which circle holds C.",
         "help": "If it heard D, say the letters one by one. You can type the same words in Chat."
       },
       {
@@ -171,13 +171,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Keep the rule and example below handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
+        "text": "Keep the rule and example handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Practice riddle: I have keys but no locks. The intended answer is a piano."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Ask for a hint, then type Reveal. Check the two replies separately.",
+        "text": "Use Your prompt with the supplied sample. Ask for a hint, then type Reveal. Check the two replies separately.",
         "help": "If the first reply spoils it, edit the instructions and start a fresh test conversation with the Gem."
       },
       {
@@ -228,7 +228,7 @@
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Open Preview. Tap Score twice, then once more. Try Reset.",
+        "text": "Use Your prompt with the supplied sample. Open Preview. Tap Score twice, then once more. Try Reset.",
         "help": "If Reset leaves the win message behind, ask to clear the message and score together. Play again."
       },
       {
@@ -238,7 +238,7 @@
       },
       {
         "title": "Make a copy that runs on your computer",
-        "text": "Open the example below and try its buttons. Choose Save example. In a plain-text editor, open that HTML file and save a copy with a new name ending in .html. Open the copy in a browser.",
+        "text": "Open the example and try its buttons. Choose Save example. In a plain-text editor, open that HTML file and save a copy with a new name ending in .html. Open the copy in a browser.",
         "help": "On Windows choose All files when saving. On Mac choose Format → Make Plain Text in TextEdit. If the page shows code, check that the file ends with .html rather than .txt."
       },
       {
@@ -283,13 +283,14 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "text": "Create a copied-text source called Schedule using the supplied text.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Add a source called Schedule with the text: Practice starts at 2. Bring a pencil."
+        "code": "Practice starts at 2. Bring a pencil.",
+        "caption": "Source text for Schedule"
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Tap the little source mark beside the answer. Find the time in the note itself.",
+        "text": "Use Your prompt with the supplied sample. Tap the little source mark beside the answer. Find the time in the note itself.",
         "help": "If it says 2 p.m., look for p.m. in the note. Ask for the exact wording since the note leaves that part open."
       },
       {
@@ -334,13 +335,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Kit list: 2 red flags, 1 blue flag, 3 cones. You want a list to pack."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Open the task thread. Count the lines and add the quantities by hand.",
+        "text": "Use Your prompt with the supplied sample. Open the task thread. Count the lines and add the quantities by hand.",
         "help": "If it makes six lines, ask for one line for each kind of item, with its count beside it."
       },
       {
@@ -445,13 +446,14 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "text": "Create separate sources named Rules and Round. Put each sentence into its matching source.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Add note Rules: A star earns 2 points. Add note Round: The blue team drew 3 stars."
+        "code": "Rules — A star earns 2 points.\nRound — The blue team drew 3 stars.",
+        "caption": "Source text for Rules and Round"
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Open both citations. Multiply the score for one star by the number drawn.",
+        "text": "Use Your prompt with the supplied sample. Open both citations. Multiply the score for one star by the number drawn.",
         "help": "If only one note is cited, ask where the other number came from. Check that both notes are selected."
       },
       {
@@ -491,7 +493,7 @@
     "steps": [
       {
         "title": "Make a practice notebook",
-        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Game rules.",
+        "text": "Open the Gemini Notebook link in a computer browser. Sign in, choose Create new and name the notebook Game rules.",
         "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
@@ -580,7 +582,7 @@
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Try a blank, then desk, then space-lamp-space. Click Guess once after the win.",
+        "text": "Use Your prompt with the supplied sample. Try a blank, then desk, then space-lamp-space. Click Guess once after the win.",
         "help": "If typing lamp fails, ask the app to trim the spaces and compare both words in the same case."
       },
       {
@@ -624,13 +626,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Keep the rule and example below handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
+        "text": "Keep the rule and example handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Pretend rows: Box A, shared. Box B, room. Box C, shared."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Test the Gem with the three rows. Then remove the type from Box C and run it again.",
+        "text": "Use Your prompt with the supplied sample. Test the Gem with the three rows. Then remove the type from Box C and run it again.",
         "help": "If a blank becomes shared, add a rule to the Gem that a missing type cannot be guessed."
       },
       {
@@ -674,13 +676,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "text": "Put the sample into the source list. When two notes are named, add them one at a time. Keep their titles.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Add one note: A folder holds files. A prompt is a request. A source is material used to answer."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Open the flashcards in Studio. Say a meaning aloud before flipping each card. Mark one card missed and review it again.",
+        "text": "Use Your prompt with the supplied sample. Open the flashcards in Studio. Say a meaning aloud before flipping each card. Mark one card missed and review it again.",
         "help": "If a card asks about a new word, compare it to the note. Request a deck limited to the three listed words."
       },
       {
@@ -721,7 +723,7 @@
     "steps": [
       {
         "title": "Open Canvas",
-        "text": "Go to gemini.google.com, sign in and start a new chat. Open the tools or add menu below the message box and choose Canvas. Leave the chat empty until the next step.",
+        "text": "Go to gemini.google.com, sign in and start a new chat. Open the tools or add menu in the message composer and choose Canvas. Leave the chat empty until the next step.",
         "help": "Canvas can show a preview and the code. If a preview is already open from another job, start a new chat."
       },
       {
@@ -794,13 +796,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "text": "Put the sample into the source list. When two notes are named, add them one at a time. Keep their titles.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Score note: red earns 3, blue earns 2. Turn note: two rounds, one card per round."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Check the evidence in Notebook. Use Canvas to build a quiz from your three verified questions. Ask for a score and Play again. Answer all three correctly, then miss one on a new game.",
+        "text": "Use Your prompt with the supplied sample. Check the evidence in Notebook. Use Canvas to build a quiz from your three verified questions. Ask for a score and Play again. Answer all three correctly, then miss one on a new game.",
         "help": "If the quiz adds a prize for winning, point to the notes. Remove that extra rule from the game and test again."
       },
       {
@@ -854,13 +856,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Three notes: Red has 4. Green has 0. Blue has no score yet."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Read each row and circle only the teams that have played, including the team with zero.",
+        "text": "Use Your prompt with the supplied sample. Read each row and circle only the teams that have played, including the team with zero.",
         "help": "If Blue gets zero, ask which line says Blue has played. Put back the dash."
       },
       {
@@ -904,14 +906,14 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Mystery object: cup\nClues: hollow, holds water, sits on a table",
         "caption": "Object and clues for Live"
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. After the first clue say Next clue. Then say Reveal. Check the written conversation if you missed a word.",
+        "text": "Use Your prompt with the supplied sample. After the first clue say Next clue. Then say Reveal. Check the written conversation if you missed a word.",
         "help": "If all clues arrive together, interrupt with a request for one clue per turn. Use typed Chat if Live is unavailable."
       },
       {
@@ -955,13 +957,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Keep the rule and example below handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
+        "text": "Keep the rule and example handy. Save the rule in the Gem. Put the test case into the Gem’s chat.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "A score button used to add two points. It now adds one. The test used three taps."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Give the Gem the example. Then request a note for an update that has no test result yet.",
+        "text": "Use Your prompt with the supplied sample. Give the Gem the example. Then request a note for an update that has no test result yet.",
         "help": "If it claims all tests passed, edit the Gem to ask for the missing check. Start with a fresh change."
       },
       {
@@ -1005,13 +1007,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Draft event: game night, 6 p.m., Room A. No guest list is provided."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Inspect the task’s plan and output. Read the guest line. Finish with the draft on screen.",
+        "text": "Use Your prompt with the supplied sample. Inspect the task’s plan and output. Read the guest line. Finish with the draft on screen.",
         "help": "If a send action is proposed, leave it unapproved and ask for plain text in the task thread."
       },
       {
@@ -1056,13 +1058,14 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
+        "text": "Create a copied-text source called Glossary using the supplied text.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Add a note: deck means a stack of cards; draw means take the top card; discard means put a card aside."
+        "code": "Deck means a stack of cards. Draw means take the top card. Discard means put a card aside.",
+        "caption": "Source text for Glossary"
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Open the source for each meaning. Mark which words were in the note and which lines are invented examples.",
+        "text": "Use Your prompt with the supplied sample. Open the source for each meaning. Mark which words were in the note and which lines are invented examples.",
         "help": "If draw becomes making a picture, select only the card note and ask what draw means in this game."
       },
       {
@@ -1114,7 +1117,7 @@
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Choose Blue and go back. Choose Gold and go back. Count all the available endings.",
+        "text": "Use Your prompt with the supplied sample. Choose Blue and go back. Choose Gold and go back. Count all the available endings.",
         "help": "If both doors open the same ending, ask for separate click actions. Try each path from the start."
       },
       {
@@ -1158,13 +1161,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "There are three time slots: 1, 2, 3. Setup must come before Play. Cleanup must be last."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Write the slots on paper. Try the proposed swap yourself. If your account offers thinking levels, compare Low and High in separate chats.",
+        "text": "Use Your prompt with the supplied sample. Write the slots on paper. Try the proposed swap yourself. If your account offers thinking levels, compare Low and High in separate chats.",
         "help": "If the answer just says it works, ask it to point to the numbers for Setup and Play after the swap."
       },
       {
@@ -1208,13 +1211,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Compare two official Google topics: turning on Gemini Live and making a Notebook flashcard."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Before starting, check that the plan asks for both distinct products. Open each final link and look for its action.",
+        "text": "Use Your prompt with the supplied sample. Before starting, check that the plan asks for both distinct products. Open each final link and look for its action.",
         "help": "If the links just open the same homepage, ask for the specific help articles and inspect their headings."
       },
       {
@@ -1254,7 +1257,7 @@
     "steps": [
       {
         "title": "Make a practice notebook",
-        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Study night.",
+        "text": "Open the Gemini Notebook link in a computer browser. Sign in, choose Create new and name the notebook Study night.",
         "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
@@ -1265,8 +1268,8 @@
       },
       {
         "title": "Try Fast Research",
-        "text": "In the Sources search box choose Web and Fast Research. Search for the words below. Choose View. Open a result from Google Help and import it.",
-        "help": "If that page is missing, open the flashcards help link below. In Sources, choose Add sources and paste its web address.",
+        "text": "In the Sources search box choose Web and Fast Research. Search for the words. Choose View. Open a result from Google Help and import it.",
+        "help": "If that page is missing, open the flashcards help link. In Sources, choose Add sources and paste its web address.",
         "code": "Gemini Notebook flashcards practice only cards you missed"
       },
       {
@@ -1281,7 +1284,7 @@
       },
       {
         "title": "Ask, then test a missing price",
-        "text": "Now use Your prompt. Open the citation for missed cards. Check the event answers too. Add a new source named Fare with the line below, select it and ask the price again.",
+        "text": "Now use Your prompt. Open the citation for missed cards. Check the event answers too. Add a new source named Fare with the line, select it and ask the price again.",
         "help": "If the first answer says 9, clear Rumor and ask which selected line supports that price. Only use a price you can point to.",
         "code": "Fare — One study night ticket costs 2 game coins."
       },
@@ -1347,7 +1350,7 @@
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Add A, B and C. Serve twice. Add D. Clear. Try to serve once more.",
+        "text": "Use Your prompt with the supplied sample. Add A, B and C. Serve twice. Add D. Clear. Try to serve once more.",
         "help": "If D is served before C, ask it to remove only the oldest waiting ticket. Replay from empty."
       },
       {
@@ -1391,13 +1394,13 @@
       },
       {
         "title": "Set up the sample",
-        "text": "Use the fake facts below along with the prompt. In a voice exercise, say the facts out loud.",
+        "text": "Use the fake facts along with the prompt. In a voice exercise, say the facts out loud.",
         "help": "Use just the sample shown here. Keep a copy so you can check the result.",
         "code": "Practice event: setup 3 minutes, game 7 minutes, cleanup 2 minutes. Start at minute 0."
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Open the finished file or table. Change game time to 5 in a follow-up task. Compare the start of cleanup in both versions.",
+        "text": "Use Your prompt with the supplied sample. Open the finished file or table. Change game time to 5 in a follow-up task. Compare the start of cleanup in both versions.",
         "help": "If the last end time stays 12, ask it to compute every time again from the changed duration."
       },
       {
@@ -1437,7 +1440,7 @@
     "steps": [
       {
         "title": "Make a practice notebook",
-        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Mailbox radio.",
+        "text": "Open the Gemini Notebook link in a computer browser. Sign in, choose Create new and name the notebook Mailbox radio.",
         "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
@@ -1453,7 +1456,7 @@
       },
       {
         "title": "Interrupt the hosts",
-        "text": "Open the recording, select Interactive Mode and start playback. While the hosts are talking, choose Join. Allow the microphone if asked. Wait for the hosts to call on you, then speak the question below. Listen until they answer and return to their discussion.",
+        "text": "Open the recording, select Interactive Mode and start playback. While the hosts are talking, choose Join. Allow the microphone if asked. Wait for the hosts to call on you, then speak the question. Listen until they answer and return to their discussion.",
         "help": "If Join is missing, check the recording language and try the new recording in a computer browser. You can ask the same question in Chat to practice checking a claim.",
         "code": "Which mailbox would I use for a meeting space, and what does the other mailbox serve?"
       },
@@ -1524,7 +1527,7 @@
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Press Count. Change C to room and press Count again. Inspect the original pasted text after each run.",
+        "text": "Use Your prompt with the supplied sample. Press Count. Change C to room and press Count again. Inspect the original pasted text after each run.",
         "help": "If unknown disappears, add an Unknown group. Add another unknown row and watch only that group grow."
       },
       {
@@ -1534,7 +1537,7 @@
       },
       {
         "title": "Make a copy that runs on your computer",
-        "text": "Open the example below and try its buttons. Choose Save example. In a plain-text editor, open that HTML file and save a copy with a new name ending in .html. Open the copy in a browser.",
+        "text": "Open the example and try its buttons. Choose Save example. In a plain-text editor, open that HTML file and save a copy with a new name ending in .html. Open the copy in a browser.",
         "help": "On Windows choose All files when saving. On Mac choose Format → Make Plain Text in TextEdit. If the page shows code, check that the file ends with .html rather than .txt."
       },
       {
@@ -1585,7 +1588,7 @@
       },
       {
         "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Give Blue +5, Red −5, Blue +5. Try a score after the win. Undo, then start a new game.",
+        "text": "Use Your prompt with the supplied sample. Give Blue +5, Red −5, Blue +5. Try a score after the win. Undo, then start a new game.",
         "help": "If undo changes Red instead, keep a list of moves in order. Undo only the last recorded move, then retest."
       },
       {
@@ -1624,7 +1627,7 @@
     "steps": [
       {
         "title": "Make a practice notebook",
-        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Mailbox help desk.",
+        "text": "Open the Gemini Notebook link in a computer browser. Sign in, choose Create new and name the notebook Mailbox help desk.",
         "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
@@ -1640,7 +1643,7 @@
       },
       {
         "title": "Generate and check a Data Table",
-        "text": "In Studio, use the pencil beside Data Table. Use the request below and generate the table. Open it and read every row against the answer key.",
+        "text": "In Studio, use the pencil beside Data Table. Use the request and generate the table. Open it and read every row against the answer key.",
         "help": "If a count or price is wrong, edit the request and generate a fresh table. Check the new values against the original notes.",
         "code": "Make four rows for Type of A, Shared count, Edit allowed and Cost. Use three columns called Question, Answer and Source. Write unknown for facts our notes do not give."
       },
@@ -1651,7 +1654,7 @@
       },
       {
         "title": "Build the app in Canvas",
-        "text": "Open Gemini in a second tab. In a new chat choose Canvas in Tools. Paste only your checked answers, their source names and the exact lines. Use the app request below. Open Preview.",
+        "text": "Open Gemini in a second tab. In a new chat choose Canvas in Tools. Paste only your checked answers, their source names and the exact lines. Use the app request. Open Preview.",
         "help": "Canvas needs the words behind each answer. Copy the checked lines from your notes if an answer has lost its source.",
         "code": "Build a read-only help desk with four buttons: Type of A, Shared count, Edit allowed and Cost. Show the answer and its source when a button is pressed. For Cost show Unknown."
       },

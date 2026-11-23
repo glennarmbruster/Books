@@ -1,4 +1,4 @@
-Fictional case packet. The labels below summarize selected records. They are not a raw vendor export.
+Fictional case packet. The case labels summarize selected records. They are not a raw vendor export.
 HR1 | 10:00Z | Approved test route from Exchange Online to on-premises Exchange: build.example.test mail goes to bridge.example.test.
 HR2 | 10:04Z | Exchange Online outbound connector RelayToShop: enabled; recipient scope build.example.test; smart host old-bridge.example.test; use MX false.
 HR3 | 10:04Z | On-premises Exchange receive connector SHOP01\Relay intake: enabled on SHOP01. The incoming service at bridge.example.test is accepting test traffic. This snapshot alone gives no arrival for a particular message.

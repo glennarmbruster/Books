@@ -17,9 +17,9 @@
     "intro": {
       "what": "Find the job you actually have. Each table starts from one concrete example. Change your pick when the work or the evidence changes.",
       "features": "Nine job tables compare five tools. The entries are editorial suggestions, not benchmark scores.",
-      "exchange": "Test a proposed mail fix against a read-only result.",
-      "m365": "Start in the app that owns the approved work file.",
-      "developer": "Choose a coding workspace when the result belongs in a repository.",
+      "exchange": "Choose a helper based on whether the mail task needs code, sources or a draft.",
+      "m365": "Check the spreadsheet and in-app columns before choosing a document workflow.",
+      "developer": "Compare local code editing with a quick visual prototype for the job at hand.",
       "sources": [
         [
           "Get started with Claude",
@@ -681,9 +681,9 @@
     "intro": {
       "what": "Find the date, subject and destination of a recorded update.",
       "features": "Open the page named in a row to read the current advice.",
-      "exchange": "Find the last review of a mail reference.",
-      "m365": "Trace a plan limit back to the review that changed it.",
-      "developer": "Check which part of a project guide moved.",
+      "exchange": "Record which mail procedure was actually retested after a guide changed.",
+      "m365": "Distinguish a changed help page from a human review of a team workflow.",
+      "developer": "Use the dated change note to find which app-building instruction needs a recheck.",
       "sources": [
         [
           "How can I create and manage projects?",
@@ -806,9 +806,9 @@
     "intro": {
       "what": "Find a prompt by task, then open the chapter for its tool and checks.",
       "features": "Each card includes a task, tool, chapter and a copyable prompt.",
-      "exchange": "Practice a diagnosis with invented trace facts.",
-      "m365": "Try a workbook question on four known values.",
-      "developer": "Ask for a file change with three test inputs.",
+      "exchange": "Adapt the count-blanks prompt to a read-only mailbox inventory.",
+      "m365": "Reuse a tagged spreadsheet prompt and change only its sample rows.",
+      "developer": "Try a library request on a known fixture before reusing it in an app.",
       "sources": [
         [
           "Get started with Claude",
@@ -1053,9 +1053,9 @@
     "intro": {
       "what": "Browse reference pages by tool, job or feature.",
       "features": "One page can belong to several topics. The counts come from this copy of the book.",
-      "exchange": "Open Exchange for diagnosis and reporting.",
-      "m365": "Look under M365 or connectors for account boundaries.",
-      "developer": "Use code, apps or offline to find a build reference.",
+      "exchange": "Use a mail or limits tag to find the right reference during a shift.",
+      "m365": "Follow a connectors tag when a document helper cannot read a file.",
+      "developer": "Find the offline and coding pages by tag when building away from Wi-Fi.",
       "sources": [
         [
           "Get started with Claude",

@@ -6,9 +6,9 @@
     "intro": {
       "what": "Gemini is an app you can talk or type to. A model is the part that makes the answer. Think of the app as a radio and the model as the station you choose.",
       "features": "Chat answers a message. Tasks can work on a longer job. Deep Research can look for sources and build a report.",
-      "exchange": "Ask it to sort two pretend messages into “delivery problem” and “password question.” Check each label.",
-      "m365": "Turn a four-line meeting note into a checklist. Make sure the time stays the same.",
-      "developer": "Ask it to write the rules for a guessing game. Try a winning guess and a losing guess.",
+      "exchange": "Compare two Gemini settings on a made-up queue deadline.",
+      "m365": "Try a short meeting summary before choosing a thinking level.",
+      "developer": "Time the response to a small puzzle and check that it obeys every clue.",
       "sources": [
         [
           "Google · the Gemini app and feature directory",
@@ -124,9 +124,9 @@
     "intro": {
       "what": "An API lets one app ask another app for help. Your program sends a request with a model ID. An ID is the exact label the service expects.",
       "features": "Google lists models for reading, writing, pictures and more. Each listing tells you what goes in, what comes out and how much fits.",
-      "exchange": "Give a model a made-up mail warning. Check whether it keeps the error number.",
-      "m365": "Ask for the date on a sample meeting flyer. Leave the date blank on one test.",
-      "developer": "Build a screen that reads a flyer and lets you fix any wrong fields.",
+      "exchange": "Compare two available API models on a missing timestamp in a mail-status card.",
+      "m365": "Test a model on dated and undated calendar notes.",
+      "developer": "Run the same app input with two candidate API model IDs and compare the JSON your form receives.",
       "sources": [
         [
           "Google AI Studio · choosing a model",
@@ -251,9 +251,9 @@
     "intro": {
       "what": "Gemini can read a shared browser page, work with a linked app or answer from files you select in Gemini Notebook.",
       "features": "Chrome can share a tab. Connected Apps can read files you allow. Gemini Notebook puts sources, chat and Studio side by side. Studio turns the same pages into maps, audio or study cards.",
-      "exchange": "Put two sample mail rules in a notebook. Ask which one catches a blank subject.",
-      "m365": "Find which of two meeting notes gives the updated time. Check its date.",
-      "developer": "Put the rules and help page for a game in one notebook. Find a rule the help page forgot.",
+      "exchange": "Attach one practice trace and ask which row records delivery.",
+      "m365": "Select the current project brief before asking for its due date.",
+      "developer": "Give the helper the actual settings file that your preview reads.",
       "sources": [
         [
           "Google · Gemini in Chrome and device availability",
@@ -429,9 +429,9 @@
     "intro": {
       "what": "AI Studio is a place to try ideas with Google models. Antigravity is a coding tool that can open a project folder and work on its files.",
       "features": "Playground lets you test a prompt. Build can make a working preview. Antigravity lets you read the plan, try the app and inspect the edits.",
-      "exchange": "Test whether a mail helper shows a blank date when a message gives no date.",
-      "m365": "Build a small meeting list that keeps two times if a flyer lists two sessions.",
-      "developer": "Build a word game with a Guess button. Check a win, a miss and a blank guess.",
+      "exchange": "Build a local page that counts sample mailboxes by type.",
+      "m365": "Prototype a form that turns meeting actions into a list.",
+      "developer": "Try the new button in the preview and watch the value change.",
       "sources": [
         [
           "Google · AI Studio Playground and Run settings",
@@ -516,9 +516,9 @@
     "intro": {
       "what": "Google offers different tools for different kinds of media. One can draw a picture. Another can listen to speech and write down the words.",
       "features": "You can edit a still picture, make a short clip, create music or read a script aloud. The app and the API may offer different choices.",
-      "exchange": "Read a picture of a made-up error box. Check that its last digit was copied correctly.",
-      "m365": "Make a short spoken version of a sample meeting note. Listen for the time and date.",
-      "developer": "Draw a game icon. Shrink it to button size and see if you can still tell what it is.",
+      "exchange": "Sketch two mailbox queues in contrasting colors for a training slide.",
+      "m365": "Turn a short event brief into a storyboard with an opening and closing frame.",
+      "developer": "Check a game icon at the size it will have on a tablet.",
       "sources": [
         [
           "Google · image creation in the Gemini app",

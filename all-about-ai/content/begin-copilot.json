@@ -65,7 +65,7 @@
       {
         "title": "Start the file",
         "do": "Create double.js. On the first line type // Return twice a numeric value. Press Enter. The two slashes make the line a note for readers.",
-        "see": "You have a new line below your note.",
+        "see": "You have a new line after your note.",
         "stuck": "If the file ends in .txt, save it as double.js before looking for code suggestions."
       },
       {
@@ -229,14 +229,14 @@
     "summary": "Compare a summary with the original messages. Watch for the difference between a proposed day and a booked day.",
     "topic": "Microsoft 365 Copilot",
     "where": [
-      "Open Outlook on your computer or mobile device with access to Copilot. You can practice with only the made-up messages below by pasting them into work Copilot Chat."
+      "Open Outlook on your computer or mobile device with access to Copilot. You can practice with only the supplied practice messages by pasting them into work Copilot Chat."
     ],
     "actions": [
       {
         "title": "Find a conversation",
-        "do": "In Outlook, open a practice thread you are allowed to read. Look above the messages for Summary by Copilot or Summarize.",
+        "do": "In Outlook, open a practice thread you are allowed to read. In the conversation controls, look for Summary by Copilot or Summarize.",
         "see": "If available, this opens a short account of the thread.",
-        "stuck": "If the button is missing, move to the sample chat exercise below."
+        "stuck": "If the button is missing, move to the sample chat exercise."
       },
       {
         "title": "Read the source",
@@ -287,7 +287,7 @@
     "summary": "Use two short meeting lines to separate an idea from an approved decision.",
     "topic": "Microsoft 365 Copilot",
     "where": [
-      "In Teams open a past practice meeting you may read. You can also open m365.cloud.microsoft/chat and use only the two lines below. Meeting settings and account access affect the recap and transcript you can see."
+      "In Teams open a past practice meeting you may read. You can also open m365.cloud.microsoft/chat and use only the two lines. Meeting settings and account access affect the recap and transcript you can see."
     ],
     "actions": [
       {
@@ -347,8 +347,8 @@
       {
         "title": "Fill four cells",
         "do": "Type Team in A1 and Count in B1. On row 2 enter North and 4. On row 3 enter South and 7. A cell is one box in the sheet.",
-        "see": "Column B now has 4 and 7 below the Count heading.",
-        "stuck": "If the numbers sit below Team, move them into B2 and B3."
+        "see": "Column B now has 4 and 7 in the Count column.",
+        "stuck": "If the numbers landed in the Team column, move them into B2 and B3."
       },
       {
         "title": "Ask for a formula",

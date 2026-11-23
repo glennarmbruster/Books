@@ -6,9 +6,9 @@
     "intro": {
       "what": "Devin is a coding helper. Enterprise is a version set up for teams. A team can choose which projects it can use and who may approve changes.",
       "features": "Ask reads and explains. Agent can change practice files and run tests. A session keeps the request, the steps and the result together.",
-      "exchange": "Find the file that decides how a sample mail report shows a zero.",
-      "m365": "Trace the date shown in a sample task list back to its source file.",
-      "developer": "Find which file draws the score before asking Devin to change it.",
+      "exchange": "Start with a report that reads made-up mailbox rows from a file.",
+      "m365": "Pick a practice workspace before asking for an inventory summary.",
+      "developer": "Give Devin a small app folder and one visible success condition.",
       "sources": [
         [
           "Your first Devin session",
@@ -161,9 +161,9 @@
     "intro": {
       "what": "A cloud Agent gets its own computer to edit files and run tests. A cold start means waiting while that computer gets its tools. Sometimes you can get your answer before you even need that computer.",
       "features": "Ask Devin searches saved code. DeepWiki explains how the parts fit. Devin CLI works in a folder on your computer. A cloud Agent can keep working after you leave.",
-      "exchange": "Use Ask to find the sorting rule in a sample mail report. Open the line it names.",
-      "m365": "Give a cloud Agent a practice task list and a test. Let it check that a blank due date stays blank.",
-      "developer": "Try a new button label with Devin CLI. Open the local game and see whether the label fits.",
+      "exchange": "Reuse a prepared report folder when timing repeated mail tests.",
+      "m365": "Compare warm and cold runs with the same sample workbook export.",
+      "developer": "Record setup time separately from the time spent editing your app.",
       "sources": [
         [
           "Ask Devin about project files",
@@ -269,7 +269,7 @@
         "paragraphs": [
           "Cognition calls this “wide and shallow.” Picture a tray of small jobs you can finish and check one at a time. For practice, aim for a piece a teammate could do in 60 to 90 minutes. This is a way to size the work. An Agent may take a different amount of time.",
           "Try a mail report with three needs. One piece checks how it sorts rows. A second checks a file with only column names. A third checks that a failed run leaves the old report safe. Give each piece a sample, the result you expect, and the exact command to run.",
-          "For the second piece, ask for a report with the same column names and zero data rows. Run the kit command in the previous section. Find “PASS 2 - empty input retains its header” and check the other four lines too. Run the whole set so a change to one rule cannot quietly break another.",
+          "For the second piece, ask for a report with the same column names and zero data rows. Run the practice kit’s Test-Inventory.ps1 command. Find “PASS 2 - empty input retains its header” and check the other four lines too. Run the whole set so a change to one rule cannot quietly break another.",
           "Start with one piece and have a teammate check it. Two pieces can run side by side when they touch different files and both have clear tests. When both need to change the same line, finish the first piece before you start the next."
         ],
         "sources": [
@@ -383,9 +383,9 @@
     "intro": {
       "what": "A session is a workspace for one job. You can ask where a rule lives, give permission to edit it and inspect the result in one place.",
       "features": "Devin can link to a file, propose an edit and report a test. A draft pull request lets another person check its work.",
-      "exchange": "Clarify one line about a pretend mailbox report. Keep its example address fake.",
-      "m365": "Fix one line in a sample meeting guide. Open its old link after the change.",
-      "developer": "Update a game’s rule and check the player’s Help button still opens it.",
+      "exchange": "Use one sample mail report to learn where the plan and test output appear.",
+      "m365": "Keep the practice inventory task inside its chosen repository.",
+      "developer": "Follow the first session from initial request to the file you can open.",
       "sources": [
         [
           "Starting a session",
@@ -481,9 +481,9 @@
     "intro": {
       "what": "A blueprint is a recipe for setting up Devin’s work computer. A build follows the recipe and saves a snapshot. A new session can start from a copy of that snapshot.",
       "features": "Setup can install the tools, fetch project packages and run a check. A log shows where each part worked or failed.",
-      "exchange": "Run a fake mailbox report on two fresh work computers and compare the files.",
-      "m365": "Set up the test tools a sample workbook exporter needs.",
-      "developer": "Make a small game run without installing a missing tool by hand each time.",
+      "exchange": "Confirm the practice machine can open the mail CSV and run its test.",
+      "m365": "Record the tools that a repeatable document export needs.",
+      "developer": "Start from a clean workspace and prove its setup can launch your app.",
       "sources": [
         [
           "Building and selecting snapshots",
@@ -585,9 +585,9 @@
     "intro": {
       "what": "Ask mode reads project files and helps make a plan. Agent mode can carry out an approved plan in a working copy.",
       "features": "Progress shows the steps taken. Side Chat can help you ask about the current session while work is still under way.",
-      "exchange": "Count two pretend mail alerts with different IDs even if they have the same text.",
-      "m365": "Process a repeated sample calendar update once.",
-      "developer": "Keep a game from adding the same saved turn twice.",
+      "exchange": "Keep one mailbox-report change in one session until its test passes.",
+      "m365": "Resume an inventory-format edit with its earlier decisions in view.",
+      "developer": "Use a second request to change an existing feature without rebuilding it.",
       "sources": [
         [
           "Ask and plan a handoff",
@@ -670,9 +670,9 @@
     "intro": {
       "what": "A code review is a check of a proposed edit. A test gives you one piece of evidence about how the edit behaves.",
       "features": "Devin can show changed lines, report test results and, on supported projects, record a short run of the app.",
-      "exchange": "Verify that a repeated sample alert counts once in a mail report.",
-      "m365": "Compare a changed exporter with the file a spreadsheet can actually open.",
-      "developer": "Play a turn twice and see whether the game adds the same points twice.",
+      "exchange": "Use a mailbox exactly at the cutoff to review a quota fix.",
+      "m365": "Compare a report change with the acceptance rule in the ticket.",
+      "developer": "Try the case immediately beside the one a patch was meant to fix.",
       "sources": [
         [
           "Devin Review",
@@ -746,9 +746,9 @@
     "intro": {
       "what": "A skill is a saved set of instructions for a job. Older accounts may show Playbooks or Knowledge while Devin moves them to Skills.",
       "features": "Skills can live under Customize or with project files. You can name a skill in a session and check what it actually did.",
-      "exchange": "Save a recipe for checking a sample mailbox inventory.",
-      "m365": "Reuse a set of checks on each practice meeting-notes export.",
-      "developer": "Teach a helper how to test a game save and reload.",
+      "exchange": "Write a reusable procedure for checking a report with an empty mailbox count.",
+      "m365": "Reuse the same review steps on the next practice inventory export.",
+      "developer": "Run a saved build recipe against a different sample project.",
       "sources": [
         [
           "Creating and invoking skills",
@@ -838,9 +838,9 @@
     "intro": {
       "what": "A connection links a tool such as Teams or a ticket board with Devin. A ticket is a short note that tracks one piece of work.",
       "features": "A new ticket can start a session. A later comment can update the same session. Some tools can show the result back on the ticket.",
-      "exchange": "Put follow-up details about a sample mail issue on its existing ticket.",
-      "m365": "Route a practice Teams request to the team that owns it.",
-      "developer": "Add a correction to a game bug report without opening another job.",
+      "exchange": "Use a practice ticket to track a requested mail-report fix.",
+      "m365": "Match a repeated project notification to the session it already started.",
+      "developer": "Test that a retried app ticket points to a single coding job.",
       "sources": [
         [
           "Jira integration options",
@@ -932,9 +932,9 @@
     "intro": {
       "what": "A permission says what someone may do. Devin, the project host and the team can each control a different part of the path.",
       "features": "The sign-in method, team role, project grant and review rules each answer a different access question.",
-      "exchange": "Let a reader see a sample mail project while a reviewer approves changes.",
-      "m365": "Check whether a practice account can open just the needed team file.",
-      "developer": "Give a helper access to one game project and test it with a harmless file.",
+      "exchange": "Compare who may read a sample mail report with who may edit its script.",
+      "m365": "Review the role that permits a practice workspace change.",
+      "developer": "Try the app-change workflow with the smallest useful project permission.",
       "sources": [
         [
           "Organizations and repositories",
@@ -1059,9 +1059,9 @@
     "intro": {
       "what": "A deployment is the setup that runs Devin. A job may run in Devin’s cloud, in a cloud area set aside for one customer or on a computer the customer runs.",
       "features": "A profile sets rules for the network and tools a session can use. The rules for making a snapshot can differ from the rules for a running session.",
-      "exchange": "Find where a read-only mail report runs before checking for its sample input.",
-      "m365": "Check which practice data an approved work computer may reach.",
-      "developer": "Test the package your game needs on the same kind of computer that will run it.",
+      "exchange": "Locate the practice machine where a mail script reads its inputs.",
+      "m365": "Check where inventory files are available before handing a task to Devin.",
+      "developer": "Confirm which environment runs a test before trusting a local-only result.",
       "sources": [
         [
           "Enterprise deployment options",
@@ -1152,9 +1152,9 @@
     "intro": {
       "what": "Devin’s API lets a program start and track a job. A session ID is like a claim ticket. Save it so you can find the same job again.",
       "features": "The API has separate calls to create a session, read its progress and send another message. Your account needs permission for each action.",
-      "exchange": "Track one practice mail report by ID and record its output.",
-      "m365": "Attach a sample job’s session link to its task.",
-      "developer": "Keep a retry from starting the same paid build twice.",
+      "exchange": "Track a mock mail-report job using the ID returned when it starts.",
+      "m365": "Keep the inventory job ID beside its last known state.",
+      "developer": "Poll one mock session until it finishes and count how often it was started.",
       "sources": [
         [
           "API identities",
@@ -1248,9 +1248,9 @@
     "intro": {
       "what": "A group of Devin sessions can work on separate projects. They still need a shared rule when their work must agree.",
       "features": "One coordinator can hand off jobs, collect tests and decide when the next group is ready. Dynamic Workflows can put those stages in a script.",
-      "exchange": "Try a new sample mail-report date format on two reports first.",
-      "m365": "Check that several practice exporters agree about a missing meeting date.",
-      "developer": "Give one helper the game rules and another the score display. Agree on the score format first.",
+      "exchange": "Check the same report-label change in two mock mail projects.",
+      "m365": "Keep one test result per inventory project in a shared rollout.",
+      "developer": "Record which app still needs a test before declaring a group release ready.",
       "sources": [
         [
           "Coordinating sessions",
@@ -1302,7 +1302,7 @@
       {
         "title": "Grow the test slowly",
         "paragraphs": [
-          "Pick one report that uses the shared tool and one that stands alone. Open their outputs in the app that reads them. If both pass, start a small group the reviewers can handle. Within a project, stacked pull requests depend on the one below. Across projects, write down the order in which changes must land."
+          "Pick one report that uses the shared tool and one that stands alone. Open their outputs in the app that reads them. If both pass, start a small group the reviewers can handle. Within a project, each pull request in a stack depends on its parent change. Across projects, write down the order in which changes must land."
         ],
         "sources": [
           [
@@ -1338,9 +1338,9 @@
     "intro": {
       "what": "Agent Compute Units, or ACUs, measure work done by {{fact.devin.enterprise.name}}. The rate your team pays comes from its own plan.",
       "features": "Usage reports show the units spent. Review records show which changes were accepted. An audit log records changes to settings and access.",
-      "exchange": "Count accepted practice mail reports and the time spent checking them.",
-      "m365": "Compare two batches of sample work of the same size and type.",
-      "developer": "Measure how much work it took to deliver a tested game fix.",
+      "exchange": "Compare the cost of two attempts that produced one accepted report fix.",
+      "m365": "Count accepted inventory changes by their distinct review IDs.",
+      "developer": "Divide practice credits spent by the number of changes you actually kept.",
       "sources": [
         [
           "Enterprise billing and budgets",
@@ -1435,9 +1435,9 @@
     "intro": {
       "what": "This is a paper-and-pencil way to practice being the reviewer. You can do all three cases without connecting to a service.",
       "features": "Write a clear brief, point out missing test evidence and use numbers to decide what to try next.",
-      "exchange": "Review a pretend report that counted one mail alert twice.",
-      "m365": "Check what a blocked export test can actually prove.",
-      "developer": "Use a tiny pilot before adding a change to every game screen.",
+      "exchange": "Trace a read-only report from its test fixture through review and rerun.",
+      "m365": "Hand another person the evidence needed to repeat an inventory test.",
+      "developer": "Exercise a repeated ticket against a saved ledger before shipping it.",
       "sources": [
         [
           "Choosing work for Devin",

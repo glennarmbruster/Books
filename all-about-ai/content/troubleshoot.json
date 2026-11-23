@@ -7,9 +7,9 @@
     "intro": {
       "what": "Describe what went wrong. Write a test that could prove your first guess wrong.",
       "features": "Use one broken message and one that works. Record what the test showed.",
-      "exchange": "Trace one receipt from a report to a new delivery test.",
-      "m365": "Keep a sign-in guess separate from the policy result that could prove it.",
-      "developer": "Reproduce a broken label, then try a second input that should stay unchanged.",
+      "exchange": "Trace a delivery symptom to evidence that could confirm or rule out its cause.",
+      "m365": "Separate a Teams incident report into symptoms, guesses and tests.",
+      "developer": "Keep an app bug open until a new run reproduces the expected result.",
       "sources": [
         [
           "Microsoft Learn · read a cloud message trace",
@@ -138,9 +138,9 @@
     "intro": {
       "what": "Follow one message ID to each address. The same message can reach one desk and fail at another.",
       "features": "Compare the failed row with its bounce. Then test a fresh message.",
-      "exchange": "Tell a service desk which copy of a message failed and which copy reached its recipient.",
-      "m365": "Show a support team which facts belong in its incident note and which ones still need checking.",
-      "developer": "Use the same method when a reminder app sends one alert to several people.",
+      "exchange": "Use message ID and recipient together to find the failed delivery.",
+      "m365": "Keep multiple recipients distinct when summarizing a service notice.",
+      "developer": "Use a stable message ID to track one notification through a log.",
       "sources": [
         [
           "Microsoft Learn · follow a message through Exchange Online",
@@ -286,9 +286,9 @@
     "intro": {
       "what": "Read the checks added by the system that received the message.",
       "features": "Compare those checks with the saved DNS records. Mark the final mailbox state unknown if no receipt is present.",
-      "exchange": "Separate a failing bulletin from another message that used the same From address.",
-      "m365": "Give a security reviewer the smallest set of fields needed to check an authentication claim.",
-      "developer": "When an app sends notices, compare the records from a failing send and a known working send.",
+      "exchange": "Read the receiving server’s recorded SPF, DKIM and DMARC results.",
+      "m365": "Ask for the evidence behind a claim that a message was quarantined.",
+      "developer": "Distinguish a failed signature check from a recorded delivery decision.",
       "sources": [
         [
           "Microsoft Learn · read the authentication results in mail headers",
@@ -404,7 +404,7 @@
       ],
       [
         "header",
-        "The lines a mail system adds above the message body."
+        "The lines a mail system adds before the message body."
       ],
       [
         "SPF",
@@ -435,9 +435,9 @@
     "intro": {
       "what": "An enabled rule can still miss a message. Check each condition against the failed notice.",
       "features": "Use the same subject at a second address. Check whether the rule stayed within its scope.",
-      "exchange": "Explain a mail flow rule that never matches the intended board notices.",
-      "m365": "Write an approval note that limits a correction to one field on one rule.",
-      "developer": "Test a notification filter with an expected match and two examples that should stay unchanged.",
+      "exchange": "Match the rule’s subject word and recipient to one practice message.",
+      "m365": "Check that an unrelated announcement keeps its original subject.",
+      "developer": "Test a filtering rule with both a match and a near miss.",
       "sources": [
         [
           "Microsoft Learn · mail flow rule conditions",
@@ -575,9 +575,9 @@
     "intro": {
       "what": "Start with one failed sign-in. Connect its time and device to the rule that ran.",
       "features": "Compare a rule that blocks access with one that only logs a result.",
-      "exchange": "Separate an app sign-in block from a mail delivery failure.",
-      "m365": "Compare one blocked sign-in with one successful sign-in to the same resource.",
-      "developer": "Put an event label on each app error so two failures close in time can be told apart.",
+      "exchange": "Check which device rule actually blocked the sample mail sign-in.",
+      "m365": "Match a compliance report to the time and device in a sign-in log.",
+      "developer": "Distinguish an enforced access check from a preview result in an app log.",
       "sources": [
         [
           "Microsoft Learn · review the Conditional Access result for a sign-in",
@@ -642,7 +642,7 @@
             [
               "Device",
               "IC1 before EV-31",
-              "The tablet was below the required OS."
+              "The tablet was short of the required OS."
             ],
             [
               "Control",
@@ -736,9 +736,9 @@
     "intro": {
       "what": "A message moves from cloud mail to a server on site. Draw that path before you read the logs.",
       "features": "Mark the last place that saw the message. A receipt for the trip back proves only the return path.",
-      "exchange": "Match an Exchange Online sending route to the intended on-premises destination.",
-      "m365": "Use a separate test for each direction when two services exchange a file.",
-      "developer": "Compare the address an app used with the address its test plan approved.",
+      "exchange": "Draw the direction of the failed mail hop and match the receiving receipt.",
+      "m365": "Check the destination and UTC time before combining two service logs.",
+      "developer": "Compare the host your app intended to call with the host it actually tried.",
       "sources": [
         [
           "Microsoft Learn · hybrid mail routing",
@@ -879,9 +879,9 @@
     "intro": {
       "what": "Run one mail case in four tools. Give each one the same facts in a new chat.",
       "features": "Score each reply against the case. Leave the row blank if you did not run that tool.",
-      "exchange": "See which reply uses the small-message and second-recipient controls to narrow a mail fault.",
-      "m365": "Try the same method with a sign-in that fails on only one device. Keep a successful sign-in as a control.",
-      "developer": "Give four helpers the same failed test and one passing test. Check whether they ask for useful evidence before changing code.",
+      "exchange": "Give four tools the same limited mail trace and save the first replies.",
+      "m365": "Leave an untested product blank when scoring a service diagnosis.",
+      "developer": "Use a frozen input to compare bug explanations before supplying later evidence.",
       "sources": [
         [
           "Microsoft Learn · read delivery trace results",
@@ -927,7 +927,7 @@
       {
         "title": "Score evidence before style",
         "paragraphs": [
-          "Give one point for each row below. Read the reply beside the original packet. A correct guess without the named evidence misses that point. A type of fault may be likely long before its exact setting is known."
+          "Give one point for each row. Read the reply beside the original packet. A correct guess without the named evidence misses that point. A type of fault may be likely long before its exact setting is known."
         ],
         "table": {
           "columns": [
@@ -953,7 +953,7 @@
             ],
             [
               "Safe test",
-              "Read Workroom’s current receive limit. A limit below 14 MB supports the mailbox theory. If it allows 14 MB, check for another limit on that route."
+              "Read Workroom’s current receive limit. A limit under 14 MB supports the mailbox theory. If it allows 14 MB, check for another limit on that route."
             ]
           ]
         },

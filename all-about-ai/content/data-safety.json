@@ -6,9 +6,9 @@
     "intro": {
       "what": "Start with the rules for the training workspace. Make the smallest copy that can answer the question.",
       "features": "Check every field before you share. Write down what you sent and why.",
-      "exchange": "Keep the link between a mail retry and a delivery while removing real addresses.",
-      "m365": "Check the allowed account and workspace before you share a marked document.",
-      "developer": "Use fake project settings when asking for help with a broken app.",
+      "exchange": "Replace real mail identities with stable aliases in a retry example.",
+      "m365": "Check the approved account, task and share policy before attaching a file.",
+      "developer": "Keep only the fields needed to reproduce a bug in a public example.",
       "sources": [
         [
           "Microsoft Learn · sensitivity labels and data policies",
@@ -141,9 +141,9 @@
     "intro": {
       "what": "A note may contain an order as well as a fact. Read the order as part of the note.",
       "features": "Look for the entry made by the person who can close the case.",
-      "exchange": "Keep a quoted mail footer from changing the conclusion of a mail case.",
-      "m365": "Read a pasted meeting note without treating an old request as approval.",
-      "developer": "Stop a feedback summary from changing an app setting because of words in a comment.",
+      "exchange": "Treat requests quoted inside a ticket as case text while reading mail status.",
+      "m365": "Separate a pasted instruction from the user's actual document task.",
+      "developer": "Test that a note imported by your app cannot authorize an unrelated action.",
       "sources": [
         [
           "Microsoft Learn · untrusted document content and prompt injection",

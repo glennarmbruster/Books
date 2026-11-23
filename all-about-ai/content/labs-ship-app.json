@@ -4,7 +4,7 @@
     "title": "Play the last second of Signal Sprint",
     "summary": "Prove a wrong tap, a right tap and a late tap do three different things.",
     "level": "Starter",
-    "requires": "Use the running example below. For a file you can keep, use Save example (.html) and rename the copy index.html in an empty practice folder.",
+    "requires": "Use the running example. For a file you can keep, use Save example (.html) and rename the copy index.html in an empty practice folder.",
     "features": "Start the clock and try a good tap, a wrong tap and a late tap. Check the score after each.",
     "roles": [
       "Test a timeout on a pretend mail-report screen.",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Use a practice identity",
-        "text": "Set the two fictional values below for this repository only. Check that the address printed is builder@example.test. Keep this practice history local. For an actual public project, review your approved author identity and GitHub commit email privacy before publishing.",
+        "text": "Set the two fictional values for this repository only. Check that the address printed is builder@example.test. Keep this practice history local. For an actual public project, review your approved author identity and GitHub commit email privacy before publishing.",
         "help": "The --local setting is for this folder. If Git asks who you are, check these local settings in the same terminal. You do not need to enter personal contact details for this exercise.",
         "code": "git config --local user.name \"Practice Builder\"\ngit config --local user.email \"builder@example.test\"\ngit config --local --get user.email"
       },
@@ -200,7 +200,7 @@
       },
       {
         "title": "Reverse just the tested edit",
-        "text": "Confirm git status --short is empty and that Try the 1.1 label is still the newest commit. Only in that clean scratch project, run the rollback below. Check the three entries. Reopen index.html and look for 1.0.",
+        "text": "Confirm git status --short is empty and that Try the 1.1 label is still the newest commit. Only in that clean scratch project, run the rollback. Check the three entries. Reopen index.html and look for 1.0.",
         "help": "If the newest commit or status differs, inspect the history and stop. This exercise assumes HEAD is exactly the small label edit.",
         "code": "git revert --no-edit HEAD\ngit log -3 --oneline\ngit status --short"
       }
@@ -367,7 +367,7 @@
     "steps": [
       {
         "title": "Isolate the release file",
-        "text": "Put only the game in a clean release folder. Run the command below there. Leave the server open.",
+        "text": "Put only the game in a clean release folder. Run the command there. Leave the server open.",
         "help": "Check that index.html is in the folder you served.",
         "code": "python3 -m http.server 8000 --bind 127.0.0.1"
       },
@@ -454,7 +454,7 @@
     "title": "Retest a release at the address a player will use",
     "summary": "Find an old copy by its build label and verify the last playable second on the released copy.",
     "level": "Expert",
-    "requires": "Use the Signal Sprint example below and Python 3 for the local rehearsal. Use a new release-copy folder containing only the saved example renamed index.html. If you published this same safe game in lab 5, you can repeat the checks online.",
+    "requires": "Use the Signal Sprint example and Python 3 for the local rehearsal. Use a new release-copy folder containing only the saved example renamed index.html. If you published this same safe game in lab 5, you can repeat the checks online.",
     "features": "Open the public copy. Check its label, clock and score before you sign off.",
     "roles": [
       "Record the tested version of a sample report viewer.",
@@ -466,11 +466,11 @@
       {
         "title": "Make an old-copy control",
         "text": "In a separate folder named old-copy, save a spare game file and change only the visible label to Signal Sprint 0.9. Open it and look for 0.9. Leave the clean release-copy at 1.0. Do not publish the old copy.",
-        "help": "If both show 0.9, replace release-copy/index.html with the unedited example below."
+        "help": "If both show 0.9, replace release-copy/index.html with the unedited example."
       },
       {
         "title": "Test the actual address",
-        "text": "From release-copy, start a local server with the lab 5 command below. In a fresh browser session open http://127.0.0.1:8000/index.html. Record the address, Signal Sprint 1.0 and the short commit ID if you have it. For an optional live test, separately visit the published Pages address in a fresh session.",
+        "text": "From release-copy, start a local server with the lab 5 command. In a fresh browser session open http://127.0.0.1:8000/index.html. Record the address, Signal Sprint 1.0 and the short commit ID if you have it. For an optional live test, separately visit the published Pages address in a fresh session.",
         "help": "If you see 0.9, check the address, source folder, published branch and last deployment. Reload in a fresh session. Claim only the address where you saw 1.0.",
         "code": "python3 -m http.server 8000 --bind 127.0.0.1"
       },

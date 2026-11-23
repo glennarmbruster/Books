@@ -6,9 +6,9 @@
     "intro": {
       "what": "ChatGPT is an app for talking to an AI helper. The model makes an answer. The effort setting tells it how much time to spend working through a problem.",
       "features": "Chat can draft text. Search can find a page. Deep research can study several sources. Work can make a document. Codex can edit an app.",
-      "exchange": "Ask it to explain a pretend mail rule. Try an exception and check it against the rule.",
-      "m365": "Turn a sample meeting note into a short reminder. Check the day and time.",
-      "developer": "Describe when your game should end. Ask for a test that proves the ending works.",
+      "exchange": "Test a short handoff in chat before choosing deeper reasoning for a mail case.",
+      "m365": "Choose a research mode when a policy brief needs current sources.",
+      "developer": "Use one small rule puzzle to compare speed with correctness.",
       "sources": [
         [
           "OpenAI Help · Models in ChatGPT",
@@ -81,9 +81,9 @@
     "intro": {
       "what": "OpenAI’s API is a way for your app to send a request and get an answer back. The exact model ID tells the service which model to use.",
       "features": "The model list names tools for words, pictures and code. A price table tells you the cost of sending in text and getting text back.",
-      "exchange": "Use pretend mail and ask for one of three labels. Count the labels that match your answer key.",
-      "m365": "Test whether a helper finds both dates on a made-up project notice.",
-      "developer": "Try the same broken score button with two models. Run the same test on each fix.",
+      "exchange": "Try a structured mail-status response against a missing-status example.",
+      "m365": "Require a valid field for the date in an automated meeting summary.",
+      "developer": "Check the model's output shape before your app accepts it.",
       "sources": [
         [
           "OpenAI Developers · Model catalog",
@@ -99,7 +99,7 @@
       {
         "title": "Choose one that fits the job",
         "paragraphs": [
-          "Make a little test with a result you can see. For a picture, pick a screen with a large Help button. For math, use a score you can add by hand. The exact IDs below are for apps."
+          "Make a little test with a result you can see. For a picture, pick a screen with a large Help button. For math, use a score you can add by hand. The exact IDs are for apps."
         ],
         "sources": [
           [
@@ -184,9 +184,9 @@
     "intro": {
       "what": "Search can look for a web page. Deep research can study several sources. Data analysis can use code to count rows or do math with a file.",
       "features": "You can follow source links, review a research plan or check the numbers behind a chart.",
-      "exchange": "Count two types of pretend mail errors and compare the counts with the sample rows.",
-      "m365": "Ask for the original rule behind a date in a draft notice. Open the cited page.",
-      "developer": "Give a score app a table with one blank. Check how it counts completed turns.",
+      "exchange": "Open the official page behind a proposed read-only mail command.",
+      "m365": "Check the cited line before passing a policy summary to a team.",
+      "developer": "Recalculate a reported percentage from its original values.",
       "sources": [
         [
           "OpenAI Help · ChatGPT Search",
@@ -247,9 +247,9 @@
     "intro": {
       "what": "Work helps make finished items such as a checklist or a slide deck. Codex can make a change in the files that run an app.",
       "features": "Codex can work on your computer or in the cloud. It can show the lines it changed and run tests. Work can use the notes and tools you give it.",
-      "exchange": "Use Work to draft a report from made-up mailbox rows. Use Codex to change the report script.",
-      "m365": "Turn a short mock agenda into a handout. Check that each decision appears once.",
-      "developer": "Test a Next button on the first, middle and last pages of a small puzzle book.",
+      "exchange": "Give Codex a practice folder for a read-only report and inspect the diff.",
+      "m365": "Build a local filter for sample inventory titles.",
+      "developer": "Test a search field, its empty result and its Clear button in the browser.",
       "sources": [
         [
           "OpenAI Help · ChatGPT Work and Codex",
@@ -285,7 +285,7 @@
       {
         "title": "Try the button like a reader",
         "paragraphs": [
-          "Ask Codex for Previous and Next above a puzzle. Tell it to keep a player’s marks. Open the middle puzzle, mark a word and press Next. Press Previous. The mark should still be there. Open the last page and check that Next cannot take you past the end. If the book should work offline, save it first and repeat the test with the network off."
+          "Ask Codex for Previous and Next in the puzzle header. Tell it to keep a player’s marks. Open the middle puzzle, mark a word and press Next. Press Previous. The mark should still be there. Open the last page and check that Next cannot take you past the end. If the book should work offline, save it first and repeat the test with the network off."
         ],
         "sources": [
           [
@@ -311,9 +311,9 @@
     "intro": {
       "what": "ChatGPT can make images, edit a picture and talk with you. A transcript is a written copy of spoken words.",
       "features": "You can make a still picture, practice a spoken exchange or have the AI draft a shot list. Each job gives you a different kind of result.",
-      "exchange": "Turn a pretend mail alert into a spoken notice. Check that its code sounds right.",
-      "m365": "Draft a picture for a practice slide. Keep enough room for the title.",
-      "developer": "Design a badge for Coach Alex. Check that the name is easy to read on a small screen.",
+      "exchange": "Sketch an icon that distinguishes held mail from delivered mail.",
+      "m365": "Check whether slide artwork leaves room for its caption.",
+      "developer": "Edit one color on a badge while keeping its shape and empty ribbon.",
       "sources": [
         [
           "OpenAI · Image tools and examples",

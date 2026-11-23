@@ -298,7 +298,7 @@
       },
       {
         "title": "Try a clear case",
-        "do": "In the ordinary box, write “The ticket is blue.” Choose Run. Compare the reply with the rule above.",
+        "do": "In the ordinary box, write “The ticket is blue.” Choose Run. Compare the reply with the stated rule.",
         "see": "A correct reply is just blue.",
         "stuck": "If it gives a whole sentence, check that you saved the rule in the chat you are using."
       },
@@ -356,7 +356,7 @@
         "title": "Ask for a change",
         "do": "Ask for a Subtract one button that allows negative scores. From zero, press it once. Try Reset again.",
         "see": "The new button gives -1. Reset still gives 0.",
-        "stuck": "If it stops at zero, tell the builder that a penalty can put the score below zero. Retest the three buttons."
+        "stuck": "If it stops at zero, tell the builder that a penalty can put the score less than zero. Retest the three buttons."
       }
     ],
     "roles": [
@@ -440,12 +440,12 @@
     "topic": "Gemini Tasks",
     "where": [
       "Use Gemini on the web or in its mobile app while online. Age, region, account and rollout can affect access.",
-      "Look for Task above the message box. Older guides call this feature Spark. You can try the math in an ordinary chat if your account has no Task choice."
+      "Look for Task in the message composer. Older guides call this feature Spark. You can try the math in an ordinary chat if your account has no Task choice."
     ],
     "actions": [
       {
         "title": "Choose Task",
-        "do": "Start a new Gemini chat. Select Task above the text box. Look at the model menu. Leave the current choice in place.",
+        "do": "Start a new Gemini chat. Select Task in the composer. Look at the model menu. Leave the current choice in place.",
         "see": "The message area shows you are starting a task.",
         "stuck": "If the option is missing, use an ordinary chat to try the sample. The separate progress view requires Task access."
       },

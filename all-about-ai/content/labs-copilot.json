@@ -15,7 +15,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Notice A. Mail search maintenance, Saturday 09:00–09:30 UTC. Message delivery will continue."
       },
@@ -66,7 +66,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "M1 Approver: Tuesday is booked.\nM2 Organizer: Could we use Wednesday instead?\nM3 Approver: I will check."
       },
@@ -121,7 +121,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Build 12. A display bug affects iPad only. Fix rolls out Tuesday 14:00 UTC. Restart the app after rollout. Windows needs no action.",
         "caption": "Sample rules and inputs"
@@ -177,7 +177,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "09:03 chat C1 Recorder: Could exports run nightly?\n09:10 transcript begins\n09:12 T1 Approver: I approve weekly exports.\n09:13 T2 Recorder: I will own the export job."
       },
@@ -232,7 +232,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Row,Person,Plan\n1,u1,A\n2,u1,B\n3,u2,A\n4,u2,A"
       },
@@ -292,7 +292,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Pilot A. Invited: 12 sites. Responded: 9. Respondents supporting extension: 6."
       },
@@ -343,11 +343,11 @@
       "Check age limits on a queue sheet.",
       "Sort game tasks by wait time."
     ],
-    "prompt": "Below 15 minutes is normal. From 15 through 29 is watch. At 30 and above use investigate. Blank or negative values are invalid. Give each row its label and count each label. Show the rule in words or a formula.",
+    "prompt": "Less than 15 minutes is normal. From 15 through 29 is watch. At 30 or higher use investigate. Blank or negative values are invalid. Give each row its label and count each label. Show the rule in words or a formula.",
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "ID,Minutes\nA,14\nB,15\nC,29\nD,30\nE,\nF,-1"
       },
@@ -402,7 +402,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "V1 effective Jan 1: groups up to 20 may move.\nV2 effective Feb 1: groups up to 30 may move unless flagged; flagged groups are held.\nA Jan 31 size 25; B Feb 1 size 30 clear; C Feb 2 size 12 flagged; D Feb 3 size 12 flag unknown."
       },
@@ -457,7 +457,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "P1 Standard archive request: 5 business days.\nP2 Urgent archive request: 1 business day.\nQ1 Standard archive time? Q2 Restore time? Q3 Archive time?"
       },
@@ -517,7 +517,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Batch,Attempted,Completed\nWest,80,72\nEast,20,10\nIdle,0,0"
       },
@@ -572,7 +572,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Usage in GB: m1=10, m2=20.\nMap: m1→North, m1→South, m2→East."
       },
@@ -627,7 +627,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "A Jan 5 23:55 -0600: delay observed.\nB Jan 6 06:02 +0000: queue peaked.\nC Jan 6 01:10 -0500: recovery observed.\nD 00:59 offset/date unknown: configuration note."
       },
@@ -682,7 +682,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Rule: approved rollback; successful backup within 60 min; all smoke tests pass.\nR1 rollback approved. B1 backup successful 09:00 UTC. T1 two passed, one pending.\nTimes: 10:00 and 10:01 UTC, same day."
       },
@@ -737,7 +737,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "R1 | project alpha\nR1 | project alpha\nR2 | project beta\nR1 | project gamma"
       },
@@ -792,7 +792,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "G1 gate: >=95% complete AND owner approval.\nR1 North 48/50. R2 South 47/50.\nM1 owner: I can review tomorrow.\nM2 participant: We should move ahead."
       },
@@ -851,7 +851,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Team\tPoints\nBlue\t3\nGold\t4\nBlue\t-1",
         "caption": "Two columns for the workbook"
@@ -907,7 +907,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Deck: How many sides on a square? 4. Which is colder, ice or steam? ice. What is 3 plus 5? 8."
       },
@@ -958,7 +958,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "A: shared, Help Desk. B: user, Practice Seat. C: room, Meeting Room."
       },
@@ -1009,7 +1009,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Budget (minutes): 30\nWelcome: 5\nDemo: 12\nQuestions: 8",
         "caption": "Agenda in minutes"
@@ -1027,7 +1027,7 @@
       {
         "title": "Try the second test",
         "text": "Change questions from 8 to 15 minutes. Check the last row again.",
-        "help": "If every row starts from 30, point the formula at the row just above it before subtracting."
+        "help": "If every row starts from 30, point the formula at the preceding agenda row before subtracting."
       }
     ],
     "check": [
@@ -1065,7 +1065,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Rules: [help] goes to Help; [bill] goes to Bills; any other tag goes to Review. Cards: [help] printer, [bill] paper, [other] hello."
       },
@@ -1077,7 +1077,7 @@
       {
         "title": "Check the first result",
         "text": "Compare the result with this hand check. Reply Help to the printer card. One point. Reply Help to the paper card. The score stays 1 and the explanation points to [bill].",
-        "help": "Write the three folder names at the top of a sheet. Place the subject cards below their tags. Compare the host’s grading with your piles."
+        "help": "Write the three folder names at the top of a sheet. Group each subject card with its tag. Compare the host’s grading with your piles."
       },
       {
         "title": "Try the second test",
@@ -1116,7 +1116,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Capacity 3. Input rows: Desk A yes, Desk B no, Desk C yes."
       },
@@ -1171,7 +1171,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Sample today is day 12. Items opened on days 7, 10, 12 and 13. Watch starts at age 3."
       },
@@ -1183,7 +1183,7 @@
       {
         "title": "Check the first result",
         "text": "Compare the result with this hand check. The four rows read 5 Watch, 2 Fresh, 0 Fresh and Check date.",
-        "help": "Subtract the opened day from day 12. For a result below zero, check the date. Only then apply Watch to ages of three or more."
+        "help": "Subtract the opened day from day 12. For a result less than zero, check the date. Only then apply Watch to ages of three or more."
       },
       {
         "title": "Try the second test",
@@ -1226,7 +1226,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Rule card: cannot find a message → ask “Is search working?” If yes, check folder; if no, check search status. Cannot send → check Outbox. Anything else → human review."
       },
@@ -1277,7 +1277,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Board 2, 4, 6. Draw pile 4, 4, 2, 6. Start with nothing marked."
       },
@@ -1333,7 +1333,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Room A: slot 1 starts at minute 10 and ends at 25. Slot 2 runs 25–40. Slot 3 runs 20–27."
       },
@@ -1388,7 +1388,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Desk A belongs to Readers and Editors. Desk B belongs to Readers. Readers can view Kit. Editors can edit Kit. Edit includes view."
       },
@@ -1443,7 +1443,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Budget: 10\nRound 1: map 3, clue 1\nRound 2: bridge 5, raft 2\nRound 3: lantern 4, torch 1",
         "caption": "Choices and token prices"
@@ -1495,7 +1495,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Events: 1 take A desk1; 2 take A desk2; 3 return A desk1; 4 take A desk2."
       },
@@ -1546,7 +1546,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Target 8. Rounds: Blue 5, Gold 3, Blue -2, Gold 5. Zero is a legal turn. Blank means no turn."
       },
@@ -1601,7 +1601,7 @@
     "steps": [
       {
         "title": "Start with the sample",
-        "text": "Open a fresh Copilot chat. Paste the sample below in the message box. You can paste it above the request in the same message.",
+        "text": "Open a fresh Copilot chat. Paste the sample in the message box. You can place it before the request in the same message.",
         "help": "Copy every heading and row. If Copilot has already answered, you can send the request in your next message.",
         "code": "Sample columns ID,Type,Count. A,shared,2; B,user,0; C,room,4; D,user,blank. Count only user and shared rows."
       },

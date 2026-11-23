@@ -16,7 +16,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -65,7 +65,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -114,7 +114,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -163,7 +163,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -212,7 +212,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -266,7 +266,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -315,7 +315,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -364,7 +364,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -417,7 +417,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -471,7 +471,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -524,7 +524,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -577,7 +577,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -626,7 +626,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -679,7 +679,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -728,7 +728,7 @@
       {
         "title": "Open the practice folder",
         "text": "In Antigravity on a computer, open a new project with just one empty practice folder.",
-        "help": "Look for the folder name above the chat. If you see another project, switch folders first."
+        "help": "Look for the folder name in the chat header. If you see another project, switch folders first."
       },
       {
         "title": "Ask the helper",
@@ -1537,7 +1537,7 @@
       "Show the reason each team row needs review.",
       "Ship an app with input, export and built-in checks."
     ],
-    "prompt": "Build one index.html file with its style and JavaScript inside. Build a local practice desk. Load the sample or pasted CSV. Show each mailbox and percent used. Warn at 90 percent and above. A missing used value or a zero limit needs review. Keep rejected rows visible. Add counts for all three labels and a Download report button. Include a Run checks button that independently compares the four known labels with their expected values. Use these practice values: CSV heading box,used,limit. Rows: A,90,100 then B,0,100 then C,,100 then D,5,0.",
+    "prompt": "Build one index.html file with its style and JavaScript inside. Build a local practice desk. Load the sample or pasted CSV. Show each mailbox and percent used. Warn at 90 percent or higher. A missing used value or a zero limit needs review. Keep rejected rows visible. Add counts for all three labels and a Download report button. Include a Run checks button that independently compares the four known labels with their expected values. Use these practice values: CSV heading box,used,limit. Rows: A,90,100 then B,0,100 then C,,100 then D,5,0.",
     "steps": [
       {
         "title": "Set up the practice space",

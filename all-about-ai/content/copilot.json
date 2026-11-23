@@ -6,9 +6,9 @@
     "intro": {
       "what": "Microsoft 365 Copilot is a helper for work apps. Your account, license and permissions determine which tools and files you can use.",
       "features": "Copilot Chat can work from a prompt or an uploaded file. Some accounts also have Work IQ, which can draw on work content the signed-in person may read.",
-      "exchange": "Give it a fake mail notice and ask when the planned change starts.",
-      "m365": "Ask for the line in a sample meeting note that names the task owner.",
-      "developer": "Write a short help tip from a pretend feature list and check every claim.",
+      "exchange": "Check whether Copilot can read the approved training notice you intended.",
+      "m365": "Identify the account and linked document behind a draft.",
+      "developer": "Compare an answer grounded in an attached spec with one given without it.",
       "sources": [
         [
           "Microsoft · grounding and the Work IQ control",
@@ -78,9 +78,9 @@
     "intro": {
       "what": "Copilot in Outlook can sum up a thread of messages. Copilot in Teams can help you follow a meeting when the settings allow it.",
       "features": "Mail summaries can link back to messages. A meeting summary may use a saved transcript or meeting chat. Check the material each one could read.",
-      "exchange": "Find the last confirmed time in a fake mail thread.",
-      "m365": "Make a list of meeting decisions, owners and unknown dates from a pretend transcript.",
-      "developer": "Turn a player’s feature request into a draft note. Keep requested changes separate from promised fixes.",
+      "exchange": "Separate a proposed mail restart from an approved restart in meeting notes.",
+      "m365": "Find the transcript line that assigns an action to its owner.",
+      "developer": "Turn a feature discussion into decided changes and open questions.",
       "sources": [
         [
           "Microsoft · summarizing an email thread in Outlook",
@@ -144,9 +144,9 @@
     "intro": {
       "what": "Copilot can help write a note in Word and use an approved file to draft a presentation in PowerPoint.",
       "features": "You can ask for sections in a brief, use that brief as a slide source and edit a chart label so readers know who was counted.",
-      "exchange": "Turn a pretend mail pilot into a summary and show how many mailboxes were tested.",
-      "m365": "Move a checked project decision from Word to four slides.",
-      "developer": "Use sample play-test feedback to explain what players liked and how many answered.",
+      "exchange": "Use a checked service note as the sole source for a mail update slide.",
+      "m365": "Trace each claim in a four-slide deck back to the original document.",
+      "developer": "Keep the known test result distinct from the planned release in your demo.",
       "sources": [
         [
           "Microsoft · working from an existing document in Word",
@@ -208,9 +208,9 @@
     "intro": {
       "what": "Excel stores related values in rows and columns. Copilot can suggest formulas or help you work with a table in a supported workbook.",
       "features": "A formula tells the sheet how to calculate. You can inspect the cells it uses and try one change to see if the answer updates.",
-      "exchange": "Count good rows in a fake mailbox list. Check the total against the individual counts.",
-      "m365": "Build a practice Excel table that updates when a rejected count changes.",
-      "developer": "Test a game’s score totals by changing one turn, including a zero.",
+      "exchange": "Add counts of shared mailboxes while keeping zero-count rows.",
+      "m365": "Inspect the Excel formula after another team adds a row.",
+      "developer": "Use a tiny score sheet to test totals before coding your scoreboard.",
       "sources": [
         [
           "Microsoft · editing, supported settings and recovery in Excel",
@@ -303,9 +303,9 @@
     "intro": {
       "what": "GitHub Copilot helps with code. Agent Builder makes a helper for repeated questions. Copilot Studio can connect a helper to tools and actions.",
       "features": "A coding helper can propose an edit. A handbook helper can answer from a given file. A service action can make a real record after someone asks for it.",
-      "exchange": "Make a question helper for a pretend mail handbook before trying a reporting action.",
-      "m365": "Use a sample meeting policy as the only source for a small office helper.",
-      "developer": "Ask a coding helper to test a game export that contains a comma in a name.",
+      "exchange": "Choose a handbook helper for policy questions about a practice mailbox.",
+      "m365": "Ask a handbook agent to point to the clause behind a file-sharing answer.",
+      "developer": "Choose a coding agent when the job needs a change to a project file.",
       "sources": [
         [
           "GitHub · choosing an agent and working environment",

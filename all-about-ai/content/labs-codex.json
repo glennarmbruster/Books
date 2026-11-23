@@ -15,7 +15,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as trace.log. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as trace.log. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called trace.log.txt is a different file.",
         "code": "A queued\nB queued\nA retrying\nA delivered"
       },
@@ -66,7 +66,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as pages.txt. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as pages.txt. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called pages.txt.txt is a different file.",
         "code": "Check queue\nVerify delivery"
       },
@@ -117,7 +117,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as ledger.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as ledger.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called ledger.csv.txt is a different file.",
         "code": "player,points\nBlue,80\nGold,35\nBlue,-75\nGold,0\nBlue,10"
       },
@@ -168,7 +168,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as AGENTS.md. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as AGENTS.md. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called AGENTS.md.txt is a different file.",
         "code": "Every findings file is a JSON array. Each item has exactly two keys: id and status. The status is uppercase. Sort items by id ascending. Omit commentary inside JSON."
       },
@@ -223,7 +223,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as versions.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as versions.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called versions.csv.txt is a different file.",
         "code": "id,rev,label\nx,2,New\ny,1,First\nx,1,Old\ny,1,First"
       },
@@ -234,7 +234,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. merged.csv has x,2,New and y,1,First below the header.",
+        "text": "Compare the result with this hand check. merged.csv has x,2,New and y,1,First after the header.",
         "help": "Sort the x rows by their revision numbers. Cross off the older one. The two equal y rows can share one spot."
       },
       {
@@ -244,7 +244,7 @@
       }
     ],
     "check": [
-      "merged.csv has x,2,New and y,1,First below the header.",
+      "merged.csv has x,2,New and y,1,First after the header.",
       "The tool reports the tie. The last good merged.csv still matches its copy."
     ],
     "sources": [
@@ -279,7 +279,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as titles.txt. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as titles.txt. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called titles.txt.txt is a different file.",
         "code": "Mailbox Review\nGroup Audit\nMail Flow\nArchive Plan"
       },
@@ -330,7 +330,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as cap.py. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as cap.py. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called cap.py.txt is a different file.",
         "code": "def allowed(count):\n    return count <= 5"
       },
@@ -385,7 +385,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as counts.schema.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as counts.schema.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called counts.schema.json.txt is a different file.",
         "code": "{\"type\":\"object\",\"properties\":{\"sent\":{\"type\":\"integer\"},\"held\":{\"type\":\"integer\"},\"unknown\":{\"type\":\"integer\"}},\"required\":[\"sent\",\"held\",\"unknown\"],\"additionalProperties\":false}"
       },
@@ -437,7 +437,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as audit.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as audit.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called audit.csv.txt is a different file.",
         "code": "email,status,message\none@example.test,OK,reviewed\ntwo@example.test,,pending\nthree@example.test,ok,reviewed"
       },
@@ -493,7 +493,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as replies.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as replies.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called replies.json.txt is a different file.",
         "code": "[{\"status\":429,\"retry_after\":2},{\"status\":429,\"retry_after\":4},{\"status\":200,\"items\":[\"G1\"]}]"
       },
@@ -544,7 +544,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as backups.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as backups.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called backups.json.txt is a different file.",
         "code": "[{\"v\":1,\"name\":\"Blue\",\"score\":-5},{\"v\":2,\"name\":\"Gold\",\"points\":0},{\"v\":3,\"name\":\"Future\",\"points\":10}]"
       },
@@ -595,7 +595,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as grants.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as grants.json. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called grants.json.txt is a different file.",
         "code": "{\"Blue\":[\"Editors\",\"Readers\"],\"Editors\":[\"Readers\",\"permit:write\"],\"Readers\":[\"Editors\",\"permit:read\"],\"Gold\":[]}"
       },
@@ -646,7 +646,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as jobs.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as jobs.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called jobs.csv.txt is a different file.",
         "code": "id,start,end\nA,0,3\nB,2,4\nC,3,5\nD,3,3"
       },
@@ -766,7 +766,7 @@
     "steps": [
       {
         "title": "Set up the practice file",
-        "text": "In the new folder, save the sample below as inventory.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
+        "text": "In the new folder, save the sample as inventory.csv. You can ask Codex to make the file using these exact lines, then open it and check its contents.",
         "help": "Check the file name in the folder list. A file called inventory.csv.txt is a different file.",
         "code": "id,status\nA,OK\nB,HOLD\nB,HOLD\nC,OK"
       },

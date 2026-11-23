@@ -17,7 +17,7 @@
       {
         "title": "Start with a blank chat",
         "do": "Sign in and start a new conversation. If an account menu offers several spaces, choose one meant for practice.",
-        "see": "The message box is ready without an old question above it.",
+        "see": "The message box is ready without an earlier question in its history.",
         "stuck": "If someone else's work is already on screen, return to the sidebar and start a fresh chat."
       },
       {
@@ -129,7 +129,7 @@
       },
       {
         "title": "Install the command",
-        "do": "Use Anthropic's setup link below to check its current instructions. On Mac the install command is curl -fsSL https://claude.ai/install.sh | bash. In Windows PowerShell with WinGet, use winget install Anthropic.ClaudeCode. Press Enter after the command for your computer.",
+        "do": "Use Anthropic's setup link to check its current instructions. On Mac the install command is curl -fsSL https://claude.ai/install.sh | bash. In Windows PowerShell with WinGet, use winget install Anthropic.ClaudeCode. Press Enter after the command for your computer.",
         "see": "The installer finishes and the typing prompt returns.",
         "stuck": "If WinGet is missing, follow the Windows choices in the official setup guide. Keep the Mac command for a Mac."
       },
@@ -446,7 +446,7 @@
     "actions": [
       {
         "title": "Find the extension",
-        "do": "Open Anthropic’s getting-started page below. Follow its Chrome Web Store link. Check that Claude comes from Anthropic. On your own or approved computer select Add to Chrome if you want it.",
+        "do": "Open Anthropic’s getting-started page. Follow its Chrome Web Store link. Check that Claude comes from Anthropic. On your own or approved computer select Add to Chrome if you want it.",
         "see": "Chrome shows the access the extension asks for. You can read it before deciding to install.",
         "stuck": "If you see a different publisher, go back to Anthropic's link. Check local rules before installing on a work computer."
       },

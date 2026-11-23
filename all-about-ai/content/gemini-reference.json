@@ -12,9 +12,9 @@
     "intro": {
       "what": "Separate recorded facts from guesses in a short chat.",
       "features": "Follow-up messages let you change one detail and see which part of the answer changes.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Ask which delivery actions were observed and which outcomes remain unknown.",
+      "m365": "Separate a started retry from confirmed success in a team update.",
+      "developer": "Change one log line and see whether the bug summary changes for the right reason.",
       "sources": [
         [
           "Use Gemini Apps - Computer - Gemini Apps Help",
@@ -46,7 +46,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Start a new Gemini chat. Paste the delivery note and question below in one message.",
+          "Start a new Gemini chat. Paste the delivery note and question in one message.",
           "Delivery attempt at 08:04. Retry started at 08:06. No final result was recorded.",
           "Turn these notes into two lines. Label one Observed and one Unknown. Did delivery succeed?",
           "Check your result. Observed includes the attempt and retry. Unknown covers final delivery."
@@ -149,9 +149,9 @@
     "intro": {
       "what": "Find the source line behind an answer.",
       "features": "Notebook chat uses selected sources. Its citations take you back to the supporting passage.",
-      "exchange": "Trace a delivery claim back to the sample report.",
-      "m365": "Find the exact line in a practice policy.",
-      "developer": "Keep the input files beside your test results.",
+      "exchange": "Select a mail policy and a shift record, then trace each claim to its note.",
+      "m365": "Check the pilot date and rollout date against separately named sources.",
+      "developer": "Deselect one rule sheet to see which game claim loses support.",
       "sources": [
         [
           "Use chat in Gemini Notebook - Gemini Notebook Help",
@@ -297,9 +297,9 @@
     "intro": {
       "what": "Test a draft tool before putting it into a larger project.",
       "features": "Canvas pairs an editable file with a preview. Change the code or ask for a revision.",
-      "exchange": "Test a pretend queue counter with zero messages.",
-      "m365": "Try two rows from a fictional request list.",
-      "developer": "Run the smallest working screen before adding another feature.",
+      "exchange": "Try count and reset on a mock bag of messages in a Canvas preview.",
+      "m365": "Let a team test a tally before proposing it as a shared workflow.",
+      "developer": "Tap a counter several times, clear it, and test its first tap again.",
       "sources": [
         [
           "Create docs, apps & more with Canvas - Computer - Gemini Apps Help",
@@ -331,7 +331,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open a Gemini chat, choose Canvas under the tools menu and ask for the counter below. Open the preview.",
+          "Open a Gemini chat, choose Canvas under the tools menu and ask for the counter. Open the preview.",
           "Make a small page that counts packed bags. It needs Add bag and Start over.",
           "In Canvas, build the bag counter with a number visible at all times. Try Add bag twice and Start over once.",
           "Check your result. The page visits 0, 1, 2 and 0."
@@ -433,9 +433,9 @@
     "intro": {
       "what": "Find the difference between a missing score and a recorded zero.",
       "features": "Antigravity works on project files. Its agent can propose a patch and run a test.",
-      "exchange": "Test a pretend queue counter with zero messages.",
-      "m365": "Try two rows from a fictional request list.",
-      "developer": "Run the smallest working screen before adding another feature.",
+      "exchange": "Test an empty set of mailboxes and a mailbox with zero items as separate inputs.",
+      "m365": "Inspect the changed files for a local inventory summary.",
+      "developer": "Run both the empty-state and zero-score tests on a practice branch.",
       "sources": [
         [
           "Agent Capabilities Overview",
@@ -467,7 +467,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Make a new practice folder. Open it as a project in Antigravity. Use the agent panel and give it the score task below.",
+          "Make a new practice folder. Open it as a project in Antigravity. Use the agent panel and give it the score task.",
           "An empty score list should say No plays. A list with a single zero should show 0.",
           "Open a practice folder. Build a score summary for both inputs. Show which files changed and run both checks.",
           "Check your result. The empty list gets a message. The real zero stays visible."
@@ -573,9 +573,9 @@
     "intro": {
       "what": "Look up a detail in a known practice note.",
       "features": "Connected Apps can provide information from services you enable. You choose the account.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Find one approved mail supply note and check its current count.",
+      "m365": "Look up a named Workspace file again after its owner edits it.",
+      "developer": "Give a helper a missing-source case as well as a successful lookup.",
       "sources": [
         [
           "Use & manage Connected Apps in Gemini - Computer - Gemini Apps Help",
@@ -607,7 +607,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Put the sample line below in a training document named Supply list. Open Gemini’s Connected Apps settings. Enable the permitted service and ask for that document.",
+          "Put the sample line in a training document named Supply list. Open Gemini’s Connected Apps settings. Enable the permitted service and ask for that document.",
           "A practice note called Supply list has one line reading Paper rolls: 4.",
           "Use the connected service to find Supply list. Return the paper roll count and identify the note. Stop if you cannot open it.",
           "Check your result. The result names the note and gives 4, or reports missing access."
@@ -709,9 +709,9 @@
     "intro": {
       "what": "Read the next check time from a browser tab.",
       "features": "Auto browse can work through a task in Chrome. You can oversee the steps.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Expand the next-check panel on a training mail desk and stop there.",
+      "m365": "Read a scheduled check from an open tab without sending the form.",
+      "developer": "Compare the browser plan with the single control your app test permits.",
       "sources": [
         [
           "Ask Gemini in Chrome to complete tasks for you with auto browse - Computer - Gemini Apps Help",
@@ -743,7 +743,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open the practice desk below in Chrome. In the portable book, save and open the page. Choose Ask Gemini. Ask it to expand Show next check. Review the plan and choose Start task if offered. Watch which control it opens.",
+          "Open the practice desk in Chrome. In the portable book, save and open the page. Choose Ask Gemini. Ask it to expand Show next check. Review the plan and choose Start task if offered. Watch which control it opens.",
           "The check time starts folded up. The Submit button is outside this task.",
           "Find the time of the next check on the open practice page. Tell me where you found it. Stop before submitting anything.",
           "Check your result. The reply identifies the next-check label and the time 10:30.",
@@ -847,9 +847,9 @@
     "intro": {
       "what": "Keep a recurring reminder and check its next run.",
       "features": "Gemini Tasks can keep a schedule. A saved task has instructions you can revisit.",
-      "exchange": "Practice a reminder to check yesterday’s queue.",
-      "m365": "Schedule a draft of a weekly practice summary.",
-      "developer": "Time a reminder to retest an app after release.",
+      "exchange": "Move a recurring mail-kit count one hour and inspect the saved task.",
+      "m365": "Check the weekday and time zone on a team reminder.",
+      "developer": "Test a reminder's next run before relying on it in a personal routine.",
       "sources": [
         [
           "Manage your tasks & workflows in Gemini Apps - Computer - Gemini Apps Help",
@@ -881,7 +881,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "In the Gemini web app, choose Task below the message box. Enter the prompt below. Then open the saved schedule.",
+          "In the Gemini web app, choose Task in the message composer. Enter the prompt. Then open the saved schedule.",
           "Every Friday at noon UTC, remind me to count returned kits. Show the next run and the reminder text.",
           "Check your result. Both the next Friday and noon appear in the saved schedule."
         ],
@@ -982,9 +982,9 @@
     "intro": {
       "what": "Identify a visible control while talking through a task.",
       "features": "Gemini Live accepts spoken questions. On supported devices you can share a view.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Show a drawn mock mail control to Live and check its label and color.",
+      "m365": "Rehearse pointing out two controls during a training walkthrough.",
+      "developer": "Cover one button in a sketch and ask what the camera can still see.",
       "sources": [
         [
           "Talk naturally with Gemini Live - Android phone & tablet - Gemini Apps Help",
@@ -1118,9 +1118,9 @@
     "intro": {
       "what": "Tell a missing cell from a zero before accepting a total.",
       "features": "Uploaded files can provide tables, documents and images for analysis in chat.",
-      "exchange": "Trace a delivery claim back to the sample report.",
-      "m365": "Find the exact line in a practice policy.",
-      "developer": "Keep the input files beside your test results.",
+      "exchange": "Count known mailbox sizes while keeping empty rows distinct from zero.",
+      "m365": "Compare a revised spreadsheet attachment with the original known total.",
+      "developer": "Test an import with a blank field, then fill just that field and repeat.",
       "sources": [
         [
           "Attach & analyze files in Gemini Apps - Computer - Gemini Apps Help",
@@ -1252,9 +1252,9 @@
     "intro": {
       "what": "Build a helper that formats the same kind of note each time.",
       "features": "A Gem saves instructions. Google is moving this feature to skills. Look for the label shown in your account.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Teach a Gem to return only ready mail checks and give it new examples.",
+      "m365": "Reuse a saved sorting instruction across two packing or inventory lists.",
+      "developer": "Create a helper whose rule stays fixed as the game's test inputs change.",
       "sources": [
         [
           "Get started with Gems in Gemini Apps - Gemini Apps Help",
@@ -1288,7 +1288,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open the Gemini web app. In the Gems or skills area, create a helper called Practice sorter. Save “Return only rows marked packed.” Give it the packing card below. Compare its list to the row labels."
+          "Open the Gemini web app. In the Gems or skills area, create a helper called Practice sorter. Save “Return only rows marked packed.” Give it the packing list from See a worked example. Compare its list to the row labels."
         ],
         "sources": [
           [
@@ -1336,7 +1336,7 @@
       {
         "title": "Gotchas",
         "paragraphs": [
-          "If Gems is missing, use the transition guide. To try the rule right now, paste it above the card in a fresh chat."
+          "If Gems is missing, use the transition guide. To try the rule right now, place it before the card text in a fresh chat."
         ],
         "sources": [
           [
@@ -1352,7 +1352,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1383,9 +1383,9 @@
     "intro": {
       "what": "Choose what a report should cover before letting a search run.",
       "features": "Deep Research proposes a plan and can gather a report from selected sources. You can open the citations.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Narrow a research plan to the official mail feature you need to explain.",
+      "m365": "Remove irrelevant topics before a team research brief starts.",
+      "developer": "Ask for the official control behind a feature and check the linked instructions.",
       "sources": [
         [
           "Use Deep Research in Gemini Apps - Computer - Gemini Apps Help",
@@ -1483,7 +1483,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1514,9 +1514,9 @@
     "intro": {
       "what": "See which connected sources are allowed to personalize an answer.",
       "features": "Personal Intelligence can draw on connected Google apps. The privacy controls explain how those connections are used.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Draft a pretend shift reminder using only the format the user supplied.",
+      "m365": "Check which preferences are stated before personalizing a team draft.",
+      "developer": "Make your example work with a stated preference and an unknown color.",
       "sources": [
         [
           "Connect your Google apps to personalize your Gemini experience - Android phone & tablet - Gemini Apps Help",
@@ -1550,7 +1550,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open Gemini settings and look for Personal Intelligence or connected apps. Inspect what is enabled. For a practice test, use the fictional preference card below in chat. Ask for the listed choice without connecting a real account.",
+          "Open Gemini settings and look for Personal Intelligence or connected apps. Inspect what is enabled. For a practice test, use the fictional preference card in chat. Ask for the listed choice without connecting a real account.",
           "Look for the format named on the Reminder line. If another preference appears, ask it to name the source of that extra detail."
         ],
         "sources": [
@@ -1615,7 +1615,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1646,9 +1646,9 @@
     "intro": {
       "what": "Keep the original text and the proposed change side by side.",
       "features": "Gemini in Workspace can work in apps such as Gmail and Docs. Ask Gemini opens the help beside the item.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Update the date in a practice handoff document and reread the draft.",
+      "m365": "Ask Gemini beside a Doc to summarize two inspections with different weekdays.",
+      "developer": "Compare proposed release wording against the current text before inserting it.",
       "sources": [
         [
           "Get started with Google Workspace with Gemini - Business / Enterprise - Google Docs Editors Help",
@@ -1746,7 +1746,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1777,9 +1777,9 @@
     "intro": {
       "what": "Build a visual draft from a short shot list.",
       "features": "Gemini’s image tools can create and edit a picture. Its video tools can make or edit a short scene.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Generate a simple status sign and check that its two symbols stay distinct.",
+      "m365": "Change one color in a training illustration without swapping its labels.",
+      "developer": "Check the anchor and bell positions after editing a generated game sign.",
       "sources": [
         [
           "Generate & edit images with Gemini Apps - Computer - Gemini Apps Help",
@@ -1878,7 +1878,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [

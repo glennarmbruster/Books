@@ -446,7 +446,7 @@ function labBody(lab) {
       if (!response.ok) throw Error('Missing practice page');
       return response.text();
     }).then(html => { frame.srcdoc = html; }).catch(() => {
-      frame.replaceWith(element('p','The example could not open. Save it below, or reopen the book online to finish its download.'));
+      frame.replaceWith(element('p','The example could not open. Choose Save example, or reopen the book online to finish its download.'));
     });
     const link = element('a','Save example (.html)','lab-action');
     link.href = fileUrl;

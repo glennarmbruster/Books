@@ -6,9 +6,9 @@
     "intro": {
       "what": "A player needs the same game you tested. Use the build label to find that copy.",
       "features": "Save the file, serve it, then play through it again at the player’s address.",
-      "exchange": "Use a fake mailbox tally when you practice shipping a report viewer.",
-      "m365": "Use a made-up shift board to test which release the team sees.",
-      "developer": "Share a working single-file game and retest its last second.",
+      "exchange": "Check a report page at the published address before calling it ready.",
+      "m365": "Record the build label when testing an internal training page.",
+      "developer": "Play the last second of the released game and compare it to the local build.",
       "sources": [
         [
           "Git · record and inspect changes",
@@ -132,9 +132,9 @@
     "intro": {
       "what": "A player can read the files a web game sends to the browser.",
       "features": "Use a harmless marker to check what is visible. Keep private work on a server you control.",
-      "exchange": "A public practice viewer can count made-up rows. A real mail reader needs approved access outside the public page.",
-      "m365": "Use a sample shift list while testing. Keep shared service credentials out of team dashboards.",
-      "developer": "Keep the single-file game local to the browser. Design a private score service separately if you later need one.",
+      "exchange": "Check a mail-report page for values that should live only on a server.",
+      "m365": "Inspect earlier commits before sharing a practice script repository.",
+      "developer": "Keep a browser-only score game free of service keys or private configuration.",
       "sources": [
         [
           "MDN · inspect code delivered to the browser",

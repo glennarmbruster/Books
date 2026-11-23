@@ -6,9 +6,9 @@
     "intro": {
       "what": "Grok is a helper that can answer questions. Some versions can search the web or X for public posts. Grok Bot is a separate way to give a helper a task.",
       "features": "You can look for an original post, read a public policy or try a tool made for pictures, video or speech.",
-      "exchange": "Look up a public mail service notice. Compare the time in the post with the service’s own update.",
-      "m365": "Find the original announcement behind a public feature summary. Check its date.",
-      "developer": "Find the page that explains a tool your app uses. Save the link with your notes.",
+      "exchange": "Ask for the source behind a claim about a mail setting and open it.",
+      "m365": "Compare a dated announcement with its cited product guide.",
+      "developer": "Check the original evidence for a claim about browser support.",
       "sources": [
         [
           "Grok API · searching X",
@@ -73,9 +73,9 @@
     "intro": {
       "what": "Perplexity helps you look up an answer. Comet is a browser with a helper beside the pages you open.",
       "features": "Search can give you source links. Comet can help you read or compare tabs. Its permissions control what the assistant may see.",
-      "exchange": "Find the public help page for a mail command. Read its example before using it in a report.",
-      "m365": "Check a public release note for the date a feature starts. Distinguish it from the date of the post.",
-      "developer": "Compare two tools for making game sounds. Check the terms for saving a sound file.",
+      "exchange": "Follow a search citation to the guide for a mail report field.",
+      "m365": "Collect two official sources for an inventory-review handoff.",
+      "developer": "Use Comet to inspect the relevant passage behind an app compatibility claim.",
       "sources": [
         [
           "Perplexity · the Comet browser",
@@ -146,9 +146,9 @@
     "intro": {
       "what": "Muse is Meta’s personal AI helper. You can give it a goal, leave it to work and then review the result.",
       "features": "It can draft a plan, make a file, set up a later task or work with an app you connect. Its Library holds finished files.",
-      "exchange": "Draft a checklist for reviewing a pretend mailbox report. Tick off each check as you try it.",
-      "m365": "Make a plan from a pretend meeting note. Check each date against the note.",
-      "developer": "Use Muse to draft the rules for a card game. Play a round on paper to spot missing rules.",
+      "exchange": "Turn a fictional shift note into duties and owners.",
+      "m365": "Carry a corrected action item into a saved meeting draft.",
+      "developer": "Use a small project brief to check whether a draft preserves ownership.",
       "sources": [
         [
           "Meta · meet Muse",
@@ -176,7 +176,7 @@
       {
         "title": "Check the result before sharing it",
         "paragraphs": [
-          "If Muse made a file, open Library and find its title. Open the file and read the actual words. A message saying “done” tells you to look for the result. It still needs a check. Later, try the illustrated lessons on reminders, linked apps and approvals. You can practice the checklist above without linking an inbox."
+          "If Muse made a file, open Library and find its title. Open the file and read the actual words. A message saying “done” tells you to look for the result. It still needs a check. Later, try the illustrated lessons on reminders, linked apps and approvals. You can practice the meeting-action checklist without linking an inbox."
         ],
         "sources": [
           [
@@ -207,9 +207,9 @@
     "intro": {
       "what": "Mistral Vibe can help with writing and code. A speech model works with sound. A local model runs on the computer you have in front of you.",
       "features": "You can test a minute of audio, try a coding chat or download a model and a compatible app to use it.",
-      "exchange": "Use a local model on a small pretend mail report. Compare one answer with a row.",
-      "m365": "Try a short sample recording. Check which speaker gave the meeting time.",
-      "developer": "Use a small local model to sort five game items into groups. Test it again with the network off.",
+      "exchange": "Try a local helper on fictional mail text while disconnected.",
+      "m365": "Check a transcript against a practice meeting phrase before sharing it.",
+      "developer": "Use the same short input when testing a local model or a speech tool.",
       "sources": [
         [
           "Mistral · Vibe",
@@ -272,9 +272,9 @@
     "intro": {
       "what": "A browser is an app such as Chrome or Safari that opens websites. An extension is a tool added to a browser. Some browsers include their own AI helper.",
       "features": "A helper can read a page you share or work inside a browser. Its access depends on the app, its settings and the device.",
-      "exchange": "Compare two public mail help pages. Check which page the helper actually quoted.",
-      "m365": "Ask a helper to explain one paragraph from a public meeting guide. Share that paragraph.",
-      "developer": "Open your app’s help page and test whether the helper can find the button named on it.",
+      "exchange": "Check which queue count is visible to a browser helper on a mock page.",
+      "m365": "Ask about the open training tab and verify the item it identifies.",
+      "developer": "Test a folded details panel before letting a helper interact with it.",
       "sources": [
         [
           "Chrome Help · manage extension site access",

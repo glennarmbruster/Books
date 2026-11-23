@@ -12,9 +12,9 @@
     "intro": {
       "what": "Draft and revise one message without losing the thread.",
       "features": "A chat keeps the turns together so you can ask for a shorter draft.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Revise a shift handoff after one more delivery test passes.",
+      "m365": "Shorten a meeting update without dropping the unresolved decision.",
+      "developer": "Keep the observed bug and the unknown cause separate in a short report.",
       "sources": [
         [
           "Get started with Claude",
@@ -46,7 +46,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open Claude and start a new chat. Paste the note below and its question together.",
+          "Open Claude and start a new chat. Paste the note and its question together.",
           "Mail queued at 09:00. One test arrived at 09:12. Other routes have not been tested.",
           "Write two sentences for a handoff. Separate the one test that passed from the routes we still need to check.",
           "Check your result. The update names the successful test and leaves other routes open.",
@@ -149,9 +149,9 @@
     "intro": {
       "what": "Keep a standing rule beside the notes you use each week.",
       "features": "Project knowledge holds reference material. Project instructions tell Claude how to use it.",
-      "exchange": "Trace a delivery claim back to the sample report.",
-      "m365": "Find the exact line in a practice policy.",
-      "developer": "Keep the input files beside your test results.",
+      "exchange": "Store the practice mail-count rule once and reuse it across shifts.",
+      "m365": "Give new project chats the same approved document revision.",
+      "developer": "Keep your app's scoring rules with the project instead of typing them every session.",
       "sources": [
         [
           "How can I create and manage projects?",
@@ -183,7 +183,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open Projects. Create Practice desk. Save the entire practice handbook below in a text file. On the project page use + to add that file. Start a chat in the project.",
+          "Open Projects. Create Practice desk. Save the entire practice handbook in a text file. On the project page use + to add that file. Start a chat in the project.",
           "Practice handbook, revision B: only closed requests go in the weekly count. The sample has two closed and one open.",
           "Add the handbook to a practice project. In a fresh project chat ask for the weekly count and the rule used.",
           "Check your result. The answer gives two closed requests and points to revision B."
@@ -285,9 +285,9 @@
     "intro": {
       "what": "Make a small working counter you can try beside the chat.",
       "features": "An Artifact opens the generated work in its own pane. Ask for a change and test the preview again.",
-      "exchange": "Test a pretend queue counter with zero messages.",
-      "m365": "Try two rows from a fictional request list.",
-      "developer": "Run the smallest working screen before adding another feature.",
+      "exchange": "Prototype a count-and-reset control for a mock queue.",
+      "m365": "Let reviewers click a tally instead of reading a description of it.",
+      "developer": "Press the Artifact's buttons again after Reset to test its stored value.",
       "sources": [
         [
           "What are artifacts and how do I use them?",
@@ -319,7 +319,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Start a Claude chat. Ask for the counter below as an interactive Artifact. Open its preview.",
+          "Start a Claude chat. Ask for the counter as an interactive Artifact. Open its preview.",
           "The tally starts at zero. Count adds one. Reset returns to zero.",
           "Make an interactive tally artifact with Count and Reset. Show the score as a number.",
           "Check your result. Two Count clicks show 2. Reset shows 0."
@@ -421,9 +421,9 @@
     "intro": {
       "what": "Change a small part of a project and inspect the patch.",
       "features": "Claude Code can read project files, propose edits and run checks in the working folder.",
-      "exchange": "Test a pretend queue counter with zero messages.",
-      "m365": "Try two rows from a fictional request list.",
-      "developer": "Run the smallest working screen before adding another feature.",
+      "exchange": "Change one button label on a local mail dashboard and inspect its diff.",
+      "m365": "Review a tiny edit to a practice report page without changing its calculations.",
+      "developer": "Load the edited counter and check the original start and reset values.",
       "sources": [
         [
           "Overview - Claude Code Docs",
@@ -455,7 +455,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Make an empty practice folder. In a plain text editor, use Copy starter file below and save the text as index.html. Open it in a browser. The score starts at 2. Press Clear All to see 0. Now open the folder in Claude Code.",
+          "Make an empty practice folder. In a plain text editor, choose Copy starter file and save the text as index.html. Open it in a browser. The score starts at 2. Press Clear All to see 0. Now open the folder in Claude Code.",
           "A practice counter page shows the right number but calls its reset button Clear All.",
           "In the practice folder, find the reset button. Rename its label to Reset. Show the changed lines and the result of one reset test.",
           "Check your result. Only the label changes. A score of 2 still resets to 0."
@@ -558,9 +558,9 @@
     "intro": {
       "what": "Look up a known note through an approved connection.",
       "features": "Connectors let Claude use information or tools from another service with the access you grant.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Find a training shift card and check its first line against the source.",
+      "m365": "Read one approved file through a connector using its title.",
+      "developer": "Test how your helper behaves when a project document is unavailable.",
       "sources": [
         [
           "Use connectors to extend Claude's capabilities",
@@ -592,7 +592,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "In an approved practice Drive folder, create a document named Shift card. Put only “Window B” on line one. In Claude choose Customize, Connectors, then +. Choose the approved service and Connect. Sign in with the practice account.",
+          "In an approved practice Drive folder, create a document named Shift card. Put only “Window B” on line one. In Claude choose Customize, Connectors, then +. Choose the approved service and Connect. Sign in with the practice account. Keep the window name in the source document only. Send just the lookup request to Claude.",
           "An approved training folder contains a note called Shift card. Its first line reads Window B.",
           "Using only the approved connector, find Shift card. Quote its first line. Say unknown if you cannot open it. Make no changes.",
           "Check your result. The reply says Window B and identifies the note, or explains it could not read it."
@@ -694,9 +694,9 @@
     "intro": {
       "what": "Read a value from the page you are viewing.",
       "features": "Claude in Chrome works with browser tabs. Cowork also supports tasks that need a computer.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Read the mock desk's waiting count while leaving Submit untouched.",
+      "m365": "Inspect a folded schedule on the active training page.",
+      "developer": "Check an interface label without asking the browser helper to change state.",
       "sources": [
         [
           "Get started with Claude in Chrome",
@@ -728,7 +728,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open the practice desk below in Chrome. In the portable book, save and open the page. Install the Claude in Chrome extension from the official guide. Sign in and click its toolbar icon.",
+          "Open the practice desk in Chrome. In the portable book, save and open the page. Install the Claude in Chrome extension from the official guide. Sign in and click its toolbar icon.",
           "A practice dashboard shows 8 waiting requests and an unused Submit button.",
           "Read the waiting count from this practice page. Report the number and the label next to it. Do not click Submit.",
           "Check your result. The report pairs 8 with waiting requests. The page stays in the same state.",
@@ -832,9 +832,9 @@
     "intro": {
       "what": "Run a repeating brief and inspect the saved schedule.",
       "features": "Scheduled tasks pair instructions with a repeat time. The task list lets you inspect them.",
-      "exchange": "Practice a reminder to check yesterday’s queue.",
-      "m365": "Schedule a draft of a weekly practice summary.",
-      "developer": "Time a reminder to retest an app after release.",
+      "exchange": "Schedule a fictional shift reminder and inspect its UTC run time.",
+      "m365": "Move a practice duty reminder to another weekday and check the calendar.",
+      "developer": "Test one recurring reminder before adding recurring work to an app plan.",
       "sources": [
         [
           "Schedule recurring tasks in Claude Cowork",
@@ -866,7 +866,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open Cowork’s scheduled tasks. Create a practice task. Paste the request below and inspect its next run.",
+          "Open Cowork’s scheduled tasks. Create a practice task. Paste the request and inspect its next run.",
           "A fictional duty rotation lists Monday as desk B. The desired output is one line.",
           "Every Monday at 09:00 UTC, remind me “Monday duty: desk B.” Show the next run.",
           "Check that the list shows Monday at 09:00 UTC, or its equivalent in the displayed time zone. Remove the practice task after the test."
@@ -968,9 +968,9 @@
     "intro": {
       "what": "Practice speaking a short handoff and check what was heard.",
       "features": "Voice mode lets you talk and hear the reply. You can inspect the resulting chat.",
-      "exchange": "Use a fictional mail handoff to test this surface.",
-      "m365": "Apply the same check to an approved practice note.",
-      "developer": "Try the example with a small local project.",
+      "exchange": "Speak two queue counts and verify their digits in the transcript.",
+      "m365": "Rehearse a short spoken handoff and correct just its ending figure.",
+      "developer": "Try the wording of a voice interaction and check what the mic captured.",
       "sources": [
         [
           "Use voice mode",
@@ -1002,7 +1002,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open a fresh Claude chat. Choose the voice control and allow the microphone. Say the two counts below, then stop and read the transcript.",
+          "Open a fresh Claude chat. Choose the voice control and allow the microphone. Say the two counts, then stop and read the transcript.",
           "The queue held fifteen items before lunch and five after lunch.",
           "Read those counts aloud. Ask for a one-sentence handoff and a separate line with the two numbers.",
           "Check your result. The written numbers are 15 and 5, in that order."
@@ -1105,9 +1105,9 @@
     "intro": {
       "what": "Ask about a page or image you can compare by eye.",
       "features": "A chat attachment supplies a particular file. Project knowledge can supply the same material again later.",
-      "exchange": "Trace a delivery claim back to the sample report.",
-      "m365": "Find the exact line in a practice policy.",
-      "developer": "Keep the input files beside your test results.",
+      "exchange": "Ask for both row labels before accepting the total in a mailbox PDF.",
+      "m365": "Change a count in a second attachment and verify which row moved.",
+      "developer": "Check whether a file reader can extract the visible table without inventing cells.",
       "sources": [
         [
           "Upload files to Claude",
@@ -1139,7 +1139,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Create a one-page practice file with the counts below. Choose Add files or photos in a new chat, attach the file and ask the question.",
+          "Create a one-page practice file with the counts. Choose Add files or photos in a new chat, attach the file and ask the question.",
           "A short practice PDF has a table showing 2 requests open and 3 closed.",
           "Attach the practice page. Name both row labels, give their values and calculate the total. Flag any cell you cannot read.",
           "Check your result. The rows say open 2 and closed 3. The total is 5."
@@ -1239,9 +1239,9 @@
     "intro": {
       "what": "Try a harmless preference across two conversations.",
       "features": "Memory can keep a preference. Chat search can find a past discussion. They have separate controls.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Check whether the saved bullet format carries into a new shift handoff.",
+      "m365": "Inspect and remove a practice writing preference after the test.",
+      "developer": "Separate preferences remembered between chats from facts in the current prompt.",
       "sources": [
         [
           "Use Claude’s chat search and memory to build on previous context",
@@ -1339,7 +1339,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1370,9 +1370,9 @@
     "intro": {
       "what": "Save a small set of instructions for a job you often repeat.",
       "features": "A skill bundles directions and optional files. Claude can load the skill when its description matches the task.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Save a ready-only sorting rule for fictional repair tickets.",
+      "m365": "Run the same saved review skill after two task statuses swap.",
+      "developer": "Keep the app’s reusable sorting rule separate from a single list of inputs.",
       "sources": [
         [
           "What are skills?",
@@ -1406,7 +1406,7 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open Customize and choose Skills. Create a practice skill for sorting repair notes. Give it the rule “List only rows labeled ready.” Save it. Try the card below."
+          "Open Customize and choose Skills. Create a practice skill for sorting repair notes. Give it the rule “List only rows labeled ready.” Save it. Try the repair rows in See a worked example."
         ],
         "sources": [
           [
@@ -1470,7 +1470,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1501,9 +1501,9 @@
     "intro": {
       "what": "Keep one writing preference or reuse a style through a skill.",
       "features": "Account instructions set broad preferences. A skill can hold a format for a particular kind of writing.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Change a mail notice from two bullets to one sentence while keeping its meaning.",
+      "m365": "Check that a house style leaves the correct route and weekday intact.",
+      "developer": "Try a saved announcement format on two different release notes.",
       "sources": [
         [
           "Understanding Claude's personalization features",
@@ -1601,7 +1601,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1635,9 +1635,9 @@
     "intro": {
       "what": "Follow a claim from an answer to a page you can read.",
       "features": "Research searches across sources and returns a report with links. Web search can answer a narrower question.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Open the passage supporting a claim about a mail workflow.",
+      "m365": "Ask for the official setting behind a team guide and check its citation.",
+      "developer": "Verify product behavior in the cited help section before adding it to your app.",
       "sources": [
         [
           "Use research on Claude",
@@ -1735,7 +1735,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [
@@ -1766,9 +1766,9 @@
     "intro": {
       "what": "Test a harder question with a result you can check yourself.",
       "features": "The model menu controls effort and, on some models, a thinking switch. Extra time can help with a multi-step problem.",
-      "exchange": "Try the steps with a made-up mail handoff. Keep the test result next to the draft.",
-      "m365": "Use an empty practice document. Check the suggested edit before adding it.",
-      "developer": "Use the card below as a small test before trusting this feature in an app.",
+      "exchange": "Compare reasoning settings on an ordered mail-count calculation.",
+      "m365": "Check the middle step in a multi-stage resource estimate.",
+      "developer": "Run a puzzle with a changed penalty and inspect the score before doubling.",
       "sources": [
         [
           "Change the model, effort, and thinking settings",
@@ -1802,8 +1802,8 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Open the model menu beside Send. Note the current effort. Use the score card below. If another effort is offered, repeat the unchanged card in a fresh chat and compare the arithmetic.",
-          "If your account offers only one setting, do the two paper runs below. The answer key checks the score without comparing speeds."
+          "Open the model menu beside Send. Note the current effort. Use the relay scoring request in See a worked example. If another effort is offered, repeat the unchanged card in a fresh chat and compare the arithmetic.",
+          "If your account offers only one setting, do the two scoring tests in the worked example. The answer key checks the score without comparing speeds."
         ],
         "sources": [
           [
@@ -1867,7 +1867,7 @@
       {
         "title": "Official docs",
         "paragraphs": [
-          "Read the feature guide and its companion page below. Compare the stated account rules with the controls you can see."
+          "Read the feature guide and its companion page. Compare the stated account rules with the controls you can see."
         ],
         "sources": [
           [

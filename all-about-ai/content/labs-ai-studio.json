@@ -64,7 +64,7 @@
     "steps": [
       {
         "title": "Open a fresh chat",
-        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Open System instructions. Put the short rule below in that box.",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Open System instructions. Put the short rule in that box.",
         "help": "A system instruction is a rule for each turn in this chat. The separate chat box is for a single card or question.",
         "code": "Return only Topic | Owner. Copy the stated topic and owner exactly. Use UNASSIGNED when the card has no named owner."
       },
@@ -212,7 +212,7 @@
     "steps": [
       {
         "title": "Open a fresh chat",
-        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. In Run settings turn on structured output. Paste the shape below, or use the editor to add the same fields.",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. In Run settings turn on structured output. Paste the shape, or use the editor to add the same fields.",
         "help": "Choose a model that offers structured output. The two field names are id and date.",
         "code": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"date\":{\"type\":[\"string\",\"null\"]}},\"required\":[\"id\",\"date\"]}}"
       },
@@ -365,7 +365,7 @@
     "steps": [
       {
         "title": "Open a fresh chat",
-        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Turn on Function calling in Run settings. Add the tool description below. For two tools, use one description per tool if the editor asks.",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Turn on Function calling in Run settings. Add the tool description. For two tools, use one description per tool if the editor asks.",
         "help": "A tool description tells the model what it may ask for. You supply the pretend reply. If there is no reply control, act out both turns on paper.",
         "code": "{\"name\":\"lookup_book\",\"description\":\"Look up an exact book ID\",\"parameters\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"]}}"
       },
@@ -515,7 +515,7 @@
     "steps": [
       {
         "title": "Open a fresh chat",
-        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Open System instructions. Put the short rule below in that box. Leave web search off for this test.",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Open System instructions. Put the short rule in that box. Leave web search off for this test.",
         "help": "A system instruction is a rule for each turn in this chat. The separate chat box is for a single card or question.",
         "code": "Consider only approved records effective on or before the query date. Use the latest effective date. If two eligible records tie on that date and disagree, return CONFLICT with both IDs. With no eligible record, return UNKNOWN."
       },
@@ -526,7 +526,7 @@
       },
       {
         "title": "Try a second case",
-        "text": "Add P4, approved for July 12 with cap 5. Run the same three days again using the rule in the box above.",
+        "text": "Add P4, approved for July 12 with cap 5. Run the same three days again using the rule in System instructions.",
         "help": "If 9 appears, check P2's draft label. If one July 12 rule wins after P4 arrives, check for a tie on the start date."
       }
     ],
@@ -565,7 +565,7 @@
     "steps": [
       {
         "title": "Open a fresh chat",
-        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Turn on Function calling in Run settings. Add the tool description below. For two tools, use one description per tool if the editor asks.",
+        "text": "Open Google AI Studio in a browser. Go to Playground. Start a new chat. Turn on Function calling in Run settings. Add the tool description. For two tools, use one description per tool if the editor asks.",
         "help": "A tool description tells the model what it may ask for. You supply the pretend reply. If there is no reply control, act out both turns on paper.",
         "code": "[{\"name\":\"find_vessel\",\"description\":\"Resolve a nickname\",\"parameters\":{\"type\":\"object\",\"properties\":{\"nickname\":{\"type\":\"string\"}},\"required\":[\"nickname\"]}},{\"name\":\"get_route\",\"description\":\"Fetch a route by exact vessel ID\",\"parameters\":{\"type\":\"object\",\"properties\":{\"vessel_id\":{\"type\":\"string\"}},\"required\":[\"vessel_id\"]}}]"
       },
@@ -903,7 +903,7 @@
   {
     "id": "lab-ai-studio-19",
     "title": "Make a tiny help-ticket counter",
-    "summary": "Build two buttons for a stack of pretend tickets. Stop the count from falling below zero.",
+    "summary": "Build two buttons for a stack of pretend tickets. Stop the count from becoming negative.",
     "level": "Starter",
     "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
     "features": "Use Build chat to make the app. Try each control in the preview.",
