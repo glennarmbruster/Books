@@ -1,27 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
-<title id="title">What did you let the helper read?</title><desc id="desc">Plain chat can read text you paste. A built-in browser helper may use a shared tab. A site-restricted extension can run on approved sites.</desc>
-<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">What did you let the helper read?</text>
-<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">Three ways to ask about a practice page.</text>
-<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Check the page and the access switch before you share.</text>
-<rect x="28" y="135" width="249" height="147" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<rect x="28" y="135" width="249" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
-<text x="40" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Plain chat</text>
-<text x="40" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Paste one paragraph.</text>
-<text x="40" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">The rest of the page</text>
-<text x="40" y="262" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">stays outside it.</text>
-<rect x="295" y="135" width="249" height="147" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<rect x="295" y="135" width="249" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
-<text x="307" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Browser helper</text>
-<text x="307" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Share this tab if</text>
-<text x="307" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">the browser asks.</text>
-<text x="307" y="262" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Check the tab name.</text>
-<rect x="562" y="135" width="249" height="147" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<rect x="562" y="135" width="249" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
-<text x="574" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Extension</text>
-<text x="574" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Allow this site.</text>
-<text x="574" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Keep other sites</text>
-<text x="574" y="262" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">out of its reach.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Check the scope of a browser helper</title><desc id="desc">The active tab and the permissions you grant determine what a helper can use for a task. Identify. Open the practice page and read its address. Inspect. Check the page or site access the helper requests. Verify. Compare its answer or action with what you can see on the intended page.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Check the scope of a browser helper</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">The active tab and the permissions you grant determine what a helper can use</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">for a task.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Identify</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Open the practice page and read its address.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">Inspect</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Check the page or site access the helper requests.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Verify</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">Compare its answer or action with what you can see on the intended page.</text>
 </svg>

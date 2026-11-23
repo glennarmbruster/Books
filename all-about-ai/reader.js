@@ -566,7 +566,7 @@ function openLocation(moveFocus) {
       } else if (section.table) block.append(makeTable(section.table, section.title));
       if (section.exercise) {
         const practice = element('aside', undefined, 'practice');
-        practice.append(element('h3', 'Try it'), element('p', section.exercise.prompt));
+        practice.append(element('h3', 'Try it'), element('p', section.exercise.context), element('p', section.exercise.prompt));
         for (const [i, question] of (section.exercise.questions || []).entries()) {
           practice.append(practiceQuestion(question, chapter.id + '-' + sectionIndex + '-' + i));
         }
@@ -595,8 +595,6 @@ function openLocation(moveFocus) {
     if (!lab && !chapter.group.guide) sections.unshift(chapterIntroduction(chapter.intro),workedExample(worked.get(chapter.id),chapter.summary));
     if (!chapter.group.guide) {
       sections.unshift(launchHelp(chapter));
-      const figures = chapterPictures(chapter.id);
-      sections.splice(2,0,...figures.map(picture));
     }
     if (chapter.surface || chapter.group.file === 'reference-desk.json') {
       const quickSections = sections.filter(node=>node.classList.contains('section') && node.querySelector('h2') && !node.classList.contains('worked'));
@@ -618,6 +616,7 @@ function openLocation(moveFocus) {
     }
     if (terms) sections.unshift(terms);
     byId('body').replaceChildren(...sections);
+    placeChapterPictures(chapter);
     const pages = lab ? chapter.group.items : chapter.group.guide ? guideChapters : referenceChapters;
     document.querySelector('book-pager').setPage(chapter.number,pages.length,lab ? 'lab' : chapter.group.guide ? 'lesson' : 'chapter',
       number => { location.hash = pages[number-1].id; }, () => { location.hash = lab ? 'labs' : chapter.group.guide ? 'start' : 'contents'; });
@@ -696,7 +695,7 @@ async function start() {
   productFacts = new Map(factRows.map(row=>[row.key,row]));
   illustrations = fillModelFields(pictures, catalog, new Set());
   worked = new Map(examples.map(example=>[example.id,fillModelFields(example,catalog,new Set())]));
-  groups = await Promise.all(edition.groups.map(async group => {
+  groups = await Promise.all(fillModelFields(edition.groups, catalog, new Set()).map(async group => {
     const rows = await json('./content/' + group.file);
     const items = rows.map(row => {
       const used = new Set();

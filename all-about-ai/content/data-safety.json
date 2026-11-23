@@ -92,7 +92,8 @@
           "prompt": "Your manager says to hurry, but the data class of a project nickname is unknown. The nickname is not needed. What is your next move?",
           "answer": [
             "Drop the nickname locally and check that the remaining fields and destination are allowed. If any part of the remaining packet or destination is unclear, hold the request for the policy owner."
-          ]
+          ],
+          "context": "A team wants help with a note that contains a project nickname. A short record tells the next person why it was shared or held back."
         }
       }
     ],
@@ -181,7 +182,8 @@
           "prompt": "Both SN3 and SN5 use a form of the word close. Which one can support a state change in the second summary?",
           "answer": [
             "SN5 reports a completed event. SN3 requests action inside a quoted footer. A word match alone cannot decide the state."
-          ]
+          ],
+          "context": "A ticket includes comments as well as official changes. Only a recorded change by someone with permission can close it."
         }
       },
       {

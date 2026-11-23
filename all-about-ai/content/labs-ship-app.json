@@ -76,7 +76,7 @@
   {
     "id": "lab-ship-app-02",
     "title": "Save a first checkpoint with Git",
-    "summary": "Make a local history of one game file and read back the name of the saved version.",
+    "summary": "A tested game file needs a saved Git version so another person can identify it later. Make a local history of one game file and read back the name of the saved version.",
     "level": "Starter",
     "requires": "Use a computer with Git installed. Download the game from ship lab 1. Make a new stand-alone folder outside any other project, with just index.html in it. Open a terminal in that folder.",
     "features": "Save a checkpoint of the game. Check that it contains just the files you meant to save.",
@@ -258,7 +258,7 @@
   {
     "id": "lab-ship-app-04",
     "title": "Catch a pretend secret before shipping",
-    "summary": "Use a harmless marker to see why both the release file and old versions need review.",
+    "summary": "A harmless practice marker disappeared from the current page but may still exist in an earlier version. Use a harmless marker to see why both the release file and old versions need review.",
     "level": "Intermediate",
     "requires": "Use a second throwaway folder and a copy of the clean game. Keep it separate from your public release and never submit this practice history. Git is needed for the history check.",
     "features": "Use a harmless marker to see which files a player can read. Keep private values on the server.",
@@ -354,7 +354,7 @@
   {
     "id": "lab-ship-app-05",
     "title": "Serve the same file locally or publish it on Pages",
-    "summary": "Find out exactly which folder a web server will show. Compare a local rehearsal with an optional public release.",
+    "summary": "A local test can catch a mistake in a game before anyone publishes it. Find out exactly which folder a web server will show. Compare a local rehearsal with an optional public release.",
     "level": "Advanced",
     "requires": "Use a desktop computer, your clean Signal Sprint 1.0 file and Python 3. A GitHub account and the internet are needed only for the optional public path.",
     "features": "Serve the folder that holds the finished game. Open the game as a player would.",
@@ -452,7 +452,7 @@
   {
     "id": "lab-ship-app-06",
     "title": "Retest a release at the address a player will use",
-    "summary": "Find an old copy by its build label and verify the last playable second on the released copy.",
+    "summary": "Two copies of a game have different build labels. Find an old copy by its build label and verify the last playable second on the released copy.",
     "level": "Expert",
     "requires": "Use the Signal Sprint example and Python 3 for the local rehearsal. Use a new release-copy folder containing only the saved example renamed index.html. If you published this same safe game in lab 5, you can repeat the checks online.",
     "features": "Open the public copy. Check its label, clock and score before you sign off.",

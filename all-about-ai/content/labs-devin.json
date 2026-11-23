@@ -348,7 +348,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. Rows a and b are valid, even though b is zero. Their sum is 3. Row c needs a look.",
+        "text": "Compare the result with this hand check. Rows a and b are valid, even though b is zero. Their sum is 3. Row c needs a look. For a missing-count test, leave the Count cell empty. A recorded 0 still counts as a known reading. An empty cell belongs in the list to check.",
         "help": "Cross out negative, blank and broken counts. Include zero in the row count and write zero in the sum. Compare your paper rule with the recipe."
       },
       {
@@ -491,7 +491,7 @@
   {
     "id": "lab-devin-09",
     "title": "Find a missing and an extra permission",
-    "summary": "Compare the approved list with what the test report actually found. Check both directions.",
+    "summary": "A reviewer needs to compare the access the team approved with the access it actually found. Compare the approved list with what the test report actually found. Check both directions.",
     "level": "Advanced",
     "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
     "features": "If you check only for extra keys, you may miss a key someone should have received.",
@@ -1158,7 +1158,7 @@
   {
     "id": "lab-devin-21",
     "title": "Make a card draw without repeats",
-    "summary": "Draw every card from a small deck once. Shuffle only when a new round begins.",
+    "summary": "A draw should produce each card once before a fresh deck starts. Draw every card from a small deck once. Shuffle only when a new round begins.",
     "level": "Starter",
     "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
     "features": "Pulling a card out of the pile prevents it appearing twice before the pile is rebuilt.",

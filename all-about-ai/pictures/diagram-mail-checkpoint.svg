@@ -1,24 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 345" role="img" aria-labelledby="t d" font-family="Arial, sans-serif"><title id="t">One message, two recipient paths</title><desc id="d">Same message. A subject can repeat. Match the exact ID. Two trace rows. TR1: Delivered TR2: Failed Next evidence. Find the matching NDR. Then test one cause.</desc>
-<rect x="2" y="2" width="866" height="341" rx="13" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
-<text x="25" y="44" font-size="32" fill="#182c2d" font-weight="700">One message, two recipient paths</text>
-<text x="26" y="80" font-size="21" fill="#145756" font-weight="400">Follow the message ID and recipient together.</text>
-<path d="M25 98H845" stroke="#8b571b" stroke-width="3"/>
-<rect x="25" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="25" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="37" y="155" font-size="21" fill="#faf6ea" font-weight="700">Same message</text>
-<text x="37" y="197" font-size="19" fill="#182c2d" font-weight="400">A subject can repeat.</text>
-<text x="37" y="227" font-size="19" fill="#182c2d" font-weight="400">Match the exact ID.</text>
-<path d="M281 205h18m-6 -6 6 6 -6 6" stroke="#8b571b" fill="none" stroke-width="3"/>
-<rect x="305" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="305" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="317" y="155" font-size="21" fill="#faf6ea" font-weight="700">Two trace rows</text>
-<text x="317" y="197" font-size="19" fill="#182c2d" font-weight="400">TR1: Delivered</text>
-<text x="317" y="227" font-size="19" fill="#182c2d" font-weight="400">TR2: Failed</text>
-<path d="M561 205h18m-6 -6 6 6 -6 6" stroke="#8b571b" fill="none" stroke-width="3"/>
-<rect x="585" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="585" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="597" y="155" font-size="21" fill="#faf6ea" font-weight="700">Next evidence</text>
-<text x="597" y="197" font-size="19" fill="#182c2d" font-weight="400">Find the matching NDR.</text>
-<text x="597" y="227" font-size="19" fill="#182c2d" font-weight="400">Then test one cause.</text>
-<text x="25" y="319" font-size="19" fill="#182c2d" font-weight="700">The failed row alone cannot tell you why delivery failed.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Trace delivery separately for each recipient</title><desc id="desc">Two people can receive different results for the same message. Use the message ID and the recipient together. Identify. Match the message ID in each delivery record. Compare. Read the final status for each recipient. Investigate. For a failed delivery, find the matching bounce notice before proposing a cause.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Trace delivery separately for each recipient</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">Two people can receive different results for the same message. Use the</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">message ID and the recipient together.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Identify</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Match the message ID in each delivery record.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">Compare</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Read the final status for each recipient.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Investigate</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">For a failed delivery, find the matching bounce notice before proposing a cause.</text>
 </svg>

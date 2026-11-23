@@ -1,6 +1,7 @@
 """Check strings that reach a reader, with the same catalog order as reader.js."""
 from html.parser import HTMLParser
 import re
+from edition_trust import FIELD, PLAN
 from xml.etree import ElementTree
 
 TRUST = re.compile(
@@ -14,6 +15,21 @@ TRUST_STATUS = re.compile(
     r'\bedition\s+\d+\s*[(·–-]\s*draft\b)', re.I)
 CATALOG = {kind: re.compile(r'\{\{'+kind+r'\.([a-z0-9.-]+)\}\}') for kind in ('fact','model')}
 
+LAYOUT_WORD = re.compile(r'\b(?:above|below)\b', re.I)
+
+
+def catalog_guard(models):
+    # Source addresses may identify a model in their path. Reader-facing labels
+    # still use the catalog, just like the paragraphs that cite those sources.
+    names = {v['text'] for key, v in models.items() if key.endswith(('.name', '.id'))}
+    pattern = re.compile(r'(?<![\w.-])(?:' + '|'.join(re.escape(n) for n in sorted(names, key=len, reverse=True))
+                         + r')(?![\w.-])', re.I)
+    def check(text, where):
+        prose = re.sub(r'https?://[^\s<>"\']+', '', FIELD.sub('', text))
+        if pattern.search(prose) or PLAN.search(prose):
+            raise ValueError('Put this model or plan label in its catalog: '+where)
+    return check
+
 def expand_catalogs(text, facts, models):
     text = CATALOG['fact'].sub(lambda m:facts[m[1]]['value'], text)
     return CATALOG['model'].sub(lambda m:models[m[1]]['text'], text)
@@ -21,6 +37,8 @@ def expand_catalogs(text, facts, models):
 def check_public_text(text, where):
     if TRUST.search(text) or TRUST_STATUS.search(text.strip()):
         raise ValueError('Remove the trust label from '+where)
+    if LAYOUT_WORD.search(text):
+        raise ValueError('Use the section or control name in '+where)
     if '{{' in text:
         raise ValueError('Unresolved reader field in '+where+': '+text[:100])
 
@@ -59,8 +77,11 @@ def check_html(text, where):
     parser.close()
 
 def validate_reader(book, manifest, pages, examples, figures, facts, models, cases):
-    def rendered(value, where):
+    check_catalog = catalog_guard(models)
+    def rendered(value, where, catalog_record=False):
         for text in displayed(value):
+            if not catalog_record:
+                check_catalog(text, where)
             check_public_text(expand_catalogs(text, facts, models),where)
     # Worked chapter fields are expanded in update_edition before this pass.
     for page in pages.values():
@@ -72,14 +93,18 @@ def validate_reader(book, manifest, pages, examples, figures, facts, models, cas
         rendered(row,row['id']+' worked example')
     for collection, name in [(manifest,'edition'),(figures,'figure'),(list(facts.values()),'fact'),
                              (list(models.values()),'model'),(cases,'practice file list')]:
-        rendered(collection,name)
+        rendered(collection,name, catalog_record=name in {'model','fact'})
     for path in [book/'index.html',*(book/'practice/browser').glob('*.html')]:
-        check_html(path.read_text(),path.name)
+        source = path.read_text()
+        check_catalog(source, path.name)
+        check_html(source, path.name)
     for path in (book/'pictures').glob('*.svg'):
         for line in ElementTree.parse(path).getroot().itertext():
+            check_catalog(line,path.name)
             check_public_text(line,path.name)
     for row in cases:
         path=book/'practice/exchange-inventory/cases'/row['file']
+        check_catalog(path.read_text(),row['file'])
         check_public_text(path.read_text(),row['file'])
     for filename in ('reader.js','guides.js'):
         code=(book/filename).read_text()

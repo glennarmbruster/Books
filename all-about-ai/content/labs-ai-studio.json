@@ -51,7 +51,7 @@
   {
     "id": "lab-ai-studio-02",
     "title": "Keep the same rule for three turns",
-    "summary": "Write one standing rule for a stack of topic cards. Each answer should use only its own card.",
+    "summary": "An unassigned ferry ticket names a topic but leaves its owner empty. Write one standing rule for a stack of topic cards. Each answer should use only its own card.",
     "level": "Starter",
     "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
     "features": "Use System Instructions, a rule box that stays in place for a chat.",
@@ -199,7 +199,7 @@
   {
     "id": "lab-ai-studio-05",
     "title": "Give an app a clean date box",
-    "summary": "Turn three launch cards into records an app can read. Leave a missing date empty on purpose.",
+    "summary": "Three launch notices describe dates with different levels of certainty. Turn three launch cards into records an app can read. Leave a missing date empty on purpose.",
     "level": "Intermediate",
     "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
     "features": "Use structured output, a set of named boxes a program can read.",
@@ -254,7 +254,7 @@
   {
     "id": "lab-ai-studio-06",
     "title": "Check the math on a score sheet",
-    "summary": "Read the math the helper ran. Check a zero round, a missing round and a negative score.",
+    "summary": "A score sheet includes a penalty, a zero-point turn and a missing entry. Read the math the helper ran. Check a zero round, a missing round and a negative score.",
     "level": "Intermediate",
     "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
     "features": "Use Code execution to show and run the math behind an answer.",
@@ -303,7 +303,7 @@
   {
     "id": "lab-ai-studio-07",
     "title": "Judge two models with the same scorecard",
-    "summary": "Give two helpers the same parking puzzle. Score the math before picking a favorite answer.",
+    "summary": "A parking visit can qualify for an evening fee or reach the normal price cap. Give two helpers the same parking puzzle. Score the math before picking a favorite answer.",
     "level": "Intermediate",
     "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
     "features": "Try two model choices and grade them with one answer key.",
@@ -402,7 +402,7 @@
   {
     "id": "lab-ai-studio-09",
     "title": "Test what the model can actually see",
-    "summary": "Use a picture with two colored labels. Run the same question again without the picture.",
+    "summary": "A two-panel picture contains letters and colors that a reader can check by eye. Use a picture with two colored labels. Run the same question again without the picture.",
     "level": "Advanced",
     "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
     "features": "Attach a picture, then compare the reply with a run that has no picture.",
@@ -457,7 +457,7 @@
   {
     "id": "lab-ai-studio-10",
     "title": "Make a date editor with an export button",
-    "summary": "Build a small real form. Let a reader fix dates and export the two cards once both are ready.",
+    "summary": "One practice notice has a date. The other needs a date before the two notices can be exported. Build a small real form. Let a reader fix dates and export the two cards once both are ready.",
     "level": "Advanced",
     "requires": "Open Google AI Studio on a computer. Go to Build to make a practice app.",
     "features": "Use Build and its live preview to test a small form.",
@@ -651,7 +651,7 @@
   {
     "id": "lab-ai-studio-14",
     "title": "Price each useful answer",
-    "summary": "Count what the practice helpers cost, including tries you pay for twice. All prices here are made up for a math game.",
+    "summary": "Two models charge different prices and pass different numbers of the same cases. Count what the practice helpers cost, including tries you pay for twice. All prices here are made up for a math game.",
     "level": "Expert",
     "requires": "Sign in to AI Studio in a browser. Use a practice chat.",
     "features": "Use Code execution to add the cost of each paid practice try.",
@@ -700,7 +700,7 @@
   {
     "id": "lab-ai-studio-15",
     "title": "Make a form that proves where its answers came from",
-    "summary": "Build a page that lets you approve a draft only when the date, bay and quoted words all match the source.",
+    "summary": "Two bay notices let a reviewer catch an invented quote or an unsupported date. Build a page that lets you approve a draft only when the date, bay and quoted words all match the source.",
     "level": "Expert",
     "requires": "Open Google AI Studio on a computer. Go to Build to make a practice app.",
     "features": "Use app Build mode, a live preview and fixed sample checks.",
@@ -853,7 +853,7 @@
   {
     "id": "lab-ai-studio-18",
     "title": "Build a countdown card for a reader",
-    "summary": "Move a timer forward by hand. A reader can learn the controls without waiting five real minutes.",
+    "summary": "A timer should advance only while it is running. Move a timer forward by hand. A reader can learn the controls without waiting five real minutes.",
     "level": "Starter",
     "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
     "features": "Use Build chat to make the app. Try each control in the preview.",
@@ -1003,7 +1003,7 @@
   {
     "id": "lab-ai-studio-21",
     "title": "Make a card picker for three moods",
-    "summary": "Use a choice to show the right card. Two readers can choose different moods without typing a prompt.",
+    "summary": "Three mood buttons offer different activities. Use a choice to show the right card. Two readers can choose different moods without typing a prompt.",
     "level": "Starter",
     "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
     "features": "Use Build chat to make the app. Try each control in the preview.",
@@ -1103,7 +1103,7 @@
   {
     "id": "lab-ai-studio-23",
     "title": "Make a day-by-day meal board",
-    "summary": "Plan three meals and add up the ingredients. Use a second serving to test whether the list really changes.",
+    "summary": "A three-day meal plan has to update its shopping totals when a meal changes. Plan three meals and add up the ingredients. Use a second serving to test whether the list really changes.",
     "level": "Intermediate",
     "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
     "features": "Use Build chat to make the app. Try each control in the preview.",
@@ -1153,7 +1153,7 @@
   {
     "id": "lab-ai-studio-24",
     "title": "Mark dates that still need attention",
-    "summary": "Pick out missing dates, impossible dates and real leap days. A colored label needs words as well as color.",
+    "summary": "One practice list mixes possible dates with dates that could never occur. Pick out missing dates, impossible dates and real leap days. A colored label needs words as well as color.",
     "level": "Intermediate",
     "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
     "features": "Use Build chat to make the app. Try each control in the preview.",
@@ -1408,7 +1408,7 @@
   {
     "id": "lab-ai-studio-29",
     "title": "Capstone · Make a branching puzzle adventure",
-    "summary": "Build a short story a reader can win, lose and replay. The bag must remember a key between rooms.",
+    "summary": "A player can reach the gate with a key or without one. Build a short story a reader can win, lose and replay. The bag must remember a key between rooms.",
     "level": "Advanced",
     "requires": "Sign in to Google AI Studio in a computer browser. Open Build and choose a new app.",
     "features": "Use Build chat to make the app. Try each control in the preview.",

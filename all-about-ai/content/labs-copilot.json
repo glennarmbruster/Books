@@ -364,7 +364,7 @@
       {
         "title": "Try the second test",
         "text": "Change A from 14 to 15 and recalculate.",
-        "help": "If the empty row becomes normal, put the blank check ahead of the number checks."
+        "help": "If the empty row becomes normal, put the blank check ahead of the number checks. A recorded wait of 0 is a known wait of zero minutes. A blank means nobody recorded a wait. Keep that row in the missing group."
       }
     ],
     "check": [
@@ -838,7 +838,7 @@
   {
     "id": "lab-copilot-16",
     "title": "Build a round tally in Excel",
-    "summary": "Turn three rows into a score table that updates whenever a player adds points.",
+    "summary": "A scorekeeper adds new rows to an Excel table and expects the team totals to follow. Turn three rows into a score table that updates whenever a player adds points.",
     "level": "Starter",
     "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
     "features": "A sum-by-team formula only adds numbers on rows carrying the team’s label.",
@@ -996,7 +996,7 @@
   {
     "id": "lab-copilot-19",
     "title": "Build a meeting countdown sheet",
-    "summary": "Show how much time remains as a meeting moves through its agenda.",
+    "summary": "An event organizer wants to see how proposed activities fit a time budget. Show how much time remains as a meeting moves through its agenda.",
     "level": "Starter",
     "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access. Also open an empty Excel workbook. Copilot Chat can give you formulas to enter yourself.",
     "features": "Subtract each activity from the time still in the pot. A negative amount tells you how far past the end you went.",
@@ -1213,7 +1213,7 @@
   {
     "id": "lab-copilot-23",
     "title": "Build a branching help desk in chat",
-    "summary": "Make a helper that asks one question at a time and can admit when it has run out of rules.",
+    "summary": "A help-desk rehearsal uses a rule card to decide which question comes next. Make a helper that asks one question at a time and can admit when it has run out of rules.",
     "level": "Intermediate",
     "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
     "features": "A little decision tree can guide the next step without guessing the cause of a problem.",
@@ -1264,7 +1264,7 @@
   {
     "id": "lab-copilot-24",
     "title": "Make a bingo caller with repeat protection",
-    "summary": "Play a small number game with a fixed draw order that includes a repeat.",
+    "summary": "A bingo caller may repeat a number that is already marked. Play a small number game with a fixed draw order that includes a repeat.",
     "level": "Intermediate",
     "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
     "features": "The pile counts every draw. The board counts each number only once. Those are different totals.",
@@ -1430,7 +1430,7 @@
   {
     "id": "lab-copilot-27",
     "title": "Make a three-round budget game",
-    "summary": "Try to keep a tiny project within its budget. Each choice changes the remaining amount.",
+    "summary": "A traveler makes one choice per round while staying inside a budget. Try to keep a tiny project within its budget. Each choice changes the remaining amount.",
     "level": "Intermediate",
     "requires": "Open Microsoft 365 Copilot Chat in a browser with an account that has access.",
     "features": "A bad choice should leave a player exactly where they were, able to choose again.",
@@ -1562,7 +1562,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Change the target to 5. Then start a new game ID, enter Blue 0 and a blank score.",
+        "text": "Change the target to 5. Then start a new game ID, enter Blue 0 and a blank score. A round with a 0 was played. A blank score leaves the round unrecorded.",
         "help": "If clearing a new game wipes old rows, filter by game ID. Keep each game’s inputs in the same history table."
       }
     ],
@@ -1612,13 +1612,13 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. Three rows belong. Known sum is 2. D is missing, C is excluded and the heading says Hold.",
+        "text": "Compare the result with this hand check. Three rows belong. Known sum is 2. D is missing, C is excluded and the heading says Hold. A recorded 0 belongs in the known rows. An empty cell has no count yet and holds the summary for review.",
         "help": "Add 2 and 0. Write D on a separate missing list. Check that the room’s 4 stays out of the included sum before fixing the missing count."
       },
       {
         "title": "Try the second test",
         "text": "Give D a count of 5. Check the heading. Add a second A and check the heading again.",
-        "help": "If a missing count passes because its cell looks like zero, check whether the original input cell is blank before doing math."
+        "help": "If the result treats a missing count as zero, inspect the original cell. Check for a blank before doing the math."
       }
     ],
     "check": [

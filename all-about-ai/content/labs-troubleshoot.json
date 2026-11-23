@@ -150,7 +150,7 @@
     "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Read the checks stamped on one message. Keep its final delivery state separate.",
     "roles": [
-      "Identify which authentication checks failed.",
+      "Name the checks that failed when the receiver tried to verify the sender.",
       "Share a short evidence note with a reviewer.",
       "Read the receiver’s results for an app notice."
     ],
@@ -225,7 +225,7 @@
   {
     "id": "lab-troubleshoot-04",
     "title": "Check the DNS behind an authentication verdict",
-    "summary": "Use a dated DNS snapshot and a working comparison to test an AI explanation.",
+    "summary": "A saved DNS record lets an operator check whether a suspected sender mismatch is plausible. Use a dated DNS snapshot and a working comparison to test an AI explanation.",
     "level": "Starter",
     "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "features": "Compare the sending address with the saved DNS record. Use the second message as a check.",
@@ -416,7 +416,7 @@
       {
         "title": "Compare and close",
         "text": "Uncover RT3 through RT5. Compare each delivery status and received subject to your three predictions. Record each new message ID and the result.",
-        "help": "If the AI closes the case using only RT3, ask for one control that differs by subject and one that differs by mailbox."
+        "help": "If the AI relies only on RT3, ask for two more tests. Change just the subject in one and just the mailbox in the other."
       }
     ],
     "check": [
@@ -624,7 +624,7 @@
   {
     "id": "lab-troubleshoot-09",
     "title": "Verify a device fix without changing a policy",
-    "summary": "Decide what would count as a successful retest before revealing the outcome.",
+    "summary": "A repaired tablet needs a fresh sign-in test and a mail test before the desk can close the ticket. Decide what would count as a successful retest before revealing the outcome.",
     "level": "Intermediate",
     "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
@@ -864,7 +864,7 @@
   {
     "id": "lab-troubleshoot-12",
     "title": "Audit a proposed command before trusting it",
-    "summary": "Read a command before you trust it. Check the shell, the fields and the result.",
+    "summary": "An operator is checking which commands are available before trusting a proposed remedy. Read a command before you trust it. Check the shell, the fields and the result.",
     "level": "Advanced",
     "requires": "Open the practice files listed. Use a blank sheet for your answers. Keep the original files as they are.",
     "kit": "practice/exchange-inventory.zip",
@@ -1095,7 +1095,7 @@
     "id": "lab-troubleshoot-14",
     "level": "Advanced",
     "title": "Test a fix and an unaffected message",
-    "summary": "Decide whether the after-test proves the change stayed inside its scope.",
+    "summary": "A targeted fix needs two checks: the message that should change and one that should stay ordinary. Decide whether the after-test proves the change stayed inside its scope.",
     "roles": [
       "Trace one receipt from a report to a new delivery test.",
       "Keep a sign-in guess separate from the policy result that could prove it.",

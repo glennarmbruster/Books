@@ -100,7 +100,7 @@
   {
     "id": "lab-antigravity-03",
     "title": "Build a quiz card you can turn over",
-    "summary": "Make a tiny page with a question on one side and a hidden answer you can reveal.",
+    "summary": "A quiz card should reveal its answer when the reader asks for it. Make a tiny page with a question on one side and a hidden answer you can reveal.",
     "level": "Starter",
     "requires": "Open Antigravity on a computer. Use an empty practice folder.",
     "features": "Make an HTML file and open it in a browser.",
@@ -301,7 +301,7 @@
   {
     "id": "lab-antigravity-07",
     "title": "Keep a help desk open past midnight",
-    "summary": "Build a clock rule for a desk that opens at ten at night and closes at two in the morning.",
+    "summary": "A desk opens in the evening and closes after midnight. Build a clock rule for a desk that opens at ten at night and closes at two in the morning.",
     "level": "Intermediate",
     "requires": "Open Antigravity on a computer. Use an empty practice folder. Install Python 3 if the computer cannot run Python files.",
     "features": "Use a table of clock times to test a Python rule.",
@@ -457,7 +457,7 @@
   {
     "id": "lab-antigravity-10",
     "title": "Update a book that works offline",
-    "summary": "Save two tiny book files in the browser. Make sure the newer edition takes the place of the old one.",
+    "summary": "A two-file book has a new edition that needs to open on an offline device. Save two tiny book files in the browser. Make sure the newer edition takes the place of the old one.",
     "level": "Advanced",
     "requires": "Open Antigravity on a computer. Use an empty practice folder.",
     "features": "Use a local web server and a browser helper that saves pages for offline reading.",
@@ -983,7 +983,7 @@
   {
     "id": "lab-antigravity-20",
     "title": "Make a three-stop route card",
-    "summary": "Use two buttons to move through a short route. A reader should always know where they are.",
+    "summary": "A pocket guide lets its reader move among three stops. Use two buttons to move through a short route. A reader should always know where they are.",
     "level": "Starter",
     "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use the project chat to build the page. Open the changed file to see how it works.",
@@ -1474,7 +1474,7 @@
   {
     "id": "lab-antigravity-29",
     "title": "Capstone · Build a working pairs tournament",
-    "summary": "Run two full memory rounds and compare the scores. Both players should get the same board and rules.",
+    "summary": "Two players try the same pairs board so their numbers of tries can be compared. Run two full memory rounds and compare the scores. Both players should get the same board and rules.",
     "level": "Advanced",
     "requires": "Open Antigravity on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use the project chat to build the page. Open the changed file to see how it works.",

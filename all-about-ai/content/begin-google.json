@@ -2,7 +2,7 @@
   {
     "id": "open-antigravity",
     "title": "Open Antigravity for the first time",
-    "summary": "Install the app on a computer. Ask it a question with an answer you can check.",
+    "summary": "A first launch can ask about your work before it shows the message box. A question with a known answer tells you the app is ready.",
     "topic": "Google Antigravity",
     "where": [
       "Use a Google account and the internet. Google lists 64-bit Windows 10, Windows 11, or macOS 13 or newer on a supported Intel or Apple Silicon Mac. Read along on iPad and use the computer for this lesson.",
@@ -23,7 +23,7 @@
       },
       {
         "title": "Sign in",
-        "do": "Open Antigravity. Follow its Google sign-in screen. After signing in, return to the app window.",
+        "do": "Open Antigravity. Follow its Google sign-in screen. After signing in, return to the app window. If a welcome screen asks what kind of work you do, finish that step to reach Home.",
         "see": "The Home screen offers a box for your first message.",
         "stuck": "If you are still looking at a browser tab, switch back to the Antigravity app."
       },
@@ -219,7 +219,7 @@
   {
     "id": "open-ai-studio",
     "title": "Open Google AI Studio and run a tiny test",
-    "summary": "Find the Playground, send a question and change one number to see what happens.",
+    "summary": "A price card makes a simple first test. When the quantity changes, you can check the total yourself.",
     "topic": "Google AI Studio",
     "where": [
       "Use a browser on a Mac or PC. On iPad, turn Safari sideways for extra room. Use an internet connection.",

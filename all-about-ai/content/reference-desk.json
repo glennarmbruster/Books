@@ -16,7 +16,7 @@
     "firstGuide": "which-account",
     "intro": {
       "what": "Find the job you actually have. Each table starts from one concrete example. Change your pick when the work or the evidence changes.",
-      "features": "Nine job tables compare five tools. The entries are editorial suggestions, not benchmark scores.",
+      "features": "Nine tables compare five tools. Each table suggests a tool for a job and explains why you might pick it.",
       "exchange": "Choose a helper based on whether the mail task needs code, sources or a draft.",
       "m365": "Check the spreadsheet and in-app columns before choosing a document workflow.",
       "developer": "Compare local code editing with a quick visual prototype for the job at hand.",
@@ -47,6 +47,7 @@
       {
         "title": "Writing",
         "paragraphs": [
+          "A handoff has to keep the facts in the supplied notes. The right tool also depends on where the finished note will live.",
           "Draft a short handoff from supplied notes."
         ],
         "sources": [
@@ -115,6 +116,7 @@
       {
         "title": "Research with sources",
         "paragraphs": [
+          "A reader wants to open the evidence for a claim and check its wording. Compare how each tool lets you do that.",
           "Find the rule behind a public product claim."
         ],
         "sources": [
@@ -183,6 +185,7 @@
       {
         "title": "Spreadsheets",
         "paragraphs": [
+          "A team shares a worksheet with live formulas. Decide whether the job calls for changing that file or explaining a copy.",
           "Edit a shared Excel workbook while keeping its formulas."
         ],
         "sources": [
@@ -251,6 +254,7 @@
       {
         "title": "Code",
         "paragraphs": [
+          "A check fails in a practice project. Compare which tools can open its files, edit the code and show the test result.",
           "Repair a small app with a failing test in its repo."
         ],
         "sources": [
@@ -319,6 +323,7 @@
       {
         "title": "M365 admin help",
         "paragraphs": [
+          "A team has a written rule for handling a mail problem. The first question is which tools can see the approved copy.",
           "Find the approved mail runbook for a work account."
         ],
         "sources": [
@@ -387,6 +392,7 @@
       {
         "title": "Long documents",
         "paragraphs": [
+          "An answer drawn from many pages needs a passage you can find again. Look for a way to trace a claim to its source.",
           "Find evidence in a stack of supplied documents."
         ],
         "sources": [
@@ -455,6 +461,7 @@
       {
         "title": "Images",
         "paragraphs": [
+          "A reader wants to change one detail in a picture. Look for controls that let the rest of the picture stay the same.",
           "Create a draft illustration and change one detail."
         ],
         "sources": [
@@ -523,6 +530,7 @@
       {
         "title": "Scheduled work",
         "paragraphs": [
+          "A repeated job needs a place to run when nobody has the chat open. Compare what each option can actually schedule.",
           "Schedule repeated work on a code repository."
         ],
         "sources": [
@@ -595,6 +603,7 @@
       {
         "title": "Working inside Microsoft 365",
         "paragraphs": [
+          "A team shares one document. Decide whether the work should happen inside that document or on a separate copy.",
           "Revise a document inside a Microsoft 365 app."
         ],
         "sources": [
@@ -770,6 +779,12 @@
             "date": "2026-11-23",
             "where": "reference-prompts",
             "what": "Edition 9 replaces every worked example with two checked outcomes and a separate copyable recovery message. Role examples are specific to each chapter.",
+            "kind": "edition"
+          },
+          {
+            "date": "2026-11-23",
+            "what": "Edition 10 adds a guide to twelve Devin tools. Each page has a first task, access notes, a picture and a worked example.",
+            "where": "devin-reference-ask",
             "kind": "edition"
           }
         ]

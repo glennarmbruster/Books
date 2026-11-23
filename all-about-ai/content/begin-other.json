@@ -180,7 +180,7 @@
   {
     "id": "open-vibe",
     "title": "Have Mistral Vibe draft a checklist",
-    "summary": "Turn two short notes into two boxes you could tick.",
+    "summary": "A two-item checklist is small enough to test by hand. Editing one item should leave the other alone.",
     "topic": "Mistral Vibe",
     "where": [
       "Open chat.mistral.ai. Sign in if your account supports it. Older guides may call the app Le Chat."
@@ -257,7 +257,7 @@
       {
         "title": "Set the first frame",
         "do": "Add the mug photo under Frames. Leave the final frame empty for this test.",
-        "see": "A small copy of the mug appears as the first frame.",
+        "see": "A small copy of the mug appears as the first frame. The official example shows a lake in this control. Your first frame should show your mug.",
         "stuck": "Remove a wrong photo before you generate the clip."
       },
       {
@@ -311,7 +311,7 @@
       {
         "title": "Mark the patch",
         "do": "Brush over a small patch beside the mug. Leave the mug and handle outside your mark.",
-        "see": "A colored patch shows the space you chose.",
+        "see": "A colored patch shows the space you chose. In the official room photo, pink marks the selected patch. In your mug photo, look for that mark beside the mug.",
         "stuck": "Use Select less or subtract if the mark touches the mug."
       },
       {

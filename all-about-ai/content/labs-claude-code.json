@@ -102,7 +102,7 @@
   {
     "id": "lab-claude-code-03",
     "title": "Keep a writing rule with a project",
-    "summary": "Give a project its own short rule card. See whether a new chat in the same folder follows it.",
+    "summary": "A team wants every release note to follow the same headings. Give a project its own short rule card. See whether a new chat in the same folder follows it.",
     "level": "Starter",
     "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder.",
     "features": "Keep a project rule in CLAUDE.md so later chats can follow it.",
@@ -580,7 +580,7 @@
   {
     "id": "lab-claude-code-13",
     "title": "Change a file and change it back",
-    "summary": "Save a new version of a small address book. Prove you can turn the new file back into the original data.",
+    "summary": "An address tool must be able to take a value apart and put it back unchanged. Save a new version of a small address book. Prove you can turn the new file back into the original data.",
     "level": "Expert",
     "requires": "Open Claude Code on your computer. You need a plain text editor and a new practice folder. Install Python 3 if the computer cannot run Python files.",
     "features": "Turn one JSON file into another and check that a return trip restores the data.",
@@ -749,7 +749,7 @@
   {
     "id": "lab-claude-code-16",
     "title": "Play three rounds of rock, paper, scissors",
-    "summary": "Play against a pretend opponent. Its first three moves are fixed so you can check a win, a tie and a loss.",
+    "summary": "A three-turn game needs to remember both moves and stop at the end. Play against a pretend opponent. Its first three moves are fixed so you can check a win, a tie and a loss.",
     "level": "Starter",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -803,7 +803,7 @@
   {
     "id": "lab-claude-code-17",
     "title": "Catch the odd word",
-    "summary": "Find the item that does not belong with the others. Give the answer a reason as well as a point.",
+    "summary": "An odd-word quiz should explain the answer once per round. Find the item that does not belong with the others. Give the answer a reason as well as a point.",
     "level": "Starter",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -911,7 +911,7 @@
   {
     "id": "lab-claude-code-19",
     "title": "Build a one-button lunch poll",
-    "summary": "Give each practice ballot one vote. See how a tie looks before declaring a winner.",
+    "summary": "A double tap on a lunch ballot should still count as one vote. Give each practice ballot one vote. See how a tie looks before declaring a winner.",
     "level": "Starter",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -965,7 +965,7 @@
   {
     "id": "lab-claude-code-20",
     "title": "Make a mailbox size dial",
-    "summary": "Show how full a pretend mailbox is. Include a message for a missing size or an impossible limit.",
+    "summary": "A mailbox gauge must deal with a missing limit as well as a full mailbox. Show how full a pretend mailbox is. Include a message for a missing size or an impossible limit.",
     "level": "Starter",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -1073,7 +1073,7 @@
   {
     "id": "lab-claude-code-22",
     "title": "Build a sliding tile game",
-    "summary": "Move nearby number tiles into one empty space. Work a one-move puzzle and try a trick move.",
+    "summary": "A sliding tile puzzle permits only a neighbor to move into the empty square. Move nearby number tiles into one empty space. Work a one-move puzzle and try a trick move.",
     "level": "Intermediate",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -1240,7 +1240,7 @@
   {
     "id": "lab-claude-code-25",
     "title": "Make a puzzle clock without real waiting",
-    "summary": "Run two timed puzzle rounds. A manual clock makes pause, resume and scoring easy to test.",
+    "summary": "A two-round game clock must handle both a solved round and a timeout. Run two timed puzzle rounds. A manual clock makes pause, resume and scoring easy to test.",
     "level": "Intermediate",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -1294,7 +1294,7 @@
   {
     "id": "lab-claude-code-26",
     "title": "Find a daily peak from pretend counts",
-    "summary": "Add rows that happened on the same day, then find the busiest day. A tie needs room on the page too.",
+    "summary": "Several counts share a date, and more than one date can tie for the highest total. Add rows that happened on the same day, then find the busiest day. A tie needs room on the page too.",
     "level": "Intermediate",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -1456,7 +1456,7 @@
   {
     "id": "lab-claude-code-29",
     "title": "Capstone · Make a fair two-team quiz night",
-    "summary": "Run a four-question quiz from the first turn through the final score. Give each team exactly two chances.",
+    "summary": "Two teams take turns answering a four-question quiz. Run a four-question quiz from the first turn through the final score. Give each team exactly two chances.",
     "level": "Advanced",
     "requires": "Open Claude Code on a computer. Select a new, empty practice folder for this lab.",
     "features": "Use Claude Code to write a local page. Try the page in your browser.",
@@ -1533,7 +1533,7 @@
       },
       {
         "title": "Try the sample",
-        "text": "Mark M1 and M2 reviewed. Export the file, restore the sample, then import the export. Check each row and both totals.",
+        "text": "Mark M1 and M2 reviewed. Export the file, restore the sample, then import the export. Check each row and both totals. A queue of 0 means someone recorded an empty queue. A blank queue has no reading. The saved handoff must preserve that difference.",
         "help": "The restored handoff says 2 of 3 reviewed and 4 known items. M2 keeps 0, M3 says Missing. The review flags survive the trip."
       },
       {

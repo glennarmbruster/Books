@@ -237,7 +237,8 @@
           "prompt": "A new run costs 12 cents and gives four useful clues. How much did one useful clue cost?",
           "answer": [
             "12 divided by 4 is 3 cents. Keep a tally of useful clues so you can do the same check on your own runs."
-          ]
+          ],
+          "context": "Suppose a game needs helpful clues. Counting the good clues lets you compare two runs even when their prices differ."
         }
       }
     ],
@@ -282,7 +283,7 @@
           "https://gemini.google/overview/video-generation/"
         ],
         [
-          "Grok Imagine · video capabilities",
+          "{{model.xai.imagine.name}} · video capabilities",
           "https://docs.x.ai/developers/model-capabilities/video/overview"
         ],
         [
@@ -339,7 +340,7 @@
             "https://gemini.google/overview/video-generation/"
           ],
           [
-            "Grok Imagine · video capabilities",
+            "{{model.xai.imagine.name}} · video capabilities",
             "https://docs.x.ai/developers/model-capabilities/video/overview"
           ],
           [
@@ -428,6 +429,7 @@
       {
         "title": "Score what you can check",
         "paragraphs": [
+          "Imagine checking a parking receipt before paying. An answer earns credit when the charge agrees with the arrival time and the posted rule.",
           "Give a point for each correct charge. Give one more point if the answer uses the start time for the evening rule. Give one more if it spots the daily limit. A total of five points is possible. Record the time the answer took in a separate box."
         ],
         "sources": [
@@ -592,6 +594,7 @@
       {
         "title": "Open one fresh session per tool",
         "paragraphs": [
+          "Four people could build the same game and hand you four different files. Separate sessions let you trace each file back to its builder.",
           "Choose one route per tool and record it. Go to the next row only after saving the first result."
         ],
         "sources": [
@@ -674,6 +677,7 @@
       {
         "title": "Score the first try, then record your own ratings",
         "paragraphs": [
+          "A good-looking game can still count the same tap twice. Test the rules first, then record what you liked about using it.",
           "Pick a tool. For each first-try check, select Pass or Fail. Leave checks you have yet to run as Untested. If there was no runnable game, record that in Notes. Distinguish a demonstrated failure from something you could not check.",
           "For the other three rows, use 2 for easy and complete, 1 for partly working or awkward, and 0 if you tried and could not do it. Leave an untried row blank. Score the edit row after the next step. Keep the first five points as their own score."
         ],

@@ -28,7 +28,8 @@
       {
         "title": "Find the source",
         "paragraphs": [
-          "Sign in to Microsoft 365 Copilot Chat with the account you mean to use. Create a pretend note: “The early shift moves to 8 a.m. on May 6.” Give Copilot just this note. Ask which shift changes, what time it starts and who owns the change. Open its source. The note gives no owner. With Work IQ enabled, you can also ask about work files you already have permission to read."
+          "Sign in to Microsoft 365 Copilot Chat with the account you mean to use. Create a pretend note: “The early shift moves to 8 a.m. on May 6.” Give Copilot just this note. Ask which shift changes, what time it starts and who owns the change. Open its source. The note gives no owner. With Work IQ enabled, you can also ask about work files you already have permission to read.",
+          "A reply may draw from mail, a Teams conversation or a file your work account can read. Open its source to check both the words and which account had access."
         ],
         "sources": [
           [
@@ -143,7 +144,7 @@
     "summary": "Build a short slide deck where every title matches the numbers.",
     "intro": {
       "what": "Copilot can help write a note in Word and use an approved file to draft a presentation in PowerPoint.",
-      "features": "You can ask for sections in a brief, use that brief as a slide source and edit a chart label so readers know who was counted.",
+      "features": "Ask for a short brief with headings. Build slides from the brief. Label each chart so readers know who was counted.",
       "exchange": "Use a checked service note as the sole source for a mail update slide.",
       "m365": "Trace each claim in a four-slide deck back to the original document.",
       "developer": "Keep the known test result distinct from the planned release in your demo.",
@@ -226,6 +227,7 @@
       {
         "title": "Make a small table",
         "paragraphs": [
+          "A packing team wants to know how many items it can ship. The sheet records the packed and rejected items separately for each batch.",
           "Make a new practice workbook. Enter these rows as numbers. Turn the range into a table named Shipments. Ask for an Accepted column equal to Packed minus Rejected. If your account gives instructions in chat, enter the formula there in your practice sheet."
         ],
         "sources": [

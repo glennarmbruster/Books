@@ -2,7 +2,7 @@
   {
     "id": "open-codex",
     "title": "Open Codex and choose one practice folder",
-    "summary": "Make an empty folder. Ask Codex to tell you exactly which folder it can see.",
+    "summary": "Two folders can look much alike. A new practice folder lets you check which one the helper can read.",
     "topic": "Codex",
     "where": [
       "Use the ChatGPT desktop app on a Mac or Windows PC. Get it at chatgpt.com/download and sign in. An iPad can show these steps while you work on the computer. Some accounts also offer cloud or Remote tasks on iPad."
@@ -280,7 +280,7 @@
   {
     "id": "open-work-project",
     "title": "Give a ChatGPT project its own rule",
-    "summary": "Keep related chats together and see whether a rule carries into a new one.",
+    "summary": "Two chats need the same source note. A named project gives you a place to keep it.",
     "topic": "ChatGPT Work & Projects",
     "where": [
       "Open ChatGPT on the web, desktop or iPad. Sign in to the account where you want to keep the practice chats. Open its sidebar."
@@ -352,7 +352,7 @@
       },
       {
         "title": "Attach the file",
-        "do": "In the project open Sources. Choose Add source or the file upload control, then select counts.txt. On iPad use Browse to find its folder.",
+        "do": "In the project open Sources. Choose Add source or the file upload control, then select counts.txt. On iPad use Browse to find its folder. The menu beside Share opens settings for this project. Use Sources to add the practice file.",
         "see": "The file name appears among the project’s sources.",
         "stuck": "If you picked the wrong file, remove it from the practice project and attach the intended one."
       },

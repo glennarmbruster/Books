@@ -22,7 +22,7 @@
       "reviewed": "2026-11-22"
     },
     {
-      "title": "Devin Enterprise",
+      "title": "{{fact.devin.enterprise.name}}",
       "file": "devin.json",
       "reviewed": "2026-11-22"
     },
@@ -85,7 +85,7 @@
       "reviewed": "2026-11-22"
     },
     {
-      "title": "Devin Enterprise",
+      "title": "{{fact.devin.enterprise.name}}",
       "track": "devin",
       "file": "labs-devin.json",
       "reviewed": "2026-11-22",
@@ -200,11 +200,16 @@
       "reviewed": "2026-11-23"
     },
     {
+      "title": "Devin: full potential",
+      "file": "devin-reference.json",
+      "reviewed": "2026-11-23"
+    },
+    {
       "title": "Reference desk",
       "file": "reference-desk.json",
       "reviewed": "2026-11-23"
     }
   ],
   "extensionPages": [],
-  "version": 9
+  "version": 10
 }

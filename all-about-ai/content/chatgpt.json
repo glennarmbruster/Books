@@ -99,6 +99,7 @@
       {
         "title": "Choose one that fits the job",
         "paragraphs": [
+          "An app that reads a picture has a different job from one that checks a score. Choose a test that tells you whether the job was done.",
           "Make a little test with a result you can see. For a picture, pick a screen with a large Help button. For math, use a score you can add by hand. The exact IDs are for apps."
         ],
         "sources": [
@@ -164,7 +165,8 @@
           "prompt": "One run costs $1 and gives eight good answers. Another costs $1 and gives ten. Which costs less per good answer?",
           "answer": [
             "The first costs 12.5 cents per good answer. The second costs 10 cents. These are made-up bills to practice the math."
-          ]
+          ],
+          "context": "A team pays for a batch of answers, but only correct answers can be used. That makes the cost for each good answer worth checking."
         }
       }
     ],

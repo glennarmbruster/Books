@@ -1,24 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 345" role="img" aria-labelledby="t d" font-family="Arial, sans-serif"><title id="t">Follow one direction at a time</title><desc id="d">HR4 · forward trip. Old host selected. Message timed out. HR7 · fresh retry. Approved host used. Destination saw TEST-43. HR8 · control. Different route. TEST-44 arrived.</desc>
-<rect x="2" y="2" width="866" height="341" rx="13" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
-<text x="25" y="44" font-size="32" fill="#182c2d" font-weight="700">Follow one direction at a time</text>
-<text x="26" y="80" font-size="21" fill="#145756" font-weight="400">A passing return path cannot prove the forward trip.</text>
-<path d="M25 98H845" stroke="#8b571b" stroke-width="3"/>
-<rect x="25" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="25" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="37" y="155" font-size="21" fill="#faf6ea" font-weight="700">HR4 · forward trip</text>
-<text x="37" y="197" font-size="19" fill="#182c2d" font-weight="400">Old host selected.</text>
-<text x="37" y="227" font-size="19" fill="#182c2d" font-weight="400">Message timed out.</text>
-<path d="M281 205h18m-6 -6 6 6 -6 6" stroke="#8b571b" fill="none" stroke-width="3"/>
-<rect x="305" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="305" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="317" y="155" font-size="21" fill="#faf6ea" font-weight="700">HR7 · fresh retry</text>
-<text x="317" y="197" font-size="19" fill="#182c2d" font-weight="400">Approved host used.</text>
-<text x="317" y="227" font-size="19" fill="#182c2d" font-weight="400">Destination saw TEST-43.</text>
-<path d="M561 205h18m-6 -6 6 6 -6 6" stroke="#8b571b" fill="none" stroke-width="3"/>
-<rect x="585" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="585" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="597" y="155" font-size="21" fill="#faf6ea" font-weight="700">HR8 · control</text>
-<text x="597" y="197" font-size="19" fill="#182c2d" font-weight="400">Different route.</text>
-<text x="597" y="227" font-size="19" fill="#182c2d" font-weight="400">TEST-44 arrived.</text>
-<text x="25" y="319" font-size="19" fill="#182c2d" font-weight="700">Verify the new message at its destination. Keep the control separate.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Check both ends of a mail route</title><desc id="desc">Mail travels between a cloud service and a local server. Success in one direction proves only that trip. Before. Identify the destination the failed route actually selected. Retest. Send a fresh practice message. Confirm the intended destination received it. Control. Send a separate message on the unaffected route. Record that result separately.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Check both ends of a mail route</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">Mail travels between a cloud service and a local server. Success in one</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">direction proves only that trip.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Before</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Identify the destination the failed route actually selected.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">Retest</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Send a fresh practice message. Confirm the intended destination received it.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Control</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">Send a separate message on the unaffected route. Record that result separately.</text>
 </svg>

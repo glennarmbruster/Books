@@ -49,6 +49,11 @@ def check_sample_text(value, path):
     require(not re.search(r'(?:/Users/|C:\\Users\\|/home/)[A-Za-z0-9._-]+', value, re.I), f'Remove the personal home folder in {path}')
     require(not re.search(r'(?<![\w.-])(?:\+1[-. ]?)?\(\d{3}\)[-. ]*\d{3}[-. ]\d{4}\b', value), f'Remove the personal phone number in {path}')
 
+    secret = re.search(r'-----BEGIN (?:[A-Z0-9 ]+ )?PRIVATE KEY-----|'
+                       r'\b(?:gh[pousr]_[A-Za-z0-9]{32,}|github_pat_[A-Za-z0-9_]{44,}|'
+                       r'sk-(?:proj-)?[A-Za-z0-9_-]{32,}|AKIA[A-Z0-9]{16})\b', value)
+    require(not secret, f'Remove the credential from {path}')
+
 
 def check_sources(sources, key):
     require(sources, f'Missing sources in {key}')
@@ -234,14 +239,32 @@ for group in groups:
 
 desk = next(ch for ch in json.loads((book/'content/reference-desk.json').read_text()) if ch['id']=='reference-changes')
 expected_surfaces = {'chat','artifacts','projects','code','connectors','browser','scheduled','voice','files'}
-for vendor, alternate in [('claude',set()),('gemini',{'notebook','canvas'})]:
+surface_groups = {
+    'claude': expected_surfaces | {'memory','skills','style','research','thinking'},
+    'gemini': (expected_surfaces - {'projects','artifacts'}) |
+             {'notebook','canvas','gems','research','personal','workspace','creation'},
+    'devin': {'ask','agent','deepwiki','review','skills','blueprints','cli','apps',
+              'scheduled','workflows','integrations','outposts'},
+}
+for vendor, expected in surface_groups.items():
     pages = json.loads((book/'content'/f'{vendor}-reference.json').read_text())
-    expected = (expected_surfaces - {'projects','artifacts'} | alternate) if alternate else expected_surfaces
-    expected = expected | ({'memory','skills','style','research','thinking'} if vendor=='claude' else {'gems','research','personal','workspace','creation'})
+    require(any(g['file'] == vendor+'-reference.json' and g['title'] == vendor.title()+': full potential'
+                for g in groups), 'Missing surface group for '+vendor)
     for page in pages:
         require([s['title'] for s in page['sections']] == ['What it is for','Do this first','What it cannot do','Plan and availability','Gotchas','Official docs'], 'Missing surface guide section in '+page['id'])
         links = {u for part in page['sections'] for _,u in part['sources']}
         require(len(links)>=2 and page['summary']!=page['intro']['what'], 'Check sources or introduction in '+page['id'])
+        if vendor == 'devin':
+            key = page['id']+'.availability'
+            require(page['sections'][3]['paragraphs'] == ['{{fact.'+key+'}}'] and key in facts,
+                    'Link the matching availability fact in '+page['id'])
+            def devin_doc(url):
+                parts = urlsplit(url)
+                return valid_source(url) and parts.hostname == 'docs.devin.ai' and parts.path.strip('/')
+            docs = {url for _,url in page['sections'][5]['sources']}
+            require(len({urlsplit(u).path.rstrip('/') for u in docs}) >= 2 and
+                    all(devin_doc(u) for u in links | docs | {facts[key]['source']}),
+                    'Use distinct official Devin documentation in '+page['id'])
     require(len(pages) == len(expected) and {p['surface'] for p in pages} == expected and
             all(p['id'] == vendor+'-reference-'+p['surface'] and p['id'] in reference_ids for p in pages),
             'Missing full-potential surface for '+vendor)
@@ -255,7 +278,7 @@ require(len(tracks) == len(track_levels) and set(tracks) == set(track_levels) an
 require(len(writing_labs) == 20 and set(writing_labs) == set(track_levels) - {'data-safety','troubleshoot','ship-app'},
         'Expected 20 optional prompt exercises across the original tracks')
 comparison_ids = {'lab-gemini-app-14','lab-claude-code-14','lab-codex-14'}
-require(manifest.get('version') == 9 and build_spec is not None, 'Expected edition 9 with the four-tool build-off')
+require(manifest.get('version') == 10 and build_spec is not None, 'Expected edition 10 with the four-tool build-off')
 require({lab['id'] for lab in build_labs} == comparison_ids, 'Expected three shared Lab 14 builds')
 for lab in build_labs:
     require(lab['prompt'] == build_spec['prompt'] and lab['check'] == build_spec['check'],
@@ -352,6 +375,7 @@ for ex in examples:
 from copy_rules import validate_worked
 validate_worked(examples)
 check_refs(examples)
+check_refs(manifest)
 from collections import Counter
 role_lines = Counter(' '.join(ch['intro'][role].lower().split()) for ch in page_text.values()
                      if 'intro' in ch for role in ('exchange','m365','developer'))
@@ -367,6 +391,8 @@ figures = json.loads((book / 'content/figures.json').read_text())
 check_refs(figures)
 check_refs(fact_rows)
 require(used_facts == set(facts), 'Unused product facts: '+', '.join(sorted(set(facts)-used_facts)))
+require({p.name for p in (book/'content').glob('*.json')} ==
+        {Path(a).name for a in assets if a.startswith('content/')}, 'Register every content file for offline reading')
 require(used == set(values), 'Unused model fields: ' + ', '.join(sorted(set(values)-used)))
 previous_diagrams = """
     tokens-context chat-project-agent vibe-coding-loop model-picker structured-json tool-calling
@@ -374,7 +400,26 @@ previous_diagrams = """
     exchange-pipeline git-branch-pr pagination-loop zero-vs-blank
 """.split()
 new_diagrams = """
+    devin-enterprise-overview guide-chatgpt-api guide-claude-reference-artifacts
+    guide-claude-reference-browser guide-claude-reference-chat guide-claude-reference-code
+    guide-claude-reference-connectors guide-claude-reference-files guide-claude-reference-memory
+    guide-claude-reference-projects guide-claude-reference-scheduled guide-claude-reference-style
+    guide-claude-reference-thinking guide-claude-reference-voice guide-copilot-excel guide-devin-api
+    guide-devin-first-session guide-devin-lab guide-devin-reference-ask guide-devin-reference-integrations
+    guide-gemini-reference-browser guide-gemini-reference-canvas guide-gemini-reference-chat
+    guide-gemini-reference-code guide-gemini-reference-connectors guide-gemini-reference-creation
+    guide-gemini-reference-files guide-gemini-reference-gems guide-gemini-reference-personal
+    guide-gemini-reference-scheduled guide-gemini-reference-voice guide-gemini-reference-workspace
+    guide-lab-ai-studio-01 guide-lab-ai-studio-15 guide-lab-ai-studio-29 guide-lab-ai-studio-30
+    guide-lab-antigravity-01 guide-lab-antigravity-15 guide-lab-antigravity-29 guide-lab-antigravity-30
+    guide-lab-claude-code-01 guide-lab-claude-code-15 guide-lab-claude-code-29 guide-lab-codex-01
+    guide-lab-codex-15 guide-lab-copilot-01 guide-lab-copilot-15 guide-lab-data-safety-06
+    guide-lab-devin-15 guide-lab-devin-29 guide-lab-devin-30 guide-lab-gemini-app-01
+    guide-lab-gemini-app-24 guide-lab-gemini-app-29 guide-lab-troubleshoot-16 guide-meta-muse
+    guide-reference-changes guide-reference-job-picker guide-reference-prompts guide-reference-tags
+    guide-troubleshoot-trial guide-lab-ship-app-01
     devin-speed-modes blueprint-snapshot session-side-chat devin-review-flow skill-reuse
+    devin-deepwiki devin-cli-handoff devin-apps devin-scheduled
     ticket-to-session access-four-scopes outposts-network fleet-pilot acu-metrics
     gemini-surfaces notebook-studio ai-studio-pipeline multimodal-io mindmap-connections quiz-from-notes
     claude-surfaces plan-then-edit connector-vs-browser svg-vs-raster effort-dial search-vs-analysis
@@ -408,6 +453,31 @@ for fig in figures:
     require(set(related) <= ids and len(set([fig['lesson'],*related])) == len(related) + 1, f'Unknown or duplicate figure target in {name}')
     if name == 'diagram-four-way-buildoff.svg':
         require(fig['lesson'] == 'build-off' and comparison_ids <= set(related), 'Link the build-off diagram to the chapter and all three labs')
+    placements = fig.get('placements', {})
+    require(set(placements) == {fig['lesson'], *related}, 'Give every figure link a lesson passage: '+name)
+    for target, placement in placements.items():
+        field = placement.get('field', '')
+        evidence = placement.get('evidence', '')
+        require(re.fullmatch(r'(?:summary|features|intro\.(?:what|features)|sections\.\d+\.paragraphs\.\d+|steps\.\d+\.text|actions\.\d+\.(?:do|see))', field),
+                f'Choose a visible lesson passage for {name} on {target}')
+        value = page_text[target]
+        for part in field.split('.'):
+            if isinstance(value, list) and part.isdecimal() and int(part) < len(value):
+                value = value[int(part)]
+            elif isinstance(value, dict) and part in value:
+                value = value[part]
+            else:
+                value = None
+                break
+        require(isinstance(value, str) and isinstance(evidence, str) and len(evidence.strip()) >= 12 and evidence in value,
+                f'Recheck the illustration against its passage: {name} on {target}')
+    if name == 'diagram-devin-enterprise-overview.svg':
+        require(fig['lesson'] == 'devin-start' and not related, 'Keep the enterprise overview with the Devin introduction')
+    if name == 'diagram-zero-vs-blank.svg':
+        for target in placements:
+            prose = ' '.join(strings_in_content(page_text[target])).casefold()
+            require(target != 'devin-start' and re.search(r'\b(?:zero|0)\b',prose) and re.search(r'\b(?:missing|blank|null|empty|unreported)\b',prose),
+                    'The page must explain both a recorded zero and a missing value: '+target)
     if fig['source'].startswith('#'):
         require(fig['source'][1:] in ids, f'Unknown local figure source {name}')
     else:

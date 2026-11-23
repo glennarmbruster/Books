@@ -104,7 +104,7 @@
   {
     "id": "lab-codex-03",
     "title": "Add points, even when a score is zero",
-    "summary": "Count how many rounds each team played and how many points each kept.",
+    "summary": "A team total must include a penalty and a real zero while keeping blanks separate. Count how many rounds each team played and how many points each kept.",
     "level": "Starter",
     "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
     "features": "A zero is a score someone entered. A minus takes points away. Neither one erases a round.",
@@ -753,7 +753,7 @@
   {
     "id": "lab-codex-15",
     "title": "Hand over a report with its own test",
-    "summary": "Build a report someone else can run and check from a short set of directions.",
+    "summary": "A report has repeated IDs. Build a report someone else can run and check from a short set of directions.",
     "level": "Expert",
     "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
     "features": "A clear handover lets another person prove the tool works without borrowing your chat history.",
@@ -1064,7 +1064,7 @@
   {
     "id": "lab-codex-21",
     "title": "Make mail status easy to scan",
-    "summary": "Build buttons that filter a little list by mail state.",
+    "summary": "A mail board should keep the correct counts when a reader switches its status filter. Build buttons that filter a little list by mail state.",
     "level": "Starter",
     "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
     "features": "A filter changes which rows you see. It keeps the original rows ready for the next filter.",
@@ -1325,7 +1325,7 @@
   {
     "id": "lab-codex-26",
     "title": "Build a mail list comparison",
-    "summary": "Compare yesterday’s practice list with today’s. Report who joined and who left.",
+    "summary": "Yesterday’s mailbox list and today’s list need to be compared by ID. Compare yesterday’s practice list with today’s. Report who joined and who left.",
     "level": "Intermediate",
     "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
     "features": "Crossing out matches on two lists leaves only the new and missing items.",
@@ -1427,7 +1427,7 @@
   {
     "id": "lab-codex-28",
     "title": "Preflight a CSV import",
-    "summary": "Catch bad rows before an app adds anything to a saved list.",
+    "summary": "A table already contains saved records. Catch bad rows before an app adds anything to a saved list.",
     "level": "Intermediate",
     "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
     "features": "Seeing a preview is like checking a shopping basket before paying. It should not change the saved list.",
@@ -1478,7 +1478,7 @@
   {
     "id": "lab-codex-29",
     "title": "Capstone: build an offline word hunt",
-    "summary": "Build a whole playable word game, then close the network and finish the round.",
+    "summary": "A word hunt should still recognize a word when its letters are selected in reverse. Build a whole playable word game, then close the network and finish the round.",
     "level": "Advanced",
     "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
     "features": "Use a fixed board to prove every clue exists. Save the app files and the player’s progress separately.",
@@ -1529,7 +1529,7 @@
   {
     "id": "lab-codex-30",
     "title": "Capstone: build a mailbox report wall",
-    "summary": "Make a small offline dashboard that can explain every total to a reader.",
+    "summary": "A mailbox dashboard needs separate figures for known counts and missing readings. Make a small offline dashboard that can explain every total to a reader.",
     "level": "Expert",
     "requires": "Open Codex on a Mac or PC. Give it a fresh practice folder. Use “First time here?” to find the steps for opening it.",
     "features": "A report can have a real zero and still have missing data on another row. Separate those cases before adding anything.",

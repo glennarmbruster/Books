@@ -176,14 +176,14 @@
     "summary": "Put a ferry schedule in a Project and give it a standing rule. Check whether a second chat uses both.",
     "topic": "Claude Projects",
     "where": [
-      "Open claude.ai/projects in a browser on Mac, PC or iPad. Anthropic lists Projects on free and paid accounts. Free accounts have a limit of five projects."
+      "Open claude.ai/projects in a browser on Mac, PC or iPad. {{fact.claude-reference-projects.availability}}"
     ],
     "actions": [
       {
         "title": "Give the project a name",
         "do": "Open Projects from the sidebar. Choose + New Project and name it Ferry Practice. If the screen asks who can see it, choose private for this exercise.",
         "see": "The new project has its own page and title.",
-        "stuck": "If you reached the free plan limit, use a suitable existing practice project with space for this made-up schedule."
+        "stuck": "If you reached your project limit, use a suitable existing practice project with space for this made-up schedule."
       },
       {
         "title": "Add the schedule",
@@ -199,7 +199,7 @@
       },
       {
         "title": "Try two chats",
-        "do": "Ask for Cove Ferry's time. Start a second chat inside Ferry Practice and ask for Bay Ferry's time.",
+        "do": "Ask for Cove Ferry's time. Start a second chat inside Ferry Practice and ask for Bay Ferry's time. An existing chat can also be moved into a project from its chat menu. For this test, start both chats inside Ferry Practice.",
         "see": "The first answer is 08:10. The second should say unknown because Bay has no entry.",
         "stuck": "If the second chat cannot see the schedule, look at its project name before asking again."
       }
@@ -276,7 +276,7 @@
     "summary": "Cowork can gather supplied notes into a document. Make the finished page easy for a second reader to check.",
     "topic": "Claude Cowork",
     "where": [
-      "Anthropic lists Cowork on paid plans. Web and mobile options depend on the plan and on any rules set by the account owner. Use claude.ai or Claude Desktop on a Mac or PC."
+      "{{fact.claude.cowork.availability}} Use claude.ai or Claude Desktop on a Mac or PC."
     ],
     "actions": [
       {
@@ -330,8 +330,8 @@
     "summary": "Leave a tiny handoff on one device and find it on another. Pick the route your account actually offers.",
     "topic": "Claude Dispatch",
     "where": [
-      "Dispatch is a limited test for some existing Pro, Max and Ultra users. New users cannot enroll. For Dispatch the supported desktop app must stay open on an awake computer, and the phone app needs internet.",
-      "Eligible cloud Cowork users can start the practice job there and reopen the same job on mobile or the web without Dispatch pairing."
+      "{{fact.claude.dispatch.availability}} For Dispatch the supported desktop app must stay open on an awake computer, and the phone app needs internet.",
+      "If your account has cloud Cowork, start the job there. You can reopen it on your phone or the web without pairing a device."
     ],
     "actions": [
       {

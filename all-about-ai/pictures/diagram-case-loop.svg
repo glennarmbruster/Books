@@ -1,24 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 345" role="img" aria-labelledby="t d" font-family="Arial, sans-serif"><title id="t">Did the fix pass the control?</title><desc id="d">Predict. Receipt: Tagged Ordinary mail: Plain Observe. RW3: Tagged RW4: Plain Decide. Both probes passed. Other mail: unknown.</desc>
-<rect x="2" y="2" width="866" height="341" rx="13" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
-<text x="25" y="44" font-size="32" fill="#182c2d" font-weight="700">Did the fix pass the control?</text>
-<text x="26" y="80" font-size="21" fill="#145756" font-weight="400">Practice receipt: the tag went missing. Delivery itself worked.</text>
-<path d="M25 98H845" stroke="#8b571b" stroke-width="3"/>
-<rect x="25" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="25" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="37" y="155" font-size="21" fill="#faf6ea" font-weight="700">Predict</text>
-<text x="37" y="197" font-size="19" fill="#182c2d" font-weight="400">Receipt: Tagged</text>
-<text x="37" y="227" font-size="19" fill="#182c2d" font-weight="400">Ordinary mail: Plain</text>
-<path d="M281 205h18m-6 -6 6 6 -6 6" stroke="#8b571b" fill="none" stroke-width="3"/>
-<rect x="305" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="305" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="317" y="155" font-size="21" fill="#faf6ea" font-weight="700">Observe</text>
-<text x="317" y="197" font-size="19" fill="#182c2d" font-weight="400">RW3: Tagged</text>
-<text x="317" y="227" font-size="19" fill="#182c2d" font-weight="400">RW4: Plain</text>
-<path d="M561 205h18m-6 -6 6 6 -6 6" stroke="#8b571b" fill="none" stroke-width="3"/>
-<rect x="585" y="127" width="253" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-<rect x="585" y="127" width="253" height="40" rx="5" fill="#145756"/>
-<text x="597" y="155" font-size="21" fill="#faf6ea" font-weight="700">Decide</text>
-<text x="597" y="197" font-size="19" fill="#182c2d" font-weight="400">Both probes passed.</text>
-<text x="597" y="227" font-size="19" fill="#182c2d" font-weight="400">Other mail: unknown.</text>
-<text x="25" y="319" font-size="19" fill="#182c2d" font-weight="700">Keep the old value and the two test IDs with the verdict.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 476" font-family="Verdana, sans-serif">
+<title id="title">Test the mail rule and an ordinary message</title><desc id="desc">A receipt should gain a tag. Ordinary mail should keep its original subject. Check both before closing the case. Predict. Write down what each new test message should look like. Observe. Send the practice receipt and ordinary message. Read both subjects. Decide. A tagged receipt and an unchanged ordinary message support the fix for these two cases.</desc>
+<rect x="2" y="2" width="956" height="472" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Test the mail rule and an ordinary message</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">A receipt should gain a tag. Ordinary mail should keep its original subject.</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">Check both before closing the case.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Predict</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Write down what each new test message should look like.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">Observe</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Send the practice receipt and ordinary message. Read both subjects.</text>
+<rect x="24" y="338" width="912" height="114" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Decide</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">A tagged receipt and an unchanged ordinary message support the fix for these two</text>
+<text x="55" y="430" fill="#182c2d" font-size="20">cases.</text>
 </svg>

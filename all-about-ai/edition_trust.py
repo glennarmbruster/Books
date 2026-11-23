@@ -6,7 +6,7 @@ from urllib.parse import urlsplit
 BASIS = {'ai-drafted', 'source-read', 'human-tested'}
 PRODUCT_GROUPS = {'gemini.json', 'claude.json', 'chatgpt.json', 'copilot.json', 'devin.json',
                   'other-tools.json', 'field-comparisons.json', 'claude-reference.json',
-                  'gemini-reference.json', 'reference-desk.json'}
+                  'gemini-reference.json', 'devin-reference.json', 'reference-desk.json'}
 FIELD = re.compile(r'\{\{(model|fact)\.([a-z0-9.-]+)\}\}')
 # Product limits have a unit or a quota phrase. A made-up score or time on a clock is exercise data.
 QUOTA = re.compile(r'\b(?:up to|maximum(?: of)?|at most|limited to|limit(?: of| is)?|at least)\s+(?:\d[\d,.]*|one|two|three|four|five|ten|twenty)\s+(?:files?|projects?|requests?|tokens?|messages?|tasks?|years? old|MB|GB|uploads?|credits?|seats?)\b|\b\d[\d,.]*\s*(?:MB|GB|TB|tokens? per|files? per|messages? per|requests? per|credits? per|tokens? of context)\b|\b(?:quota|allowance|upload limit|context window)\s*(?:of|is|:|=)?\s*\d', re.I)

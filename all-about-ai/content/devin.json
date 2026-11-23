@@ -32,7 +32,8 @@
       {
         "title": "Give it one job",
         "paragraphs": [
-          "Open the link your team uses to sign in to Devin. Choose your practice project and start Ask. Try “Which file shows the total? Point to the line.” Open the file it names. If all you need is the answer, you are done. Switch to Agent when you want a change you can test."
+          "Open the project your team uses for practice. Give Devin the project and one request. If you want to understand the files, use Ask Devin. Try “Which command tests the report? Show me the line in the README.” Open the file link and check the answer.",
+          "If you need an edit, start an Agent session. Ask it to make one change on a branch, run the tests and open a draft pull request. A draft pull request lets a teammate review the proposed change before it goes into the shared project."
         ],
         "sources": [
           [
@@ -52,7 +53,7 @@
       {
         "title": "Learn six words as you use them",
         "paragraphs": [
-          "Imagine a game with one broken button. Follow it from its project folder to a proposed fix."
+          "Imagine your team owns a command that prints a weekly report. Follow one proposed fix from its project folder to review."
         ],
         "sources": [
           [
@@ -76,7 +77,7 @@
           "rows": [
             [
               "Repository or repo",
-              "The project files plus a history of their edits. Pick the folder for the game."
+              "The report files and the history of their edits."
             ],
             [
               "Session",
@@ -84,7 +85,7 @@
             ],
             [
               "Environment",
-              "The computer and tools that run the game."
+              "The computer and tools used to run the report and its tests."
             ],
             [
               "Branch",
@@ -118,9 +119,9 @@
         ]
       },
       {
-        "title": "Pick a change you can judge",
+        "title": "Give the agent a change you can check",
         "paragraphs": [
-          "Start with “Show 0 when a score is zero. Keep a missing score blank.” Give it three rows: blank, zero and five. Ask it to show all three after the edit. A team owner can help you find the training project when it is missing from the list."
+          "The report lists two open tickets, but its heading says “Closed tickets.” Ask the agent to fix the heading and run the report on the practice file. Check the draft pull request. The heading should say “Open tickets,” and the same two ticket IDs should still appear."
         ],
         "sources": [
           [
@@ -137,10 +138,11 @@
           ]
         ],
         "exercise": {
-          "prompt": "Someone asks for a better report. What would make that request clear?",
+          "prompt": "Someone asks you to approve the heading fix. What would you check first?",
           "answer": [
-            "Ask who reads it, what they see now and what they should see. “The zero row should show 0” gives a check you can run."
-          ]
+            "Read the changed line, then open the sample report. Its heading should say “Open tickets.” Compare the two IDs with the practice file before you approve the edit."
+          ],
+          "context": "The report is about open tickets. Its heading should describe the rows you can actually see."
         }
       }
     ],
@@ -349,7 +351,8 @@
             "Ask Devin. Ask can look up the line in the saved project. Open the line it cites and check it yourself.",
             "Devin CLI. Devin CLI edits the copy on your computer. You can open that same copy in your browser after each change.",
             "Agent with a ready snapshot. A cloud Agent keeps working on its own computer. The snapshot has the tools, and the test output gives you something to check later."
-          ]
+          ],
+          "context": "The three requests need different results. One person needs an explanation, while another needs working files."
         },
         "sources": [
           [
@@ -461,7 +464,8 @@
           "prompt": "The new page says “You can renew once.” Does it pass?",
           "answer": [
             "It leaves out the waiting list. Ask for “You may renew once if nobody is waiting.” Open the latest preview and check its full sentence."
-          ]
+          ],
+          "context": "A borrower reads the new renewal notice. Checking its wording against the approved rule helps prevent a false promise."
         }
       }
     ],
@@ -531,6 +535,7 @@
       {
         "title": "Read the first failure",
         "paragraphs": [
+          "A practice project should pass its test before any files change. One line from the first failure can help you tell missing setup from a problem in the code.",
           "Try a known passing test before you ask Devin to edit any files. Save the version, folder and first error. After a repair, open a second new session and try again."
         ],
         "sources": [
@@ -912,7 +917,8 @@
           "prompt": "A ticket creation notice arrives twice. A later comment corrects the date. How many sessions should you have?",
           "answer": [
             "One. The repeat names an existing job. The corrected date belongs in that job."
-          ]
+          ],
+          "context": "One ticket can send more than one notice. Follow the ticket number so a repeat cannot start a second job."
         }
       }
     ],
@@ -1318,7 +1324,8 @@
           "prompt": "Two of eight reports turn a blank date into January 1, 1970. The early tests all passed. What now?",
           "answer": [
             "Pause the next group. Add the blank case to the shared test. Check all eight reports and any copies already in use before starting more work."
-          ]
+          ],
+          "context": "Several reports use the same date rule. A small trial can reveal a bad date before the change reaches every report."
         }
       }
     ],
@@ -1435,7 +1442,7 @@
     "intro": {
       "what": "This is a paper-and-pencil way to practice being the reviewer. You can do all three cases without connecting to a service.",
       "features": "Write a clear brief, point out missing test evidence and use numbers to decide what to try next.",
-      "exchange": "Trace a read-only report from its test fixture through review and rerun.",
+      "exchange": "Trace a read-only report from the sample input to the reviewed result, then run it again.",
       "m365": "Hand another person the evidence needed to repeat an inventory test.",
       "developer": "Exercise a repeated ticket against a saved ledger before shipping it.",
       "sources": [
@@ -1474,7 +1481,8 @@
           "answer": [
             "Ask for the old $9.00 and the fixed $5.50. Repeat A again. The fixed total should stay $5.50. Two different IDs for equal fees must both count.",
             "Ask for the edited lines and the test run. If A comes back with a different fee, ask the owner to decide the rule."
-          ]
+          ],
+          "context": "A borrower could get charged twice if a fee notice arrives again. Use the event labels to tell a new charge from a repeat."
         }
       },
       {
@@ -1501,7 +1509,8 @@
           "answer": [
             "The small check passed. The full export still needs testing. Record the file version, command and first error.",
             "Set up the sample database on a clean work computer. Run the old and edited versions there. Open the output file and check its contents."
-          ]
+          ],
+          "context": "A reviewer wants to know if the whole export works. A small passing test tells them only part of the story."
         }
       },
       {
@@ -1528,7 +1537,8 @@
           "answer": [
             "Six out of ten is 60%. Divide 48 by 6 for 8 units per accepted fix. Divide 90 by 6 for 15 minutes of review per accepted fix.",
             "The 90 minutes cover only the six accepted fixes. Track time on every job next time. Fix the repeat and the blocked setup before you grow the trial."
-          ]
+          ],
+          "context": "A team has run a small trial. It wants to know how much work was accepted and what each usable result cost."
         }
       }
     ],

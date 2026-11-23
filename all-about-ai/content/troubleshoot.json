@@ -207,7 +207,8 @@
           "prompt": "A teammate says TR4 proves the original parcel reached the Supply desk. What two cells would you compare?",
           "answer": [
             "Compare the message ID and the recipient. TR4 concerns parcel-43 and supply, whereas TR2 concerns parcel-41 and stores. TR4 helps form a guess. NR1, NR2 and AL4 let you test it."
-          ]
+          ],
+          "context": "Two messages seem to tell the same story. Their IDs and recipients let you decide whether the original parcel arrived."
         }
       },
       {
@@ -364,7 +365,8 @@
           "prompt": "What can the team tell the sending service right now?",
           "answer": [
             "Report the IP mismatch and the missing selector name with their times. Request the approved sender list and the receiver’s original DNS evidence before proposing a repair."
-          ]
+          ],
+          "context": "A team needs to explain why two messages got different checks. The evidence belongs to individual messages."
         }
       },
       {
@@ -512,7 +514,8 @@
           "prompt": "If RT4 also had [BOARD], could you call the repair verified?",
           "answer": [
             "No. A subject outside the requested word would have received the label. Keep the ticket open and follow the agreed rollback plan."
-          ]
+          ],
+          "context": "A new label appeared on a message. A second message without the trigger helps prove the rule did the work."
         }
       },
       {
@@ -614,6 +617,7 @@
       {
         "title": "Join on the device and the time",
         "paragraphs": [
+          "A device can change state after a sign-in fails. The rows let you tell what the sign-in service could have known at the time.",
           "Cover the lines after 09:04 UTC. Give the helper the sign-in rows and the earlier Intune rows. Ask it which device fact was available when the block happened. IC1 is the earlier state for tab-7. IC2 belongs to another tablet. IC3 comes later.",
           "The tablet’s operating system (OS) is the software that runs the device. Its old version fits the failed check. A later reading cannot prove what was on that tablet earlier. If the time or device label is missing, leave the cause open."
         ],
@@ -927,6 +931,7 @@
       {
         "title": "Score evidence before style",
         "paragraphs": [
+          "Imagine two reports about the same missing message. The one you can act on ties each claim to the right message and test.",
           "Award a point when the answer names the right evidence for that check. A lucky guess earns no point. A message can suggest a size limit even when no one has read the actual setting."
         ],
         "table": {

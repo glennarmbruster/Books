@@ -123,6 +123,7 @@
       {
         "title": "Pick two to try",
         "paragraphs": [
+          "Suppose you need a helper to spot conflicts in a schedule. Two helpers can look equally good until you check their answers against the schedule.",
           "Make an answer card before you start. It might say “Date missing. Two events. One time overlap.” Give each model the same notes. See which items it catches. These are direct API IDs."
         ],
         "sources": [
@@ -164,6 +165,7 @@
       {
         "title": "Read the two prices",
         "paragraphs": [
+          "A long request and a long reply can cost different amounts. Look up each part before you estimate a bill.",
           "Input is what you send. Output is what the model writes. A token is a piece of text. These base prices are in US dollars per million tokens. Read across a row for one model. Longer requests and extra tools can cost more."
         ],
         "sources": [
@@ -204,7 +206,8 @@
           "prompt": "Which row changes when a request gets long?",
           "answer": [
             "The first row applies through {{model.claude.haiku.threshold}}. After that threshold its rates are {{model.claude.haiku.long-rate}}. Check the price page when you plan a large job."
-          ]
+          ],
+          "context": "Imagine pricing a short request and a much longer one. The price table tells you whether the same rate applies to both."
         }
       },
       {

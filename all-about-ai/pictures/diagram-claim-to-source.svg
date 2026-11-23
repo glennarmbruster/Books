@@ -1,26 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
-<title id="title">Can you trace the time on this post?</title><desc id="desc">A repost says eight. The official post says to check the holiday timetable. The timetable lists seven for the correct route and date.</desc>
-<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">Can you trace the time on this post?</text>
-<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">A repost claims the last boat leaves at eight.</text>
-<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Keep the timetable, the travel date and the route with your answer.</text>
-<rect x="28" y="141" width="237" height="118" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<rect x="28" y="141" width="237" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
-<text x="40" y="168" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Repost</text>
-<text x="40" y="210" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">“Last boat at 8.”</text>
-<text x="40" y="239" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">No date or route.</text>
-<path d="M269 206h24m-7 -6 7 6 -7 6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="299" y="141" width="237" height="118" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<rect x="299" y="141" width="237" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
-<text x="311" y="168" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Official post</text>
-<text x="311" y="210" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Holiday hours vary.</text>
-<text x="311" y="239" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Open the timetable.</text>
-<path d="M540 206h25m-7 -6 7 6 -7 6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="571" y="141" width="240" height="118" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-<rect x="571" y="141" width="240" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
-<text x="583" y="168" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Official timetable</text>
-<text x="583" y="210" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Holiday · Route B</text>
-<text x="583" y="239" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Last boat: 7:00.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 485" font-family="Verdana, sans-serif">
+<title id="title">Trace a public claim back to the original evidence</title><desc id="desc">A post can repeat an announcement without its date or conditions. Check the original before relying on it. Claim. Write down what the post says happened. Source. Follow the link to the official announcement and check its date. Decision. Read the passage. Keep only the part of the claim it actually supports.</desc>
+<rect x="2" y="2" width="956" height="481" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Trace a public claim back to the original</text>
+<text x="28" y="79" fill="#145756" font-size="29" font-weight="bold">evidence</text>
+<text x="28" y="115" fill="#182c2d" font-size="20">A post can repeat an announcement without its date or conditions. Check the</text>
+<text x="28" y="143" fill="#182c2d" font-size="20">original before relying on it.</text>
+<rect x="24" y="176" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 193v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="211" fill="#145756" font-size="22" font-weight="bold">Claim</text>
+<text x="55" y="241" fill="#182c2d" font-size="20">Write down what the post says happened.</text>
+<rect x="24" y="275" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 292v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="310" fill="#145756" font-size="22" font-weight="bold">Source</text>
+<text x="55" y="340" fill="#182c2d" font-size="20">Follow the link to the official announcement and check its date.</text>
+<rect x="24" y="374" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 391v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="409" fill="#145756" font-size="22" font-weight="bold">Decision</text>
+<text x="55" y="439" fill="#182c2d" font-size="20">Read the passage. Keep only the part of the claim it actually supports.</text>
 </svg>

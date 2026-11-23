@@ -5,7 +5,13 @@
     "caption": "One first-launch layout asks about your work before opening the app.",
     "alt": "Antigravity welcome screen offers role choices and a Continue button.",
     "source": "https://antigravity.google/docs/getting-started/",
-    "credit": "Google"
+    "credit": "Google",
+    "placements": {
+      "open-antigravity": {
+        "field": "actions.2.do",
+        "evidence": "If a welcome screen asks what kind of work you do, finish that step to reach Home."
+      }
+    }
   },
   {
     "file": "begin-starter.webp",
@@ -13,15 +19,27 @@
     "caption": "The project label in this example says No Project. Choose your practice project before asking for a file.",
     "alt": "Antigravity Home composer with starter suggestions and No Project in the composer.",
     "source": "https://antigravity.google/docs/getting-started/",
-    "credit": "Google"
+    "credit": "Google",
+    "placements": {
+      "antigravity-project": {
+        "field": "actions.1.do",
+        "evidence": "In Antigravity's left side bar, choose New Project."
+      }
+    }
   },
   {
     "file": "begin-project-plan.webp",
     "lesson": "antigravity-plan",
-    "caption": "Antigravity practice view. Does the plan stay inside the score game?",
-    "alt": "Review a plan. Task. Fix the score display.. Plan. 1. Read score.js.  2. Test a score of zero.  3. Show the edit.. Your decision. Does the plan stay inside the score game?",
+    "caption": "Illustrated practice view. Changing Charger should leave the other boxes alone.",
+    "alt": "Review the packing-list plan. Requested items. Passport and Charger start as separate checkboxes. Revise the plan. Add the third item before building the page. Check the preview. Changing Charger should leave the other boxes alone.",
     "source": "https://antigravity.google/docs/implementation-plan/",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "antigravity-plan": {
+        "field": "actions.0.do",
+        "evidence": "In the project chat, type “/plan Make one page with checkboxes for Passport and Charger."
+      }
+    }
   },
   {
     "file": "begin-review.webp",
@@ -29,7 +47,13 @@
     "caption": "Select a changed file in Review to see what the agent added or removed.",
     "alt": "Antigravity Review shows a file list and highlighted changes in bookmarks.js.",
     "source": "https://antigravity.google/docs/review-changes/",
-    "credit": "Google"
+    "credit": "Google",
+    "placements": {
+      "antigravity-review": {
+        "field": "actions.2.do",
+        "evidence": "In the conversation's Overview panel, choose Review."
+      }
+    }
   },
   {
     "file": "begin-line-comment.webp",
@@ -37,31 +61,55 @@
     "caption": "A comment on a selected line gives the agent a precise place to revise.",
     "alt": "An inline review comment explains the expected behavior and offers an Edit Comment control.",
     "source": "https://antigravity.google/docs/review-changes/",
-    "credit": "Google"
+    "credit": "Google",
+    "placements": {
+      "antigravity-review": {
+        "field": "actions.3.do",
+        "evidence": "Comment on that line, or type “Change Dock 4 to Dock 5 on line two.” Open sign.txt again."
+      }
+    }
   },
   {
     "file": "begin-studio-home.webp",
     "lesson": "open-ai-studio",
-    "caption": "Google AI Studio practice view. Use Playground for a word list. Use Build for a score button.",
-    "alt": "Pick a starting place. Playground. Try one prompt and compare the reply.. Build. Make an app with a preview.. Your first test. Use Playground for a word list. Use Build for a score button.",
+    "caption": "Illustrated practice view. Buy three at the same price. The new total should be twelve dollars.",
+    "alt": "Change one input in a price question. First request. Two cards cost four dollars each. First result. Two times four gives eight dollars. Follow-up. Buy three at the same price. The new total should be twelve dollars.",
     "source": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-studio-updates-more-control/",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-ai-studio": {
+        "field": "actions.2.do",
+        "evidence": "Enter “One card costs 4 dollars."
+      }
+    }
   },
   {
     "file": "begin-studio-system.webp",
     "lesson": "ai-studio-instructions",
-    "caption": "Google AI Studio practice view. Count the lines. Look for three different items.",
-    "alt": "Give the helper a rule. Instructions. Answer with three short lines.. Request. Name three things to pack for a game.. Expected check. Count the lines. Look for three different items.",
+    "caption": "Illustrated practice view. Leave out the color. The helper should return UNKNOWN.",
+    "alt": "Apply the same rule to a new ticket. Rule. Return only the listed color. Use UNKNOWN if it is missing. First ticket. A blue ticket should return blue. Next ticket. Leave out the color. The helper should return UNKNOWN.",
     "source": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-studio-updates-more-control/",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "ai-studio-instructions": {
+        "field": "actions.1.do",
+        "evidence": "If the card gives no color, answer UNKNOWN.” Leave this rule there."
+      }
+    }
   },
   {
     "file": "begin-studio-build2.webp",
     "lesson": "ai-studio-build",
-    "caption": "Google AI Studio practice view. Open the preview and tap the button three times.",
-    "alt": "Build a game. Build. Start a new app.. Describe the app. Add one point when I tap Score. Show a win at three.. Next. Open the preview and tap the button three times.",
+    "caption": "Illustrated practice view. The number goes back to 0 on the page.",
+    "alt": "Test a counter in the running preview. Starting screen. The page opens with a score of 0. Use the controls. Add twice. Check for 1, then 2. Reset. The number goes back to 0 on the page.",
     "source": "https://codelabs.developers.google.com/vibe-code-with-gemini-in-aistudio",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "ai-studio-build": {
+        "field": "actions.1.do",
+        "evidence": "Send “Make a score counter for a browser."
+      }
+    }
   },
   {
     "file": "begin-studio-build3.webp",
@@ -69,7 +117,13 @@
     "caption": "The builder’s conversation sits beside a running preview. The Codelab uses a game.",
     "alt": "Google AI Studio shows the build conversation on the left and a playable game preview on the right.",
     "source": "https://codelabs.developers.google.com/vibe-code-with-gemini-in-aistudio",
-    "credit": "Google"
+    "credit": "Google",
+    "placements": {
+      "ai-studio-build": {
+        "field": "actions.0.do",
+        "evidence": "Go to AI Studio and choose Build, or open aistudio.google.com/apps."
+      }
+    }
   },
   {
     "file": "begin-claude-project.webp",
@@ -77,15 +131,27 @@
     "caption": "A conversation’s menu can move an existing chat into a project.",
     "alt": "An arrow points to Add to project in the conversation menu.",
     "source": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
-    "credit": "Anthropic"
+    "credit": "Anthropic",
+    "placements": {
+      "claude-projects-begin": {
+        "field": "actions.3.do",
+        "evidence": "An existing chat can also be moved into a project from its chat menu."
+      }
+    }
   },
   {
     "file": "begin-claude-demo.webp",
     "lesson": "claude-code-terminal",
-    "caption": "Claude Code practice view. A tap adds one point. Source: rules.txt.",
-    "alt": "Terminal. Current folder. practice/score-game. Your request. Read the score rule. Tell me how a turn works.. Result. A tap adds one point. Source: rules.txt.",
+    "caption": "Illustrated practice view. Open greeting.txt and read its line yourself.",
+    "alt": "Check the file the command made. Folder. Open the practice folder in your terminal. Request. Have Claude create the practice greeting file. Result. Open greeting.txt and read its line yourself.",
     "source": "https://github.com/anthropics/claude-code",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "claude-code-terminal": {
+        "field": "actions.3.do",
+        "evidence": "Send “Create greeting.txt containing Hello from my terminal.” Review the file edit if asked, then open the file in the folder."
+      }
+    }
   },
   {
     "file": "begin-dispatch-intro.webp",
@@ -93,7 +159,13 @@
     "caption": "Eligible existing users may see this setup card in Cowork.",
     "alt": "Coworking on the go introduction with examples and a Get started button.",
     "source": "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork",
-    "credit": "Anthropic"
+    "credit": "Anthropic",
+    "placements": {
+      "claude-dispatch-begin": {
+        "field": "actions.1.do",
+        "evidence": "Existing Dispatch users can choose Get started."
+      }
+    }
   },
   {
     "file": "begin-dispatch-setup.webp",
@@ -101,7 +173,13 @@
     "caption": "Review the device choices before choosing Finish setup.",
     "alt": "Dispatch setup card showing file access and keep-awake controls and a Finish setup button.",
     "source": "https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork",
-    "credit": "Anthropic"
+    "credit": "Anthropic",
+    "placements": {
+      "claude-dispatch-begin": {
+        "field": "actions.1.do",
+        "evidence": "Read the file access and keep-awake options and choose Finish setup when ready."
+      }
+    }
   },
   {
     "file": "begin-oai-new-project.webp",
@@ -109,7 +187,13 @@
     "caption": "The sidebar contains the New project control and the existing project list.",
     "alt": "ChatGPT sidebar with New project and three existing project names.",
     "source": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
-    "credit": "OpenAI"
+    "credit": "OpenAI",
+    "placements": {
+      "open-work-project": {
+        "field": "actions.0.see",
+        "evidence": "You see a new place with the project name."
+      }
+    }
   },
   {
     "file": "begin-oai-project-settings.webp",
@@ -117,7 +201,13 @@
     "caption": "Open the menu beside Share to find the settings for this particular project.",
     "alt": "Fitness goals project header with its menu open on Project settings.",
     "source": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt",
-    "credit": "OpenAI"
+    "credit": "OpenAI",
+    "placements": {
+      "work-project-files": {
+        "field": "actions.1.do",
+        "evidence": "The menu beside Share opens settings for this project."
+      }
+    }
   },
   {
     "file": "begin-copilot-signin.webp",
@@ -125,7 +215,13 @@
     "caption": "The Copilot status menu has a sign-in button when the editor is signed out.",
     "alt": "Screenshot of the Copilot status menu in VS Code, showing Sign in to use Copilot.",
     "source": "https://code.visualstudio.com/docs/setup/copilot",
-    "credit": "Microsoft"
+    "credit": "Microsoft",
+    "placements": {
+      "open-github-copilot": {
+        "field": "actions.1.do",
+        "evidence": "Point to the Copilot status icon."
+      }
+    }
   },
   {
     "file": "begin-copilot-suggestion.webp",
@@ -133,31 +229,55 @@
     "caption": "Dimmed code is a suggestion awaiting a decision.",
     "alt": "A JavaScript function in VS Code with a dim suggested completion beneath the first line.",
     "source": "https://code.visualstudio.com/docs/editing/ai-powered-suggestions",
-    "credit": "Microsoft"
+    "credit": "Microsoft",
+    "placements": {
+      "github-copilot-inline": {
+        "field": "actions.1.see",
+        "evidence": "Dim text may appear."
+      }
+    }
   },
   {
     "file": "begin-devin-ask.webp",
     "lesson": "open-devin",
-    "caption": "Devin Ask practice view. Open title.txt and compare the first line.",
-    "alt": "Trace an answer. Question. Which file holds the title?. Answer. The title comes from title.txt.. Check it. Open title.txt and compare the first line.",
+    "caption": "Illustrated practice view. Open the link and read the heading yourself.",
+    "alt": "Check a read-only answer. Scope. Select the practice project. Request. Ask for the first heading in README.md and a link to the file. Verify. Open the link and read the heading yourself.",
     "source": "https://docs.devin.ai/get-started/first-run",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-devin": {
+        "field": "actions.3.do",
+        "evidence": "Leave the project alone.” Open the link and compare the heading yourself."
+      }
+    }
   },
   {
     "file": "begin-devin-repos.webp",
     "lesson": "devin-first-repo",
-    "caption": "Devin practice view. The question will use the report project.",
-    "alt": "Choose a project. Practice projects. mail-report   ·   score-game   ·   team-notes. Selected. mail-report. Check the source. The question will use the report project.",
+    "caption": "Illustrated practice view. Match both pieces of text to the same file.",
+    "alt": "Confirm the selected project. Before asking. Open README.md in the intended practice repository. In Devin. Select that project and request the heading and a nearby phrase. Verify. Match both pieces of text to the same file.",
     "source": "https://docs.devin.ai/get-started/first-run",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "devin-first-repo": {
+        "field": "actions.3.do",
+        "evidence": "Ask for the first heading and a phrase underneath in the file you chose."
+      }
+    }
   },
   {
     "file": "begin-devin-shell.webp",
     "lesson": "devin-follow-session",
-    "caption": "Devin practice view. PASS · zero is shown as 0.",
-    "alt": "Follow the session. Session. Check the score report.. Shell. python check_score.py. Test output. PASS · zero is shown as 0.",
+    "caption": "Illustrated practice view. Open the file. Both lines should appear in the requested order.",
+    "alt": "Follow a small edit through its check. Request. Name the practice file and the two lines you want it to contain. Session. Inspect the file the agent changed and the check it ran. Verify. Open the file. Both lines should appear in the requested order.",
     "source": "https://docs.devin.ai/work-with-devin/devin-session-tools",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "devin-follow-session": {
+        "field": "actions.2.do",
+        "evidence": "Look in Shell or the session record for the check Devin ran."
+      }
+    }
   },
   {
     "file": "begin-oai-codex-menu.webp",
@@ -165,7 +285,13 @@
     "caption": "OpenAI’s desktop walkthrough illustrates the Codex workspace and its Add menu for files and folders.",
     "alt": "A Codex desktop example showing the sidebar and open Add menu with Files and folders.",
     "source": "https://developers.openai.com/codex/app/features/",
-    "credit": "OpenAI"
+    "credit": "OpenAI",
+    "placements": {
+      "open-codex": {
+        "field": "actions.1.do",
+        "evidence": "Look for the product menu and choose Codex."
+      }
+    }
   },
   {
     "file": "begin-oai-codex-review.webp",
@@ -173,15 +299,27 @@
     "caption": "In OpenAI’s review example, the finding sits beside the changed code it refers to.",
     "alt": "An example diff with a review comment attached to a line.",
     "source": "https://learn.chatgpt.com/docs/code-review?surface=app",
-    "credit": "OpenAI"
+    "credit": "OpenAI",
+    "placements": {
+      "codex-review": {
+        "field": "actions.2.do",
+        "evidence": "Open the task’s review pane and select README.md."
+      }
+    }
   },
   {
     "file": "begin-oai-dot.webp",
     "lesson": "open-dots",
-    "caption": "OpenAI dots practice view. Open the same dot and find the task again.",
-    "alt": "Pick up a task. Desktop task. Compare two game rules. Use only my note.. Follow-up. Keep each answer under ten words.. On another device. Open the same dot and find the task again.",
+    "caption": "Illustrated practice view. Increase the group to thirteen. Only room C fits.",
+    "alt": "Find a meeting room that fits. First request. Find the smallest listed room that fits eleven people. Result. Room B fits the initial group. Follow-up. Increase the group to thirteen. Only room C fits.",
     "source": "https://learn.chatgpt.com/docs/dots",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-dots": {
+        "field": "actions.2.do",
+        "evidence": "Which is the smallest room for a group of 11?"
+      }
+    }
   },
   {
     "file": "begin-oai-cloud-location.webp",
@@ -189,7 +327,13 @@
     "caption": "OpenAI’s desktop example shows the Work in menu with This computer and Cloud.",
     "alt": "The desktop composer with its location menu open, including This computer and Cloud.",
     "source": "https://learn.chatgpt.com/docs/environments/modes",
-    "credit": "OpenAI"
+    "credit": "OpenAI",
+    "placements": {
+      "codex-cloud": {
+        "field": "summary",
+        "evidence": "Give one small job to a cloud computer."
+      }
+    }
   },
   {
     "file": "muse-chat-screen.webp",
@@ -197,74 +341,125 @@
     "caption": "Meta’s phone demonstration shows the message box and the chat bubble at the bottom.",
     "alt": "Muse phone chat with menu button at top left, assistant icon at top center, and message field at bottom.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-    "credit": "Meta"
+    "credit": "Meta",
+    "placements": {
+      "open-muse": {
+        "field": "actions.0.see",
+        "evidence": "The page or app says Muse and identifies Meta."
+      }
+    }
   },
   {
     "file": "muse-planning-reply.webp",
     "lesson": "muse-first-plan",
-    "caption": "Meta Muse practice view. Open the card and check that the break is in the middle.",
-    "alt": "Open a plan card. Your request. Plan a game night with two rounds and a break.. Plan card. Round 1 · break · round 2. What to check. Open the card and check that the break is in the middle.",
+    "caption": "Illustrated practice view. Leave at 9:45 to arrive at 10:00.",
+    "alt": "Work back from ferry boarding. Deadline. Boarding closes at 10:10. Travel time. The walk takes fifteen minutes. With a buffer. Leave at 9:45 to arrive at 10:00.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "muse-first-plan": {
+        "field": "actions.3.do",
+        "evidence": "Ask for three lines labeled Leave, Arrive and Boarding closes."
+      }
+    }
   },
   {
     "file": "muse-permission-screen.webp",
     "lesson": "muse-connections",
-    "caption": "Meta Muse practice view. Check the address and words before choosing Allow or Deny.",
-    "alt": "Check a proposed action. Draft message. Game starts at 6. Bring a deck.. Destination. club@example.test. Your decision. Check the address and words before choosing Allow or Deny.",
+    "caption": "Illustrated practice view. Draft the reminder using the two sample times before approving any action.",
+    "alt": "Check the requested calendar permission. Read. Listing existing calendar entries needs permission to read. Write. Adding an entry would also need permission to write. Practice. Draft the reminder using the two sample times before approving any action.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "muse-connections": {
+        "field": "actions.1.see",
+        "evidence": "Listing needs permission to read."
+      }
+    }
   },
   {
     "file": "muse-file-card.webp",
     "lesson": "muse-library",
-    "caption": "Meta Muse practice view. Look for cards, pencils and a score pad.",
-    "alt": "Find the result. Task. Make a packing checklist.. File card. Game kit.pdf. Open and check. Look for cards, pencils and a score pad.",
+    "caption": "Illustrated practice view. The file should say cards, pencils, clock.",
+    "alt": "Verify the saved checklist. Initial file. Open the checklist and read its three items. Requested edit. Replace the last item, timer, with clock. Reopen. The file should say cards, pencils, clock.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
     "credit": "All About AI · sample screen based on the product guide",
-    "also": [
-      "meta-muse"
-    ]
+    "placements": {
+      "muse-library": {
+        "field": "actions.0.do",
+        "evidence": "Ask for a plain-text file called Game Kit with one item per line: cards, pencils, timer."
+      }
+    }
   },
   {
     "file": "copilot-work-home.webp",
     "lesson": "open-copilot",
-    "caption": "Microsoft 365 Copilot practice view. Use the notes that belong to this exercise.",
-    "alt": "Start in a work space. Account. Practice workspace. Request. Make a checklist from these three sample notes.. Check. Use the notes that belong to this exercise.",
+    "caption": "Illustrated practice view. The notice gives no owner for the work.",
+    "alt": "Find the limit of a mail notice. Source. A notice announces maintenance on mail search. Known. Message delivery continues. Unknown. The notice gives no owner for the work.",
     "source": "https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-microsoft-365-copilot-chat",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-copilot": {
+        "field": "actions.2.see",
+        "evidence": "Mail delivery continues."
+      }
+    }
   },
   {
     "file": "copilot-outlook-summary.webp",
     "lesson": "open-copilot-outlook",
-    "caption": "Copilot in Outlook practice view. The time moved to 5. Open message 2 to check.",
-    "alt": "Trace a summary. Message 1. Practice starts at 4.. Message 2. Update: practice starts at 5.. Summary. The time moved to 5. Open message 2 to check.",
+    "caption": "Illustrated practice view. Ask whether Wednesday was approved.",
+    "alt": "Check which day was booked. Source thread. One day is booked. A later message requests a different day. Summary check. Tuesday is booked. Wednesday is a request. Draft reply. Ask whether Wednesday was approved.",
     "source": "https://support.microsoft.com/en-us/outlook/copilot-pages/summarize-an-email-thread-with-copilot-in-outlook",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-copilot-outlook": {
+        "field": "actions.3.see",
+        "evidence": "The draft can ask if Wednesday was approved."
+      }
+    }
   },
   {
     "file": "copilot-teams-recap.webp",
     "lesson": "open-copilot-teams",
-    "caption": "Copilot in Teams practice view. Look for support in the note before assigning anyone.",
-    "alt": "Read a meeting recap. Meeting note. Bring the game board. Snacks still need an owner.. Recap. Board confirmed. Snack owner unknown.. Check. Look for support in the note before assigning anyone.",
+    "caption": "Illustrated practice view. The notes do not say who will carry out the decision.",
+    "alt": "Read a suggestion and a decision. 10:01. Friday is suggested in the meeting notes. 10:05. Monday is chosen. Owner. The notes do not say who will carry out the decision.",
     "source": "https://support.microsoft.com/en-us/teams/copilot/catch-up-on-meetings-with-microsoft-365-copilot-in-teams",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-copilot-teams": {
+        "field": "actions.3.see",
+        "evidence": "Neither line names someone who will carry it out."
+      }
+    }
   },
   {
     "file": "comet-assistant-sidebar.webp",
     "lesson": "open-comet",
-    "caption": "Perplexity Comet practice view. 3 × 2 = 6. The two-point rule is on the page.",
-    "alt": "Read beside the page. Sample page. A team earns 2 points per star.. Assistant panel. How many points for three stars?. Check the source. 3 × 2 = 6. The two-point rule is on the page.",
+    "caption": "Illustrated practice view. Match the assistant’s answer to the address of the tab you shared.",
+    "alt": "Check which tab supplied an answer. First tab. The heading is Example Domain. The address ends in .com. Second tab. The heading matches but the address ends in .org. Verify. Match the assistant’s answer to the address of the tab you shared.",
     "source": "https://r2cdn.perplexity.ai/pdf/pplx-at-work.pdf#page=10",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-comet": {
+        "field": "actions.2.see",
+        "evidence": "The heading matches, and the address is example.com."
+      }
+    }
   },
   {
     "file": "claude-duet-brief.webp",
     "lesson": "open-claude-duet",
-    "caption": "Claude Duet practice view. Check that the schedule also says 5.",
-    "alt": "Read a morning brief. Message. Two practice items need review.. First item. The new notice moves the game to 5.. Before you approve. Check that the schedule also says 5.",
+    "caption": "Illustrated practice view. Leave out a room or time zone the note never names.",
+    "alt": "Check a draft before sending it. Source note. A Monday meeting moves to 3. Draft. Give the new time and keep the day. Verify. Leave out a room or time zone the note never names.",
     "source": "https://claude.com/product/claude-duet",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-claude-duet": {
+        "field": "actions.1.see",
+        "evidence": "It does not invent a room, an address or a time zone."
+      }
+    }
   },
   {
     "file": "firefly-fill-selection.webp",
@@ -272,7 +467,13 @@
     "caption": "Adobe’s pink brush marks show the part of the room Generative Fill can change. The editor also has a prompt field.",
     "alt": "Room in the Firefly editor with a pink selection over the wall and rug and a prompt field.",
     "source": "https://helpx.adobe.com/firefly/web/work-with-images/edit-images/generative-fill.html",
-    "credit": "Adobe"
+    "credit": "Adobe",
+    "placements": {
+      "firefly-fill": {
+        "field": "actions.1.see",
+        "evidence": "In the official room photo, pink marks the selected patch."
+      }
+    }
   },
   {
     "file": "firefly-video-first-frame.webp",
@@ -280,39 +481,69 @@
     "caption": "The small picture under Frames sets the start of the video. Adobe’s example uses a lake reflected in the mountains.",
     "alt": "Firefly’s Frames panel beside a landscape preview. The first-frame thumbnail is highlighted.",
     "source": "https://helpx.adobe.com/firefly/web/work-with-audio-and-video/work-with-video/generate-videos-using-images.html",
-    "credit": "Adobe"
+    "credit": "Adobe",
+    "placements": {
+      "open-firefly": {
+        "field": "actions.1.see",
+        "evidence": "The official example shows a lake in this control."
+      }
+    }
   },
   {
     "file": "excel-copilot-table-reply.webp",
     "lesson": "open-copilot-excel",
-    "caption": "Copilot in Excel practice view. Four rows in the sheet. The two counts add to four.",
-    "alt": "Count and check. Sheet · Type column. Shared  /  Room  /  Shared  /  Room. Reply. 2 shared, 2 room. Verify. Four rows in the sheet. The two counts add to four.",
+    "caption": "Illustrated practice view. Check that the total updates to 13.",
+    "alt": "Check a total against two cells. Count column. B2 contains 4. B3 contains 7. Formula. SUM(B2:B3) adds those two cells and gives 11. Change a count. Check that the total updates to 13.",
     "source": "https://support.microsoft.com/en-us/excel/get-direct-answers-to-your-data-analysis-questions",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-copilot-excel": {
+        "field": "actions.1.see",
+        "evidence": "A suitable reply is =SUM(B2:B3)."
+      }
+    }
   },
   {
     "file": "grok-bot-ipad-thread.webp",
     "lesson": "open-grok-bot",
-    "caption": "Grok Bot practice view. Give Blue two points. Check that Red stays at zero.",
-    "alt": "Read a bot thread. Task list. Check a rule · Draft a scoreboard. Scoreboard thread. First draft ready for a test.. Follow-up. Give Blue two points. Check that Red stays at zero.",
+    "caption": "Illustrated practice view. Both kinds of fruit appear and their counts add to five.",
+    "alt": "Open the table that the bot made. Request. Make a CSV file from the two fruit counts. Open. Read the two rows in the file. Check. Both kinds of fruit appear and their counts add to five.",
     "source": "https://apps.apple.com/us/app/grok-bot/id6794501026?platform=ipad",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-grok-bot": {
+        "field": "actions.3.see",
+        "evidence": "Two rows, two kinds of fruit, five pieces in all."
+      }
+    }
   },
   {
     "file": "vibe-work-ipad.webp",
     "lesson": "open-vibe",
-    "caption": "Mistral Vibe practice view. A list you can check against the three file names.",
-    "alt": "Start a work task. Work. Choose a new practice task.. Request. Sort three sample files by title.. Expected result. A list you can check against the three file names.",
+    "caption": "Illustrated practice view. The first item stays in place and the second shows the new word.",
+    "alt": "Edit one item in a two-item checklist. Start. Turn the two practice notes into two boxes. Edit. Change the second item to tablet. Verify. The first item stays in place and the second shows the new word.",
     "source": "https://apps.apple.com/us/app/vibe-by-mistral-ex-le-chat/id6740410176?platform=ipad",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "open-vibe": {
+        "field": "summary",
+        "evidence": "A two-item checklist is small enough to test by hand."
+      }
+    }
   },
   {
     "file": "muse-tracking-follow-up.webp",
     "lesson": "muse-upcoming",
-    "caption": "Meta Muse practice view. Review the two options before taking another step.",
-    "alt": "Inspect a follow-up. Task. Watch a practice event for a new time.. Update. Two times are available: 4 or 7.. Your choice. Review the two options before taking another step.",
+    "caption": "Illustrated practice view. A one-time reminder has no further run.",
+    "alt": "Verify a one-time reminder. Request. Set one practice reminder about the packing list. Check. Read the saved time and message. After delivery. A one-time reminder has no further run.",
     "source": "https://apps.apple.com/us/app/muse-from-meta/id6760173601?platform=ipad",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "placements": {
+      "muse-upcoming": {
+        "field": "actions.3.see",
+        "evidence": "A one-time reminder has no next run after delivery."
+      }
+    }
   },
   {
     "file": "practice-before.webp",
@@ -320,7 +551,13 @@
     "caption": "Two files belong to one project. Read the schedule before trusting the time in the notice.",
     "alt": "The practice desk shows schedule.txt beside notice.txt. The notice contains a 9:50 a.m. meeting time.",
     "source": "#first-project",
-    "credit": "All About AI · Practice desk"
+    "credit": "All About AI · Practice desk",
+    "placements": {
+      "project-or-chat": {
+        "field": "actions.2.do",
+        "evidence": "Ask it to make the notice agree with the schedule."
+      }
+    }
   },
   {
     "file": "practice-after.webp",
@@ -328,19 +565,34 @@
     "caption": "After the correction, the edited notice says 9:15. Open the schedule to check the two times agree.",
     "alt": "The practice desk shows the updated notice and a message confirming the fix to the meeting time.",
     "source": "#first-project",
-    "credit": "All About AI · Practice desk"
+    "credit": "All About AI · Practice desk",
+    "placements": {
+      "read-a-change": {
+        "field": "actions.3.do",
+        "evidence": "Open the edited notice."
+      }
+    }
   },
   {
     "file": "diagram-tokens-context.svg",
-    "lesson": "chatgpt-api",
-    "caption": "A model reads pieces of text called tokens. Its context window has room for only so many pieces at once.",
-    "alt": "A model reads pieces of text called tokens. Its context window has room for only so many pieces at once.",
-    "source": "#chatgpt-api",
+    "lesson": "gemini-api",
+    "caption": "A model processes pieces of text called tokens. The context window is the space available for one exchange.",
+    "alt": "What fits in a model’s context window?. A model processes pieces of text called tokens. The context window is the space available for one exchange.",
+    "source": "#gemini-api",
     "credit": "All About AI · original diagram",
     "also": [
-      "gemini-api",
       "claude-models"
-    ]
+    ],
+    "placements": {
+      "gemini-api": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "The context window is like one desk with room for the question, your files and the reply."
+      },
+      "claude-models": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Think of a context window as a desk that must hold both the notes and the answer."
+      }
+    }
   },
   {
     "file": "diagram-chat-project-agent.svg",
@@ -349,131 +601,220 @@
     "alt": "Ask a chat for a word meaning, keep trip notes together in a project, or ask an agent to fix a file.",
     "source": "#project-or-chat",
     "credit": "All About AI · original diagram",
-    "also": [
-      "open-antigravity",
-      "open-devin",
-      "lab-antigravity-01",
-      "lab-gemini-app-01",
-      "claude-reference-projects",
-      "reference-tags",
-      "claude-reference-memory"
-    ]
+    "placements": {
+      "project-or-chat": {
+        "field": "actions.3.do",
+        "evidence": "Choose a tool for each job: define one word, keep three notes together, fix a file and show the change."
+      }
+    }
   },
   {
     "file": "diagram-vibe-coding-loop.svg",
     "lesson": "ai-studio-build",
-    "caption": "Describe a small job, build it, try it in a browser, and fix what went wrong. Run the same test again.",
-    "alt": "Describe a small job, build it, try it in a browser, and fix what went wrong. Run the same test again.",
+    "caption": "A counter lets you check each edit by pressing a button and watching the result.",
+    "alt": "Test a small app one change at a time. A counter lets you check each edit by pressing a button and watching the result.",
     "source": "#ai-studio-build",
     "credit": "All About AI · original diagram",
     "also": [
-      "lab-gemini-app-05",
-      "lab-gemini-app-29",
-      "claude-reference-artifacts",
-      "gemini-reference-canvas"
-    ]
+      "lab-gemini-app-05"
+    ],
+    "placements": {
+      "ai-studio-build": {
+        "field": "summary",
+        "evidence": "Describe a small app, use its real buttons and ask for a change you can test."
+      },
+      "lab-gemini-app-05": {
+        "field": "steps.3.text",
+        "evidence": "The win appears only at 3."
+      }
+    }
   },
   {
     "file": "diagram-model-picker.svg",
     "lesson": "choose-a-model",
-    "caption": "Try a fast choice for a small job. Try a thinking choice when several rules interact. Check either answer.",
-    "alt": "Try a fast choice for a small job. Try a thinking choice when several rules interact. Check either answer.",
+    "caption": "You can compare two available thinking settings with the same task and a result you can check yourself.",
+    "alt": "Choose how much thinking a task needs. You can compare two available thinking settings with the same task and a result you can check yourself.",
     "source": "#choose-a-model",
     "credit": "All About AI · original diagram",
     "also": [
       "lab-gemini-app-02",
-      "lab-gemini-app-22",
-      "reference-job-picker"
-    ]
+      "lab-gemini-app-22"
+    ],
+    "placements": {
+      "choose-a-model": {
+        "field": "summary",
+        "evidence": "Choose a tool that can read your input and give you the kind of result you need."
+      },
+      "lab-gemini-app-02": {
+        "field": "steps.0.text",
+        "evidence": "Choose a thinking level if your account offers it."
+      },
+      "lab-gemini-app-22": {
+        "field": "steps.0.text",
+        "evidence": "Choose a thinking level if your account offers it."
+      }
+    }
   },
   {
     "file": "diagram-structured-json.svg",
     "lesson": "gemini-api",
-    "caption": "The same three facts become named fields. The app can now read the score as a number.",
-    "alt": "The same three facts become named fields. The app can now read the score as a number.",
+    "caption": "JSON stores information as named fields. A program can read each field by name.",
+    "alt": "Give an app a predictable answer from a note. JSON stores information as named fields. A program can read each field by name.",
     "source": "#gemini-api",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-ai-studio-01"
-    ]
+    "placements": {
+      "gemini-api": {
+        "field": "sections.0.paragraphs.2",
+        "evidence": "Ask it for named fields such as title and date in JSON, a text format that labels each value."
+      }
+    }
   },
   {
     "file": "diagram-tool-calling.svg",
-    "lesson": "chatgpt-api",
-    "caption": "The model asks a tool for a value. If the lookup fails, report that the score is unknown.",
-    "alt": "The model asks a tool for a value. If the lookup fails, report that the score is unknown.",
-    "source": "#chatgpt-api",
+    "lesson": "lab-ai-studio-12",
+    "caption": "A tool is a function the model can ask for data. The answer from one lookup can supply the next one.",
+    "alt": "Look up a boat’s next stop with two tools. A tool is a function the model can ask for data. The answer from one lookup can supply the next one.",
+    "source": "#lab-ai-studio-12",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-ai-studio-12"
-    ]
+    "placements": {
+      "lab-ai-studio-12": {
+        "field": "steps.1.text",
+        "evidence": "When the first tool asks about Wren, reply {\"found\":true,\"id\":\"V42\"}."
+      }
+    }
   },
   {
     "file": "diagram-offline-pwa.svg",
-    "lesson": "first-project",
+    "lesson": "lab-codex-29",
     "caption": "A web app can save its files before a trip. Test by switching off the network and opening it again.",
     "alt": "A web app can save its files before a trip. Test by switching off the network and opening it again.",
-    "source": "#first-project",
+    "source": "#lab-codex-29",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-claude-code-30",
-      "lab-codex-29"
-    ]
+    "placements": {
+      "lab-codex-29": {
+        "field": "steps.3.text",
+        "evidence": "Find DOG, go offline after the app says ready, reload, then select COD from top to bottom."
+      }
+    }
   },
   {
     "file": "diagram-cost-per-win.svg",
     "lesson": "compare-cost",
-    "caption": "These made-up points show why a cheap try can cost more after retries. Count only results that pass.",
-    "alt": "These made-up points show why a cheap try can cost more after retries. Count only results that pass.",
+    "caption": "One run can be cheap and still need a retry. Count all attempts when comparing the cost of a correct result.",
+    "alt": "Find the cost of one usable answer. One run can be cheap and still need a retry. Count all attempts when comparing the cost of a correct result.",
     "source": "#compare-cost",
     "credit": "All About AI · original diagram",
     "also": [
-      "field-test"
-    ]
+      "chatgpt-api"
+    ],
+    "placements": {
+      "compare-cost": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "A costs 2 cents per useful hint."
+      },
+      "chatgpt-api": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Include retries and tool fees when you compare bills."
+      }
+    }
   },
   {
     "file": "diagram-diff-review.svg",
     "lesson": "read-a-change",
-    "caption": "The minus line will go away. The plus line will take its place. Check both against the schedule.",
-    "alt": "The minus line will go away. The plus line will take its place. Check both against the schedule.",
+    "caption": "A change view pairs the old and new lines so you can see exactly what the edit would do.",
+    "alt": "Read a proposed file change before accepting it. A change view pairs the old and new lines so you can see exactly what the edit would do.",
     "source": "#read-a-change",
     "credit": "All About AI · original diagram",
     "also": [
       "codex-review",
-      "antigravity-review",
-      "lab-claude-code-15",
-      "claude-reference-code",
-      "reference-changes"
-    ]
+      "antigravity-review"
+    ],
+    "placements": {
+      "read-a-change": {
+        "field": "summary",
+        "evidence": "An edit can fix the time and break the pier number."
+      },
+      "codex-review": {
+        "field": "actions.2.do",
+        "evidence": "Find the line marked minus and the one marked plus."
+      },
+      "antigravity-review": {
+        "field": "actions.2.do",
+        "evidence": "In the conversation's Overview panel, choose Review."
+      }
+    }
   },
   {
     "file": "diagram-notebook-grounding.svg",
     "lesson": "gemini-notebook",
-    "caption": "Select the schedule and open the citation. If no selected note gives a price, leave the price unknown.",
-    "alt": "Select the schedule and open the citation. If no selected note gives a price, leave the price unknown.",
+    "caption": "A notebook answers from the sources you select. A citation points back to the passage used.",
+    "alt": "Trace a notebook answer to its source. A notebook answers from the sources you select. A citation points back to the passage used.",
     "source": "#gemini-notebook",
     "credit": "All About AI · original diagram",
     "also": [
       "lab-gemini-app-06",
       "lab-gemini-app-10",
-      "lab-gemini-app-30",
-      "gemini-reference-notebook"
-    ]
+      "gemini-reference-notebook",
+      "lab-gemini-app-30"
+    ],
+    "placements": {
+      "gemini-notebook": {
+        "field": "actions.2.do",
+        "evidence": "Show the source for each answer.” Open the little source link beside each answer."
+      },
+      "lab-gemini-app-06": {
+        "field": "features",
+        "evidence": "Gemini Notebook answers questions about sources you choose."
+      },
+      "lab-gemini-app-10": {
+        "field": "steps.4.text",
+        "evidence": "In Sources, select only Old."
+      },
+      "gemini-reference-notebook": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "Its citations take you back to the supporting passage."
+      },
+      "lab-gemini-app-30": {
+        "field": "steps.2.text",
+        "evidence": "Open the citations."
+      }
+    }
   },
   {
     "file": "diagram-deep-research.svg",
     "lesson": "gemini-research-begin",
-    "caption": "Read the research plan before it starts. Check sources before trusting the finished brief.",
-    "alt": "Read the research plan before it starts. Check sources before trusting the finished brief.",
+    "caption": "A research tool gathers sources for a question. You decide whether each source supports the resulting claim.",
+    "alt": "Build a research brief you can check. A research tool gathers sources for a question. You decide whether each source supports the resulting claim.",
     "source": "#gemini-research-begin",
     "credit": "All About AI · original diagram",
     "also": [
       "lab-gemini-app-08",
       "lab-gemini-app-23",
-      "lab-gemini-app-24",
       "claude-reference-research",
       "gemini-reference-research"
-    ]
+    ],
+    "placements": {
+      "gemini-research-begin": {
+        "field": "actions.0.see",
+        "evidence": "Gemini offers to plan a research task."
+      },
+      "lab-gemini-app-08": {
+        "field": "features",
+        "evidence": "Deep Research builds a plan and gathers sources."
+      },
+      "lab-gemini-app-23": {
+        "field": "features",
+        "evidence": "Deep Research builds a plan and gathers sources."
+      },
+      "claude-reference-research": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Use official help and link each claim.” Open a cited page and locate the sentence supporting one setting."
+      },
+      "gemini-reference-research": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "Deep Research proposes a plan and can gather a report from selected sources."
+      }
+    }
   },
   {
     "file": "diagram-m365-grounding.svg",
@@ -482,70 +823,152 @@
     "alt": "Copilot uses information available to your account and the current app. Ask for evidence for each claim.",
     "source": "#copilot-at-work",
     "credit": "All About AI · original diagram",
-    "also": [
-      "open-copilot",
-      "copilot-documents"
-    ]
+    "placements": {
+      "copilot-at-work": {
+        "field": "sections.0.paragraphs.1",
+        "evidence": "A reply may draw from mail, a Teams conversation or a file your work account can read."
+      }
+    }
   },
   {
     "file": "diagram-exchange-pipeline.svg",
     "lesson": "lab-devin-01",
-    "caption": "Read a made-up table, run the report on that table, and compare its rows with the expected answer.",
-    "alt": "Read a made-up table, run the report on that table, and compare its rows with the expected answer.",
+    "caption": "The practice file contains different kinds of mailboxes. The report should keep only the kinds requested.",
+    "alt": "Test a mailbox report before using a live service. The practice file contains different kinds of mailboxes. The report should keep only the kinds requested.",
     "source": "#lab-devin-01",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-gemini-app-28",
-      "lab-antigravity-30"
-    ]
+    "placements": {
+      "lab-devin-01": {
+        "field": "summary",
+        "evidence": "Which of six pretend mailboxes should appear on a list for people and shared teams?"
+      }
+    }
   },
   {
     "file": "diagram-git-branch-pr.svg",
-    "lesson": "devin-first-repo",
-    "caption": "A branch gives you a separate copy to edit. A pull request asks someone to check it before it joins main.",
-    "alt": "A branch gives you a separate copy to edit. A pull request asks someone to check it before it joins main.",
-    "source": "#devin-first-repo",
+    "lesson": "devin-reference-agent",
+    "caption": "A branch gives an edit a separate place to live. A pull request invites a teammate to review it.",
+    "alt": "Review a proposed change before it reaches the shared code. A branch gives an edit a separate place to live. A pull request invites a teammate to review it.",
+    "source": "#devin-reference-agent",
     "credit": "All About AI · original diagram",
     "also": [
       "devin-review-first"
-    ]
+    ],
+    "placements": {
+      "devin-reference-agent": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Ask Devin to add a label to a test page, run its check and open a draft PR."
+      },
+      "devin-review-first": {
+        "field": "actions.0.do",
+        "evidence": "Choose one practice pull request in Review."
+      }
+    }
   },
   {
     "file": "diagram-pagination-loop.svg",
     "lesson": "lab-antigravity-08",
-    "caption": "Follow the next link even on an empty page. End at a missing link, or stop with a warning when a link repeats.",
-    "alt": "Follow the next link even on an empty page. End at a missing link, or stop with a warning when a link repeats.",
+    "caption": "A report may return its rows in several pages. A page with no rows can still have a link to the next page.",
+    "alt": "Follow the next link until the report ends. A report may return its rows in several pages. A page with no rows can still have a link to the next page.",
     "source": "#lab-antigravity-08",
     "credit": "All About AI · original diagram",
     "also": [
-      "devin-api"
-    ]
+      "lab-devin-24"
+    ],
+    "placements": {
+      "lab-antigravity-08": {
+        "field": "summary",
+        "evidence": "A report can have an empty page with an arrow to more rows."
+      },
+      "lab-devin-24": {
+        "field": "summary",
+        "evidence": "A service can return an empty middle page while later pages still have results."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-enterprise-overview.svg",
+    "lesson": "devin-start",
+    "caption": "Give Devin a team project and one request. Use Ask for an answer you can check in the files. Use an Agent session for a change your team can test and review.",
+    "alt": "A team repository and a request lead to two paths. Ask Devin reads the files and explains them. An Agent session edits a branch, runs tests and opens a draft pull request for a teammate.",
+    "source": "#devin-start",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-start": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "If you want to understand the files, use Ask Devin."
+      }
+    }
   },
   {
     "file": "diagram-zero-vs-blank.svg",
-    "lesson": "devin-start",
-    "caption": "Zero is a real score. A blank value records a missing answer. Only count a turn with a real score.",
-    "alt": "Zero is a real score. A blank value records a missing answer. Only count a turn with a real score.",
-    "source": "#devin-start",
+    "lesson": "lab-devin-06",
+    "caption": "In this report, a dash marks a missing count. A recorded zero adds one to the number of known readings and zero to their sum.",
+    "alt": "Two sample rows. A recorded count of 0 displays as 0 and counts as one known reading. A blank or null count displays as a dash and is flagged as missing.",
+    "source": "#lab-devin-06",
     "credit": "All About AI · original diagram",
     "also": [
+      "lab-ai-studio-06",
       "lab-gemini-app-16",
-      "lab-gemini-app-29",
-      "lab-codex-30",
+      "lab-copilot-07",
       "lab-copilot-29",
-      "lab-copilot-30"
-    ]
+      "lab-codex-30",
+      "lab-copilot-30",
+      "gemini-reference-files",
+      "lab-claude-code-30"
+    ],
+    "placements": {
+      "lab-devin-06": {
+        "field": "steps.2.text",
+        "evidence": "A recorded 0 still counts as a known reading."
+      },
+      "lab-ai-studio-06": {
+        "field": "summary",
+        "evidence": "Check a zero round, a missing round and a negative score."
+      },
+      "lab-gemini-app-16": {
+        "field": "summary",
+        "evidence": "Read each row and circle only the teams that have played, including the team with zero."
+      },
+      "lab-copilot-07": {
+        "field": "features",
+        "evidence": "A missing reading stays missing."
+      },
+      "lab-copilot-29": {
+        "field": "steps.3.text",
+        "evidence": "A round with a 0 was played."
+      },
+      "lab-codex-30": {
+        "field": "features",
+        "evidence": "A report can have a real zero and still have missing data on another row."
+      },
+      "lab-copilot-30": {
+        "field": "steps.2.text",
+        "evidence": "A recorded 0 belongs in the known rows."
+      },
+      "gemini-reference-files": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Blank means unreported."
+      },
+      "lab-claude-code-30": {
+        "field": "steps.2.text",
+        "evidence": "A blank queue has no reading."
+      }
+    }
   },
   {
     "file": "diagram-devin-speed-modes.svg",
     "lesson": "devin-speed",
-    "caption": "For a question, read the project first. Pick a local edit or a cloud session when the job needs changes.",
-    "alt": "Three paths lead from a question about a file to Ask or DeepWiki, a quick edit to Devin CLI, and a long test to a cloud Agent with a snapshot.",
+    "caption": "Choose based on whether you need to read files, edit them locally or run tests in the cloud.",
+    "alt": "Choose a Devin mode for the job. Choose based on whether you need to read files, edit them locally or run tests in the cloud.",
     "source": "#devin-speed",
     "credit": "All About AI · original diagram",
-    "also": [
-      "devin-first-session"
-    ]
+    "placements": {
+      "devin-speed": {
+        "field": "intro.what",
+        "evidence": "A cloud Agent gets its own computer to edit files and run tests."
+      }
+    }
   },
   {
     "file": "diagram-blueprint-snapshot.svg",
@@ -553,7 +976,20 @@
     "caption": "Build the snapshot once. Start a fresh session and run one little test to check the tools.",
     "alt": "A three-step picture shows a recipe with tools and tests, a saved snapshot made from that recipe, and a new session that uses the ready tools.",
     "source": "#devin-environment",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "devin-reference-blueprints"
+    ],
+    "placements": {
+      "devin-environment": {
+        "field": "intro.what",
+        "evidence": "A build follows the recipe and saves a snapshot."
+      },
+      "devin-reference-blueprints": {
+        "field": "intro.what",
+        "evidence": "A build follows the list and saves a snapshot, a ready-to-start copy of the work machine."
+      }
+    }
   },
   {
     "file": "diagram-session-side-chat.svg",
@@ -561,49 +997,93 @@
     "caption": "Open a Side Chat from a worklog message to ask what Devin has seen so far.",
     "alt": "The main timeline runs from reading a file through editing to a test. A side branch at the edit opens a read-only question. The main line keeps going.",
     "source": "#devin-sessions",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-sessions": {
+        "field": "intro.features",
+        "evidence": "Side Chat can help you ask about the current session while work is still under way."
+      }
+    }
   },
   {
     "file": "diagram-devin-review-flow.svg",
     "lesson": "devin-review",
-    "caption": "A reviewer can follow the same test from a broken result to a working result.",
-    "alt": "One test starts red, a one-line edit changes the rule, Devin Review flags lines to check, and a repeat test passes. Save both results for the reviewer.",
+    "caption": "A finding is a possible problem in a proposed change. A small test helps a reviewer decide if it is real.",
+    "alt": "Test a code review finding. A finding is a possible problem in a proposed change. A small test helps a reviewer decide if it is real.",
     "source": "#devin-review",
     "credit": "All About AI · original diagram",
     "also": [
-      "lab-devin-30",
-      "lab-codex-15"
-    ]
+      "devin-reference-review"
+    ],
+    "placements": {
+      "devin-review": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "On connected GitHub or GitLab projects, a reviewer can ask for /devin review on a proposed change."
+      },
+      "devin-reference-review": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Open the review and find the line linked to a finding."
+      }
+    }
   },
   {
     "file": "diagram-skill-reuse.svg",
     "lesson": "devin-playbooks",
-    "caption": "A short skill fixes the shape of the answer. Each ticket supplies its own facts.",
-    "alt": "The same SKILL.md file describes two headings. A ticket about a label and a ticket about a score each produce a note with those headings and different evidence.",
+    "caption": "A skill file contains directions a helper can reuse with fresh input. Test the directions on more than one case.",
+    "alt": "Save a repeatable task as a skill. A skill file contains directions a helper can reuse with fresh input. Test the directions on more than one case.",
     "source": "#devin-playbooks",
     "credit": "All About AI · original diagram",
     "also": [
+      "devin-reference-skills",
       "lab-claude-code-07",
-      "claude-reference-skills",
-      "claude-reference-style",
-      "gemini-reference-gems"
-    ]
+      "claude-reference-skills"
+    ],
+    "placements": {
+      "devin-playbooks": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Call @skills:verify-import-retries in a fresh session with the whole rule."
+      },
+      "devin-reference-skills": {
+        "field": "summary",
+        "evidence": "Try the same recipe on two small samples."
+      },
+      "lab-claude-code-07": {
+        "field": "summary",
+        "evidence": "A skill is a small set of directions the tool can reuse."
+      },
+      "claude-reference-skills": {
+        "field": "summary",
+        "evidence": "Teach a repeatable task with a skill."
+      }
+    }
   },
   {
     "file": "diagram-ticket-to-session.svg",
     "lesson": "devin-integrations",
-    "caption": "Use a ticket key in the integration so a repeated message finds the session already running.",
-    "alt": "Jira, Teams, and Slack each point to ticket T-17. A lookup finds or creates one session for T-17. The session links its pull request back to the ticket.",
+    "caption": "A ticket system may deliver the same notice twice. Use its ticket number to find the work already under way.",
+    "alt": "Keep a ticket and its updates in one session. A ticket system may deliver the same notice twice. Use its ticket number to find the work already under way.",
     "source": "#devin-integrations",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-integrations": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Jira can use a Devin app with an agent card, or a linked service account with comments and links."
+      }
+    }
   },
   {
     "file": "diagram-access-four-scopes.svg",
     "lesson": "devin-access",
-    "caption": "Read each grant before you widen it. A missing grant at one step can block the practice job.",
-    "alt": "Four checks ask what the signed-in person may do, what a service bot may request, which organization owns the task, and which repository the Git connection can open.",
+    "caption": "A team keeps a practice handbook in a project. Someone can start a session and still lack permission to read that file.",
+    "alt": "How to check access to a project file. A team keeps a practice handbook in a project. Someone can start a session and still lack permission to read that file.",
     "source": "#devin-access",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-access": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "In teams with Access and Sharing enabled, a mismatch report can compare Devin’s grants with access at the code host."
+      }
+    }
   },
   {
     "file": "diagram-outposts-network.svg",
@@ -611,76 +1091,130 @@
     "caption": "The worker asks Devin Cloud for its next job. The team controls the machine where commands run.",
     "alt": "The Devin Cloud side holds the agent and queue. Across a boundary, the customer worker connects out, takes a job, and runs commands inside its own work environment.",
     "source": "#devin-deployment",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "devin-reference-outposts"
+    ],
+    "placements": {
+      "devin-deployment": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "With Outposts, file edits and commands run on the customer’s worker."
+      },
+      "devin-reference-outposts": {
+        "field": "intro.features",
+        "evidence": "With a dedicated VPC, the host sets aside a private cloud network for one customer."
+      }
+    }
   },
   {
     "file": "diagram-fleet-pilot.svg",
     "lesson": "devin-fleet",
-    "caption": "Write the pass rule first. A failed pilot tells you which job to fix before more projects join.",
-    "alt": "A shared rule feeds a trial in Repo A and Repo B. Both results must pass before the next group starts. A failure sends the work back for repair.",
+    "caption": "A team can run several coding sessions across different projects. A small trial limits how many projects a mistake can affect.",
+    "alt": "Test a change on a few projects first. A team can run several coding sessions across different projects. A small trial limits how many projects a mistake can affect.",
     "source": "#devin-fleet",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "devin-reference-workflows"
+    ],
+    "placements": {
+      "devin-fleet": {
+        "field": "intro.what",
+        "evidence": "A group of Devin sessions can work on separate projects."
+      },
+      "devin-reference-workflows": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Give it a rule: if the pilot fails, stop before the next batch."
+      }
+    }
   },
   {
     "file": "diagram-acu-metrics.svg",
     "lesson": "devin-metrics",
-    "caption": "Include the try that needed a redo. Divide all the work by the number of accepted pull requests.",
-    "alt": "Three attempts cost 3, 2 and 5 ACUs, for 10 total. Two pull requests were accepted, so 10 divided by 2 gives 5 ACUs per accepted pull request.",
+    "caption": "Ten practice tickets used 72 units of agent work. The team accepted six changes. An open ticket still uses some of the budget.",
+    "alt": "Work units per accepted change. Ten practice tickets used 72 units of agent work. The team accepted six changes. An open ticket still uses some of the budget.",
     "source": "#devin-metrics",
     "credit": "All About AI · original diagram",
-    "also": [
-      "devin-lab"
-    ]
+    "placements": {
+      "devin-metrics": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Divide 72 by 6 to get 12 units per accepted change so far."
+      }
+    }
   },
   {
     "file": "diagram-gemini-surfaces.svg",
     "lesson": "gemini-app",
-    "caption": "Pick the place that holds the materials you need, whether that is a note, a prompt or a folder of project files.",
-    "alt": "Gemini App handles a quick chat or draft. Notebook uses chosen sources. AI Studio tests a prompt or builds an app preview. Antigravity works across a coding project.",
+    "caption": "Your goal decides where to start. A quick reply, a future action and a report with sources need different checks.",
+    "alt": "Pick a Gemini feature for the job. Your goal decides where to start. A quick reply, a future action and a report with sources need different checks.",
     "source": "#gemini-app",
     "credit": "All About AI · original diagram",
-    "also": [
-      "gemini-reference-chat",
-      "gemini-reference-personal",
-      "gemini-reference-workspace"
-    ]
+    "placements": {
+      "gemini-app": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Use Tasks for a job you want to check on later."
+      }
+    }
   },
   {
     "file": "diagram-notebook-studio.svg",
     "lesson": "gemini-workflow",
-    "caption": "A chat citation can point you back to a note. Check each study aid against the same selected notes.",
-    "alt": "Two selected notes feed a chat with a citation and Studio with Audio, Mind Maps, Flashcards and Slides. Both uses need a check against the source words.",
+    "caption": "The same set of notes can support a direct answer or a study activity. Both need a check against the original material.",
+    "alt": "Study a set of selected notebook sources. The same set of notes can support a direct answer or a study activity. Both need a check against the original material.",
     "source": "#gemini-workflow",
     "credit": "All About AI · original diagram",
     "also": [
       "lab-gemini-app-13",
-      "lab-gemini-app-27",
-      "lab-gemini-app-10",
-      "lab-gemini-app-30"
-    ]
+      "lab-gemini-app-27"
+    ],
+    "placements": {
+      "gemini-workflow": {
+        "field": "summary",
+        "evidence": "Find the line behind an answer, then turn the notes into something you can study."
+      },
+      "lab-gemini-app-13": {
+        "field": "summary",
+        "evidence": "A student wants a study card for each of three terms in a selected note."
+      },
+      "lab-gemini-app-27": {
+        "field": "steps.5.text",
+        "evidence": "Pause on a claim about a box and write down the note that supports it."
+      }
+    }
   },
   {
     "file": "diagram-ai-studio-pipeline.svg",
     "lesson": "gemini-build",
-    "caption": "Carry the prompt and its expected fields into Build. Test the preview with a sample and export the code.",
-    "alt": "A Playground prompt asks for a card and score. A JSON schema gives the two fields and their types. Build mode previews the card. Export saves the project code.",
+    "caption": "A flyer checker should show what the flyer says and flag any missing detail before someone uses it.",
+    "alt": "Build a flyer checker from a tested prompt. A flyer checker should show what the flyer says and flag any missing detail before someone uses it.",
     "source": "#gemini-build",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-build": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "Give the title, date and every showtime."
+      }
+    }
   },
   {
     "file": "diagram-multimodal-io.svg",
     "lesson": "gemini-media",
-    "caption": "Check which inputs and outputs a tool accepts. Give it a small sample before you send a long recording.",
-    "alt": "Text can prompt an image, an image can be described in text, speech can become a transcript and a video can be studied for a scene list. Each row names a matching tool.",
+    "caption": "Making new footage, reading an image and transcribing speech require different kinds of input and output.",
+    "alt": "Match the media tool to the work. Making new footage, reading an image and transcribing speech require different kinds of input and output.",
     "source": "#gemini-media",
     "credit": "All About AI · original diagram",
     "also": [
-      "media-studio",
-      "claude-reference-voice",
-      "claude-reference-files",
-      "gemini-reference-voice",
-      "gemini-reference-creation"
-    ]
+      "media-studio"
+    ],
+    "placements": {
+      "gemini-media": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Each job calls for a different kind of sound."
+      },
+      "media-studio": {
+        "field": "intro.what",
+        "evidence": "A media tool can make a picture, a sound or a clip."
+      }
+    }
   },
   {
     "file": "diagram-mindmap-connections.svg",
@@ -688,7 +1222,13 @@
     "caption": "Explore a branch in the Mind Map. Check the date and exact number in the note that backs it up.",
     "alt": "The center idea, the score limit, branches to an older rule from May 1 that says 8 points and a newer rule from May 4 that says 12. The newer note sets the current limit.",
     "source": "#lab-gemini-app-10",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-gemini-app-10": {
+        "field": "features",
+        "evidence": "A Mind Map groups ideas into branches."
+      }
+    }
   },
   {
     "file": "diagram-quiz-from-notes.svg",
@@ -697,9 +1237,12 @@
     "alt": "A score note says that red earns 3. A quiz asks what a red card earns and marks 3 as right. In Canvas, a player answers, sees the score, and taps Play again to restart.",
     "source": "#lab-gemini-app-15",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-gemini-app-30"
-    ]
+    "placements": {
+      "lab-gemini-app-15": {
+        "field": "summary",
+        "evidence": "Use Canvas to build a quiz from your three verified questions."
+      }
+    }
   },
   {
     "file": "diagram-claude-surfaces.svg",
@@ -708,108 +1251,152 @@
     "alt": "Chat answers a question. Project knowledge stores materials across chats. Cowork carries out a file task. Claude Code changes a coding project. Artifacts show a draft or a small app.",
     "source": "#claude-workspace",
     "credit": "All About AI · original diagram",
-    "also": [
-      "claude-reference-chat"
-    ]
+    "placements": {
+      "claude-workspace": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "If you want to ask more questions tomorrow, create a Project and add the file there."
+      }
+    }
   },
   {
     "file": "diagram-plan-then-edit.svg",
     "lesson": "claude-code",
-    "caption": "In Plan Mode, list the tests first. Read the plan, allow a small edit, and ask for the actual test results.",
-    "alt": "Claude Code reads in Plan Mode and proposes three checks. A person examines the boundary case and approves the scope. Then Claude edits one file and runs the checks.",
+    "caption": "A plan lets a reviewer check what the agent intends to change and how the team will test it.",
+    "alt": "Check the plan before a coding agent edits files. A plan lets a reviewer check what the agent intends to change and how the team will test it.",
     "source": "#claude-code",
     "credit": "All About AI · original diagram",
     "also": [
-      "lab-claude-code-05",
-      "lab-claude-code-01",
-      "gemini-reference-code"
-    ]
+      "lab-claude-code-05"
+    ],
+    "placements": {
+      "claude-code": {
+        "field": "intro.what",
+        "evidence": "Claude Code helps with files in a coding project."
+      },
+      "lab-claude-code-05": {
+        "field": "features",
+        "evidence": "Use Plan mode to inspect a rule before making any edits."
+      }
+    }
   },
   {
     "file": "diagram-connector-vs-browser.svg",
     "lesson": "claude-browser",
-    "caption": "To check one draft, uploading that one file may be enough.",
-    "alt": "A file upload brings one copy. A connector reads allowed items in an app. The browser panel can use a permitted page.",
+    "caption": "A single question may need only one file or one browser tab. Each way of sharing gives a helper a different view.",
+    "alt": "Choose how much information to share. A single question may need only one file or one browser tab. Each way of sharing gives a helper a different view.",
     "source": "#claude-browser",
     "credit": "All About AI · original diagram",
-    "also": [
-      "claude-reference-connectors",
-      "gemini-reference-connectors"
-    ]
+    "placements": {
+      "claude-browser": {
+        "field": "intro.what",
+        "evidence": "A connector lets Claude use a service you choose."
+      }
+    }
   },
   {
     "file": "diagram-svg-vs-raster.svg",
     "lesson": "claude-visuals",
-    "caption": "Choose a path for a cut line and pixels for a photo.",
-    "alt": "A roof drawn as a vector has two smooth slopes. The same roof enlarged from a tiny bitmap has stair-step edges.",
+    "caption": "A cutting machine needs a path to follow. A photo stores an image as a grid of colored pixels.",
+    "alt": "Choose a drawing format for the job. A cutting machine needs a path to follow. A photo stores an image as a grid of colored pixels.",
     "source": "#claude-visuals",
     "credit": "All About AI · original diagram",
     "also": [
       "media-studio"
-    ]
+    ],
+    "placements": {
+      "claude-visuals": {
+        "field": "intro.what",
+        "evidence": "It can write drawing instructions called SVG."
+      },
+      "media-studio": {
+        "field": "intro.features",
+        "evidence": "An SVG stores drawing shapes."
+      }
+    }
   },
   {
     "file": "diagram-effort-dial.svg",
     "lesson": "chatgpt-picker",
-    "caption": "Extra thinking buys time to work. You still check the result.",
-    "alt": "A simple sort can use a fast reply. A timetable with three rules deserves a thinking pass and a check against all three rules.",
+    "caption": "A quick choice may work for one rule. A second rule can change the right answer. Use the same cards when comparing settings.",
+    "alt": "Test how well a model follows an extra rule. A quick choice may work for one rule. A second rule can change the right answer. Use the same cards when comparing settings.",
     "source": "#chatgpt-picker",
     "credit": "All About AI · original diagram",
-    "also": [
-      "claude-reference-thinking"
-    ]
+    "placements": {
+      "chatgpt-picker": {
+        "field": "intro.what",
+        "evidence": "The effort setting tells it how much time to spend working through a problem."
+      }
+    }
   },
   {
     "file": "diagram-search-vs-analysis.svg",
     "lesson": "chatgpt-research",
-    "caption": "Check a public claim on its page. Check a total against its rows.",
-    "alt": "To find a public opening date, search the web and open the dated announcement. To total a sheet, add its rows with data analysis.",
+    "caption": "The first job needs an original source. The second needs arithmetic on all the supplied rows.",
+    "alt": "Find a public fact or calculate an answer. The first job needs an original source. The second needs arithmetic on all the supplied rows.",
     "source": "#chatgpt-research",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "chatgpt-research": {
+        "field": "intro.what",
+        "evidence": "Data analysis can use code to count rows or do math with a file."
+      }
+    }
   },
   {
     "file": "diagram-local-vs-cloud-codex.svg",
     "lesson": "chatgpt-codex",
-    "caption": "To include a local draft in a cloud task, save it to the shared branch first.",
-    "alt": "The local task uses your open folder, including a saved draft. A cloud task starts with its connected repository and branch. A local-only file is absent.",
+    "caption": "A puzzle needs new Previous and Next buttons. First locate the copy of the puzzle that should receive the edit.",
+    "alt": "Which copy will the coding helper change?. A puzzle needs new Previous and Next buttons. First locate the copy of the puzzle that should receive the edit.",
     "source": "#chatgpt-codex",
     "credit": "All About AI · original diagram",
-    "also": [
-      "claude-reference-scheduled"
-    ]
+    "placements": {
+      "chatgpt-codex": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "“Cloud” means another computer reached over the internet."
+      }
+    }
   },
   {
     "file": "diagram-media-handoff.svg",
     "lesson": "chatgpt-media",
-    "caption": "Play the clip once with sound and once muted. Does the action still read?",
-    "alt": "Three storyboard beats become matching still images, then a renderer animates them. A final pass checks timing and sound.",
+    "caption": "A shot list describes what the camera should show. Making a plan and producing a video are separate steps.",
+    "alt": "Plan a movie as a sequence of shots. A shot list describes what the camera should show. Making a plan and producing a video are separate steps.",
     "source": "#chatgpt-media",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "chatgpt-media": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Play the final clip and count the shots."
+      }
+    }
   },
   {
     "file": "diagram-thread-to-decision.svg",
     "lesson": "copilot-mail-meetings",
-    "caption": "Decision: 11:00. Keep the final reply with the summary.",
-    "alt": "Mail proposes ten. Teams suggests eleven. A final reply accepts eleven. Only the last message confirms the decision.",
+    "caption": "A conversation can contain several different dates. Check the order and wording before reporting a decision.",
+    "alt": "Distinguish a proposed change from an approved one. A conversation can contain several different dates. Check the order and wording before reporting a decision.",
     "source": "#copilot-mail-meetings",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-devin-15",
-      "lab-copilot-15",
-      "lab-codex-01",
-      "gemini-reference-scheduled"
-    ]
+    "placements": {
+      "copilot-mail-meetings": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "We need to ask the reviewer.” Ask for the decision, owner and due date."
+      }
+    }
   },
   {
     "file": "diagram-denominator-trap.svg",
     "lesson": "copilot-documents",
-    "caption": "Always name who you counted in the bottom number.",
-    "alt": "Of twelve sites, six said yes, three said no and three did not reply. Six divided by nine replies is about 67 percent. Six divided by twelve sites is 50 percent.",
+    "caption": "Twelve teams were invited to a trial. Nine replied and six would continue. The same six votes answer two different questions.",
+    "alt": "Explain what a percentage counts. Twelve teams were invited to a trial. Nine replied and six would continue. The same six votes answer two different questions.",
     "source": "#copilot-documents",
     "credit": "All About AI · original diagram",
-    "also": [
-      "copilot-excel"
-    ]
+    "placements": {
+      "copilot-documents": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "Six of those nine would continue."
+      }
+    }
   },
   {
     "file": "diagram-copilot-surface-choice.svg",
@@ -817,33 +1404,48 @@
     "caption": "Before a workflow sends or changes anything, test it with a practice item.",
     "alt": "A code change belongs in GitHub Copilot. A question about approved notes fits Agent Builder. A workflow that takes actions fits Copilot Studio.",
     "source": "#copilot-agents",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "copilot-agents": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "If the next job is to file a request, explore Copilot Studio in an approved practice area."
+      }
+    }
   },
   {
     "file": "diagram-claim-to-source.svg",
     "lesson": "grok",
-    "caption": "Keep the timetable, the travel date and the route with your answer.",
-    "alt": "A repost says eight. The official post says to check the holiday timetable. The timetable lists seven for the correct route and date.",
+    "caption": "A post can repeat an announcement without its date or conditions. Check the original before relying on it.",
+    "alt": "Trace a public claim back to the original evidence. A post can repeat an announcement without its date or conditions. Check the original before relying on it.",
     "source": "#grok",
     "credit": "All About AI · original diagram",
     "also": [
-      "perplexity",
-      "lab-ai-studio-15",
-      "lab-ai-studio-30",
-      "lab-copilot-01"
-    ]
+      "perplexity"
+    ],
+    "placements": {
+      "grok": {
+        "field": "intro.features",
+        "evidence": "You can look for an original post, read a public policy or try a tool made for pictures, video or speech."
+      },
+      "perplexity": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Request the date, time, time zone and source line."
+      }
+    }
   },
   {
     "file": "diagram-browser-permissions.svg",
     "lesson": "browser-tools",
-    "caption": "Check the page and the access switch before you share.",
-    "alt": "Plain chat can read text you paste. A built-in browser helper may use a shared tab. A site-restricted extension can run on approved sites.",
+    "caption": "The active tab and the permissions you grant determine what a helper can use for a task.",
+    "alt": "Check the scope of a browser helper. The active tab and the permissions you grant determine what a helper can use for a task.",
     "source": "#browser-tools",
     "credit": "All About AI · original diagram",
-    "also": [
-      "claude-reference-browser",
-      "gemini-reference-browser"
-    ]
+    "placements": {
+      "browser-tools": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "See whether you can limit access to selected sites or to one click."
+      }
+    }
   },
   {
     "file": "diagram-local-offline-ai.svg",
@@ -851,15 +1453,27 @@
     "caption": "A compatible local runner can use downloaded {{model.google.gemma.name}} weights in airplane mode. A cloud-only app still needs a connection.",
     "alt": "A cloud API needs a network trip to a server. A compatible runner with downloaded Gemma weights can answer on the device without that trip.",
     "source": "#other-models",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "other-models": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Turn the network off, restart the app and ask a new question about a file saved on the device."
+      }
+    }
   },
   {
     "file": "diagram-blind-model-trial.svg",
     "lesson": "field-test",
-    "caption": "Key: L, R, L. Reveal the model names only after you score the answers.",
-    "alt": "The key says the three labels should be L, R, L. Anonymous answers A and C match two labels. Answer B matches all three. Reveal the model names after scoring.",
+    "caption": "Give each helper the same parking rules and visits. Hide its name while you mark the answers.",
+    "alt": "Score anonymous answers to a parking-fee problem. Give each helper the same parking rules and visits. Hide its name while you mark the answers.",
     "source": "#field-test",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "field-test": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "An answer earns credit when the charge agrees with the arrival time and the posted rule."
+      }
+    }
   },
   {
     "file": "diagram-game-state-loop.svg",
@@ -868,13 +1482,12 @@
     "alt": "Start both teams at zero. Each turn adds points and checks for ten. A lower score passes play to the next team. A winning score locks play until Restart.",
     "source": "#lab-devin-22",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-gemini-app-29",
-      "lab-devin-29",
-      "lab-antigravity-29",
-      "lab-ai-studio-29",
-      "lab-claude-code-29"
-    ]
+    "placements": {
+      "lab-devin-22": {
+        "field": "steps.3.text",
+        "evidence": "Press Roll again after the win, then Restart."
+      }
+    }
   },
   {
     "file": "diagram-undo-history-stack.svg",
@@ -883,28 +1496,40 @@
     "alt": "The list holds juice, toast, juice in that order. Undo removes only the last juice, leaving juice and toast. Undo is unavailable when the list is empty.",
     "source": "#lab-devin-23",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-gemini-app-29"
-    ]
+    "placements": {
+      "lab-devin-23": {
+        "field": "steps.2.text",
+        "evidence": "Undo removes only the last juice and leaves 5."
+      }
+    }
   },
   {
     "file": "diagram-fifo-queue.svg",
     "lesson": "lab-gemini-app-25",
-    "caption": "Empty list? Turn off Serve so it cannot return the last ticket again.",
-    "alt": "Add tickets A, B, C in order. Serve removes A. Add D behind C. When nothing is waiting, disable Serve.",
+    "caption": "A waiting list starts empty. Each visitor gets a lettered ticket. A new ticket goes at the end of the line.",
+    "alt": "The oldest waiting ticket gets served first. A waiting list starts empty. Each visitor gets a lettered ticket. A new ticket goes at the end of the line.",
     "source": "#lab-gemini-app-25",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-gemini-app-25": {
+        "field": "summary",
+        "evidence": "A waiting list must serve the oldest person first."
+      }
+    }
   },
   {
     "file": "diagram-atomic-file-swap.svg",
     "lesson": "lab-devin-14",
-    "caption": "Pull the plug just before the swap. The saved report should still say 7.",
-    "alt": "Check both counts, write nine in a nearby temporary file, then replace the old file in one move. A stop before that move leaves seven in the old report.",
+    "caption": "A report can be damaged if a job replaces it before checking all the new rows.",
+    "alt": "Keep the last good report during an update. A report can be damaged if a job replaces it before checking all the new rows.",
     "source": "#lab-devin-14",
     "credit": "All About AI · original diagram",
-    "also": [
-      "lab-antigravity-15"
-    ]
+    "placements": {
+      "lab-devin-14": {
+        "field": "summary",
+        "evidence": "Keep yesterday’s good total until you have a full new one."
+      }
+    }
   },
   {
     "file": "diagram-csv-quote-shield.svg",
@@ -913,9 +1538,12 @@
     "alt": "In the row m1 comma double-quote North comma West double-quote, splitting at every comma makes three pieces. A CSV reader returns m1 and North, West as two fields.",
     "source": "#lab-devin-03",
     "credit": "All About AI · original diagram",
-    "also": [
-      "gemini-reference-files"
-    ]
+    "placements": {
+      "lab-devin-03": {
+        "field": "features",
+        "evidence": "In a CSV file, quotes can wrap a comma that belongs inside a single field."
+      }
+    }
   },
   {
     "file": "diagram-four-way-buildoff.svg",
@@ -925,55 +1553,111 @@
       "lab-claude-code-14",
       "lab-codex-14"
     ],
-    "caption": "Give each tool the same brief. Check the first files before giving all four the same small edit.",
-    "alt": "One game prompt goes to four equal lanes for ChatGPT, Claude, Gemini and Grok. Each original file faces the same five checks before the edit round.",
+    "caption": "Each tool gets the same Harbor Relay brief. Save its first playable file before asking for a change.",
+    "alt": "Compare four builds of the same trivia app. Each tool gets the same Harbor Relay brief. Save its first playable file before asking for a change.",
     "source": "#build-off",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "build-off": {
+        "field": "intro.what",
+        "evidence": "Each tool gets the same request for Harbor Relay Trivia & Scoreboard, a game where two teams share one screen."
+      },
+      "lab-gemini-app-14": {
+        "field": "steps.1.text",
+        "evidence": "Save the first reply before asking for any changes."
+      },
+      "lab-claude-code-14": {
+        "field": "steps.1.text",
+        "evidence": "Save the first reply before asking for any changes."
+      },
+      "lab-codex-14": {
+        "field": "steps.1.text",
+        "evidence": "Save the first reply before asking for any changes."
+      }
+    }
   },
   {
     "file": "diagram-case-loop.svg",
     "lesson": "troubleshoot-loop",
+    "caption": "A receipt should gain a tag. Ordinary mail should keep its original subject. Check both before closing the case.",
+    "alt": "Test the mail rule and an ordinary message. A receipt should gain a tag. Ordinary mail should keep its original subject. Check both before closing the case.",
+    "source": "#troubleshoot-loop",
+    "credit": "All About AI · original diagram",
     "also": [
       "troubleshoot-rules",
-      "troubleshoot-trial",
-      "lab-troubleshoot-01",
       "lab-troubleshoot-06",
-      "lab-troubleshoot-13",
       "lab-troubleshoot-14",
-      "lab-troubleshoot-15",
-      "lab-troubleshoot-16",
-      "reference-prompts"
+      "lab-troubleshoot-15"
     ],
-    "caption": "Keep the old value and the two test IDs with the verdict.",
-    "alt": "Predict. Receipt: Tagged Ordinary mail: Plain Observe. RW3: Tagged RW4: Plain Decide. Both probes passed. Other mail: unknown.",
-    "source": "#troubleshoot-loop",
-    "credit": "All About AI · original diagram"
+    "placements": {
+      "troubleshoot-loop": {
+        "field": "sections.2.paragraphs.1",
+        "evidence": "The fresh receipt is tagged and the ordinary message is plain."
+      },
+      "troubleshoot-rules": {
+        "field": "sections.2.paragraphs.1",
+        "evidence": "The change in RS8 and these three results support closing the ticket for this rule and these cases."
+      },
+      "lab-troubleshoot-06": {
+        "field": "features",
+        "evidence": "Predict which subjects should gain a tag."
+      },
+      "lab-troubleshoot-14": {
+        "field": "steps.0.text",
+        "evidence": "Write Tagged for the new receipt and Plain for ordinary mail."
+      },
+      "lab-troubleshoot-15": {
+        "field": "steps.1.text",
+        "evidence": "Imagine RW4 now says Tagged."
+      }
+    }
   },
   {
     "file": "diagram-mail-checkpoint.svg",
     "lesson": "troubleshoot-trace",
-    "also": [
-      "lab-troubleshoot-02",
-      "lab-troubleshoot-05"
-    ],
-    "caption": "The failed row alone cannot tell you why delivery failed.",
-    "alt": "Same message. A subject can repeat. Match the exact ID. Two trace rows. TR1: Delivered TR2: Failed Next evidence. Find the matching NDR. Then test one cause.",
+    "caption": "Two people can receive different results for the same message. Use the message ID and the recipient together.",
+    "alt": "Trace delivery separately for each recipient. Two people can receive different results for the same message. Use the message ID and the recipient together.",
     "source": "#troubleshoot-trace",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-troubleshoot-01",
+      "lab-troubleshoot-02"
+    ],
+    "placements": {
+      "troubleshoot-trace": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Match NR1 to the message ID and NR2 to the failed address."
+      },
+      "lab-troubleshoot-01": {
+        "field": "steps.2.text",
+        "evidence": "You should see “unknown” and a request for the matching bounce or trace details."
+      },
+      "lab-troubleshoot-02": {
+        "field": "steps.0.text",
+        "evidence": "Find the trace row with the same ID and recipient."
+      }
+    }
   },
   {
     "file": "diagram-device-evidence.svg",
     "lesson": "troubleshoot-access",
-    "also": [
-      "lab-troubleshoot-07",
-      "lab-troubleshoot-08",
-      "lab-troubleshoot-09",
-      "lab-troubleshoot-12"
-    ],
     "caption": "A later device check cannot prove the device state at the earlier sign-in.",
     "alt": "Sign-in. Which request failed? When did it happen? Policy result. Was it enforced? Which condition failed? Device record. Same device? Checked before failure?",
     "source": "#troubleshoot-access",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-troubleshoot-08"
+    ],
+    "placements": {
+      "troubleshoot-access": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "A later reading cannot prove what was on that tablet earlier."
+      },
+      "lab-troubleshoot-08": {
+        "field": "features",
+        "evidence": "Match the device report to the failed sign-in."
+      }
+    }
   },
   {
     "file": "diagram-hybrid-route-proof.svg",
@@ -982,10 +1666,24 @@
       "lab-troubleshoot-10",
       "lab-troubleshoot-11"
     ],
-    "caption": "Verify the new message at its destination. Keep the control separate.",
-    "alt": "HR4 · forward trip. Old host selected. Message timed out. HR7 · fresh retry. Approved host used. Destination saw TEST-43. HR8 · control. Different route. TEST-44 arrived.",
+    "caption": "Mail travels between a cloud service and a local server. Success in one direction proves only that trip.",
+    "alt": "Check both ends of a mail route. Mail travels between a cloud service and a local server. Success in one direction proves only that trip.",
     "source": "#troubleshoot-hybrid",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "troubleshoot-hybrid": {
+        "field": "summary",
+        "evidence": "Cloud mail is trying to reach a mailbox on a server at the work site."
+      },
+      "lab-troubleshoot-10": {
+        "field": "steps.2.text",
+        "evidence": "Circle any line from HR1 through HR5 showing the original message in its destination mailbox."
+      },
+      "lab-troubleshoot-11": {
+        "field": "features",
+        "evidence": "Check the changed route in both directions."
+      }
+    }
   },
   {
     "file": "diagram-mail-auth-evidence.svg",
@@ -994,62 +1692,1022 @@
       "lab-troubleshoot-03",
       "lab-troubleshoot-04"
     ],
-    "caption": "A failed DKIM check can coexist with a DMARC pass through aligned SPF.",
-    "alt": "First message. SPF failed. DKIM failed. Look up the clues. DN1: different IP. DN2: selector missing. Comparison: DN5. Aligned SPF passed. DMARC passed.",
+    "caption": "The receiving mail service records checks on the sender. Use the results for the same message before drawing a conclusion.",
+    "alt": "Read the identity checks on an incoming email. The receiving mail service records checks on the sender. Use the results for the same message before drawing a conclusion.",
     "source": "#troubleshoot-auth",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "troubleshoot-auth": {
+        "field": "intro.features",
+        "evidence": "DMARC checks that a passing SPF or DKIM result lines up with the domain in the visible From address."
+      },
+      "lab-troubleshoot-03": {
+        "field": "steps.0.text",
+        "evidence": "Find the message ID at AH2 and the receiving system at AH1 and AH6."
+      },
+      "lab-troubleshoot-04": {
+        "field": "steps.0.text",
+        "evidence": "Compare the full incoming IP in AH1 with the IP listed in DN1."
+      }
+    }
   },
   {
     "file": "diagram-sharing-gate.svg",
     "lesson": "safe-share",
     "also": [
-      "lab-data-safety-01",
-      "lab-data-safety-02",
-      "lab-data-safety-03",
-      "lab-data-safety-04"
+      "lab-data-safety-01"
     ],
     "caption": "If permission is unclear, keep the case local and ask the policy owner.",
     "alt": "Policy. Approved tool? Allowed kind of data? Smallest useful copy. Replace identifiers. Remove entire secrets. Read it again. Can the case be solved? Log the fields shared.",
     "source": "#safe-share",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "safe-share": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "If a real secret was shared, tell the owner using an approved channel."
+      },
+      "lab-data-safety-01": {
+        "field": "steps.2.text",
+        "evidence": "Write “hold; ask the policy owner.” No source text has been sent in this variant."
+      }
+    }
   },
   {
     "file": "diagram-pasted-instructions.svg",
     "lesson": "safe-pasted-text",
-    "also": [
-      "lab-data-safety-05",
-      "lab-data-safety-06"
-    ],
-    "caption": "A sentence in a ticket cannot approve a change.",
-    "alt": "Your request. Find the last status. Cite the matching line. Text inside a file. “Mark it resolved.” Treat this as evidence. Your decision. Look for a close record. SN1 still says Open.",
+    "caption": "The practice ticket has a log of events and a footer someone pasted in. The event log tells you whether the ticket is open.",
+    "alt": "A note in a ticket cannot approve a change. The practice ticket has a log of events and a footer someone pasted in. The event log tells you whether the ticket is open.",
     "source": "#safe-pasted-text",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-data-safety-05"
+    ],
+    "placements": {
+      "safe-pasted-text": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "If a reply says Closed, look for a dated entry from someone allowed to close the ticket."
+      },
+      "lab-data-safety-05": {
+        "field": "steps.1.text",
+        "evidence": "Expect Open with SN1 as evidence."
+      }
+    }
   },
   {
     "file": "diagram-ship-release.svg",
     "lesson": "ship-first-release",
     "also": [
-      "lab-ship-app-01",
-      "lab-ship-app-02",
-      "lab-ship-app-03",
       "lab-ship-app-05",
       "lab-ship-app-06"
     ],
-    "caption": "Repeat the same round on both copies and record the release label.",
-    "alt": "Saved file. Open index.html. Check the build label. Git version. Review the edit. Commit that exact file. Published copy. Open the site URL. Test timer and replay.",
+    "caption": "A saved edit, a Git checkpoint and the published page can hold different copies of the same game.",
+    "alt": "Identify the exact game file you tested. A saved edit, a Git checkpoint and the published page can hold different copies of the same game.",
     "source": "#ship-first-release",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "ship-first-release": {
+        "field": "sections.2.paragraphs.1",
+        "evidence": "If a release fails, restore a reviewed version, then repeat the test at the same address."
+      },
+      "lab-ship-app-05": {
+        "field": "steps.0.text",
+        "evidence": "Put only the game in a clean release folder."
+      },
+      "lab-ship-app-06": {
+        "field": "summary",
+        "evidence": "Two copies of a game have different build labels."
+      }
+    }
   },
   {
     "file": "diagram-ship-secret.svg",
     "lesson": "ship-secrets",
-    "also": [
-      "lab-ship-app-04",
-      "lab-ship-app-05"
-    ],
     "caption": "A secret written into the finished page is visible to anyone with a copy.",
     "alt": "Public game. HTML, CSS and script can be downloaded. Offline option. Use sample answers. Leave the key out. Online option. Server keeps the key. Browser gets the result.",
     "source": "#ship-secrets",
-    "credit": "All About AI · original diagram"
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-ship-app-04"
+    ],
+    "placements": {
+      "ship-secrets": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Putting the key in the browser’s storage or encoding it in the HTML still gives the player a copy."
+      },
+      "lab-ship-app-04": {
+        "field": "steps.3.text",
+        "evidence": "Put a secret only on the server side."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-deepwiki.svg",
+    "lesson": "devin-reference-deepwiki",
+    "caption": "A repository diagram shows how files in a project are connected. Open the code to check what an arrow means.",
+    "alt": "Use DeepWiki to check how two files fit together. A repository diagram shows how files in a project are connected. Open the code to check what an arrow means.",
+    "source": "#devin-reference-deepwiki",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-reference-deepwiki": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "If an arrow has no link, follow the page’s source links."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-cli-handoff.svg",
+    "lesson": "devin-reference-cli",
+    "caption": "A handoff continues a task on another computer. Use one small file change to check what arrived.",
+    "alt": "Move a local coding task to Devin Cloud. A handoff continues a task on another computer. Use one small file change to check what arrived.",
+    "source": "#devin-reference-cli",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-reference-cli": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "The /handoff command sends the current branch, conversation and pending code changes to a cloud session."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-apps.svg",
+    "lesson": "devin-reference-apps",
+    "caption": "An internal web tool may use both sign-in and sharing rules to decide who can open it.",
+    "alt": "Check who can open an internal Devin App. An internal web tool may use both sign-in and sharing rules to decide who can open it.",
+    "source": "#devin-reference-apps",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-reference-apps": {
+        "field": "intro.what",
+        "evidence": "Visitors sign in to Devin."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-scheduled.svg",
+    "lesson": "devin-reference-scheduled",
+    "caption": "The practice file lists jobs marked waiting or done. A scheduled Devin session should count the waiting jobs at each run.",
+    "alt": "Check that a scheduled report reads fresh data. The practice file lists jobs marked waiting or done. A scheduled Devin session should count the waiting jobs at each run.",
+    "source": "#devin-reference-scheduled",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-reference-scheduled": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "It cannot tell whether the report used fresh data or whether the answer was correct."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-artifacts.svg",
+    "lesson": "claude-reference-artifacts",
+    "caption": "An Artifact is a working item you can open beside the chat. Here it keeps a tally.",
+    "alt": "Test a counter in an Artifact. An Artifact is a working item you can open beside the chat. Here it keeps a tally.",
+    "source": "#claude-reference-artifacts",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-artifacts": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "Make an interactive tally artifact with Count and Reset."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-chat.svg",
+    "lesson": "claude-reference-chat",
+    "caption": "A teammate needs to know what a delivery test actually proved.",
+    "alt": "Revise a handoff in the same chat. A teammate needs to know what a delivery test actually proved.",
+    "source": "#claude-reference-chat",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-chat": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "The update names the successful test and leaves other routes open."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-code.svg",
+    "lesson": "claude-reference-code",
+    "caption": "A practice counter has a button whose label needs to change.",
+    "alt": "Check a small code edit. A practice counter has a button whose label needs to change.",
+    "source": "#claude-reference-code",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-code": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "A practice counter page shows the right number but calls its reset button Clear All."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-files.svg",
+    "lesson": "claude-reference-files",
+    "caption": "A one-page report lists two open requests and three closed requests.",
+    "alt": "Check an answer against an attachment. A one-page report lists two open requests and three closed requests.",
+    "source": "#claude-reference-files",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-files": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "Name both row labels, give their values and calculate the total."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-memory.svg",
+    "lesson": "claude-reference-memory",
+    "caption": "One correct response does not tell you whether a preference carries over.",
+    "alt": "Test a writing preference across chats. One correct response does not tell you whether a preference carries over.",
+    "source": "#claude-reference-memory",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-memory": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "In a practice chat say “Remember that practice handoffs should use bullets.” Start a new chat."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-projects.svg",
+    "lesson": "claude-reference-projects",
+    "caption": "A project gives related chats a shared place for instructions and reference files.",
+    "alt": "How a project keeps a team brief together. A project gives related chats a shared place for instructions and reference files.",
+    "source": "#claude-reference-projects",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-projects": {
+        "field": "summary",
+        "evidence": "Put a brief, reference files and project instructions together."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-scheduled.svg",
+    "lesson": "claude-reference-scheduled",
+    "caption": "A saved reminder needs a job, a repeat time and the right time zone.",
+    "alt": "Check a repeat task before relying on it. A saved reminder needs a job, a repeat time and the right time zone.",
+    "source": "#claude-reference-scheduled",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-scheduled": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "Every Monday at 09:00 UTC, remind me “Monday duty: desk B.” Show the next run."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-style.svg",
+    "lesson": "claude-reference-style",
+    "caption": "A desk wants short announcements that preserve what is open and closed.",
+    "alt": "Change the writing style and keep the facts. A desk wants short announcements that preserve what is open and closed.",
+    "source": "#claude-reference-style",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-style": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Save “For practice announcements, use two short bullets.” Ask for an announcement about a closed gate and an open footpath."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-thinking.svg",
+    "lesson": "claude-reference-thinking",
+    "caption": "Use the same scoring problem so you can tell whether more thinking helped.",
+    "alt": "Compare two levels of effort. Use the same scoring problem so you can tell whether more thinking helped.",
+    "source": "#claude-reference-thinking",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-thinking": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "If another effort is offered, repeat the unchanged card in a fresh chat and compare the arithmetic."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-voice.svg",
+    "lesson": "claude-reference-voice",
+    "caption": "A spoken number can sound like another number. The written record lets you catch it.",
+    "alt": "Check what a voice chat heard. A spoken number can sound like another number. The written record lets you catch it.",
+    "source": "#claude-reference-voice",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-voice": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "The queue held fifteen items before lunch and five after lunch."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-api.svg",
+    "lesson": "devin-api",
+    "caption": "A session is one coding job. A tracker needs to find the same job if its first reply goes missing.",
+    "alt": "Find a coding job after a lost reply. A session is one coding job. A tracker needs to find the same job if its first reply goes missing.",
+    "source": "#devin-api",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-api": {
+        "field": "summary",
+        "evidence": "Design a small job tracker that can recover when a reply goes missing."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-first-session.svg",
+    "lesson": "devin-first-session",
+    "caption": "The team wants a small change to a help page and a way to see what changed.",
+    "alt": "Follow a first Devin edit from question to review. The team wants a small change to a help page and a way to see what changed.",
+    "source": "#devin-first-session",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-first-session": {
+        "field": "summary",
+        "evidence": "Follow one small edit from a question about a help page to a preview you can read."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-lab.svg",
+    "lesson": "devin-lab",
+    "caption": "A library report should count each event ID once, even if a ticket arrives again.",
+    "alt": "Review a fee ledger that receives a ticket twice. A library report should count each event ID once, even if a ticket arrives again.",
+    "source": "#devin-lab",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-lab": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "A pretend library gets event A for 350 cents, event B for 200 cents, then A again for 350 cents."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-reference-ask.svg",
+    "lesson": "devin-reference-ask",
+    "caption": "Ask Devin can help you read a project before you decide whether a change is needed.",
+    "alt": "Trace a rule to the code that uses it. Ask Devin can help you read a project before you decide whether a change is needed.",
+    "source": "#devin-reference-ask",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-reference-ask": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Link to the rule and to one place that calls it.”"
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-canvas.svg",
+    "lesson": "gemini-reference-canvas",
+    "caption": "Canvas keeps a draft app beside the conversation so you can try its controls.",
+    "alt": "Test an edit in Canvas. Canvas keeps a draft app beside the conversation so you can try its controls.",
+    "source": "#gemini-reference-canvas",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-canvas": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "In Canvas, build the bag counter with a number visible at all times."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-chat.svg",
+    "lesson": "gemini-reference-chat",
+    "caption": "A mail log can show a retry before anyone knows whether delivery succeeded.",
+    "alt": "Separate a delivery attempt from a result. A mail log can show a retry before anyone knows whether delivery succeeded.",
+    "source": "#gemini-reference-chat",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-chat": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Observed includes the attempt and retry."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-code.svg",
+    "lesson": "gemini-reference-code",
+    "caption": "A practice project must distinguish an empty score list from a list containing zero.",
+    "alt": "Review a coding agent’s change. A practice project must distinguish an empty score list from a list containing zero.",
+    "source": "#gemini-reference-code",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-code": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Test both an empty list and a list containing zero."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-connectors.svg",
+    "lesson": "gemini-reference-connectors",
+    "caption": "A connected service can supply a document your practice account may read.",
+    "alt": "Check one detail through a connected app. A connected service can supply a document your practice account may read.",
+    "source": "#gemini-reference-connectors",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-connectors": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "A practice note called Supply list has one line reading Paper rolls: 4."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-gems.svg",
+    "lesson": "gemini-reference-gems",
+    "caption": "A custom helper can apply the same instructions to each new packing list.",
+    "alt": "Save a rule for repeated sorting jobs. A custom helper can apply the same instructions to each new packing list.",
+    "source": "#gemini-reference-gems",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-gems": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Save “Return only rows marked packed.” Give it the packing list from See a worked example."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-personal.svg",
+    "lesson": "gemini-reference-personal",
+    "caption": "A reply that happens to suit you does not prove where the preference came from.",
+    "alt": "Find the source of a preference. A reply that happens to suit you does not prove where the preference came from.",
+    "source": "#gemini-reference-personal",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-personal": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Look for the format named on the Reminder line."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-scheduled.svg",
+    "lesson": "gemini-reference-scheduled",
+    "caption": "The team wants a regular reminder to count returned kits.",
+    "alt": "Check the next run of a recurring task. The team wants a regular reminder to count returned kits.",
+    "source": "#gemini-reference-scheduled",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-scheduled": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Every Friday at noon UTC, remind me to count returned kits."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-voice.svg",
+    "lesson": "gemini-reference-voice",
+    "caption": "This practice drawing lets you check whether a spoken answer used the visible details.",
+    "alt": "Check what the camera showed in a voice chat. This practice drawing lets you check whether a spoken answer used the visible details.",
+    "source": "#gemini-reference-voice",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-voice": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Draw a yellow Review button and a blue Save button on paper."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-workspace.svg",
+    "lesson": "gemini-reference-workspace",
+    "caption": "A schedule change mentions two jobs. Only one of their dates moved.",
+    "alt": "Review a draft beside the source document. A schedule change mentions two jobs. Only one of their dates moved.",
+    "source": "#gemini-reference-workspace",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-workspace": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Pier check stays Tuesday.” Open Ask Gemini in that document."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-files.svg",
+    "lesson": "gemini-reference-files",
+    "caption": "A missing count can disappear inside a sum. Count known and missing readings separately.",
+    "alt": "Check a total in an uploaded sheet. A missing count can disappear inside a sum. Count known and missing readings separately.",
+    "source": "#gemini-reference-files",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-files": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Blank means unreported."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-meta-muse.svg",
+    "lesson": "meta-muse",
+    "caption": "A helper can produce a plan or a file. Each kind of result needs its own check.",
+    "alt": "Check a personal helper’s result. A helper can produce a plan or a file. Each kind of result needs its own check.",
+    "source": "#meta-muse",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "meta-muse": {
+        "field": "summary",
+        "evidence": "Give a personal helper one small job and inspect what comes back."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-ai-studio-01.svg",
+    "lesson": "lab-ai-studio-01",
+    "caption": "A short note gives a meeting place and a date but leaves out the year.",
+    "alt": "Read only what a travel note says. A short note gives a meeting place and a date but leaves out the year.",
+    "source": "#lab-ai-studio-01",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-ai-studio-01": {
+        "field": "summary",
+        "evidence": "A note names a pier and a day."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-ai-studio-15.svg",
+    "lesson": "lab-ai-studio-15",
+    "caption": "A practice form must show that the proposed entry matches its source.",
+    "alt": "Decide whether a draft is ready to approve. A practice form must show that the proposed entry matches its source.",
+    "source": "#lab-ai-studio-15",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-ai-studio-15": {
+        "field": "summary",
+        "evidence": "Build a page that lets you approve a draft only when the date, bay and quoted words all match the source."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-ai-studio-29.svg",
+    "lesson": "lab-ai-studio-29",
+    "caption": "The player starts in the lobby. The gate only opens when the bag contains the key.",
+    "alt": "A key changes how an adventure ends. The player starts in the lobby. The gate only opens when the bag contains the key.",
+    "source": "#lab-ai-studio-29",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-ai-studio-29": {
+        "field": "steps.2.text",
+        "evidence": "Restart, visit Workshop, take the key twice, return to Lobby, then go to Gate and exit."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-ai-studio-30.svg",
+    "lesson": "lab-ai-studio-30",
+    "caption": "A team builds an action board from three meeting slips and exports only checked tasks.",
+    "alt": "Keep evidence beside each action on a board. A team builds an action board from three meeting slips and exports only checked tasks.",
+    "source": "#lab-ai-studio-30",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-ai-studio-30": {
+        "field": "summary",
+        "evidence": "A team has three pretend meeting slips."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-antigravity-01.svg",
+    "lesson": "lab-antigravity-01",
+    "caption": "Two files play different parts in answering one question.",
+    "alt": "Follow a file reference to the book title. Two files play different parts in answering one question.",
+    "source": "#lab-antigravity-01",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-antigravity-01": {
+        "field": "summary",
+        "evidence": "Find which one holds the book title and which one points the way."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-antigravity-15.svg",
+    "lesson": "lab-antigravity-15",
+    "caption": "A saved marker tells the next run which rows have already been counted.",
+    "alt": "Resume an import after an interruption. A saved marker tells the next run which rows have already been counted.",
+    "source": "#lab-antigravity-15",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-antigravity-15": {
+        "field": "features",
+        "evidence": "Stop and restart a Python job using a saved place marker."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-antigravity-29.svg",
+    "lesson": "lab-antigravity-29",
+    "caption": "Both players get a fresh copy of the same board. The player who needs fewer tries wins.",
+    "alt": "Compare two rounds of the same memory game. Both players get a fresh copy of the same board. The player who needs fewer tries wins.",
+    "source": "#lab-antigravity-29",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-antigravity-29": {
+        "field": "steps.3.text",
+        "evidence": "Have each player match both pairs in two tries."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-antigravity-30.svg",
+    "lesson": "lab-antigravity-30",
+    "caption": "A practice report uses storage readings to warn the team about full mailboxes.",
+    "alt": "Explain why a mailbox row needs review. A practice report uses storage readings to warn the team about full mailboxes.",
+    "source": "#lab-antigravity-30",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-antigravity-30": {
+        "field": "steps.2.text",
+        "evidence": "Load the four rows."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-claude-code-01.svg",
+    "lesson": "lab-claude-code-01",
+    "caption": "A small program labels a message large when its size reaches the cutoff.",
+    "alt": "Test the exact cutoff for a mail-size rule. A small program labels a message large when its size reaches the cutoff.",
+    "source": "#lab-claude-code-01",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-claude-code-01": {
+        "field": "summary",
+        "evidence": "A small program sorts mail by size."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-claude-code-15.svg",
+    "lesson": "lab-claude-code-15",
+    "caption": "A fee rule gives the first two items free. The third costs 1.25 dollars.",
+    "alt": "Check the first item that should cost money. A fee rule gives the first two items free. The third costs 1.25 dollars.",
+    "source": "#lab-claude-code-15",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-claude-code-15": {
+        "field": "summary",
+        "evidence": "The first two items are free."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-claude-code-29.svg",
+    "lesson": "lab-claude-code-29",
+    "caption": "Two teams share four questions. Answering twice must never earn an extra point.",
+    "alt": "Score each quiz question once. Two teams share four questions. Answering twice must never earn an extra point.",
+    "source": "#lab-claude-code-29",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-claude-code-29": {
+        "field": "summary",
+        "evidence": "Two teams take turns answering a four-question quiz."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-codex-01.svg",
+    "lesson": "lab-codex-01",
+    "caption": "One log contains lines for two messages. A later line changes only the message it names.",
+    "alt": "Find the last known state of each message. One log contains lines for two messages. A later line changes only the message it names.",
+    "source": "#lab-codex-01",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-codex-01": {
+        "field": "steps.2.text",
+        "evidence": "B was queued on line 2."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-codex-15.svg",
+    "lesson": "lab-codex-15",
+    "caption": "Several CSV rows can name the same item. Their status must agree before the report is saved.",
+    "alt": "Count each mailbox ID once in a report. Several CSV rows can name the same item. Their status must agree before the report is saved.",
+    "source": "#lab-codex-15",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-codex-15": {
+        "field": "steps.3.text",
+        "evidence": "Run the README report command against the header-only CSV and inspect its three zero totals."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-copilot-01.svg",
+    "lesson": "lab-copilot-01",
+    "caption": "The notice describes a search outage. It leaves one important question unanswered.",
+    "alt": "Separate the maintenance window from its owner. The notice describes a search outage. It leaves one important question unanswered.",
+    "source": "#lab-copilot-01",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-copilot-01": {
+        "field": "steps.2.text",
+        "evidence": "Notice A gives a 30-minute window, 09:00 to 09:30 UTC."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-copilot-15.svg",
+    "lesson": "lab-copilot-15",
+    "caption": "Finishing enough work and getting approval are separate requirements.",
+    "alt": "Check both conditions before a rollout. Finishing enough work and getting approval are separate requirements.",
+    "source": "#lab-copilot-15",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-copilot-15": {
+        "field": "steps.2.text",
+        "evidence": "M1 promises a review."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-data-safety-06.svg",
+    "lesson": "lab-data-safety-06",
+    "caption": "Another reviewer needs enough facts to check the case while protected details stay private.",
+    "alt": "Prepare a practice case for safe review. Another reviewer needs enough facts to check the case while protected details stay private.",
+    "source": "#lab-data-safety-06",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-data-safety-06": {
+        "field": "steps.0.text",
+        "evidence": "Name the workspace and read-only purpose."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-devin-15.svg",
+    "lesson": "lab-devin-15",
+    "caption": "A readiness report needs both a complete count and the owner’s approval.",
+    "alt": "Check whether a mail move can go ahead. A readiness report needs both a complete count and the owner’s approval.",
+    "source": "#lab-devin-15",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-devin-15": {
+        "field": "steps.2.text",
+        "evidence": "The starting numbers are 95 of 100, but A1 says review pending."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-devin-29.svg",
+    "lesson": "lab-devin-29",
+    "caption": "Two players uncover treasure on a six-tile board. Only a fresh tile counts as a move.",
+    "alt": "A used tile cannot take another turn. Two players uncover treasure on a six-tile board. Only a fresh tile counts as a move.",
+    "source": "#lab-devin-29",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-devin-29": {
+        "field": "steps.2.text",
+        "evidence": "The repeat leaves Blue’s turn in place."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-devin-30.svg",
+    "lesson": "lab-devin-30",
+    "caption": "A before-and-after report tells the team which mailbox records changed.",
+    "alt": "Compare two mailbox lists by ID. A before-and-after report tells the team which mailbox records changed.",
+    "source": "#lab-devin-30",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-devin-30": {
+        "field": "steps.2.text",
+        "evidence": "The clean run shows D added, C removed, B changed from shared to user and A the same."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-gemini-app-01.svg",
+    "lesson": "lab-gemini-app-01",
+    "caption": "A short practice note names four things, but one appears twice.",
+    "alt": "Remove repeats from a packing list. A short practice note names four things, but one appears twice.",
+    "source": "#lab-gemini-app-01",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-gemini-app-01": {
+        "field": "steps.3.text",
+        "evidence": "Three lines in order: hat, pencil, cup."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-gemini-app-24.svg",
+    "lesson": "lab-gemini-app-24",
+    "caption": "A rumor about ticket prices can spoil an answer based on otherwise useful study notes.",
+    "alt": "Check which sources belong in a notebook. A rumor about ticket prices can spoil an answer based on otherwise useful study notes.",
+    "source": "#lab-gemini-app-24",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-gemini-app-24": {
+        "field": "steps.4.text",
+        "evidence": "In Sources, clear Rumor, the report if imported, and any page you could not verify."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-gemini-app-29.svg",
+    "lesson": "lab-gemini-app-29",
+    "caption": "Two teams race to 10 using five-point moves. The scorekeeper must remember the last move.",
+    "alt": "Undo a winning turn and reopen play. Two teams race to 10 using five-point moves. The scorekeeper must remember the last move.",
+    "source": "#lab-gemini-app-29",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-gemini-app-29": {
+        "field": "steps.3.text",
+        "evidence": "Undo restores Blue 5 and play resumes."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-troubleshoot-16.svg",
+    "lesson": "lab-troubleshoot-16",
+    "caption": "Use the same five practice records to see which answers the evidence supports.",
+    "alt": "Give four helpers the same mail evidence. Use the same five practice records to see which answers the evidence supports.",
+    "source": "#lab-troubleshoot-16",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-troubleshoot-16": {
+        "field": "steps.1.text",
+        "evidence": "Offline, mark the four rows untested and score the paper reply instead."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-troubleshoot-trial.svg",
+    "lesson": "troubleshoot-trial",
+    "caption": "Four helpers get the same mail records. A useful answer separates evidence from a guess.",
+    "alt": "Compare answers to a mail delivery case. Four helpers get the same mail records. A useful answer separates evidence from a guess.",
+    "source": "#troubleshoot-trial",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "troubleshoot-trial": {
+        "field": "sections.3.paragraphs.1",
+        "evidence": "Record the mode, date and one case fact from each reply."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-reference-changes.svg",
+    "lesson": "reference-changes",
+    "caption": "Use the change list to see which instructions deserve another look.",
+    "alt": "Follow a change back to its page. Use the change list to see which instructions deserve another look.",
+    "source": "#reference-changes",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "reference-changes": {
+        "field": "summary",
+        "evidence": "Find the date, subject and destination of a recorded update."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-reference-job-picker.svg",
+    "lesson": "reference-job-picker",
+    "caption": "A useful comparison starts with the work and the evidence you can check.",
+    "alt": "Choose a tool for the job in front of you. A useful comparison starts with the work and the evidence you can check.",
+    "source": "#reference-job-picker",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "reference-job-picker": {
+        "field": "intro.features",
+        "evidence": "Nine tables compare five tools."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-reference-prompts.svg",
+    "lesson": "reference-prompts",
+    "caption": "Each prompt belongs to a task, a tool and a chapter with checks.",
+    "alt": "Turn a library prompt into a practice task. Each prompt belongs to a task, a tool and a chapter with checks.",
+    "source": "#reference-prompts",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "reference-prompts": {
+        "field": "summary",
+        "evidence": "Find a prompt by task, then open the chapter for its tool and checks."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-reference-tags.svg",
+    "lesson": "reference-tags",
+    "caption": "A tag groups pages about the same topic, even when they belong to different chapters.",
+    "alt": "Find a reference page through a tag. A tag groups pages about the same topic, even when they belong to different chapters.",
+    "source": "#reference-tags",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "reference-tags": {
+        "field": "summary",
+        "evidence": "Browse reference pages by tool, job or feature."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-chatgpt-api.svg",
+    "lesson": "chatgpt-api",
+    "caption": "An app needs usable answers. A low price for a single request can hide the cost of retries.",
+    "alt": "Compare models using an answer key. An app needs usable answers. A low price for a single request can hide the cost of retries.",
+    "source": "#chatgpt-api",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "chatgpt-api": {
+        "field": "summary",
+        "evidence": "Give each model a test you can mark with an answer key."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-copilot-excel.svg",
+    "lesson": "copilot-excel",
+    "caption": "A formula uses values from particular cells. A small test can show whether it uses the right rows.",
+    "alt": "Check how an Excel total was calculated. A formula uses values from particular cells. A small test can show whether it uses the right rows.",
+    "source": "#copilot-excel",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "copilot-excel": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Is it a fixed number or a formula that reads the updated rows?"
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-reference-integrations.svg",
+    "lesson": "devin-reference-integrations",
+    "caption": "A chat message or ticket can ask Devin to work on a project. Keep a link between that request and its session.",
+    "alt": "Follow a work request into a coding session. A chat message or ticket can ask Devin to work on a project. Keep a link between that request and its session.",
+    "source": "#devin-reference-integrations",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "devin-reference-integrations": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Pick a practice Teams channel where Devin AI is installed."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-creation.svg",
+    "lesson": "gemini-reference-creation",
+    "caption": "A short creative brief gives you details you can verify by eye in the result.",
+    "alt": "Check an image and a moving shot. A short creative brief gives you details you can verify by eye in the result.",
+    "source": "#gemini-reference-creation",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-creation": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Ask for a cream sign with a blue anchor on its left and a gold bell on its right."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-connectors.svg",
+    "lesson": "claude-reference-connectors",
+    "caption": "A connector lets the helper read a service your account is allowed to use. Test the connection with one known document.",
+    "alt": "Check a detail through a connector. A connector lets the helper read a service your account is allowed to use. Test the connection with one known document.",
+    "source": "#claude-reference-connectors",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-connectors": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "Using only the approved connector, find Shift card."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-gemini-reference-browser.svg",
+    "lesson": "gemini-reference-browser",
+    "caption": "The practice dashboard hides its next check time until a control is opened.",
+    "alt": "Watch a browser helper open one control. The practice dashboard hides its next check time until a control is opened.",
+    "source": "#gemini-reference-browser",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "gemini-reference-browser": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Watch which control it opens."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-claude-reference-browser.svg",
+    "lesson": "claude-reference-browser",
+    "caption": "A browser task uses the page you make available. Use a practice dashboard whose contents you can check.",
+    "alt": "Check what a browser helper can see. A browser task uses the page you make available. Use a practice dashboard whose contents you can check.",
+    "source": "#claude-reference-browser",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "claude-reference-browser": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "A practice dashboard shows 8 waiting requests and an unused Submit button."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-ship-app-01.svg",
+    "lesson": "lab-ship-app-01",
+    "caption": "Signal Sprint has a target, a score and a 15-second clock. The same tap can have a different result after time runs out.",
+    "alt": "Check a tap before and after time runs out. Signal Sprint has a target, a score and a 15-second clock. The same tap can have a different result after time runs out.",
+    "source": "#lab-ship-app-01",
+    "credit": "All About AI · original diagram",
+    "placements": {
+      "lab-ship-app-01": {
+        "field": "features",
+        "evidence": "Start the clock and try a good tap, a wrong tap and a late tap."
+      }
+    }
   }
 ]

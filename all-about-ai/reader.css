@@ -114,3 +114,5 @@ tbody th{font-weight:650}tbody tr:nth-child(even){background:#f1eee1}
 
 html:not([data-online="true"]) .online-reference { display: none; }
 html[data-online="true"] .online-reference { display: inline-block; margin-inline: .4rem; text-decoration: underline; }
+/* Long mail headers stay readable on a tablet. */
+.section > pre { white-space: pre-wrap; overflow-wrap: anywhere; }

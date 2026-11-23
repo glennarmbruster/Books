@@ -32,6 +32,7 @@
       {
         "title": "Find the model menu",
         "paragraphs": [
+          "The same app can show different choices to two readers. Match the row to the account you are using.",
           "Open Gemini on your iPad. Tap the model name near the message box. Auto lets the app choose. What you see depends on your account and its limits. These are the choices Google lists for personal accounts."
         ],
         "sources": [
@@ -89,7 +90,8 @@
           "prompt": "What answers should the two versions give?",
           "answer": [
             "8:50 for the first walk. Leave at 8:45 to arrive five minutes early."
-          ]
+          ],
+          "context": "A traveler must reach the bus before it leaves. The walk time is the part that changes between tests."
         }
       },
       {
@@ -146,7 +148,9 @@
       {
         "title": "Read the ID and pick a first test",
         "paragraphs": [
-          "Use the exact ID from the second column when your program calls Google. Use these jobs to try the choices. Compare the results with answers you know."
+          "A program needs the exact name of the model it calls. The sample jobs let you check that the chosen model does the work you need.",
+          "Use the exact ID from the second column when your program calls Google. Use these jobs to try the choices. Compare the results with answers you know.",
+          "Suppose an app reads a flyer. Ask it for named fields such as title and date in JSON, a text format that labels each value. The app can display the fields in the same places even if the flyer words them differently."
         ],
         "sources": [
           [
@@ -154,7 +158,7 @@
             "https://aistudio.google.com/docs/choosing-a-model"
           ],
           [
-            "Google · Argon specifications",
+            "Google · {{model.google.argon.name}} specifications",
             "https://aistudio.google.com/docs/models/gemini-4-argon"
           ],
           [
@@ -330,6 +334,7 @@
       {
         "title": "Pick a Studio output for the job",
         "paragraphs": [
+          "A recorded overview and a study sheet can draw from the same rule book. Pick the format your reader can use.",
           "Suppose you have two rule sheets for a game. A friend wants to hear the rules. A player wants to see what changed. Open Studio in the notebook and pick a format for each person. Use the same two sheets for both.",
           "Slide Decks and Infographics need an eligible adult account. If a tool is missing on your tablet, open the book beside a computer browser for that activity."
         ],
@@ -579,6 +584,7 @@
       {
         "title": "Choose the right kind of sound",
         "paragraphs": [
+          "A game may need background music, spoken directions, or a reply to a player. Each job calls for a different kind of sound.",
           "Listen for the one detail that matters. If the script says “gate fifteen,” play the sound back and check that it does not say “gate fifty.”"
         ],
         "sources": [

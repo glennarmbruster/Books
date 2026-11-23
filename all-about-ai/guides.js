@@ -1,4 +1,4 @@
-// The practice desk uses only the two sample notes below. It never reads device files.
+// The practice desk uses only two built-in sample notes. It never reads device files.
 function actionButton(label, onClick) {
   const button = element('button', label, 'lab-action');
   button.type = 'button';
@@ -111,6 +111,27 @@ function chapterPictures(id) {
   return illustrations.filter(f=>f.lesson === id || f.also?.includes(id));
 }
 
+// Put each illustration beside the authored passage checked by the edition builder.
+function placeChapterPictures(chapter) {
+  const body = byId('body');
+  const paragraphs = Array.from(body.querySelectorAll('p')).filter(p => !p.closest('.worked, .book-figure'));
+  const lastAt = new Map();
+  for (const figure of chapterPictures(chapter.id)) {
+    const place = figure.placements[chapter.id];
+    const text = place.field.split('.').reduce((value, key) => value[key], chapter);
+    const anchor = place.field === 'summary' ? byId('summary') : paragraphs.find(p => p.textContent === text);
+    if (!anchor) throw new Error('Missing passage for ' + figure.file + ' on ' + chapter.id);
+    const view = picture(figure);
+    view.dataset.figure = figure.file;
+    view.dataset.passage = place.field;
+    const last = lastAt.get(anchor);
+    if (last) last.after(view);
+    else if (anchor === byId('summary')) body.prepend(view);
+    else anchor.after(view);
+    lastAt.set(anchor, view);
+  }
+}
+
 function guideBody(chapter) {
   const block = element('section',undefined,'section');
   block.append(element('h2','Where to begin'));
@@ -144,7 +165,6 @@ function guideBody(chapter) {
   const sections = [block];
   if (chapter.id === 'first-project') sections.push(practiceDesk());
   sections.push(walkthrough);
-  for (const figure of chapterPictures(chapter.id)) sections.push(picture(figure));
   const work = element('details',undefined,'sources');
   work.append(element('summary','Try it in your own work'));
   const roles = element('dl',undefined,'role-list');
@@ -278,7 +298,8 @@ function toolLink(chapter) {
 function workedExample(example, chapterSummary) {
   const wrap = element('section',undefined,'section worked');
   wrap.append(element('h2','See a worked example'));
-  if (example.premise !== chapterSummary) wrap.append(element('p',example.premise));
+  if (!chapterSummary.includes(example.premise)) wrap.append(element('p',example.premise));
+  wrap.append(element('p',example.why));
   const flow = element('ol',undefined,'example-flow');
   for (const [label,value] of [['Start with this',example.before],['Try this',example.try],['Look for this result',example.after]]) {
     const step = element('li');
@@ -294,7 +315,7 @@ function workedExample(example, chapterSummary) {
     } else step.append(element('p',value));
     flow.append(step);
   }
-  wrap.append(flow,element('p',example.why));
+  wrap.append(flow);
   const fix=element('details',undefined,'step-help');
   fix.append(element('summary','Something look different?'),element('p',example.rescue));
   if (example.rescuePrompt) fix.append(snippet(example.rescuePrompt,'follow-up','Follow-up message for the tool'));

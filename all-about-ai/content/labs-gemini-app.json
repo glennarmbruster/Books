@@ -2,7 +2,7 @@
   {
     "id": "lab-gemini-app-01",
     "title": "Make your first packing list",
-    "summary": "Count the lines. Put a tick beside each item in the note as you read the answer.",
+    "summary": "A packing note names one item twice. Count the lines. Put a tick beside each item in the note as you read the answer.",
     "level": "Starter",
     "requires": "Use the Gemini app or website online with an account that can open this feature.",
     "features": "Chat lets you ask a question and follow up.",
@@ -203,7 +203,7 @@
   {
     "id": "lab-gemini-app-05",
     "title": "Build a playable tap counter",
-    "summary": "Open Preview. Tap Score twice, then once more. Try Reset.",
+    "summary": "A tap game counts one point at a time and stops at a winning score. Open Preview. Tap Score twice, then once more. Try Reset.",
     "level": "Starter",
     "requires": "Use the Gemini app or website online with an account that can open this feature.",
     "features": "Canvas lets you build and try a small app.",
@@ -265,7 +265,7 @@
   {
     "id": "lab-gemini-app-06",
     "title": "Open your first source citation",
-    "summary": "Tap the little source mark beside the answer. Find the time in the note itself.",
+    "summary": "A schedule is the only selected source for answering a question about practice. Tap the little source mark beside the answer. Find the time in the note itself.",
     "level": "Starter",
     "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
     "features": "Gemini Notebook answers questions about sources you choose.",
@@ -559,7 +559,7 @@
   {
     "id": "lab-gemini-app-11",
     "title": "Make a word guessing game",
-    "summary": "Try a blank, then desk, then space-lamp-space. Click Guess once after the win.",
+    "summary": "A word game needs to distinguish a real guess from an empty entry. Try a blank, then desk, then space-lamp-space. Click Guess once after the win.",
     "level": "Intermediate",
     "requires": "Use the Gemini app or website online with an account that can open this feature.",
     "features": "Canvas lets you build and try a small app.",
@@ -659,7 +659,7 @@
   {
     "id": "lab-gemini-app-13",
     "title": "Make a three-card study deck",
-    "summary": "Open the flashcards in Studio. Say a meaning aloud before flipping each card. Mark one card missed and review it again.",
+    "summary": "A student wants a study card for each of three terms in a selected note. Open the flashcards in Studio. Say a meaning aloud before flipping each card. Mark one card missed and review it again.",
     "level": "Intermediate",
     "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
     "features": "Gemini Notebook answers questions about sources you choose.",
@@ -780,7 +780,7 @@
   {
     "id": "lab-gemini-app-15",
     "title": "Capstone: Build a quiz from a checked rulebook",
-    "summary": "Check the evidence in Notebook. Use Canvas to build a quiz from your three verified questions. Ask for a score and Play again. Answer all three correctly, then miss one on a new game.",
+    "summary": "A quiz based on two notes needs answers that can be traced back to those notes. Check the evidence in Notebook. Use Canvas to build a quiz from your three verified questions. Ask for a score and Play again. Answer all three correctly, then miss one on a new game.",
     "level": "Expert",
     "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
     "features": "Gemini Notebook answers questions about sources you choose.",
@@ -840,7 +840,7 @@
   {
     "id": "lab-gemini-app-16",
     "title": "Turn mixed notes into a neat table",
-    "summary": "Read each row and circle only the teams that have played, including the team with zero.",
+    "summary": "A team sheet contains a positive score, a zero and a team with no score yet. Read each row and circle only the teams that have played, including the team with zero.",
     "level": "Starter",
     "requires": "Use the Gemini app or website online with an account that can open this feature.",
     "features": "Chat lets you ask a question and follow up.",
@@ -991,7 +991,7 @@
   {
     "id": "lab-gemini-app-19",
     "title": "Review a task before it shares anything",
-    "summary": "Inspect the task’s plan and output. Read the guest line. Finish with the draft on screen.",
+    "summary": "An organizer needs a draft invitation with the right time and room. Inspect the task’s plan and output. Read the guest line. Finish with the draft on screen.",
     "level": "Starter",
     "requires": "Use the Gemini app or website online with an account that can open this feature.",
     "features": "Tasks can work through a job and return a result.",
@@ -1042,7 +1042,7 @@
   {
     "id": "lab-gemini-app-20",
     "title": "Build a glossary from one source",
-    "summary": "Open the source for each meaning. Mark which words were in the note and which lines are invented examples.",
+    "summary": "A glossary note supplies the meanings of three card-game terms. Open the source for each meaning. Mark which words were in the note and which lines are invented examples.",
     "level": "Starter",
     "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
     "features": "Gemini Notebook answers questions about sources you choose.",
@@ -1328,7 +1328,7 @@
   {
     "id": "lab-gemini-app-25",
     "title": "Build a live wait-list tool",
-    "summary": "Add A, B and C. Serve twice. Add D. Clear. Try to serve once more.",
+    "summary": "A waiting list must serve the oldest person first. Add A, B and C. Serve twice. Add D. Clear. Try to serve once more.",
     "level": "Intermediate",
     "requires": "Use the Gemini app or website online with an account that can open this feature.",
     "features": "Canvas lets you build and try a small app.",
@@ -1504,7 +1504,7 @@
   {
     "id": "lab-gemini-app-28",
     "title": "Build a read-only mailbox tally",
-    "summary": "Press Count. Change C to room and press Count again. Inspect the original pasted text after each run.",
+    "summary": "A local report needs to count shared and room mailboxes while keeping unknown types visible. Press Count. Change C to room and press Count again. Inspect the original pasted text after each run.",
     "level": "Intermediate",
     "requires": "Use the Gemini app or website online with an account that can open this feature.",
     "features": "Canvas lets you build and try a small app.",
@@ -1616,7 +1616,7 @@
   {
     "id": "lab-gemini-app-30",
     "title": "Capstone: Make a source-checked help desk",
-    "summary": "Turn three notes into a checked Data Table, a Slide Deck and a working Canvas help desk. Try a question that has no answer in the notes.",
+    "summary": "A help sheet draws on three selected sources and must show where each answer came from. Turn three notes into a checked Data Table, a Slide Deck and a working Canvas help desk. Try a question that has no answer in the notes.",
     "level": "Expert",
     "requires": "Use Gemini Notebook online with editing access and Gemini Canvas. Slide Decks require an eligible adult account. You can still check the table and app if slides are unavailable.",
     "features": "Studio makes a table and slides from sources. Canvas can turn the answers you checked into a small app.",

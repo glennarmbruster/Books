@@ -19,7 +19,7 @@
           "https://docs.x.ai/developers/release-notes"
         ],
         [
-          "Grok Imagine · video capabilities",
+          "{{model.xai.imagine.name}} · video capabilities",
           "https://docs.x.ai/developers/model-capabilities/video/overview"
         ]
       ]
@@ -52,7 +52,7 @@
             "https://docs.x.ai/developers/release-notes"
           ],
           [
-            "Grok Imagine · video capabilities",
+            "{{model.xai.imagine.name}} · video capabilities",
             "https://docs.x.ai/developers/model-capabilities/video/overview"
           ]
         ]
