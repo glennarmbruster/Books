@@ -1,0 +1,649 @@
+[
+  {
+    "id": "lab-codex-01",
+    "title": "Find a stuck message in a local trace",
+    "summary": "Start with a diagnostic question that has a visible answer in a four-line file.",
+    "level": "Starter",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor.",
+    "features": "Read-only project inspection and evidence references",
+    "roles": [
+      "Inspect message lifecycle records",
+      "Trace sample job events",
+      "Explain an incomplete app operation"
+    ],
+    "prompt": "Read trace.log and build a two-row Markdown table in your reply. For each ID, list the final observed state and the line number supporting it. Leave the source file as supplied.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as trace.log. Keep the filename and the sample values exactly as shown.",
+        "help": "There are four lines and no header. Line numbers start at one. Use this practice folder as the Codex project.",
+        "code": "A queued\nB queued\nA retrying\nA delivered"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "The answer should include separate rows for A and B. If it calls B failed, ask for the line that proves that claim."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Append B delivered as line 5, save and ask Codex to update only the row whose final observed state changed.",
+        "help": "If B remains queued, make sure the file was saved and ask Codex to reread the local file."
+      }
+    ],
+    "check": [
+      "Initially A is delivered on line 4 and B is queued on line 2.",
+      "After the edit, B is delivered on line 5."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-02",
+    "title": "Build a tiny two-page browser guide",
+    "summary": "Make a local mini-app and verify its behavior by clicking through both pages.",
+    "level": "Starter",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A desktop browser.",
+    "features": "Creating a static HTML file and checking navigation",
+    "roles": [
+      "Publish a two-step runbook",
+      "Create a quick support guide",
+      "Prototype an app flow"
+    ],
+    "prompt": "Use pages.txt to build index.html. Show one page title at a time, with Previous and Next buttons and a page count. Disable Previous on the first page and Next on the last. Put everything in the single HTML file and use no remote assets.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as pages.txt. Keep the filename and the sample values exactly as shown.",
+        "help": "Save both titles on separate lines. A blank line at the end should not generate an extra page.",
+        "code": "Check queue\nVerify delivery"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Open index.html by double-clicking it. If both titles show together, ask Codex to render only the selected page."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Click Next, then Previous. Try activating the unavailable button on each end and watch both the title and the count.",
+        "help": "If a third blank page appears, direct Codex to ignore trailing blank lines when reading the input titles."
+      }
+    ],
+    "check": [
+      "Initial state is Check queue, 1 of 2, Previous disabled.",
+      "Next displays Verify delivery, 2 of 2, Next disabled. Back restores the initial state."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-03",
+    "title": "Calculate a signed ledger total",
+    "summary": "Give Codex a deliberately mixed set of positive, negative and zero values, then independently check the arithmetic.",
+    "level": "Starter",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Local file processing with reproducible numeric output",
+    "roles": [
+      "Reconcile quota adjustments",
+      "Check license adjustments",
+      "Build a game score ledger"
+    ],
+    "prompt": "Read ledger.csv and create totals.py using only Python’s standard library. Print one row per player with round count and signed total. Retain zero scores as rounds and keep players in first-seen order. Run the script locally.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as ledger.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "Keep the minus sign in row 4 and the zero in row 5. The header is not a played round.",
+        "code": "player,points\nAri,80\nBea,35\nAri,-75\nBea,0\nAri,10"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Check the output for both players. If Bea has one round, ask Codex whether it discarded a numeric zero while filtering blanks."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Append Bea,-40 and rerun. Compare her new count and total with a hand calculation.",
+        "help": "The sign can change across zero. If Bea becomes 75, inspect any absolute-value conversion in the parser."
+      }
+    ],
+    "check": [
+      "Initially Ari has 3 rounds and 15 points; Bea has 2 rounds and 35 points.",
+      "With the appended row Bea has 3 rounds and -5 points."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-04",
+    "title": "Set durable rules for a project",
+    "summary": "Put a small data format contract in AGENTS.md and verify it in a new chat about the same project.",
+    "level": "Intermediate",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor.",
+    "features": "Project instructions and contract verification",
+    "roles": [
+      "Standardize audit notes",
+      "Set inventory handoff rules",
+      "Keep app release notes consistent"
+    ],
+    "prompt": "Read the project instructions and create findings.json from these facts: ID A1 has status open and ID A2 has status closed. Follow the contract exactly. Show the parsed output.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as AGENTS.md. Keep the filename and the sample values exactly as shown.",
+        "help": "Save this exact filename in the project root. Open a new Codex session in that folder after saving it so project instructions are discovered.",
+        "code": "Every findings file is a JSON array. Each item has exactly two keys: id and status. The status is uppercase. Sort items by id ascending. Omit commentary inside JSON."
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Check the data as parsed JSON. If Codex includes a prose explanation inside the file, point to the contract and ask for a valid array."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Start a fresh chat in the same folder. Ask for second-findings.json from Z9 closed and B2 open, without repeating the format rules.",
+        "help": "If the second file differs in structure, inspect the project directory of the second chat and verify AGENTS.md is present there."
+      }
+    ],
+    "check": [
+      "First file contains A1 OPEN and A2 CLOSED.",
+      "Second file has B2 OPEN before Z9 CLOSED and exactly two keys per record."
+    ],
+    "sources": [
+      [
+        "OpenAI · AGENTS.md instructions",
+        "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      ],
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-05",
+    "title": "Keep the right row when exports overlap",
+    "summary": "Merge two reporting periods by a stable identity and an explicit selection rule.",
+    "level": "Intermediate",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Building a deterministic importer and conflict check",
+    "roles": [
+      "Join mailbox snapshots",
+      "Merge periodic inventory reports",
+      "Import offline exports"
+    ],
+    "prompt": "Read versions.csv. Create merge.py that selects the highest integer revision per ID and writes merged.csv sorted by ID. Identical duplicates are harmless. If the same ID and revision have different labels, fail before replacing any existing merged.csv. Test both success and failure.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as versions.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "The final row duplicates the earlier y record. Row order is deliberately different from revision order.",
+        "code": "id,rev,label\nx,2,New\ny,1,First\nx,1,Old\ny,1,First"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Inspect merged.csv after the first run. If Old wins because it came later, ask for numeric revision comparison."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Append x,2,Conflict. Save the preceding output text, rerun, and compare the resulting merged.csv byte for byte with your saved copy.",
+        "help": "The process should report the conflict and preserve the successful output. If it truncates the file, validate all inputs before opening the destination."
+      }
+    ],
+    "check": [
+      "Successful output contains x,2,New and y,1,First.",
+      "Conflicting revision fails and leaves the last successful file intact."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-06",
+    "title": "Make a search field that handles empty input",
+    "summary": "Build a small searchable index and exercise it from a desktop browser.",
+    "level": "Intermediate",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A desktop browser.",
+    "features": "Local browser prototype and edge-case testing",
+    "roles": [
+      "Search troubleshooting guides",
+      "Filter a catalog of sites",
+      "Build a bookshelf index"
+    ],
+    "prompt": "Generate a self-contained index.html from titles.txt. Show a search field and the matching titles in original order. Match case-insensitive substrings after trimming the query. Show the count and an explicit empty-state message. No external libraries.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as titles.txt. Keep the filename and the sample values exactly as shown.",
+        "help": "Keep one title per line. The first and third titles both contain “mail” but in different positions.",
+        "code": "Mailbox Review\nGroup Audit\nMail Flow\nArchive Plan"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Open the generated file and type mail. If no titles appear, compare the case conversion applied to input and titles."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Try the query “ MAIL ” with surrounding spaces, then “xyz”, then erase the query. Observe the count each time.",
+        "help": "A zero-result query should visibly report the empty state. If the blank query keeps old results, check for an early return before rerendering."
+      }
+    ],
+    "check": [
+      "MAIL with outer spaces finds Mailbox Review and Mail Flow.",
+      "xyz finds 0; clearing the input restores all 4."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-07",
+    "title": "Review an uncommitted change before accepting it",
+    "summary": "Use Git history to distinguish a newly introduced error from the baseline and ask Codex to review the difference.",
+    "level": "Intermediate",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Git and Python 3.",
+    "features": "Diff-based code review and regression testing",
+    "roles": [
+      "Review date and quota gates",
+      "Catch incorrect rollout boundaries",
+      "Review a small app patch"
+    ],
+    "prompt": "Review the uncommitted change in cap.py. Explain its user-visible effect and identify the smallest input that changes the answer for a nonnegative integer. Leave the edit in place for inspection.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as cap.py. Keep the filename and the sample values exactly as shown.",
+        "help": "In a terminal in this new practice folder run git init, then git add cap.py, then git -c user.name=Lab -c user.email=lab@example.invalid commit -m baseline. Change <= to < in the saved file.",
+        "code": "def allowed(count):\n    return count <= 5"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Confirm git diff shows one changed operator. Ask Codex to review that change; if available, use its review of uncommitted changes. A clean diff means the edit was not saved."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Ask Codex to run the current function with 4, 5 and 6, compare against the committed baseline, and propose the one-character correction.",
+        "help": "If it discusses negative numbers, point back to the explicitly nonnegative domain. Compare the two outputs for 5."
+      }
+    ],
+    "check": [
+      "Only count 5 changes from allowed to denied.",
+      "The repaired comparison restores True, True, False for 4, 5 and 6."
+    ],
+    "sources": [
+      [
+        "OpenAI · code review",
+        "https://learn.chatgpt.com/docs/code-review?surface=app"
+      ],
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-08",
+    "title": "Make a repeatable Codex command with structured output",
+    "summary": "Collect a machine-readable answer directly from a noninteractive Codex run and check the facts inside it.",
+    "level": "Advanced",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A signed-in Codex CLI on this computer.",
+    "features": "CLI exec, output schema and captured final response",
+    "roles": [
+      "Classify queue samples",
+      "Produce a reliable review summary",
+      "Feed structured data to an app"
+    ],
+    "prompt": "Count states in this sample: sent, held, sent, unknown. Return JSON satisfying the schema. Count each label exactly, including unknown.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as counts.schema.json. Keep the filename and the sample values exactly as shown.",
+        "help": "Save the schema with ordinary straight quotation marks. In your lab terminal run codex exec --help and locate --output-schema and -o.",
+        "code": "{\"type\":\"object\",\"properties\":{\"sent\":{\"type\":\"integer\"},\"held\":{\"type\":\"integer\"},\"unknown\":{\"type\":\"integer\"}},\"required\":[\"sent\",\"held\",\"unknown\"],\"additionalProperties\":false}"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "In a terminal opened in the practice folder, run the command below. It sends the lab prompt to Codex, applies your schema to the final response and saves the result.",
+        "help": "The answer should land in result.json. If the command reports an unknown option, inspect codex exec --help and compare the spelling with the installed CLI.",
+        "code": "codex exec --skip-git-repo-check --output-schema counts.schema.json -o result.json \"Count states in this sample: sent, held, sent, unknown. Return JSON satisfying the schema. Count each label exactly, including unknown.\""
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Open result.json and inspect the keys and values. Repeat the command using “held, held” as the entire sample and save to second.json.",
+        "help": "If the console includes progress lines, inspect the file named by -o. Validate counts separately from whether the JSON has the right shape."
+      }
+    ],
+    "check": [
+      "First run gives sent 2, held 1, unknown 1.",
+      "Second run gives sent 0, held 2, unknown 0; no extra keys appear."
+    ],
+    "sources": [
+      [
+        "OpenAI · non-interactive mode",
+        "https://learn.chatgpt.com/docs/non-interactive-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-09",
+    "title": "Publish a useful summary without exposing addresses",
+    "summary": "Build aggregate results for an audience that only needs category counts. Inspect the final artifact for accidental identifiers.",
+    "level": "Advanced",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Reporting with field minimization and artifact inspection",
+    "roles": [
+      "Summarize fictional mailbox exceptions",
+      "Share aggregate guest-account status",
+      "Publish private-by-design usage stats"
+    ],
+    "prompt": "Read audit.csv and create summarize.py. Produce only summary.json with counts by lowercase status and a total. Treat a blank status as unknown. Never include an address, raw row or message field in the generated summary. Run the program and inspect the actual output file.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as audit.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "These are fictional addresses. The status column alone is sufficient for the report.",
+        "code": "email,status,message\none@example.invalid,OK,reviewed\ntwo@example.invalid,,pending\nthree@example.invalid,ok,reviewed"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Open the generated JSON and check its allowed keys. If any message or identifier appears, require selecting only the needed column before grouping."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Append four@example.invalid,OK,contact-me and rerun. Ask Codex to check the artifact text for @, contact-me and example.invalid.",
+        "help": "A count increase should not expose the added detail. If the check scans the entire practice folder, narrow it to summary.json."
+      }
+    ],
+    "check": [
+      "Initially ok is 2, unknown is 1 and total is 3.",
+      "After the edit ok is 3, total is 4; no searched identifiers occur in summary.json."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-10",
+    "title": "Handle a throttled read in a local simulator",
+    "summary": "Practice recovery from a service response without sending any network requests or waiting in real time.",
+    "level": "Advanced",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Mock responses, retry budgets and recorded delays",
+    "roles": [
+      "Test resilience of a mail-report reader",
+      "Handle simulated Graph throttling",
+      "Improve a mobile data loader"
+    ],
+    "prompt": "Build simulator.py using replies.json. For a 429 record retry_after as a planned delay, then consume the next response. For 200 return items. Stop after three total attempts or an unrecognized status. Do all work in memory; print attempts, planned delays and outcome. Test exhaustion.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as replies.json. Keep the filename and the sample values exactly as shown.",
+        "help": "The values 2 and 4 are simulated seconds. Do not add an actual HTTP client or connect a service.",
+        "code": "[{\"status\":429,\"retry_after\":2},{\"status\":429,\"retry_after\":4},{\"status\":200,\"items\":[\"G1\"]}]"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Confirm the simulator prints its results immediately. If it sleeps, ask for an injected delay recorder that appends numbers to a list."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Replace the final response with {\"status\":429,\"retry_after\":8}. Run again. Define a delay only when another attempt remains.",
+        "help": "If an 8 is recorded after the last attempt, the retry budget is checked too late. The failure should identify exhaustion."
+      }
+    ],
+    "check": [
+      "Success returns G1 in 3 attempts with delays [2,4].",
+      "Three throttles also yield 3 attempts and delays [2,4], then exhaustion."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-11",
+    "title": "Upgrade old offline backups safely",
+    "summary": "Design an importer that accepts yesterday’s backup and today’s format while refusing unsupported future versions.",
+    "level": "Expert",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Version-aware import, preservation of user data and validation",
+    "roles": [
+      "Restore a report profile",
+      "Upgrade an inventory export",
+      "Protect offline game saves"
+    ],
+    "prompt": "Read backups.json. Build a Python importer: v1 maps score to points; v2 keeps points; both preserve name and signed integers. For newer versions fail before updating current.json. Set initial current.json to {\"name\":\"Keep\",\"points\":42}. Demonstrate v1, v2, and the unsupported version in separate tests.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as backups.json. Keep the filename and the sample values exactly as shown.",
+        "help": "The second user has a real score of zero. It must not be replaced by a default.",
+        "code": "[{\"v\":1,\"name\":\"Kai\",\"score\":-5},{\"v\":2,\"name\":\"Jo\",\"points\":0},{\"v\":3,\"name\":\"Future\",\"points\":10}]"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Check the before and after state in each test independently. If either a zero score or negative score disappears, look for normalization treating it as invalid."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Run v2 successfully, then attempt v3 on the same current.json. Compare the saved file’s bytes before and after v3.",
+        "help": "If the invalid version clears the file, move validation before opening the destination for writing."
+      }
+    ],
+    "check": [
+      "v1 restores Kai with -5 points; v2 restores Jo with zero.",
+      "v3 reports failure and the previously successful save remains byte-identical."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-12",
+    "title": "Calculate effective access from a sample graph",
+    "summary": "Follow inherited group membership through a small, cyclic permission map using only the supplied fixture.",
+    "level": "Expert",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Graph traversal, cycle detection and explainable evidence paths",
+    "roles": [
+      "Review role-group assignments",
+      "Understand nested group grants",
+      "Audit permissions in a small app"
+    ],
+    "prompt": "Create access.py for grants.json. Each edge points from a principal to a group or permission. For a starting name, return sorted distinct reachable permission names beginning permit:, plus one path proving each grant. Ignore cycles. Test Ari and Jo; do not call a directory service.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as grants.json. Keep the filename and the sample values exactly as shown.",
+        "help": "Editors and Readers deliberately point to each other. The graph describes a fictional app’s rules rather than any provider’s directory semantics.",
+        "code": "{\"Ari\":[\"Editors\",\"Readers\"],\"Editors\":[\"Readers\",\"permit:write\"],\"Readers\":[\"Editors\",\"permit:read\"],\"Jo\":[]}"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Ask Codex to show the visited-node rule. If a test hangs, interrupt that local test and mark groups visited before expanding their outgoing edges."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Add permit:read directly to Ari as another edge. Rerun and compare the number of unique grants and the validity of each displayed path.",
+        "help": "Multiple paths to a permission still count as one grant. Each adjacent pair in the displayed proof must exist in the file."
+      }
+    ],
+    "check": [
+      "Ari reaches permit:read and permit:write exactly once each; Jo reaches neither.",
+      "The redundant direct grant changes no effective permission."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-13",
+    "title": "Measure peak overlap with simultaneous boundaries",
+    "summary": "Compute how many jobs are active at once and deliberately test the instant one job ends as another begins.",
+    "level": "Expert",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Time-interval analysis, independent oracle and edge cases",
+    "roles": [
+      "Estimate mail processing overlap",
+      "Review batch-job concurrency",
+      "Plan capacity for a small service"
+    ],
+    "prompt": "Build peak.py for jobs.csv. Treat intervals as [start,end) in integer minutes. Print peak concurrency and the earliest minute reaching it. Ignore zero-length intervals. Implement an independent minute-by-minute checker and compare it with your primary algorithm for this fixture and an all-empty fixture.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as jobs.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "An end minute is excluded. Job D starts and ends at 3, contributing no active minutes.",
+        "code": "id,start,end\nA,0,3\nB,2,4\nC,3,5\nD,3,3"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "You should see both methods report the same result. If a peak of three occurs at 3, check whether the algorithm processed the ending job too late."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Change A to cover [0,2) and rerun. Then set every end equal to its start. Define an empty result as peak zero and no earliest minute.",
+        "help": "A second method must genuinely count active intervals for each minute. Reusing the first method twice cannot reveal its ordering bug."
+      }
+    ],
+    "check": [
+      "Original peak is 2 first reached at minute 2.",
+      "With A shortened peak is 2 first reached at 3. All-empty input yields 0 and no minute."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-14",
+    "title": "Stop stale search results overwriting a fresh query",
+    "summary": "Make a browser timing bug reproducible by controlling two completion delays in a local app.",
+    "level": "Expert",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. A desktop browser.",
+    "features": "Controlled reproduction, UI behavior and stale-response tests",
+    "roles": [
+      "Avoid stale search results in support tools",
+      "Build reliable directory search screens",
+      "Fix racing autocomplete responses"
+    ],
+    "prompt": "Use delays.json to create a standalone index.html with a Run demo button. On click, start the query old then new immediately, and simulate their completion using the listed delays. First demonstrate the bug where the last completed response overwrites the display. Fix it so only the most recently started query can update the result. Keep a visible completion log.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as delays.json. Keep the filename and the sample values exactly as shown.",
+        "help": "The names describe when queries started. Old deliberately finishes later in this file.",
+        "code": "{\"old\":{\"delay_ms\":60,\"label\":\"Old result\"},\"new\":{\"delay_ms\":5,\"label\":\"New result\"}}"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Open index.html and click Run demo. Ask for a “before” capture or a switch that reproduces the bug, and check the completion log records both callbacks."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "With the fix active, run again, then swap the two delays in the fixture and ask Codex to rebuild the standalone page. Test both orders.",
+        "help": "If only one callback is logged, a result may have been hidden by skipping the request entirely. Require both completions to remain visible in the log."
+      }
+    ],
+    "check": [
+      "Original delays complete new then old. The faulty display ends Old result; the fixed display ends New result.",
+      "After swapping delays, the fixed display still ends New result."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ],
+      [
+        "OpenAI · code review",
+        "https://learn.chatgpt.com/docs/code-review?surface=app"
+      ]
+    ]
+  },
+  {
+    "id": "lab-codex-15",
+    "title": "Ship a self-checking report kit",
+    "summary": "Create a small deliverable someone else can run in a clean folder, then challenge its successful and failed behavior independently.",
+    "level": "Expert",
+    "requires": "Codex signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "End-to-end CLI implementation, contract tests, handoff and independent verification",
+    "roles": [
+      "Ship a mailbox health summary",
+      "Hand off an inventory reporting tool",
+      "Release a dependable app utility"
+    ],
+    "prompt": "Build report.py, test_report.py and README.md from inventory.csv. Accept an input and output path. Unique IDs count once, identical duplicate rows are allowed, status must be OK or HOLD, and conflicting duplicates fail before replacing an existing report. Write JSON summary with ok, hold and total, plus a documented test command and example invocation. Use Python standard library only.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as inventory.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "Run this exercise in its own new folder. The repeated B is identical and should not inflate the total.",
+        "code": "id,status\nA,OK\nB,HOLD\nB,HOLD\nC,OK"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Codex and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Review the README as if you had received only these files. Run its documented example yourself and open the JSON. For missing arguments expect a helpful usage error."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Append C,HOLD and rerun against the existing output. Then test a file containing only the header. Ask Codex to demonstrate both results using the README commands.",
+        "help": "A conflicting duplicate must not erase a previous good output. If the empty file case fails, distinguish a valid header-only CSV from a missing header."
+      }
+    ],
+    "check": [
+      "Good output is ok 2, hold 1, total 3. Conflict gives a nonzero exit and preserves that output.",
+      "A valid header-only input gives all three counts zero. The stand-alone test command passes."
+    ],
+    "sources": [
+      [
+        "OpenAI · Codex CLI",
+        "https://learn.chatgpt.com/docs/codex/cli"
+      ],
+      [
+        "OpenAI · code review",
+        "https://learn.chatgpt.com/docs/code-review?surface=app"
+      ]
+    ]
+  }
+]

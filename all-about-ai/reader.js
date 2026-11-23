@@ -1,6 +1,9 @@
 const byId = id => document.getElementById(id);
 const chapters = [];
 let groups = [];
+const referenceChapters = [];
+let indexMode;
+let currentTrack = 'devin';
 const dateLabel = iso => new Intl.DateTimeFormat('en-US', {dateStyle:'long', timeZone:'UTC'}).format(new Date(iso + 'T12:00:00Z'));
 
 function element(tag, value, className) {
@@ -13,18 +16,36 @@ function element(tag, value, className) {
 function showContents() {
   const query = byId('query').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const result = document.createDocumentFragment();
+  const labsOnly = location.hash === '#labs';
+  byId('contents-title').textContent = labsOnly ? 'Hands-on labs' : 'Contents';
+  byId('lab-note').hidden = !labsOnly;
+  byId('lab-door').hidden = labsOnly;
+  document.querySelector('.front').hidden = labsOnly;
   let count = 0;
   for (const group of groups) {
+    if (labsOnly && !group.track) continue;
+    if (!labsOnly && group.track && !query.length) continue;
     const found = group.items.filter(ch => query.every(term => ch.search.includes(term)));
     if (!found.length) continue;
-    const block = element('section', undefined, 'group');
-    block.append(element('h3', group.title, 'group-heading'));
+    const block = element(group.track ? 'details' : 'section', undefined, group.track ? 'group track' : 'group');
+    if (group.track) {
+      block.open = query.length > 0 || group.track === currentTrack;
+      const completed = group.items.filter(item => isComplete(item.id)).length;
+      block.append(element('summary',group.title + ' · ' + group.items.length + ' labs' + (completed ? ' · ' + completed + ' complete' : '')));
+    } else block.append(element('h3', group.title, 'group-heading'));
     const list = element('ol');
     for (const chapter of found) {
       const row = element('li');
       const link = element('a', undefined, 'entry');
       link.href = '#' + chapter.id;
-      link.append(element('span', String(chapter.number).padStart(2,'0'), 'num'), element('span', chapter.title));
+      const name = element('span');
+      name.append(element('span',chapter.title,'lab-entry-title'));
+      if (group.track) {
+        const done = isComplete(chapter.id);
+        link.classList.toggle('done',done);
+        name.append(element('small',chapter.level + (done ? ' · Complete' : '')));
+      }
+      link.append(element('span', String(chapter.number).padStart(2,'0'), 'num'),name);
       row.append(link);
       list.append(row);
     }
@@ -33,7 +54,7 @@ function showContents() {
     result.append(block);
   }
   byId('groups').replaceChildren(result);
-  byId('matches').textContent = query.length ? (count ? count + (count === 1 ? ' chapter matches.' : ' chapters match.') : 'No chapters match. Try a model name, tool or shorter phrase.') : '';
+  byId('matches').textContent = query.length ? (count ? count + (count === 1 ? ' result.' : ' results.') : 'No results. Try a model name, tool or shorter phrase.') : '';
 }
 
 function makeTable(table, title) {
@@ -95,6 +116,96 @@ function chapterIntroduction(intro) {
   return block;
 }
 
+function isComplete(id) {
+  try { return localStorage.getItem('all-about-ai.completed.' + id) === 'yes'; }
+  catch { return false; }
+}
+
+function snippet(value, label) {
+  const block = element('div', undefined, 'lab-snippet');
+  const pre = element('pre', value);
+  const button = element('button', 'Copy ' + label, 'copy-lab');
+  button.type = 'button';
+  button.onclick = async () => {
+    try {
+      await navigator.clipboard.writeText(value);
+      button.textContent = 'Copied';
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(pre);
+      const selection = getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      button.textContent = 'Text selected · copy using your device';
+    }
+  };
+  block.append(pre, button);
+  return block;
+}
+
+function labBody(lab) {
+  const about = element('section', undefined, 'chapter-intro');
+  const roleInfo = element('details', undefined, 'sources');
+  roleInfo.append(element('summary', 'Applications for your work'));
+  const roles = element('dl', undefined, 'role-list');
+  ['Exchange engineer', 'Microsoft 365 engineer', 'Personal app developer'].forEach((role,i) => {
+    roles.append(element('dt',role),element('dd',lab.roles[i]));
+  });
+  roleInfo.append(roles);
+  about.append(element('h2','What you’ll use'),element('p',lab.features),roleInfo,
+    element('h2','Before you start'),element('p',lab.requires));
+  const setup = element('details', undefined, 'sources');
+  setup.append(element('summary','How to open this tool'), element('p',lab.group.gettingStarted));
+  const setupLink = element('a',lab.group.startLabel);
+  setupLink.href = lab.group.startUrl;
+  setupLink.target = '_blank';
+  setupLink.rel = 'noopener noreferrer';
+  setup.append(setupLink);
+  about.append(setup);
+  if (lab.kit) {
+    const link = element('a','Download the practice kit (.zip)','lab-action');
+    link.href = './' + lab.kit;
+    link.download = lab.kit.split('/').pop();
+    about.append(link);
+  }
+  const prompt = element('section',undefined,'section');
+  prompt.append(element('h2','Your prompt'),element('p','Prepare the sample in the walkthrough, then paste this prompt when instructed.'),snippet(lab.prompt,'prompt'));
+  const instructions = element('section',undefined,'section');
+  const list = element('ol',undefined,'lab-steps');
+  for (const step of lab.steps) {
+    const item = element('li');
+    item.append(element('h3',step.title),element('p',step.text));
+    if (step.code) item.append(snippet(step.code,'example'));
+    const help = element('details',undefined,'step-help');
+    help.append(element('summary','Help with this step'),element('p',step.help));
+    item.append(help);
+    list.append(item);
+  }
+  instructions.append(element('h2','Walkthrough'),list);
+  const checks = element('details',undefined,'result-check');
+  checks.append(element('summary','Check your result'));
+  const answers = element('ul');
+  lab.check.forEach(value => answers.append(element('li',value)));
+  checks.append(answers);
+  const finish = element('section',undefined,'section');
+  const label = element('label',undefined,'complete-lab');
+  const checkbox = element('input');
+  checkbox.type = 'checkbox';
+  checkbox.checked = isComplete(lab.id);
+  const status = element('span');
+  status.setAttribute('role','status');
+  checkbox.onchange = () => {
+    try {
+      if (checkbox.checked) localStorage.setItem('all-about-ai.completed.' + lab.id,'yes');
+      else localStorage.removeItem('all-about-ai.completed.' + lab.id);
+      status.textContent = '';
+    } catch { status.textContent = 'This browser could not save your progress.'; }
+  };
+  label.append(checkbox,document.createTextNode('Mark lab complete on this device'));
+  finish.append(element('h2','Finish the lab'),checks,label,status,sourceLinks(lab.sources));
+  return [about,prompt,instructions,finish];
+}
+
 function openLocation(moveFocus) {
   const id = location.hash.slice(1);
   const chapter = chapters.find(item => item.id === id);
@@ -102,14 +213,19 @@ function openLocation(moveFocus) {
   byId('chapter').hidden = !chapter;
   document.title = chapter ? chapter.title + ' · All About AI' : 'All About AI · Books';
   if (!chapter) {
+    const mode = id === 'labs' ? 'labs' : 'contents';
+    if (indexMode !== mode) byId('query').value = '';
+    indexMode = mode;
     showContents();
     if (moveFocus) byId('contents-title').focus({preventScroll:true});
   } else {
-    byId('group-name').textContent = chapter.group.title + '  /  Chapter ' + chapter.number;
+    const lab = Boolean(chapter.group.track);
+    if (lab) currentTrack = chapter.group.track;
+    byId('group-name').textContent = lab ? chapter.group.title + '  /  Lab ' + chapter.number + ' of ' + chapter.group.items.length + ' · ' + chapter.level : chapter.group.title + '  /  Chapter ' + chapter.number;
     byId('chapter-title').textContent = chapter.title;
     byId('summary').textContent = chapter.summary;
     byId('review-date').textContent = 'Reviewed ' + dateLabel(chapter.group.reviewed);
-    const sections = chapter.sections.map(section => {
+    const sections = lab ? labBody(chapter) : chapter.sections.map(section => {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
@@ -128,9 +244,11 @@ function openLocation(moveFocus) {
       }
       return block;
     });
-    byId('body').replaceChildren(chapterIntroduction(chapter.intro), ...sections);
-    document.querySelector('book-pager').setPage(chapter.number,chapters.length,'chapter',
-      number => { location.hash = chapters[number-1].id; }, () => { location.hash = 'contents'; });
+    if (!lab) sections.unshift(chapterIntroduction(chapter.intro));
+    byId('body').replaceChildren(...sections);
+    const pages = lab ? chapter.group.items : referenceChapters;
+    document.querySelector('book-pager').setPage(chapter.number,pages.length,lab ? 'lab' : 'chapter',
+      number => { location.hash = pages[number-1].id; }, () => { location.hash = lab ? 'labs' : 'contents'; });
     if (moveFocus) byId('chapter-title').focus({preventScroll:true});
   }
   window.scrollTo(0,0);
@@ -177,14 +295,17 @@ async function start() {
   const edition = await json('./edition.json');
   groups = await Promise.all(edition.groups.map(async group => ({...group, items:await json('./content/' + group.file)})));
   for (const group of groups) {
-    for (const ch of group.items) {
-      ch.search = [group.title,ch.title,ch.summary,ch.intro.what,ch.intro.features,ch.intro.exchange,ch.intro.m365,ch.intro.developer,...ch.sections.flatMap(s => [s.title,...s.paragraphs,...(s.table?.rows.flat() || []), s.exercise?.prompt || '', ...(s.exercise?.answer || [])])].join(' ').toLowerCase();
-      ch.number = chapters.length + 1;
+    for (const [i, ch] of group.items.entries()) {
+      ch.search = (group.title + ' ' + JSON.stringify(ch)).toLowerCase();
+      if (!group.track) referenceChapters.push(ch);
+      ch.number = group.track ? i + 1 : referenceChapters.length;
       ch.group = group;
       chapters.push(ch);
     }
   }
-  byId('edition').textContent = chapters.length + ' chapters  ·  Updated ' + dateLabel(edition.reviewed);
+  const labCount = chapters.length - referenceChapters.length;
+  byId('lab-count').textContent = labCount + ' guided labs · ' + groups.filter(g=>g.track).length + ' tools';
+  byId('edition').textContent = referenceChapters.length + ' chapters · ' + labCount + ' labs · Updated ' + dateLabel(edition.reviewed);
   byId('query').addEventListener('input',showContents);
   window.addEventListener('hashchange',() => openLocation(true));
   openLocation(false);

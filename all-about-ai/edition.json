@@ -1,12 +1,94 @@
 {
   "reviewed": "2026-11-22",
   "groups": [
-    {"title":"Gemini", "file":"gemini.json", "reviewed":"2026-11-22"},
-    {"title":"Claude", "file":"claude.json", "reviewed":"2026-11-22"},
-    {"title":"ChatGPT", "file":"chatgpt.json", "reviewed":"2026-11-22"},
-    {"title":"Copilot at work", "file":"copilot.json", "reviewed":"2026-11-22"},
-    {"title":"Devin Enterprise", "file":"devin.json", "reviewed":"2026-11-22"},
-    {"title":"Other tools and models", "file":"other-tools.json", "reviewed":"2026-11-22"},
-    {"title":"Field comparisons", "file":"field-comparisons.json", "reviewed":"2026-11-22"}
+    {
+      "title": "Gemini",
+      "file": "gemini.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Claude",
+      "file": "claude.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "ChatGPT",
+      "file": "chatgpt.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Copilot at work",
+      "file": "copilot.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Devin Enterprise",
+      "file": "devin.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Other tools and models",
+      "file": "other-tools.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Field comparisons",
+      "file": "field-comparisons.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Devin Enterprise",
+      "track": "devin",
+      "file": "labs-devin.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open the Devin web app",
+      "startUrl": "https://app.devin.ai/",
+      "gettingStarted": "Sign in through your organization and select its training repository. Start a new session. Choose Ask for investigation or planning and Agent when a step asks you to change the practice project."
+    },
+    {
+      "title": "Antigravity",
+      "track": "antigravity",
+      "file": "labs-antigravity.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Antigravity setup guide",
+      "startUrl": "https://antigravity.google/docs/getting-started",
+      "gettingStarted": "On your computer, start Antigravity and open an empty practice folder as your project. Use its agent conversation for the prompt, and inspect proposed file changes in the project."
+    },
+    {
+      "title": "Google AI Studio",
+      "track": "ai-studio",
+      "file": "labs-ai-studio.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open Google AI Studio",
+      "startUrl": "https://aistudio.google.com/",
+      "gettingStarted": "Sign in with an eligible Google account. Use a new Playground prompt for model experiments. For labs that build an app, open Build and work in a fresh practice project."
+    },
+    {
+      "title": "Claude Code",
+      "track": "claude-code",
+      "file": "labs-claude-code.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Claude Code quickstart",
+      "startUrl": "https://code.claude.com/docs/en/quickstart",
+      "gettingStarted": "Open a terminal in the practice folder on your computer and start claude. Sign in if prompted, confirm the selected folder, then use the session for prompts. Run verification commands in a separate terminal in that same folder."
+    },
+    {
+      "title": "Codex",
+      "track": "codex",
+      "file": "labs-codex.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Codex quickstart",
+      "startUrl": "https://learn.chatgpt.com/docs/quickstart",
+      "gettingStarted": "Open the practice project in the Codex app or start the signed-in Codex CLI in its folder. Paste the brief into the task composer. Labs that specify codex exec use the CLI in a terminal."
+    },
+    {
+      "title": "Microsoft 365 Copilot",
+      "track": "copilot",
+      "file": "labs-copilot.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open Microsoft 365 Copilot Chat",
+      "startUrl": "https://m365.cloud.microsoft/chat",
+      "gettingStarted": "Sign in with your work or school account and start a fresh Microsoft 365 Copilot Chat. Paste just the synthetic inputs the step specifies. For exercises in Word, Excel or PowerPoint, use the supported work app or the chat alternative given in the lab."
+    }
   ]
 }

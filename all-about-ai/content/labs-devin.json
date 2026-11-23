@@ -1,0 +1,761 @@
+[
+  {
+    "id": "lab-devin-01",
+    "level": "Starter",
+    "title": "Build a read-only Exchange Online mailbox report",
+    "summary": "Use Devin to build a mailbox inventory, prove what it includes with six fictional mailboxes, and review the exact query before you consider using it on a connected workstation.",
+    "requires": "For practice, use a Devin workspace with an approved training repository and a workstation with PowerShell 7 (pwsh). The downloadable kit contains the inputs, acceptance tests and a working answer. You can run the fixture and answer key locally without Devin, an Exchange module or a tenant. The optional connected run needs your organization’s approved ExchangeOnlineManagement module and read access to the intended recipients.",
+    "features": "Use Ask to inspect two starter files, Agent to propose a script, a local test double to simulate the Exchange reader, and a pull request to inspect the result.",
+    "roles": [
+      "Build and verify a roster of user and shared mailboxes without changing Exchange.",
+      "Give support staff a reproducible report with a defined scope and clear success criteria.",
+      "Reuse the fixture → transformation → export pattern for your own reporting apps."
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "prompt": "Inspect mailboxes.csv and Test-Inventory.ps1 in this practice repository. Plan a PowerShell 7 script called Get-MailboxInventory.ps1. Give it two modes: -InputCsv <path> for local rehearsal, or -Live for an already connected session. Both require -OutputCsv <new path>. In live mode call only Get-EXOMailbox -RecipientTypeDetails UserMailbox,SharedMailbox -ResultSize Unlimited -ErrorAction Stop. Keep DisplayName, PrimarySmtpAddress and RecipientTypeDetails in that order. Include only user and shared mailboxes, sorted by primary address. Preserve names with commas and Unicode. For zero matches, write the CSV header. Fail on a blank or duplicate included address (case-insensitive), an existing output file, or a failed read. Leave no partial report. Tell me which evidence will establish each requirement. Use synthetic data throughout. Leave the acceptance tests unchanged.",
+    "steps": [
+      {
+        "title": "Unpack the kit and inspect the input",
+        "text": "Download the practice kit and unzip it. Open PowerShell 7 in the extracted folder containing mailboxes.csv. Run the commands below. Read the six rows and predict which four should appear.",
+        "help": "If pwsh is missing, use the PowerShell installation link under Sources. If the CSV cannot be found, use Get-Location and Get-ChildItem to locate the extracted folder. The fixture includes two resources to exclude.",
+        "code": "Get-Location\n$PSVersionTable.PSVersion\nImport-Csv ./mailboxes.csv | Format-Table -AutoSize"
+      },
+      {
+        "title": "Start in Devin with the two starter files",
+        "text": "In an approved training repo, add mailboxes.csv and Test-Inventory.ps1 at the root and commit them on a practice branch. Keep Reference outside the exercise repo. In Devin, choose your organization, start Ask, select that repo and ask it to identify both files by name. Paste the opening prompt above.",
+        "help": "Ask should cite the CSV and test file and offer a plan. If it sees a different tree, compare its repository and revision with the commit containing the files. If you have no Devin access today, use the included Reference script beginning at step 4."
+      },
+      {
+        "title": "Send a bounded assignment to Agent",
+        "text": "Review the plan for the exact read command, filters and error cases. Use Send to Devin or start Agent on the same practice repo. Paste the implementation request below. Inspect the proposed diff before running anything.",
+        "help": "The change should be one candidate script. Ask Devin to explain any additional remote command and remove scope creep. Authentication belongs to your optional local run. A missing PowerShell runtime in Devin is a reason to run the tests on the workstation.",
+        "code": "Implement the approved plan in Get-MailboxInventory.ps1. Run the supplied tests if pwsh is available. Open a draft PR and give me the branch, changed files, exact test command, output and anything you could not verify."
+      },
+      {
+        "title": "Generate your first CSV locally",
+        "text": "Bring the reviewed candidate into the extracted folder beside the fixture and test file, or use the reference path shown below. Run all three commands in the same PowerShell session. Inspect the parsed CSV rather than counting lines of text.",
+        "help": "If you are testing your own candidate, set $reportScript to ./Get-MailboxInventory.ps1. If report.csv already exists, choose a fresh output name in both commands. A quoted comma in the raw CSV is valid. Import-Csv should keep Lane, Avery in one field.",
+        "code": "$reportScript = './Reference/Get-MailboxInventory.ps1'\n& $reportScript -InputCsv ./mailboxes.csv -OutputCsv ./report.csv\nImport-Csv ./report.csv | Format-Table -AutoSize"
+      },
+      {
+        "title": "Run the five acceptance checks",
+        "text": "Run the harness against the same script. It parses the output and checks row order, types, header-only input, invalid addresses, preservation of existing output and both a successful and an interrupted simulated live query. Read all five PASS lines.",
+        "help": "An exception identifies the failing condition. For “Filter or sort mismatch,” compare the addresses with the ordered list in Check your result. Send Devin the failing message and the synthetic fixture, ask for a minimal change, and rerun the entire harness.",
+        "code": "./Test-Inventory.ps1 -Script $reportScript"
+      },
+      {
+        "title": "Prove a test can catch a bad result",
+        "text": "Create a disposable copy of the reference script, change the sort direction in that copy and run the tests against it. Then point the tests back at the unmodified reference.",
+        "help": "Expect “Filter or sort mismatch” only for the altered copy. The final reference run should pass all five checks again. If the altered version passes, search its text for -Descending to confirm you changed the disposable copy.",
+        "code": "$copy = Join-Path ([IO.Path]::GetTempPath()) (\"inventory-{0}.ps1\" -f [guid]::NewGuid())\n(Get-Content ./Reference/Get-MailboxInventory.ps1 -Raw).Replace('Sort-Object PrimarySmtpAddress |', 'Sort-Object PrimarySmtpAddress -Descending |') | Set-Content -LiteralPath $copy\ntry { ./Test-Inventory.ps1 -Script $copy } catch { $_.Exception.Message } finally { Remove-Item -LiteralPath $copy }\n./Test-Inventory.ps1 -Script ./Reference/Get-MailboxInventory.ps1"
+      },
+      {
+        "title": "Optionally run against Exchange Online",
+        "text": "The rehearsal is complete. For a connected report, open a fresh PowerShell 7 session on your authorized workstation. Use a reviewed script and a new output path outside source control. Import your approved module, sign in interactively using your normal MFA process, and fetch only the permitted mailbox scope. A local file is the only report output.",
+        "help": "If the module is absent, follow your organization’s installation process or finish with the fixture. If the role cannot read mailbox objects, check the assigned read role and scope with your Exchange admin. A valid inventory may exclude mailboxes outside that scope. Never send the live CSV or authentication details to the practice session.",
+        "code": "Import-Module ExchangeOnlineManagement\n$upn = Read-Host 'Your authorized Exchange Online sign-in'\nConnect-ExchangeOnline -UserPrincipalName $upn -ShowBanner:$false\ntry {\n    $out = Join-Path ([IO.Path]::GetTempPath()) (\"mailbox-inventory-{0}.csv\" -f [guid]::NewGuid())\n    ./Reference/Get-MailboxInventory.ps1 -Live -OutputCsv $out\n    Import-Csv -LiteralPath $out | Group-Object RecipientTypeDetails | Select-Object Name, Count\n    $out\n} finally {\n    Disconnect-ExchangeOnline -Confirm:$false\n}"
+      },
+      {
+        "title": "Decide whether to accept the change",
+        "text": "Compare the proposed script, its latest revision and the five local test results. On a connected run, compare a known user and shared mailbox from the same administrative scope with the Exchange admin center. Record the command, revision, counts and any excluded scope in your review notes.",
+        "help": "Fixture totals apply only to the practice data. For a live discrepancy, verify account, scope, recipient type and collection time before treating it as a script defect. Keep actual addresses in your approved reporting location."
+      }
+    ],
+    "check": [
+      "Fixture output has four rows in this order: accounts@example.test, avery@example.test, bookings@example.test, zoe@example.test. Types alternate SharedMailbox, UserMailbox, SharedMailbox, UserMailbox.",
+      "The room and device are absent. The names Lane, Avery and Zoë Chen survive a CSV round trip. All five acceptance checks pass on the original script and the deliberately reversed sort fails.",
+      "You can identify the only Exchange data query, explain the fixture/live boundary and show which evidence came from a simulation. A live spot check is separate and depends on your authorized scope."
+    ],
+    "sources": [
+      [
+        "Cognition · start in Ask and move to Agent",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Microsoft · Get-EXOMailbox parameters",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-exomailbox?view=exchange-ps"
+      ],
+      [
+        "Microsoft · Exchange Online connection and prerequisites",
+        "https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps"
+      ],
+      [
+        "Microsoft · Exchange Online feature permissions",
+        "https://learn.microsoft.com/en-us/exchange/permissions-exo/feature-permissions"
+      ],
+      [
+        "Microsoft · install PowerShell",
+        "https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-02",
+    "title": "Trace a mailbox threshold before changing code",
+    "summary": "Ask Devin to explain a small function, predict its boundary behavior and demonstrate it in a scratch session.",
+    "level": "Starter",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Session source reading and small reproducible checks",
+    "roles": [
+      "Trace a mailbox quota rule.",
+      "Review thresholds in service reports.",
+      "Inspect a score threshold in an app."
+    ],
+    "prompt": "In the training directory create quota.py exactly as supplied. Predict the output for 79, 80 and 81 before running it. Show the predictions and actual output side by side. Explain the threshold using the exact comparison expression. Leave the rule unchanged.",
+    "steps": [
+      {
+        "title": "Give Devin a tiny function",
+        "text": "Start a fresh Agent session, paste the file contents below, then send the prompt. Ask to see the saved file.",
+        "help": "If the function is explained before a file exists, ask Devin to create quota.py in the scratch checkout and show its contents.",
+        "code": "def label(percent):\n    return \"watch\" if percent >= 80 else \"normal\"\n\nfor value in (79, 80, 81):\n    print(value, label(value))"
+      },
+      {
+        "title": "Compare prediction and observation",
+        "text": "Ask Devin to run python3 quota.py and show the output. Read the equality condition yourself.",
+        "help": "At exactly 80 the condition is true. If the prediction differs, keep the raw output and correct the explanation."
+      },
+      {
+        "title": "Probe an unsupported value",
+        "text": "Ask what label a value of -1 would receive, then run a scratch check. Discuss whether that behavior suits a percentage report.",
+        "help": "Current behavior returns normal because -1 is below 80. Product policy could call it invalid. Keep that as a distinct future requirement."
+      }
+    ],
+    "check": [
+      "79 normal, 80 watch, 81 watch.",
+      "-1 currently returns normal. No policy change is needed to demonstrate the gap."
+    ],
+    "sources": [
+      [
+        "Cognition · starting a session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-03",
+    "title": "Reproduce a parser bug with one quoted comma",
+    "summary": "Create a failing example, watch a focused fix and retain a regression check.",
+    "level": "Starter",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Debugging from a failing fixture and reviewing a small diff",
+    "roles": [
+      "Parse display names from mailbox exports.",
+      "Import team names containing punctuation.",
+      "Import player names from CSV."
+    ],
+    "prompt": "Create sample.csv from the fixture and parser.py using the supplied starter expression. Run it to reproduce the bad field count. Replace only the naive splitting logic with Python’s standard CSV reader. Add a regression assertion and show the before and after results.",
+    "steps": [
+      {
+        "title": "Seed an intentionally faulty reader",
+        "text": "Paste the two small inputs. Ask Devin to run the starter on both records and print each field count.",
+        "help": "The quoted comma belongs inside the display name. Its record should have two fields.",
+        "code": "sample.csv:\nid,name\nm1,\"North, West\"\nm2,East\nparser.py starter: print([len(line.rstrip().split(\",\")) for line in open(\"sample.csv\")])"
+      },
+      {
+        "title": "Require evidence of failure first",
+        "text": "Send the prompt. Ask to see the initial printed list before reviewing the fix or accepting a claim that it worked.",
+        "help": "Including the header, the broken list is [2, 3, 2]. If the input lost its quotes during copying, recreate it exactly."
+      },
+      {
+        "title": "Inspect the fixed value",
+        "text": "Ask Devin to assert that the parsed m1 name is exactly “North, West,” and rerun. Then add a quoted empty name and require the empty string to survive.",
+        "help": "Correct field counts alone cannot establish that content was preserved. Check the name itself and the empty case."
+      }
+    ],
+    "check": [
+      "Corrected field counts are [2, 2, 2].",
+      "A quoted empty value gives two fields with an empty name."
+    ],
+    "sources": [
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-04",
+    "title": "Rebuild a report in a clean working directory",
+    "summary": "Write down what a new Devin machine needs so another run can reproduce the result.",
+    "level": "Intermediate",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Environment setup, working directories and reproducibility",
+    "roles": [
+      "Make an Exchange report reproducible.",
+      "Rebuild an inventory tool from a clean checkout.",
+      "Document how a new contributor runs your app."
+    ],
+    "prompt": "Build an offline Python script that reads the supplied rows.csv beside the script and prints the sum of the integer counts. Give me one smoke-test command. Prove that running from another working directory gives the same result. Return a concise setup note and captured output.",
+    "steps": [
+      {
+        "title": "Enter the minimal input",
+        "text": "Ask Devin to put rows.csv and report.py in a new folder named cleanlab. Supply only the input fixture and the prompt.",
+        "help": "Keep dependencies to Python’s standard library. A package install would add an unrelated dependency to this exercise.",
+        "code": "site,count\nWest,3\nEast,5"
+      },
+      {
+        "title": "Reveal a hidden assumption",
+        "text": "Ask Devin to run from inside cleanlab, then from its parent via python3 cleanlab/report.py. Compare outputs.",
+        "help": "If the second command cannot find rows.csv, have Devin resolve the data file relative to the script location and retest both commands."
+      },
+      {
+        "title": "Create a handover",
+        "text": "Request a setup note naming Python 3, input location and expected result. Copy only the described files into another new scratch directory and repeat the smoke test.",
+        "help": "A clean copy catches a success that depends on a file left behind. For a missing CSV, require a visible failure rather than a plausible zero."
+      }
+    ],
+    "check": [
+      "Both working directories print 8.",
+      "A fresh copy reproduces 8; a missing input exits unsuccessfully."
+    ],
+    "sources": [
+      [
+        "Cognition · environment blueprints",
+        "https://docs.devin.ai/onboard-devin/environment/blueprints"
+      ],
+      [
+        "Cognition · maintaining environments",
+        "https://docs.devin.ai/enterprise/environment-management/best-practices"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-05",
+    "title": "Stop a polished patch from merging on weak evidence",
+    "summary": "Review a proposed change against examples the author failed to test.",
+    "level": "Intermediate",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Diff review, independent test cases and rejection criteria",
+    "roles": [
+      "Review recipient deduplication.",
+      "Deduplicate case-insensitive inventory keys.",
+      "Find repeated account names in an import."
+    ],
+    "prompt": "Act as a reviewer. The requirement treats case and surrounding spaces as insignificant and ignores empty IDs. Create candidate.py with the proposed function. Write independent tests from the requirement. Show the failing case before offering a minimal patch, then rerun all tests. Work on scratch files only.",
+    "steps": [
+      {
+        "title": "Provide the candidate change",
+        "text": "Paste the function and four sample IDs. State the input assumptions explicitly.",
+        "help": "If Devin cleans up the function before recording a failure, ask it to recreate the supplied candidate under a separate filename.",
+        "code": "def unique(ids):\n    return sorted({v.lower() for v in ids if v})\n\nsample = [\" A1 \", \"a1\", \"\", \" \"]"
+      },
+      {
+        "title": "Make the defect visible",
+        "text": "Send the prompt and inspect the raw returned strings with repr or an equivalent display that exposes whitespace.",
+        "help": "The intended output is just [\"a1\"]. The original preserves spaces and lets a whitespace-only ID through."
+      },
+      {
+        "title": "Verify the repair independently",
+        "text": "Give it [\" B2\", \"b2 \", \"C3\", \"c3\"] after the patch, plus an empty list. Ask to see the test commands and results.",
+        "help": "Expected sorted outputs are [\"b2\",\"c3\"] and []. If tests only inspect length, add equality checks for the complete returned values."
+      }
+    ],
+    "check": [
+      "The candidate fails on the supplied fixture before editing.",
+      "The patch passes all three groups with exact, normalized IDs."
+    ],
+    "sources": [
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-06",
+    "title": "Turn a repeated review into a reusable playbook",
+    "summary": "Create one set of task instructions and run it against two unfamiliar datasets to test whether it generalizes.",
+    "level": "Intermediate",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below. A scratch Markdown playbook is sufficient if your account cannot save shared playbooks.",
+    "features": "Reusable instructions, validation and repeated sessions",
+    "roles": [
+      "Standardize mailbox export reviews.",
+      "Repeat license exception checks.",
+      "Validate data files for several puzzle volumes."
+    ],
+    "prompt": "Draft a reusable playbook in training/REVIEW.md. Inputs are a CSV with columns ID,Count. Report valid row count, sum of valid counts, and exception IDs. Accept nonnegative integers including zero. Blank or invalid values are exceptions. Then demonstrate the playbook on the supplied fixture.",
+    "steps": [
+      {
+        "title": "Create a repeatable contract",
+        "text": "Provide the first CSV and paste the prompt. Ask for a named input, output fields and clear exception handling in the playbook.",
+        "help": "The playbook should describe a method. Remove sample IDs from the permanent instructions so the second run has to inspect its own input.",
+        "code": "ID,Count\na,3\nb,0\nc,"
+      },
+      {
+        "title": "Run the first review",
+        "text": "Inspect the results and ask Devin to quote which playbook step handles zero. Save the scratch Markdown for reuse.",
+        "help": "Expected count 2, sum 3, exception c. If zero is flagged, the instructions confused a present zero with a blank."
+      },
+      {
+        "title": "Re-run with different evidence",
+        "text": "Give a fresh session the saved text plus the second CSV below. If you cannot start another session, clear earlier fixture context by naming exactly one input.",
+        "help": "A reused playbook should now identify x. Reject a report that still contains the old exception c.",
+        "code": "ID,Count\nx,-2\ny,8\nz,1"
+      }
+    ],
+    "check": [
+      "First result: count 2, sum 3, exception c.",
+      "Second result: count 2, sum 9, exception x."
+    ],
+    "sources": [
+      [
+        "Cognition · using playbooks",
+        "https://docs.devin.ai/product-guides/using-playbooks"
+      ],
+      [
+        "Cognition · reusable skills",
+        "https://docs.devin.ai/product-guides/skills"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-07",
+    "title": "Prove a saved score survives reload",
+    "summary": "Have Devin build a tiny offline page, then test its behavior across a browser reload.",
+    "level": "Intermediate",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below. Use the session browser for the local test page.",
+    "features": "Browser-based testing and evidence of retained state",
+    "roles": [
+      "Verify a saved preference in an admin reporting UI.",
+      "Test a locally saved filter in an inventory tool.",
+      "Keep a scoreboard across a refresh."
+    ],
+    "prompt": "Create a training-only HTML page with a displayed score, an Add button and a numeric field for a signed change. Persist the total in localStorage. Serve it locally, test the supplied sequence in the browser, and capture the values before and after reload. Include a check for blank input.",
+    "steps": [
+      {
+        "title": "Define observable behavior",
+        "text": "Give Devin the prompt and exact fixture below. Request plain HTML and JavaScript in a new scratch folder so the example has no external dependencies.",
+        "help": "Confirm the browser is displaying the local page and starts at zero. Use a fresh storage key if a previous run left a score.",
+        "code": "Start 0. Add 12. Add -5. Reload the page. Submit a blank field."
+      },
+      {
+        "title": "Watch the persistence test",
+        "text": "Ask Devin to enter the values, capture the displayed score after each step and reload the same browser URL.",
+        "help": "The total must remain 7 after reload. A changed port or hostname creates a different browser storage origin."
+      },
+      {
+        "title": "Check the empty case",
+        "text": "Submit the blank field and record the displayed value and feedback. Reopen the same URL once more.",
+        "help": "A blank should leave the saved score unchanged. Reject a run showing NaN or an unreported reset. Screenshots or a recorded run can support the result."
+      }
+    ],
+    "check": [
+      "The score sequence is 0, 12, 7, 7.",
+      "Blank submission preserves 7 and gives visible feedback."
+    ],
+    "sources": [
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-08",
+    "title": "Simulate a ticket intake retry without creating two tasks",
+    "summary": "Use a local ledger to deduplicate deliveries that refer to the same requested piece of work.",
+    "level": "Advanced",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below. No issue tracker or Devin API credentials are needed.",
+    "features": "Integration design, request correlation and replay testing",
+    "roles": [
+      "Prevent duplicate mail-report requests.",
+      "Correlate rollout tickets with delegated work.",
+      "Handle repeated build notifications."
+    ],
+    "prompt": "Implement a local dispatcher simulation with Python and SQLite. Key a task by issue plus revision. Replayed delivery IDs or new deliveries for the same issue/revision must reuse the existing simulated task. Print a decision for every event. Do not contact any external system.",
+    "steps": [
+      {
+        "title": "Give Devin four events",
+        "text": "Paste these mock records and the prompt. Explain that task identifiers can be local counters.",
+        "help": "Separate the delivery ID, which describes a notification, from the issue/revision pair, which identifies the requested work.",
+        "code": "delivery,issue,revision\nd1,T21,r1\nd1,T21,r1\nd2,T21,r1\nd3,T21,r2"
+      },
+      {
+        "title": "Replay after restarting",
+        "text": "Ask Devin to process the first three events, end the program, then process the full fixture using the same database.",
+        "help": "In-memory storage would lose the mapping. After the second run only r2 should introduce another task."
+      },
+      {
+        "title": "Challenge the deduplication rule",
+        "text": "Append “d4,T22,r1” and request the final ledger. Compare the rows with the unique issue/revision pairs you can count by hand.",
+        "help": "A revision alone is insufficient. T22 has its own r1, and must receive another task."
+      }
+    ],
+    "check": [
+      "The four original events produce two unique tasks.",
+      "After d4 there are three, including one distinct T22/r1 task."
+    ],
+    "sources": [
+      [
+        "Cognition · tracking sessions",
+        "https://docs.devin.ai/api-reference/common-flows"
+      ],
+      [
+        "Cognition · creating a v3 session",
+        "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-09",
+    "title": "Find a testing gap in a role-to-repository access matrix",
+    "summary": "Review a fictional inventory for unexpected grants without granting or revoking real access.",
+    "level": "Advanced",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Enterprise organization boundaries and a read-only matrix comparison",
+    "roles": [
+      "Audit who can read a mail-reports project.",
+      "Compare inventory access with an approved matrix.",
+      "Review contributor access for separate app repos."
+    ],
+    "prompt": "Write a read-only local comparison of approved and observed role/repository pairs. Report unexpected observed grants separately from missing approved grants. Flag duplicate rows as data-quality notes. Include tests and print the exact pairs. Make no configuration changes.",
+    "steps": [
+      {
+        "title": "Define the two inventories",
+        "text": "Paste both labeled lists and the prompt. Treat capitalization as exact and ordering as irrelevant for this exercise.",
+        "help": "A repeated identical row has no additional permission meaning. Preserve its occurrence count in the quality notes.",
+        "code": "Approved: Reader/reports, Maintainer/app.\nObserved: Reader/reports, Reader/reports, Reader/app."
+      },
+      {
+        "title": "Evaluate differences both ways",
+        "text": "Ask Devin to show the implementation and test output. Check that it performs both observed-minus-approved and approved-minus-observed.",
+        "help": "Reader/app is unexpected. Maintainer/app is missing. Reversing set subtraction swaps the labels."
+      },
+      {
+        "title": "Restore the approved state on paper",
+        "text": "Replace the second observed Reader/reports with Maintainer/app and remove Reader/app. Rerun on the edited fixture.",
+        "help": "Both difference sets and the duplicate note should now be empty. This simulated matrix cannot determine any actual organization permissions."
+      }
+    ],
+    "check": [
+      "One unexpected grant, one missing grant, one duplicate in the original.",
+      "The corrected fixture has no differences."
+    ],
+    "sources": [
+      [
+        "Cognition · repository access by organization",
+        "https://docs.devin.ai/enterprise/integrations/git-integrations"
+      ],
+      [
+        "Cognition · security profiles",
+        "https://docs.devin.ai/product-guides/security-profiles"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-10",
+    "title": "Build a defensible cost-per-accepted-change report",
+    "summary": "Separate metered work from delivered outcomes by checking a small session ledger.",
+    "level": "Advanced",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below. The exercise uses invented units and no billing connection.",
+    "features": "Consumption analysis and PR-outcome reconciliation",
+    "roles": [
+      "Measure effort per accepted reporting change.",
+      "Evaluate the results of a pilot program.",
+      "Compare the cost of accepted app fixes."
+    ],
+    "prompt": "Use a local script to calculate total illustrative units, unique accepted pull requests, and units per accepted change. Include failed and follow-up sessions in total consumption. An accepted pull request may appear on multiple rows. Return the counted IDs and calculations.",
+    "steps": [
+      {
+        "title": "Seed a four-row ledger",
+        "text": "Paste this fictional ledger and prompt. Use the explicit accepted marker for each PR in the fixture.",
+        "help": "A session is a unit of work. Multiple sessions can contribute to one accepted change.",
+        "code": "session,units,pr,accepted\ns1,4,P1,yes\ns2,2,P1,yes\ns3,3,P2,no\ns4,1,,no"
+      },
+      {
+        "title": "Audit the rate",
+        "text": "Ask Devin to show raw sum, distinct accepted ID set and denominator. Compare the result with counting accepted rows instead.",
+        "help": "Total 10 divided by {P1} gives 10 per accepted PR. Counting two rows for P1 would incorrectly yield 5."
+      },
+      {
+        "title": "Handle an empty denominator",
+        "text": "Set every accepted marker to no. Rerun and ask for a clearly labeled undefined rate alongside total consumption.",
+        "help": "Displaying zero cost per accepted change would imply delivery. Ten units were consumed and no accepted change exists."
+      }
+    ],
+    "check": [
+      "Original total 10, one accepted PR, rate 10.",
+      "All-no variant reports zero accepted and an undefined rate."
+    ],
+    "sources": [
+      [
+        "Cognition · PR metrics",
+        "https://docs.devin.ai/api-reference/v3/metrics/metrics-prs"
+      ],
+      [
+        "Cognition · daily consumption",
+        "https://docs.devin.ai/api-reference/v3/consumption/consumption-daily-users"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-11",
+    "title": "Normalize two identical clock times correctly",
+    "summary": "Teach a reporting script to place offset-tagged events in real chronological order during a clock change.",
+    "level": "Expert",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Time-zone-aware fixture design and boundary testing",
+    "roles": [
+      "Rebuild a message timeline across a clock change.",
+      "Align audit records from different systems.",
+      "Order scheduled events in a travel app."
+    ],
+    "prompt": "Build a local Python report accepting ISO timestamps with explicit offsets. Convert to UTC, sort by elapsed time, and count events in a start-inclusive, end-exclusive window. Flag rows lacking a UTC offset instead of guessing. Print the evidence IDs for every included event.",
+    "steps": [
+      {
+        "title": "Enter the repeated-clock fixture",
+        "text": "Give Devin the rows and window below. Require Python standard-library datetime processing so offsets are retained.",
+        "help": "The two 01:15 values are different instants. A parser that discards offsets will collapse them.",
+        "code": "A 2026-11-01T01:15:00-04:00\nB 2026-11-01T01:15:00-05:00\nC 2026-11-01T06:30:00+00:00\nD 2026-11-01T01:20:00\nWindow 05:15Z through 06:30Z on Nov 1."
+      },
+      {
+        "title": "Check normalized evidence",
+        "text": "Run the prompt and inspect both local and normalized values. Ask why C lies outside and why D was quarantined.",
+        "help": "A becomes 05:15Z, B becomes 06:15Z. C sits on the excluded end; D has no usable offset."
+      },
+      {
+        "title": "Shift the window one second",
+        "text": "Move only the start to 05:15:01Z and rerun. Verify every unrelated fact is preserved.",
+        "help": "A now drops out, B remains, and the missing-offset error for D must still be present."
+      }
+    ],
+    "check": [
+      "The original window includes A and B with a 60-minute gap.",
+      "The shifted window includes only B."
+    ],
+    "sources": [
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-12",
+    "title": "Recover from a lost session-creation response",
+    "summary": "Handle the dangerous gap between a remote service accepting work and the caller learning its ID, using an entirely local fake.",
+    "level": "Expert",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below. No API key, network call or live session launcher is needed.",
+    "features": "v3 session orchestration, reconciliation and fault injection",
+    "roles": [
+      "Prevent duplicate collection jobs.",
+      "Design reliable delegated maintenance intake.",
+      "Avoid duplicate background builds."
+    ],
+    "prompt": "Implement a local fake creation service and client. The fake stores request tag T9 and session S1, then simulates a lost response. The client must persist an uncertain state, reconcile using the tag, and attach S1 when found. Never treat elapsed time as proof the create failed. Show a call counter and ledger.",
+    "steps": [
+      {
+        "title": "Specify the simulated outcomes",
+        "text": "Paste the prompt and fixture. The tag lookup is an explicit feature of this fake. A production implementation would need to validate supported API filters and correlation fields.",
+        "help": "A local exception after storage is enough to simulate the lost response. No call to a real API belongs in this lab.",
+        "code": "Create T9: store S1, then throw timeout.\nLookup T9: one match S1.\nCreate call counter begins at zero."
+      },
+      {
+        "title": "Restart at the difficult moment",
+        "text": "Ask Devin to stop the client after it records uncertainty and invoke reconciliation in a new process. Inspect local durable state.",
+        "help": "A new process must attach S1 with the creation counter still at one. If it creates S2, correct the uncertain-state branch."
+      },
+      {
+        "title": "Simulate ambiguity",
+        "text": "Make lookup return S1 and S2 for the same tag. Ask for the result and counter.",
+        "help": "The client should flag an ambiguous match for review. Arbitrarily taking the first result loses evidence of a duplicated remote task."
+      }
+    ],
+    "check": [
+      "Single match recovers S1 without a second create.",
+      "Two matches produce an explicit ambiguity and no new create."
+    ],
+    "sources": [
+      [
+        "Cognition · creating a v3 session",
+        "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+      ],
+      [
+        "Cognition · tracking sessions",
+        "https://docs.devin.ai/api-reference/common-flows"
+      ],
+      [
+        "Cognition · reading a v3 session",
+        "https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-13",
+    "title": "Review changes across two dependent repositories",
+    "summary": "Practice a staged data-format migration with compatibility checks on old and new consumers.",
+    "level": "Expert",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below. Two folders in one scratch checkout stand in for two repositories.",
+    "features": "Coordination between repositories, interface contracts and staged tests",
+    "roles": [
+      "Migrate an Exchange export without breaking readers.",
+      "Coordinate identity data between reporting teams.",
+      "Version the interface between an app and its data feed."
+    ],
+    "prompt": "In local producer/ and consumer/ folders, simulate a migration from the input key count to total. The transitional reader must accept either key, accept equal values when both are present, and reject conflicting pairs. Design a safe transition order and run the compatibility matrix before retiring the old key.",
+    "steps": [
+      {
+        "title": "Fix the expected contract",
+        "text": "Paste the four JSON records below. Ask for a small reader with tests, plus old and new producer examples. Keep work in scratch files.",
+        "help": "Give each case a name. Seeing only the new-format case pass does not establish compatibility during rollout.",
+        "code": "legacy {\"count\":2}\nnew {\"total\":2}\ntransition {\"count\":2,\"total\":2}\nconflict {\"count\":2,\"total\":3}"
+      },
+      {
+        "title": "Review the sequence",
+        "text": "Ask Devin to run each producer output against the transitional reader. Ask what goes wrong if a total-only producer ships before the old count-only reader is upgraded.",
+        "help": "The old reader cannot find count. A defensible sequence introduces the compatible reader before a total-only producer."
+      },
+      {
+        "title": "Test rollback compatibility",
+        "text": "Simulate reverting the producer to the old format while keeping the transitional reader. Then test the conflicting record and capture the failure reason.",
+        "help": "Rollback should still return 2 from count. Conflicting values must fail visibly rather than silently choosing one."
+      }
+    ],
+    "check": [
+      "The legacy, new and equal-pair cases each yield 2.",
+      "The conflicting pair fails and the rollback case remains readable."
+    ],
+    "sources": [
+      [
+        "Cognition · coordinating sessions",
+        "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-14",
+    "title": "Detect partial snapshots before replacing a good report",
+    "summary": "Keep the previous valid local report readable when a new export is incomplete or the writer fails halfway.",
+    "level": "Expert",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Failure simulation, validation gates and atomic local publication",
+    "roles": [
+      "Protect a mailbox-count report from partial exports.",
+      "Publish a trustworthy inventory snapshot.",
+      "Protect saved progress during a failed update."
+    ],
+    "prompt": "Build a local report writer. Validate that each unique region in the manifest exists exactly once and counts are nonnegative integers. Write to a temporary file and replace current.json only after validation and a successful write. Simulate an interrupted write. Capture checksums of the previous and resulting current.json.",
+    "steps": [
+      {
+        "title": "Give it a known good baseline",
+        "text": "Supply baseline and manifest. Ask Devin to create an isolated scratch folder and record the baseline file checksum.",
+        "help": "Use a known file byte sequence or compare against the just-recorded baseline hash. Formatting changes otherwise look like data changes.",
+        "code": "current.json contains {\"total\":7}\nmanifest: North,South\npartial input: North=4\ngood input: North=4,South=5"
+      },
+      {
+        "title": "Test two failure paths",
+        "text": "Run once with the partial input and once with valid input plus an injected exception immediately before final replacement. Inspect the visible report and exit outcomes after each.",
+        "help": "Both should preserve the original checksum. Writing directly to current.json can leave a truncated visible report."
+      },
+      {
+        "title": "Publish a successful result",
+        "text": "Run the complete fixture without injected failure and read current.json. Add a third run with two North rows and no South.",
+        "help": "The successful total is 9. Duplicate North cannot replace missing South, even though the row count looks right. The valid total of 9 must survive."
+      }
+    ],
+    "check": [
+      "Partial and interrupted runs preserve the baseline total of 7 byte for byte.",
+      "Successful run publishes 9 and the later invalid run preserves it."
+    ],
+    "sources": [
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · maintaining environments",
+        "https://docs.devin.ai/enterprise/environment-management/best-practices"
+      ]
+    ]
+  },
+  {
+    "id": "lab-devin-15",
+    "title": "Lead an end-to-end migration readiness review",
+    "summary": "Give Devin a small reporting project, review its evidence, and decide whether the result is ready for handover.",
+    "level": "Expert",
+    "requires": "A Devin Agent session in an approved scratch repository with Python 3. Use the fictional fixture below.",
+    "features": "Task planning, acceptance gates, independent verification and handoff",
+    "roles": [
+      "Decide whether a mock mailbox migration can advance.",
+      "Review a rollout gate spanning data and sign-off.",
+      "Apply an evidence-backed release gate to an app."
+    ],
+    "prompt": "Plan then implement a local readiness report. Every required region must appear exactly once, completions must be between zero and attempted, overall completion must reach 95%, and explicit owner approval is required. Report each gate separately with its evidence ID. Create tests and handover instructions. No deployment or external calls.",
+    "steps": [
+      {
+        "title": "Give the session a bounded brief",
+        "text": "Paste the fixture and prompt. Before authorizing edits in the scratch directory, read its plan and ensure the approval check is independent of the numerical rate.",
+        "help": "Missing regional evidence and a failed percentage answer different questions. Ask for distinct labels if the plan combines them.",
+        "code": "Manifest North,South. R1 North 48/50. R2 South 47/50. A1 owner: review pending."
+      },
+      {
+        "title": "Challenge the proposed result",
+        "text": "Require the test command, the calculated numerator and denominator, and the source of the decision. Then change A1 to “approved” and rerun.",
+        "help": "The rate is 95/100 in both runs. Approval changes HOLD to GO. Compare the changed gate and the output file independently."
+      },
+      {
+        "title": "Perform the handover test",
+        "text": "Follow the README in a new scratch folder. Try removing South and then restoring South as 51/50. Ask for review findings and rerun evidence.",
+        "help": "Missing South and impossible counts must both block release. Neither malformed input should yield a convincing aggregate recommendation."
+      }
+    ],
+    "check": [
+      "Pending approval holds; approved complete fixture passes at exactly 95%.",
+      "Both invalid variants are blocked; the documented checks reproduce the results without original session context."
+    ],
+    "sources": [
+      [
+        "Cognition · asking about a repository",
+        "https://docs.devin.ai/work-with-devin/ask-devin"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ]
+  }
+]

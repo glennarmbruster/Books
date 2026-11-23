@@ -1,0 +1,683 @@
+[
+  {
+    "id": "lab-ai-studio-01",
+    "title": "Extract exactly what a notice says",
+    "summary": "Try one text prompt in Playground and distinguish an explicit fact from a missing one.",
+    "level": "Starter",
+    "requires": "A browser, network access and a Google account with AI Studio. No API key is needed for this Playground exercise when your account provides access.",
+    "features": "Playground, a text model and Run.",
+    "roles": [
+      "Extract a status code from a sample notice.",
+      "Find a rollout date in an announcement.",
+      "Read departure details from a booking."
+    ],
+    "prompt": "Read only this notice: “Harbor shuttle boards at Pier 4 on March 8. Bring the blue ticket.” Return three lines labeled Pier, Date, Time. Use unknown for missing information. Do not invent a year.",
+    "steps": [
+      {
+        "title": "Open a fresh prompt",
+        "text": "Open Google AI Studio Playground and create a new chat. Choose an available text-capable model and record its displayed name.",
+        "help": "When you see app-generation controls and a live preview, you are in Build. Switch to Playground for this exercise."
+      },
+      {
+        "title": "Run the notice",
+        "text": "Paste the prompt and select Run. Compare each returned value with the words in the notice.",
+        "help": "A plausible departure time is still unsupported. Ask for the exact phrase that establishes the time."
+      },
+      {
+        "title": "Change one fact",
+        "text": "Open a fresh chat using the same model and append “Boarding begins at 09:15.” inside the notice. Run the prompt again.",
+        "help": "A fresh chat helps confirm that the changed source, rather than an earlier answer, supplied the time."
+      }
+    ],
+    "check": [
+      "First run gives Pier 4, March 8 and unknown.",
+      "Second run gives 09:15. Neither run adds a year."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google · prompt design strategies",
+        "https://aistudio.google.com/docs/prompting-strategies"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-02",
+    "title": "Keep response rules across turns",
+    "summary": "Use a system instruction to set a reporting convention and see how a follow-up affects the next answer.",
+    "level": "Starter",
+    "requires": "An online AI Studio Playground chat with System Instructions available.",
+    "features": "System instructions and multi-turn prompts.",
+    "roles": [
+      "Use consistent columns for sample incidents.",
+      "Normalize status summaries in a report.",
+      "Keep trivia hints in a fixed format."
+    ],
+    "prompt": "Card H2. Topic: Ferries. No owner is assigned. Return the two requested fields.",
+    "steps": [
+      {
+        "title": "Set the standing instruction",
+        "text": "In Playground, add the exact system instruction below. Start the conversation with the supplied prompt.",
+        "help": "Look for System Instructions above or alongside the prompt editor. Keep this rule separate from the data in the user message.",
+        "code": "Return only Topic | Owner. Copy the stated topic and owner exactly. Use UNASSIGNED when the card has no named owner."
+      },
+      {
+        "title": "Supply a new card",
+        "text": "In the same conversation send “Card K4. Topic: Trains. Owner: Mei.” Inspect the returned row.",
+        "help": "If the response includes the prior card, remind it to report only the current input card and note the deviation."
+      },
+      {
+        "title": "Test the missing value again",
+        "text": "Send “Card R9. Topic: Maps.” Check whether the previous owner leaked into the new answer.",
+        "help": "If Mei reappears, revise the system instruction to make ownership local to each card, then retest all three."
+      }
+    ],
+    "check": [
+      "Expected rows are Ferries | UNASSIGNED, Trains | Mei and Maps | UNASSIGNED.",
+      "A new card never inherits the previous card’s owner."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google · prompt design strategies",
+        "https://aistudio.google.com/docs/prompting-strategies"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-03",
+    "title": "Teach a classifier by example",
+    "summary": "Give the model examples of how your queue is organized, then test an ambiguous request.",
+    "level": "Starter",
+    "requires": "AI Studio Playground online with an available text model.",
+    "features": "Few-shot examples, a limited label set and independent test runs.",
+    "roles": [
+      "Route mock Exchange issues to a queue.",
+      "Triage workload-specific service requests.",
+      "Sort reader feedback for a small app."
+    ],
+    "prompt": "Choose a queue from MAIL, FILES, BOTH or UNKNOWN. Examples: “letter bounced” → MAIL; “document will not open” → FILES; “letter bounced and document will not open” → BOTH; “please help” → UNKNOWN. Classify these in order: A “mail came back”; B “document does not load”; C “please help”; D “mail returned and document fails”. Return ID and label only.",
+    "steps": [
+      {
+        "title": "Run the examples",
+        "text": "Paste the complete prompt in a new Playground chat and inspect the four output rows.",
+        "help": "If the response invents another queue, add a system instruction listing the only allowed labels."
+      },
+      {
+        "title": "Check semantic coverage",
+        "text": "Change only A to “the cafeteria is closed” and rerun in a fresh chat with the same examples.",
+        "help": "An unrelated sentence belongs to UNKNOWN even though it describes a real problem."
+      },
+      {
+        "title": "Record an improvement",
+        "text": "If any row fails, add one labeled example for that failure class and rerun both prompts. Keep the test sentences out of the example list.",
+        "help": "Copying the test answer into the teaching examples conceals whether the model learned the distinction."
+      }
+    ],
+    "check": [
+      "Original labels are MAIL, FILES, UNKNOWN, BOTH.",
+      "Replacing A with the cafeteria sentence changes only A to UNKNOWN."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google · prompt design strategies",
+        "https://aistudio.google.com/docs/prompting-strategies"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-04",
+    "title": "Make a claim point back to evidence",
+    "summary": "Require a source ID and a short supporting passage for every reported decision.",
+    "level": "Intermediate",
+    "requires": "AI Studio Playground online. Use only the three supplied synthetic notices.",
+    "features": "Document-grounded prompting, evidence extraction and conflict handling.",
+    "roles": [
+      "Resolve which mock maintenance date is current.",
+      "Compare two notices about a pilot.",
+      "Build a sourced answer in a reference app."
+    ],
+    "prompt": "Sources: M1 “Draft: Pier 2 opens June 3.” M2 “Approved: Pier 2 opens June 8.” M3 “Approved: Pier 4 opens June 9.” Report the approved opening of Pier 2 and whether a closing date is documented. For each conclusion give source ID and supporting text, or say no supporting source.",
+    "steps": [
+      {
+        "title": "Isolate the material",
+        "text": "Use a new Playground chat with web grounding off. Paste the prompt. A lookup outside this exercise would introduce a different source collection.",
+        "help": "If an answer cites a website, verify the grounding setting and ask for the supplied IDs only."
+      },
+      {
+        "title": "Check entailment",
+        "text": "Match the sentence quoted for the opening date to its pier number and approval status. Inspect the closing-date response separately.",
+        "help": "June 9 has a valid source but applies to another pier. A citation alone is insufficient."
+      },
+      {
+        "title": "Remove the authority",
+        "text": "Run a fresh version without M2. Compare the wording of the opening-date conclusion.",
+        "help": "The draft still supports a proposed June 3 date. It cannot support an approved opening for Pier 2."
+      }
+    ],
+    "check": [
+      "Approved opening is June 8 with M2. No source states a closing date.",
+      "Without M2, the approved Pier 2 date is unknown."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google · prompt design strategies",
+        "https://aistudio.google.com/docs/prompting-strategies"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-05",
+    "title": "Enforce a JSON shape for missing values",
+    "summary": "Turn loosely worded cards into machine-readable records with an explicit null for an absent date.",
+    "level": "Intermediate",
+    "requires": "Online AI Studio with a model supporting structured output.",
+    "features": "Run settings, a JSON schema and semantic validation.",
+    "roles": [
+      "Extract typed fields from synthetic delivery reports.",
+      "Normalize a set of rollout notices.",
+      "Convert a clue description to a puzzle record."
+    ],
+    "prompt": "Return one record per input, in order. C1: “Launch 2027-04-02.” C2: “Date to be announced.” C3: “Tentative 2027-05-09.” A tentative date belongs in the date field. Use null only when no date is stated.",
+    "steps": [
+      {
+        "title": "Set structured output",
+        "text": "In Playground Run settings enable structured output. Enter the schema below or create equivalent fields using the schema editor.",
+        "help": "If a schema option is disabled, select a supported model. All objects need both fields even when the date is null.",
+        "code": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"date\":{\"type\":[\"string\",\"null\"]}},\"required\":[\"id\",\"date\"]}}"
+      },
+      {
+        "title": "Run the extraction",
+        "text": "Paste the three-card prompt and Run. Read the literal JSON values as well as the IDs.",
+        "help": "The string “null” and JSON null are different values. A parser should yield a missing value for C2."
+      },
+      {
+        "title": "Test meaning separately",
+        "text": "Change the C3 date to 2027-05-10 in a fresh run with the same schema and compare the two arrays.",
+        "help": "A valid schema establishes the output structure. Compare C3 to the source to catch a well-formed but incorrect date."
+      }
+    ],
+    "check": [
+      "Three objects appear in order, with dates 2027-04-02, null and 2027-05-09.",
+      "Changing C3 updates only that date."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Gemini API · structured output",
+        "https://aistudio.google.com/docs/structured-output"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-06",
+    "title": "Inspect the calculation behind a total",
+    "summary": "Use code execution to make a reconciliation independently checkable.",
+    "level": "Intermediate",
+    "requires": "Online AI Studio Playground and a model that offers Code execution in Run settings.",
+    "features": "Model-generated code, execution output and arithmetic inspection.",
+    "roles": [
+      "Check grouped counts in a mock trace file.",
+      "Reconcile a usage export.",
+      "Audit positive and negative game rounds."
+    ],
+    "prompt": "Use code execution on this CSV: player,points / Ava,12 / Bo,-3 / Ava,0 / Bo,8 / Ava,blank. Slashes separate rows. Ignore the literal blank as missing. Count real zero as a scored round. Show total and scored rounds per player and grand total.",
+    "steps": [
+      {
+        "title": "Enable execution",
+        "text": "Select a supporting model and turn on Code execution before running the prompt. Open the code and its output in the response.",
+        "help": "A prose calculation alone is a different exercise. If the tool is unavailable, try another eligible model before comparing results."
+      },
+      {
+        "title": "Inspect the filter",
+        "text": "Find the line that handles missing data. Verify that it distinguishes zero from an absent score.",
+        "help": "A truthiness check on the numeric value can silently exclude zero from the round count."
+      },
+      {
+        "title": "Change a value",
+        "text": "Replace Bo,8 with Bo,-8 and run again. Examine both the printed result and the final answer.",
+        "help": "Bo’s new total is negative. If only the narrative changes, ask to see fresh tool output for the edited fixture."
+      }
+    ],
+    "check": [
+      "Original gives Ava 12 across 2 rounds, Bo 5 across 2 and grand total 17.",
+      "Modified gives Bo −11 and grand total 1."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Gemini API · code execution",
+        "https://aistudio.google.com/docs/code-execution"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-07",
+    "title": "Compare two models against an answer key",
+    "summary": "Run a small blind test and separate correct decisions from plausible explanations.",
+    "level": "Intermediate",
+    "requires": "Online AI Studio Playground with two available text models, or two supported effort settings.",
+    "features": "Model selector, fresh chats and repeatable evaluation.",
+    "roles": [
+      "Compare classification of report outcomes.",
+      "Compare service-window decision quality.",
+      "Select a model for game-rule questions."
+    ],
+    "prompt": "A facility charges $2 per started hour, capped at $8. Entries at or after 18:00 pay $3 flat. All visits occur on one day. A: 17:30–19:45; B: 18:00–18:20; C: 09:00–15:00. Give each fee and the rule that applies. Treat the entry time as the eligibility time.",
+    "steps": [
+      {
+        "title": "Run two independent chats",
+        "text": "Use the same prompt in fresh Playground chats. Change only the model or effort and label the answers X and Y before scoring.",
+        "help": "Record the selected model and effort privately so you can identify results after scoring."
+      },
+      {
+        "title": "Score visible criteria",
+        "text": "Award one point for each correct fee and one for identifying entry time as the eligibility test. Compare total scores.",
+        "help": "A model that gets A right by using the wrong rule will lose the rule point."
+      },
+      {
+        "title": "Use a holdout",
+        "text": "Move A’s entry to 18:01, keep its exit unchanged and run both versions again. Record latency separately from accuracy.",
+        "help": "This switches A to the evening rate. A faster incorrect answer still fails that case."
+      }
+    ],
+    "check": [
+      "A costs $6, B $3, C $8. The cutoff applies to entry.",
+      "Holdout A costs $3. The tiny trial demonstrates this prompt only."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google AI Studio · model selection",
+        "https://aistudio.google.com/docs/choosing-a-model"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-08",
+    "title": "Separate a function request from its result",
+    "summary": "Teach the model to request a lookup and supply a mock result before it can state an answer.",
+    "level": "Advanced",
+    "requires": "Online AI Studio with function calling available. Use a text model that supports this tool.",
+    "features": "Function declaration, tool arguments and manual simulation.",
+    "roles": [
+      "Prototype a read-only mailbox-status lookup.",
+      "Model a service-status lookup.",
+      "Connect a catalog assistant to a local index."
+    ],
+    "prompt": "What shelf contains book BK17? Use lookup_book for catalog facts. Wait for the tool result before giving a shelf number.",
+    "steps": [
+      {
+        "title": "Define the mock tool",
+        "text": "Enable Function calling in Playground and enter the declaration below. Use the individual function declaration editor when the interface offers it.",
+        "help": "If the editor wants a list of functions, wrap this single declaration in square brackets. There is no external service to connect.",
+        "code": "{\"name\":\"lookup_book\",\"description\":\"Look up an exact book ID\",\"parameters\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"]}}"
+      },
+      {
+        "title": "Observe the request",
+        "text": "Run the prompt and inspect the generated function name and arguments. Supply the mock response {\"found\":true,\"shelf\":\"H-04\"} using the tool-response control if offered.",
+        "help": "If the UI exposes calls only, keep the call as evidence and simulate the response in a clearly labeled follow-up. Record which workflow you used."
+      },
+      {
+        "title": "Test a miss",
+        "text": "In a fresh run request BK99. Reply to its lookup with {\"found\":false}. Check the final wording.",
+        "help": "If a shelf appears before the reply, restate the instruction to wait for tool evidence and run the case again."
+      }
+    ],
+    "check": [
+      "First tool request names lookup_book with id BK17. After the mock result the answer is H-04.",
+      "BK99 produces an unknown or missing result with no invented shelf."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Gemini API · function calling",
+        "https://aistudio.google.com/docs/function-calling"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-09",
+    "title": "Compare visual input with a text-only control",
+    "summary": "Test a multimodal extraction using a drawing you can make offline and inspect yourself.",
+    "level": "Advanced",
+    "requires": "Online AI Studio Playground with an image-capable model and a browser screenshot tool.",
+    "features": "Image attachment, multimodal interpretation and evidence controls.",
+    "roles": [
+      "Read fields from a sample monitoring screenshot.",
+      "Extract labels from a mock topology slide.",
+      "Turn a handmade puzzle diagram into data."
+    ],
+    "prompt": "Read the attached layout. Return the label and fill color of the left and right panels in visual order. If the layout is absent, say image required. Use only what is visible.",
+    "steps": [
+      {
+        "title": "Create a reference image",
+        "text": "Save the HTML below in a scratch file, open it locally, and take a screenshot of the two panels.",
+        "help": "Use a screenshot in PNG or JPEG format. Both letters and both colored boxes should fit within the captured area.",
+        "code": "<div style=\"display:flex;font:48px sans-serif;color:white\"><b style=\"padding:32px;background:#0647a8\">Q</b><b style=\"padding:32px;background:#ae2b20\">Z</b></div>"
+      },
+      {
+        "title": "Attach and inspect",
+        "text": "Add the screenshot to a fresh Playground prompt. Run the supplied instruction and compare positions with the image.",
+        "help": "If the labels are reversed, check whether the screenshot was mirrored before changing the prompt."
+      },
+      {
+        "title": "Remove the evidence",
+        "text": "In a new chat paste the same prompt without the attachment and run it.",
+        "help": "Reusing the previous conversation retains the picture in its context and invalidates the negative control."
+      }
+    ],
+    "check": [
+      "Left is Q on blue and right is Z on red.",
+      "Without the image the response requests an image or reports insufficient evidence."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google AI Studio · model selection",
+        "https://aistudio.google.com/docs/choosing-a-model"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-10",
+    "title": "Prototype an editable result in Build mode",
+    "summary": "Create a working review screen where a person can correct an extraction before export.",
+    "level": "Advanced",
+    "requires": "Online Google AI Studio Build mode in a browser. Use mock records only.",
+    "features": "Build chat, app preview and iterative edits.",
+    "roles": [
+      "Review sample report categories before exporting.",
+      "Correct rollout dates before sharing a digest.",
+      "Edit imported puzzle answers."
+    ],
+    "prompt": "Build a small browser app entirely from local sample data. Display two editable cards: N1, Harbor, 2027-06-03; N2, Rail, missing date. Mark cards with missing date “Needs review.” Show an Export JSON button enabled only when all dates are valid YYYY-MM-DD calendar dates. In preview, display the exported JSON as readable text.",
+    "steps": [
+      {
+        "title": "Create the app",
+        "text": "Open Build mode, submit the brief and wait for the preview. Read both cards before editing.",
+        "help": "If the builder introduces a login or remote database, ask it to use the two in-memory examples only."
+      },
+      {
+        "title": "Test the invalid state",
+        "text": "Leave N2 blank, then try 2027-02-30. The export must remain unavailable or report a validation error.",
+        "help": "If an HTML date input blocks the invalid date itself, observe that it cannot become an accepted value and continue with a real date."
+      },
+      {
+        "title": "Complete and regress",
+        "text": "Enter 2027-06-04 for N2, export and inspect both JSON records. Clear N1 and try again.",
+        "help": "If the old success persists after clearing a date, ask Build chat to recompute readiness on every edit and retry."
+      }
+    ],
+    "check": [
+      "A missing or impossible date cannot be exported.",
+      "With both valid dates, N1 and N2 export once each; clearing N1 prevents another export."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · building and previewing apps",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-11",
+    "title": "Resolve an as-of date with competing authorities",
+    "summary": "Build a prompt that resolves version history and exposes conflicts it cannot settle.",
+    "level": "Expert",
+    "requires": "Online AI Studio Playground with system instructions and text input.",
+    "features": "Source ordering, effective-date logic and held-out evaluation.",
+    "roles": [
+      "Determine which mail routing policy an example references.",
+      "Reconstruct the rollout guidance current on a date.",
+      "Recover rules for a past game edition."
+    ],
+    "prompt": "Using only the supplied records, report the rule effective on each requested date, citing its ID. P1 approved effective July 1: cap 4. P2 draft effective July 8: cap 9. P3 approved effective July 12: cap 6. Queries in 2027: June 30, July 10, July 12. All records refer to 2027.",
+    "steps": [
+      {
+        "title": "Set the decision rule",
+        "text": "Put the rule below in System Instructions and paste the three-date prompt in the user field. Keep web grounding off.",
+        "help": "If sources are treated as instructions, state that the supplied records are input and the selection rule remains fixed.",
+        "code": "Consider only approved records effective on or before the query date. Use the latest effective date. If two eligible records tie on that date and disagree, return CONFLICT with both IDs. With no eligible record, return UNKNOWN."
+      },
+      {
+        "title": "Inspect each row",
+        "text": "Run and check the effective date and approval status separately for each selected record.",
+        "help": "A choice of P2 indicates that approval status was ignored even if its date fits correctly."
+      },
+      {
+        "title": "Create a conflicting tie",
+        "text": "Use a fresh chat with the same system instruction and add P4 approved effective July 12: cap 5. Rerun all dates.",
+        "help": "If the model picks the last-mentioned record, reverse the order of P3 and P4. Both orders should produce the same conflict."
+      }
+    ],
+    "check": [
+      "Base answers are UNKNOWN, 4/P1 and 6/P3.",
+      "After P4, July 12 is CONFLICT with P3 and P4. Earlier dates are unchanged."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google · prompt design strategies",
+        "https://aistudio.google.com/docs/prompting-strategies"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-12",
+    "title": "Test a two-call tool handoff",
+    "summary": "Simulate a directory and a schedule service. Require the correct identifier to cross the boundary and prevent a lookup after a miss.",
+    "level": "Expert",
+    "requires": "Online AI Studio Playground with a model supporting function calling. The exercise uses mock responses.",
+    "features": "Multiple declared functions and a verified sequence of tool arguments.",
+    "roles": [
+      "Resolve a mock alias before looking up its trace.",
+      "Resolve a site key before asking for its report.",
+      "Look up a ship by nickname before checking its route."
+    ],
+    "prompt": "What is the next stop for the vessel named Wren? Resolve the nickname to an ID using find_vessel, then use get_route with the returned ID. If the directory has no match, say unknown and stop. Never invent an ID.",
+    "steps": [
+      {
+        "title": "Declare two tools",
+        "text": "In the function editor define find_vessel with required string nickname and get_route with required string vessel_id, using its declaration form or the JSON below.",
+        "help": "Enable function calling for a compatible model. If the editor accepts one declaration at a time, enter the two objects individually.",
+        "code": "[{\"name\":\"find_vessel\",\"description\":\"Resolve a nickname\",\"parameters\":{\"type\":\"object\",\"properties\":{\"nickname\":{\"type\":\"string\"}},\"required\":[\"nickname\"]}},{\"name\":\"get_route\",\"description\":\"Fetch a route by exact vessel ID\",\"parameters\":{\"type\":\"object\",\"properties\":{\"vessel_id\":{\"type\":\"string\"}},\"required\":[\"vessel_id\"]}}]"
+      },
+      {
+        "title": "Feed results in sequence",
+        "text": "Run the prompt. Return {\"found\":true,\"id\":\"V42\"} to the first call and {\"next_stop\":\"Cove\"} to the second. Watch the arguments.",
+        "help": "Where Playground only displays proposed calls, simulate each result in a labeled follow-up. Do not count that as an executed integration."
+      },
+      {
+        "title": "Cut off the chain",
+        "text": "Repeat in a new chat for Sparrow, with a first response of {\"found\":false}. Inspect every proposed call.",
+        "help": "A correct-looking final “unknown” still fails the test if the model attempted a downstream lookup with an invented ID."
+      }
+    ],
+    "check": [
+      "Wren triggers find_vessel(Wren), then get_route(V42), then the answer Cove.",
+      "A missing Sparrow has no route lookup."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Gemini API · function calling",
+        "https://aistudio.google.com/docs/function-calling"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-13",
+    "title": "Measure the effect of a prompt change",
+    "summary": "Use a hand-scored reference set to separate improved wording from an actual gain in classification quality.",
+    "level": "Expert",
+    "requires": "Online AI Studio Playground with a fixed model and a sheet of paper for scoring.",
+    "features": "System instruction variants, a locked test set and held-out edge cases.",
+    "roles": [
+      "Score a triage threshold for synthetic queue warnings.",
+      "Test migration-priority labels around a cutoff.",
+      "Evaluate puzzle difficulty tags against a fixed rubric."
+    ],
+    "prompt": "Assign RED if count is at least 10, AMBER for 5 through 9, GREEN for 0 through 4, and UNKNOWN for missing, negative or non-integer values. Return IDs and labels only. Inputs: A=0, B=4, C=5, D=9, E=10, F=missing, G=-1, H=4.5.",
+    "steps": [
+      {
+        "title": "Run a baseline",
+        "text": "Use an empty Playground chat with the supplied prompt. Copy the model name and output exactly before examining the answer key.",
+        "help": "If the interface automatically chooses the model, choose one fixed named model when available so a model switch cannot confound the rerun."
+      },
+      {
+        "title": "Change one instruction",
+        "text": "In another fresh chat keep inputs and model fixed. Add “Validate presence, integer type and sign before comparing thresholds” to System Instructions. Score both runs.",
+        "help": "Record correct answers out of eight and count wrong UNKNOWN cases separately. Two perfect scores show a tie on this set."
+      },
+      {
+        "title": "Guard against memorization",
+        "text": "Try a new four-case batch I=7, J=11, K=2 and L=1.25 with the same rules. Repeat each variant.",
+        "help": "If results differ between identical runs, record the range of scores. One lucky answer does not settle which prompt transfers better."
+      }
+    ],
+    "check": [
+      "Expected A–H are GREEN, GREEN, AMBER, AMBER, RED, UNKNOWN, UNKNOWN, UNKNOWN.",
+      "Holdout scores against AMBER, RED, GREEN, UNKNOWN. Report the observed scores, including ties."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Google · prompt design strategies",
+        "https://aistudio.google.com/docs/prompting-strategies"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-14",
+    "title": "Budget a fallback model using observed outcomes",
+    "summary": "Calculate cost per accepted result for two synthetic model configurations and a selective retry policy.",
+    "level": "Expert",
+    "requires": "Online AI Studio, an available code-execution-capable model and the supplied fictional prices.",
+    "features": "Code execution, outcome scoring and cost sensitivity.",
+    "roles": [
+      "Price retries for a batch of mock trace labels.",
+      "Estimate cost per usable change summary.",
+      "Compare game-content generation budgets."
+    ],
+    "prompt": "Use code execution. Eight case IDs A–H each cost 2 cents with Quick or 8 cents with Deep. Quick is correct for A,B,C,D,E. Deep is correct for A,B,C,D,E,F,G. A visible validation rule flags E,F,G,H. Routing policy: run Quick on every case, replace its answer with Deep on flagged cases only. Give total cents, accepted count and cost per accepted answer for each approach.",
+    "steps": [
+      {
+        "title": "Set up a transparent run",
+        "text": "Enable Code execution, enter the prompt, and open the generated code plus execution result. Treat the prices as fixed fictional inputs.",
+        "help": "If the model counts only paid successes, inspect the cost expression. Every attempted call costs money here."
+      },
+      {
+        "title": "Check the routing",
+        "text": "Trace E and H by hand. Both are billed twice. Replacing E retains a correct answer; H still fails.",
+        "help": "If the result claims eight accepted, ask it to print the final selected model and correctness for each ID."
+      },
+      {
+        "title": "Tighten the flag",
+        "text": "Remove G from the flag set and rerun from a fresh prompt. Compare saved spend with the lost accepted answer.",
+        "help": "A routing rule can miss a fixable error. Compare accepted count alongside cents per accepted result."
+      }
+    ],
+    "check": [
+      "Quick: 16 cents, 5 accepted, 3.2 cents each. Deep: 64 cents, 7 accepted, about 9.14 each.",
+      "Original route: 48 cents, 7 accepted, about 6.86 each. Removing G gives 40 cents and 6 accepted, about 6.67 each."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ],
+      [
+        "Gemini API · code execution",
+        "https://aistudio.google.com/docs/code-execution"
+      ]
+    ]
+  },
+  {
+    "id": "lab-ai-studio-15",
+    "title": "Build and audit an evidence-backed extraction app",
+    "summary": "Connect a model-generated draft to a human review screen and deterministic checks that reject unsupported evidence.",
+    "level": "Expert",
+    "requires": "Online AI Studio Build mode with access to a Gemini text model. Keep the prototype private and use the synthetic notices below.",
+    "features": "Build preview, model-backed extraction, validation, fixtures and manual approval.",
+    "roles": [
+      "Prototype a triage brief with traceable source lines.",
+      "Prepare a review queue for rollout notices.",
+      "Create a sourced fact-card editor for a book."
+    ],
+    "prompt": "Build a private prototype in Build mode. Load sample source lines L1 “Bay 7 opens 2027-08-04.” and L2 “Bay 9 opening date pending.” Use Gemini to propose a record per bay with bay, date or null, source ID and an exact supporting quote. Show source and proposal side by side. Validate quote membership and date evidence in code before enabling human approval. Include a “Run fixture checks” button using fixed draft responses, so validation can be tested without a model call. Display pass/fail per case.",
+    "steps": [
+      {
+        "title": "Inspect the two paths",
+        "text": "Run the prompt. In the preview, generate a draft once. Inspect the generated files to find the model request and the separate validation function.",
+        "help": "If the prototype only echoes hard-coded responses, ask for a live generation button distinct from the repeatable fixture checks. Keep the platform-managed key on the server."
+      },
+      {
+        "title": "Challenge unsupported claims",
+        "text": "Ask Build chat to add fixtures for a correct Bay 7 row, Bay 9 with null, Bay 9 assigned 2027-08-04 from L1, and a Bay 7 row with an invented quote.",
+        "help": "Checking only whether a date occurs somewhere in the document will incorrectly accept the crossed-bay case. Require the cited line to support both bay and date."
+      },
+      {
+        "title": "Rehearse review and export",
+        "text": "Run fixture checks, generate and edit a proposal, approve a valid row, then change its date. Check that validation reruns and the prior approval clears.",
+        "help": "If model access fails, exercise the validator with fixed drafts and record live generation as unverified. Test data and a model result are separate evidence."
+      }
+    ],
+    "check": [
+      "Correct Bay 7 and pending Bay 9 pass. The crossed-bay and invented-quote fixtures fail.",
+      "The app prevents approval of an invalid edit and clears a previous approval when that row changes."
+    ],
+    "sources": [
+      [
+        "Google AI Studio · building and previewing apps",
+        "https://aistudio.google.com/docs/aistudio-build-mode"
+      ],
+      [
+        "Gemini API · structured output",
+        "https://aistudio.google.com/docs/structured-output"
+      ],
+      [
+        "Google AI Studio · Playground and run settings",
+        "https://aistudio.google.com/docs/ai-studio-quickstart"
+      ]
+    ]
+  }
+]

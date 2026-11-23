@@ -2,10 +2,12 @@
 import argparse
 from datetime import date
 from hashlib import sha256
+import io
 import json
 from pathlib import Path
 import re
 from urllib.parse import urlsplit
+from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 book = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser(description=__doc__)
@@ -22,11 +24,55 @@ def words(values):
     return isinstance(values, list) and values and all(isinstance(v, str) and v.strip() for v in values)
 
 
+def check_sources(sources, key):
+    require(sources, f'Missing sources in {key}')
+    for label, link in sources:
+        url = urlsplit(link)
+        require(label and url.scheme == 'https' and url.hostname, f'Invalid source in {key}')
+
+
+def check_lab(lab, track, number):
+    key = lab['id']
+    require(key == f'lab-{track}-{number:02}', f'Unexpected lab order for {key}')
+    require(words([lab[k] for k in ('level', 'requires', 'features', 'prompt')]), f'Incomplete brief in {key}')
+    levels = ['Starter'] * 3 + ['Intermediate'] * 4 + ['Advanced'] * 3 + ['Expert'] * 5
+    require(number <= len(levels) and lab['level'] == levels[number - 1], f'Unexpected level in {key}')
+    require(words(lab['roles']) and len(lab['roles']) == 3, f'Check roles in {key}')
+    require(len(lab['steps']) >= 3 and words(lab['check']), f'Incomplete walkthrough in {key}')
+    for step in lab['steps']:
+        require(words([step[k] for k in ('title', 'text', 'help')]), f'Step missing guidance in {key}')
+        if 'code' in step:
+            require(words([step['code']]), f'Empty example in {key}')
+    check_sources(lab['sources'],key)
+
+
+def refresh_kit(folder):
+    # Fixed file order and metadata make identical kits produce identical editions.
+    for name in ('mailboxes.csv', 'Test-Inventory.ps1', 'Reference/Get-MailboxInventory.ps1', 'README.md'):
+        require((folder / name).is_file(), f'Missing practice file {name}')
+    packed = io.BytesIO()
+    with ZipFile(packed, 'w') as archive:
+        for source in sorted(folder.rglob('*')):
+            if source.is_file() and not any(p.startswith('.') for p in source.relative_to(folder).parts):
+                info = ZipInfo((Path(folder.name) / source.relative_to(folder)).as_posix())
+                info.compress_type = ZIP_DEFLATED
+                info.external_attr = 0o100644 << 16
+                archive.writestr(info, source.read_bytes())
+    output = folder.with_suffix('.zip')
+    if not output.exists() or packed.getvalue() != output.read_bytes():
+        require(not args.check, f'Run update_edition.py to refresh {output.name}')
+        output.write_bytes(packed.getvalue())
+    return output.relative_to(book).as_posix()
+
+
 manifest = json.loads((book / 'edition.json').read_text())
 edition_date = date.fromisoformat(manifest['reviewed'])
 groups = manifest['groups']
 ids = set()
 assets = ['index.html', 'reader.css', 'reader.js', 'edition.json', '../book-pager.js', '../shelf-art/all-about-ai.jpg']
+kit = refresh_kit(book / 'practice' / 'exchange-inventory')
+assets.append(kit)
+lab_count = 0
 require(groups, 'List at least one group in edition.json.')
 for group in groups:
     require(group['title'] and date.fromisoformat(group['reviewed']) <= edition_date, 'Check group title and review date.')
@@ -36,11 +82,20 @@ for group in groups:
     assets.append(path)
     chapters = json.loads((book / path).read_text())
     require(chapters, f'Empty group {path}')
-    for ch in chapters:
+    if group.get('track'):
+        require(words([group['startLabel'],group['gettingStarted']]) and urlsplit(group['startUrl']).scheme == 'https', f'Check setup help in {path}')
+        require(len(chapters) == 15, f'Expected 15 labs in {path}')
+    for number, ch in enumerate(chapters, start=1):
         key = ch['id']
-        require(re.fullmatch(r'[a-z0-9-]+', key) and key != 'contents' and key not in ids, f'Invalid or duplicate ID {key}')
+        require(re.fullmatch(r'[a-z0-9-]+', key) and key not in ('contents', 'labs') and key not in ids, f'Invalid or duplicate ID {key}')
         ids.add(key)
-        require(words([ch['title'], ch['summary']]) and ch['sections'], f'Incomplete chapter {key}')
+        require(words([ch['title'], ch['summary']]), f'Incomplete page {key}')
+        if group.get('track'):
+            check_lab(ch, group['track'], number)
+            require('kit' not in ch or ch['kit'] == kit, f'Unknown kit in {key}')
+            lab_count += 1
+            continue
+        require(ch['sections'], f'Incomplete chapter {key}')
         intro = ch['intro']
         require(words([intro[k] for k in ('what', 'features', 'exchange', 'm365', 'developer')]) and intro['sources'], f'Incomplete introduction in {key}')
         for label, link in intro['sources']:
@@ -71,4 +126,4 @@ for path, expected in [(book / 'sw.js', worker), (shelf_path, shelf)]:
     if not path.exists() or path.read_text() != expected:
         require(not args.check, f'Run update_edition.py to refresh {path.name}')
         path.write_text(expected)
-print(f'{len(ids)} chapters. {edition}')
+print(f'{len(ids)-lab_count} reference chapters, {lab_count} labs. {edition}')

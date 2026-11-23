@@ -11,14 +11,16 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to book</a>
-  <header class="bar"><div><a href="../index.html">← Bookshelf</a><a class="contents" href="#contents">Contents</a><span id="offline" role="status"></span></div></header>
+  <header class="bar"><div><a href="../index.html">← Bookshelf</a><a class="contents" href="#contents">Contents</a><a href="#labs">Labs</a><span id="offline" role="status"></span></div></header>
   <main id="main">
     <section id="index">
       <div class="front">
         <img src="../shelf-art/all-about-ai.jpg" width="220" height="275" alt="Light splitting through a glass prism on an optical bench">
         <div><span class="eyebrow">A field guide</span><h1>All About AI</h1><p>A practical guide to AI for Exchange engineering, Microsoft 365 and building your own apps.</p><div class="review" id="edition"></div></div>
       </div>
+      <section class="lab-door" id="lab-door"><div><h2>Hands-on labs</h2><p id="lab-count"></p></div><a class="lab-action" href="#labs">Browse the labs →</a></section>
       <section class="library" aria-labelledby="contents-title"><div class="tools"><h2 id="contents-title" tabindex="-1">Contents</h2><label class="search">Find a topic <input type="search" id="query" placeholder="Model, tool or task…" autocomplete="off"></label></div>
+        <p id="lab-note" hidden>Read the guides and open the practice kit offline. To work in a hosted AI tool, connect to the internet and use an account with access.</p>
         <p id="matches" aria-live="polite"></p><div id="groups"></div>
       </section>
     </section>

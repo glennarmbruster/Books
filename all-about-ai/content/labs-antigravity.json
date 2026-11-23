@@ -1,0 +1,697 @@
+[
+  {
+    "id": "lab-antigravity-01",
+    "title": "Inspect a two-file project",
+    "summary": "Create a two-file project, ask Antigravity how the files relate, and verify its answer against the text.",
+    "level": "Starter",
+    "requires": "Antigravity desktop app online and an empty practice folder.",
+    "features": "Project folders, chat and file references.",
+    "roles": [
+      "Trace a mail runbook reference.",
+      "Find the file that owns a rollout date.",
+      "Locate a book’s displayed title."
+    ],
+    "prompt": "Create title.txt containing Harbor Notes and route.txt containing Open title.txt first. Then read both and report which file stores the title, which points to it and whether a date is present. Keep spelling and capitalization. Need no additional files.",
+    "steps": [
+      {
+        "title": "Open an empty project",
+        "text": "Create a folder named lab-inspect and add it to a new project in Antigravity.",
+        "help": "The project should show only that folder. If another project is selected, switch before sending the prompt."
+      },
+      {
+        "title": "Run the prompt",
+        "text": "Use the project conversation and open the two resulting files from the changes view.",
+        "help": "Expect two plain text files. Click each filename if the conversation only shows a summary."
+      },
+      {
+        "title": "Check its reading",
+        "text": "Ask “Which exact line supplies the date?” Open the cited file yourself.",
+        "help": "Both files are one line long. A claim about a date should be withdrawn when you ask the agent to quote it."
+      }
+    ],
+    "check": [
+      "title.txt contains Harbor Notes. route.txt is a pointer.",
+      "There is no date in either source."
+    ],
+    "sources": [
+      [
+        "Antigravity · project folders and worktrees",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-02",
+    "title": "Review a small edit in context",
+    "summary": "Correct one catalog title while preserving an intentional near match.",
+    "level": "Starter",
+    "requires": "Antigravity desktop app online and a scratch project.",
+    "features": "Agent edits and the file-change review.",
+    "roles": [
+      "Fix a spelling error in one template.",
+      "Correct one workload label in a guide.",
+      "Change one title in a book catalog."
+    ],
+    "prompt": "Create catalog.txt with three lines: Dock Notes / Dock Notse / Dock Notes Archive (one item per line). Wait for me before editing it further.",
+    "steps": [
+      {
+        "title": "Establish the original",
+        "text": "Run the prompt in an empty project. Open catalog.txt and check all three lines.",
+        "help": "Expect the typo on line two only. If the slashes were copied, ask for one entry per line."
+      },
+      {
+        "title": "Request one correction",
+        "text": "In the same conversation say “Change the second line to Dock Notes. Preserve the original order and every other line.”",
+        "help": "If the agent suggests deduplicating the catalog, remind it that repeated titles are intentional."
+      },
+      {
+        "title": "Inspect the result",
+        "text": "In the changes view open catalog.txt and compare the complete file with the three-line baseline.",
+        "help": "A new file may show all lines as additions. Read the full contents to check the edit in that case."
+      }
+    ],
+    "check": [
+      "Final lines are Dock Notes, Dock Notes and Dock Notes Archive, in order.",
+      "The archive remains separate and duplicate entries survive."
+    ],
+    "sources": [
+      [
+        "Antigravity · project folders and worktrees",
+        "https://antigravity.google/docs/projects/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-03",
+    "title": "Build a clickable first page",
+    "summary": "Turn three sentences into a local page with one small interaction.",
+    "level": "Starter",
+    "requires": "Antigravity desktop app online, a scratch folder and a web browser.",
+    "features": "File creation, local preview and visual verification.",
+    "roles": [
+      "Mock an incident detail panel.",
+      "Sketch an expandable policy note.",
+      "Prototype a hint button on a puzzle."
+    ],
+    "prompt": "Create a self-contained index.html with heading Harbor Quiz, question Which boat leaves first?, and a button Show answer. Initially hide the answer Dawn Ferry. Clicking reveals it and changes the button to Hide answer. Clicking again hides it. Use plain HTML and JavaScript.",
+    "steps": [
+      {
+        "title": "Create the page",
+        "text": "Send the prompt in an empty Antigravity project and open the resulting HTML from its folder in a browser.",
+        "help": "If you see markup, open the file with a browser rather than a text editor."
+      },
+      {
+        "title": "Exercise both states",
+        "text": "Read the initial screen, click the button twice and note the label and answer after each click.",
+        "help": "The heading alone cannot prove the interaction works. Watch for the answer disappearing on the second click."
+      },
+      {
+        "title": "Give concrete feedback",
+        "text": "In Antigravity report the first mismatch, or request a walkthrough of the two observed states. Reload the page.",
+        "help": "If the answer stays visible after reloading, ask the agent to recheck how it sets the initial state."
+      }
+    ],
+    "check": [
+      "Initial and reloaded page hide Dawn Ferry.",
+      "First click reveals Dawn Ferry and second click hides it again."
+    ],
+    "sources": [
+      [
+        "Antigravity · features and project surfaces",
+        "https://antigravity.google/docs/features"
+      ],
+      [
+        "Antigravity · reviewing a walkthrough",
+        "https://antigravity.google/docs/walkthrough/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-04",
+    "title": "Normalize an untidy export",
+    "summary": "Write a reproducible transformation and test what happens to invalid rows.",
+    "level": "Intermediate",
+    "requires": "Antigravity desktop app online, Python 3 and an empty project.",
+    "features": "Project files, terminal execution and output inspection.",
+    "roles": [
+      "Normalize synthetic delivery statuses.",
+      "Summarize mocked license assignments.",
+      "Clean scores imported from a CSV file."
+    ],
+    "prompt": "Create input.csv from ID,minutes / A,15 / B,0 / C, / D,oops (slashes separate lines). Write summarize.py using Python’s standard library. Zero is valid. Skip blank or nonnumeric values, recording their IDs. Print valid count, total and rejected IDs. Run it.",
+    "steps": [
+      {
+        "title": "Check the fixture",
+        "text": "Run the request, then open input.csv in the project. Confirm C has an empty field and D has a literal word.",
+        "help": "Fix the input first if either row was “cleaned” during setup. They are intentional test cases."
+      },
+      {
+        "title": "Inspect the run",
+        "text": "Open the terminal output or ask the agent to rerun python3 summarize.py from the project directory.",
+        "help": "If the command cannot locate input.csv, confirm both files are in the same folder and note the current directory."
+      },
+      {
+        "title": "Perturb one row",
+        "text": "Change only C to C,6 and rerun the same command. Compare the outputs.",
+        "help": "A stored summary that never changes indicates the program hard-coded the fixture instead of reading the file."
+      }
+    ],
+    "check": [
+      "First run has 2 valid, total 15, rejected C and D.",
+      "After the edit there are 3 valid, total 21, rejected D only."
+    ],
+    "sources": [
+      [
+        "Antigravity · features and project surfaces",
+        "https://antigravity.google/docs/features"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-05",
+    "title": "Fix a numeric sorting defect",
+    "summary": "Use an observable failure to guide one edit, then repeat the same interaction.",
+    "level": "Intermediate",
+    "requires": "Antigravity desktop app online, an empty project and browser. Built-in browser support depends on account and version.",
+    "features": "Local app inspection, browser interaction and diff review.",
+    "roles": [
+      "Sort mailbox sizes numerically.",
+      "Order site storage figures.",
+      "Sort a high-score list."
+    ],
+    "prompt": "Create sort.html with a Sort button and an initially unsorted list of strings 10, 2, 0. On click use unmodified JavaScript array sort() to display the result. This intentionally buggy fixture will be fixed in a second step.",
+    "steps": [
+      {
+        "title": "Observe the old behavior",
+        "text": "Produce the page. Open it in a browser and click Sort. Record the displayed sequence.",
+        "help": "If automated browsing is unavailable, open the file yourself. The fixture should show 0, 10, 2 after the click."
+      },
+      {
+        "title": "Trace and patch",
+        "text": "Tell Antigravity “Sort as numbers and retain duplicate entries. Show the changed line and rerun the original example.”",
+        "help": "If it edits just the displayed sample, ask it to identify the comparison used by the sort operation."
+      },
+      {
+        "title": "Check a second input",
+        "text": "Replace the fixture list with 10, 2, 2, 0 and reload before clicking Sort.",
+        "help": "If the old list persists, check the file path in the address bar and match it to the edited project."
+      }
+    ],
+    "check": [
+      "The original fixed result is 0, 2, 10.",
+      "The duplicate case gives 0, 2, 2, 10."
+    ],
+    "sources": [
+      [
+        "Antigravity · browser tools and availability",
+        "https://antigravity.google/docs/browser"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-06",
+    "title": "Read a saved file from two app versions",
+    "summary": "Add compatibility and an explicit error path for an unknown format.",
+    "level": "Intermediate",
+    "requires": "Antigravity desktop app online, Python 3 and a new project.",
+    "features": "A plan, a file-format reader and fixture tests.",
+    "roles": [
+      "Read two versions of a synthetic trace export.",
+      "Handle an inventory report rename.",
+      "Load scores saved before an app upgrade."
+    ],
+    "prompt": "Plan a standard-library Python reader for three JSON fixtures: {\"version\":1,\"points\":7}, {\"version\":2,\"score\":0}, {\"version\":3,\"score\":99}. Version 1 uses points, version 2 uses score. Unknown versions raise ValueError. Preserve a true zero. Show cases before writing files.",
+    "steps": [
+      {
+        "title": "Review the plan",
+        "text": "Send the prompt in an empty project. Check which field is selected for each version and which case fails.",
+        "help": "If the plan tries to guess the newest structure, point to the explicit contract for version 3."
+      },
+      {
+        "title": "Implement the checks",
+        "text": "Reply “Create reader.py and test_reader.py with unittest; run python3 -m unittest -v.” Examine the test names and assertions.",
+        "help": "A test that only checks whether a number was returned could miss an accidental zero fallback."
+      },
+      {
+        "title": "Try a missing field",
+        "text": "Ask the agent to add a version 2 record with no score and reject it clearly. Run the suite again.",
+        "help": "Read the missing-field assertion and the original zero assertion side by side to verify both still mean different things."
+      }
+    ],
+    "check": [
+      "Known versions return 7 and 0.",
+      "Version 3 and version 2 missing score are rejected."
+    ],
+    "sources": [
+      [
+        "Antigravity · planning before changes",
+        "https://antigravity.google/docs/plan/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-07",
+    "title": "Preserve an overnight service window",
+    "summary": "Translate a boundary rule into tests before implementing a time predicate.",
+    "level": "Intermediate",
+    "requires": "Antigravity desktop app online with Python 3 in a scratch folder.",
+    "features": "Planning, terminal tests and inspecting changes.",
+    "roles": [
+      "Test hours for a mail-processing window.",
+      "Check a rollout window across midnight.",
+      "Implement overnight booking hours."
+    ],
+    "prompt": "Design an is_open(hour, minute) function for a service open from 22:00 inclusive until 02:00 exclusive each day. Inputs use 24-hour local time. Invalid hour or minute raises ValueError. Draft a boundary table before coding.",
+    "steps": [
+      {
+        "title": "Inspect the table",
+        "text": "Ask Antigravity for adjacent minutes on either side of each boundary and noon.",
+        "help": "If the table only lists late evening, ask for the early-morning half and the midnight transition."
+      },
+      {
+        "title": "Build from the examples",
+        "text": "Request a Python module with table-driven unittest coverage and a terminal run. Compare the implementation with the table.",
+        "help": "Using an ordinary same-day interval usually loses midnight. A failed 00:00 case narrows the mistake."
+      },
+      {
+        "title": "Challenge validation",
+        "text": "Add 24:00 and 01:60 as invalid inputs and rerun the suite.",
+        "help": "If either wraps to another time, ask the agent where input validation happens before the time comparison."
+      }
+    ],
+    "check": [
+      "21:59 false, 22:00 true, 00:00 true, 01:59 true, 02:00 false and noon false.",
+      "24:00 and 01:60 each raise ValueError."
+    ],
+    "sources": [
+      [
+        "Antigravity · planning before changes",
+        "https://antigravity.google/docs/plan/"
+      ],
+      [
+        "Antigravity · features and project surfaces",
+        "https://antigravity.google/docs/features"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-08",
+    "title": "Prove a paged report is complete",
+    "summary": "Test a Graph-shaped inventory locally, including an empty middle page.",
+    "level": "Advanced",
+    "requires": "Antigravity desktop app online, Python 3 and a new local practice project.",
+    "features": "Terminal test execution and reviewing an API adapter.",
+    "roles": [
+      "Page through a synthetic mailbox inventory.",
+      "Verify a Graph report reaches the last collection page.",
+      "Load paged results in a hobby catalog."
+    ],
+    "prompt": "Implement a Python collector with a fake fetch function. Page one returns {\"value\":[\"A\"],\"@odata.nextLink\":\"p2\"}, p2 returns {\"value\":[],\"@odata.nextLink\":\"p3\"}, p3 returns {\"value\":[\"C\"]}. Log requests, follow supplied links, and reject a repeated link with a clear error. No network calls.",
+    "steps": [
+      {
+        "title": "Agree on termination",
+        "text": "Open a clean project and discuss what ends enumeration before asking for code and unittest fixtures.",
+        "help": "The absence of the next link is the normal stopping signal. Zero items alone do not end this fixture."
+      },
+      {
+        "title": "Verify normal traversal",
+        "text": "Run the tests and inspect both the list of fetched pages and the returned data.",
+        "help": "If C is missing, inspect whether an empty value array stops the loop early."
+      },
+      {
+        "title": "Introduce a cycle",
+        "text": "Have p3 link to p2 and rerun the collector. Read the test output and count fetches.",
+        "help": "A timeout is an unhelpful pass criterion. Ask the test to assert a cycle error before a second request to p2."
+      }
+    ],
+    "check": [
+      "Normal output is A, C and the fetch log is p1, p2, p3.",
+      "The cycle variant raises an error without fetching p2 twice."
+    ],
+    "sources": [
+      [
+        "Antigravity · features and project surfaces",
+        "https://antigravity.google/docs/features"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ],
+      [
+        "Microsoft Learn · paging through Graph results",
+        "https://learn.microsoft.com/en-us/graph/paging"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-09",
+    "title": "Check a dialog with only a keyboard",
+    "summary": "Create a test a screenshot alone cannot pass. Follow keyboard focus across opening and closing a modal.",
+    "level": "Advanced",
+    "requires": "Antigravity desktop app online, an empty project and a desktop browser with a keyboard.",
+    "features": "Browser verification, focus behavior and review of an interactive page.",
+    "roles": [
+      "Prototype a keyboard-friendly trace detail view.",
+      "Review an admin form’s focus behavior.",
+      "Make puzzle help usable by keyboard."
+    ],
+    "prompt": "Build dialog.html with a button named Rules and a modal containing a heading, “Two players take turns,” and a Close button. Open with Enter, place focus on Close, close with Escape or Close, and return focus to Rules. Keep the background unavailable during the modal.",
+    "steps": [
+      {
+        "title": "Inspect the initial state",
+        "text": "Send the prompt and open the page locally. Press Tab until Rules is focused, then Enter.",
+        "help": "If the browser moves focus through its own toolbar first, click the page background and start again with Tab."
+      },
+      {
+        "title": "Trace keyboard focus",
+        "text": "Look for a visible focus indicator on Close. Press Tab and Shift+Tab while the dialog is open.",
+        "help": "Background controls should remain unreachable. If visual focus is unclear, inspect document.activeElement in the browser console."
+      },
+      {
+        "title": "Close both ways",
+        "text": "Press Escape, check the focused control, reopen, and activate Close with the keyboard. Report any mismatch to Antigravity and retest.",
+        "help": "Keep the exact key sequence with the bug report so the agent can reproduce the failing path."
+      }
+    ],
+    "check": [
+      "Both closing routes return focus to Rules.",
+      "The dialog text and Close control are unavailable in the closed state."
+    ],
+    "sources": [
+      [
+        "Antigravity · browser tools and availability",
+        "https://antigravity.google/docs/browser"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-10",
+    "title": "Test an offline book update",
+    "summary": "Build a tiny two-edition reading page and distinguish an installed revision from a stale cached one.",
+    "level": "Advanced",
+    "requires": "Antigravity desktop app online with a localhost web server and browser developer tools.",
+    "features": "Terminal, service-worker code review and browser network inspection.",
+    "roles": [
+      "Cache an approved field reference.",
+      "Distribute a portable onboarding guide.",
+      "Verify an iPad book after a revision."
+    ],
+    "prompt": "Create index.html, chapter.txt (edition A), and sw.js for a small read-only book on localhost. Precache the document and chapter, expose “Ready offline” only once this page is controlled, and remove older book caches when activating a new edition. Create a terminal command to serve the folder.",
+    "steps": [
+      {
+        "title": "Install the first copy",
+        "text": "Open the localhost URL online. Wait for Ready offline, then reload offline in the browser’s network controls.",
+        "help": "If it fails on the first visit, re-enable the network, wait for activation and reload for control. A file URL cannot install this worker."
+      },
+      {
+        "title": "Prepare the revision",
+        "text": "Go online. Ask Antigravity to change the chapter to edition B and update the worker’s cache name. Inspect both edits.",
+        "help": "If only the text file changed, the installed cache can still contain edition A."
+      },
+      {
+        "title": "Prove the update",
+        "text": "Close the old reader tabs so a waiting worker can activate. Reopen online, verify edition B, then perform an ordinary offline reload.",
+        "help": "A hard reload can bypass the cache. Use a normal reload and inspect the worker state if the old edition persists."
+      }
+    ],
+    "check": [
+      "Edition A opens offline after installation.",
+      "After update the offline reader displays B and the old book-specific cache is gone."
+    ],
+    "sources": [
+      [
+        "Antigravity · browser tools and availability",
+        "https://antigravity.google/docs/browser"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ],
+      [
+        "Antigravity · features and project surfaces",
+        "https://antigravity.google/docs/features"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-11",
+    "title": "Make a replay-safe event ledger",
+    "summary": "Guarantee the recorded balance through retries and concurrent writers sharing one database.",
+    "level": "Expert",
+    "requires": "Antigravity desktop app online and Python 3 with SQLite. Use a disposable local database.",
+    "features": "Implementation planning, concurrency tests and review of the transaction boundary.",
+    "roles": [
+      "Deduplicate synthetic notification deliveries.",
+      "Test replayed service-change events.",
+      "Protect a score history from double taps."
+    ],
+    "prompt": "Build a Python/SQLite event ledger. An event ID identifies one immutable signed amount. Apply A,+40 and B,+40, then retry A,+40. A repeat ID with a different amount is an error. Use a database-enforced uniqueness rule. Test with two independent connections delivering C,+10 simultaneously. Use only a temporary database.",
+    "steps": [
+      {
+        "title": "Pin down the contract",
+        "text": "Ask for a plan and expected totals before implementation. Check how the design distinguishes different IDs with the same amount.",
+        "help": "Reject a proposal to deduplicate on amount. A and B are separate legitimate contributions."
+      },
+      {
+        "title": "Inspect the transaction",
+        "text": "Have the agent implement and run the cases. Open the diff at the durable write and inspect how duplicates and conflicts are handled.",
+        "help": "A Python set shared by two test calls cannot establish behavior across database connections. Require the test to open two actual connections."
+      },
+      {
+        "title": "Repeat under contention",
+        "text": "Run the concurrent case several times on new databases. Submit A,+41 and read the stored rows afterward.",
+        "help": "A run blocked by a database lock is a recorded failure to handle contention. Ask the agent to preserve its output and address the transaction behavior."
+      }
+    ],
+    "check": [
+      "The replay leaves two rows and total 80. Two deliveries of C leave three rows and total 90.",
+      "A,+41 produces an explicit conflict, preserving A,+40 and total 90."
+    ],
+    "sources": [
+      [
+        "Antigravity · planning before changes",
+        "https://antigravity.google/docs/plan/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ],
+      [
+        "Antigravity · reviewing a walkthrough",
+        "https://antigravity.google/docs/walkthrough/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-12",
+    "title": "Verify staged configuration precedence",
+    "summary": "Implement a layered configuration reader and force it to disclose which layer supplied each effective setting.",
+    "level": "Expert",
+    "requires": "Antigravity desktop app online and Python 3 in an empty project.",
+    "features": "Agent planning, terminal tests and inspecting configuration provenance.",
+    "roles": [
+      "Explain a mail policy override.",
+      "Review a site-specific rollout setting.",
+      "Resolve book defaults and personal preferences."
+    ],
+    "prompt": "Write a standard-library configuration resolver. Defaults are reminders=true, limit=10. Site overrides set limit=5. User overrides set reminders=false and limit=0. Later layers win when a key exists. A supplied null is an error. Return each value and the layer that supplied it. Reject unknown settings.",
+    "steps": [
+      {
+        "title": "Review the merge rule",
+        "text": "Start in a scratch project. Ask the agent to show expected outcomes for absent, false, zero and null before writing the resolver.",
+        "help": "A map that uses truthiness to detect presence will silently drop both legitimate overrides. Point out which rows should reveal this."
+      },
+      {
+        "title": "Exercise each source",
+        "text": "Run the implemented tests. Remove limit from the user input, then remove it from the site input and run each variation.",
+        "help": "If the result stays zero, check whether the fixture object is being reused or mutated between cases."
+      },
+      {
+        "title": "Prove failure is atomic",
+        "text": "Pass a user override containing reminders=false and typo_lim=7. Inspect the result and original dictionaries after rejection.",
+        "help": "Ask for an assertion that the original objects are unchanged so one failed evaluation cannot contaminate the next one."
+      }
+    ],
+    "check": [
+      "Original resolves false and 0 from user. Removing user limit gives 5 from site; removing both yields 10 from defaults.",
+      "An explicit null or unknown key causes an error with no mutation of input layers."
+    ],
+    "sources": [
+      [
+        "Antigravity · planning before changes",
+        "https://antigravity.google/docs/plan/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-13",
+    "title": "Migrate a contract while two clients coexist",
+    "summary": "Use an independent reader and writer to reveal exactly when a format switch breaks an older client.",
+    "level": "Expert",
+    "requires": "Antigravity desktop app online, Python 3 and a disposable project.",
+    "features": "Multi-file navigation, a compatibility matrix and command-line verification.",
+    "roles": [
+      "Stage a mailbox report format rename.",
+      "Coordinate consumption of a new inventory export.",
+      "Keep old saved-game readers working."
+    ],
+    "prompt": "Build two Python readers and two writers for a score record. Reader V1 looks only for points. Reader V2 accepts score or points, but rejects conflicting values when both exist. Writer Legacy emits only points. Writer Dual emits points and score with the same value. Test score zero and negative seven in every pairing.",
+    "steps": [
+      {
+        "title": "Create a compatibility matrix",
+        "text": "In Antigravity ask for a table with writer versions down the side and reader versions across the top. Then request independently callable functions.",
+        "help": "All four combinations should work before testing the proposed change. A reader that imports writer internals weakens the compatibility check."
+      },
+      {
+        "title": "Introduce a future writer",
+        "text": "Add Writer New that emits only score. Run the same readers on its output and record the expected V1 failure.",
+        "help": "A migration plan is incomplete if the table simply drops the legacy reader. Keep its failing case visible."
+      },
+      {
+        "title": "Handle a bad dual record",
+        "text": "Feed both readers a hand-written record with points=3 and score=4. Read their different outcomes, then request a rollout sequence.",
+        "help": "For old clients, points is the only recognized field. The new reader has enough information to detect a disagreement and should raise a clear error."
+      }
+    ],
+    "check": [
+      "The original four pairings reproduce 0 and −7. The new writer works only with V2.",
+      "V1 reads 3 from the conflicting record. V2 rejects it. Deploy V2 readers before retiring the dual writer."
+    ],
+    "sources": [
+      [
+        "Antigravity · planning before changes",
+        "https://antigravity.google/docs/plan/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ],
+      [
+        "Antigravity · reviewing a walkthrough",
+        "https://antigravity.google/docs/walkthrough/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-14",
+    "title": "Verify an outage calculation across midnight",
+    "summary": "Distinguish event duration from unique unavailable minutes when intervals overlap or touch.",
+    "level": "Expert",
+    "requires": "Antigravity desktop app online and Python 3 with UTC timestamp support.",
+    "features": "Repository tests, an independent calculation and diagnostic evidence.",
+    "roles": [
+      "Compute overlapping mail gateway outages.",
+      "Summarize service-health windows.",
+      "Measure actual unavailability of a personal app."
+    ],
+    "prompt": "Write a Python union-duration calculator. Intervals are UTC, start-inclusive and end-exclusive. Fixtures on Jan 1–2, 2027: A 23:50–00:10; B 00:05–00:20; C 00:20–00:25; D 00:08–00:09 (B,C,D start Jan 2). Count unique minutes, reject end before start and allow zero-length intervals.",
+    "steps": [
+      {
+        "title": "Establish an independent answer",
+        "text": "Draw the timeline before opening the plan. Ask Antigravity to write both a merged-interval implementation and a minute-set reference for these whole-minute synthetic fixtures.",
+        "help": "Naively summing individual intervals gives 41 minutes. The four intervals form one continuous span."
+      },
+      {
+        "title": "Exercise invariants",
+        "text": "Request tests for shuffled input, a duplicate of A, a zero-length D replacement and a separate Jan 2 01:00–01:02 interval.",
+        "help": "If order changes the answer, inspect whether the implementation merges sorted or original intervals."
+      },
+      {
+        "title": "Review failure behavior",
+        "text": "Feed an interval whose explicit UTC end precedes its start. Have the agent show exactly which interval is rejected and rerun the suite.",
+        "help": "A negative interval must not be interpreted as a midnight crossing after the full dates have already been supplied."
+      }
+    ],
+    "check": [
+      "Original union is 35 minutes; adding the separate interval yields 37.",
+      "Duplicates, shuffle and a zero-length nested interval do not inflate the total; reversed timestamps fail."
+    ],
+    "sources": [
+      [
+        "Antigravity · planning before changes",
+        "https://antigravity.google/docs/plan/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ]
+    ]
+  },
+  {
+    "id": "lab-antigravity-15",
+    "title": "Release a tested, recoverable importer",
+    "summary": "Rehearse failure halfway through a file import and verify that retrying produces the same durable state as a clean run.",
+    "level": "Expert",
+    "requires": "Antigravity desktop app online with Python 3 and SQLite. Start a new disposable project.",
+    "features": "Project plans, controlled fault injection, terminal execution and a release walkthrough.",
+    "roles": [
+      "Resume a synthetic mailbox-report import.",
+      "Recover a batch of site inventory rows.",
+      "Safely restore a saved-game backup."
+    ],
+    "prompt": "Implement a local Python importer for three records: R1 +8, R2 -3, R3 +5. Use a transaction per row to persist its ID, amount and checkpoint atomically in temporary SQLite. Add a test-only switch that interrupts immediately after the second commit. Resume from the checkpoint, then replay the entire input. A conflicting duplicate must fail clearly.",
+    "steps": [
+      {
+        "title": "Define durable observations",
+        "text": "Review the plan in Antigravity. Ask for a clean-run reference and a table of database state after interruption, resume and replay.",
+        "help": "An in-memory counter cannot prove recoverability. Require a newly started process to read the same database for the resume."
+      },
+      {
+        "title": "Inspect the transaction and test",
+        "text": "Have the agent implement, run the importer with the fault switch, then use a new process to resume. Compare rows, total and checkpoint to the clean run.",
+        "help": "If the checkpoint advances independently of the amount write, interrupting between those operations could lose a row. Inspect their transaction together."
+      },
+      {
+        "title": "Produce a release handoff",
+        "text": "Ask for a walkthrough with commands and observed outputs. Retry with a fresh input file that presents R2,-9 from the beginning, against the populated database.",
+        "help": "The modified row must be inspected during a full replay. A resume that skips already checkpointed rows would never exercise the conflict."
+      }
+    ],
+    "check": [
+      "After interruption: R1 and R2, total 5, checkpoint 2. After resume: three rows, total 10, checkpoint 3.",
+      "Full replay gives the same durable rows. Conflicting R2 is rejected and its stored amount stays −3."
+    ],
+    "sources": [
+      [
+        "Antigravity · planning before changes",
+        "https://antigravity.google/docs/plan/"
+      ],
+      [
+        "Antigravity · reviewing file changes",
+        "https://antigravity.google/docs/review-changes/"
+      ],
+      [
+        "Antigravity · reviewing a walkthrough",
+        "https://antigravity.google/docs/walkthrough/"
+      ]
+    ]
+  }
+]

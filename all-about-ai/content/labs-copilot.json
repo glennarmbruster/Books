@@ -1,0 +1,692 @@
+[
+  {
+    "id": "lab-copilot-01",
+    "title": "Read a maintenance notice without filling the gaps",
+    "summary": "Build a first Copilot Chat prompt that extracts evidence and leaves missing details open.",
+    "level": "Starter",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
+    "features": "Work chat and source-grounded extraction",
+    "roles": [
+      "Read a mail maintenance notice.",
+      "Check the scope of a service announcement.",
+      "Turn a release brief into a checklist."
+    ],
+    "prompt": "Using only the notice above, give me a table of affected service, start, end, time zone and owner. For each value quote the supporting words. Use “unspecified” when the notice is silent.",
+    "steps": [
+      {
+        "title": "Supply one short source",
+        "text": "Start a fresh work chat and paste this entire fictional notice. Keep the identifier so you can tell which version the answer used.",
+        "help": "If chat starts to summarize immediately, send the lab prompt as your next message in the same conversation.",
+        "code": "Notice A. Mail search maintenance, Saturday 09:00–09:30 UTC. Message delivery will continue."
+      },
+      {
+        "title": "Extract the fields",
+        "text": "Paste the prompt. Compare every returned value against the single sentence that supports it.",
+        "help": "The affected function is mail search. If the answer says all mail is down, ask which sentence supports that claim."
+      },
+      {
+        "title": "Change one fact",
+        "text": "Send a revised Notice B with the words “Owner: Taylor” appended. Request an updated table for B only.",
+        "help": "Only the owner and document reference should change. An invented owner for A means the evidence test failed."
+      }
+    ],
+    "check": [
+      "A has a 30-minute UTC window and an unspecified owner.",
+      "B names Taylor. Neither notice describes a delivery outage."
+    ],
+    "sources": [
+      [
+        "Microsoft · work grounding and permissions",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-02",
+    "title": "Find the last confirmed instruction in a mail thread",
+    "summary": "Use the chronology of a conversation to distinguish a requested date from a confirmed one.",
+    "level": "Starter",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Paste the mock thread directly; no email account action is needed.",
+    "features": "Outlook-style thread summaries and drafting",
+    "roles": [
+      "Confirm a mailbox move window.",
+      "Reconstruct a rollout approval.",
+      "Draft an accurate beta invitation."
+    ],
+    "prompt": "Return three lines: last confirmed date, latest proposal, and person who still needs to respond. Cite the message numbers. Draft a one-sentence follow-up for the pending decision.",
+    "steps": [
+      {
+        "title": "Create the thread",
+        "text": "Paste these three messages together. The message numbers stand in for the links that Outlook can supply in a real thread.",
+        "help": "Keep the sender on each line. A proposal from an organizer and confirmation from an approver are different events.",
+        "code": "M1 Approver: Tuesday is booked.\nM2 Organizer: Could we use Wednesday instead?\nM3 Approver: I will check."
+      },
+      {
+        "title": "Check the status",
+        "text": "Send the prompt and inspect the evidence. Reading M3 in isolation leaves the prior confirmed date invisible.",
+        "help": "Tuesday comes from M1. If Wednesday is shown as confirmed, ask which message explicitly accepts it."
+      },
+      {
+        "title": "Close the loop",
+        "text": "Append “M4 Approver: Wednesday is now booked. Cancel Tuesday.” Ask for the same three lines.",
+        "help": "Wednesday now has explicit support. The pending responder should disappear. Use the draft as text only."
+      }
+    ],
+    "check": [
+      "Before M4, Tuesday is confirmed and Wednesday is pending with the approver.",
+      "After M4, Wednesday is confirmed and Tuesday is canceled."
+    ],
+    "sources": [
+      [
+        "Microsoft · Outlook thread summaries",
+        "https://support.microsoft.com/en-us/outlook/copilot-pages/summarize-an-email-thread-with-copilot-in-outlook"
+      ],
+      [
+        "Microsoft · Copilot in each Office app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-03",
+    "title": "Write a release note for two audiences",
+    "summary": "Use Word or chat to retell the same change without quietly widening its scope.",
+    "level": "Starter",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optionally paste the fixture into an unsent Word document and use its Copilot pane.",
+    "features": "Word drafting and audience adaptation",
+    "roles": [
+      "Write user-facing mail maintenance notices.",
+      "Translate technical changes into a help-desk note.",
+      "Announce one platform-specific fix."
+    ],
+    "prompt": "Write a 35-word user notice and a three-bullet help-desk note. Preserve platforms, time zone and required action. Mark unanswered questions explicitly. Use only the release note above.",
+    "steps": [
+      {
+        "title": "Give the editor precise facts",
+        "text": "Enter the release note below into a blank document or a new chat.",
+        "help": "If Word editing is unavailable, paste the same text into ordinary Copilot Chat and request draft text.",
+        "code": "Build 12. A display bug affects iPad only. Fix rolls out Tuesday 14:00 UTC. Restart the app after rollout. Windows needs no action."
+      },
+      {
+        "title": "Read both versions",
+        "text": "Send the prompt. Highlight any statement about Android, downtime or a local time zone. The source says nothing about these.",
+        "help": "Ask for a revision preserving “iPad only” if the shortened notice says that all users must restart."
+      },
+      {
+        "title": "Handle a missing date",
+        "text": "Replace the rollout sentence with “Rollout time pending.” Repeat the prompt and compare both versions.",
+        "help": "The old timestamp should disappear in both drafts. Look for the stale time in headings as well as body text."
+      }
+    ],
+    "check": [
+      "Both first drafts limit the restart to iPad and preserve 14:00 UTC.",
+      "Neither revised draft invents a new rollout time."
+    ],
+    "sources": [
+      [
+        "Microsoft · Copilot in Word",
+        "https://support.microsoft.com/en-us/word/copilot/start-from-exist"
+      ],
+      [
+        "Microsoft · Copilot in each Office app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-04",
+    "title": "Recover a decision from a partial meeting transcript",
+    "summary": "Practice attributing decisions when the available transcript covers only part of a meeting.",
+    "level": "Intermediate",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. The supplied transcript substitutes for a licensed Teams recap.",
+    "features": "Teams transcript scope, evidence and decision logs",
+    "roles": [
+      "Verify an incident handoff.",
+      "Separate a Teams decision from a chat proposal.",
+      "Identify open design decisions."
+    ],
+    "prompt": "Produce a decision log with evidence IDs, owner and deadline. List unresolved proposals separately. Use “unknown” for anything outside the provided record. Do not assume silence means approval.",
+    "steps": [
+      {
+        "title": "Assemble the event record",
+        "text": "Paste this combined chat and transcript. The transcript begins ten minutes after the meeting starts.",
+        "help": "Preserve the source type. A chat message before transcription began can still be evidence of what its writer proposed.",
+        "code": "09:03 chat C1 Lee: Could exports run nightly?\n09:10 transcript begins\n09:12 T1 Kim: I approve weekly exports.\n09:13 T2 Lee: I will own the export job."
+      },
+      {
+        "title": "Check the decision log",
+        "text": "Send the prompt. Compare the decision with T1 and the owner with T2. Note the missing deadline.",
+        "help": "If Copilot claims nightly exports were rejected by vote, ask for the vote text. This record supports approval of weekly exports."
+      },
+      {
+        "title": "Remove the approval",
+        "text": "Delete T1 and rerun in a new chat with the shortened record. In Teams, this resembles a gap in the available speech evidence.",
+        "help": "The remaining evidence supports a proposal and an owner, while the approved frequency is unknown."
+      }
+    ],
+    "check": [
+      "Initial approval is weekly, assigned to Lee, with no date.",
+      "Without T1, no approved frequency can be established."
+    ],
+    "sources": [
+      [
+        "Microsoft · Teams transcript coverage",
+        "https://support.microsoft.com/en-us/teams/copilot/catch-up-on-meetings-with-microsoft-365-copilot-in-teams"
+      ],
+      [
+        "Microsoft · work grounding and permissions",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-05",
+    "title": "Reconcile license assignments without counting people twice",
+    "summary": "Use Excel or Copilot Chat to distinguish assignment rows from the people represented in them.",
+    "level": "Intermediate",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optional Excel workbook for a formula or PivotTable.",
+    "features": "Excel tables, distinct counts and reconciliation",
+    "roles": [
+      "Count distinct mail users in a report.",
+      "Measure unique license coverage.",
+      "Reconcile subscriptions in a small app."
+    ],
+    "prompt": "From the supplied CSV, report assignment rows, distinct person-and-plan pairs, and distinct people. Explain your duplicate rule. Return the person list behind the last total.",
+    "steps": [
+      {
+        "title": "Supply four assignments",
+        "text": "Paste the CSV into chat or enter it in three Excel columns. Ask how the row ID differs from a person ID.",
+        "help": "Keep A and B for the first person. Those are two plans owned by the same person.",
+        "code": "Row,Person,Plan\n1,u1,A\n2,u1,B\n3,u2,A\n4,u2,A"
+      },
+      {
+        "title": "Reconcile three totals",
+        "text": "Send the prompt. In Excel ask to see the source range and distinct list. In chat ask for the intermediate pairs as a table.",
+        "help": "The unique pairs are u1/A, u1/B and u2/A. Seeing only two pairs usually means the method dropped Plan."
+      },
+      {
+        "title": "Introduce an incomplete row",
+        "text": "Append “5,,B”. Ask it to count the new row, flag the missing person, and exclude unidentified people and pairs from distinct totals.",
+        "help": "If the count of people rises to three, inspect the distinct list for a blank entry and restate the exclusion."
+      }
+    ],
+    "check": [
+      "Four rows, three unique pairs, two people before the change.",
+      "After the change there are five rows, one exception and still two identifiable people."
+    ],
+    "sources": [
+      [
+        "Microsoft · editing and verification in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ],
+      [
+        "Microsoft · Copilot in each Office app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-06",
+    "title": "Build a slide whose headline survives the math",
+    "summary": "Make a one-slide pilot report with a traceable denominator for each percentage.",
+    "level": "Intermediate",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. PowerPoint with Copilot can render the slide. Ordinary chat can provide the slide text and speaker notes.",
+    "features": "Word-to-PowerPoint drafting and data verification",
+    "roles": [
+      "Summarize a mailbox pilot.",
+      "Brief a steering group on adoption.",
+      "Share a beta survey with testers."
+    ],
+    "prompt": "Produce a one-slide draft with a headline, two labeled fractions, and a speaker note about nonresponse. Cite the source label Pilot A. Count support among respondents and among all invited locations separately.",
+    "steps": [
+      {
+        "title": "Create the approved brief",
+        "text": "Paste the three counts, or save them in a Word brief and reference it from PowerPoint.",
+        "help": "Start with a single file if the presentation feature cannot find your brief. The chat fallback needs only the pasted counts.",
+        "code": "Pilot A. Invited: 12 sites. Responded: 9. Respondents supporting extension: 6."
+      },
+      {
+        "title": "Build and check",
+        "text": "Send the prompt. Check that the slide distinguishes recorded support among all invited sites from support among respondents.",
+        "help": "Six of nine is about 66.7%. Six of twelve is 50%. The three silent sites have unknown views."
+      },
+      {
+        "title": "Challenge the title",
+        "text": "Ask whether “Two thirds of all pilot sites support extension” is justified and request a replacement title.",
+        "help": "A suitable replacement identifies the respondent group or states the count directly. Speaker notes alone cannot repair a misleading headline."
+      }
+    ],
+    "check": [
+      "The two denominators are labeled 9 and 12.",
+      "The headline treats no response as unknown."
+    ],
+    "sources": [
+      [
+        "Microsoft · creating a presentation from a file",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/prepare-your-presentation-with-microsoft-365-copilot"
+      ],
+      [
+        "Microsoft · Copilot in Word",
+        "https://support.microsoft.com/en-us/word/copilot/start-from-exist"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-07",
+    "title": "Check a mail queue against an explicit threshold",
+    "summary": "Ask Copilot to classify observations using precise boundary and missing-data rules.",
+    "level": "Intermediate",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Excel users can put the sample into a small practice table.",
+    "features": "Conditional formulas, missing values and boundary tests",
+    "roles": [
+      "Classify queue-age samples.",
+      "Triage aged service requests.",
+      "Flag slow background jobs."
+    ],
+    "prompt": "Classify each observation: below 15 minutes is normal; 15 through 29 inclusive is watch; 30 or above is investigate. Blank or negative is invalid. Give counts, row IDs and a formula or pseudocode implementing the rule.",
+    "steps": [
+      {
+        "title": "Set up a test at each boundary",
+        "text": "Paste these minute values into two columns. Preserve the empty field for E.",
+        "help": "If a spreadsheet converts a blank to zero, check emptiness before applying the numeric comparisons.",
+        "code": "ID,Minutes\nA,14\nB,15\nC,29\nD,30\nE,\nF,-1"
+      },
+      {
+        "title": "Check each comparison",
+        "text": "Send the prompt. Inspect which side of the 15 and 30 boundaries includes equality. Chat can produce the same truth table when workbook editing is unavailable.",
+        "help": "Read the formula from left to right. An invalid negative must be handled before “below 15.”"
+      },
+      {
+        "title": "Change exactly one input",
+        "text": "Replace A’s 14 with 15 and predict the counts before asking for a fresh table.",
+        "help": "Only A moves category. Watch rises by one and normal falls by one. Invalid and investigate counts stay put."
+      }
+    ],
+    "check": [
+      "Initial normal 1, watch 2, investigate 1, invalid 2.",
+      "Revised normal 0 and watch 3."
+    ],
+    "sources": [
+      [
+        "Microsoft · editing and verification in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ],
+      [
+        "Microsoft · Copilot in each Office app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-08",
+    "title": "Resolve a migration policy conflict by effective date",
+    "summary": "Reconcile two versions of a policy and keep special cases attached to the edition that established them.",
+    "level": "Advanced",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
+    "features": "Multi-document grounding, exceptions and effective dates",
+    "roles": [
+      "Evaluate a mailbox move policy.",
+      "Track changes in a rollout playbook.",
+      "Version an app eligibility rule."
+    ],
+    "prompt": "For each case A–D, return allowed, held or unknown; identify the governing edition and quote its relevant condition. Newer rules apply on and after their effective date. Identify unresolved inputs.",
+    "steps": [
+      {
+        "title": "Provide both policy excerpts",
+        "text": "Paste these fictional excerpts and cases into one chat. The dates here are unambiguous UTC calendar dates.",
+        "help": "If Copilot prefers the most recent edition for every case, ask it to decide which date applies before reading the eligibility rule.",
+        "code": "V1 effective Jan 1: groups up to 20 may move.\nV2 effective Feb 1: groups up to 30 may move unless flagged; flagged groups are held.\nA Jan 31 size 25; B Feb 1 size 30 clear; C Feb 2 size 12 flagged; D Feb 3 size 12 flag unknown."
+      },
+      {
+        "title": "Resolve the four cases",
+        "text": "Run the prompt. Treat a group exceeding the numerical limit as held for this exercise. Require the edition next to the verdict.",
+        "help": "D cannot be resolved without the flag value. If the tool assumes clear, ask it to name its evidence."
+      },
+      {
+        "title": "Move only the effective date",
+        "text": "Change V2 to Feb 2. Re-run B and C. Compare the two decisions with their original results.",
+        "help": "B now falls under V1 and switches to held. C remains held under V2 because it is flagged."
+      }
+    ],
+    "check": [
+      "A held, B allowed, C held, D unknown.",
+      "Changing the effective date changes B but leaves C held."
+    ],
+    "sources": [
+      [
+        "Microsoft · work grounding and permissions",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+      ],
+      [
+        "Microsoft · Copilot in each Office app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-09",
+    "title": "Design a source-bound handbook assistant",
+    "summary": "Prototype a reusable question-answering agent and test how it behaves when a policy is silent.",
+    "level": "Advanced",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Agent Builder is optional and subject to your organization’s settings. Use chat for the same behavior test.",
+    "features": "Agent Builder instructions, sources and evaluation",
+    "roles": [
+      "Answer recurring mailbox change questions.",
+      "Prototype an internal policy assistant.",
+      "Design a help assistant for an app."
+    ],
+    "prompt": "Use only the two supplied policy clauses. Answer with a clause ID and the exact applicable limit, or say “not covered.” Ask one clarifying question when the item type is missing. Evaluate the three sample questions separately.",
+    "steps": [
+      {
+        "title": "Set the boundary",
+        "text": "Paste the clauses and questions. In Agent Builder use the prompt as instructions and a scratch document containing just the clauses as knowledge. Keep the trial private.",
+        "help": "If you lack builder access, put the instructions and clauses in one ordinary chat. This tests responses, not deployment.",
+        "code": "P1 Standard archive request: 5 business days.\nP2 Urgent archive request: 1 business day.\nQ1 Standard archive time? Q2 Restore time? Q3 Archive time?"
+      },
+      {
+        "title": "Check the answers",
+        "text": "Run all three questions. Open each referenced clause and match its scope to the question.",
+        "help": "Q2 concerns restore. A confident “5 days” incorrectly carries an archive promise into a different service."
+      },
+      {
+        "title": "Revise a source and retest",
+        "text": "Change P2 to 2 business days in the scratch source. Start a fresh test and ask for the urgent archive time.",
+        "help": "If it returns 1, confirm that the agent or chat received the revised source and repeat with a new conversation."
+      }
+    ],
+    "check": [
+      "Q1 gives 5 business days from P1, Q2 is not covered, Q3 asks which request type.",
+      "Revised urgent requests take 2 business days according to P2."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · Agent Builder and Copilot Studio",
+        "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/copilot-studio-experience"
+      ],
+      [
+        "Microsoft Learn · agent knowledge sources",
+        "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-10",
+    "title": "Calculate a rate across unequal migration batches",
+    "summary": "Audit a success-rate dashboard and explain why averaging individual batch percentages can mislead.",
+    "level": "Advanced",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optional Excel practice workbook.",
+    "features": "Weighted rates, recalculation and reviewer notes",
+    "roles": [
+      "Reconcile mail move completion.",
+      "Measure adoption without weighting each group equally.",
+      "Track verification rates across app releases."
+    ],
+    "prompt": "Report completed / attempted per batch, weighted overall completion, and the simple mean of the defined batch rates. Explain the difference in plain language. Treat a zero-attempt batch as undefined for its own rate.",
+    "steps": [
+      {
+        "title": "Create a small migration report",
+        "text": "Paste the data or build an Excel table. Ask for an overall formula using the sums of both columns.",
+        "help": "Exclude the all-zero row from the mean of defined rates. It still contributes zero to each overall total.",
+        "code": "Batch,Attempted,Completed\nWest,80,72\nEast,20,10\nIdle,0,0"
+      },
+      {
+        "title": "Audit both interpretations",
+        "text": "Send the prompt. Use a calculator or manual arithmetic to confirm both results. Ask to see numerator and denominator.",
+        "help": "West is 90% and East is 50%. Their simple mean is 70%, while 82 of 100 attempts completed."
+      },
+      {
+        "title": "Model an error in the export",
+        "text": "Change East completed to 22 with the original 20 attempts. Ask for validation before publishing any overall figure.",
+        "help": "For this fixture completions cannot exceed attempts. A helpful report names East, holds the aggregate and asks for corrected data."
+      }
+    ],
+    "check": [
+      "Initial weighted rate 82%; mean batch rate 70%.",
+      "The impossible 22-of-20 row is identified before a final rate is reported."
+    ],
+    "sources": [
+      [
+        "Microsoft · editing and verification in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ],
+      [
+        "Microsoft · Copilot in each Office app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-11",
+    "title": "Audit a join that silently doubles your report",
+    "summary": "Expose a many-to-many join before presenting Exchange or Microsoft 365 usage totals.",
+    "level": "Expert",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Excel is optional; pasted rows support the same paper audit.",
+    "features": "Relational reasoning, join validation and exception tables",
+    "roles": [
+      "Reconcile mailbox usage by department.",
+      "Combine usage and assignment exports.",
+      "Join player activity to customer records."
+    ],
+    "prompt": "Treat each usage row as one mailbox. Count duplicate keys in the department map before joining. Report the trusted usage total, ambiguous mailboxes and their usage, and the total a naive join would produce. Never allocate ambiguous usage twice.",
+    "steps": [
+      {
+        "title": "Create two tiny exports",
+        "text": "Supply both labeled tables below. Units are GB for every row. Department mappings may be ambiguous.",
+        "help": "Ask for the keys in each table first. Usage contains two unique mailbox IDs and the mapping contains three rows.",
+        "code": "Usage: m1=10, m2=20.\nMap: m1→North, m1→South, m2→East."
+      },
+      {
+        "title": "Inspect the inflated result",
+        "text": "Run the prompt. Request a row-by-row preview of a naive inner join and the sums before and after.",
+        "help": "The duplicated m1 contributes 10 extra GB. The 30 GB source total is the independent control."
+      },
+      {
+        "title": "Clear the exception",
+        "text": "Remove the m1→South row. Rerun and ask which regional totals are now trustworthy.",
+        "help": "You should now see North 10 and East 20. If the total changes from 30, the assignment procedure has lost or duplicated a mailbox."
+      }
+    ],
+    "check": [
+      "Before correction, naive total 40 GB; source total 30 GB; 10 GB ambiguous.",
+      "After correction, all 30 GB have one department."
+    ],
+    "sources": [
+      [
+        "Microsoft · editing and verification in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ],
+      [
+        "Microsoft · work grounding and permissions",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-12",
+    "title": "Reconstruct an incident across midnight",
+    "summary": "Reconcile three clocks and avoid converting a sequence of events into a claim about the cause.",
+    "level": "Expert",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
+    "features": "Timeline normalization, evidence attribution and missing offsets",
+    "roles": [
+      "Reconstruct a mail delay.",
+      "Align service desk and application records.",
+      "Compare client and server logs."
+    ],
+    "prompt": "Normalize each known timestamp to UTC. Make an ordered timeline with the evidence IDs, calculate the first-observed-to-recovery interval, and list unplaceable events separately. Describe what the evidence establishes about cause.",
+    "steps": [
+      {
+        "title": "Enter records with their offsets",
+        "text": "Paste the fictional evidence exactly as shown. The dates use January and the offsets are numeric.",
+        "help": "Use the supplied offsets for arithmetic. Inferring a time zone for a line that has none changes the evidence.",
+        "code": "A Jan 5 23:55 -0600: delay observed.\nB Jan 6 06:02 +0000: queue peaked.\nC Jan 6 01:10 -0500: recovery observed.\nD 00:59 offset/date unknown: configuration note."
+      },
+      {
+        "title": "Check the day boundary",
+        "text": "Run the prompt. Verify A’s UTC date advances to Jan 6. Calculate the duration manually from the normalized times.",
+        "help": "A is 05:55Z, B is 06:02Z, C is 06:10Z. D cannot yet be positioned."
+      },
+      {
+        "title": "Add time but not causality",
+        "text": "Give D the date Jan 6 and offset -0500, then rerun. Ask what proof would be needed to attribute the delay to D.",
+        "help": "D is now 05:59Z, four minutes after A. Its position alone does not establish that the note caused the incident."
+      }
+    ],
+    "check": [
+      "The observed interval is 15 minutes across A and C.",
+      "D becomes placeable after clarification; cause remains unproven."
+    ],
+    "sources": [
+      [
+        "Microsoft · work grounding and permissions",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+      ],
+      [
+        "Microsoft · Copilot in each Office app",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/how-copilot-chat-works-in-microsoft-365-apps"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-13",
+    "title": "Stress-test a readiness gate with stale evidence",
+    "summary": "Turn a rollout checklist into a reproducible decision with failing and expiring prerequisites.",
+    "level": "Expert",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below.",
+    "features": "Document-grounded decision rules and cutoff tests",
+    "roles": [
+      "Verify pilot-move prerequisites.",
+      "Review a deployment sign-off packet.",
+      "Evaluate an app release candidate."
+    ],
+    "prompt": "Evaluate the gate at each supplied time. Report a row for every prerequisite, the exact evidence ID and its age when relevant. Overall result is GO only if all prerequisites pass. Mark missing inputs explicitly.",
+    "steps": [
+      {
+        "title": "Enter the fictional release gate",
+        "text": "Paste the policy and evidence. Treat “within 60 minutes” as inclusive.",
+        "help": "Require an explicit decision for rollback, backup and test status. Missing one row can make an unsupported GO sound plausible.",
+        "code": "Rule: approved rollback; successful backup within 60 min; all smoke tests pass.\nR1 rollback approved. B1 backup successful 09:00 UTC. T1 two passed, one pending.\nTimes: 10:00 and 10:01 UTC, same day."
+      },
+      {
+        "title": "Evaluate twice",
+        "text": "Send the prompt. Compare gate status at the boundary and one minute later.",
+        "help": "At 10:00 the backup is fresh and tests are pending. At 10:01 the backup is also stale. Both evaluations hold."
+      },
+      {
+        "title": "Change the test record",
+        "text": "Replace T1 with “three passed.” Evaluate both times again. In plain chat the verdict is a worksheet answer, with no release action.",
+        "help": "The result should change at 10:00 only. If both pass, ask for the elapsed minutes since B1."
+      }
+    ],
+    "check": [
+      "Initial verdict HOLD at both times.",
+      "With every test passing, GO at 10:00 and HOLD at 10:01."
+    ],
+    "sources": [
+      [
+        "Microsoft · work grounding and permissions",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+      ],
+      [
+        "Microsoft · Copilot in Word",
+        "https://support.microsoft.com/en-us/word/copilot/start-from-exist"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-14",
+    "title": "Simulate a request agent that receives the same form twice",
+    "summary": "Specify how to handle a repeat request before any connector is allowed to act.",
+    "level": "Expert",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Optional private Copilot Studio design canvas. All actions in this lab use a paper ledger.",
+    "features": "Workflow design, duplicate suppression and conflict handling",
+    "roles": [
+      "Design mailbox request intake.",
+      "Review an agent-driven service desk flow.",
+      "Protect a personal app order form from double submission."
+    ],
+    "prompt": "Simulate a ledger keyed by request ID. New ID creates one draft row; same ID and same payload returns the existing row; same ID and changed payload flags a conflict without overwriting. Show every input decision and the final ledger. Perform no external actions.",
+    "steps": [
+      {
+        "title": "Prepare simulated inputs",
+        "text": "Paste the ordered requests. If using Studio, sketch the lookup and decision steps on paper or in a private scratch design. Do not connect a live system.",
+        "help": "The ID identifies a request. The name in the payload is not a reliable duplicate key.",
+        "code": "R1 | project alpha\nR1 | project alpha\nR2 | project beta\nR1 | project gamma"
+      },
+      {
+        "title": "Run the paper simulation",
+        "text": "Send the prompt and examine each outcome in sequence. Ask for the ledger contents immediately before input four.",
+        "help": "Two drafts exist then. Input four must flag a conflict without turning alpha into gamma."
+      },
+      {
+        "title": "Test independence",
+        "text": "Append “R3 | project alpha.” Predict whether it is new. Explain what a real destination would need for two simultaneous submissions.",
+        "help": "R3 is a distinct request. A real implementation needs an atomic unique-key decision or equivalent destination guarantee. A chat simulation tests the rule only."
+      }
+    ],
+    "check": [
+      "First four outcomes are create, reuse, create, conflict.",
+      "After R3 there are three rows; the original R1 payload remains alpha."
+    ],
+    "sources": [
+      [
+        "Microsoft Learn · Agent Builder and Copilot Studio",
+        "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/copilot-studio-experience"
+      ],
+      [
+        "Microsoft Learn · agent knowledge sources",
+        "https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/copilot-studio-lite-knowledge"
+      ]
+    ]
+  },
+  {
+    "id": "lab-copilot-15",
+    "title": "Deliver a rollout brief that passes an independent audit",
+    "summary": "Combine mail evidence, metrics and an approval rule into a decision memo and a single defensible slide.",
+    "level": "Expert",
+    "requires": "Microsoft 365 Copilot Chat with the synthetic text below. Word, Excel and PowerPoint can hold the outputs; ordinary Copilot Chat can produce all three as plain text.",
+    "features": "Cross-app synthesis, evidence checks and revision control",
+    "roles": [
+      "Report a migration pilot with a defensible release decision.",
+      "Prepare an evidence-bound change advisory packet.",
+      "Publish a measurable beta exit recommendation."
+    ],
+    "prompt": "Prepare a one-paragraph decision brief, a slide title and a verification table. Use IDs for every decision and metric. The gate requires at least 95% completed and explicit owner approval. Label unmet requirements and unsupported claims.",
+    "steps": [
+      {
+        "title": "Assemble the packet",
+        "text": "Paste each source separately, preserving its identifier. Ask for the two criteria before calculating anything.",
+        "help": "A proposed approval and an explicit approval have different evidentiary value. The gate requires both its criteria.",
+        "code": "G1 gate: >=95% complete AND owner approval.\nR1 North 48/50. R2 South 47/50.\nM1 owner: I can review tomorrow.\nM2 participant: We should move ahead."
+      },
+      {
+        "title": "Challenge the headline",
+        "text": "Run the prompt. Check the totals and inspect which sentence establishes approval. If you use a slide, check its headline without reading the notes.",
+        "help": "95/100 meets the numerical gate. Neither message approves. A defensible title says the metric is met and approval is pending."
+      },
+      {
+        "title": "Retest two independent changes",
+        "text": "First add “M3 owner: I approve release.” Then revise R2 to 46/50 and ask for the updated decision. Preserve both versions as evidence.",
+        "help": "The first change unlocks GO at 95%. The second lowers the rate to 94%, so the gate returns to HOLD even with approval."
+      }
+    ],
+    "check": [
+      "Original HOLD; adding explicit approval yields GO.",
+      "A 94/100 revision restores HOLD. All artifacts express the same decision."
+    ],
+    "sources": [
+      [
+        "Microsoft · work grounding and permissions",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/what-information-does-copilot-use-to-answer-my-prompt"
+      ],
+      [
+        "Microsoft · editing and verification in Excel",
+        "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+      ],
+      [
+        "Microsoft · creating a presentation from a file",
+        "https://support.microsoft.com/en-us/microsoft-365-copilot/prepare-your-presentation-with-microsoft-365-copilot"
+      ]
+    ]
+  }
+]

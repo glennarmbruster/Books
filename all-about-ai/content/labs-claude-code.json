@@ -1,0 +1,652 @@
+[
+  {
+    "id": "lab-claude-code-01",
+    "title": "Read a mail-routing rule",
+    "summary": "Use Claude Code as a guide to unfamiliar code before asking it to change anything.",
+    "level": "Starter",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
+    "features": "Read-only source explanation and boundary tracing",
+    "roles": [
+      "Read mail-flow logic",
+      "Interpret provisioning rules",
+      "Understand an unfamiliar conditional"
+    ],
+    "prompt": "Read route.py. Explain the function to someone new to Python. Give the returned value for 0, 24, 25 and 26. Quote the comparison that decides the boundary. Leave the file unchanged.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as route.py. Keep the filename and the sample values exactly as shown.",
+        "help": "You should see four lines in total, including the function definition. Keep the equals sign in the comparison.",
+        "code": "def route(size_mb):\n    if size_mb >= 25:\n        return \"large\"\n    return \"normal\"\n"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "The explanation should mention the unit, MB, and the exact >= operator. If Claude describes a deployed mail policy, ask it to stick to this fictional function."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Ask where a 25 MB item goes, then change only the comparison in the editor to > and repeat the question.",
+        "help": "The second reading should move 25 to normal. If the answer repeats the first result, ask Claude to reread the saved file."
+      }
+    ],
+    "check": [
+      "Original values give normal, normal, large, large.",
+      "With > only the third case changes."
+    ],
+    "sources": [
+      [
+        "Anthropic · Claude Code overview",
+        "https://code.claude.com/docs/en/overview"
+      ],
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-02",
+    "title": "Turn an inventory into a handoff note",
+    "summary": "Produce a concise note from a tiny file and retain uncertainty in the source.",
+    "level": "Starter",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
+    "features": "Reading a local CSV and writing Markdown",
+    "roles": [
+      "Summarize mailbox inventories",
+      "Hand off group-ownership exceptions",
+      "Write a release handoff"
+    ],
+    "prompt": "Read owners.csv and create handoff.md. Report the total, how many rows have owners, and the names with missing owners. Treat a blank as unknown. Preserve the display names exactly.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as owners.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "There are four data rows. The commas at the ends of Facilities and Front Desk encode empty fields.",
+        "code": "name,owner\nShipping,Ari\nFacilities,\nDesign Lab,Kim\nFront Desk,\n"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Open handoff.md and find the two counts. If Claude invents owners, ask it to trace every name to a line of the CSV."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Fill the Facilities owner with Lee, save, and ask Claude to rebuild the same note.",
+        "help": "The total stays four. If Facilities still appears in the exception list, make sure Claude reopened the saved CSV."
+      }
+    ],
+    "check": [
+      "First run lists 2 owned out of 4, with Facilities and Front Desk unknown.",
+      "After the edit, only Front Desk is unknown and 3 rows have owners."
+    ],
+    "sources": [
+      [
+        "Anthropic · Claude Code overview",
+        "https://code.claude.com/docs/en/overview"
+      ],
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-03",
+    "title": "Keep a project convention across sessions",
+    "summary": "Teach Claude one project-specific convention, start a fresh session and inspect whether the convention survived.",
+    "level": "Starter",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
+    "features": "Project-level CLAUDE.md instructions",
+    "roles": [
+      "Standardize mail runbooks",
+      "Consistent collaboration guides",
+      "Maintain release-note style"
+    ],
+    "prompt": "Read CLAUDE.md and write release.md for these facts: version 1.2 fixes a duplicate reminder and has been checked on two devices. Follow the project convention.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as CLAUDE.md. Keep the filename and the sample values exactly as shown.",
+        "help": "The filename is uppercase CLAUDE.md at the project root. Rich-text documents or hidden .txt suffixes will prevent discovery.",
+        "code": "For every release note, use exactly these two Markdown headings in order:\n## Change\n## Verification\nUse one plain sentence under each heading."
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "The release note should have exactly two headings. If a generic template appears, ask Claude which project instruction file it loaded."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Start a new Claude Code session in the same folder. Ask for release-next.md about a corrected date label, verified on one device, without repeating the convention.",
+        "help": "The new file should retain both headings in order. If it does not, compare the folder shown in each session."
+      }
+    ],
+    "check": [
+      "Both documents have Change then Verification.",
+      "The second note mentions one device and contains no facts copied from version 1.2."
+    ],
+    "sources": [
+      [
+        "Anthropic · project instructions",
+        "https://code.claude.com/docs/en/memory"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-04",
+    "title": "Make address comparison predictable",
+    "summary": "Use a table of examples to drive a small function that compares addresses.",
+    "level": "Intermediate",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Implementing a function from fixtures and running regression checks",
+    "roles": [
+      "Deduplicate alias lists",
+      "Normalize sample owner addresses",
+      "Clean a contact list"
+    ],
+    "prompt": "Read cases.tsv. Implement unique_addresses(values) in addresses.py for these rules: trim outer whitespace, lowercase, omit blank entries, preserve first-seen order. Write and run unit tests for every example and an empty list. Use Python’s standard library.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as cases.tsv. Keep the filename and the sample values exactly as shown.",
+        "help": "Keep spaces around the first and last values. If your editor removes them, type them back inside the sample field.",
+        "code": "input separated by |\texpected separated by |\n A@Example.org |a@example.org|B@EXAMPLE.ORG\ta@example.org|b@example.org\n | Z@example.org | \tz@example.org\n"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Claude should show a test run with no failures. If it sorts the results, ask for a reverse-alphabetical input that reveals the difference."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Ask Claude to print the result for [\" Z@X \",\"a@x\",\"z@x\",\" \"], then rerun the tests.",
+        "help": "The first value stays first after normalization. If the result starts with a@x, check whether the implementation sorts a set."
+      }
+    ],
+    "check": [
+      "The check prints [\"z@x\", \"a@x\"].",
+      "An empty input produces an empty list."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-05",
+    "title": "Plan a mail report before editing it",
+    "summary": "Separate an investigation from implementation so you can correct the policy before it reaches code.",
+    "level": "Intermediate",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Plan mode and handoff to an editable session",
+    "roles": [
+      "Define mailbox thresholds",
+      "Scope lifecycle reports",
+      "Agree on feature behavior"
+    ],
+    "prompt": "In Plan mode, read thresholds.txt and propose three test cases for an integer percentage, including the exact boundary and a missing value. Show expected results. Wait for my decision before editing.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as thresholds.txt. Keep the filename and the sample values exactly as shown.",
+        "help": "Use the Plan mode control in Claude Code before sending the prompt. The three rules must be visible in the same file.",
+        "code": "Mailbox quota warning begins at 90 percent inclusive.\nBelow 90 is OK.\nA missing percentage must be UNKNOWN.\n"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "You should receive a plan with no new files. If 90 is categorized OK, correct the plan while still in Plan mode."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Switch to a mode that permits edits. Ask Claude to implement classify(value) in quota.py and run its three tests with 89, 90 and None.",
+        "help": "If no file appears, confirm you left Plan mode. If None errors, require the missing-value case to be handled before comparing numeric values."
+      }
+    ],
+    "check": [
+      "Plan precedes writes.",
+      "89 gives OK, 90 gives WARNING, None gives UNKNOWN."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ],
+      [
+        "Anthropic · Claude Code overview",
+        "https://code.claude.com/docs/en/overview"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-06",
+    "title": "Find where an owner disappears",
+    "summary": "Reproduce a filtering mistake and compare old and new results using a small, fictional tenant export.",
+    "level": "Intermediate",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Targeted debugging with a before-and-after run",
+    "roles": [
+      "Retain unowned shared mailboxes",
+      "Report groups missing owners",
+      "Show incomplete records in an app"
+    ],
+    "prompt": "Run groups.py and preserve its original output in your reply. Fix the report so every group appears exactly once and missing owners print UNASSIGNED. Keep input order. Run it again and show the changed lines.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as groups.py. Keep the filename and the sample values exactly as shown.",
+        "help": "Save the sample and check that its print line is inside the if block. The mistake is visible when you compare outputs.",
+        "code": "groups = [(\"Ops\",\"Kai\"), (\"HR\",\"\"), (\"Docs\",\"Lou\")]\nfor name, owner in groups:\n    if owner:\n        print(name, owner)\n"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "The original output should contain two lines. If you see three immediately, ask Claude to show the original sample above and explain the difference."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Append (\"Lab\",\"\") to the list, run the revised file again and count the output rows.",
+        "help": "Both missing owners should use the same label. If one row vanishes, look for a remaining conditional that filters blank owners."
+      }
+    ],
+    "check": [
+      "Original report omits HR.",
+      "Final report prints Ops Kai, HR UNASSIGNED, Docs Lou, Lab UNASSIGNED in order."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-07",
+    "title": "Create a skill for release notes",
+    "summary": "Package a small repeatable writing task so you can call it again on another change.",
+    "level": "Intermediate",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor.",
+    "features": "Project skills and slash invocation",
+    "roles": [
+      "Document script releases",
+      "Prepare M365 deployment notes",
+      "Record app updates"
+    ],
+    "prompt": "Read changes.txt. Create .claude/skills/note/SKILL.md with name note and a clear description. Its instructions should read changes.txt, write note.md using exactly the headings Change and Evidence, and copy only supported facts. Tell me how to invoke it.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as changes.txt. Keep the filename and the sample values exactly as shown.",
+        "help": "Keep the literal Change and Evidence labels. These are the only source facts for this exercise.",
+        "code": "Change: export now keeps empty departments.\nEvidence: 4 fixture rows passed.\n"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Open SKILL.md and check that valid YAML frontmatter names the skill note. If Claude writes the release note only, ask for the project skill file explicitly."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Start a new session in this folder and enter /note. Change the evidence to 6 fixture rows passed, save and invoke /note again.",
+        "help": "The second note should replace four with six. If the slash command is missing, check the folder and SKILL.md spelling, then reopen the session."
+      }
+    ],
+    "check": [
+      "The skill file exists under the project’s .claude/skills/note folder.",
+      "The second note has two headings and cites six fixture rows."
+    ],
+    "sources": [
+      [
+        "Anthropic · reusable skills",
+        "https://code.claude.com/docs/en/skills"
+      ],
+      [
+        "Anthropic · project instructions",
+        "https://code.claude.com/docs/en/memory"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-08",
+    "title": "Build a preview of membership changes",
+    "summary": "Produce a deterministic preview using two local exports. This exercise ends at a written plan.",
+    "level": "Advanced",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Set comparison, normalization and reproducible output",
+    "roles": [
+      "Compare distribution-list snapshots",
+      "Preview M365 group membership",
+      "Compare app invite lists"
+    ],
+    "prompt": "Read members.json. Write preview.py to print JSON with add, remove and keep arrays. Trim and lowercase identifiers, drop empty values and sort each array. Use only the local file and standard library. Run the preview and add a test where current equals desired.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as members.json. Keep the filename and the sample values exactly as shown.",
+        "help": "Both lists intentionally contain entries that collapse after normalization. Open the JSON as text to confirm the spelling.",
+        "code": "{\"current\":[\" Ari \",\"BO\",\"bo\",\"Cy\"],\"desired\":[\"ari\",\"Dee\",\"\", \"DEE\"]}"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Output should contain three arrays and no duplicate identifiers. If the script suggests updating a remote directory, restate that its sole output is JSON."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Make desired an exact copy of current and ask Claude to rerun its script and explain the result.",
+        "help": "Both change arrays should be empty. If anything remains, ask it to normalize both sides before building the sets."
+      }
+    ],
+    "check": [
+      "First run adds dee, removes bo and cy, keeps ari.",
+      "Second run keeps ari, bo and cy, with zero changes."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-09",
+    "title": "Compare two versions of a sharing policy",
+    "summary": "Find what changed in the policy and write tests for the changed boundary.",
+    "level": "Advanced",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Comparing documents, extracting decision rules and testing a boundary",
+    "roles": [
+      "Check distribution policy revisions",
+      "Validate sharing-policy changes",
+      "Review app permission rules"
+    ],
+    "prompt": "Read policies.txt and explain the one behavior that changed. Implement decide(version, kind, days) using Python and the written policy. Build a test table at days 6, 7, 8 for guests and at day 8 for members, with a result for each edition.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as policies.txt. Keep the filename and the sample values exactly as shown.",
+        "help": "Preserve the different comparison operators. You should be able to point to a single character that changes a guest result.",
+        "code": "V1: members ALLOW. Guests ALLOW when days < 7; otherwise REVIEW.\nV2: members ALLOW. Guests ALLOW when days <= 7; otherwise REVIEW.\nOnly member and guest are in scope."
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Review the proposed table before the tests. If a member depends on days, point to the first sentence of each edition."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Ask Claude to show the number of differing edition results across the four cases, with the one changed row.",
+        "help": "Exactly one pair differs. More differences usually mean a member was treated as a guest or an inequality was reversed."
+      }
+    ],
+    "check": [
+      "Day 7 guest changes REVIEW to ALLOW.",
+      "Day 8 guest remains REVIEW, and day 8 member remains ALLOW."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-10",
+    "title": "Test pagination without contacting a tenant",
+    "summary": "Build a report that follows a chain of saved pages and detects a broken chain before publishing a result.",
+    "level": "Advanced",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Fixture-driven integration tests and failure diagnosis",
+    "roles": [
+      "Read multi-page report exports",
+      "Understand Graph pagination",
+      "Follow paginated app data"
+    ],
+    "prompt": "Build paged.py from pages.json. Start at one, follow next until null, deduplicate items in first-seen order, and detect a missing page or repeated page. Print the final JSON list on success. On error, print a clear reason and return a nonzero exit code without printing a partial list. Test both failures with temporary fixtures.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as pages.json. Keep the filename and the sample values exactly as shown.",
+        "help": "Keep page two even though it is empty. Its next value is necessary to reach the last page.",
+        "code": "{\"one\":{\"items\":[\"M1\",\"M2\"],\"next\":\"two\"},\"two\":{\"items\":[],\"next\":\"three\"},\"three\":{\"items\":[\"M2\",\"M3\"],\"next\":null}}"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Ask Claude to run its script against the supplied sample. If it stops after M2, examine how it decides that pagination has finished."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Change the last next from null to \"one\" and rerun. Change it again to \"absent\" and rerun.",
+        "help": "The first failure identifies a cycle, the second a missing page. A repeating run needs a set of visited page identifiers."
+      }
+    ],
+    "check": [
+      "Success prints [\"M1\",\"M2\",\"M3\"].",
+      "Both malformed chains return failure and neither emits a partial success list."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-11",
+    "title": "Trace a flaky quota test to its date boundary",
+    "summary": "Turn a calendar-dependent result into an explicit test with minute-level evidence.",
+    "level": "Expert",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Regression isolation, precise timestamps and injected reference time",
+    "roles": [
+      "Track retention boundaries",
+      "Validate aging reports",
+      "Test expiry displays"
+    ],
+    "prompt": "Read expiry.csv. Write Python tests and a classifier accepting an as_of UTC timestamp. An item is expired at as_of >= its deadline. Use timezone-aware timestamps, show the three results at 2027-01-01T00:00:00Z and verify the exact boundary one second later. No dependence on today’s date.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as expiry.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "The middle deadline equals the reference timestamp exactly. Verify both year values if your editor changes date formatting.",
+        "code": "id,deadline\nA,2026-12-31T23:59:59Z\nB,2027-01-01T00:00:00Z\nC,2027-01-01T00:00:01Z"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Look for a reference-time parameter in the classifier and fixed inputs in the tests. If results vary by day, search for a call to the current clock."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Ask Claude to run the same tests twice and give result counts for the reference second and the following second.",
+        "help": "If B remains active at midnight, inspect the equality check. If C never expires, check that seconds were retained during parsing."
+      }
+    ],
+    "check": [
+      "At midnight A and B expire while C is active.",
+      "At 00:00:01Z all three expire."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-12",
+    "title": "Repair an importer after a partial run",
+    "summary": "Model a failure halfway through an import. Make the next run complete the work exactly once.",
+    "level": "Expert",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3 including sqlite3.",
+    "features": "Restart behavior, durable state and failure injection",
+    "roles": [
+      "Resume message-index exports",
+      "Resume list-item imports",
+      "Recover a broken data import"
+    ],
+    "prompt": "Build a local importer using events.csv and a Python sqlite3 database. Use the event ID as the unique key. Commit each processed row. Support a test argument that stops after two input rows. Retry the same input, then run it again. Show stored IDs and their total; preserve the first value on duplicate IDs.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as events.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "The duplicate E1 is intentional. Start with a new empty practice database so earlier tests cannot change the totals.",
+        "code": "id,amount\nE1,4\nE2,8\nE1,4\nE3,5"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Ask for the row count immediately after the injected stop. If it is zero, the transaction was never committed before interruption."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "After a successful retry append E2,99 and rerun. Ask for the stored amount for E2 and the sum.",
+        "help": "E2 must retain its original value. If it changes to 99, inspect whether insertion replaces existing rows."
+      }
+    ],
+    "check": [
+      "After the stop there are two IDs totaling 12.",
+      "After retry and duplicate delivery, E1, E2 and E3 total 17 and E2 remains 8."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-13",
+    "title": "Stage a schema migration and reversal",
+    "summary": "Migrate a local data file while preserving records that are hard to reconstruct later.",
+    "level": "Expert",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Explicit invariants, forward migration and round-trip comparison",
+    "roles": [
+      "Evolve mail-report schemas",
+      "Manage inventory schema revisions",
+      "Upgrade saved app data"
+    ],
+    "prompt": "Create forward.py and reverse.py for people.json. Forward creates people-v2.json with address split into local and domain at the last @; null remains represented explicitly. Preserve id, note and order. Reverse creates roundtrip.json. Compare the two parsed structures and fail if anything differs. Leave the original untouched.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as people.json. Keep the filename and the sample values exactly as shown.",
+        "help": "Save the fixture as JSON, not a JavaScript assignment. One address deliberately has two @ characters to specify the splitting rule.",
+        "code": "[{\"id\":1,\"address\":\"a@example.org\",\"note\":\"A, B\"},{\"id\":2,\"address\":null,\"note\":\"\"},{\"id\":3,\"address\":\"b@c@example.org\",\"note\":\"x\"}]"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Open the third migrated record. Its local value must be b@c. If Claude validates email syntax and drops the row, reiterate the specified transformation."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Inspect both directions, rerun them, then compare roundtrip.json with the original by parsing JSON.",
+        "help": "Whitespace differences are fine. If null becomes the string \"null\" or disappears, revise the representation and rerun the comparison."
+      }
+    ],
+    "check": [
+      "Three records remain in their original order.",
+      "The parsed round trip is identical, including empty note, null address and punctuation."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-14",
+    "title": "Find the earliest trustworthy incident evidence",
+    "summary": "Reconstruct an ordering while explicitly preserving uncertainty and contradictions in inputs.",
+    "level": "Expert",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Timeline reconstruction, stable deduplication and evidence citations",
+    "roles": [
+      "Reconcile mail-flow observations",
+      "Compare service-desk events",
+      "Investigate a repeated app event"
+    ],
+    "prompt": "Read observations.csv. Write a local Python reconciler and incident.md. Sort by UTC instant, normalize offsets, count distinct event IDs, and flag contradictory values for the same ID. Cite original row numbers including the header as row 1. Preserve both claims when they conflict.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as observations.csv. Keep the filename and the sample values exactly as shown.",
+        "help": "Preserve both negative offsets. Clock time alone is misleading across the offset change.",
+        "code": "id,time,state\nR1,2026-11-01T01:20:00-05:00,queued\nR2,2026-11-01T01:05:00-06:00,done\nR1,2026-11-01T06:20:00Z,queued\nR2,2026-11-01T07:05:00Z,failed"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Look for 06:20Z and 07:05Z in the report. If 01:05 appears before 01:20, request conversion before sorting."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Change the last state to done and rebuild. Compare distinct IDs, conflicts and order with the original report.",
+        "help": "The conflict count should drop while the number of unique IDs stays constant. If records vanish, inspect deduplication before conflict detection."
+      }
+    ],
+    "check": [
+      "R1 precedes R2. Two distinct IDs appear.",
+      "First report flags rows 3 and 5 for R2; revised report has zero conflicts."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ]
+    ]
+  },
+  {
+    "id": "lab-claude-code-15",
+    "title": "Hand off a release with independent evidence",
+    "summary": "Work from a contract, a prior version and a candidate version. Accept or reject before implementing a repair.",
+    "level": "Expert",
+    "requires": "Claude Code signed in on a computer, a new empty practice folder and a plain-text editor. Python 3.",
+    "features": "Plan, independent checks and a verification handoff",
+    "roles": [
+      "Review report-format releases",
+      "Gate a provisioning helper",
+      "Decide whether to publish an update"
+    ],
+    "prompt": "Read release.txt. Write tests independent of the candidate, record before/after results in evidence.md, then repair the candidate in fee.py. Give the reviewer a single local command to repeat every check. Preserve the documented boundary and two-decimal output. Include a case outside the supplied examples.",
+    "steps": [
+      {
+        "title": "Prepare the sample",
+        "text": "In the new practice folder, use a text editor to save the following as release.txt. Keep the filename and the sample values exactly as shown.",
+        "help": "Copy both formulas exactly. The candidate is deliberately wrong and the contract is the agreed reference.",
+        "code": "Contract: first two items free. Each additional item costs 1.25 dollars. Whole nonnegative counts only. Use fixed two-decimal amounts. Reject negatives.\nPrevious formula: max(0,n-2)*1.25\nCandidate formula: max(0,n-1)*1.25"
+      },
+      {
+        "title": "Run the assignment",
+        "text": "Open this folder in Claude Code and paste the lab prompt. Read the proposed action and allow the local changes or checks specified in the prompt.",
+        "help": "Require evidence from a test of the uncorrected candidate. If all results pass immediately, ask to run the original candidate expression against two items."
+      },
+      {
+        "title": "Check the boundary",
+        "text": "Run the command documented in evidence.md. Ask for outputs at -1, 0, 2, 3 and the added case of 6 items.",
+        "help": "For 0 or 2 the visible output is 0.00. If 6 produces 6.25, inspect how many free items the candidate subtracts."
+      }
+    ],
+    "check": [
+      "Candidate originally fails at 2; repaired version yields 0.00 for 0 and 2, 1.25 for 3, 5.00 for 6.",
+      "Negative count is rejected and the reviewer command passes."
+    ],
+    "sources": [
+      [
+        "Anthropic · common workflows",
+        "https://code.claude.com/docs/en/common-workflows"
+      ],
+      [
+        "Anthropic · project instructions",
+        "https://code.claude.com/docs/en/memory"
+      ]
+    ]
+  }
+]
