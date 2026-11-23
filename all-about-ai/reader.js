@@ -453,6 +453,14 @@ function openLocation(moveFocus) {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
+      for (const prompt of section.prompts || []) {
+        const card = element('article',undefined,'prompt-card');
+        const target = chapters.find(ch=>ch.id===prompt.page);
+        const link = element('a',target.title);
+        link.href = '#' + target.id;
+        card.append(element('h3',prompt.title),element('span',prompt.tool + ' · '),link,snippet(prompt.text,'prompt'));
+        block.append(card);
+      }
       if (section.entries) {
         const list = element('ul', undefined, 'change-list');
         for (const item of [...section.entries].reverse().sort((a,b)=>b.date.localeCompare(a.date))) {

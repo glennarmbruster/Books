@@ -252,6 +252,9 @@ fixed_fields = {entry['text'] for key,entry in values.items()
 for group in groups:
     rows = json.loads((book/'content'/group['file']).read_text())
     for item in rows:
+        for section in item.get('sections', []):
+            for prompt in section.get('prompts', []):
+                require(words([prompt['tool'],prompt['title'],prompt['text']]) and prompt['page'] in reference_ids, 'Invalid prompt library reference')
         if 'relatedLabs' in item:
             links = item['relatedLabs']
             require(words(links) and len(links) == len(set(links)) and all(link in ids and link.startswith('lab-') for link in links), 'Unknown or repeated lab link in '+item['id'])

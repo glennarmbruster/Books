@@ -2815,5 +2815,14 @@
     "after": "The move is a source notice. The confirmed limit carries the human review date.",
     "why": "A web page can change without changing the product.",
     "rescue": "If there is only a notice, open the official source before relying on a new limit."
+  },
+  {
+    "id": "reference-prompts",
+    "premise": "A prompt needs a result you can check.",
+    "before": "A first draft says only “check my sheet.”",
+    "try": "Pick Count blanks. Replace its values with 0, blank and 5.",
+    "after": "The reply should identify two filled cells, one missing cell and a total of 5.",
+    "why": "Known inputs make a quick independent check possible.",
+    "rescue": "Reduce the example to one zero and one blank before trying a larger sheet."
   }
 ]

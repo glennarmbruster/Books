@@ -620,5 +620,253 @@
     ],
     "lastVerified": "2026-11-22",
     "verificationBasis": "page review"
+  },
+  {
+    "id": "reference-prompts",
+    "title": "Prompt library",
+    "summary": "Find a prompt by task, then open the chapter for its tool and checks.",
+    "tags": [
+      "prompts",
+      "templates",
+      "writing",
+      "code",
+      "m365"
+    ],
+    "firstGuide": "ask-check",
+    "intro": {
+      "what": "Find a prompt by task, then open the chapter for its tool and checks.",
+      "features": "Each card includes a task, tool, chapter and a copyable prompt.",
+      "exchange": "Practice a diagnosis with invented trace facts.",
+      "m365": "Try a workbook question on four known values.",
+      "developer": "Ask for a file change with three test inputs.",
+      "sources": [
+        [
+          "Get started with Claude",
+          "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+        ],
+        [
+          "Use Gemini Apps - Computer - Gemini Apps Help",
+          "https://support.google.com/gemini/answer/13275745?hl=en"
+        ],
+        [
+          "ChatGPT capabilities overview",
+          "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Write and explain",
+        "paragraphs": [
+          "Pick an example, copy it and change the fictional inputs. Open its chapter for the limits and a result to check."
+        ],
+        "sources": [
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ],
+          [
+            "Use Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ],
+          [
+            "ChatGPT capabilities overview",
+            "https://help.openai.com/en/articles/9260256-chatgpt-capabilities-overview"
+          ]
+        ],
+        "prompts": [
+          {
+            "tool": "Claude",
+            "page": "claude-reference-chat",
+            "title": "Write a handoff",
+            "text": "Mail arrived at 08:02 and the queue was empty at 08:05. Write two lines for the next shift. Label anything the timestamps cannot prove as unknown."
+          },
+          {
+            "tool": "Gemini",
+            "page": "gemini-reference-voice",
+            "title": "Read back a count",
+            "text": "I will say two pretend counts aloud. Repeat the numbers as digits before you explain the change. If a number is unclear, ask me to repeat it."
+          },
+          {
+            "tool": "ChatGPT",
+            "page": "reference-job-picker",
+            "title": "Tighten a notice",
+            "text": "The practice room opens at 10 and closes at 2. Write a sign in twelve words or fewer. Keep both times exactly as supplied."
+          }
+        ]
+      },
+      {
+        "title": "Research and check a source",
+        "paragraphs": [
+          "Pick an example, copy it and change the fictional inputs. Open its chapter for the limits and a result to check."
+        ],
+        "sources": [
+          [
+            "Use chat in Gemini Notebook - Gemini Notebook Help",
+            "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ],
+          [
+            "Enable and use web search",
+            "https://support.claude.com/en/articles/10684626-enable-and-use-web-search"
+          ],
+          [
+            "Deep research in ChatGPT",
+            "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt"
+          ]
+        ],
+        "prompts": [
+          {
+            "tool": "Gemini",
+            "page": "gemini-reference-notebook",
+            "title": "Compare revisions",
+            "text": "Use only the two selected notes. Which rule changed between revisions A and B? Cite the old sentence and the new one. If either is missing, say which one."
+          },
+          {
+            "tool": "Claude",
+            "page": "claude-reference-projects",
+            "title": "Find the rule",
+            "text": "Use the uploaded practice handbook. Quote the line about closed tickets, name its revision and tell me whether a draft ticket counts."
+          },
+          {
+            "tool": "ChatGPT",
+            "page": "reference-job-picker",
+            "title": "Check a feature",
+            "text": "Find the current official help page for scheduled tasks. Give the page title, one supported surface and a link. Mark any limit you cannot confirm as unknown."
+          }
+        ]
+      },
+      {
+        "title": "Spreadsheets and mail",
+        "paragraphs": [
+          "Pick an example, copy it and change the fictional inputs. Open its chapter for the limits and a result to check."
+        ],
+        "sources": [
+          [
+            "Attach & analyze files in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/14903178?hl=en"
+          ],
+          [
+            "Frequently asked questions about Copilot in Excel",
+            "https://support.microsoft.com/en-us/excel/copilot/frequently-asked-questions-about-copilot-in-excel"
+          ],
+          [
+            "Get started with Claude",
+            "https://support.claude.com/en/articles/8114491-get-started-with-claude"
+          ]
+        ],
+        "prompts": [
+          {
+            "tool": "Gemini",
+            "page": "gemini-reference-files",
+            "title": "Count blanks",
+            "text": "Here are the counts in order: 0, 2, blank, 3. Report the total, the number of filled cells and the number of missing cells. Show the row that contains a real zero."
+          },
+          {
+            "tool": "Microsoft 365 Copilot",
+            "page": "reference-job-picker",
+            "title": "Check a formula",
+            "text": "In the practice workbook compare the displayed total with the four visible rows. List each cell used. Leave the workbook unchanged until I review the difference."
+          },
+          {
+            "tool": "Claude",
+            "page": "troubleshoot-loop",
+            "title": "Test one explanation",
+            "text": "One fictional mailbox rejected a 14 MB message. A second received the same message. List two reasons. For each, name evidence that would weaken it. Give one read-only test and no change command."
+          }
+        ]
+      },
+      {
+        "title": "Build and test a file",
+        "paragraphs": [
+          "Pick an example, copy it and change the fictional inputs. Open its chapter for the limits and a result to check."
+        ],
+        "sources": [
+          [
+            "Overview - Claude Code Docs",
+            "https://code.claude.com/docs/en/overview"
+          ],
+          [
+            "Agent Capabilities Overview",
+            "https://antigravity.google/docs/agent/"
+          ],
+          [
+            "When to Use Devin - Devin Docs",
+            "https://docs.devin.ai/essential-guidelines/when-to-use-devin"
+          ],
+          [
+            "Using Codex with your ChatGPT plan",
+            "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+          ]
+        ],
+        "prompts": [
+          {
+            "tool": "Claude",
+            "page": "claude-reference-code",
+            "title": "Review a patch",
+            "text": "In the practice counter, rename Clear to Reset. Show the changed lines. Test two increments and a reset. Report expected and actual scores."
+          },
+          {
+            "tool": "Gemini",
+            "page": "gemini-reference-canvas",
+            "title": "Make a preview",
+            "text": "Build a two-button tally in Canvas. Start at zero. Add increments once per click. Reset restores zero. Show the number after each click in Add, Add, Reset."
+          },
+          {
+            "tool": "Devin",
+            "page": "reference-job-picker",
+            "title": "Fix a small bug",
+            "text": "Use the practice repository. A saved score of zero shows as missing. Reproduce it using a local sample. Fix the display and show test results for zero, blank and five."
+          },
+          {
+            "tool": "ChatGPT",
+            "page": "build-off",
+            "title": "Make an offline file",
+            "text": "Create a single HTML packing list with two checkboxes and a count. Use no remote files. Tell me how to test checking, unchecking and opening it offline."
+          }
+        ]
+      },
+      {
+        "title": "Schedule and delegate",
+        "paragraphs": [
+          "Pick an example, copy it and change the fictional inputs. Open its chapter for the limits and a result to check."
+        ],
+        "sources": [
+          [
+            "Schedule recurring tasks in Claude Cowork",
+            "https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork"
+          ],
+          [
+            "Manage your tasks & workflows in Gemini Apps - Computer - Gemini Apps Help",
+            "https://support.google.com/gemini/answer/17094507?hl=en"
+          ],
+          [
+            "Scheduled Sessions - Devin Docs",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ],
+        "prompts": [
+          {
+            "tool": "Claude",
+            "page": "claude-reference-scheduled",
+            "title": "Check a repeat job",
+            "text": "Using fictional notes only, prepare a weekly summary every Friday at 10 in the time zone I confirm. Show the next occurrence. Report an empty note as missing input."
+          },
+          {
+            "tool": "Gemini",
+            "page": "gemini-reference-scheduled",
+            "title": "Check a reminder",
+            "text": "Set a reminder to review a pretend supply list each Monday at noon. Confirm the time zone and next run. Show how I can pause it."
+          },
+          {
+            "tool": "Devin",
+            "page": "reference-job-picker",
+            "title": "Plan a scheduled check",
+            "text": "Define a scheduled read-only test run for a practice repository. List the branch, expected test output and the condition for asking a human to review it. Do not schedule it yet."
+          }
+        ]
+      }
+    ],
+    "lastVerified": "2026-11-22",
+    "verificationBasis": "page review"
   }
 ]
