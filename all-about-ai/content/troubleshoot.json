@@ -5,8 +5,8 @@
     "summary": "A missing receipt label makes a small case you can prove from start to finish.",
     "firstGuide": "ask-check",
     "intro": {
-      "what": "AI can help you choose what to check next. You own the evidence and the decision. A clear answer with no row to support it is still a guess.",
-      "features": "Use a case note with six boxes: symptom, possible cause, evidence needed, one test, expected result and verdict. Record what happened before and after a fix.",
+      "what": "Describe what went wrong. Write a test that could prove your first guess wrong.",
+      "features": "Use one broken message and one that works. Record what the test showed.",
       "exchange": "Trace one receipt from a report to a new delivery test.",
       "m365": "Keep a sign-in guess separate from the policy result that could prove it.",
       "developer": "Reproduce a broken label, then try a second input that should stay unchanged.",
@@ -29,8 +29,8 @@
       {
         "title": "Give the helper a small, useful case",
         "paragraphs": [
-          "Write the exact symptom first: “Training receipts arrive without the expected label.” Add the UTC window, which messages are affected, the error text if there is one, and one message that works. Keep the original in its approved store. Share only approved, stripped-down fields.",
-          "Open Lab 13 or the practice kit and read change-card.txt. Hide C3 through C7 for your first pass. Ask the helper for two causes, one piece of evidence that would decide each, and one read-only test. Ask it to say “unknown” when the data stops."
+          "A receipt arrived without its tag. Write “no error text supplied.” Open review-window.csv. Use RW2 for the mail that worked.",
+          "Open Lab 13 or the practice kit and read change-card.txt. Hide CC3 through CC7 for your first pass. Ask the helper for two causes, one piece of evidence that would decide each, and one read-only test. Ask it to say “unknown” when the data stops."
         ],
         "sources": [
           [
@@ -47,7 +47,7 @@
         "title": "Make each guess earn a test",
         "paragraphs": [
           "A missing label could mean the receipt never arrived or the rule missed its subject. If the first idea is right, the receiving test should lack the message. If the second is right, the receipt arrives plain and its subject differs from the stored rule word.",
-          "Read C1 and C3. Delivery happened in this case. The rule looks for “invioce” and the receipt says “invoice.” Mark the second idea supported. Keep other messages and other rules outside your verdict."
+          "Read CC1 and CC3. Delivery happened in this case. The rule looks for “invioce” and the receipt says “invoice.” Mark the second idea supported. Keep other messages and other rules outside your verdict."
         ],
         "sources": [
           [
@@ -63,8 +63,8 @@
       {
         "title": "Separate a proposed change from a verified fix",
         "paragraphs": [
-          "Read C4 for the one approved practice edit. Before any real change, record the current value, who approves, a stop condition and how to restore that value. Check the exact cmdlet, environment and parameters on Microsoft Learn. Inspect the current state first. Use WhatIf only when the command supports it. A preview cannot prove how a new message travels.",
-          "Read W3 and W4 in review-window.csv. The fresh receipt is tagged and the ordinary message is plain. You can call the fix verified for these probes. If only W3 were present, the effect on ordinary mail would be unknown. Give the next operator the evidence IDs and the rollback note."
+          "Read CC4 for the one approved practice edit. Before any real change, record the current value, who approves, a stop condition and how to restore that value. Check the exact cmdlet, environment and parameters on Microsoft Learn. Inspect the current state first. Use WhatIf only when the command supports it. A preview cannot prove how a new message travels.",
+          "Read RW3 and RW4 in review-window.csv. The fresh receipt is tagged and the ordinary message is plain. You can call the fix verified for these probes. If only RW3 were present, the effect on ordinary mail would be unknown. Give the next operator the evidence IDs and the rollback note."
         ],
         "sources": [
           [
@@ -89,6 +89,44 @@
       "exchange",
       "m365",
       "troubleshooting"
+    ],
+    "wordHelp": [
+      [
+        "evidence",
+        "A line, file or test result that you can check."
+      ],
+      [
+        "receipt",
+        "A record that shows what reached the other end."
+      ],
+      [
+        "trace",
+        "A record of what happened to a message on its route."
+      ],
+      [
+        "policy",
+        "A written rule that sets what is allowed."
+      ],
+      [
+        "sign-in",
+        "One attempt to open an account."
+      ],
+      [
+        "rule",
+        "A test and the action to take when the test passes."
+      ],
+      [
+        "read-only",
+        "You may look at the data without changing it."
+      ],
+      [
+        "rollback",
+        "Putting the old setting or file back."
+      ],
+      [
+        "preview",
+        "A look at what a proposed change would do."
+      ]
     ]
   },
   {
@@ -96,8 +134,8 @@
     "title": "One message, two delivery results",
     "summary": "A message trace shows where to look next. A matching bounce can explain why a particular copy failed.",
     "intro": {
-      "what": "A message trace follows mail through Exchange. A non-delivery report, or NDR, tells the sender about a failed delivery. Let the AI match the two records before it explains the failure.",
-      "features": "Give the helper a small time window, a message ID and made-up recipient labels. Ask for a separate claim and row for each recipient. Add the bounce only after it tells you which fact is missing.",
+      "what": "Follow one message ID to each address. The same message can reach one desk and fail at another.",
+      "features": "Compare the failed row with its bounce. Then test a fresh message.",
       "exchange": "Tell a service desk which copy of a message failed and which copy reached its recipient.",
       "m365": "Show a support team which facts belong in its incident note and which ones still need checking.",
       "developer": "Use the same method when a reminder app sends one alert to several people.",
@@ -116,7 +154,7 @@
       {
         "title": "Make the subject line a bad shortcut",
         "paragraphs": [
-          "Open trace-recipients.csv in the practice kit. All four subjects say Dock sheet. Ask about parcel-41 only. Put a finger beside each row with that exact message ID. There are two. T3 has the same sender and subject but belongs to another send.",
+          "Open trace-recipients.csv in the practice kit. All four subjects say Dock sheet. Find <parcel-41@example.test>. Put a finger beside each row with that exact message ID. There are two. TR3 has the same sender and subject but belongs to another send.",
           "Read the two recipient addresses and statuses back to the helper. Dock shows Delivered and stores shows Failed. Neither row shows whether a person opened the message. The summary alone gives no reason for the failure."
         ],
         "sources": [
@@ -134,7 +172,7 @@
         "title": "Give each guess a test",
         "paragraphs": [
           "Write two possible causes before opening the next file. A missing recipient should leave an address lookup error. A mail rule that blocked delivery would need evidence of that rule’s action. Ask which single record could separate them.",
-          "Open ndr-recipient.txt. Match N1 to the message ID and N2 to the failed address. N4 and N5 give a lookup error. Ask whether the bounce alone tells you who entered the address or whether a mailbox was deleted. Both answers are still unknown."
+          "Open ndr-recipient.txt. Match NR1 to the message ID and NR2 to the failed address. NR4 and NR5 give a lookup error. Ask whether the bounce alone tells you who entered the address or whether a mailbox was deleted. Both answers are still unknown."
         ],
         "sources": [
           [
@@ -150,8 +188,8 @@
       {
         "title": "Record a fix you can check",
         "paragraphs": [
-          "Open alias-check.txt. A3 names the active Supply address. A4 shows the old entry in one list. A5 records approval for a correction in that list only. Read the results of two fresh sends in A6 and A7.",
-          "A ticket can now say which entry changed and which test passed. It can also say “Other senders and lists were outside this test.” If someone claims every lost message is fixed, ask for the fresh send that supports that claim."
+          "Open alias-check.txt. AL3 names the active Supply address. AL4 shows the old entry in one list. AL5 records approval for a correction in that list only. Read the results of two fresh sends in AL6 and AL7.",
+          "A ticket can now say which entry changed and which test passed. This test covers only the practice list. Check the scope. Which fresh send supports the claim?"
         ],
         "sources": [
           [
@@ -164,11 +202,41 @@
           ]
         ],
         "exercise": {
-          "prompt": "A teammate says T4 proves the original parcel reached the Supply desk. What two cells would you compare?",
+          "prompt": "A teammate says TR4 proves the original parcel reached the Supply desk. What two cells would you compare?",
           "answer": [
-            "Compare the message ID and the recipient. T4 concerns parcel-43 and supply, whereas T2 concerns parcel-41 and stores. T4 helps form a guess. N1, N2 and A4 let you test it."
+            "Compare the message ID and the recipient. TR4 concerns parcel-43 and supply, whereas TR2 concerns parcel-41 and stores. TR4 helps form a guess. NR1, NR2 and AL4 let you test it."
           ]
         }
+      },
+      {
+        "title": "Message trace field guide",
+        "paragraphs": [
+          "Use the recipient and the message ID. A single message may have more than one result."
+        ],
+        "documentShape": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | desk@example.test | room@example.test | Delivered",
+        "sources": [
+          [
+            "Microsoft Learn · Message trace",
+            "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+          ],
+          [
+            "Microsoft Learn · message trace search",
+            "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2"
+          ]
+        ]
+      },
+      {
+        "title": "Delivery failure report field guide",
+        "paragraphs": [
+          "The notice names the failed address and gives an error. Match it to the trace."
+        ],
+        "documentShape": "Generating server: mail.example.test\nroom@example.test\nRemote server returned: 550 5.1.10 Recipient not found",
+        "sources": [
+          [
+            "Microsoft Learn · Delivery failure report",
+            "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online"
+          ]
+        ]
       }
     ],
     "firstGuide": "ask-check",
@@ -182,6 +250,28 @@
       "exchange",
       "m365",
       "troubleshooting"
+    ],
+    "wordHelp": [
+      [
+        "evidence",
+        "A line, file or test result that you can check."
+      ],
+      [
+        "alias",
+        "A made-up label that stands in for a name or address."
+      ],
+      [
+        "trace",
+        "A record of what happened to a message on its route."
+      ],
+      [
+        "bounce",
+        "A notice that says a message could not reach its target."
+      ],
+      [
+        "rule",
+        "A test and the action to take when the test passes."
+      ]
     ]
   },
   {
@@ -189,8 +279,8 @@
     "title": "Read a mail header before changing DNS",
     "summary": "Test an AI’s SPF, DKIM and DMARC explanation against a stamped result and a dated DNS snapshot.",
     "intro": {
-      "what": "A receiver leaves a short record of its checks in the message header. Ask the AI to read the result for this one message, then test each possible cause against the records from that time.",
-      "features": "SPF checks a sending source. DKIM checks a signature. DMARC asks whether at least one passing check lines up with the visible From domain. Each check tells you something different.",
+      "what": "Read the checks added by the system that received the message.",
+      "features": "Compare those checks with the saved DNS records. Mark the final mailbox state unknown if no receipt is present.",
       "exchange": "Separate a failing bulletin from another message that used the same From address.",
       "m365": "Give a security reviewer the smallest set of fields needed to check an authentication claim.",
       "developer": "When an app sends notices, compare the records from a failing send and a known working send.",
@@ -217,8 +307,7 @@
       {
         "title": "Read the receiver’s own copy",
         "paragraphs": [
-          "Open auth-header.txt. H2 gives the message ID. H6 names sink.example.test, the receiver that supplied this saved header. On H6, find the SPF result beside smtp.mailfrom, the DKIM result beside header.d and the DMARC result beside header.from.",
-          "Write down each result before guessing a cause. H1 gives the incoming IP. H5 gives the signing domain and selector, a label for the key the receiver looks up. H7 leaves the final mailbox outcome open."
+          "Open auth-header.txt. Find the message ID in AH2. Read each stamp in AH6. Write down SPF, DKIM and DMARC as separate checks. AH1 gives the sending IP. AH5 names the signing domain and key label. AH7 leaves the last mail state unknown."
         ],
         "sources": [
           [
@@ -234,8 +323,7 @@
       {
         "title": "Test the source and the signing key",
         "paragraphs": [
-          "Open auth-dns.txt. Read the last number of the incoming IP in H1 and the authorized IP in D1. The sample sender ends in 44. The record lists 24. Ask the helper to cite both lines before it blames SPF.",
-          "Join the selector in H5 to the signing domain. D2 is the lookup for that exact name. It found no such name a minute after receipt. That supports a missing-key explanation for DKIM. An exact replay of what the receiver saw at 10:04 would need its lookup record from then. D4 also leaves the approved owner of the sending IP unknown."
+          "Open auth-dns.txt from the kit. Compare AH1 with DN1. The sender ends in 44. The listed address ends in 24. DN2 says the key name was missing a minute later. That helps explain the failed stamp. It does not show what the receiver saw a minute earlier."
         ],
         "sources": [
           [
@@ -255,8 +343,7 @@
       {
         "title": "Make the helper explain the other message",
         "paragraphs": [
-          "D3 shows strict alignment for both checks. In D5 the envelope and visible domains match exactly. SPF passed. That single aligned pass is enough for DMARC even though DKIM failed. Ask the helper to explain why this case can differ from H6.",
-          "Ask it to predict final delivery from D3 alone. A published quarantine policy is not a receipt. Confirm delivery or quarantine with a separate receiving-side record for the message. Leave that outcome unknown for beacon-17."
+          "Read DN5 as a new message. Its sender lines match and SPF passed. One aligned pass can satisfy DMARC. DN3 asks for quarantine on failure. A policy is not proof that the first message reached a folder. Ask for its receipt."
         ],
         "sources": [
           [
@@ -274,6 +361,19 @@
             "Report the IP mismatch and the missing selector name with their times. Request the approved sender list and the receiver’s original DNS evidence before proposing a repair."
           ]
         }
+      },
+      {
+        "title": "Authentication-Results header field guide",
+        "paragraphs": [
+          "Read each stamp on its own. The sample domains and verdicts are made up."
+        ],
+        "documentShape": "Authentication-Results: spf=fail smtp.mailfrom=sender.example.test; dkim=pass header.d=sender.example.test; dmarc=pass header.from=sender.example.test",
+        "sources": [
+          [
+            "Microsoft Learn · Authentication-Results header",
+            "https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo"
+          ]
+        ]
       }
     ],
     "firstGuide": "ask-check",
@@ -288,6 +388,36 @@
       "m365",
       "troubleshooting",
       "mail"
+    ],
+    "wordHelp": [
+      [
+        "evidence",
+        "A line, file or test result that you can check."
+      ],
+      [
+        "receipt",
+        "A record that shows what reached the other end."
+      ],
+      [
+        "header",
+        "The lines a mail system adds above the message body."
+      ],
+      [
+        "SPF",
+        "A check of which machines may send mail for a domain."
+      ],
+      [
+        "DKIM",
+        "A check of a digital stamp on the message."
+      ],
+      [
+        "DMARC",
+        "A check that compares the visible sender with a domain that passed a mail check."
+      ],
+      [
+        "policy",
+        "A written rule that sets what is allowed."
+      ]
     ]
   },
   {
@@ -295,8 +425,8 @@
     "title": "Why an enabled mail rule never tags the notice",
     "summary": "Trace a missing subject label from the intended rule through a narrow fix and two controls.",
     "intro": {
-      "what": "A transport rule has a test and an action. In this case, a delivered message reaches the right mailbox, but the subject never gets the label the team needs.",
-      "features": "Ask the AI for one row per condition. Give each row the required value, the observed value and a yes or no. Check the actual incoming subject before reading the result.",
+      "what": "An enabled rule can still miss a message. Check each condition against the failed notice.",
+      "features": "Use the same subject at a second address. Check whether the rule stayed within its scope.",
       "exchange": "Explain a mail flow rule that never matches the intended board notices.",
       "m365": "Write an approval note that limits a correction to one field on one rule.",
       "developer": "Test a notification filter with an expected match and two examples that should stay unchanged.",
@@ -319,8 +449,8 @@
       {
         "title": "Find the first false condition",
         "paragraphs": [
-          "Open rule-snapshot.txt and find B1 in rule-retest.csv. Read SentTo and SubjectContainsWords as separate tests. B1 meets the recipient test. Its subject contains PIER. R5 requires the word PIERX.",
-          "The rule is enabled and set to Enforce in this copy. R6 describes a subject label. The missing label is the symptom. Delivery itself worked. If the AI recommends changing routing, ask it to point to a failed delivery in B1."
+          "Open rule-snapshot.txt and find RT1 in rule-retest.csv. Read SentTo and SubjectContainsWords as separate tests. RT1 meets the recipient test. Its subject contains PIER. RS5 requires the word PIERX.",
+          "The rule is enabled and set to Enforce in this copy. RS6 describes a subject label. The missing label is the symptom. Delivery itself worked. If the AI recommends changing routing, ask it to point to a failed delivery in RT1."
         ],
         "sources": [
           [
@@ -340,8 +470,8 @@
       {
         "title": "Predict the boundary",
         "paragraphs": [
-          "R7 is the approved requirement. Write a small test grid before you read any After rows. A PIER notice to board should get the label. A FERRY notice to board should stay plain. A PIER notice to office should also stay plain.",
-          "Changing the subject test alone fits the request. Keep the recipient and action fixed. Before reading R8, write a rollback note: restore PIERX on Board ticket label if a control gets a label or the target stops delivering. Keep the old record and ask the owner to review the test result."
+          "RS7 is the approved requirement. Write a small test grid before you read any After rows. A PIER notice to board should get the label. A FERRY notice to board should stay plain. A PIER notice to office should also stay plain.",
+          "Changing the subject test alone fits the request. Keep the recipient and action fixed. Before reading RS8, write a rollback note: restore PIERX on Board ticket label if a control gets a label or the target stops delivering. Keep the old record and ask the owner to review the test result."
         ],
         "sources": [
           [
@@ -357,8 +487,8 @@
       {
         "title": "Decide whether to close the case",
         "paragraphs": [
-          "In rule-retest.csv compare B1 with V1. Both were delivered, but only V1 has the label in its received subject. The two new control sends V2 and V3 stayed plain. Use their own message IDs in your note.",
-          "The change in R8 and these three results support closing the ticket for this rule and these cases. A fresh date or different route needs its own evidence. In an actual change window the team owns approval, timing, tests and rollback. This exercise reads recorded practice results."
+          "In rule-retest.csv compare RT1 with RT3. Both were delivered, but only RT3 has the label in its received subject. The two new control sends RT4 and RT5 stayed plain. Use their own message IDs in your note.",
+          "The change in RS8 and these three results support closing the ticket for this rule and these cases. A fresh date or different route needs its own evidence. In an actual change window the team owns approval, timing, tests and rollback. This exercise reads recorded practice results."
         ],
         "sources": [
           [
@@ -371,11 +501,24 @@
           ]
         ],
         "exercise": {
-          "prompt": "If V2 also had [BOARD], could you call the repair verified?",
+          "prompt": "If RT4 also had [BOARD], could you call the repair verified?",
           "answer": [
             "No. A subject outside the requested word would have received the label. Keep the ticket open and follow the agreed rollback plan."
           ]
         }
+      },
+      {
+        "title": "Mail flow rule field guide",
+        "paragraphs": [
+          "These are practice values for two rule conditions. Check both conditions against the same message."
+        ],
+        "documentShape": "SubjectContainsWords: invoice\nSentTo: desk@example.test",
+        "sources": [
+          [
+            "Microsoft Learn · Mail flow rule",
+            "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+          ]
+        ]
       }
     ],
     "firstGuide": "ask-check",
@@ -390,6 +533,28 @@
       "m365",
       "troubleshooting",
       "mail"
+    ],
+    "wordHelp": [
+      [
+        "evidence",
+        "A line, file or test result that you can check."
+      ],
+      [
+        "control",
+        "A second test that should stay the same after a fix."
+      ],
+      [
+        "trace",
+        "A record of what happened to a message on its route."
+      ],
+      [
+        "rule",
+        "A test and the action to take when the test passes."
+      ],
+      [
+        "rollback",
+        "Putting the old setting or file back."
+      ]
     ]
   },
   {
@@ -397,8 +562,8 @@
     "title": "Which sign-in did the device policy block?",
     "summary": "A tablet cannot open mail. Put the sign-in and the device report side by side before blaming an access policy.",
     "intro": {
-      "what": "Ask AI to explain one sign-in. Give it the event, resource, device label and time. Ask which row supports each claim.",
-      "features": "An Entra event can show results for several access policies. Intune can show a device’s compliance state. AI can line up these records. You decide if they describe the same attempt.",
+      "what": "Start with one failed sign-in. Connect its time and device to the rule that ran.",
+      "features": "Compare a rule that blocks access with one that only logs a result.",
       "exchange": "Separate an app sign-in block from a mail delivery failure.",
       "m365": "Compare one blocked sign-in with one successful sign-in to the same resource.",
       "developer": "Put an event label on each app error so two failures close in time can be told apart.",
@@ -438,7 +603,7 @@
       {
         "title": "Join on the device and the time",
         "paragraphs": [
-          "Cover the lines after 09:04 UTC. Give the helper the sign-in rows and the earlier Intune rows. Ask it which device fact was available when the block happened. I1 is the earlier state for tab-7. I2 belongs to another tablet. I3 comes later.",
+          "Cover the lines after 09:04 UTC. Give the helper the sign-in rows and the earlier Intune rows. Ask it which device fact was available when the block happened. IC1 is the earlier state for tab-7. IC2 belongs to another tablet. IC3 comes later.",
           "Ask what remains unknown. The old OS and the failed grant fit together in this case. A snapshot on its own cannot prove what happened at sign-in. If the device label or time is missing, ask for that evidence and leave the cause open."
         ],
         "sources": [
@@ -460,17 +625,17 @@
           "rows": [
             [
               "Policy",
-              "S1 and S2",
+              "ES1 and ES2",
               "One enforced failure and one report-only result."
             ],
             [
               "Device",
-              "I1 before EV-31",
+              "IC1 before EV-31",
               "The tablet was below the required OS."
             ],
             [
               "Control",
-              "S3 and S4",
+              "ES3 and ES4",
               "Mail worked on tab-4, even with the report-only failure."
             ]
           ]
@@ -479,7 +644,7 @@
       {
         "title": "Close the loop with a fresh sign-in",
         "paragraphs": [
-          "Predict what you expect after the approved device update. Tab-7 should report the required OS, its enabled grant should pass and the same Mail resource should open. Now reveal N2, I3, S5 and N3. They meet all three checks. Record the result for tab-7 only.",
+          "Predict what you expect after the approved device update. Tab-7 should report the required OS, its enabled grant should pass and the same Mail resource should open. Now reveal ID2, IC3, ES5 and ID3. They meet all three checks. Record the result for tab-7 only.",
           "If the device reported compliant but the next sign-in still failed, ask for the new event and its applied policies. An AI summary of the old attempt cannot stand in for a new test."
         ],
         "sources": [
@@ -490,6 +655,19 @@
           [
             "Microsoft Learn · read Intune device compliance reports",
             "https://learn.microsoft.com/en-us/intune/device-security/compliance/monitor-policy"
+          ]
+        ]
+      },
+      {
+        "title": "Sign-in and policy result field guide",
+        "paragraphs": [
+          "Match the sign-in time and device. A report-only rule records what might have happened."
+        ],
+        "documentShape": "Application: Mail\nConditional Access: Failure",
+        "sources": [
+          [
+            "Microsoft Learn · Sign-in and policy result",
+            "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
           ]
         ]
       }
@@ -509,6 +687,32 @@
       "troubleshooting",
       "permissions",
       "mail"
+    ],
+    "wordHelp": [
+      [
+        "evidence",
+        "A line, file or test result that you can check."
+      ],
+      [
+        "control",
+        "A second test that should stay the same after a fix."
+      ],
+      [
+        "policy",
+        "A written rule that sets what is allowed."
+      ],
+      [
+        "sign-in",
+        "One attempt to open an account."
+      ],
+      [
+        "rule",
+        "A test and the action to take when the test passes."
+      ],
+      [
+        "preview",
+        "A look at what a proposed change would do."
+      ]
     ]
   },
   {
@@ -516,8 +720,8 @@
     "title": "Trace one hybrid handoff",
     "summary": "A cloud message stalls on its way to an on-premises mailbox. Mark the direction, expected host and actual host before proposing a repair.",
     "intro": {
-      "what": "A message takes a route. Give AI the sender side, recipient side and one test marker. Ask it to join just the records for that route.",
-      "features": "A cloud outbound connector and an on-premises receive connector have different jobs. A connector setting tells you the intended setup. A receipt can show where a particular test message arrived.",
+      "what": "A message moves from cloud mail to a server on site. Draw that path before you read the logs.",
+      "features": "Mark the last place that saw the message. A receipt for the trip back proves only the return path.",
       "exchange": "Match an Exchange Online sending route to the intended on-premises destination.",
       "m365": "Use a separate test for each direction when two services exchange a file.",
       "developer": "Compare the address an app used with the address its test plan approved.",
@@ -540,8 +744,7 @@
       {
         "title": "Draw one arrow",
         "paragraphs": [
-          "Open hybrid-route.txt from the practice kit and read lines H1 through H5. Write the direction as cloud to on-premises. H1 names the approved target. H2 records the cloud setting. H4 names the host actually tried. H3 says the intended receiving service was ready. H3 has no arrival for TEST-41.",
-          "Have the helper give two possible causes and one test that separates them. A wrong destination and a problem at the intended listener make different predictions about which host the failed attempt used. The name in H4 agrees with H2 and differs from H1. A timeout alone would leave both explanations open."
+          "Open hybrid-route.txt. Read HR1 through HR5. Draw an arrow from cloud mail to the site. HR1 gives the right host. HR2 shows the host in use. HR4 tells you where the trip stopped."
         ],
         "sources": [
           [
@@ -561,8 +764,7 @@
       {
         "title": "Use the right read-only command",
         "paragraphs": [
-          "For the sending side, use the Exchange Online session and the Microsoft Learn page for Get-OutboundConnector. For the receiving side, use the on-premises Exchange session and the page for Get-ReceiveConnector. Each command has an Identity parameter. Check that the returned name is exactly the connector requested. An empty or wrong identity can return a broader list.",
-          "Before using a proposed command, find its exact parameters in the official syntax and check the command available in the connected session. Lab 12 supplies separate read-only examples and writes each result to its own new CSV. The offline case can be solved entirely from the text file."
+          "Read the cloud side in Exchange Online. Read the site side in the local Exchange shell. Look up each Get command before you use it. Write the shell and host next to each result. Use the saved rows if you have no test system."
         ],
         "sources": [
           [
@@ -586,8 +788,7 @@
       {
         "title": "Test the same direction after the recorded change",
         "paragraphs": [
-          "H5 is a good test in the reverse direction. It cannot close the original incident. Before reading H6 through H8, predict the host and the destination receipt a successful cloud-to-site test must show.",
-          "H6 records an owner’s change. H7 has a fresh marker on the right host and in the destination mailbox. H8 covers a separate unchanged route. In your verdict, record the target and the time of each test. Keep open any question that neither test answers."
+          "HR5 proves that mail came back from the site. It does not prove that mail got there. Hide HR7 and HR8. Predict what a good send would show. Now check the new host and both receipts. If the first path fails again, use the old value in your rollback note."
         ],
         "sources": [
           [
@@ -597,6 +798,19 @@
           [
             "Microsoft Learn · read an Exchange Online outbound connector",
             "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-outboundconnector?view=exchange-ps"
+          ]
+        ]
+      },
+      {
+        "title": "Outbound connector field guide",
+        "paragraphs": [
+          "These are connector setting names. A setting alone cannot prove that a message arrived."
+        ],
+        "documentShape": "Name: Practice relay\nSmartHosts: relay.example.test\nUseMXRecord: False\nRecipientDomains: example.test",
+        "sources": [
+          [
+            "Microsoft Learn · Outbound connector",
+            "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-outboundconnector"
           ]
         ]
       }
@@ -613,6 +827,32 @@
       "m365",
       "troubleshooting",
       "mail"
+    ],
+    "wordHelp": [
+      [
+        "evidence",
+        "A line, file or test result that you can check."
+      ],
+      [
+        "receipt",
+        "A record that shows what reached the other end."
+      ],
+      [
+        "hybrid",
+        "A mail setup that uses both a cloud service and a local server."
+      ],
+      [
+        "connector",
+        "A saved set of rules for how mail travels between systems."
+      ],
+      [
+        "trace",
+        "A record of what happened to a message on its route."
+      ],
+      [
+        "read-only",
+        "You may look at the data without changing it."
+      ]
     ]
   },
   {
@@ -620,8 +860,8 @@
     "title": "Give four tools the same mail case",
     "summary": "Which helper notices a useful control, spots a missing setting and asks for one safe test? Score the first replies yourself.",
     "intro": {
-      "what": "A fair trial gives each helper the same case. Here one mailbox refuses a large message. The same sender can reach another mailbox with the same message.",
-      "features": "You can run the case online or learn to score a sample reply offline. The kit keeps the first prompt, the key and the later test results apart.",
+      "what": "Run one mail case in four tools. Give each one the same facts in a new chat.",
+      "features": "Score each reply against the case. Leave the row blank if you did not run that tool.",
       "exchange": "See which reply uses the small-message and second-recipient controls to narrow a mail fault.",
       "m365": "Try the same method with a sign-in that fails on only one device. Keep a successful sign-in as a control.",
       "developer": "Give four helpers the same failed test and one passing test. Check whether they ask for useful evidence before changing code.",
@@ -680,19 +920,19 @@
           "rows": [
             [
               "Symptom",
-              "R1 is the failed 14 MB message to Workroom."
+              "VT1 is the failed 14 MB message to Workroom."
             ],
             [
               "Size control",
-              "R2 shows a small message reached the same recipient."
+              "VT2 shows a small message reached the same recipient."
             ],
             [
               "Recipient control",
-              "R3 shows the same sender sent the same large message to Stores. That weakens a sender-wide limit as the cause."
+              "VT3 shows the same sender sent the same large message to Stores. That weakens a sender-wide limit as the cause."
             ],
             [
               "Uncertainty",
-              "R4 points to a size limit. R5 is a plan. Neither gives the active setting."
+              "VT4 points to a size limit. VT5 is a plan. Neither gives the active setting."
             ],
             [
               "Safe test",
@@ -715,8 +955,8 @@
         "title": "Practice with a reply you can inspect offline",
         "paragraphs": [
           "This reply was written for practice. It is not the output of a named product.",
-          "R1 is the failed 14 MB message to Workroom. R2 shows small mail gets there, and R3 shows the same sender can send the large message elsewhere. The active setting is unknown. R4 hints at size, and the plan in R5 may be stale. Change the setting to 20 MB.",
-          "It earns four points. It uses R1, R2 and R3 well and keeps the active value unknown. It misses the last point by proposing a change. The missing step is to read the current mailbox limit and say what each possible result would mean."
+          "VT1 is the failed 14 MB message to Workroom. VT2 shows small mail gets there, and VT3 shows the same sender can send the large message elsewhere. The active setting is unknown. VT4 hints at size, and the plan in VT5 may be stale. Change the setting to 20 MB.",
+          "It earns four points. It uses VT1, VT2 and VT3 well and keeps the active value unknown. It misses the last point by proposing a change. The missing step is to read the current mailbox limit and say what each possible result would mean."
         ],
         "sources": [
           [
@@ -759,7 +999,7 @@
       {
         "title": "Unseal the later evidence",
         "paragraphs": [
-          "After scoring all first replies, read V1 through V4. The active value was 10 MB. The approved practice change affected only Workroom. The old 14 MB failure now passes. A 24 MB message is still refused.",
+          "After scoring all first replies, read VT6 through VT9. The active value was 10 MB. The approved practice change affected only Workroom. The old 14 MB failure now passes. A 24 MB message is still refused.",
           "Write a one-line verdict with the two retest row IDs. Keep your original first-try scores. A later fact can change your diagnosis without changing what the first replies knew."
         ],
         "sources": [
@@ -785,6 +1025,24 @@
       "m365",
       "troubleshooting",
       "mail"
+    ],
+    "wordHelp": [
+      [
+        "evidence",
+        "A line, file or test result that you can check."
+      ],
+      [
+        "control",
+        "A second test that should stay the same after a fix."
+      ],
+      [
+        "trace",
+        "A record of what happened to a message on its route."
+      ],
+      [
+        "sign-in",
+        "One attempt to open an account."
+      ]
     ]
   }
 ]

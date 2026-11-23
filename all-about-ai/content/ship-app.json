@@ -4,8 +4,8 @@
     "title": "Ship the file you actually tested",
     "summary": "Follow one tiny game from your folder to a web address. A version label and a timed test tell you which copy you opened.",
     "intro": {
-      "what": "A release is a copy you mean other people to use. For Signal Sprint, that copy can be a single index.html file. It holds the page, the rules and the timer.",
-      "features": "Git saves checkpoints. A static host delivers saved files to a browser. A server-backed app can also run private code for each request. A game with its whole deck on the device can use the first kind.",
+      "what": "A player needs the same game you tested. Use the build label to find that copy.",
+      "features": "Save the file, serve it, then play through it again at the player’s address.",
       "exchange": "Use a fake mailbox tally when you practice shipping a report viewer.",
       "m365": "Use a made-up shift board to test which release the team sees.",
       "developer": "Share a working single-file game and retest its last second.",
@@ -99,6 +99,28 @@
       "apps",
       "shipping",
       "files"
+    ],
+    "wordHelp": [
+      [
+        "checkpoint",
+        "A saved version you can return to."
+      ],
+      [
+        "version",
+        "A label for one copy of a file."
+      ],
+      [
+        "host",
+        "The system that serves a page to a browser."
+      ],
+      [
+        "secret",
+        "A private value that must stay out of files a player can open."
+      ],
+      [
+        "rollback",
+        "Putting the old setting or file back."
+      ]
     ]
   },
   {
@@ -106,8 +128,8 @@
     "title": "Draw a line around secrets",
     "summary": "A player can inspect the code you send to their browser. Design the game so that file can be shared whole.",
     "intro": {
-      "what": "A secret is a value that lets its holder use an account or service. If a game sends a key to the browser, a player can read the delivered file.",
-      "features": "You can inspect a release file, design a server-side boundary and review Git history before sharing. If a real key has been exposed, the owner must revoke or rotate it.",
+      "what": "A player can read the files a web game sends to the browser.",
+      "features": "Use a harmless marker to check what is visible. Keep private work on a server you control.",
       "exchange": "A public practice viewer can count made-up rows. A real mail reader needs approved access outside the public page.",
       "m365": "Use a sample shift list while testing. Keep shared service credentials out of team dashboards.",
       "developer": "Keep the single-file game local to the browser. Design a private score service separately if you later need one.",
@@ -194,6 +216,28 @@
       "apps",
       "shipping",
       "files"
+    ],
+    "wordHelp": [
+      [
+        "checkpoint",
+        "A saved version you can return to."
+      ],
+      [
+        "version",
+        "A label for one copy of a file."
+      ],
+      [
+        "host",
+        "The system that serves a page to a browser."
+      ],
+      [
+        "secret",
+        "A private value that must stay out of files a player can open."
+      ],
+      [
+        "rollback",
+        "Putting the old setting or file back."
+      ]
     ]
   }
 ]

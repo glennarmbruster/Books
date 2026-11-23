@@ -1,3 +1,4 @@
+# PE1 · Practice script
 [CmdletBinding()]
 param(
     [Parameter(Mandatory)][ValidateNotNullOrEmpty()][string]$EventId,

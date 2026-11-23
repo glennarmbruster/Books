@@ -109,6 +109,14 @@ ids = set()
 assets = ['index.html', 'reader.css', 'reader.js', 'guides.js', 'guide.css', 'content/figures.json', 'content/worked.json', 'content/models.json', 'edition.json', '../book-pager.js', '../shelf-art/all-about-ai.jpg']
 kit = refresh_kit(book / 'practice' / 'exchange-inventory')
 assets.append(kit)
+assets.append('practice/exchange-inventory/case-guide.json')
+case_rows = json.loads((book / assets[-1]).read_text())
+case_names = {p.name for p in (book/'practice/exchange-inventory/cases').iterdir() if p.is_file() and not p.name.startswith('.')}
+require({r['file'] for r in case_rows} == case_names and len(case_rows) == len(case_names), 'Map every practice file once')
+require(len({r['prefix'] for r in case_rows}) == len(case_rows), 'Each practice file needs a distinct label prefix')
+for row in case_rows:
+    require(re.fullmatch(r'[A-Z]{2,4}',row['prefix']) and re.search(r'\b'+row['prefix']+r'\d+\b',(book/'practice/exchange-inventory/cases'/row['file']).read_text()), 'Check label prefix in '+row['file'])
+    check_sources(row['sources'],row['file'])
 lab_count = 0
 guide_ids = set()
 reference_ids = set()
@@ -279,6 +287,12 @@ examples = json.loads((book / 'content/worked.json').read_text())
 require(len(examples) == len(ids - guide_ids) and {ex['id'] for ex in examples} == ids - guide_ids, 'Every reference and lab needs its own worked example')
 for ex in examples:
     require(words([ex[k] for k in ('premise','before','try','after','why','rescue')]), 'Incomplete worked example '+ex['id'])
+    key = ex['id']
+    require(len(ex['before']) >= 100 and re.search(r'[?]|\b(?:list|read|return|count|give|match|paste|report)\b',ex['before'],re.I), 'Worked card needs data and an instruction in '+key)
+    steps = ex['try'].splitlines()
+    require(2 <= len(steps) <= 5 and all(line.startswith(f'{n}. ') and len(line)>12 for n,line in enumerate(steps,1)), 'Number the worked steps in '+key)
+    require(re.fullmatch(r'First run: .+?\. Second run: .+?\. .+',ex['after']) and len(ex['after']) >= 40, 'Show the checked result of both runs in '+key)
+    require(len(ex['why']) >= 20 and len(ex['rescue']) >= 35 and re.search(r'\b(?:send|ask|type|write|retry|repeat)\b',ex['rescue'],re.I), 'Give the reader a rescue message in '+key)
 check_refs(examples)
 figures = json.loads((book / 'content/figures.json').read_text())
 check_refs(figures)

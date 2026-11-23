@@ -1,5 +1,5 @@
 Evidence,Window,Probe,Expected,Observed
-W1,Before,ReceiptTag,Tagged,Plain
-W2,Before,OrdinaryMail,Plain,Plain
-W3,After,ReceiptTag,Tagged,Tagged
-W4,After,OrdinaryMail,Plain,Plain
+RW1,Before,ReceiptTag,Tagged,Plain
+RW2,Before,OrdinaryMail,Plain,Plain
+RW3,After,ReceiptTag,Tagged,Tagged
+RW4,After,OrdinaryMail,Plain,Plain

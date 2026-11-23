@@ -1,3 +1,4 @@
+# TW1 · Practice script
 [CmdletBinding()]
 param(
     [string] $InputPath = (Join-Path $PSScriptRoot 'review-window.csv'),
@@ -15,7 +16,7 @@ $report = foreach ($row in $rows) {
     $key = "$($row.Window)/$($row.Probe)"
     if ($row.Window -cnotin 'Before','After' -or $row.Probe -cnotin 'ReceiptTag','OrdinaryMail' -or
         $row.Expected -cne $expected[$row.Probe] -or $row.Observed -cnotin 'Tagged','Plain' -or
-        $row.Evidence -cnotmatch '^W[1-4]$' -or $seen.ContainsKey($key) -or $seenIds.ContainsKey($row.Evidence)) {
+        $row.Evidence -cnotmatch '^RW[1-4]$' -or $seen.ContainsKey($key) -or $seenIds.ContainsKey($row.Evidence)) {
         throw "Invalid or repeated row at $key."
     }
     $seen[$key] = $true

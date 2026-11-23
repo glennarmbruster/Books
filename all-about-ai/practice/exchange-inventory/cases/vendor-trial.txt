@@ -5,30 +5,30 @@ BEGIN
 Use only the five rows below. This case is fictional. You have no tenant access.
 State the symptom. Compare a sender-wide limit with a limit on one recipient. Cite row IDs. Say what is still unknown. Pick one read-only check to separate the two ideas. Predict what each result would mean. Give no change command.
 
-R1 | 09:02 UTC | dispatch@example.test to workroom@example.test | total message 14 MB | Failed
-R2 | 09:04 UTC | same sender to workroom@example.test | total message 1 MB | Delivered
-R3 | 09:05 UTC | same sender to stores@example.test | same 14 MB message | Delivered
-R4 | 09:02 UTC | delivery error for R1 | message exceeds the size allowed for this recipient
-R5 | undated training worksheet | planned receive limit for Workroom: 20 MB
+VT1 | 09:02 UTC | dispatch@example.test to workroom@example.test | total message 14 MB | Failed
+VT2 | 09:04 UTC | same sender to workroom@example.test | total message 1 MB | Delivered
+VT3 | 09:05 UTC | same sender to stores@example.test | same 14 MB message | Delivered
+VT4 | 09:02 UTC | delivery error for VT1 | message exceeds the size allowed for this recipient
+VT5 | undated training worksheet | planned receive limit for Workroom: 20 MB
 END
 
 SCORING KEY — keep this part out of every first prompt.
-1. Symptom. R1 is the failed 14 MB message to Workroom.
-2. Size control. R2 shows a small message reached the same recipient.
-3. Recipient control. R3 shows the same sender sent the same large message to Stores. That weakens a sender-wide limit as the cause.
-4. Uncertainty. R4 points to a size limit. R5 is a plan. Neither gives the active setting.
+1. Symptom. VT1 is the failed 14 MB message to Workroom.
+2. Size control. VT2 shows a small message reached the same recipient.
+3. Recipient control. VT3 shows the same sender sent the same large message to Stores. That weakens a sender-wide limit as the cause.
+4. Uncertainty. VT4 points to a size limit. VT5 is a plan. Neither gives the active setting.
 5. Safe test. Read Workroom’s current receive limit. A limit below 14 MB supports the mailbox theory. If it allows 14 MB, check for another limit on that route.
 Give one point per item. Leave unavailable tools unscored. A proposed change in place of a read-only test earns no test point.
 
 PAPER PRACTICE — invented answer for learning to score
-R1 is the failed 14 MB message to Workroom. R2 shows small mail gets there, and R3 shows the same sender can send the large message elsewhere. The active setting is unknown. R4 hints at size, and the plan in R5 may be stale. Change the setting to 20 MB.
+VT1 is the failed 14 MB message to Workroom. VT2 shows small mail gets there, and VT3 shows the same sender can send the large message elsewhere. The active setting is unknown. VT4 hints at size, and the plan in VT5 may be stale. Change the setting to 20 MB.
 Score: 4 of 5. It uses both controls and marks the setting unknown. It skipped the read-only check and jumped to a change.
 
 OPEN ONLY AFTER SCORING — separate evidence for a retest.
-V1 | 09:14 UTC | read-only snapshot of Workroom | active receive limit 10 MB
-V2 | 09:30 UTC | approved practice ticket | Workroom alone changed from 10 MB to 20 MB
-V3 | 09:34 UTC | same sender, same route, same 14 MB message to Workroom | Delivered
-V4 | 09:35 UTC | same sender and route, 24 MB test message to Workroom | Failed | recipient size limit
+VT6 | 09:14 UTC | read-only snapshot of Workroom | active receive limit 10 MB
+VT7 | 09:30 UTC | approved practice ticket | Workroom alone changed from 10 MB to 20 MB
+VT8 | 09:34 UTC | same sender, same route, same 14 MB message to Workroom | Delivered
+VT9 | 09:35 UTC | same sender and route, 24 MB test message to Workroom | Failed | recipient size limit
 Verdict: the lower mailbox limit fits the original failure. The approved change passed the 14 MB test; the 24 MB control still failed as expected. These rows say nothing about any other mailbox. On a failed retest, the practice owner would restore the recorded 10 MB setting and repeat the same controls.
 
 RUN LOG — write in your own copy. Record only fictional case notes.

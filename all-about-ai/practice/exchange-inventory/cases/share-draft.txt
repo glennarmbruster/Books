@@ -1,8 +1,8 @@
 LOCAL PRACTICE COPY. Fully invented data, including the harmless token marker.
 Question: Did the second attempt use a different source and reach the same mailbox?
-F1 10:00Z | case ref QUAY-88 | tenant QuartzRoom | recipient board@example.test | source 192.0.2.20 | Deferred
-F2 10:05Z | case ref QUAY-88 | tenant QuartzRoom | recipient board@example.test | source 192.0.2.21 | Delivered
-F3 Export filename: trace-QuartzRoom-QUAY-88.csv
-F4 Reply-to detail copied below an earlier draft: board@example.test
-F5 Authentication token test field: TEST-NOT-A-CREDENTIAL
-F6 Extra note: Driftbell review. This project's meaning and data class are unknown and it is not needed to answer the question.
+SD1 10:00Z | case ref QUAY-88 | tenant QuartzRoom | recipient board@example.test | source 192.0.2.20 | Deferred
+SD2 10:05Z | case ref QUAY-88 | tenant QuartzRoom | recipient board@example.test | source 192.0.2.21 | Delivered
+SD3 Export filename: trace-QuartzRoom-QUAY-88.csv
+SD4 Reply-to detail copied below an earlier draft: board@example.test
+SD5 Authentication token test field: TEST-NOT-A-CREDENTIAL
+SD6 Extra note: Driftbell review. This project's meaning and data class are unknown and it is not needed to answer the question.

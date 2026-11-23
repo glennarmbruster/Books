@@ -1,9 +1,9 @@
 Fictional case packet. The labels below summarize selected records. They are not a raw vendor export.
-H1 | 10:00Z | Approved test route from Exchange Online to on-premises Exchange: build.example.test mail goes to bridge.example.test.
-H2 | 10:04Z | Exchange Online outbound connector RelayToShop: enabled; recipient scope build.example.test; smart host old-bridge.example.test; use MX false.
-H3 | 10:04Z | On-premises Exchange receive connector SHOP01\Relay intake: enabled on SHOP01. The incoming service at bridge.example.test is accepting test traffic. This snapshot alone gives no arrival for a particular message.
-H4 | 10:05Z | Cloud delivery attempt TEST-41 to dock@build.example.test: selected RelayToShop; tried old-bridge.example.test; timed out.
-H5 | 10:06Z | Reverse direction test TEST-42: an on-premises sender reaches a cloud mailbox. The destination cloud mailbox has the unique TEST-42 marker.
-H6 | 10:12Z | Owner's change record: in this fictional exercise only, the named connector's smart host was changed to the approved bridge.example.test. No other setting changed.
-H7 | 10:15Z | Cloud retry with a fresh message, TEST-43, to dock@build.example.test: selected RelayToShop and reached bridge.example.test. The destination mailbox contains TEST-43 at 10:16Z.
-H8 | 10:17Z | Separate unchanged route to paper.example.test, test TEST-44: the destination mailbox contains TEST-44.
+HR1 | 10:00Z | Approved test route from Exchange Online to on-premises Exchange: build.example.test mail goes to bridge.example.test.
+HR2 | 10:04Z | Exchange Online outbound connector RelayToShop: enabled; recipient scope build.example.test; smart host old-bridge.example.test; use MX false.
+HR3 | 10:04Z | On-premises Exchange receive connector SHOP01\Relay intake: enabled on SHOP01. The incoming service at bridge.example.test is accepting test traffic. This snapshot alone gives no arrival for a particular message.
+HR4 | 10:05Z | Cloud delivery attempt TEST-41 to dock@build.example.test: selected RelayToShop; tried old-bridge.example.test; timed out.
+HR5 | 10:06Z | Reverse direction test TEST-42: an on-premises sender reaches a cloud mailbox. The destination cloud mailbox has the unique TEST-42 marker.
+HR6 | 10:12Z | Owner's change record: in this fictional exercise only, the named connector's smart host was changed to the approved bridge.example.test. No other setting changed.
+HR7 | 10:15Z | Cloud retry with a fresh message, TEST-43, to dock@build.example.test: selected RelayToShop and reached bridge.example.test. The destination mailbox contains TEST-43 at 10:16Z.
+HR8 | 10:17Z | Separate unchanged route to paper.example.test, test TEST-44: the destination mailbox contains TEST-44.

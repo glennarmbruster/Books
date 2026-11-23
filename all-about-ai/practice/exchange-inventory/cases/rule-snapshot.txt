@@ -1,10 +1,10 @@
 Synthetic Exchange Online rule dump, shortened to selected fields.
 Only one rule is in the practice set. All recipients below are fictional mailboxes.
-R1 Name: Board ticket label
-R2 State: Enabled
-R3 Mode: Enforce
-R4 SentTo: board@example.test
-R5 SubjectContainsWords: PIERX
-R6 PrependSubject: [BOARD]
-R7 Approved requirement: Add [BOARD] to notices for board@example.test with the whole word PIER in the subject. Other mail keeps its original subject.
-R8 Owner-approved test change at 14:00Z: change only the word PIERX to PIER on this rule. Copy the original value into the rollback note first.
+RS1 Name: Board ticket label
+RS2 State: Enabled
+RS3 Mode: Enforce
+RS4 SentTo: board@example.test
+RS5 SubjectContainsWords: PIERX
+RS6 PrependSubject: [BOARD]
+RS7 Approved requirement: Add [BOARD] to notices for board@example.test with the whole word PIER in the subject. Other mail keeps its original subject.
+RS8 Owner-approved test change at 14:00Z: change only the word PIERX to PIER on this rule. Copy the original value into the rollback note first.

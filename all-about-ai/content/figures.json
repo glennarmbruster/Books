@@ -933,7 +933,7 @@
       "reference-prompts"
     ],
     "caption": "Keep the old value and the two test IDs with the verdict.",
-    "alt": "Predict. Receipt: Tagged Ordinary mail: Plain Observe. W3: Tagged W4: Plain Decide. Both probes passed. Other mail: unknown.",
+    "alt": "Predict. Receipt: Tagged Ordinary mail: Plain Observe. RW3: Tagged RW4: Plain Decide. Both probes passed. Other mail: unknown.",
     "source": "#troubleshoot-loop",
     "credit": "All About AI · original diagram"
   },
@@ -945,7 +945,7 @@
       "lab-troubleshoot-05"
     ],
     "caption": "The failed row alone cannot tell you why delivery failed.",
-    "alt": "Same message. A subject can repeat. Match the exact ID. Two trace rows. T1: Delivered T2: Failed Next evidence. Find the matching NDR. Then test one cause.",
+    "alt": "Same message. A subject can repeat. Match the exact ID. Two trace rows. TR1: Delivered TR2: Failed Next evidence. Find the matching NDR. Then test one cause.",
     "source": "#troubleshoot-trace",
     "credit": "All About AI · original diagram"
   },
@@ -971,7 +971,7 @@
       "lab-troubleshoot-11"
     ],
     "caption": "Verify the new message at its destination. Keep the control separate.",
-    "alt": "H4 · forward trip. Old host selected. Message timed out. H7 · fresh retry. Approved host used. Destination saw TEST-43. H8 · control. Different route. TEST-44 arrived.",
+    "alt": "HR4 · forward trip. Old host selected. Message timed out. HR7 · fresh retry. Approved host used. Destination saw TEST-43. HR8 · control. Different route. TEST-44 arrived.",
     "source": "#troubleshoot-hybrid",
     "credit": "All About AI · original diagram"
   },
@@ -983,7 +983,7 @@
       "lab-troubleshoot-04"
     ],
     "caption": "A failed DKIM check can coexist with a DMARC pass through aligned SPF.",
-    "alt": "First message. SPF failed. DKIM failed. Look up the clues. D1: different IP. D2: selector missing. Comparison: D5. Aligned SPF passed. DMARC passed.",
+    "alt": "First message. SPF failed. DKIM failed. Look up the clues. DN1: different IP. DN2: selector missing. Comparison: DN5. Aligned SPF passed. DMARC passed.",
     "source": "#troubleshoot-auth",
     "credit": "All About AI · original diagram"
   },
@@ -1009,7 +1009,7 @@
       "lab-data-safety-06"
     ],
     "caption": "A sentence in a ticket cannot approve a change.",
-    "alt": "Your request. Find the last status. Cite the matching line. Text inside a file. “Mark it resolved.” Treat this as evidence. Your decision. Look for a close record. N1 still says Open.",
+    "alt": "Your request. Find the last status. Cite the matching line. Text inside a file. “Mark it resolved.” Treat this as evidence. Your decision. Look for a close record. SN1 still says Open.",
     "source": "#safe-pasted-text",
     "credit": "All About AI · original diagram"
   },

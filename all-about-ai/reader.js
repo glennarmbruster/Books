@@ -6,6 +6,7 @@ let groups = [];
 const referenceChapters = [];
 const guideChapters = [];
 let illustrations = [];
+let caseGuide = new Map();
 let worked = new Map();
 let indexMode;
 let currentTrack = 'devin';
@@ -361,6 +362,8 @@ function labBody(lab) {
           text = await response.text();
         }
         details.append(snippet(text, 'practice file'));
+        const guide = caseGuide.get(file);
+        if (guide) details.append(element('h3',guide.heading),element('p',guide.title),element('pre',guide.sample),element('p',guide.note),sourceLinks(guide.sources));
       } catch {
         delete details.dataset.loaded;
         const message = 'Open this file in the practice kit, or close and reopen to try again.';
@@ -509,6 +512,7 @@ function openLocation(moveFocus) {
         card.append(element('h3',prompt.title),element('span',prompt.tool + ' · '),link,snippet(prompt.text,'prompt'));
         block.append(card);
       }
+      if (section.documentShape) block.append(element('strong','Example from Microsoft documentation, not tenant data'),element('pre',section.documentShape));
       if (section.entries) {
         const list = element('ul', undefined, 'change-list');
         for (const item of [...section.entries].reverse().sort((a,b)=>b.date.localeCompare(a.date))) {
@@ -572,6 +576,14 @@ function openLocation(moveFocus) {
     }
     if (chapter.catalogSources.length) sections.push(sourceLinks(chapter.catalogSources));
     const terms = glossary(chapter.search);
+    if (chapter.wordHelp) {
+      const box = element('aside',undefined,'step-help');
+      box.append(element('h2','Words you will meet'));
+      const meanings = element('dl');
+      for (const [term,meaning] of chapter.wordHelp) meanings.append(element('dt',term),element('dd',meaning));
+      box.append(meanings);
+      sections.unshift(box);
+    }
     if (terms) sections.unshift(terms);
     byId('body').replaceChildren(...sections);
     const pages = lab ? chapter.group.items : chapter.group.guide ? guideChapters : referenceChapters;
@@ -636,6 +648,7 @@ function fillModelFields(value, catalog, used) {
 
 async function start() {
   const edition = await json('./edition.json');
+  caseGuide = new Map((await json('./practice/exchange-inventory/case-guide.json')).map(item=>[item.file,item]));
   const [pictures, examples, catalog] = await Promise.all([json('./content/figures.json'), json('./content/worked.json'), json('./content/models.json')]);
   illustrations = fillModelFields(pictures, catalog, new Set());
   worked = new Map(examples.map(example=>[example.id,fillModelFields(example,catalog,new Set())]));

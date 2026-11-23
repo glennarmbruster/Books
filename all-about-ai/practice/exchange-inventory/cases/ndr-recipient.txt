@@ -1,7 +1,7 @@
 Synthetic NDR excerpt. These labels are for this practice case.
-N1 Original-Message-ID: <parcel-41@example.test>
-N2 Final-Recipient: rfc822; stores@example.test
-N3 Action: failed
-N4 Status: 5.1.10
-N5 Diagnostic-Code: smtp; 550 5.1.10 Recipient not found
-N6 Report time: 2026-11-12T09:20:15Z
+NR1 Original-Message-ID: <parcel-41@example.test>
+NR2 Final-Recipient: rfc822; stores@example.test
+NR3 Action: failed
+NR4 Status: 5.1.10
+NR5 Diagnostic-Code: smtp; 550 5.1.10 Recipient not found
+NR6 Report time: 2026-11-12T09:20:15Z

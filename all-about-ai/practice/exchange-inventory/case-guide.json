@@ -1,0 +1,290 @@
+[
+  {
+    "file": "alias-check.txt",
+    "prefix": "AL",
+    "title": "Delivery failure report",
+    "sample": "Generating server: mail.example.test\nroom@example.test\nRemote server returned: 550 5.1.10 Recipient not found",
+    "note": "The notice names the failed address and gives an error. Match it to the trace.",
+    "sources": [
+      [
+        "Microsoft Learn · Delivery failure report",
+        "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "auth-dns.txt",
+    "prefix": "DN",
+    "title": "DNS mail check",
+    "sample": "TXT name: sender.example.test\nTXT value: v=spf1 ip4:192.0.2.24 -all",
+    "note": "Read the practice sender address alongside the SPF record.",
+    "sources": [
+      [
+        "Microsoft Learn · DNS mail check",
+        "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "auth-header.txt",
+    "prefix": "AH",
+    "title": "Authentication-Results header",
+    "sample": "Authentication-Results: spf=fail smtp.mailfrom=sender.example.test; dkim=pass header.d=sender.example.test; dmarc=pass header.from=sender.example.test",
+    "note": "Read each stamp on its own. The sample domains and verdicts are made up.",
+    "sources": [
+      [
+        "Microsoft Learn · Authentication-Results header",
+        "https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "change-card.txt",
+    "prefix": "CC",
+    "title": "Mail flow rule",
+    "sample": "SubjectContainsWords: invoice\nSentTo: desk@example.test",
+    "note": "These are practice values for two rule conditions. Check both conditions against the same message.",
+    "sources": [
+      [
+        "Microsoft Learn · Mail flow rule",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "entra-signins.csv",
+    "prefix": "ES",
+    "title": "Sign-in and policy result",
+    "sample": "Application: Mail\nConditional Access: Failure",
+    "note": "Match the sign-in time and device. A report-only rule records what might have happened.",
+    "sources": [
+      [
+        "Microsoft Learn · Sign-in and policy result",
+        "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "hybrid-route.txt",
+    "prefix": "HR",
+    "title": "Outbound connector",
+    "sample": "Name: Practice relay\nSmartHosts: relay.example.test\nUseMXRecord: False\nRecipientDomains: example.test",
+    "note": "These are connector setting names. A setting alone cannot prove that a message arrived.",
+    "sources": [
+      [
+        "Microsoft Learn · Outbound connector",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/set-outboundconnector"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "identity-case-notes.txt",
+    "prefix": "ID",
+    "title": "Sign-in and policy result",
+    "sample": "Application: Mail\nConditional Access: Failure",
+    "note": "Match the sign-in time and device. A report-only rule records what might have happened.",
+    "sources": [
+      [
+        "Microsoft Learn · Sign-in and policy result",
+        "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "intune-checkins.csv",
+    "prefix": "IC",
+    "title": "Device compliance status",
+    "sample": "Device name: practice-tablet\nCompliance status: Compliant",
+    "note": "Match the device and report time before you explain the sign-in.",
+    "sources": [
+      [
+        "Microsoft Learn · Device compliance status",
+        "https://learn.microsoft.com/en-us/intune/device-security/compliance/monitor-policy"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "ndr-recipient.txt",
+    "prefix": "NR",
+    "title": "Delivery failure report",
+    "sample": "Generating server: mail.example.test\nroom@example.test\nRemote server returned: 550 5.1.10 Recipient not found",
+    "note": "The notice names the failed address and gives an error. Match it to the trace.",
+    "sources": [
+      [
+        "Microsoft Learn · Delivery failure report",
+        "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "review-window.csv",
+    "prefix": "RW",
+    "title": "Mail flow rule",
+    "sample": "SubjectContainsWords: invoice\nSentTo: desk@example.test",
+    "note": "These are practice values for two rule conditions. Check both conditions against the same message.",
+    "sources": [
+      [
+        "Microsoft Learn · Mail flow rule",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "rule-retest.csv",
+    "prefix": "RT",
+    "title": "Mail flow rule",
+    "sample": "SubjectContainsWords: invoice\nSentTo: desk@example.test",
+    "note": "These are practice values for two rule conditions. Check both conditions against the same message.",
+    "sources": [
+      [
+        "Microsoft Learn · Mail flow rule",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "rule-snapshot.txt",
+    "prefix": "RS",
+    "title": "Mail flow rule",
+    "sample": "SubjectContainsWords: invoice\nSentTo: desk@example.test",
+    "note": "These are practice values for two rule conditions. Check both conditions against the same message.",
+    "sources": [
+      [
+        "Microsoft Learn · Mail flow rule",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "share-draft.txt",
+    "prefix": "SD",
+    "title": "Workplace classification guide",
+    "sample": "Practice policy: approved training space\nCase decision: hold until approved",
+    "note": "This is a teaching note. The linked guide explains sensitivity labels. Your workplace sets its own sharing rules.",
+    "sources": [
+      [
+        "Microsoft Learn · Workplace classification guide",
+        "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+      ]
+    ],
+    "heading": "Fictional policy card and related Microsoft guidance"
+  },
+  {
+    "file": "share-note.txt",
+    "prefix": "SN",
+    "title": "Workplace classification guide",
+    "sample": "Practice policy: approved training space\nCase decision: hold until approved",
+    "note": "This is a teaching note. The linked guide explains sensitivity labels. Your workplace sets its own sharing rules.",
+    "sources": [
+      [
+        "Microsoft Learn · Workplace classification guide",
+        "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+      ]
+    ],
+    "heading": "Fictional policy card and related Microsoft guidance"
+  },
+  {
+    "file": "share-policy.txt",
+    "prefix": "SP",
+    "title": "Workplace classification guide",
+    "sample": "Practice policy: approved training space\nCase decision: hold until approved",
+    "note": "This is a teaching note. The linked guide explains sensitivity labels. Your workplace sets its own sharing rules.",
+    "sources": [
+      [
+        "Microsoft Learn · Workplace classification guide",
+        "https://learn.microsoft.com/en-us/purview/sensitivity-labels"
+      ]
+    ],
+    "heading": "Fictional policy card and related Microsoft guidance"
+  },
+  {
+    "file": "trace-recipients.csv",
+    "prefix": "TR",
+    "title": "Message trace",
+    "sample": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | desk@example.test | room@example.test | Delivered",
+    "note": "Use the recipient and the message ID. A single message may have more than one result.",
+    "sources": [
+      [
+        "Microsoft Learn · Message trace",
+        "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+      ],
+      [
+        "Microsoft Learn · message trace search",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "vendor-trial.txt",
+    "prefix": "VT",
+    "title": "Delivery failure report",
+    "sample": "Generating server: mail.example.test\nroom@example.test\nRemote server returned: 550 5.1.10 Recipient not found",
+    "note": "The notice names the failed address and gives an error. Match it to the trace.",
+    "sources": [
+      [
+        "Microsoft Learn · Delivery failure report",
+        "https://learn.microsoft.com/en-us/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "Read-PolicyEvent.ps1",
+    "prefix": "PE",
+    "title": "Sign-in and policy result",
+    "sample": "Application: Mail\nConditional Access: Failure",
+    "note": "Match the sign-in time and device. A report-only rule records what might have happened.",
+    "sources": [
+      [
+        "Microsoft Learn · Sign-in and policy result",
+        "https://learn.microsoft.com/en-us/entra/identity/conditional-access/troubleshoot-conditional-access"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "Test-ReceiptWindow.ps1",
+    "prefix": "TW",
+    "title": "Mail flow rule",
+    "sample": "SubjectContainsWords: invoice\nSentTo: desk@example.test",
+    "note": "These are practice values for two rule conditions. Check both conditions against the same message.",
+    "sources": [
+      [
+        "Microsoft Learn · Mail flow rule",
+        "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/conditions-and-exceptions"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  },
+  {
+    "file": "mail-case-index.txt",
+    "prefix": "MX",
+    "title": "Message trace",
+    "sample": "MessageId | SenderAddress | RecipientAddress | Status\n<parcel-41@example.test> | desk@example.test | room@example.test | Delivered",
+    "note": "Use the recipient and the message ID. A single message may have more than one result.",
+    "sources": [
+      [
+        "Microsoft Learn · Message trace",
+        "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+      ],
+      [
+        "Microsoft Learn · message trace search",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2"
+      ]
+    ],
+    "heading": "Example from Microsoft documentation, not tenant data"
+  }
+]

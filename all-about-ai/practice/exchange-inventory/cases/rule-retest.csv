@@ -1,6 +1,6 @@
 CaseRow,SentUTC,MessageId,Stage,RecipientAddress,OriginalSubject,DeliveryStatus,ReceivedSubject
-B1,2026-11-12T13:30:00Z,<board-81@example.test>,Before,board@example.test,PIER roster,Delivered,PIER roster
-B2,2026-11-12T13:32:00Z,<board-82@example.test>,Before,board@example.test,FERRY roster,Delivered,FERRY roster
-V1,2026-11-12T15:10:00Z,<board-91@example.test>,After,board@example.test,PIER crew,Delivered,[BOARD] PIER crew
-V2,2026-11-12T15:12:00Z,<board-92@example.test>,After,board@example.test,FERRY crew,Delivered,FERRY crew
-V3,2026-11-12T15:14:00Z,<board-93@example.test>,After,office@example.test,PIER crew,Delivered,PIER crew
+RT1,2026-11-12T13:30:00Z,<board-81@example.test>,Before,board@example.test,PIER roster,Delivered,PIER roster
+RT2,2026-11-12T13:32:00Z,<board-82@example.test>,Before,board@example.test,FERRY roster,Delivered,FERRY roster
+RT3,2026-11-12T15:10:00Z,<board-91@example.test>,After,board@example.test,PIER crew,Delivered,[BOARD] PIER crew
+RT4,2026-11-12T15:12:00Z,<board-92@example.test>,After,board@example.test,FERRY crew,Delivered,FERRY crew
+RT5,2026-11-12T15:14:00Z,<board-93@example.test>,After,office@example.test,PIER crew,Delivered,PIER crew

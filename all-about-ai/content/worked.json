@@ -2522,9 +2522,9 @@
   {
     "id": "lab-data-safety-02",
     "premise": "Use this small practice case to check one part of “Keep just enough evidence to answer” before trying the full task.",
-    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nTime band | keep\nEvent state | keep\nPersonal identifier | remove\n\nKeep the smallest allowed packet that can explain the result List the matching record names in the order shown. Use only rows marked “keep”.",
-    "try": "1. Open a new practice chat in an approved tool. You can also answer on paper with the network off.\n2. Send the whole card. On paper, read the rows and write your first answer before looking below.\n3. Start with a fresh copy of the card. Change the finding for Personal identifier from “remove” to “keep”. Send it again, or cross out the old value on paper and write your second answer.",
-    "after": "First run: Time band, Event state. Second run: Time band, Event state, Personal identifier. Match the values, labels and order shown.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nTime band | keep\nEvent state | keep\nRelay alias | remove\n\nKeep the smallest allowed packet that can explain the result. List the matching record names in the order shown. Use only rows marked “keep”.",
+    "try": "1. Open a new practice chat in an approved tool. You can also answer on paper with the network off.\n2. Send the whole card. On paper, read the rows and write your first answer before looking below.\n3. Start with a fresh copy of the card. Change the finding for Relay alias from “remove” to “keep”. Send it again, or cross out the old value on paper and write your second answer.",
+    "after": "First run: Time band, Event state. Second run: Time band, Event state, Relay alias. Match the values, labels and order shown.",
     "why": "One changed finding can change which records belong in the answer.",
     "rescue": "An extra record means the filter was too broad. Send this follow-up: “Read each finding aloud. Which records carry the requested finding, in order?”"
   },
@@ -2612,9 +2612,9 @@
   {
     "id": "lab-ship-app-04",
     "premise": "Use this small practice case to check one part of “Catch a pretend secret before shipping” before trying the full task.",
-    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nScore limit | public\nServer-only value | private\nGame title | public\n\nWhich fields may ship inside the downloadable game file? List the matching record names in the order shown. Use only rows marked “public”.",
-    "try": "1. Open a new practice chat in an approved tool. You can also answer on paper with the network off.\n2. Send the whole card. On paper, read the rows and write your first answer before looking below.\n3. Start with a fresh copy of the card. Change the finding for Server-only value from “private” to “public”. Send it again, or cross out the old value on paper and write your second answer.",
-    "after": "First run: Score limit, Game title. Second run: Score limit, Server-only value, Game title. Match the values, labels and order shown.",
+    "before": "Paste this fictional practice card into a fresh chat. Its question is below the data.\n\nRecord | Finding\nScore limit | public\nCredits screen | private\nGame title | public\n\nWhich fields may ship inside the downloadable game file? List the matching record names in the order shown. Use only rows marked “public”.",
+    "try": "1. Open a new practice chat in an approved tool. You can also answer on paper with the network off.\n2. Send the whole card. On paper, read the rows and write your first answer before looking below.\n3. Start with a fresh copy of the card. Change the finding for Credits screen from “private” to “public”. Send it again, or cross out the old value on paper and write your second answer.",
+    "after": "First run: Score limit, Game title. Second run: Score limit, Credits screen, Game title. Match the values, labels and order shown.",
     "why": "One changed finding can change which records belong in the answer.",
     "rescue": "An extra record means the filter was too broad. Send this follow-up: “Read each finding aloud. Which records carry the requested finding, in order?”"
   },
