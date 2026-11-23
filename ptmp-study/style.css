@@ -1,0 +1,56 @@
+:root{color-scheme:light;--ink:#193d3b;--red:#9d3c2c;--line:#bdb5a1;--paper:#fcf8ef;background:#f1ecdf;color:var(--ink);font:17px/1.52 system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0}
+.wrap{width:min(100%,57rem);margin:auto;padding:1.15rem clamp(1rem,4vw,2.5rem)}
+header{background:#173d39;color:#fff8e6;border-bottom:4px solid #c08a48}
+.bar,.actions,.pagerline,.choices,.stats{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap}
+.bar{justify-content:space-between;padding-block:.5rem}
+a{color:inherit;text-underline-offset:.15em}
+.bar a{padding:.6rem .15rem}
+.brand{font-weight:700;text-decoration:none}
+h1,h2,h3,.score{font-family:Georgia,serif;line-height:1.16;text-wrap:pretty}
+h1{font-size:clamp(2.25rem,6vw,4rem);margin:.2em 0 .3em;letter-spacing:-.035em}
+h2{font-size:clamp(1.55rem,3.5vw,2.25rem);margin:1.05em 0 .4em}
+h3{font-size:1.35rem;margin:.7em 0 .25em}
+p{margin:.5rem 0 1rem}
+.cover{width:clamp(85px,17vw,136px);aspect-ratio:2/3;object-fit:cover;box-shadow:4px 4px #cbbd9e}
+.hero{display:flex;align-items:center;gap:clamp(1rem,3vw,2rem);padding:.65rem 0 1.4rem;border-bottom:1px solid var(--line)}
+.hero p{margin:0}
+.section-label{color:#84422c;font-weight:700;font-size:.86rem;letter-spacing:.03em}
+.panel,.lesson,.feedback{padding:clamp(1rem,3vw,1.65rem);background:var(--paper);border:1px solid var(--line);margin:1.1rem 0}
+.panel h2:first-child,.lesson h2:first-child,.feedback h2:first-child{margin-top:0}
+.chapters,.history,.index,.details{list-style:none;padding:0}
+.chapters a,.history a,.index a{display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.85rem .3rem;border-top:1px solid var(--line);text-decoration:none}
+.chapters a:hover,.history a:hover,.index a:hover{text-decoration:underline}
+.small,footer{font-size:.87rem}
+.muted{color:#475d55}
+button,.button,select,input[type=number]{font:inherit;border:1px solid #788b7e;border-radius:5px;background:#fffdf7;color:var(--ink);padding:.5rem .8rem;min-height:44px}
+button,.button{cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+button:disabled{opacity:.5;cursor:default}
+.primary{background:var(--ink);color:white;border-color:var(--ink);font-weight:700}
+input[type=number]{width:6.3rem}
+fieldset{border:0;padding:0;margin:0} legend,.field>span{font-weight:700;display:block;margin-bottom:.35rem}
+.field{display:block;margin:.8rem 0}
+select{max-width:100%;width:min(100%,29rem)}
+label.check{display:flex;align-items:center;gap:.5rem;min-height:44px;cursor:pointer}
+input[type=checkbox],input[type=radio]{width:1.2rem;height:1.2rem;accent-color:var(--ink);flex-shrink:0}
+.actions{margin:.85rem 0}
+.book-top-navigation{margin-top:.4rem}
+.choices{flex-direction:column;align-items:stretch}
+.option{display:flex;align-items:baseline;gap:.7rem;padding:.75rem;background:#fffcf5;border:1px solid var(--line);border-radius:5px;cursor:pointer}
+.option:has(:checked){background:#e4eee5;border-color:var(--ink);box-shadow:inset 3px 0 var(--ink)}
+.option input{align-self:flex-start;margin-top:.22rem}
+.qtitle{font:600 clamp(1.45rem,3.3vw,2rem)/1.27 Georgia,serif;letter-spacing:0;margin:.65rem 0 1rem}
+.worked,.tip{background:#e8eee4;border-left:4px solid #426958;padding:.8rem 1rem}
+.lesson,.feedback{scroll-margin:1.4rem}
+.feedback{border-top:4px solid var(--red)}
+.feedback b,.lesson b{display:block;margin:.7rem 0 .15rem}
+.score{font-size:2.7rem;font-weight:bold}
+table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:.55rem .3rem;border-bottom:1px solid var(--line)}
+.index a span:last-child,.chapters a span:last-child{flex-shrink:0}
+details{margin:.65rem 0}summary{cursor:pointer;font-weight:650;padding:.55rem 0}
+.details li{padding:.45rem 0;border-top:1px solid var(--line)}
+footer{border-top:1px solid var(--line);margin-top:1.5rem}
+:focus-visible{outline:3px solid #ab6026;outline-offset:2px}
+[hidden]{display:none!important}
+@media(max-width:550px){.bar{gap:.2rem}.brand{order:-1;flex-basis:100%}.hero{align-items:flex-start}.hero h1{font-size:2rem}.chapters a,.index a{align-items:flex-start}.panel,.lesson,.feedback{padding:1rem}.index a span:first-child{min-width:0}}
