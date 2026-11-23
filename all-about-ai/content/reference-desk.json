@@ -461,6 +461,10 @@
           [
             "Scheduled Sessions - Devin Docs",
             "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ],
+          [
+            "Microsoft · scheduled prompts and tasks",
+            "https://support.microsoft.com/en-us/microsoft-365-copilot/schedule-your-most-used-copilot-prompts"
           ]
         ],
         "table": {
@@ -483,7 +487,7 @@
             ],
             [
               "Microsoft 365 Copilot",
-              "Check the schedule feature in the work account and confirm licensing first."
+              "Use a licensed Copilot account to schedule a repeated prompt. Check its saved time in the task list."
             ],
             [
               "Devin",
@@ -613,6 +617,36 @@
             "date": "2026-11-22",
             "where": "reference-job-picker",
             "what": "Added a five-tool comparison for nine jobs.",
+            "kind": "edition"
+          },
+          {
+            "date": "2026-11-22",
+            "where": "reference-changes",
+            "kind": "edition",
+            "what": "Added page review dates and a linked history of human reviews."
+          },
+          {
+            "date": "2026-11-22",
+            "where": "reference-prompts",
+            "kind": "edition",
+            "what": "Added 16 prompts with tool labels, chapter links and copy buttons."
+          },
+          {
+            "date": "2026-11-22",
+            "where": "reference-tags",
+            "kind": "edition",
+            "what": "Added an offline index of reference tags and six shortcuts on the contents page."
+          },
+          {
+            "date": "2026-11-22",
+            "where": "reference-changes",
+            "kind": "edition",
+            "what": "Added online source links, domain-limited documentation searches, a monthly checklist and a local source checker."
+          },
+          {
+            "date": "2026-11-22",
+            "where": "which-account",
+            "what": "Replaced the retired account-support address with the official sign-in guide after a 404 check.",
             "kind": "edition"
           }
         ]

@@ -204,6 +204,14 @@ for group in groups:
                 require(all(words(row) and len(row) == len(tbl['columns']) for row in tbl['rows']), f'Invalid table in {key}')
 
 desk = next(ch for ch in json.loads((book/'content/reference-desk.json').read_text()) if ch['id']=='reference-changes')
+expected_surfaces = {'chat','artifacts','projects','code','connectors','browser','scheduled','voice','files'}
+for vendor, alternate in [('claude',set()),('gemini',{'notebook','canvas'})]:
+    pages = json.loads((book/'content'/f'{vendor}-reference.json').read_text())
+    expected = (expected_surfaces - {'projects','artifacts'} | alternate) if alternate else expected_surfaces
+    require(len(pages) == len(expected) and {p['surface'] for p in pages} == expected and
+            all(p['id'] == vendor+'-reference-'+p['surface'] and p['id'] in reference_ids for p in pages),
+            'Missing full-potential surface for '+vendor)
+require({'reference-tags','reference-job-picker','reference-prompts','reference-changes'} <= reference_ids, 'Missing reference desk page')
 history = next(s['entries'] for s in desk['sections'] if 'entries' in s)
 require(history and all(date.fromisoformat(row['date']) <= edition_date and row['where'] in ids and
         words([row['what']]) and row['kind'] in {'edition','review','source check'} for row in history), 'Invalid change history')
@@ -213,7 +221,7 @@ require(len(tracks) == len(track_levels) and set(tracks) == set(track_levels) an
 require(len(writing_labs) == 20 and set(writing_labs) == set(track_levels) - {'data-safety','troubleshoot','ship-app'},
         'Expected 20 optional prompt exercises across the original tracks')
 comparison_ids = {'lab-gemini-app-14','lab-claude-code-14','lab-codex-14'}
-require(manifest.get('version') == 6 and build_spec is not None, 'Expected edition 6 with the four-tool build-off')
+require(manifest.get('version') == 7 and build_spec is not None, 'Expected edition 7 with the four-tool build-off')
 require({lab['id'] for lab in build_labs} == comparison_ids, 'Expected three shared Lab 14 builds')
 for lab in build_labs:
     require(lab['prompt'] == build_spec['prompt'] and lab['check'] == build_spec['check'],

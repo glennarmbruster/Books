@@ -123,12 +123,17 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "Google notes that the mobile app may have limits for this feature. Not verified — 2026-11-22: the source allowance for an individual workspace."
+          "The mobile app has some differences. Google says usage depends on the task and plan. Larger Google AI plans can raise the allowance.",
+          "Not verified — 2026-11-22: the source allowance for an individual workspace."
         ],
         "sources": [
           [
             "Use chat in Gemini Notebook - Gemini Notebook Help",
             "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ],
+          [
+            "Google · Gemini Notebook usage limits",
+            "https://support.google.com/gemininotebook/answer/17670842?hl=en"
           ]
         ]
       },
@@ -270,7 +275,8 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "The desktop setup guide lists supported systems, including 64-bit Windows and macOS 13 or later. Not verified — 2026-11-22: a fixed number of agent runs per account."
+          "Personal access and rate limits depend on the Google AI plan. Workspace plans do not include the personal Antigravity plan. The desktop setup guide lists supported systems.",
+          "Not verified — 2026-11-22: a fixed number of agent runs per account."
         ],
         "sources": [
           [
@@ -280,6 +286,10 @@
           [
             "Get started",
             "https://antigravity.google/docs/getting-started/"
+          ],
+          [
+            "Google · Antigravity plans",
+            "https://antigravity.google/docs/plans"
           ]
         ]
       },
@@ -553,12 +563,16 @@
       {
         "title": "Plan and availability",
         "paragraphs": [
-          "The cited Live guide requires sign-in and excludes the Gemini web app. Features roll out gradually across supported devices."
+          "On an iPad, open the Gemini mobile app and sign in to use Live. Google lists the Gemini web app as unavailable for Live. Updates can reach devices at different times."
         ],
         "sources": [
           [
             "Talk naturally with Gemini Live - Android phone & tablet - Gemini Apps Help",
             "https://support.google.com/gemini/answer/15274899?hl=en"
+          ],
+          [
+            "Google · Gemini Live on iPhone and iPad",
+            "https://support.google.com/gemini/answer/15274899?co=GENIE.Platform%3DiOS&hl=en"
           ]
         ]
       },
