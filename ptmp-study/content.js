@@ -42,7 +42,7 @@ const chapters = [
       [
         0,
         "A booth attendant now handles remote intercom calls, plate exceptions and refunds. What should guide the next revision of the job description?",
-        "Observe the current work and document the decisions and skills it requires",
+        "Analyze the tasks, decisions and skills now required",
         "Start with the pay grade of the previous booth position",
         "Copy the description used at the largest neighboring airport",
         "List every function offered by the new parking software",
@@ -54,7 +54,7 @@ const chapters = [
       [
         0,
         "A dispatch supervisor is retiring. Which result best demonstrates the succession plan is working?",
-        "A designated alternate successfully runs a supervised shift",
+        "A backup demonstrates the job on shift",
         "The retiring supervisor has written a detailed duty list",
         "Two employees say they would accept the position",
         "The department has budgeted for a replacement",
@@ -102,7 +102,7 @@ const chapters = [
       [
         0,
         "A job posting requires five years on one brand of kiosk. The actual job involves diagnosing routine faults and escalating the rest. Which change broadens recruitment while preserving the standard?",
-        "Ask candidates to demonstrate the required troubleshooting skills",
+        "Use a job-related troubleshooting exercise",
         "Remove the troubleshooting requirement until after probation",
         "Reserve the first interview round for current vendor employees",
         "Require five years with any brand of pay station",
@@ -162,7 +162,7 @@ const chapters = [
       [
         0,
         "A union-represented garage plans to change shift bidding. What should the director do before posting the new schedule?",
-        "Review the agreement and coordinate the applicable labor process",
+        "Check the agreement with labor relations",
         "Run a majority staff poll and apply the winning schedule",
         "Post a temporary schedule and negotiate permanent details later",
         "Ask only the most senior operators to approve the changes",
@@ -186,7 +186,7 @@ const chapters = [
       [
         0,
         "A strategic plan calls for a more reliable evening shuttle. Which annual staff objective best supports that outcome?",
-        "Reduce missed scheduled evening departures to the agreed target",
+        "Cut missed evening departures to the target",
         "Hold twelve presentations about shuttle reliability",
         "Increase total passenger trips without regard to time of day",
         "Purchase new radios for everyone by the end of the year",
@@ -342,7 +342,7 @@ const chapters = [
       [
         0,
         "A supervisor wants someone to learn cash reconciliation without compromising the existing independent review. Which assignment fits?",
-        "Have the trainee reconcile under oversight while a separate reviewer approves",
+        "Separate trainee reconciliation from approval",
         "Let the trainee collect, reconcile and approve the same receipts",
         "Give the trainee a colleague's login to perform practice approvals",
         "Delay every independent review until the trainee has finished probation",
@@ -378,7 +378,7 @@ const chapters = [
       [
         0,
         "Dispatchers have only ten paid minutes for a daily briefing. What is the highest-value agenda?",
-        "Current exceptions, assigned actions and confirmation of responsibilities",
+        "Exceptions, action owners and a quick check-back",
         "A full reading of the annual service plan at every shift change",
         "Individual performance rankings followed by department announcements",
         "A recap of all routine tasks regardless of changes or risks",
@@ -414,7 +414,7 @@ const chapters = [
       [
         0,
         "A downtown operator wants leaders to surface near misses. Reports fall after a manager praises the shift with the fewest reports. What should change?",
-        "Recognize timely reporting and follow-through on corrective actions",
+        "Recognize reporting and effective corrections",
         "Continue rewarding low counts but raise the monthly reward",
         "Ask only managers to file reports, reducing staff paperwork",
         "Exclude reports from staff who have recently been coached",
@@ -438,7 +438,7 @@ const chapters = [
       [
         0,
         "A remote attendant receives complaints about long queues but cannot change lane settings. Which accountability arrangement is fairest?",
-        "Measure response within the role and report lane issues to the empowered owner",
+        "Assess agent response and escalate lane settings",
         "Hold the attendant solely responsible for all exit queue lengths",
         "Limit the review to how many vehicles the garage handled",
         "Reward attendants only when the entire facility has no complaints",
@@ -474,7 +474,7 @@ const chapters = [
       [
         0,
         "A department can fund one course for someone who will train others. What criterion best links that investment to the service plan?",
-        "A documented skill gap and a plan to transfer the learning",
+        "A skill gap and an actionable transfer plan",
         "Seniority alone, regardless of course relevance",
         "The number of pages in the course workbook",
         "Which vendor offers the most continuing education hours",
@@ -486,7 +486,7 @@ const chapters = [
       [
         0,
         "A frontline lead informally instructs attendants to waive charges for friends. An attendant reports it privately. Which leadership response fits?",
-        "Use the established reporting route and document the concern objectively",
+        "Document and report through authorized channels",
         "Discuss the allegation by name during the next staff meeting",
         "Tell the attendant to confront the lead before any review",
         "Wait until annual reviews because no total loss is yet known",
@@ -522,7 +522,7 @@ const chapters = [
       [
         1,
         "An arena changes its accessible drop-off location for one concert. Which outreach plan best reaches people before they make their last turn?",
-        "Update ticket emails, arrival maps and signs at the approach decision point",
+        "Use pre-trip notices and signs before the turn",
         "Post an announcement at the old drop-off after doors open",
         "Send a press release aimed primarily at downtown businesses",
         "Display a QR code inside the seating bowl on event night",
@@ -570,7 +570,7 @@ const chapters = [
       [
         1,
         "A planned garage closure affects students, nearby residents and paratransit riders in different ways. What should guide the communications plan?",
-        "Map each audience's decisions, timing and trusted channels",
+        "Each audience's decisions and information needs",
         "Use the same internal maintenance notice for everyone",
         "Start with whichever platform has the most followers",
         "Issue one notice to on-campus permit holders only",
@@ -582,7 +582,7 @@ const chapters = [
       [
         1,
         "A fee-change notice receives thousands of impressions. What evidence best demonstrates that motorists understood the change?",
-        "A sample correctly identifies the new rate and effective date",
+        "Accurate recall of the rate and start date",
         "The social post generated more impressions than usual",
         "Subscribers opened the message more than once",
         "Staff approved the wording without requesting revisions",
@@ -618,7 +618,7 @@ const chapters = [
       [
         1,
         "A focus group of ten drivers strongly favors free overnight parking. How should the manager use that finding?",
-        "Treat it as a hypothesis and test demand with broader evidence",
+        "Test the preference in a broader sample",
         "Report that all drivers in the district prefer that policy",
         "Set the overnight price using a vote of the ten participants",
         "Treat the group as an exhaustive forecast of occupancy",
@@ -714,7 +714,7 @@ const chapters = [
       [
         1,
         "A service alert contains a map differentiated solely by red and green areas. What change best preserves meaning for more readers?",
-        "Add distinct labels and a text description of the affected areas",
+        "Label the areas and describe them in text",
         "Increase the saturation of both colors on the same map",
         "Use the same map as the only content of the email",
         "Put a phone number in tiny type beneath the color legend",
@@ -726,7 +726,7 @@ const chapters = [
       [
         1,
         "A marketing manager must choose between two reminder messages for permit renewals. What is the fairest comparison?",
-        "Randomly divide similar recipients and compare on-time renewal rates",
+        "Randomize messages and compare timely renewals",
         "Send one message now and the other only after the deadline",
         "Send the longer message to customers who already renewed",
         "Compare how much the design team enjoyed writing each version",
@@ -738,7 +738,7 @@ const chapters = [
       [
         1,
         "A transit agency wants warnings about a temporary stop closure to reach riders without smartphones. Which addition best serves them?",
-        "Post notices at the stop and brief operators on the alternate boarding point",
+        "Post at the stop and brief the operators",
         "Issue a second push notification closer to departure",
         "Require riders to create a web account for detour maps",
         "Put the message exclusively in a downloadable app update",
@@ -762,7 +762,7 @@ const chapters = [
       [
         1,
         "The campus is translating a detour alert. What quality check best protects the intended meaning?",
-        "Ask fluent reviewers familiar with the route to test the directions",
+        "Have a fluent reviewer follow the directions",
         "Count whether the translation has as many words as the original",
         "Check that the logo appears in the same place in both versions",
         "Translate the stop names differently for variety across channels",
@@ -774,7 +774,7 @@ const chapters = [
       [
         1,
         "A transit authority plans a major change in a community with low trust in agency surveys. Which approach is most likely to improve participation?",
-        "Work with trusted local organizations and offer several ways to respond",
+        "Use trusted partners and varied response channels",
         "Send the same survey link each day until responses increase",
         "Replace local outreach with a general press announcement",
         "Accept responses only from customers with registered accounts",
@@ -786,7 +786,7 @@ const chapters = [
       [
         1,
         "The communications team issues separate closure updates on social media, email and the website. Staff accidentally publish conflicting reopening times. What process would prevent recurrence?",
-        "Designate one verified update owner and synchronize channel revisions",
+        "Coordinate all channels from one verified update",
         "Let each channel manager estimate the reopening time independently",
         "Remove the time from the website but leave it in previous emails",
         "Require each operator to answer customers using personal judgment",
@@ -1022,7 +1022,7 @@ const chapters = [
       [
         0,
         "A graduate student switches vehicles for one day. The permit grants parking to one vehicle at a time and allows temporary registrations. Which action implements the policy?",
-        "Register the temporary vehicle and suspend concurrent use of the original",
+        "Substitute the temporary vehicle on the permit",
         "Create a second annual permit at no charge",
         "Require the student to surrender their annual eligibility",
         "Let both vehicles park until the next monthly audit",
@@ -1034,7 +1034,7 @@ const chapters = [
       [
         0,
         "An agency has citation photographs, timestamps and officer notes. Which appeals practice best supports a fair, reviewable decision?",
-        "Use an authorized impartial reviewer and record the reasoning",
+        "Use an impartial reviewer and document the basis",
         "Ask the issuing officer to decide disputed facts alone",
         "Reverse all citations whenever a photograph is challenged",
         "Decide cases in descending order of the fine amount",
@@ -1058,7 +1058,7 @@ const chapters = [
       [
         0,
         "A driver receives a late-payment notice while an appeal is pending. Local policy pauses collections during review. What change addresses the control failure?",
-        "Link appeal status to collection holds and test the handoff",
+        "Test whether pending appeals trigger a hold",
         "Shorten the appeal window for future customers",
         "Raise the late charge to encourage earlier contact",
         "Allow the vendor to send notices until a hearing is booked",
@@ -1070,7 +1070,7 @@ const chapters = [
       [
         0,
         "A residential permit program is intended to protect residents' access without guaranteeing a particular stall. Which publication is most accurate?",
-        "Describe eligibility, zones, hours and the absence of a reserved space",
+        "Publish the zone rights and limits of the permit",
         "Promise every permit holder an open space on their block",
         "Describe the residential permit as valid in all city facilities",
         "Assign each permit a permanent curb address in the public notice",
@@ -1082,7 +1082,7 @@ const chapters = [
       [
         0,
         "An audit finds a low citation count on a high-risk loading curb. Which investigation distinguishes good compliance from weak patrol coverage?",
-        "Observe both violations and patrol exposure at representative times",
+        "Observe both compliance and patrol coverage",
         "Treat low issuance as proof that the rule works",
         "Set a minimum citation quota for each officer",
         "Compare only the total fines collected last quarter",
@@ -1094,7 +1094,7 @@ const chapters = [
       [
         0,
         "Several meters become unavailable during a network interruption. Which preapproved enforcement instruction best prevents inconsistent decisions?",
-        "Apply the published outage protocol and document the affected area and time",
+        "Apply and log the authorized outage response",
         "Let each officer choose a personal grace period",
         "Keep citing until the first appeal is approved",
         "Waive all future permit requirements in the district",
@@ -1130,7 +1130,7 @@ const chapters = [
       [
         1,
         "A fixed route carries many commuters at shift change. Trips elsewhere are dispersed and infrequent midmorning. Which policy fits both patterns?",
-        "Retain fixed peak service and evaluate on-demand coverage for scattered trips",
+        "Keep peak routes and assess flexible off-peak trips",
         "Replace every trip with individual reservations regardless of volume",
         "Operate the peak route every five minutes all day without checking use",
         "Drop low-volume trips from evaluation because they are hard to predict",
@@ -1142,7 +1142,7 @@ const chapters = [
       [
         1,
         "A transit provider's app-only booking excludes some riders. Which service policy most directly addresses that barrier?",
-        "Offer equivalent booking assistance by phone or another accessible channel",
+        "Provide an equivalent phone-booking option",
         "Send a video explaining how to install the app",
         "Offer a faster app to riders who already have accounts",
         "Advertise the app on the exterior of every vehicle",
@@ -1167,37 +1167,37 @@ const chapters = [
         1,
         "A motor-pool policy assigns electric vans by mileage alone. Winter loads sometimes exceed the practical round-trip range. Which allocation criterion is missing?",
         "Route energy needs and charging windows",
-        "The average age of all drivers on the route",
-        "The number of branded decals on the vehicle",
+        "Average range across the fleet last summer",
+        "The count of existing chargers across the region",
         "Last year's aggregate motor-pool revenue",
         "Loads, weather, route and charging windows affect whether the duty cycle is feasible. A mileage average masks those conditions.",
-        "Driver age does not establish energy availability.",
-        "Vehicle graphics do not determine route feasibility.",
+        "A summer fleet average can overlook a specific loaded winter duty cycle.",
+        "A regional count does not show whether a van can reach an available charger during its assigned trip.",
         "Aggregate revenue gives no duty-cycle information."
       ],
       [
         1,
         "Two agencies operate shuttles sharing a station. Each argues the other must provide an evening connection. What should their agreement define?",
-        "Connection responsibilities, service windows and exception handling",
-        "Only the logo size on the shared timetable",
-        "A single fleet paint color for all vehicles",
+        "Who provides the connection and when",
+        "Which agency collects the largest share of fare revenue",
+        "A common passenger-counting method for the two routes",
         "A ridership target with no assigned operator",
         "The rider depends on a linked service. An agreement must identify who supplies each leg and how delays or missed connections are handled.",
-        "Timetable branding can help recognition but cannot assign service.",
-        "Common paint does not prevent an unserved connection.",
+        "Revenue allocation can be important, but it does not commit either operator to delivering the evening connection.",
+        "Consistent counting helps measure ridership after the connection exists. It does not provide the connection.",
         "A target without ownership leaves the service gap unresolved."
       ],
       [
         1,
         "A dockless bicycle contract focuses only on the total number of bikes deployed. Several neighborhoods have none at opening time. Which additional measure addresses the gap?",
         "Bike availability by zone and time window",
-        "Number of marketing emails sent to all residents",
+        "Daily utilization averaged across the entire fleet",
         "Total annual distance traveled by all bikes",
-        "Number of bicycles painted in agency colors",
+        "Annual average number of trips per bike",
         "The issue is spatial and temporal availability. A distribution measure exposes empty zones even when the fleet total meets the contract.",
-        "Emails do not place bicycles where needed.",
+        "A busy downtown core can lift the average even if the outlying neighborhoods have no bikes at opening.",
         "Annual distance can be high in a few well-served neighborhoods.",
-        "Branding does not measure where bikes can be used."
+        "A fleet average can indicate productivity while concealing missing service in a particular area."
       ],
       [
         1,
@@ -1250,7 +1250,7 @@ const chapters = [
       [
         1,
         "A route change shortens many rides but removes the only practical stop for a senior housing complex. What analysis should precede adoption?",
-        "Evaluate affected riders' access and feasible alternatives alongside travel-time gains",
+        "Compare time savings with access losses and alternatives",
         "Calculate systemwide average time savings and stop there",
         "Count complaints only after the stop has been removed",
         "Compare the number of route maps before and after the change",
@@ -1262,7 +1262,7 @@ const chapters = [
       [
         1,
         "A newly contracted operator can report missed trips either as cancellations or as schedule edits. Which governance step improves comparability?",
-        "Define reportable trips and audit changes against the published schedule",
+        "Audit missed trips against one published baseline",
         "Accept either definition as long as overall costs are stable",
         "Rate performance using only the operator's revised schedule",
         "Drop cancellation reporting during every timetable revision",
@@ -1335,24 +1335,24 @@ const chapters = [
         2,
         "A subsidized transit pass has 800 enrollees. The board asks how many car trips the subsidy displaced. What information is most important?",
         "Participants’ commute modes before and after",
-        "The number of transit advertising impressions",
+        "Monthly boardings by all riders in the participating district",
         "The system's total number of bus seats",
-        "The total cost of printing the pass brochure",
+        "Total program cost per pass issued",
         "Some enrollees already used transit. Estimating displaced trips requires a baseline or credible comparison of previous and current behavior.",
-        "Impressions measure exposure before or during enrollment.",
+        "Aggregate ridership can rise or fall for other reasons and does not identify how participants previously traveled.",
         "Seat supply does not indicate which riders formerly drove.",
-        "Printing cost measures expenditure, not behavioral change."
+        "Cost per pass helps compare spending efficiency but does not reveal which car trips disappeared."
       ],
       [
         2,
         "Peak traffic is the problem, and most employees must drive because no alternative reaches their homes. Which action targets the time of travel?",
         "Offer staggered starts where duties permit",
         "Add parking stalls beside the existing entrance",
-        "Repaint the shuttle fleet using brighter colors",
+        "Provide free park-and-ride permits to fixed-hour drivers",
         "Offer monthly parking at a lower flat rate",
         "Staggering work schedules can move trips out of the peak even if travel mode remains unchanged.",
         "Extra stalls increase storage and do not change arrival timing.",
-        "Vehicle color has no direct connection to shift schedules.",
+        "A park-and-ride benefit may influence mode or route, but it does not target departure time.",
         "A lower flat fee does not distinguish peak from off-peak travel."
       ],
       [
@@ -1444,12 +1444,12 @@ const chapters = [
         "A university wants to know whether new bus trips come from solo driving or from walking. Which survey question best distinguishes those effects?",
         "How did you previously make this trip?",
         "How many seats are available on your regular bus?",
-        "What color should the next transit pass be?",
-        "How many months have you owned a smartphone?",
+        "Would you recommend the new service to a colleague?",
+        "Do you expect to renew your transit pass next year?",
         "Previous mode identifies the travel behavior displaced by the new service. That determines whether the shift advances the stated objective.",
         "Bus capacity cannot identify a rider's previous mode.",
-        "A branding preference does not reveal travel history.",
-        "Device ownership duration does not identify the displaced trip."
+        "A favorable rating reveals satisfaction, not whether the rider previously walked or drove.",
+        "Future purchase intentions do not identify the behavior the current trip replaced."
       ],
       [
         3,
@@ -1478,12 +1478,12 @@ const chapters = [
       [
         3,
         "A garage contracts cleaning services. Before allowing work in occupied areas, what should risk management verify?",
-        "Coverage and operating conditions required by the agreement",
-        "The contractor's logo matches the garage color scheme",
+        "Evidence of the agreed coverage and controls",
+        "Customer ratings from the contractor's previous garage",
         "The contractor has the lowest price in the region",
         "Every cleaner has worked at a competing facility",
         "Verify the contract's risk controls and required evidence before exposure begins. Insurance complements operational safeguards.",
-        "Branding does not establish coverage or safe working arrangements.",
+        "References can inform selection but do not verify coverage and controls for this assignment.",
         "Price does not demonstrate appropriate protection.",
         "Prior experience alone does not establish compliance with the agreement."
       ],
@@ -1502,7 +1502,7 @@ const chapters = [
       [
         3,
         "Local policy limits retention of routine plate records. A formal hold covers a defined set of records in a dispute. Which approach fits both obligations?",
-        "Preserve the covered records and follow normal retention for the rest",
+        "Apply the hold only within its specified scope",
         "Erase all records at the routine deadline despite the hold",
         "Retain the entire historical database indefinitely",
         "Give the records to the complainant for safekeeping",
@@ -1527,18 +1527,18 @@ const chapters = [
         3,
         "A manager counts physical access cards but never compares them with active system credentials. What risk remains undetected?",
         "Access assigned to missing or retired cards",
-        "An incorrect count of replacement printer ribbons",
+        "A difference between gross and net card-processing fees",
         "Seasonal changes in visitor arrival times",
-        "A small decline in website visits",
+        "A mismatch between hourly revenue and visitor demand",
         "Physical inventory and live permissions must be matched. An absent card can continue granting entry if its credential remains active.",
-        "Printer consumables are a separate stock category.",
+        "Payment processing concerns financial tender, while the discrepancy here concerns physical access credentials.",
         "Arrival patterns do not measure credential validity.",
-        "Web traffic does not identify orphaned access rights."
+        "That mismatch requires transaction and demand records. It will not be revealed by a credential inventory."
       ],
       [
         3,
         "An agency tests emergency phones by confirming they light up. What further check tests the actual protective function?",
-        "Place a coordinated test call and confirm location and response routing",
+        "Test call completion and location reporting",
         "Check that every housing is painted the approved color",
         "Count all poles against the original purchase order",
         "Inspect only the annual subscription invoice",
@@ -1562,14 +1562,14 @@ const chapters = [
       [
         3,
         "An agency uses a third party for payment processing. What evidence should management request about security responsibilities?",
-        "A documented division of control duties and current validation evidence",
-        "The processor's advertising claim of bank-grade protection",
+        "Shared-duty records and validation evidence",
+        "The processor's summary of customer satisfaction and uptime",
         "An assurance that outsourcing transfers every agency obligation",
-        "The number of social media followers the processor has",
+        "An invoice showing that processing fees were paid on time",
         "Outsourcing changes who performs particular controls. The merchant still needs to understand its scope and verify relevant third-party responsibilities.",
-        "Marketing language is not validation.",
+        "Availability and satisfaction are useful for service management but do not establish who performs each security control.",
         "Some agency controls and oversight remain even with a processor.",
-        "Popularity does not establish control effectiveness."
+        "A current account balance does not validate the processor's controls or establish the merchant's remaining responsibilities."
       ],
       [
         3,
@@ -1598,7 +1598,7 @@ const chapters = [
       [
         3,
         "A meter vendor proposes recording full payment card numbers in support tickets to identify transactions. What alternative best limits exposure?",
-        "Use an approved transaction reference and the designated support process",
+        "Use the approved transaction reference",
         "Collect the full number only on the first ticket each week",
         "Move full numbers into a shared spreadsheet with a warning label",
         "Print numbers and keep them in a drawer until the customer calls back",
@@ -1610,7 +1610,7 @@ const chapters = [
       [
         3,
         "An audit finds three cashier refunds using the same unusual exception code. Which is the best first conclusion?",
-        "The pattern warrants checking transactions against source evidence",
+        "The exceptions warrant a source-record check",
         "The cashier has conclusively committed fraud",
         "Every refund at the facility must be reversed",
         "The exception proves the control is working correctly",
@@ -1670,19 +1670,19 @@ const chapters = [
       [
         4,
         "A hospital can restore two services first after an outage. What should guide the recovery order?",
-        "Impact on essential functions and time-sensitive dependencies",
-        "The age of each application's logo",
-        "Which manager sends the most reminder messages",
-        "The alphabetic order of vendor contracts",
+        "Critical functions and their dependencies",
+        "Replacement cost of the equipment running each application",
+        "The number of employees normally logged into each system",
+        "Which vendor promises the shortest repair time",
         "A business impact analysis identifies what operations require, how soon, and which dependencies must return first.",
-        "Brand age is unrelated to operational impact.",
-        "Demand from a vocal manager is not a consistent priority rule.",
-        "Contract order does not reflect business criticality."
+        "Cost can guide capital decisions, but a low-cost service may be essential to emergency access.",
+        "Usage gives some context but misses essential functions performed by a few specialists.",
+        "A quick recovery can be attractive, but essential functions and their dependencies should set the priority."
       ],
       [
         4,
         "Staff complete an emergency tabletop discussion. What evidence best demonstrates that the exercise produced improvement?",
-        "Named owners close identified gaps and retest the changes",
+        "Closed findings verified by a retest",
         "Everyone signs the exercise attendance sheet",
         "The facilitator saves a copy of the original questions",
         "The organization repeats the same presentation next year",
@@ -1706,7 +1706,7 @@ const chapters = [
       [
         4,
         "A supervisor leaves during an extended flood response. What handover best supports continuous coordination?",
-        "Transfer current priorities, resource status, outstanding needs and authority",
+        "A current incident briefing and transfer of authority",
         "Provide only the original response plan written before the flood",
         "Send the replacement a copy of last month's budget",
         "Wait for the next regular staff meeting to discuss the transition",
@@ -1730,7 +1730,7 @@ const chapters = [
       [
         4,
         "A flood makes a lower-deck equipment room inaccessible. Which planned measure most directly reduces correlated loss of records?",
-        "Store a protected recovery copy in a separate risk location",
+        "Keep a recovery copy outside the shared hazard",
         "Place both backup drives on the same equipment rack",
         "Increase the font size of the equipment-room inventory",
         "Move the spare batteries onto a shelf beside the server",
@@ -1754,7 +1754,7 @@ const chapters = [
       [
         4,
         "A facility can lose at most 30 minutes of new transactions after failure. Which design question addresses this requirement?",
-        "How recent a recoverable copy of transactions will exist?",
+        "How recent is the newest recoverable record?",
         "How quickly can the cashier line reopen after an outage?",
         "How many call-center agents work the night shift?",
         "How many years should closed cases be retained?",
@@ -1766,7 +1766,7 @@ const chapters = [
       [
         4,
         "Two agencies are developing a plan to share buses in a regional evacuation. Why settle responsibilities before an incident?",
-        "To establish activation authority, availability and communication paths",
+        "To define who can request what and how",
         "To guarantee every vehicle will always be available",
         "To replace the need for exercises and updates",
         "To eliminate the need to account for borrowed equipment",
@@ -1778,7 +1778,7 @@ const chapters = [
       [
         4,
         "Rumors circulate about a campus garage closure during severe weather. Which response protects public trust while facts develop?",
-        "Issue a verified update with known actions and the next update time",
+        "Publish verified instructions and the next update time",
         "Publish an estimated reopening time as confirmed",
         "Wait until every final damage estimate is available",
         "Let each garage post independently without coordinating facts",
@@ -1826,7 +1826,7 @@ const chapters = [
       [
         5,
         "A night cleaner finds an unlabeled transfer container with an unknown liquid. Which action best fits sound hazard communication?",
-        "Set it aside safely and obtain authorized identification before use",
+        "Secure it pending authorized identification",
         "Identify the product by smell and attach a handwritten guess",
         "Use it only in open areas until the supplier visits",
         "Mix a small amount with a familiar product to identify it",
@@ -1874,7 +1874,7 @@ const chapters = [
       [
         5,
         "A field operator reports dizziness during outdoor staffing on a hot afternoon. What is the priority?",
-        "Stop the exposure and activate the site's heat-response procedure",
+        "Remove the exposure and use the heat-response plan",
         "Ask the worker to finish the queue before taking a break",
         "Wait until shift end to review their training record",
         "Record the complaint only if several coworkers feel ill",
@@ -1886,7 +1886,7 @@ const chapters = [
       [
         5,
         "An employee reports repeated verbal threats at a service counter. What should the supervisor do first?",
-        "Address immediate safety and use the established reporting and response process",
+        "Protect the employee and escalate the threat",
         "Treat the threats solely as negative customer feedback",
         "Wait for physical injury before documenting a pattern",
         "Publish the employee's account with their personal contact information",
@@ -1922,14 +1922,14 @@ const chapters = [
       [
         5,
         "Crews report poor visibility when motorists enter a service lane. Which trial best tests a proposed intervention?",
-        "Observe conflicts under comparable conditions before and after the change",
-        "Use the total number of safety posters as the success measure",
+        "Compare observed conflicts under matched conditions",
+        "Count staff briefings immediately before the trial",
         "Compare traffic on the busiest day with a closed-facility holiday",
-        "Count only the number of managers who attended installation",
+        "Survey managers who approved the visibility project",
         "A matched observation of vehicle-worker conflicts measures the hazard more directly than counting activities. Review any residual risk.",
-        "Posters are an activity and may not affect visibility.",
+        "Briefings show implementation effort. They do not show whether the visibility change reduced actual conflicts.",
         "Demand differences erase comparability.",
-        "Manager attendance does not show whether the lane became safer."
+        "Managers' impressions can be useful context but cannot replace observed exposure in the lane."
       ],
       [
         5,
@@ -1984,12 +1984,12 @@ const chapters = [
         "A manager wants to cut safety training because incident counts are low at a small site. What additional evidence best informs that decision?",
         "Exposure hours, near misses, and observed performance",
         "Only the absolute injury count for the last calendar year",
-        "How many posters other garages display in their break rooms",
-        "The resale value of nearby parking equipment",
+        "Annual training expenditure at the region's largest garage",
+        "The age of the existing online training module",
         "Few incidents may result from limited exposure or underreporting. Observed performance and exposure-adjusted information provide a better picture.",
         "An absolute count repeats the already limited evidence.",
-        "Posters elsewhere do not establish local readiness.",
-        "Asset resale value is unrelated to staff safety competence."
+        "Spending at a different site does not establish whether workers here can manage their hazards.",
+        "Course age can prompt a content review, but it does not show workers' actual exposure or competence."
       ],
       [
         5,
@@ -2030,7 +2030,7 @@ const chapters = [
       [
         6,
         "A visitor says they paid twice. What should the agent request first through the approved channel?",
-        "Transaction references, time and amount needed to locate the charges",
+        "Approved transaction IDs, amount and time",
         "The full card number and security code by ordinary email",
         "A copy of every purchase on the visitor's monthly statement",
         "The visitor's account password to reproduce the payment",
@@ -2078,7 +2078,7 @@ const chapters = [
       [
         6,
         "A student cannot resolve a permit issue using a screen reader. Which response helps today and improves the service?",
-        "Offer an accessible route now and log the barrier for correction",
+        "Provide accessible help and flag the defect",
         "Send the same inaccessible form as an email attachment",
         "Ask the student to disclose their password to a friend",
         "Advise the student to wait until next year's app refresh",
@@ -2090,7 +2090,7 @@ const chapters = [
       [
         6,
         "A supervisor finds ten recurring complaints about the same confusing zone code. What customer-service improvement is most useful?",
-        "Correct the code presentation and check for repeat contacts afterward",
+        "Clarify the code and track repeat contacts",
         "Train agents to close tickets more quickly without changing the code",
         "Reward customers who stop reporting the problem",
         "Classify the complaints separately so no category appears frequently",
@@ -2102,7 +2102,7 @@ const chapters = [
       [
         6,
         "The caller says an agent was rude. Which case note best supports fair review?",
-        "Record the reported words, time, channel and available evidence",
+        "Specific statements, times and available records",
         "Write that the customer is habitually unreasonable",
         "Record the manager's conclusion before obtaining the account",
         "Omit details and classify the whole call as miscellaneous",
@@ -2151,12 +2151,12 @@ const chapters = [
         6,
         "A customer receives different answers from phone and counter agents about permit refunds. What should the manager fix first?",
         "One current policy and an escalation path for exceptions",
-        "The color of the counter signs and telephone handsets",
-        "The number of greeting options available to call agents",
+        "Staffing ratios between the phone and counter teams",
+        "A common target for maximum conversation length",
         "A requirement that customers choose one channel permanently",
         "Consistent answers depend on a common approved rule and a way to resolve exceptions. Check whether staff use the reference.",
-        "Appearance does not reconcile policy interpretations.",
-        "Greetings affect tone rather than decision consistency.",
+        "Workload can affect delays, but the reported failure involves inconsistent decisions about the same policy.",
+        "Speed targets do not reconcile conflicting interpretations and can even discourage staff from resolving exceptions.",
         "Forcing one channel hides differences without correcting them."
       ],
       [
@@ -2174,13 +2174,13 @@ const chapters = [
       [
         6,
         "A visitor says, “I parked where the appointment letter told me to go.” The current website points elsewhere. What should the agent do before advising on the disputed charge?",
-        "Obtain the dated letter and compare instructions in effect at the visit",
+        "Compare the dated letter with rules then in force",
         "Assume today's website was identical on the appointment date",
-        "Deny the claim because the departments use different logos",
+        "Treat current garage signage as conclusive regardless of earlier instructions",
         "Treat a general phone greeting as proof of the written directions",
         "Versioned instructions and dates matter. A documented conflict can support review and correction of both communications channels.",
         "The website may have changed since the visit.",
-        "A logo difference does not establish which instructions applied.",
+        "Current signage can inform a review but does not establish what the visitor was told or what applied on the visit date.",
         "A greeting does not show what the letter or website said."
       ]
     ]
