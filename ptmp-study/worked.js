@@ -1,4 +1,4 @@
-// Standalone study examples. The 450-question practice bank is separate.
+// Standalone study examples. The practice question bank is separate.
 const workedExamples = [
   {
     title: 'Occupancy on a sold-out morning',

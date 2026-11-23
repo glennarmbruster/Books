@@ -3,9 +3,9 @@
 const page = document.getElementById('page');
 const questions = new Map();
 for (const [domain, chapter] of chapters.entries()) {
-  chapter.items.forEach(([lesson, stem, correct, a, b, c, rationale, whyA, whyB, whyC], i) => {
+  chapter.items.forEach(([lesson, stem, correct, a, b, c, rationale, whyA, whyB, whyC, caseGroup], i) => {
     const id = (domain + 1) + '-' + (i + 1);
-    questions.set(id, {id, domain, lesson, stem, options:[correct,a,b,c], reasons:[rationale,whyA,whyB,whyC]});
+    questions.set(id, {id, domain, lesson, stem, caseGroup:caseGroup || id, options:[correct,a,b,c], reasons:[rationale,whyA,whyB,whyC]});
   });
 }
 const storageKey = 'books.ptmp-study.v1';
@@ -42,9 +42,21 @@ function available(scope) {
   return [...questions.values()].filter(q => scope==='all' || (scope==='missed' ? state.missed[q.id] : q.domain===Number(scope)));
 }
 // Allocate mixed sets by exam weight, while respecting the questions still available.
-function draw(pool,count) {
-  const groups = chapters.map((_,i)=>shuffle(pool.filter(q=>q.domain===i))
-    .sort((a,b)=>(state.exposure[a.id]||0)-(state.exposure[b.id]||0)));
+function draw(pool,count,prior=[]) {
+  const occurrences = new Map();
+  for (const q of prior) occurrences.set(q.caseGroup,(occurrences.get(q.caseGroup)||0)+1);
+  const ranked = shuffle(pool).map(q=>{
+    const exposure=state.exposure[q.id]||0;
+    return {q,exposure};
+  }).sort((a,b)=>a.exposure-b.exposure);
+  // At equal exposure, use each case once before returning to its follow-up questions.
+  for (const row of ranked) {
+    const key=row.q.caseGroup;
+    row.round=occurrences.get(key)||0;
+    occurrences.set(key,row.round+1);
+  }
+  ranked.sort((a,b)=>a.exposure-b.exposure || a.round-b.round);
+  const groups=chapters.map((_,i)=>ranked.filter(row=>row.q.domain===i).map(row=>row.q));
   const sizes=groups.map(()=>0);
   let remaining=count;
   while (remaining>0) {
@@ -69,7 +81,7 @@ function start(scope,count,mock) {
   if(!Number.isInteger(count)||count<1||count>pool.length) return;
   const scored=draw(pool,mock ? 150 : count);
   const used=new Set(scored.map(q=>q.id));
-  const unscored=mock ? draw(pool.filter(q=>!used.has(q.id)),15) : [];
+  const unscored=mock ? draw(pool.filter(q=>!used.has(q.id)),15,scored) : [];
   const entries=shuffle([...scored,...unscored]).map(q=>{
     state.exposure[q.id]=(state.exposure[q.id]||0)+1;
     return {id:q.id,order:shuffle([0,1,2,3]),answer:null,flag:false,scored:used.has(q.id)};
@@ -100,7 +112,7 @@ function grade(a,domain) {
   return {right,total:scored.length,percent:scored.length ? Math.round(right/scored.length*100)+'%' : '—'};
 }
 function setup() {
-  const hero='<div class="hero"><img class="cover" src="../shelf-art/ptmp-study.jpg" alt=""><div><p class="section-label">Parking, transportation &amp; mobility</p><h1>PTMP Study Companion</h1><p>Four study chapters and 450 practice questions.</p></div></div>';
+  const hero='<div class="hero"><img class="cover" src="../shelf-art/ptmp-study.jpg" alt=""><div><p class="section-label">Parking, transportation &amp; mobility</p><h1>PTMP Study Companion</h1><p>Four study chapters and '+questions.size.toLocaleString('en-US')+' practice questions.</p></div></div>';
   const list=chapters.map((ch,i)=>'<li>'+href('chapter/'+i,ch.title+' · '+ch.weight+'%')+'</li>').join('');
   const a=state.active;
   let builder;
