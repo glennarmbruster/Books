@@ -221,7 +221,10 @@
     "caption": "Meta Muse practice view. Look for cards, pencils and a score pad.",
     "alt": "Find the result. Task. Make a packing checklist.. File card. Game kit.pdf. Open and check. Look for cards, pencils and a score pad.",
     "source": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-    "credit": "All About AI · sample screen based on the product guide"
+    "credit": "All About AI · sample screen based on the product guide",
+    "also": [
+      "meta-muse"
+    ]
   },
   {
     "file": "copilot-work-home.webp",
@@ -348,7 +351,9 @@
     "credit": "All About AI · original diagram",
     "also": [
       "open-antigravity",
-      "open-devin"
+      "open-devin",
+      "lab-antigravity-01",
+      "lab-gemini-app-01"
     ]
   },
   {
@@ -405,7 +410,8 @@
     "source": "#first-project",
     "credit": "All About AI · original diagram",
     "also": [
-      "lab-claude-code-30"
+      "lab-claude-code-30",
+      "lab-codex-29"
     ]
   },
   {
@@ -428,7 +434,8 @@
     "credit": "All About AI · original diagram",
     "also": [
       "codex-review",
-      "antigravity-review"
+      "antigravity-review",
+      "lab-claude-code-15"
     ]
   },
   {
@@ -453,7 +460,8 @@
     "credit": "All About AI · original diagram",
     "also": [
       "lab-gemini-app-08",
-      "lab-gemini-app-23"
+      "lab-gemini-app-23",
+      "lab-gemini-app-24"
     ]
   },
   {
@@ -476,7 +484,8 @@
     "source": "#lab-devin-01",
     "credit": "All About AI · original diagram",
     "also": [
-      "lab-gemini-app-28"
+      "lab-gemini-app-28",
+      "lab-antigravity-30"
     ]
   },
   {
@@ -510,7 +519,358 @@
     "credit": "All About AI · original diagram",
     "also": [
       "lab-gemini-app-16",
+      "lab-gemini-app-29",
+      "lab-codex-30",
+      "lab-copilot-29",
+      "lab-copilot-30"
+    ]
+  },
+  {
+    "file": "diagram-devin-speed-modes.svg",
+    "lesson": "devin-speed",
+    "caption": "For a question, read the project first. Pick a local edit or a cloud session when the job needs changes.",
+    "alt": "Three paths lead from a question about a file to Ask or DeepWiki, a quick edit to Devin CLI, and a long test to a cloud Agent with a snapshot.",
+    "source": "#devin-speed",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "devin-first-session"
+    ]
+  },
+  {
+    "file": "diagram-blueprint-snapshot.svg",
+    "lesson": "devin-environment",
+    "caption": "Build the snapshot once. Start a fresh session and run one little test to check the tools.",
+    "alt": "A three-step picture shows a recipe with tools and tests, a saved snapshot made from that recipe, and a new session that uses the ready tools.",
+    "source": "#devin-environment",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-session-side-chat.svg",
+    "lesson": "devin-sessions",
+    "caption": "Open a Side Chat from a worklog message to ask what Devin has seen so far.",
+    "alt": "The main timeline runs from reading a file through editing to a test. A side branch at the edit opens a read-only question. The main line keeps going.",
+    "source": "#devin-sessions",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-devin-review-flow.svg",
+    "lesson": "devin-review",
+    "caption": "A reviewer can follow the same test from a broken result to a working result.",
+    "alt": "One test starts red, a one-line edit changes the rule, Devin Review flags lines to check, and a repeat test passes. Save both results for the reviewer.",
+    "source": "#devin-review",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-devin-30",
+      "lab-codex-15"
+    ]
+  },
+  {
+    "file": "diagram-skill-reuse.svg",
+    "lesson": "devin-playbooks",
+    "caption": "A short skill fixes the shape of the answer. Each ticket supplies its own facts.",
+    "alt": "The same SKILL.md file describes two headings. A ticket about a label and a ticket about a score each produce a note with those headings and different evidence.",
+    "source": "#devin-playbooks",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-claude-code-07"
+    ]
+  },
+  {
+    "file": "diagram-ticket-to-session.svg",
+    "lesson": "devin-integrations",
+    "caption": "Use a ticket key in the integration so a repeated message finds the session already running.",
+    "alt": "Jira, Teams, and Slack each point to ticket T-17. A lookup finds or creates one session for T-17. The session links its pull request back to the ticket.",
+    "source": "#devin-integrations",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-access-four-scopes.svg",
+    "lesson": "devin-access",
+    "caption": "Read each grant before you widen it. A missing grant at one step can block the practice job.",
+    "alt": "Four checks ask what the signed-in person may do, what a service bot may request, which organization owns the task, and which repository the Git connection can open.",
+    "source": "#devin-access",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-outposts-network.svg",
+    "lesson": "devin-deployment",
+    "caption": "The worker asks Devin Cloud for its next job. The team controls the machine where commands run.",
+    "alt": "The Devin Cloud side holds the agent and queue. Across a boundary, the customer worker connects out, takes a job, and runs commands inside its own work environment.",
+    "source": "#devin-deployment",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-fleet-pilot.svg",
+    "lesson": "devin-fleet",
+    "caption": "Write the pass rule first. A failed pilot tells you which job to fix before more projects join.",
+    "alt": "A shared rule feeds a trial in Repo A and Repo B. Both results must pass before the next group starts. A failure sends the work back for repair.",
+    "source": "#devin-fleet",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-acu-metrics.svg",
+    "lesson": "devin-metrics",
+    "caption": "Include the try that needed a redo. Divide all the work by the number of accepted pull requests.",
+    "alt": "Three attempts cost 3, 2 and 5 ACUs, for 10 total. Two pull requests were accepted, so 10 divided by 2 gives 5 ACUs per accepted pull request.",
+    "source": "#devin-metrics",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "devin-lab"
+    ]
+  },
+  {
+    "file": "diagram-gemini-surfaces.svg",
+    "lesson": "gemini-app",
+    "caption": "Pick the place that holds the materials you need, whether that is a note, a prompt or a folder of project files.",
+    "alt": "Gemini App handles a quick chat or draft. Notebook uses chosen sources. AI Studio tests a prompt or builds an app preview. Antigravity works across a coding project.",
+    "source": "#gemini-app",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-notebook-studio.svg",
+    "lesson": "gemini-workflow",
+    "caption": "A chat citation can point you back to a note. Check each study aid against the same selected notes.",
+    "alt": "Two selected notes feed a chat with a citation and Studio with Audio, Mind Maps, Flashcards and Slides. Both uses need a check against the source words.",
+    "source": "#gemini-workflow",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-13",
+      "lab-gemini-app-27",
+      "lab-gemini-app-10",
+      "lab-gemini-app-30"
+    ]
+  },
+  {
+    "file": "diagram-ai-studio-pipeline.svg",
+    "lesson": "gemini-build",
+    "caption": "Carry the prompt and its expected fields into Build. Test the preview with a sample and export the code.",
+    "alt": "A Playground prompt asks for a card and score. A JSON schema gives the two fields and their types. Build mode previews the card. Export saves the project code.",
+    "source": "#gemini-build",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-multimodal-io.svg",
+    "lesson": "gemini-media",
+    "caption": "Check which inputs and outputs a tool accepts. Give it a small sample before you send a long recording.",
+    "alt": "Text can prompt an image, an image can be described in text, speech can become a transcript and a video can be studied for a scene list. Each row names a matching tool.",
+    "source": "#gemini-media",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "media-studio"
+    ]
+  },
+  {
+    "file": "diagram-mindmap-connections.svg",
+    "lesson": "lab-gemini-app-10",
+    "caption": "Explore a branch in the Mind Map. Check the date and exact number in the note that backs it up.",
+    "alt": "The center idea, the score limit, branches to an older rule from May 1 that says 8 points and a newer rule from May 4 that says 12. The newer note sets the current limit.",
+    "source": "#lab-gemini-app-10",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-quiz-from-notes.svg",
+    "lesson": "lab-gemini-app-15",
+    "caption": "Verify each answer in Notebook. Give Canvas the checked questions and try a new round to test the score.",
+    "alt": "A score note says that red earns 3. A quiz asks what a red card earns and marks 3 as right. In Canvas, a player answers, sees the score, and taps Play again to restart.",
+    "source": "#lab-gemini-app-15",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-30"
+    ]
+  },
+  {
+    "file": "diagram-claude-surfaces.svg",
+    "lesson": "claude-workspace",
+    "caption": "For a mini app you can try inside the conversation, use an Artifact. For edits in a code folder, use Claude Code.",
+    "alt": "Chat answers a question. Project knowledge stores materials across chats. Cowork carries out a file task. Claude Code changes a coding project. Artifacts show a draft or a small app.",
+    "source": "#claude-workspace",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-plan-then-edit.svg",
+    "lesson": "claude-code",
+    "caption": "In Plan Mode, list the tests first. Read the plan, allow a small edit, and ask for the actual test results.",
+    "alt": "Claude Code reads in Plan Mode and proposes three checks. A person examines the boundary case and approves the scope. Then Claude edits one file and runs the checks.",
+    "source": "#claude-code",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-claude-code-05",
+      "lab-claude-code-01"
+    ]
+  },
+  {
+    "file": "diagram-connector-vs-browser.svg",
+    "lesson": "claude-browser",
+    "caption": "To check one draft, uploading that one file may be enough.",
+    "alt": "A file upload brings one copy. A connector reads allowed items in an app. The browser panel can use a permitted page.",
+    "source": "#claude-browser",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-svg-vs-raster.svg",
+    "lesson": "claude-visuals",
+    "caption": "Choose a path for a cut line and pixels for a photo.",
+    "alt": "A roof drawn as a vector has two smooth slopes. The same roof enlarged from a tiny bitmap has stair-step edges.",
+    "source": "#claude-visuals",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "media-studio"
+    ]
+  },
+  {
+    "file": "diagram-effort-dial.svg",
+    "lesson": "chatgpt-picker",
+    "caption": "Extra thinking buys time to work. You still check the result.",
+    "alt": "A simple sort can use a fast reply. A timetable with three rules deserves a thinking pass and a check against all three rules.",
+    "source": "#chatgpt-picker",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-search-vs-analysis.svg",
+    "lesson": "chatgpt-research",
+    "caption": "Check a public claim on its page. Check a total against its rows.",
+    "alt": "To find a public opening date, search the web and open the dated announcement. To total a sheet, add its rows with data analysis.",
+    "source": "#chatgpt-research",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-local-vs-cloud-codex.svg",
+    "lesson": "chatgpt-codex",
+    "caption": "To include a local draft in a cloud task, save it to the shared branch first.",
+    "alt": "The local task uses your open folder, including a saved draft. A cloud task starts with its connected repository and branch. A local-only file is absent.",
+    "source": "#chatgpt-codex",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-media-handoff.svg",
+    "lesson": "chatgpt-media",
+    "caption": "Play the clip once with sound and once muted. Does the action still read?",
+    "alt": "Three storyboard beats become matching still images, then a renderer animates them. A final pass checks timing and sound.",
+    "source": "#chatgpt-media",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-thread-to-decision.svg",
+    "lesson": "copilot-mail-meetings",
+    "caption": "Decision: 11:00. Keep the final reply with the summary.",
+    "alt": "Mail proposes ten. Teams suggests eleven. A final reply accepts eleven. Only the last message confirms the decision.",
+    "source": "#copilot-mail-meetings",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-devin-15",
+      "lab-copilot-15",
+      "lab-codex-01"
+    ]
+  },
+  {
+    "file": "diagram-denominator-trap.svg",
+    "lesson": "copilot-documents",
+    "caption": "Always name who you counted in the bottom number.",
+    "alt": "Of twelve sites, six said yes, three said no and three did not reply. Six divided by nine replies is about 67 percent. Six divided by twelve sites is 50 percent.",
+    "source": "#copilot-documents",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "copilot-excel"
+    ]
+  },
+  {
+    "file": "diagram-copilot-surface-choice.svg",
+    "lesson": "copilot-agents",
+    "caption": "Before a workflow sends or changes anything, test it with a practice item.",
+    "alt": "A code change belongs in GitHub Copilot. A question about approved notes fits Agent Builder. A workflow that takes actions fits Copilot Studio.",
+    "source": "#copilot-agents",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-claim-to-source.svg",
+    "lesson": "grok",
+    "caption": "Keep the timetable, the travel date and the route with your answer.",
+    "alt": "A repost says eight. The official post says to check the holiday timetable. The timetable lists seven for the correct route and date.",
+    "source": "#grok",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "perplexity",
+      "lab-ai-studio-15",
+      "lab-ai-studio-30",
+      "lab-copilot-01"
+    ]
+  },
+  {
+    "file": "diagram-browser-permissions.svg",
+    "lesson": "browser-tools",
+    "caption": "Check the page and the access switch before you share.",
+    "alt": "Plain chat can read text you paste. A built-in browser helper may use a shared tab. A site-restricted extension can run on approved sites.",
+    "source": "#browser-tools",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-local-offline-ai.svg",
+    "lesson": "other-models",
+    "caption": "A compatible local runner can use downloaded {{model.google.gemma.name}} weights in airplane mode. A cloud-only app still needs a connection.",
+    "alt": "A cloud API needs a network trip to a server. A compatible runner with downloaded Gemma weights can answer on the device without that trip.",
+    "source": "#other-models",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-blind-model-trial.svg",
+    "lesson": "field-test",
+    "caption": "Key: L, R, L. Reveal the model names only after you score the answers.",
+    "alt": "The key says the three labels should be L, R, L. Anonymous answers A and C match two labels. Answer B matches all three. Reveal the model names after scoring.",
+    "source": "#field-test",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-game-state-loop.svg",
+    "lesson": "lab-devin-22",
+    "caption": "Try another roll after the win. The winning score must stay put.",
+    "alt": "Start both teams at zero. Each turn adds points and checks for ten. A lower score passes play to the next team. A winning score locks play until Restart.",
+    "source": "#lab-devin-22",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-gemini-app-29",
+      "lab-devin-29",
+      "lab-antigravity-29",
+      "lab-ai-studio-29",
+      "lab-claude-code-29",
+      "lab-gemini-app-14"
+    ]
+  },
+  {
+    "file": "diagram-undo-history-stack.svg",
+    "lesson": "lab-devin-23",
+    "caption": "Keep one history entry per tap, even when the same item was tapped twice.",
+    "alt": "The list holds juice, toast, juice in that order. Undo removes only the last juice, leaving juice and toast. Undo is unavailable when the list is empty.",
+    "source": "#lab-devin-23",
+    "credit": "All About AI · original diagram",
+    "also": [
       "lab-gemini-app-29"
     ]
+  },
+  {
+    "file": "diagram-fifo-queue.svg",
+    "lesson": "lab-gemini-app-25",
+    "caption": "Empty list? Turn off Serve so it cannot return the last ticket again.",
+    "alt": "Add tickets A, B, C in order. Serve removes A. Add D behind C. When nothing is waiting, disable Serve.",
+    "source": "#lab-gemini-app-25",
+    "credit": "All About AI · original diagram"
+  },
+  {
+    "file": "diagram-atomic-file-swap.svg",
+    "lesson": "lab-devin-14",
+    "caption": "Pull the plug just before the swap. The saved report should still say 7.",
+    "alt": "Check both counts, write nine in a nearby temporary file, then replace the old file in one move. A stop before that move leaves seven in the old report.",
+    "source": "#lab-devin-14",
+    "credit": "All About AI · original diagram",
+    "also": [
+      "lab-antigravity-15"
+    ]
+  },
+  {
+    "file": "diagram-csv-quote-shield.svg",
+    "lesson": "lab-devin-03",
+    "caption": "Count the fields and check the full label. This row should have two fields.",
+    "alt": "In the row m1 comma double-quote North comma West double-quote, splitting at every comma makes three pieces. A CSV reader returns m1 and North, West as two fields.",
+    "source": "#lab-devin-03",
+    "credit": "All About AI · original diagram"
   }
 ]

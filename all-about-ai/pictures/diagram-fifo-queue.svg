@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
+<title id="title">The oldest ticket goes first</title><desc id="desc">Add tickets A, B, C in order. Serve removes A. Add D behind C. When nothing is waiting, disable Serve.</desc>
+<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">The oldest ticket goes first</text>
+<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">FIFO means first in, first out. Read each row from left to right.</text>
+<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Empty list? Turn off Serve so it cannot return the last ticket again.</text>
+<text x="39" y="158" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="21" font-weight="700">Add A, B, C</text>
+<rect x="307" y="133" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="349.5" y="157" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">A</text>
+<rect x="411" y="133" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="453.5" y="157" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">B</text>
+<rect x="515" y="133" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="557.5" y="157" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">C</text>
+<text x="39" y="218" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="21" font-weight="700">Serve once</text>
+<rect x="307" y="193" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="349.5" y="217" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">B</text>
+<rect x="411" y="193" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="453.5" y="217" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">C</text>
+<text x="39" y="278" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="21" font-weight="700">Add D</text>
+<rect x="307" y="253" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="349.5" y="277" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">B</text>
+<rect x="411" y="253" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="453.5" y="277" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">C</text>
+<rect x="515" y="253" width="85" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="557.5" y="277" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">D</text>
+<text x="634" y="162" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="700">First served: A</text>
+<text x="634" y="222" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Next up: B</text>
+</svg>

@@ -54,6 +54,11 @@ tbody th{font-weight:650}tbody tr:nth-child(even){background:#f1eee1}
 .practice{margin:1.15rem 0;padding:.85rem 1rem;background:#efeee1;border-left:3px solid var(--teal)}
 .practice h3{margin:.1rem 0;color:#204543;font-size:1.2rem}
 .practice p{margin:.5rem 0}
+.practice-question{margin:1rem 0;padding:.5rem .8rem .8rem;min-width:0;border:1px solid var(--line);border-radius:.3rem}
+.practice-question legend{font-weight:650;padding:0 .3rem}
+.practice-question label{display:flex;align-items:center;gap:.55rem;min-height:44px;cursor:pointer}
+.practice-question input{min-height:0;width:1.2rem;height:1.2rem;accent-color:var(--teal)}
+.practice-question p:not(:empty){padding:.5rem .65rem;border-left:3px solid var(--teal);background:var(--paper)}
 .practice summary{width:fit-content;min-height:44px;cursor:pointer;color:var(--teal);padding:.5rem 0;font-weight:650}
 .sources{font-size:.9rem;border-left:3px solid #af813e;padding-left:.75rem}
 .sources summary{cursor:pointer;padding:.4rem 0;color:var(--teal);font-weight:650}

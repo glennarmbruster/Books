@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Trace two rules back to their dates</title>
+  <desc id="description">The center idea, the score limit, branches to an older rule from May 1 that says 8 points and a newer rule from May 4 that says 12. The newer note sets the current limit.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Trace two rules back to their dates</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Read each branch, then open its source before you choose a score limit.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="39" y="197" width="200" height="82" rx="30" fill="#145756" stroke="#145756" stroke-width="2" />
+  <text x="139" y="247" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">Score limit</text>
+  <path d="M240 238H291Q312 238 312 220V185Q312 171 333 171H355 M290 238Q312 238 312 254V302Q312 315 333 315H355" fill="none" stroke="#8b571b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="359" y="137" width="230" height="68" rx="25" fill="#faf6ea" stroke="#8b571b" stroke-width="2.5" />
+  <text x="474" y="180" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">May 1 · Old</text>
+  <path d="M591 171L632 171" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M623.6 176.4L632 171L623.6 165.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="640" y="137" width="205" height="68" rx="25" fill="#8b571b" stroke="#8b571b" stroke-width="2.5" />
+  <text x="742" y="180" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">8 points</text>
+  <rect x="359" y="282" width="230" height="68" rx="25" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <text x="474" y="325" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">May 4 · New</text>
+  <path d="M591 316L632 316" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M623.6 321.4L632 316L623.6 310.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="640" y="282" width="205" height="68" rx="25" fill="#145756" stroke="#145756" stroke-width="2.5" />
+  <text x="742" y="325" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="middle">12 points</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">The newer note sets the limit at 12. If you select only the old note, you can support 8.</text>
+</svg>

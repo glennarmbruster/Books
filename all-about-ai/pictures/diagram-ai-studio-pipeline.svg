@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Turn a prompt into a small app</title>
+  <desc id="description">A Playground prompt asks for a card and score. A JSON schema gives the two fields and their types. Build mode previews the card. Export saves the project code.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Turn a prompt into a small app</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Choose the answer shape first so the app knows what to read.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="45" y="131" width="36" height="36" rx="18" fill="#145756" stroke="#145756" stroke-width="2" />
+  <text x="63" y="157" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">1</text>
+  <rect x="34" y="183" width="198" height="146" rx="11" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <rect x="34" y="183" width="6" height="146" rx="3" fill="#145756" stroke="#145756" stroke-width="0" />
+  <text x="50" y="216" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Playground</text>
+  <text x="50" y="248" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Describe a card.</text>
+  <text x="50" y="275" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Ask for its score.</text>
+  <path d="M233 250L245 250" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M236.6 255.4L245 250L236.6 244.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="259" y="131" width="36" height="36" rx="18" fill="#8b571b" stroke="#8b571b" stroke-width="2" />
+  <text x="277" y="157" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">2</text>
+  <rect x="248" y="183" width="198" height="146" rx="11" fill="#faf6ea" stroke="#8b571b" stroke-width="2.5" />
+  <rect x="248" y="183" width="6" height="146" rx="3" fill="#8b571b" stroke="#8b571b" stroke-width="0" />
+  <text x="264" y="216" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">JSON schema</text>
+  <text x="264" y="248" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">card = text</text>
+  <text x="264" y="275" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">score = number</text>
+  <path d="M447 250L459 250" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M450.6 255.4L459 250L450.6 244.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="473" y="131" width="36" height="36" rx="18" fill="#145756" stroke="#145756" stroke-width="2" />
+  <text x="491" y="157" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">3</text>
+  <rect x="462" y="183" width="198" height="146" rx="11" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <rect x="462" y="183" width="6" height="146" rx="3" fill="#145756" stroke="#145756" stroke-width="0" />
+  <text x="478" y="216" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Build preview</text>
+  <text x="478" y="248" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Show the card.</text>
+  <text x="478" y="275" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Try a score of 0.</text>
+  <path d="M661 250L673 250" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M664.6 255.4L673 250L664.6 244.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="687" y="131" width="36" height="36" rx="18" fill="#145756" stroke="#145756" stroke-width="2" />
+  <text x="705" y="157" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">4</text>
+  <rect x="676" y="183" width="198" height="146" rx="11" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <rect x="676" y="183" width="6" height="146" rx="3" fill="#145756" stroke="#145756" stroke-width="0" />
+  <text x="692" y="216" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Export code</text>
+  <text x="692" y="248" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Save the files.</text>
+  <text x="692" y="275" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Repeat the test.</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">A score of zero is a real result. Check that the exported app still shows the zero.</text>
+</svg>

@@ -232,10 +232,10 @@
   {
     "id": "gemini-workflow",
     "title": "Give Gemini the right page or file",
-    "summary": "A chat can use what you share. Learn how to point to the right source and check its answer.",
+    "summary": "Give Gemini a tab, a file or a set of notes. Find the line behind an answer, then turn the notes into something you can study.",
     "intro": {
       "what": "Gemini can read a shared browser page, work with a linked app or answer from files you select in Gemini Notebook.",
-      "features": "Chrome can share a tab. Connected Apps can use an account you allow. A notebook lets you pick sources and open links to the words behind an answer.",
+      "features": "Chrome can share a tab. Connected Apps can read files you allow. Gemini Notebook puts sources, chat and Studio side by side. Studio turns the same pages into maps, audio or study cards.",
       "exchange": "Put two sample mail rules in a notebook. Ask which one catches a blank subject.",
       "m365": "Find which of two meeting notes gives the updated time. Check its date.",
       "developer": "Put the rules and help page for a game in one notebook. Find a rule the help page forgot.",
@@ -251,6 +251,10 @@
         [
           "Google Help · source selection and citations in Gemini Notebook",
           "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+        ],
+        [
+          "Google Help · the notebook and its Studio tools",
+          "https://support.google.com/gemininotebook/answer/16206563?hl=en"
         ]
       ]
     },
@@ -286,12 +290,110 @@
         ],
         "sources": [
           [
-            "Google Help · source selection and citations in Gemini Notebook",
+            "Google Help · check an answer against its sources",
             "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Find new sources inside the notebook",
+        "paragraphs": [
+          "Open your notebook on a computer. Look for Sources on the left. Enter a question there and choose Web. Fast Research brings back a short list you can open. Deep Research takes longer and brings back a report plus links. Google limits Deep Research to adult accounts.",
+          "Choose View. Open a result and find the line that answers your question. Import the pages you want. In Sources, clear the check beside any page you cannot verify. With only your checked pages selected, ask the question in Chat. Follow its citation, the little link back to the source."
+        ],
+        "sources": [
+          [
+            "Google Help · find and import sources with Fast or Deep Research",
+            "https://support.google.com/gemininotebook/answer/16215270?hl=en"
           ],
           [
-            "Google · Deep Research",
-            "https://gemini.google/overview/deep-research/"
+            "Google Help · check an answer against its sources",
+            "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Pick a Studio output for the job",
+        "paragraphs": [
+          "Suppose you have two rule sheets for a game. A friend wants to hear the rules. A player wants to see what changed. Open Studio in the notebook and pick a format for each person. Use the same two sheets for both.",
+          "Slide Decks and Infographics need an eligible adult account. If a tool is missing on your tablet, open the book beside a computer browser for that activity."
+        ],
+        "table": {
+          "columns": [
+            "Studio tool",
+            "Try it with the rules"
+          ],
+          "rows": [
+            [
+              "Audio Overview",
+              "Hear two hosts discuss the rules. In a new English recording, turn on Interactive Mode and choose Join to ask them a question."
+            ],
+            [
+              "Video Overview",
+              "Watch a narrated tour of the rules. Pause on one picture and check its label against the rule sheet."
+            ],
+            [
+              "Mind Map",
+              "Open the map in Studio and expand a branch. Select a point to ask about that part of the game in Chat."
+            ],
+            [
+              "Slide Deck",
+              "Show one rule per slide. Check the winning score on the slide before you teach it."
+            ],
+            [
+              "Infographic",
+              "Make a single picture to hang by the game. Check that its labels match the rules."
+            ],
+            [
+              "Data Table",
+              "Put dates in one column and winning scores in another. Read across each row to catch a swapped score."
+            ],
+            [
+              "Flashcards and Quizzes",
+              "Set the difficulty. Mark cards you missed and practice those again. In a quiz, try Hint or Explain, then retake it. This adapts your practice to what you need."
+            ]
+          ]
+        },
+        "sources": [
+          [
+            "Google Help · the notebook and its Studio tools",
+            "https://support.google.com/gemininotebook/answer/16206563?hl=en"
+          ],
+          [
+            "Google Help · join the hosts in an Audio Overview",
+            "https://support.google.com/gemininotebook/answer/16212820?hl=en"
+          ],
+          [
+            "Google Help · build and explore a Mind Map",
+            "https://support.google.com/gemininotebook/answer/16212283?hl=en"
+          ],
+          [
+            "Google Help · make and check a Slide Deck",
+            "https://support.google.com/gemininotebook/answer/16757456?hl=en"
+          ],
+          [
+            "Google Help · practice with flashcards and quizzes",
+            "https://support.google.com/gemininotebook/answer/16958963?hl=en"
+          ],
+          [
+            "Google Help · make an Infographic",
+            "https://support.google.com/gemininotebook/answer/16758265?hl=en"
+          ]
+        ]
+      },
+      {
+        "title": "Check the version your friends will see",
+        "paragraphs": [
+          "Open a finished map, table or slide beside the original rule sheets. Find a claim you can check, such as “The winning score is 12.” Look for both the score and the date on the sheet. If the source later changes, make a fresh Studio output and check it again. Older outputs can keep the old rule."
+        ],
+        "sources": [
+          [
+            "Google Help · find and import sources with Fast or Deep Research",
+            "https://support.google.com/gemininotebook/answer/16215270?hl=en"
+          ],
+          [
+            "Google Help · the notebook and its Studio tools",
+            "https://support.google.com/gemininotebook/answer/16206563?hl=en"
           ]
         ]
       }

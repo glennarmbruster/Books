@@ -12,7 +12,9 @@ Keep chapter and lab IDs stable. Saved links and lab checkmarks use them. Each c
 
 There are seven lab files with 30 labs each. In the six older tracks, labs 1–15 keep their original order and levels. Labs 16–30 start a new set of builds: six Starter, seven Intermediate, one Advanced and one Expert. Both halves of Gemini App & Gemini Notebook follow that pattern. Muse, Grok and Perplexity have reference chapters and illustrated first steps. They have no numbered lab tracks.
 
-Give each reference chapter and lab one entry in `content/worked.json`. Keep the six parts: starting problem, sample input, action, expected result, reason and recovery. Add figures under `pictures/` and list their page, caption, description, credit and source in `content/figures.json`. A book-made diagram may use a local chapter link. Put its title and description inside the SVG too.
+Give each reference chapter and lab one entry in `content/worked.json`. Keep the six parts: starting problem, sample input, action, expected result, reason and recovery. Add figures under `pictures/` and list their page, caption, description, credit and source in `content/figures.json`. A book-made diagram may use a local chapter link. Put its title and description inside the SVG too. Use `also` to show a picture on related pages. Every reference chapter has a figure, as do labs 1, 15, 29 and 30 in each track. Keep model names in figure captions linked to the catalog so they update with the text.
+
+For a chapter with a pick-an-answer exercise, give each question a prompt, a list of choices, the index of the correct choice (starting at zero), and a short reason. The reader shows feedback after each pick, even offline.
 
 Use fictional roles, made-up notes and reserved example addresses. Review text inside pictures as well as their labels. Keep personal account names, employers, home folders, contact details and personal trip locations out of the book. A vendor’s name can still identify its product or documentation. Mark a teaching mock-up as a practice view.
 

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Match the input to the output</title>
+  <desc id="description">Text can prompt an image, an image can be described in text, speech can become a transcript and a video can be studied for a scene list. Each row names a matching tool.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Match the input to the output</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">One input can serve different jobs. Choose a tool that can make the output you want.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="46" y="147" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Your input</text>
+  <text x="297" y="147" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">What the tool does</text>
+  <text x="644" y="147" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Wanted output</text>
+  <rect x="38" y="164" width="811" height="42" rx="6" fill="#faf6ea" stroke="#182c2d" stroke-width="1.5" />
+  <text x="48" y="193" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Text prompt</text>
+  <path d="M231 185L267 185" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M258.6 190.4L267 185L258.6 179.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="297" y="193" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Image generator</text>
+  <path d="M571 185L612 185" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M603.6 190.4L612 185L603.6 179.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="643" y="193" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">A poster</text>
+  <rect x="38" y="214" width="811" height="42" rx="6" fill="#faf6ea" stroke="#182c2d" stroke-width="1.5" />
+  <text x="48" y="243" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Image</text>
+  <path d="M231 235L267 235" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M258.6 240.4L267 235L258.6 229.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="297" y="243" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Image reader</text>
+  <path d="M571 235L612 235" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M603.6 240.4L612 235L603.6 229.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="643" y="243" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">A caption</text>
+  <rect x="38" y="264" width="811" height="42" rx="6" fill="#faf6ea" stroke="#182c2d" stroke-width="1.5" />
+  <text x="48" y="293" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Audio clip</text>
+  <path d="M231 285L267 285" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M258.6 290.4L267 285L258.6 279.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="297" y="293" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Speech transcriber</text>
+  <path d="M571 285L612 285" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M603.6 290.4L612 285L603.6 279.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="643" y="293" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">Written words</text>
+  <rect x="38" y="314" width="811" height="42" rx="6" fill="#faf6ea" stroke="#182c2d" stroke-width="1.5" />
+  <text x="48" y="343" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Video clip</text>
+  <path d="M231 335L267 335" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M258.6 340.4L267 335L258.6 329.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="297" y="343" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Video reader</text>
+  <path d="M571 335L612 335" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M603.6 340.4L612 335L603.6 329.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="643" y="343" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">A scene list</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">To make new moving footage from a scene list, use a video generator that accepts it.</text>
+</svg>

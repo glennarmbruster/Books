@@ -829,12 +829,12 @@
   },
   {
     "id": "gemini-workflow",
-    "premise": "A notebook has two notes with the same event name. You need the time from the approved note.",
-    "before": "Draft says Game Night starts at 6. Final says it starts at 7. Only Final is selected.",
-    "try": "Ask Gemini Notebook for the start time and the line that gives it. Open the numbered source beside the answer.",
-    "after": "The answer says 7 and takes you to Final. The word “Final” by itself does not give a time. Read the line too.",
-    "why": "A source link lets you see which note the helper used. Picking sources lets you control what it may read.",
-    "rescue": "If the answer mixes the times, unselect Draft, keep Final selected and ask again. Check that the two notes have clear names."
+    "premise": "A game-night flyer needs a start time. Two notes disagree.",
+    "before": "Draft says Game Night starts at 6. Final says it starts at 7.",
+    "try": "Select Final alone. Ask for the start time and open its citation. In Studio, make a one-page infographic for players. Read the time printed on it.",
+    "after": "Final gives 7. A flyer showing 7 passes this check. One showing 6 needs a fresh output.",
+    "why": "A source proves where the time came from. Checking the picture catches errors that can slip in after a correct chat answer.",
+    "rescue": "Open Final and read the line yourself. Clear Draft and generate the flyer again if it shows the old time."
   },
   {
     "id": "gemini-build",
@@ -979,6 +979,15 @@
     "after": "A report that follows the rule shows 0, a dash and 5 in the same order.",
     "why": "A small example tells the helper when the job is done. It also tells you when to stop at reading the file.",
     "rescue": "If both of the first two rows still show a dash, give the two separate expected results and ask for a test that includes both."
+  },
+  {
+    "id": "devin-speed",
+    "premise": "The practice mail report has an empty day. Someone asks whether the file will still have column names. The review is due before the team leaves.",
+    "before": "Open the Exchange inventory kit from Devin lab 1. The folder has a made-up mailbox list, a test file and a Reference folder with the finished script.",
+    "try": "Ask Devin which test checks an empty day in the saved project. Open the line it cites in Test-Inventory.ps1. Then use the terminal in the kit folder to run pwsh -File ./Test-Inventory.ps1 -Script ./Reference/Get-MailboxInventory.ps1.",
+    "after": "Five PASS lines appear. The second says “empty input retains its header.” That line checks the case in the question. A teammate can repeat the same command.",
+    "why": "Ask found the rule without starting a cloud Agent. Running the test showed how this copy acts. If the team later asks for a fix that must run after you leave, a prepared cloud session can use the same check.",
+    "rescue": "If the terminal cannot find the test file, open the folder that contains Test-Inventory.ps1. If it cannot find pwsh, use a computer with PowerShell 7 or ask the setup owner to add it to the Blueprint and rebuild."
   },
   {
     "id": "devin-first-session",
@@ -1270,12 +1279,12 @@
   },
   {
     "id": "lab-gemini-app-10",
-    "premise": "Tell an old rule from a new rule. Work through this small example before trying your own.",
-    "before": "Old, May 1: play to 8. New, May 4: play to 12. Add them as separate named notes.",
-    "try": "Choose only Old and ask again in a fresh question. Then select only New and repeat.",
-    "after": "With both, the newer limit is 12. With Old alone you can only support 8.",
-    "why": "A source mark is a starting point. The line it opens must actually support the answer.",
-    "rescue": "If the notes blend together, open each source, check its title, then ask for a two-row comparison."
+    "premise": "Two game cards agree on how to earn points and disagree on when to stop.",
+    "before": "Old says one point per turn and a target of 8 on May 1. New keeps one point per turn and changes the target to 12 on May 4.",
+    "try": "Build a Mind Map and open it in Studio. Expand a branch on scoring and pick a point. Ask Chat what changed, then open both dated sources.",
+    "after": "Both notes share the points rule. The newer target is 12. With Old selected alone, the only target you can prove is 8.",
+    "why": "A branch connects ideas. The date and the words in New tell you which rule to use.",
+    "rescue": "If the map shows only “scoring,” select that point and ask Chat for both dates. Read Old and New side by side before choosing a winner."
   },
   {
     "id": "lab-gemini-app-11",
@@ -1396,12 +1405,12 @@
   },
   {
     "id": "lab-gemini-app-24",
-    "premise": "Check a missing detail in a study guide. Work through this small example before trying your own.",
-    "before": "Add Packing: bring a badge. Add Times: doors open at 4. No note gives a ticket price.",
-    "try": "Find support for each answer. Now add Fare: tickets cost 2 game coins. Repeat only the price question.",
-    "after": "First answers are badge, 4, unknown. After the new note the price is 2 game coins, supported by Fare.",
-    "why": "A source mark is a starting point. The line it opens must actually support the answer.",
-    "rescue": "If the old answer sticks, check that Fare is selected. Ask for its exact sentence in a new question."
+    "premise": "A study-night guide needs one tip about flashcards and one checked ticket price.",
+    "before": "Packing says badge. Times says 4. Rumor guesses 9 coins. Search the web inside the notebook for how to study missed flashcards.",
+    "try": "Try Fast Research, then Deep Research. Inspect each imported web page. Keep the help page that explains missed cards. Clear Rumor and any unverified page before asking the study-night question.",
+    "after": "The help page supports another round of missed cards. The checked event notes give badge and 4. The price is unknown until Fare supplies 2 game coins.",
+    "why": "A useful search result can answer the flashcard question. It cannot set a price for a made-up event.",
+    "rescue": "If the answer says 9, ask it to point to that number in a selected source. Clear Rumor and the research report, then ask a fresh question."
   },
   {
     "id": "lab-gemini-app-25",
@@ -1423,12 +1432,12 @@
   },
   {
     "id": "lab-gemini-app-27",
-    "premise": "Use an audio overview as a study check. Work through this small example before trying your own.",
-    "before": "Add note A: a shared mailbox serves a team. Add note B: a room mailbox represents a meeting space.",
-    "try": "Play it in Studio. Pause when it explains each type. Open the notes and check both claims. On supported mobile, try Download to listen later.",
-    "after": "Both definitions trace to their own note. You can identify which type fits a team and which fits a room.",
-    "why": "A source mark is a starting point. The line it opens must actually support the answer.",
-    "rescue": "If the audio adds a rule about costs, mark it unverified. Ask the notebook for the source line before using it."
+    "premise": "Two audio hosts explain mailbox types. You need to pick the one that stands for a meeting space.",
+    "before": "Team says a shared box serves a team. Room says a room box represents a meeting space.",
+    "try": "Generate a new English Deep Dive. In Interactive Mode, choose Join while it plays. Ask which box fits a meeting space. When the hosts answer, open the Room note and check the words.",
+    "after": "A room mailbox fits a meeting space. A shared box serves a team. Each part traces to its own note.",
+    "why": "Spoken answers go by quickly. Writing down a claim gives you something to match to the source.",
+    "rescue": "If the hosts invent a booking fee, open both notes and look for a price. Mark the fee unknown. If Join is hidden, reopen the new English audio in your notebook."
   },
   {
     "id": "lab-gemini-app-28",
@@ -1450,12 +1459,12 @@
   },
   {
     "id": "lab-gemini-app-30",
-    "premise": "Capstone: Make a source-checked help desk. Work through this small example before trying your own.",
-    "before": "Note Types: shared boxes serve a team; room boxes book a space. Note Rows: A shared, B room, C shared. Note Limit: read only; never change a box.",
-    "try": "Open every citation. Turn the verified sheet into a Canvas app with buttons Type, Count, and Edit allowed. Add a question about cost. Have another reader try every button.",
-    "after": "Type A says shared. Count gives 2. Editing is disallowed. Cost is unknown. Every known answer names its source note.",
-    "why": "A source mark is a starting point. The line it opens must actually support the answer.",
-    "rescue": "If the app invents a cost or offers to change a mailbox, remove that action. Keep this a read-only demo and repeat all four tests."
+    "premise": "A tiny help desk needs four answers it can prove or label unknown.",
+    "before": "Rows lists A shared, B room and C shared. Types explains the boxes. Limit says read only. The notes give no price.",
+    "try": "Make a Data Table and a Slide Deck in Studio. Check the table row for shared boxes and count the shared boxes pictured on the slides. Copy the checked lines into a Canvas app and press each button.",
+    "after": "A is shared. A and C make two shared boxes. Limit rules out edits. Cost stays unknown across the app and any Studio output that mentions cost.",
+    "why": "A tidy table or slide can still contain a mistake. Checking each output against the original rows keeps one wrong total out of the app.",
+    "rescue": "If a slide counts three shared boxes, read Rows aloud. Generate a corrected slide. Keep the verified count of two in the app and retest all four buttons."
   },
   {
     "id": "lab-antigravity-16",

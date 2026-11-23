@@ -146,6 +146,220 @@
     ]
   },
   {
+    "id": "devin-speed",
+    "title": "Make Devin Fast: Choose the Right Mode and Warm Setup",
+    "summary": "Find a line of code, try a small edit, or leave a job running while you close your laptop. Each calls for a different start.",
+    "intro": {
+      "what": "A cloud Agent gets its own computer to edit files and run tests. A cold start means waiting while that computer gets its tools. Sometimes you can get your answer before you even need that computer.",
+      "features": "Ask Devin searches saved code. DeepWiki explains how the parts fit. Devin CLI works in a folder on your computer. A cloud Agent can keep working after you leave.",
+      "exchange": "Use Ask to find the sorting rule in a sample mail report. Open the line it names.",
+      "m365": "Give a cloud Agent a practice task list and a test. Let it check that a blank due date stays blank.",
+      "developer": "Try a new button label with Devin CLI. Open the local game and see whether the label fits.",
+      "sources": [
+        [
+          "Ask Devin about project files",
+          "https://docs.devin.ai/work-with-devin/ask-devin"
+        ],
+        [
+          "Read a DeepWiki project guide",
+          "https://docs.devin.ai/work-with-devin/deepwiki"
+        ],
+        [
+          "What a handoff carries",
+          "https://docs.devin.ai/cli/handoff"
+        ],
+        [
+          "Build and use an environment snapshot",
+          "https://docs.devin.ai/onboard-devin/environment"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Pick the smallest tool that can finish the job",
+        "paragraphs": [
+          "Start with the result you need. Are you looking for an answer, a change you can see right now, or a job that keeps going after you leave?"
+        ],
+        "table": {
+          "columns": [
+            "What you need",
+            "What to open",
+            "How to check it"
+          ],
+          "rows": [
+            [
+              "An answer about saved code",
+              "Open Ask Devin, choose the practice project, and ask which file sorts its report. Open DeepWiki for a map of the project. Both can use a project Devin has already indexed, so you can skip starting a cloud Agent.",
+              "Follow the link to the line in the file. If the project is missing, ask its owner to connect it and let Devin build its search index."
+            ],
+            [
+              "A quick edit on this computer",
+              "With Devin CLI installed, open a terminal in your practice folder. A terminal is a window for typing commands. Type devin, then ask it to fix one label.",
+              "Read the changed line. Open your local app and try the button."
+            ],
+            [
+              "A longer job on a second computer",
+              "Open Agent in the Devin web app and choose the practice project. Or, inside Devin CLI, type /handoff and describe what work is left. It sends the conversation, the branch and edits in progress.",
+              "Check which project and changes will go. Open the cloud session and check the task. When you return, look for the test output and changed files."
+            ]
+          ]
+        },
+        "sources": [
+          [
+            "Ask Devin about project files",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "Read a DeepWiki project guide",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Open Devin CLI",
+            "https://docs.devin.ai/cli"
+          ],
+          [
+            "What a handoff carries",
+            "https://docs.devin.ai/cli/handoff"
+          ]
+        ]
+      },
+      {
+        "title": "Pack the tools once",
+        "paragraphs": [
+          "A Blueprint is a recipe for setting up the cloud computer. A Snapshot is a ready-to-use copy made from that recipe. Imagine packing a pencil case the night before class. In the morning you just open it.",
+          "Have the project owner give Devin access to the practice project. Ask the person who manages Devin to open a setup session and request the right tools. For the Exchange practice kit, ask for PowerShell 7 and the files that came with the kit. For an app, include the tools and added packages its tests need.",
+          "Review the proposed Blueprint. Approve the setup and wait for the build to finish. Start a fresh Agent session on this project. From the kit folder, run pwsh -File ./Test-Inventory.ps1 -Script ./Reference/Get-MailboxInventory.ps1. Look for five PASS lines. The tests use made-up mailboxes.",
+          "Time the wait from starting the new session to its first test. Write down the seconds. A warm start skips the long install step. The time still depends on the project. If each new session starts by installing the same tool, add it to the Blueprint, rebuild, and try again."
+        ],
+        "sources": [
+          [
+            "Build and use an environment snapshot",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ],
+          [
+            "How a Blueprint saves installed tools",
+            "https://docs.devin.ai/onboard-devin/environment/blueprint-reference"
+          ]
+        ]
+      },
+      {
+        "title": "Teach the team rule once",
+        "paragraphs": [
+          "Keep the testing steps in a Skill. Open Customize in Devin and create a skill named check-mail-report. Give it a short description such as “Check a practice mail report.” In the steps, tell it to use the made-up rows, run the kit test, and copy the five PASS lines into the review.",
+          "If the team keeps its instructions with the project, it can save that same skill at .agents/skills/check-mail-report/SKILL.md. To use it in the cloud prompt box, type @skills:check-mail-report and add the new task. The skill holds the repeatable steps. Your message says what changed this time."
+        ],
+        "sources": [
+          [
+            "Create and call a Devin Skill",
+            "https://docs.devin.ai/product-guides/skills"
+          ]
+        ]
+      },
+      {
+        "title": "Cut one big job into testable pieces",
+        "paragraphs": [
+          "Cognition calls this “wide and shallow.” Picture a tray of small jobs you can finish and check one at a time. For practice, aim for a piece a teammate could do in 60 to 90 minutes. This is a way to size the work. An Agent may take a different amount of time.",
+          "Try a mail report with three needs. One piece checks how it sorts rows. A second checks a file with only column names. A third checks that a failed run leaves the old report safe. Give each piece a sample, the result you expect, and the exact command to run.",
+          "For the second piece, ask for a report with the same column names and zero data rows. Run the kit command in the previous section. Find “PASS 2 - empty input retains its header” and check the other four lines too. Run the whole set so a change to one rule cannot quietly break another.",
+          "Start with one piece and have a teammate check it. Two pieces can run side by side when they touch different files and both have clear tests. When both need to change the same line, finish the first piece before you start the next."
+        ],
+        "sources": [
+          [
+            "Split work into small pieces",
+            "https://docs.devin.ai/use-cases/best-practices"
+          ]
+        ]
+      },
+      {
+        "title": "Pick Fusion or a schedule when it pays off",
+        "paragraphs": [
+          "Fusion pairs two AI models. One plans the tricky parts and checks the result. A lower-cost helper handles routine steps. Try it when a change needs careful reasoning followed by lots of small edits. In Devin CLI, type /fusion. In a cloud session, look for Fusion in the agent picker if your team offers it.",
+          "An ACU is a unit Devin uses to measure work. In a cloud session, open Session Insights to see the ACUs used. Compare runs that pass the same test. Include retries. Say two tries use 3 ACUs each. That is 6 ACUs for one accepted fix. One try using 4 ACUs costs 4 for that same fix.",
+          "Scheduled Devins can start a repeat job while the team is away. First try the job by hand. For a weekly check of a practice project, open Automations, choose Create automation, and add a Schedule trigger. Pick the day and time, then check the time zone shown. Give it the skill and the exact test.",
+          "Have the job check first whether the sample changed. End the run early when there is nothing to check. Review a week of results and ACUs. If most runs find nothing, schedule them less often. A schedule saves someone from starting each run by hand. Each run can still use ACUs."
+        ],
+        "sources": [
+          [
+            "How Fusion shares work",
+            "https://docs.devin.ai/cli/fusion"
+          ],
+          [
+            "Pick a cloud agent",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "Set up a scheduled Devin",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ],
+          [
+            "Check Enterprise usage",
+            "https://docs.devin.ai/admin/billing/enterprise"
+          ]
+        ]
+      },
+      {
+        "title": "Which mode would you open?",
+        "paragraphs": [
+          "Picture three messages arriving at your desk. Choose where you would start each job. Look for the part that tells you whether you need to read, edit here, or keep working in the cloud."
+        ],
+        "exercise": {
+          "prompt": "Pick a mode for each job, then check why it fits.",
+          "questions": [
+            {
+              "prompt": "A teammate asks which file picks the order of rows in the mail report. They only need the file and line. Which mode would you open?",
+              "choices": [
+                "Ask Devin",
+                "Devin CLI",
+                "Agent with a ready snapshot"
+              ],
+              "correct": 0,
+              "why": "Ask can look up the line in the saved project. Open the line it cites and check it yourself."
+            },
+            {
+              "prompt": "You want to rename a button in the copy of a practice app on your laptop. You want to try two labels and click the button after each edit. Which mode fits?",
+              "choices": [
+                "Ask Devin",
+                "Devin CLI",
+                "Agent with a ready snapshot"
+              ],
+              "correct": 1,
+              "why": "Devin CLI edits the copy on your computer. You can open that same copy in your browser after each change."
+            },
+            {
+              "prompt": "The team wants a report fix and a full test run. The project already has a ready snapshot. You need to close your laptop while the work runs. Which mode fits?",
+              "choices": [
+                "Ask Devin",
+                "Devin CLI",
+                "Agent with a ready snapshot"
+              ],
+              "correct": 2,
+              "why": "A cloud Agent keeps working on its own computer. The snapshot has the tools, and the test output gives you something to check later."
+            }
+          ],
+          "answer": [
+            "Ask Devin. Ask can look up the line in the saved project. Open the line it cites and check it yourself.",
+            "Devin CLI. Devin CLI edits the copy on your computer. You can open that same copy in your browser after each change.",
+            "Agent with a ready snapshot. A cloud Agent keeps working on its own computer. The snapshot has the tools, and the test output gives you something to check later."
+          ]
+        },
+        "sources": [
+          [
+            "Ask Devin about project files",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "What a handoff carries",
+            "https://docs.devin.ai/cli/handoff"
+          ],
+          [
+            "Build and use an environment snapshot",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ]
+        ]
+      }
+    ]
+  },
+  {
     "id": "devin-first-session",
     "title": "Run your first Devin session",
     "summary": "Follow one small edit from a question about a help page to a preview you can read.",

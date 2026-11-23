@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
+<title id="title">Grade the answer before you see the name</title><desc id="desc">The key says the three labels should be L, R, L. Anonymous answers A and C match two labels. Answer B matches all three. Reveal the model names after scoring.</desc>
+<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">Grade the answer before you see the name</text>
+<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">Give each model the same rule and the same practice cases.</text>
+<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Key: L, R, L. Reveal the model names only after you score the answers.</text>
+<rect x="29" y="130" width="246" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="41" y="157" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Hidden name A</text>
+<text x="47" y="215" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="25" font-weight="700">L    L    L</text>
+<text x="47" y="265" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="22" font-weight="400">2 of 3</text>
+<rect x="296" y="130" width="246" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="308" y="157" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Hidden name B</text>
+<text x="314" y="215" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="25" font-weight="700">L    R    L</text>
+<text x="314" y="265" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="22" font-weight="400">3 of 3</text>
+<rect x="563" y="130" width="246" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="575" y="157" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Hidden name C</text>
+<text x="581" y="215" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="25" font-weight="700">R    R    L</text>
+<text x="581" y="265" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="22" font-weight="400">2 of 3</text>
+</svg>

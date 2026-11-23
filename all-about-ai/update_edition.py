@@ -88,6 +88,7 @@ kit = refresh_kit(book / 'practice' / 'exchange-inventory')
 assets.append(kit)
 lab_count = 0
 guide_ids = set()
+reference_ids = set()
 require(groups, 'List at least one group in edition.json.')
 for group in groups:
     require(group['title'] and date.fromisoformat(group['reviewed']) <= edition_date, 'Check group title and review date.')
@@ -122,6 +123,7 @@ for group in groups:
                 if sample not in assets: assets.append(sample)
             lab_count += 1
             continue
+        reference_ids.add(key)
         require(ch['sections'], f'Incomplete chapter {key}')
         intro = ch['intro']
         require(words([intro[k] for k in ('what', 'features', 'exchange', 'm365', 'developer')]) and intro['sources'], f'Incomplete introduction in {key}')
@@ -135,6 +137,11 @@ for group in groups:
             if 'exercise' in section:
                 exercise = section['exercise']
                 require(words([exercise['prompt']]) and words(exercise['answer']), f'Incomplete exercise in {key}')
+                for question in exercise.get('questions', []):
+                    choices = question['choices']
+                    require(words([question['prompt'], question['why']]) and words(choices) and
+                            len(set(choices)) == len(choices) >= 2 and type(question['correct']) is int and
+                            0 <= question['correct'] < len(choices), f'Invalid practice choice in {key}')
             if 'table' in section:
                 tbl = section['table']
                 require(words(tbl['columns']) and tbl['rows'], f'Empty table in {key}')
@@ -143,7 +150,7 @@ for group in groups:
 tracks = [group['track'] for group in groups if group.get('track')]
 expected_tracks = {'antigravity','ai-studio','claude-code','codex','copilot','devin','gemini-app'}
 require(set(tracks) == expected_tracks and len(tracks) == 7 and lab_count == 210, 'Expected seven distinct tracks of 30 labs')
-require(manifest.get('version') == 3, 'Expected edition 3')
+require(manifest.get('version') == 4, 'Expected edition 4')
 catalog = json.loads((book / 'content/models.json').read_text())
 require(date.fromisoformat(catalog['reviewed']) <= edition_date, 'Check model catalog date')
 values = catalog['values']
@@ -192,10 +199,31 @@ require(len(examples) == len(ids - guide_ids) and {ex['id'] for ex in examples} 
 for ex in examples:
     require(words([ex[k] for k in ('premise','before','try','after','why','rescue')]), 'Incomplete worked example '+ex['id'])
 check_refs(examples)
-require(used == set(values), 'Unused model fields: ' + ', '.join(sorted(set(values)-used)))
 figures = json.loads((book / 'content/figures.json').read_text())
-diagrams = {f'diagram-{name}.svg' for name in ('tokens-context','chat-project-agent','vibe-coding-loop','model-picker','structured-json','tool-calling','offline-pwa','cost-per-win','diff-review','notebook-grounding','deep-research','m365-grounding','exchange-pipeline','git-branch-pr','pagination-loop','zero-vs-blank')}
-require({fig['file'] for fig in figures if fig['file'].endswith('.svg')} == diagrams, 'Check the 16 required diagrams')
+check_refs(figures)
+require(used == set(values), 'Unused model fields: ' + ', '.join(sorted(set(values)-used)))
+previous_diagrams = """
+    tokens-context chat-project-agent vibe-coding-loop model-picker structured-json tool-calling
+    offline-pwa cost-per-win diff-review notebook-grounding deep-research m365-grounding
+    exchange-pipeline git-branch-pr pagination-loop zero-vs-blank
+""".split()
+new_diagrams = """
+    devin-speed-modes blueprint-snapshot session-side-chat devin-review-flow skill-reuse
+    ticket-to-session access-four-scopes outposts-network fleet-pilot acu-metrics
+    gemini-surfaces notebook-studio ai-studio-pipeline multimodal-io mindmap-connections quiz-from-notes
+    claude-surfaces plan-then-edit connector-vs-browser svg-vs-raster effort-dial search-vs-analysis
+    local-vs-cloud-codex media-handoff thread-to-decision denominator-trap copilot-surface-choice
+    claim-to-source browser-permissions local-offline-ai blind-model-trial game-state-loop
+    undo-history-stack fifo-queue atomic-file-swap csv-quote-shield
+""".split()
+new_svg_files = {f'diagram-{name}.svg' for name in new_diagrams}
+diagrams = new_svg_files | {f'diagram-{name}.svg' for name in previous_diagrams}
+require(len(figures) == 93 and {f['file'] for f in figures if f['file'].endswith('.svg')} == diagrams,
+        'Expected the 52 named diagrams and 41 other pictures')
+illustrated = {page for figure in figures for page in [figure['lesson'], *figure.get('also', [])]}
+milestones = {f'lab-{track}-{number}' for track in tracks for number in ('01', '15', '29', '30')}
+required_pages = reference_ids | milestones | {'lab-gemini-app-10','lab-gemini-app-24','lab-gemini-app-27'}
+require(required_pages <= illustrated, 'Missing figures on ' + ', '.join(sorted(required_pages - illustrated)))
 require({p.name for p in (book/'pictures').glob('*') if p.is_file() and not p.name.startswith('.')} == {f['file'] for f in figures}, 'Picture list does not match files on disk')
 for fig in figures:
     name = fig['file']
@@ -211,6 +239,10 @@ for fig in figures:
     if name in diagrams:
         svg = ElementTree.parse(book / path).getroot()
         ns = '{http://www.w3.org/2000/svg}'
+        if name in new_svg_files:
+            colors = {el.get(attr) for el in svg.iter() for attr in ('fill', 'stroke')
+                      if el.get(attr) not in (None, 'none')}
+            require(colors == {'#faf6ea', '#182c2d', '#145756', '#8b571b'}, f'Check the book palette in {name}')
         require(svg.tag == ns+'svg' and svg.get('viewBox') and svg.findtext(ns+'title') and svg.findtext(ns+'desc'), f'Diagram needs a title and description: {name}')
         require(all(el.tag in {ns+t for t in ('svg','title','desc','defs','marker','rect','text','path')} for el in svg.iter()), f'Unexpected SVG element {name}')
     else:

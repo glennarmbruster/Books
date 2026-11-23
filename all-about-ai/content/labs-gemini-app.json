@@ -430,47 +430,74 @@
   },
   {
     "id": "lab-gemini-app-10",
-    "title": "Tell an old rule from a new rule",
-    "summary": "Choose only Old and ask again in a fresh question. Then select only New and repeat.",
+    "title": "Map two rules and find the one to use",
+    "summary": "Two dated notes give different winning scores. Build a Mind Map, follow a branch and prove which score applies.",
     "level": "Intermediate",
-    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
-    "features": "Gemini Notebook answers questions about sources you choose.",
+    "requires": "Use Gemini Notebook online in a computer browser. The mobile app does not offer Mind Maps.",
+    "features": "A Mind Map groups ideas into branches. A point on a branch can open a question in Chat.",
     "roles": [
       "Compare two dated mail rules.",
       "Check which meeting note is newer.",
       "Update a game’s win condition."
     ],
-    "prompt": "List both limits with dates and citations. Use the newer note to tell us when to stop.",
+    "prompt": "Both notes use points. What stayed the same? Which winning score changed? Show both dates and name the note that backs each score.",
     "steps": [
       {
-        "title": "Open your work area",
-        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
-        "help": "Open the source list. Check only the notes you want this question to use."
+        "title": "Make a practice notebook",
+        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Game rules.",
+        "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
-        "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
-        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Old, May 1: play to 8. New, May 4: play to 12. Add them as separate named notes."
+        "title": "Add the rule sheets",
+        "text": "In Sources, choose Add sources and paste the first line as its own source. Name it Old. Repeat with the second line and name it New. Select both.",
+        "help": "Check that Sources shows two titles. Keeping each dated line in its own source makes a wrong match easier to spot.",
+        "code": "Old — May 1. Players earn one point per turn. The first to 8 wins.\nNew — May 4. Players earn one point per turn. This replaces the old target. The first to 12 wins."
       },
       {
-        "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Choose only Old and ask again in a fresh question. Then select only New and repeat.",
-        "help": "If the notes blend together, open each source, check its title, then ask for a two-row comparison."
+        "title": "Grow the map",
+        "text": "Choose Mind Map in the notebook. If you see it under Chat as a suggested button, select it there. When it finishes, open the new Mind Map in Studio.",
+        "help": "The map looks like a tree on its side. Zoom in until you can read a branch."
       },
       {
-        "title": "Check what you made",
-        "text": "With both, the newer limit is 12. With Old alone you can only support 8.",
-        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+        "title": "Follow a connection",
+        "text": "Expand a branch about points or winning. Select a point on that branch to open Chat about it. Ask the question under Your prompt. Open each source it names.",
+        "help": "Your map may use different labels. Pick the closest branch. When a citation opens a whole short note, read its dated line."
+      },
+      {
+        "title": "Try one sheet at a time",
+        "text": "In Sources, select only Old. Ask which target this sheet sets. Then select only New and repeat. Read the answers next to the two dated lines.",
+        "help": "Use fresh chat questions for this test. A map you already made can still show both sheets."
+      },
+      {
+        "title": "Make a rule poster",
+        "text": "Select New by itself. If your adult account offers Infographic, use its pencil in Studio. Ask for a poster with the points per turn and the winning score. Read every number on the result.",
+        "help": "Your poster should show 1 point per turn and a target of 12. A picture that shows 8 as the new target needs a fresh version."
       }
     ],
     "check": [
-      "With both, the newer limit is 12. With Old alone you can only support 8."
+      "Both sheets give one point per turn. The May 1 target is 8. The May 4 sheet replaces it with 12.",
+      "You can open a branch in Studio and point to a line in each source. With Old alone you can support only the old target."
     ],
     "sources": [
       [
-        "Google · Gemini Notebook",
-        "https://support.google.com/gemininotebook/answer/16296687"
+        "Open Gemini Notebook",
+        "https://notebook.google.com/"
+      ],
+      [
+        "Google Help · build and explore a Mind Map",
+        "https://support.google.com/gemininotebook/answer/16212283?hl=en"
+      ],
+      [
+        "Google Help · check an answer against its sources",
+        "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+      ],
+      [
+        "Google Help · find and import sources with Fast or Deep Research",
+        "https://support.google.com/gemininotebook/answer/16215270?hl=en"
+      ],
+      [
+        "Google Help · generate an Infographic",
+        "https://support.google.com/gemininotebook/answer/16758265?hl=en"
       ]
     ],
     "firstGuide": "gemini-notebook"
@@ -1089,47 +1116,73 @@
   },
   {
     "id": "lab-gemini-app-24",
-    "title": "Check a missing detail in a study guide",
-    "summary": "Find support for each answer. Now add Fare: tickets cost 2 game coins. Repeat only the price question.",
+    "title": "Find a source you would trust for study night",
+    "summary": "Run two searches inside the notebook. Inspect the pages you bring in and remove a rumor before you ask your question.",
     "level": "Intermediate",
-    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
-    "features": "Gemini Notebook answers questions about sources you choose.",
+    "requires": "Use a computer browser and Gemini Notebook online. Deep Research requires an eligible adult account. If you have Fast Research only, you can still do the source check.",
+    "features": "Fast Research finds pages. Deep Research also writes a report. You choose which sources Chat may use.",
     "roles": [
-      "Leave missing mail fields unknown.",
-      "Keep a guide honest when facts change.",
-      "Teach an app to handle missing data."
+      "Check a mail help page before using its advice.",
+      "Keep an unverified tip out of a meeting guide.",
+      "Teach a study app to mark a missing price as unknown."
     ],
-    "prompt": "Make three study questions: what to bring, when doors open, and what a ticket costs. Only answer from the two sources.",
+    "prompt": "Using only my selected sources, how can I practice the flashcards I missed? For our study night, what do I bring, when do doors open and what does a ticket cost? Name the source for each answer. Say unknown if no source gives it.",
     "steps": [
       {
-        "title": "Open your work area",
-        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
-        "help": "Open the source list. Check only the notes you want this question to use."
+        "title": "Make a practice notebook",
+        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Study night.",
+        "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
-        "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
-        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Add Packing: bring a badge. Add Times: doors open at 4. No note gives a ticket price."
+        "title": "Set up the event notes",
+        "text": "Use Add sources and paste each line separately. Give each source the title at the start of its line. Hold off on asking Chat anything yet.",
+        "help": "Rumor is a made-up note for this test. It has no proof for its claim.",
+        "code": "Packing — Bring a badge.\nTimes — Doors open at 4.\nRumor — Someone thinks study night tickets cost 9 coins."
       },
       {
-        "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Find support for each answer. Now add Fare: tickets cost 2 game coins. Repeat only the price question.",
-        "help": "If the old answer sticks, check that Fare is selected. Ask for its exact sentence in a new question."
+        "title": "Try Fast Research",
+        "text": "In the Sources search box choose Web and Fast Research. Search for the words below. Choose View. Open a result from Google Help and import it.",
+        "help": "If that page is missing, open the flashcards help link below. In Sources, choose Add sources and paste its web address.",
+        "code": "Gemini Notebook flashcards practice only cards you missed"
       },
       {
-        "title": "Check what you made",
-        "text": "First answers are badge, 4, unknown. After the new note the price is 2 game coins, supported by Fare.",
-        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+        "title": "Try Deep Research in the same notebook",
+        "text": "In Sources, choose Web and Deep Research. Search for the same topic and ask how reviewing a missed card differs from retaking a quiz. Open View when it finishes. Look at the report and its list of pages. Import one useful web page to compare.",
+        "help": "The report and its sources are separate choices. If your account lacks Deep Research, inspect a second Fast Research result and record which mode you used."
+      },
+      {
+        "title": "Inspect the imports before asking",
+        "text": "Open each imported web source. Find the publisher and the words that tell you how to review missed cards. Make a note of which page supports that tip. In Sources, clear Rumor, the report if imported, and any page you could not verify. Keep Packing, Times and the checked help page selected.",
+        "help": "Click a source title to read it. Use the checkbox to include or exclude it. A search result can look useful even when its text never answers your question."
+      },
+      {
+        "title": "Ask, then test a missing price",
+        "text": "Now use Your prompt. Open the citation for missed cards. Check the event answers too. Add a new source named Fare with the line below, select it and ask the price again.",
+        "help": "If the first answer says 9, clear Rumor and ask which selected line supports that price. Only use a price you can point to.",
+        "code": "Fare — One study night ticket costs 2 game coins."
+      },
+      {
+        "title": "Try the study tip you checked",
+        "text": "Select just Packing, Times and Fare. In Studio, choose Flashcards. Mark one card as missed. Finish the round and choose to retry only the cards you missed. Then create a Quiz on the same notes and try Explain on an answer.",
+        "help": "For a harder round, use the pencil beside Quizzes before you generate it. Check the explanation against one of your three notes."
       }
     ],
     "check": [
-      "First answers are badge, 4, unknown. After the new note the price is 2 game coins, supported by Fare."
+      "The checked help page explains how to review just the cards you missed. You can find the supporting line yourself.",
+      "With Rumor clear, the event answers are badge, 4 and unknown. After you select Fare, the checked price is 2 game coins."
     ],
     "sources": [
       [
-        "Google · Gemini Notebook",
-        "https://support.google.com/gemininotebook/answer/16296687"
+        "Open Gemini Notebook",
+        "https://notebook.google.com/"
+      ],
+      [
+        "Google Help · find and import sources with Fast or Deep Research",
+        "https://support.google.com/gemininotebook/answer/16215270?hl=en"
+      ],
+      [
+        "Google Help · practice with flashcards and quizzes",
+        "https://support.google.com/gemininotebook/answer/16958963?hl=en"
       ]
     ],
     "firstGuide": "gemini-notebook"
@@ -1229,47 +1282,71 @@
   },
   {
     "id": "lab-gemini-app-27",
-    "title": "Use an audio overview as a study check",
-    "summary": "Play it in Studio. Pause when it explains each type. Open the notes and check both claims. On supported mobile, try Download to listen later.",
+    "title": "Join the audio hosts and check what they say",
+    "summary": "Interrupt a new Audio Overview with a question about a room mailbox. Check the spoken answer against the original note.",
     "level": "Intermediate",
-    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
-    "features": "Gemini Notebook answers questions about sources you choose.",
+    "requires": "Use Gemini Notebook online, a notebook you can edit and a microphone. Interactive Mode needs a newly generated English Audio Overview.",
+    "features": "Interactive Mode lets you join the AI hosts for a spoken follow-up. Chat can help you find the source line afterward.",
     "roles": [
       "Practice explaining mailbox types.",
       "Make an audio study break.",
       "Test narration for a learning app."
     ],
-    "prompt": "Make a short Audio Overview based on the two notes. Focus on how the two mailbox types differ.",
+    "prompt": "For a short Deep Dive, compare the two mailboxes in my notes. Explain when a team would pick each one.",
     "steps": [
       {
-        "title": "Open your work area",
-        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
-        "help": "Open the source list. Check only the notes you want this question to use."
+        "title": "Make a practice notebook",
+        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Mailbox radio.",
+        "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
-        "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
-        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Add note A: a shared mailbox serves a team. Add note B: a room mailbox represents a meeting space."
+        "title": "Add two source cards",
+        "text": "In Sources, use Add sources to paste these lines as two separate sources. Title them Team and Room. Select both.",
+        "help": "These are pretend study cards. You can do the whole lab without an email account for either mailbox.",
+        "code": "Team — A shared mailbox serves a team.\nRoom — A room mailbox represents a meeting space."
       },
       {
-        "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Play it in Studio. Pause when it explains each type. Open the notes and check both claims. On supported mobile, try Download to listen later.",
-        "help": "If the audio adds a rule about costs, mark it unverified. Ask the notebook for the source line before using it."
+        "title": "Make a new recording",
+        "text": "In Studio, customize an Audio Overview with the pencil. Choose Deep Dive and English. Type Your prompt, generate the audio and wait for it to appear.",
+        "help": "Use the recording you just made in your own notebook. A shared recording link gives listeners regular playback."
       },
       {
-        "title": "Check what you made",
-        "text": "Both definitions trace to their own note. You can identify which type fits a team and which fits a room.",
-        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+        "title": "Interrupt the hosts",
+        "text": "Open the recording, select Interactive Mode and start playback. While the hosts are talking, choose Join. Allow the microphone if asked. Wait for the hosts to call on you, then speak the question below. Listen until they answer and return to their discussion.",
+        "help": "If Join is missing, check the recording language and try the new recording in a computer browser. You can ask the same question in Chat to practice checking a claim.",
+        "code": "Which mailbox would I use for a meeting space, and what does the other mailbox serve?"
+      },
+      {
+        "title": "Find proof for the spoken answer",
+        "text": "Write down the two types the hosts named. Open Room and Team under Sources and read their lines. Ask Chat for a citation if a phrase is unclear. Match each part of what you heard to a line you can see.",
+        "help": "A cost or a booking rule would need its own source. Mark it unknown if the hosts add one."
+      },
+      {
+        "title": "Compare a spoken answer with a picture",
+        "text": "In Studio, choose Video Overview and ask for a short tour of the two boxes. When it is ready, play it. Pause on a claim about a box and write down the note that supports it.",
+        "help": "You can leave the video to build while you check the audio. Read the words on the screen as well as the words you hear."
       }
     ],
     "check": [
-      "Both definitions trace to their own note. You can identify which type fits a team and which fits a room."
+      "In the live audio path you asked the hosts a follow-up and heard them answer before playback continued.",
+      "Room backs “meeting space.” Team backs “serves a team.” Neither card gives a price."
     ],
     "sources": [
       [
-        "Google · Gemini Notebook",
-        "https://support.google.com/gemininotebook/answer/16296687"
+        "Open Gemini Notebook",
+        "https://notebook.google.com/"
+      ],
+      [
+        "Google Help · join the hosts in an Audio Overview",
+        "https://support.google.com/gemininotebook/answer/16212820?hl=en"
+      ],
+      [
+        "Google Help · check an answer against its sources",
+        "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+      ],
+      [
+        "Google Help · make and play a Video Overview",
+        "https://support.google.com/gemininotebook/answer/16454555?hl=en"
       ]
     ],
     "firstGuide": "gemini-notebook"
@@ -1380,54 +1457,79 @@
   {
     "id": "lab-gemini-app-30",
     "title": "Capstone: Make a source-checked help desk",
-    "summary": "Open every citation. Turn the verified sheet into a Canvas app with buttons Type, Count, and Edit allowed. Add a question about cost. Have another reader try every button.",
+    "summary": "Turn three notes into a checked Data Table, a Slide Deck and a working Canvas help desk. Try a question that has no answer in the notes.",
     "level": "Expert",
-    "requires": "Use Gemini Notebook online with a practice notebook. The app can use the notes you add.",
-    "features": "Gemini Notebook answers questions about sources you choose.",
+    "requires": "Use Gemini Notebook online with editing access and Gemini Canvas. Slide Decks require an eligible adult account. You can still check the table and app if slides are unavailable.",
+    "features": "Studio makes a table and slides from sources. Canvas can turn the answers you checked into a small app.",
     "roles": [
       "Build a safe help desk for mail facts.",
       "Turn team reference notes into a checked guide.",
       "Build a small question-and-answer app."
     ],
-    "prompt": "Build an answer sheet with each claim linked to its source. Answer what A is, how many shared boxes exist, and whether edits are allowed. Mark unsupported claims unknown.",
+    "prompt": "Make a four-row answer sheet. Give the type of box A, the count of shared boxes, whether edits are allowed and the cost. Name the source and show its exact line for each known answer. Mark a missing answer unknown.",
     "steps": [
       {
-        "title": "Open your work area",
-        "text": "Open Gemini Notebook. Make a fresh notebook. Add each sample note as a separate source with its own title.",
-        "help": "Open the source list. Check only the notes you want this question to use."
+        "title": "Make a practice notebook",
+        "text": "Open the Gemini Notebook link below in a computer browser. Sign in, choose Create new and name the notebook Mailbox help desk.",
+        "help": "If a notebook is already open, return to the notebook list to make a new one."
       },
       {
-        "title": "Set up the sample",
-        "text": "Put the sample below into the source list. When two notes are named, add them one at a time. Keep their titles.",
-        "help": "Use just the sample shown here. Keep a copy so you can check the result.",
-        "code": "Note Types: shared boxes serve a team; room boxes book a space. Note Rows: A shared, B room, C shared. Note Limit: read only; never change a box."
+        "title": "Add three sources",
+        "text": "In Sources, choose Add sources. Paste each of the three lines as its own source. Use Types, Rows and Limit as their titles. Select all three.",
+        "help": "Keep the letters A, B and C. They let you check the total by hand.",
+        "code": "Types — Shared boxes serve a team. Room boxes book a space.\nRows — A shared, B room, C shared.\nLimit — This desk is read only. Never change a box."
       },
       {
-        "title": "Try the task",
-        "text": "Use Your prompt with the sample above. Open every citation. Turn the verified sheet into a Canvas app with buttons Type, Count, and Edit allowed. Add a question about cost. Have another reader try every button.",
-        "help": "If the app invents a cost or offers to change a mailbox, remove that action. Keep this a read-only demo and repeat all four tests."
+        "title": "Build your answer key",
+        "text": "Ask Chat the question under Your prompt. Open the citations. Point to A and C in Rows as you count. Look for a claim about cost in all three notes.",
+        "help": "No note gives a price. Mark it unknown. A missing price and a price of zero mean different things."
       },
       {
-        "title": "Carry the checked notes into Canvas",
-        "text": "Open Gemini in a second tab. Start a new chat and choose Canvas in its tools menu. Copy your checked answers into that chat. For each answer, include the source note’s title and its exact line. Ask for a working app, then open Preview.",
-        "help": "The notebook and the app are two different places. If Preview asks where its facts came from, paste just the checked notes again. A source title without its words gives the app too little to use."
+        "title": "Generate and check a Data Table",
+        "text": "In Studio, use the pencil beside Data Table. Use the request below and generate the table. Open it and read every row against the answer key.",
+        "help": "If a count or price is wrong, edit the request and generate a fresh table. Check the new values against the original notes.",
+        "code": "Make four rows for Type of A, Shared count, Edit allowed and Cost. Use three columns called Question, Answer and Source. Write unknown for facts our notes do not give."
       },
       {
-        "title": "Check what you made",
-        "text": "Type A says shared. Count gives 2. Editing is disallowed. Cost is unknown. Every known answer names its source note.",
-        "help": "If a detail differs, point to it in your follow-up request. Repeat the same check after the change."
+        "title": "Generate and check a Slide Deck",
+        "text": "In Studio, choose Slide Deck. Ask for a short deck that shows the two mailbox types, the shared count and the read-only rule. Read each slide beside the sources. Count the boxes shown in any picture.",
+        "help": "A slide with three shared boxes needs a fix even if its text says two. Write down the slide and the correct count before asking for a fresh deck. If slides are unavailable, use the checked table for the app."
+      },
+      {
+        "title": "Build the app in Canvas",
+        "text": "Open Gemini in a second tab. In a new chat choose Canvas in Tools. Paste only your checked answers, their source names and the exact lines. Use the app request below. Open Preview.",
+        "help": "Canvas needs the words behind each answer. Copy the checked lines from your notes if an answer has lost its source.",
+        "code": "Build a read-only help desk with four buttons: Type of A, Shared count, Edit allowed and Cost. Show the answer and its source when a button is pressed. For Cost show Unknown."
+      },
+      {
+        "title": "Try all four buttons",
+        "text": "Press each button in Preview. Ask another reader to find the count and tell you which note proves it. Keep the source text beside the app while you test.",
+        "help": "If a button offers to edit a mailbox, ask Canvas to remove that action and rerun all four checks."
       }
     ],
     "check": [
-      "Type A says shared. Count gives 2. Editing is disallowed. Cost is unknown. Every known answer names its source note."
+      "Type of A is shared. The count is 2 from A and C in Rows. Limit forbids edits. Cost is unknown.",
+      "The table and checked slides agree with the source notes. Each known app answer points back to its source."
     ],
     "sources": [
       [
-        "Google · Gemini Notebook",
-        "https://support.google.com/gemininotebook/answer/16296687"
+        "Open Gemini Notebook",
+        "https://notebook.google.com/"
       ],
       [
-        "Google · build and preview an app in Canvas",
+        "Google Help · the notebook and its Studio tools",
+        "https://support.google.com/gemininotebook/answer/16206563?hl=en"
+      ],
+      [
+        "Google Help · make and check a Slide Deck",
+        "https://support.google.com/gemininotebook/answer/16757456?hl=en"
+      ],
+      [
+        "Google Help · check an answer against its sources",
+        "https://support.google.com/gemininotebook/answer/16179559?hl=en"
+      ],
+      [
+        "Google Help · build and preview an app in Canvas",
         "https://support.google.com/gemini/answer/16047321"
       ]
     ],

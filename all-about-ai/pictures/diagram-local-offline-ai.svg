@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
+<title id="title">Can it answer with Wi-Fi off?</title><desc id="desc">A cloud API needs a network trip to a server. A compatible runner with downloaded Gemma weights can answer on the device without that trip.</desc>
+<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">Can it answer with Wi-Fi off?</text>
+<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">Try a fresh prompt after you turn on airplane mode.</text>
+<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Download the runner and model first. Then test with a brand-new question.</text>
+<rect x="31" y="135" width="370" height="147" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<rect x="31" y="135" width="370" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="43" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Cloud API</text>
+<text x="43" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Device → internet → server</text>
+<text x="43" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Server builds a reply.</text>
+<text x="43" y="262" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Airplane mode breaks the route.</text>
+<rect x="438" y="135" width="370" height="147" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<rect x="438" y="135" width="370" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="450" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Local model</text>
+<text x="450" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Device → runner → saved model</text>
+<text x="450" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">The reply is made right here.</text>
+<text x="450" y="262" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Try a new question offline.</text>
+</svg>

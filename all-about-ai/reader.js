@@ -108,6 +108,27 @@ function sourceLinks(references) {
   return details;
 }
 
+function practiceQuestion(question, groupName) {
+  const field = element('fieldset', undefined, 'practice-question');
+  field.append(element('legend', question.prompt));
+  const feedback = element('p');
+  feedback.setAttribute('role', 'status');
+  for (const [index, choice] of question.choices.entries()) {
+    const label = element('label');
+    const radio = element('input');
+    radio.type = 'radio';
+    radio.name = groupName;
+    radio.addEventListener('change', () => {
+      const result = index === question.correct ? 'Correct. ' : 'Try another mode. ';
+      feedback.textContent = result + question.why;
+    });
+    label.append(radio, document.createTextNode(choice));
+    field.append(label);
+  }
+  field.append(feedback);
+  return field;
+}
+
 function chapterIntroduction(intro) {
   const block = element('section', undefined, 'chapter-intro');
   block.setAttribute('aria-label', 'Chapter introduction');
@@ -265,7 +286,7 @@ function openLocation(moveFocus) {
     byId('chapter-title').textContent = chapter.title;
     byId('summary').textContent = chapter.summary;
     byId('review-date').textContent = 'Reviewed ' + dateLabel(chapter.group.reviewed);
-    const sections = chapter.group.guide ? guideBody(chapter) : lab ? labBody(chapter) : chapter.sections.map(section => {
+    const sections = chapter.group.guide ? guideBody(chapter) : lab ? labBody(chapter) : chapter.sections.map((section, sectionIndex) => {
       const block = element('section', undefined, 'section');
       block.append(element('h2',section.title));
       for (const paragraph of section.paragraphs) block.append(element('p',paragraph));
@@ -273,6 +294,9 @@ function openLocation(moveFocus) {
       if (section.exercise) {
         const practice = element('aside', undefined, 'practice');
         practice.append(element('h3', 'Try it'), element('p', section.exercise.prompt));
+        for (const [i, question] of (section.exercise.questions || []).entries()) {
+          practice.append(practiceQuestion(question, chapter.id + '-' + sectionIndex + '-' + i));
+        }
         const answer = element('details');
         answer.append(element('summary', 'Check your reasoning'));
         for (const step of section.exercise.answer) answer.append(element('p', step));
@@ -357,7 +381,7 @@ function fillModelFields(value, catalog, used) {
 async function start() {
   const edition = await json('./edition.json');
   const [pictures, examples, catalog] = await Promise.all([json('./content/figures.json'), json('./content/worked.json'), json('./content/models.json')]);
-  illustrations = pictures;
+  illustrations = fillModelFields(pictures, catalog, new Set());
   worked = new Map(examples.map(example=>[example.id,fillModelFields(example,catalog,new Set())]));
   groups = await Promise.all(edition.groups.map(async group => {
     const rows = await json('./content/' + group.file);
