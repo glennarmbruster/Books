@@ -1429,11 +1429,11 @@
       "Track tasks with prerequisites.",
       "Make a quest that unlocks in order."
     ],
-    "prompt": "Build a local browser checklist. Each task has a checkbox, a list of earlier tasks and a reason if locked. Start with only Read input available. If an earlier task is unchecked, clear later completed steps that depend on it.",
+    "prompt": "Build a local browser checklist. Each task has a checkbox, a list of earlier tasks and a reason if locked. Start with only Read input available. If an earlier task is unchecked, clear later completed steps that depend on it. Display the number of finished steps out of three after every change. Display the number of finished steps out of three after every change.",
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "text": "Choose the practice repository in Devin. Stage the supplied sample and build request together in one unsent message.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "Read input has no earlier task. Make report needs Read input. Review needs Make report."
       },

@@ -61,3 +61,9 @@ The checker reads public HTML and text without logging in or running page script
 ### Monthly fact queue
 
 Run `python3 verify_sources.py --stale-only` for an offline list in the dated stale-facts file under _work. The full source check writes it too. Start with the oldest due facts, then inspect upcoming ones. Unconfirmed entries are due immediately. The reader shows the same queue on **What changed**. A successful web request cannot certify a statement or a workflow. Use the source checker’s `--record` only when you choose to put link notices in the book. Then rebuild and check both readers.
+
+## Editing a worked example
+
+Write the first input for the intended tool. Put setup directions in the numbered steps and a short label in `caption`. Give two concrete test results in `after`. Put the likely failure in `rescue` and the single message a reader can send in `rescuePrompt`. Use `noAccount` only for a check that works locally. A whole chapter field can be reused with a `{{chapter.prompt}}` reference. The shared Harbor Relay build prompt is attached separately from its optional scoring question.
+
+After changing a worked answer in the owner project, update its fixture in `_work/answer-checks/tests.jsonl`. Put calculations inside double square brackets, then run `python3 _work/answer-checks/verify_answers.py` from the project root. Run the edition build and check again. In the portable reader, copy both messages and compare the clipboard text to each labeled box.

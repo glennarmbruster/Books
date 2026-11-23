@@ -428,7 +428,7 @@ function labBody(lab) {
   };
   label.append(checkbox,document.createTextNode('Mark lab complete on this device'));
   finish.append(element('h2','Finish the lab'),checks,label,status,sourceLinks(lab.sources));
-  const example = workedExample(worked.get(lab.id));
+  const example = workedExample(worked.get(lab.id),lab.summary);
   const sections = [about];
   if (lab.writeYourOwn) sections.push(writeYourOwn(lab, example, prompt));
   sections.push(example, prompt, instructions);
@@ -597,7 +597,7 @@ function openLocation(moveFocus) {
       }
       sections.push(links);
     }
-    if (!lab && !chapter.group.guide) sections.unshift(chapterIntroduction(chapter.intro),workedExample(worked.get(chapter.id)));
+    if (!lab && !chapter.group.guide) sections.unshift(chapterIntroduction(chapter.intro),workedExample(worked.get(chapter.id),chapter.summary));
     if (!chapter.group.guide) {
       sections.unshift(launchHelp(chapter));
       const figures = chapterPictures(chapter.id);

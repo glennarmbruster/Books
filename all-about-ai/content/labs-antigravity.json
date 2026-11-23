@@ -533,7 +533,7 @@
       },
       {
         "title": "Try a second case",
-        "text": "Repeat the two-connection test on fresh data. Then try A,+41 against the finished database.",
+        "text": "On a fresh database seed A,+40 and B,+40, repeat the two simultaneous C,+10 writes, then try A,+41. Inspect the three saved rows.",
         "help": "If the total reaches 100, ask for a rule in the database that blocks a second row with the same ID. Test both connections again."
       }
     ],

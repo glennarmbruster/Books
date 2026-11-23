@@ -111,7 +111,7 @@
       "Rehearse clear meeting directions.",
       "Try spoken clues for a puzzle."
     ],
-    "prompt": "Say: I have A on the left and C on the right. Which empty circle should get B? Repeat my labels first.",
+    "prompt": "I have A on the left and C on the right. Which empty circle should get B? Repeat my labels first. Give the answer as a position and a letter.",
     "steps": [
       {
         "title": "Open your work area",

@@ -32,7 +32,7 @@ def validate_worked(examples):
     from collections import Counter
     def normal(value):
         return ' '.join(re.findall(r'[a-z0-9]+', value.casefold()))
-    whys, endings = Counter(), Counter()
+    whys, endings, questions = Counter(), Counter(), Counter()
     stale = ('before looking below','match the values, labels and order shown','in the original card',
              'show the changed row separately','cross out','paste this fictional practice card')
     tools = {'claude-code':'Claude Code','codex':'Codex','devin':'Devin','antigravity':'Antigravity'}
@@ -44,27 +44,34 @@ def validate_worked(examples):
         if any(phrase in joined for phrase in stale):
             raise ValueError('Replace old worked-example wording in '+key)
         opened = None
-        for character in message:
-            if character == '“':
+        for index,character in enumerate(message):
+            before = message[index-1] if index else ' '
+            after = message[index+1] if index+1 < len(message) else ' '
+            if character in ("'", "’") and before.isalnum() and after.isalnum():
+                continue  # Apostrophe inside a word, such as driver's.
+            if character in ('“','‘'):
                 if opened: raise ValueError('Nested follow-up quotes in '+key)
-                opened = '”'
-            elif character == '”':
+                opened = {'“':'”','‘':'’'}[character]
+            elif character in ('”','’'):
                 if opened != character: raise ValueError('Mismatched follow-up quotes in '+key)
                 opened = None
-            elif character == '"':
-                if opened == '"': opened = None
+            elif character in ('"', "'"):
+                if opened == character: opened = None
                 elif opened: raise ValueError('Nested follow-up quotes in '+key)
-                else: opened = '"'
+                else: opened = character
         if opened: raise ValueError('Unclosed follow-up quote in '+key)
         why = normal(ex['why'])
         whys[why] += 1
         # A request can end in an imperative. Check that ending too.
         sentences = re.split(r'(?<=[.!?])\s+', ex['before'].strip())
         endings[normal(sentences[-1])] += 1
+        actual_questions = re.findall(r'(?:^|(?<=[.!?\n]))\s*([^.!?\n]+\?)', ex['before'])
+        if actual_questions:
+            questions[re.sub(r'\d+', '#', normal(actual_questions[-1]))] += 1
         for track,tool in tools.items():
             if key.startswith('lab-'+track+'-') and tool.casefold() not in ex['try'].casefold():
                 raise ValueError('Show how to use '+tool+' in '+key)
     if max(whys.values()) > 1:
         raise ValueError('A worked explanation is repeated')
-    if max(endings.values()) > 3:
+    if max(endings.values()) > 3 or max(questions.values(), default=0) > 3:
         raise ValueError('A worked request ending occurs more than three times')

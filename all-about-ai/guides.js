@@ -275,14 +275,18 @@ function toolLink(chapter) {
   return link;
 }
 
-function workedExample(example) {
+function workedExample(example, chapterSummary) {
   const wrap = element('section',undefined,'section worked');
-  wrap.append(element('h2','See a worked example'),element('p',example.premise));
+  wrap.append(element('h2','See a worked example'));
+  if (example.premise !== chapterSummary) wrap.append(element('p',example.premise));
   const flow = element('ol',undefined,'example-flow');
   for (const [label,value] of [['Start with this',example.before],['Try this',example.try],['Look for this result',example.after]]) {
     const step = element('li');
     step.append(element('h3',label));
-    if (label === 'Start with this') step.append(snippet(value,'practice card',example.caption || 'Message for the tool'));
+    if (label === 'Start with this') {
+      if (example.buildPrompt) step.append(snippet(example.buildPrompt,'build prompt','Shared build prompt · send alone'));
+      step.append(snippet(value,'practice card',example.caption || 'Message for the tool'));
+    }
     else if (label === 'Try this') {
       const instructions = element('ol');
       for (const line of value.split(/\n(?=\d+\. )/)) instructions.append(element('li',line.replace(/^\d+\. /,'')));
