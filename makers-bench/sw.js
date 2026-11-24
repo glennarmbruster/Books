@@ -1,4 +1,4 @@
-const edition = "makers-bench-a64991c8c42ac8";
+const edition = "makers-bench-6ef0e5bb9f4af6";
 const files = [
   "../book-pager.js",
   "../shelf-art/bench.jpg",

@@ -1,4 +1,4 @@
-const edition = "makers-bench-desktop-d0d3cfb96c5b29";
+const edition = "makers-bench-desktop-3738cc3a8fe78d";
 const files = [
   "app.js",
   "arrange.js",
